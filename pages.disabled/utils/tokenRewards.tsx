@@ -30,8 +30,6 @@ export async function rewardOnboarding (...args: any[]) : any {
         method: 'POST,
         body: JSON.stringify ({
 
-<<<<<<< HEAD
-=======
           userId,'
           action: 'referral',
           referredUserId,
@@ -63,9 +61,9 @@ export async function rewardOnboarding (...args: any[]) : any {}
 ,
   action: 'referral,
           referredUserId,
-<<<<<<< HEAD
+
           amount: 100}) }) }}
-=======
+
           amount: 100
         }) 
       }) }

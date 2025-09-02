@@ -1,281 +1,45 @@
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-import React from,
-  react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../components/layout/MainLayout';
-import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from
-  'lucide-react';
-import Link from
-  'next/link';
-=======
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {
-  Download,
-  FileText,
-  Calendar,
-  User,
-  Eye,
-  ArrowRight,
-  Search,
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
 
 const Whitepapers: NextPage = () => {
   const whitepapers = [
     {
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-      id:
-  'ai-business-transformation,
-      title:,
-  AI-Powered Business Transformation: A Comprehensive Guide,
-      description:,
-  Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.',
-      author: 'Dr. Sarah Johnson,
-      date:,
-  2024-01-20',
-      category: 'Artificial Intelligence,
-=======
-      id: 'ai-business-transformation',
-      title: 'AI-Powered Business Transformation: A Comprehensive Guide',
-      description:
-        'Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.',
-      author: 'Dr. Sarah Johnson',
-      date: '2024-01-20',
-      category: 'Artificial Intelligence',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 45,
       downloads:
   '12.5k',
       rating: 4.8,
       featured: true,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-      topics: [,
-  Machine Learning',
-  'Business Strategy',
-  'Digital Transformation',
-  'ROI Analysis']
-    },
-    {
-      id: 'cloud-migration-strategies,
-      title:,
-  Cloud Migration Strategies for Enterprise Success',
-      description: 'Best practices and proven strategies for successful cloud migration in enterprise environments.,
-      author:,
-  Michael Chen',
-      date: '2024-01-15,
-      category:
-  'Cloud Computing',
-=======
-      topics: [
-        'Machine Learning',
-        'Business Strategy',
-        'Digital Transformation',
-        'ROI Analysis',
-      ],
-    },
-    {
-      id: 'cloud-migration-strategies',
-      title: 'Cloud Migration Strategies for Enterprise Success',
-      description:
-        'Best practices and proven strategies for successful cloud migration in enterprise environments.',
-      author: 'Michael Chen',
-      date: '2024-01-15',
-      category: 'Cloud Computing',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 32,
       downloads:
   '8.2k',
       rating: 4.7,
       featured: true,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-      topics: [,
-  Cloud Architecture',
-  'Migration Planning',
-  'Cost Optimization',
-  'Security']
-    },
-    {
-      id: 'cybersecurity-framework,
-      title:,
-  Modern Cybersecurity Framework for Digital Businesses',
-      description: 'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity.,
-      author:,
-  David Rodriguez',
-      date: '2024-01-10,
-      category:
-  'Cybersecurity',
-=======
-      topics: [
-        'Cloud Architecture',
-        'Migration Planning',
-        'Cost Optimization',
-        'Security',
-      ],
-    },
-    {
-      id: 'cybersecurity-framework',
-      title: 'Modern Cybersecurity Framework for Digital Businesses',
-      description:
-        'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity.',
-      author: 'David Rodriguez',
-      date: '2024-01-10',
-      category: 'Cybersecurity',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 38,
       downloads:
   '6.8k',
       rating: 4.9,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-      topics: [,
-  Threat Detection',
-  'Risk Management',
-  'Compliance',
-  'Incident Response']
-    },
-    {
-      id: 'microservices-architecture,
-      title:,
-  Microservices Architecture: Design Patterns and Best Practices,
-      description:,
-  Complete guide to designing and implementing microservices architecture for scalable applications.',
-      author: 'Emily Watson,
-      date:,
-  2024-01-05',
-      category: 'Software Architecture,
-=======
-      topics: [
-        'Threat Detection',
-        'Risk Management',
-        'Compliance',
-        'Incident Response',
-      ],
-    },
-    {
-      id: 'microservices-architecture',
-      title: 'Microservices Architecture: Design Patterns and Best Practices',
-      description:
-        'Complete guide to designing and implementing microservices architecture for scalable applications.',
-      author: 'Emily Watson',
-      date: '2024-01-05',
-      category: 'Software Architecture',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 52,
       downloads:
   '5.4k',
       rating: 4.6,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-      topics: [,
-  Service Design',
-  'API Management',
-  'Scalability',
-  'DevOps']
-    },
-    {
-      id: 'data-analytics-insights,
-      title:,
-  Data Analytics for Business Intelligence: From Insights to Action,
-      description:,
-  How to leverage data analytics to drive informed business decisions and competitive advantage.',
-      author: 'Alex Thompson,
-      date:,
-  2023-12-28',
-      category: 'Data Analytics,
-=======
-      topics: ['Service Design', 'API Management', 'Scalability', 'DevOps'],
-    },
-    {
-      id: 'data-analytics-insights',
-      title:
-        'Data Analytics for Business Intelligence: From Insights to Action',
-      description:
-        'How to leverage data analytics to drive informed business decisions and competitive advantage.',
-      author: 'Alex Thompson',
-      date: '2023-12-28',
-      category: 'Data Analytics',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 41,
       downloads:
   '4.9k',
       rating: 4.7,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-      topics: [,
-  Business Intelligence',
-  'Data Visualization',
-  'Predictive Analytics',
-  'KPIs']
-    },
-    {
-      id: 'mobile-app-development,
-      title:,
-  Mobile App Development: Native vs Cross-Platform Strategies,
-      description:,
-  Comprehensive comparison of mobile development approaches and their impact on business outcomes.',
-      author: 'Lisa Park,
-      date:,
-  2023-12-20',
-      category: 'Mobile Development,
-=======
-      topics: [
-        'Business Intelligence',
-        'Data Visualization',
-        'Predictive Analytics',
-        'KPIs',
-      ],
-    },
-    {
-      id: 'mobile-app-development',
-      title: 'Mobile App Development: Native vs Cross-Platform Strategies',
-      description:
-        'Comprehensive comparison of mobile development approaches and their impact on business outcomes.',
-      author: 'Lisa Park',
-      date: '2023-12-20',
-      category: 'Mobile Development',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 28,
       downloads:
   '3.7k',
       rating: 4.5,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-      topics: [
-  'React Native',
-  'Flutter',
-  'Performance',
-  'User Experience']
-    }
-  ];
-
-  const categories = [
-  'All',
-  'Artificial Intelligence',
-  'Cloud Computing',
-  'Cybersecurity',
-  'Software Architecture',
-  'Data Analytics',
-  'Mobile Development'];
-=======
-      topics: ['React Native', 'Flutter', 'Performance', 'User Experience'],
-    },
-  ];
-
-  const categories = [
-    'All',
-    'Artificial Intelligence',
-    'Cloud Computing',
-    'Cybersecurity',
-    'Software Architecture',
-    'Data Analytics',
-    'Mobile Development',
-  ];
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
 
   return (
     <MainLayout

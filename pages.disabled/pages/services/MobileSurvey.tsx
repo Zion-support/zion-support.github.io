@@ -1,6 +1,6 @@
 
 :pages.disabled/pages/services/MobileSurvey.tsx
-<<<<<<< HEAD
+
 export default function MobileSurvey() {,
   Mobile-first NPS/CSAT/CES templates',;'
   'QR code and link campaigns',;'
@@ -8,7 +8,7 @@ export default function MobileSurvey() {,
   'Webhooks to CRM/Slack',;'
   'Kiosk mode for in-person feedback',;'
   'Multilingual with auto-translate';
-=======
+
 export default function MobileSurvey() {
     'Mobile-first NPS/CSAT/CES templates',;'
     'QR code and link campaigns',;'
@@ -59,9 +59,9 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
         </div>""
         <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">""
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>""
-<<<<<<< HEAD
+
           <div className="grid md:grid-cols-3 gap-4">"{pricing.map((p) => (""
-=======
+
           <div className="grid md:grid-cols-3 gap-4">"
             <Smartphone className="w-4 h-4 mr-2" /> Capture feedback anywhere, anytime;
           </div>""
@@ -94,12 +94,12 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
         </div>"
       </section>""
       <section className="pb-16 max-w-6xl mx-auto px-6">""
-<<<<<<< HEAD
+
         <div className="grid md:grid-cols-3 gap-6">'"{[{icon: MessageSquare, t:
   'Conversational UX'}, {icon: Users, t:
   'High Completion'}, {icon: BarChart2, t:
   'AI Insights'}].map((c) => (""
-=======
+
         <div className="grid md:grid-cols-3 gap-6">'"
             ))}
           </div>""
@@ -116,9 +116,9 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
             </div>
 :pages.disabled/pages/services/MobileSurvey.tsx
-<<<<<<< HEAD
+
           ))}"</div>""
-=======
+
           ))}"
           ))}
         </div>""
@@ -131,10 +131,10 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
       </section>;
 :pages.disabled/pages/services/MobileSurvey.tsx
     </div>;'"
-<<<<<<< HEAD
+
   )}}
   '"'"
-=======
+
   )}}'"'"
     </div>;
   )}}'""

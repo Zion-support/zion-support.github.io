@@ -20,9 +20,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {
         title="AI Workflow Automation - Zion Tech Group""
         description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function AIWorkflowAutomation(...args: any[]): any {}
   return()
@@ -39,9 +39,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -62,9 +62,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
-<<<<<<< HEAD
+
                 Get Started"</button>""
-=======
+
                 Get Started"
               <Workflow className="w-4 h-4 mr-2"  />              AI-Powered Automation;
             </div>""
@@ -89,9 +89,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -101,9 +101,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -112,9 +112,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
               Intelligent Automation Features"</h2>""
-=======
+
               Intelligent Automation Features"
               Intelligent Automation Features;
             </h2>""
@@ -125,9 +125,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
               capabilities.
             </p>
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -138,9 +138,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -152,9 +152,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                   <feature.icon className="w-6 h-6 text-cyan-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>""
@@ -171,9 +171,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -196,9 +196,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                 improved customer satisfaction, the benefits are clear and
                 quantifiable."
               </p>""
-<<<<<<< HEAD
+
               <div className="grid grid-cols-1 gap-4">"{benefits.map((benefit, index) => (""
-=======
+
               <div className="grid grid-cols-1 gap-4">"
               transition={{ duration: 0.6 }}
             >""
@@ -224,9 +224,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
             <motion.div;
               initial={{ opacity: 0, x: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
               whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
               whileInView={{ opacity: 1, x: 0 }}"
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}""
@@ -237,9 +237,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                 <div className="text-center">""
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">""
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
                     <Zap className="w-10 h-10 text-white"  />"</div>""
-=======
+
                     <Zap className="w-10 h-10 text-white"  />"
                     <Zap className="w-10 h-10 text-white"  />
                   </div>""
@@ -249,9 +249,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                   </h3>"                  <p className="text-slate-300 mb-6">
 :pages.disabled/pages/services/ai-workflow-automation.tsx
                     Start your AI workflow automation journey today and see the
-<<<<<<< HEAD
+
                     transformation in action."</p>""
-=======
+
                     transformation in action."
                     Start your AI workflow automation journey today and see the;
                     transformation in action.
@@ -267,9 +267,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -279,9 +279,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -298,9 +298,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
-<<<<<<< HEAD
+
                 Get Started Now"</button>""
-=======
+
                 Get Started Now"
               Ready to Automate Your Workflows?
             </h2>""
@@ -322,11 +322,11 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/ai-workflow-automation.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

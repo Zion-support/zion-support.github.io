@@ -4,9 +4,9 @@ const RagSearch: React.FC = (): JSX.Element => (
     <SEO title="RAG Search - Zion Tech Group" description="AI search over your documents and data with citations and guardrails."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
+
       <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>"</section>""
-=======
+
       <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>"
       <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>
     </section>""
@@ -20,9 +20,9 @@ const RagSearch: React.FC = (): JSX.Element => (
           <li>Observability and feedback loops</li>
           <li>PII redaction + compliance filters</li>
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -34,9 +34,9 @@ const RagSearch: React.FC = (): JSX.Element => (
           <li>Vector DB: Pinecone, Weaviate, pgvector</li>
           <li>Indexers: Unstructured.io, LangChain</li>
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -49,9 +49,9 @@ const RagSearch: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, VPC + SSO</li>
         </ul>;
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
+
       </div>;"</section>;""
-=======
+
       </div>;"
       </div>;
     </section>;""
@@ -66,9 +66,9 @@ export { RagSearch };
 export default RagSearch;
 :pages.disabled/pages/services/RagSearch.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

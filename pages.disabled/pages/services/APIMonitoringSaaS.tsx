@@ -4,9 +4,9 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
     <SEO title="API Monitoring & Status - Zion Tech Group" description="SLA-grade API monitoring, alerting, SLOs, and status pages for your services."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/APIMonitoringSaaS.tsx
-<<<<<<< HEAD
+
       <h1 className="text-4xl font-bold mb-4">API Monitoring & Status</h1>"      <p className="text-slate-300 max-w-3xl">End-to-end API uptime, latency, and error monitoring with synthetic checks, distributed tracing hooks, and public status pages. Define SLOs and get proactive alerts before customers are impacted.</p>"</section>""
-=======
+
       <h1 className="text-4xl font-bold mb-4">API Monitoring & Status</h1>"      <p className="text-slate-300 max-w-3xl">End-to-end API uptime, latency, and error monitoring with synthetic checks, distributed tracing hooks, and public status pages. Define SLOs and get proactive alerts before customers are impacted.</p>"
       <h1 className="text-4xl font-bold mb-4">API Monitoring & Status</h1>"      <p className="text-slate-300 max-w-3xl">End-to-end API uptime, latency, and error monitoring with synthetic checks, distributed tracing hooks, and public status pages. Define SLOs and get proactive alerts before customers are impacted.</p>
     </section>""
@@ -20,9 +20,9 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
           <li>Distributed tracing hooks (OpenTelemetry)</li>
           <li>Auto incident creation and on-call schedules</li>
 :pages.disabled/pages/services/APIMonitoringSaaS.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -34,9 +34,9 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
           <li>Datadog, New Relic, Grafana, Prometheus</li>
           <li>GitHub, GitLab, Jira for incident workflows</li>
 :pages.disabled/pages/services/APIMonitoringSaaS.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -49,9 +49,9 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, SSO, advanced analytics</li>
         </ul>
 :pages.disabled/pages/services/APIMonitoringSaaS.tsx
-<<<<<<< HEAD
+
       </div>;"</section>;""
-=======
+
       </div>;"
       </div>;
     </section>;""
@@ -67,9 +67,9 @@ export { APIMonitoringSaaS };
 export default APIMonitoringSaaS;
 :pages.disabled/pages/services/APIMonitoringSaaS.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

@@ -1,9 +1,9 @@
 ;const ReturnsManagementSaaS: React.FC = (): JSX.Element => {}
   return()
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"<SEO""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
@@ -17,9 +17,9 @@
 ""
       <section className="mx-auto max-w-6xl px-6 py-16">""
         <div className="flex items-center gap-3 mb-6 text-cyan-300">""
-<<<<<<< HEAD
+
           <Package className="h-5 w-5"  />"          <span className="text-sm font-semibold">RETURNS MANAGEMENT</span>"</div>""
-=======
+
           <Package className="h-5 w-5"  />"          <span className="text-sm font-semibold">RETURNS MANAGEMENT</span>"
         canonical="/services/returns-management""
       />
@@ -34,9 +34,9 @@
           Streamline returns with branded portals, label generation, smart approvals, carrier pick-ups, refund workflows,
           exchanges, and analytics to cut costs and lift repeat purchase rate.
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
-<<<<<<< HEAD
+
         </p>"""
-=======
+
         </p>"
         </p>
 ""
@@ -51,9 +51,9 @@
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Refunds, exchanges, store credit</li>""
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> SLA tracking & fraud controls</li>
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
-<<<<<<< HEAD
+
             </ul>"</div>""
-=======
+
             </ul>"
             </ul>
           </div>""
@@ -67,9 +67,9 @@
               <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300" /> ERP/WMS via REST or webhooks</li>"
             </ul>"            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $49–$299/month typical</div>
           </div>
-<<<<<<< HEAD
+
         </div>"""
-=======
+
         </div>"
               <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300" /> ERP/WMS via REST or webhooks</li>
             </ul>"            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $49–$299/month typical</div>
@@ -93,9 +93,9 @@
             <ul className="list-disc ml-5 text-slate-300 space-y-1">"
               <li>""
                 Market benchmarks: <a className="text-cyan-400 hover:underline" href="https://apps.shopify.com/categories/store-management-returns-exchanges" target="_blank" rel="noreferrer">Shopify App Store (Returns)</a>
-<<<<<<< HEAD
+
               </li>"<li>""
-=======
+
               </li>"
             </ul>
           </div>""
@@ -119,9 +119,9 @@
         </div>"
 ""
         <div className="mt-8">""
-<<<<<<< HEAD
+
           <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">;"Book a demo;""
-=======
+
           <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">;"
         </div>
 ""
@@ -141,10 +141,10 @@
 ;
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
 export { ReturnsManagementSaaS };"
-<<<<<<< HEAD
+
 export default ReturnsManagementSaaS}
   '"'"
-=======
+
 export default ReturnsManagementSaaS}'"'"
 export { ReturnsManagementSaaS };
 export default ReturnsManagementSaaS}'""

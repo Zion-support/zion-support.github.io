@@ -1,7 +1,7 @@
 
 :pages.disabled/pages/services/EmailSequencer.tsx
 export default function EmailSequencer() {
-<<<<<<< HEAD
+
   'Multi-step sequences with A/B testing',;'
   'AI subject line and body suggestions',;'
   'CRM/webhook integrations (HubSpot, Salesforce, Slack),;'
@@ -10,7 +10,7 @@ export default function EmailSequencer() {
   'Per-recipient throttling and warmup controls',;'
   'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips,
   ;
-=======
+
 		'Multi-step sequences with A/B testing',;'
 		'AI subject line and body suggestions',;'
 		'CRM/webhook integrations (HubSpot, Salesforce, Slack),;'
@@ -59,9 +59,9 @@ export default function EmailSequencer(function EmailSequencer() {): any {}
 				<div className="text-center mb-12">""
 					<div className="mx-auto w-16 h-16 rounded-2xl bg-zion-cyan/20 flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/EmailSequencer.tsx
-<<<<<<< HEAD
+
 						<Mail className="w-8 h-8 text-zion-cyan"  />"</div>""
-=======
+
 						<Mail className="w-8 h-8 text-zion-cyan"  />"
 						<Mail className="w-8 h-8 text-zion-cyan"  />
 					</div>""
@@ -72,9 +72,9 @@ export default function EmailSequencer(function EmailSequencer() {): any {}
 :pages.disabled/pages/services/EmailSequencer.tsx
 				</div>"
 ""
-<<<<<<< HEAD
+
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">"{features.map((f) => (""
-=======
+
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">"
 				</div>
 ""
@@ -90,9 +90,9 @@ export default function EmailSequencer(function EmailSequencer() {): any {}
 ""
 				<div className="mb-16">""
 					<h2 className="text-2xl font-semibold text-white mb-6">Plans</h2>""
-<<<<<<< HEAD
+
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">"{plans.map((p) => (""
-=======
+
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
 				</div>
 ""
@@ -111,9 +111,9 @@ export default function EmailSequencer(function EmailSequencer() {): any {}
 									{p.details.map((d) => (""
 										<li key={d} className="flex items-start text-zion-slate-light text-sm">""
 											<Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5"  /> {d}										</li>
-<<<<<<< HEAD
+
 									))}"</ul>""
-=======
+
 									))}"
 									<span className="text-zion-cyan font-semibold">{p.price}</span>
 								</div>""
@@ -134,9 +134,9 @@ export default function EmailSequencer(function EmailSequencer() {): any {}
 				<div>""
 					<h2 className="text-2xl font-semibold text-white mb-4">Market reference links</h2>""
 					<p className="text-zion-slate-light mb-4 text-sm">Compare typical pricing and features across leading platforms:</p>""
-<<<<<<< HEAD
+
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">"{references.map((ref) => (""
-=======
+
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
 
 				<div>""
@@ -154,10 +154,10 @@ export default function EmailSequencer(function EmailSequencer() {): any {}
 			</section>;
 :pages.disabled/pages/services/EmailSequencer.tsx
 		</div>;'"
-<<<<<<< HEAD
+
 	)}}
   '"'"
-=======
+
 	)}}'"'"
 		</div>;
 	)}}'""

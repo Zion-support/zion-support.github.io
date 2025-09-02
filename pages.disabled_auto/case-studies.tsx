@@ -1,26 +1,4 @@
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-import { 
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
   TrendingUp,
   Users,
   DollarSign,
@@ -44,14 +22,7 @@ import {
   Download,
   Share2,
   Filter,
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
-  Search
-} from
-  'lucide-react';
-=======
-  Search,
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
 
 const CaseStudies: React.FC = () => {
   const caseStudies = [
@@ -245,13 +216,7 @@ const CaseStudies: React.FC = () => {
               Case Studies
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
-              Discover how we
-  've helped businesses across industries achieve remarkable results with AI-powered solutions.
-=======
-              Discover how we&apos;ve helped businesses across industries
-              achieve remarkable results with AI-powered solutions.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
             </p>
           </motion.div>
         </div>
@@ -461,16 +426,7 @@ const CaseStudies: React.FC = () => {
                       <button
                         key={industry.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
-                          industry.active 
-                            ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white
-  ': 'text-gray-300 hover:bg-slate-700
-=======
-                          industry.active
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                            : 'text-gray-300 hover:bg-slate-700'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                         }`}
                       >
                         <span>{industry.name}</span>

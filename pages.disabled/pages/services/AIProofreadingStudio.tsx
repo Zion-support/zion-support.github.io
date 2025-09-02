@@ -4,9 +4,9 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
     <SEO title="AI Proofreading Studio - Zion Tech Group" description="AI-powered proofreading, tone, and localization for marketing and technical content."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/AIProofreadingStudio.tsx
-<<<<<<< HEAD
+
       <h1 className="text-4xl font-bold mb-4">AI Proofreading Studio</h1>"      <p className="text-slate-300 max-w-3xl">Improve clarity, tone, and accuracy across blogs, docs, and emails. Enforce brand voice and compliance with customizable playbooks.</p>"</section>""
-=======
+
       <h1 className="text-4xl font-bold mb-4">AI Proofreading Studio</h1>"      <p className="text-slate-300 max-w-3xl">Improve clarity, tone, and accuracy across blogs, docs, and emails. Enforce brand voice and compliance with customizable playbooks.</p>"
       <h1 className="text-4xl font-bold mb-4">AI Proofreading Studio</h1>"      <p className="text-slate-300 max-w-3xl">Improve clarity, tone, and accuracy across blogs, docs, and emails. Enforce brand voice and compliance with customizable playbooks.</p>
     </section>""
@@ -20,9 +20,9 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
           <li>PII/PHI detection and redaction suggestions</li>
           <li>Localization drafts for 20+ languages</li>
 :pages.disabled/pages/services/AIProofreadingStudio.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -34,9 +34,9 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
           <li>CMS: WordPress, Webflow, Ghost</li>
           <li>APIs and webhooks for custom pipelines</li>
 :pages.disabled/pages/services/AIProofreadingStudio.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -49,9 +49,9 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, SSO + DLP</li>
         </ul>;
 :pages.disabled/pages/services/AIProofreadingStudio.tsx
-<<<<<<< HEAD
+
       </div>;"</section>;""
-=======
+
       </div>;"
       </div>;
     </section>;""
@@ -66,9 +66,9 @@ export { AIProofreadingStudio };
 export default AIProofreadingStudio;
 :pages.disabled/pages/services/AIProofreadingStudio.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

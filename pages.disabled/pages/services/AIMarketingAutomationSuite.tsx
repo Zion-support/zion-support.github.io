@@ -14,9 +14,9 @@ import {}
   'lucide-react.ts';
 
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-<<<<<<< HEAD
+
 export default function AIMarketingAutomationSuite(...args: any[]): any {return()
-=======
+
 export default function AIMarketingAutomationSuite(...args: any[]): any {
 
 export default function AIMarketingAutomationSuite(...args: any[]): any {}
@@ -29,9 +29,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
             AI Marketing Automation Suite"</h1>""
-=======
+
             AI Marketing Automation Suite"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing;
           </div>""
@@ -53,9 +53,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Revolutionary Marketing Features"
             </h2>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{features.map(f => (""
-=======
+
             <ul className="space-y-3">"
       </section>
 ""
@@ -84,9 +84,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
             </h3>""
             <div className="grid md: anygrid-cols-1 gap-4">
               {tiers.map(t => (
-<<<<<<< HEAD
+
                 <div"key={t.name}""
-=======
+
                 <div"
               ))}
             </ul>""
@@ -108,9 +108,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-purple-600 mb-2">
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-<<<<<<< HEAD
+
                     {t.price}"</div>""
-=======
+
                     {t.price}"
                     {t.price}
                   </div>""
@@ -124,9 +124,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               ))}"
             </div>""
-<<<<<<< HEAD
+
             <div className="mt-6 flex flex-wrap gap-3">"<a""
-=======
+
             <div className="mt-6 flex flex-wrap gap-3">"
               ))}
             </div>""
@@ -138,9 +138,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
               </a>
               <a""
@@ -161,9 +161,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Marketing Benefits"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{benefits.map(b => (""
-=======
+
             <ul className="space-y-3">"
         </div>
 ""
@@ -186,9 +186,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Use Cases"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{useCases.map(u => (""
-=======
+
             <ul className="space-y-3">"
           </div>
           <div>""
@@ -213,9 +213,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {marketingChannels.map(c => (
-<<<<<<< HEAD
+
               <div"key={c}""
-=======
+
               <div"
         </div>
 ""
@@ -243,9 +243,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {aiCapabilities.map(c => (
-<<<<<<< HEAD
+
               <div"key={c}""
-=======
+
               <div"
         </div>
 ""
@@ -277,9 +277,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
                 1"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 Data Collection"</h4>""
-=======
+
                 Data Collection"
         </div>
 ""
@@ -306,9 +306,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
                 2"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 Segmentation"</h4>""
-=======
+
                 Segmentation"
             </div>
             <div>""
@@ -329,9 +329,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
                 3"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 Automation"</h4>""
-=======
+
                 Automation"
             </div>
             <div>""
@@ -352,9 +352,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
                 4"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 Optimization"</h4>""
-=======
+
                 Optimization"
             </div>
             <div>""
@@ -377,9 +377,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to revolutionize your marketing?"
           </div>""
-<<<<<<< HEAD
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
-=======
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
         </div>
 ""
@@ -395,9 +395,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
             >""
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
@@ -410,10 +410,10 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-4 text-sm text-zion-slate-light">,
   Visit us at: {'}"<a""
-=======
+
           <div className="mt-4 text-sm text-zion-slate-light">'
             Visit us at:{' '}"
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com;
@@ -427,9 +427,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
               target="_blank""
               rel="noreferrer""
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-<<<<<<< HEAD
+
               className="text-purple-600 hover:underline">
-=======
+
               className="text-purple-600 hover:underline"
               className="text-purple-600 hover:underline""
             >
@@ -441,9 +441,9 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

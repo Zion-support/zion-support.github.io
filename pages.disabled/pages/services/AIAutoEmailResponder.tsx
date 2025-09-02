@@ -2,9 +2,9 @@
 export { function };export default function AIAutoEmailResponder(...args[]):  {}
   return()
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
-<<<<<<< HEAD
+
     <div className = "min-h-screen bg-futuristic text-white">;"<SEO""
-=======
+
     <div className = "min-h-screen bg-futuristic text-white">;"
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO""
@@ -14,9 +14,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
       />""
       <section className="container-responsive py-16">"        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
-<<<<<<< HEAD
+
           AI Auto Email Responder"</h1>""
-=======
+
           AI Auto Email Responder"
           AI Auto Email Responder;
         </h1>""
@@ -26,9 +26,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
           classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options;
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
-<<<<<<< HEAD
+
         </p>"""
-=======
+
         </p>"
         </p>
 ""
@@ -44,9 +44,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
               <li>• Secure redaction (PII/PHI), audit logs</li>
               <li>• Integrations: Gmail, O365, HubSpot, Salesforce, Zendesk</li>
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
-<<<<<<< HEAD
+
             </ul>"</div>""
-=======
+
             </ul>"
             </ul>
           </div>""
@@ -59,9 +59,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
               <li>• Enterprise: Custom SSO, VPC, SLAs</li>"
             </ul>""
-<<<<<<< HEAD
+
             <p className="mt-4 text-xs text-zion-slate-light">"References:""
-=======
+
             <p className="mt-4 text-xs text-zion-slate-light">"
               <li>• Enterprise: Custom SSO, VPC, SLAs</li>
             </ul>""
@@ -74,9 +74,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
             </p>;
           </div>;
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
-<<<<<<< HEAD
+
         </div>;";""
-=======
+
         </div>;"
         </div>;
 ;""
@@ -89,9 +89,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
           </div>""
           <div className = "rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">""
             <h3 className="font-semibold mb-2">Compliance</h3>""
-<<<<<<< HEAD
+
             <p className="text-sm text-zion-slate-light">SOC 2 patterns, data residency, encryption, audit trails.</p>"</div>""
-=======
+
             <p className="text-sm text-zion-slate-light">SOC 2 patterns, data residency, encryption, audit trails.</p>"
             <p className="text-sm text-zion-slate-light">Deploy pilot in 7 days; typical 35–60% faster responses.</p>
           </div>""
@@ -110,9 +110,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
   )}
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

@@ -1,15 +1,16 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Search from './Search';
-
-describe('Search', () => {
-  it('renders without crashing', () => {
-    render(<Search />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-
-  it('displays expected content', () => {
-    render(<Search />);
-    // Add specific test assertions based on component content
-  });
-});
+,"});,"})
+import { render, screen } from '@testing-library/react';,"});,"})
+,"});,"})
+;,"});,"})
+describe('Search', () => {;,"});,"})
+  it('renders without crashing', () => {;,"});,"})
+    render(<Search />);,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
+  });,"});,"})
+;,"});,"})
+  it('displays expected content', () => {;,"});,"})
+    render(<Search />);,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+  });,"});,"})
+});,"});,"})
+;,"});,"})

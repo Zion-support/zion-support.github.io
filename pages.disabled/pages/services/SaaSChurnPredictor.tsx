@@ -4,9 +4,9 @@ const SaaSChurnPredictor: React.FC = (): JSX.Element => (
     <SEO title="SaaS Churn Predictor - Zion Tech Group" description="Predict churn risk, explain drivers, and trigger retention plays across your lifecycle stack."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/SaaSChurnPredictor.tsx
-<<<<<<< HEAD
+
       <h1 className="text-4xl font-bold mb-3">SaaS Churn Predictor</h1>"      <p className="text-slate-300 max-w-3xl">ML models score user churn risk from product telemetry, billing history, and support signals. Explainable insights point to drivers and prescribe actions via playbooks.</p>"</section>""
-=======
+
       <h1 className="text-4xl font-bold mb-3">SaaS Churn Predictor</h1>"      <p className="text-slate-300 max-w-3xl">ML models score user churn risk from product telemetry, billing history, and support signals. Explainable insights point to drivers and prescribe actions via playbooks.</p>"
       <h1 className="text-4xl font-bold mb-3">SaaS Churn Predictor</h1>"      <p className="text-slate-300 max-w-3xl">ML models score user churn risk from product telemetry, billing history, and support signals. Explainable insights point to drivers and prescribe actions via playbooks.</p>
     </section>""
@@ -20,9 +20,9 @@ const SaaSChurnPredictor: React.FC = (): JSX.Element => (
           <li>Automated save offers & outreach</li>
           <li>Real-time alerts to CSMs</li>
 :pages.disabled/pages/services/SaaSChurnPredictor.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -34,9 +34,9 @@ const SaaSChurnPredictor: React.FC = (): JSX.Element => (
           <li>Segment, RudderStack, PostHog</li>
           <li>HubSpot, Salesforce, Intercom</li>
 :pages.disabled/pages/services/SaaSChurnPredictor.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -49,9 +49,9 @@ const SaaSChurnPredictor: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, SSO, model export</li>
         </ul>
 :pages.disabled/pages/services/SaaSChurnPredictor.tsx
-<<<<<<< HEAD
+
       </div>;"</section>;""
-=======
+
       </div>;"
       </div>;
     </section>;""
@@ -67,9 +67,9 @@ export { SaaSChurnPredictor };
 export default SaaSChurnPredictor;
 :pages.disabled/pages/services/SaaSChurnPredictor.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

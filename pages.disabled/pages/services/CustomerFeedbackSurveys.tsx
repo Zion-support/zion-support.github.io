@@ -2,9 +2,9 @@
 export { function };export default function CustomerFeedbackSurveys(...args[]):  {}
   return()
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
-<<<<<<< HEAD
+
     <div className = "min-h-screen bg-futuristic text-white">;"<SEO""
-=======
+
     <div className = "min-h-screen bg-futuristic text-white">;"
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO""
@@ -14,9 +14,9 @@ export { function };export default function CustomerFeedbackSurveys(...args[]): 
       />""
       <section className="container-responsive py-16">"        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
-<<<<<<< HEAD
+
           Mobile-First Feedback Surveys"</h1>""
-=======
+
           Mobile-First Feedback Surveys"
           Mobile-First Feedback Surveys;
         </h1>""
@@ -25,9 +25,9 @@ export { function };export default function CustomerFeedbackSurveys(...args[]): 
           Launch engaging surveys across web, SMS, and email with real-time dashboards.
           AI highlights themes, predicts churn risk, and recommends actions.
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
-<<<<<<< HEAD
+
         </p>"""
-=======
+
         </p>"
         </p>
 ""
@@ -42,9 +42,9 @@ export { function };export default function CustomerFeedbackSurveys(...args[]): 
               <li>• Alerts to Slack/Teams; webhook and REST APIs</li>
               <li>• Exports to BigQuery, Snowflake, S3</li>
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
-<<<<<<< HEAD
+
             </ul>"</div>""
-=======
+
             </ul>"
             </ul>
           </div>""
@@ -57,9 +57,9 @@ export { function };export default function CustomerFeedbackSurveys(...args[]): 
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
               <li>• Enterprise: SSO, DPA, custom SLAs</li>"
             </ul>""
-<<<<<<< HEAD
+
             <p className="mt-4 text-xs text-zion-slate-light">"References:""
-=======
+
             <p className="mt-4 text-xs text-zion-slate-light">"
               <li>• Enterprise: SSO, DPA, custom SLAs</li>
             </ul>""
@@ -71,9 +71,9 @@ export { function };export default function CustomerFeedbackSurveys(...args[]): 
             </p>
           </div>
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
-<<<<<<< HEAD
+
         </div>"""
-=======
+
         </div>"
         </div>
 ""
@@ -88,9 +88,9 @@ export { function };export default function CustomerFeedbackSurveys(...args[]): 
   )}
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

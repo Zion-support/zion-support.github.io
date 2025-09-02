@@ -1,15 +1,16 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import CaseStudies from './CaseStudies';
-
-describe('CaseStudies', () => {
-  it('renders without crashing', () => {
-    render(<CaseStudies />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-
-  it('displays expected content', () => {
-    render(<CaseStudies />);
-    // Add specific test assertions based on component content
-  });
-});
+,"});,"})
+import { render, screen } from '@testing-library/react';,"});,"})
+,"});,"})
+;,"});,"})
+describe('CaseStudies', () => {;,"});,"})
+  it('renders without crashing', () => {;,"});,"})
+    render(<CaseStudies />);,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
+  });,"});,"})
+;,"});,"})
+  it('displays expected content', () => {;,"});,"})
+    render(<CaseStudies />);,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+  });,"});,"})
+});,"});,"})
+;,"});,"})

@@ -5,9 +5,9 @@
         <header className="mb-10">""
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
             Remote Meeting Summarizer"</h1>""
-=======
+
             Remote Meeting Summarizer"
             Remote Meeting Summarizer;
           </h1>""
@@ -17,9 +17,9 @@
             Slack, Notion, and email.
           </p>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
         </header>"""
-=======
+
         </header>"
         </header>
 ""
@@ -40,9 +40,9 @@
                   Next steps, owners, and due dates"
                 </li>""
                 <li className="p-3 rounded-lg bg-slate-800/50">
-<<<<<<< HEAD
+
                   Knowledge base sync and search"</li>""
-=======
+
                   Knowledge base sync and search"
                   Zoom, Google Meet, Teams integrations;
                 </li>""
@@ -65,9 +65,9 @@
 ""
             <div className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Pricing (avg market ranges)"</h2>""
-=======
+
                 Pricing (avg market ranges)"
             </div>
 ""
@@ -84,9 +84,9 @@
                 <li>Enterprise: $149–$249/user/mo — SSO, DLP, VPC options</li>
               </ul>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
             </div>"""
-=======
+
             </div>"
             </div>
 ""
@@ -95,9 +95,9 @@
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -106,9 +106,9 @@
                     href="https://marketplace.zoom.us/""
                     target="_blank""
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -117,9 +117,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -128,9 +128,9 @@
                     href="https://developers.google.com/calendar""
                     target="_blank""
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -139,9 +139,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -150,9 +150,9 @@
                     href="https://platform.openai.com/docs""
                     target="_blank""
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -170,9 +170,9 @@
               <h3 className="text-xl font-semibold">Book a Demo</h3>"
               <a""
                 href="/contact""
-<<<<<<< HEAD
+
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-emerald-400 text-white hover:from-cyan-500 hover:to-emerald-500">
-=======
+
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-emerald-400 text-white hover:from-cyan-500 hover:to-emerald-500"
           </div>
 ""
@@ -194,9 +194,9 @@
   )};
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
 export default RemoteMeetingSummarizer;"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default RemoteMeetingSummarizer;
 '""

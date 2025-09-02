@@ -1,10 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/blog.tsx
-import React from
-  'react';
-=======
-import React from 'react';
-export default React.memo(function Blog () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/blog.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/blog.tsx
 
 ;
   return (;

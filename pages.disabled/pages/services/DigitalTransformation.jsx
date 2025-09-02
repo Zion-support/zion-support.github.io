@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from,
   react';'
 import { Link } from
@@ -10,7 +10,7 @@ import { motion } from
 import { ArrowRight } from
   'lucide-react';
 ;: pages.disabled/pages/services/DigitalTransformation.jsx
-=======
+
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { SEO } from '@/components/SEO';'
@@ -152,9 +152,9 @@ const DigitalTransformation = () => {
       description: 'Continuous improvement and scaling},
   ];
   return()
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">"<SEO""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">"
 const DigitalTransformation = () => {}
   const transformationServices = []
@@ -257,10 +257,10 @@ const DigitalTransformation = () => {}
             transition={{ duration: 0.8 }}
           >"
             Digital""
-<<<<<<< HEAD
+
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'{
   ' '}
-=======
+
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
         canonical="https://ziontechgroup.com/services/digital-transformation""
       />
@@ -283,9 +283,9 @@ const DigitalTransformation = () => {}
 :pages.disabled/pages/services/DigitalTransformation.jsx
           </motion.h1>"
           <motion.p""
-<<<<<<< HEAD
+
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"initial={{ opacity: 0, y: 20 }}
-=======
+
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           </motion.h1>
           <motion.p""
@@ -308,9 +308,9 @@ const DigitalTransformation = () => {}
             <Link""
               to="/contact""
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-<<<<<<< HEAD
+
             >"Start Your Transformation""
-=======
+
             >"
           >
             <Link""
@@ -325,9 +325,9 @@ const DigitalTransformation = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.jsx
-<<<<<<< HEAD
+
 "{/* Services Section */}""
-=======
+
 "
 
       {/* Services Section */}""
@@ -337,9 +337,9 @@ const DigitalTransformation = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/DigitalTransformation.jsx
-<<<<<<< HEAD
+
               Our Transformation Capabilities"</h2>""
-=======
+
               Our Transformation Capabilities"
               Our Transformation Capabilities;
             </h2>""
@@ -372,9 +372,9 @@ const DigitalTransformation = () => {}
                   </h4>""
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-<<<<<<< HEAD
+
                       <li"key={idx}""
-=======
+
                       <li"
           </div>
 ""
@@ -417,9 +417,9 @@ const DigitalTransformation = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -429,9 +429,9 @@ const DigitalTransformation = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/DigitalTransformation.jsx
-<<<<<<< HEAD
+
               Benefits of Digital Transformation"</h2>""
-=======
+
               Benefits of Digital Transformation"
               Benefits of Digital Transformation;
             </h2>""
@@ -450,9 +450,9 @@ const DigitalTransformation = () => {}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}"
             >""
-<<<<<<< HEAD
+
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"<svg""
-=======
+
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
           </div>
 ""
@@ -472,9 +472,9 @@ const DigitalTransformation = () => {}
                   stroke="currentColor""
 :pages.disabled/pages/services/DigitalTransformation.jsx
                   viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                 >"<path""
-=======
+
                 >"
                   viewBox="0 0 24 24""
                 >
@@ -489,9 +489,9 @@ const DigitalTransformation = () => {}
                 </svg>"
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                 Increased Efficiency"</h3>""
-=======
+
                 Increased Efficiency"
                     d="M13 10V3L4 14h7v7l9-11h-7z""
                   />
@@ -514,9 +514,9 @@ const DigitalTransformation = () => {}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}"
             >""
-<<<<<<< HEAD
+
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"<svg""
-=======
+
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
 
             <motion.div""
@@ -534,9 +534,9 @@ const DigitalTransformation = () => {}
                   stroke="currentColor""
 :pages.disabled/pages/services/DigitalTransformation.jsx
                   viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                 >"<path""
-=======
+
                 >"
                   viewBox="0 0 24 24""
                 >
@@ -551,9 +551,9 @@ const DigitalTransformation = () => {}
                 </svg>"
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                 Better Customer Experience"</h3>""
-=======
+
                 Better Customer Experience"
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z""
                   />
@@ -576,9 +576,9 @@ const DigitalTransformation = () => {}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}"
             >""
-<<<<<<< HEAD
+
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"<svg""
-=======
+
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
 
             <motion.div""
@@ -596,9 +596,9 @@ const DigitalTransformation = () => {}
                   stroke="currentColor""
 :pages.disabled/pages/services/DigitalTransformation.jsx
                   viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                 >"<path""
-=======
+
                 >"
                   viewBox="0 0 24 24""
                 >
@@ -613,9 +613,9 @@ const DigitalTransformation = () => {}
                 </svg>"
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                 Data-Driven Insights"</h3>""
-=======
+
                 Data-Driven Insights"
                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z""
                   />
@@ -633,9 +633,9 @@ const DigitalTransformation = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.jsx
-<<<<<<< HEAD
+
 "{/* Process Section */}""
-=======
+
 "
 
       {/* Process Section */}""
@@ -645,9 +645,9 @@ const DigitalTransformation = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/DigitalTransformation.jsx
-<<<<<<< HEAD
+
               Our Transformation Approach"</h2>""
-=======
+
               Our Transformation Approach"
               Our Transformation Approach;
             </h2>""
@@ -672,9 +672,9 @@ const DigitalTransformation = () => {}
                   {step.icon}"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {step.step}"</h3>""
-=======
+
                   {step.step}"
           </div>
 ""
@@ -702,9 +702,9 @@ const DigitalTransformation = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -723,9 +723,9 @@ const DigitalTransformation = () => {}
           <Link""
             to="/contact""
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-<<<<<<< HEAD
+
           >"Start Your Transformation""
-=======
+
           >"
             Ready to Transform Your Business?
           </h2>""
@@ -749,9 +749,9 @@ const DigitalTransformation = () => {}
 
 :pages.disabled/pages/services/DigitalTransformation.jsx
 export default DigitalTransformation;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default DigitalTransformation;
 '""

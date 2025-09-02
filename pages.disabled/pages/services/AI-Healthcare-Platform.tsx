@@ -61,12 +61,12 @@ import {}
   Microscope,
   Flask,
   TestTube,
-<<<<<<< HEAD
+
   Beaker} from,
   lucide-react';: pages.disabled/pages/services/AI-Healthcare-Platform.tsx
 const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview
   ');
-=======
+
   Beaker} from 'lucide-react';
 
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
@@ -80,16 +80,9 @@ const AIHealthcarePlatform: React.FC = () => {}
   useEffect(() => {}
     setIsVisible(true)}, []);
 
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">"{/* Hero Section */}""
-=======
-  
-  
-  
-  
-  
-  
+
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -100,9 +93,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}""
@@ -114,9 +107,9 @@ const AIHealthcarePlatform: React.FC = () => {}
               <Heart className="w-4 h-4 mr-2"  />              Healthcare Innovation"
             </div>""
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-<<<<<<< HEAD
+
               AI-Powered Healthcare Platform"</h1>""
-=======
+
               AI-Powered Healthcare Platform"
               <Heart className="w-4 h-4 mr-2"  />              Healthcare Innovation;
             </div>""
@@ -137,9 +130,9 @@ const AIHealthcarePlatform: React.FC = () => {}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             transition={{ duration: 0.8, delay: 0.2 }}""
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-<<<<<<< HEAD
+
           >"<Link""
-=======
+
           >"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}""
@@ -152,9 +145,9 @@ const AIHealthcarePlatform: React.FC = () => {}
             >""
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
               <Heart className="w-5 h-5 mr-2"  />              Transform Healthcare
-<<<<<<< HEAD
+
             </Link>"<Link""
-=======
+
             </Link>"
               <Heart className="w-5 h-5 mr-2"  />              Transform Healthcare;
             </Link>
@@ -168,9 +161,9 @@ const AIHealthcarePlatform: React.FC = () => {}
             </Link>
           </motion.div>
         </div>
-<<<<<<< HEAD
+
 "{/* Floating Elements */}""
-=======
+
 "
               <Eye className="w-5 h-5 mr-2"  />              Watch Demo;
             </Link>
@@ -186,9 +179,9 @@ const AIHealthcarePlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Healthcare Statistics */}""
-=======
+
 "
 
       {/* Healthcare Statistics */}""
@@ -201,9 +194,9 @@ const AIHealthcarePlatform: React.FC = () => {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
-=======
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             {healthcareStats.map((stat, index (
               <motion.div;
@@ -219,9 +212,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                   {stat.value}"
                 </div>""
                 <div className="text-lg font-semibold text-green-300 mb-2">
-<<<<<<< HEAD
+
                   {stat.metric}"</div>""
-=======
+
                   {stat.metric}"
                   {stat.value}
                 </div>""
@@ -236,9 +229,9 @@ const AIHealthcarePlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -248,9 +241,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.4 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}""
@@ -259,9 +252,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
               Advanced Healthcare Features"</h2>""
-=======
+
               Advanced Healthcare Features"
               Advanced Healthcare Features;
             </h2>""
@@ -278,9 +271,9 @@ const AIHealthcarePlatform: React.FC = () => {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
-=======
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
           </motion.div>
 ""
@@ -299,9 +292,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -318,9 +311,9 @@ const AIHealthcarePlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Healthcare Modules Section */}""
-=======
+
 "
 
       {/* Healthcare Modules Section */}""
@@ -330,9 +323,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.6 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}""
@@ -341,9 +334,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
               Comprehensive Healthcare Modules"</h2>""
-=======
+
               Comprehensive Healthcare Modules"
               Comprehensive Healthcare Modules;
             </h2>""
@@ -353,9 +346,9 @@ const AIHealthcarePlatform: React.FC = () => {}
               needs;
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -366,9 +359,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
-=======
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}""
@@ -381,9 +374,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                 </h3>""
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <div"key={featureIndex}""
-=======
+
                     <div"
                   <Heart className="w-6 h-6 mr-3 text-green-400"  />                  {module.name}
                 </h3>""
@@ -404,9 +397,9 @@ const AIHealthcarePlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -416,9 +409,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.8 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}""
@@ -427,9 +420,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
               Healthcare Applications"</h2>""
-=======
+
               Healthcare Applications"
               Healthcare Applications;
             </h2>""
@@ -438,9 +431,9 @@ const AIHealthcarePlatform: React.FC = () => {}
               Transform healthcare delivery across all medical specialties;
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -453,9 +446,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                 animate={{}
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
-=======
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
                 transition={{ duration: 0.8, delay: 0.2 * index }}""
@@ -468,9 +461,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                 </h3>""
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
-<<<<<<< HEAD
+
                     <div"key={appIndex}""
-=======
+
                     <div"
                   <Target className="w-6 h-6 mr-3 text-green-400"  />                  {useCase.industry}
                 </h3>""
@@ -491,9 +484,9 @@ const AIHealthcarePlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -503,9 +496,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 1.0 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 1.0 }}""
@@ -514,9 +507,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
               Healthcare Platform Pricing"</h2>""
-=======
+
               Healthcare Platform Pricing"
               Healthcare Platform Pricing;
             </h2>""
@@ -529,9 +522,9 @@ const AIHealthcarePlatform: React.FC = () => {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map(tier: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -544,11 +537,11 @@ const AIHealthcarePlatform: React.FC = () => {}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
   tier.popular'
   '
-=======
+
                 className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
 '
                   tier.popular''
@@ -562,9 +555,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                     ? 'border-green-500 scale-105''
   '`: 'border-green-500/20``
                 }`}
-<<<<<<< HEAD
+
               >"{tier.popular && (""
-=======
+
               >
                 {tier.popular && (""
 >>>>>>> pr-10728
@@ -587,9 +580,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                     <span className="text-gray-400">{tier.period}</span>"
                   </div>""
                   <p className="text-gray-300 text-sm">{tier.description}</p>
-<<<<<<< HEAD
+
                 </div>"""
-=======
+
                 </div>"
                 )}
 ""
@@ -611,9 +604,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                   <div className="flex items-center justify-center mb-4">""
                     <span className="text-gray-400 line-through mr-2">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
                       {tier.marketPrice}"</span>""
-=======
+
                       {tier.marketPrice}"
                       {tier.marketPrice}
                     </span>""
@@ -627,9 +620,9 @@ const AIHealthcarePlatform: React.FC = () => {}
 ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                 </div>
 ""
@@ -648,14 +641,14 @@ const AIHealthcarePlatform: React.FC = () => {}
 "
                 <Link""`
                   to="/contact"``
-<<<<<<< HEAD
+
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   tier.popular'
   '
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hover:to-blue-700''
   '`
                       : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white``}`}
-=======
+
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 '
                     tier.popular''
@@ -679,9 +672,9 @@ const AIHealthcarePlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -691,9 +684,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 1.2 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 1.2 }}""
@@ -702,9 +695,9 @@ const AIHealthcarePlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
               Why Choose Our Healthcare Platform?"</h2>""
-=======
+
               Why Choose Our Healthcare Platform?"
               Why Choose Our Healthcare Platform?
             </h2>""
@@ -717,9 +710,9 @@ const AIHealthcarePlatform: React.FC = () => {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -732,9 +725,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                 animate={{}
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
-=======
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
                 transition={{ duration: 0.8, delay: 0.2 * index }}""
@@ -746,9 +739,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -765,9 +758,9 @@ const AIHealthcarePlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Contact Section */}""
-=======
+
 "
 
       {/* Contact Section */}""
@@ -785,9 +778,9 @@ const AIHealthcarePlatform: React.FC = () => {}
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
               Join the healthcare revolution with AI-powered medical technology
-<<<<<<< HEAD
+
             </p>"""
-=======
+
             </p>"
             transition={{ duration: 0.8, delay: 1.4 }}
           >""
@@ -807,9 +800,9 @@ const AIHealthcarePlatform: React.FC = () => {}
               </div>""
               <div className="flex items-center text-gray-300">""
                 <Mail className="w-5 h-5 mr-2 text-green-400"  />
-<<<<<<< HEAD
+
                 <span>kleber@ziontechgroup.com</span>"</div>""
-=======
+
                 <span>kleber@ziontechgroup.com</span>"
                 <span>+1 302 464 0950</span>
               </div>""
@@ -824,9 +817,9 @@ const AIHealthcarePlatform: React.FC = () => {}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
             </div>"
 ""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             </div>
 ""
@@ -838,9 +831,9 @@ const AIHealthcarePlatform: React.FC = () => {}
               >""
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                 <Heart className="w-5 h-5 mr-2"  />                Schedule Healthcare Demo
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Heart className="w-5 h-5 mr-2"  />                Schedule Healthcare Demo;
               </Link>
@@ -850,9 +843,9 @@ const AIHealthcarePlatform: React.FC = () => {}
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-<<<<<<< HEAD
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website</Link>
-=======
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website;
               </Link>

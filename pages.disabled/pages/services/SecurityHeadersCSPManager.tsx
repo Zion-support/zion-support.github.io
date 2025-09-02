@@ -44,9 +44,9 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
                 desc:
   'Fail builds on insecure headers or CSP regressions.'},
             ].map(f => (
-<<<<<<< HEAD
+
               <div"key={f.title}""
-=======
+
               <div"
             <Shield className="w-8 h-8 text-cyan-400"  /> Security Headers & CSP;
             Manager;
@@ -82,10 +82,10 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               </div>
             ))}"
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-8 text-sm text-slate-300">,
   "Typical pricing: {'}""
-=======
+
           <div className="mt-8 text-sm text-slate-300">'"
                   <CheckCircle className="w-4 h-4"  /> {f.title}
                 </div>"                <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
@@ -101,9 +101,9 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
             ."
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-4 flex gap-4 text-sm">"<a""
-=======
+
           <div className="mt-4 flex gap-4 text-sm">"
             .
           </div>""
@@ -117,9 +117,9 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
             >""
               SecurityHeaders.com <ExternalLink className="w-3 h-3"  />
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
             </a>
             <a""
@@ -138,9 +138,9 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500"
             >
               Start pilot
-<<<<<<< HEAD
+
             </Link>"<a""
-=======
+
             </Link>"
             </a>
           </div>""
@@ -158,9 +158,9 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
             >""
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
               <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
             </a>
@@ -170,9 +170,9 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
             >""
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
-<<<<<<< HEAD
+
               <Phone className="w-4 h-4"  /> +1 302 464 0950</a>          </div>
-=======
+
               <Phone className="w-4 h-4"  /> +1 302 464 0950
               <Phone className="w-4 h-4"  /> +1 302 464 0950;
             </a>          </div>
@@ -182,9 +182,9 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

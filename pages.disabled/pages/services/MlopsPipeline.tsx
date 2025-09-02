@@ -4,9 +4,9 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
     <SEO title="MLOps Pipeline - Zion Tech Group" description="Automated training, evaluation, deployment, and monitoring for ML models."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/MlopsPipeline.tsx
-<<<<<<< HEAD
+
       <h1 className="text-4xl font-bold mb-4">MLOps Pipeline</h1>"      <p className="text-slate-300 max-w-3xl">Production-grade pipelines with CI/CD, feature stores, model registry, and drift monitoring. Works on AWS, GCP, and Azure.</p>"</section>""
-=======
+
       <h1 className="text-4xl font-bold mb-4">MLOps Pipeline</h1>"      <p className="text-slate-300 max-w-3xl">Production-grade pipelines with CI/CD, feature stores, model registry, and drift monitoring. Works on AWS, GCP, and Azure.</p>"
       <h1 className="text-4xl font-bold mb-4">MLOps Pipeline</h1>"      <p className="text-slate-300 max-w-3xl">Production-grade pipelines with CI/CD, feature stores, model registry, and drift monitoring. Works on AWS, GCP, and Azure.</p>
     </section>""
@@ -20,9 +20,9 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
           <li>Canary + shadow deployment</li>
           <li>Real-time and batch monitoring</li>
 :pages.disabled/pages/services/MlopsPipeline.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -34,9 +34,9 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
           <li>Runbooks and dashboards</li>
           <li>Cost and reliability guardrails</li>
 :pages.disabled/pages/services/MlopsPipeline.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -49,9 +49,9 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
           <li>Managed run: from $3,000/mo</li>
         </ul>;
 :pages.disabled/pages/services/MlopsPipeline.tsx
-<<<<<<< HEAD
+
       </div>;"</section>;""
-=======
+
       </div>;"
       </div>;
     </section>;""
@@ -66,9 +66,9 @@ export { MlopsPipeline };
 export default MlopsPipeline;
 :pages.disabled/pages/services/MlopsPipeline.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

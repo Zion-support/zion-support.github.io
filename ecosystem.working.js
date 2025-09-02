@@ -60,12 +60,7 @@ module.exports = {
       max_memory_restart:,
   500M',
       env: {
-<<<<<<< HEAD
-        NODE_ENV:
-  'production
-=======
-        NODE_ENV: 'production',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       },
       error_file:,
   ./logs/error-monitor-error.log',
@@ -80,12 +75,7 @@ module.exports = {
       min_uptime:
   '5s',
       restart_delay: 2000,
-<<<<<<< HEAD
-      cron_restart:,
-  */5 * * * *'
-=======
-      cron_restart: '*/5 * * * *',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     },
 
     {
@@ -98,12 +88,7 @@ module.exports = {
       max_memory_restart:,
   500M',
       env: {
-<<<<<<< HEAD
-        NODE_ENV:
-  'production
-=======
-        NODE_ENV: 'production',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       },
       error_file:,
   ./logs/syntax-fixer-error.log',
@@ -118,12 +103,7 @@ module.exports = {
       min_uptime:
   '5s',
       restart_delay: 2000,
-<<<<<<< HEAD
-      cron_restart:,
-  */10 * * * *'
-=======
-      cron_restart: '*/10 * * * *',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     },
 
     {
@@ -136,12 +116,7 @@ module.exports = {
       max_memory_restart:,
   300M',
       env: {
-<<<<<<< HEAD
-        NODE_ENV:
-  'production
-=======
-        NODE_ENV: 'production',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       },
       error_file:,
   ./logs/build-health-error.log',
@@ -156,12 +131,7 @@ module.exports = {
       min_uptime:
   '5s',
       restart_delay: 1000,
-<<<<<<< HEAD
-      cron_restart:,
-  */15 * * * *'
-=======
-      cron_restart: '*/15 * * * *',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     },
 
     {
@@ -174,12 +144,7 @@ module.exports = {
       max_memory_restart:,
   500M',
       env: {
-<<<<<<< HEAD
-        NODE_ENV:
-  'production
-=======
-        NODE_ENV: 'production',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       },
       error_file:,
   ./logs/merge-resolver-error.log',
@@ -194,12 +159,7 @@ module.exports = {
       min_uptime:
   '10s',
       restart_delay: 5000,
-<<<<<<< HEAD
-      cron_restart:,
-  */30 * * * *'
-=======
-      cron_restart: '*/30 * * * *',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     },
 
     // Enhanced automation processes
@@ -225,48 +185,9 @@ module.exports = {
       out_file:
   './logs/ai-code-analyzer-out.log',
       merge_logs: true,
-<<<<<<< HEAD
-      log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
-    }
-=======
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   ],
 
   deploy: {
     production: {
-<<<<<<< HEAD
-      user:,
-  ubuntu',
-      host: 'localhost,
-      ref:,
-  origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git,
-      path:,
-  /workspace',
-  'pre-deploy-local': ',
-,
-  post-deploy
-  ': 'npm install && npm run build && pm2 reload ecosystem.working.js --env production,
-,
-  pre-setup
-  ': '
-    }
-  }
-};
-=======
-      user: 'ubuntu',
-      host: 'localhost',
-      ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/workspace',
-      'pre-deploy-local': '',
-      'post-deploy':
-        'npm install && npm run build && pm2 reload ecosystem.working.js --env production',
-      'pre-setup': '',
-    },
-  },
-};
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1

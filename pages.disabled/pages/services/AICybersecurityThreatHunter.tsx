@@ -14,9 +14,9 @@ import {}
   'lucide-react.ts';
 
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-<<<<<<< HEAD
+
 export default function AICybersecurityThreatHunter(...args: any[]): any {return()
-=======
+
 export default function AICybersecurityThreatHunter(...args: any[]): any {
 
 export default function AICybersecurityThreatHunter(...args: any[]): any {}
@@ -30,9 +30,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
             <Shield className="w-4 h-4 mr-2"  /> AI-Powered Cybersecurity"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
             AI Cybersecurity Threat Hunter"</h1>""
-=======
+
             AI Cybersecurity Threat Hunter"
             <Shield className="w-4 h-4 mr-2"  /> AI-Powered Cybersecurity;
           </div>""
@@ -53,9 +53,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Advanced Security Features"
             </h2>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{features.map(f => (""
-=======
+
             <ul className="space-y-3">"
       </section>
 ""
@@ -72,9 +72,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
                   <Check className="w-5 h-5 text-red-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-<<<<<<< HEAD
+
               ))}"</ul>""
-=======
+
               ))}"
               ))}
             </ul>""
@@ -91,9 +91,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
             </h3>""
             <div className="grid md: anygrid-cols-1 gap-4">
               {tiers.map(t => (
-<<<<<<< HEAD
+
                 <div"key={t.name}""
-=======
+
                 <div"
             </div>
           </div>""
@@ -111,9 +111,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-red-600 mb-2">
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-<<<<<<< HEAD
+
                     {t.price}"</div>""
-=======
+
                     {t.price}"
                     {t.price}
                   </div>""
@@ -127,9 +127,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
               ))}"
             </div>""
-<<<<<<< HEAD
+
             <div className="mt-6 flex flex-wrap gap-3">"<a""
-=======
+
             <div className="mt-6 flex flex-wrap gap-3">"
               ))}
             </div>""
@@ -141,9 +141,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
               </a>
               <a""
@@ -164,9 +164,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Security Benefits"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{benefits.map(b => (""
-=======
+
             <ul className="space-y-3">"
         </div>
 ""
@@ -189,9 +189,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Use Cases"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{useCases.map(u => (""
-=======
+
             <ul className="space-y-3">"
           </div>
           <div>""
@@ -216,9 +216,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {securityFeatures.map(f => (
-<<<<<<< HEAD
+
               <div"key={f}""
-=======
+
               <div"
         </div>
 ""
@@ -242,9 +242,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
 ""
         <div className="mt-12 bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-8">""
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">
-<<<<<<< HEAD
+
             Why Choose AI-Powered Security?"</h3>""
-=======
+
             Why Choose AI-Powered Security?"
         </div>
 ""
@@ -262,9 +262,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
               </h4>""
               <p className="text-sm text-zion-slate-light">
                 Reactive, rule-based, high false positives, human-dependent
-<<<<<<< HEAD
+
               </p>"</div>""
-=======
+
               </p>"
                 Traditional Security;
               </h4>""
@@ -277,9 +277,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
               <Brain className="w-12 h-12 text-red-600 mx-auto mb-3"  />""
               <h4 className="font-semibold text-zion-slate-dark mb-2">
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-<<<<<<< HEAD
+
                 AI-Powered Security"</h4>""
-=======
+
                 AI-Powered Security"
                 AI-Powered Security;
               </h4>""
@@ -295,9 +295,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to secure your digital assets?"
           </div>""
-<<<<<<< HEAD
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
-=======
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
         </div>
 ""
@@ -313,9 +313,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
             >""
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
@@ -328,10 +328,10 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-4 text-sm text-zion-slate-light">,
   Visit us at: {'}"<a""
-=======
+
           <div className="mt-4 text-sm text-zion-slate-light">'
             Visit us at:{' '}"
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com;
@@ -345,9 +345,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
               target="_blank""
               rel="noreferrer""
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-<<<<<<< HEAD
+
               className="text-red-600 hover:underline">
-=======
+
               className="text-red-600 hover:underline"
               className="text-red-600 hover:underline""
             >
@@ -359,9 +359,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

@@ -1,7 +1,7 @@
 
 :pages.disabled/pages/services/ITHelpdesk.tsx
 export default function ITHelpdesk() {
-<<<<<<< HEAD
+
   'Ticketing with SLA and automation rules',;'
   'Self-service knowledge base and chat widget',;'
   'Asset inventory and remote assistance',;'
@@ -9,7 +9,7 @@ export default function ITHelpdesk() {
   'Multi-tenant client portals',;'
   'Reports: MTTR, CSAT, backlog trends,
   ;
-=======
+
     'Ticketing with SLA and automation rules',;'
     'Self-service knowledge base and chat widget',;'
     'Asset inventory and remote assistance',;'
@@ -56,9 +56,9 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
       <section className="py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">"
         <div>""
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Capabilities</h2>""
-<<<<<<< HEAD
+
           <ul className="space-y-3">"{features.map((f) => (""
-=======
+
           <ul className="space-y-3">"
             <LifeBuoy className="w-4 h-4 mr-2" /> IT support that scales with your MSP;
           </div>""
@@ -81,9 +81,9 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
         </div>""
         <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">""
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>""
-<<<<<<< HEAD
+
           <div className="grid md:grid-cols-3 gap-4">"{pricing.map((p) => (""
-=======
+
           <div className="grid md:grid-cols-3 gap-4">"
           </ul>
         </div>""
@@ -100,9 +100,9 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
                 </ul>
               </div>
 :pages.disabled/pages/services/ITHelpdesk.tsx
-<<<<<<< HEAD
+
             ))}"</div>""
-=======
+
             ))}"
             ))}
           </div>""
@@ -114,13 +114,13 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
       </section>"
 ""
       <section className="pb-16 max-w-6xl mx-auto px-6">""
-<<<<<<< HEAD
+
         <div className="grid md:grid-cols-3 gap-6">
   '"{[{icon: Ticket, t: 'Tickets & SLAs
   '}, {icon: Cpu, t: 'Remote Support
   '}, {icon: Shield, t: 'Security & SSO
   '}].map((c) => (""
-=======
+
         <div className="grid md:grid-cols-3 gap-6">'"
       </section>
 ""
@@ -133,9 +133,9 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
             </div>
 :pages.disabled/pages/services/ITHelpdesk.tsx
-<<<<<<< HEAD
+
           ))}"</div>""
-=======
+
           ))}"
           ))}
         </div>""
@@ -148,10 +148,10 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
       </section>;
 :pages.disabled/pages/services/ITHelpdesk.tsx
     </div>;'"
-<<<<<<< HEAD
+
   )}}
   '"'"
-=======
+
   )}}'"'"
     </div>;
   )}}'""

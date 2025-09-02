@@ -9,9 +9,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 :pages.disabled/pages/services/finops-advisor.tsx
       </Helmet>"
 ""
-<<<<<<< HEAD
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       </Helmet>
 ""
@@ -30,9 +30,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 FinOps""
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
-<<<<<<< HEAD
+
               </h1>"""
-=======
+
               </h1>"
                 <DollarSign className="w-4 h-4 mr-2"  />                Cloud Financial Operations;
               </div>
@@ -58,9 +58,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">""
-<<<<<<< HEAD
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo</button>
-=======
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
               </p>
 ""
@@ -80,9 +80,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
         {/* Features Section */}""
@@ -92,9 +92,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
                 Cloud Financial Optimization"</h2>""
-=======
+
                 Cloud Financial Optimization"
                 Cloud Financial Optimization;
               </h2>""
@@ -147,9 +147,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD
+
                     <feature.icon className="w-6 h-6 text-white" />"</div>""
-=======
+
                     <feature.icon className="w-6 h-6 text-white" />"
             </div>
 ""
@@ -199,9 +199,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
 "{/* Cost Optimization Areas Section */}""
-=======
+
 "
 
         {/* Cost Optimization Areas Section */}""
@@ -211,9 +211,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
                 Cost Optimization Areas"</h2>""
-=======
+
                 Cost Optimization Areas"
                 Cost Optimization Areas;
               </h2>""
@@ -281,9 +281,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>""
                   <p className="text-slate-300 mb-4">{area.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{area.benefits.map((benefit, benefitIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -352,9 +352,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
 "{/* FinOps Framework Section */}""
-=======
+
 "
 
         {/* FinOps Framework Section */}""
@@ -364,9 +364,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
                 FinOps Framework Implementation"</h2>""
-=======
+
                 FinOps Framework Implementation"
                 FinOps Framework Implementation;
               </h2>""
@@ -403,9 +403,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
-=======
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"
             </div>
 ""
@@ -443,9 +443,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
 "{/* Cost Savings Section */}""
-=======
+
 "
 
         {/* Cost Savings Section */}""
@@ -455,9 +455,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
                 Proven Cost Savings"</h2>""
-=======
+
                 Proven Cost Savings"
                 Proven Cost Savings;
               </h2>""
@@ -470,9 +470,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
-<<<<<<< HEAD
+
                 <div className="space-y-6">"{[""
-=======
+
                 <div className="space-y-6">"
             </div>
 ""
@@ -498,9 +498,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>""
-<<<<<<< HEAD
+
                 <div className="space-y-4">"{[""
-=======
+
                 <div className="space-y-4">"
               </div>
 ""
@@ -513,9 +513,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                     { metric: "50-60%", label: "Resource Utilization", description: "Improvement" },""
                     { metric: "70%", label: "Faster Decisions", description: "Optimization speed" },""
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }"].map((item, index)  => (""
-=======
+
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }"
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }
                   ].map((item, index)  => (""
@@ -532,9 +532,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
 "{/* Tools & Integrations Section */}""
-=======
+
 "
 
         {/* Tools & Integrations Section */}""
@@ -544,9 +544,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
                 FinOps Tools & Integrations"</h2>""
-=======
+
                 FinOps Tools & Integrations"
                 FinOps Tools & Integrations;
               </h2>""
@@ -614,9 +614,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{tool.title}</h3>""
                   <p className="text-slate-300 mb-4">{tool.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{tool.features.map((feature, featureIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -685,9 +685,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
 "{/* Implementation Process Section */}""
-=======
+
 "
 
         {/* Implementation Process Section */}""
@@ -697,9 +697,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
                 Implementation Process"</h2>""
-=======
+
                 Implementation Process"
                 Implementation Process;
               </h2>""
@@ -743,9 +743,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
-=======
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"
             </div>
 ""
@@ -789,9 +789,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -814,9 +814,9 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
-=======
+
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
               Ready to Optimize Your Cloud Costs?
             </h2>""
@@ -842,10 +842,10 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
       </div>;
 :pages.disabled/pages/services/finops-advisor.tsx
     </>"
-<<<<<<< HEAD
+
   )}}}}}}}
   '"'"
-=======
+
   )}}}}}}}'"'"
     </>
   )}}}}}}}'""

@@ -145,9 +145,9 @@ const CloudDevOps = () => {
         keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD""
         canonical="https://ziontechgroup.com/services/cloud-devops"
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 const CloudDevOps = () => {}
   const cloudServices = []
@@ -238,9 +238,9 @@ const CloudDevOps = () => {}
                 {
   ' '}
                 Modern DevOps
-<<<<<<< HEAD
+
               </span>"</h1>""
-=======
+
               </span>"
               Cloud & DevOps;
             </div>""
@@ -260,9 +260,9 @@ const CloudDevOps = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.jsx
-<<<<<<< HEAD
+
 "{/* Services Overview */}""
-=======
+
 "
 
       {/* Services Overview */}""
@@ -275,9 +275,9 @@ const CloudDevOps = () => {}
           </h2>""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cloudServices.map((service, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
             Our Cloud & DevOps Services;
           </h2>""
@@ -300,9 +300,9 @@ const CloudDevOps = () => {}
                 </p>""
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-<<<<<<< HEAD
+
                     <li"key={idx}""
-=======
+
                     <li"
                   <service.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -330,9 +330,9 @@ const CloudDevOps = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.jsx
-<<<<<<< HEAD
+
 "{/* Cloud Platforms */}""
-=======
+
 "
 
       {/* Cloud Platforms */}""
@@ -345,9 +345,9 @@ const CloudDevOps = () => {}
           </h2>""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {platforms.map((platform, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
             Cloud Platforms We Support;
           </h2>""
@@ -361,9 +361,9 @@ const CloudDevOps = () => {}
                 <div className="text-4xl mb-4">{platform.icon}</div>""
                 <h3 className="text-xl font-bold text-white mb-3">
 :pages.disabled/pages/services/CloudDevOps.jsx
-<<<<<<< HEAD
+
                   {platform.name}"</h3>""
-=======
+
                   {platform.name}"
                   {platform.name}
                 </h3>""
@@ -375,9 +375,9 @@ const CloudDevOps = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.jsx
-<<<<<<< HEAD
+
 "{/* DevOps Tools */}""
-=======
+
 "
 
       {/* DevOps Tools */}""
@@ -390,9 +390,9 @@ const CloudDevOps = () => {}
           </h2>""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {devOpsTools.map((category, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
             DevOps Tools & Technologies;
           </h2>""
@@ -409,9 +409,9 @@ const CloudDevOps = () => {}
                 </h3>""
                 <div className="space-y-2">
                   {category.tools.map((tool, idx) => (
-<<<<<<< HEAD
+
                     <div"key={idx}""
-=======
+
                     <div"
                   {category.category}
                 </h3>""
@@ -433,9 +433,9 @@ const CloudDevOps = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -461,9 +461,9 @@ const CloudDevOps = () => {}
             </a>"
             <a""
               href="/contact""
-<<<<<<< HEAD
+
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all">
-=======
+
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             Ready to Transform Your Infrastructure?
           </h2>""
@@ -496,9 +496,9 @@ const CloudDevOps = () => {}
 export { CloudDevOps };
 :pages.disabled/pages/services/CloudDevOps.jsx
 export default CloudDevOps;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default CloudDevOps;
 '""

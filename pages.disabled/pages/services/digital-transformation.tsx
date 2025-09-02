@@ -9,9 +9,9 @@ export { function };export default function DigitalTransformation(...args: []): 
 :pages.disabled/pages/services/digital-transformation.tsx
       </Helmet>"
 ""
-<<<<<<< HEAD
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       </Helmet>
 ""
@@ -30,9 +30,9 @@ export { function };export default function DigitalTransformation(...args: []): 
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 Digital""
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Transformation</span>
-<<<<<<< HEAD
+
               </h1>"""
-=======
+
               </h1>"
                 <RefreshCw className="w-4 h-4 mr-2"  />                Business Transformation;
               </div>
@@ -58,9 +58,9 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">""
-<<<<<<< HEAD
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo</button>
-=======
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
               </p>
 ""
@@ -80,9 +80,9 @@ export { function };export default function DigitalTransformation(...args: []): 
           </div>
         </section>
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
         {/* Features Section */}""
@@ -92,9 +92,9 @@ export { function };export default function DigitalTransformation(...args: []): 
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
                 Comprehensive Digital Transformation"</h2>""
-=======
+
                 Comprehensive Digital Transformation"
                 Comprehensive Digital Transformation;
               </h2>""
@@ -147,9 +147,9 @@ export { function };export default function DigitalTransformation(...args: []): 
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD
+
                     <feature.icon className="w-6 h-6 text-white" />"</div>""
-=======
+
                     <feature.icon className="w-6 h-6 text-white" />"
             </div>
 ""
@@ -199,9 +199,9 @@ export { function };export default function DigitalTransformation(...args: []): 
           </div>
         </section>
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
 "{/* Transformation Areas Section */}""
-=======
+
 "
 
         {/* Transformation Areas Section */}""
@@ -211,9 +211,9 @@ export { function };export default function DigitalTransformation(...args: []): 
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
                 Digital Transformation Areas"</h2>""
-=======
+
                 Digital Transformation Areas"
                 Digital Transformation Areas;
               </h2>""
@@ -281,9 +281,9 @@ export { function };export default function DigitalTransformation(...args: []): 
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>""
                   <p className="text-slate-300 mb-4">{area.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{area.benefits.map((benefit, benefitIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -352,9 +352,9 @@ export { function };export default function DigitalTransformation(...args: []): 
           </div>
         </section>
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
 "{/* Technology Stack Section */}""
-=======
+
 "
 
         {/* Technology Stack Section */}""
@@ -364,9 +364,9 @@ export { function };export default function DigitalTransformation(...args: []): 
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
                 Modern Technology Stack"</h2>""
-=======
+
                 Modern Technology Stack"
                 Modern Technology Stack;
               </h2>""
@@ -434,9 +434,9 @@ export { function };export default function DigitalTransformation(...args: []): 
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{tech.title}</h3>""
                   <p className="text-slate-300 mb-4">{tech.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{tech.features.map((feature, featureIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -505,9 +505,9 @@ export { function };export default function DigitalTransformation(...args: []): 
           </div>
         </section>
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
         {/* Benefits Section */}""
@@ -517,9 +517,9 @@ export { function };export default function DigitalTransformation(...args: []): 
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
                 Digital Transformation Benefits"</h2>""
-=======
+
                 Digital Transformation Benefits"
                 Digital Transformation Benefits;
               </h2>""
@@ -532,9 +532,9 @@ export { function };export default function DigitalTransformation(...args: []): 
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
-<<<<<<< HEAD
+
                 <div className="space-y-6">"{[""
-=======
+
                 <div className="space-y-6">"
             </div>
 ""
@@ -560,9 +560,9 @@ export { function };export default function DigitalTransformation(...args: []): 
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>""
-<<<<<<< HEAD
+
                 <div className="space-y-4">"{[""
-=======
+
                 <div className="space-y-4">"
               </div>
 ""
@@ -575,9 +575,9 @@ export { function };export default function DigitalTransformation(...args: []): 
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },""
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },""
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }"].map((item, index)  => (""
-=======
+
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }"
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
                   ].map((item, index)  => (""
@@ -594,9 +594,9 @@ export { function };export default function DigitalTransformation(...args: []): 
           </div>
         </section>
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
 "{/* Implementation Process Section */}""
-=======
+
 "
 
         {/* Implementation Process Section */}""
@@ -606,9 +606,9 @@ export { function };export default function DigitalTransformation(...args: []): 
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
                 Transformation Process"</h2>""
-=======
+
                 Transformation Process"
                 Transformation Process;
               </h2>""
@@ -652,9 +652,9 @@ export { function };export default function DigitalTransformation(...args: []): 
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
-=======
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"
             </div>
 ""
@@ -698,9 +698,9 @@ export { function };export default function DigitalTransformation(...args: []): 
           </div>
         </section>
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -723,9 +723,9 @@ export { function };export default function DigitalTransformation(...args: []): 
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-=======
+
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               Ready to Transform Your Business?
             </h2>""
@@ -751,10 +751,10 @@ export { function };export default function DigitalTransformation(...args: []): 
       </div>;
 :pages.disabled/pages/services/digital-transformation.tsx
     </>"
-<<<<<<< HEAD
+
   )}}}}}}
   '"'"
-=======
+
   )}}}}}}'"'"
     </>
   )}}}}}}'""

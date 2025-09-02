@@ -5,9 +5,9 @@ export default function MicroSAASSolutions() {
     <div className="min-h-screen bg-slate-900 text-white pt-20">"      <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <motion.div
-<<<<<<< HEAD
+
           initial={{ opacity: 0, y: 20 }}"animate={{ opacity: 1, y: 0 }}""
-=======
+
           initial={{ opacity: 0, y: 20 }}"
 export default function MicroSAASSolutions(function MicroSAASSolutions() {): any {}
   return()
@@ -21,9 +21,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
         >""
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
-<<<<<<< HEAD
+
             Micro SaaS Solutions"</h1>""
-=======
+
             Micro SaaS Solutions"
             Micro SaaS Solutions;
           </h1>""
@@ -40,9 +40,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
           animate={{ opacity: 1, y: 0 }}"
           transition={{ delay: 0.2 }}""
-<<<<<<< HEAD
+
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
+
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}""
@@ -54,9 +54,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
               key={solution.name}
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
-<<<<<<< HEAD
+
               animate={{ opacity: 1, y: 0 }}"transition={{ delay: 0.1 * index }}""
-=======
+
               animate={{ opacity: 1, y: 0 }}"
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}""
@@ -67,9 +67,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">""
                   <solution.icon className="w-6 h-6 text-white" />
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
-<<<<<<< HEAD
+
                 </div>"<div>""
-=======
+
                 </div>"
                 </div>
                 <div>""
@@ -94,9 +94,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
                   <Link
                     to={service.link}"
-<<<<<<< HEAD
+
                     className="block w-full text-center bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
-=======
+
                     className="block w-full text-center bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
                   <Link;
                     to={service.link}
@@ -108,9 +108,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
                   <Link"
                     to="/request-quote""
-<<<<<<< HEAD
+
                     className="block w-full text-center border border-gray-300 text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200">
-=======
+
                     className="block w-full text-center border border-gray-300 text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200"
                   <Link;
                     to="/request-quote""
@@ -169,9 +169,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
 ""
               <div className="space-y-2">
                 {solution.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                   <div"key={featureIndex}""
-=======
+
                   <div"
 
             <div className="text-center">
@@ -199,9 +199,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
                   </div>
                 ))}
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
-<<<<<<< HEAD
+
               </div>"""
-=======
+
               </div>"
               </div>
 ""
@@ -217,9 +217,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
-<<<<<<< HEAD
+
           animate={{ opacity: 1, y: 0 }}"transition={{ delay: 0.4 }}""
-=======
+
           animate={{ opacity: 1, y: 0 }}"
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}""
@@ -238,9 +238,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-colors">
-<<<<<<< HEAD
+
                 Get Free Consultation"</button>""
-=======
+
                 Get Free Consultation"
               Ready to Transform Your Business?
             </h2>""
@@ -264,9 +264,9 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
     </div>
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
   )}"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

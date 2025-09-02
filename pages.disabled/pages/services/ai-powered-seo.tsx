@@ -32,9 +32,9 @@ export default function AIPoweredSEO(...args: any[]): any {
         title="AI-Powered SEO Services - Zion Tech Group""
         description="Revolutionary AI-powered SEO services that use machine learning to boost rankings, increase traffic, and drive conversions. Get ahead of the competition with predictive analytics and automated optimization."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function AIPoweredSEO(...args: any[]): any {}
   return()
@@ -51,9 +51,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -71,9 +71,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
               </span>"
               <br />""
               <span className="text-white">That Actually Works</span>
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
             </div>
 ""
@@ -106,9 +106,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center""
               >""
-<<<<<<< HEAD
+
                 <Monitor className="w-5 h-5 mr-2"  />                View Demo</motion.button>
-=======
+
                 <Monitor className="w-5 h-5 mr-2"  />                View Demo
             </p>
 ""
@@ -133,9 +133,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -145,9 +145,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -165,9 +165,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
               that traditional SEO methods can
   't match.
             </p>
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
               Powered by Advanced AI Technology;
             </h2>""
@@ -185,9 +185,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -199,9 +199,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
                   <feature.icon className="w-6 h-6 text-cyan-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>""
@@ -216,9 +216,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -228,9 +228,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -239,9 +239,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
               Proven Results & Benefits"</h2>""
-=======
+
               Proven Results & Benefits"
               Proven Results & Benefits;
             </h2>""
@@ -251,9 +251,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
               directly impact your bottom line and competitive position.
             </p>
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -264,9 +264,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -280,9 +280,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
 "{/* Services & Pricing */}""
-=======
+
 "
 
       {/* Services & Pricing */}""
@@ -292,9 +292,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -303,9 +303,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
               Flexible Service Packages"</h2>""
-=======
+
               Flexible Service Packages"
               Flexible Service Packages;
             </h2>""
@@ -316,9 +316,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
               expert support.
             </p>
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -329,9 +329,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -344,9 +344,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 </h3>""
                 <p className="text-gray-300 mb-4">{service.description}</p>""
                 <div className="text-2xl font-bold text-cyan-400 mb-4">
-<<<<<<< HEAD
+
                   {service.price}"</div>""
-=======
+
                   {service.price}"
                   {service.title}
                 </h3>""
@@ -364,9 +364,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-powered-seo.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -399,9 +399,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center""
               >""
-<<<<<<< HEAD
+
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950</motion.button>
-=======
+
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
             transition={{ duration: 0.8 }}
           >""
@@ -435,9 +435,9 @@ export default function AIPoweredSEO(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/ai-powered-seo.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

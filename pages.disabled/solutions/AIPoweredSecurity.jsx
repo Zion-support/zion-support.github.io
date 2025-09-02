@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 import React from
   'react';'
 import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from
   'lucide-react';
-=======
+
 import React from 'react';'
 import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
 >>>>>>> pr-10728
@@ -57,9 +57,8 @@ const AIPoweredSecurity = () => {
             icon: AlertTriangle,""
             capabilities: ["Threat hunting", "Automated response", "Forensic analysis", "Recovery planning"]
 
-<<<<<<< HEAD
     ];"const benefits = [""
-=======
+
     ];"
 const AIPoweredSecurity = () => {}
     const securitySolutions = []
@@ -159,9 +158,9 @@ const AIPoweredSecurity = () => {}
             duration: "Ongoing"
 "
     ];""
-<<<<<<< HEAD
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         "Cost-effective security operations""
     ];
@@ -223,9 +222,9 @@ const AIPoweredSecurity = () => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#features" className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
                 Explore Features"</a>""
-=======
+
                 Explore Features"
               AI Security Solution;
             </div>""
@@ -250,9 +249,9 @@ const AIPoweredSecurity = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
 "{/* Security Features */}""
-=======
+
 "
 
       {/* Security Features */}""
@@ -262,9 +261,9 @@ const AIPoweredSecurity = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
               AI Security Features"</h2>""
-=======
+
               AI Security Features"
               AI Security Features;
             </h2>""
@@ -274,9 +273,9 @@ const AIPoweredSecurity = () => {}
               protection against evolving cyber threats.
             </p>
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -285,9 +284,9 @@ const AIPoweredSecurity = () => {}
             {securityFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
                   <feature.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <feature.icon className="w-8 h-8 text-white"/>"
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -305,9 +304,9 @@ const AIPoweredSecurity = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
 "{/* Security Solutions */}""
-=======
+
 "
 
       {/* Security Solutions */}""
@@ -319,8 +318,7 @@ const AIPoweredSecurity = () => {}
 :pages.disabled/solutions/AIPoweredSecurity.jsx
               Security Solutions"
             </h2>""
-<<<<<<< HEAD
-=======
+
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">'
               Comprehensive AI-powered security solutions covering all aspects''
               of your organization's security needs.
@@ -335,9 +333,9 @@ const AIPoweredSecurity = () => {}
               of your organization
   's security needs.
             </p>
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>
 ""
 >>>>>>> pr-10728
@@ -345,9 +343,9 @@ const AIPoweredSecurity = () => {}
             {securitySolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
                   <solution.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <solution.icon className="w-8 h-8 text-white"/>"
                   <solution.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -376,9 +374,9 @@ const AIPoweredSecurity = () => {}
               </h2>""
               <p className="text-lg text-gray-300 mb-6">
                 Our AI security solution provides intelligent, adaptive protection
-<<<<<<< HEAD
+
                 that continuously learns and improves."</p>""
-=======
+
                 that continuously learns and improves."
 
       {/* Benefits Section */}""
@@ -400,9 +398,9 @@ const AIPoweredSecurity = () => {}
                     {benefit}
                   </li>))}
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -414,9 +412,9 @@ const AIPoweredSecurity = () => {}
                 <p className="text-gray-300 mb-6">
 :pages.disabled/solutions/AIPoweredSecurity.jsx
                   AI-powered security that learns from every threat and adapts
-<<<<<<< HEAD
+
                   to protect against new attack vectors."</p>""
-=======
+
                   to protect against new attack vectors."
                   AI-powered security that learns from every threat and adapts;
                   to protect against new attack vectors.
@@ -433,9 +431,9 @@ const AIPoweredSecurity = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
 "{/* Implementation Process */}""
-=======
+
 "
 
       {/* Implementation Process */}""
@@ -444,9 +442,9 @@ const AIPoweredSecurity = () => {}
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
             Implementation Process"</h2>""
-=======
+
             Implementation Process"
             Implementation Process;
           </h2>""
@@ -455,9 +453,9 @@ const AIPoweredSecurity = () => {}
             A structured approach to deploying AI-powered security across;
             your organization with minimal disruption.
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
           </p>"""
-=======
+
           </p>"
           </p>
 ""
@@ -466,9 +464,9 @@ const AIPoweredSecurity = () => {}
             {implementation.map((phase, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
                   {index + 1}"</div>""
-=======
+
                   {index + 1}"
                   {index + 1}
                 </div>""
@@ -481,9 +479,9 @@ const AIPoweredSecurity = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIPoweredSecurity.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -500,9 +498,9 @@ const AIPoweredSecurity = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Secure Your Business"</a>""
-=======
+
               Secure Your Business"
             Ready to Secure Your Organization?
           </h2>""
@@ -526,10 +524,10 @@ const AIPoweredSecurity = () => {}
 export { AIPoweredSecurity };
 :pages.disabled/solutions/AIPoweredSecurity.jsx
 export default AIPoweredSecurity;'"
-<<<<<<< HEAD
+
 }}}}
   '"'"
-=======
+
 }}}}'"'"
 export default AIPoweredSecurity;
 }}}}'""

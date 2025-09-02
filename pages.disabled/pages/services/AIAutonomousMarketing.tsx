@@ -26,9 +26,8 @@ import {}
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
 const AIAutonomousMarketing: React.FC = (): JSX.Element => {
 
-<<<<<<< HEAD
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -48,7 +47,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Marketing with""
-<<<<<<< HEAD
+
               <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
   '{' 
   '}
@@ -56,7 +55,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
               </span>
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
             </h1>"""
-=======
+
               <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">'
             transition={{ duration: 0.8 }}
           >""
@@ -84,9 +83,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
+
                 Start Free Trial"</button>""
-=======
+
                 Start Free Trial"
             </p>
 ""
@@ -103,9 +102,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -116,9 +115,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -127,9 +126,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
               Advanced Marketing Features"</h2>""
-=======
+
               Advanced Marketing Features"
               Advanced Marketing Features;
             </h2>""
@@ -139,9 +138,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
               modern businesses;
             </p>
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -153,9 +152,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -167,9 +166,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -184,9 +183,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -197,9 +196,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -208,9 +207,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
               Why Choose AI Autonomous Marketing?"</h2>""
-=======
+
               Why Choose AI Autonomous Marketing?"
               Why Choose AI Autonomous Marketing?
             </h2>""
@@ -220,9 +219,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
               ROI;
             </p>
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -238,9 +237,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Key Benefits"
               </h3>""
-<<<<<<< HEAD
+
               <div className="space-y-4">"{benefits.map((benefit, index) => (""
-=======
+
               <div className="space-y-4">"
               viewport={{ once: true }}
             >""
@@ -261,9 +260,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
               transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
               transition={{ duration: 0.8 }}"
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}""
@@ -276,9 +275,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
               </h3>""
               <p className="text-gray-300 mb-6">
                 Join thousands of businesses already using AI to enhance their
-<<<<<<< HEAD
+
                 marketing performance."</p>""
-=======
+
                 marketing performance."
                 Ready to Transform Marketing?
               </h3>""
@@ -295,9 +294,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -320,9 +319,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300">
-<<<<<<< HEAD
+
                 Start Free Trial"</button>""
-=======
+
                 Start Free Trial"
             viewport={{ once: true }}
           >""
@@ -350,9 +349,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {}
 
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
 export default AIAutonomousMarketing;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default AIAutonomousMarketing;
 '""

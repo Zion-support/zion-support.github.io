@@ -25,9 +25,8 @@ import {}
 :pages.disabled/pages/services/AISEO.tsx
 const AISEO: React.FC = (): JSX.Element => {
 
-<<<<<<< HEAD
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 const AISEO: React.FC = (): JSX.Element => {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -47,7 +46,7 @@ const AISEO: React.FC = (): JSX.Element => {}
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Dominate Search Rankings with""
-<<<<<<< HEAD
+
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
   '{' 
   '}
@@ -55,7 +54,7 @@ const AISEO: React.FC = (): JSX.Element => {}
               </span>
 :pages.disabled/pages/services/AISEO.tsx
             </h1>"""
-=======
+
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'
             transition={{ duration: 0.8 }}
           >""
@@ -83,9 +82,9 @@ const AISEO: React.FC = (): JSX.Element => {}
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
+
                 Start Free Trial"</button>""
-=======
+
                 Start Free Trial"
             </p>
 ""
@@ -102,9 +101,9 @@ const AISEO: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -115,9 +114,9 @@ const AISEO: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -126,9 +125,9 @@ const AISEO: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
               Advanced SEO Features Powered by AI"</h2>""
-=======
+
               Advanced SEO Features Powered by AI"
               Advanced SEO Features Powered by AI;
             </h2>""
@@ -138,9 +137,9 @@ const AISEO: React.FC = (): JSX.Element => {}
               search rankings;
             </p>
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -152,9 +151,9 @@ const AISEO: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -166,9 +165,9 @@ const AISEO: React.FC = (): JSX.Element => {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -183,9 +182,9 @@ const AISEO: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -196,9 +195,9 @@ const AISEO: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -207,9 +206,9 @@ const AISEO: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
               Why Choose AI-Powered SEO?"</h2>""
-=======
+
               Why Choose AI-Powered SEO?"
               Why Choose AI-Powered SEO?
             </h2>""
@@ -219,9 +218,9 @@ const AISEO: React.FC = (): JSX.Element => {}
               organic traffic;
             </p>
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -237,9 +236,9 @@ const AISEO: React.FC = (): JSX.Element => {}
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Key Benefits"
               </h3>""
-<<<<<<< HEAD
+
               <div className="space-y-4">"{benefits.map((benefit, index) => (""
-=======
+
               <div className="space-y-4">"
               viewport={{ once: true }}
             >""
@@ -260,9 +259,9 @@ const AISEO: React.FC = (): JSX.Element => {}
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
               transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
               transition={{ duration: 0.8 }}"
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}""
@@ -275,9 +274,9 @@ const AISEO: React.FC = (): JSX.Element => {}
               </h3>""
               <p className="text-gray-300 mb-6">
                 Join thousands of websites already using AI to dominate search
-<<<<<<< HEAD
+
                 results."</p>""
-=======
+
                 results."
                 Ready to Boost Rankings?
               </h3>""
@@ -294,9 +293,9 @@ const AISEO: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AISEO.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -319,9 +318,9 @@ const AISEO: React.FC = (): JSX.Element => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300">
-<<<<<<< HEAD
+
                 Start Free Trial"</button>""
-=======
+
                 Start Free Trial"
             viewport={{ once: true }}
           >""
@@ -349,9 +348,9 @@ const AISEO: React.FC = (): JSX.Element => {}
 
 :pages.disabled/pages/services/AISEO.tsx
 export default AISEO;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default AISEO;
 '""

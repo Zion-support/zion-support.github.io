@@ -1,30 +1,4 @@
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-import React from,
-  react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
-  'lucide-react';
-import Link from
-  'next/link';
-=======
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import {
-  CheckCircle,
-  Star,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  DollarSign,
-  Clock,
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
 
 const SmallBusiness: NextPage = () => {
   const solutions = [
@@ -34,63 +8,21 @@ const SmallBusiness: NextPage = () => {
       description:
   'Complete business management suite in the cloud',
       icon: <Globe className="w-8 h-8" />,
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-      features: [,
-  Customer relationship management',
-  'Inventory tracking',
-  'Financial reporting',
-  'Team collaboration tools'
-      ]
-=======
-      features: [
-        'Customer relationship management',
-        'Inventory tracking',
-        'Financial reporting',
-        'Team collaboration tools',
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       title: 'AI-Powered Customer Support,
       description:
   'Automated customer service with human touch',
       icon: <Users className="w-8 h-8" />,
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-      features: [,
-  24/7 chatbot support',
-  'Ticket management system',
-  'Knowledge base integration',
-  'Performance analytics'
-      ]
-=======
-      features: [
-        '24/7 chatbot support',
-        'Ticket management system',
-        'Knowledge base integration',
-        'Performance analytics',
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       title: 'Digital Marketing Automation,
       description:
   'Streamline your marketing efforts with AI',
       icon: <Zap className="w-8 h-8" />,
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-      features: [,
-  Email marketing campaigns',
-  'Social media management',
-  'Content generation',
-  'Lead nurturing automation'
-      ]
-=======
-      features: [
-        'Email marketing campaigns',
-        'Social media management',
-        'Content generation',
-        'Lead nurturing automation',
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       title: 'Cybersecurity Protection,
@@ -98,101 +30,18 @@ const SmallBusiness: NextPage = () => {
   'Comprehensive security for your business data',
       icon: <Shield className="w-8 h-8" />,
       features: [
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-  'Data encryption',
-  'Regular security audits',
-  'Backup and recovery',
-  'Employee training'
-      ]
-    }
-=======
-        'Data encryption',
-        'Regular security audits',
-        'Backup and recovery',
-        'Employee training',
-      ],
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
   ];
 
   const benefits = [
     {
       icon: <DollarSign className="w-6 h-6" />,
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-      title:,
-  Cost Effective',
-      description: 'Reduce operational costs by up to 40% with our efficient solutions
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title:,
-  Quick Implementation',
-      description: Get up and running in weeks, not months'
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title:,
-  Scalable Growth',
-      description: 'Solutions that grow with your business
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title:,
-  Dedicated Support',
-      description: 'Personal support team for your business needs
-    }
-=======
-      title: 'Cost Effective',
-      description:
-        'Reduce operational costs by up to 40% with our efficient solutions',
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Quick Implementation',
-      description: 'Get up and running in weeks, not months',
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Scalable Growth',
-      description: 'Solutions that grow with your business',
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Dedicated Support',
-      description: 'Personal support team for your business needs',
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
   ];
 
   const pricing = [
     {
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-      name:,
-  Starter',
-      price: '$299,
-      period:,
-  /month',
-      description: 'Perfect for small businesses just getting started,
-      features: [,
-  Up to 5 users',
-  'Basic CRM functionality',
-  'Email support',
-  'Standard security features',
-  'Monthly reporting'
-      ]
-=======
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses just getting started',
-      features: [
-        'Up to 5 users',
-        'Basic CRM functionality',
-        'Email support',
-        'Standard security features',
-        'Monthly reporting',
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       name: 'Growth,
@@ -202,24 +51,7 @@ const SmallBusiness: NextPage = () => {
       description:,
   Ideal for growing small businesses',
       features: [
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-  'Up to 15 users,
-,
-  Advanced CRM features',
-  'AI customer support',
-  'Priority support',
-  'Advanced analytics',
-  'Custom integrations'
-      ]
-=======
-        'Up to 15 users',
-        'Advanced CRM features',
-        'AI customer support',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations',
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       name: 'Professional,
@@ -229,25 +61,7 @@ const SmallBusiness: NextPage = () => {
       description:,
   Complete solution for established small businesses',
       features: [
-<<<<<<< HEAD:pages.disabled_auto/solutions/small-business.tsx
-  'Unlimited users,
-  'Full feature access',
-  'Dedicated account manager',
-  '24/7 phone support',
-  'Custom development',
-  'Advanced security features'
-      ]
-    }
-=======
-        'Unlimited users',
-        'Full feature access',
-        'Dedicated account manager',
-        '24/7 phone support',
-        'Custom development',
-        'Advanced security features',
-      ],
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
   ];
 
   return (

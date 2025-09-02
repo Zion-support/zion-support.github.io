@@ -1,6 +1,6 @@
 
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
 export default function AIMarketingAutomationPersonalization(...args: any[]): any {,
   Predictive lead scoring and conversion optimization',;'
   'Multi-channel campaign orchestration (email, SMS, social, web),;'
@@ -9,7 +9,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   'Customer journey mapping and automated nurturing sequences',;'
   'Advanced analytics and ROI tracking with attribution modeling',;'
   'Integration with major CRM, e-commerce, and advertising platforms',;
-=======
+
 export default function AIMarketingAutomationPersonalization(...args: any[]): any {
 
     'Predictive lead scoring and conversion optimization',;'
@@ -72,7 +72,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   ];
 
   '
-<<<<<<< HEAD
+
     { name: 'Scikit-learn, url:,
   https: //scikit-learn.org/ },;,
   { name: 'Apache Spark, url:,
@@ -107,7 +107,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   { name: 'Elasticsearch, url:,
   https: //www.elastic.co/ },;
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx];
-=======
+
     { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;'
     { name: 'Apache Spark', url: 'https://spark.apache.org/' },;'
     { name: 'Kubernetes', url: 'https://kubernetes.io/' },;'
@@ -134,9 +134,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           <div className="text-center">""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketing Automation & Personalization</span>"</h1>""
-=======
+
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketing Automation & Personalization</span>"
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketing Automation & Personalization</span>
             </h1>""
@@ -149,9 +149,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Get Marketing Demo""
-<<<<<<< HEAD
+
                 <ArrowRight className="ml-2 h-5 w-5"  /></Link>"              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-=======
+
                 <ArrowRight className="ml-2 h-5 w-5"  />
               Revolutionize your marketing with AI-driven automation, intelligent personalization, and predictive analytics. 
               Deliver the right message to the right person at the right time across all channels."
@@ -166,9 +166,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               </a>
             </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
           </div>"</div>""
-=======
+
           </div>"
           </div>
         </div>""
@@ -179,9 +179,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -195,9 +195,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
                 <Brain className="h-8 w-8 text-white"  />"
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>"
             </div>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{features.slice(0, 4).map((item) => (""
-=======
+
             <ul className="space-y-3">"
                 <Brain className="h-8 w-8 text-white"  />
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
@@ -211,9 +211,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               ))}
             </ul>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -225,9 +225,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
                 <Target className="h-8 w-8 text-white"  />"
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>"
             </div>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{marketingChannels.slice(0, 5).map((item) => (""
-=======
+
             <ul className="space-y-3">"
                 <Target className="h-8 w-8 text-white"  />
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>
@@ -241,9 +241,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               ))}
             </ul>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -253,9 +253,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
                 <Zap className="h-8 w-8 text-white"  />"
-<<<<<<< HEAD
+
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>"</div>""
-=======
+
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>"
                 <Zap className="h-8 w-8 text-white"  />
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
@@ -266,9 +266,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               <li>Professional: $799/month (up to 100,000 contacts)</li>
               <li>Enterprise: $1,999/month (unlimited contacts)</li>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
               <li>Custom: Tailored enterprise solutions</li>"</ul>""
-=======
+
               <li>Custom: Tailored enterprise solutions</li>"
               <li>Custom: Tailored enterprise solutions</li>
             </ul>""
@@ -279,9 +279,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           </div>
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -319,9 +319,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             </div>""
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">""
               <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">""
-<<<<<<< HEAD
+
                 <BarChart3 className="h-6 w-6 text-white" />"</div>""
-=======
+
                 <BarChart3 className="h-6 w-6 text-white" />"
                 <Users className="h-6 w-6 text-white"  />
               </div>""
@@ -360,9 +360,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           </div>
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -371,9 +371,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
           <div className="flex flex-wrap gap-3">"{aiCapabilities.map((capability) => (""
-=======
+
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {aiCapabilities.map((capability) => (""
@@ -385,9 +385,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           </div>
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -396,9 +396,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
           <div className="flex flex-wrap gap-3">"{integrations.map((integration) => (""
-=======
+
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {integrations.map((integration) => (""
@@ -410,9 +410,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           </div>
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -421,9 +421,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
           <div className="flex flex-wrap gap-3">"{stack.map((s) => (""
-=======
+
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {stack.map((s) => (""
@@ -435,9 +435,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           </div>
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -452,9 +452,9 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               <ArrowRight className="ml-2 h-5 w-5"  />"
             </Link>"            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"</div>;""
-=======
+
             </a>"
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
               Start Free Trial""
@@ -471,10 +471,10 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
       </section>;
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
     </div>;'"
-<<<<<<< HEAD
+
   )}
   '"'"
-=======
+
   )}'"'"
     </div>;
   )}'""

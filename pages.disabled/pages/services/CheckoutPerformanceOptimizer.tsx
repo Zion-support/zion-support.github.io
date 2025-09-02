@@ -42,9 +42,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
               desc:
   'Error budgets, drop‑off heatmaps and Slack alerts.'},
           ].map(f => (
-<<<<<<< HEAD
+
             <div"key={f.title}""
-=======
+
             <div"
           <CreditCard className="w-8 h-8 text-cyan-400"  /> Checkout Performance;
           Optimizer;
@@ -85,9 +85,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           Typical pricing: {'}""
           <span className="font-semibold text-cyan-300">$99–$399/mo</span>."
         </div>""
-<<<<<<< HEAD
+
         <div className="mt-4 flex gap-4 text-sm">"<a""
-=======
+
         <div className="mt-4 flex gap-4 text-sm">"
                 <CheckCircle className="w-4 h-4"  /> {f.title}
               </div>"              <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
@@ -115,9 +115,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500"
           >
             Request audit
-<<<<<<< HEAD
+
           </Link>"<a""
-=======
+
           </Link>"
           </a>
         </div>""
@@ -135,9 +135,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           >""
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
-<<<<<<< HEAD
+
           </a>"<a""
-=======
+
           </a>"
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
           </a>
@@ -147,9 +147,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
-<<<<<<< HEAD
+
             <Phone className="w-4 h-4"  /> +1 302 464 0950</a>
-=======
+
             <Phone className="w-4 h-4"  /> +1 302 464 0950
             <Phone className="w-4 h-4"  /> +1 302 464 0950;
           </a>
@@ -159,9 +159,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

@@ -6,7 +6,7 @@ function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
       const numberWords = {
-<<<<<<< HEAD
+
   '5': 'Five,
 ,
   4': 'Four,
@@ -18,8 +18,7 @@ function toCamelCase(str) {
   1': 'One,
 ,
   0': 'Zero
-      
-=======
+
   '5': 'Five',4': 'Four',3': 'Three',2': 'Two',1': 'One',
           '0': 'Zero'      
 >>>>>>> pr-10728
@@ -27,10 +26,6 @@ function toCamelCase(str) {
 };
       return numberWords[match] || match}),
   0': 'Zero
-      
-
-
-
 
 };
       return numberWords[match] || match;

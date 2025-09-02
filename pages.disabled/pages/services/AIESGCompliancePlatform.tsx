@@ -20,9 +20,9 @@ import {}
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
 export default function AIESGCompliancePlatform() {
   return()
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-white">"{/* Hero Section */}""
-=======
+
     <div className="min-h-screen bg-white">"
 export default function AIESGCompliancePlatform(function AIESGCompliancePlatform() {): any {}
   return()
@@ -49,9 +49,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
               className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors"
             >
               View Pricing
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
             <Leaf className="w-4 h-4 mr-2"  /> AI-Powered ESG Compliance Platform;
           </div>""
@@ -76,9 +76,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
               target="_blank""
               rel="noreferrer""
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
-=======
+
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors""
             >
@@ -89,9 +89,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         </div>
       </section>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -100,9 +100,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         <div className="text-center mb-16">""
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
             Comprehensive ESG Intelligence"</h2>""
-=======
+
             Comprehensive ESG Intelligence"
             Comprehensive ESG Intelligence;
           </h2>""
@@ -119,9 +119,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">
               Core Capabilities"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-4">"{features.map((feature, index) => (""
-=======
+
             <ul className="space-y-4">"
         </div>
 ""
@@ -147,9 +147,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
             </h3>""
             <div className="grid grid-cols-1 gap-3">
               {esgCategories.map((category, index) => (
-<<<<<<< HEAD
+
                 <div"key={index}""
-=======
+
                 <div"
 
           <div>""
@@ -171,9 +171,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         </div>
       </section>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -183,9 +183,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
           <div className="text-center mb-16">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Why Choose AI ESG Compliance Platform?"</h2>""
-=======
+
               Why Choose AI ESG Compliance Platform?"
               Why Choose AI ESG Compliance Platform?
             </h2>""
@@ -199,9 +199,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
           </div>
 ""
@@ -214,9 +214,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
               >""
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
                   <TrendingUp className="w-6 h-6 text-green-600"  />"</div>"                <p className="text-gray-700 font-medium">{benefit}</p>
-=======
+
                   <TrendingUp className="w-6 h-6 text-green-600"  />"
                   <TrendingUp className="w-6 h-6 text-green-600"  />
                 </div>"                <p className="text-gray-700 font-medium">{benefit}</p>
@@ -227,9 +227,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         </div>
       </section>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -238,9 +238,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         <div className="text-center mb-16">""
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
             Industry Applications"</h2>""
-=======
+
             Industry Applications"
             Industry Applications;
           </h2>""
@@ -253,9 +253,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
 ""
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
-<<<<<<< HEAD
+
             <div"key={index}""
-=======
+
             <div"
         </div>
 ""
@@ -268,9 +268,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
             >""
               <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 <Database className="w-5 h-5 text-green-600"  />"</div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
-=======
+
                 <Database className="w-5 h-5 text-green-600"  />"
                 <Database className="w-5 h-5 text-green-600"  />
               </div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
@@ -280,9 +280,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         </div>
       </section>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -292,9 +292,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
           <div className="text-center mb-16">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Transparent Pricing"</h2>""
-=======
+
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
@@ -303,9 +303,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
               Choose the plan that fits your ESG compliance needs;
             </p>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -315,14 +315,14 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
               <div;
                 key={index}
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${,
   `
                   plan.popular ? 'border-green-500
   ': 'border-gray-200``
                 } p-8`}
               >"{plan.popular && (""
-=======
+
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${
 '`
                   plan.popular ? 'border-green-500' : 'border-gray-200'``
@@ -352,9 +352,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
                   <p className="text-gray-600">per month</p>
                 </div>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-3 mb-8">"{plan.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-3 mb-8">"
                 )}
 ""
@@ -379,14 +379,14 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
 `
                 <button``
-<<<<<<< HEAD
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${,
   plan.popular'
   '
                       ? 'bg-green-600 text-white hover: bg-green-700''
   '`
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200``}`}
-=======
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
 '
                     plan.popular''
@@ -414,9 +414,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
             </p>"
             <a""
               href="mailto:kleber@ziontechgroup.com""
-<<<<<<< HEAD
+
               className="text-green-600 hover:text-green-700 font-semibold">
-=======
+
               className="text-green-600 hover:text-green-700 font-semibold"
           </div>
 ""
@@ -435,9 +435,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         </div>
       </section>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* ROI Section */}""
-=======
+
 "
 
       {/* ROI Section */}""
@@ -446,9 +446,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         <div className="max-w-6xl mx-auto px-6 text-center">""
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
             Proven Results"</h2>""
-=======
+
             Proven Results"
             Proven Results;
           </h2>""
@@ -461,9 +461,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
             </div>""
             <div className="bg-white rounded-lg p-6 shadow-sm">""
               <div className="text-3xl font-bold text-green-600 mb-2">90%</div>""
-<<<<<<< HEAD
+
               <p className="text-gray-700">Improved compliance accuracy</p>"</div>""
-=======
+
               <p className="text-gray-700">Improved compliance accuracy</p>"
               <p className="text-gray-700">Faster ESG reporting time</p>
             </div>""
@@ -480,9 +480,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
         </div>
       </section>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -506,9 +506,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
             </a>"
             <a""
               href="tel:+13024640950""
-<<<<<<< HEAD
+
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
-=======
+
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
             Ready to Transform Your ESG Compliance?
           </h2>""
@@ -538,10 +538,10 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
       {/* Contact Section */}""
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">""
         <h2 className="text-3xl font-bold text-gray-900 mb-8">'
-<<<<<<< HEAD
+
           Questions? We
   're Here to Help"</h2>""
-=======
+
           Questions? We're Here to Help"
 
       {/* Contact Section */}""
@@ -562,13 +562,13 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
             </p>"
             <a""
               href="tel:+13024640950""
-<<<<<<< HEAD
+
               className="text-green-600 hover:text-green-700 font-semibold">
               +1 302 464 0950;
             </a>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
           </div>"""
-=======
+
               className="text-green-600 hover:text-green-700 font-semibold"
               Call Us;
             </h3>""
@@ -609,9 +609,9 @@ export default function AIESGCompliancePlatform(function AIESGCompliancePlatform
           </h3>""
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
-<<<<<<< HEAD
+
           </p>"<a""
-=======
+
           </p>"
               Email Us;
             </h3>""

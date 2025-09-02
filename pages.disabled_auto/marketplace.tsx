@@ -7,40 +7,7 @@ import Link from
 
 const MarketplacePage: React.FC = () => {
   const sections = [
-<<<<<<< HEAD:pages.disabled_auto/marketplace.tsx
-    { title:
-  'Products, href:,
-  /marketplace/products', description: AI tools, software, and platforms.,
-  },
-    { title: 'Talent, href:,
-  /marketplace/talent', description: 'Expert contractors and fractional teams. },
-    { title:,
-  Equipment', href: '/marketplace/equipment, description:,
-  Hardware and infrastructure.' },
-    { title: 'Services, href:,
-  /marketplace/services', description: 'Professional and managed services. },
-=======
-    {
-      title: 'Products',
-      href: '/marketplace/products',
-      description: 'AI tools, software, and platforms.',
-    },
-    {
-      title: 'Talent',
-      href: '/marketplace/talent',
-      description: 'Expert contractors and fractional teams.',
-    },
-    {
-      title: 'Equipment',
-      href: '/marketplace/equipment',
-      description: 'Hardware and infrastructure.',
-    },
-    {
-      title: 'Services',
-      href: '/marketplace/services',
-      description: 'Professional and managed services.',
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/marketplace.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/marketplace.tsx
   ];
 
   return (

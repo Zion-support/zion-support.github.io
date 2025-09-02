@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from,
   react';'
 import { Link } from
@@ -6,7 +6,7 @@ import { Link } from
 import { Helmet } from
   'react-helmet-async';
 ;: pages.disabled/pages/services/ITInfrastructure.jsx
-=======
+
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Helmet } from 'react-helmet-async';
@@ -99,7 +99,7 @@ const ITInfrastructure = () => {
       ]},
     {
 '
-<<<<<<< HEAD
+
       area: 'Storage Infrastructure,
 ,
   solutions: [''
@@ -107,7 +107,7 @@ const ITInfrastructure = () => {
   ',Cloud storage',Data protection
   ',
       ]},];
-=======
+
       area: 'Storage Infrastructure','
       solutions: [''
         'Storage arrays',Backup systems',Cloud storage',Data protection',
@@ -210,9 +210,9 @@ const ITInfrastructure = () => {}
                 {
   ' '}
                 Infrastructure
-<<<<<<< HEAD
+
               </span>"</h1>""
-=======
+
               </span>"
         <meta;
           name="description""
@@ -263,9 +263,9 @@ const ITInfrastructure = () => {}
               </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-=======
+
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               scalability, and security.
             </p>""
@@ -287,9 +287,9 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-<<<<<<< HEAD
+
 "{/* Features Grid */}""
-=======
+
 "
 
         {/* Features Grid */}""
@@ -299,9 +299,9 @@ const ITInfrastructure = () => {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ITInfrastructure.jsx
-<<<<<<< HEAD
+
                 Infrastructure Solutions"</h2>""
-=======
+
                 Infrastructure Solutions"
                 Infrastructure Solutions;
               </h2>""
@@ -314,9 +314,9 @@ const ITInfrastructure = () => {}
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-<<<<<<< HEAD
+
                 <div"key={index}""
-=======
+
                 <div"
             </div>
 ""
@@ -333,9 +333,9 @@ const ITInfrastructure = () => {}
                     {feature.title}"
                   </h3>""
                   <p className="text-gray-300 mb-4">{feature.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-2">"{feature.features.map((item, idx) => (""
-=======
+
                   <ul className="space-y-2">"
                     {feature.title}
                   </h3>""
@@ -355,9 +355,9 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-<<<<<<< HEAD
+
 "{/* Infrastructure Areas */}""
-=======
+
 "
 
         {/* Infrastructure Areas */}""
@@ -367,9 +367,9 @@ const ITInfrastructure = () => {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ITInfrastructure.jsx
-<<<<<<< HEAD
+
                 Infrastructure Areas"</h2>""
-=======
+
                 Infrastructure Areas"
                 Infrastructure Areas;
               </h2>""
@@ -382,9 +382,9 @@ const ITInfrastructure = () => {}
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
-<<<<<<< HEAD
+
                 <div"key={index}""
-=======
+
                 <div"
             </div>
 ""
@@ -399,9 +399,9 @@ const ITInfrastructure = () => {}
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     {area.area}"
                   </h3>""
-<<<<<<< HEAD
+
                   <ul className="space-y-2">"{area.solutions.map((solution, idx) => (""
-=======
+
                   <ul className="space-y-2">"
                     {area.area}
                   </h3>""
@@ -420,9 +420,9 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-<<<<<<< HEAD
+
 "{/* Benefits */}""
-=======
+
 "
 
         {/* Benefits */}""
@@ -432,9 +432,9 @@ const ITInfrastructure = () => {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ITInfrastructure.jsx
-<<<<<<< HEAD
+
                 Why Choose Our Infrastructure Services?"</h2>""
-=======
+
                 Why Choose Our Infrastructure Services?"
                 Why Choose Our Infrastructure Services?
               </h2>""
@@ -448,9 +448,9 @@ const ITInfrastructure = () => {}
 ""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
               <div className="text-center">""
-<<<<<<< HEAD
+
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"<svg""
-=======
+
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
             </div>
 ""
@@ -464,9 +464,9 @@ const ITInfrastructure = () => {}
                     stroke="currentColor""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     viewBox="0 0 24 24""
                   >
@@ -481,9 +481,9 @@ const ITInfrastructure = () => {}
                   </svg>"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   Reliability"</h3>""
-=======
+
                   Reliability"
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z""
                     />
@@ -500,9 +500,9 @@ const ITInfrastructure = () => {}
               </div>"
 ""
               <div className="text-center">""
-<<<<<<< HEAD
+
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"<svg""
-=======
+
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
               </div>
 ""
@@ -515,9 +515,9 @@ const ITInfrastructure = () => {}
                     stroke="currentColor""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     viewBox="0 0 24 24""
                   >
@@ -532,9 +532,9 @@ const ITInfrastructure = () => {}
                   </svg>"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   Scalability"</h3>""
-=======
+
                   Scalability"
                       d="M7 11l5-5m0 0l5 5m-5-5v12""
                     />
@@ -551,9 +551,9 @@ const ITInfrastructure = () => {}
               </div>"
 ""
               <div className="text-center">""
-<<<<<<< HEAD
+
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"<svg""
-=======
+
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
               </div>
 ""
@@ -566,9 +566,9 @@ const ITInfrastructure = () => {}
                     stroke="currentColor""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     viewBox="0 0 24 24""
                   >
@@ -583,9 +583,9 @@ const ITInfrastructure = () => {}
                   </svg>"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   Security"</h3>""
-=======
+
                   Security"
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z""
                     />
@@ -603,9 +603,9 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -623,9 +623,9 @@ const ITInfrastructure = () => {}
             </p>"
             <Link""
               to="/contact""
-<<<<<<< HEAD
+
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-=======
+
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               Ready to Build Your Infrastructure?
             </h2>""
@@ -649,9 +649,9 @@ const ITInfrastructure = () => {}
 
 :pages.disabled/pages/services/ITInfrastructure.jsx
 export default ITInfrastructure;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default ITInfrastructure;
 '""

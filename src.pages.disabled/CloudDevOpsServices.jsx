@@ -1,5 +1,1 @@
-<<<<<<< HEAD:src.pages.disabled/CloudDevOpsServices.jsx
-import React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm, setSearchTerm] = useState (") ; const [selectedCategory, setSelectedCategory] = useState ("all") ; const [selectedPricing, setSelectedPricing] = useState ("all") ;
-=======
-import React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm, setSearchTerm] = useState (") ; const [selectedCategory, setSelectedCategory] = useState ("all") ; const [selectedPricing, setSelectedPricing] = useState ("all") ;"""";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/CloudDevOpsServices.jsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/CloudDevOpsServices.jsx

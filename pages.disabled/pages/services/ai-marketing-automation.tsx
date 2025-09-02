@@ -26,9 +26,9 @@ import {}
   'lucide-react.ts';
 
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
 export default function AIMarketingAutomation(...args: any[]): any {return()
-=======
+
 export default function AIMarketingAutomation(...args: any[]): any {
 
 export default function AIMarketingAutomation(...args: any[]): any {}
@@ -40,9 +40,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
         keywords="AI marketing automation, marketing automation, personalized marketing, customer segmentation, marketing ROI, AI campaigns"
        />"
-<<<<<<< HEAD
+
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         keywords="AI marketing automation, marketing automation, personalized marketing, customer segmentation, marketing ROI, AI campaigns""
        />
@@ -55,9 +55,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
               animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
               animate={{ opacity: 1, y: 0 }}"
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}""
@@ -73,9 +73,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
 ""
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Marketing Automation
-<<<<<<< HEAD
+
               </h1>"""
-=======
+
               </h1>"
                   AI-Powered Marketing Automation;
                 </span>              </div>
@@ -96,9 +96,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
-=======
+
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
               </p>
 ""
@@ -115,9 +115,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                   className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
-=======
+
                   className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
@@ -132,9 +132,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
           </div>
         </section>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
         {/* Features Section */}""
@@ -144,9 +144,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
               whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
               whileInView={{ opacity: 1, y: 0 }}"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}""
@@ -155,9 +155,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             >""
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
                 Intelligent Marketing Automation"</h2>""
-=======
+
                 Intelligent Marketing Automation"
                 Intelligent Marketing Automation;
               </h2>""
@@ -168,9 +168,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                 customer experiences at scale.
               </p>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
             </motion.div>"""
-=======
+
             </motion.div>"
             </motion.div>
 ""
@@ -181,9 +181,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, y: 0 }}"
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -195,9 +195,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                     <feature.icon className="w-6 h-6 text-cyan-400" />"
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                     {feature.title}"</h3>""
-=======
+
                     {feature.title}"
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>""
@@ -212,9 +212,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
           </div>
         </section>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
 "{/* Marketing Channels Section */}""
-=======
+
 "
 
         {/* Marketing Channels Section */}""
@@ -224,9 +224,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
               whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
               whileInView={{ opacity: 1, y: 0 }}"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}""
@@ -235,9 +235,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             >""
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
                 Multi-Channel Marketing Automation"</h2>""
-=======
+
                 Multi-Channel Marketing Automation"
                 Multi-Channel Marketing Automation;
               </h2>""
@@ -247,9 +247,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                 AI-powered workflows and consistent customer experiences.
               </p>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
             </motion.div>"""
-=======
+
             </motion.div>"
             </motion.div>
 ""
@@ -260,9 +260,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                   key={channel.title}
                   initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, y: 0 }}"
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -274,9 +274,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                     <channel.icon className="w-6 h-6 text-purple-400" />"
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                     {channel.title}"</h3>""
-=======
+
                     {channel.title}"
                     <channel.icon className="w-6 h-6 text-purple-400" />
                   </div>""
@@ -291,9 +291,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
           </div>
         </section>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
         {/* Use Cases Section */}""
@@ -303,9 +303,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
               whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
               whileInView={{ opacity: 1, y: 0 }}"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}""
@@ -314,9 +314,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             >""
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
                 Marketing Automation Use Cases"</h2>""
-=======
+
                 Marketing Automation Use Cases"
                 Marketing Automation Use Cases;
               </h2>""
@@ -326,9 +326,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                 marketing challenges and business objectives.
               </p>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
             </motion.div>"""
-=======
+
             </motion.div>"
             </motion.div>
 ""
@@ -339,9 +339,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                   key={useCase.title}
                   initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, y: 0 }}"
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -353,9 +353,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                     <useCase.icon className="w-8 h-8 text-cyan-400" />"
                   </div>""
                   <h3 className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                     {useCase.title}"</h3>""
-=======
+
                     {useCase.title}"
                     <useCase.icon className="w-8 h-8 text-cyan-400" />
                   </div>""
@@ -370,9 +370,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
           </div>
         </section>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
         {/* Benefits Section */}""
@@ -382,9 +382,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
               whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
               whileInView={{ opacity: 1, y: 0 }}"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}""
@@ -393,9 +393,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             >""
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
                 Why Choose AI Marketing Automation?"</h2>""
-=======
+
                 Why Choose AI Marketing Automation?"
                 Why Choose AI Marketing Automation?
               </h2>""
@@ -413,9 +413,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD
+
                     whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                     whileInView={{ opacity: 1, x: 0 }}"
             </motion.div>
 ""
@@ -440,9 +440,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: 20 }}
-<<<<<<< HEAD
+
                     whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                     whileInView={{ opacity: 1, x: 0 }}"
                 ))}
               </div>""
@@ -464,9 +464,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
           </div>
         </section>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -476,9 +476,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
               whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
               whileInView={{ opacity: 1, y: 0 }}"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}""
@@ -498,9 +498,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
-=======
+
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
                 Ready to Transform Your Marketing?
               </h2>""
@@ -522,9 +522,9 @@ export default function AIMarketingAutomation(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                   className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
-=======
+
                   className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
@@ -541,11 +541,11 @@ export default function AIMarketingAutomation(...args: any[]): any {}
       </div>
     </>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-React from
-  'react.ts';
-import Link from 'next/link';
-  'next/link.ts';'import {;'
-=======
-import React from 'react.ts';'import Link from 'next/link.ts';'import {;''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   Mail, Phone,
   MapPin, Linkedin,
   Twitter, Github,

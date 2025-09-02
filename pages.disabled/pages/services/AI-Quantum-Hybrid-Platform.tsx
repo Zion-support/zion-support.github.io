@@ -29,12 +29,12 @@ import {}
   Bot,
   Workflow,
   Eye,
-<<<<<<< HEAD
+
   Sparkles} from,
   lucide-react';: pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
 const AIQuantumHybridPlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview
   ');
-=======
+
   Sparkles} from 'lucide-react';
 
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
@@ -48,14 +48,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
   useEffect(() => {}
     setIsVisible(true)}, []);
 
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
-  
-  
-  
-  
+
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -66,9 +61,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}""
@@ -86,9 +81,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
               The world
   's first integrated platform combining artificial
               intelligence with quantum computing, delivering unprecedented
-<<<<<<< HEAD
+
               computational power and intelligence for the most complexchallenges.
-=======
+
               computational power and intelligence for the most complex
               <Atom className="w-4 h-4 mr-2"  />              Revolutionary Technology;
             </div>""
@@ -110,9 +105,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             transition={{ duration: 0.8, delay: 0.2 }}""
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-<<<<<<< HEAD
+
           >"<Link""
-=======
+
           >"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}""
@@ -125,9 +120,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
             >""
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
               <Rocket className="w-5 h-5 mr-2"  />              Start Your Quantum Journey
-<<<<<<< HEAD
+
             </Link>"<Link""
-=======
+
             </Link>"
               <Rocket className="w-5 h-5 mr-2"  />              Start Your Quantum Journey;
             </Link>
@@ -141,9 +136,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
             </Link>
           </motion.div>
         </div>
-<<<<<<< HEAD
+
 "{/* Floating Elements */}""
-=======
+
 "
               <Eye className="w-5 h-5 mr-2"  />              Watch Demo;
             </Link>
@@ -159,9 +154,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -171,9 +166,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.4 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}""
@@ -182,9 +177,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
               Revolutionary Features"</h2>""
-=======
+
               Revolutionary Features"
               Revolutionary Features;
             </h2>""
@@ -201,9 +196,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
-=======
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
           </motion.div>
 ""
@@ -222,9 +217,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -241,9 +236,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -253,9 +248,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.6 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}""
@@ -264,9 +259,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
               Industry Applications"</h2>""
-=======
+
               Industry Applications"
               Industry Applications;
             </h2>""
@@ -275,9 +270,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
               Transform your industry with quantum-AI powered solutions;
             </p>
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -290,9 +285,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                 animate={{}
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
-=======
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
                 transition={{ duration: 0.8, delay: 0.2 * index }}""
@@ -305,9 +300,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                 </h3>""
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
-<<<<<<< HEAD
+
                     <div"key={appIndex}""
-=======
+
                     <div"
                   <Target className="w-6 h-6 mr-3 text-purple-400"  />                  {useCase.industry}
                 </h3>""
@@ -328,9 +323,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -340,9 +335,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.8 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}""
@@ -351,9 +346,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
               Competitive Pricing"</h2>""
-=======
+
               Competitive Pricing"
               Competitive Pricing;
             </h2>""
@@ -366,9 +361,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map(tier: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -381,11 +376,11 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
   tier.popular'
   '
-=======
+
                 className={`relative bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
 '
                   tier.popular''
@@ -399,9 +394,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                     ? 'border-purple-500 scale-105''
   '`: 'border-purple-500/20``
                 }`}
-<<<<<<< HEAD
+
               >"{tier.popular && (""
-=======
+
               >
                 {tier.popular && (""
 >>>>>>> pr-10728
@@ -424,9 +419,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                     <span className="text-gray-400">{tier.period}</span>"
                   </div>""
                   <p className="text-gray-300 text-sm">{tier.description}</p>
-<<<<<<< HEAD
+
                 </div>"""
-=======
+
                 </div>"
                 )}
 ""
@@ -448,9 +443,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                   <div className="flex items-center justify-center mb-4">""
                     <span className="text-gray-400 line-through mr-2">
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
                       {tier.marketPrice}"</span>""
-=======
+
                       {tier.marketPrice}"
                       {tier.marketPrice}
                     </span>""
@@ -464,9 +459,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
 ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                 </div>
 ""
@@ -485,14 +480,14 @@ const AIQuantumHybridPlatform: React.FC = () => {}
 "
                 <Link""`
                   to="/contact"``
-<<<<<<< HEAD
+
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   tier.popular'
   '
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700''
   '`
                       : 'border-2 border-purple-500 text-purple-300 hover:bg-purple-500 hover:text-white``}`}
-=======
+
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 '
                     tier.popular''
@@ -516,9 +511,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -528,9 +523,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 1.0 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 1.0 }}""
@@ -539,9 +534,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
               Why Choose Our Platform?"</h2>""
-=======
+
               Why Choose Our Platform?"
               Why Choose Our Platform?
             </h2>""
@@ -555,9 +550,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -570,9 +565,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                 animate={{}
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
-=======
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
                 transition={{ duration: 0.8, delay: 0.2 * index }}""
@@ -584,9 +579,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -603,9 +598,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Contact Section */}""
-=======
+
 "
 
       {/* Contact Section */}""
@@ -624,9 +619,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
             <p className="text-xl text-gray-300 mb-8">
               Join the quantum revolution and transform your business with
               AI-Quantum hybrid technology
-<<<<<<< HEAD
+
             </p>"""
-=======
+
             </p>"
             transition={{ duration: 0.8, delay: 1.2 }}
           >""
@@ -647,9 +642,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
               </div>""
               <div className="flex items-center text-gray-300">""
                 <Mail className="w-5 h-5 mr-2 text-purple-400"  />
-<<<<<<< HEAD
+
                 <span>kleber@ziontechgroup.com</span>"</div>""
-=======
+
                 <span>kleber@ziontechgroup.com</span>"
                 <span>+1 302 464 0950</span>
               </div>""
@@ -664,9 +659,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
             </div>"
 ""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             </div>
 ""
@@ -678,9 +673,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
               >""
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
                 <Rocket className="w-5 h-5 mr-2"  />                Schedule a Demo
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Rocket className="w-5 h-5 mr-2"  />                Schedule a Demo;
               </Link>
@@ -690,9 +685,9 @@ const AIQuantumHybridPlatform: React.FC = () => {}
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-purple-500 text-purple-300 font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-<<<<<<< HEAD
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website</Link>
-=======
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website;
               </Link>

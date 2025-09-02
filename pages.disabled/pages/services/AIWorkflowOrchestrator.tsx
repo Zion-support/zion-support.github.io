@@ -26,9 +26,8 @@ import {}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
 const AIWorkflowOrchestrator: React.FC = props {
 
-<<<<<<< HEAD
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
 const AIWorkflowOrchestrator: React.FC = props {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -40,9 +39,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -62,9 +61,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               business processes with AI-powered optimization and real-time
               execution."
             </p>""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Workflow className="w-8 h-8 text-white"  />              </div>
             </div>""
@@ -84,9 +83,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               >""
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                 <Play className="w-5 h-5 mr-2"  />                Start Free Trial
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Play className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
@@ -96,9 +95,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo</Link>
-=======
+
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo;
               </Link>
@@ -108,9 +107,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
         </div>
       </div>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -120,9 +119,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -131,9 +130,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
               Powerful Features for Modern Workflows"</h2>""
-=======
+
               Powerful Features for Modern Workflows"
               Powerful Features for Modern Workflows;
             </h2>""
@@ -150,9 +149,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -171,9 +170,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -188,9 +187,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -200,9 +199,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -211,9 +210,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
               Transparent Pricing"</h2>""
-=======
+
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
@@ -227,9 +226,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
 ""
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map(tier: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -242,7 +241,7 @@ const AIWorkflowOrchestrator: React.FC = props {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,
   tier.popular''
                     ?
@@ -250,7 +249,7 @@ const AIWorkflowOrchestrator: React.FC = props {}
   '`: 'border-white/10``
                 }`}
               >"{tier.popular && (""
-=======
+
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   tier.popular''
@@ -276,9 +275,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">
-<<<<<<< HEAD
+
                     {tier.name}"</h3>""
-=======
+
                     {tier.name}"
                 )}
 ""
@@ -299,9 +298,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
 ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                       {tier.price}
                     </span>""
@@ -320,7 +319,7 @@ const AIWorkflowOrchestrator: React.FC = props {}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
+
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx,
   <Link'
   '`
@@ -333,7 +332,7 @@ const AIWorkflowOrchestrator: React.FC = props {}
                       ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover: from-blue-600 hover:to-purple-600''
   '`
                       : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white``}`}
-=======
+
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
 '
                 <Link''`
@@ -361,9 +360,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -373,9 +372,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -384,9 +383,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
               Why Choose AI Workflow Orchestrator?"</h2>""
-=======
+
               Why Choose AI Workflow Orchestrator?"
               Why Choose AI Workflow Orchestrator?
             </h2>""
@@ -403,9 +402,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -424,9 +423,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -441,9 +440,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -453,9 +452,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -470,9 +469,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               Join thousands of businesses that have already automated their
               processes with AI-powered intelligence."
             </p>""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               Ready to Transform Your Workflows?
             </h2>""
@@ -488,9 +487,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               >""
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                 <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
@@ -500,9 +499,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo</Link>
-=======
+
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo;
               </Link>
@@ -512,9 +511,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
 "{/* Contact Information */}""
-=======
+
 "
 
       {/* Contact Information */}""
@@ -526,9 +525,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               <Phone className="w-8 h-8 text-blue-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>""
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
               <p className="text-gray-300">+1 302 464 0950</p>"</div>""
-=======
+
               <p className="text-gray-300">+1 302 464 0950</p>"
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>""
@@ -537,9 +536,9 @@ const AIWorkflowOrchestrator: React.FC = props {}
               <Mail className="w-8 h-8 text-blue-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>""
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-<<<<<<< HEAD
+
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"</div>""
-=======
+
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>""

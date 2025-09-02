@@ -109,18 +109,7 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
         fill={fill}
         onLoad={handleLoad}
         onError={handleError}
-<<<<<<< HEAD
-        style={{,
-  ''''
-  '          objectFit: fill ? 'cover
-  ' : 'contain}}'      />
-  '
-      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>
-=======
-        style={{
-''''''          objectFit: fill ? 'cover' : 'contain'}}'      />'
-      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   );
 };
 
@@ -132,9 +121,4 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
     <Component {...props} />
   );
 };
-<<<<<<< HEAD
-'"`
-  '""export default OptimizedImage;'"`'"`""`
-=======
-'"`'""export default OptimizedImage;'"`'"`""`"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1

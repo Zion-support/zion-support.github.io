@@ -9,9 +9,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
       </Helmet>"
 ""
-<<<<<<< HEAD
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       </Helmet>
 ""
@@ -30,9 +30,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 AI Auto Email""
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Responder</span>
-<<<<<<< HEAD
+
               </h1>"""
-=======
+
               </h1>"
                 <Mail className="w-4 h-4 mr-2"  />                AI-Powered Email Automation;
               </div>
@@ -58,9 +58,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">""
-<<<<<<< HEAD
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo</button>
-=======
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
               </p>
 ""
@@ -80,9 +80,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
           </div>
         </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
         {/* Features Section */}""
@@ -92,9 +92,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
                 Intelligent Email Automation"</h2>""
-=======
+
                 Intelligent Email Automation"
                 Intelligent Email Automation;
               </h2>""
@@ -147,9 +147,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD
+
                     <feature.icon className="w-6 h-6 text-white" />"</div>""
-=======
+
                     <feature.icon className="w-6 h-6 text-white" />"
             </div>
 ""
@@ -199,9 +199,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
           </div>
         </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
         {/* Use Cases Section */}""
@@ -211,9 +211,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
                 Email Automation Use Cases"</h2>""
-=======
+
                 Email Automation Use Cases"
                 Email Automation Use Cases;
               </h2>""
@@ -281,9 +281,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>""
                   <p className="text-slate-300 mb-4">{useCase.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{useCase.benefits.map((benefit, benefitIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -352,9 +352,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
           </div>
         </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
 "{/* How It Works Section */}""
-=======
+
 "
 
         {/* How It Works Section */}""
@@ -364,9 +364,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
                 How AI Email Automation Works"</h2>""
-=======
+
                 How AI Email Automation Works"
                 How AI Email Automation Works;
               </h2>""
@@ -410,9 +410,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
-=======
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"
             </div>
 ""
@@ -456,9 +456,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
           </div>
         </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
         {/* Benefits Section */}""
@@ -468,9 +468,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
                 Transform Your Email Management"</h2>""
-=======
+
                 Transform Your Email Management"
                 Transform Your Email Management;
               </h2>""
@@ -483,9 +483,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
-<<<<<<< HEAD
+
                 <div className="space-y-6">"{[""
-=======
+
                 <div className="space-y-6">"
             </div>
 ""
@@ -511,9 +511,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>""
-<<<<<<< HEAD
+
                 <div className="space-y-4">"{[""
-=======
+
                 <div className="space-y-4">"
               </div>
 ""
@@ -526,9 +526,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                     { metric: "10x", label: "Email Volume Capacity" },""
                     { metric: "24/7", label: "Availability" },""
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
                     { metric: "95%", label: "Customer Satisfaction" }"].map((item, index)  => (""
-=======
+
                     { metric: "95%", label: "Customer Satisfaction" }"
                     { metric: "95%", label: "Customer Satisfaction" }
                   ].map((item, index)  => (""
@@ -544,9 +544,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
           </div>
         </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
 "{/* Integration Section */}""
-=======
+
 "
 
         {/* Integration Section */}""
@@ -556,9 +556,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
                 Seamless Integrations"</h2>""
-=======
+
                 Seamless Integrations"
                 Seamless Integrations;
               </h2>""
@@ -626,9 +626,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{integration.title}</h3>""
                   <p className="text-slate-300 mb-4">{integration.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{integration.features.map((feature, featureIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -697,9 +697,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
           </div>
         </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -722,9 +722,9 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-=======
+
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
               Ready to Automate Your Email Management?
             </h2>""
@@ -750,10 +750,10 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
       </div>;
 :pages.disabled/pages/services/ai-auto-email-responder.tsx
     </>"
-<<<<<<< HEAD
+
   )}}}}}}
   '"'"
-=======
+
   )}}}}}}'"'"
     </>
   )}}}}}}'""

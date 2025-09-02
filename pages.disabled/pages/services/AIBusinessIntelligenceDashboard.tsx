@@ -31,9 +31,9 @@ import {}
         title="AI-Powered Business Intelligence Dashboard - Zion Tech Group""
         description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
@@ -47,9 +47,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -67,9 +67,9 @@ import {}
               </span>"
               <br />""
               <span className="text-white">Dashboard</span>
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
               <Brain className="w-4 h-4 mr-2 text-cyan-400"  />              AI-Powered Business Intelligence;
             </div>
@@ -97,9 +97,9 @@ import {}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >"
                 Start Free Trial""
-<<<<<<< HEAD
+
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>"<a""
-=======
+
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>"
             </p>
 ""
@@ -116,9 +116,9 @@ import {}
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group""
               >""
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
                 <Play className="w-5 h-5 mr-2"  />                Watch Demo</a>
-=======
+
                 <Play className="w-5 h-5 mr-2"  />                Watch Demo
                 <Play className="w-5 h-5 mr-2"  />                Watch Demo;
               </a>
@@ -127,9 +127,9 @@ import {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
 "{/* Background Elements */}""
-=======
+
 "
 
         {/* Background Elements */}""
@@ -154,9 +154,9 @@ import {}
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Powerful Features
-<<<<<<< HEAD
+
               </span>"</h2>""
-=======
+
               </span>"
 
       {/* Features Section */}""
@@ -180,9 +180,9 @@ import {}
               actionable intelligence;
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -194,9 +194,9 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -209,9 +209,9 @@ import {}
                     <feature.icon className="w-8 h-8 text-white" />"
                   </div>""
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
-<<<<<<< HEAD
+
                     {feature.title}"</h3>""
-=======
+
                     {feature.title}"
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>""
@@ -243,9 +243,9 @@ import {}
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Use Cases
-<<<<<<< HEAD
+
               </span>"</h2>""
-=======
+
               </span>"
 
       {/* Use Cases Section */}""
@@ -269,9 +269,9 @@ import {}
               and efficiency;
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -283,9 +283,9 @@ import {}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -298,9 +298,9 @@ import {}
                     <useCase.icon className="w-8 h-8 text-white" />"
                   </div>""
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
-<<<<<<< HEAD
+
                     {useCase.title}"</h3>""
-=======
+
                     {useCase.title}"
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>""
@@ -332,9 +332,9 @@ import {}
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Pricing Plans
-<<<<<<< HEAD
+
               </span>"</h2>""
-=======
+
               </span>"
 
       {/* Pricing Section */}""
@@ -358,9 +358,9 @@ import {}
               14-day free trial.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -372,14 +372,14 @@ import {}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
+
                 viewport={{ once: true }}
 ,
   className={`relative ${plan.popular ? 'lg: -mt-8
   ' : '}`}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
               >"{plan.popular && (""
-=======
+
                 viewport={{ once: true }}'
                 className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -416,9 +416,9 @@ import {}
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>"
 ""
-<<<<<<< HEAD
+
                   <ul className="space-y-4 mb-8">"{plan.features.map((feature, idx) => (""
-=======
+
                   <ul className="space-y-4 mb-8">"
 
                 <div`
@@ -453,14 +453,14 @@ import {}
 "
                   <a""`
                     href="https://ziontechgroup.com/contact"``
-<<<<<<< HEAD
+
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${,
   plan.popular'
   '
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-400 hover:to-blue-400''
   '`
                         : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10``}`}
-=======
+
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
 '
                       plan.popular''
@@ -494,9 +494,9 @@ import {}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+
             viewport={{ once: true }}">""
-=======
+
             viewport={{ once: true }}"
 
       {/* Testimonials Section */}""
@@ -516,9 +516,9 @@ import {}
               </span>
             </h2>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -530,9 +530,9 @@ import {}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -555,9 +555,9 @@ import {}
                       {testimonial.name}"
                     </div>""
                     <div className="text-sm text-cyan-400">
-<<<<<<< HEAD
+
                       {testimonial.role}"</div>""
-=======
+
                       {testimonial.role}"
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i}""
@@ -586,9 +586,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -615,9 +615,9 @@ import {}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >"
                 Start Free Trial""
-<<<<<<< HEAD
+
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>"<a""
-=======
+
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>"
             viewport={{ once: true }}
           >""
@@ -641,9 +641,9 @@ import {}
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group""
               >""
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950</a>
-=======
+
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950;
               </a>
@@ -653,9 +653,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
+
 "{/* Contact Information */}""
-=======
+
 "
 
       {/* Contact Information */}""
@@ -681,9 +681,9 @@ import {}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 kleber@ziontechgroup.com
-<<<<<<< HEAD
+
               </a>"</div>""
-=======
+
               </a>"
               <Phone className="w-8 h-8 text-cyan-400 mb-4"  />"              <div className="text-white font-semibold">Phone</div>
               <a""

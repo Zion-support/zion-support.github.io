@@ -14,9 +14,9 @@ import {}
   'lucide-react.ts';
 
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
 export default function AIBusinessProcessOptimizer(...args: any[]): any {return()
-=======
+
 export default function AIBusinessProcessOptimizer(...args: any[]): any {
 
 export default function AIBusinessProcessOptimizer(...args: any[]): any {}
@@ -30,9 +30,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <Brain className="w-4 h-4 mr-2"  /> AI-Powered Process Optimization"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
             AI Business Process Optimizer"</h1>""
-=======
+
             AI Business Process Optimizer"
             <Brain className="w-4 h-4 mr-2"  /> AI-Powered Process Optimization;
           </div>""
@@ -53,9 +53,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Revolutionary Features"
             </h2>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{features.map(f => (""
-=======
+
             <ul className="space-y-3">"
       </section>
 ""
@@ -84,9 +84,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             </h3>""
             <div className="grid md: anygrid-cols-1 gap-4">
               {tiers.map(t => (
-<<<<<<< HEAD
+
                 <div"key={t.name}""
-=======
+
                 <div"
               ))}
             </ul>""
@@ -108,9 +108,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-zion-cyan mb-2">
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
                     {t.price}"</div>""
-=======
+
                     {t.price}"
                     {t.price}
                   </div>""
@@ -124,9 +124,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
               ))}"
             </div>""
-<<<<<<< HEAD
+
             <div className="mt-6 flex flex-wrap gap-3">"<a""
-=======
+
             <div className="mt-6 flex flex-wrap gap-3">"
               ))}
             </div>""
@@ -138,9 +138,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
               </a>
               <a""
@@ -161,9 +161,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Key Benefits"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{benefits.map(b => (""
-=======
+
             <ul className="space-y-3">"
         </div>
 ""
@@ -186,9 +186,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Use Cases"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{useCases.map(u => (""
-=======
+
             <ul className="space-y-3">"
           </div>
           <div>""
@@ -212,9 +212,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
   'Real-time monitoring',AI-powered insights
   ',Process automation',
           ].map(t => (
-<<<<<<< HEAD
+
             <div"key={t}""
-=======
+
             <div"
         </div>
 ""
@@ -230,9 +230,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               <BarChart3 className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{t}</div>
             </div>
-<<<<<<< HEAD
+
           ))}: pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-=======
+
           ))}
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
 >>>>>>> pr-10728
@@ -242,9 +242,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to optimize your business processes?"
           </div>""
-<<<<<<< HEAD
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
-=======
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
         </div>
 ""
@@ -260,9 +260,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             >""
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
@@ -275,11 +275,11 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-4 text-sm text-zion-slate-light">
   '
             Visit us at:{'}"<a""
-=======
+
           <div className="mt-4 text-sm text-zion-slate-light">'
             Visit us at:{' '}"
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com;
@@ -293,9 +293,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               target="_blank""
               rel="noreferrer""
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
               className="text-zion-cyan hover:underline">
-=======
+
               className="text-zion-cyan hover:underline"
               className="text-zion-cyan hover:underline""
             >
@@ -307,9 +307,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

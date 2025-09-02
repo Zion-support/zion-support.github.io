@@ -31,12 +31,12 @@ export default function IncidentResponsePlatform(...args: any[]): any {
       />
 "
       {/* Hero Section */}""
-<<<<<<< HEAD
+
       <section className="relative py-20 overflow-hidden">"
   '"
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20"></div>'"        <div className="absolute inset-0 bg-[url(
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>"""
-=======
+
       <section className="relative py-20 overflow-hidden">"'"
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20"></div>'"        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>"
 export default function IncidentResponsePlatform(...args: any[]): any {}
@@ -56,9 +56,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -73,9 +73,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6">
               Incident Response Platform
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
             </div>
 ""
@@ -95,9 +95,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300">
-=======
+
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300"
             </p>
 ""
@@ -114,9 +114,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300">
-=======
+
                 className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
               <motion.button;
                 whileHover={{ scale: 1.05 }}
@@ -131,9 +131,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -143,9 +143,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -154,9 +154,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
               Comprehensive Incident Response"</h2>""
-=======
+
               Comprehensive Incident Response"
               Comprehensive Incident Response;
             </h2>""
@@ -167,9 +167,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
               your organization stays protected.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -180,9 +180,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -194,9 +194,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                   <feature.icon className="w-8 h-8 text-red-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-red-400" />
                 </div>""
@@ -208,9 +208,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
                     <li"key={idx}""
-=======
+
                     <li"
                     <li;
                       key={idx}""
@@ -227,9 +227,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
 "{/* Capabilities Section */}""
-=======
+
 "
 
       {/* Capabilities Section */}""
@@ -239,9 +239,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -250,9 +250,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
               Platform Capabilities"</h2>""
-=======
+
               Platform Capabilities"
               Platform Capabilities;
             </h2>""
@@ -263,9 +263,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
               lessons learned.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -276,9 +276,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                 key={capability.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -289,9 +289,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
 :pages.disabled/pages/services/incident-response-platform.tsx
                   <Target className="w-6 h-6 text-red-400 mr-3"  />                  {capability.category}"
                 </h3>""
-<<<<<<< HEAD
+
                 <ul className="space-y-3">"{capability.services.map((service, idx) => (""
-=======
+
                 <ul className="space-y-3">"
                   <Target className="w-6 h-6 text-red-400 mr-3"  />                  {capability.category}
                 </h3>""
@@ -310,9 +310,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
 "{/* Technologies Section */}""
-=======
+
 "
 
       {/* Technologies Section */}""
@@ -322,9 +322,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -333,9 +333,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
               Advanced Technologies"</h2>""
-=======
+
               Advanced Technologies"
               Advanced Technologies;
             </h2>""
@@ -346,9 +346,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
               incident response capabilities.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -359,9 +359,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -375,9 +375,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white">
                     {tech.name}
-<<<<<<< HEAD
+
                   </h3>"</div>""
-=======
+
                   </h3>"
                     <tech.icon className="w-6 h-6 text-red-400" />
                   </div>""
@@ -393,9 +393,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
 "{/* Performance Metrics */}""
-=======
+
 "
 
       {/* Performance Metrics */}""
@@ -405,9 +405,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -416,9 +416,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
               Performance Metrics"</h2>""
-=======
+
               Performance Metrics"
               Performance Metrics;
             </h2>""
@@ -429,9 +429,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
               impact of security incidents.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -442,9 +442,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                 key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -456,9 +456,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                   {metric.metric}"
                 </h3>""
                 <div className="text-3xl font-bold text-red-400 mb-2">
-<<<<<<< HEAD
+
                   {metric.value}"</div>""
-=======
+
                   {metric.value}"
                   {metric.metric}
                 </h3>""
@@ -475,9 +475,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -487,9 +487,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -510,9 +510,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                   className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300">
-=======
+
                   className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300"
                 Ready to Enhance Your Incident Response?
               </h2>""
@@ -534,9 +534,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                   className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300">
-=======
+
                   className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
@@ -552,9 +552,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
 "{/* Contact Info */}""
-=======
+
 "
 
       {/* Contact Info */}""
@@ -568,9 +568,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
             </h3>""
             <p className="text-slate-300 mb-6">
               Ready to strengthen your incident response capabilities? Get in
-<<<<<<< HEAD
+
               touch with our cybersecurity experts."</p>""
-=======
+
               touch with our cybersecurity experts."
               Contact Our Incident Response Team;
             </h3>""
@@ -587,9 +587,9 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
               </div>""
               <div className="flex items-center">""
                 <Mail className="w-5 h-5 text-red-400 mr-2"  />
-<<<<<<< HEAD
+
                 <span>kleber@ziontechgroup.com</span>"</div>""
-=======
+
                 <span>kleber@ziontechgroup.com</span>"
                 <span>+1 302 464 0950</span>
               </div>""
@@ -607,11 +607,11 @@ export default function IncidentResponsePlatform(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/incident-response-platform.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

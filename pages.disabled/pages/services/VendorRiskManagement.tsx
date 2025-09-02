@@ -6,9 +6,9 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
 ""
     <section className="container mx-auto px-4 py-12">""
       <h1 className="text-4xl font-bold mb-3">Vendor Risk Management (VRM)</h1>"      <p className="text-slate-300 max-w-3xl">Automate third-party due diligence, security questionnaires, continuous control monitoring, and risk scoring. Consolidate SIG/Lite responses, map to SOC 2/ISO 27001, and trigger remediation with owners and SLAs.</p>
-<<<<<<< HEAD
+
     </section>"""
-=======
+
     </section>"
     <SEO title="Vendor Risk Management (VRM) SaaS - Zion Tech Group" description="Continuously assess, score, and monitor third-party risk with automated evidence collection and remediation workflows."  />
 ""
@@ -26,9 +26,9 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
           <li>Risk scoring by domain (security, privacy, financial)</li>
           <li>Continuous monitoring via attack surface feeds</li>
 :pages.disabled/pages/services/VendorRiskManagement.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -40,9 +40,9 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
           <li>Okta/Azure AD for vendor access reviews</li>
           <li>SecurityScorecard/BitSight/HaveIBeenPwned</li>
 :pages.disabled/pages/services/VendorRiskManagement.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -56,9 +56,9 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
         </ul>
       </div>
 :pages.disabled/pages/services/VendorRiskManagement.tsx
-<<<<<<< HEAD
+
     </section>;";""
-=======
+
     </section>;"
     </section>;
 ;""
@@ -74,9 +74,9 @@ export { VendorRiskManagement };
 export default VendorRiskManagement;
 :pages.disabled/pages/services/VendorRiskManagement.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

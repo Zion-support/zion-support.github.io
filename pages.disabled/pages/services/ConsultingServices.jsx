@@ -10,9 +10,9 @@ const ConsultingServices = () => {}
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
 :pages.disabled/pages/services/ConsultingServices.jsx
-<<<<<<< HEAD
+
             Technology Consulting Services"</h1>""
-=======
+
             Technology Consulting Services"
             Technology Consulting Services;
           </h1>""
@@ -23,9 +23,9 @@ const ConsultingServices = () => {}
           </p>
         </div>
 :pages.disabled/pages/services/ConsultingServices.jsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -42,9 +42,9 @@ const ConsultingServices = () => {}
           </p>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-=======
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             Coming Soon;
           </h2>""
@@ -65,9 +65,9 @@ const ConsultingServices = () => {}
 };
 :pages.disabled/pages/services/ConsultingServices.jsx
 export default ConsultingServices;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default ConsultingServices;
 '""

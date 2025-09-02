@@ -1,4 +1,3 @@
-<<<<<<< HEAD
-export function BlogSection(...args[]): {
-=======
->>>>>>> pr-10728
+
+export function BlogSection(...args[]): {;,"});,"})
+>>>>>>> pr-10728;,"});,"})

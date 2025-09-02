@@ -1,30 +1,4 @@
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-import React from
-  'react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../components/layout/MainLayout';
-import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
-  'lucide-react';
-import Link from
-  'next/link';
-=======
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {
-  Book,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Download,
-  ExternalLink,
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
 
 const Documentation: NextPage = () => {
   const docCategories = [
@@ -34,26 +8,7 @@ const Documentation: NextPage = () => {
   Getting Started',
       description: 'Quick start guides and basic setup instructions,
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-        { title:,
-  Introduction to Zion Tech Group', href: '/docs/introduction },
-        { title:,
-  Account Setup', href: '/docs/account-setup },
-        { title:,
-  First Steps', href: '/docs/first-steps },
-        { title:,
-  Basic Configuration', href: '/docs/basic-config }
-      ]
-=======
-        {
-          title: 'Introduction to Zion Tech Group',
-          href: '/docs/introduction',
-        },
-        { title: 'Account Setup', href: '/docs/account-setup' },
-        { title: 'First Steps', href: '/docs/first-steps' },
-        { title: 'Basic Configuration', href: '/docs/basic-config' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
     },
     {
       icon: Code,
@@ -61,23 +16,7 @@ const Documentation: NextPage = () => {
   API Reference',
       description: 'Complete API documentation and examples,
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-        { title:,
-  Authentication', href: '/docs/api/auth },
-        { title:,
-  Endpoints', href: '/docs/api/endpoints },
-        { title:,
-  SDKs', href: '/docs/api/sdks },
-        { title:,
-  Rate Limits', href: '/docs/api/rate-limits }
-      ]
-=======
-        { title: 'Authentication', href: '/docs/api/auth' },
-        { title: 'Endpoints', href: '/docs/api/endpoints' },
-        { title: 'SDKs', href: '/docs/api/sdks' },
-        { title: 'Rate Limits', href: '/docs/api/rate-limits' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
     },
     {
       icon: Database,
@@ -86,24 +25,7 @@ const Documentation: NextPage = () => {
       description: Data handling, storage, and processing guides,
   ,
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-        { title:
-  'Data Models, href:,
-  /docs/data/models' },
-        { title: 'Data Import/Export, href:,
-  /docs/data/import-export' },
-        { title: 'Data Security, href:,
-  /docs/data/security' },
-        { title: 'Backup & Recovery, href:
-  '/docs/data/backup' }
-      ]
-=======
-        { title: 'Data Models', href: '/docs/data/models' },
-        { title: 'Data Import/Export', href: '/docs/data/import-export' },
-        { title: 'Data Security', href: '/docs/data/security' },
-        { title: 'Backup & Recovery', href: '/docs/data/backup' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
     },
     {
       icon: Cloud,
@@ -111,23 +33,7 @@ const Documentation: NextPage = () => {
   Cloud Services',
       description: 'Cloud infrastructure and deployment guides,
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-        { title:,
-  Cloud Setup', href: '/docs/cloud/setup },
-        { title:,
-  Deployment', href: '/docs/cloud/deployment },
-        { title:,
-  Scaling', href: '/docs/cloud/scaling },
-        { title:,
-  Monitoring', href: '/docs/cloud/monitoring }
-      ]
-=======
-        { title: 'Cloud Setup', href: '/docs/cloud/setup' },
-        { title: 'Deployment', href: '/docs/cloud/deployment' },
-        { title: 'Scaling', href: '/docs/cloud/scaling' },
-        { title: 'Monitoring', href: '/docs/cloud/monitoring' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
     },
     {
       icon: Shield,
@@ -135,23 +41,7 @@ const Documentation: NextPage = () => {
   Security',
       description: 'Security best practices and implementation,
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-        { title:,
-  Security Overview', href: '/docs/security/overview },
-        { title:,
-  Authentication', href: '/docs/security/auth },
-        { title:,
-  Authorization', href: '/docs/security/authorization },
-        { title:,
-  Compliance', href: '/docs/security/compliance }
-      ]
-=======
-        { title: 'Security Overview', href: '/docs/security/overview' },
-        { title: 'Authentication', href: '/docs/security/auth' },
-        { title: 'Authorization', href: '/docs/security/authorization' },
-        { title: 'Compliance', href: '/docs/security/compliance' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
     },
     {
       icon: Zap,
@@ -159,46 +49,7 @@ const Documentation: NextPage = () => {
   Advanced Features',
       description: 'Advanced functionality and customization,
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-        { title:,
-  Custom Integrations', href: '/docs/advanced/integrations },
-        { title:,
-  Workflow Automation', href: '/docs/advanced/automation },
-        { title:,
-  Performance Optimization', href: '/docs/advanced/performance },
-        { title:,
-  Troubleshooting', href: '/docs/advanced/troubleshooting }
-      ]
-    }
-  ];
-
-  const quickLinks = [
-    { title:,
-  API Playground', href: '/api-playground, icon: Code },
-    { title:,
-  Status Page', href: '/status, icon: Zap },
-    { title:,
-  Support', href: '/help, icon: Book },
-    { title:,
-  Community', href: '/community, icon: ExternalLink }
-=======
-        { title: 'Custom Integrations', href: '/docs/advanced/integrations' },
-        { title: 'Workflow Automation', href: '/docs/advanced/automation' },
-        {
-          title: 'Performance Optimization',
-          href: '/docs/advanced/performance',
-        },
-        { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' },
-      ],
-    },
-  ];
-
-  const quickLinks = [
-    { title: 'API Playground', href: '/api-playground', icon: Code },
-    { title: 'Status Page', href: '/status', icon: Zap },
-    { title: 'Support', href: '/help', icon: Book },
-    { title: 'Community', href: '/community', icon: ExternalLink },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
   ];
 
   return (
@@ -422,13 +273,7 @@ const Documentation: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-              Can
-  't find what you're looking for? Our support team is here to help.
-=======
-              Can&apos;t find what you&apos;re looking for? Our support team is
-              here to help.
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
             </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link

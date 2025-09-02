@@ -1,26 +1,4 @@
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-import { 
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
   Calendar,
   Clock,
   Users,
@@ -47,14 +25,7 @@ import {
   CheckCircle,
   Download,
   Bookmark,
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
-  ExternalLink
-} from
-  'lucide-react';
-=======
-  ExternalLink,
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
 
 const Webinars: React.FC = () => {
   const webinars = [
@@ -286,44 +257,13 @@ const Webinars: React.FC = () => {
                         className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30"
                       >
                         <Play className="w-6 h-6 mr-2" />
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
-                        {featuredWebinar.status ===,
-  upcoming' ?
-  'Register Now': 'Watch Recording}
-=======
-                        {featuredWebinar.status === 'upcoming'
-                          ? 'Register Now'
-                          : 'Watch Recording'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                       </Button>
                     </div>
                   </div>
                   <div className="p-8">
                     <div className="flex items-center mb-4">
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
-                      <Badge variant="outline" className="mr-3">{featuredWebinar.category}</Badge>
-                      <Badge variant={featuredWebinar.status ===,
-  upcoming' ?
-  'default': 'secondary} className="text-xs">
-                        {featuredWebinar.status ===,
-  upcoming' ?
-  'Upcoming': 'Recorded}
-=======
-                      <Badge variant="outline" className="mr-3">
-                        {featuredWebinar.category}
-                      </Badge>
-                      <Badge
-                        variant={
-                          featuredWebinar.status === 'upcoming'
-                            ? 'default'
-                            : 'secondary'
-                        }
-                        className="text-xs"
-                      >
-                        {featuredWebinar.status === 'upcoming'
-                          ? 'Upcoming'
-                          : 'Recorded'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                       </Badge>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -369,15 +309,7 @@ const Webinars: React.FC = () => {
                         {featuredWebinar.time}
                       </div>
                       <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
-                        {featuredWebinar.status ===,
-  upcoming' ?
-  'Register Now': 'Watch Recording}
-=======
-                        {featuredWebinar.status === 'upcoming'
-                          ? 'Register Now'
-                          : 'Watch Recording'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
@@ -422,134 +354,7 @@ const Webinars: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
-                  {webinars.filter(webinar => !webinar.featured).map((webinar, index) => (
-                    <motion.div
-                      key={webinar.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.1 * index }}
-                    >
-                      <Card className="overflow-hidden h-full">
-                        <div className="relative h-48">
-                          <img 
-                            src={webinar.image} 
-                            alt={webinar.title}
-                            className="w-full h-full object-cover"
-                          />
-                          <div className="absolute top-4 left-4">
-                            <Badge variant="outline">{webinar.category}</Badge>
-                          </div>
-                          <div className="absolute top-4 right-4">
-                            <Badge variant={webinar.status ===,
-  upcoming' ?
-  'default': 'secondary} className="text-xs">
-                              {webinar.status ===,
-  upcoming' ?
-  'Upcoming': 'Recorded}
-                            </Badge>
-                          </div>
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30">
-                              <Play className="w-4 h-4 mr-2" />
-                              {webinar.status ===,
-  upcoming' ?
-  'Register': 'Watch}
-                            </Button>
-                          </div>
-                        </div>
-                        <div className="p-6">
-                          <h3 className="text-xl font-bold text-white mb-3">{webinar.title}</h3>
-                          <p className="text-gray-300 mb-4 text-sm">{webinar.description}</p>
-                          
-                          <div className="flex items-center mb-4 text-sm text-gray-400">
-                            <Users className="w-4 h-4 mr-2" />
-                            {webinar.speaker}
-                            <Calendar className="w-4 h-4 ml-4 mr-2" />
-                            {new Date(webinar.date).toLocaleDateString()}
-                            <Clock className="w-4 h-4 ml-4 mr-2" />
-                            {webinar.time}
-                          </div>
-                          
-                          <div className="grid grid-cols-2 gap-4 mb-4">
-                            <div className="text-center">
-                              <div className="text-lg font-bold text-green-400">{webinar.attendees.toLocaleString()}</div>
-                              <div className="text-xs text-gray-400">Attendees</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-lg font-bold text-blue-400">{webinar.rating}/5</div>
-                              <div className="text-xs text-gray-400">Rating</div>
-                            </div>
-                          </div>
-                          
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {webinar.tags.slice(0, 3).map((tag, tagIndex) => (
-                              <Badge key={tagIndex} variant="secondary" className="text-xs">
-                                <Tag className="w-3 h-3 mr-1" />
-                                {tag}
-                              </Badge>
-                            ))}
-                          </div>
-                          
-                          <div className="flex items-center justify-between">
-                            <Button variant="outline" size="sm">
-                              <Eye className="w-4 h-4 mr-2" />
-                              View Details
-                            </Button>
-                            <div className="flex gap-2">
-                              <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-                                {webinar.status ===,
-  upcoming' ?
-  'Register': 'Watch}
-                              </Button>
-                              <Button variant="outline" size="sm">
-                                <Share2 className="w-4 h-4" />
-=======
-                  {webinars
-                    .filter(webinar => !webinar.featured)
-                    .map((webinar, index) => (
-                      <motion.div
-                        key={webinar.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 * index }}
-                      >
-                        <Card className="overflow-hidden h-full">
-                          <div className="relative h-48">
-                            <img
-                              src={webinar.image}
-                              alt={webinar.title}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-4 left-4">
-                              <Badge variant="outline">
-                                {webinar.category}
-                              </Badge>
-                            </div>
-                            <div className="absolute top-4 right-4">
-                              <Badge
-                                variant={
-                                  webinar.status === 'upcoming'
-                                    ? 'default'
-                                    : 'secondary'
-                                }
-                                className="text-xs"
-                              >
-                                {webinar.status === 'upcoming'
-                                  ? 'Upcoming'
-                                  : 'Recorded'}
-                              </Badge>
-                            </div>
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <Button
-                                size="sm"
-                                className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30"
-                              >
-                                <Play className="w-4 h-4 mr-2" />
-                                {webinar.status === 'upcoming'
-                                  ? 'Register'
-                                  : 'Watch'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                               </Button>
                             </div>
                           </div>
@@ -647,15 +452,7 @@ const Webinars: React.FC = () => {
                       <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
-                          category.active 
-                            ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
-=======
-                          category.active
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                            : 'text-gray-300 hover:bg-slate-700'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         }`}
                       >
                         <span>{category.name}</span>

@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { cn } from '../../src/lib/utils';
-
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
-=======
-import React from 'react';'import { cn } from '../../src/lib/utils';''const Card = React.forwardRef<;'
-  HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-'rounded-lg border bg-card text-card-foreground shadow-sm', className'    )}'    {...props}
-  />
-));
-Card.displayName = 'Card';''const CardHeader = React.forwardRef<;
-  HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}

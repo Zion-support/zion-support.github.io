@@ -13,9 +13,9 @@ import {}
 const AIAutonomousBusinessManager = () => {}
   return()
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"{/* Hero Section */}""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}""
@@ -46,9 +46,9 @@ const AIAutonomousBusinessManager = () => {}
               </Link>"
               <Link""
                 to="/case-studies""
-<<<<<<< HEAD
+
                 className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-=======
+
                 className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
               </div>
             </div>""
@@ -79,9 +79,9 @@ const AIAutonomousBusinessManager = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -90,9 +90,9 @@ const AIAutonomousBusinessManager = () => {}
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
             Autonomous Business Management Features"</h2>""
-=======
+
             Autonomous Business Management Features"
             Autonomous Business Management Features;
           </h2>""
@@ -101,9 +101,9 @@ const AIAutonomousBusinessManager = () => {}
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">""
               <div className="p-3 bg-blue-600/20 rounded-lg w-fit mb-4">""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
                 <CogIcon className="h-8 w-8 text-blue-400" />"</div>""
-=======
+
                 <CogIcon className="h-8 w-8 text-blue-400" />"
                 <CogIcon className="h-8 w-8 text-blue-400" />
               </div>""
@@ -121,9 +121,9 @@ const AIAutonomousBusinessManager = () => {}
                 <ChartBarIcon className="h-8 w-8 text-green-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Performance Analytics"</h3>""
-=======
+
                 Performance Analytics"
             </div>
 ""
@@ -144,9 +144,9 @@ const AIAutonomousBusinessManager = () => {}
 ""
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">""
               <div className="p-3 bg-purple-600/20 rounded-lg w-fit mb-4">""
-<<<<<<< HEAD
+
                 <ShieldCheckIcon className="h-8 w-8 text-purple-400" />"</div>""
-=======
+
                 <ShieldCheckIcon className="h-8 w-8 text-purple-400" />"
             </div>
 ""
@@ -168,9 +168,9 @@ const AIAutonomousBusinessManager = () => {}
                 <RocketLaunchIcon className="h-8 w-8 text-orange-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Scalability Management"</h3>""
-=======
+
                 Scalability Management"
             </div>
 ""
@@ -191,9 +191,9 @@ const AIAutonomousBusinessManager = () => {}
 ""
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">""
               <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">""
-<<<<<<< HEAD
+
                 <UserGroupIcon className="h-8 w-8 text-cyan-400" />"</div>""
-=======
+
                 <UserGroupIcon className="h-8 w-8 text-cyan-400" />"
             </div>
 ""
@@ -215,9 +215,9 @@ const AIAutonomousBusinessManager = () => {}
                 <CogIcon className="h-8 w-8 text-pink-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Learning & Adaptation"</h3>""
-=======
+
                 Learning & Adaptation"
             </div>
 ""
@@ -238,9 +238,9 @@ const AIAutonomousBusinessManager = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
 "{/* How It Works Section */}""
-=======
+
 "
 
       {/* How It Works Section */}""
@@ -249,9 +249,9 @@ const AIAutonomousBusinessManager = () => {}
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
             How It Works"</h2>""
-=======
+
             How It Works"
             How It Works;
           </h2>""
@@ -260,9 +260,9 @@ const AIAutonomousBusinessManager = () => {}
             <div className="text-center">""
               <div className="bg-blue-600/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
                 <span className="text-2xl font-bold text-blue-400">1</span>"</div>""
-=======
+
                 <span className="text-2xl font-bold text-blue-400">1</span>"
                 <span className="text-2xl font-bold text-blue-400">1</span>
               </div>""
@@ -276,9 +276,9 @@ const AIAutonomousBusinessManager = () => {}
             </div>""
             <div className="text-center">""
               <div className="bg-green-600/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">""
-<<<<<<< HEAD
+
                 <span className="text-2xl font-bold text-green-400">2</span>"</div>""
-=======
+
                 <span className="text-2xl font-bold text-green-400">2</span>"
               </p>
             </div>""
@@ -299,9 +299,9 @@ const AIAutonomousBusinessManager = () => {}
                 <span className="text-2xl font-bold text-purple-400">3</span>"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Autonomous Operation"</h3>""
-=======
+
                 Autonomous Operation"
               </p>
             </div>""
@@ -322,9 +322,9 @@ const AIAutonomousBusinessManager = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -333,9 +333,9 @@ const AIAutonomousBusinessManager = () => {}
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
             Business Benefits"</h2>""
-=======
+
             Business Benefits"
             Business Benefits;
           </h2>""
@@ -344,9 +344,9 @@ const AIAutonomousBusinessManager = () => {}
             <div className="space-y-6">""
               <div className="flex items-start space-x-4">""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"<svg""
-=======
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"
                 <div className="bg-green-600/20 p-2 rounded-lg">
                   <svg""
@@ -356,9 +356,9 @@ const AIAutonomousBusinessManager = () => {}
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
                     stroke="currentColor"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     stroke="currentColor""
                   >
@@ -374,9 +374,9 @@ const AIAutonomousBusinessManager = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
-<<<<<<< HEAD
+
                     Increased Efficiency"</h4>""
-=======
+
                     Increased Efficiency"
                       d="M5 13l4 4L19 7""
                     />
@@ -395,9 +395,9 @@ const AIAutonomousBusinessManager = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
-<<<<<<< HEAD
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"<svg""
-=======
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"
                 </div>
               </div>""
@@ -410,9 +410,9 @@ const AIAutonomousBusinessManager = () => {}
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
                     stroke="currentColor"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     stroke="currentColor""
                   >
@@ -425,9 +425,9 @@ const AIAutonomousBusinessManager = () => {}
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-<<<<<<< HEAD
+
                 </div>"<div>""
-=======
+
                 </div>"
                       d="M5 13l4 4L19 7""
                     />
@@ -444,9 +444,9 @@ const AIAutonomousBusinessManager = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
-<<<<<<< HEAD
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"<svg""
-=======
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"
                 </div>
               </div>""
@@ -459,9 +459,9 @@ const AIAutonomousBusinessManager = () => {}
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
                     stroke="currentColor"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     stroke="currentColor""
                   >
@@ -474,9 +474,9 @@ const AIAutonomousBusinessManager = () => {}
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-<<<<<<< HEAD
+
                 </div>"<div>""
-=======
+
                 </div>"
                       d="M5 13l4 4L19 7""
                     />
@@ -495,9 +495,9 @@ const AIAutonomousBusinessManager = () => {}
             </div>""
             <div className="space-y-6">""
               <div className="flex items-start space-x-4">""
-<<<<<<< HEAD
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"<svg""
-=======
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"
               </div>
             </div>""
@@ -511,9 +511,9 @@ const AIAutonomousBusinessManager = () => {}
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
                     stroke="currentColor"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     stroke="currentColor""
                   >
@@ -529,9 +529,9 @@ const AIAutonomousBusinessManager = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
-<<<<<<< HEAD
+
                     Data-Driven Decisions"</h4>""
-=======
+
                     Data-Driven Decisions"
                       d="M5 13l4 4L19 7""
                     />
@@ -550,9 +550,9 @@ const AIAutonomousBusinessManager = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
-<<<<<<< HEAD
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"<svg""
-=======
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"
                 </div>
               </div>""
@@ -565,9 +565,9 @@ const AIAutonomousBusinessManager = () => {}
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
                     stroke="currentColor"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     stroke="currentColor""
                   >
@@ -580,9 +580,9 @@ const AIAutonomousBusinessManager = () => {}
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-<<<<<<< HEAD
+
                 </div>"<div>""
-=======
+
                 </div>"
                       d="M5 13l4 4L19 7""
                     />
@@ -599,9 +599,9 @@ const AIAutonomousBusinessManager = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
-<<<<<<< HEAD
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"<svg""
-=======
+
                 <div className="bg-green-600/20 p-2 rounded-lg">"
                 </div>
               </div>""
@@ -614,9 +614,9 @@ const AIAutonomousBusinessManager = () => {}
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
                     stroke="currentColor"
-<<<<<<< HEAD
+
                   >"<path""
-=======
+
                   >"
                     stroke="currentColor""
                   >
@@ -632,9 +632,9 @@ const AIAutonomousBusinessManager = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
-<<<<<<< HEAD
+
                     Competitive Advantage"</h4>""
-=======
+
                     Competitive Advantage"
                       d="M5 13l4 4L19 7""
                     />
@@ -656,9 +656,9 @@ const AIAutonomousBusinessManager = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -683,9 +683,9 @@ const AIAutonomousBusinessManager = () => {}
             </Link>"
             <Link""
               to="/pricing""
-<<<<<<< HEAD
+
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-=======
+
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
             Ready to Transform Your Business?
           </h2>""
@@ -715,9 +715,9 @@ const AIAutonomousBusinessManager = () => {}
 };
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
 export default AIAutonomousBusinessManager;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default AIAutonomousBusinessManager;
 '""

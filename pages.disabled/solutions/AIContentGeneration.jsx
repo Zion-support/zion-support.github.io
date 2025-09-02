@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 import React from
   'react';'
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from
   'lucide-react';
-=======
+
 import React from 'react';'
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
 >>>>>>> pr-10728
@@ -57,9 +57,8 @@ const AIContentGeneration = () => {
             icon: Globe,""
             capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]
 
-<<<<<<< HEAD
     ];"const benefits = [""
-=======
+
     ];"
 const AIContentGeneration = () => {}
     const contentTypes = []
@@ -159,9 +158,9 @@ const AIContentGeneration = () => {}
             duration: "1-2 weeks"
 "
     ];""
-<<<<<<< HEAD
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         "24/7 content creation availability""
     ];
@@ -223,9 +222,9 @@ const AIContentGeneration = () => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#features" className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
                 Explore Features"</a>""
-=======
+
                 Explore Features"
               AI Content Solution;
             </div>""
@@ -250,9 +249,9 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
 "{/* Content Features */}""
-=======
+
 "
 
       {/* Content Features */}""
@@ -262,9 +261,9 @@ const AIContentGeneration = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
               Content Generation Features"</h2>""
-=======
+
               Content Generation Features"
               Content Generation Features;
             </h2>""
@@ -274,9 +273,9 @@ const AIContentGeneration = () => {}
               and formats for comprehensive content creation.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -285,9 +284,9 @@ const AIContentGeneration = () => {}
             {contentFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
                   <feature.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <feature.icon className="w-8 h-8 text-white"/>"
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -305,9 +304,9 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
 "{/* Content Types */}""
-=======
+
 "
 
       {/* Content Types */}""
@@ -317,9 +316,9 @@ const AIContentGeneration = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
               Content Types"</h2>""
-=======
+
               Content Types"
               Content Types;
             </h2>""
@@ -329,9 +328,9 @@ const AIContentGeneration = () => {}
               and communication needs.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -340,9 +339,9 @@ const AIContentGeneration = () => {}
             {contentTypes.map((contentType, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
                   <contentType.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <contentType.icon className="w-8 h-8 text-white"/>"
                   <contentType.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -371,9 +370,9 @@ const AIContentGeneration = () => {}
               </h2>""
               <p className="text-lg text-gray-300 mb-6">
                 Our AI content generation platform revolutionizes how you create,
-<<<<<<< HEAD
+
                 manage, and distribute content across all channels."</p>""
-=======
+
                 manage, and distribute content across all channels."
 
       {/* Benefits Section */}""
@@ -395,9 +394,9 @@ const AIContentGeneration = () => {}
                     {benefit}
                   </li>))}
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -409,9 +408,9 @@ const AIContentGeneration = () => {}
                 <p className="text-gray-300 mb-6">
 :pages.disabled/solutions/AIContentGeneration.jsx
                   Leverage AI to create engaging, high-quality content that
-<<<<<<< HEAD
+
                   resonates with your audience and drives results."</p>""
-=======
+
                   resonates with your audience and drives results."
                   Leverage AI to create engaging, high-quality content that;
                   resonates with your audience and drives results.
@@ -428,9 +427,9 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
 "{/* Implementation Process */}""
-=======
+
 "
 
       {/* Implementation Process */}""
@@ -439,9 +438,9 @@ const AIContentGeneration = () => {}
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
             Implementation Process"</h2>""
-=======
+
             Implementation Process"
             Implementation Process;
           </h2>""
@@ -450,9 +449,9 @@ const AIContentGeneration = () => {}
             A structured approach to implementing AI content generation;
             in your organization.
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
           </p>"""
-=======
+
           </p>"
           </p>
 ""
@@ -461,9 +460,9 @@ const AIContentGeneration = () => {}
             {implementation.map((phase, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
                   {index + 1}"</div>""
-=======
+
                   {index + 1}"
                   {index + 1}
                 </div>""
@@ -476,9 +475,9 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -495,9 +494,9 @@ const AIContentGeneration = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Start Creating"</a>""
-=======
+
               Start Creating"
             Ready to Transform Your Content Creation?
           </h2>""
@@ -521,10 +520,10 @@ const AIContentGeneration = () => {}
 export { AIContentGeneration };
 :pages.disabled/solutions/AIContentGeneration.jsx
 export default AIContentGeneration;'"
-<<<<<<< HEAD
+
 }}}}
   '"'"
-=======
+
 }}}}'"'"
 export default AIContentGeneration;
 }}}}'""

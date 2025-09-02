@@ -10,9 +10,9 @@ const InfrastructureServices = () => {}
           <div className="text-center">""
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
 :pages.disabled/pages/services/Infrastructure.jsx
-<<<<<<< HEAD
+
               IT Infrastructure Solutions"</h1>""
-=======
+
               IT Infrastructure Solutions"
               IT Infrastructure Solutions;
             </h1>""
@@ -22,9 +22,9 @@ const InfrastructureServices = () => {}
             </p>
           </div>
 :pages.disabled/pages/services/Infrastructure.jsx
-<<<<<<< HEAD
+
         </div>"</section>""
-=======
+
         </div>"
         </div>
       </section>""
@@ -51,9 +51,9 @@ const InfrastructureServices = () => {}
             </div>""
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
-<<<<<<< HEAD
+
                 Data Centers"</h3>""
-=======
+
                 Data Centers"
                 Network Design;
               </h3>""
@@ -87,9 +87,9 @@ const InfrastructureServices = () => {}
           <h2 className="text-3xl font-bold mb-6">Build Your Foundation</h2>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
+
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-=======
+
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
         </div>
       </section>""
@@ -111,9 +111,9 @@ const InfrastructureServices = () => {}
 export { InfrastructureServices };
 :pages.disabled/pages/services/Infrastructure.jsx
 export default InfrastructureServices;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default InfrastructureServices;
 '""

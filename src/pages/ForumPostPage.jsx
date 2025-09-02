@@ -1,2 +1,2 @@
-import React from 'react'; export default function ForumPostPage () {
-}
+ export default function ForumPostPage () {;,"});,"})
+}"});,"})

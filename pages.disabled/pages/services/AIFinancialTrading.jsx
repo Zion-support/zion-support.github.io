@@ -114,7 +114,7 @@ export default function AIFinancialTrading() {
   '
       cta: 'Start Free Trial,
       popular: true},
-<<<<<<< HEAD
+
     {,
   name: 'Institutional,
 ,
@@ -132,7 +132,7 @@ export default function AIFinancialTrading() {
   ',Advanced compliance',
       ],
   'cta: 'Contact Sales,
-=======
+
     {
 '
       name: 'Institutional','
@@ -306,8 +306,6 @@ export default function AIFinancialTrading() {}
   'Derivatives trading with advanced hedging and speculation strategies},
     {
 
-<<<<<<< HEAD
-=======
       icon: Monitor,'
       title: 'Bonds & Fixed Income','
       description:''
@@ -384,10 +382,10 @@ export default function AIFinancialTrading() {}
   '},
   ];
   return()
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">"{/* Hero Section */}""
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">
       {/* Hero Section */}""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">""
@@ -399,10 +397,10 @@ export default function AIFinancialTrading() {}
             AI-Powered Financial Technology
           </div>"
 ""
-<<<<<<< HEAD
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">'"AI Financial{
   '}""
-=======
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">'"
             AI-Powered Financial Technology;
           </div>
@@ -414,9 +412,9 @@ export default function AIFinancialTrading() {}
               Trading;
             </span>
 :pages.disabled/pages/services/AIFinancialTrading.jsx
-<<<<<<< HEAD
+
           </h1>"""
-=======
+
           </h1>"
           </h1>
 ""
@@ -437,9 +435,9 @@ export default function AIFinancialTrading() {}
             </Link>"
             <Link""
               to="/request-demo""
-<<<<<<< HEAD
+
               className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-=======
+
               className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200"
           </p>
 ""
@@ -460,9 +458,9 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialTrading.jsx
-<<<<<<< HEAD
+
 "{/* Key Stats */}""
-=======
+
 "
 
         {/* Key Stats */}""
@@ -479,9 +477,9 @@ export default function AIFinancialTrading() {}
           </div>""
           <div className="text-center">""
             <div className="text-3xl font-bold text-purple-400 mb-2">μs</div>""
-<<<<<<< HEAD
+
             <div className="text-gray-400">Execution Speed</div>"</div>""
-=======
+
             <div className="text-gray-400">Execution Speed</div>"
             <div className="text-gray-400">Higher Returns</div>
           </div>""
@@ -509,9 +507,9 @@ export default function AIFinancialTrading() {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, idx) => (
-<<<<<<< HEAD
+
               <div"key={idx}""
-=======
+
               <div"
 
         {/* Features Grid */}""
@@ -532,9 +530,9 @@ export default function AIFinancialTrading() {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -557,9 +555,9 @@ export default function AIFinancialTrading() {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tradingInstruments.map((instrument, idx) => (
-<<<<<<< HEAD
+
               <div"key={idx}""
-=======
+
               <div"
 
         {/* Trading Instruments Section */}""
@@ -580,9 +578,9 @@ export default function AIFinancialTrading() {}
                   <instrument.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {instrument.title}"</h3>""
-=======
+
                   {instrument.title}"
                   <instrument.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -601,9 +599,9 @@ export default function AIFinancialTrading() {}
         <div className="mb-16">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing Plans
-<<<<<<< HEAD
+
           </h2>"""
-=======
+
           </h2>"
 
         {/* Pricing Section */}""
@@ -618,7 +616,7 @@ export default function AIFinancialTrading() {}
               <div;
                 key={idx}
 :pages.disabled/pages/services/AIFinancialTrading.jsx
-<<<<<<< HEAD
+
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${,
   plan.popular''
                     ?
@@ -626,7 +624,7 @@ export default function AIFinancialTrading() {}
   '`: 'border-gray-700``
                 }`}
               >"{plan.popular && (""
-=======
+
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
 '
                   plan.popular''
@@ -663,9 +661,9 @@ export default function AIFinancialTrading() {}
 ""
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIdx) => (
-<<<<<<< HEAD
+
                     <li"key={featureIdx}""
-=======
+
                     <li"
                 )}
 ""
@@ -698,9 +696,9 @@ export default function AIFinancialTrading() {}
                   {plan.popular ? (""
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white block">
                       {plan.cta}
-<<<<<<< HEAD
+
                     </span>") : (""
-=======
+
                     </span>"
                 </ul>
 ""
@@ -721,9 +719,9 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialTrading.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
         {/* Benefits Section */}""
@@ -736,9 +734,9 @@ export default function AIFinancialTrading() {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, idx) => (
-<<<<<<< HEAD
+
               <div"key={idx}""
-=======
+
               <div"
           </h2>
 ""
@@ -754,9 +752,9 @@ export default function AIFinancialTrading() {}
                   <benefit.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -770,9 +768,9 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialTrading.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -796,9 +794,9 @@ export default function AIFinancialTrading() {}
               </Link>"
               <Link""
                 to="/request-demo""
-<<<<<<< HEAD
+
                 className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-=======
+
                 className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               Ready to Transform Your Trading?
             </h2>""

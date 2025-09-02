@@ -8,9 +8,9 @@ import {}
   'lucide-react.ts';
 
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
-<<<<<<< HEAD
+
 export default function GDPRDSARPortal(...args: any[]): any {return()
-=======
+
 export default function GDPRDSARPortal(...args: any[]): any {
 
 export default function GDPRDSARPortal(...args: any[]): any {}
@@ -22,9 +22,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
           <div className="max-w-3xl">""
             <h1 className="text-3xl sm:text-5xl font-bold flex items-center gap-3">""
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
-<<<<<<< HEAD
+
               <Shield className="w-8 h-8 text-cyan-400"  /> GDPR/CCPA DSAR Portal"</h1>""
-=======
+
               <Shield className="w-8 h-8 text-cyan-400"  /> GDPR/CCPA DSAR Portal"
               <Shield className="w-8 h-8 text-cyan-400"  /> GDPR/CCPA DSAR Portal;
             </h1>""
@@ -58,9 +58,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
                   desc:
   'PDF/CSV exports with auto‑redaction.'},
               ].map(f => (
-<<<<<<< HEAD
+
                 <div"key={f.title}""
-=======
+
                 <div"
             </p>
 ""
@@ -101,9 +101,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               plus usage. Market comps: OneTrust/Transcend tiers.
             </div>"
 ""
-<<<<<<< HEAD
+
             <div className="mt-4 flex gap-4 text-sm">"<a""
-=======
+
             <div className="mt-4 flex gap-4 text-sm">"
                     <CheckCircle className="w-4 h-4"  /> {f.title}
                   </div>"                  <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
@@ -127,9 +127,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               >""
                 OneTrust pricing <ExternalLink className="w-3 h-3"  />
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
               </a>
               <a""
@@ -149,9 +149,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
                 className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500"
               >
                 Request a demo
-<<<<<<< HEAD
+
               </Link>"<a""
-=======
+
               </Link>"
             </div>
 ""
@@ -169,9 +169,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               >""
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
                 <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
                 <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
               </a>
@@ -184,9 +184,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
                 <Phone className="w-4 h-4"  /> +1 302 464 0950
               </a>
             </div>
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
                 <Phone className="w-4 h-4"  /> +1 302 464 0950;
               </a>
@@ -198,9 +198,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
             <div className="text-sm text-slate-300">
               Looking for our existing DSAR implementation page?
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
-<<<<<<< HEAD
+
             </div>"<Link""
-=======
+
             </div>"
             </div>
             <Link""
@@ -209,9 +209,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               className="mt-3 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
             >""
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
-<<<<<<< HEAD
+
               Go to DSAR Portal <ExternalLink className="w-3 h-3"  />"</Link>"            <div className="mt-6 text-xs text-slate-400">
-=======
+
               Go to DSAR Portal <ExternalLink className="w-3 h-3"  />"
               Go to DSAR Portal <ExternalLink className="w-3 h-3"  />
             </Link>"            <div className="mt-6 text-xs text-slate-400">
@@ -224,9 +224,9 @@ export default function GDPRDSARPortal(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

@@ -73,14 +73,9 @@ import {}
   Sun} from
   'lucide-react';
 
-<<<<<<< HEAD
 :pages.disabled/pages/services/SpaceTech.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
 
-  
-  
-  
 :pages.disabled/pages/services/SpaceTech.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -92,9 +87,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -108,7 +103,7 @@ import {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Space""
-<<<<<<< HEAD
+
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
   '{' 
   '}
@@ -116,7 +111,7 @@ import {}
               </span>
 :pages.disabled/pages/services/SpaceTech.tsx
             </h1>"""
-=======
+
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
               <Rocket className="w-4 h-4 mr-2"  />              Space Technology Solutions;
             </div>
@@ -136,9 +131,9 @@ import {}
               Pioneer the future with our cutting-edge space technology;
               solutions that enable satellite operations, space communications,
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
               and Earth observation."</p>""
-=======
+
               and Earth observation."
               and Earth observation.
             </p>""
@@ -150,9 +145,9 @@ import {}
                 Launch Space Project"
               </button>""
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">""
-<<<<<<< HEAD
+
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Demo</button>
-=======
+
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Demo
                 Launch Space Project;
               </button>""
@@ -165,9 +160,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -177,9 +172,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -188,9 +183,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
               Advanced Space Technology Features"</h2>""
-=======
+
               Advanced Space Technology Features"
               Advanced Space Technology Features;
             </h2>""
@@ -207,9 +202,9 @@ import {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -228,9 +223,9 @@ import {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -245,9 +240,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
 "{/* Services Section */}""
-=======
+
 "
 
       {/* Services Section */}""
@@ -257,9 +252,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -268,9 +263,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
               Core Space Technology Services"</h2>""
-=======
+
               Core Space Technology Services"
               Core Space Technology Services;
             </h2>""
@@ -287,9 +282,9 @@ import {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
@@ -310,9 +305,9 @@ import {}
                   </div>"
                   <div>""
                     <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                       {service.title}"</h3>""
-=======
+
                       {service.title}"
                   </div>
                   <div>""
@@ -329,9 +324,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -341,9 +336,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -352,9 +347,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
               Space Technology Benefits"</h2>""
-=======
+
               Space Technology Benefits"
               Space Technology Benefits;
             </h2>""
@@ -372,9 +367,9 @@ import {}
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
@@ -399,9 +394,9 @@ import {}
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
               ))}
             </div>""
@@ -423,9 +418,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -435,9 +430,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -446,9 +441,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
               Industry Applications"</h2>""
-=======
+
               Industry Applications"
               Industry Applications;
             </h2>""
@@ -465,9 +460,9 @@ import {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -483,9 +478,9 @@ import {}
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
                   <Target className="w-8 h-8 text-white"  />"</div>""
-=======
+
                   <Target className="w-8 h-8 text-white"  />"
                   <Target className="w-8 h-8 text-white"  />
                 </div>""
@@ -512,9 +507,9 @@ import {}
                 Space technology provides unprecedented opportunities to
                 explore, monitor, and understand our world and beyond."
               </p>""
-<<<<<<< HEAD
+
               <ul className="space-y-3">"{benefits.map((benefit, index) => (""
-=======
+
               <ul className="space-y-3">"
 
       {/* Benefits Section */}""
@@ -538,9 +533,9 @@ import {}
                   </li>
                 ))}
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -553,9 +548,9 @@ import {}
                   Space Innovation"
                 </h3>"                <p className="text-gray-300 mb-6">
                   Our team has deep expertise in space technology and is
-<<<<<<< HEAD
+
                   committed to advancing the frontiers of exploration."</p>""
-=======
+
                   committed to advancing the frontiers of exploration."
                   Space Innovation;
                 </h3>"                <p className="text-gray-300 mb-6">
@@ -574,9 +569,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/SpaceTech.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -599,9 +594,9 @@ import {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">"
                 Get Started Today""
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"</button>"              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-=======
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"
             transition={{ duration: 0.8 }}
           >""
@@ -629,9 +624,9 @@ import {}
 ;
 :pages.disabled/pages/services/SpaceTech.tsx
 export { SpaceTech };export default SpaceTech;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export { SpaceTech };export default SpaceTech;
 '""

@@ -28,7 +28,7 @@ module.exports = {
     // Error Monitor - runs every 10 minutes
     {
       name: 'error-monitor',
-      script: './scripts/error-monitor.js',
+      script: './scripts/error-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -52,7 +52,7 @@ module.exports = {
     // Health Checker - runs every 5 minutes
     {
       name: 'health-checker',
-      script: './scripts/health-checker.js',
+      script: './scripts/health-checker.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -76,7 +76,7 @@ module.exports = {
     // Auto Fixer - runs every 2 hours
     {
       name: 'auto-fixer',
-      script: './scripts/auto-fixer.js',
+      script: './scripts/auto-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,

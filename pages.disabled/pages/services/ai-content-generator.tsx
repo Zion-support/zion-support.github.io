@@ -18,9 +18,9 @@ export default function AIContentGenerator(...args: any[]): any {}
         title="AI Content Generator - Zion Tech Group""
         description="Revolutionary AI-powered content creation that writes, optimizes, and scales your content strategy. Generate high-quality, SEO-optimized content in minutes."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO""
@@ -36,9 +36,9 @@ export default function AIContentGenerator(...args: any[]): any {}
           <div className="text-center">""
             <div className="max-w-4xl mx-auto mb-12">"              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
 :pages.disabled/pages/services/ai-content-generator.tsx
-<<<<<<< HEAD
+
                 AI Content Generator"</h1>""
-=======
+
                 AI Content Generator"
                 AI Content Generator;
               </h1>""
@@ -53,9 +53,9 @@ export default function AIContentGenerator(...args: any[]): any {}
             <div className="mb-16">"
               <a""
                 href="/contact""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
-=======
+
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
               </p>
             </div>""
@@ -72,9 +72,9 @@ export default function AIContentGenerator(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-content-generator.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -84,9 +84,9 @@ export default function AIContentGenerator(...args: any[]): any {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-content-generator.tsx
-<<<<<<< HEAD
+
               Revolutionary AI Content Generation"</h2>""
-=======
+
               Revolutionary AI Content Generation"
               Revolutionary AI Content Generation;
             </h2>""
@@ -96,9 +96,9 @@ export default function AIContentGenerator(...args: any[]): any {}
               generator;
             </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -110,9 +110,9 @@ export default function AIContentGenerator(...args: any[]): any {}
                 <Brain className="w-8 h-8 text-blue-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Intelligent Content Creation"</h3>"              <p className="text-gray-300">
-=======
+
                 Intelligent Content Creation"
                 <Brain className="w-8 h-8 text-blue-400"  />
               </div>""
@@ -131,9 +131,9 @@ export default function AIContentGenerator(...args: any[]): any {}
                 <Zap className="w-8 h-8 text-green-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 SEO Optimization"</h3>"              <p className="text-gray-300">
-=======
+
                 SEO Optimization"
             </div>
 ""
@@ -156,9 +156,9 @@ export default function AIContentGenerator(...args: any[]): any {}
                 <Users className="w-8 h-8 text-purple-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Audience Targeting"</h3>"              <p className="text-gray-300">
-=======
+
                 Audience Targeting"
             </div>
 ""
@@ -181,9 +181,9 @@ export default function AIContentGenerator(...args: any[]): any {}
                 <TrendingUp className="w-8 h-8 text-yellow-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Performance Analytics"</h3>"              <p className="text-gray-300">
-=======
+
                 Performance Analytics"
             </div>
 ""
@@ -206,9 +206,9 @@ export default function AIContentGenerator(...args: any[]): any {}
                 <Shield className="w-8 h-8 text-red-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Quality Assurance"</h3>"              <p className="text-gray-300">
-=======
+
                 Quality Assurance"
             </div>
 ""
@@ -231,9 +231,9 @@ export default function AIContentGenerator(...args: any[]): any {}
                 <Clock className="w-8 h-8 text-indigo-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Rapid Content Scaling"</h3>"              <p className="text-gray-300">
-=======
+
                 Rapid Content Scaling"
             </div>
 ""
@@ -252,9 +252,9 @@ export default function AIContentGenerator(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-content-generator.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -270,9 +270,9 @@ export default function AIContentGenerator(...args: any[]): any {}
           </p>"
           <a""
             href="/contact""
-<<<<<<< HEAD
+
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
-=======
+
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
             Ready to Transform Your Content Strategy?
           </h2>""
@@ -290,11 +290,11 @@ export default function AIContentGenerator(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/ai-content-generator.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

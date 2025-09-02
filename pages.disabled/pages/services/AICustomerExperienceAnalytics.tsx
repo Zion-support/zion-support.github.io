@@ -25,9 +25,8 @@ import {}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
 const AICustomerExperienceAnalytics: React.FC = props {
 
-<<<<<<< HEAD
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
 const AICustomerExperienceAnalytics: React.FC = props {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,9 +38,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -60,9 +59,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               Transform customer insights into actionable intelligence with
               AI-powered analytics that reveal the true voice of your customers."
             </p>""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Users className="w-8 h-8 text-white"  />              </div>
             </div>""
@@ -81,9 +80,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               >""
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                 <Play className="w-5 h-5 mr-2"  />                Start Free Trial
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Play className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
@@ -93,9 +92,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo</Link>
-=======
+
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo;
               </Link>
@@ -105,9 +104,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
         </div>
       </div>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -117,9 +116,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -128,9 +127,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
               Advanced CX Analytics Features"</h2>""
-=======
+
               Advanced CX Analytics Features"
               Advanced CX Analytics Features;
             </h2>""
@@ -140,9 +139,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               to help you deliver exceptional experiences that drive loyalty and growth.
             </p>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -153,9 +152,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -167,9 +166,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -184,9 +183,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
 "{/* Analytics Capabilities Section */}""
-=======
+
 "
 
       {/* Analytics Capabilities Section */}""
@@ -196,9 +195,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -207,9 +206,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
               Comprehensive Analytics Capabilities"</h2>""
-=======
+
               Comprehensive Analytics Capabilities"
               Comprehensive Analytics Capabilities;
             </h2>""
@@ -225,9 +224,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -243,9 +242,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               >""
                 <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">""
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
                   <BarChart3 className="w-6 h-6 text-white" />"</div>""
-=======
+
                   <BarChart3 className="w-6 h-6 text-white" />"
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>""
@@ -257,9 +256,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -269,9 +268,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -280,9 +279,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
               Transparent Pricing"</h2>""
-=======
+
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
@@ -295,9 +294,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
 ""
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map(tier: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -310,7 +309,7 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,
   tier.popular''
                     ?
@@ -318,7 +317,7 @@ const AICustomerExperienceAnalytics: React.FC = props {}
   '`: 'border-white/10``
                 }`}
               >"{tier.popular && (""
-=======
+
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   tier.popular''
@@ -344,9 +343,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">
-<<<<<<< HEAD
+
                     {tier.name}"</h3>""
-=======
+
                     {tier.name}"
                 )}
 ""
@@ -367,9 +366,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
 ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                       {tier.price}
                     </span>""
@@ -388,7 +387,7 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
+
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx,
   <Link'
   '`
@@ -401,7 +400,7 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600''
   '`
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white``}`}
-=======
+
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
 '
                 <Link''`
@@ -429,9 +428,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -441,9 +440,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -452,9 +451,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
               Why Choose AI Customer Experience Analytics?"</h2>""
-=======
+
               Why Choose AI Customer Experience Analytics?"
               Why Choose AI Customer Experience Analytics?
             </h2>""
@@ -470,9 +469,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -491,9 +490,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -508,9 +507,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -520,9 +519,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -537,9 +536,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               Join leading companies that use AI-powered analytics to deliver
               exceptional customer experiences."
             </p>""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               Ready to Transform Your Customer Experience?
             </h2>""
@@ -555,9 +554,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               >""
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                 <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
@@ -567,9 +566,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo</Link>
-=======
+
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo;
               </Link>
@@ -579,9 +578,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
 "{/* Contact Information */}""
-=======
+
 "
 
       {/* Contact Information */}""
@@ -593,9 +592,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               <Phone className="w-8 h-8 text-purple-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>""
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
               <p className="text-gray-300">+1 302 464 0950</p>"</div>""
-=======
+
               <p className="text-gray-300">+1 302 464 0950</p>"
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>""
@@ -604,9 +603,9 @@ const AICustomerExperienceAnalytics: React.FC = props {}
               <Mail className="w-8 h-8 text-purple-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>""
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-<<<<<<< HEAD
+
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"</div>""
-=======
+
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>""

@@ -28,9 +28,8 @@ import {}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
 const AIDataGovernancePlatform: React.FC = props {
 
-<<<<<<< HEAD
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"
 const AIDataGovernancePlatform: React.FC = props {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -42,9 +41,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -64,9 +63,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               classifies, and protects your sensitive data while ensuring
               compliance with global regulations."
             </p>""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Shield className="w-8 h-8 text-white"  />              </div>
             </div>""
@@ -86,9 +85,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               >""
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                 <Play className="w-5 h-5 mr-2"  />                Start Free Trial
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Play className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
@@ -98,9 +97,9 @@ const AIDataGovernancePlatform: React.FC = props {}
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo</Link>
-=======
+
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo;
               </Link>
@@ -110,9 +109,9 @@ const AIDataGovernancePlatform: React.FC = props {}
         </div>
       </div>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -122,9 +121,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -133,9 +132,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
               Comprehensive Data Governance Features"</h2>""
-=======
+
               Comprehensive Data Governance Features"
               Comprehensive Data Governance Features;
             </h2>""
@@ -152,9 +151,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -173,9 +172,9 @@ const AIDataGovernancePlatform: React.FC = props {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -190,9 +189,9 @@ const AIDataGovernancePlatform: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Compliance Section */}""
-=======
+
 "
 
       {/* Compliance Section */}""
@@ -202,9 +201,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -213,9 +212,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
               Global Compliance Framework Support"</h2>""
-=======
+
               Global Compliance Framework Support"
               Global Compliance Framework Support;
             </h2>""
@@ -232,9 +231,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -250,9 +249,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               >""
                 <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4">""
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
                   <CheckCircle className="w-6 h-6 text-white"  />"</div>"                <p className="text-white font-medium text-sm">{framework}</p>
-=======
+
                   <CheckCircle className="w-6 h-6 text-white"  />"
                   <CheckCircle className="w-6 h-6 text-white"  />
                 </div>"                <p className="text-white font-medium text-sm">{framework}</p>
@@ -263,9 +262,9 @@ const AIDataGovernancePlatform: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -275,9 +274,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -286,9 +285,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
               Transparent Pricing"</h2>""
-=======
+
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
@@ -302,9 +301,9 @@ const AIDataGovernancePlatform: React.FC = props {}
 ""
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map(tier: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -317,7 +316,7 @@ const AIDataGovernancePlatform: React.FC = props {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,
   tier.popular''
                     ?
@@ -325,7 +324,7 @@ const AIDataGovernancePlatform: React.FC = props {}
   '`: 'border-white/10``
                 }`}
               >"{tier.popular && (""
-=======
+
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   tier.popular''
@@ -351,9 +350,9 @@ const AIDataGovernancePlatform: React.FC = props {}
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">
-<<<<<<< HEAD
+
                     {tier.name}"</h3>""
-=======
+
                     {tier.name}"
                 )}
 ""
@@ -374,9 +373,9 @@ const AIDataGovernancePlatform: React.FC = props {}
 ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                       {tier.price}
                     </span>""
@@ -395,7 +394,7 @@ const AIDataGovernancePlatform: React.FC = props {}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
+
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx,
   <Link'
   '`
@@ -408,7 +407,7 @@ const AIDataGovernancePlatform: React.FC = props {}
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover: from-blue-600 hover:to-indigo-600''
   '`
                       : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white``}`}
-=======
+
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
 '
                 <Link''`
@@ -436,9 +435,9 @@ const AIDataGovernancePlatform: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -448,9 +447,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -459,9 +458,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
               Why Choose AI Data Governance Platform?"</h2>""
-=======
+
               Why Choose AI Data Governance Platform?"
               Why Choose AI Data Governance Platform?
             </h2>""
@@ -478,9 +477,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -499,9 +498,9 @@ const AIDataGovernancePlatform: React.FC = props {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -516,9 +515,9 @@ const AIDataGovernancePlatform: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -528,9 +527,9 @@ const AIDataGovernancePlatform: React.FC = props {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -545,9 +544,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               Join organizations worldwide that trust our platform to protect
               their data and ensure compliance."
             </p>""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               Ready to Govern Your Data with AI?
             </h2>""
@@ -563,9 +562,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               >""
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                 <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
@@ -575,9 +574,9 @@ const AIDataGovernancePlatform: React.FC = props {}
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo</Link>
-=======
+
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo;
               </Link>
@@ -587,9 +586,9 @@ const AIDataGovernancePlatform: React.FC = props {}
         </div>
       </section>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Contact Information */}""
-=======
+
 "
 
       {/* Contact Information */}""
@@ -601,9 +600,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               <Phone className="w-8 h-8 text-blue-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>""
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
               <p className="text-gray-300">+1 302 464 0950</p>"</div>""
-=======
+
               <p className="text-gray-300">+1 302 464 0950</p>"
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>""
@@ -612,9 +611,9 @@ const AIDataGovernancePlatform: React.FC = props {}
               <Mail className="w-8 h-8 text-blue-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>""
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
+
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"</div>""
-=======
+
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>""

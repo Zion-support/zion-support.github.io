@@ -1,247 +1,21 @@
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
-import React from
-  'react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../components/layout/MainLayout';
-import { Handshake, Award, Users, Globe, Star, CheckCircle } from
-  'lucide-react';
-import Link from
-  'next/link';
-=======
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {
-  Handshake,
-  Award,
-  Users,
-  Globe,
-  Star,
-  CheckCircle,
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
 
 const Partners: NextPage = () => {
   const partnerTypes = [
     {
       icon: Handshake,
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
-      title:,
-  Strategic Partners',
-      description: 'Long-term partnerships that drive mutual growth and innovation.,
-      benefits: [
-  'Joint product development',
-  'Shared resources',
-  'Market expansion']
-    },
-    {
-      icon: Award,
-      title:,
-  Technology Partners',
-      description: 'Integration partnerships with leading technology providers.,
-      benefits: [
-  'API integrations',
-  'Technical support',
-  'Co-marketing opportunities']
-    },
-    {
-      icon: Users,
-      title:,
-  Channel Partners',
-      description: 'Reseller and distribution partnerships for market reach.,
-      benefits: [
-  'Revenue sharing',
-  'Training programs',
-  'Marketing support']
-    },
-    {
-      icon: Globe,
-      title:,
-  Global Partners',
-      description: 'International partnerships for worldwide market presence.,
-      benefits: [,
-  Local expertise',
-  'Regional support',
-  'Cultural adaptation']
-    }
-=======
-      title: 'Strategic Partners',
-      description:
-        'Long-term partnerships that drive mutual growth and innovation.',
-      benefits: [
-        'Joint product development',
-        'Shared resources',
-        'Market expansion',
-      ],
-    },
-    {
-      icon: Award,
-      title: 'Technology Partners',
-      description:
-        'Integration partnerships with leading technology providers.',
-      benefits: [
-        'API integrations',
-        'Technical support',
-        'Co-marketing opportunities',
-      ],
-    },
-    {
-      icon: Users,
-      title: 'Channel Partners',
-      description: 'Reseller and distribution partnerships for market reach.',
-      benefits: ['Revenue sharing', 'Training programs', 'Marketing support'],
-    },
-    {
-      icon: Globe,
-      title: 'Global Partners',
-      description: 'International partnerships for worldwide market presence.',
-      benefits: ['Local expertise', 'Regional support', 'Cultural adaptation'],
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   ];
 
   const currentPartners = [
     {
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
-      name: 'Microsoft,
-      logo:,
-  /api/placeholder/200/100',
-      description: 'Cloud infrastructure and AI services partnership,
-      category:,
-  Technology Partner'
-    },
-    {
-      name: 'Amazon Web Services,
-      logo:,
-  /api/placeholder/200/100',
-      description: 'Cloud computing and machine learning solutions,
-      category:,
-  Technology Partner'
-    },
-    {
-      name: 'Google Cloud,
-      logo:,
-  /api/placeholder/200/100',
-      description: 'AI and analytics platform integration,
-      category:,
-  Technology Partner'
-    },
-    {
-      name: 'IBM,
-      logo:,
-  /api/placeholder/200/100',
-      description: 'Quantum computing and enterprise solutions,
-      category:,
-  Strategic Partner'
-    },
-    {
-      name: 'Oracle,
-      logo:,
-  /api/placeholder/200/100',
-      description: 'Database and enterprise application integration,
-      category:,
-  Technology Partner'
-    },
-    {
-      name: 'Salesforce,
-      logo:,
-  /api/placeholder/200/100',
-      description: 'CRM and customer experience solutions,
-      category:
-  'Technology Partner'
-    }
-=======
-      name: 'Microsoft',
-      logo: '/api/placeholder/200/100',
-      description: 'Cloud infrastructure and AI services partnership',
-      category: 'Technology Partner',
-    },
-    {
-      name: 'Amazon Web Services',
-      logo: '/api/placeholder/200/100',
-      description: 'Cloud computing and machine learning solutions',
-      category: 'Technology Partner',
-    },
-    {
-      name: 'Google Cloud',
-      logo: '/api/placeholder/200/100',
-      description: 'AI and analytics platform integration',
-      category: 'Technology Partner',
-    },
-    {
-      name: 'IBM',
-      logo: '/api/placeholder/200/100',
-      description: 'Quantum computing and enterprise solutions',
-      category: 'Strategic Partner',
-    },
-    {
-      name: 'Oracle',
-      logo: '/api/placeholder/200/100',
-      description: 'Database and enterprise application integration',
-      category: 'Technology Partner',
-    },
-    {
-      name: 'Salesforce',
-      logo: '/api/placeholder/200/100',
-      description: 'CRM and customer experience solutions',
-      category: 'Technology Partner',
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   ];
 
   const partnershipBenefits = [
     {
       icon: Star,
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
-      title:,
-  Access to Cutting-Edge Technology',
-      description: 'Leverage the latest innovations and technologies from our partners.
-    },
-    {
-      icon: Users,
-      title:,
-  Expanded Market Reach',
-      description: 'Tap into new markets and customer segments through our partner network.
-    },
-    {
-      icon: Award,
-      title:,
-  Enhanced Credibility',
-      description: 'Build trust with customers through our established partner relationships.
-    },
-    {
-      icon: CheckCircle,
-      title:,
-  Comprehensive Support',
-      description: 'Access to expert support and resources from our partner ecosystem.
-    }
-=======
-      title: 'Access to Cutting-Edge Technology',
-      description:
-        'Leverage the latest innovations and technologies from our partners.',
-    },
-    {
-      icon: Users,
-      title: 'Expanded Market Reach',
-      description:
-        'Tap into new markets and customer segments through our partner network.',
-    },
-    {
-      icon: Award,
-      title: 'Enhanced Credibility',
-      description:
-        'Build trust with customers through our established partner relationships.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'Comprehensive Support',
-      description:
-        'Access to expert support and resources from our partner ecosystem.',
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   ];
 
   return (
@@ -310,13 +84,7 @@ const Partners: NextPage = () => {
                 Our Current Partners
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
-                We
-  're proud to work with industry leaders and innovative companies across the globe.
-=======
-                We&apos;re proud to work with industry leaders and innovative
-                companies across the globe.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
               </p>
             </div>
 

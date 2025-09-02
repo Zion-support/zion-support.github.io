@@ -18,9 +18,9 @@ export default function AICustomerSupport(...args: any[]): any {}
         title="AI Customer Support - Zion Tech Group""
         description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO""
@@ -36,9 +36,9 @@ export default function AICustomerSupport(...args: any[]): any {}
           <div className="text-center">""
             <div className="max-w-4xl mx-auto mb-12">"              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
 :pages.disabled/pages/services/ai-customer-support.tsx
-<<<<<<< HEAD
+
                 AI Customer Support"</h1>""
-=======
+
                 AI Customer Support"
                 AI Customer Support;
               </h1>""
@@ -53,9 +53,9 @@ export default function AICustomerSupport(...args: any[]): any {}
             <div className="mb-16">"
               <a""
                 href="/contact""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
-=======
+
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
               </p>
             </div>""
@@ -72,9 +72,9 @@ export default function AICustomerSupport(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-customer-support.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -84,9 +84,9 @@ export default function AICustomerSupport(...args: any[]): any {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-customer-support.tsx
-<<<<<<< HEAD
+
               Revolutionary AI-Powered Support"</h2>""
-=======
+
               Revolutionary AI-Powered Support"
               Revolutionary AI-Powered Support;
             </h2>""
@@ -95,9 +95,9 @@ export default function AICustomerSupport(...args: any[]): any {}
               Transform your customer support with our advanced AI automation;
             </p>
 :pages.disabled/pages/services/ai-customer-support.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -109,9 +109,9 @@ export default function AICustomerSupport(...args: any[]): any {}
                 <Bot className="w-8 h-8 text-blue-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Intelligent Chatbots"</h3>"              <p className="text-gray-300">
-=======
+
                 Intelligent Chatbots"
                 <Bot className="w-8 h-8 text-blue-400"  />
               </div>""
@@ -130,9 +130,9 @@ export default function AICustomerSupport(...args: any[]): any {}
                 <Clock className="w-8 h-8 text-green-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 24/7 Availability"</h3>"              <p className="text-gray-300">
-=======
+
                 24/7 Availability"
             </div>
 ""
@@ -155,9 +155,9 @@ export default function AICustomerSupport(...args: any[]): any {}
                 <Brain className="w-8 h-8 text-purple-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Smart Issue Resolution"</h3>"              <p className="text-gray-300">
-=======
+
                 Smart Issue Resolution"
             </div>
 ""
@@ -180,9 +180,9 @@ export default function AICustomerSupport(...args: any[]): any {}
                 <Users className="w-8 h-8 text-yellow-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Personalized Support"</h3>"              <p className="text-gray-300">
-=======
+
                 Personalized Support"
             </div>
 ""
@@ -204,9 +204,9 @@ export default function AICustomerSupport(...args: any[]): any {}
                 <TrendingUp className="w-8 h-8 text-red-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Performance Analytics"</h3>"              <p className="text-gray-300">
-=======
+
                 Performance Analytics"
             </div>
 ""
@@ -229,9 +229,9 @@ export default function AICustomerSupport(...args: any[]): any {}
                 <Shield className="w-8 h-8 text-indigo-400"  />"
               </div>""
               <h3 className="text-xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Secure & Compliant"</h3>"              <p className="text-gray-300">
-=======
+
                 Secure & Compliant"
             </div>
 ""
@@ -251,9 +251,9 @@ export default function AICustomerSupport(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-customer-support.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -269,9 +269,9 @@ export default function AICustomerSupport(...args: any[]): any {}
           </p>"
           <a""
             href="/contact""
-<<<<<<< HEAD
+
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
-=======
+
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
             Ready to Transform Your Customer Support?
           </h2>""
@@ -289,11 +289,11 @@ export default function AICustomerSupport(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/ai-customer-support.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}
