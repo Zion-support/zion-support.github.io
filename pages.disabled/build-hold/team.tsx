@@ -1,55 +1,48 @@
 React from;
   'react';
 import { motion } from;
-  'framer-motion';{ SEO } from;
+  'framer-motion'{ SEO } from;
   '../components/SEO';
 import { Button } from;
-  '../components/ui/Button';{ Card } from;
+  '../components/ui/Button'{ Card } from;
   '../components/ui/Card';
 import { Badge } from;
-  '../components/ui/Badge';import { '  Linkedin, Twitter,;
-  Mail, Globe,;
-  Award, Star,;
-  Users, Brain,;
-  Shield, Cloud,;
-  Database, Network,;
-  Zap, Target,;
-  TrendingUp, Phone,;
-  MapPin, Calendar,;
-  GraduationCap, Briefcase,;
-  Heart, Sparkles,;
-  CheckCircle, ArrowRight;
-} from;
-  'lucide-react'';const Team: React.FC = () => {;
-  const teamMembers = [;
-    {;
-      id: 1, name: 'Dr. Sarah Johnson','      title: 'Chief Executive Officer', bio: 'Visionary leader with 15+ years of experience in AI and technology innovation. Former VP of Engineering at leading tech companies.','      image: '/api/placeholder/300/300', expertise: ['AI Strategy', 'Leadership', 'Innovation'], education: 'PhD in Computer Science, MIT', experience: '15+ years','      linkedin: 'https://linkedin.com/in/sarahjohnson', twitter: 'https://twitter.com/sarahjohnson','      email: 'sarah@ziontechgroup.com', featured: true'    },'    {;
-      id: 2, name: 'Michael Chen','      title: 'Chief Technology Officer', bio: 'Technology architect with expertise in AI, cloud computing, and scalable systems. Led development teams at Fortune 500 companies.','      image: '/api/placeholder/300/300', expertise: ['AI Architecture', 'Cloud Computing', 'System Design'], education: 'MS in Computer Science, Stanford', experience: '12+ years','      linkedin: 'https://linkedin.com/in/michaelchen', twitter: 'https://twitter.com/michaelchen','      email: 'michael@ziontechgroup.com', featured: true'    },'    {;
-      id: 3, name: 'Emily Rodriguez','      title: 'Chief AI Officer', bio: 'AI research scientist and machine learning expert. Published author with 50+ research papers in top-tier conferences.','      image: '/api/placeholder/300/300', expertise: ['Machine Learning', 'Research', 'AI Ethics'], education: 'PhD in AI, Carnegie Mellon', experience: '10+ years','      linkedin: 'https://linkedin.com/in/emilyrodriguez', twitter: 'https://twitter.com/emilyrodriguez','      email: 'emily@ziontechgroup.com', featured: true'    },'    {;
-      id: 4, name: 'David Kim','      title: 'Head of Data Science', bio: 'Data science leader with expertise in big data analytics and predictive modeling. Former data scientist at Google and Amazon.','      image: '/api/placeholder/300/300', expertise: ['Data Science', 'Analytics', 'Predictive Modeling'], education: 'PhD in Statistics, UC Berkeley', experience: '8+ years','      linkedin: 'https://linkedin.com/in/davidkim', twitter: 'https://twitter.com/davidkim','      email: 'david@ziontechgroup.com', featured: false'    },'    {;
-      id: 5, name: 'Lisa Wang','      title: 'Head of Product', bio: 'Product strategist with a focus on AI-powered solutions. Led product development for multiple successful AI startups.','      image: '/api/placeholder/300/300', expertise: ['Product Strategy', 'AI Products', 'User Experience'], education: 'MBA, Harvard Business School', experience: '9+ years','      linkedin: 'https://linkedin.com/in/lisawang', twitter: 'https://twitter.com/lisawang','      email: 'lisa@ziontechgroup.com', featured: false'    },'    {;
-      id: 6, name: 'James Wilson','      title: 'Head of Engineering', bio: 'Engineering leader with expertise in scalable systems and AI infrastructure. Former senior engineer at Netflix and Uber.','      image: '/api/placeholder/300/300', expertise: ['Engineering', 'Infrastructure', 'Scalability'], education: 'MS in Software Engineering, CMU', experience: '11+ years','      linkedin: 'https://linkedin.com/in/jameswilson', twitter: 'https://twitter.com/jameswilson','      email: 'james@ziontechgroup.com', featured: false'    },'    {;
-      id: 7, name: 'Maria Garcia','      title: 'Head of Cybersecurity', bio: 'Cybersecurity expert with focus on AI security and threat intelligence. Former security architect at major financial institutions.','      image: '/api/placeholder/300/300', expertise: ['Cybersecurity', 'AI Security', 'Threat Intelligence'], education: 'MS in Cybersecurity, Georgia Tech', experience: '7+ years','      linkedin: 'https://linkedin.com/in/mariagarcia', twitter: 'https://twitter.com/mariagarcia','      email: 'maria@ziontechgroup.com', featured: false'    },'    {;
+  '../components/ui/Badge';import { '  Linkedin, Twitter,
+  Mail, Globe,
+  Award, Star,
+  Users, Brain,
+  Shield, Cloud,
+  Database, Network,
+  Zap, Target,
+  TrendingUp, Phone,
+  MapPin, Calendar,
+  GraduationCap, Briefcase,
+  Heart, Sparkles,
+  CheckCircle, ArrowRight} from;
+  'lucide-react'';const Team: React.FC = () => {
+  const teamMembers = [{
+      id: 1, name: 'Dr. Sarah Johnson','      title: 'Chief Executive Officer', bio: 'Visionary leader with 15+ years of experience in AI and technology innovation. Former VP of Engineering at leading tech companies.','      image: '/api/placeholder/300/300', expertise: ['AI Strategy', 'Leadership', 'Innovation'], education: 'PhD in Computer Science, MIT', experience: '15+ years','      linkedin: 'https://linkedin.com/in/sarahjohnson', twitter: 'https://twitter.com/sarahjohnson','      email: 'sarah@ziontechgroup.com', featured: true'    },'    {
+      id: 2, name: 'Michael Chen','      title: 'Chief Technology Officer', bio: 'Technology architect with expertise in AI, cloud computing, and scalable systems. Led development teams at Fortune 500 companies.','      image: '/api/placeholder/300/300', expertise: ['AI Architecture', 'Cloud Computing', 'System Design'], education: 'MS in Computer Science, Stanford', experience: '12+ years','      linkedin: 'https://linkedin.com/in/michaelchen', twitter: 'https://twitter.com/michaelchen','      email: 'michael@ziontechgroup.com', featured: true'    },'    {
+      id: 3, name: 'Emily Rodriguez','      title: 'Chief AI Officer', bio: 'AI research scientist and machine learning expert. Published author with 50+ research papers in top-tier conferences.','      image: '/api/placeholder/300/300', expertise: ['Machine Learning', 'Research', 'AI Ethics'], education: 'PhD in AI, Carnegie Mellon', experience: '10+ years','      linkedin: 'https://linkedin.com/in/emilyrodriguez', twitter: 'https://twitter.com/emilyrodriguez','      email: 'emily@ziontechgroup.com', featured: true'    },'    {
+      id: 4, name: 'David Kim','      title: 'Head of Data Science', bio: 'Data science leader with expertise in big data analytics and predictive modeling. Former data scientist at Google and Amazon.','      image: '/api/placeholder/300/300', expertise: ['Data Science', 'Analytics', 'Predictive Modeling'], education: 'PhD in Statistics, UC Berkeley', experience: '8+ years','      linkedin: 'https://linkedin.com/in/davidkim', twitter: 'https://twitter.com/davidkim','      email: 'david@ziontechgroup.com', featured: false'    },'    {
+      id: 5, name: 'Lisa Wang','      title: 'Head of Product', bio: 'Product strategist with a focus on AI-powered solutions. Led product development for multiple successful AI startups.','      image: '/api/placeholder/300/300', expertise: ['Product Strategy', 'AI Products', 'User Experience'], education: 'MBA, Harvard Business School', experience: '9+ years','      linkedin: 'https://linkedin.com/in/lisawang', twitter: 'https://twitter.com/lisawang','      email: 'lisa@ziontechgroup.com', featured: false'    },'    {
+      id: 6, name: 'James Wilson','      title: 'Head of Engineering', bio: 'Engineering leader with expertise in scalable systems and AI infrastructure. Former senior engineer at Netflix and Uber.','      image: '/api/placeholder/300/300', expertise: ['Engineering', 'Infrastructure', 'Scalability'], education: 'MS in Software Engineering, CMU', experience: '11+ years','      linkedin: 'https://linkedin.com/in/jameswilson', twitter: 'https://twitter.com/jameswilson','      email: 'james@ziontechgroup.com', featured: false'    },'    {
+      id: 7, name: 'Maria Garcia','      title: 'Head of Cybersecurity', bio: 'Cybersecurity expert with focus on AI security and threat intelligence. Former security architect at major financial institutions.','      image: '/api/placeholder/300/300', expertise: ['Cybersecurity', 'AI Security', 'Threat Intelligence'], education: 'MS in Cybersecurity, Georgia Tech', experience: '7+ years','      linkedin: 'https://linkedin.com/in/mariagarcia', twitter: 'https://twitter.com/mariagarcia','      email: 'maria@ziontechgroup.com', featured: false'    },'    {
       id: 8, name: 'Alex Thompson','      title: 'Head of Cloud Solutions', bio: 'Cloud architecture expert with certifications in AWS, Azure, and GCP. Led cloud migration projects for enterprise clients.','      image: '/api/placeholder/300/300', expertise: ['Cloud Architecture', 'Migration', 'DevOps'], education: 'BS in Computer Science, UT Austin', experience: '6+ years','      linkedin: 'https://linkedin.com/in/alexthompson', twitter: 'https://twitter.com/alexthompson','      email: 'alex@ziontechgroup.com', featured: false'    }'  ];
-;
   const leadership = teamMembers.filter(member => member.featured);
   const otherMembers = teamMembers.filter(member => !member.featured);
-;
-  const companyStats = [;
-    { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },'    { label: 'PhD Holders', value: '15+', icon: GraduationCap }, { label: 'Research Papers Published', value: '100+', icon: Star }'  ]';
+  const companyStats = [{ label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },'    { label: 'PhD Holders', value: '15+', icon: GraduationCap }, { label: 'Research Papers Published', value: '100+', icon: Star }'  ]';
   const values = [
-    {;
-      title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology', ,;
-  '      icon: Brain    },;
-    {;
-      title: 'Client Success', description: 'Our success is measured by the success of our clients','      icon: Target'    }, {;
-      title: 'Ethical AI','      description: 'We develop AI solutions that are fair, transparent, and beneficial', icon: Shield'    },'    {;
+    {
+      title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology', ,
+  '      icon: Brain    },
+    {
+      title: 'Client Success', description: 'Our success is measured by the success of our clients','      icon: Target'    }, {
+      title: 'Ethical AI','      description: 'We develop AI solutions that are fair, transparent, and beneficial', icon: Shield'    },'    {
       title: 'Continuous Learning', description: 'We stay at the forefront of technology through constant learning','      icon: TrendingUp'    }
-  ];
-;
-  return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='Our Team - Zion Tech Group' '        description='Meet the talented team of AI experts, engineers, and innovators behind Zion Tech Group. Learn about our leadership and company culture.''      />';
-      {/* Hero Section */}
+  ]
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='Our Team - Zion Tech Group' '        description='Meet the talented team of AI experts, engineers, and innovators behind Zion Tech Group. Learn about our leadership and company culture.''      />'{/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>'        <div className='max-w-7xl mx-auto text-center'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -64,7 +57,7 @@ import { Badge } from;
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50'>'        <div className='max-w-7xl mx-auto'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='grid grid-cols-1 md:grid-cols-4 gap-8''          >'            {companyStats.map((stat, index) => (;
+            className='grid grid-cols-1 md:grid-cols-4 gap-8''          >'            {companyStats.map((stat, index) => (
               <motion.div;
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -86,8 +79,8 @@ import { Badge } from;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >;
-                <Card className='p-8 text-center h-full'>'                  <div className='relative mb-6'>'                    <img '                      src={member.image} ;
+              >
+                <Card className='p-8 text-center h-full'>'                  <div className='relative mb-6'>'                    <img '                      src={member.image}
                       alt={member.name}
                       className='w-32 h-32 rounded-full mx-auto object-cover''                    />'                    <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2'>'                      <Badge className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                        Leadership'                      </Badge>
                     </div>
@@ -119,8 +112,8 @@ import { Badge } from;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >;
-                <Card className='p-6 text-center h-full'>'                  <div className='relative mb-4'>'                    <img '                      src={member.image} ;
+              >
+                <Card className='p-6 text-center h-full'>'                  <div className='relative mb-4'>'                    <img '                      src={member.image}
                       alt={member.name}
                       className='w-24 h-24 rounded-full mx-auto object-cover''                    />'                  </div>
                   <h3 className='text-xl font-bold text-white mb-1'>{member.name}</h3>'                  <div className='text-blue-400 font-semibold mb-3 text-sm'>{member.title}</div>'                  '                  <p className='text-gray-300 mb-4 text-sm'>{member.bio}</p>'                  '                  <div className='mb-4'>'                    <div className='flex flex-wrap gap-1 justify-center'>'                      {member.expertise.map((skill, skillIndex) => ('                        <Badge key={skillIndex} variant='secondary' className='text-xs'>'                          {skill}'                        </Badge>
@@ -146,7 +139,7 @@ import { Badge } from;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >;
+              >
                 <Card className='p-6 text-center h-full'>'                  <div className='p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-4'>'                    <value.icon className='w-8 h-8 text-blue-400' />'                  </div>'                  <h3 className='text-xl font-bold text-white mb-3'>{value.title}</h3>'                  <p className='text-gray-300 text-sm'>{value.description}</p>'                </Card>'              </motion.div>
             ))}
           </div>
@@ -158,7 +151,7 @@ import { Badge } from;
             transition={{ duration: 0.6 }}
           >
             <h2 className='text-4xl font-bold text-white mb-6'>'              Join Our Team'            </h2>
-            <p className='text-xl text-gray-300 mb-8'>'              We&apos;re always looking for talented individuals who share our passion for AI and innovation. ''              Join us in building the future of technology.'            </p>
+            <p className='text-xl text-gray-300 mb-8'>'              We&aposre always looking for talented individuals who share our passion for AI and innovation. ''              Join us in building the future of technology.'            </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>'              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                <Briefcase className='w-5 h-5 mr-2' />'                View Open Positions'              </Button>
               <Button size='lg' variant='outline'>'                <Mail className='w-5 h-5 mr-2' />'                Contact HR Team'              </Button>
             </div>
@@ -166,7 +159,6 @@ import { Badge } from;
         </div>
       </section>
     </div>
-  );
-};
+  )}
 ;
-export default Team;
+export default Team

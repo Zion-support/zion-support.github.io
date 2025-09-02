@@ -1,100 +1,99 @@
-React from,;
+React from,
   react';
 import type { NextPage } from;
   'next';MainLayout from;
   '../components/layout/MainLayout';
 import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   'lucide-react';import Link from;
-  'next/link'';const Whitepapers: NextPage = () => {;
+  'next/link'';const Whitepapers: NextPage = () => {
   const whitepapers = [
-    {;
-      id: 'ai-business-transformation, title:,;
-  AI-Powered Business Transformation: A Comprehensive Guide,'      description:,;
-  Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.', author: 'Dr. Sarah Johnson,;
-,;
+    {
+      id: 'ai-business-transformation, title:,
+  AI-Powered Business Transformation: A Comprehensive Guide,'      description:,
+  Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.', author: 'Dr. Sarah Johnson,
+,
   date: '2024-01-20, category: 'Artificial Intelligence;
   ','      pages: 45, downloads:;
-  '12.5k',;
-  '      rating: 4.8, featured: true,'      topics: [,;
-  Machine Learning',;
-  'Business Strategy',;
-  'Digital Transformation',;
+  '12.5k',
+  '      rating: 4.8, featured: true,'      topics: [,
+  Machine Learning',
+  'Business Strategy',
+  'Digital Transformation',
   'ROI Analysis'];
-  '    }, {'      id: 'cloud-migration-strategies,;
-,;
-  title: 'Cloud Migration Strategies for Enterprise Success, description:,;
+  '    }, {'      id: 'cloud-migration-strategies,
+,
+  title: 'Cloud Migration Strategies for Enterprise Success, description:,
   Best practices and proven strategies for successful cloud migration in enterprise environments.;
-  ','      author: 'Michael Chen, date:,;
-  2024-01-15',;
+  ','      author: 'Michael Chen, date:,
+  2024-01-15',
   '      category: 'Cloud Computing, pages: 32,'      downloads:;
-  '8.2k', rating: 4.7,;
-  '      featured: true, topics: [,;
+  '8.2k', rating: 4.7,
+  '      featured: true, topics: [,
   Cloud Architecture;
   ', 'Migration Planning;
   ', 'Cost Optimization;
   ', 'Security;
-  ']'    }, {;
-  '      id: 'cybersecurity-framework,'      title:,;
-  Modern Cybersecurity Framework for Digital Businesses', description: 'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity.,;
-,;
-  author: 'David Rodriguez, date:,;
+  ']'    }, {
+  '      id: 'cybersecurity-framework,'      title:,
+  Modern Cybersecurity Framework for Digital Businesses', description: 'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity.,
+,
+  author: 'David Rodriguez, date:,
   2024-01-10;
-  ','      category: 'Cybersecurity, pages: 38,;
-,;
+  ','      category: 'Cybersecurity, pages: 38,
+,
   downloads: '6.8k, rating: 4.9,'      featured: false, topics: [,
-  Threat Detection',;
-  'Risk Management',;
-  'Compliance',;
+  Threat Detection',
+  'Risk Management',
+  'Compliance',
   'Incident Response'];
-  '    }, {'      id: 'microservices-architecture,;
-,;
-  title: 'Microservices Architecture: Design Patterns and Best Practices, description:,;
+  '    }, {'      id: 'microservices-architecture,
+,
+  title: 'Microservices Architecture: Design Patterns and Best Practices, description:,
   Complete guide to designing and implementing microservices architecture for scalable applications.;
-  ','      author: 'Emily Watson, date:,;
-  2024-01-05',;
+  ','      author: 'Emily Watson, date:,
+  2024-01-05',
   '      category: 'Software Architecture, pages: 52,'      downloads:;
-  '5.4k', rating: 4.6,;
-  '      featured: false, topics: [,;
+  '5.4k', rating: 4.6,
+  '      featured: false, topics: [,
   Service Design;
   ', 'API Management;
   ', 'Scalability;
   ', 'DevOps;
-  ']'    }, {;
-  '      id: 'data-analytics-insights,'      title:,;
-  Data Analytics for Business Intelligence: From Insights to Action, description:,;
-  How to leverage data analytics to drive informed business decisions and competitive advantage.',;
-  '      author: 'Alex Thompson, date:,;
+  ']'    }, {
+  '      id: 'data-analytics-insights,'      title:,
+  Data Analytics for Business Intelligence: From Insights to Action, description:,
+  How to leverage data analytics to drive informed business decisions and competitive advantage.',
+  '      author: 'Alex Thompson, date:,
   2023-12-28;
-  ','      category: 'Data Analytics, pages: 41,;
-,;
+  ','      category: 'Data Analytics, pages: 41,
+,
   downloads: '4.9k, rating: 4.7,'      featured: false, topics: [,
-  Business Intelligence',;
-  'Data Visualization',;
-  'Predictive Analytics',;
+  Business Intelligence',
+  'Data Visualization',
+  'Predictive Analytics',
   'KPIs'];
-  '    }, {'      id: 'mobile-app-development,;
-,;
-  title: 'Mobile App Development: Native vs Cross-Platform Strategies, description:,;
+  '    }, {'      id: 'mobile-app-development,
+,
+  title: 'Mobile App Development: Native vs Cross-Platform Strategies, description:,
   Comprehensive comparison of mobile development approaches and their impact on business outcomes.;
-  ','      author: 'Lisa Park, date:,;
-  2023-12-20',;
+  ','      author: 'Lisa Park, date:,
+  2023-12-20',
   '      category: 'Mobile Development, pages: 28,'      downloads:;
-  '3.7k', rating: 4.5,;
+  '3.7k', rating: 4.5,
   '      featured: false, topics: ['React Native;
   ', 'Flutter;
   ', 'Performance;
   ', 'User Experience;
   ']'    }
   '  ];
-;
   const categories = ['All;
   ', 'Artificial Intelligence;
   ', 'Cloud Computing;
   ', 'Cybersecurity;
   ', 'Software Architecture;
   ', 'Data Analytics;
-  ', 'Mobile Development;
-  ']'  return (;
+  ', 'Mobile Development
+  ']'  return(
     <MainLayout;
       title='Whitepapers - Zion Tech Group''      description='Download our comprehensive whitepapers and research reports on technology trends and best practices.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Whitepapers</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            In-depth research and insights on technology trends, best practices, and industry innovations.'          </p>
@@ -132,7 +131,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
                 <div className='p-6'>'                  <div className='flex items-center space-x-4 mb-3'>'                    <span className='bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs font-semibold'>'                      {paper.category}'                    </span>
                     <span className='text-gray-500 text-sm'>{paper.pages} pages</span>'                  </div>'                  <h3 className='text-xl font-bold text-gray-900 mb-3'>{paper.title}</h3>'                  <p className='text-gray-600 mb-4'>{paper.description}</p>'                  '                  <div className='mb-4'>'                    <div className='flex flex-wrap gap-1'>'                      {paper.topics.slice(0, 3).map((topic, index) => ('                        <span key={index} className='bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs'>'                          {topic}'                        </span>
                       ))}
-                      {paper.topics.length > 3 && (;
+                      {paper.topics.length > 3 && (
                         <span className='text-gray-500 text-xs'>+{paper.topics.length - 3} more</span>'                      )}'                    </div>
                   </div>
                   <div className='flex items-center justify-between mb-4'>'                    <div className='flex items-center space-x-4 text-sm text-gray-500'>'                      <div className='flex items-center space-x-1'>'                        <User className='w-3 h-3' />'                        <span>{paper.author}</span>'                      </div>
@@ -141,7 +140,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
                     <div className='flex items-center text-yellow-500'>'                      <span className='text-sm font-semibold'>{paper.rating}</span>'                    </div>'                  </div>
                   <div className='flex items-center justify-between'>'                    <button className='flex items-center bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors'>'                      <Download className='w-4 h-4 mr-2' />'                      Download'                    </button>
                     <Link;
-                      href={`/whitepapers/${paper.id}`}`                      className='flex items-center text-blue-600 hover:text-blue-700 font-semibold''                    >'                      Preview;
+                      href={`/whitepapers/${paper.id}`}`                      className='flex items-center text-blue-600 hover:text-blue-700 font-semibold''                    >'                      Preview
                       <ArrowRight className='w-4 h-4 ml-1' />'                    </Link>'                  </div>
                 </div>
               </div>
@@ -157,7 +156,6 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default Whitepapers;
+export default Whitepapers

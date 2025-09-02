@@ -11,16 +11,13 @@ const withBundleAnalyzer = (nextConfig = {}) => {
             openAnalyzer: false,
             reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',
           })
-        );
-      }
+        )}
       
       if (nextConfig.webpack) {
-        return nextConfig.webpack(config, { dev, isServer });
-      }
+        return nextConfig.webpack(config, { dev, isServer })}
       
-      return config;
-    },
-  };
-};
+      return config},
+  }
+}
 
 module.exports = withBundleAnalyzer;

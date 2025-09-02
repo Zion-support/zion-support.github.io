@@ -1,5 +1,5 @@
 describe (
-  'BlogPost', () => {}'; it ('renders without crashing
+  'BlogPost', () => {}' it ('renders without crashing
   ', () => {} render (<BlogPost />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<BlogPost />) ''

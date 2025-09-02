@@ -1,4 +1,4 @@
-import React from,;
+import React from,
   react';
 import Head from;
   'next/head';
@@ -72,16 +72,14 @@ import { real2027Q3Additions } from;
   '../../data/real-2027-q3-additions';
 import { real2027Q4Additions } from;
   '../../data/real-2027-q4-additions';
-;
 type Service = typeof ultimateInnovativeServices2026[number];
 const contactInfo = {
-	mobile: '+1 302 464 0950,;
-	email:,;
-  kleber@ziontechgroup.com',;
-	address: '364 E Main St STE 1008 Middletown DE 19709,;
-	website:,;
-  https: //ziontechgroup.com;
-};
+	mobile: '+1 302 464 0950,
+	email:,
+  kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709,
+	website:,
+  https: //ziontechgroup.com}
 ;
 return enhancedRealMicroSaasServices;
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[]);
@@ -112,54 +110,44 @@ return enhancedRealMicroSaasServices;
 		.concat(real2027Q1Additions as unknown as Service[]);
 		.concat(real2027Q2Additions as unknown as Service[]);
 		.concat(real2027Q3Additions as unknown as Service[]);
-		.concat(real2027Q4Additions as unknown as Service[]);
-}
-;
-return value.toLowerCase().replace(/[^a-z0-9]+/g,;
+		.concat(real2027Q4Additions as unknown as Service[])}
+return value.toLowerCase().replace(/[^a-z0-9]+/g,
   '-').replace(/(^-|-$)/g, ';
-  ');
-}
-;
-function extractServiceSlugFromLink(link: string): string | null {;
-	try {;
+  ')}
+function extractServiceSlugFromLink(link: string): string | null {
+	try {
 		const url = new URL(link);
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
-		if (path.startsWith(;
-  'services/')) {;
-			return path.substring(;
-  'services/'.length);
-		}
-return path;return null;
-} catch {;
-		return null;
-	}
+		if (path.startsWith(
+  'services/')) {
+			return path.substring(
+  'services/'.length)}
+return path;return null} catch {
+		return null}
 }
-;
 export default function ServiceSlugPage({ params }: { params?: { slug: string } }) {
-	const slug = params?.slug ||,;
+	const slug = params?.slug ||,
   default-service';
-;
 	// Placeholder service data - replace with actual data;
-	const service = {;
-		name: 'Service Name,;
-		tagline:,;
-  Service description and tagline',;
+	const service = {
+		name: 'Service Name,
+		tagline:,
+  Service description and tagline',
 		features: [;
-  'Feature 1,;
-,;
-  Feature 2',;
-  'Feature 3'],;
-		price: '$99/month,;
-		rating:,;
-  4.8',;
-		customers: '100+,;
-		description:,;
-  Detailed service description goes here...',;
-		link: '#;
-	};
+  'Feature 1,
+,
+  Feature 2',
+  'Feature 3'],
+		price: '$99/month,
+		rating:,
+  4.8',
+		customers: '100+,
+		description:,
+  Detailed service description goes here...',
+		link: '#}
 ;
-	return (;
-		<>;
+	return(
+		<>
 			<Head>
 				<title>{service.name} — Zion Tech Group</title>
 				<meta name='description' content={service.tagline} />
@@ -176,10 +164,10 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 						</p>
 						<div className='flex flex-wrap justify-center gap-4'>
 							<a href='/contact' className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'>
-								Get Started;
+								Get Started
 							</a>
 							<a href='/services' className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300'>
-								View All Services;
+								View All Services
 							</a>
 						</div>
 					</section>
@@ -195,7 +183,7 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 									</p>
 									<h3 className='text-xl font-semibold mb-4 text-white'>Key Features</h3>
 									<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-6'>
-										{service.features.map((feature, index) => (;
+										{service.features.map((feature, index) => (
 											<div key={index} className='flex items-center gap-3'>
 												<Check className='w-5 h-5 text-cyan-400 flex-shrink-0' />
 												<span className='text-white/80'>{feature}</span>
@@ -239,9 +227,8 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 									</div>
 									<a
 										href='/contact';
-										className='block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 mt-6';
-									>;
-										Contact Us;
+										className='block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 mt-6'>
+										Contact Us
 									</a>
 								</div>
 								{/* Quick Actions */}
@@ -250,15 +237,13 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 									<div className='space-y-3'>
 										<a
 											href='/case-studies';
-											className='block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300';
-										>;
-											View Case Studies;
+											className='block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300'>
+											View Case Studies
 										</a>
 										<a
 											href='/services';
-											className='block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300';
-										>;
-											Browse Services;
+											className='block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300'>
+											Browse Services
 										</a>
 									</div>
 								</div>
@@ -269,78 +254,65 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 					<section className='text-center'>
 						<h2 className='text-3xl font-bold mb-6 text-white'>Ready to Get Started?</h2>
 						<p className='text-xl text-white/80 mb-8 max-w-2xl mx-auto'>
-							Join hundreds of companies that have already transformed their business with our cutting-edge solutions.;
+							Join hundreds of companies that have already transformed their business with our cutting-edge solutions.
 						</p>
 						<div className='flex flex-wrap justify-center gap-4'>
 							<a
 								href='/contact';
-								className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg';
-							>;
-								Start Your Project;
+								className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg'>
+								Start Your Project
 							</a>
 							<a
 								href='/case-studies';
-								className='px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 text-lg';
-							>;
-								View Case Studies;
+								className='px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 text-lg'>
+								View Case Studies
 							</a>
 						</div>
 					</section>
 				</main>
 			</div>
-		</>);
-}
-export async function getStaticPaths() {;
-	const services = getAllServices();
+		</>)}
+export async function getStaticPaths() {
+	const services = getAllServices()
 	const slugs = new Set<string>();
-;
-	for (const s of services) {;
+	for (const s of services) {
 		// Prefer explicit link under /services/* when available;
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
-		if (fromLink) {;
+		if (fromLink) {
 			slugs.add(fromLink);
-			continue;
-		}
+			continue}
 		// Fall back to normalized id or name to provide a stable URL under /services/*;
 		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
-	}
-;
-	return {;
-		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),;
-		fallback: false;
-	};
+		else if (s.name) slugs.add(toSlug(s.name))}
+	return {
+		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
+		fallback: false}
 const contactInfo = {
-  mobile:,;
-  +1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com,;
-  address:,;
-  364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com;
-};
+  mobile:,
+  +1 302 464 0950',
+  email: 'kleber@ziontechgroup.com,
+  address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com}
 ;
 export async function getStaticPaths() {
   // Return empty paths for now to fix build;
-  return {;
-    paths: [],;
+  return {
+    paths: [],
     fallback:;
-  'blocking';
-  };
+  'blocking'}
 }
-;
-export async function getStaticProps({ params }: { params: { slug: string } }) {;
+export async function getStaticProps({ params }: { params: { slug: string } }) {
   // For now, return mock data to fix build;
-  return {;
-    props: {;
-      service: mockService,;
-      slug: params?.slug ||;
-  'default';
-    }
-  };
+  return {
+    props: {
+      service: mockService,
+      slug: params?.slug ||
+  'default'}
+  }
 }
-;
-export default function ServiceDetailPage({ service, slug }: { service: SimpleService slug: string }) {;
-  return (;
+export default function ServiceDetailPage({ service, slug }: { service: SimpleService slug: string }) {
+  return(
     <Layout>
       <Head>
         <title>{service.name} | Zion Tech Group</title>
@@ -352,10 +324,9 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
         <div className='mb-8'>
           <Link
             href='/services';
-            className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors';
-          >;
+            className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors'>
             <ArrowLeft className='w-4 h-4' />
-            Back to Services;
+            Back to Services
           </Link>
         </div>
 }
@@ -376,7 +347,7 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
             <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>
               <h3 className='text-white text-lg font-semibold mb-4'>Key Features</h3>
               <ul className='space-y-2 text-gray-300'>
-                {service.features.map((feature, index) => (;
+                {service.features.map((feature, index) => (
                   <li key={index} className='flex items-start gap-2'>
                     <Check className='w-4 h-4 mt-0.5 text-emerald-400' />
                     <span>{feature}</span>
@@ -391,7 +362,7 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 <div>
                   <div className='text-sm text-gray-400 mb-2'>Use Cases</div>
                   <ul className='list-disc list-inside space-y-1'>
-                    {service.useCases.map((useCase, index) => (;
+                    {service.useCases.map((useCase, index) => (
                       <li key={index}>{useCase}</li>
                     ))}
                   </ul>
@@ -399,7 +370,7 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 <div>
                   <div className='text-sm text-gray-400 mb-2'>Integrations</div>
                   <div className='flex flex-wrap gap-2'>
-                    {service.integrations.map((integration, index) => (;
+                    {service.integrations.map((integration, index) => (
                       <span key={index} className='px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs'>
                         {integration}
                       </span>
@@ -418,21 +389,19 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 <span className='text-base font-medium text-gray-400'>{service.period}</span>
               </div>
               <div className='text-sm text-gray-400 mt-2'>
-                Contact us for custom pricing and implementation details;
+                Contact us for custom pricing and implementation details
               </div>
               <div className='mt-6 flex gap-3'>
                 <Link
                   href='/contact';
-                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300';
-                >;
-                  Contact Sales;
+                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'>
+                  Contact Sales
                 </Link>
                 <Link
-                  href={service.link} ;
-                  className='flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:border-gray-500 hover:text-white transition-all duration-300';
-                >;
+                  href={service.link}
+                  className='flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:border-gray-500 hover:text-white transition-all duration-300'>
                   <ExternalLink className='w-4 h-4 inline mr-2' />
-                  Learn More;
+                  Learn More
                 </Link>
               </div>
             </div>
@@ -455,12 +424,10 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 <div className='flex items-center gap-2 text-green-400'>
                   <MapPin className='w-4 h-4' />
                   <a
-                    href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} ;
+                    href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
                     target='_blank';
                     rel='noopener noreferrer';
-                    className='text-xs hover:underline';
-                  >;
-                    {contactInfo.address}
+                    className='text-xs hover:underline'>{contactInfo.address}
                   </a>
                 </div>
               </div>
@@ -477,9 +444,8 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 </p>
                 <Link
                   href='/pricing';
-                  className='inline-block mt-2 text-cyan-300 hover:text-cyan-200';
-                >;
-                  View Pricing Plans →;
+                  className='inline-block mt-2 text-cyan-300 hover:text-cyan-200'>
+                  View Pricing Plans →
                 </Link>
               </div>
             </div>
@@ -487,6 +453,4 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
         </div>
       </div>
     </Layout>
-  );
-}
-;
+  )}

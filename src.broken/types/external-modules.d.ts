@@ -11,19 +11,18 @@ declare module '@radix-ui/react-toggle-group';
 declare module '@radix-ui/react-toggle';
 declare module;
   '*.module.css' {
-  const classes: { [key: string]: string };
+  const classes: { [key: string]: string }
   export default classes;
-declare module,;
+declare module,
   @tanstack/react-query';
 declare module;
-  'react-day-picker' {;
-  export interface DateRange {;
+  'react-day-picker' {
+  export interface DateRange {
   from?: Date;
    to?: Date;
    // Minimal placeholder for the DayPicker component used in the app // The actual library provides full typings but we stub them here so the // TypeScript compiler can understand the imports without requiring the real // type definitions. // eslint-disable-next-line @typescript-eslint/no-explicit-any export const DayPicker: any;
   declare module 'sonner';
-   declare module 'lucide-react { import { FC, SVGProps;
-} from;
+   declare module 'lucide-react { import { FC, SVGProps} from;
   'react';
   export interface LucideProps extends SVGProps<SVGSVGElement> {
     color?: string;
@@ -54,14 +53,14 @@ declare module;
   export const Webhook: LucideIcon;
   export const XCircle: LucideIcon;
   export const Zap: LucideIcon;
-  const icons: { [key: string]: LucideIcon };
+  const icons: { [key: string]: LucideIcon }
   export default icons;
-declare module,;
+declare module,
   child_process';
 declare module;
   'date-fns';
 declare module;
-  'jspdf' {;
+  'jspdf' {
 export const jsPDF: any;
   export default jsPDF;declare module;
   '@hookform/resolvers/zod';
@@ -110,11 +109,11 @@ declare module;
 declare module;
   '@supabase/supabase-js';
 declare module;
-  'class-variance-authority' {;
+  'class-variance-authority' {
 export function cva(...inputs: any[]): any;
   export type VariantProps<T extends (...args: any) => any> = any;
 declare module;
-  'clsx' {;
+  'clsx' {
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string;declare module;
   'embla-carousel-react';
@@ -135,23 +134,23 @@ declare module;
   export type FieldPath<TFieldValues extends FieldValues> =;
     keyof TFieldValues & string;
   export type Control<TFieldValues extends FieldValues = FieldValues> =  export interface UseFormReturn<;
-    TFieldValues extends FieldValues = FieldValues,;
-  > {;
+    TFieldValues extends FieldValues = FieldValues,
+  > {
     control: Control<TFieldValues>
 handleSubmit: any;
     register: any;
     formState: any;
     [key: string]: any;
   export function useForm<;
-    TFieldValues extends FieldValues = FieldValues,;
+    TFieldValues extends FieldValues = FieldValues,
   >(options?: any): UseFormReturn<TFieldValues>
   export function useFieldArray<;
-    TFieldValues extends FieldValues = FieldValues,;
+    TFieldValues extends FieldValues = FieldValues,
   >(options: any): any;
   export interface ControllerProps<;
-    TFieldValues extends FieldValues = FieldValues,;
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,;
-  > {;
+    TFieldValues extends FieldValues = FieldValues,
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  > {
     name: TName;
     control?: Control<TFieldValues>
     rules?: any;
@@ -159,13 +158,13 @@ handleSubmit: any;
     render: (props: any) => ReactElement;
   export const Controller: ComponentType<ControllerProps<any, any>>;
   export interface FormProviderProps<;
-    TFieldValues extends FieldValues = FieldValues,;
-  > {;
+    TFieldValues extends FieldValues = FieldValues,
+  > {
     children?: ReactNode;
     [key: string]: any;
   export const FormProvider: ComponentType<FormProviderProps<any>>;
   export function useFormContext<;
-    TFieldValues extends FieldValues = FieldValues,;
+    TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>declare module;
   'react-i18next';
 declare module;
@@ -187,10 +186,9 @@ declare module;
 declare module;
   'recharts';
 declare module;
-  'next' {;
+  'next' {
 export type GetStaticPaths = any;
   export type GetStaticProps<P = any, Q = any> = any;declare module;
   'next-themes';
 declare module;
-  'tailwind-merge';
-}}}}}}}}}}}}}
+  'tailwind-merge'}}}}}}}}}}}}}

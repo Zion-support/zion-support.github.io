@@ -6,33 +6,31 @@ import MainLayout from;
   '../../components/layout/MainLayout';
 import Link from;
   'next/link';
-;
-const AISalesAssistant: NextPage = () => (;
+const AISalesAssistant: NextPage = () => (
   <MainLayout
     title='AI Sales Assistant - Lead Scoring & Outreach Automation';
-    description='Increase pipeline and reply rates with AI lead scoring, personalized sequences, and meeting booking.';
-  >;
+    description='Increase pipeline and reply rates with AI lead scoring, personalized sequences, and meeting booking.'>
     <section className='bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-16'>
       <div className='container mx-auto px-4 max-w-5xl'>
         <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          AI Sales Assistant;
+          AI Sales Assistant
         </h1>
         <p className='text-lg text-gray-200 mb-6'>
           Automatically research prospects, score leads, and generate;
-          context-aware, multi-channel outreach that books more meetings.;
+          context-aware, multi-channel outreach that books more meetings.
         </p>
         <div className='flex flex-wrap gap-3'>
           <span className='px-3 py-1 rounded bg-white/10'>
-            CRM Sync (HubSpot/Salesforce);
+            CRM Sync (HubSpot/Salesforce)
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            AI Personalization;
+            AI Personalization
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            Omnichannel (Email/LinkedIn);
+            Omnichannel (Email/LinkedIn)
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            Meeting Scheduler;
+            Meeting Scheduler
           </span>
         </div>
       </div>
@@ -62,7 +60,7 @@ const AISalesAssistant: NextPage = () => (;
         <div className='p-6 border rounded-lg'>
           <h3 className='text-xl font-semibold mb-2'>Enterprise</h3>
           <p className='text-gray-600 mb-4'>
-            For complex ICPs and strict compliance.;
+            For complex ICPs and strict compliance.
           </p>
           <ul className='text-sm text-gray-700 space-y-2 mb-4'>
             <li>• Custom scoring models</li>
@@ -80,25 +78,22 @@ const AISalesAssistant: NextPage = () => (;
           <li className='p-4 bg-white rounded border'>2-4x reply rate lift</li>
           <li className='p-4 bg-white rounded border'>20-35% more meetings</li>
           <li className='p-4 bg-white rounded border'>
-            1-2 hours saved/day/rep;
+            1-2 hours saved/day/rep
           </li>
         </ul>
         <div className='mt-6 text-sm text-gray-600'>
           Pricing competitive with tools like Apollo, Clay, Outreach, and;
-          Lavender.;
+          Lavender.
         </div>
         <div className='mt-4'>
           <Link
             href='/contact';
-            className='inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg';
-          >;
-            Start a trial;
+            className='inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg'>
+            Start a trial
           </Link>
         </div>
       </div>
     </section>
   </MainLayout>
 );
-;
-export default AISalesAssistant;
-;
+export default AISalesAssistant

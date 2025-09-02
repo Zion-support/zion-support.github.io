@@ -1,59 +1,57 @@
-React from,;
+React from,
   react';
 import type { NextPage } from;
   'next';MainLayout from;
   '../../components/layout/MainLayout';
 import { services, getServicesByCategory } from;
-  '../../data/services';{ ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from;
+  '../../data/services'{ ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from;
   'lucide-react';
 import Link from;
   'next/link';import { motion } from;
-  'framer-motion';const ServicesPage: NextPage = () => {;
+  'framer-motion';const ServicesPage: NextPage = () => {
   '  const microSaasServices = getServicesByCategory('micro-saas;
-  ')'  const itServices = getServicesByCategory(;
-  'it-services')'  const aiServices = getServicesByCategory(;
-  'ai-services')'  const stats = [;
-    { number: '80+, label: 'Micro SaaS Solutions;
-  ', icon: Zap }, { number:,;
+  ')'  const itServices = getServicesByCategory(
+  'it-services')'  const aiServices = getServicesByCategory(
+  'ai-services')'  const stats = [{ number: '80+, label: 'Micro SaaS Solutions;
+  ', icon: Zap }, { number:,
   35+;
-  ', label: 'IT Services, icon: Shield },'    { number:,;
-  30+', label: 'AI Services, icon: Globe }, { number:,;
-  500+', label: 'Projects Completed, icon: TrendingUp },;
-  '  ]';
+  ', label: 'IT Services, icon: Shield },'    { number:,
+  30+', label: 'AI Services, icon: Globe }, { number:,
+  500+', label: 'Projects Completed, icon: TrendingUp },
+  '  ]'
   const benefits = [
-    {;
-      icon: <DollarSign className='w-8 h-8' />, title:,;
-  Competitive Pricing',;
-  '      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.';
-  '    },'    {;
-      icon: <Target className='w-8 h-8' />, title:,;
-  Proven Results',;
-  '      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'    }, {'      icon: <Rocket className='w-8 h-8' />,'      title:,;
-  Fast Implementation', description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.''    }, {;
-  '      icon: <Award className='w-8 h-8' />,'      title:,;
+    {
+      icon: <DollarSign className='w-8 h-8' />, title:,
+  Competitive Pricing',
+  '      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
+  '    },'    {
+      icon: <Target className='w-8 h-8' />, title:,
+  Proven Results',
+  '      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'    }, {'      icon: <Rocket className='w-8 h-8' />,'      title:,
+  Fast Implementation', description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.''    }, {
+  '      icon: <Award className='w-8 h-8' />,'      title:,
   Expert Support;
   ', description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.';
-  '    }'  ];
-;
-  return (;
+  '    }'  ]
+  return(
     <MainLayout;
       title='Our Services - Zion Tech Group''      description='Comprehensive technology solutions including Micro SaaS, IT Services, and AI Services. Transform your business with our innovative solutions.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4'>'          <div className='max-w-4xl mx-auto text-center'>'            <motion.h1 '              className='text-5xl md: text-6xl font-bold mb-6 leading-tight''              initial={{ opacity: 0, y: 30 }}'              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Comprehensive Technology Solutions;
+              Comprehensive Technology Solutions
             </motion.h1>
             <motion.p
               className='text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed''              initial={{ opacity: 0, y: 30 }}'              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >;
-              From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions,;
-              we provide the technology foundation your business needs to thrive in the digital age.;
+            >
+              From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions,
+              we provide the technology foundation your business needs to thrive in the digital age.
             </motion.p>
             <motion.div
               className='flex flex-col sm: flex-row gap-4 justify-center mb-12''              initial={{ opacity: 0, y: 30 }}'              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-            >;
+            >
               <Link href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg'>'                Get Started Today'              </Link>
               <Link href='/solutions' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105'>'                View Solutions'              </Link>
             </motion.div>
@@ -61,16 +59,14 @@ import Link from;
             <motion.div
               className='grid grid-cols-2 md:grid-cols-4 gap-8''              initial={{ opacity: 0, y: 30 }}'              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-            >;
-              {stats.map((stat, index) => {;
-                const IconComponent = stat.icon;
+            >{stats.map((stat, index) => {
+                const IconComponent = stat.icon
                 return (
                   <motion.div
                     key={stat.label}
                     className='text-center group''                    whileHover={{ scale: 1.05 }}'                    transition={{ duration: 0.2 }}
-                  >;
-                    <div className='flex justify-center mb-2'>'                      <IconComponent className='w-8 h-8 text-blue-400 group-hover:text-purple-400 transition-colors' />'                    </div>'                    <div className='text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors'>{stat.number}</div>'                    <div className='text-gray-300'>{stat.label}</div>'                  </motion.div>'                );
-              })}
+                  >
+                    <div className='flex justify-center mb-2'>'                      <IconComponent className='w-8 h-8 text-blue-400 group-hover:text-purple-400 transition-colors' />'                    </div>'                    <div className='text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors'>{stat.number}</div>'                    <div className='text-gray-300'>{stat.label}</div>'                  </motion.div>'                )})}
             </motion.div>
           </div>
         </div>
@@ -87,8 +83,8 @@ import Link from;
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-            >;
-:pages/services/index.tsx;
+            >
+:pages/services/index.tsx
               <div className='text-blue-600 mb-4 group-hover:text-purple-600 transition-colors'>'                <Zap className='w-12 h-12' />'              </div>'              <h3 className='text-2xl font-bold text-gray-900 mb-4'>Micro SaaS Solutions</h3>'              <p className='text-gray-600 mb-6'>'                Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.'              </p>
               <div className='mb-6'>'                <div className='text-sm text-gray-500 mb-2'>Popular Services: </div>'                <ul className='text-sm text-gray-600 space-y-1'>'                  <li>• AI Content Generator Pro</li>'                  <li>• AI Email Responder</li>
                   <li>• Event Management Dashboard</li>
@@ -102,8 +98,8 @@ import Link from;
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-            >;
-:pages/services/index.tsx;
+            >
+:pages/services/index.tsx
               <div className='text-blue-600 mb-4 group-hover:text-purple-600 transition-colors'>'                <Shield className='w-12 h-12' />'              </div>'              <h3 className='text-2xl font-bold text-gray-900 mb-4'>IT Services</h3>'              <p className='text-gray-600 mb-6'>'                Comprehensive IT infrastructure, cloud migration, cybersecurity, and enterprise solutions for modern businesses.'              </p>
               <div className='mb-6'>'                <div className='text-sm text-gray-500 mb-2'>Popular Services: </div>'                <ul className='text-sm text-gray-600 space-y-1'>'                  <li>• Cloud Migration Expert</li>'                  <li>• Edge Computing Solutions</li>
                   <li>• Blockchain Infrastructure</li><li>• Zero Trust Security</li>
@@ -118,8 +114,8 @@ import Link from;
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-            >;
-:pages/services/index.tsx;
+            >
+:pages/services/index.tsx
               <div className='text-blue-600 mb-4 group-hover:text-purple-600 transition-colors'>'                <Globe className='w-12 h-12' />'              </div>'              <h3 className='text-2xl font-bold text-gray-900 mb-4'>AI Services</h3>'              <p className='text-gray-600 mb-6'>'                Cutting-edge artificial intelligence solutions to automate processes, gain insights, and achieve competitive advantages.'              </p>
               <div className='mb-6'>'                <div className='text-sm text-gray-500 mb-2'>Popular Services: </div>'                <ul className='text-sm text-gray-600 space-y-1'>'                  <li>• AI Drug Discovery Platform</li>'                  <li>• AI Climate Modeling</li>
                   <li>• AI Space Exploration</li>
@@ -143,7 +139,7 @@ import Link from;
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-              >;
+              >
                 <div className='flex justify-center mb-4'>'                  <div className='p-4 bg-blue-100 rounded-full group-hover:bg-purple-100 transition-colors'>'                    <div className='text-blue-600 group-hover:text-purple-600 transition-colors'>'                      {benefit.icon}'                    </div>
                   </div>
                 </div>
@@ -173,7 +169,7 @@ import Link from;
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-              >;
+              >
                 <div className='flex items-center mb-4'>'                  <span className='text-2xl mr-3'>{service.icon}</span>'                  <h3 className='text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors'>'                    {service.name}'                  </h3>
                 </div>
                 <p className='text-gray-600 mb-4 text-sm'>{service.description}</p>'                <div className='flex justify-between items-center'>'                  <div className='text-lg font-semibold text-green-600'>'                    From ${service.pricing.starter}/mo'                  </div>
@@ -187,9 +183,9 @@ import Link from;
             className='text-center mt-12''            initial={{ opacity: 0, y: 30 }}'            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-          >;
+          >
             <Link;
-              href='/contact''              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg''            >'              Get Custom Quote;
+              href='/contact''              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg''            >'              Get Custom Quote
             </Link>
           </motion.div>
         </div>
@@ -201,7 +197,7 @@ import Link from;
             viewport={{ once: true }}
           >
             <h2 className='text-4xl font-bold text-white mb-6'>'              Ready to Transform Your Business?'            </h2>
-            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>'              Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.';
+            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>'              Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.'
   '            </p>'            <div className='flex flex-col sm: flex-row justify-center gap-4'>'              <Link href='/contact' className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg'>'                Get Started Today'              </Link>
               <Link href='/about' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105'>'                Learn More About Us"              </Link>
             </div>
@@ -209,7 +205,6 @@ import Link from;
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default ServicesPage;
+export default ServicesPage

@@ -1,19 +1,16 @@
 
 export const formatDate = (date) => {
-  return new Date(date).toLocaleDateString();
-};
+  return new Date(date).toLocaleDateString()}
 
 export const debounce = (func, wait) => {
   let timeout;
   return function executedFunction(...args) {
     const later = () => {
       clearTimeout(timeout);
-      func(...args);
-    };
+      func(...args)}
     clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-};
+    timeout = setTimeout(later, wait)}
+}
 
 export const throttle = (func, limit) => {
   let inThrottle;
@@ -23,7 +20,6 @@ export const throttle = (func, limit) => {
     if (!inThrottle) {
       func.apply(context, args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
-};
+      setTimeout(() => inThrottle = false, limit)}
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from,;
+import React, { useState } from,
   react';
 import Head from;
   'next/head';
@@ -6,81 +6,74 @@ import { motion } from;
   'framer-motion';
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from;
   'lucide-react';
-;
 export default function Revolutionary2025ServicesShowcasePage() {
   // Placeholder data for services;
-  const services = [;
-    {;
-      id: 'ai-solutions,;
-      name:,;
-  AI Solutions',;
-      description: 'Revolutionary artificial intelligence and machine learning services,;
-      features: [,;
-  Custom AI Models',;
-  'Predictive Analytics',;
-  'Natural Language Processing',;
-  'Computer Vision',;
-  'AI Consulting'],;
-      price: 'Custom,;
-      rating: 5,;
-      customers: 50;
-    },;
-    {;
-      id:,;
-  cybersecurity',;
-      name: 'Cybersecurity,;
-      description:,;
-  Next-generation security solutions and threat protection',;
+  const services = [{
+      id: 'ai-solutions,
+      name:,
+  AI Solutions',
+      description: 'Revolutionary artificial intelligence and machine learning services,
+      features: [,
+  Custom AI Models',
+  'Predictive Analytics',
+  'Natural Language Processing',
+  'Computer Vision',
+  'AI Consulting'],
+      price: 'Custom,
+      rating: 5,
+      customers: 50},
+    {
+      id:,
+  cybersecurity',
+      name: 'Cybersecurity,
+      description:,
+  Next-generation security solutions and threat protection',
       features: [;
-  'Threat Detection,;
-,;
-  Zero Trust Architecture',;
-  'Security Audits',;
-  'Incident Response',;
-  'Compliance'],;
-      price: 'Custom,;
-      rating: 5,;
-      customers: 75;
-    },;
-    {;
-      id:,;
-  cloud-devops',;
-      name: 'Cloud & DevOps,;
-      description:,;
-  Scalable cloud infrastructure and automation solutions',;
+  'Threat Detection,
+,
+  Zero Trust Architecture',
+  'Security Audits',
+  'Incident Response',
+  'Compliance'],
+      price: 'Custom,
+      rating: 5,
+      customers: 75},
+    {
+      id:,
+  cloud-devops',
+      name: 'Cloud & DevOps,
+      description:,
+  Scalable cloud infrastructure and automation solutions',
       features: [;
-  'Cloud Migration,;
-,;
-  DevOps Automation',;
-  'Infrastructure as Code',;
-  'Monitoring',;
-  'Scalability'],;
-      price: 'Custom,;
-      rating: 5,;
+  'Cloud Migration,
+,
+  DevOps Automation',
+  'Infrastructure as Code',
+  'Monitoring',
+  'Scalability'],
+      price: 'Custom,
+      rating: 5,
       customers: 60}
-  });
-;
+  })
   // Statistics;
-  const stats = {;
-    totalServices: allRevolutionaryServices.length,;
-    totalCustomers: allRevolutionaryServices.reduce((sum, service) => sum + service.customers, 0),;
-    averageRating: (allRevolutionaryServices.reduce((sum, service) => sum + service.rating, 0) / allRevolutionaryServices.length).toFixed(1),;
-    totalRevenue: allRevolutionaryServices.reduce((sum, service) => {;
-      const price = parseInt(service.price.replace(;
+  const stats = {
+    totalServices: allRevolutionaryServices.length,
+    totalCustomers: allRevolutionaryServices.reduce((sum, service) => sum + service.customers, 0),
+    averageRating: (allRevolutionaryServices.reduce((sum, service) => sum + service.rating, 0) / allRevolutionaryServices.length).toFixed(1),
+    totalRevenue: allRevolutionaryServices.reduce((sum, service) => {
+      const price = parseInt(service.price.replace(
   '$', ';
-  ').replace(',;
+  ').replace(',
   ', ''));
-      return sum + (price * service.customers);
-    }, 0);
-  };
-;
-  return (;
+      return sum + (price * service.customers)}, 0)}
+
+  return(
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className='min-h-screen'>
         <Head>
           <title>Revolutionary 2025 Services Showcase - Zion Tech Group | Cutting-Edge AI & IT Solutions</title>
           <meta name='description' content='Explore Zion Tech Group
-  's revolutionary 2025 services including AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950' />;
+  's revolutionary 2025 services including AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950' />
           <meta name='keywords' content='AI consciousness, quantum computing, zero trust security, edge computing, 5G networks, neuromorphic computing, AI branding, holographic events, mental health AI, creative AI' />
           <meta name='author' content='Zion Tech Group' />
           <meta name='robots' content='index, follow' />
@@ -98,41 +91,41 @@ export default function Revolutionary2025ServicesShowcasePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >;
+            >
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
-                Revolutionary 2025 Services;
+                Revolutionary 2025 Services
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Experience the future of technology with our cutting-edge AI, quantum computing, and IT infrastructure services.;
-                Transform your business with solutions that were once only science fiction.;
+                Transform your business with solutions that were once only science fiction.
               </p>
               {/* Stats Grid */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 }} className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>;
+                  transition={{ duration: 0.6, delay: 0.1 }} className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
                   <div className='text-3xl font-bold text-blue-400'>{stats.totalServices}</div>
                   <div className='text-sm text-gray-400'>Revolutionary Services</div>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }} className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30'>;
+                  transition={{ duration: 0.6, delay: 0.2 }} className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30'>
                   <div className='text-3xl font-bold text-green-400'>{stats.totalCustomers.toLocaleString()}+</div>
                   <div className='text-sm text-gray-400'>Active Customers</div>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }} className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30'>;
+                  transition={{ duration: 0.6, delay: 0.3 }} className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30'>
                   <div className='text-3xl font-bold text-purple-400'>{stats.averageRating}</div>
                   <div className='text-sm text-gray-400'>Average Rating</div>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.4 }} className='bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-6 border border-orange-500/30'>;
+                  transition={{ duration: 0.6, delay: 0.4 }} className='bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-6 border border-orange-500/30'>
                   <div className='text-3xl font-bold text-orange-400'>${(stats.totalRevenue / 1000000).toFixed(1)}M+</div>
                   <div className='text-sm text-gray-400'>Revenue Generated</div>
                 </motion.div>
@@ -156,19 +149,18 @@ export default function Revolutionary2025ServicesShowcasePage() {
             <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8'>
               {/* Category Filter */}
               <div className='flex flex-wrap gap-3'>
-                {serviceCategories.map((category) => (;
+                {serviceCategories.map((category) => (
                   <motion.button;
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${;
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
                       selectedCategory === category.id;
-                        ?,;
-  bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white;
-  ': 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400;
-                    }`}
+                        ?,
+  bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white
+  ': 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400}`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                  >;
+                  >
                     <category.icon className='w-4 h-4' />
                     {category.name}
                     <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
@@ -183,7 +175,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
                   <span className='text-gray-400 text-sm'>Sort by:</span>
                   <select;
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)} className='bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-gray-300 text-sm focus:outline-none focus:border-blue-500'>;
+                    onChange={(e) => setSortBy(e.target.value as any)} className='bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-gray-300 text-sm focus:outline-none focus:border-blue-500'>
                     <option value='popularity'>Popularity</option>
                     <option value='rating'>Rating</option>
                     <option value='price'>Price</option>
@@ -192,27 +184,25 @@ export default function Revolutionary2025ServicesShowcasePage() {
                 </div>
                 <div className='flex items-center gap-2'>
                   <button;
-                    onClick={() => setViewMode(,;
+                    onClick={() => setViewMode(,
   grid;
   ')}
-                    className={`p-2 rounded-lg transition-colors ${;
+                    className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'grid;
-  ' ? 'bg-blue-600 text-white;
-  ': 'text-gray-400 hover:text-blue-400;
-                    }`}
-                  >;
+  ' ? 'bg-blue-600 text-white
+  ': 'text-gray-400 hover:text-blue-400}`}
+                  >
                     <Grid className='w-5 h-5' />
                   </button>
                   <button;
-                    onClick={() => setViewMode(,;
+                    onClick={() => setViewMode(,
   list;
   ')}
-                    className={`p-2 rounded-lg transition-colors ${;
+                    className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'list;
-  ' ? 'bg-blue-600 text-white;
-  ': 'text-gray-400 hover:text-blue-400;
-                    }`}
-                  >;
+  ' ? 'bg-blue-600 text-white
+  ': 'text-gray-400 hover:text-blue-400}`}
+                  >
                     <List className='w-5 h-5' />
                   </button>
                 </div>
@@ -229,31 +219,27 @@ export default function Revolutionary2025ServicesShowcasePage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className={;
-                viewMode ===,;
+              className={
+                viewMode ===,
   grid;
   ';
                   ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8;
   ';
-                  : 'space-y-6;
-              }
-            >;
-              {sortedServices.map((service) => (;
+                  : 'space-y-6}
+            >{sortedServices.map((service) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className={`group relative ${;
-                    viewMode ===,;
+                  className={`group relative ${
+                    viewMode ===,
   grid;
   ';
                       ? 'bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover: border-blue-500/50 transition-all duration-300 hover:scale-105;
   ';
-                      : 'bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300;
-                  }`}
-                >;
-                  {/* Service Header */}
+                      : 'bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300}`}
+                >{/* Service Header */}
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center gap-3'>
                       <div className='text-3xl'>{service.icon}</div>
@@ -264,10 +250,10 @@ export default function Revolutionary2025ServicesShowcasePage() {
                         <p className='text-gray-400 text-sm'>{service.tagline}</p>
                       </div>
                     </div>
-                    {service.popular && (;
+                    {service.popular && (
                       <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1'>
                         <Star className='w-3 h-3' />
-                        Popular;
+                        Popular
                       </div>
                     )}
                   </div>
@@ -289,15 +275,15 @@ export default function Revolutionary2025ServicesShowcasePage() {
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-2'>Key Features:</h4>
                     <div className='grid grid-cols-1 gap-1'>
-                      {service.features.slice(0, 3).map((feature, idx) => (;
+                      {service.features.slice(0, 3).map((feature, idx) => (
                         <div key={idx} className='flex items-center gap-2 text-sm text-gray-400'>
                           <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>
                           {feature}
                         </div>
                       ))}
-                      {service.features.length > 3 && (;
+                      {service.features.length > 3 && (
                         <div className='text-xs text-gray-500 mt-1'>
-                          +{service.features.length - 3} more features;
+                          +{service.features.length - 3} more features
                         </div>
                       )}
                     </div>
@@ -322,7 +308,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
                   <div className='flex items-center gap-3'>
                     <button className='flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                       <ExternalLink className='w-4 h-4 mr-2' />
-                      Learn More;
+                      Learn More
                     </button>
                     <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
                       <Phone className='w-4 h-4' />
@@ -343,13 +329,13 @@ export default function Revolutionary2025ServicesShowcasePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
+            >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Ready to Transform Your Business?;
+                Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
                 Join thousands of businesses already leveraging our revolutionary 2025 services.;
-                Get started today with a free consultation and discover how we can help you achieve the impossible.;
+                Get started today with a free consultation and discover how we can help you achieve the impossible.
               </p>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
@@ -371,11 +357,11 @@ export default function Revolutionary2025ServicesShowcasePage() {
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                   <Rocket className='w-5 h-5 mr-2' />
-                  Start Your Transformation;
+                  Start Your Transformation
                 </button>
                 <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
                   <BookOpen className='w-5 h-5 mr-2' />
-                  Download Brochure;
+                  Download Brochure
                 </button>
               </div>
             </motion.div>
@@ -383,5 +369,4 @@ export default function Revolutionary2025ServicesShowcasePage() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  );
-}
+  )}

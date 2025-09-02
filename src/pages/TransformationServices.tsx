@@ -12,8 +12,6 @@ const TransformationServices: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default TransformationServices;
-;
+export default TransformationServices

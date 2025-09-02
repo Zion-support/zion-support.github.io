@@ -15,22 +15,19 @@ interface OptimizedImageProps {
    quality?: number;
    placeholder?: 'blur' | 'empty';
    blurDataURL?: string;
-   sizes?: string;
-}
-;
-const OptimizedImage: React.FC<OptimizedImageProps> = ({;
-  src,;
-  alt,;
-  width = 800,;
-  height = 600,;
-  className,;
-  priority = false,;
-  quality = 85,;
-  placeholder = 'empty',;
-  blurDataURL,;
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-}) => {;
-  return (;
+   sizes?: string}
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  className,
+  priority = false,
+  quality = 85,
+  placeholder = 'empty',
+  blurDataURL,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}) => {
+  return(
     <div className={cn('relative overflow-hidden', className)}>
       <Image
         src={src}
@@ -42,10 +39,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
         placeholder={placeholder}
         blurDataURL={blurDataURL}
         sizes={sizes}
-        className='object-cover transition-transform duration-300 hover:scale-105';
-      />;
+        className='object-cover transition-transform duration-300 hover:scale-105'/>
     </div>
-  );
-};
+  )}
 ;
-export default OptimizedImage;
+export default OptimizedImage

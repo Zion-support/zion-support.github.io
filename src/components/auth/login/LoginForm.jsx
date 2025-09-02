@@ -1,6 +1,5 @@
 import { useState } from 'react';
-export default function Page() {}
-);
+export default function Page() {})
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
@@ -11,8 +10,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {}
-  Form,;
-  FormControl,;
+  Form,
+  FormControl,
   FormField,';
   FormItem,'';
   FormLabel,''';
@@ -24,20 +23,20 @@ const loginSchema = z.object({}
     .string()';
     .email('Please enter a valid email')';
     .min(1,Email is required'),';
-  password: z.string().min(6,Password must be at least 6 characters')});
+  password: z.string().min(6,Password must be at least 6 characters')})
 function LoginForm() {}
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm({}
-    resolver: zodResolver(loginSchema),;
+    resolver: zodResolver(loginSchema),
     defaultValues: {}
 ';
 '';
 ''';
       email: '',''';
-      password: ''}});
+      password: ''}})
   const onSubmit = async data => {}
     if(isSubmitting) return;
     try {}
@@ -47,34 +46,28 @@ function LoginForm() {}
 ';
 '';
 ''';
-        navigate('/');
-      } else {}
+        navigate('/')} else {}
 ';
         form.setError('root', {}
 ';
 '';
 ''';
-          message: 'Login failed. Please check your credentials.'});
-      }
+          message: 'Login failed. Please check your credentials.'})}
     } catch (error) {}
 ';
       form.setError('root', {}
 ';
 '';
 ''';
-        message: 'An error occurred. Please try again.'});
-    } finally {}
-      setIsSubmitting(false);
-    }
-  };
-  return ();
+        message: 'An error occurred. Please try again.'})} finally {}
+      setIsSubmitting(false)}
+  }
+  return ()
     <Form {...form}>
       <form;
         onSubmit={form.handleSubmit(onSubmit)}
         className='space-y-6'''';
-        autoComplete='off''';
-      >''';
-        {form.formState.errors.root && ('''';
+        autoComplete='off'''>'''{form.formState.errors.root && (''''
           <p className='text-red-400 text-sm' role='alert'>
             {form.formState.errors.root.message}
           </p>
@@ -82,114 +75,102 @@ function LoginForm() {}
         <FormField''';
           control={form.control}'''';
           name='email''';
-          render={({ field }) => (''';
-            <FormItem>'''';
+          render={({ field }) => ('''
+            <FormItem>''''
               <FormLabel className='text-zion-slate-light'>
-                Email address;
-              </FormLabel>''';
-              <FormControl>'''';
-                <div className='relative'>''';
+                Email address
+              </FormLabel>'''
+              <FormControl>''''
+                <div className='relative'>'''
                   <Input'''';
                     placeholder='you@example.com'''';
-                    className='bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple'''';
-                    {...field}'''';
-                    autoComplete='off'''';
-                  />'''';
+                    className='bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple''''{...field}'''';
+                    autoComplete='off''''/>''''
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                </div>''';
-              </FormControl>'''';
+                </div>'''
+              </FormControl>''''
               <FormMessage className='text-red-400' />
             </FormItem>
           )}
-        />;
+        />
         <FormField''';
           control={form.control}'''';
           name='password''';
-          render={({ field }) => (''';
-            <FormItem>'''';
-              <FormLabel className='text-zion-slate-light'>Password</FormLabel>''';
-              <FormControl>'''';
-                <div className='relative'>';
+          render={({ field }) => ('''
+            <FormItem>''''
+              <FormLabel className='text-zion-slate-light'>Password</FormLabel>'''
+              <FormControl>''''
+                <div className='relative'>'
                   <Input''''';
                     type={showPassword ? 'text' : 'password'}'''';
                     placeholder='••••••••'''';
-                    className='bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple'''';
-                    {...field}'''';
-                    autoComplete='off'''';
-                  />'''';
-                  <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />''';
+                    className='bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple''''{...field}'''';
+                    autoComplete='off''''/>''''
+                  <LogIn className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />'''
                   <Button'''';
                     type='button'''';
                     variant='ghost'''';
                     size='sm'''';
                     className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan''';
                     onClick={() => setShowPassword(!showPassword)}
-                  >''';
-                    {showPassword ? ('''';
-                      <EyeOff className='h-4 w-4' />''';
-                    ) : ('''';
-                      <Eye className='h-4 w-4' />''';
-                    )}'''';
-                    <span className='sr-only'>';
-                      {showPassword ? 'Hide password' : 'Show password'}
+                  >'''{showPassword ? (''''
+                      <EyeOff className='h-4 w-4' />''') : (''''
+                      <Eye className='h-4 w-4' />''')}''''
+                    <span className='sr-only'>'{showPassword ? 'Hide password' : 'Show password'}
                     </span>
                   </Button>
-                </div>''';
-              </FormControl>'''';
+                </div>'''
+              </FormControl>''''
               <FormMessage className='text-red-400' />
             </FormItem>
           )}
         />''';
-'''';
-        <div className='flex items-center justify-between'>'''';
-          <div className='text-sm'>''';
+''''
+        <div className='flex items-center justify-between'>''''
+          <div className='text-sm'>'''
             <Link''''
               to='/forgot-password'''';
-              className='font-medium text-zion-cyan hover:text-zion-cyan-light '>;
-              Forgot your password?;
+              className='font-medium text-zion-cyan hover:text-zion-cyan-light '>
+              Forgot your password?
             </Link>
           </div>
         </div>
-''';
+'''
         <Button''''
           type='submit'''';
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white''';
           disabled={isSubmitting || isLoading}
-        >;
-          {isSubmitting ? (''';
-            <>'''';
+        >{isSubmitting ? ('''
+            <>''''
               <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2'></div>
-              Signing in...;
+              Signing in...
             </>
-          ) : (''';
-            <>'''';
+          ) : ('''
+            <>''''
               <LogIn className='h-4 w-4 mr-2' />
-              Sign in;
+              Sign in
             </>
           )}
         </Button>''';
-''''';
-        <div className='text-center text-sm'>'''''';
-          <span className='text-zion-slate-light'>Don't have an account? </span>''';
+'''''
+        <div className='text-center text-sm'>''''''
+          <span className='text-zion-slate-light'>Don't have an account? </span>'''
           <Link''''
             to='/signup'''';
-            className='font-medium text-zion-cyan hover:text-zion-cyan-light ">;
-            Sign up;
+            className='font-medium text-zion-cyan hover:text-zion-cyan-light ">
+            Sign up
           </Link>
         </div>
       </form>
     </Form>
-  );
-}
-;
+  )}
 export default LoginForm;
+export { LoginForm }
 ;
-export { LoginForm };
+export { LoginForm }
 ;
-export { LoginForm };
+export { LoginForm }
 ;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { Page, LoginForm };
+export { LoginForm }
+
+export { Page, LoginForm }

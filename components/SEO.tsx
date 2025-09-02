@@ -8,9 +8,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-  siteName?: string;
-}
-
+  siteName?: string}
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -18,18 +16,15 @@ const SEO: React.FC<SEOProps> = ({
   image,
   url,
   type = 'website',
-  siteName = 'Zion Tech Group'
-}) => {
+  siteName = 'Zion Tech Group'}) => {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || '/images/og-image.jpg';
-  const fullUrl = url || 'https://ziontechgroup.com';
-
+  const fullUrl = url || 'https://ziontechgroup.com'
   return (
     <Head>
       <title>{fullTitle}</title>
       <meta name='description' content={description} />
       {keywords && <meta name='keywords' content={keywords} />}
-
       {/* Open Graph */}
       <meta property='og:type' content={type} />
       <meta property='og:title' content={fullTitle} />
@@ -63,24 +58,19 @@ const SEO: React.FC<SEOProps> = ({
               'addressLocality': 'Middletown',
               'addressRegion': 'DE',
               'postalCode': '19709',
-              'addressCountry': 'US'
-            },
+              'addressCountry': 'US'},
             'contactPoint': {
               '@type': 'ContactPoint',
               'telephone': '+1-302-464-0950',
               'contactType': 'customer service',
-              'email': 'kleber@ziontechgroup.com'
-            },
+              'email': 'kleber@ziontechgroup.com'},
             'sameAs': [
               'https://linkedin.com/company/ziontechgroup',
               'https://twitter.com/ziontechgroup',
               'https://github.com/ziontechgroup'
-            ]
-          })
-        }}
+            ]})}}
       />
     </Head>
-  );
-};
-
-export default SEO;
+  )}
+;
+export default SEO

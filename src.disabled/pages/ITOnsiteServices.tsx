@@ -1,5 +1,5 @@
 import React from 'react.ts';
-const ITOnsiteServices: React.FC = (): JSX.Element => {;
+const ITOnsiteServices: React.FC = (): JSX.Element => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-8'>
       <div className='max-w-3xl text-center text-white'>
@@ -7,6 +7,5 @@ const ITOnsiteServices: React.FC = (): JSX.Element => {;
         <p className='text-lg text-gray-300'>Professional onsite support for deployments, maintenance, and troubleshooting.</p>
       </div>
     </div>
-  );
-};
-export default ITOnsiteServices;
+  )}
+export default ITOnsiteServices

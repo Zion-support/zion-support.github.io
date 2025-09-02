@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function MainSidebar() {;
+export function MainSidebar() {
   return (
     <aside className='w-64 bg-white border-r border-gray-200 hidden lg:block'>
       <nav className='p-4 space-y-6'>
@@ -35,5 +35,4 @@ export function MainSidebar() {;
         </div>
       </nav>
     </aside>
-  );
-}
+  )}

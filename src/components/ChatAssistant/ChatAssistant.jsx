@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { AuthContext } from '../../context/auth/AuthContext';
-
-;
 ;
 import { ChatInput } from './ChatInput.jsx';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -47,7 +45,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         else {}
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
             setLoggedInMessages(newMessages)}
-    };
+    }
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {}
         if(debouncedApiCallParams) {}
@@ -59,39 +57,37 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
 ';
 '';
 ''';
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}
     const handleSendMessage = async(messageContent) => {}
         if(!messageContent.trim());
             return;
         if(!isGuest) { // Logged-in user;
             const newMessage = {}
   id: Date.now().toString(),';
-                role: 'user',;
-                message: messageContent,;
-  timestamp: new Date();
-};
+                role: 'user',
+                message: messageContent,
+  timestamp: new Date()}
             setCurrentMessages((prev) => [...prev, newMessage]);
             setPendingApiCallParams({ message: messageContent, conversationId })}
         else { // Guest user;
             setGuestMessage(messageContent);
             setShowGuestModal(true)}
-    };
+    }
     const handleModalSendConfirm = () => {}
         if(!guestMessage);
             return;
         const newMessage = {}
   id: Date.now().toString(),';
-            role: 'user',;
-            message: guestMessage,;
-  timestamp: new Date();
-};
+            role: 'user',
+            message: guestMessage,
+  timestamp: new Date()}
         setCurrentMessages((prev) => [...prev, newMessage]) // This will now use the guest-aware setCurrentMessages;
-        setPendingApiCallParams({ message: guestMessage, conversationId });
+        setPendingApiCallParams({ message: guestMessage, conversationId })
         setShowGuestModal(false);
-        setGuestMessage(null)};
+        setGuestMessage(null)}
     const handleModalCancel = () => {}
         setShowGuestModal(false);
-        setGuestMessage(null)};
+        setGuestMessage(null)}
     useEffect(() => {}
         if(!showGuestModal);
             return;
@@ -99,8 +95,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
 ';
             if (e.key === 'Escape') {}
                 e.preventDefault();
-                handleModalCancel()}';
-        }';
+                handleModalCancel()}'}';
         const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null';';
         document.addEventListener('keydown', handleKey);
         return () => {}
@@ -121,64 +116,56 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         document.addEventListener('keydown', handleKeyDown)';
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]);
     if (!isOpen)''';
-        return null';'';
-    return (<div className='fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4' role='dialog' aria-modal='true' aria-labelledby='chat-assistant-title'>'''';
-      <div className='w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]'>''';
-        {/* Header */}'''';
-        <div className='bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20'>'''';
-          <div className='flex items-center space-x-3'>'''';
-            <Avatar className='h-10 w-10 border border-zion-purple/20'>''';
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}/>'''';
+        return null';''
+    return (<div className='fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4' role='dialog' aria-modal='true' aria-labelledby='chat-assistant-title'>''''
+      <div className='w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]'>'''{/* Header */}''''
+        <div className='bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20'>''''
+          <div className='flex items-center space-x-3'>''''
+            <Avatar className='h-10 w-10 border border-zion-purple/20'>'''
+              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}/>''''
               <AvatarFallback className='bg-zion-purple/20 text-white'>
                 {recipient.name.charAt(0).toUpperCase()}
               </AvatarFallback>
-            </Avatar>''';
-            <div>'''';
+            </Avatar>'''
+            <div>''''
               <h2 id='chat-assistant-title' className='font-medium text-white'>
-                {recipient.name}''';
-              </h2>'''';
-              {recipient.role && (<div className='text-xs text-zion-slate'>{recipient.role}</div>)}
-            </div>''';
-          </div>'''';
-          <Button variant='ghost' size='icon' className='text-white hover:bg-zion-purple/10 rounded-full' onClick={onClose} aria-label='Close chat'>'''';
+                {recipient.name}'''
+              </h2>''''{recipient.role && (<div className='text-xs text-zion-slate'>{recipient.role}</div>)}
+            </div>'''
+          </div>''''
+          <Button variant='ghost' size='icon' className='text-white hover:bg-zion-purple/10 rounded-full' onClick={onClose} aria-label='Close chat'>''''
             <X className='h-5 w-5'/>
           </Button>
         </div>
-''';
-        {/* Context Header (Optional) */}'''';
-        {contextHeader && (<div className='border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3'>
+'''{/* Context Header (Optional) */}''''{contextHeader && (<div className='border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3'>
             {contextHeader}
           </div>)}
-''';
-        {/* Messages */}'''';
-        <div className='flex-1 overflow-y-auto p-4 space-y-4' aria-live='polite'>'''';
-          {currentMessages.length === 0 ? (<div className='text-center text-zion-slate py-8'>
+'''{/* Messages */}''''
+        <div className='flex-1 overflow-y-auto p-4 space-y-4' aria-live='polite'>''''{currentMessages.length === 0 ? (<div className='text-center text-zion-slate py-8'>
               <p>Start a conversation with {recipient.name}</p>
             </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
           <div ref={messagesEndRef}/>
         </div>
-''';
-        {/* Input */}'''';
+'''{/* Input */}''''
         <div className='p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
           <ChatInput onSend={handleSendMessage}/>
         </div>
-      </div>''';
-'''';
-      {showGuestModal && guestMessage && (<div ref={guestModalRef} className='fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4' role='dialog' aria-modal='true' aria-labelledby='confirm-message-title'>'''';
-          <div className='bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md'>'''';
-            <h3 id='confirm-message-title' className='text-lg font-semibold text-white mb-4'>Confirm Message</h3>'''';
+      </div>'''
+''''{showGuestModal && guestMessage && (<div ref={guestModalRef} className='fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4' role='dialog' aria-modal='true' aria-labelledby='confirm-message-title'>''''
+          <div className='bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md'>''''
+            <h3 id='confirm-message-title' className='text-lg font-semibold text-white mb-4'>Confirm Message</h3>''''
             <p className='text-zion-slate mb-6 whitespace-pre-wrap break-words'>
-              {guestMessage}''';
-            </p>'''';
-            <div className='flex justify-end space-x-3'>'''';
+              {guestMessage}'''
+            </p>''''
+            <div className='flex justify-end space-x-3'>''''
               <Button variant='outline' onClick={handleModalCancel} className='text-white border-zion-purple hover:bg-zion-purple/10'>
-                Cancel''';
-              </Button>'''';
+                Cancel'''
+              </Button>''''
               <Button onClick={handleModalSendConfirm} className='bg-zion-purple hover:bg-zion-purple-dark text-white'>
-                Send;
+                Send
               </Button>
             </div>
           </div>
         </div>)}
     </div>)}''`;
-''`'"`;
+''`'"`

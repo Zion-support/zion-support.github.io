@@ -19,6 +19,7 @@ import {
   Rocket
 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
+
 import AccessibilityManager from '../components/AccessibilityManager';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 
@@ -40,56 +41,46 @@ const EnhancedHome: React.FC = () => {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced security measures to protect your digital assets and ensure compliance.',
-      color: 'from-green-500 to-emerald-500'
-    },
+      color: 'from-green-500 to-emerald-500'},
     {
       icon: Zap,
       title: 'DevOps Excellence',
       description: 'Streamlined development and deployment processes for faster, more reliable software delivery.',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      color: 'from-yellow-500 to-orange-500'},
     {
       icon: Database,
       title: 'Data Analytics',
       description: 'Transform raw data into actionable insights with our advanced analytics platforms.',
-      color: 'from-indigo-500 to-purple-500'
-    },
+      color: 'from-indigo-500 to-purple-500'},
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions built to meet your specific business requirements.',
-      color: 'from-red-500 to-pink-500'
-    }
+      color: 'from-red-500 to-pink-500'}
   ];
-
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '50+', label: 'Expert Team Members' },
     { number: '24/7', label: 'Support Available' }
   ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'CTO, TechCorp',
       content: 'Zion Tech Group transformed our entire technology infrastructure. Their AI solutions increased our efficiency by 300%.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Michael Chen',
       role: 'CEO, InnovateLab',
       content: 'The cloud architecture they designed is incredibly scalable and secure. We can now handle 10x more traffic.',
-      rating: 5
-    },
+      rating: 5},
     {
       name: 'Emily Rodriguez',
       role: 'VP Engineering, DataFlow',
       content: 'Their DevOps practices reduced our deployment time from hours to minutes. Outstanding work!',
-      rating: 5
-    }
-  ];
-
+      rating: 5}
+  ]
   return (
     <>
       <SEOOptimizer
@@ -125,15 +116,13 @@ const EnhancedHome: React.FC = () => {
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
                   href='/contact'
-                  className='inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg'
-                >
+                  className='inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg'>
                   Get Started Today
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </Link>
                 <Link
                   href='/services'
-                  className='inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold text-lg'
-                >
+                  className='inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors font-semibold text-lg'>
                   Explore Services
                 </Link>
               </div>
@@ -150,8 +139,7 @@ const EnhancedHome: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='text-center'
-                >
+                  className='text-center'>
                   <div className='text-4xl md:text-5xl font-bold text-blue-600 mb-2'>
                     {stat.number}
                   </div>
@@ -170,8 +158,7 @@ const EnhancedHome: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-            >
+              className='text-center mb-16'>
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
                 Our Core Services
               </h2>
@@ -187,8 +174,7 @@ const EnhancedHome: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow'
-                >
+                  className='bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow'>
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-6`}>
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
@@ -210,8 +196,7 @@ const EnhancedHome: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-            >
+              className='text-center mb-16'>
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
                 What Our Clients Say
               </h2>
@@ -226,15 +211,14 @@ const EnhancedHome: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='bg-white rounded-xl p-8 shadow-lg'
-                >
+                  className='bg-white rounded-xl p-8 shadow-lg'>
                   <div className='flex mb-4'>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />
                     ))}
                   </div>
                   <p className='text-gray-600 mb-6 italic'>
-                    "{testimonial.content}"
+                    '{testimonial.content}'
                   </p>
                   <div>
                     <div className='font-semibold text-gray-900'>
@@ -261,21 +245,19 @@ const EnhancedHome: React.FC = () => {
                 Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-                Let's discuss how our technology solutions can drive your success.
+                Let's discuss how our technology solutions can drive your success.;
                 Get in touch with our experts today.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
                   href='/contact'
-                  className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg'
-                >
+                  className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg'>
                   Start Your Project
                   <Rocket className='ml-2 w-5 h-5' />
                 </Link>
                 <Link
                   href='/pricing'
-                  className='inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg'
-                >
+                  className='inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg'>
                   View Pricing
                 </Link>
               </div>
@@ -284,7 +266,6 @@ const EnhancedHome: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default EnhancedHome;
+  )}
+;
+export default EnhancedHome

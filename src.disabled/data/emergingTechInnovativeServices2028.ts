@@ -19,5 +19,4 @@ export interface EmergingTechService2028 {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-   website: string;
-} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] } export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [;
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] } export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [;

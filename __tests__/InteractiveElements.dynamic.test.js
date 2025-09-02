@@ -7,21 +7,19 @@ import InteractiveElements.dynamic from '../components/InteractiveElements.dynam
 describe('InteractiveElements.dynamic', () => {
   test('renders without crashing', () => {
     render(<InteractiveElements.dynamic />);
-    expect(screen.getByTestId('interactiveelements.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('interactiveelements.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
     render(<InteractiveElements.dynamic />);
     // Add specific content tests based on component
-  });
+  })
 
   test('handles user interactions', () => {
     render(<InteractiveElements.dynamic />);
     // Add interaction tests based on component functionality
-  });
+  })
 
   test('applies correct styling', () => {
     render(<InteractiveElements.dynamic />);
     // Add styling tests if needed
-  });
-});
+  })})

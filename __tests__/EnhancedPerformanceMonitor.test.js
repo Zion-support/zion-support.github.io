@@ -7,21 +7,19 @@ import EnhancedPerformanceMonitor from '../components/EnhancedPerformanceMonitor
 describe('EnhancedPerformanceMonitor', () => {
   test('renders without crashing', () => {
     render(<EnhancedPerformanceMonitor />);
-    expect(screen.getByTestId('enhancedperformancemonitor')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('enhancedperformancemonitor')).toBeInTheDocument()})
 
   test('displays correct content', () => {
     render(<EnhancedPerformanceMonitor />);
     // Add specific content tests based on component
-  });
+  })
 
   test('handles user interactions', () => {
     render(<EnhancedPerformanceMonitor />);
     // Add interaction tests based on component functionality
-  });
+  })
 
   test('applies correct styling', () => {
     render(<EnhancedPerformanceMonitor />);
     // Add styling tests if needed
-  });
-});
+  })})

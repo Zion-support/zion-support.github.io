@@ -5,15 +5,11 @@ import React, { useState, useEffect, useRef } from 'react' import { Search, X, F
    url: string;
    type: 'service' | 'solution' | 'page' | 'article';
    category?: string;
-   tags?: string[];
-} interface SearchComponentProps {
+   tags?: string[]} interface SearchComponentProps {
    className?: string;
    placeholder?: string;
    showFilters?: boolean;
-   onSearch?: (query: string, filters: SearchFilters) => void;
-} interface SearchFilters {
+   onSearch?: (query: string, filters: SearchFilters) => void} interface SearchFilters {
    type: string[];
-   category: string[];
-   tags: string[];
-} export const SearchComponent: React.FC<SearchComponentProps> = ({ className = '', placeholder = 'Search for AI services, solutions, and more...', showFilters = true, onSearch }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [filters, setFilters] = useState<SearchFilters>({ type: [], category: [], tags: [] }) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const [recentSearches, setRecentSearches] = useState<string[]>([]) const [trendingSearches, setTrendingSearches] = useState<string[]>([])  const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) ';;
-;
+   category: string[]
+   tags: string[]} export const SearchComponent: React.FC<SearchComponentProps> = ({ className = '', placeholder = 'Search for AI services, solutions, and more...', showFilters = true, onSearch }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [filters, setFilters] = useState<SearchFilters>({ type: [], category: [], tags: [] }) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const [recentSearches, setRecentSearches] = useState<string[]>([]) const [trendingSearches, setTrendingSearches] = useState<string[]>([])  const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) ';

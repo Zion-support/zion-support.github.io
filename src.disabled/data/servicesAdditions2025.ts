@@ -1,4 +1,4 @@
-export type AddedService = { id: string title: string description: string category:,;
+export type AddedService = { id: string title: string description: string category:,
   Micro SaaS' |;
   'IT Services' |;
   'AI Solutions' price: string billing:;

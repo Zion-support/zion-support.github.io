@@ -6,33 +6,31 @@ import MainLayout from;
   '../../components/layout/MainLayout';
 import Link from;
   'next/link';
-;
-const DataPlatform: NextPage = () => (;
+const DataPlatform: NextPage = () => (
   <MainLayout
     title='Modern Data Platform - ELT, Warehouse, and Analytics';
-    description='Automate ELT, centralize metrics, and deliver self-serve analytics with a modular modern data stack.';
-  >;
+    description='Automate ELT, centralize metrics, and deliver self-serve analytics with a modular modern data stack.'>
     <section className='bg-gradient-to-br from-sky-900 via-blue-900 to-indigo-900 text-white py-16'>
       <div className='container mx-auto px-4 max-w-5xl'>
         <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Modern Data Platform;
+          Modern Data Platform
         </h1>
         <p className='text-lg text-gray-200 mb-6'>
           Pre-integrated ELT connectors, data quality checks, warehouse;
-          modeling, and semantic layers for fast BI and AI-readiness.;
+          modeling, and semantic layers for fast BI and AI-readiness.
         </p>
         <div className='flex flex-wrap gap-3'>
           <span className='px-3 py-1 rounded bg-white/10'>
-            Fivetran/Airbyte;
+            Fivetran/Airbyte
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            dbt/Core + Cloud;
+            dbt/Core + Cloud
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            Snowflake/BigQuery/Redshift;
+            Snowflake/BigQuery/Redshift
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            Looker/Metabase/Power BI;
+            Looker/Metabase/Power BI
           </span>
         </div>
       </div>
@@ -42,7 +40,7 @@ const DataPlatform: NextPage = () => (;
         <div className='p-6 border rounded-lg'>
           <h3 className='text-xl font-semibold mb-2'>Starter</h3>
           <p className='text-gray-600 mb-4'>
-            For teams building first dashboards.;
+            For teams building first dashboards.
           </p>
           <ul className='text-sm text-gray-700 space-y-2 mb-4'>
             <li>• 5 connectors</li>
@@ -64,7 +62,7 @@ const DataPlatform: NextPage = () => (;
         <div className='p-6 border rounded-lg'>
           <h3 className='text-xl font-semibold mb-2'>Enterprise</h3>
           <p className='text-gray-600 mb-4'>
-            For complex, multi-region data estates.;
+            For complex, multi-region data estates.
           </p>
           <ul className='text-sm text-gray-700 space-y-2 mb-4'>
             <li>• Private deployment</li>
@@ -84,9 +82,8 @@ const DataPlatform: NextPage = () => (;
               className='text-blue-700 underline';
               href='https://www.getdbt.com/';
               target='_blank';
-              rel='noreferrer';
-            >;
-              dbt Labs;
+              rel='noreferrer'>
+              dbt Labs
             </a>
           </li>
           <li>
@@ -94,9 +91,8 @@ const DataPlatform: NextPage = () => (;
               className='text-blue-700 underline';
               href='https://airbyte.com/';
               target='_blank';
-              rel='noreferrer';
-            >;
-              Airbyte;
+              rel='noreferrer'>
+              Airbyte
             </a>
           </li>
           <li>
@@ -104,9 +100,8 @@ const DataPlatform: NextPage = () => (;
               className='text-blue-700 underline';
               href='https://fivetran.com/';
               target='_blank';
-              rel='noreferrer';
-            >;
-              Fivetran;
+              rel='noreferrer'>
+              Fivetran
             </a>
           </li>
           <li>
@@ -114,24 +109,20 @@ const DataPlatform: NextPage = () => (;
               className='text-blue-700 underline';
               href='https://snowflake.com/';
               target='_blank';
-              rel='noreferrer';
-            >;
-              Snowflake;
+              rel='noreferrer'>
+              Snowflake
             </a>
           </li>
         </ul>
         <div className='mt-4'>
           <Link
             href='/contact';
-            className='inline-block bg-sky-600 text-white px-6 py-3 rounded-lg';
-          >;
-            Discuss your data stack;
+            className='inline-block bg-sky-600 text-white px-6 py-3 rounded-lg'>
+            Discuss your data stack
           </Link>
         </div>
       </div>
     </section>
   </MainLayout>
 );
-;
-export default DataPlatform;
-;
+export default DataPlatform

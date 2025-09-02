@@ -1,32 +1,32 @@
-import React from,;
+import React from,
   react''; import { motion } from 'framer-motion;
   ''; import { Link } from 'react-router-dom;
   ' import {} Brain, TrendingUp, Zap, BarChart3, ' CheckCircle, ';
   ' ArrowRight, '';
   ' Play} from 'lucide-react;
   ''; import SEO from '../SEO;
-  ' const features = [] {}';;'; title: 'AI-Powered Consciousness Evolution Platform, ,;
+  ' const features = [] {}';'; title: 'AI-Powered Consciousness Evolution Platform, ,
   ';
   ' description: ''';
-  ';Intelligent consciousness evolution platform system that learns and adapts to your specific needs and requirements., '' icon: Brain, ,;
+  ';Intelligent consciousness evolution platform system that learns and adapts to your specific needs and requirements., '' icon: Brain, ,
   ';
-  ' color: 'from-purple-500 to-pink-500}, {};;
-  ';'; title: 'Automated Operations, ,;
-  ';
-  ' description: ''';
-  ';Streamline consciousness evolution platform processes with intelligent automation and optimization., '' icon: Zap, ,;
-  ';
-  ' color: 'from-blue-500 to-cyan-500}, {};;
-  ';'; title: 'Real-time Insights, ,;
+  ' color: 'from-purple-500 to-pink-500}, {};
+  ';'; title: 'Automated Operations, ,
   ';
   ' description: ''';
-  ';Get instant insights and analytics for better decision-making and performance optimization., '' icon: BarChart3, ,;
+  ';Streamline consciousness evolution platform processes with intelligent automation and optimization., '' icon: Zap, ,
   ';
-  ' color: 'from-green-500 to-emerald-500}, {};;
-   title: 'Scalable Solution,;
-,;
-   description: '';Built to grow with your business needs, from startup to enterprise scale.', icon: TrendingUp,;
-,;
+  ' color: 'from-blue-500 to-cyan-500}, {};
+  ';'; title: 'Real-time Insights, ,
+  ';
+  ' description: ''';
+  ';Get instant insights and analytics for better decision-making and performance optimization., '' icon: BarChart3, ,
+  ';
+  ' color: 'from-green-500 to-emerald-500}, {};
+   title: 'Scalable Solution,
+,
+   description: '';Built to grow with your business needs, from startup to enterprise scale.', icon: TrendingUp,
+,
    color: 'from-orange-500 to-red-500} ]'; const benefits = ['
   ';Increase efficiency and productivity;
   ', Reduce operational costs',Improve accuracy and quality;

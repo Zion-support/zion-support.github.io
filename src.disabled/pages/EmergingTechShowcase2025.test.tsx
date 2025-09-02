@@ -1,5 +1,5 @@
 describe (
-  'EmergingTechShowcase2025', () => {}'; it ('renders without crashing
+  'EmergingTechShowcase2025', () => {}' it ('renders without crashing
   ', () => {} render (<EmergingTechShowcase2025 />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<EmergingTechShowcase2025 />) ''

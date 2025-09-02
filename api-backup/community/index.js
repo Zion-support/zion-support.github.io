@@ -1,161 +1,155 @@
 // Simple in-memory list of posts used for mocking API responses;
-const mockPosts = [;
-    {;
-        id:,;
+const mockPosts = [{
+        id:,
   1','';
   ';
-        title: 'Best practices for AI model fine-tuning,',;
+        title: 'Best practices for AI model fine-tuning,',
   ';
-        content: 'Ive been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...',',;
+        content: 'Ive been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...',',
   ';
-        authorId: 'user1,',;
+        authorId: 'user1,',
   ';
-        authorName: 'Alex Johnson,',;
+        authorName: 'Alex Johnson,',
   ';
-        authorAvatar: 'https://i.pravatar.cc/150?img=3,',;
+        authorAvatar: 'https://i.pravatar.cc/150?img=3,',
   ';
-        authorRole: 'Verified Talent,',;
+        authorRole: 'Verified Talent,',
   ';
-        categoryId: 'ai-tools,',;
+        categoryId: 'ai-tools,',
   ';
-        tags: ['machine-learning, ,;
+        tags: ['machine-learning, ,
   fine-tuning;
   ', 'gpt;
   '],'';
   ';
-        createdAt: '2025-04-01T12:00:00Z,',;
+        createdAt: '2025-04-01T12:00:00Z,',
   ';
-        updatedAt: '2025-04-01T12:00:00Z,;
-        upvotes: 48,;
-        downvotes: 2,;
-        replyCount: 12,;
-        isAnswered: true,;
-        isFeatured: true;
-    },;
-    {,;
+        updatedAt: '2025-04-01T12:00:00Z,
+        upvotes: 48,
+        downvotes: 2,
+        replyCount: 12,
+        isAnswered: true,
+        isFeatured: true},
+    {,
   ';
   ';
 '';
   '';
-        id: '2,',;
+        id: '2,',
   ';
   '';
-        title: 'How to build an effective AI talent profile?,'',;
+        title: 'How to build an effective AI talent profile?,'',
   ''';
-        content: 'Im looking to improve my profile to get more client attention. What are the key elements I should focus on?',',;
+        content: 'Im looking to improve my profile to get more client attention. What are the key elements I should focus on?',',
   ';
-        authorId: 'user2,',;
+        authorId: 'user2,',
   ';
-        authorName: 'Sarah Chen,',;
+        authorName: 'Sarah Chen,',
   ';
-        authorAvatar: 'https://i.pravatar.cc/150?img=5,',;
+        authorAvatar: 'https://i.pravatar.cc/150?img=5,',
   ';
-        categoryId: 'getting-hired,',;
+        categoryId: 'getting-hired,',
   ';
-        tags: ['profile, ,;
+        tags: ['profile, ,
   tips;
   ', 'hiring;
   '],'';
   ';
-        createdAt: '2025-04-03T09:15:00Z,',;
+        createdAt: '2025-04-03T09:15:00Z,',
   ';
-        updatedAt: '2025-04-03T09:15:00Z,;
-        upvotes: 32,;
-        downvotes: 0,;
-        replyCount: 8,;
-        isPinned: true,;
-        isFeatured: true;
-    },;
-    {,;
+        updatedAt: '2025-04-03T09:15:00Z,
+        upvotes: 32,
+        downvotes: 0,
+        replyCount: 8,
+        isPinned: true,
+        isFeatured: true},
+    {,
   ';
   ';
 '';
   '';
-        id: '3,',;
+        id: '3,',
   ';
   '';
-        title: 'Looking for feedback on my automated testing approach,'',;
+        title: 'Looking for feedback on my automated testing approach,'',
   ''';
-        content: 'Ive set up a CI/CD pipeline with the following testing strategy...',',;
+        content: 'Ive set up a CI/CD pipeline with the following testing strategy...',',
   ';
-        authorId: 'user3,',;
+        authorId: 'user3,',
   ';
-        authorName: 'Michael Wong,',;
+        authorName: 'Michael Wong,',
   ';
-        categoryId: 'project-help,',;
+        categoryId: 'project-help,',
   ';
-        tags: ['testing, ,;
+        tags: ['testing, ,
   automation;
   ', 'ci-cd;
   '],'';
   ';
-        createdAt: '2025-04-10T14:30:00Z,',;
+        createdAt: '2025-04-10T14:30:00Z,',
   ';
-        updatedAt: '2025-04-10T14:30:00Z,;
-        upvotes: 5,;
-        downvotes: 0,;
-        replyCount: 2;
-    },;
-    {,;
+        updatedAt: '2025-04-10T14:30:00Z,
+        upvotes: 5,
+        downvotes: 0,
+        replyCount: 2},
+    {,
   ';
   ';
 '';
   ';
-        id: '4,',;
+        id: '4,',
   ';
-        title: 'Feature request: Team collaboration tools,',;
+        title: 'Feature request: Team collaboration tools,',
   ';
-        content: 'It would be really helpful if we could have built-in tools for team collaboration...,',;
+        content: 'It would be really helpful if we could have built-in tools for team collaboration...,',
   ';
-        authorId: 'user4,',;
+        authorId: 'user4,',
   ';
-        authorName: 'Emma Davis,',;
+        authorName: 'Emma Davis,',
   ';
-        categoryId: 'feedback,',;
+        categoryId: 'feedback,',
   ';
-        tags: ['feature-request, ,;
+        tags: ['feature-request, ,
   teams;
   ', 'collaboration;
   '],'';
   ';
-        createdAt: '2025-04-09T18:45:00Z,',;
+        createdAt: '2025-04-09T18:45:00Z,',
   ';
-        updatedAt: '2025-04-09T18:45:00Z,;
-        upvotes: 12,;
-        downvotes: 1,;
-        replyCount: 3;
-    },;
-    {,;
+        updatedAt: '2025-04-09T18:45:00Z,
+        upvotes: 12,
+        downvotes: 1,
+        replyCount: 3},
+    {,
   ';
   ';
 '';
   '';
-        id: '5,',;
+        id: '5,',
   ';
   '';
-        title: 'How to handle client scope creep?,'',;
+        title: 'How to handle client scope creep?,'',
   ''';
-        content: 'Im working on a project where the client keeps adding requirements...',',;
+        content: 'Im working on a project where the client keeps adding requirements...',',
   ';
-        authorId: 'user5,',;
+        authorId: 'user5,',
   ';
-        authorName: 'David Lin,',;
+        authorName: 'David Lin,',
   ';
-        categoryId: 'project-help,',;
+        categoryId: 'project-help,',
   ';
-        tags: ['client-management, ,;
+        tags: ['client-management, ,
   scope;
   ', 'projects;
   '],'';
   ';
-        createdAt: '2025-04-08T10:20:00Z,',;
+        createdAt: '2025-04-08T10:20:00Z,',
   ';
-        updatedAt: '2025-04-08T10:20:00Z,;
-        upvotes: 24,;
-        downvotes: 0,;
-        replyCount: 7,;
-        isAnswered: true;
-    }
+        updatedAt: '2025-04-08T10:20:00Z,
+        upvotes: 24,
+        downvotes: 0,
+        replyCount: 7,
+        isAnswered: true}
 ];
 export default function handler(req, res) {
 ';
@@ -164,10 +158,9 @@ export default function handler(req, res) {
 '';
   ';
     if (req.method !== 'GET;
-  ') {;
+  ') {
         res.status(405).end()';
-        return';
-    }'';
+        return'}'';
   ';
     const { category, limit = '20;
   ', offset = '0;
@@ -177,11 +170,9 @@ export default function handler(req, res) {
     let filtered = mockPosts';
   ';
     if (category && typeof category === 'string;
-  ') {;
-        filtered = mockPosts.filter(p => p.categoryId === category);
-    }
+  ') {
+        filtered = mockPosts.filter(p => p.categoryId === category)}
     const paged = filtered.slice(off, off + lim);
-    res.status(200).json({ posts: paged })'';
-}
+    res.status(200).json({ posts: paged })''}
   '''';
   '''''';

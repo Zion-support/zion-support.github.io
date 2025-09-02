@@ -4,4 +4,4 @@ Sentry.init ({ dsn: import.meta.env.VITE_SENTRY_DSN, integrations: [new Sentry.B
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
-function captureException (error: unknown) { Sentry.captureException (error) };
+function captureException (error: unknown) { Sentry.captureException (error) }

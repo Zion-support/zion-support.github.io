@@ -7,21 +7,19 @@ import _document from '../pages/_document';
 describe('_document Integration Tests', () => {
   test('page renders correctly', () => {
     render(<_document />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+    expect(screen.getByRole('main')).toBeInTheDocument()})
 
   test('navigation works', () => {
     render(<_document />);
     // Test navigation elements
-  });
+  })
 
   test('page content is accessible', () => {
     render(<_document />);
     // Test accessibility features
-  });
+  })
 
   test('page loads with correct data', () => {
     render(<_document />);
     // Test data loading and display
-  });
-});
+  })})

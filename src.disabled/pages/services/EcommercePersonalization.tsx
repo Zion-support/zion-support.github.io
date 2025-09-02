@@ -9,8 +9,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
       <SEO
         title='E‑commerce Personalization - Zion Tech Group';
         description='Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV.';
-        keywords='ecommerce personalization, recommendations, AOV, LTV';
-      />;
+        keywords='ecommerce personalization, recommendations, AOV, LTV'/>
       <section className='mx-auto max-w-6xl px-6 py-16'>
         <div className='flex items-center gap-3 mb-6 text-cyan-300'>
           <ShoppingCart className='h-5 w-5' />
@@ -38,13 +37,10 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
             <div className='mt-4 text-sm font-semibold text-cyan-300'>Pricing: $249–$1,499/month</div>
           </div>
         </div>
-;
+
         <div className='mt-10 text-sm text-slate-400'>Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>
       </section>
     </div>
-  );
-};
-;
-export default EcommercePersonalization;
-;
-}
+  )}
+
+export default EcommercePersonalization}

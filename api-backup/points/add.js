@@ -1,4 +1,4 @@
-import { createClient } from,;
+import { createClient } from,
   @supabase/supabase-js'';
 import { withErrorLogging } from '@/utils/withErrorLogging;
   ';
@@ -15,43 +15,40 @@ const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY ||;
   ';
     '';
 const supabase = createClient(supabaseUrl, serviceKey);
-async function handler(req, res) {;
+async function handler(req, res) {
   ';
 '';
 '';
   ';
     if (req.method !== 'POST;
-  ') {;
+  ') {
         res.status(405).end()';
-        return';
-    }'';
+        return'}'';
   ';
     const { userId, amount, orderId, reason = 'order;
   ' } = req.body || {}';
   ';
     if (!userId || typeof amount !== 'number;
-  ') {;
+  ') {
 ';
 ';
   ';
 '';
   ';
-        res.status(400).json({ error: 'Missing userId or amount });
-        return';
-    }';
+        res.status(400).json({ error: 'Missing userId or amount })
+        return'}';
   ';
     const delta = Math.round(amount)';
   ';
     const { error } = await supabase.from('points_ledger;
-  ').insert({;
-        user_id: userId,;
-        delta,;
-        reason,;
-        order_id: orderId || null});
-    if (error) {;
-        res.status(500).json({ error: error.message });
-        return;
-    }';
+  ').insert({
+        user_id: userId,
+        delta,
+        reason,
+        order_id: orderId || null})
+    if (error) {
+        res.status(500).json({ error: error.message })
+        return}';
     // Update profile points balance';
   ';
     const { data: profile } = await supabase'';
@@ -74,7 +71,6 @@ async function handler(req, res) {;
   ';
         .eq('id;
   ', userId);
-    res.status(200).json({ success: true });
-}';
+    res.status(200).json({ success: true })}';
 export default withErrorLogging(handler)';
 ''';

@@ -3,54 +3,40 @@ import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm';
 import { vi } from 'vitest';
 import * as toastHook from '@/hooks/use-toast';
 
-vi.mock(;
-  '@/hooks/use-toast', () => ({;
-  toast: {;
-    success: vi.fn(),;
+vi.mock(
+  '@/hooks/use-toast', () => ({
+  toast: {
+    success: vi.fn(),
     error: vi.fn()}}));
-;
-beforeEach(() => {;
+beforeEach(() => {
   vi.clearAllMocks();
-  // @ts-ignore;
-  delete global.fetch;
-});
-;
-test('invalid email shows error'', () => {;
+  // @ts-ignore
+  delete global.fetch})
+test('invalid email shows error'', () => {
   render(<EnhancedNewsletterForm />);
-;
-  fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {;
+  fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {
     target: { value:;
-  'bad }});
-  fireEvent.submit(screen.getByRole(;
+  'bad }})
+  fireEvent.submit(screen.getByRole(
   'button', { name: /subscribe/i }));
-;
-  expect(screen.getByRole(;
-  'alert')).toHaveTextContent(/valid email/i);
-});
-;
-test(;
-  'valid email triggers fetch', async () => {;
+  expect(screen.getByRole(
+  'alert')).toHaveTextContent(/valid email/i)})
+test(
+  'valid email triggers fetch', async () => {
   const fetchMock = vi;
     .fn();
-    .mockResolvedValue({ ok: true, json: async () => ({}) });
-  global.fetch = fetchMock as any;
-;
+    .mockResolvedValue({ ok: true, json: async () => ({})})
+  global.fetch = fetchMock as any
   render(<EnhancedNewsletterForm />);
-;
-  fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {;
+  fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {
     target: { value:;
-  'user@example.com' }});
-  fireEvent.submit(screen.getByRole(;
+  'user@example.com' }})
+  fireEvent.submit(screen.getByRole(
   'button', { name: /subscribe/i }));
-;
-  await vi.waitFor(() => {;
-    expect(fetchMock).toHaveBeenCalledWith(,;
-  /api/newsletter/subscribe',;
-      expect.objectContaining({;
-        method: 'POST,;
-        body: JSON.stringify({ email:;
-  'user@example.com' })});
-    );
-  });
-});
-;
+  await vi.waitFor(() => {
+    expect(fetchMock).toHaveBeenCalledWith(,
+  /api/newsletter/subscribe',
+      expect.objectContaining({
+        method: 'POST,
+        body: JSON.stringify({ email:
+  'user@example.com' })}))})})

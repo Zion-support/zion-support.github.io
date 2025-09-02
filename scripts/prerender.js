@@ -8,24 +8,23 @@ import React from;
   'react';
 import { renderToString } from;
   'react-dom/server';
-async function prerender() {;
-  const result = await build({;
-    entryPoints[resolve(;
-  'src/pages/Home.tsx')],;
-    bundle: true,;
-    platform:,;
-  node',;
-    format: 'esm,;
-    write: false,;
-    plugins[;
-      {;
+async function prerender() {
+  const result = await build({
+    entryPoints[resolve(
+  'src/pages/Home.tsx')],
+    bundle: true,
+    platform:,
+  node',
+    format: 'esm,
+    write: false,
+    plugins[{
         name:;
-  'alias',;
-        setup(build) {;
-          build.onResolve({ filter: /^@\// }, (args) => {;
-            const file = args.path.replace(/^@\//, ,;
+  'alias',
+        setup(build) {
+          build.onResolve({ filter: /^@\// }, (args) => {
+            const file = args.path.replace(/^@\//, ,
   ');
-            return { path: path.resolve('src, file) }})}}]});
+            return { path: path.resolve('src, file) }})}}]})
   const text = result.outputFiles[0].text;
   const mod = await import(`data:text/javascript;base64,${Buffer.from(text).toString('base64;
   ')}`);
@@ -39,11 +38,7 @@ async function prerender() {;
   writeFileSync(resolve('dist/index.html;
   '), rendered);
   // // // // // // // console.log('Pre-rendered homepage to dist/index.html;
-  ');
-}
-prerender().catch((err) => {;
+  ')}
+prerender().catch((err) => {
   // // // // // // // console.error('Error prerendering:', err);
-process.exit(1);process.exit(1);
-});
-}
-;
+process.exit(1);process.exit(1)})}

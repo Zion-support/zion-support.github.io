@@ -1,2 +1,2 @@
-import { ProductListing } from,;
+import { ProductListing } from,
   @/types/listings'  export const ADDITIONAL_INNOVATIVE_SERVICES_2030: ProductListing[] = [';

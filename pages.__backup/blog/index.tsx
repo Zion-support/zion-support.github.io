@@ -4,8 +4,7 @@ import Head from;
   'next/head';
 import Link from;
   'next/link';
-;
-const Index: NextPage = () => {;
+const Index: NextPage = () => {
   return (
     <div>
       <Head>
@@ -18,8 +17,6 @@ const Index: NextPage = () => {;
         <Link href='/blog'>Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  )}
 ;
-export default Index;
-;
+export default Index

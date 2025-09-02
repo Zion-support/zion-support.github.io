@@ -1,1 +1,1 @@
-import { Wrench, TrendingUp, AlertTriangle, BarChart3, Smartphone, CheckCircle,;
+import { Wrench, TrendingUp, AlertTriangle, BarChart3, Smartphone, CheckCircle,

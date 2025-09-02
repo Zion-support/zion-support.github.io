@@ -2,8 +2,7 @@ import type { NextPage } from;
   'next';
 import Head from;
   'next/head';
-;
-const Custom404: NextPage = () => {;
+const Custom404: NextPage = () => {
   return (
     <div>
       <Head>
@@ -15,8 +14,6 @@ const Custom404: NextPage = () => {;
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )}
 ;
-export default Custom404;
-;
+export default Custom404

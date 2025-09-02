@@ -9,11 +9,9 @@ import React, { useEffect, useState } from;
    frameOptions: boolean;
    contentType: boolean;
    referrerPolicy: boolean;
-   permissionsPolicy: boolean;
-} interface SecurityThreat {
+   permissionsPolicy: boolean} interface SecurityThreat {
    id: string;
    type: 'low' | 'medium' | 'high' | 'critical';
    description: string;
    recommendation: string;
-   timestamp: Date;
-} export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat[]>([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null>(null)  useEffect(() => {';
+   timestamp: Date} export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat[]>([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null>(null)  useEffect(() => {'

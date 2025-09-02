@@ -1,5 +1,5 @@
 :pages.disabled_auto/services/ai-services.tsx;
-import React from,;
+import React from,
   react';
 import type { NextPage } from;
   'next';
@@ -15,90 +15,82 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
-import {;
-  ArrowRight,;
-  CheckCircle,;
-  Brain,;
-  Zap,;
-  Users,;
-  Shield,;
+import {
+  ArrowRight,
+  CheckCircle,
+  Brain,
+  Zap,
+  Users,
+  Shield,
 } from 'lucide-react';
 import Link from 'next/link';
 
-const AIServicesPage: NextPage = () => {;
-  const aiServices = getServicesByCategory(;
-  'ai-services);
-;
+const AIServicesPage: NextPage = () => {
+  const aiServices = getServicesByCategory(
+  'ai-services)
   const benefits = [
-    {;
-      icon: <Brain className='w-8 h-8' />,;
-:pages.disabled_auto/services/ai-services.tsx;
-      title:,;
-  Advanced AI',;
-      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.;
-    },;
-    {;
-      icon: <Zap className='w-8 h-8' />,;
-      title:,;
-  Rapid Implementation',;
-      description: 'Quick deployment of AI solutions with proven methodologies and best practices.;
-    },;
-    {;
-      icon: <Users className='w-8 h-8' />,;
-      title:,;
-  Expert Team',;
-      description: 'AI specialists with deep expertise in machine learning and data science.;
-    },;
-    {;
-      icon: <Shield className='w-8 h-8' />,;
-      title:,;
-  Scalable Solutions',;
-      description: 'AI solutions that grow with your business and adapt to changing needs.;
-    }
-      title: 'Advanced AI',;
+    {
+      icon: <Brain className='w-8 h-8' />,
+:pages.disabled_auto/services/ai-services.tsx
+      title:,
+  Advanced AI',
+      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.},
+    {
+      icon: <Zap className='w-8 h-8' />,
+      title:,
+  Rapid Implementation',
+      description: 'Quick deployment of AI solutions with proven methodologies and best practices.},
+    {
+      icon: <Users className='w-8 h-8' />,
+      title:,
+  Expert Team',
+      description: 'AI specialists with deep expertise in machine learning and data science.},
+    {
+      icon: <Shield className='w-8 h-8' />,
+      title:,
+  Scalable Solutions',
+      description: 'AI solutions that grow with your business and adapt to changing needs.}
+      title: 'Advanced AI',
+      description:
+        'Cutting-edge machine learning and AI technologies to solve complex business problems.'},
+    {
+      icon: <Zap className='w-8 h-8' />,
+      title: 'Rapid Implementation',
+      description:
+        'Quick deployment of AI solutions with proven methodologies and best practices.'},
+    {
+      icon: <Users className='w-8 h-8' />,
+      title: 'Expert Team',
+      description:
+        'AI specialists with deep expertise in machine learning and data science.'},
+    {
+      icon: <Shield className='w-8 h-8' />,
+      title: 'Scalable Solutions',
       description:;
-        'Cutting-edge machine learning and AI technologies to solve complex business problems.'},;
-    {;
-      icon: <Zap className='w-8 h-8' />,;
-      title: 'Rapid Implementation',;
-      description:;
-        'Quick deployment of AI solutions with proven methodologies and best practices.'},;
-    {;
-      icon: <Users className='w-8 h-8' />,;
-      title: 'Expert Team',;
-      description:;
-        'AI specialists with deep expertise in machine learning and data science.'},;
-    {;
-      icon: <Shield className='w-8 h-8' />,;
-      title: 'Scalable Solutions',;
-      description:;
-        'AI solutions that grow with your business and adapt to changing needs.'}];
-;
-  return (;
+        'AI solutions that grow with your business and adapt to changing needs.'}]
+  return(
     <MainLayout
       title='AI & Machine Learning Services - Zion Tech Group';
-      description='Custom AI model development, process automation, analytics platforms, and chatbot solutions. Leverage the power of artificial intelligence to transform your business.';
-    >;
-      {/* Hero Section */}
+      description='Custom AI model development, process automation, analytics platforms, and chatbot solutions. Leverage the power of artificial intelligence to transform your business.'>{/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>
-              AI & Machine Learning Services;
+              AI & Machine Learning Services
             </h1>
             <p className='text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed'>
-              Leverage the power of artificial intelligence to automate processes, gain insights, and create competitive advantages for your business.;
+              Leverage the power of artificial intelligence to automate processes, gain insights, and create competitive advantages for your business.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               <Link href='/contact'>
                 <span className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>
-                  Get Free Consultation;
+                  Get Free Consultation
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </span>
               </Link>
               <Link href='#pricing'>
                 <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
-                  View Pricing;
+                  View Pricing
                 </span>
               </Link>
             </div>
@@ -111,11 +103,11 @@ const AIServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our AI Services?</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We deliver cutting-edge AI solutions with proven methodologies and expert implementation.;
+              We deliver cutting-edge AI solutions with proven methodologies and expert implementation.
             </p>
           </div>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {benefits.map((benefit, index) => (;
+            {benefits.map((benefit, index) => (
               <div key={index} className='text-center p-6 rounded-lg hover: shadow-lg transition-shadow'>
                 <div className='text-blue-600 mb-4 flex justify-center'>{benefit.icon}</div>
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>
@@ -131,11 +123,11 @@ const AIServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our AI Services</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose from our comprehensive suite of AI and machine learning services designed to transform your business.;
+              Choose from our comprehensive suite of AI and machine learning services designed to transform your business.
             </p>
           </div>
           <div className='grid lg: grid-cols-2 gap-8'>
-            {aiServices.map((service) => (;
+            {aiServices.map((service) => (
               <div key={service.id} className='bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow'>
                 <div className='flex items-start justify-between mb-6'>
                   <div className='text-5xl'>{service.icon}</div>
@@ -149,7 +141,7 @@ const AIServicesPage: NextPage = () => {;
                 <div className='mb-6'>
                   <h4 className='font-semibold text-gray-900 mb-3'>Capabilities: </h4>
                   <ul className='space-y-2'>
-                    {service.features.map((feature, index) => (;
+                    {service.features.map((feature, index) => (
                       <li key={index} className='flex items-center text-gray-600'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
                         {feature}
@@ -160,7 +152,7 @@ const AIServicesPage: NextPage = () => {;
                 <div className='mb-6'>
                   <h4 className='font-semibold text-gray-900 mb-3'>Benefits: </h4>
                   <ul className='space-y-2'>
-                    {service.benefits.map((benefit, index) => (;
+                    {service.benefits.map((benefit, index) => (
                       <li key={index} className='flex items-center text-gray-600'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
                         {benefit}
@@ -171,7 +163,7 @@ const AIServicesPage: NextPage = () => {;
                 <div className='mb-6'>
                   <h4 className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>
                   <ul className='space-y-2'>
-                    {service.useCases.map((useCase, index) => (;
+                    {service.useCases.map((useCase, index) => (
                       <li key={index} className='flex items-center text-gray-600'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
                         {useCase}
@@ -182,7 +174,7 @@ const AIServicesPage: NextPage = () => {;
                 <div className='mb-6'>
                   <h4 className='font-semibold text-gray-900 mb-3'>Technologies: </h4>
                   <div className='flex flex-wrap gap-2'>
-                    {service.technologies.map((tech, index) => (;
+                    {service.technologies.map((tech, index) => (
                       <span key={index} className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm'>
                         {tech}
                       </span>
@@ -192,13 +184,13 @@ const AIServicesPage: NextPage = () => {;
                 <div className='flex justify-between items-center'>
                   <Link href={service.link}>
                     <span className='text-blue-600 hover: text-blue-700 font-medium cursor-pointer inline-flex items-center'>
-                      Learn More;
+                      Learn More
                       <ArrowRight className='ml-1 w-4 h-4' />
                     </span>
                   </Link>
                   <Link href='/contact'>
                     <span className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>
-                      Get Quote;
+                      Get Quote
                     </span>
                   </Link>
                 </div>
@@ -213,7 +205,7 @@ const AIServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our AI Development Process</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We follow a proven methodology to ensure successful AI implementation and optimal results.;
+              We follow a proven methodology to ensure successful AI implementation and optimal results.
             </p>
           </div>
           <div className='grid md: grid-cols-5 gap-8'>
@@ -251,7 +243,7 @@ const AIServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>AI Technologies We Use</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We leverage the latest AI and machine learning technologies to deliver cutting-edge solutions.;
+              We leverage the latest AI and machine learning technologies to deliver cutting-edge solutions.
             </p>
           </div>
           <div className='grid md: grid-cols-3 gap-8'>
@@ -291,7 +283,7 @@ const AIServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>AI Service Pricing</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose the AI service level that best fits your business needs and budget.;
+              Choose the AI service level that best fits your business needs and budget.
             </p>
           </div>
           <div className='grid md:grid-cols-3 gap-8'>
@@ -301,24 +293,24 @@ const AIServicesPage: NextPage = () => {;
               <ul className='space-y-3 mb-8'>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Basic AI model development;
+                  Basic AI model development
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Standard data preprocessing;
+                  Standard data preprocessing
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Basic API integration;
+                  Basic API integration
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Email support;
+                  Email support
                 </li>
               </ul>
               <Link href='/contact'>
                 <span className='w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
-                  Get Quote;
+                  Get Quote
                 </span>
               </Link>
             </div>
@@ -331,28 +323,28 @@ const AIServicesPage: NextPage = () => {;
               <ul className='space-y-3 mb-8'>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Advanced AI model development;
+                  Advanced AI model development
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Comprehensive data engineering;
+                  Comprehensive data engineering
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Full API development;
+                  Full API development
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Priority support;
+                  Priority support
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Model optimization;
+                  Model optimization
                 </li>
               </ul>
               <Link href='/contact'>
                 <span className='w-full bg-blue-600 hover: bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
-                  Get Quote;
+                  Get Quote
                 </span>
               </Link>
             </div>
@@ -362,28 +354,28 @@ const AIServicesPage: NextPage = () => {;
               <ul className='space-y-3 mb-8'>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Custom AI platform development;
+                  Custom AI platform development
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Advanced data infrastructure;
+                  Advanced data infrastructure
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Scalable architecture;
+                  Scalable architecture
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Dedicated support;
+                  Dedicated support
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Ongoing maintenance;
+                  Ongoing maintenance
                 </li>
               </ul>
               <Link href='/contact'>
                 <span className='w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
-                  Contact Sales;
+                  Contact Sales
                 </span>
               </Link>
             </div>
@@ -396,25 +388,24 @@ const AIServicesPage: NextPage = () => {;
           <h2 className='text-4xl font-bold mb-6'>Ready to Harness the Power of AI?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
             Let&aposs discuss how our AI services can help automate your processes, '';
-            gain insights, and create competitive advantages for your business.;
+            gain insights, and create competitive advantages for your business.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
             <Link href='/contact'>
               <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>
-                Schedule Consultation;
+                Schedule Consultation
                 <ArrowRight className='ml-2 w-5 h-5' />
               </span>
             </Link>
             <Link href='tel:+13024640950'>
               <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
-                Call +1 302 464 0950;
+                Call +1 302 464 0950
               </span>
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default AIServicesPage;
+export default AIServicesPage

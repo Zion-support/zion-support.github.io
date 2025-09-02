@@ -1,5 +1,5 @@
 describe (
-  'MobileLaunch', () => {}'; it ('renders without crashing
+  'MobileLaunch', () => {}' it ('renders without crashing
   ', () => {} render (<MobileLaunch />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<MobileLaunch />) ''

@@ -7,21 +7,19 @@ import AnalyticsManager from '../components/AnalyticsManager';
 describe('AnalyticsManager', () => {
   test('renders without crashing', () => {
     render(<AnalyticsManager />);
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()})
 
   test('displays correct content', () => {
     render(<AnalyticsManager />);
     // Add specific content tests based on component
-  });
+  })
 
   test('handles user interactions', () => {
     render(<AnalyticsManager />);
     // Add interaction tests based on component functionality
-  });
+  })
 
   test('applies correct styling', () => {
     render(<AnalyticsManager />);
     // Add styling tests if needed
-  });
-});
+  })})

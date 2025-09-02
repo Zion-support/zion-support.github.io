@@ -4,16 +4,15 @@ import React from 'react';
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false, error: null }
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
+    console.error('Error caught by boundary:', error, errorInfo)}
 
   render() {
     if (this.state.hasError) {
@@ -24,11 +23,9 @@ class ErrorBoundary extends React.Component {
             {this.state.error && this.state.error.toString()}
           </details>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

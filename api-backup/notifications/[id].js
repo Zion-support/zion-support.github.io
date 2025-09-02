@@ -1,4 +1,4 @@
-import { createClient } from,;
+import { createClient } from,
   @supabase/supabase-js';
 const supabaseUrl = process.env.SUPABASE_URL ||;
   ';
@@ -13,19 +13,18 @@ const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY ||;
   ';
     '';
 const supabase = createClient(supabaseUrl, serviceKey);
-export default async function handler(req, res) {;
+export default async function handler(req, res) {
     const id = req.query?.id;
-    if (!id) {;
+    if (!id) {
   ';
 '';
 '';
   ';
         res.status(400).json({ error: 'Missing id })';
-        return';
-    }'';
+        return'}'';
   ';
     if (req.method === 'PATCH;
-  ') {;
+  ') {
 ';
         const { read } = req.body || {}';
         const { error } = await supabase'';
@@ -36,16 +35,14 @@ export default async function handler(req, res) {;
   ';
             .eq('id;
   ', id);
-        if (error) {;
-            res.status(500).json({ error: error.message });
-            return;
-        }
+        if (error) {
+            res.status(500).json({ error: error.message })
+            return}
         res.status(200).json({ success: true })';
-        return';
-    }'';
+        return'}'';
   ';
     if (req.method === 'DELETE;
-  ') {;
+  ') {
 ';
 ';
   ';
@@ -57,14 +54,11 @@ export default async function handler(req, res) {;
   ';
             .eq('id;
   ', id);
-        if (error) {;
-            res.status(500).json({ error: error.message });
-            return;
-        }
-        res.status(200).json({ success: true });
-        return;
-    }
-    res.status(405).end()';
-}';
+        if (error) {
+            res.status(500).json({ error: error.message })
+            return}
+        res.status(200).json({ success: true })
+        return}
+    res.status(405).end()'}';
   ';
 ''';

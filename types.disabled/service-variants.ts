@@ -987,4 +987,3 @@ export type ServiceVariant =;
   'photonic-futuristic';
   |;
   'robotics-futuristic';
-;

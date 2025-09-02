@@ -15,7 +15,7 @@ const AccessibilityContext = createContext (null) ;
 '';
 ''';
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
-    return context};
+    return context}
 // Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {}
     const [highContrast, setHighContrast] = useState(false);
@@ -41,6 +41,6 @@ export const AccessibilityProvider = ({ children }) => {}
   highContrast,
             reducedMotion,"""
             fontSize,
-  highContrast,;
+  highContrast,
             reducedMotion,''';
-            fontSize,''''';
+            fontSize,'''''

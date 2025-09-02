@@ -1,33 +1,29 @@
 import fs from 'fs';
 import { glob } from 'glob';
-function fixUtilsFile(...args: unknown[]): unknown {;
-  try {;
+function fixUtilsFile(...args: unknown[]): unknown {
+  try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     // Fix common patterns in utils files;
-    content = content.replace(;
-      /export,\s*interface,\s*([^{]+)\s*{/g,;
-      'export interface $1 {',;
+    content = content.replace(
+      /export,\s*interface,\s*([^{]+)\s*{/g,
+      'export interface $1 {',
     );
-    content = content.replace(;
-      /export,\s*const\s+([^=]+)\s*=\s*([^;]+);/g,;
-      'export const $1 = $2';;
-    );
-    content = content.replace(;
+    content = content.replace(
+      /export,\s*const\s+([^=]+)\s*=\s*([^;]+);/g,
+      'export const $1 = $2');
+    content = content.replace(
       /import\s+React\s+from\s*;
-  'rea\s*c\s*t';;/g,;
+  'rea\s*c\s*t';/g,
       'import React from;
-  'react'';;
-    );
-    content = content.replace(;
-      /const\s+([^=]+)\s*=\s*([^;]+);/g,;
-      'const $1 = $2';;
-    );
-    content = content.replace(/retu,\s*r,\s*n\s+([^;]+);/g, 'return $1';);
-    content = content.replace(;
-      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,;
-      'if (!$1) return $2';;
-    );
+  'react'');
+    content = content.replace(
+      /const\s+([^=]+)\s*=\s*([^;]+);/g,
+      'const $1 = $2');
+    content = content.replace(/retu,\s*r,\s*n\s+([^;]+);/g, 'return $1');
+    content = content.replace(
+      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,
+      'if (!$1) return $2');
     // Fix string literals;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
     // Fix variable names    content = content.replace(/ht,\s*m,\s*l/g, 'html');
@@ -63,9 +59,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content = content.replace(/receiveMessa,\s*g,\s*e/g, 'receiveMessage');
     content = content.replace(/callba,\s*c,\s*k/g, 'callback');
     content = content.replace(/messa,\s*g,\s*e/g, 'message');
-    content = content.replace(;
-      /clo,\s*u,\s*d-servic,\s*e,\s*s/g,;
-      'cloud-services',;
+    content = content.replace(
+      /clo,\s*u,\s*d-servic,\s*e,\s*s/g,
+      'cloud-services',
     );
     content = content.replace(/na,\s*m,\s*e/g, 'name');
     content = content.replace(/ai-servic,\s*e,\s*s/g, 'ai-services');
@@ -85,9 +81,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content = content.replace(/budg,\s*e,\s*t/g, 'budget');
     content = content.replace(/timeli,\s*n,\s*e/g, 'timeline');
     content = content.replace(/stat,\s*u,\s*s/g, 'status');
-    content = content.replace(;
-      /createMiddlewareClie,\s*n,\s*t/g,;
-      'createMiddlewareClient',;
+    content = content.replace(
+      /createMiddlewareClie,\s*n,\s*t/g,
+      'createMiddlewareClient',
     );
     content = content.replace(/getSessi,\s*o,\s*n/g, 'getSession');
     content = content.replace(/createServerClient/g, 'createServerClient');
@@ -95,54 +91,50 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content = content.replace(/supabaseUr,\s*l/g, 'supabaseUrl');
     content = content.replace(/proce,\s*s,\s*s/g, 'process');
     content = content.replace(/e,\s*n,\s*v/g, 'env');
-    content = content.replace(;
-      /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g,;
-      'NEXT_PUBLIC_SUPABASE_URL',;
+    content = content.replace(
+      /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g,
+      'NEXT_PUBLIC_SUPABASE_URL',
     );
-    content = content.replace(;
-      /htt,\s*p,\s*s:\/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co,;
-  /g,;
+    content = content.replace(
+      /htt,\s*p,\s*s:\/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co,
+  /g,
       ';
-  'https: //placeholder.supabase.co',;
+  'https: //placeholder.supabase.co',
     );
     content = content.replace(/supabaseAnonKe,\s*y/g, 'supabaseAnonKey');
-    content = content.replace(;
-      /NEXT_PUBLIC_SUPABASE_ANON_K,\s*E,\s*Y/g,;
-      'NEXT_PUBLIC_SUPABASE_ANON_KEY',;
+    content = content.replace(
+      /NEXT_PUBLIC_SUPABASE_ANON_K,\s*E,\s*Y/g,
+      'NEXT_PUBLIC_SUPABASE_ANON_KEY',
     );
-    content = content.replace(;
+    content = content.replace(
       /placehold,\s*e,\s*r-k,\s*e,\s*y;
-  '/g,;
-      ''placeholder-key'',;
+  '/g,
+      ''placeholder-key'',
     );
     content = content.replace(/supabaseMiddleware/g, 'supabaseMiddleware');
     content = content.replace(/au,\s*t,\s*h/g, 'auth');
-    if (content !== originalContent) {;
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
 // // // console.log(`Fixed: ${filePath}`);return true;
-;
-    return false;
-  } catch (error) {;
+    return false} catch (error) {
 // // // console.error(`Error processing ${filePath}:`, error.message);return false;
-;
-async function fixAllUtilsFiles(...args: unknown[]): unknown {;
-  const files = await glob('utils/**/*.{ts,tsx}', {;
+async function fixAllUtilsFiles(...args: unknown[]): unknown {
+  const files = await glob('utils/**/*.{ts,tsx}', {
     ignore: ['node_modules/**', '.next/**']
-  });
+  })
   const fixedCount = 0;
-  for (const file of files) {;
-    if (fixUtilsFile(file)) {;
+  for (const file of files) {
+    if (fixUtilsFile(file)) {
       fixedCount++;
 // // // console.log(`Fixed ${fixedCount} utils files.`);console.log(`Fixed: ${filePath}`);
       return true}
-    return false} catch (error) {;
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-async function fixedCount = 0;for (const file of files) {;
-    if (fixUtilsFile(file)) {;
+async function fixedCount = 0;for (const file of files) {
+    if (fixUtilsFile(file)) {
       fixedCount++}
   }
   console.log(`Fixed ${fixedCount} utils files.`)}
-fixAllUtilsFiles();
-}}}}}}}}}
+fixAllUtilsFiles()}}}}}}}}}

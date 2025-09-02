@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
-const AIAutonomousHRPlatform: React.FC = () => {;
-  return (;
-    <>;
+const AIAutonomousHRPlatform: React.FC = () => {
+  return(
+    <>
       <Helmet>
         <title>AI Autonomous HR Platform | Zion Tech Group</title>
         <meta name='description' content='Revolutionary AI-powered HR platform that autonomously manages recruitment, employee engagement, performance tracking, and workforce optimization with intelligent automation and predictive analytics.' />
@@ -18,43 +18,39 @@ const AIAutonomousHRPlatform: React.FC = () => {;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-        >;
+        >
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className='mb-8';
-            >;
+              className='mb-8'>
               <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-6'>
                 <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                   <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' />
                 </svg>
               </div>
               <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-                AI Autonomous HR Platform;
+                AI Autonomous HR Platform
               </h1>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Revolutionary AI-powered HR platform that autonomously manages recruitment, employee engagement, performance tracking, and workforce optimization with intelligent automation and predictive analytics.;
+                Revolutionary AI-powered HR platform that autonomously manages recruitment, employee engagement, performance tracking, and workforce optimization with intelligent automation and predictive analytics.
               </p>
             </motion.div>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className='flex flex-col sm:flex-row gap-4 justify-center';
-            >;
+              className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='tel:+13024640950';
-                className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300';
-              >;
-                Call Now: +1 302 464 0950;
+                className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300'>
+                Call Now: +1 302 464 0950
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300';
-              >;
-                Email Us;
+                className='border-2 border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300'>
+                Email Us
               </a>
             </motion.div>
           </div>
@@ -66,54 +62,46 @@ const AIAutonomousHRPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-7xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Comprehensive AI-driven HR capabilities that transform your human resources operations;
+                Comprehensive AI-driven HR capabilities that transform your human resources operations
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {[;
-                {;
-                  icon: '🎯',;
-                  title: 'AI Recruitment',;
-                  description: 'Intelligent candidate sourcing, screening, and matching with automated interview scheduling and assessment tools.';
-                },;
-                {;
-                  icon: '📊',;
-                  title: 'Performance Analytics',;
-                  description: 'Advanced performance tracking with predictive analytics, goal management, and automated feedback systems.';
-                },;
-                {;
-                  icon: '🤖',;
-                  title: 'Employee Engagement',;
-                  description: 'AI-powered engagement monitoring, satisfaction surveys, and automated retention strategies.';
-                },;
-                {;
-                  icon: '💼',;
-                  title: 'Workforce Planning',;
-                  description: 'Predictive workforce analytics with skills gap analysis, succession planning, and capacity optimization.';
-                },;
-                {;
-                  icon: '🎓',;
-                  title: 'Learning & Development',;
-                  description: 'Personalized learning paths, skill assessment, and automated training recommendations.';
-                },;
-                {;
-                  icon: '📈',;
-                  title: 'HR Analytics',;
-                  description: 'Comprehensive HR insights with predictive modeling, trend analysis, and strategic recommendations.';
-                }
-              ].map((feature, index) => (;
+              {[{
+                  icon: '🎯',
+                  title: 'AI Recruitment',
+                  description: 'Intelligent candidate sourcing, screening, and matching with automated interview scheduling and assessment tools.'},
+                {
+                  icon: '📊',
+                  title: 'Performance Analytics',
+                  description: 'Advanced performance tracking with predictive analytics, goal management, and automated feedback systems.'},
+                {
+                  icon: '🤖',
+                  title: 'Employee Engagement',
+                  description: 'AI-powered engagement monitoring, satisfaction surveys, and automated retention strategies.'},
+                {
+                  icon: '💼',
+                  title: 'Workforce Planning',
+                  description: 'Predictive workforce analytics with skills gap analysis, succession planning, and capacity optimization.'},
+                {
+                  icon: '🎓',
+                  title: 'Learning & Development',
+                  description: 'Personalized learning paths, skill assessment, and automated training recommendations.'},
+                {
+                  icon: '📈',
+                  title: 'HR Analytics',
+                  description: 'Comprehensive HR insights with predictive modeling, trend analysis, and strategic recommendations.'}
+              ].map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20';
-                >;
+                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
                   <div className='text-4xl mb-4'>{feature.icon}</div>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300'>{feature.description}</p>
@@ -129,7 +117,7 @@ const AIAutonomousHRPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-7xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>
@@ -137,62 +125,57 @@ const AIAutonomousHRPlatform: React.FC = () => {;
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               {[
-                {;
-                  name: 'Starter',;
-                  price: '$99',;
-                  period: '/month',;
-                  description: 'Perfect for small teams',;
+                {
+                  name: 'Starter',
+                  price: '$99',
+                  period: '/month',
+                  description: 'Perfect for small teams',
                   features: [;
-                    'Up to 50 employees',;
-                    'Basic AI recruitment',;
-                    'Performance tracking',;
-                    'Standard analytics',;
+                    'Up to 50 employees',
+                    'Basic AI recruitment',
+                    'Performance tracking',
+                    'Standard analytics',
                     'Email support';
-                  ];
-                },;
-                {;
-                  name: 'Professional',;
-                  price: '$299',;
-                  period: '/month',;
-                  description: 'Ideal for growing companies',;
+                  ]},
+                {
+                  name: 'Professional',
+                  price: '$299',
+                  period: '/month',
+                  description: 'Ideal for growing companies',
                   features: [;
-                    'Up to 500 employees',;
-                    'Advanced AI features',;
-                    'Employee engagement',;
-                    'Workforce planning',;
-                    'Priority support',;
+                    'Up to 500 employees',
+                    'Advanced AI features',
+                    'Employee engagement',
+                    'Workforce planning',
+                    'Priority support',
                     'Custom integrations';
-                  ],;
-                  popular: true;
-                },;
-                {;
-                  name: 'Enterprise',;
-                  price: '$799',;
-                  period: '/month',;
-                  description: 'For large organizations',;
+                  ],
+                  popular: true},
+                {
+                  name: 'Enterprise',
+                  price: '$799',
+                  period: '/month',
+                  description: 'For large organizations',
                   features: [
-                    'Unlimited employees',;
-                    'Full AI capabilities',;
-                    'Custom AI models',;
-                    'Dedicated support',;
-                    'White-label options',;
-                    'Advanced reporting';
-                  ];
-                }
-              ].map((plan, index) => (;
+                    'Unlimited employees',
+                    'Full AI capabilities',
+                    'Custom AI models',
+                    'Dedicated support',
+                    'White-label options',
+                    'Advanced reporting'
+                  ]}
+              ].map((plan, index) => (
                 <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${;
-                    plan.popular ? 'border-indigo-500' : 'border-white/20';
-                  } relative`}
-                >;
-                  {plan.popular && (;
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
+                    plan.popular ? 'border-indigo-500' : 'border-white/20'} relative`}
+                >{plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                        Most Popular;
+                        Most Popular
                       </span>
                     </div>
                   )}
@@ -203,7 +186,7 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                     <span className='text-gray-300'>{plan.period}</span>
                   </div>
                   <ul className='space-y-3 mb-8'>
-                    {plan.features.map((feature, featureIndex) => (;
+                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-center text-gray-300'>
                         <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
@@ -214,13 +197,12 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                   </ul>
                   <a
                     href='tel:+13024640950';
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${;
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700';
-                        : 'border-2 border-indigo-500 text-indigo-300 hover:bg-indigo-500 hover:text-white';
-                    }`}
-                  >;
-                    Get Started;
+                        : 'border-2 border-indigo-500 text-indigo-300 hover:bg-indigo-500 hover:text-white'}`}
+                  >
+                    Get Started
                   </a>
                 </motion.div>
               ))}
@@ -234,12 +216,12 @@ const AIAutonomousHRPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-7xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Transform your HR operations with AI-powered automation and intelligent workforce management;
+                Transform your HR operations with AI-powered automation and intelligent workforce management
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
@@ -247,13 +229,13 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
                   {[;
-                    'Reduce recruitment time by 70% with AI automation',;
-                    'Improve employee retention by 45% through predictive analytics',;
-                    'Increase hiring quality by 80% with intelligent matching',;
-                    'Save 25+ hours per week on manual HR tasks',;
-                    'Boost employee satisfaction by 60% with engagement optimization',;
-                    'Scale HR operations across unlimited employees efficiently';
-                  ].map((benefit, index) => (;
+                    'Reduce recruitment time by 70% with AI automation',
+                    'Improve employee retention by 45% through predictive analytics',
+                    'Increase hiring quality by 80% with intelligent matching',
+                    'Save 25+ hours per week on manual HR tasks',
+                    'Boost employee satisfaction by 60% with engagement optimization',
+                    'Scale HR operations across unlimited employees efficiently'
+                  ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4 mt-1'>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
@@ -296,26 +278,24 @@ const AIAutonomousHRPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-4xl font-bold text-white mb-6'>
-              Ready to Transform Your HR?;
+              Ready to Transform Your HR?
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              Join thousands of HR teams already using our AI-powered platform to revolutionize their human resources operations.;
+              Join thousands of HR teams already using our AI-powered platform to revolutionize their human resources operations.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='tel:+13024640950';
-                className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300';
-              >;
-                Call +1 302 464 0950;
+                className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300'>
+                Call +1 302 464 0950
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300';
-              >;
-                Email kleber@ziontechgroup.com;
+                className='border-2 border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300'>
+                Email kleber@ziontechgroup.com
               </a>
             </div>
             <div className='mt-8 text-gray-400'>
@@ -325,7 +305,6 @@ const AIAutonomousHRPlatform: React.FC = () => {;
         </motion.section>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default AIAutonomousHRPlatform;
+export default AIAutonomousHRPlatform

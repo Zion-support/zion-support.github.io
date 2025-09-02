@@ -14,18 +14,14 @@ export function usePerformanceMonitoring() {
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
           non_interaction: true,
-        });
-      }
-    };
+        })}
+    }
 
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-  }, []);
-}
+    getTTFB(sendToAnalytics)}, [])}
 
 export function reportWebVitals(metric) {
-  console.log('Web Vitals:', metric);
-}
+  console.log('Web Vitals:', metric)}

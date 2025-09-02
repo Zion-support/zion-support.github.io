@@ -6,6 +6,6 @@ import React, { useState } from;
   '../components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from;
   '../data/innovativeMicroSaasServices2027' import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from;
   '../data/innovativeITInfrastructureServices2027' import { EMERGING_TECHNOLOGY_SERVICES_2027 } from;
-  '../data/emergingTechnologyServices2027'  export default function ComprehensiveServicesLanding2027() { const [activeCategory, setActiveCategory] = useState(;
+  '../data/emergingTechnologyServices2027'  export default function ComprehensiveServicesLanding2027() { const [activeCategory, setActiveCategory] = useState(
   'all') const [expandedService, setExpandedService] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState(';
-  ') ';
+  ') '

@@ -1,2 +1,1 @@
-export const PerformanceMonitor = () => { const [metrics, setMetrics] = useState ({;
-;
+export const PerformanceMonitor = () => { const [metrics, setMetrics] = useState ({

@@ -2,12 +2,10 @@ import React, { useEffect } from 'react';
 
 // Declare gtag function for TypeScript
 declare global {
-  function gtag(...args: any[]): void;
-}
+  function gtag(...args: any[]): void}
 
 interface AnalyticsProps {
-  trackingId?: string;
-}
+  trackingId?: string}
 
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   useEffect(() => {
@@ -22,13 +20,13 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
     const script2 = document.createElement('script');
     script2.innerHTML = `
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){dataLayer.push(arguments)}
       gtag('js', new Date());
       gtag('config', '${trackingId}', {
         page_title: document.title,
         page_location: window.location.href,
         send_page_view: true
-      });
+      })
     `;
     document.head.appendChild(script2);
 
@@ -38,16 +36,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         gtag('config', trackingId, {
           page_title: document.title,
           page_location: window.location.href
-        });
-      }
-    };
+        })}
+    }
 
     // Listen for route changes (Next.js)
     window.addEventListener('popstate', handleRouteChange);
 
     return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
+      window.removeEventListener('popstate', handleRouteChange)}
   }, [trackingId]);
 
   // Track page performance
@@ -59,17 +55,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (perfData) {
           const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-          trackEvent('page_load_time', 'Performance', 'Page Load', Math.round(loadTime));
-        }
+          trackEvent('page_load_time', 'Performance', 'Page Load', Math.round(loadTime))}
       }
-    };
+    }
 
     window.addEventListener('load', trackPerformance);
-    return () => window.removeEventListener('load', trackPerformance);
-  }, []);
+    return () => window.removeEventListener('load', trackPerformance)}, []);
 
-  return null;
-};
+  return null}
 
 // Export tracking functions for use in components
 export const trackEvent = (action: string, category: string, label?: string, value?: number) => {
@@ -78,17 +71,15 @@ export const trackEvent = (action: string, category: string, label?: string, val
       event_category: category,
       event_label: label,
       value: value
-    });
-  }
-};
+    })}
+}
 
 export const trackPageView = (url: string, title: string) => {
   if (typeof gtag !== 'undefined') {
     gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {
       page_title: title,
       page_location: url
-    });
-  }
-};
+    })}
+}
 
-export default Analytics;
+export default Analytics

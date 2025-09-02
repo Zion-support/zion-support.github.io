@@ -16,7 +16,7 @@ class AppHealthMonitor {
       timestamp: new Date().toISOString(),
       overall: 'unknown',
       checks: {}
-    };
+    }
   }
 
   async runHealthChecks() {
@@ -29,8 +29,7 @@ class AppHealthMonitor {
     await this.checkSecurity();
     await this.checkAccessibility();
     
-    this.generateReport();
-  }
+    this.generateReport()}
 
   async checkDependencies() {
     console.log('📦 Checking dependencies...');
@@ -46,11 +45,10 @@ class AppHealthMonitor {
           encoding: 'utf8', 
           cwd: this.projectRoot,
           stdio: 'pipe'
-        });
+        })
         const outdatedDeps = JSON.parse(outdated);
         if (Object.keys(outdatedDeps).length > 0) {
-          issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`);
-        }
+          issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}
       } catch (error) {
         // npm outdated returns non-zero exit code when there are outdated deps
       }
@@ -60,24 +58,22 @@ class AppHealthMonitor {
         execSync('npm audit --audit-level=moderate', { 
           cwd: this.projectRoot,
           stdio: 'pipe'
-        });
-      } catch (error) {
-        issues.push('Security vulnerabilities detected');
-      }
+        })} catch (error) {
+        issues.push('Security vulnerabilities detected')}
       
       this.healthReport.checks.dependencies = {
         status: issues.length === 0 ? 'healthy' : 'warning',
         issues: issues,
         totalDependencies: Object.keys(packageJson.dependencies || {}).length + 
                           Object.keys(packageJson.devDependencies || {}).length
-      };
+      }
       
     } catch (error) {
       this.healthReport.checks.dependencies = {
         status: 'error',
         issues: ['Failed to check dependencies'],
         error: error.message
-      };
+      }
     }
   }
 
@@ -91,8 +87,7 @@ class AppHealthMonitor {
       let buildAge = null;
       if (buildExists) {
         const stats = fs.statSync(buildDir);
-        buildAge = Date.now() - stats.mtime.getTime();
-      }
+        buildAge = Date.now() - stats.mtime.getTime()}
       
       // Try to run a build check
       let buildSuccess = false;
@@ -101,9 +96,8 @@ class AppHealthMonitor {
           cwd: this.projectRoot,
           stdio: 'pipe',
           timeout: 60000
-        });
-        buildSuccess = true;
-      } catch (error) {
+        })
+        buildSuccess = true} catch (error) {
         // Build failed
       }
       
@@ -113,14 +107,14 @@ class AppHealthMonitor {
         buildAge: buildAge,
         buildSuccess: buildSuccess,
         issues: buildSuccess ? [] : ['Build process failed']
-      };
+      }
       
     } catch (error) {
       this.healthReport.checks.build = {
         status: 'error',
         issues: ['Failed to check build health'],
         error: error.message
-      };
+      }
     }
   }
 
@@ -134,20 +128,16 @@ class AppHealthMonitor {
         execSync('npx tsc --noEmit', { 
           cwd: this.projectRoot,
           stdio: 'pipe'
-        });
-      } catch (error) {
-        issues.push('TypeScript compilation errors');
-      }
+        })} catch (error) {
+        issues.push('TypeScript compilation errors')}
       
       // Check for ESLint errors
       try {
         execSync('npx eslint . --ext .js,.jsx,.ts,.tsx', { 
           cwd: this.projectRoot,
           stdio: 'pipe'
-        });
-      } catch (error) {
-        issues.push('ESLint errors detected');
-      }
+        })} catch (error) {
+        issues.push('ESLint errors detected')}
       
       // Check for console.log statements in production code
       const srcFiles = this.findSourceFiles();
@@ -156,27 +146,25 @@ class AppHealthMonitor {
         const content = fs.readFileSync(file, 'utf8');
         const matches = content.match(/console\.(log|warn|error|info)/g);
         if (matches) {
-          consoleLogCount += matches.length;
-        }
+          consoleLogCount += matches.length}
       }
       
       if (consoleLogCount > 0) {
-        issues.push(`${consoleLogCount} console statements found`);
-      }
+        issues.push(`${consoleLogCount} console statements found`)}
       
       this.healthReport.checks.codeQuality = {
         status: issues.length === 0 ? 'healthy' : 'warning',
         issues: issues,
         consoleLogCount: consoleLogCount,
         totalSourceFiles: srcFiles.length
-      };
+      }
       
     } catch (error) {
       this.healthReport.checks.codeQuality = {
         status: 'error',
         issues: ['Failed to check code quality'],
         error: error.message
-      };
+      }
     }
   }
 
@@ -190,8 +178,7 @@ class AppHealthMonitor {
       if (fs.existsSync(buildDir)) {
         const bundleSize = this.getDirectorySize(buildDir);
         if (bundleSize > 50 * 1024 * 1024) { // 50MB
-          issues.push('Large bundle size detected');
-        }
+          issues.push('Large bundle size detected')}
       }
       
       // Check for large images
@@ -199,8 +186,7 @@ class AppHealthMonitor {
       if (fs.existsSync(publicDir)) {
         const imageSize = this.getImageDirectorySize(publicDir);
         if (imageSize > 10 * 1024 * 1024) { // 10MB
-          issues.push('Large images detected');
-        }
+          issues.push('Large images detected')}
       }
       
       this.healthReport.checks.performance = {
@@ -208,14 +194,14 @@ class AppHealthMonitor {
         issues: issues,
         bundleSize: fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0,
         imageSize: fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : 0
-      };
+      }
       
     } catch (error) {
       this.healthReport.checks.performance = {
         status: 'error',
         issues: ['Failed to check performance'],
         error: error.message
-      };
+      }
     }
   }
 
@@ -230,8 +216,7 @@ class AppHealthMonitor {
         const content = fs.readFileSync(file, 'utf8');
         if (content.includes('password') || content.includes('secret') || content.includes('api_key')) {
           issues.push('Potential hardcoded secrets found');
-          break;
-        }
+          break}
       }
       
       // Check for vulnerable dependencies
@@ -239,22 +224,20 @@ class AppHealthMonitor {
         execSync('npm audit --audit-level=high', { 
           cwd: this.projectRoot,
           stdio: 'pipe'
-        });
-      } catch (error) {
-        issues.push('High severity vulnerabilities detected');
-      }
+        })} catch (error) {
+        issues.push('High severity vulnerabilities detected')}
       
       this.healthReport.checks.security = {
         status: issues.length === 0 ? 'healthy' : 'warning',
         issues: issues
-      };
+      }
       
     } catch (error) {
       this.healthReport.checks.security = {
         status: 'error',
         issues: ['Failed to check security'],
         error: error.message
-      };
+      }
     }
   }
 
@@ -272,31 +255,28 @@ class AppHealthMonitor {
         
         // Check for missing alt attributes
         if (content.includes('<img') && !content.includes('alt=')) {
-          accessibilityIssues++;
-        }
+          accessibilityIssues++}
         
         // Check for missing aria labels
         if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
-          accessibilityIssues++;
-        }
+          accessibilityIssues++}
       }
       
       if (accessibilityIssues > 0) {
-        issues.push(`${accessibilityIssues} accessibility issues found`);
-      }
+        issues.push(`${accessibilityIssues} accessibility issues found`)}
       
       this.healthReport.checks.accessibility = {
         status: issues.length === 0 ? 'healthy' : 'warning',
         issues: issues,
         accessibilityIssues: accessibilityIssues
-      };
+      }
       
     } catch (error) {
       this.healthReport.checks.accessibility = {
         status: 'error',
         issues: ['Failed to check accessibility'],
         error: error.message
-      };
+      }
     }
   }
 
@@ -309,11 +289,9 @@ class AppHealthMonitor {
     const dirs = [srcDir, pagesDir, componentsDir].filter(dir => fs.existsSync(dir));
     
     for (const dir of dirs) {
-      this.scanDirectory(dir, files);
-    }
+      this.scanDirectory(dir, files)}
     
-    return files;
-  }
+    return files}
 
   scanDirectory(dir, files) {
     const items = fs.readdirSync(dir);
@@ -322,10 +300,8 @@ class AppHealthMonitor {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        this.scanDirectory(fullPath, files);
-      } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(item)) {
-        files.push(fullPath);
-      }
+        this.scanDirectory(fullPath, files)} else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(item)) {
+        files.push(fullPath)}
     }
   }
 
@@ -336,13 +312,10 @@ class AppHealthMonitor {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-        size += this.getDirectorySize(fullPath);
-      } else {
-        size += stat.size;
-      }
+        size += this.getDirectorySize(fullPath)} else {
+        size += stat.size}
     }
-    return size;
-  }
+    return size}
 
   getImageDirectorySize(dir) {
     let size = 0;
@@ -351,13 +324,10 @@ class AppHealthMonitor {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-        size += this.getImageDirectorySize(fullPath);
-      } else if (/\.(jpg|jpeg|png|gif|svg|webp)$/i.test(item)) {
-        size += stat.size;
-      }
+        size += this.getImageDirectorySize(fullPath)} else if (/\.(jpg|jpeg|png|gif|svg|webp)$/i.test(item)) {
+        size += stat.size}
     }
-    return size;
-  }
+    return size}
 
   generateReport() {
     // Calculate overall health
@@ -366,12 +336,9 @@ class AppHealthMonitor {
     const totalChecks = checks.length;
     
     if (healthyChecks === totalChecks) {
-      this.healthReport.overall = 'healthy';
-    } else if (healthyChecks >= totalChecks * 0.7) {
-      this.healthReport.overall = 'warning';
-    } else {
-      this.healthReport.overall = 'error';
-    }
+      this.healthReport.overall = 'healthy'} else if (healthyChecks >= totalChecks * 0.7) {
+      this.healthReport.overall = 'warning'} else {
+      this.healthReport.overall = 'error'}
     
     // Save report
     const reportPath = path.join(this.projectRoot, 'app-health-report.json');
@@ -385,27 +352,23 @@ class AppHealthMonitor {
     for (const [checkName, check] of Object.entries(this.healthReport.checks)) {
       console.log(`${this.getStatusIcon(check.status)} ${checkName}: ${check.status}`);
       if (check.issues && check.issues.length > 0) {
-        check.issues.forEach(issue => console.log(`  - ${issue}`));
-      }
+        check.issues.forEach(issue => console.log(`  - ${issue}`))}
     }
     
-    console.log(`\n📄 Full report saved to: ${reportPath}`);
-  }
+    console.log(`\n📄 Full report saved to: ${reportPath}`)}
 
   getStatusIcon(status) {
     switch (status) {
       case 'healthy': return '✅';
       case 'warning': return '⚠️';
       case 'error': return '❌';
-      default: return '❓';
-    }
+      default: return '❓'}
   }
 }
 
 // Run health checks
 async function main() {
   const monitor = new AppHealthMonitor();
-  await monitor.runHealthChecks();
-}
+  await monitor.runHealthChecks()}
 
 main().catch(console.error);

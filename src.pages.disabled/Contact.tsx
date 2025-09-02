@@ -13,8 +13,6 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default Contact;
-;
+export default Contact

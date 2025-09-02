@@ -1,88 +1,80 @@
-import,;
+import,
   ./globals.css';
 import type { ReactNode } from;
   'react';
 import { Navigation } from;
   '@/components/Navigation';
-;
-export const metadata = {;
-  title: 'Zion OS - Sovereign AI-Powered Digital Economies,;
-  description:,;
-  Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.',;
-  keywords: AI, digital economy, blockchain, governance, marketplace, deployment, Zion,;
-  ,;
+export const metadata = {
+  title: 'Zion OS - Sovereign AI-Powered Digital Economies,
+  description:,
+  Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.',
+  keywords: AI, digital economy, blockchain, governance, marketplace, deployment, Zion,
+  ,
   authors: [{ name:;
-  'Zion Tech Group }],;
-  viewport:,;
-  width=device-width, initial-scale=1',;
-  robots: index, follow,;
-  ,;
-  openGraph: {;
+  'Zion Tech Group }],
+  viewport:,
+  width=device-width, initial-scale=1',
+  robots: index, follow,
+  ,
+  openGraph: {
     title:;
-  'Zion OS - Sovereign AI-Powered Digital Economies,;
-    description:,;
-  Launch sovereign AI-powered digital economies with one click',;
-    type: 'website,;
+  'Zion OS - Sovereign AI-Powered Digital Economies,
+    description:,
+  Launch sovereign AI-powered digital economies with one click',
+    type: 'website,
     locale:;
-  'en_US'}};
+  'en_US'}}
 ;
-export { function };
+export { function }
 export default function RootLayout(...args: unknown[]): unknown {
-  return (;
+  return(
     <html lang='en' className='scroll-smooth'>
       <head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect';
           href='https://fonts.gstatic.com';
-          crossOrigin='anonymous';
-        />;
+          crossOrigin='anonymous'/>
         <link
           href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-          rel='stylesheet';
-        />;
+          rel='stylesheet'/>
       </head>
       <body className='min-h-screen bg-[var(--bg)] text-[var(--fg)] antialiased'>
         <nav className='border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur'>
           <div className='max-w-6xl mx-auto px-4 py-3 flex items-center gap-4'>
             <a href='/' className='font-semibold'>
-              Zion OS;
+              Zion OS
             </a>
             <a
               href='/services';
-              className='text-sm opacity-80 hover:opacity-100';
-            >;
-              Services;
+              className='text-sm opacity-80 hover:opacity-100'>
+              Services
             </a>
             <a
               href='/solutions';
-              className='text-sm opacity-80 hover:opacity-100';
-            >;
-              Solutions;
+              className='text-sm opacity-80 hover:opacity-100'>
+              Solutions
             </a>
             <a href='/about' className='text-sm opacity-80 hover:opacity-100'>
-              About;
+              About
             </a>
             <a href='/contact' className='text-sm opacity-80 hover:opacity-100'>
-              Contact;
+              Contact
             </a>
             <a
               href='/multiverse/launch';
-              className='text-sm opacity-80 hover:opacity-100';
-            >;
-              Launch;
+              className='text-sm opacity-80 hover:opacity-100'>
+              Launch
             </a>
             <a
               href='/admin/os-deploy';
-              className='text-sm opacity-80 hover:opacity-100';
-            >;
-              Admin Deploy;
+              className='text-sm opacity-80 hover:opacity-100'>
+              Admin Deploy
             </a>
             <a
               href='/admin/instances';
-              className='text-sm opacity-80 hover:opacity-100';
-            >;
-              Instances;
+              className='text-sm opacity-80 hover:opacity-100'>
+              Instances
             </a>
           </div>
         </nav>
@@ -92,11 +84,11 @@ export default function RootLayout(...args: unknown[]): unknown {
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
               <div>
                 <h3 className='text-xl font-bold gradient-text mb-4'>
-                  Zion OS;
+                  Zion OS
                 </h3>
                 <p className='text-sm text-gray-400'>
                   Unified deployment protocol for sovereign AI-powered digital;
-                  economies.;
+                  economies.
                 </p>
               </div>
               <div>
@@ -105,25 +97,22 @@ export default function RootLayout(...args: unknown[]): unknown {
                   <li>
                     <a
                       href='/multiverse/launch';
-                      className='hover:text-white transition-colors';
-                    >;
-                      Launch Wizard;
+                      className='hover:text-white transition-colors'>
+                      Launch Wizard
                     </a>
                   </li>
                   <li>
                     <a
                       href='/admin/instances';
-                      className='hover:text-white transition-colors';
-                    >;
-                      Instances;
+                      className='hover:text-white transition-colors'>
+                      Instances
                     </a>
                   </li>
                   <li>
                     <a
                       href='/admin/os-deploy';
-                      className='hover:text-white transition-colors';
-                    >;
-                      Admin Deploy;
+                      className='hover:text-white transition-colors'>
+                      Admin Deploy
                     </a>
                   </li>
                 </ul>
@@ -154,6 +143,4 @@ export default function RootLayout(...args: unknown[]): unknown {
         </footer>
       </body>
     </html>
-  );
-}
-;
+  )}

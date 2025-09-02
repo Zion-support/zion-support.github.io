@@ -1,5 +1,5 @@
 :pages.disabled_auto/services/it-services.tsx;
-import React from,;
+import React from,
   react';
 import type { NextPage } from;
   'next';
@@ -15,90 +15,82 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
-import {;
-  ArrowRight,;
-  CheckCircle,;
-  Shield,;
-  Zap,;
-  Users,;
-  Globe,;
+import {
+  ArrowRight,
+  CheckCircle,
+  Shield,
+  Zap,
+  Users,
+  Globe,
 } from 'lucide-react';
 import Link from 'next/link';
 
-const ITServicesPage: NextPage = () => {;
-  const itServices = getServicesByCategory(;
-  'it-services);
-;
+const ITServicesPage: NextPage = () => {
+  const itServices = getServicesByCategory(
+  'it-services)
   const benefits = [
-    {;
-      icon: <Shield className='w-8 h-8' />,;
-:pages.disabled_auto/services/it-services.tsx;
-      title:,;
-  Enterprise Security',;
-      description: 'Bank-level security protocols and compliance standards to protect your business data.;
-    },;
-    {;
-      icon: <Zap className='w-8 h-8' />,;
-      title:,;
-  Performance Optimization',;
-      description: 'Optimize your infrastructure for maximum performance and efficiency.;
-    },;
-    {;
-      icon: <Users className='w-8 h-8' />,;
-      title:,;
-  Expert Team',;
-      description: 'Experienced IT professionals with deep expertise in enterprise solutions.;
-    },;
-    {;
-      icon: <Globe className='w-8 h-8' />,;
-      title:,;
-  Global Support',;
-      description: '24/7 support and monitoring to ensure your systems run smoothly.;
-    }
-      title: 'Enterprise Security',;
+    {
+      icon: <Shield className='w-8 h-8' />,
+:pages.disabled_auto/services/it-services.tsx
+      title:,
+  Enterprise Security',
+      description: 'Bank-level security protocols and compliance standards to protect your business data.},
+    {
+      icon: <Zap className='w-8 h-8' />,
+      title:,
+  Performance Optimization',
+      description: 'Optimize your infrastructure for maximum performance and efficiency.},
+    {
+      icon: <Users className='w-8 h-8' />,
+      title:,
+  Expert Team',
+      description: 'Experienced IT professionals with deep expertise in enterprise solutions.},
+    {
+      icon: <Globe className='w-8 h-8' />,
+      title:,
+  Global Support',
+      description: '24/7 support and monitoring to ensure your systems run smoothly.}
+      title: 'Enterprise Security',
+      description:
+        'Bank-level security protocols and compliance standards to protect your business data.'},
+    {
+      icon: <Zap className='w-8 h-8' />,
+      title: 'Performance Optimization',
+      description:
+        'Optimize your infrastructure for maximum performance and efficiency.'},
+    {
+      icon: <Users className='w-8 h-8' />,
+      title: 'Expert Team',
+      description:
+        'Experienced IT professionals with deep expertise in enterprise solutions.'},
+    {
+      icon: <Globe className='w-8 h-8' />,
+      title: 'Global Support',
       description:;
-        'Bank-level security protocols and compliance standards to protect your business data.'},;
-    {;
-      icon: <Zap className='w-8 h-8' />,;
-      title: 'Performance Optimization',;
-      description:;
-        'Optimize your infrastructure for maximum performance and efficiency.'},;
-    {;
-      icon: <Users className='w-8 h-8' />,;
-      title: 'Expert Team',;
-      description:;
-        'Experienced IT professionals with deep expertise in enterprise solutions.'},;
-    {;
-      icon: <Globe className='w-8 h-8' />,;
-      title: 'Global Support',;
-      description:;
-        '24/7 support and monitoring to ensure your systems run smoothly.'}];
-;
-  return (;
+        '24/7 support and monitoring to ensure your systems run smoothly.'}]
+  return(
     <MainLayout
       title='IT Services & Solutions - Zion Tech Group';
-      description='Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data backup solutions. Transform your infrastructure with our expert team.';
-    >;
-      {/* Hero Section */}
+      description='Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data backup solutions. Transform your infrastructure with our expert team.'>{/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>
-              IT Services & Solutions;
+              IT Services & Solutions
             </h1>
             <p className='text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed'>
-              Comprehensive IT services to modernize your infrastructure, enhance security, and optimize your technology operations.;
+              Comprehensive IT services to modernize your infrastructure, enhance security, and optimize your technology operations.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               <Link href='/contact'>
                 <span className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>
-                  Get Free Consultation;
+                  Get Free Consultation
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </span>
               </Link>
               <Link href='#pricing'>
                 <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
-                  View Pricing;
+                  View Pricing
                 </span>
               </Link>
             </div>
@@ -111,11 +103,11 @@ const ITServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our IT Services?</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We deliver enterprise-grade IT solutions with proven methodologies and cutting-edge technology.;
+              We deliver enterprise-grade IT solutions with proven methodologies and cutting-edge technology.
             </p>
           </div>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {benefits.map((benefit, index) => (;
+            {benefits.map((benefit, index) => (
               <div key={index} className='text-center p-6 rounded-lg hover: shadow-lg transition-shadow'>
                 <div className='text-blue-600 mb-4 flex justify-center'>{benefit.icon}</div>
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>
@@ -131,11 +123,11 @@ const ITServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our IT Services</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose from our comprehensive suite of IT services designed to transform your business infrastructure.;
+              Choose from our comprehensive suite of IT services designed to transform your business infrastructure.
             </p>
           </div>
           <div className='grid lg: grid-cols-2 gap-8'>
-            {itServices.map((service) => (;
+            {itServices.map((service) => (
               <div key={service.id} className='bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow border border-gray-100'>
                 <div className='flex items-start justify-between mb-6'>
                   <div className='text-5xl'>{service.icon}</div>
@@ -149,7 +141,7 @@ const ITServicesPage: NextPage = () => {;
                 <div className='mb-6'>
                   <h4 className='font-semibold text-gray-900 mb-3'>Services Include: </h4>
                   <ul className='space-y-2'>
-                    {service.features.map((feature, index) => (;
+                    {service.features.map((feature, index) => (
                       <li key={index} className='flex items-center text-gray-600'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
                         {feature}
@@ -160,7 +152,7 @@ const ITServicesPage: NextPage = () => {;
                 <div className='mb-6'>
                   <h4 className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>
                   <ul className='space-y-2'>
-                    {service.useCases.map((useCase, index) => (;
+                    {service.useCases.map((useCase, index) => (
                       <li key={index} className='flex items-center text-gray-600'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
                         {useCase}
@@ -171,7 +163,7 @@ const ITServicesPage: NextPage = () => {;
                 <div className='mb-6'>
                   <h4 className='font-semibold text-gray-900 mb-3'>Technologies: </h4>
                   <div className='flex flex-wrap gap-2'>
-                    {service.technologies.map((tech, index) => (;
+                    {service.technologies.map((tech, index) => (
                       <span key={index} className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm'>
                         {tech}
                       </span>
@@ -181,13 +173,13 @@ const ITServicesPage: NextPage = () => {;
                 <div className='flex justify-between items-center'>
                   <Link href={service.link}>
                     <span className='text-blue-600 hover: text-blue-700 font-medium cursor-pointer inline-flex items-center'>
-                      Learn More;
+                      Learn More
                       <ArrowRight className='ml-1 w-4 h-4' />
                     </span>
                   </Link>
                   <Link href='/contact'>
                     <span className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>
-                      Get Quote;
+                      Get Quote
                     </span>
                   </Link>
                 </div>
@@ -202,7 +194,7 @@ const ITServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our IT Service Process</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We follow a proven methodology to ensure successful implementation and optimal results.;
+              We follow a proven methodology to ensure successful implementation and optimal results.
             </p>
           </div>
           <div className='grid md: grid-cols-4 gap-8'>
@@ -235,7 +227,7 @@ const ITServicesPage: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Transparent Pricing</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose the service level that best fits your business needs and budget.;
+              Choose the service level that best fits your business needs and budget.
             </p>
           </div>
           <div className='grid md: grid-cols-3 gap-8'>
@@ -245,24 +237,24 @@ const ITServicesPage: NextPage = () => {;
               <ul className='space-y-3 mb-8'>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Basic assessment;
+                  Basic assessment
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Standard implementation;
+                  Standard implementation
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Email support;
+                  Email support
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Basic documentation;
+                  Basic documentation
                 </li>
               </ul>
               <Link href='/contact'>
                 <span className='w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
-                  Get Quote;
+                  Get Quote
                 </span>
               </Link>
             </div>
@@ -275,28 +267,28 @@ const ITServicesPage: NextPage = () => {;
               <ul className='space-y-3 mb-8'>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Comprehensive assessment;
+                  Comprehensive assessment
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Advanced implementation;
+                  Advanced implementation
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Priority support;
+                  Priority support
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Detailed documentation;
+                  Detailed documentation
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Training included;
+                  Training included
                 </li>
               </ul>
               <Link href='/contact'>
                 <span className='w-full bg-blue-600 hover: bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
-                  Get Quote;
+                  Get Quote
                 </span>
               </Link>
             </div>
@@ -306,28 +298,28 @@ const ITServicesPage: NextPage = () => {;
               <ul className='space-y-3 mb-8'>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Full enterprise assessment;
+                  Full enterprise assessment
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Custom implementation;
+                  Custom implementation
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Dedicated support;
+                  Dedicated support
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  SLA guarantee;
+                  SLA guarantee
                 </li>
                 <li className='flex items-center text-gray-600'>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-                  Ongoing maintenance;
+                  Ongoing maintenance
                 </li>
               </ul>
               <Link href='/contact'>
                 <span className='w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
-                  Contact Sales;
+                  Contact Sales
                 </span>
               </Link>
             </div>
@@ -340,25 +332,24 @@ const ITServicesPage: NextPage = () => {;
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
             Let&aposs discuss how our IT services can help modernize your infrastructure '';
-            and drive operational efficiency.;
+            and drive operational efficiency.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
             <Link href='/contact'>
               <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>
-                Schedule Consultation;
+                Schedule Consultation
                 <ArrowRight className='ml-2 w-5 h-5' />
               </span>
             </Link>
             <Link href='tel:+13024640950'>
               <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
-                Call +1 302 464 0950;
+                Call +1 302 464 0950
               </span>
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default ITServicesPage;
+export default ITServicesPage

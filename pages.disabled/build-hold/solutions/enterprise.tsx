@@ -4,11 +4,11 @@ import Layout from;
   '../../components/Layout';Link from;
   'next/link';
 import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
-  'lucide-react'';const EnterpriseSolutions: NextPage = () => {;
+  'lucide-react'';const EnterpriseSolutions: NextPage = () => {
   return (
     <Layout;
       title='Enterprise Solutions - Zion Tech Group''      description='Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.''    >'      {/* Hero Section */}
-      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            Enterprise'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Transform your enterprise with scalable, secure, and innovative technology solutions. '            We help large organizations modernize their IT infrastructure and drive digital transformation.;
+      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            Enterprise'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Transform your enterprise with scalable, secure, and innovative technology solutions. '            We help large organizations modernize their IT infrastructure and drive digital transformation.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Transform Your Enterprise'              </a>
             </Link>
@@ -65,7 +65,7 @@ import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
           <div className='grid md:grid-cols-2 gap-12'>'            <div>'              <h3 className='text-2xl font-bold mb-6 text-gray-900'>Common Enterprise Challenges</h3>'              <div className='space-y-6'>'                <div className='flex items-start space-x-4'>'                  <div className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'                    <span className='text-red-600 text-sm font-bold'>1</span>'                  </div>'                  <div>
                     <h4 className='text-lg font-semibold mb-2'>Legacy System Complexity</h4>'                    <p className='text-gray-600'>Outdated systems that are difficult to maintain and integrate with modern technologies.</p>'                  </div>'                </div>
                 <div className='flex items-start space-x-4'>'                  <div className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'                    <span className='text-red-600 text-sm font-bold'>2</span>'                  </div>'                  <div>
-                    <h4 className='text-lg font-semibold mb-2'>Scalability Issues</h4>'                    <p className='text-gray-600'>Systems that can&apos;t handle growth and increased user demands effectively.</p>''                  </div>
+                    <h4 className='text-lg font-semibold mb-2'>Scalability Issues</h4>'                    <p className='text-gray-600'>Systems that can&apost handle growth and increased user demands effectively.</p>''                  </div>
   '                </div>
                 <div className='flex items-start space-x-4'>'                  <div className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'                    <span className='text-red-600 text-sm font-bold'>3</span>'                  </div>'                  <div>
                     <h4 className='text-lg font-semibold mb-2'>Security & Compliance</h4>'                    <p className='text-gray-600'>Meeting strict security requirements and regulatory compliance standards.</p>'                  </div>'                </div>
@@ -116,7 +116,7 @@ import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
                 <div className='flex items-start space-x-4'>'                  <CheckCircle className='w-6 h-6 text-green-500 mt-1 flex-shrink-0' />'                  <div>'                    <h3 className='text-lg font-semibold mb-2'>24/7 Support</h3>'                    <p className='text-gray-600'>Round-the-clock support and monitoring for critical enterprise systems.</p>'                  </div>'                </div>
               </div>
             </div>
-            <div className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white'>'              <h3 className='text-2xl font-bold mb-4'>Ready to Transform?</h3>'              <p className='mb-6 text-blue-100'>'                Let&apos;s discuss how our enterprise solutions can modernize your organization and drive growth.''              </p>
+            <div className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white'>'              <h3 className='text-2xl font-bold mb-4'>Ready to Transform?</h3>'              <p className='mb-6 text-blue-100'>'                Let&aposs discuss how our enterprise solutions can modernize your organization and drive growth.''              </p>
   '              <Link href='/contact'>'                <a className='bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>'                  Schedule a Consultation'                </a>
               </Link>
             </div>
@@ -124,7 +124,7 @@ import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Enterprise?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Join leading enterprises that have already transformed their operations with Zion Tech Group. '            Let&apos;s build the future of your business together.''          </p>'          <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Transform Your Enterprise'              </a>
+      <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Enterprise?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Join leading enterprises that have already transformed their operations with Zion Tech Group. '            Let&aposs build the future of your business together.''          </p>'          <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Transform Your Enterprise'              </a>
             </Link>
             <Link href='/solutions'>'              <a className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Explore All Solutions'              </a>
             </Link>
@@ -132,7 +132,6 @@ import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 ;
-export default EnterpriseSolutions;
+export default EnterpriseSolutions

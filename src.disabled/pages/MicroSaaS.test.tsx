@@ -1,5 +1,5 @@
 describe (
-  'MicroSaaS', () => {}'; it ('renders without crashing
+  'MicroSaaS', () => {}' it ('renders without crashing
   ', () => {} render (<MicroSaaS />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<MicroSaaS />) ''

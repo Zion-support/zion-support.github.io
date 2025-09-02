@@ -5,8 +5,8 @@ import { useEffect } from;
   ''; import { LoginContent } from '@/components/auth/login;
   ''; import { ErrorBoundary } from 'react-error-boundary;
   ''; import { useCart } from '@/context/CartContext;
-  '';;
+  '';
   ' import { toast } from '@/hooks/use-toast;
   ''; import { useDispatch } from 'react-redux;
   ''; import { setLoggedIn } from '@/store/authSlice;
-  '  useEffect ( () => {}';';
+  '  useEffect ( () => {}';'

@@ -8,14 +8,10 @@ interface User {
    role?: string;
    isEmailVerified?: boolean;
    createdAt?: string;
-   updatedAt?: string;
-}
-;
+   updatedAt?: string}
 interface AuthTokens {
   accessToken: string | null;
-   refreshToken: string | null;
-}
-;
+   refreshToken: string | null}
 interface AuthContextType {
   user: User | null;
    isLoading: boolean;
@@ -32,16 +28,12 @@ interface AuthContextType {
    loginWithTwitter: () => Promise<any>
    loginWithWeb3: () => Promise<any>
 }
-;
 const AuthContext = createContext<AuthContextType | null>(null);
-;
-export const useAuth: React.FC = ($2) => {;
+export const useAuth: React.FC = ($2) => {
   const context = useContext(AuthContext);
-  if (context = == null) {;
+  if (context = == null) {
     throw new Error('useAuth must be used within an AuthProvider');
-;
-  return context;
-};
-;
-export { AuthContext };
-export type { User, AuthTokens, AuthContextType };}}}}
+  return context}
+
+export { AuthContext }
+export type { User, AuthTokens, AuthContextType }}}}}

@@ -1,29 +1,28 @@
-React from,;
+React from,
   react';
 import type { NextPage } from;
   'next';MainLayout from;
   '../../components/layout/MainLayout';
 import { getServicesByCategory } from;
-  '../../data/services';{ ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from;
+  '../../data/services'{ ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from;
   'lucide-react';
 import Link from;
-  'next/link'';const ITServicesPage: NextPage = () => {;
-  const itServices = getServicesByCategory('it-services;
+  'next/link'';const ITServicesPage: NextPage = () => {
+  const itServices = getServicesByCategory('it-services
   ')'  const benefits = [
-    {;
-      icon: <Shield className='w-8 h-8' />, title:,;
-  Enterprise Security',;
-  '      description: 'Bank-level security protocols and compliance standards to protect your business data.'    }, {'      icon: <Zap className='w-8 h-8' />,'      title:,;
-  Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.'    },;
-  '    {;
-      icon: <Users className='w-8 h-8' />, title:,;
-  Expert Team;
-  ','      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'    }, {;
-  '      icon: <Globe className='w-8 h-8' />,'      title:,;
+    {
+      icon: <Shield className='w-8 h-8' />, title:,
+  Enterprise Security',
+  '      description: 'Bank-level security protocols and compliance standards to protect your business data.'    }, {'      icon: <Zap className='w-8 h-8' />,'      title:,
+  Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.'    },
+  '    {
+      icon: <Users className='w-8 h-8' />, title:,
+  Expert Team
+  ','      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'    }, {
+  '      icon: <Globe className='w-8 h-8' />,'      title:,
   Global Support;
-  ', description: '24/7 support and monitoring to ensure your systems run smoothly.'    }'  ];
-;
-  return (;
+  ', description: '24/7 support and monitoring to ensure your systems run smoothly.'    }'  ]
+  return(
     <MainLayout;
       title='IT Services & Solutions - Zion Tech Group''      description='Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data backup solutions. Transform your infrastructure with our expert team.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4'>'          <div className='max-w-4xl mx-auto text-center'>'            <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>'              IT Services & Solutions'            </h1>
@@ -106,7 +105,7 @@ import Link from;
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&apos;s discuss how our IT services can help modernize your infrastructure ';
+      <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&apos;s discuss how our IT services can help modernize your infrastructure '
   '            and drive operational efficiency.'          </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>'            <Link href='/contact'>'              <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />'              </span>'            </Link>
             <Link href='tel:+13024640950'>'              <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                Call +1 302 464 0950'              </span>
@@ -115,7 +114,6 @@ import Link from;
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default ITServicesPage;
+export default ITServicesPage

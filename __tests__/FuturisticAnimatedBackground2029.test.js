@@ -7,21 +7,19 @@ import FuturisticAnimatedBackground2029 from '../components/FuturisticAnimatedBa
 describe('FuturisticAnimatedBackground2029', () => {
   test('renders without crashing', () => {
     render(<FuturisticAnimatedBackground2029 />);
-    expect(screen.getByTestId('futuristicanimatedbackground2029')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('futuristicanimatedbackground2029')).toBeInTheDocument()})
 
   test('displays correct content', () => {
     render(<FuturisticAnimatedBackground2029 />);
     // Add specific content tests based on component
-  });
+  })
 
   test('handles user interactions', () => {
     render(<FuturisticAnimatedBackground2029 />);
     // Add interaction tests based on component functionality
-  });
+  })
 
   test('applies correct styling', () => {
     render(<FuturisticAnimatedBackground2029 />);
     // Add styling tests if needed
-  });
-});
+  })})

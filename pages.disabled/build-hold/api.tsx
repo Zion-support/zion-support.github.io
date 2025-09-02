@@ -1,62 +1,60 @@
-React from,;
+React from,
   react';
 import type { NextPage } from;
   'next';MainLayout from;
   '../components/layout/MainLayout';
 import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
   'lucide-react';import Link from;
-  'next/link'';const API: NextPage = () => {;
+  'next/link'';const API: NextPage = () => {
   const apiEndpoints = [
-    {;
-      method: 'GET, endpoint:,;
+    {
+      method: 'GET, endpoint:,
   /api/v1/users;
-  ','      description: 'Retrieve user information, category:,;
-  Users''    },;
-  '    {;
-      method: 'POST, endpoint:,;
+  ','      description: 'Retrieve user information, category:,
+  Users''    },
+  '    {
+      method: 'POST, endpoint:,
   /api/v1/users;
-  ','      description: 'Create a new user, category:,;
-  Users''    },;
-  '    {;
-      method: 'GET, endpoint:,;
+  ','      description: 'Create a new user, category:,
+  Users''    },
+  '    {
+      method: 'GET, endpoint:,
   /api/v1/projects;
-  ','      description: 'List all projects, category:,;
-  Projects''    },;
-  '    {;
-      method: 'POST, endpoint:,;
+  ','      description: 'List all projects, category:,
+  Projects''    },
+  '    {
+      method: 'POST, endpoint:,
   /api/v1/projects;
-  ','      description: 'Create a new project, category:,;
-  Projects''    },;
-  '    {;
-      method: 'GET, endpoint:,;
+  ','      description: 'Create a new project, category:,
+  Projects''    },
+  '    {
+      method: 'GET, endpoint:,
   /api/v1/analytics;
-  ','      description: 'Get analytics data, category:,;
-  Analytics''    },;
-  '    {;
-      method: 'POST, endpoint:,;
+  ','      description: 'Get analytics data, category:,
+  Analytics''    },
+  '    {
+      method: 'POST, endpoint:,
   /api/v1/webhooks;
-  ','      description: 'Create a webhook, category:,;
+  ','      description: 'Create a webhook, category:,
   Webhooks''    }
   '  ];
-;
-  const sdkLanguages = [;
-    { name: 'JavaScript, version:,;
+  const sdkLanguages = [{ name: 'JavaScript, version:,
   2.1.0;
-  ', icon: '🟨 }, { name:,;
+  ', icon: '🟨 }, { name:,
   Python;
-  ', version: '1.8.2, icon:,;
+  ', version: '1.8.2, icon:,
   🐍;
-  ' },'    { name: 'PHP, version:,;
-  1.5.0', icon: '🐘 }, { name:,;
-  Java', version: '1.3.0, icon:,;
-  ☕' },;
-  '    { name: 'Go, version:,;
+  ' },'    { name: 'PHP, version:,
+  1.5.0', icon: '🐘 }, { name:,
+  Java', version: '1.3.0, icon:,
+  ☕' },
+  '    { name: 'Go, version:,
   1.2.0;
-  ', icon: '🐹 }, { name:,;
+  ', icon: '🐹 }, { name:,
   Ruby;
   ', version: '1.1.0, icon: '💎;
-  ' }'  ]';
-  return (;
+  ' }'  ]'
+  return(
     <MainLayout;
       title='API Reference - Zion Tech Group''      description='Complete API reference and documentation for Zion Tech Group services.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>API Reference</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Complete API documentation for integrating with Zion Tech Group services.'          </p>
@@ -68,9 +66,9 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
       {/* API Overview */}
       <section className='py-16 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-12'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>API Overview</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Our RESTful API provides programmatic access to all Zion Tech Group services.'            </p>
           </div>
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto'>'            <div className='bg-blue-50 p-6 rounded-lg text-center'>'              <Globe className='w-12 h-12 text-blue-600 mx-auto mb-4' />'              <h3 className='text-lg font-semibold text-gray-900 mb-2'>RESTful API</h3>'              <p className='text-gray-600'>Standard HTTP methods and status codes</p>'            </div>';
-            <div className='bg-green-50 p-6 rounded-lg text-center'>'              <Shield className='w-12 h-12 text-green-600 mx-auto mb-4' />'              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Secure</h3>'              <p className='text-gray-600'>OAuth 2.0 and API key authentication</p>'            </div>';
-            <div className='bg-purple-50 p-6 rounded-lg text-center'>'              <Zap className='w-12 h-12 text-purple-600 mx-auto mb-4' />'              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Fast</h3>'              <p className='text-gray-600'>Low latency and high performance</p>'            </div>';
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto'>'            <div className='bg-blue-50 p-6 rounded-lg text-center'>'              <Globe className='w-12 h-12 text-blue-600 mx-auto mb-4' />'              <h3 className='text-lg font-semibold text-gray-900 mb-2'>RESTful API</h3>'              <p className='text-gray-600'>Standard HTTP methods and status codes</p>'            </div>'
+            <div className='bg-green-50 p-6 rounded-lg text-center'>'              <Shield className='w-12 h-12 text-green-600 mx-auto mb-4' />'              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Secure</h3>'              <p className='text-gray-600'>OAuth 2.0 and API key authentication</p>'            </div>'
+            <div className='bg-purple-50 p-6 rounded-lg text-center'>'              <Zap className='w-12 h-12 text-purple-600 mx-auto mb-4' />'              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Fast</h3>'              <p className='text-gray-600'>Low latency and high performance</p>'            </div>'
             <div className='bg-orange-50 p-6 rounded-lg text-center'>'              <Database className='w-12 h-12 text-orange-600 mx-auto mb-4' />'              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Reliable</h3>'              <p className='text-gray-600'>99.9% uptime guarantee</p>'            </div>'          </div>
         </div>
       </section>
@@ -101,7 +99,7 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
       <section className='py-16 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-12'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>API Endpoints</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Explore our comprehensive API endpoints organized by category.'            </p>
           </div>
           <div className='max-w-6xl mx-auto'>'            <div className='bg-white rounded-lg shadow-lg overflow-hidden'>'              <div className='overflow-x-auto'>'                <table className='w-full'>'                  <thead className='bg-gray-50'>'                    <tr>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Method</th>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Endpoint</th>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Description</th>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Category</th>'                    </tr>'                  </thead>
-                  <tbody className='bg-white divide-y divide-gray-200'>'                    {apiEndpoints.map((endpoint, index) => ('                      <tr key={index} className='hover: bg-gray-50'>'                        <td className='px-6 py-4 whitespace-nowrap'>'                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${'                            endpoint.method ===,;
+                  <tbody className='bg-white divide-y divide-gray-200'>'                    {apiEndpoints.map((endpoint, index) => ('                      <tr key={index} className='hover: bg-gray-50'>'                        <td className='px-6 py-4 whitespace-nowrap'>'                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${'                            endpoint.method ===,
   GET' ?;
   'bg-green-100 text-green-800': '                            endpoint.method === 'POST;
   ' ? 'bg-blue-100 text-blue-800;
@@ -159,7 +157,6 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default API;
+export default API

@@ -4,15 +4,14 @@ import React from 'react.ts';
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>
       <SEO
         title='Healthcare Solutions - Zion Tech Group';
-        description='Clinical AI, patient analytics, secure interoperability, and compliance-ready platforms.';
-      />;
+        description='Clinical AI, patient analytics, secure interoperability, and compliance-ready platforms.'/>
       <section className='container mx-auto px-4 py-16'>
         <div className='text-center mb-16'>
           <h1 className='text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent'>
-            Healthcare Solutions;
+            Healthcare Solutions
           </h1>
           <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
-            Accelerate outcomes with AI diagnostics, care management analytics, FHIR-based integrations, and HIPAA-compliant data flows.;
+            Accelerate outcomes with AI diagnostics, care management analytics, FHIR-based integrations, and HIPAA-compliant data flows.
           </p>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
@@ -24,7 +23,7 @@ import React from 'react.ts';
             </div>
             <h3 className='text-xl font-semibold mb-2'>AI-Powered Diagnostics</h3>
             <p className='text-gray-400'>
-              Advanced machine learning algorithms for early disease detection and accurate diagnosis.;
+              Advanced machine learning algorithms for early disease detection and accurate diagnosis.
             </p>
           </div>
           <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700/50'>
@@ -35,7 +34,7 @@ import React from 'react.ts';
             </div>
             <h3 className='text-xl font-semibold mb-2'>Patient Analytics</h3>
             <p className='text-gray-400'>
-              Comprehensive patient data analysis for personalized care and treatment optimization.;
+              Comprehensive patient data analysis for personalized care and treatment optimization.
             </p>
           </div>
           <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700/50'>
@@ -46,28 +45,26 @@ import React from 'react.ts';
             </div>
             <h3 className='text-xl font-semibold mb-2'>HIPAA Compliance</h3>
             <p className='text-gray-400'>
-              Secure, compliant data handling with end-to-end encryption and audit trails.;
+              Secure, compliant data handling with end-to-end encryption and audit trails.
             </p>
           </div>
         </div>
         <div className='text-center'>
           <h2 className='text-3xl font-bold mb-6'>Ready to Transform Healthcare?</h2>
           <p className='text-gray-300 mb-8 max-w-2xl mx-auto'>
-            Join leading healthcare organizations in leveraging AI and advanced analytics to improve patient outcomes.;
+            Join leading healthcare organizations in leveraging AI and advanced analytics to improve patient outcomes.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <button className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'>
-              Get Started;
+              Get Started
             </button>
             <button className='px-8 py-3 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-300'>
-              Learn More;
+              Learn More
             </button>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )}
 ;
-export default HealthcareSolutions;
-;
+export default HealthcareSolutions

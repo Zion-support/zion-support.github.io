@@ -5,102 +5,100 @@ import type { NextPage } from;
   '../components/layout/MainLayout';
 import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from;
   'lucide-react';import Link from;
-  'next/link'';const Documentation: NextPage = () => {;
+  'next/link'';const Documentation: NextPage = () => {
   const docCategories = [
-    {;
-      icon: Book, title:,;
+    {
+      icon: Book, title:,
   Getting Started;
-  ','      description: 'Quick start guides and basic setup instructions, articles: [,;
-  { title: 'Introduction to Zion Tech Group, href:,;
+  ','      description: 'Quick start guides and basic setup instructions, articles: [,
+  { title: 'Introduction to Zion Tech Group, href:,
   /docs/introduction;
-  ' }, { title: 'Account Setup, href:,;
+  ' }, { title: 'Account Setup, href:,
   /docs/account-setup;
-  ' }, { title: 'First Steps, href:,;
+  ' }, { title: 'First Steps, href:,
   /docs/first-steps;
   ' }, { title: 'Basic Configuration, href: '/docs/basic-config;
   ' }'      ];
-  '    }, {;
-      icon: Code,;
-      title:,;
+  '    }, {
+      icon: Code,
+      title:,
   API Reference;
-  ', description: 'Complete API documentation and examples,'      articles: [,;
-  { title: 'Authentication, href:,;
+  ', description: 'Complete API documentation and examples,'      articles: [,
+  { title: 'Authentication, href:,
   /docs/api/auth;
-  ' },'        { title: 'Endpoints, href:,;
-  /docs/api/endpoints' },;
-  '        { title: 'SDKs, href:,;
+  ' },'        { title: 'Endpoints, href:,
+  /docs/api/endpoints' },
+  '        { title: 'SDKs, href:,
   /docs/api/sdks;
   ' },'        { title: 'Rate Limits, href:;
   '/docs/api/rate-limits' }
-  '      ]'    }, {;
-      icon: Database,;
-      title:,;
-  Data Management', description: Data handling, storage, and processing guides,;
-  ,;
+  '      ]'    }, {
+      icon: Database,
+      title:,
+  Data Management', description: Data handling, storage, and processing guides,
+  ,
   '      articles: ['        { title:
-  'Data Models, href:,;
-  /docs/data/models' },;
-  '        { title: 'Data Import/Export, href:,;
+  'Data Models, href:,
+  /docs/data/models' },
+  '        { title: 'Data Import/Export, href:,
   /docs/data/import-export;
-  ' },'        { title: 'Data Security, href:,;
-  /docs/data/security' },;
+  ' },'        { title: 'Data Security, href:,
+  /docs/data/security' },
   '        { title: 'Backup & Recovery, href: '/docs/data/backup;
   ' }'      ];
-  '    }, {;
-      icon: Cloud,;
-      title:,;
+  '    }, {
+      icon: Cloud,
+      title:,
   Cloud Services;
-  ', description: 'Cloud infrastructure and deployment guides,'      articles: [,;
-  { title: 'Cloud Setup, href:,;
+  ', description: 'Cloud infrastructure and deployment guides,'      articles: [,
+  { title: 'Cloud Setup, href:,
   /docs/cloud/setup;
-  ' },'        { title: 'Deployment, href:,;
-  /docs/cloud/deployment' },;
-  '        { title: 'Scaling, href:,;
+  ' },'        { title: 'Deployment, href:,
+  /docs/cloud/deployment' },
+  '        { title: 'Scaling, href:,
   /docs/cloud/scaling;
   ' },'        { title: 'Monitoring, href:;
   '/docs/cloud/monitoring' }
-  '      ]'    }, {;
-      icon: Shield,;
-      title:,;
-  Security', description: 'Security best practices and implementation,;
-,;
+  '      ]'    }, {
+      icon: Shield,
+      title:,
+  Security', description: 'Security best practices and implementation,
+,
   articles: ['        { title:
-  'Security Overview, href:,;
-  /docs/security/overview' },;
-  '        { title: 'Authentication, href:,;
+  'Security Overview, href:,
+  /docs/security/overview' },
+  '        { title: 'Authentication, href:,
   /docs/security/auth;
-  ' },'        { title: 'Authorization, href:,;
-  /docs/security/authorization' },;
+  ' },'        { title: 'Authorization, href:,
+  /docs/security/authorization' },
   '        { title: 'Compliance, href: '/docs/security/compliance;
   ' }'      ];
-  '    }, {;
-      icon: Zap,;
-      title:,;
+  '    }, {
+      icon: Zap,
+      title:,
   Advanced Features;
-  ', description: 'Advanced functionality and customization,'      articles: [,;
-  { title: 'Custom Integrations, href:,;
+  ', description: 'Advanced functionality and customization,'      articles: [,
+  { title: 'Custom Integrations, href:,
   /docs/advanced/integrations;
-  ' },'        { title: 'Workflow Automation, href:,;
-  /docs/advanced/automation' },;
-  '        { title: 'Performance Optimization, href:,;
+  ' },'        { title: 'Workflow Automation, href:,
+  /docs/advanced/automation' },
+  '        { title: 'Performance Optimization, href:,
   /docs/advanced/performance;
-  ' },'        { title: 'Troubleshooting, href:,;
+  ' },'        { title: 'Troubleshooting, href:,
   /docs/advanced/troubleshooting' }
   '      ]'    }
   ];
-;
-  const quickLinks = [;
-    { title: 'API Playground, href:;
-  '/api-playground', icon: Code }, { title:,;
-  Status Page', href: '/status, icon: Zap },;
-,;
+  const quickLinks = [{ title: 'API Playground, href:;
+  '/api-playground', icon: Code }, { title:,
+  Status Page', href: '/status, icon: Zap },
+,
   { title: 'Support, href: '/help;
-  ', icon: Book }, { title:,;
+  ', icon: Book }, { title:,
   Community;
-  ', href: '/community, icon: ExternalLink }'  ]';
-  return (;
+  ', href: '/community, icon: ExternalLink }'  ]'
+  return(
     <MainLayout;
-      title='Documentation - Zion Tech Group''      description='Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and technical resources to help you succeed.''      keywords='documentation, API reference, guides, tutorials, technical documentation, developer resources''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Documentation</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Comprehensive guides, API references, and technical resources to help you '              make the most of our services and build amazing solutions.;
+      title='Documentation - Zion Tech Group''      description='Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and technical resources to help you succeed.''      keywords='documentation, API reference, guides, tutorials, technical documentation, developer resources''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Documentation</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Comprehensive guides, API references, and technical resources to help you '              make the most of our services and build amazing solutions.
             </p>
           </div>
         </section>
@@ -155,18 +153,17 @@ import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
           </div>
         </section>
         {/* Support Section */}
-        <section className='py-16 bg-blue-900 text-white'>'          <div className='container mx-auto px-4 text-center'>'            <h2 className='text-3xl font-bold mb-4'>Need Help?</h2>'            <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto'>'              Can&apos;t find what you&apos;re looking for? Our support team is here to help.'            </p>
-            <div className='flex flex-col sm: flex-row justify-center gap-4'>'              <Link'                href='/help''                className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors''              >'                Contact Support;
+        <section className='py-16 bg-blue-900 text-white'>'          <div className='container mx-auto px-4 text-center'>'            <h2 className='text-3xl font-bold mb-4'>Need Help?</h2>'            <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto'>'              Can&apos;t find what you&aposre looking for? Our support team is here to help.'            </p>
+            <div className='flex flex-col sm: flex-row justify-center gap-4'>'              <Link'                href='/help''                className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors''              >'                Contact Support
               </Link>
               <Link;
-                href='/faq''                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors''              >"                View FAQ;
+                href='/faq''                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors''              >"                View FAQ
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default Documentation;
+export default Documentation

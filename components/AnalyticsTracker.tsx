@@ -8,9 +8,7 @@ interface AnalyticsTrackerProps {
     category: string;
     action: string;
     label?: string;
-    value?: number;
-  }>;
-}
+    value?: number}>}
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   pageName = 'Home',
@@ -26,9 +24,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           custom_map: {
             'custom_parameter_1': 'zion_tech_group'
           }
-        });
-      }
-    };
+        })}
+    }
     // Track user engagement
     const trackEngagement = () => {
       let startTime = Date.now();
@@ -44,11 +41,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
                 event_category: 'user_behavior',
                 event_label: 'meaningful_engagement',
                 value: Math.floor(timeSpent / 1000)
-              });
-            }
+              })}
           }
         }
-      };
+      }
 
       // Track when user leaves
       const handleBeforeUnload = () => {
@@ -59,13 +55,12 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             event_category: 'user_behavior',
             event_label: 'time_on_page',
             value: Math.floor(timeSpent / 1000)
-          });
-        }
-      };
+          })}
+      }
 
       // Track scroll depth
       const trackScrollDepth = () => {
-        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
 
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {
@@ -73,26 +68,23 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
               event_category: 'user_behavior',
               event_label: '25_percent_scroll',
               value: scrollDepth
-            });
-          }
+            })}
         } else if (scrollDepth >= 50 && scrollDepth < 75) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'scroll', {
               event_category: 'user_behavior',
               event_label: '50_percent_scroll',
               value: scrollDepth
-            });
-          }
+            })}
         } else if (scrollDepth >= 75) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'scroll', {
               event_category: 'user_behavior',
               event_label: '75_percent_scroll',
               value: scrollDepth
-            });
-          }
+            })}
         }
-      };
+      }
       // Track button clicks
       const trackButtonClicks = (e: Event) => {
         const target = e.target as HTMLElement;
@@ -103,10 +95,9 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
               event_category: 'button_click',
               event_label: buttonText,
               page_title: pageName
-            });
-          }
+            })}
         }
-      };
+      }
 
       // Track form interactions
       const trackFormInteractions = (e: Event) => {
@@ -117,14 +108,13 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
               event_category: 'form_engagement',
               event_label: target.name || target.id || 'unknown_field',
               page_title: pageName
-            });
-          }
+            })}
         }
-      };
+      }
 
       // Set up event listeners
       window.addEventListener('beforeunload', handleBeforeUnload);
-      window.addEventListener('scroll', trackScrollDepth, { passive: true });
+      window.addEventListener('scroll', trackScrollDepth, { passive: true })
       document.addEventListener('click', trackButtonClicks);
       document.addEventListener('focus', trackFormInteractions, true);
 
@@ -136,9 +126,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         window.removeEventListener('scroll', trackScrollDepth);
         document.removeEventListener('click', trackButtonClicks);
         document.removeEventListener('focus', trackFormInteractions, true);
-        clearInterval(interval);
-      };
-    };
+        clearInterval(interval)}
+    }
 
     // Track custom events
     const trackCustomEvents = () => {
@@ -148,18 +137,15 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             event_category: event.category,
             event_label: event.label,
             value: event.value
-          });
-        }
-      });
-    };
+          })}
+      })}
 
     // Initialize tracking
     trackPageView();
     const cleanup = trackEngagement();
     trackCustomEvents();
 
-    return cleanup;
-  }, [pageName, customEvents]);
+    return cleanup}, [pageName, customEvents])
   return (
     <Head>
       {/* Google Analytics 4 */}
@@ -171,13 +157,13 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){dataLayer.push(arguments)}
             gtag('js', new Date());
             gtag('config', 'GA_MEASUREMENT_ID', {
               page_title: '${pageName}',
               page_location: window.location.href,
               send_page_view: true
-            });
+            })
           `
         }}
       />
@@ -196,8 +182,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
                   item_category: category,
                   item_brand: 'Zion Tech Group'
                 }]
-              });
-            }
+              })}
 
             // Track contact form submissions
             function trackContactSubmission(formType) {
@@ -205,8 +190,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
                 event_category: 'contact',
                 event_label: formType,
                 value: 1
-              });
-            }
+              })}
 
             // Track demo requests
             function trackDemoRequest(demoType) {
@@ -214,13 +198,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
                 event_category: 'demo',
                 event_label: demoType,
                 value: 1
-              });
-            }
+              })}
           `
         }}
       />
     </Head>
-  );
-};
+  )}
 
-export default AnalyticsTracker;
+export default AnalyticsTracker

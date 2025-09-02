@@ -2,71 +2,62 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-;
   const footerSections = [
-    {;
-      title: 'Services',;
-      links: [;
-        { name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },;
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },;
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },;
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },;
-        { name: 'Financial Solutions', href: '/services/financial-solutions' },;
+    {
+      title: 'Services',
+      links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'Financial Solutions', href: '/services/financial-solutions' },
         { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
-      ];
-    },;
-    {;
-      title: 'Solutions',;
+      ]},
+    {
+      title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },;
-        { name: 'Startup Solutions', href: '/solutions/startup' },;
-        { name: 'Space Technology', href: '/solutions/space-tech' },;
-        { name: 'Supply Chain', href: '/solutions/supply-chain' },;
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Startup Solutions', href: '/solutions/startup' },
+        { name: 'Space Technology', href: '/solutions/space-tech' },
+        { name: 'Supply Chain', href: '/solutions/supply-chain' },
         { name: 'Industry Solutions', href: '/solutions/industry' }
-      ];
-    },;
-    {;
-      title: 'Company',;
+      ]},
+    {
+      title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },;
-        { name: 'Our Story', href: '/about/story' },;
-        { name: 'Team', href: '/about/team' },;
-        { name: 'Careers', href: '/careers' },;
-        { name: 'Partners', href: '/partners' },;
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Story', href: '/about/story' },
+        { name: 'Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
         { name: 'Contact', href: '/contact' }
-      ];
-    },;
-    {;
-      title: 'Resources',;
+      ]},
+    {
+      title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog' },;
-        { name: 'Case Studies', href: '/case-studies' },;
-        { name: 'White Papers', href: '/white-papers' },;
-        { name: 'Webinars', href: '/webinars' },;
-        { name: 'Training', href: '/training' },;
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' },
         { name: 'Documentation', href: '/docs' }
-      ];
-    },;
-    {;
-      title: 'Support',;
+      ]},
+    {
+      title: 'Support',
       links: [
-        { name: 'Help Center', href: '/help' },;
-        { name: 'FAQ', href: '/faq' },;
-        { name: 'Support', href: '/support' },;
-        { name: 'System Status', href: '/system-status' },;
+        { name: 'Help Center', href: '/help' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Support', href: '/support' },
+        { name: 'System Status', href: '/system-status' },
         { name: 'Request Quote', href: '/request-quote' }
-      ];
-    }
+      ]}
   ];
-;
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy-policy' },;
-    { name: 'Terms of Service', href: '/terms-of-service' },;
-    { name: 'Cookie Policy', href: '/cookie-policy' },;
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms-of-service' },
+    { name: 'Cookie Policy', href: '/cookie-policy' },
     { name: 'Accessibility', href: '/accessibility' }
   ];
-;
-  return (;
+  return(
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -83,8 +74,8 @@ export default function Footer() {
               </div>
             </div>
             <p className='text-gray-400 mb-6 max-w-md'>
-              Empowering businesses with cutting-edge technology solutions, AI innovation,;
-              and digital transformation expertise to drive growth and competitive advantage.;
+              Empowering businesses with cutting-edge technology solutions, AI innovation,
+              and digital transformation expertise to drive growth and competitive advantage.
             </p>
             <div className='flex space-x-4'>
               <a href='#' className='text-gray-400 hover:text-white transition-colors'>
@@ -105,17 +96,15 @@ export default function Footer() {
             </div>
           </div>
           {/* Footer Sections */}
-          {footerSections.map((section) => (;
+          {footerSections.map((section) => (
             <div key={section.title}>
               <h4 className='text-white font-semibold mb-4'>{section.title}</h4>
               <ul className='space-y-2'>
-                {section.links.map((link) => (;
+                {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className='text-gray-400 hover:text-white transition-colors text-sm';
-                    >;
-                      {link.name}
+                      className='text-gray-400 hover:text-white transition-colors text-sm'>{link.name}
                     </Link>
                   </li>
                 ))}
@@ -129,16 +118,14 @@ export default function Footer() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='text-gray-400 text-sm'>
-              © {currentYear} Zion Tech Group. All rights reserved.;
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className='flex space-x-6'>
-              {legalLinks.map((link) => (;
+              {legalLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className='text-gray-400 hover:text-white transition-colors text-sm';
-                >;
-                  {link.name}
+                  className='text-gray-400 hover:text-white transition-colors text-sm'>{link.name}
                 </Link>
               ))}
             </div>
@@ -146,5 +133,4 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
+  )}

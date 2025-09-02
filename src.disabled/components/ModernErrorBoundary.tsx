@@ -5,10 +5,8 @@ import React, { Component, ErrorInfo, ReactNode } from;
    children: ReactNode;
    fallback?: ReactNode;
    onError?: (error: Error, errorInfo: ErrorInfo) => void;
-   showDetails?: boolean;
-} interface State {
+   showDetails?: boolean} interface State {
    hasError: boolean;
    error: Error | null;
-   errorInfo: ErrorInfo | null;
-   showDetails: boolean;
-} export class ModernErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false, error: null, errorInfo: null, showDetails: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error, errorInfo: null, showDetails: false } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo })  if (this.props.onError) { this.props.onError(error, errorInfo) }';
+   errorInfo: ErrorInfo | null
+   showDetails: boolean} export class ModernErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false, error: null, errorInfo: null, showDetails: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error, errorInfo: null, showDetails: false } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo })  if (this.props.onError) { this.props.onError(error, errorInfo) }'

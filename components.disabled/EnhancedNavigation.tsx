@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC = () => {;
+const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
-;
-  return (;
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
+  return(
     <nav className='bg-white shadow-lg sticky top-0 z-50'>
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center py-4'>
@@ -28,15 +27,15 @@ const EnhancedNavigation: React.FC = () => {;
                 className='flex items-center text-gray-600 hover:text-blue-600 transition-colors';
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-              >;
-                Services;
+              >
+                Services
                 <ChevronDown className='ml-1 w-4 h-4' />
               </button>
               <div;
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-              >;
+              >
                 <Link href='/services/ai-development' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>AI Development</Link>
                 <Link href='/services/cloud-services' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>Cloud Services</Link>
                 <Link href='/services/web-development' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>Web Development</Link>
@@ -52,15 +51,15 @@ const EnhancedNavigation: React.FC = () => {;
                 className='flex items-center text-gray-600 hover:text-blue-600 transition-colors';
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
-              >;
-                Solutions;
+              >
+                Solutions
                 <ChevronDown className='ml-1 w-4 h-4' />
               </button>
               <div;
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
-              >;
+              >
                 <Link href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>Enterprise Solutions</Link>
                 <Link href='/solutions/small-business' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>Small Business</Link>
                 <Link href='/solutions/startups' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>Startups</Link>
@@ -80,12 +79,11 @@ const EnhancedNavigation: React.FC = () => {;
             <Link href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>Get Started</Link>
           </div>
           {/* Mobile menu button */}
-          <button className='lg:hidden text-gray-600 hover:text-gray-900' onClick={() => setIsOpen(!isOpen)}>;
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+          <button className='lg:hidden text-gray-600 hover:text-gray-900' onClick={() => setIsOpen(!isOpen)}>{isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
         {/* Mobile Navigation */}
-        {isOpen && (;
+        {isOpen && (
           <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link href='/' className='block py-2 text-gray-600 hover:text-blue-600'>Home</Link>
@@ -124,8 +122,6 @@ const EnhancedNavigation: React.FC = () => {;
         )}
       </div>
     </nav>
-  );
-};
+  )}
 ;
-export default EnhancedNavigation;
-;
+export default EnhancedNavigation

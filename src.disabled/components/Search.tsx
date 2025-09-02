@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from,;
+import React, { useState, useEffect, useRef, useCallback } from,
   react' import { motion, AnimatePresence } from;
   'framer-motion' import { cn } from;
   '@/lib/utils'  interface SearchResult {
@@ -9,13 +9,11 @@ import React, { useState, useEffect, useRef, useCallback } from,;
    type: 'page' | 'service' | 'blog' | 'case-study;
    category: string;
    tags: string[];
-   relevance: number;
-} interface SearchProps {
+   relevance: number} interface SearchProps {
    className?: string;
    placeholder?: string;
    onSearch?: (query: string) => void;
    showFilters?: boolean;
-   showSuggestions?: boolean;
-} export function Search({ className, placeholder =;
-  'Search Zion Tech Group...', onSearch, showFilters = true, showSuggestions = true }: SearchProps) { const [query, setQuery] = useState(';
-  ') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedFilters, setSelectedFilters] = useState<string[]>([]) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) ';
+   showSuggestions?: boolean} export function Search({ className, placeholder =;
+  'Search Zion Tech Group...', onSearch, showFilters = true, showSuggestions = true }: SearchProps) { const [query, setQuery] = useState('
+  ') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedFilters, setSelectedFilters] = useState<string[]>([]) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) '

@@ -6,31 +6,29 @@ import MainLayout from;
   '../../components/layout/MainLayout';
 import Link from;
   'next/link';
-;
-const MartechAutomation: NextPage = () => (;
+const MartechAutomation: NextPage = () => (
   <MainLayout
     title='MarTech Automation - CDP, Personalization, and Attribution';
-    description='Unify marketing data, personalize journeys, and measure ROI with a modular MarTech stack.';
-  >;
+    description='Unify marketing data, personalize journeys, and measure ROI with a modular MarTech stack.'>
     <section className='bg-gradient-to-br from-pink-900 via-rose-900 to-amber-900 text-white py-16'>
       <div className='container mx-auto px-4 max-w-5xl'>
         <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          MarTech Automation;
+          MarTech Automation
         </h1>
         <p className='text-lg text-gray-200 mb-6'>
           CDP pipelines, audience building, real-time personalization, and;
-          multi-touch attribution that connect to your channels.;
+          multi-touch attribution that connect to your channels.
         </p>
         <div className='flex flex-wrap gap-3'>
           <span className='px-3 py-1 rounded bg-white/10'>
-            Segment/Snowplow;
+            Segment/Snowplow
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>Real-time CDP</span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            GA4, Meta, Ads APIs;
+            GA4, Meta, Ads APIs
           </span>
           <span className='px-3 py-1 rounded bg-white/10'>
-            Journey Orchestration;
+            Journey Orchestration
           </span>
         </div>
       </div>
@@ -78,9 +76,8 @@ const MartechAutomation: NextPage = () => (;
               className='text-blue-700 underline';
               href='https://segment.com/';
               target='_blank';
-              rel='noreferrer';
-            >;
-              Segment;
+              rel='noreferrer'>
+              Segment
             </a>
           </li>
           <li>
@@ -88,9 +85,8 @@ const MartechAutomation: NextPage = () => (;
               className='text-blue-700 underline';
               href='https://snowplow.io/';
               target='_blank';
-              rel='noreferrer';
-            >;
-              Snowplow;
+              rel='noreferrer'>
+              Snowplow
             </a>
           </li>
           <li>
@@ -98,24 +94,20 @@ const MartechAutomation: NextPage = () => (;
               className='text-blue-700 underline';
               href='https://marketingplatform.google.com/about/analytics/';
               target='_blank';
-              rel='noreferrer';
-            >;
-              Google Analytics;
+              rel='noreferrer'>
+              Google Analytics
             </a>
           </li>
         </ul>
         <div className='mt-4'>
           <Link
             href='/contact';
-            className='inline-block bg-rose-600 text-white px-6 py-3 rounded-lg';
-          >;
-            Plan your stack;
+            className='inline-block bg-rose-600 text-white px-6 py-3 rounded-lg'>
+            Plan your stack
           </Link>
         </div>
       </div>
     </section>
   </MainLayout>
 );
-;
-export default MartechAutomation;
-;
+export default MartechAutomation

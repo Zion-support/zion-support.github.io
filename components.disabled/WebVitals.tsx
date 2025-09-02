@@ -5,34 +5,28 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from;
   name: string;
    value: number;
    delta: number;
-   id: string;
-}
-;
-const sendToAnalytics = (metric: WebVitalsMetric) => {;
+   id: string}
+const sendToAnalytics = (metric: WebVitalsMetric) => {
   // Send to your analytics service;
-  if (typeof window !==,;
+  if (typeof window !==,
   undefined;
   ' && 'gtag;
-  ' in window) {'    (window as any).gtag(;
-  'event', metric.name, {;
+  ' in window) {'    (window as any).gtag(
+  'event', metric.name, {
   '      event_category: 'Web Vitals, event_label: metric.id,'      value: Math.round(metric.name ===;
-  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,;
+  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
 })'  }
-;
   // Log to console in development;
   if (process.env.NODE_ENV ===;
-  'development') {;
-  '    console.log('Web Vital: , metric)'  }'};
+  'development') {
+  '    console.log('Web Vital: , metric)'  }'}
 ;
-export const WebVitals = () => {;useEffect(() => {;
+export const WebVitals = () => {useEffect(() => {
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-  }, []);
+    getTTFB(sendToAnalytics)}, []);
+  return null}
 ;
-  return null;
-};
-;
-export default WebVitals;
+export default WebVitals
