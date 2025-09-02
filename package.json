@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/optimize-build.js",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
@@ -56,7 +56,7 @@
     "dev:quality": "concurrently \"npm run dev\" \"npm run quality:check\"",
     "dev:secure": "concurrently \"npm run dev\" \"npm run security:scan\"",
     "dev:test": "concurrently \"npm run dev\" \"npm run test:automation\"",
-    "build:analyze": "npm run build && npm run build:optimize",
+    "build:analyze": "npm run build && npm run build:optimize && node scripts/optimize-build.js",
     "build:secure": "npm run security:scan && npm run build",
     "build:quality": "npm run quality:check && npm run build",
     "build:full": "npm run quality:full && npm run build:analyze",
