@@ -1,43 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-import {;
-  ArrowRight,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Database,;
-  Server,;
-  Lock,;
-  BarChart3,;
-  Users,;
-  Globe,;
-  Code,;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Clock,;
-  Award;
+import {
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Server,
+  Lock,
+  BarChart3,
+  Users,
+  Globe,
+  Code,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Clock,
+  Award
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 
 export default function Services() {
-	const title =
-  'Services — Zion Tech Group'
-	const description =
-  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const title = 'Services — Zion Tech Group';
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
 		<PageTransition>
-import PageTransition from '../src/components/PageTransition';
-;
-export default function Services() {;
-	const title =;
-  'Services — Zion Tech Group';
-	const description =;
-  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-	return (;
-		<PageTransition>;
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>;
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
@@ -551,6 +540,162 @@ export default function Services() {;
 							<div className='flex items-center justify-between text-sm'>;
 								<span className='font-semibold text-red-600'>From $79/mo</span>;
 								<Link href='/contact' className='text-red-600 hover:text-red-500'>Automate workflows →</Link>;
+							</div>;
+						</div>;
+						{/* New Innovative AI Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Brain className='h-5 w-5 text-purple-600' />;
+								<h3 className='font-semibold text-gray-900'>AI-Powered Email Marketing Automation</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Intelligent email campaigns with personalized content and optimal send times.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Dynamic content personalization based on user behavior</li>;
+								<li>• Predictive send time optimization</li>;
+								<li>• Automated A/B testing and performance optimization</li>;
+								<li>• Advanced segmentation and targeting</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-purple-600'>From $199/mo</span>;
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Start campaign →</Link>;
+							</div>;
+						</div>;
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Database className='h-5 w-5 text-blue-600' />;
+								<h3 className='font-semibold text-gray-900'>AI-Powered Data Quality Management</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Automated data cleaning, validation, and enrichment with machine learning.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Real-time data quality monitoring and alerts</li>;
+								<li>• Automated duplicate detection and merging</li>;
+								<li>• Data enrichment from external sources</li>;
+								<li>• Compliance and privacy protection</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-blue-600'>From $299/mo</span>;
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Clean data →</Link>;
+							</div>;
+						</div>;
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Shield className='h-5 w-5 text-green-600' />;
+								<h3 className='font-semibold text-gray-900'>AI Security Threat Detection</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Advanced threat detection using machine learning and behavioral analysis.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Real-time anomaly detection and threat hunting</li>;
+								<li>• Automated incident response and remediation</li>;
+								<li>• Zero-day attack prevention</li>;
+								<li>• Compliance reporting and audit trails</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-green-600'>From $399/mo</span>;
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Secure now →</Link>;
+							</div>;
+						</div>;
+						{/* New IT Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Server className='h-5 w-5 text-orange-600' />;
+								<h3 className='font-semibold text-gray-900'>Edge Computing Infrastructure</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Distributed computing solutions for low-latency applications and IoT.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Global edge node deployment and management</li>;
+								<li>• CDN optimization and content delivery</li>;
+								<li>• IoT device connectivity and data processing</li>;
+								<li>• Real-time analytics and monitoring</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-orange-600'>From $499/mo</span>;
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Deploy edge →</Link>;
+							</div>;
+						</div>;
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Globe className='h-5 w-5 text-cyan-600' />;
+								<h3 className='font-semibold text-gray-900'>API Gateway & Management Platform</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive API lifecycle management with security and analytics.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• API versioning, documentation, and testing</li>;
+								<li>• Rate limiting, authentication, and authorization</li>;
+								<li>• Performance monitoring and analytics</li>;
+								<li>• Developer portal and SDK generation</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-cyan-600'>From $199/mo</span>;
+								<Link href='/contact' className='text-cyan-600 hover:text-cyan-500'>Manage APIs →</Link>;
+							</div>;
+						</div>;
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<BarChart3 className='h-5 w-5 text-pink-600' />;
+								<h3 className='font-semibold text-gray-900'>Real-Time Analytics Dashboard</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Custom dashboards with real-time data visualization and alerts.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Interactive charts and data exploration</li>;
+								<li>• Custom KPI tracking and goal setting</li>;
+								<li>• Automated report generation and distribution</li>;
+								<li>• Mobile-responsive design</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-pink-600'>From $149/mo</span>;
+								<Link href='/contact' className='text-pink-600 hover:text-pink-500'>View analytics →</Link>;
+							</div>;
+						</div>;
+						{/* New Micro SaaS Solutions */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Code className='h-5 w-5 text-teal-600' />;
+								<h3 className='font-semibold text-gray-900'>AI Code Review Assistant</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Automated code review with security scanning and best practice recommendations.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Automated vulnerability detection and fixes</li>;
+								<li>• Code quality metrics and improvement suggestions</li>;
+								<li>• Integration with popular Git platforms</li>;
+								<li>• Custom rule configuration and team standards</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-teal-600'>From $99/mo</span>;
+								<Link href='/contact' className='text-teal-600 hover:text-teal-500'>Review code →</Link>;
+							</div>;
+						</div>;
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Users className='h-5 w-5 text-violet-600' />;
+								<h3 className='font-semibold text-gray-900'>Smart HR Management Platform</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>AI-powered HR automation with recruitment and employee management.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Automated resume screening and candidate matching</li>;
+								<li>• Employee performance tracking and feedback</li>;
+								<li>• Benefits administration and payroll integration</li>;
+								<li>• Compliance monitoring and reporting</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-violet-600'>From $199/mo</span>;
+								<Link href='/contact' className='text-violet-600 hover:text-violet-500'>Manage HR →</Link>;
+							</div>;
+						</div>;
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+							<div className='flex items-center gap-3 mb-3'>;
+								<Zap className='h-5 w-5 text-amber-600' />;
+								<h3 className='font-semibold text-gray-900'>E-Commerce Automation Suite</h3>;
+							</div>;
+							<p className='text-sm text-gray-600 mb-3'>Complete e-commerce automation with inventory, pricing, and customer service.</p>;
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>;
+								<li>• Dynamic pricing and inventory management</li>;
+								<li>• Automated customer support and chatbots</li>;
+								<li>• Order fulfillment and shipping optimization</li>;
+								<li>• Multi-channel selling and marketplace integration</li>;
+							</ul>;
+							<div className='flex items-center justify-between text-sm'>;
+								<span className='font-semibold text-amber-600'>From $299/mo</span>;
+								<Link href='/contact' className='text-amber-600 hover:text-amber-500'>Automate store →</Link>;
 							</div>;
 						</div>;
 					</div>;

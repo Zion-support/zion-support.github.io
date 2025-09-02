@@ -4,34 +4,35 @@ import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import {;
-  CheckCircle,;
-  Star,;
-  Zap,;
-  Shield,;
-  Users,;
-  Globe,;
-  Phone,;
-  Mail,   ArrowRight,;
-  DollarSign,;
-  TrendingUp,;
-  Award,;
-  Clock,;
-  Target,;
-  Brain,;
-  Server,;
-  Cloud,;
-  Database,;
-  Lock,;
-  BarChart3,;
-  Rocket,;
-  Heart,;
-  Sparkles,;
-  Calculator,;
-  BookOpen,;
-  Lightbulb,;
-  HelpCircle,;
-  Network;
+import {
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  Phone,
+  Mail,
+  ArrowRight,
+  DollarSign,
+  TrendingUp,
+  Award,
+  Clock,
+  Target,
+  Brain,
+  Server,
+  Cloud,
+  Database,
+  Lock,
+  BarChart3,
+  Rocket,
+  Heart,
+  Sparkles,
+  Calculator,
+  BookOpen,
+  Lightbulb,
+  HelpCircle,
+  Network
 } from 'lucide-react';
 ;
 const PricingGuide: React.FC = () => {;
