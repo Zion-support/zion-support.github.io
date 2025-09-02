@@ -1,23 +1,26 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import Layout from '../components/Layout';
-import Link from 'next/link';
+import Head from 'next/head';
 
-const Home: NextPage = () => {
-	return (
-		<Layout title="Zion Tech Group - Leading AI & Technology Solutions" description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.">
-			<section className="py-20 px-4 sm:px-6 lg:px-8">
-				<div className="max-w-5xl mx-auto text-center">
-					<h1 className="text-4xl md:text-6xl font-bold mb-6">Transform Your Business with AI</h1>
-					<p className="text-lg md:text-xl text-gray-600 mb-8">Cutting-edge AI, cloud, and technology solutions to accelerate your growth.</p>
-					<div className="flex gap-4 justify-center">
-						<Link href="/services" className="px-6 py-3 rounded-md bg-blue-600 text-white">Explore Services</Link>
-						<Link href="/contact" className="px-6 py-3 rounded-md border border-gray-300">Get a Consultation</Link>
-					</div>
-				</div>
-			</section>
-		</Layout>
-	);
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Zion Tech Group</title>
+        <meta name="description" content="Leading technology solutions provider" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <main className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
+            </p>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}

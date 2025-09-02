@@ -21,8 +21,7 @@ self.addEventListener('install', (event) => {
           STATIC_FILES.map(url =>
             cache.add(url).catch(error => {
               // // // // // // // console.warn(`Dev SW: Failed to cache ${url}:`, error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-              return null;
+return null;
             })
           )
         );
@@ -35,8 +34,7 @@ self.addEventListener('install', (event) => {
       })
       .catch((error) => {
         // // // // // // // console.error('Dev SW: Error in install:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-      })
+})
   );
 });
 // Activate event - clean up old caches
@@ -48,15 +46,13 @@ self.addEventListener('activate', (event) => {
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
               // // // // // // // console.log('Dev SW: Deleting old cache:', cacheName);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-              return caches.delete(cacheName);
+return caches.delete(cacheName);
           })
         );
       })
       .then(() => {
         // // // // // // // console.log('Dev SW: Activated');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        return self.clients.claim();
+return self.clients.claim();
       })
   );
 });
@@ -72,8 +68,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(request).catch((error) => {
         // // // // // // // console.warn('Dev SW: External request failed:', url.href, error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        // Return empty response for failed external requests
+// Return empty response for failed external requests
         return new Response('', { status: 204 });
       })
     );
@@ -92,8 +87,7 @@ self.addEventListener('fetch', (event) => {
       })
       .catch((error) => {
         // // // // // // // console.log('Dev SW: Network failed, trying cache:', url.href);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        // Try to serve from cache if network fails
+// Try to serve from cache if network fails
         return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;

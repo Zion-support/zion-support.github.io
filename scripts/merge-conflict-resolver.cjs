@@ -258,4 +258,3 @@ if (require.main === module) {
 }
 
 module.exports = MergeConflictResolver;
->>>>>>> e2490d5a35d5a0dd04450da6c597434927cc01aa
