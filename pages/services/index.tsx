@@ -5,16 +5,15 @@ import { services, getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 const ServicesPage: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
   const itServices = getServicesByCategory('it-services');
   const aiServices = getServicesByCategory('ai-services');
 
   const stats = [
-    { number: '50+', label: 'Micro SaaS Solutions', icon: Zap },
-    { number: '25+', label: 'IT Services', icon: Shield },
-    { number: '20+', label: 'AI Services', icon: Globe },
+    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap },
+    { number: '35+', label: 'IT Services', icon: Shield },
+    { number: '30+', label: 'AI Services', icon: Globe },
     { number: '500+', label: 'Projects Completed', icon: TrendingUp },
   ];
 
@@ -274,6 +273,43 @@ const ServicesPage: NextPage = () => {
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact and Pricing Guidance */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2">Talk to an Expert</h3>
+              <p className="text-gray-600 mb-4">Get a tailored recommendation and a quote within 24 hours.</p>
+              <ul className="text-sm text-gray-700 space-y-2 mb-4">
+                <li>• Mobile: +1 302 464 0950</li>
+                <li>• E-mail: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 underline">kleber@ziontechgroup.com</a></li>
+                <li>• Address: 364 E Main St STE 1008 Middletown DE 19709</li>
+              </ul>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded transition">Contact Sales</Link>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2">Typical Market Pricing</h3>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Micro SaaS: $19–$299/mo per workspace</li>
+                <li>• IT Services: $8k–$250k/project</li>
+                <li>• AI Solutions: $10k–$2M/project</li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-3">Pricing varies by scope, data complexity, security, and integration needs.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2">Useful Links</h3>
+              <ul className="text-sm text-blue-700 space-y-2">
+                <li><a className="underline" href="https://ziontechgroup.com">Website</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/services">All Services</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/contact">Contact</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/privacy">Privacy</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/terms">Terms</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
