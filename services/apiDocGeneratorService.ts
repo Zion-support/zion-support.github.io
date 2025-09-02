@@ -16,7 +16,14 @@ export interface APIDocumentation {
 export interface APIEndpoint {
   id: string;
   path: string;
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';
+  method:
+  'GET' |
+  'POST' |
+  'PUT' |
+  'DELETE' |
+  'PATCH' |
+  'HEAD' |
+  'OPTIONS';
   summary: string;
   description: string;
   parameters: APIParameter[];
@@ -28,7 +35,11 @@ export interface APIEndpoint {
   authentication?: AuthenticationRequirement}
 export interface APIParameter {
   name: string;
-  in: 'path' | 'query' | 'header' | 'cookie';
+  in:
+  'path' |
+  'query' |
+  'header' |
+  'cookie';
   required: boolean;
   schema: APISchema;
   description: string;
@@ -89,11 +100,20 @@ export interface RateLimit {
   window: string;
   description?: string}
 export interface AuthenticationRequirement {
-  type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
+  type:
+  'bearer' |
+  'apiKey' |
+  'oauth2' |
+  'basic';
   description: string;
   required: boolean}
 export interface DocumentationConfig {
-  outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
+  outputFormat:
+  'html' |
+  'markdown' |
+  'pdf' |
+  'json' |
+  'openapi';
   includeExamples: boolean;
   includeSchemas: boolean;
   includeAuthentication: boolean;
@@ -105,10 +125,28 @@ export interface DocumentationConfig {
     compName?: string}}
 export class APIDocGeneratorService {
   private supportedFrameworks = [;
-    'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel';
+
+  'express',
+  'fastify',
+  'koa',
+  'hapi',
+  'django',
+  'flask',
+  'fastapi',
+  'spring',
+  'aspnet',
+  'laravel';
   ];
   private supportedLanguages = [;
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby';
+
+  'javascript',
+  'typescript',
+  'python',
+  'java',
+  'csharp',
+  'php',
+  'go',
+  'ruby';
   ];
   async generateDocumentation(
     sourcePath: string,
@@ -145,7 +183,8 @@ export class APIDocGeneratorService {
       documentation.metadata.frameworks = analysis.frameworks;
       // Generate examples if requested
       if (config.includeExamples) {
-      // // // // // // // console.error('Error generating documentation:', error);
+      // // // // // // // console.error(
+  'Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
@@ -154,7 +193,8 @@ export class APIDocGeneratorService {
 documentation.examples = await this.generateExamples(documentation.endpoints)}
       // Calculate coverage;
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)} catch (error) {;
-      console.error('Error generating documentation:', error);
+      console.error(
+  'Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length}
@@ -171,18 +211,33 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     // Simulate code analysis based on file extensions
     const files = await this.scanDirectory(sourcePath);
     for (const file of files) {
-      const extension = file.split('.').pop()?.toLowerCase();
-      if (extension = == 'js' || extension === 'ts') {;
-        languages.push('javascript', 'typescript');
-        frameworks.push('express', 'fastify');
+      const extension = file.split(
+  '.').pop()?.toLowerCase();
+      if (extension = ==
+  'js' || extension ===
+  'ts') {;
+        languages.push(
+  'javascript',
+  'typescript');
+        frameworks.push(
+  'express',
+  'fastify');
         endpoints.push(...this.analyzeJavaScriptFile(file));
-      } else if (extension = == 'py') {;
-        languages.push('python');
-        frameworks.push('django', 'flask', 'fastapi');
+      } else if (extension = ==
+  'py') {;
+        languages.push(
+  'python');
+        frameworks.push(
+  'django',
+  'flask',
+  'fastapi');
         endpoints.push(...this.analyzePythonFile(file));
-      } else if (extension = == 'java') {;
-        languages.push('java');
-        frameworks.push('spring');
+      } else if (extension = ==
+  'java') {;
+        languages.push(
+  'java');
+        frameworks.push(
+  'spring');
         endpoints.push(...this.analyzeJavaFile(file))}
     }
     // Remove duplicates
@@ -195,97 +250,124 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     }}
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning
-    return [
-      'src/routes/users.js',
-      'src/routes/products.js',
-      'src/routes/orders.js',
-      'src/models/User.js',
-      'src/models/Product.js',
-      'src/middleware/auth.js',
-      'src/config/database.js'
+    return [,
+  src/routes/users.js',
+  'src/routes/products.js',
+  'src/routes/orders.js',
+  'src/models/User.js',
+  'src/models/Product.js',
+  'src/middleware/auth.js',
+  'src/config/database.js'
     ]}
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
     // Simulate route analysis
-    if (filePath.includes('users')) {
+    if (filePath.includes(
+  'users)) {
       endpoints.push(
         {
           id: `endpoint_${Date.now()}_1`,
-          path: '/api/users',
-          method: 'GET',
-          summary: 'Get all users',
-          description: 'Retrieve a list of all users with optional filtering and pagination',
+          path:,
+  /api/users',
+          method: 'GET,
+          summary:,
+  Get all users',
+          description: 'Retrieve a list of all users with optional filtering and pagination,
           parameters[
             {
-              name: 'page',
-              in: 'query',
+              name:,
+  page',
+              in: 'query,
               required: false,
-              schema: { type: 'integer', minimum: 1, default: 1 },
-              description: 'Page number for pagination'
+              schema: { type:
+  'integer', minimum: 1, default: 1 },
+              description:,
+  Page number for pagination'
             },
             {
-              name: 'limit',
-              in: 'query',
+              name: 'limit,
+              in:
+  'query',
               required: false,
-              schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
-              description: 'Number of users per page'
+              schema: { type:
+  'integer', minimum: 1, maximum: 100, default: 20 },
+              description:
+  'Number of users per page'
           ],
           requestBody: null,
           responses: [
             {
-              code: '200',
-              description: 'Successful response',
-              content: {
-                'application/json': {
+              code:,
+  200',
+              description: 'Successful response,
+              content: {,
+  application/json': {
                   schema: {
-                    type: 'object',
+                    type:
+  'object,
                     properties: {
                       users: {
-                        type: 'array',
-                        items: { $ref: '#/components/schemas/User' }
+                        type:,
+  array',
+                        items: { $ref:
+  '#/components/schemas/User }
                       },
                       pagination: {
-                        $ref: '#/components/schemas/Pagination'
+                        $ref:
+  '#/components/schemas/Pagination'
           ],
-          tags['Users'],
+          tags[
+  'Users'],
           deprecated: false,
           rateLimit: {
             requests: 100,
-            window: '1m'
+            window:,
+  1m'
           },
           authentication: {
-            type: 'bearer',
-            description: 'JWT token required',
+            type:
+  'bearer,
+            description:
+  'JWT token required',
             required: true
         },
         {
           id: `endpoint_${Date.now()}_2`,
-          path: '/api/users/{id}',
-          method: 'GET',
-          summary: 'Get user by ID',
-          description: 'Retrieve a specific user by their unique identifier',
+          path:,
+  /api/users/{id}',
+          method: 'GET,
+          summary:,
+  Get user by ID',
+          description: 'Retrieve a specific user by their unique identifier,
           parameters[
             {
-              name: 'id',
-              in: 'path',
+              name:,
+  id',
+              in: 'path,
               required: true,
-              schema: { type: 'string', format: 'uuid' },
-              description: 'User unique identifier'
+              schema: { type:,
+  string', format: 'uuid },
+              description:
+  'User unique identifier'
           ],
           requestBody: null,
           responses: [
             {
-              code: '200',
-              description: 'User found successfully',
-              content: {
-                'application/json': {
-                  schema: { $ref: '#/components/schemas/User' }
+              code:,
+  200',
+              description: 'User found successfully,
+              content: {,
+  application/json': {
+                  schema: { $ref:
+  '#/components/schemas/User }
             },
             {
-              code: '404',
-              description: 'User not found'
+              code:,
+  404',
+              description: 'User not found
           ],
-          tags['Users'],
+          tags[
+  'Users'],
           deprecated: false
         }
       )}
@@ -293,126 +375,199 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   private analyzePythonFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
     // Simulate FastAPI/Django route analysis
-    if (filePath.includes('products')) {
+    if (filePath.includes(
+  'products')) {
       endpoints.push({
         id: `endpoint_${Date.now()}_3`,
-        path: '/api/products',
-        method: 'POST',
-        summary: 'Create new product',
-        description: 'Create a new product with the provided information',
+        path:,
+  /api/products',
+        method: 'POST,
+        summary:,
+  Create new product',
+        description: 'Create a new product with the provided information,
         parameters[],
         requestBody: {
           required: true,
-          content: {
-            'application/json': {
-              schema: { $ref: '#/components/schemas/Product' }
+          content: {,
+  application/json': {
+              schema: { $ref:
+  '#/components/schemas/Product }
         },
         responses[
           {
-            code: '201',
-            description: 'Product created successfully',
-            content: {
-              'application/json': {
-                schema: { $ref: '#/components/schemas/Product' }
+            code:,
+  201',
+            description: 'Product created successfully,
+            content: {,
+  application/json': {
+                schema: { $ref:
+  '#/components/schemas/Product }
           },
           {
-            code: '400',
-            description: 'Invalid input data'
+            code:,
+  400',
+            description: 'Invalid input data
         ],
-        tags['Products'],
+        tags[
+  'Products'],
         deprecated: false
       })}
     return endpoints}
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
     // Simulate Spring Boot endpoint analysis
-    if (filePath.includes('orders')) {
+    if (filePath.includes(
+  'orders')) {
       endpoints.push({
         id: `endpoint_${Date.now()}_4`,
-        path: '/api/orders',
-        method: 'GET',
-        summary: 'Get all orders',
-        description: 'Retrieve a list of all orders with optional filtering',
+        path:,
+  /api/orders',
+        method: 'GET,
+        summary:,
+  Get all orders',
+        description: 'Retrieve a list of all orders with optional filtering,
         parameters[
           {
-            name: 'status',
-            in: 'query',
+            name:,
+  status',
+            in: 'query,
             required: false,
-            schema: { type: 'string', enum['pending', 'processing', 'completed', 'cancelled'] },
-            description: 'Filter orders by status'
+            schema: { type:,
+  string', enum[
+  'pending',
+  'processing',
+  'completed',
+  'cancelled'] },
+            description: 'Filter orders by status
         ],
         requestBody: null,
         responses: [
           {
-            code: '200',
-            description: 'Successful response',
-            content: {
-              'application/json': {
+            code:,
+  200',
+            description: 'Successful response,
+            content: {,
+  application/json': {
                 schema: {
-                  type: 'array',
-                  items: { $ref: '#/components/schemas/Order' }
+                  type:
+  'array,
+                  items: { $ref:
+  '#/components/schemas/Order' }
         ],
-        tags['Orders'],
+        tags[
+  'Orders'],
         deprecated: false
       })}
     return endpoints}
   private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
     const schemas: APISchema[] = [
       {
-        type: 'object',
+        type:,
+  object',
         properties: {
-          id: { type: 'string', format: 'uuid' },
-          email: { type: 'string', format: 'email' },
-          name: { type: 'string', minLength: 1, maxLength: 100 },
-          createdAt: { type: 'string', format: 'date-time' },
-          updatedAt: { type: 'string', format: 'date-time' }
+          id: { type:
+  'string, format:,
+  uuid' },
+          email: { type:
+  'string, format:,
+  email' },
+          name: { type:
+  'string, minLength: 1, maxLength: 100 },
+          createdAt: { type:,
+  string', format: 'date-time },
+          updatedAt: { type:,
+  string', format: 'date-time }
         },
-        required['id', 'email', 'name'],
-        description: 'User entity schema'
+        required[,
+  id',
+  'email',
+  'name'],
+        description: 'User entity schema
       },
       {
-        type: 'object',
+        type:,
+  object',
         properties: {
-          id: { type: 'string', format: 'uuid' },
-          name: { type: 'string', minLength: 1, maxLength: 200 },
-          description: { type: 'string', maxLength: 1000 },
-          price: { type: 'number', minimum: 0 },
-          category: { type: 'string' },
-          inStock: { type: 'boolean' }
+          id: { type:
+  'string, format:,
+  uuid' },
+          name: { type:
+  'string, minLength: 1, maxLength: 200 },
+          description: { type:
+  'string', maxLength: 1000 },
+          price: { type:
+  'number', minimum: 0 },
+          category: { type:,
+  string' },
+          inStock: { type:
+  'boolean }
         },
-        required['id', 'name', 'price'],
-        description: 'Product entity schema'
+        required[,
+  id',
+  'name',
+  'price'],
+        description: 'Product entity schema
       },
       {
-        type: 'object',
+        type:,
+  object',
         properties: {
-          id: { type: 'string', format: 'uuid' },
-          userId: { type: 'string', format: 'uuid' },
+          id: { type:
+  'string, format:,
+  uuid' },
+          userId: { type:
+  'string, format:,
+  uuid' },
           items: {
-            type: 'array',
+            type:
+  'array,
             items: {
-              type: 'object',
+              type:,
+  object',
               properties: {
-                productId: { type: 'string', format: 'uuid' },
-                quantity: { type: 'integer', minimum: 1 },
-                price: { type: 'number', minimum: 0 }
+                productId: { type:
+  'string, format:,
+  uuid' },
+                quantity: { type:
+  'integer, minimum: 1 },
+                price: { type:
+  'number', minimum: 0 }
           },
-          total: { type: 'number', minimum: 0 },
-          status: { type: 'string', enum['pending', 'processing', 'completed', 'cancelled'] }
+          total: { type:
+  'number', minimum: 0 },
+          status: { type:,
+  string', enum[
+  'pending',
+  'processing',
+  'completed',
+  'cancelled'] }
         },
-        required['id', 'userId', 'items', 'total'],
-        description: 'Order entity schema'
+        required[
+  'id',
+  'userId',
+  'items',
+  'total'],
+        description: 'Order entity schema
       },
       {
-        type: 'object',
+        type:,
+  object',
         properties: {
-          page: { type: 'integer', minimum: 1 },
-          limit: { type: 'integer', minimum: 1 },
-          total: { type: 'integer', minimum: 0 },
-          pages: { type: 'integer', minimum: 1 }
+          page: { type:
+  'integer, minimum: 1 },
+          limit: { type:
+  'integer', minimum: 1 },
+          total: { type:
+  'integer', minimum: 0 },
+          pages: { type:
+  'integer', minimum: 1 }
         },
-        required['page', 'limit', 'total', 'pages'],
-        description: 'Pagination metadata schema'
+        required[,
+  page',
+  'limit',
+  'total',
+  'pages'],
+        description: 'Pagination metadata schema
     ];
     return schemas}
   private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
@@ -426,16 +581,19 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         request: {
           method: endpoint.method,
           url: `https://api.example.com${endpoint.path}`,
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer your-jwt-token'
+          headers: {,
+  Content-Type': 'application/json,
+,
+  Authorization': 'Bearer your-jwt-token
           },
           body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : null
         },
         response: {
-          status: parseInt(endpoint.responses[0]?.code || '200'),
+          status: parseInt(endpoint.responses[0]?.code ||,
+  200'),
           headers: {
-            'Content-Type': 'application/json'
+  'Content-Type':
+  'application/json
           },
           body: this.generateExampleResponse(endpoint.responses[0])
         },
@@ -451,7 +609,8 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     }}
   private generateExampleResponse(response: APIResponse):  {
     // Generate example response based on schema
-    if (response.content?.['application/json']?.schema) {
+    if (response.content?.[
+  'application/json']?.schema) {
       return {
         id: "123e4567-e89b-12d3-a456-426614174000",
         name: "Example Item",
@@ -462,34 +621,43 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     return [
       {
         id: `fallback_${Date.now()}`,
-        path: '/api/health',
-        method: 'GET',
-        summary: 'Health check endpoint',
-        description: 'Simple health check to verify API is running',
+        path:,
+  /api/health',
+        method: 'GET,
+        summary:,
+  Health check endpoint',
+        description: 'Simple health check to verify API is running,
         parameters: [],
         requestBody: null,
         responses: [
           {
-            code: '200',
-            description: 'API is healthy'
+            code:,
+  200',
+            description: 'API is healthy
         ],
-        tags['System'],
+        tags[
+  'System'],
         deprecated: false
       }
     ]}
   private extractProjectName(sourcePath: string): string {
     // Extract project name from path
-    const parts = sourcePath.split('/');
-    return parts[parts.length - 1] || 'API Documentation'}
+    const parts = sourcePath.split(
+  '/');
+    return parts[parts.length - 1] ||
+  'API Documentation'}
   private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.
-    return '1.0.0'}
+    return
+  '1.0.0'}
   private async extractDescription(sourcePath: string): Promise<string> {
     // Simulate description extraction from README, package.json, etc.
-    return 'Comprehensive API documentation automatically generated from source code'}
+    return,
+  Comprehensive API documentation automatically generated from source code'}
   private async extractBaseUrl(sourcePath: string): Promise<string> {
     // Simulate base URL extraction from configuration files
-    return 'https://api.example.com'}
+    return
+  'https://api.example.com}
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0;
@@ -501,7 +669,12 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     return Math.round((documentedEndpoints / endpoints.length) * 100)}
   async exportDocumentation(
     documentation: APIDocumentation,
-    format: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi'
+    format:
+  'html' |
+  'markdown' |
+  'pdf' |
+  'json' |
+  'openapi'
   ): Promise<string> {
     // Simulate export functionality
     const timestamp = new Date().toISOString();

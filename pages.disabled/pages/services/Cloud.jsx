@@ -1,5 +1,7 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';
 :pages.disabled/pages/services/Cloud.jsx
 const CloudServices = () => {
     const cloudServices = [
@@ -71,4 +73,5 @@ const CloudServices = () => {
 export { CloudServices };
 :pages.disabled/pages/services/Cloud.jsx
 export default CloudServices;'"
-}'"'"
+}
+  '"'"

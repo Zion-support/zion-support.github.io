@@ -85,7 +85,8 @@ import {Brain,
   Jitter,
   Ridge,
 :pages.disabled/pages/services/AISolutions.tsx
-  Joy} from 'lucide-react';
+  Joy} from
+  'lucide-react';
 ;
 export function AISolutions(...args: unknown[]): unknown {
 
@@ -293,7 +294,8 @@ export function AISolutions(...args: unknown[]): unknown {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>"
-            <p className="text-xl text-cyan-100 mb-8">'
+            <p className="text-xl text-cyan-100 mb-8">
+  '
               Let's discuss how our AI solutions can drive innovation,
               efficiency, and growth for your organization.
             </p>"

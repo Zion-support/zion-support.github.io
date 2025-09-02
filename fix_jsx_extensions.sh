@@ -39,4 +39,3 @@ find src -name "*.js" -exec grep -l "JSX\|<.*>" {} \; | while read file; do
 done
 
 echo "JSX file extensions fixed!"
-=======

@@ -1,64 +1,89 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
-;
-:pages.disabled/solutions/Healthcare.jsx
+import React from,
+  react';'
+import { Link } from
+  'react-router-dom';'
+import { Heart, Shield, Users, Activity, Microscope, Pill } from
+  'lucide-react';
+;: pages.disabled/solutions/Healthcare.jsx
 const HealthcareSolutions = () => {
   const solutions = [
     {
-'
-      title: 'AI-Powered Patient Care','
-      description:''
-        'Intelligent patient monitoring and care management systems.','
-      features: [''
-        'Real-time patient monitoring',Predictive health analytics',Automated care protocols',Patient engagement tools',Care coordination platform',],
+  '
+      title: 'AI-Powered Patient Care,'
+      description:,
+  '
+        'Intelligent patient monitoring and care management systems.
+  ','
+      features: ['
+  '
+        'Real-time patient monitoring,Predictive health analytics',Automated care protocols
+  ',Patient engagement tools',Care coordination platform
+  ',],
       icon: Heart,'
-      href: '/services/ai-autonomous-systems'},
-:pages.disabled/solutions/Healthcare.jsx
+      href:,
+  /services/ai-autonomous-systems'},: pages.disabled/solutions/Healthcare.jsx
     {
-'
-      title: 'Medical Imaging AI','
-      description: 'Advanced AI for diagnostic imaging and analysis.','
+  '
+      title: 'Medical Imaging AI,'
+      description:,
+  Advanced AI for diagnostic imaging and analysis.',
+  '
       features: [''
-        'Radiology image analysis',Pathology detection',3D imaging reconstruction',Automated reporting',Quality assurance tools',],
-      icon: Microscope,'
-      href: '/services/ai-autonomous-systems'},
+  'Radiology image analysis,Pathology detection
+  ',3D imaging reconstruction',Automated reporting
+  ',Quality assurance tools',],
+      icon: Microscope,
+,
+  href: '/services/ai-autonomous-systems},
 :pages.disabled/solutions/Healthcare.jsx
-    {
-'
-      title: 'Drug Discovery Platform','
-      description: 'AI-driven pharmaceutical research and development.','
-      features: [''
-        'Molecular modeling',Target identification',Clinical trial optimization',Drug repurposing',Safety prediction',],
+    {,
+  title: 'Drug Discovery Platform,
+,
+  description: 'AI-driven pharmaceutical research and development.,'
+      features: ['
+  '
+        'Molecular modeling
+  ',Target identification',Clinical trial optimization
+  ',Drug repurposing',Safety prediction
+  ',],
       icon: Pill,'
-      href: '/services/quantum-technology'},
-:pages.disabled/solutions/Healthcare.jsx
+      href:,
+  /services/quantum-technology'},: pages.disabled/solutions/Healthcare.jsx
     {
-'
-      title: 'Healthcare Compliance','
-      description:''
-        'Automated compliance management for healthcare regulations.','
-      features: [''
-        'HIPAA compliance',FDA regulations',Audit automation',Risk assessment',Document management',
+  '
+      title: 'Healthcare Compliance,'
+      description:,
+  '
+        'Automated compliance management for healthcare regulations.
+  ','
+      features: ['
+  '
+        'HIPAA compliance,FDA regulations',Audit automation
+  ',Risk assessment',Document management
+  ',
       ],
       icon: Shield,'
-      href: '/services/cybersecurity'},
+      href:,
+  /services/cybersecurity'},
   ];
   const benefits = [
     {
-'
-      title: 'Improved Patient Outcomes','
-      description: 'AI-driven insights lead to better diagnosis and treatment.',
+  '
+      title: 'Improved Patient Outcomes,'
+      description:
+  'AI-driven insights lead to better diagnosis and treatment.',
       icon: Activity},
-    {
-'
-      title: 'Operational Efficiency','
-      description:''
-        'Streamlined workflows reduce costs and improve care delivery.',
+    {,
+  title: 'Operational Efficiency,'
+      description:'
+  '
+        'Streamlined workflows reduce costs and improve care delivery.
+  ',
       icon: Users},
-    {
-'
-      title: 'Enhanced Security','description: 'HIPAA-compliant solutions protect patient data.',
+    {,
+  title: 'Enhanced Security,
+,
+  description: 'HIPAA-compliant solutions protect patient data.,
       icon: Shield}
   ];
   return()
@@ -212,4 +237,4 @@ const HealthcareSolutions = () => {
 
 :pages.disabled/solutions/Healthcare.jsx
 export default HealthcareSolutions;'"
-'"'"
+  '"'"
