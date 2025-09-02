@@ -1,5 +1,4 @@
-// Service finder utility for searching and filtering services
-
+// Service finder utility for searching and filtering services;
 export interface Service {
   id: string;
   name: string;
@@ -12,16 +11,13 @@ export interface Service {
 }
 
 export function findServicesByCategory(
-  allServiceArrays: Service[][],
-  categoryIncludes: string
+  allServiceArrays: Service[][], categoryIncludes: string
 ): Service[] {
   const results: Service[] = [];
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
-      if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
-        results.push(s);
-      }
+      if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {'        results.push(s);'      }
     }
   }
   
@@ -29,18 +25,15 @@ export function findServicesByCategory(
 }
 
 export function findServicesByTag(
-  allServiceArrays: Service[][],
-  tagIncludes: string
+  allServiceArrays: Service[][], tagIncludes: string
 ): Service[] {
   const results: Service[] = [];
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
       if (s && s.tags && Array.isArray(s.tags)) {
-        const hasTag = s.tags.some(tag => 
-          typeof tag === 'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())
-        );
-        if (hasTag) {
+        const hasTag = s.tags.some(tag => ;
+          typeof tag === 'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())'        );'        if (hasTag) {
           results.push(s);
         }
       }
@@ -51,17 +44,14 @@ export function findServicesByTag(
 }
 
 export function findServicesByPriceRange(
-  allServiceArrays: Service[][],
-  minPrice: number,
+  allServiceArrays: Service[][], minPrice: number,;
   maxPrice: number
 ): Service[] {
   const results: Service[] = [];
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
-      if (s && typeof s.price === 'number' && s.price >= minPrice && s.price <= maxPrice) {
-        results.push(s);
-      }
+      if (s && typeof s.price === 'number' && s.price >= minPrice && s.price <= maxPrice) {'        results.push(s);'      }
     }
   }
   
@@ -69,8 +59,7 @@ export function findServicesByPriceRange(
 }
 
 export function searchServices(
-  allServiceArrays: Service[][],
-  searchTerm: string
+  allServiceArrays: Service[][], searchTerm: string
 ): Service[] {
   const results: Service[] = [];
   const term = searchTerm.toLowerCase();
