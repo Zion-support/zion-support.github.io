@@ -2,7 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description =
@@ -586,13 +587,15 @@ export default function AIServices() {
     },
   ];
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-services" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
+
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm:py-32">
@@ -804,6 +807,8 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-    </PageTransition>
+      
+      <Footer />
+    </>
   );
 }
