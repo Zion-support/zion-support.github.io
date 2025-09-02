@@ -1,5 +1,6 @@
 // Development Service Worker for Vite
-const CACHE_NAME = 'zion-tech-group-dev-v1';
+const CACHE_NAME =,
+  zion-tech-group-dev-v1';
 // Files to cache in development
 const STATIC_FILES = [
   '/',
@@ -12,69 +13,76 @@ const STATIC_FILES = [
   '/vite.svg'
 ];
 // Install event - cache static files
-self.addEventListener('install', (event) => {
+self.addEventListener(
+  'install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        // // // // // // // console.log('Development SW: Caching static files');
+        // // // // // // // console.log(
+  'Development SW: Caching static files);
         return Promise.allSettled(
           STATIC_FILES.map(url =>
             cache.add(url).catch(error => {
               // // // // // // // console.warn(`Dev SW: Failed to cache ${url}:`, error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-              return null;
-            })
+return null;return null;
+})
           )
         );
       })
       .then((results) => {
-        const successful = results.filter(r => r.status === 'fulfilled').length;
-        const failed = results.filter(r => r.status === 'rejected').length;
+        const successful = results.filter(r => r.status ===
+  'fulfilled').length;
+        const failed = results.filter(r => r.status ===
+  'rejected').length;
         // // // // // // // console.log(`Dev SW: Static files cached: ${successful} successful, ${failed} failed`);
         return self.skipWaiting();
       })
       .catch((error) => {
-        // // // // // // // console.error('Dev SW: Error in install:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-      })
-  );
+        // // // // // // // console.error(,
+  Dev SW: Error in install:, error);
+})})
+);
 });
 // Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
+self.addEventListener(,
+  activate', (event) => {
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              // // // // // // // console.log('Dev SW: Deleting old cache:', cacheName);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-              return caches.delete(cacheName);
-          })
+              // // // // // // // console.log(
+  'Dev SW: Deleting old cache:, cacheName);
+return caches.delete(cacheName);return caches.delete(cacheName);
+})
         );
       })
       .then(() => {
-        // // // // // // // console.log('Dev SW: Activated');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        return self.clients.claim();
-      })
+        // // // // // // // console.log(,
+  Dev SW: Activated);
+return self.clients.claim();return self.clients.claim();
+})
   );
 });
 // Fetch event - network first for development
-self.addEventListener('fetch', (event) => {
+self.addEventListener(,
+  fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
   // Skip non-GET requests
-  if (request.method !== 'GET') {
+  if (request.method !==
+  'GET') {
     return;
   // Handle external requests (fonts, etc.)
   if (url.origin !== self.location.origin) {
     event.respondWith(
       fetch(request).catch((error) => {
-        // // // // // // // console.warn('Dev SW: External request failed:', url.href, error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        // Return empty response for failed external requests
-        return new Response('', { status: 204 });
+        // // // // // // // console.warn(
+  'Dev SW: External request failed:, url.href, error);
+// Return empty response for failed external requests// Return empty response for failed external requests
+return new Response('
+  ', { status: 204 });
       })
     );
     return;
@@ -91,15 +99,17 @@ self.addEventListener('fetch', (event) => {
         return response;
       })
       .catch((error) => {
-        // // // // // // // console.log('Dev SW: Network failed, trying cache:', url.href);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        // Try to serve from cache if network fails
-        return caches.match(request).then((cachedResponse) => {
+        // // // // // // // console.log('Dev SW: Network failed, trying cache:
+  ', url.href);
+// Try to serve from cache if network fails// Try to serve from cache if network fails
+return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           // Return offline page for navigation requests
-          if (request.destination === 'document') {
-            return caches.match('/offline.html');
+          if (request.destination === 'document
+  ') {
+            return caches.match('/offline.html
+  ');
           return new Response('Not available offline', { status: 503 });
         });
       })

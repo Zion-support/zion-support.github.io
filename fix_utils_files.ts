@@ -14,8 +14,10 @@ function fixUtilsFile(...args: unknown[]): unknown {
       "export const $1 = $2;",
     );
     content = content.replace(
-      /import\s+React\s+from\s*'rea\s*c\s*t';;'/g,
-      "import React from 'react';",
+      /import\s+React\s+from\s*
+  'rea\s*c\s*t';;'/g,
+      "import React from
+  'react';",
     );
     content = content.replace(
       /const\s+([^=]+)\s*=\s*([^;]+);/g,
@@ -27,8 +29,12 @@ function fixUtilsFile(...args: unknown[]): unknown {
       "if (!$1) return $2;",
     );
     // Fix string literals
-    content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
-    content = content.replace(/"([^"]+),\s*([^"]+)"/g,"$1 $2"');
+    content = content.replace(/
+  '([^']+),\s*([^
+  ']+)'/g, "
+  '$1 $2'");
+    content = content.replace(/"([^"]+),\s*([^"]+)"/g,"$1 $2"
+  ');
     // Fix variable names
     content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
@@ -100,8 +106,10 @@ function fixUtilsFile(...args: unknown[]): unknown {
       "NEXT_PUBLIC_SUPABASE_URL",
     );
     content = content.replace(
-      /htt,\s*p,\s*s:\/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co'/g,
-      "'https://placeholder.supabase.co'",
+      /htt,\s*p,\s*s:\/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co,
+  /g,
+      "
+  'https: //placeholder.supabase.co",
     );
     content = content.replace(/supabaseAnonKe,\s*y/g, "supabaseAnonKey");
     content = content.replace(
@@ -109,7 +117,8 @@ function fixUtilsFile(...args: unknown[]): unknown {
       "NEXT_PUBLIC_SUPABASE_ANON_KEY",
     );
     content = content.replace(
-      /placehold,\s*e,\s*r-k,\s*e,\s*y'/g,
+      /placehold,\s*e,\s*r-k,\s*e,\s*y
+  '/g,
       "'placeholder-key'",
     );
     content = content.replace(/supabaseMiddleware/g, "supabaseMiddleware");
