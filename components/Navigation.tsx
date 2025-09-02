@@ -11,19 +11,19 @@ const Navigation: React.FC = () => {;
     {;
       name: 'Services', href: '/services',;
       dropdown: [;
-        { name: 'AI Development', href: '/services/ai-model-development-chat' },;
-        { name: 'Cloud Solutions', href: '/services/cloud-migration-services-chat' },;
-        { name: 'Web Development', href: '/services/web-application-development-chat' },;
-        { name: 'Mobile Apps', href: '/services/mobile-app-development-chat' },;
-        { name: 'Data Analytics', href: '/services/business-intelligence-chat' },;
-        { name: 'Cybersecurity', href: '/services/network-security-chat' }
+        { name: 'AI Services', href: '/services#ai' },;
+        { name: 'Cloud Platforms', href: '/services#cloud' },;
+        { name: 'Cybersecurity', href: '/services#cybersecurity' },;
+        { name: 'Micro SaaS', href: '/services#saas' },;
+        { name: 'IT Consulting', href: '/services' },;
+        { name: 'Data Engineering', href: '/services' }
       ];
     }, {;
       name: 'Solutions',;
-      href: '/products', dropdown: [
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions' }, { name: 'IoT Platforms', href: '/iot-platforms' }, { name: 'AI-Powered Systems', href: '/services/ai-model-development-chat' }
+      href: '/solutions', dropdown: [
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' }, { name: 'Email Automation', href: '/solutions/email-automation' }, { name: 'Customer Support Platform', href: '/solutions/customer-support' }, { name: 'Event Management', href: '/solutions/event-management' }, { name: 'Project Management', href: '/solutions/project-management' }, { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
       ];
-    }, { name: 'About', href: '/about' }, { name: 'Blog', href: '/blog' }, { name: 'Talent', href: '/talent' }, { name: 'Contact', href: '/contact' }
+    }, { name: 'Pricing', href: '/pricing-guide' }, { name: 'About', href: '/about' }, { name: 'Blog', href: '/blog' }, { name: 'Contact', href: '/contact' }
   ];
 ;
   const toggleDropdown = (itemName: string) => {
