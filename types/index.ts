@@ -115,9 +115,10 @@ export interface PerformanceMetrics {
 }
 export interface AccessibilitySettings {
   highContrast: boolean;
-   fontSize: number;
-   reducedMotion: boolean;
-   screenReader: boolean}
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
    language: string;
