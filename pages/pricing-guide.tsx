@@ -35,6 +35,8 @@ import {
   Lightbulb,
   HelpCircle
 } from 'lucide-react';
+// Ensure all icons referenced below are imported
+import { Network } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
