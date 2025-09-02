@@ -51,7 +51,11 @@
     "type-check:watch": "tsc --noEmit --watch",
     "test:ci": "jest --ci --coverage --watchAll=false",
     "clean": "rm -rf .next node_modules/.cache",
-    "postinstall": "npm run clean"
+    "postinstall": "npm run clean",
+    "analyze:bundle": "ANALYZE=true npm run build",
+    "lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
+    "audit:security": "npm audit --audit-level=moderate",
+    "audit:fix": "npm audit fix"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.2",

@@ -5,11 +5,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    
-    
-  },
-  experimental: {
-    esmExternals: false
+    optimizeCss: true,
+    scrollRestoration: true,
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -17,10 +14,14 @@ const nextConfig = {
   images: {
     domains: ['ziontechgroup.com'],
     unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
     config.module.rules.push({

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import Sidebar from '../components/Sidebar';
+import SEOHead from '../src/components/SEO/SEOHead';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import { organizationStructuredData, websiteStructuredData } from '../src/components/SEO/StructuredData';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
 
 export default function Home() {
@@ -60,13 +62,14 @@ export default function Home() {
   ];
 
   return (
-    <>
-      <Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
+    <ErrorBoundary>
+      <SEOHead
+        title="Zion Tech Group - Leading Technology Solutions Provider"
+        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
+        keywords="AI services, micro SaaS, IT services, DevOps, cybersecurity, technology consulting, software development, digital transformation"
+        canonical="https://ziontechgroup.com"
+        structuredData={[organizationStructuredData, websiteStructuredData]}
+      />
       
       <Navigation />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -193,6 +196,6 @@ export default function Home() {
       </main>
       
       <Footer />
-    </>
+    </ErrorBoundary>
   );
 }
