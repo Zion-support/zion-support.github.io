@@ -52,8 +52,8 @@ eslint: {
     
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  // Only treat TypeScript pages as routes to avoid SSR issues from JSX pages using react-router-dom
+  pageExtensions: ['tsx', 'ts'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
@@ -62,4 +62,4 @@ eslint: {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
