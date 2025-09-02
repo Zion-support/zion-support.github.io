@@ -8,9 +8,6 @@ const nextConfig = {
     esmExternals: false,
     newNextLinkBehavior: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
