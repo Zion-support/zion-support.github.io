@@ -11,21 +11,21 @@ function replaceNextImports(content, filePath) {
   // Replace next/link with react-router-dom;
   if (content.includes(
   'next/link')) {
-    content = content.replace(/import Link from [;
+    content = content.replace(/import Link from '[';
   '']next\/link[''];?/g,
   'import { Link } from 'react-router-dom'');
     modified = true}
   // Replace next/image with regular img tags (or keep as is for now);
   if (content.includes(
   'next/image')) {
-    content = content.replace(/import Image from [;
+    content = content.replace(/import Image from '[';
   '']next\/image[''];?/g,
   '// import Image from 'next/image' // TODO: Replace with regular img or custom Image component);
     modified = true}
   // Replace next/router with react-router-dom hooks;
   if (content.includes(
   'next/router')) {
-    content = content.replace(/import.*from [;
+    content = content.replace(/import.*from '[';
   '']next\/router[''];?/g,
   'import { useNavigate, useLocation, useParams } from 'react-router-dom'');
     modified = true}
@@ -94,14 +94,14 @@ function main() {
   console.log(
   '🔍 Scanning for Next.js imports...');
   const filesFixed = walkDir(srcDir);
-  // // // console.log(`\n🎯 Migration Summary:`);
+  // // // console.log(`\n🎯 Migration Summary: `);
   // // // console.log(`Files processed: ${filesFixed}`);
   // // // console.log(`Next.js imports replaced with React Router equivalents`);
   if (filesFixed > 0) {
   // // // // // // // console.log(
   '🔍 Scanning for Next.js imports...');
   const filesFixed = walkDir(srcDir);
-  // // // // // // // console.log(`\n🎯 Migration Summary:`);
+  // // // // // // // console.log(`\n🎯 Migration Summary: `);
   // // // // // // // console.log(`Files processed: ${filesFixed}`);
   // // // // // // // console.log(`Next.js imports replaced with React Router equivalents`);
   if (filesFixed > 0) {

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-02T21:12:42.169Z",
+  "timestamp": "2025-09-02T21:44:57.380Z",
   "summary": {
     "total": 8,
     "successful": 5,
@@ -10,7 +10,7 @@
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_12_30_474Z-debug-0.log\n"
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_44_32_716Z-debug-0.log\n"
     },
     {
       "command": "npm run type-check",
@@ -22,13 +22,13 @@
       "command": "npm run test",
       "description": "Test Suite",
       "success": false,
-      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot find module 'msw/node'\nRequire stack:\n- /workspace/jest.config.cjs\n- /workspace/node_modules/jest-util/build/requireOrImportModule.js\n- /workspace/node_modules/jest-util/build/index.js\n- /workspace/node_modules/@jest/core/build/FailedTestsInteractiveMode.js\n- /workspace/node_modules/@jest/core/build/plugins/FailedTestsInteractive.js\n- /workspace/node_modules/@jest/core/build/watch.js\n- /workspace/node_modules/@jest/core/build/cli/index.js\n- /workspace/node_modules/@jest/core/build/index.js\n- /workspace/node_modules/jest-cli/build/run.js\n- /workspace/node_modules/jest-cli/build/index.js\n- /workspace/node_modules/jest-cli/bin/jest.js\n- /workspace/node_modules/jest/bin/jest.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at Function.resolve (node:internal/modules/helpers:145:19)\n    at Object.<anonymous> (/workspace/jest.config.cjs:44:27)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n"
+      "error": "spawnSync /bin/sh ENOBUFS"
     },
     {
       "command": "npm run build",
       "description": "Build Application",
       "success": true,
-      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Collecting page data ...\n   Generating static pages (0/18) ...\n\r   Generating static pages (4/18) \r\n\r   Generating static pages (8/18) \r\n\r   Generating static pages (13/18) \r\n\r ✓ Generating static pages (18/18) \n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                              Size     First Load JS\n┌ ○ /                                      4.41 kB        86.4 kB\n├   /_app                                  0 B            79.2 kB\n├ ○ /404                                   180 B          79.4 kB\n├ ○ /about                                 2.52 kB        88.2 kB\n├ ○ /ai-services                           6.47 kB        88.5 kB\n├ ○ /blog                                  2.91 kB        88.6 kB\n├ ○ /contact                               3.35 kB        82.6 kB\n├ ○ /help                                  3.52 kB        89.2 kB\n├ ○ /index.p                               1.46 kB        80.7 kB\n├ ○ /it-services                           6.61 kB        88.6 kB\n├ ○ /micro-saas                            6.85 kB        88.9 kB\n├ ○ /pricing                               3.51 kB        89.2 kB\n├ ○ /privacy                               3.37 kB        89.1 kB\n├ ○ /services                              12.9 kB        94.9 kB\n├ ○ /services/ai-development               2.73 kB        88.4 kB\n├ ○ /services/cloud-services               2.61 kB        88.3 kB\n├ ○ /services/web-development              2.77 kB        88.5 kB\n└ ○ /terms                                 3.75 kB        89.4 kB\n+ First Load JS shared by all              79.2 kB\n  ├ chunks/framework-fae63b21a27d6472.js   45.4 kB\n  ├ chunks/main-99dbb5afab61ecf9.js        32.8 kB\n  ├ chunks/pages/_app-c3948da649f29b07.js  303 B\n  └ chunks/webpack-fd8027ecb5121007.js     770 B\n\nƒ Middleware                               25.3 kB\n\n○  (Static)  automatically rendered as static HTML (uses no initial props)\n\n"
+      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ⨯ esmExternals\n     ✓ newNextLinkBehavior\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n   Downloading swc package @next/swc-linux-x64-gnu... to /home/ubuntu/.cache/next-swc\n   Downloading swc package @next/swc-linux-x64-musl... to /home/ubuntu/.cache/next-swc\n ✓ Compiled successfully in 4.5s\n   Collecting page data ...\n   Generating static pages (0/31) ...\n   Generating static pages (7/31) \r\n   Generating static pages (15/31) \r\n   Generating static pages (23/31) \r\n ✓ Generating static pages (31/31)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     4.49 kB        88.9 kB\n├   /_app                                     0 B        81.7 kB\n├ ○ /404                                    180 B        81.9 kB\n├ ○ /about                                2.55 kB        90.6 kB\n├ ○ /ai-services                           6.5 kB        90.9 kB\n├ ○ /blog                                 2.94 kB          91 kB\n├ ○ /careers                              4.69 kB        97.3 kB\n├ ○ /contact                              3.34 kB        85.1 kB\n├ ○ /cookies                              3.39 kB        87.8 kB\n├ ○ /help                                 3.57 kB        91.6 kB\n├ ○ /index.p                              1.45 kB        83.2 kB\n├ ○ /it-services                          6.62 kB          91 kB\n├ ○ /micro-saas                           6.91 kB        91.3 kB\n├ ○ /NotFound                             35.7 kB         120 kB\n├ ○ /partners                             3.77 kB        96.4 kB\n├ ○ /pricing                              3.56 kB        91.6 kB\n├ ○ /pricing-guide                        3.52 kB        99.8 kB\n├ ○ /privacy                              3.41 kB        91.4 kB\n├ ○ /services                             12.9 kB        97.3 kB\n├ ○ /services/ai-development              2.77 kB        90.8 kB\n├ ○ /services/cloud-services              2.65 kB        90.7 kB\n├ ○ /services/web-development              2.8 kB        90.8 kB\n├ ○ /sitemap                              3.09 kB        87.5 kB\n├ ○ /solutions                            4.72 kB        97.4 kB\n├ ○ /solutions/ai-content-creation        4.23 kB        96.9 kB\n├ ○ /solutions/customer-support           3.42 kB        96.1 kB\n├ ○ /solutions/email-automation           4.15 kB        96.8 kB\n├ ○ /solutions/event-management           3.37 kB          96 kB\n├ ○ /solutions/project-management         3.42 kB        96.1 kB\n├ ○ /solutions/workflow-automation        3.35 kB          96 kB\n└ ○ /terms                                3.79 kB        91.8 kB\n+ First Load JS shared by all             81.7 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-b0c4cf624f4f2cc5.js       35.9 kB\n  └ other shared chunks (total)           1.02 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"
     },
     {
       "name": "Error Detection",
@@ -43,6 +43,10 @@
       "success": true,
       "result": {
         "issues": [
+          {
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Potential infinite re-render"
+          },
           {
             "file": "/workspace/src/components/PerformanceOptimizer.tsx",
             "issue": "Potential N+1 query problem"
@@ -64,7 +68,7 @@
             "issue": "Potential infinite re-render"
           }
         ],
-        "count": 5
+        "count": 6
       }
     },
     {
@@ -102,11 +106,7 @@
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
             "issue": "Console.log in production code"
           },
           {
@@ -114,7 +114,7 @@
             "issue": "Console.log in production code"
           }
         ],
-        "count": 6
+        "count": 5
       }
     }
   ]

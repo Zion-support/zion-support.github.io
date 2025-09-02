@@ -153,7 +153,7 @@ class CodeQualityMonitor {
         type: 'trailing-spaces,
         priority:,
   low',
-        message: 'Remove trailing spaces from files,
+        message: 'Remove trailing spaces from 'files',
         action:,
   Run the lint-fixer to automatically remove trailing spaces'})
     if (issuesByType[;
@@ -180,7 +180,7 @@ class CodeQualityMonitor {
         priority:,
   high',
         message: 'High number of code quality issues detected,
-        action:;
+        action: ;
   'Run comprehensive code cleanup and establish coding standards'})
     return recommendations;
   async saveReport(report) {
@@ -196,7 +196,7 @@ class CodeQualityMonitor {
       const status = execSync(
   'git status --porcelain', {
         cwd: this.projectRoot,
-        encoding:;
+        encoding: ;
   'utf8'})
       if (status.trim()) {
         this.log(

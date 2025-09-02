@@ -50,7 +50,7 @@ class AutoFixer {
       // Find files with merge conflict markers;
       const conflictFiles = execSync(
   'grep -r '' src/ --include='*.ts' --include='*.tsx' --include='*.js' --include='*.jsx' -l || true', {        cwd: this.projectRoot,
-        encoding:;
+        encoding: ;
   'utf8'}).trim().split(
   '\n').filter(f => f);
       if (conflictFiles.length === 0) {
@@ -222,7 +222,7 @@ class AutoFixer {
       const tsFiles = execSync(
   'find src/ -name '*.ts' -o -name '*.tsx'', {
         cwd: this.projectRoot,
-        encoding:;
+        encoding: ;
   'utf8'}).trim().split(
   '\n');
       for (const file of tsFiles) {
@@ -233,8 +233,8 @@ class AutoFixer {
         const originalContent = content;
         // Fix import extensions;
         content = content;
-          // Remove .js extensions from imports;
-          .replace(/from [;
+          // Remove .js extensions from 'imports';
+          .replace(/from '[';
   '']([^'']+)\.js[;
   '']/g, 'from '$1;
   '');
@@ -243,7 +243,7 @@ class AutoFixer {
   '']+)['']/g, 'import $1 from;
   '$2'');
           // Fix relative imports;
-          .replace(/from [;
+          .replace(/from '[';
   '']\.\/([^'']+)[;
   '']/g, 'from './$1;
   '');
@@ -358,7 +358,7 @@ class AutoFixer {
   }
 }
 // Run if called directly;
-const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+const isMainModule = import.meta.url === `file: //${process.argv[1]}`;
 if (isMainModule) {
   const fixer = new AutoFixer();
   const errorFile = process.argv[2];
@@ -366,6 +366,6 @@ if (isMainModule) {
     console.log('Auto-fixer completed successfully;
   ');
     process.exit(0)}).catch(error => {
-    console.error('Auto-fixer failed:', error);
+    console.error('Auto-fixer failed: ', error);
     process.exit(1)})}
 export default AutoFixer;

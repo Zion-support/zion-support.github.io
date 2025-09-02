@@ -1,3 +1,21 @@
-// Import useNavigate // Assuming ToastData or similar is exported // To get types for mocked useAuth // Define types for mockFetch responses interface MockResponse {
-status: number;
-body: Record<string, unknown> | { message: string } | { error: string }; // More specific than any } // Mock useAuth vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ loginWithGoogle: vi.fn(), loginWithFacebook: vi.fn(), loginWithTwitter: vi.fn(), // Ensure the mock for signup matches the expected signature from AuthContextType signup: vi.fn().mockResolvedValue({ error: null, data: { user: { id: 'test-user-id' }, session: { access_token: 'jwt' }}}),
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import signup from '../components/signup';
+
+describe('signup', () => {
+  test('renders without crashing', () => {
+    render(<signup />);
+    expect(screen.getByTestId('signup')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<signup />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<signup />);
+    // Add interaction tests based on component functionality
+  });
+});

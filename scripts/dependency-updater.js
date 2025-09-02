@@ -4,7 +4,7 @@
  * Replaces GitHub Actions dependencies workflow;
  * Checks and updates project dependencies;
  */;
-import fs from,
+import fs from 'fs';
   fs';
 import path from;
   'path';
@@ -37,7 +37,7 @@ class DependencyUpdater {
       await this.generateReport();
       console.log('✅ Dependency update check completed;
   ')} catch (error) {
-      console.error('❌ Error during dependency update: , error.message)}
+      console.error('❌ Error during dependency update:  , error.message)}
   }
   async checkOutdatedPackages() {
     try {
@@ -49,12 +49,12 @@ class DependencyUpdater {
         encoding:,
   utf8;
   ',
-        stdio: ['pipe,pipe',pipe
+        stdio: ['pipe,pipe',pipe;
   ']})
       if (result.trim()) {
         const outdated = JSON.parse(result);
         this.outdatedPackages = Object.keys(outdated);
-        console.log(`📦 Found ${this.outdatedPackages.length} outdated packages:`);
+        console.log(`📦 Found ${this.outdatedPackages.length} outdated packages: `);
         this.outdatedPackages.forEach(pkg => {
           const info = outdated[pkg];
           console.log(`   - ${pkg}: ${info.current} → ${info.latest}`)})} else {
@@ -65,7 +65,7 @@ class DependencyUpdater {
         // npm outdated returns 1 when there are outdated packages;
         console.log('📦 Found outdated packages (details above))} else {
         console.warn(
-  '⚠️  Could not check outdated packages:', error.message)}
+  '⚠️  Could not check outdated packages: ', error.message)}
     }
   }
   async runSecurityAudit() {
@@ -84,7 +84,7 @@ class DependencyUpdater {
       if (audit.vulnerabilities) {
         const vulnCount = Object.keys(audit.vulnerabilities).length;
         this.vulnerabilities = Object.keys(audit.vulnerabilities);
-        console.log(`⚠️  Found ${vulnCount} security vulnerabilities:`);
+        console.log(`⚠️  Found ${vulnCount} security vulnerabilities: `);
         this.vulnerabilities.forEach(vuln => {
           const info = audit.vulnerabilities[vuln];
           console.log(`   - ${vuln}: ${info.severity} - ${info.title}`)})} else {
@@ -95,7 +95,7 @@ class DependencyUpdater {
         // npm audit returns 1 when vulnerabilities are found;
         console.log(
   '⚠️  Security vulnerabilities found (details above))} else {
-        console.warn('⚠️  Could not run security audit: , error.message)}
+        console.warn('⚠️  Could not run security audit:  , error.message)}
     }
   }
   async checkAvailableUpdates() {
@@ -119,7 +119,7 @@ class DependencyUpdater {
         this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`)}
     } catch (error) {
       console.warn(
-  '⚠️  Could not check available updates:', error.message)}
+  '⚠️  Could not check available updates: ', error.message)}
   }
   async generateReport() {
     const report = {
@@ -151,7 +151,7 @@ class DependencyUpdater {
     console.log(`🔄 Update suggestions: ${this.updates.length}`);
     if (this.updates.length > 0) {
       console.log(
-  '\n💡 Recommendations:');
+  '\n💡 Recommendations: ');
       this.updates.forEach((update, index) => {
         console.log(`   ${index + 1}. ${update}`)})}
     console.log(
@@ -180,5 +180,5 @@ updater.updateDependencies().then(() => {
   '📦 Dependency Updater Completed');
   process.exit(0)}).catch((error) => {
   console.error(
-  '❌ Dependency Updater Failed:', error);
+  '❌ Dependency Updater Failed: ', error);
   process.exit(1)})

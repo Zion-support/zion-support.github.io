@@ -1,32 +1,26 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import '@testing-library/jest-dom';
 import App from './src/App';
 
 describe('App', () => {
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument()})
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 
-  it('displays correct content', () => {
+  test('displays correct content', () => {
     render(<App />);
     // Add specific content checks based on component functionality
-  })
+  });
 
-  it('handles user interactions', () => {
-import App from './App';
+  test('handles user interactions', () => {
+    render(<App />);
+    // Add interaction tests based on component functionality
+  });
 
-describe(
-  'App', () => {
-  it(
-  'renders without crashing', () => {
+  test('applies correct styling', () => {
     render(<App />);
-    expect(screen.getByRole(
-  'main')).toBeInTheDocument()})
-  it(
-  'displays correct content', () => {
-    render(<App />);
-    // Add specific content checks based on component functionality})
-  it(
-  'handles user interactions', () => {
-    render(<App />);
-    // Add interaction tests based on component functionality})})
+    // Add styling tests if needed
+  });
+});

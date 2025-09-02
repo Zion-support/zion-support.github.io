@@ -3,7 +3,7 @@
  * Link Integrity Checker Script;
  * Checks the integrity of links and assets;
  */;
-import fs from,
+import fs from 'fs';
   fs';
 import path from;
   'path';
@@ -35,7 +35,7 @@ class LinkIntegrityChecker {
       await this.generateReport();
       console.log('✅ Link integrity check completed;
   ')} catch (error) {
-      console.error('❌ Error during integrity check: , error.message)}
+      console.error('❌ Error during integrity check:  , error.message)}
   }
   async checkHtmlIntegrity() {
     try {
@@ -76,7 +76,7 @@ class LinkIntegrityChecker {
       }
     } catch (error) {
       console.warn(,
-  ⚠️  Could not check HTML integrity: , error.message)}
+  ⚠️  Could not check HTML integrity:  , error.message)}
   }
   async checkCssIntegrity() {
     try {
@@ -100,7 +100,7 @@ class LinkIntegrityChecker {
       }
     } catch (error) {
       console.warn(,
-  ⚠️  Could not check CSS integrity: , error.message)}
+  ⚠️  Could not check CSS integrity:  , error.message)}
   }
   async checkJsIntegrity() {
     try {
@@ -136,7 +136,7 @@ class LinkIntegrityChecker {
       }
     } catch (error) {
       console.warn(
-  '⚠️  Could not check JavaScript integrity:', error.message)}
+  '⚠️  Could not check JavaScript integrity: ', error.message)}
   }
   async checkBuildArtifacts() {
     try {
@@ -182,7 +182,7 @@ class LinkIntegrityChecker {
       }
     } catch (error) {
       console.warn(,
-  ⚠️  Could not check build artifacts: , error.message)}
+  ⚠️  Could not check build artifacts:  , error.message)}
   }
   isValidAsset(assetPath, sourceFile) {
     // Skip external URLs;
@@ -222,7 +222,7 @@ class LinkIntegrityChecker {
       const sourceDir = path.dirname(sourceFile);
       const fullPath = path.resolve(sourceDir, importPath);
       // Check for .js, .ts, .tsx, .jsx extensions;
-      const extensions = ['.js
+      const extensions = ['.js;
   ',.ts',.tsx;
   ',.jsx'];
       return extensions.some(ext => {
@@ -285,7 +285,7 @@ class LinkIntegrityChecker {
     console.log(`⚠️  Issues found: ${this.issues.length}`);
     if (this.issues.length > 0) {
       console.log(
-  '\n🔍 Issues:');
+  '\n🔍 Issues: ');
       this.issues.forEach((issue, index) => {
         console.log(`   ${index + 1}. ${issue}`)})} else {
       console.log(
@@ -316,5 +316,5 @@ checker.checkIntegrity().then(() => {
   '🔗 Link Integrity Checker Completed');
   process.exit(0)}).catch((error) => {
   console.error(
-  '❌ Link Integrity Checker Failed:', error);
+  '❌ Link Integrity Checker Failed: ', error);
   process.exit(1)})

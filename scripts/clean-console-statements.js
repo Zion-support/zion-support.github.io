@@ -99,7 +99,7 @@ class ConsoleCleaner {
         this.cleanedFiles.push(filePath);
         this.totalConsoleStatements += removedCount;
         console.log(
-          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
+          `🧹 Cleaned ${removedCount} console statements from '${path.relative(this.projectRoot', filePath)}`)}
     } catch (error) {
       console.error(`❌ Error cleaning file ${filePath}:`, error.message)}
   }

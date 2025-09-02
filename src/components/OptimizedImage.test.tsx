@@ -1,0 +1,21 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import OptimizedImage from '../OptimizedImage';
+
+describe('OptimizedImage', () => {
+  test('renders without crashing', () => {
+    render(<OptimizedImage />);
+    expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<OptimizedImage />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<OptimizedImage />);
+    // Add interaction tests based on component functionality
+  });
+});

@@ -23,13 +23,13 @@ function analyzeWebsite() {
   'App.tsx');
   const appContent = fs.readFileSync(appTsxPath,
   'utf8');
-    // Extract route paths from App.tsx;
+    // Extract route paths from 'App.tsx';
   const routeRegex = /path='([^']+)"/g;
   const routes = [];
   let match;
   while ((match = routeRegex.exec(appContent)) !== null) {
     routes.push(match[1])}
-  console.log(`📊 Found ${routes.length} routes in App.tsx:`);
+  console.log(`📊 Found ${routes.length} routes in App.tsx: `);
   routes.forEach(route => console.log(`  - ${route}`));
   // Check which pages exist;
   const existingPages = [];
@@ -47,7 +47,7 @@ function analyzeWebsite() {
         existingPages.push(pagePath)}
     })}
   scanDirectory(pagesDir);
-  console.log(`\n📁 Found ${existingPages.length} existing page files:`);
+  console.log(`\n📁 Found ${existingPages.length} existing page files: `);
   existingPages.forEach(page => console.log(`  - ${page}`));
   // Check for missing pages;
   routes.forEach(route => {
@@ -64,7 +64,7 @@ function analyzeWebsite() {
     if (!hasPage) {
       missingPages.push(route)}
   })
-  console.log(`\n❌ Found ${missingPages.length} missing pages:`);
+  console.log(`\n❌ Found ${missingPages.length} missing pages: `);
   missingPages.forEach(page => console.log(`  - ${page}`));
   // Check for placeholder pages (files with minimal content);
   const placeholderPages = [];
@@ -101,5 +101,5 @@ function analyzeWebsite() {
 try {
   analyzeWebsite()} catch (error) {
   console.error(
-  '❌ Error analyzing website:', error.message);
+  '❌ Error analyzing website: ', error.message);
   process.exit(1)}

@@ -4,7 +4,7 @@
  * Replaces GitHub Actions continuous-improvement workflow;
  * Analyzes code quality and suggests improvements;
  */;
-import fs from,
+import fs from 'fs';
   fs';
 import path from;
   'path';
@@ -36,7 +36,7 @@ class ContinuousImprovement {
       await this.generateReport();
       console.log('✅ Continuous improvement analysis completed;
   ')} catch (error) {
-      console.error('❌ Error during analysis: , error.message)}
+      console.error('❌ Error during analysis:  , error.message)}
   }
   async analyzePackageJson() {
     try {
@@ -53,7 +53,7 @@ class ContinuousImprovement {
   ')}
         }
         // Check for missing scripts;
-        const requiredScripts = ['build
+        const requiredScripts = ['build;
   ',dev',test;
   ',lint'];
         const missingScripts = requiredScripts.filter(script => !packageJson.scripts[script]);
@@ -157,13 +157,13 @@ class ContinuousImprovement {
     console.log(
   '─.repeat(50));
     if (this.improvements.length > 0) {
-      console.log(`💡 ${this.improvements.length} improvement suggestions:`);
+      console.log(`💡 ${this.improvements.length} improvement suggestions: `);
       this.improvements.forEach((improvement, index) => {
         console.log(`   ${index + 1}. ${improvement}`)})} else {
       console.log(
   '🎉 No improvement suggestions found!')}
     if (this.issues.length > 0) {
-      console.log(`⚠️  ${this.issues.length} issues encountered:`);
+      console.log(`⚠️  ${this.issues.length} issues encountered: `);
       this.issues.forEach((issue, index) => {
         console.log(`   ${index + 1}. ${issue}`)})}
     console.log(
@@ -176,5 +176,5 @@ ci.analyze().then(() => {
   '🚀 Continuous Improvement Completed');
   process.exit(0)}).catch((error) => {
   console.error(
-  '❌ Continuous Improvement Failed:', error);
+  '❌ Continuous Improvement Failed: ', error);
   process.exit(1)})

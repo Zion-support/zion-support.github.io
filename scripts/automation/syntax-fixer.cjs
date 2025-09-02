@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -60,7 +59,7 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Fix unterminated single quotes at end of lines
+    // Fix unterminated single quotes at end of lines;
     fixed = fixed.replace(/^([^'\\n]*)'([^'\\n]*)$/gm, (match, before, after) => {
       if (!after.includes("'")) {
         changes++;
@@ -69,7 +68,7 @@ class SyntaxFixer {
       return match;
     });
     
-    // Fix unterminated double quotes at end of lines
+    // Fix unterminated double quotes at end of lines;
     fixed = fixed.replace(/^([^"\\n]*)"([^"\\n]*)$/gm, (match, before, after) => {
       if (!after.includes('"')) {
         changes++;
@@ -85,12 +84,12 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Remove merge conflict markers and take the HEAD version
+    // Remove merge conflict markers and take the HEAD version;
     const mergeConflictPattern = /      changes++;
       return headContent;
     });
     
-    // Remove standalone conflict markers
+    // Remove standalone conflict markers;
     fixed = fixed.replace(/^    fixed = fixed.replace(/^=======\\n/gm, () => { changes++; return ''; });
     fixed = fixed.replace(/^    
     return { content: fixed, changes };
@@ -100,11 +99,11 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Fix extra semicolons
+    // Fix extra semicolons;
     fixed = fixed.replace(/;;+/g, () => { changes++; return ';'; });
     
-    // Fix missing semicolons at end of import statements
-    fixed = fixed.replace(/^(import .+from .+)$/gm, (match) => {
+    // Fix missing semicolons at end of import statements;
+    fixed = fixed.replace(/^(import .+from '.+)$/gm', (match) => {
       if (!match.endsWith(';')) {
         changes++;
         return match + ';';
@@ -112,7 +111,7 @@ class SyntaxFixer {
       return match;
     });
     
-    // Fix space around assignment operators
+    // Fix space around assignment operators;
     fixed = fixed.replace(/(\\w)=([^=])/g, (match, before, after) => {
       changes++;
       return before + ' = ' + after;
@@ -125,13 +124,13 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Replace CommonJS require with ES6 imports where appropriate
+    // Replace CommonJS require with ES6 imports where appropriate;
     fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\(['"]([^'"]+)['"]\\);?/g, (match, varName, moduleName) => {
       changes++;
       return `import ${varName} from '${moduleName}';`;
     });
     
-    // Fix module.exports to export default
+    // Fix module.exports to export default;
     fixed = fixed.replace(/module\\.exports\\s*=\\s*(.+);?/g, (match, value) => {
       changes++;
       return `export default ${value};`;
@@ -144,13 +143,13 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Remove lines with parsing errors
-    fixed = fixed.replace(/.*Parsing error:.*\\n/g, () => { changes++; return ''; });
+    // Remove lines with parsing errors;
+    fixed = fixed.replace(/.*Parsing error: .*\\n/g, () => { changes++; return ''; });
     
-    // Remove lines that are clearly corrupted
+    // Remove lines that are clearly corrupted;
     fixed = fixed.replace(/.*Unterminated string literal.*\\n/g, () => { changes++; return ''; });
     
-    // Remove empty quotes at end of file
+    // Remove empty quotes at end of file;
     fixed = fixed.replace(/["']\\s*$/, () => { changes++; return ''; });
     
     return { content: fixed, changes };
@@ -159,12 +158,12 @@ class SyntaxFixer {
   generateFixedContent(filePath, originalContent) {
     const ext = path.extname(filePath);
     
-    // Determine if this should be a TypeScript or JavaScript file
+    // Determine if this should be a TypeScript or JavaScript file;
     const shouldBeTypeScript = filePath.includes('.tsx') || filePath.includes('.ts');
     const shouldBeJavaScript = filePath.includes('.jsx') || filePath.includes('.js');
     
     if (originalContent.trim().length === 0) {
-      // Generate basic file structure for empty files
+      // Generate basic file structure for empty files;
       if (shouldBeTypeScript && filePath.includes('components')) {
         return this.generateBasicReactComponent(path.basename(filePath, ext));
       } else if (shouldBeJavaScript && filePath.includes('utils')) {
@@ -172,7 +171,7 @@ class SyntaxFixer {
       }
     }
     
-    return null; // Return null if no template available
+    return null; // Return null if no template available;
   }
 
   generateBasicReactComponent(componentName) {
@@ -180,7 +179,7 @@ class SyntaxFixer {
     return `import React from 'react';
 
 interface ${name}Props {
-  // Add props here
+  // Add props here;
 }
 
 const ${name}: React.FC<${name}Props> = () => {
@@ -198,10 +197,9 @@ export default ${name};
 
   generateBasicUtility(utilityName) {
     const name = utilityName.replace(/[^a-zA-Z0-9]/g, '');
-    return `// ${name} utility functions
-
+    return `// ${name} utility functions;
 export const ${name.toLowerCase()} = {
-  // Add utility functions here
+  // Add utility functions here;
 };
 
 export default ${name.toLowerCase()};
@@ -228,13 +226,13 @@ export default ${name.toLowerCase()};
       let content = originalContent;
       let totalChanges = 0;
       
-      // Apply various fixes
+      // Apply various fixes;
       const fixes = [
         this.fixMergeConflicts(content),
         this.fixUnterminatedStrings,
         this.removeCorruptContent,
         this.fixModuleSystemErrors,
-        this.fixCommonSyntaxErrors
+        this.fixCommonSyntaxErrors;
       ];
       
       for (let i = 0; i < fixes.length; i++) {
@@ -251,7 +249,7 @@ export default ${name.toLowerCase()};
         }
       }
       
-      // If content is still severely corrupted, try to generate new content
+      // If content is still severely corrupted, try to generate new content;
       if (content.trim().length === 0 || content.includes('Unterminated string literal')) {
         const generatedContent = this.generateFixedContent(filePath, originalContent);
         if (generatedContent) {
@@ -261,7 +259,7 @@ export default ${name.toLowerCase()};
         }
       }
       
-      // Only write if changes were made
+      // Only write if changes were made;
       if (totalChanges > 0) {
         fs.writeFileSync(filePath, content);
         this.fixesApplied += totalChanges;
@@ -314,7 +312,7 @@ export default ${name.toLowerCase()};
     this.log('info', `Files processed: ${this.filesProcessed}`);
     this.log('info', `Fixes applied: ${this.fixesApplied}`);
     
-    // Generate report
+    // Generate report;
     const report = {
       timestamp: new Date().toISOString(),
       duration,
@@ -326,7 +324,7 @@ export default ${name.toLowerCase()};
     const reportFile = path.join(this.projectRoot, 'syntax-error-fixer-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    // Reset counters for next run
+    // Reset counters for next run;
     this.fixesApplied = 0;
     this.filesProcessed = 0;
     
@@ -336,7 +334,7 @@ export default ${name.toLowerCase()};
   async runContinuously() {
     this.log('info', 'Syntax Fixer running in continuous mode...');
     
-    // Run initial fix
+    // Run initial fix;
     await this.run();
     
     // Set up interval to run every 6 hours (21600000 ms)
@@ -345,10 +343,10 @@ export default ${name.toLowerCase()};
       await this.run();
     }, 6 * 60 * 60 * 1000);
     
-    // Keep the process alive
+    // Keep the process alive;
     setInterval(() => {
       this.log('info', 'Syntax Fixer heartbeat - running normally');
-    }, 60 * 60 * 1000); // Heartbeat every hour
+    }, 60 * 60 * 1000); // Heartbeat every hour;
   }
 
   shutdown() {
@@ -357,11 +355,11 @@ export default ${name.toLowerCase()};
   }
 }
 
-// Run the fixer in continuous mode
+// Run the fixer in continuous mode;
 const fixer = new SyntaxFixer();
 fixer.runContinuously().then(() => {
   fixer.log('info', 'Syntax Fixer started in continuous mode');
 }).catch(error => {
-  console.error('Syntax fixer failed:', error);
+  console.error('Syntax fixer failed: ', error);
   process.exit(1);
 });

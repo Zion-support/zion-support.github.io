@@ -3,7 +3,7 @@
  * Front Maximizer Script;
  * Optimizes frontend performance and assets;
  */;
-import fs from,
+import fs from 'fs';
   fs';
 import path from;
   'path';
@@ -35,7 +35,7 @@ class FrontMaximizer {
       await this.generateReport();
       console.log('✅ Front maximizer analysis completed;
   ')} catch (error) {
-      console.error('❌ Error during front maximization: , error.message)}
+      console.error('❌ Error during front maximization:  , error.message)}
   }
   async analyzeBuildConfig() {
     try {
@@ -227,13 +227,13 @@ class FrontMaximizer {
     console.log(
   '─.repeat(50));
     if (this.optimizations.length > 0) {
-      console.log(`💡 ${this.optimizations.length} optimization opportunities:`);
+      console.log(`💡 ${this.optimizations.length} optimization opportunities: `);
       this.optimizations.forEach((optimization, index) => {
         console.log(`   ${index + 1}. ${optimization}`)})} else {
       console.log(
   '🎉 No optimization opportunities found!')}
     if (this.issues.length > 0) {
-      console.log(`\n⚠️  ${this.issues.length} issues encountered:`);
+      console.log(`\n⚠️  ${this.issues.length} issues encountered: `);
       this.issues.forEach((issue, index) => {
         console.log(`   ${index + 1}. ${issue}`)})}
     console.log(
@@ -264,5 +264,5 @@ maximizer.maximize().then(() => {
   '🚀 Front Maximizer Completed');
   process.exit(0)}).catch((error) => {
   console.error(
-  '❌ Front Maximizer Failed:', error);
+  '❌ Front Maximizer Failed: ', error);
   process.exit(1)})

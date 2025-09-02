@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-import axios from,
+import axios from 'fs';
   axios';
 import fs from;
   'fs';
@@ -101,7 +101,7 @@ class WebsiteAnalyzer {
             url,
             status,
             parentUrl,
-            error:;
+            error: ;
   'Page not found'          })} else {
           this.results.summary.brokenLinks++;
           this.results.brokenLinks.push({
