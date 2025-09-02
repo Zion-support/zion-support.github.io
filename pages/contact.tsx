@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
@@ -37,66 +36,6 @@ import Layout from '../components/Layout';
 import { CheckCircle, Clock, Closed, Cloud, Common, File, Mail, MapPin, Mobile, Now, Phone, Send, User } from 'lucide-react';
 
 const Contact: NextPage = () => {
-=======
-import React from 'react';
-import Head from 'next/head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  MessageSquare,
-  Send,
-  CheckCircle,
-  Globe,
-  Users,
-  Award,
-} from 'lucide-react';
-export default function Contact() {
-  const contactMethods = [
-    {
-      icon: Phone,
-      title: 'Phone',
-      details: '+1 302 464 0950',
-      description: 'Call us for immediate assistance',
-      href: 'tel:+13024640950',
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      details: 'kleber@ziontechgroup.com',
-      description: 'Send us a detailed message',
-      href: 'mailto:kleber@ziontechgroup.com',
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: '364 E Main St STE 1008',
-      description: 'Middletown, DE 19709',
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-    },
-    {
-      icon: Globe,
-      title: 'Website',
-      details: 'ziontechgroup.com',
-      description: 'Visit our online platform',
-      href: 'https://ziontechgroup.com',
-    },
-  ];
-  const businessHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
-    { day: 'Sunday', hours: 'Emergency Support Only' },
-  ];
-  const services = [
-    'AI Services & Solutions',
-    'IT Services & Cloud Platforms',
-    'Micro SaaS Development',
-    'Cybersecurity & Compliance',
-    'Digital Transformation',
-    'DevOps & Automation',
-  ];
->>>>>>> main
   return (
     <>
       <Head>
@@ -124,7 +63,6 @@ export default function Contact() {
           </div>
         </section>
 
-<<<<<<< HEAD
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
@@ -189,20 +127,6 @@ export default function Contact() {
                 <button
                   type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
-=======
-        {/* Contact Methods */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {contactMethods.map((method, index) => (
-                <div
-                  key={index}
-<<<<<<< HEAD
-                  className="text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow"
-=======
-                  className="text-center p-6 rounded-2xl border border-gray-200 hover: shadow-lg transition-shadow"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
->>>>>>> main
                 >
                   <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">
                     <method.icon className="w-6 h-6 text-white" />
@@ -369,11 +293,7 @@ export default function Contact() {
                     {businessHours.map((schedule, index) => (
                       <div
                         key={index}
-<<<<<<< HEAD
                         className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
-=======
-                        className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                       >
                         <span className="font-medium text-gray-900">
                           {schedule.day}

@@ -3,53 +3,12 @@ import { ArrowRight, Award, BarChart3, Carbon, CheckCircle, Clock, Cloud, Code, 
 
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-import {
-  Server,
-  Cloud,
-  Shield,
-  Database,
-  Network,
-  Monitor,
-  Smartphone,
-  Globe,
-  Lock,
-  Settings,
-  Zap,
-  Users,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Code,
-  Terminal,
-  FileText,
-  Mail,
-  Phone,
-  MapPin,
-  TrendingUp,
-<<<<<<< HEAD
-  Brain,
-  Link2,
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
-} from 'lucide-react';
->>>>>>> main
 import PageTransition from '../src/components/PageTransition';
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
   const description =
     'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const itServices = [
     {
       title: 'Cloud Infrastructure & Migration',
@@ -335,7 +294,6 @@ export default function ITServices() {
       delivery: '10-24 weeks',
       category: 'FinTech Services',
     },
-<<<<<<< HEAD
     {
       title: 'Advanced Blockchain & Web3 Infrastructure',
       description:
@@ -574,8 +532,6 @@ export default function ITServices() {
       delivery: '4-12 weeks',
       category: 'Backup Services',
     },
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
   const technologies = [
     {
@@ -728,11 +684,7 @@ export default function ITServices() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-<<<<<<< HEAD
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-=======
-                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
@@ -761,11 +713,7 @@ export default function ITServices() {
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
-<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
-=======
-                href="mailto: kleber@ziontechgroup.com"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 className="text-green-600 hover:text-green-500"
               >
                 kleber@ziontechgroup.com
@@ -784,11 +732,7 @@ export default function ITServices() {
             {itServices.map((service, index) => (
               <div
                 key={index}
-<<<<<<< HEAD
                 className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-=======
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
@@ -847,14 +791,8 @@ export default function ITServices() {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-<<<<<<< HEAD
               Let's discuss how our IT services can optimize your technology
               infrastructure. Get a free consultation and custom proposal.
-=======
-              Let&apos;s discuss how our IT services can optimize your
-              technology' infrastructure. ' Get a free consultation and custom
-              proposal.'
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             </p>
             <div className="mt-10 grid grid-cols-1 gap-8 sm: grid-cols-3">
               <div className="text-center">

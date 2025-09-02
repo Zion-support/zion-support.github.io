@@ -1,40 +1,17 @@
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    // Performance rules
-    'no-console': 'warn',
-    'no-debugger': 'error',
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 
-    // Code quality rules
-    '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/prefer-const': 'error',
-
-    // React rules
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off',
-
-    // Accessibility rules
-    'jsx-a11y/alt-text': 'error',
-    'jsx-a11y/aria-props': 'error',
-    'jsx-a11y/aria-proptypes': 'error',
-    'jsx-a11y/aria-unsupported-elements': 'error',
-    'jsx-a11y/role-has-required-aria-props': 'error',
-    'jsx-a11y/role-supports-aria-props': 'error',
-  },
-<<<<<<< HEAD
+export default [
+  js.configs.recommended,
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tsparser,
+      parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -81,19 +58,30 @@ module.exports = {
     plugins: {
       react,
       'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint,
+      '@typescript-eslint': typescript,
     },
     rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
+      // Performance rules
+      'no-console': 'warn',
+      'no-debugger': 'error',
+
+      // Code quality rules
       '@typescript-eslint/no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_' },
       ],
+      '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+      // React rules
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+
+      // General rules
       'no-unused-vars': 'off',
-      'no-console': 'warn',
       'no-undef': 'off',
     },
     settings: {
@@ -231,7 +219,3 @@ module.exports = {
     ],
   },
 ];
-=======
-  ignorePatterns: ['node_modules/', '.next/', 'out/'],
-};
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27

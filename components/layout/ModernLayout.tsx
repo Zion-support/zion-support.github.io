@@ -1,62 +1,23 @@
-import React from 'react.ts';
-import { User } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import ModernHeader from './ModernHeader';
+import ModernFooter from './ModernFooter';
 
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-import { Helmet              } from 'react-helmet-async.ts';
-import ModernHeader from "./ModernHeader";
-import ModernFooter from "./ModernFooter";
 interface ModernLayoutProps extends React.PropsWithChildren<{}> {
-
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string}
+  canonical?: string;
+}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
-
-  children, title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  children,
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-<<<<<<< HEAD
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknown//ziontechgroup.com'
-=======
-  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group', canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
->>>>>>> main
-})               => {
-
+  canonical = 'https://ziontechgroup.com'
+}) => {
   return (
     <>
       <Helmet>
@@ -69,7 +30,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph / Facebook */}
-        <meta property="og: type" content="website" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -96,53 +57,35 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML = {
-
-  {
-
+          dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-
-              "@context": "https://schema.org", "@type": "Organization",
-              "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png", "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
-              "address": {
-
-<<<<<<< HEAD
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-  "addressCountry": "US"
-=======
-                "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown", "addressRegion": "DE",
-                "postalCode": "19709", "addressCountry": "US"
-              
-
-
-
-
-
->>>>>>> main
-
-},
-              "contactPoint": {
-
-                "@type": "ContactPoint", "telephone": "+1-302-464-0950",
-                "contactType": "customer service", "email": "kleber@ziontechgroup.com"
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              'name': 'Zion Tech Group',
+              'url': 'https://ziontechgroup.com',
+              'logo': 'https://ziontechgroup.com/logo.png',
+              'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
+              'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': '364 E Main St STE 1008',
+                'addressLocality': 'Middletown',
+                'addressRegion': 'DE',
+                'postalCode': '19709',
+                'addressCountry': 'US'
               },
-              "sameAs"[
-<<<<<<< HEAD
-                "https://linkedin.com/compunknown/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
-=======
-                "https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
-                "https: //github.com/ziontechgroup"
->>>>>>> main
+              'contactPoint': {
+                '@type': 'ContactPoint',
+                'telephone': '+1-302-464-0950',
+                'contactType': 'customer service',
+                'email': 'kleber@ziontechgroup.com'
+              },
+              'sameAs': [
+                'https://linkedin.com/company/ziontechgroup',
+                'https://twitter.com/ziontechgroup',
+                'https://github.com/ziontechgroup'
               ]
-            })}}
+            })
+          }}
         />
       </Helmet>
       
@@ -150,10 +93,11 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <ModernHeader />
         <main className="flex-1 pt-20">
           {children}
-        </main>;
-        <ModernFooter />;
-      </div>;
-</>;
+        </main>
+        <ModernFooter />
+      </div>
+    </>
   );
 };
-export default ModernLayout;}
+
+export default ModernLayout;

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
 
 // Common interfaces for better type safety
@@ -36,8 +35,6 @@ interface ComponentProps {
 
 
 
-=======
->>>>>>> main
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
@@ -51,14 +48,9 @@ export default function Footer() {
         { name: 'Space Technology', href: '/solutions/space-tech' },"
         { name: 'Supply Chain', href: '/solutions/supply-chain' },"
         { name: 'Industry Solutions', href: '/solutions/industry' }
-<<<<<<< HEAD
       ]},
     {
       title: 'Compunknown',
-=======
-      ]}, {
-      title: 'Company',
->>>>>>> main
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Story', href: '/about/story' },
@@ -96,17 +88,10 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
-<<<<<<< HEAD
           {/* Compunknown Info */}
           <div className='lg:col-span-2'>
             <div className='flex items-center space-x-3 mb-6'>
               <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>
-=======
-          {/* Comp Info */}"
-          <div className='lg:col-span-2'>"
-            <div className='flex items-center space-x-3 mb-6'>"
-              <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>"
->>>>>>> main
                 <span className='text-white font-bold text-2xl'>Z</span>
               </div>
               <div>"

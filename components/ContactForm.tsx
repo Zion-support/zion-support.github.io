@@ -33,12 +33,8 @@ interface ComponentProps {
 
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
 
-=======
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
->>>>>>> main
 interface FormData {
   name: string;
   email: string;
@@ -75,11 +71,7 @@ const ContactForm: React.FC = () => {
 
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
-<<<<<<< HEAD
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-=======
-    } else if (!/\\S+@\\S+\\.\S+/.test(formData.email)) {
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       newErrors.email = 'Email is invalid';
     }
 
@@ -225,11 +217,7 @@ const ContactForm: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-<<<<<<< HEAD
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-=======
-                className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="john@compunknown.com"
@@ -296,11 +284,7 @@ const ContactForm: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               rows={5}
-<<<<<<< HEAD
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-=======
-              className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Tell us about your project and how we can help..."

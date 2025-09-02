@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 
->>>>>>> main
 interface SEOProps {
   title?: string;
   description?: string;
@@ -12,7 +11,6 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-<<<<<<< HEAD
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',
   keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',
@@ -109,4 +107,3 @@ export const SEO: React.FC<SEOProps> = ({
   );
 };
 
->>>>>>> main

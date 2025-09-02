@@ -17,10 +17,7 @@ const useResponsive = (): ResponsiveState => {
     isTablet: false,
     isDesktop: true,
   });
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   useEffect(() => {
     const updateDimensions = () => {
       const width = window.innerWidth;
@@ -34,7 +31,6 @@ const useResponsive = (): ResponsiveState => {
         isDesktop: width >= 1024,
       });
     };
-<<<<<<< HEAD
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
@@ -45,12 +41,4 @@ const useResponsive = (): ResponsiveState => {
   return state;
 };
 
-=======
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    return () => window.removeEventListener('resize', updateDimensions);
-  }, []);
-  return state;
-};
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default useResponsive;
