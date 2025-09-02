@@ -1,128 +1,96 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
+import Layout from './components/layout/Layout';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
-// Core Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { SEO } from './components/SEO';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/index'));
+const About = lazy(() => import('./pages/about'));
+const Contact = lazy(() => import('./pages/contact'));
+const Careers = lazy(() => import('./pages/careers'));
+const Services = lazy(() => import('./pages/services/index'));
+const AIServices = lazy(() => import('./pages/services/ai-services'));
+const ITServices = lazy(() => import('./pages/services/it-services'));
+const MicroSaaS = lazy(() => import('./pages/services/micro-saas'));
+const Pricing = lazy(() => import('./pages/pricing'));
+const PricingGuide = lazy(() => import('./pages/pricing-guide'));
+const Blog = lazy(() => import('./pages/blog'));
+const CaseStudies = lazy(() => import('./pages/case-studies'));
+const WhitePapers = lazy(() => import('./pages/white-papers'));
+const Webinars = lazy(() => import('./pages/webinars'));
+const Team = lazy(() => import('./pages/team'));
+const Privacy = lazy(() => import('./pages/privacy'));
+const Terms = lazy(() => import('./pages/terms'));
+const Sitemap = lazy(() => import('./pages/sitemap'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Layout Components
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
+// Service sub-pages
+const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AICustomerExperience = lazy(() => import('./pages/services/AICustomerExperience'));
+const AIHealthcareDiagnostics = lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
+const AIEnterpriseOrchestrator = lazy(() => import('./pages/services/AIEnterpriseOrchestrator'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
+const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlanning'));
 
-// Optimized lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-  const LazyComponent = lazy(importFn);
-  return (props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
-    </Suspense>
-  );
-};
-
-// Core pages with optimized imports
-const Home = createLazyComponent(() => import('./pages/Home'));
-const About = createLazyComponent(() => import('./pages/About'));
-const Contact = createLazyComponent(() => import('./pages/Contact'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Services = createLazyComponent(() => import('./pages/Services'));
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const News = createLazyComponent(() => import('./pages/News'));
-const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));
-const Terms = createLazyComponent(() => import('./pages/Terms'));
-
-// Service pages
-const AIServices = createLazyComponent(() => import('./pages/AIServices'));
-const CloudServices = createLazyComponent(() => import('./pages/CloudServices'));
-const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'));
-const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'));
-const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'));
-const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'));
-
-// Error Fallback Component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">
-    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">
-      <div className="text-red-400 text-6xl mb-4">⚠️</div>
-      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-      <p className="text-gray-300 mb-6">
-        {error.message || 'An unexpected error occurred. Please try again.'}
-      </p>
-      <div className="space-y-3">
-        <button
-          onClick={resetErrorBoundary}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Try again
-        </button>
-        <button
-          onClick={() => window.location.href = '/'}
-          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Go home
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
-function App() {
+const App: React.FC = () => {
   return (
     <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
-        <PerformanceOptimizer>
-          <SEO />
-          <div className="min-h-screen bg-gray-50">
-            <EnhancedHeader />
-            <main className="flex-1">
+      <ErrorBoundary>
+        <Layout>
+          <Suspense fallback={<LoadingSpinner />}>
+            <AnimatePresence mode="wait">
               <Routes>
-                {/* Core Pages */}
+                {/* Main Routes */}
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/careers" element={<Careers />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/research-development" element={<Solutions />} />
-                <Route path="/case-studies" element={<CaseStudies />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/events" element={<News />} />
+                <Route path="/team" element={<Team />} />
                 
-                {/* Services */}
+                {/* Services Routes */}
                 <Route path="/services" element={<Services />} />
-                <Route path="/services/ai" element={<AIServices />} />
-                <Route path="/services/cloud" element={<CloudServices />} />
-                <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
-                <Route path="/services/infrastructure" element={<InfrastructureServices />} />
-                <Route path="/services/transformation" element={<TransformationServices />} />
-                <Route path="/services/consulting" element={<ConsultingServices />} />
+                <Route path="/services-overview" element={<Services />} />
+                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/it-services" element={<ITServices />} />
+                <Route path="/micro-saas" element={<MicroSaaS />} />
                 
-                {/* Legal */}
+                {/* Service Sub-pages */}
+                <Route path="/services/ai-autonomous-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+                <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperience />} />
+                <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+                <Route path="/services/ai-enterprise-orchestrator" element={<AIEnterpriseOrchestrator />} />
+                <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
+                <Route path="/services/ai-financial-planning" element={<AIFinancialPlanning />} />
+                
+                {/* Pricing Routes */}
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/pricing-guide" element={<PricingGuide />} />
+                
+                {/* Content Routes */}
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
+                
+                {/* Legal Routes */}
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
                 
-                {/* 404 Fallback */}
-                <Route path="*" element={
-                  <div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                      <p className="text-gray-600 mb-8">Page not found</p>
-                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                        Go Home
-                      </a>
-                    </div>
-                  </div>
-                } />
+                {/* 404 Route */}
+                <Route path="*" element={<NotFound />} />
               </Routes>
-            </main>
-            <EnhancedFooter />
-          </div>
-        </PerformanceOptimizer>
+            </AnimatePresence>
+          </Suspense>
+        </Layout>
       </ErrorBoundary>
     </HelmetProvider>
   );
-}
+};
 
 export default App;
