@@ -14,6 +14,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
+<<<<<<< HEAD
   keywords = 'AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions',
   image = 'https://ziontechgroup.com/api/placeholder/1200/630',
   url = 'https://ziontechgroup.com',
@@ -88,9 +89,36 @@ const SEO: React.FC<SEOProps> = ({
           ]
         })}
       </script>
+=======
+  keywords,
+  image,
+  url,
+  type = 'website',
+  siteName = 'Zion Tech Group'
+}) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={siteName} />
+      {image && <meta property="og:image" content={image} />}
+      {url && <meta property="og:url" content={url} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
+>>>>>>> origin/main
     </Helmet>
   );
 };
 
+<<<<<<< HEAD
 export { SEO };
 export default SEO;
+=======
+export default SEO;
+>>>>>>> origin/main

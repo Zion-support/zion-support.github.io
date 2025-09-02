@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -17,6 +18,12 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+=======
+React from
+  'react';
+import { Link } from 'lucide-react';
+  'react-router-dom';'import { ;'  Brain, Mail,
+>>>>>>> origin/main
   Phone, MapPin,
   Linkedin, Twitter,
   Github, Youtube,
@@ -28,7 +35,13 @@ export default Footer;
   Database, Network,
   Target, CheckCircle,
   ExternalLink
-} from 'lucide-react';'import { Button } from '../ui/Button';'import { Badge } from '../ui/Badge';''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
+} from
+  'lucide-react';'{ Button } from
+  '../ui/Button';
+import { Badge } from 'lucide-react';
+  '../ui/Badge;
+
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
 
   const serviceCategories = [;
     {

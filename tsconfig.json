@@ -35,6 +35,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
@@ -48,6 +49,47 @@
       "@services/*": ["src/services/*"],
       "@context/*": ["src/context/*"],
       "@constants/*": ["src/constants/*"]
+=======
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@layout/*": [
+        "src/layout/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ]
+>>>>>>> origin/main
     },
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"],
@@ -72,11 +114,41 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
+<<<<<<< HEAD
+=======
+    "components",
+>>>>>>> origin/main
     "contracts",
     "cypress",
     "**/*.backup",
     "**/*.disabled",
     "temp_working",
+<<<<<<< HEAD
     "supabase/functions"
+=======
+    "supabase/functions",
+    "src/utils/generateRandomListing.ts",
+    "src/utils/linkChecker.ts",
+    "src/utils/mimeTypeFallback.ts",
+    "src/utils/passwordStrength.tsx",
+    "src/utils/resourceMonitor.ts",
+    "src/utils/seoOptimizer.tsx",
+    "src/utils/serviceWorkerRegistration.ts",
+    "src/utils/unitConversion.ts",
+    "src/utils/withErrorLogging.ts",
+    "src/utils/generateRandomBlogPost.ts",
+    "src/pages/solutions/EnterpriseSolutions.tsx",
+    "src/utils/sitemapGenerator.tsx",
+    "src/pages/zion-hire-ai.tsx",
+    "src/pages/webinars.tsx",
+    "src/routes/*Routes.tsx",
+    "src/pages/services/**",
+    "src/pages/solutions/**",
+    "src/pages/**",
+    "src/routes/**",
+    "src/services/**",
+    "src/types/**",
+    "src/utils/**"
+>>>>>>> origin/main
   ]
 }

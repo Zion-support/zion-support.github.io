@@ -19,7 +19,8 @@ import {}
   TrendingUp,
   Zap,
   Shield,
-  BookOpen} from 'lucide-react.ts';
+  BookOpen} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousLegalCounsel.tsx
 const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
@@ -39,7 +40,9 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Legal Operations with""
-              <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousLegalCounsel.tsx
@@ -196,4 +199,4 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousLegalCounsel.tsx
 export default AIAutonomousLegalCounsel;'"
-'"'"
+  '"'"

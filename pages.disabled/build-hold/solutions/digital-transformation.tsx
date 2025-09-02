@@ -1,24 +1,113 @@
-import React from 'react';'import type { NextPage } from 'next';'import MainLayout from '../../components/layout/MainLayout';'import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react';'import Link from 'next/link';''const DigitalTransformation: NextPage = () => {
+React from
+  'react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../../components/layout/MainLayout';
+import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from
+  'lucide-react';'import Link from
+  'next/link';'
+  'const DigitalTransformation: NextPage = () => {
   const transformationServices = [;
     {;
-      icon: Cloud, title: 'Cloud Migration','      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance']'    }, {'      icon: Database,;
-      title: 'Data Modernization', description: 'Transform your data architecture to support modern analytics and business intelligence.','      benefits: ['Real-time analytics', 'Improved data quality', 'Better insights', 'Automated reporting']'    }, {'      icon: Users,;
-      title: 'Process Automation', description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.','      benefits: ['Increased productivity', 'Reduced errors', 'Cost savings', 'Better compliance']'    }, {'      icon: Zap,;
-      title: 'AI Integration', description: 'Integrate artificial intelligence into your business processes for enhanced decision making.','      benefits: ['Predictive analytics', 'Automated insights', 'Improved accuracy', 'Competitive advantage']'    }, {'      icon: Shield,;
-      title: 'Security Enhancement', description: 'Implement modern security measures to protect your digital assets and ensure compliance.','      benefits: ['Enhanced security', 'Compliance assurance', 'Risk reduction', 'Peace of mind']'    }, {'      icon: Target,;
-      title: 'Customer Experience', description: 'Improve customer interactions through digital channels and personalized experiences.','      benefits: ['Better customer satisfaction', 'Increased engagement', 'Higher retention', 'Improved loyalty']'    }'  ];
+      icon: Cloud, title:,
+  Cloud Migration
+  ','      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency., benefits: [
+  'Reduced infrastructure costs',
+  'Improved scalability',
+  'Enhanced security',
+  'Better performance']
+  '    }, {'      icon: Database,;
+      title:,
+  Data Modernization', description: 'Transform your data architecture to support modern analytics and business intelligence.,
+,
+  benefits: ['Real-time analytics, 'Improved data quality
+  ', 'Better insights
+  ', 'Automated reporting
+  ']'    }, {
+  '      icon: Users,;
+      title:,
+  Process Automation
+  ', description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.,'      benefits: [
+  'Increased productivity',
+  'Reduced errors',
+  'Cost savings',
+  'Better compliance']
+  '    }, {'      icon: Zap,;
+      title:,
+  AI Integration', description: 'Integrate artificial intelligence into your business processes for enhanced decision making.,
+,
+  benefits: ['Predictive analytics, 'Automated insights
+  ', 'Improved accuracy
+  ', 'Competitive advantage
+  ']'    }, {
+  '      icon: Shield,;
+      title:,
+  Security Enhancement
+  ', description: 'Implement modern security measures to protect your digital assets and ensure compliance.,'      benefits: [
+  'Enhanced security',
+  'Compliance assurance',
+  'Risk reduction',
+  'Peace of mind']
+  '    }, {'      icon: Target,;
+      title:,
+  Customer Experience', description: 'Improve customer interactions through digital channels and personalized experiences.,
+,
+  benefits: ['Better customer satisfaction, ,
+  Increased engagement
+  ', 'Higher retention
+  ', 'Improved loyalty
+  ']'    }
+  '  ];
 
   const transformationStages = [;
     {
-      stage: 'Assessment', title: 'Current State Analysis','      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks''    },'    {;
-      stage: 'Strategy', title: 'Digital Strategy Development','      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks''    },'    {;
-      stage: 'Implementation', title: 'Solution Implementation','      description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks''    },'    {;
-      stage: 'Optimization', title: 'Continuous Improvement','      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing''    }'  ];
+      stage: 'Assessment, title:,
+  Current State Analysis
+  ','      description: We analyze your current systems, processes, and technology stack to identify opportunities for improvement.,
+  , duration: '2-4 weeks'    },
+,
+  {;
+      stage: 'Strategy, title:,
+  Digital Strategy Development
+  ','      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives., duration:,
+  3-6 weeks''    },
+  '    {;
+      stage: 'Implementation, title:,
+  Solution Implementation
+  ','      description: 'We implement the digital solutions using agile methodologies and best practices., duration:,
+  8-24 weeks''    },
+  '    {;
+      stage: 'Optimization, title:,
+  Continuous Improvement
+  ','      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact., duration:,
+  Ongoing''    }
+  '  ];
 
   const industries = [;
-    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },'    { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' },'    { name: 'Manufacturing', description: 'IoT integration, predictive maintenance, and supply chain optimization' },'    { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },'    { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },'    { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }'  ];'
+    { name: 'Healthcare, description:,
+  Digital health records, telemedicine, and patient management systems
+  ' },'    { name: 'Finance, description:,
+  Digital banking, fraud detection, and automated trading systems' },
+  '    { name: 'Manufacturing, description:,
+  IoT integration, predictive maintenance, and supply chain optimization
+  ' },'    { name: 'Retail, description:,
+  E-commerce platforms, inventory management, and customer analytics' },
+  '    { name: 'Education, description:,
+  Learning management systems, virtual classrooms, and student analytics
+  ' },'    { name: 'Government, description:,
+  Citizen services, digital governance, and public safety systems' }
+  '  ];'
   const successMetrics = [;
-    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' }, { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },'    { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' }, { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }'  ];'
+    { metric: '85%, label:,
+  Cost Reduction', description: 'Average cost savings achieved through digital transformation }, { metric:,
+  60%', label: 'Efficiency Gain, description:,
+  Improvement in operational efficiency' },
+  '    { metric: '90%, label:,
+  Customer Satisfaction
+  ', description: 'Increase in customer satisfaction scores }, { metric:,
+  75%
+  ', label: 'Time Savings, description: 'Reduction in time-to-market for new products
+  ' }'  ];'
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group""      description="Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.""      keywords="digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy""    >"      <div className="min-h-screen bg-gray-50">"        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"          <div className="container mx-auto px-4 text-center">"            <h1 className="text-4xl md: text-5xl font-bold mb-6">Digital Transformation Solutions</h1>"            <p className="text-xl text-gray-200 max-w-3xl mx-auto">"              Transform your business for the digital age with our comprehensive digital transformation services. "              Modernize your operations, improve efficiency, and drive sustainable growth.
@@ -78,7 +167,8 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-white">"          <div className="container mx-auto px-4 text-center">"            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>"            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">"              Let&apos;s discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''            </p>'            <div className="flex flex-col sm: flex-row justify-center gap-4">"              <Link"                href="/contact""                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors""              >"                Start Your Transformation
+        <section className="py-16 bg-white">"          <div className="container mx-auto px-4 text-center">"            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>"            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">"              Let&apos;s discuss how we can help you achieve your digital transformation goals and drive sustainable growth.'
+  '            </p>'            <div className="flex flex-col sm: flex-row justify-center gap-4">"              <Link"                href="/contact""                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors""              >"                Start Your Transformation
               </Link>
               <Link
                 href="/solutions""                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors""              >"                View All Solutions
