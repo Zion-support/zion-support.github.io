@@ -128,7 +128,7 @@ export class APIDocGeneratorService {
         languages[],
         frameworks[]
       };
-=======;
+;
         totalEndpoints: 0,;
         coverage: 0,;
         languages: [],;
@@ -151,8 +151,7 @@ export class APIDocGeneratorService {
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
     return documentation;
   private async analyzeSourceCode(sourcePath: string): Promise<{
-=======
-        documentation.examples = await this.generateExamples(documentation.endpoints)}
+documentation.examples = await this.generateExamples(documentation.endpoints)}
       // Calculate coverage;
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)} catch (error) {;
       console.error('Error generating documentation:', error);

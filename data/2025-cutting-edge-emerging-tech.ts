@@ -16,8 +16,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Comprehensive mission analytics'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 599,
         period: 'month',
         features: ['Basic space mining analysis', 'Standard planning tools', 'Email support']
@@ -30,26 +29,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       enterprise: {
         price: 3499,
         period: 'month',
-        features: ['Full space mining platform', 'Custom mission development', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 599, 
-        period: 'month', 
-        features['Basic space mining analysis', 'Standard planning tools', 'Email support'] 
-      },
-      professional: { 
-        price: 1499, 
-        period: 'month', 
-        features['Advanced mining algorithms', 'Custom mission planning', 'Priority support', 'Risk assessment'] 
-      },
-      enterprise: { 
-        price: 3499, 
-        period: 'month', 
-        features['Full space mining platform', 'Custom mission development', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full space mining platform', 'Custom mission development', 'Dedicated specialists', '24/7 support']},
     category: 'Space Technology',
     tags['Space Mining', 'Asteroid Mining', 'Space Resources', 'Mining Technology', 'Space Logistics'],
     website: 'https://ziontechgroup.com/space-mining-platform',
@@ -87,8 +67,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Integration with research tools'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 499,
         period: 'month',
         features: ['Basic bio-computing features', 'Standard algorithms', 'Email support']
@@ -101,26 +80,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       enterprise: {
         price: 2999,
         period: 'month',
-        features: ['Full bio-computing platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 499, 
-        period: 'month', 
-        features['Basic bio-computing features', 'Standard algorithms', 'Email support'] 
-      },
-      professional: { 
-        price: 1299, 
-        period: 'month', 
-        features['Advanced bio-computing', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
-      },
-      enterprise: { 
-        price: 2999, 
-        period: 'month', 
-        features['Full bio-computing platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full bio-computing platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']},
     category: 'Quantum Biology',
     tags['Quantum Computing', 'Biology', 'Drug Discovery', 'Protein Folding', 'Bioinformatics'],
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
@@ -158,8 +118,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Integration with medical devices'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 399,
         period: 'month',
         features: ['Basic BCI development', 'Standard algorithms', 'Email support']
@@ -172,26 +131,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       enterprise: {
         price: 2499,
         period: 'month',
-        features: ['Full BCI platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features['Basic BCI development', 'Standard algorithms', 'Email support'] 
-      },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features['Advanced BCI features', 'Custom development', 'Priority support', 'Medical integration'] 
-      },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features['Full BCI platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full BCI platform', 'Custom development', 'Dedicated specialists', '24/7 support']},
     category: 'Neural Technology',
     tags['Brain-Computer Interface', 'Neural Technology', 'Medical Devices', 'Research', 'Neuroscience'],
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
@@ -229,8 +169,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Comprehensive energy reporting'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 299,
         period: 'month',
         features: ['Basic energy optimization', 'Standard modeling', 'Email support']
@@ -243,26 +182,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       enterprise: {
         price: 1999,
         period: 'month',
-        features: ['Full energy platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features['Basic energy optimization', 'Standard modeling', 'Email support'] 
-      },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features['Advanced energy features', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
-      },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features['Full energy platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full energy platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']},
     category: 'Quantum Energy',
     tags['Quantum Computing', 'Energy', 'Fusion Power', 'Renewable Energy', 'Grid Optimization'],
     website: 'https://ziontechgroup.com/quantum-energy-platform',
@@ -300,8 +220,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Integration with vehicle systems'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 499,
         period: 'month',
         features: ['Basic autonomous features', 'Standard AI models', 'Email support']
@@ -314,26 +233,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       enterprise: {
         price: 2999,
         period: 'month',
-        features: ['Full autonomous platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 499, 
-        period: 'month', 
-        features['Basic autonomous features', 'Standard AI models', 'Email support'] 
-      },
-      professional: { 
-        price: 1299, 
-        period: 'month', 
-        features['Advanced autonomous features', 'Custom AI models', 'Priority support', 'Performance optimization'] 
-      },
-      enterprise: { 
-        price: 2999, 
-        period: 'month', 
-        features['Full autonomous platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full autonomous platform', 'Custom development', 'Dedicated specialists', '24/7 support']},
     category: 'Autonomous Systems',
     tags['Autonomous Vehicles', 'AI', 'Computer Vision', 'Robotics', 'Self-Driving'],
     website: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -349,24 +249,9 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Drone automation',
       'Robotic system development',
       'Logistics automation',
-<<<<<<< HEAD
-      'Transportation optimization'
+'Transportation optimization'
     ],
-<<<<<<< HEAD
-    integrations: ['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],
+integrations: ['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],
     compliance: ['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines']
 
-];}}}}}}
-=======
-    integrations['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],
-    compliance['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines']
-  };
-=======;
-      'Transportation optimization';
-    ],;
-    integrations: ['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],;
-    compliance: ['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines'];
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+];}}}}}}];

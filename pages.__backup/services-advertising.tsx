@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 const ext = (url: string) => (
@@ -13,27 +12,7 @@ export default function ServicesAdvertisingPage() {
 				<title>Services Advertising | Zion Tech Group</title>
 				<meta name="description" content="Features, benefits, and market references for Zion Tech Group services" />
 				<link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
-			</Head>
-=======
-			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" canonical="https://ziontechgroup.com/services-advertising/" />
-			<div className="max-w-6xl mx-auto space-y-10">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
-=======
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-
-export default function ServicesAdvertisingPage() {
-  const contact = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
-  const benefits = [
+			</Head>const benefits = [
     '1000% ROI target with measurable KPIs',
     'Transparent pricing with market references',
     'Fast onboarding with templates and playbooks',

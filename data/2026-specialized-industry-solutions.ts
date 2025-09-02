@@ -34,13 +34,7 @@ export interface SpecializedIndustrySolution {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const contact = {
+reviews: number;const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
@@ -251,8 +245,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
-<<<<<<< HEAD
-
 ];
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
@@ -261,39 +253,3 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Retail Technology',
   'Logistics Technology'
 ];}}
-=======
-    popular: true,
-    icon: '🚚',
-    color: 'from-orange-600 to-red-600',
-    textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/logistics-supply-chain-ai',
-    marketPosition: 'Leading logistics AI platform. Competes with SAP Logistics ($30K+ setup), Oracle Transportation ($25K+ setup). Our advantage: AI-powered optimization and comprehensive features.',
-    targetAudience: 'Logistics companies, Supply chain managers, Transportation companies, E-commerce businesses, Manufacturing companies',
-    trialDays: 30,
-    setupTime: '3-4 weeks',
-    category: 'Logistics Technology',
-    realService: true,
-    technology: ['AI/ML', 'Python', 'React', 'Node.js', 'IoT', 'Cloud platforms', 'GPS tracking'],
-    integrations: ['ERP systems', 'WMS systems', 'TMS systems', 'GPS platforms', 'E-commerce platforms'],
-    useCases: ['Route optimization', 'Supply chain visibility', 'Demand forecasting', 'Inventory management', 'Performance tracking'],
-    roi: 'Average 280% ROI through optimized logistics and reduced operational costs.',
-    competitors: ['SAP Logistics', 'Oracle Transportation', 'Manhattan Associates', 'JDA Software'],
-    marketSize: '$18.2B logistics AI market',
-    growthRate: '22.5% annual growth',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced logistics AI platform with comprehensive optimization and tracking capabilities.',
-    launchDate: '2024-05-01',
-    customers: 38,
-    rating: 4.6,
-    reviews: 32
-  }
-];
-export const INDUSTRY_SOLUTION_CATEGORIES = [;
-  'Healthcare Technology',;
-  'FinTech Solutions',;
-  'Manufacturing Technology',;
-  'Retail Technology',;
-  'Logistics Technology';
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

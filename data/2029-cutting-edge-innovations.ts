@@ -36,13 +36,7 @@ export interface CuttingEdge2029Service {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
+reviews: number;export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {
     id: 'ai-consciousness-simulation-platform',

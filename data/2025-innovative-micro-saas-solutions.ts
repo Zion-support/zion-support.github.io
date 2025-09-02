@@ -38,13 +38,7 @@ export interface InnovativeMicroSaasSolution {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
-<<<<<<< HEAD
-  marketDisruption: string;
-
-=======
-  marketDisruption: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const contact = {
+marketDisruption: string;const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;

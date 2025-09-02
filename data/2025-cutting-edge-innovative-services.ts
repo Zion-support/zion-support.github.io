@@ -34,13 +34,7 @@ export interface CuttingEdgeInnovativeService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [
+reviews: number;export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [
   // AI-POWERED INNOVATIVE SERVICES
   {
     id: 'ai-autonomous-business-manager',
@@ -509,33 +503,13 @@ export const serviceCategories2025: string[] = Array.from(
 ).sort();
 export const getServicesByCategory2025 = (category: string) => {;
   if (!category || category === 'All') return cuttingEdgeInnovativeServices2025;
-<<<<<<< HEAD
-  return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category)};
+return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category)};
 export const getPopularServices2025 = () =>
   cuttingEdgeInnovativeServices2025;
     .filter((s) => !!s.popular);
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
 export const getServicesByTechnology = (technology: string) => {
-<<<<<<< HEAD
-  return cuttingEdgeInnovativeServices2025.filter((s) =>
+return cuttingEdgeInnovativeServices2025.filter((s) =>
     s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()))
   );
 };}}
-=======
-  return cuttingEdgeInnovativeServices2025.filter((s) => ;
-    s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()));
-  )};
-=======
-  return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category);
-};
-export const getPopularServices2025 = () =>;
-  cuttingEdgeInnovativeServices2025;
-    .filter((s) => !!s.popular);
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-export const getServicesByTechnology = (technology: string) => {;
-  return cuttingEdgeInnovativeServices2025.filter((s) => ;
-    s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()));
-  );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

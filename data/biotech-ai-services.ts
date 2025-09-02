@@ -35,13 +35,7 @@ export interface BiotechAIService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const biotechAIServices: BiotechAIService[] = [
+reviews: number;export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform',
     name: 'AI Drug Discovery Platform',
