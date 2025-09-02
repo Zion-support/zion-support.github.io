@@ -1,14 +1,18 @@
-import type { NextPage } from 'next';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { Award, Brain, Cloud, Globe, Image, Target, Today, Users, Zap } from 'lucide-react';
 
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-const AIDevelopment: NextPage = () => {
+export default function AIDevelopment() {
   return (
-    <Layout
-      title="AI Development Services - Zion Tech Group"
-      description="Custom AI solutions and machine learning models tailored to your business needs. Transform your business with cutting-edge artificial intelligence."
-    >
+    <>
+      <Head>
+        <title>AI Development Services - Zion Tech Group</title>
+        <meta name="description" content="Custom AI solutions and machine learning models tailored to your business needs. Transform your business with cutting-edge artificial intelligence." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -258,8 +262,7 @@ const AIDevelopment: NextPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+      </main>
+    </>
   );
-};
-
-export default AIDevelopment;
+}

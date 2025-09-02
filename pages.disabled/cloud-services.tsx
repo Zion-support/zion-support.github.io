@@ -1,14 +1,18 @@
-import type { NextPage } from 'next';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { Award, Cloud, High, Server, Shield, Today, Users, Zap } from 'lucide-react';
 
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-const CloudServices: NextPage = () => {
+export default function CloudServices() {
   return (
-    <Layout
-      title="Cloud Services - Zion Tech Group"
-      description="Scalable cloud solutions and infrastructure design for modern applications. Transform your business with our comprehensive cloud services."
-    >
+    <>
+      <Head>
+        <title>Cloud Services - Zion Tech Group</title>
+        <meta name="description" content="Scalable cloud solutions and infrastructure design for modern applications. Transform your business with our comprehensive cloud services." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -252,8 +256,7 @@ const CloudServices: NextPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+      </main>
+    </>
   );
-};
-
-export default CloudServices;
+}
