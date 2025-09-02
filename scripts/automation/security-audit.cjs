@@ -4,35 +4,19 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 console.log('🔒 Starting continuous security audit automation...');
-=======
-class SecurityAuditor {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.vulnerabilities = [];
-    this.recommendations = [];
-    this.securityScore = 100;
-  }
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
-
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'error' ? '🚨' : type === 'success' ? '✅' : 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-<<<<<<< HEAD
 async function runSecurityAudit() {
   try {
     console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
 
     // Run npm audit
-    console.log(`'🔍 Running npm security audit...');
-=======
-  async auditDependencies() {
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
-    try {
+    console.log(`'🔍 Running npm security audit...');    try {
       this.log('Auditing dependencies for security vulnerabilities...');
       
       // Run npm audit
@@ -248,7 +232,6 @@ async function runSecurityAudit() {
   }
 }
 
-<<<<<<< HEAD
 // Main continuous loop
 async function runContinuous() {
   console.log(🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
@@ -295,8 +278,3 @@ runContinuous().catch(error => {
   console.error('❌ Failed to start continuous security audit:', error);
   process.exit(1);
 });
-=======
-// Run security audit
-const auditor = new SecurityAuditor();
-auditor.run().catch(console.error);
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
