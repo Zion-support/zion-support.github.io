@@ -1,5 +1,7 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';
 import {}
   Cloud,
   Zap,
@@ -7,92 +9,139 @@ import {}
   Server,
   GitFork,
   Cpu,
-  Globe,'
-  Shield} from 'lucide-react';'
-import { SEO } from '@/components/SEO';
+  Globe,
+  '
+  Shield} from 'lucide-react
+  ';'
+import { SEO } from
+  '@/components/SEO';
 ;
 :pages.disabled/pages/services/CloudDevOps.jsx
 const CloudDevOps = () => {
   const cloudServices = [
     {
 
-      icon: Cloud,'
-      title: 'Cloud Migration','
-      description:''
-        'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.','
-      features: [''
-        'Assessment & Planning',Data Migration',Application Modernization',Performance Optimization',
+      icon: Cloud,
+,
+  title: 'Cloud Migration,'
+      description:,
+  '
+        'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.
+  ','
+      features: ['
+  '
+        'Assessment & Planning,Data Migration',Application Modernization
+  ',Performance Optimization',
       ]},
     {
 
-      icon: Server,'
-      title: 'Infrastructure as Code','
-      description:''
-        'Automated infrastructure provisioning and management using modern DevOps practices.','
-      features: ['Terraform',AWS CloudFormation',Azure ARM',Kubernetes']},
+      icon: Server,
+,
+  title: 'Infrastructure as Code,'
+      description:,
+  '
+        'Automated infrastructure provisioning and management using modern DevOps practices.
+  ','
+      features: [
+  'Terraform,AWS CloudFormation
+  ',Azure ARM',Kubernetes
+  ']},
     {
 
       icon: GitFork,'
-      title: 'CI/CD Pipelines','
-      description:''
-        'Automated build, test, and deployment pipelines for faster, more reliable releases.','
-      features: ['Jenkins',GitHub Actions',GitLab CI',Azure DevOps']},
+      title:,
+  CI/CD Pipelines',
+  '
+      description: ''Automated build, test, and deployment pipelines for faster, more reliable releases.,
+  ,
+  '
+      features: ['Jenkins,GitHub Actions',GitLab CI
+  ',Azure DevOps']},
     {
 
-      icon: Database,'
-      title: 'Database Management','
-      description:''
-        'Scalable database solutions with high availability and disaster recovery.','
-      features: ['AWS RDS',Azure SQL',MongoDB Atlas',Redis']},
+      icon: Database,
+,
+  title: 'Database Management,'
+      description:,
+  '
+        'Scalable database solutions with high availability and disaster recovery.
+  ','
+      features: [
+  'AWS RDS,Azure SQL,
+  ,MongoDB Atlas',Redis
+  ']},
   ];
 
   const platforms = [
     {
 '
-      name: 'AWS','
-      description: 'Amazon Web Services cloud platform solutions','
-      icon: '☁️'},
+      name: 'AWS,
+,
+  description: 'Amazon Web Services cloud platform solutions,'
+      icon:,
+  ☁️'},
     {
-'
-      name: 'Azure','
-      description: 'Microsoft Azure cloud services and solutions','
-      icon: '🔷'},
+  '
+      name: 'Azure,'
+      description:,
+  Microsoft Azure cloud services and solutions',
+  '
+      icon: '🔷},
+    {,
+  name: 'Google Cloud,
+,
+  description: 'Google Cloud Platform infrastructure and services,'
+      icon:,
+  🔵'},
     {
-'
-      name: 'Google Cloud','
-      description: 'Google Cloud Platform infrastructure and services','
-      icon: '🔵'},
-    {
-'
-      name: 'Multi-Cloud','
-      description: 'Hybrid and multi-cloud strategy implementation','
-      icon: '🌐'},
+  '
+      name: 'Multi-Cloud,'
+      description:,
+  Hybrid and multi-cloud strategy implementation',
+  '
+      icon: '🌐},
   ];
 
   const devOpsTools = [
+    {,
+  category: 'CI/CD,
+,
+  tools: ['Jenkins,GitLab CI,
+  ,GitHub Actions
+  ',CircleCI',ArgoCD
+  ']},
     {
 '
-      category: 'CI/CD','
-      tools: ['Jenkins',GitLab CI',GitHub Actions',CircleCI',ArgoCD']},
+      category: 'Infrastructure,
+,
+  tools: ['Terraform,Ansible,
+  ,Puppet
+  ',Chef',CloudFormation
+  ']},
     {
 '
-      category: 'Infrastructure','
-      tools: ['Terraform',Ansible',Puppet',Chef',CloudFormation']},
+      category: 'Monitoring,
+,
+  tools: ['Prometheus,Grafana,
+  ,ELK Stack
+  ',Datadog',New Relic
+  ']},
     {
 '
-      category: 'Monitoring','
-      tools: ['Prometheus',Grafana',ELK Stack',Datadog',New Relic']},
-    {
-'
-      category: 'Security','
-      tools: ['Vault',AWS IAM',Azure AD',Google IAM',Prisma Cloud']},
+      category: 'Security,
+,
+  tools: ['Vault,AWS IAM',Azure AD
+  ',Google IAM',Prisma Cloud
+  ']},
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO"'"
-        title="Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services"'"'"
-        description="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices.""
+        title="Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services"
+  '"'"
+        description="Transform your infrastructure with Zion Tech Group
+  's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices.""
         keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD""
         canonical="https://ziontechgroup.com/services/cloud-devops"
       />
@@ -108,7 +157,8 @@ const CloudDevOps = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Infrastructure with""
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">'
-                {' '}
+                {
+  ' '}
                 Modern DevOps
               </span>"</h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -219,7 +269,8 @@ const CloudDevOps = () => {
 :pages.disabled/pages/services/CloudDevOps.jsx
             Ready to Transform Your Infrastructure?"
           </h2>""
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
+  '
             Let's discuss how our cloud migration and DevOps services can help
             you achieve faster deployments, better scalability, and improved
             security."
@@ -246,4 +297,4 @@ const CloudDevOps = () => {
 export { CloudDevOps };
 :pages.disabled/pages/services/CloudDevOps.jsx
 export default CloudDevOps;'"
-'"'"
+  '"'"

@@ -57,5 +57,4 @@ while IFS= read -r file; do
 done <<< "$conflict_files"
 
 echo "Merge conflict resolution completed!"
-
-# Do not auto-run build here to avoid CI side effects
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

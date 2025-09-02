@@ -1,10 +1,14 @@
-import Stripe from 'stripe';
-import { withErrorLogging } from './withErrorLogging.cjs';
+import Stripe from,
+  stripe';
+import { withErrorLogging } from
+  './withErrorLogging.cjs';
 
-const PROD_DOMAIN = 'app.ziontechgroup.com';
+const PROD_DOMAIN =
+  'app.ziontechgroup.com';
 
 function isProdDomain() {
-  const url = process.env.URL || '';
+  const url = process.env.URL || '
+  ';
   try {
     return new URL(url).hostname === PROD_DOMAIN;
   } catch {
@@ -13,17 +17,21 @@ function isProdDomain() {
 }
 
 async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST
+  ') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader('Allow
+  ', 'POST
+  ');
+    res.end('Method Not Allowed
+  ');
     return;
   }
 
   const { productId, userId } = req.body || {};
   if (!productId || !userId) {
     res.statusCode = 400;
-    res.json({ error: 'Missing productId or userId' });
+    res.json({ error: 'Missing productId or userId });
     return;
   }
 
@@ -33,21 +41,24 @@ async function handler(req, res) {
 
     if (
       !isProdDomain() &&
-      liveKey.startsWith('sk_live') &&
+      liveKey.startsWith(
+  'sk_live') &&
       !process.env.STRIPE_TEST_SECRET_KEY
     ) {
       throw new Error(
-        'Refusing to use live Stripe key on non-production domain'
+  'Refusing to use live Stripe key on non-production domain'
       );
     }
 
     const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
-      apiVersion: '2023-10-16',
+      apiVersion:
+  '2023-10-16',
     });
 
     const session = await stripe.checkout.sessions.create({
       line_items: [{ price: productId, quantity: 1 }],
-      mode: 'payment',
+      mode:
+  'payment',
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/cancel`,
       metadata: { userId, productId },

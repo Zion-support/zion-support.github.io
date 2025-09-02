@@ -1,21 +1,27 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require(,
+  fs');
+const path = require(
+  'path');
 function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
       const numberWords = {
-
-  '5': 'Five',
-        '4': 'Four',
-        '3': 'Three',
-        '2': 'Two',
-        '1': 'One',
-          '0': 'Zero'
+  '5': 'Five,
+,
+  4': 'Four,
+,
+  3': 'Three,
+,
+  2': 'Two,
+,
+  1': 'One,
+,
+  0': 'Zero
       
 
 };
-      return numberWords[match] || match})
-  '0': 'Zero'
+      return numberWords[match] || match}),
+  0': 'Zero
       
 
 
@@ -28,7 +34,8 @@ function toCamelCase(str) {
     .replace(/^(.)/, (match) => match.toUpperCase())};
 function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath,utf8');
+    const content = fs.readFileSync(filePath,utf8
+  ');
 
     // Extract filename without extension
     const filename = path.basename(filePath, path.extname(filePath));
@@ -36,13 +43,15 @@ function fixFile(filePath) {
 
     // Replace the variable declaration
     let newContent = content.replace(
-      new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,g'),
+      new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,g
+  '),
       `const ${camelCaseName}: NextPage = () => {`
     );
 
     // Replace the export statement
     newContent = newContent.replace(
-      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')};`,g'),
+      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')};`,g
+  '),
       `export default ${camelCaseName};`
     );
 
@@ -94,7 +103,9 @@ function fixedCount = 0;
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {
+      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith(
+  '.tsx') && file.includes(
+  '-')) {
       if (fixFile(filePath)) {
         fixedCount++}
     }
@@ -102,8 +113,10 @@ function fixedCount = 0;
   
   return fixedCount}
 // Start fixing files
-// // // // // // // console.log('Fixing invalid variable names in TypeScript files...');
-const fixedCount = findAndFixFiles('./pages');
+// // // // // // // console.log(
+  'Fixing invalid variable names in TypeScript files...');
+const fixedCount = findAndFixFiles(
+  './pages');
 // // // // // // // console.log(`Fixed ${fixedCount} files.`);
 console.log(`Fixed ${fixedCount} files.`);
 ;

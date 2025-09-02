@@ -12,7 +12,6 @@ echo "---"
 BATCH_SIZE=5
 BACKUP_BRANCH="test-merge-backup-$(date +%Y%m%d-%H%M%S)"
 LOG_FILE="test-merge-log-$(date +%Y%m%d-%H%M%S).txt"
-
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
@@ -38,22 +37,6 @@ resolve_conflicts() {
     local branch="$2"
     
     echo "🔧 Resolving conflicts in $file for branch $branch..."
-    log_message "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Create a backup of the conflicted file
-    cp "$file" "${file}.backup.$(date +%s)"
-    
-    # Strategy: Keep both versions where possible, prefer main branch for critical files
-    if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-        echo "📦 Critical file detected, keeping main version and merging dependencies..."
-        log_message "📦 Critical file detected, keeping main version and merging dependencies..."
-    else
-        echo "📝 Regular file, attempting to merge both versions..."
-        log_message "📝 Regular file, attempting to merge both versions..."
-    fi
-    echo "✅ Resolved conflicts in $file"
-    log_message "✅ Resolved conflicts in $file"
-    CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
 }
 
 # Function to check if a branch can be merged
@@ -86,20 +69,16 @@ merge_branch() {
     # Try to merge
     if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
         echo "✅ Successfully merged $branch"
-        log_message "✅ Successfully merged $branch"
         git commit -m "Test merge $branch into main - $(date)"
         SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
         return 0
     else
         echo "⚠️  Merge conflicts detected in $branch, resolving..."
-        log_message "⚠️  Merge conflicts detected in $branch, resolving..."
         
         # Get list of conflicted files
         CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
         
         if [ -n "$CONFLICTED_FILES" ]; then
-            echo "📋 Conflicted files: $CONFLICTED_FILES"
-            log_message "📋 Conflicted files: $CONFLICTED_FILES"
             
             # Resolve conflicts in each file
             for file in $CONFLICTED_FILES; do
@@ -119,7 +98,6 @@ merge_branch() {
             return 0
         else
             echo "❌ No conflicted files found, but merge failed. Aborting..."
-            log_message "❌ No conflicted files found, but merge failed. Aborting..."
             git merge --abort
             FAILED_MERGES=$((FAILED_MERGES + 1))
             return 1
@@ -169,25 +147,6 @@ for ((j=0; j<total_branches; j++)); do
     # Try to merge the branch
     if merge_branch "$branch"; then
         echo "✅ Test branch $branch processed successfully"
-        log_message "✅ Branch $branch processed successfully"
-        batch_success=$((batch_success + 1))
-    else
-        echo "❌ Failed to process test branch $branch"
-        log_message "❌ Failed to process branch $branch"
-        batch_failures=$((batch_failures + 1))
-    fi
-    
-    # Progress update
-    echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
-    log_message "📊 Batch progress: $batch_success successful, $batch_failures failed"
-    log_message "📊 Overall progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
-    echo "---"
-    log_message "---"
-done
-
-# Push changes after the test batch
-echo "💾 Pushing test changes to remote..."
-log_message "💾 Pushing test batch changes to remote..."
 git push origin main
 
 # Summary
@@ -200,9 +159,6 @@ echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 
-log_message "✅ Test batch completed: $batch_success successful, $batch_failures failed"
-log_message "---"
-
 # Next steps
 echo ""
 echo "🚀 Next steps:"
@@ -214,7 +170,6 @@ else
 fi
 echo "   1. Review the merged changes: git log --oneline -10"
 echo "   2. Test the application"
-
 log_message "🧪 Test merge of cursor branches completed!"
 log_message "📊 Summary:"
 log_message "   ✅ Successful merges: $SUCCESSFUL_MERGES"
@@ -226,4 +181,3 @@ log_message "   🔒 Backup branch: $BACKUP_BRANCH"
 log_message "   📝 Log file: $LOG_FILE"
 log_message "⏰ Completed at: $(date)"
 
-echo "   3. Delete the test backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"

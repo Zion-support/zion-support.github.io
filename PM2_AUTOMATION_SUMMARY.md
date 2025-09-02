@@ -337,3 +337,4 @@ cron_restart: '*/5 * * * *' // Every 5 minutes
 ---
 
 Your project now has a robust, automated error monitoring and fixing system powered by PM2! 🎉
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

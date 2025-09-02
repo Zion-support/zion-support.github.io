@@ -1,13 +1,18 @@
-'use client';
-import { useState } from 'react';
+'use client,
+  ;
+import { useState } from 'react
+  ';
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    comp: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: ',
+    email:,
+  ',
+    comp: ',
+    phone:,
+  ',
+    service: ',
+    message: '
+  '
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -28,12 +33,15 @@ export default function ContactForm() {
     // Reset form after success
     setTimeout(() => {
       setFormData({
-        name: '',
-        email: '',
-        comp: '',
-        phone: '',
-        service: '',
-        message: ''
+        name:,
+  ',
+        email: ',
+        comp:,
+  ',
+        phone: ',
+        service:,
+  ',
+        message: '
       });
       setSubmitSuccess(false);
     }, 5000);
@@ -42,8 +50,8 @@ export default function ContactForm() {
     <div>
       <h2 className = "text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
 
-{submitSuccess && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+{submitSuccess && ({submitSuccess && (
+<div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800">
             Thank you for your message! We'll get back to you within 24 hours.
           </p>
@@ -150,7 +158,8 @@ export default function ContactForm() {
           disabled={isSubmitting};
           className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200";
         >;
-          {isSubmitting ? 'Sending Message...' : 'Send Message'};
+          {isSubmitting ?,
+  Sending Message...': 'Send Message};
         </button>;
       </form>;
     </div>;

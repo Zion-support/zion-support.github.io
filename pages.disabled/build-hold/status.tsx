@@ -1,22 +1,84 @@
-import React from 'react';'import type { NextPage } from 'next';'import MainLayout from '../components/layout/MainLayout';'import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from 'lucide-react';''const Status: NextPage = () => {
+React from,
+  react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../components/layout/MainLayout';
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from
+  'lucide-react';'
+  'const Status: NextPage = () => {
   const services = [;
     {;
-      name: 'Web Application', status: 'operational','      uptime: '99.9%', responseTime: '120ms','      lastIncident: 'No incidents in the past 30 days''    }, {'      name: 'API Services','      status: 'operational', uptime: '99.8%','      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days''    },'    {;
-      name: 'Database', status: 'operational','      uptime: '99.9%', responseTime: '45ms','      lastIncident: 'No incidents in the past 30 days''    }, {'      name: 'Cloud Infrastructure','      status: 'operational', uptime: '99.7%','      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days''    },'    {;
-      name: 'CDN', status: 'operational','      uptime: '99.9%', responseTime: '50ms','      lastIncident: 'No incidents in the past 30 days''    }, {'      name: 'Monitoring','      status: 'operational', uptime: '100%','      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days''    }'  ];
+      name: 'Web Application, status:,
+  operational
+  ','      uptime: '99.9%, responseTime:,
+  120ms',
+  '      lastIncident: 'No incidents in the past 30 days'    }, {,
+  name: 'API Services,
+,
+  status: 'operational, uptime:,
+  99.8%
+  ','      responseTime: '85ms, lastIncident:,
+  No incidents in the past 30 days''    },
+  '    {;
+      name: 'Database, status:,
+  operational
+  ','      uptime: '99.9%, responseTime:,
+  45ms',
+  '      lastIncident: 'No incidents in the past 30 days'    }, {,
+  name: 'Cloud Infrastructure,
+,
+  status: 'operational, uptime:,
+  99.7%
+  ','      responseTime: '200ms, lastIncident:,
+  No incidents in the past 30 days''    },
+  '    {;
+      name: 'CDN, status:,
+  operational
+  ','      uptime: '99.9%, responseTime:,
+  50ms',
+  '      lastIncident: 'No incidents in the past 30 days'    }, {,
+  name: 'Monitoring,
+,
+  status: 'operational, uptime:,
+  100%
+  ','      responseTime: '30ms, lastIncident:,
+  No incidents in the past 30 days''    }
+  '  ];
 
   const getStatusIcon = (status: string) => {;
     switch (status) {
-      case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />;"      case 'degraded': return <AlertCircle className="w-5 h-5 text-yellow-500" />;"      case 'outage': return <XCircle className="w-5 h-5 text-red-500" />;"      default: return <Clock className="w-5 h-5 text-gray-500" />;"    }"  };
+      case 'operational
+  ': return <CheckCircle className="w-5 h-5 text-green-500" />;"      case 'degraded
+  ': return <AlertCircle className="w-5 h-5 text-yellow-500" />;"      case 'outage: return <XCircle className="w-5 h-5 text-red-500" />;"      default: return <Clock className="w-5 h-5 text-gray-500" />;"    }"  };
 
   const getStatusColor = (status: string) => {;
     switch (status) {
-      case 'operational': return 'text-green-600 bg-green-100';'      case 'degraded': return 'text-yellow-600 bg-yellow-100';'      case 'outage': return 'text-red-600 bg-red-100';'      default: return 'text-gray-600 bg-gray-100';'    }'  };
+      case,
+  operational
+  ': return 'text-green-600 bg-green-100
+  ';'      case
+  'degraded': return
+  'text-yellow-600 bg-yellow-100';'      case
+  'outage': return
+  'text-red-600 bg-red-100';'      default: return
+  'text-gray-600 bg-gray-100';    }
+  '  };
 
   const incidents = [;
     {
-      id: 1, title: 'Scheduled Maintenance - API Services','      status: 'resolved', date: '2025-01-20','      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor''    },'    {;
-      id: 2, title: 'Database Performance Issue','      status: 'resolved', date: '2025-01-15','      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor''    }'  ];
+      id: 1, title:,
+  Scheduled Maintenance - API Services
+  ','      status: 'resolved, date:,
+  2025-01-20',
+  '      description: 'Scheduled maintenance window for API services completed successfully., impact: 'minor'
+  '    },'    {;
+      id: 2, title:,
+  Database Performance Issue',
+  '      status: 'resolved, date:,
+  2025-01-15
+  ','      description: 'Temporary performance degradation in database queries has been resolved., impact:
+  'minor''    }
+  '  ];
 
   return (
     <MainLayout
@@ -26,7 +88,8 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
         </section>
 
         {/* Overall Status */}
-        <section className="py-16 bg-white">"          <div className="container mx-auto px-4">"            <div className="text-center mb-12">"              <div className="flex items-center justify-center mb-4">"                <CheckCircle className="w-12 h-12 text-green-500 mr-3" />"                <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>"              </div>"              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.''              </p>'            </div>
+        <section className="py-16 bg-white">"          <div className="container mx-auto px-4">"            <div className="text-center mb-12">"              <div className="flex items-center justify-center mb-4">"                <CheckCircle className="w-12 h-12 text-green-500 mr-3" />"                <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>"              </div>"              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.''              </p>
+  '            </div>
             
             {/* Status Overview Cards */}
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">"              <div className="bg-gray-50 rounded-lg p-6 text-center">"                <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />"                <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9%</h3>"                <p className="text-gray-600">Overall Uptime</p>"              </div>"              
@@ -68,7 +131,10 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
         <section className="py-16 bg-white">"          <div className="container mx-auto px-4">"            <div className="text-center mb-12">"              <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Incidents</h2>"              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"                History of recent incidents and their resolution status."              </p>
             </div>
             
-            <div className="max-w-4xl mx-auto">"              <div className="space-y-6">"                {incidents.map((incident) => ("                  <div key={incident.id} className="bg-gray-50 rounded-lg p-6">"                    <div className="flex items-start justify-between">"                      <div className="flex-1">"                        <div className="flex items-center mb-2">"                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />"                          <h3 className="text-lg font-semibold text-gray-900">{incident.title}</h3>"                        </div>"                        <p className="text-gray-600 mb-2">{incident.description}</p>"                        <div className="flex items-center text-sm text-gray-500">"                          <span className="mr-4">Date: {incident.date}</span>"                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${"                            incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800''                          }`}>'                            {incident.impact} impact`                          </span>
+            <div className="max-w-4xl mx-auto">"              <div className="space-y-6">"                {incidents.map((incident) => ("                  <div key={incident.id} className="bg-gray-50 rounded-lg p-6">"                    <div className="flex items-start justify-between">"                      <div className="flex-1">"                        <div className="flex items-center mb-2">"                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />"                          <h3 className="text-lg font-semibold text-gray-900">{incident.title}</h3>"                        </div>"                        <p className="text-gray-600 mb-2">{incident.description}</p>"                        <div className="flex items-center text-sm text-gray-500">"                          <span className="mr-4">Date: {incident.date}</span>"                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${"                            incident.impact ===,
+  minor
+  ' ? 'bg-yellow-100 text-yellow-800
+  ': 'bg-red-100 text-red-800'                          }`}>'                            {incident.impact} impact`                          </span>
                         </div>
                       </div>
                     </div>

@@ -30,21 +30,4 @@
     "composite": true,
     "noEmit": true
   },
-  "include": [
-    "types",
-    "src/components/**/*",
-    "src/store/**/*",
-    "src/styles/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*"
-  ],
-  "exclude": [
-    "src/pages",
-    "src/routes",
-    "src/services",
-    "src/utils",
-    "src/types",
-    "src/data",
-    "temp_working"
-  ]
 }
