@@ -2,7 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -205,6 +205,56 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Results</h3>
               <p className="text-gray-600">98% client satisfaction and 500+ successful projects</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get in Touch with Our Experts
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Ready to transform your business? Contact our team of experts for a free consultation and discover how our innovative solutions can drive your success.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600 mb-3">Speak directly with our experts</p>
+              <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                +1 302 464 0950
+              </a>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-3">Send us your project details</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600 mb-3">Our headquarters location</p>
+              <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" target="_blank" rel="noopener noreferrer" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </a>
             </div>
           </div>
         </div>
