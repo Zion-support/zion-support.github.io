@@ -104,7 +104,7 @@ const AdvancedServiceInnovationHub = () => {}
             investment: '$80B+',''';
             keyPlayers['Neuralink',Kernel',Medical Device Companies'],';';
             technologies['Neural Interfaces',Signal Processing',AI/ML'],';';
-            status: 'Emerging';
+            status: 'Emerging'}
     ];
     const filteredTrends = useMemo(() => {}
         return innovationTrends.filter(trend => {}
@@ -151,7 +151,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 0,
   y: 20}} animate = {}
   { opacity: 1,
-  y: 0';';
+  y: 0 ''';
 ''''}} className='mb-8'>''''
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>'''
           <div>''''
@@ -162,7 +162,7 @@ const AdvancedServiceInnovationHub = () => {}
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services
             </p>
           </div>''';
-'''''
+          '''''
           <div className='flex gap-2'>''''''{['trends',roadmap',insights'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size='sm' onClick={() => setViewMode(mode)}>''''''{mode === 'trends' && <TrendingUp className='w-4 h-4 mr-2'/>}''''''{mode === 'roadmap' && <Rocket className='w-4 h-4 mr-2'/>}''''''{mode === 'insights' && <Lightbulb className='w-4 h-4 mr-2'/>}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </Button>))}
@@ -174,7 +174,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 0,
   y: 20}} animate = {}
   { opacity: 1,
-  y: 0';';
+  y: 0 ''';
 ''''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>'''
               <div>''''
@@ -184,7 +184,7 @@ const AdvancedServiceInnovationHub = () => {}
                     </option>) ) }
                 </select>
               </div>
-'''
+              '''
               <div>''''
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Impact</label>''''
                 <select value={selectedImpact} onChange={(e) => setSelectedImpact(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>''''
@@ -217,7 +217,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 0,
   y: 20}} animate = {}
   { opacity: 1,
-  y: 0';';
+  y: 0 ''';
 ''''}} transition={{ delay: 0.2 }} className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8'>{filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20}} animate = {}
@@ -246,18 +246,18 @@ const AdvancedServiceInnovationHub = () => {}
                       </div>
                     </div>
                   </CardHeader>
-'''
+                  '''
                   <CardContent>''''
                     <p className='text-zion-slate-light mb-4'>
                       {trend.description}
                     </p>''';
-''''
+                    ''''
                     <div className='space-y-3'>''''
                       <div className='flex justify-between items-center'>''''
                         <span className='text-sm text-zion-slate-light'>Timeline:</span>''''
                         <span className='text-sm font-medium text-zion-slate-dark'>{trend.timeline}</span>
                       </div>''';
-''''
+                      ''''
                       <div className='flex justify-between items-center'>''''
                         <span className='text-sm text-zion-slate-light'>Adoption Rate:</span>''''
                         <div className='flex items-center gap-2'>''''
@@ -267,12 +267,12 @@ const AdvancedServiceInnovationHub = () => {}
                           <span className='text-sm font-medium'>{trend.adoption}%</span>
                         </div>
                       </div>''';
-''''
+                      ''''
                       <div className='flex justify-between items-center'>''''
                         <span className='text-sm text-zion-slate-light'>Investment:</span>''''
                         <span className='text-sm font-medium text-zion-cyan'>{trend.investment}</span>
                       </div>
-'''
+                      '''
                       <div>''''
                         <span className='text-sm text-zion-slate-light'>Key Technologies:</span>''''
                         <div className='flex flex-wrap gap-1 mt-1'>''''{trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key={idx} variant='outline' className='text-xs'>
@@ -280,7 +280,7 @@ const AdvancedServiceInnovationHub = () => {}
                             </Badge>) ) }
                         </div>
                       </div>
-'''
+                      '''
                       <div>''''
                         <span className='text-sm text-zion-slate-light'>Key Players:</span>''''
                         <div className='flex flex-wrap gap-1 mt-1'>''''{trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key={idx} variant='outline' className='text-xs'>
@@ -298,7 +298,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 0,
   y: 20}} animate = {}
   { opacity: 1,
-  y: 0';';
+  y: 0 ''';
 ''''}} transition={{ delay: 0.1 }} className='space-y-6'>{futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}
   { opacity: 0,
   x: -20}} animate = {}
@@ -319,7 +319,7 @@ const AdvancedServiceInnovationHub = () => {}
                           <p className='text-zion-slate-light'>{roadmap.description}</p>
                         </div>
                       </div>''';
-''''
+                      ''''
                       <div className='flex flex-wrap gap-2'>''''
                         <Badge className='bg-zion-blue-light/10 text-zion-blue-dark'>
                           Timeline: {roadmap.timeline}'''
@@ -334,7 +334,7 @@ const AdvancedServiceInnovationHub = () => {}
                     </div>
                   </div>
                 </CardHeader>
-'''
+                '''
                 <CardContent>''''
                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>'''
                     <div>''''
@@ -348,7 +348,7 @@ const AdvancedServiceInnovationHub = () => {}
                           </li>) ) }
                       </ul>
                     </div>
-'''
+                    '''
                     <div>''''
                       <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>''''
                         <Shield className='w-4 h-4 text-orange-500'/>
@@ -360,7 +360,7 @@ const AdvancedServiceInnovationHub = () => {}
                           </li>) ) }
                       </ul>
                     </div>
-'''
+                    '''
                     <div>''''
                       <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>''''
                         <Star className='w-4 h-4 text-yellow-500'/>
@@ -381,7 +381,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 0,
   y: 20}} animate = {}
   { opacity: 1,
-  y: 0';';
+  y: 0 ''';
 ''''}} transition={{ delay: 0.1 }} className='space-y-6'>''''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
             <Card>'''
@@ -400,7 +400,7 @@ const AdvancedServiceInnovationHub = () => {}
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' }}></div>
                   </div>''';
-''''
+                  ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>AI & Machine Learning</span>''''
                     <span className='font-semibold text-zion-purple'>$300B+</span>'''
@@ -408,7 +408,7 @@ const AdvancedServiceInnovationHub = () => {}
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' }}></div>
                   </div>''';
-''''
+                  ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Space Technology</span>''''
                     <span className='font-semibold text-zion-blue'>$200B+</span>'''
@@ -416,7 +416,7 @@ const AdvancedServiceInnovationHub = () => {}
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' }}></div>
                   </div>''';
-''''
+                  ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Biotech AI</span>''''
                     <span className='font-semibold text-zion-green'>$100B+</span>'''
@@ -443,7 +443,7 @@ const AdvancedServiceInnovationHub = () => {}
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' }}></div>
                   </div>''';
-''''
+                  ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Growing Market</span>''''
                     <span className='font-semibold text-zion-purple'>35%</span>'''
@@ -451,7 +451,7 @@ const AdvancedServiceInnovationHub = () => {}
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' }}></div>
                   </div>''';
-''''
+                  ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Mainstream</span>''''
                     <span className='font-semibold text-zion-blue'>40%</span>'''
@@ -459,7 +459,7 @@ const AdvancedServiceInnovationHub = () => {}
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' }}></div>
                   </div>''';
-''''
+                  ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Mature Market</span>''''
                     <span className='font-semibold text-zion-green'>10%</span>'''
@@ -497,7 +497,7 @@ const AdvancedServiceInnovationHub = () => {}
                     </li>
                   </ul>
                 </div>
-'''
+                '''
                 <div>''''
                   <h4 className='font-semibold text-zion-slate-dark mb-3'>Strategic Planning (2-5 years)</h4>''''
                   <ul className='space-y-2'>''''
@@ -524,7 +524,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 0,
   y: 20}} animate = {}
   { opacity: 1,
-  y: 0';';
+  y: 0 ''';
 ''''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
           <h3 className='text-3xl font-bold mb-4'>Ready to Shape the Future?</h3>''''
@@ -535,8 +535,6 @@ const AdvancedServiceInnovationHub = () => {}
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''''
             <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
 ';
-'';
-''';
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank');
 '''}>''''
               <Users className='w-5 h-5 mr-2'/>
@@ -544,8 +542,6 @@ const AdvancedServiceInnovationHub = () => {}
             </Button>''''
             <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}
 ';
-'';
-''';
   () => window.open('tel:+13024640950',_blank');
 '''}>''''
               <Zap className='w-5 h-5 mr-2"/>
@@ -555,7 +551,7 @@ const AdvancedServiceInnovationHub = () => {}
         </div>
       </motion.div>
     </div>)}
-export default AdvancedServiceInnovationHub}}}}}}
+export default AdvancedServiceInnovationHub;
 export { AdvancedServiceInnovationHub }
 ;
 export { AdvancedServiceInnovationHub }

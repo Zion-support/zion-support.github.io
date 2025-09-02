@@ -1,8 +1,4 @@
-<<<<<<< HEAD
  import { motion } from 'framer-motion' import { cn } from '@/lib/utils' import { Loader2 } from 'lucide-react'  interface ModernButtonProps {
-=======
- import { motion } from 'framer-motion' import { cn } from '@/lib/utils' import { Loader2 } from 'lucide-react'  interface ModernButtonProps {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
    children: React.ReactNode;
    variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'neon';
    size?: 'sm' | 'md' | 'lg' | 'xl';

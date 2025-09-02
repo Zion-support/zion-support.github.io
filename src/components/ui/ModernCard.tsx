@@ -1,8 +1,4 @@
-<<<<<<< HEAD
  import { motion } from 'framer-motion' import { cn } from '@/lib/utils'  interface ModernCardProps {
-=======
- import { motion } from 'framer-motion' import { cn } from '@/lib/utils'  interface ModernCardProps {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
    children: React.ReactNode;
    className?: string;
    variant?: 'default' | 'elevated' | 'glass' | 'neon';

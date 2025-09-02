@@ -1,4 +1,1 @@
-<<<<<<< HEAD
  const markdown = ` # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects, uses, and protects your information. Additional details will be added in a future revision.` ` const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title='Privacy Policy' description='Learn how Zion Tech Group handles your data and protects your privacy.' canonical='https:'''`";
-=======
- const markdown = ` # Privacy Policy Your privacy is important to us. This policy explains how Zion Tech Group collects, uses, and protects your information. Additional details will be added in a future revision.` ` const draft = true export { function } export default function PrivacyPolicy() { return() <> <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https:"""`">>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a

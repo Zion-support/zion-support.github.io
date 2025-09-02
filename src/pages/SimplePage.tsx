@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 ;
-=======
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
 import { Link, useLocation } from 'react-router-dom';
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';

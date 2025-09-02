@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, X, MessageCircle, Phone, Mail } from 'lucide-react';
+import {}
+  PlusIcon,
+  XMarkIcon,
+  ChatBubbleLeftRightIcon,
+  PhoneIcon,';
+  EnvelopeIcon} from '@heroicons/react/24/outline';
 const FloatingActionButton = ({ className = '' }) => {}
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const actionItems = []{}
-      icon: MessageCircle,';
+      icon: ChatBubbleLeftRightIcon,';
       label: 'Live Chat',';
       action: () => window.open('https://ziontechgroup.com/chat',_blank'),';
       color: 'bg-green-500 hover:bg-green-600'},
     {}
-      icon: Phone,';
+      icon: PhoneIcon,';
       label: 'Call Us',';
       action: () => window.open('tel:+1-555-0123',_self'),';
       color: 'bg-blue-500 hover:bg-blue-600'},
     {}
-      icon: Mail,';
+      icon: EnvelopeIcon,';
       label: 'Email',';
       action: () => window.open('mailto:info@ziontechgroup.com',_self'),';
       color: 'bg-purple-500 hover:bg-purple-600'}
@@ -28,7 +33,7 @@ const FloatingActionButton = ({ className = '' }) => {}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className='absolute bottom - 16 right - 0 mb-2 space - y-3 '>{actionItems.map((item, index) => (
+            className='absolute bottom-16 right-0 mb-2 space-y-3''''>{actionItems.map((item, index) => (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, x: 20 }}
@@ -68,7 +73,7 @@ const FloatingActionButton = ({ className = '' }) => {}
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}'''>''''
-              <X className='w-6 h-6' />
+              <XMarkIcon className='w-6 h-6' />
             </motion.div>
           ) : ('''
             <motion.div'''';
@@ -77,13 +82,12 @@ const FloatingActionButton = ({ className = '' }) => {}
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}'''>''''
-              <Plus className='w-6 h-6" />
+              <PlusIcon className='w-6 h-6' />
             </motion.div>
           )}
         </AnimatePresence>
       </motion.button>
-    </div>) }
-;
+    </div>)}
 export default FloatingActionButton;
 export { FloatingActionButton }
 ;

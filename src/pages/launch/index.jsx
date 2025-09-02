@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 ' import JSZip from 'jszip'' import { saveAs  } from 'file-saver'' import { AppLayout } from '@/layout/AppLayout'' import { NextSeo } from '@/components/NextSeo'' import { Button } from '@/components/ui/button'' import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'' import { Input } from '@/components/ui/input'' import { Label } from '@/components/ui/label
 ' import JSZip from 'jszip'' import { saveAs  } from 'file-saver'' import { AppLayout } from '@/layout/AppLayout'' import { NextSeo } from '@/components/NextSeo'' import { Button } from '@/components/ui/button'' import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'' import { Input } from '@/components/ui/input'' import { Label } from '@/components/ui/label'';
-=======
-'; import JSZip from 'jszip''; import { saveAs  } from 'file-saver''; import { AppLayout } from '@/layout/AppLayout''; import { NextSeo } from '@/components/NextSeo''; import { Button } from '@/components/ui/button''; import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs''; import { Input } from '@/components/ui/input''; import { Label } from '@/components/ui/label
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a

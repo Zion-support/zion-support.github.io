@@ -1,5 +1,86 @@
-
-})}
+ const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react'';
+import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
+const SEOOptimizer = () => {}
+    const [isOpen, setIsOpen] = useState (false) ;
+    const [isAnalyzing, setIsAnalyzing] = useState (false) ;
+    const [report, setReport] = useState (null) ;
+    const [selectedPage, setSelectedPage] = useState (null) ;
+    const analyzeSEO = useCallback (async () => {}
+        setIsAnalyzing (true) ;
+        try {}
+            // Simulate analyzing all pages for SEO;
+            const samplePages = []{}
+';
+'';
+''';
+                    url: '/',''';
+                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',''';
+                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',''';
+                    headings['AI-Powered Business Solutions',Comprehensive IT Services',Micro-SaaS Solutions'],';';
+                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],';';
+                    links['/services',/ai-solutions',/about',/contact'],';';
+                    keywords['AI solutions',quantum computing',cybersecurity',digital transformation']
+                },
+                {}
+';
+'';
+''';
+                    url: '/services',''';
+                    title: 'Our Services - Comprehensive Technology Solutions',''';
+                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',''';
+                    headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],';';
+                    images['/images/services-overview.jpg'],';';
+                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'],';';
+                    keywords['technology services',AI solutions',cloud infrastructure',cybersecurity']
+                },
+                {}
+';
+'';
+''';
+                    url: '/ai-solutions',''';
+                    title: 'AI Solutions - Artificial Intelligence Services',''';
+                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',''';
+                    headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],';';
+                    images['/images/ai-solutions.jpg'],';';
+                    links['/services',/about',/contact'],';';
+                    keywords['artificial intelligence',machine learning',predictive analytics',AI automation']
+                }
+            ];
+            const pageAnalyses = samplePages.map(page => {}
+                const score = calculateSEOScore(page);
+                const issues = identifySEOIssues(page);
+                const recommendations = generateSEORecommendations(issues);
+                return {}
+                    pageUrl: page.url,
+                    title: page.title,
+                    metaDescription: page.metaDescription,
+                    headings: page.headings,
+                    images: page.images,
+                    links: page.links,
+                    keywords: page.keywords,
+                    score,
+                    issues,
+                    recommendations}})
+            const totalPages = pageAnalyses.length;
+            const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages) ;
+            const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length;
+            // Collect all issues and count frequency;
+            const issueCounts = {}
+            pageAnalyses.forEach(page => {}
+                page.issues.forEach(issue => {}
+                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})})
+            const topIssues = Object.entries(issueCounts);
+                .sort(([, a], [, b]) => b - a);
+                .slice(0, 5);
+                .map(([issue]) => issue);
+            const summary = generateSummary(pageAnalyses, topIssues);
+            setReport({}
+                totalPages,
+                averageScore,
+                pagesWithIssues,
+                topIssues,
+                pageAnalyses,
+                summary})}
         catch (error) {}
 ';
 '';
@@ -13,7 +94,7 @@
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = (page) => {}
         let score = 0;
-        const maxScore = 0;
+        let maxScore = 0;
         // Title optimization(0 - 20 points) maxScore += 20
         if(page.title.length >= 30 && page.title.length <= 60) {}
             score += 20}
@@ -49,7 +130,7 @@
         if (page.url === '/' || page.url.includes('-')) {}
             score += 15}
         else if(page.url.length > 0) {}
-            score += 8;
+            score += 8}
         return Math.round((score / maxScore) * 100) }
     const issues = []
         if (!page.title || page.title.length < 30) {}
@@ -206,7 +287,7 @@
                 ×
               </button>
             </div>
-'''{/* Summary Stats */}''''{report && (<div className='grid grid-cols-3 gap-4 mt-3'>''''
+            '''{/* Summary Stats */}''''{report && (<div className='grid grid-cols-3 gap-4 mt-3'>''''
                 <div className='text-center'>''''
                   <div className='text-2xl font-bold'>{report.totalPages}</div>''''
                   <div className='text-sm text-purple-100'>Pages Analyzed</div>'''
@@ -290,7 +371,7 @@
                           ×
                         </button>
                       </div>''';
-''''
+                      ''''
                       <div className='space-y-4'>''''
                         <div className='grid grid-cols-2 gap-4'>''''
                           <div className='bg-gray-50 dark:bg-gray-800 p-3 rounded-lg'>''''
@@ -345,7 +426,7 @@
           </div>
         </div>)}
     </div>)}
-export default SEOOptimizer}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+export default SEOOptimizer;
 export { SEOOptimizer }
 ;
 export { SEOOptimizer }

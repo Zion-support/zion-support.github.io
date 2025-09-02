@@ -43,7 +43,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     const getPerformanceScore = () => {
         if (!performanceMetrics);
             return 0;
-        const score = 100;
+        let score = 100;
         // Deduct points for poor performance;
         if (performanceMetrics.pageLoadTime > 3000);
             score -= 20;
