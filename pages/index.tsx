@@ -57,9 +57,9 @@ const Home: NextPage = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
-            <Link href="/services" className="group">
+            <Link href="/services-overview" className="group">
               <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                Explore Services
+                Explore All Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
@@ -283,6 +283,121 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {/* Latest Innovations Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Latest Innovations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our newest cutting-edge services that are revolutionizing industries and transforming businesses.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* AI Video Content Generator */}
+            <motion.div 
+              className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg border border-blue-100 hover:shadow-xl transition-shadow"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">🎬</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">AI Video Content Generator</h3>
+              <p className="text-gray-600 mb-4 text-sm">Create engaging videos 10x faster with AI-powered automation</p>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-xl font-bold text-blue-600">$49</span>
+                <span className="text-sm text-gray-500">/month</span>
+              </div>
+              <Link href="/services/ai-video-content-generator" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            {/* Smart Contract Security Auditor */}
+            <motion.div 
+              className="bg-gradient-to-br from-green-50 to-white p-6 rounded-lg shadow-lg border border-green-100 hover:shadow-xl transition-shadow"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">🔍</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Smart Contract Security Auditor</h3>
+              <p className="text-gray-600 mb-4 text-sm">Automated security analysis for blockchain applications</p>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-xl font-bold text-green-600">$199</span>
+                <span className="text-sm text-gray-500">/month</span>
+              </div>
+              <Link href="/services/smart-contract-auditor" className="text-green-600 hover:text-green-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            {/* AI Customer Success Platform */}
+            <motion.div 
+              className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-lg shadow-lg border border-purple-100 hover:shadow-xl transition-shadow"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">🎯</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">AI Customer Success Platform</h3>
+              <p className="text-gray-600 mb-4 text-sm">Predict churn and boost customer retention with AI</p>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-xl font-bold text-purple-600">$79</span>
+                <span className="text-sm text-gray-500">/month</span>
+              </div>
+              <Link href="/services/ai-customer-success-platform" className="text-purple-600 hover:text-purple-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            {/* Zero Trust Security */}
+            <motion.div 
+              className="bg-gradient-to-br from-red-50 to-white p-6 rounded-lg shadow-lg border border-red-100 hover:shadow-xl transition-shadow"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Zero Trust Security Implementation</h3>
+              <p className="text-gray-600 mb-4 text-sm">Complete zero trust architecture for enterprise security</p>
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-xl font-bold text-red-600">$15K</span>
+                <span className="text-sm text-gray-500">starting</span>
+              </div>
+              <Link href="/services/zero-trust-security-implementation" className="text-red-600 hover:text-red-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/services-overview" className="group">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto">
+                View All 100+ Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -303,7 +418,7 @@ const Home: NextPage = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-              <Link href="/services" className="group">
+              <Link href="/services-overview" className="group">
                 <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
                   View All Services
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

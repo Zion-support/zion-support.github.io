@@ -37,6 +37,14 @@ const Header: React.FC = () => {
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
   ];
 
+  const quickLinks = [
+    { name: 'Services Overview', href: '/services-overview' },
+    { name: 'Get Quote', href: '/contact' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Support', href: '/support' },
+  ];
+
   return (
     <motion.header 
       className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
@@ -147,6 +155,27 @@ const Header: React.FC = () => {
                 Contact
               </Link>
 
+              {/* Quick Links Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                  Resources
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               {/* CTA Button */}
               <Link
                 href="/contact"
@@ -246,6 +275,21 @@ const Header: React.FC = () => {
                 >
                   Contact
                 </Link>
+
+                {/* Mobile Quick Links */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-3">Resources</div>
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
 
                 {/* Mobile CTA */}
                 <div className="border-t border-gray-200 pt-4">

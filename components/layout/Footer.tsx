@@ -9,40 +9,40 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
+        { name: 'AI Video Content Generator', href: '/services/ai-video-content-generator' },
+        { name: 'Smart Contract Security Auditor', href: '/services/smart-contract-auditor' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Code Testing Automation', href: '/services/ai-code-testing-automation' },
+        { name: 'AI Financial Planning & Analysis', href: '/services/ai-financial-planning-tool' },
+        { name: 'AI HR & Recruitment Platform', href: '/services/ai-hr-recruitment-platform' },
         { name: 'AI Meeting Summary Generator', href: '/services/ai-meeting-summary-generator' },
         { name: 'AI Customer Sentiment Analyzer', href: '/services/ai-customer-sentiment-analyzer' },
-        { name: 'AI Code Review Assistant', href: '/services/ai-code-review-assistant' },
-        { name: 'Smart Digital Marketing Optimizer', href: '/services/smart-digital-marketing-optimizer' },
-        { name: 'AI Content Curation Platform', href: '/services/ai-content-curation-platform' },
-        { name: 'AI Workflow Automation Suite', href: '/services/ai-workflow-automation' },
-        { name: 'AI SEO Optimizer Pro', href: '/services/ai-seo-optimizer' },
-        { name: 'AI Data Visualization Platform', href: '/services/ai-data-visualization-platform' },
       ]
     },
     {
       title: 'IT Services',
       services: [
+        { name: 'Zero Trust Security Implementation', href: '/services/zero-trust-security-implementation' },
+        { name: 'Observability Platform Setup', href: '/services/observability-platform-setup' },
+        { name: 'GitOps Implementation & Management', href: '/services/gitops-implementation' },
+        { name: 'Service Mesh Implementation', href: '/services/service-mesh-implementation' },
+        { name: 'Chaos Engineering Platform', href: '/services/chaos-engineering-platform' },
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
         { name: 'Quantum-Ready Security', href: '/services/quantum-ready-security' },
         { name: '5G Network Optimization', href: '/services/5g-network-optimization' },
-        { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
-        { name: 'AI Infrastructure & MLOps', href: '/services/ai-infrastructure-setup' },
-        { name: 'Cloud Migration Expert', href: '/services/cloud-migration' },
-        { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
-        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
       ]
     },
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Robotic Process Automation', href: '/services/ai-robotic-process-automation' },
+        { name: 'AI Conversational Analytics', href: '/services/ai-conversational-analytics' },
+        { name: 'AI Supply Chain Intelligence', href: '/services/ai-supply-chain-intelligence' },
+        { name: 'AI Energy Optimization Platform', href: '/services/ai-energy-optimization' },
+        { name: 'AI Cyber Threat Intelligence', href: '/services/ai-cyber-threat-intelligence' },
+        { name: 'AI Digital Twin Platform', href: '/services/ai-digital-twin-platform' },
         { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },
         { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
-        { name: 'AI Autonomous Systems', href: '/services/ai-autonomous-systems' },
-        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
-        { name: 'AI Financial Trading System', href: '/services/ai-financial-trading' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
-        { name: 'Custom AI Model Development', href: '/services/custom-ai-models' },
-        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
       ]
     }
   ];

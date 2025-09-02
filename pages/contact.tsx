@@ -71,6 +71,20 @@ const ContactPage: NextPage = () => {
 
   const services = [
     // Micro SaaS Services
+    'AI Video Content Generator',
+    'Smart Contract Security Auditor',
+    'AI Customer Success Platform',
+    'AI Code Testing Automation',
+    'AI Financial Planning & Analysis',
+    'AI HR & Recruitment Platform',
+    'AI Meeting Summary Generator',
+    'AI Customer Sentiment Analyzer',
+    'AI Code Review Assistant',
+    'Smart Digital Marketing Optimizer',
+    'AI Content Curation Platform',
+    'AI Workflow Automation Suite',
+    'AI SEO Optimizer Pro',
+    'AI Data Visualization Platform',
     'AI Content Generator Pro',
     'Social Media Scheduler Pro',
     'Email Marketing Automation Suite',
@@ -85,19 +99,6 @@ const ContactPage: NextPage = () => {
     'Smart Project Manager',
     'Inventory Tracker Pro',
     'AI Support Assistant',
-    'AI Code Review Assistant',
-    'Smart Contract Security Auditor',
-    'AI Translation & Localization Platform',
-    'Blockchain Analytics Dashboard',
-    'AI Video Editor Pro',
-    'IoT Device Management Platform',
-    'AI Customer Insights Platform',
-    'API Testing & Automation Suite',
-    'AI SEO Optimization Platform',
-    'Smart Inventory Optimization',
-    'AI Social Media Listening Platform',
-    'NFT Marketplace Platform',
-    'AI Workflow Automation Platform',
     'AI Predictive Maintenance Platform',
     'AI Content Moderation Platform',
     'AI Financial Analysis Platform',
@@ -171,6 +172,115 @@ const ContactPage: NextPage = () => {
               Ready to transform your business with cutting-edge technology? 
               Get in touch with our expert team today.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Pricing Overview */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Competitive Pricing & Market Rates</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our services are priced competitively in the market, offering exceptional value for cutting-edge technology solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Micro SaaS Pricing */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-blue-600 mb-6">Micro SaaS Services</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Starter Plans</span>
+                  <span className="font-semibold">$12 - $199/month</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Professional Plans</span>
+                  <span className="font-semibold">$25 - $499/month</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Enterprise Plans</span>
+                  <span className="font-semibold">$65 - $1,299/month</span>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                <p className="text-sm text-blue-800">
+                  <strong>Market Average:</strong> 30-50% savings compared to competitors
+                </p>
+              </div>
+            </div>
+
+            {/* IT Services Pricing */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-green-600 mb-6">IT Services</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Small Projects</span>
+                  <span className="font-semibold">$2,000 - $8,000</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Medium Projects</span>
+                  <span className="font-semibold">$8,000 - $25,000</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Enterprise Projects</span>
+                  <span className="font-semibold">$25,000 - $120,000</span>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-green-50 rounded-lg">
+                <p className="text-sm text-green-800">
+                  <strong>Market Average:</strong> 25-40% cost reduction vs traditional providers
+                </p>
+              </div>
+            </div>
+
+            {/* AI Services Pricing */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-purple-600 mb-6">AI Services</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Basic AI Solutions</span>
+                  <span className="font-semibold">$5,000 - $15,000</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Advanced AI Systems</span>
+                  <span className="font-semibold">$15,000 - $60,000</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Enterprise AI Platforms</span>
+                  <span className="font-semibold">$60,000 - $400,000</span>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-purple-50 rounded-lg">
+                <p className="text-sm text-purple-800">
+                  <strong>Market Average:</strong> 40-60% savings on AI development costs
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Value Proposition */}
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg text-center">
+            <h3 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h3>
+            <div className="grid md:grid-cols-4 gap-6 mt-8">
+              <div>
+                <div className="text-4xl font-bold mb-2">500+</div>
+                <div className="text-blue-200">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">50+</div>
+                <div className="text-blue-200">Happy Clients</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">99.9%</div>
+                <div className="text-blue-200">Uptime Guarantee</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">24/7</div>
+                <div className="text-blue-200">Support Available</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
