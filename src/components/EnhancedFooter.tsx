@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const EnhancedFooter: React.FC = () => {
   return (
@@ -15,27 +16,27 @@ export const EnhancedFooter: React.FC = () => {
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/services/ai" className="hover:text-white">AI Solutions</a></li>
-              <li><a href="/services/cybersecurity" className="hover:text-white">Cybersecurity</a></li>
-              <li><a href="/services/cloud" className="hover:text-white">Cloud Services</a></li>
-              <li><a href="/services/transformation" className="hover:text-white">Digital Transformation</a></li>
+              <li><Link href="/services/ai-services" className="hover:text-white">AI Services</Link></li>
+              <li><Link href="/services#cybersecurity" className="hover:text-white">Cybersecurity</Link></li>
+              <li><Link href="/services#cloud" className="hover:text-white">Cloud Services</Link></li>
+              <li><Link href="/solutions/digital-transformation" className="hover:text-white">Digital Transformation</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/about" className="hover:text-white">About</a></li>
-              <li><a href="/careers" className="hover:text-white">Careers</a></li>
-              <li><a href="/news" className="hover:text-white">News</a></li>
-              <li><a href="/case-studies" className="hover:text-white">Case Studies</a></li>
+              <li><Link href="/about" className="hover:text-white">About</Link></li>
+              <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+              <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+              <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-md font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
-              <li><a href="/terms" className="hover:text-white">Terms of Service</a></li>
-              <li><a href="/contact" className="hover:text-white">Contact</a></li>
+              <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-white">Terms of Service</Link></li>
+              <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
             </ul>
           </div>
         </div>
