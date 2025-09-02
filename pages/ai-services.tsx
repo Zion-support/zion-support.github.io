@@ -304,6 +304,230 @@ export default function AIServices() {
       pricing: '$5,000 - $18,000/month',
       delivery: '6-12 weeks',
       category: 'Market AI'
+    },
+    {
+      title: 'AI Autonomous Agents Platform',
+      description: 'Multi-agent AI system for complex task automation and decision making',
+      icon: Bot,
+      features: [
+        'Multi-agent orchestration and coordination',
+        'Autonomous task execution and decision making',
+        'Agent-to-agent communication and collaboration',
+        'Self-learning and adaptation capabilities',
+        'Integration with existing business systems',
+        'Real-time monitoring and intervention protocols'
+      ],
+      pricing: '$8,000 - $25,000/month',
+      delivery: '8-16 weeks',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent pharmaceutical research with molecular analysis and drug design',
+      icon: Brain,
+      features: [
+        'Molecular structure analysis and optimization',
+        'Drug-target interaction prediction',
+        'Toxicity and side effect assessment',
+        'Clinical trial optimization and design',
+        'Patent landscape analysis',
+        'Regulatory compliance and documentation'
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Pharma AI'
+    },
+    {
+      title: 'AI-Powered Climate Modeling System',
+      description: 'Advanced climate prediction and environmental impact analysis platform',
+      icon: Globe,
+      features: [
+        'High-resolution climate modeling and prediction',
+        'Environmental impact assessment and monitoring',
+        'Carbon footprint tracking and optimization',
+        'Renewable energy resource optimization',
+        'Disaster risk assessment and mitigation',
+        'Sustainability reporting and compliance'
+      ],
+      pricing: '$10,000 - $35,000/month',
+      delivery: '10-20 weeks',
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI-Powered Quantum Computing Interface',
+      description: 'Intelligent quantum computing optimization and algorithm development',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm optimization and development',
+        'Quantum error correction and noise mitigation',
+        'Hybrid classical-quantum computing workflows',
+        'Quantum machine learning model training',
+        'Quantum simulation and modeling',
+        'Integration with existing computing infrastructure'
+      ],
+      pricing: '$20,000 - $75,000/month',
+      delivery: '16-32 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Intelligent space mission optimization and satellite constellation management',
+      icon: Globe,
+      features: [
+        'Mission trajectory optimization and planning',
+        'Satellite constellation design and management',
+        'Space debris tracking and collision avoidance',
+        'Resource allocation and scheduling optimization',
+        'Communication network optimization',
+        'Mission risk assessment and mitigation'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Neuromorphic Computing',
+      description: 'Brain-inspired computing systems with spiking neural networks',
+      icon: Brain,
+      features: [
+        'Spiking neural network design and optimization',
+        'Neuromorphic chip simulation and testing',
+        'Edge AI processing and optimization',
+        'Real-time learning and adaptation',
+        'Low-power computing optimization',
+        'Integration with IoT and edge devices'
+      ],
+      pricing: '$12,000 - $40,000/month',
+      delivery: '12-24 weeks',
+      category: 'Neuromorphic AI'
+    },
+    {
+      title: 'AI-Powered Synthetic Biology Platform',
+      description: 'Intelligent biological system design and optimization',
+      icon: Cpu,
+      features: [
+        'Genetic circuit design and optimization',
+        'Protein structure prediction and design',
+        'Metabolic pathway engineering',
+        'Biological system simulation and modeling',
+        'Synthetic organism design and testing',
+        'Biomanufacturing optimization'
+      ],
+      pricing: '$18,000 - $60,000/month',
+      delivery: '16-28 weeks',
+      category: 'Synthetic Biology AI'
+    },
+    {
+      title: 'AI-Powered Fusion Energy Optimization',
+      description: 'Intelligent fusion reactor control and plasma optimization',
+      icon: Zap,
+      features: [
+        'Plasma confinement optimization',
+        'Magnetic field control and stabilization',
+        'Energy output maximization',
+        'Reactor safety monitoring and control',
+        'Predictive maintenance and diagnostics',
+        'Real-time performance optimization'
+      ],
+      pricing: '$30,000 - $120,000/month',
+      delivery: '24-48 weeks',
+      category: 'Fusion AI'
+    },
+    {
+      title: 'AI-Powered Brain-Computer Interface',
+      description: 'Intelligent neural signal processing and brain-computer communication',
+      icon: Brain,
+      features: [
+        'Neural signal acquisition and processing',
+        'Brain activity pattern recognition',
+        'Motor intention decoding and control',
+        'Cognitive state monitoring and analysis',
+        'Real-time feedback and adaptation',
+        'Medical device integration and control'
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '20-36 weeks',
+      category: 'BCI AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Fleet',
+      description: 'Intelligent autonomous vehicle coordination and fleet management',
+      icon: Network,
+      features: [
+        'Multi-vehicle coordination and communication',
+        'Dynamic route optimization and planning',
+        'Real-time traffic and obstacle avoidance',
+        'Predictive maintenance and diagnostics',
+        'Passenger safety and comfort optimization',
+        'Integration with smart city infrastructure'
+      ],
+      pricing: '$25,000 - $80,000/month',
+      delivery: '24-40 weeks',
+      category: 'Autonomous Vehicle AI'
+    },
+    {
+      title: 'AI-Powered Metaverse Platform',
+      description: 'Intelligent virtual world creation and immersive experience optimization',
+      icon: Globe,
+      features: [
+        'Procedural world generation and optimization',
+        'Avatar behavior and interaction modeling',
+        'Real-time physics simulation and optimization',
+        'Social interaction and community building',
+        'Virtual economy and asset management',
+        'Cross-platform integration and compatibility'
+      ],
+      pricing: '$20,000 - $70,000/month',
+      delivery: '20-36 weeks',
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI-Powered Digital Twin Platform',
+      description: 'Intelligent digital twin creation and real-time synchronization',
+      icon: Monitor,
+      features: [
+        'Real-time data synchronization and modeling',
+        'Predictive analytics and simulation',
+        'Performance optimization and recommendations',
+        'Anomaly detection and alerting',
+        'What-if scenario analysis and planning',
+        'Integration with IoT sensors and systems'
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '16-28 weeks',
+      category: 'Digital Twin AI'
+    },
+    {
+      title: 'AI-Powered Edge Computing Orchestrator',
+      description: 'Intelligent edge computing resource management and optimization',
+      icon: Server,
+      features: [
+        'Distributed computing resource allocation',
+        'Edge-to-cloud workload optimization',
+        'Real-time latency and bandwidth optimization',
+        'Autonomous edge device management',
+        'Data processing and analytics at the edge',
+        'Security and privacy protection'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '12-24 weeks',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI-Powered Blockchain Analytics',
+      description: 'Intelligent blockchain transaction analysis and DeFi optimization',
+      icon: Network,
+      features: [
+        'Blockchain transaction pattern analysis',
+        'DeFi protocol optimization and yield farming',
+        'Smart contract security auditing',
+        'Cryptocurrency market prediction and trading',
+        'Cross-chain bridge optimization',
+        'Regulatory compliance and reporting'
+      ],
+      pricing: '$10,000 - $35,000/month',
+      delivery: '14-26 weeks',
+      category: 'Blockchain AI'
     }
   ];
 
