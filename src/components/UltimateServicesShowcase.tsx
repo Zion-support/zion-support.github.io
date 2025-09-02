@@ -1,1 +1,0 @@
-import React, { useState } from 'react'; import { motion } from 'framer-motion'; import { Link } from 'react-router-dom'; import { Brain, Cloud, Shield, Globe, Code, BarChart3, Users, ShoppingCart, MessageSquare, FileText, Settings, Zap, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';

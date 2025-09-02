@@ -1,1 +1,0 @@
-import { RecommendedRole } from '@/src/src/types'; import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/src/src/components/ui/card'; import { Badge } from '@/src/src/components/ui/badge'; import { TalentCardPreview } from "./TalentCardPreview"; import { Users, DollarSign, Clock, Briefcase } from 'lucide-react';

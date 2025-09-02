@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import ErrorBoundary from '../ErrorBoundary';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -48,6 +49,25 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://ziontechgroup.com" />
+        
+        {/* Performance optimizations */}
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        
+        {/* Additional meta tags for better SEO */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="publisher" content="Zion Tech Group" />
+        <meta name="copyright" content="Zion Tech Group" />
+        <meta name="language" content="en-US" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="rating" content="general" />
+        <meta name="distribution" content="global" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Structured Data */}
         <script
@@ -59,7 +79,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading technology solutions provider helping businesses transform their digital presence",
+              "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services",
+              "foundingDate": "2020",
+              "numberOfEmployees": "50-100",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
@@ -68,29 +90,68 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 "postalCode": "19709",
                 "addressCountry": "US"
               },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-302-464-0950",
+                  "contactType": "customer service",
+                  "email": "kleber@ziontechgroup.com",
+                  "availableLanguage": "English"
+                }
+              ],
               "sameAs": [
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://facebook.com/ziontechgroup"
-              ]
+              ],
+              "serviceArea": {
+                "@type": "Country",
+                "name": "United States"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Technology Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "AI Development Services",
+                      "description": "Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Micro SaaS Solutions",
+                      "description": "Innovative, focused software solutions that solve specific business problems with minimal overhead"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "IT Services",
+                      "description": "Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses"
+                    }
+                  }
+                ]
+              }
             })
           }}
         />
       </Head>
       
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-      </div>
+      <ErrorBoundary>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </ErrorBoundary>
     </>
   );
 };

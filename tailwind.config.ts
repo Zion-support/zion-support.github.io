@@ -1,10 +1,9 @@
-import type { Config } from 'tailwindcss.ts'
+import type { Config } from 'tailwindcss'
 export default {
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{html,js}',
-    './node_modules/tw-elements/dist/js/**/*.js'
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {

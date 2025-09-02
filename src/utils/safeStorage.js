@@ -1,1 +1,0 @@
-function safeConsoleError(message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production';
