@@ -1,1 +1,0 @@
-import { specializedIndustrySolutions2026 } from '@/src/src/data/2026-specialized-industry-solutions';
