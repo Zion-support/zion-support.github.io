@@ -5,12 +5,12 @@ import MobileLaunch from './MobileLaunch';
 "
 describe('MobileLaunch', () => {"
   it('renders without crashing', () => {
-    render(<MobileLaunch /" >);"
+    render(<MobileLaunch /", ></MobileLaunch>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<MobileLaunch /" >);
+    render(<MobileLaunch /", ></MobileLaunch>);
     // Add more specific tests here,
 });,
 });

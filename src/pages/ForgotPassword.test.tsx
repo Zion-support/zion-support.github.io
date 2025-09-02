@@ -5,12 +5,12 @@ import ForgotPassword from './ForgotPassword';
 "
 describe('ForgotPassword', () => {"
   it('renders without crashing', () => {
-    render(<ForgotPassword /" >);"
+    render(<ForgotPassword /", ></ForgotPassword>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<ForgotPassword /" >);
+    render(<ForgotPassword /", ></ForgotPassword>);
     // Add more specific tests here,
 });,
 });

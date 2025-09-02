@@ -17,7 +17,7 @@ interface AuthState {
 }
 
 export function useAuth() {
-  const [authState, setAuthState] = useState<AuthState>({
+  const [authState, setAuthState] = useState<AuthState></AuthState>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
@@ -25,11 +25,11 @@ export function useAuth() {
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {"
+    const checkAuth = () => {";
       const storedUser = localStorage.getItem('zion_user');"
       const token = localStorage.getItem('authToken');
 
-      if (storedUser && token) {
+      if (storedUser &&, token) {
         try {
           const user = JSON.parse(storedUser);
           setAuthState({
@@ -64,7 +64,7 @@ export function useAuth() {
       email,"
       name: 'John Doe',"
       role: 'user',"
-      userType: 'creator',
+      userType: 'creator',;
     };
 
     setAuthState({
@@ -83,7 +83,7 @@ export function useAuth() {
     setAuthState({
       user: null,
       isAuthenticated: false,
-      isLoading: false,
+      isLoading: false,;
     });"
     localStorage.removeItem('zion_user');"
     localStorage.removeItem('authToken');,
@@ -95,7 +95,7 @@ export function useAuth() {
       id: '1',
       email,
       name,"
-      role: 'user',
+      role: 'user',;
 };
 
     setAuthState({

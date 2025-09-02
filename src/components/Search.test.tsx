@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';"
-import { Search } from 'lucide-react';
+import { Search, } from 'lucide-react';
 "
 import Search from './Search';"
 describe('Search', () => {"
   it('renders without crashing', () => {"
-    render(<Search /" >)"
+    render(<Search /", ></Search>)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
   it('displays expected content', () => {
-    render(<Search /" >)
+    render(<Search /", ></Search>)
     // Add specific test assertions based on component content,
 });
 "

@@ -1,8 +1,7 @@
 import '@testing-library/jest-dom';
 
 // Mock Next.js router"
-jest.mock('next/router', () => ({
-  useRouter() {
+jest.mock('next/router', () => ({, useRouter() {
     return {"
       route: '/',"
       pathname: '/',
@@ -25,8 +24,7 @@ jest.mock('next/router', () => ({
 }));
 
 // Mock Next.js navigation"
-jest.mock('next/navigation', () => ({
-  useRouter() {
+jest.mock('next/navigation', () => ({, useRouter() {
     return {
       push: jest.fn(),
       replace: jest.fn(),
@@ -46,14 +44,14 @@ jest.mock('next/navigation', () => ({
 
 // Global test setup
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
+  observe:, jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }));
 
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
+  observe:, jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }));

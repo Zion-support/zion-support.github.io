@@ -5,12 +5,12 @@ import Login from './Login';
 "
 describe('Login', () => {"
   it('renders without crashing', () => {
-    render(<Login /" >);"
+    render(<Login /", ></Login>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Login /" >);
+    render(<Login /", ></Login>);
     // Add more specific tests here,
 });,
 });

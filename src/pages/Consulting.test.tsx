@@ -5,12 +5,12 @@ import Consulting from './Consulting';
 "
 describe('Consulting', () => {"
   it('renders without crashing', () => {
-    render(<Consulting /" >);"
+    render(<Consulting /", ></Consulting>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Consulting /" >);
+    render(<Consulting /", ></Consulting>);
     // Add more specific tests here,
 });,
 });

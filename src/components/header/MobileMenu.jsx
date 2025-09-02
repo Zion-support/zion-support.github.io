@@ -1,5 +1,5 @@
 import React from 'react';"
-import { Link } from 'react-router-dom';"
+import { Link, } from 'react-router-dom';"
 import { X, ChevronRight, Home, Briefcase, Target, Building, FileText, Video, Mail, Brain, Cloud, Shield, Server, Rocket, Users, HelpCircle, DollarSign } from 'lucide-react';
 
 export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
@@ -68,10 +68,10 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
         { name: 'Training', href: '/training' },"
         { name: 'Contact', href: '/contact' }
       ],
-}
+};
   ];
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path) => {;
     onNavigate(path);,
 };
 
@@ -91,50 +91,43 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
         <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
           <div className="flex items-center space-x-2">"
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"
-              <span className="text-white font-bold text-lg">Z</span>
+              <span className="text-white font-bold text-lg"></spa>Z</span>
             </div>"
-            <span className="text-white font-semibold">Zion Tech Group</span>
+            <span className="text-white font-semibold"></spa>Zion Tech Group</span>
           </div>
           <button onClick={onClose}"
-            className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors"" >"
-            <X className="h-5 w-5" /" >
+            className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors" >"
+            <X className="h-5 w-5" /" ></X>
           </button>
         </div>
 
         {/* Navigation */}"
         <div className="flex-1 overflow-y-auto py-4">"
-          <nav className="space-y-1">
-            {navigationItems.map((item) => (
-              <div key={item.name}" >
+          <nav className="space-y-1">, {navigationItems.map((item) => (<div key={item.name}" >
                 {item.children ? ("
                   <details className="group">"
                     <summary className="flex items-center justify-between px-4 py-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 cursor-pointer transition-colors">"
                       <div className="flex items-center space-x-3">"
-                        <item .icon className="h-5 w-5" /" >"
-                        <span className="font-medium">{item.name}</span>
+                        <item .icon className="h-5 w-5" /" ></item>"
+                        <span className="font-medium"></spa>{item.name}</span>
                       </div>"
-                      <ChevronRight className="h-4 w-4 group-open:rotate-90 transition-transform" /" >
+                      <ChevronRight className="h-4 w-4 group-open:rotate-90 transition-transform" /" ></ChevronRight>
                     </summary>"
-                    <div className="pl-8 space-y-1">
-                      {item.children.map((child) => (
-                        <Link key={child.name}
+                    <div className="pl-8 space-y-1">, {item.children.map((child) => (<Link key={child.name}
                           to={child.href}"
-                          className="flex items-center px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-                          onClick={() =" > handleNavigation(child.href)}
+                          className="flex items-center px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors", onClick={() =" > handleNavigation(child.href)}
                         >"
-                          {child.icon && <child .icon className="h-4 w-4 mr-3" /" >}
-                          <span>{child.name}</span>
+                          {child.icon && <child .icon className="h-4 w-4 mr-3" /" ></child>}
+                          <span></spa>{child.name}</span>
                         </Link>
                       ))}
                     </div>
                   </details>
-                ) : (
-                  <Link to={item.href}"
-                    className="flex items-center px-4 py-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
-                    onClick={() =" > handleNavigation(item.href)}
+                ) : (<Link to={item.href}"
+                    className="flex items-center px-4 py-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors", onClick={() =" > handleNavigation(item.href)}
                   >"
-                    <item .icon className="h-5 w-5 mr-3" /" >"
-                    <span className="font-medium">{item.name}</span>
+                    <item .icon className="h-5 w-5 mr-3" /" ></item>"
+                    <span className="font-medium"></spa>{item.name}</span>
                   </Link>
                 )}
               </div>
@@ -159,8 +152,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
             <div className="space-y-3">
               <Link "
                 to="/login"
-                className="block w-full px-4 py-2 border border-zion-purple/30 text-zion-cyan text-center rounded-lg hover:bg-zion-purple/10 transition-colors"
-                onClick={() =" > handleNavigation('/login')}
+                className="block w-full px-4 py-2 border border-zion-purple/30 text-zion-cyan text-center rounded-lg hover:bg-zion-purple/10 transition-colors", onClick={() =" > handleNavigation('/login')}
               >
                 Sign In
               </Link>
@@ -181,8 +173,8 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
               className="flex items-center justify-center space-x-2 px-4 py-2 text-zion-cyan hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors"
               onClick={() =" > handleNavigation('/request-quote')}
             >"
-              <DollarSign className="h-4 w-4" /" >
-              <span>Request Quote</span>
+              <DollarSign className="h-4 w-4" /" ></DollarSign>
+              <span></spa>Request Quote</span>
             </Link>
           </div>
         </div>

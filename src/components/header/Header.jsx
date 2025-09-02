@@ -1,38 +1,37 @@
 import React, { useState, useEffect } from 'react';"
-import { Link } from 'react-router-dom';"
-import { Logo } from './Logo';"
-import { UserMenu } from './UserMenu';"
-import { LanguageSelector } from './LanguageSelector';"
-import { MainNavigation } from '@/layout/MainNavigation';"
-import { MobileMenu } from './MobileMenu';"
-import { useAuth } from '@/hooks/useAuth';"
-import { useWhitelabel } from '@/context/WhitelabelContext';"
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';"
-import { generateSearchSuggestions } from '@/data/marketplaceData';"
-import { useNavigate } from 'react-router-dom';"
-import { Button } from '@/components/ui/button';"
+import { Link, } from 'react-router-dom';"
+import { Logo, } from './Logo';"
+import { UserMenu, } from './UserMenu';"
+import { LanguageSelector, } from './LanguageSelector';"
+import { MainNavigation, } from '@/layout/MainNavigation';"
+import { MobileMenu, } from './MobileMenu';"
+import { useAuth, } from '@/hooks/useAuth';"
+import { useWhitelabel, } from '@/context/WhitelabelContext';"
+import { EnhancedSearchInput, } from '@/components/search/EnhancedSearchInput';"
+import { generateSearchSuggestions, } from '@/data/marketplaceData';"
+import { useNavigate, } from 'react-router-dom';"
+import { Button, } from '@/components/ui/button';"
 import { Menu, X, Sparkles } from 'lucide-react';"
-import { Search as SearchIcon } from 'lucide-react';
+import { Search, as, SearchIcon, } from 'lucide-react';
 
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();"
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions();
   
   // If we have a white-label tenant and no specific customTheme is provided,"
   // use the tenant's primary color
-  const effectiveTheme =
-    customTheme ||
+  const effectiveTheme = customTheme ||
     (isWhitelabel
       ? {
           primaryColor,"
           backgroundColor: '#000000', // Default dark background"
           textColor: '#ffffff', // Default light text,
-}
+};
       : undefined);
       
   const headerStyle = effectiveTheme
@@ -40,27 +39,27 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         backgroundColor: effectiveTheme.backgroundColor,
         color: effectiveTheme.textColor,
         borderColor: `${effectiveTheme.primaryColor}20`,
-      }
+      };
     : {};
     
   // Handle scroll effect
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);,
+    const handleScroll = () => {;
+      setIsScrolled(window.scrollY >, 20);,
 };"
     window.addEventListener('scroll', handleScroll);"
     return () => window.removeEventListener('scroll', handleScroll);,
 }, []);
   
-  const handleSubmit = e => {
+  const handleSubmit = e => {;
     e.preventDefault();
     if (query.trim()) {`
       navigate(`/search?q=${encodeURIComponent(query)}`);"
-      setQuery('');,
+      setQuery(");,
 }
   };
   
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = () => {;
     setIsMobileMenuOpen(!isMobileMenuOpen);,
 };
   
@@ -80,20 +79,20 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
         <Logo customLogo={customLogo}
           customColor={effectiveTheme?.primaryColor}
-        /" >
+        /" ></Logo>
         
         {/* Desktop Navigation */}"
         <div className="ml-6 flex-1 hidden lg:block">
-          <MainNavigation /" >
+          <MainNavigation /" ></MainNavigation>
         </div>
         
         {/* Search Bar */}"
         <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">"
           <div className="relative group">"
-            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></di></div>
             <EnhancedSearchInput value={query}
               onChange={setQuery}
-              onSelectSuggestion={text =" > {
+              onSelectSuggestion={text =" ></EnhancedSearchInput> {
                 setQuery(text);`
                 navigate(`/search?q=${encodeURIComponent(text)}`);,
 }}
@@ -109,12 +108,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           {!hideLogin && (
             <>
               {user ? (
-                <UserMenu user={user} /" >
+                <UserMenu user={user} /" ></UserMenu>
               ) : ("
                 <div className="flex items-center space-x-3">
                   <Button "
-                    variant="ghost"
-                    onClick={() =" > navigate('/login')}"
+                    variant="ghost", onClick={() =" > navigate('/login')}"
                     className="text-zion-purple hover:text-white hover:bg-zion-purple/20"
                   >
                     Sign In
@@ -130,24 +128,24 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             </>
           )}
           
-          <LanguageSelector /" >
+          <LanguageSelector /" ></LanguageSelector>
           
           {/* Mobile menu button */}
           <button onClick={toggleMobileMenu}"
-            className="lg:hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"" >
-            {isMobileMenuOpen ? <X size={24} /" > : <Menu size={24} /" >}
+            className="lg:hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors" >
+            {isMobileMenuOpen ? <X size={24} /" ></X> : <Menu size={24} /" ></Menu>}
           </button>
         </div>
       </div>
       
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMobileMenuOpen}
-        onClose={() =" > setIsMobileMenuOpen(false)}
+        onClose={() =" ></MobileMenu> setIsMobileMenuOpen(false)}
         user={user}
         onNavigate={path => {
           navigate(path);
           setIsMobileMenuOpen(false);,
-}}
+}
       />
     </header>
   );,

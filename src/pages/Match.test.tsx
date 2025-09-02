@@ -5,12 +5,12 @@ import Match from './Match';
 "
 describe('Match', () => {"
   it('renders without crashing', () => {
-    render(<Match /" >);"
+    render(<Match /", ></Match>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Match /" >);
+    render(<Match /", ></Match>);
     // Add more specific tests here,
 });,
 });

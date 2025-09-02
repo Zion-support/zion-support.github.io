@@ -5,12 +5,12 @@ import manufacturing-solutions from './manufacturing-solutions';
 "
 describe('manufacturing-solutions', () => {"
   it('renders without crashing', () => {
-    render(<manufacturing -solutions /" >);"
+    render(<manufacturing -solutions /", ></manufacturing>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<manufacturing -solutions /" >);
+    render(<manufacturing -solutions /", ></manufacturing>);
     // Add more specific tests here,
 });,
 });

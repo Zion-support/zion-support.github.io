@@ -5,12 +5,12 @@ import Community from './Community';
 "
 describe('Community', () => {"
   it('renders without crashing', () => {
-    render(<Community /" >);"
+    render(<Community /", ></Community>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Community /" >);
+    render(<Community /", ></Community>);
     // Add more specific tests here,
 });,
 });

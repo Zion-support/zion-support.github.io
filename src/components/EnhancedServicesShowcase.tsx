@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';"
-import { Link } from 'react-router-dom';
+import { motion, } from 'framer-motion';"
+import { Link, } from 'react-router-dom';
 import {
   Brain, Shield,
   Cloud, Database,
@@ -9,9 +9,9 @@ import {
   Clock, CheckCircle,;"
   Search} from 'lucide-react';
 "
-import { motion } from 'framer-motion';"
-import { Link } from 'react-router-dom';"
-import { Brain, Shield, Cloud, Database, Globe, Zap, ArrowRight, Star, TrendingUp, Users, Clock, CheckCircle, Search } from 'lucide-react'
+import { motion, } from 'framer-motion';"
+import { Link, } from 'react-router-dom';"
+import { Brain, Shield, Cloud, Database, Globe, Zap, ArrowRight, Star, TrendingUp, Users, Clock, CheckCircle, Search } from 'lucide-react';
 ;
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
@@ -40,7 +40,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
 "
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3']
 "
-export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [hoveredService, setHoveredService] = useState<string | null" >(null)
+export default function EnhancedServicesShowcase() {  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [hoveredService, setHoveredService] = useState<string | null" ></string>(null);
 ;"
 }}

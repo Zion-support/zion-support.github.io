@@ -5,12 +5,12 @@ import HomePage from './HomePage';
 "
 describe('HomePage', () => {"
   it('renders without crashing', () => {
-    render(<HomePage /" >);"
+    render(<HomePage /", ></HomePage>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<HomePage /" >);
+    render(<HomePage /", ></HomePage>);
     // Add more specific tests here,
 });,
 });

@@ -5,12 +5,12 @@ import PrivacyPolicy from './PrivacyPolicy';
 "
 describe('PrivacyPolicy', () => {"
   it('renders without crashing', () => {
-    render(<PrivacyPolicy /" >);"
+    render(<PrivacyPolicy /", ></PrivacyPolicy>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<PrivacyPolicy /" >);
+    render(<PrivacyPolicy /", ></PrivacyPolicy>);
     // Add more specific tests here,
 });,
 });

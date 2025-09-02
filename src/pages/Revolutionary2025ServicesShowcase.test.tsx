@@ -5,12 +5,12 @@ import Revolutionary2025ServicesShowcase from './Revolutionary2025ServicesShowca
 "
 describe('Revolutionary2025ServicesShowcase', () => {"
   it('renders without crashing', () => {
-    render(<Revolutionary2025ServicesShowcase /" >);"
+    render(<Revolutionary2025ServicesShowcase /", ></Revolutionary2025ServicesShowcase>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Revolutionary2025ServicesShowcase /" >);
+    render(<Revolutionary2025ServicesShowcase /", ></Revolutionary2025ServicesShowcase>);
     // Add more specific tests here,
 });,
 });

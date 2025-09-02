@@ -5,12 +5,12 @@ import AboutPage from './AboutPage';
 "
 describe('AboutPage', () => {"
   it('renders without crashing', () => {
-    render(<AboutPage /" >);"
+    render(<AboutPage /", ></AboutPage>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<AboutPage /" >);
+    render(<AboutPage /", ></AboutPage>);
     // Add more specific tests here,
 });,
 });

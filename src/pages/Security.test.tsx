@@ -5,12 +5,12 @@ import Security from './Security';
 "
 describe('Security', () => {"
   it('renders without crashing', () => {
-    render(<Security /" >);"
+    render(<Security /", ></Security>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Security /" >);
+    render(<Security /", ></Security>);
     // Add more specific tests here,
 });,
 });

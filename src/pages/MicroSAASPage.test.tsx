@@ -5,12 +5,12 @@ import MicroSAASPage from './MicroSAASPage';
 "
 describe('MicroSAASPage', () => {"
   it('renders without crashing', () => {
-    render(<MicroSAASPage /" >);"
+    render(<MicroSAASPage /", ></MicroSAASPage>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<MicroSAASPage /" >);
+    render(<MicroSAASPage /", ></MicroSAASPage>);
     // Add more specific tests here,
 });,
 });

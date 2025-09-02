@@ -5,12 +5,12 @@ import ComprehensiveServicesLanding2025 from './ComprehensiveServicesLanding2025
 "
 describe('ComprehensiveServicesLanding2025', () => {"
   it('renders without crashing', () => {
-    render(<ComprehensiveServicesLanding2025 /" >);"
+    render(<ComprehensiveServicesLanding2025 /", ></ComprehensiveServicesLanding2025>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<ComprehensiveServicesLanding2025 /" >);
+    render(<ComprehensiveServicesLanding2025 /", ></ComprehensiveServicesLanding2025>);
     // Add more specific tests here,
 });,
 });

@@ -5,12 +5,12 @@ import SystemStatus from './SystemStatus';
 "
 describe('SystemStatus', () => {"
   it('renders without crashing', () => {
-    render(<SystemStatus /" >);"
+    render(<SystemStatus /", ></SystemStatus>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<SystemStatus /" >);
+    render(<SystemStatus /", ></SystemStatus>);
     // Add more specific tests here,
 });,
 });

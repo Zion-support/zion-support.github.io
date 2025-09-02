@@ -34,7 +34,7 @@ export default function SEOHead({
     'blockchain solutions',
     'cloud services',
     'digital transformation',
-    'Zion Tech Group'
+    'Zion Tech Group';
   ];
   
   const safeKeywords = Array.isArray(keywords) ? keywords : [];
@@ -43,7 +43,7 @@ export default function SEOHead({
   
   return (
     <Head>
-      <title>{fullTitle}</title>
+      <title></titl>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={uniqueKeywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
@@ -73,10 +73,9 @@ export default function SEOHead({
       <meta name="msapplication-TileColor" content="#0ea5e9" />
       
       {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
-        }} />
+      {structuredData && (<script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html:, JSON.stringify(structuredData)
+        } />
       )}
       
       {/* Default organization structured data */}

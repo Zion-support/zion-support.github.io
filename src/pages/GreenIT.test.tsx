@@ -5,12 +5,12 @@ import GreenIT from './GreenIT';
 "
 describe('GreenIT', () => {"
   it('renders without crashing', () => {
-    render(<GreenIT /" >);"
+    render(<GreenIT /", ></GreenIT>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<GreenIT /" >);
+    render(<GreenIT /", ></GreenIT>);
     // Add more specific tests here,
 });,
 });

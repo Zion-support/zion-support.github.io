@@ -5,12 +5,12 @@ import Training from './Training';
 "
 describe('Training', () => {"
   it('renders without crashing', () => {
-    render(<Training /" >);"
+    render(<Training /", ></Training>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Training /" >);
+    render(<Training /", ></Training>);
     // Add more specific tests here,
 });,
 });

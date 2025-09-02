@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Globe, ArrowRight, ExternalLink, Search, 
   Users, Code, Shield, Brain, Atom, Rocket
@@ -56,17 +56,17 @@ export default function Sitemap() {
         { name: "Cookie Policy", url: "/cookies", description: "Cookie usage information" }, { name: "FAQ", url: "/faq", description: "Frequently asked questions" },
         { name: "System Status", url: "/system-status", description: "Service availability" }
       ]
-    }
+    };
   ];
   const quickLinks = [
     { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code },
-    { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain }
+    { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain };
   ];
   return (
     <>
       <SEO 
         title="Sitemap - Zion Tech Group | Complete Site Navigation"
-        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
+        description="Navigate Zion Tech Group"s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."
         keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
       />
       
@@ -75,11 +75,11 @@ export default function Sitemap() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motion>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Site Map
               </h1>
@@ -98,12 +98,12 @@ export default function Sitemap() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Quick Links</h2>
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Quick Links</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Popular destinations and key pages
               </p>
@@ -114,15 +114,15 @@ export default function Sitemap() {
                 <motion.a
                   key={link.name}
                   href={link.url}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 text-center"
-                >
+                ></motion>
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <link.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white">{link.name}</h3>
+                  <h3 className="text-lg font-bold text-white"></h>{link.name}</h3>
                 </motion.a>
               ))}
             </div>
@@ -133,12 +133,12 @@ export default function Sitemap() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Complete Site Structure</h2>
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Complete Site Structure</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 All pages organized by category for easy navigation
               </p>
@@ -148,12 +148,12 @@ export default function Sitemap() {
               {siteStructure.map((section, sectionIndex) => (
                 <motion.div
                   key={section.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: sectionIndex * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: sectionIndex * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
-                >
-                  <h3 className="text-xl font-bold text-white mb-4">{section.title}</h3>
+                ></motion>
+                  <h3 className="text-xl font-bold text-white mb-4"></h>{section.title}</h3>
                   <div className="space-y-3">
                     {section.pages.map((page, pageIndex) => (
                       <div key={pageIndex} className="border-b border-slate-600/30 pb-3 last: border-b-0">
@@ -184,11 +184,11 @@ export default function Sitemap() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-2xl mx-auto"
-            >
+            ></motion>
               <h2 className="text-3xl font-bold text-white mb-6">
                 Can't Find What You're Looking For?
               </h2>

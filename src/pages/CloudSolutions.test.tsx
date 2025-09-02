@@ -5,12 +5,12 @@ import CloudSolutions from './CloudSolutions';
 "
 describe('CloudSolutions', () => {"
   it('renders without crashing', () => {
-    render(<CloudSolutions /" >);"
+    render(<CloudSolutions /", ></CloudSolutions>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<CloudSolutions /" >);
+    render(<CloudSolutions /", ></CloudSolutions>);
     // Add more specific tests here,
 });,
 });

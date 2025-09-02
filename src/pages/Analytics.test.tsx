@@ -5,12 +5,12 @@ import Analytics from './Analytics';
 "
 describe('Analytics', () => {"
   it('renders without crashing', () => {
-    render(<Analytics /" >);"
+    render(<Analytics /", ></Analytics>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Analytics /" >);
+    render(<Analytics /", ></Analytics>);
     // Add more specific tests here,
 });,
 });

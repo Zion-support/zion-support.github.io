@@ -5,12 +5,12 @@ import Pricing from './Pricing';
 "
 describe('Pricing', () => {"
   it('renders without crashing', () => {
-    render(<Pricing /" >);"
+    render(<Pricing /", ></Pricing>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Pricing /" >);
+    render(<Pricing /", ></Pricing>);
     // Add more specific tests here,
 });,
 });

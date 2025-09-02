@@ -5,12 +5,12 @@ import Home from './Home';
 "
 describe('Home', () => {"
   it('renders without crashing', () => {
-    render(<Home /" >);"
+    render(<Home /", ></Home>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Home /" >);
+    render(<Home /", ></Home>);
     // Add more specific tests here,
 });,
 });

@@ -1,15 +1,14 @@
 import React from 'react';"
-import { useLocation } from 'react-router-dom';"
+import { useLocation, } from 'react-router-dom';"
 import { ArrowRight, Home, ChevronRight } from 'lucide-react';"
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom";
 
 export default function SimplePage() {
   const location = useLocation();
   
   // Generate page title and content based on the current path
   const getPageInfo = (pathname) => {
-    const pathMap = {"
-      '/services': {"
+    const pathMap = {"/services': {"
         title: 'Our Services',"
         subtitle: 'Comprehensive technology solutions for modern businesses',"
         description: 'Discover our full range of services designed to accelerate your digital transformation and drive business growth.',
@@ -32,11 +31,10 @@ export default function SimplePage() {
           {"
             title: 'Digital Transformation',"
             description: 'End-to-end business transformation services to modernize your operations',"
-            link: '/services/transformation',
+            link: '/services/transformation",
 }
         ],
-},"
-      '/solutions': {"
+},"/solutions': {"
         title: 'Industry Solutions',"
         subtitle: 'Tailored solutions for your specific industry needs',"
         description: 'We understand that every industry has unique challenges. Our specialized solutions are designed to address the specific needs of your sector.',
@@ -59,11 +57,10 @@ export default function SimplePage() {
           {"
             title: 'Retail',"
             description: 'E-commerce and omnichannel retail solutions',"
-            link: '/solutions/retail',
+            link: '/solutions/retail",
 }
         ],
-},"
-      '/about': {"
+},"/about': {"
         title: 'About Zion Tech Group',"
         subtitle: 'Innovating tomorrow through technology excellence',"
         description: 'We are a forward-thinking technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology.',
@@ -86,11 +83,10 @@ export default function SimplePage() {
           {"
             title: 'Our History',"
             description: 'From startup to industry leader - our journey of innovation and growth',"
-            link: '/about/history',
+            link: '/about/history",
 }
         ],
-},"
-      '/contact': {"
+},"/contact': {"
         title: 'Contact Us',"
         subtitle: 'Let\'s discuss your technology needs',"
         description: 'Ready to transform your business? Get in touch with our team of experts to discuss how we can help you achieve your goals.',
@@ -113,11 +109,10 @@ export default function SimplePage() {
           {"
             title: 'Partnership',"
             description: 'Explore partnership opportunities with Zion Tech Group',"
-            link: '/partners',
+            link: '/partners",
 }
         ],
-},"
-      '/blog': {"
+},"/blog': {"
         title: 'Blog & Insights',"
         subtitle: 'Latest technology trends and industry insights',"
         description: 'Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.',
@@ -140,11 +135,10 @@ export default function SimplePage() {
           {"
             title: 'Expert Opinions',"
             description: 'Thought leadership and expert perspectives on technology',"
-            link: '/blog/expert',
+            link: '/blog/expert",
 }
         ],
-},"
-      '/careers': {"
+},"/careers': {"
         title: 'Join Our Team',"
         subtitle: 'Build the future with Zion Tech Group',"
         description: 'Join our team of innovators and help us shape the future of technology. We offer exciting opportunities for growth and development.',
@@ -167,11 +161,10 @@ export default function SimplePage() {
           {"
             title: 'Career Growth',"
             description: 'Opportunities for professional development and advancement',"
-            link: '/careers/growth',
+            link: '/careers/growth",
 }
         ],
-},"
-      '/partners': {"
+},"/partners': {"
         title: 'Partnerships',"
         subtitle: 'Collaborate with Zion Tech Group',"
         description: 'Join our network of trusted partners and expand your business opportunities through strategic collaboration.',
@@ -197,7 +190,7 @@ export default function SimplePage() {
             link: '/partners/success',
 }
         ],
-}
+};
     };
 
     return pathMap[pathname] || {"
@@ -217,13 +210,13 @@ export default function SimplePage() {
       <div className="container mx-auto px-4 py-6">"
         <nav className="flex items-center space-x-2 text-sm text-zion-slate-light">"
           <Link to="/" className="flex items-center hover:text-zion-cyan transition-colors">"
-            <Home className="h-4 w-4 mr-1" /" >
+            <Home className="h-4 w-4 mr-1" /" ></Home>
             Home
           </Link>
           {breadcrumbs.map((crumb, index) => ("
             <div key={index} className="flex items-center">"
-              <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50" /" >"
-              <span className="capitalize">{crumb}</span>
+              <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50" /" ></ChevronRight>"
+              <span className="capitalize"></spa>{crumb}</span>
             </div>
           ))}
         </nav>
@@ -260,9 +253,9 @@ export default function SimplePage() {
                     {section.description}
                   </p>
                   <Link to={section.link}"
-                    className="inline-flex items-center text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1"" >
+                    className="inline-flex items-center text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1" >
                     Learn More"
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /" >
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /" ></ArrowRight>
                   </Link>
                 </div>
               ))}
@@ -284,13 +277,13 @@ export default function SimplePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
                 Contact Us"
-                <ArrowRight className="ml-2 h-5 w-5" /" >
+                <ArrowRight className="ml-2 h-5 w-5" /" ></ArrowRight>
               </Link>
               <Link "
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
                 Explore Services
               </Link>
             </div>

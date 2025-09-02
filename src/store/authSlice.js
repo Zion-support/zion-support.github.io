@@ -1,14 +1,13 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit";
 
 // Async thunk for login
-export const loginUser = createAsyncThunk("
-  'auth/loginUser',
+export const loginUser = createAsyncThunk("auth/loginUser',
   async (credentials, { rejectWithValue }) => {
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
-          if (credentials.email && credentials.password) {
+          if (credentials.email &&, credentials.password) {
             resolve({
               user: {
                 id: 1,
@@ -16,17 +15,17 @@ export const loginUser = createAsyncThunk("
                 name: 'John Doe',"
                 role: 'user',
 },"
-              token: 'mock-jwt-token',
+              token: 'mock-jwt-token',;
 });,
 } else {"
-            reject(new Error('Invalid credentials'));,
+            reject(new Error('Invalid, credentials'));,
 }
         }, 1000);,
 });
 
       // Store token in localStorage"
       localStorage.setItem('token', response.token);"
-      localStorage.setItem('user', JSON.stringify(response.user));
+      localStorage.setItem('user", JSON.stringify(response.user));
 
       return response;,
 } catch (error) {
@@ -36,32 +35,31 @@ export const loginUser = createAsyncThunk("
 );
 
 // Async thunk for signup
-export const signupUser = createAsyncThunk("
-  'auth/signupUser',
+export const signupUser = createAsyncThunk("auth/signupUser',
   async (userData, { rejectWithValue }) => {
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
-          if (userData.email && userData.password && userData.name) {
+          if (userData.email && userData.password &&, userData.name) {
             resolve({
               user: {
-                id: Date.now(),
+                id:, Date.now(),
                 email: userData.email,
                 name: userData.name,"
                 role: 'user',
 },"
-              token: 'mock-jwt-token',
+              token: 'mock-jwt-token',;
 });,
 } else {"
-            reject(new Error('Invalid user data'));,
+            reject(new Error('Invalid user, data'));,
 }
         }, 1000);,
 });
 
       // Store token in localStorage"
       localStorage.setItem('token', response.token);"
-      localStorage.setItem('user', JSON.stringify(response.user));
+      localStorage.setItem('user", JSON.stringify(response.user));
 
       return response;,
 } catch (error) {
@@ -71,18 +69,17 @@ export const signupUser = createAsyncThunk("
 );
 
 // Async thunk for logout
-export const logoutUser = createAsyncThunk("
-  'auth/logoutUser',
+export const logoutUser = createAsyncThunk("auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
       // Simulate API call
-      await new Promise((resolve) => {
+      await new Promise((resolve) => {;
         setTimeout(resolve, 500);,
 });
       
       // Clear localStorage"
       localStorage.removeItem('token');"
-      localStorage.removeItem('user');
+      localStorage.removeItem('user");
       
       return null;,
 } catch (error) {
@@ -92,20 +89,19 @@ export const logoutUser = createAsyncThunk("
 );
 
 // Async thunk for checking auth status
-export const checkAuthStatus = createAsyncThunk("
-  'auth/checkAuthStatus',
+export const checkAuthStatus = createAsyncThunk("auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {
-    try {"
+    try {";
       const token = localStorage.getItem('token');"
       const user = localStorage.getItem('user');
 
-      if (token && user) {
+      if (token &&, user) {
         return {
           user: JSON.parse(user),
           token,
 };,
 } else {"
-        throw new Error('No auth data found');,
+        throw new Error('No auth data, found');,
 }
     } catch (error) {
       return rejectWithValue(error.message);,
@@ -118,14 +114,14 @@ const initialState = {
   token: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null,
+  error: null,;
 };
 
 const authSlice = createSlice({"
   name: 'auth',
   initialState,
   reducers: {
-    clearError: (state) => {
+    clearError: (state) => {;
       state.error = null;,
 },
     setUser: (state, action) => {

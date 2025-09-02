@@ -1,9 +1,9 @@
 import { Route, Routes    } from 'react-router-dom';"
-import { Lazy } from 'lucide-react';
+import { Lazy, } from 'lucide-react';
 
 export default function Page() {"
   import { Suspense, lazy } from 'react';"
-  import { ProtectedRoute } from '../components/ProtectedRoute';"
+  import { ProtectedRoute, } from '../components/ProtectedRoute';"
 import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load dashboard pages;"
 const Dashboard = lazy(() => import('../pages/Dashboard'));"
@@ -15,51 +15,51 @@ const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));"
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));"
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
 const DashboardRoutes: React.FC = () => {"
-  return (<Suspense fallback={<LoadingSpinner /"" >}>"
+  return (<Suspense fallback={<LoadingSpinner /" >}>"
       <Routes>"
         <Route path='/dashboard' element={"
-          <ProtectedRoute"" >"
-            <Dashboard /"" >
+          <ProtectedRoute" ></Route>"
+            <Dashboard /" ></Dashboard>
           </ProtectedRoute>,",
 } />"
         <Route path='/client-dashboard' element={"
-          <ProtectedRoute"" >"
-            <ClientDashboard /"" >
+          <ProtectedRoute" ></Route>"
+            <ClientDashboard /" ></ClientDashboard>
           </ProtectedRoute>,",
 } />"
         <Route path='/talent-dashboard' element={"
-          <ProtectedRoute"" >"
-            <TalentDashboard /"" >
+          <ProtectedRoute" ></Route>"
+            <TalentDashboard /" ></TalentDashboard>
           </ProtectedRoute>,",
 } />"
         <Route path='/creator-dashboard' element={"
-          <ProtectedRoute"" >"
-            <CreatorDashboard /"" >
+          <ProtectedRoute" ></Route>"
+            <CreatorDashboard /" ></CreatorDashboard>
           </ProtectedRoute>,",
 } />"
         <Route path='/analytics' element={"
-          <ProtectedRoute"" >"
-            <Analytics /"" >
+          <ProtectedRoute" ></Route>"
+            <Analytics /" ></Analytics>
           </ProtectedRoute>,",
 } />"
         <Route path='/project-milestones' element={"
-          <ProtectedRoute"" >"
-            <ProjectMilestones /"" >
+          <ProtectedRoute" ></Route>"
+            <ProjectMilestones /" ></ProjectMilestones>
           </ProtectedRoute>,",
 } />"
         <Route path='/project-details' element={"
-          <ProtectedRoute"" >"
-            <ProjectDetails /"" >
+          <ProtectedRoute" ></Route>"
+            <ProjectDetails /" ></ProjectDetails>
           </ProtectedRoute>,",
 } />"
         <Route path='/project-room' element={"
-          <ProtectedRoute"" >"
-            <ProjectRoom /"" >
+          <ProtectedRoute" ></Route>"
+            <ProjectRoom /" ></ProjectRoom>
           </ProtectedRoute>,
 } />
       </Routes>
     </Suspense>
-  )}
+  )};
 ;
 "
 }

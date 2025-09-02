@@ -5,12 +5,12 @@ import ApiPlayground from './ApiPlayground';
 "
 describe('ApiPlayground', () => {"
   it('renders without crashing', () => {
-    render(<ApiPlayground /" >);"
+    render(<ApiPlayground /", ></ApiPlayground>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<ApiPlayground /" >);
+    render(<ApiPlayground /", ></ApiPlayground>);
     // Add more specific tests here,
 });,
 });

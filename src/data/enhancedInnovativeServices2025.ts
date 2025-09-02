@@ -58,5 +58,4 @@
    trainingData: string;
    compliance: string[];
    aiScore: number;
-   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';"
-"
+   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['";"

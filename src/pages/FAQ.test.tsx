@@ -5,12 +5,12 @@ import FAQ from './FAQ';
 "
 describe('FAQ', () => {"
   it('renders without crashing', () => {
-    render(<FAQ /" >);"
+    render(<FAQ /", ></FAQ>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<FAQ /" >);
+    render(<FAQ /", ></FAQ>);
     // Add more specific tests here,
 });,
 });

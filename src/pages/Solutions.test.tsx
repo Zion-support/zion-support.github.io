@@ -5,12 +5,12 @@ import Solutions from './Solutions';
 "
 describe('Solutions', () => {"
   it('renders without crashing', () => {
-    render(<Solutions /" >);"
+    render(<Solutions /", ></Solutions>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Solutions /" >);
+    render(<Solutions /", ></Solutions>);
     // Add more specific tests here,
 });,
 });

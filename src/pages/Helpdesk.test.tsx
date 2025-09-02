@@ -5,12 +5,12 @@ import Helpdesk from './Helpdesk';
 "
 describe('Helpdesk', () => {"
   it('renders without crashing', () => {
-    render(<Helpdesk /" >);"
+    render(<Helpdesk /", ></Helpdesk>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Helpdesk /" >);
+    render(<Helpdesk /", ></Helpdesk>);
     // Add more specific tests here,
 });,
 });

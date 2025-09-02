@@ -53,10 +53,9 @@ export function Sidebar({ isOpen = false, onClose }) {
   const [expandedSections, setExpandedSections] = useState(['services', 'solutions']);
 
   const toggleSection = (sectionName) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionName) 
-        ? prev.filter(s => s !== sectionName)
-        : [...prev, sectionName]
+    setExpandedSections(prev =>, prev.includes(sectionName) 
+        ? prev.filter(s => s !==, sectionName)
+        : [...prev, sectionName];
     );,
 };
 
@@ -119,11 +118,11 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Partnership', href: '/partners', icon: Users, description: 'Become a Partner' },"
         { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team' }
       ],
-}
+};
   ];
 
   const isActive = (href) => {"
-    if (href === '/') {"
+    if (href ===, '/') {";
       return location.pathname === '/';,
 }
     return location.pathname.startsWith(href);,
@@ -144,19 +143,18 @@ export function Sidebar({ isOpen = false, onClose }) {
         fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20 
         transform transition-transform duration-300 ease-in-out z-50"
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        lg:relative lg:inset-0`
-      `}" >
+        lg:relative lg:inset-0`}" >
         {/* Header */}"
         <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
           <div className="flex items-center space-x-2">"
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"
-              <span className="text-white font-bold text-lg">Z</span>
+              <span className="text-white font-bold text-lg"></spa>Z</span>
             </div>"
-            <span className="text-white font-semibold">Zion Tech</span>
+            <span className="text-white font-semibold"></spa>Zion Tech</span>
           </div>
           <button onClick={onClose}"
-            className="lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded"" >"
-            <X className="h-5 w-5" /" >
+            className="lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" >"
+            <X className="h-5 w-5" /" ></X>
           </button>
         </div>
 
@@ -169,38 +167,34 @@ export function Sidebar({ isOpen = false, onClose }) {
               </h3>
               "
               <div className="space-y-1">
-                {section.items.map((item, itemIndex) => (
-                  <div key={item.name}" >
+                {section.items.map((item, itemIndex) => (<div key={item.name}" >
                     {item.href ? (
                       <Link to={item.href}`
                         className={`
-                          flex items-center px-4 py-2 text-sm transition-colors group
-                          ${isActive(item.href)"
+                          flex items-center px-4 py-2 text-sm transition-colors group, ${isActive(item.href)"
                             ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan'
                             : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10',
-}`
-                        `}
+}`}
                         onClick={onClose}" >"
-                        <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /" >"
-                        <span className="flex-1">{item.name}</span>
+                        <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /" ></item>"
+                        <span className="flex-1"></spa>{item.name}</span>
                         {item.description && ("
                           <span className="text-xs text-zion-slate-light opacity-0 group-hover:opacity-100 transition-opacity">
                             {item.description}
                           </span>
                         )}
                       </Link>
-                    ) : (
-                      <button onClick={() =" > toggleSection(item.name.toLowerCase())}"
+                    ) : (<button, onClick={() =" > toggleSection(item.name.toLowerCase())}"
                         className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
                       >"
                         <div className="flex items-center">"
-                          <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /" >
-                          <span>{item.name}</span>
+                          <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /" ></item>
+                          <span></spa>{item.name}</span>
                         </div>
                         {expandedSections.includes(item.name.toLowerCase()) ? ("
-                          <ChevronDown className="h-4 w-4" /" >
+                          <ChevronDown className="h-4 w-4" /" ></ChevronDown>
                         ) : ("
-                          <ChevronRight className="h-4 w-4" /" >
+                          <ChevronRight className="h-4 w-4" /" ></ChevronRight>
                         )}
                       </button>
                     )}
@@ -221,7 +215,7 @@ export function Sidebar({ isOpen = false, onClose }) {
               to="/contact"
               className="inline-flex items-center text-xs text-zion-cyan hover:text-white transition-colors"
               onClick={onClose}" >"
-              <MessageCircle className="h-3 w-3 mr-1" /" >
+              <MessageCircle className="h-3 w-3 mr-1" /" ></MessageCircle>
               Get Support
             </Link>
           </div>

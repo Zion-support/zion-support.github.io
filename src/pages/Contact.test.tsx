@@ -5,12 +5,12 @@ import Contact from './Contact';
 "
 describe('Contact', () => {"
   it('renders without crashing', () => {
-    render(<Contact /" >);"
+    render(<Contact /", ></Contact>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Contact /" >);
+    render(<Contact /", ></Contact>);
     // Add more specific tests here,
 });,
 });

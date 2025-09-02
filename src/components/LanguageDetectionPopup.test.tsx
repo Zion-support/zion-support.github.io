@@ -2,10 +2,10 @@ import { render, screen } from '@testing-library/react';"
 import LanguageDetectionPopup from './LanguageDetectionPopup';"
 describe('LanguageDetectionPopup', () => {"
   it('renders without crashing', () => {"
-    render(<LanguageDetectionPopup /" >)"
+    render(<LanguageDetectionPopup /", ></LanguageDetectionPopup>)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
   it('displays expected content', () => {
-    render(<LanguageDetectionPopup /" >)
+    render(<LanguageDetectionPopup /", ></LanguageDetectionPopup>)
     // Add specific test assertions based on component content,
 });
 "

@@ -5,12 +5,12 @@ import News from './News';
 "
 describe('News', () => {"
   it('renders without crashing', () => {
-    render(<News /" >);"
+    render(<News /", ></News>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<News /" >);
+    render(<News /", ></News>);
     // Add more specific tests here,
 });,
 });

@@ -5,12 +5,12 @@ import Terms from './Terms';
 "
 describe('Terms', () => {"
   it('renders without crashing', () => {
-    render(<Terms /" >);"
+    render(<Terms /", ></Terms>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Terms /" >);
+    render(<Terms /", ></Terms>);
     // Add more specific tests here,
 });,
 });

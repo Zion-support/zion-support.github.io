@@ -5,12 +5,12 @@ import Accessibility from './Accessibility';
 "
 describe('Accessibility', () => {"
   it('renders without crashing', () => {
-    render(<Accessibility /" >);"
+    render(<Accessibility /", ></Accessibility>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Accessibility /" >);
+    render(<Accessibility /", ></Accessibility>);
     // Add more specific tests here,
 });,
 });

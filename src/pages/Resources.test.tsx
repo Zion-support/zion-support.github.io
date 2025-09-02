@@ -5,12 +5,12 @@ import Resources from './Resources';
 "
 describe('Resources', () => {"
   it('renders without crashing', () => {
-    render(<Resources /" >);"
+    render(<Resources /", ></Resources>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Resources /" >);
+    render(<Resources /", ></Resources>);
     // Add more specific tests here,
 });,
 });

@@ -5,12 +5,12 @@ import CaseStudies from './CaseStudies';
 "
 describe('CaseStudies', () => {"
   it('renders without crashing', () => {
-    render(<CaseStudies /" >);"
+    render(<CaseStudies /", ></CaseStudies>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<CaseStudies /" >);
+    render(<CaseStudies /", ></CaseStudies>);
     // Add more specific tests here,
 });,
 });

@@ -5,12 +5,12 @@ import Research from './Research';
 "
 describe('Research', () => {"
   it('renders without crashing', () => {
-    render(<Research /" >);"
+    render(<Research /", ></Research>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Research /" >);
+    render(<Research /", ></Research>);
     // Add more specific tests here,
 });,
 });

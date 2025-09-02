@@ -5,12 +5,12 @@ import AIPoweredSEO from './AIPoweredSEO';
 "
 describe('AIPoweredSEO', () => {"
   it('renders without crashing', () => {
-    render(<AIPoweredSEO /" >);"
+    render(<AIPoweredSEO /", ></AIPoweredSEO>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<AIPoweredSEO /" >);
+    render(<AIPoweredSEO /", ></AIPoweredSEO>);
     // Add more specific tests here,
 });,
 });

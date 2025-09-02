@@ -5,12 +5,12 @@ import NotFoundPage from './NotFoundPage';
 "
 describe('NotFoundPage', () => {"
   it('renders without crashing', () => {
-    render(<NotFoundPage /" >);"
+    render(<NotFoundPage /", ></NotFoundPage>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<NotFoundPage /" >);
+    render(<NotFoundPage /", ></NotFoundPage>);
     // Add more specific tests here,
 });,
 });

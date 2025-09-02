@@ -5,12 +5,12 @@ import Signup from './Signup';
 "
 describe('Signup', () => {"
   it('renders without crashing', () => {
-    render(<Signup /" >);"
+    render(<Signup /", ></Signup>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Signup /" >);
+    render(<Signup /", ></Signup>);
     // Add more specific tests here,
 });,
 });

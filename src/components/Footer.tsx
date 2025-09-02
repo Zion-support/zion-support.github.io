@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Globe, Arr
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
+  const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

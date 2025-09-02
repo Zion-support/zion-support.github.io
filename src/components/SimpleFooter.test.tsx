@@ -2,10 +2,10 @@ import { render, screen } from '@testing-library/react';"
 import SimpleFooter from './SimpleFooter';"
 describe('SimpleFooter', () => {"
   it('renders without crashing', () => {"
-    render(<SimpleFooter /" >)"
+    render(<SimpleFooter /", ></SimpleFooter>)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
   it('displays expected content', () => {
-    render(<SimpleFooter /" >)
+    render(<SimpleFooter /", ></SimpleFooter>)
     // Add specific test assertions based on component content,
 });
 "

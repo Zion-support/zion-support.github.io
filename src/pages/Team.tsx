@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Linkedin, Twitter, Github, Mail, Award, Users, 
   Brain, Atom, Shield, Rocket, Globe, Code, 
@@ -26,11 +26,11 @@ export default function Team() {
       name: "Lisa Park", role: "Chief Security Officer",
       department: "Cybersecurity", bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",
       expertise: ["Cybersecurity", "Risk Management", "Compliance"], achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
-    }
+    };
   ];
   const stats = [
     { number: "50+", label: "Team Members", icon: Users }, { number: "15+", label: "Countries", icon: Globe },
-    { number: "200+", label: "Years Combined Experience", icon: Award }, { number: "95%", label: "Employee Satisfaction", icon: Star }
+    { number: "200+", label: "Years Combined Experience", icon: Award }, { number: "95%", label: "Employee Satisfaction", icon: Star };
   ];
   return (
     <>
@@ -45,11 +45,11 @@ export default function Team() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motion>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Meet Our Team
               </h1>
@@ -60,15 +60,15 @@ export default function Team() {
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    initial={{ opacity: 0, y: 20 }
+                    animate={{ opacity: 1, y: 0 }
+                    transition={{ duration: 0.8, delay: index * 0.1 }
                     className="text-center"
-                  >
+                  ></motion>
                     <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-4 border border-cyan-400/20">
                       <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-                      <div className="text-gray-300 text-sm">{stat.label}</div>
+                      <div className="text-2xl font-bold text-white mb-1"></di>{stat.number}</div>
+                      <div className="text-gray-300 text-sm"></di>{stat.label}</div>
                     </div>
                   </motion.div>
                 ))}
@@ -81,12 +81,12 @@ export default function Team() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Leadership Team</h2>
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Leadership Team</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Meet the visionary leaders driving innovation and excellence at Zion Tech Group
               </p>
@@ -96,11 +96,11 @@ export default function Team() {
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={member.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-                >
+                ></motion>
                   <div className="h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                     <div className="text-6xl opacity-20">
                       {member.department === "AI & Machine Learning" && <Brain />}
@@ -115,12 +115,12 @@ export default function Team() {
                         {member.department}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-1"></h>{member.name}</h3>
                     <p className="text-blue-400 font-medium mb-3">{member.role}</p>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">{member.bio}</p>
                     
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">Expertise</h4>
+                      <h4 className="text-sm font-semibold text-white mb-2"></h>Expertise</h4>
                       <div className="flex flex-wrap gap-2">
                         {member.expertise.map((skill, skillIndex) => (
                           <span
@@ -134,7 +134,7 @@ export default function Team() {
                     </div>
 
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">Key Achievements</h4>
+                      <h4 className="text-sm font-semibold text-white mb-2"></h>Key Achievements</h4>
                       <div className="space-y-1">
                         {member.achievements.map((achievement, achIndex) => (
                           <div key={achIndex} className="flex items-center text-xs text-gray-400">
@@ -164,11 +164,11 @@ export default function Team() {
         <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motion>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Join Our Team
               </h2>

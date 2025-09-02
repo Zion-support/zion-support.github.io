@@ -1,6 +1,6 @@
     const startTime = performance.now();
     
-    const measurePerformance = () => {
+    const measurePerformance = () => {;
       const endTime = performance.now();
       const loadTime = endTime - startTime;
       

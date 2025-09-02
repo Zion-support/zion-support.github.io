@@ -5,12 +5,12 @@ import Partners from './Partners';
 "
 describe('Partners', () => {"
   it('renders without crashing', () => {
-    render(<Partners /" >);"
+    render(<Partners /", ></Partners>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Partners /" >);
+    render(<Partners /", ></Partners>);
     // Add more specific tests here,
 });,
 });

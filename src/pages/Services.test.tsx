@@ -5,12 +5,12 @@ import Services from './Services';
 "
 describe('Services', () => {"
   it('renders without crashing', () => {
-    render(<Services /" >);"
+    render(<Services /", ></Services>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Services /" >);
+    render(<Services /", ></Services>);
     // Add more specific tests here,
 });,
 });

@@ -5,12 +5,12 @@ import OnsiteSupport from './OnsiteSupport';
 "
 describe('OnsiteSupport', () => {"
   it('renders without crashing', () => {
-    render(<OnsiteSupport /" >);"
+    render(<OnsiteSupport /", ></OnsiteSupport>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<OnsiteSupport /" >);
+    render(<OnsiteSupport /", ></OnsiteSupport>);
     // Add more specific tests here,
 });,
 });

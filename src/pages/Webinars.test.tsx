@@ -5,12 +5,12 @@ import Webinars from './Webinars';
 "
 describe('Webinars', () => {"
   it('renders without crashing', () => {
-    render(<Webinars /" >);"
+    render(<Webinars /", ></Webinars>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Webinars /" >);
+    render(<Webinars /", ></Webinars>);
     // Add more specific tests here,
 });,
 });

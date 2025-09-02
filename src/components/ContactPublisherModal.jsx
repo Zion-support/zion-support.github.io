@@ -1,3 +1,2 @@
 import React, { useState, useEffect, useRef } from 'react';"
-import { focusManagement } from '@/utils/accessibility';"
-"
+import { focusManagement, } from '@/utils/accessibility";"

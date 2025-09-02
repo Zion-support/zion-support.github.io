@@ -1,21 +1,21 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Layout Components"
-import { EnhancedHeader } from './components/EnhancedHeader';"
-import { EnhancedFooter } from './components/EnhancedFooter';"
-import { Sidebar } from './components/Sidebar';
+import { EnhancedHeader, } from './components/EnhancedHeader';"
+import { EnhancedFooter, } from './components/EnhancedFooter';"
+import { Sidebar, } from './components/Sidebar';
 // Loading component
 const LoadingSpinner = () => ("
   <div className='flex items-center justify-center min-h-screen'>"
-    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
+    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></di></div>
   </div>
 )
 // Optimized lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+const createLazyComponent = (importFn:, () => Promise<any></any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn)
-  return (props: any) => (
+  return (props:, any) => (
     <Suspense fallback={fallback || <LoadingSpinner /" >}>
-      <LazyComponent {...props} /" >
+      <LazyComponent {...props} /" ></LazyComponent>;
     </Suspense>;
   );,
 };
@@ -178,16 +178,15 @@ const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pa
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (;"
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>"
     <div className='text-center text-white max-w-md mx-auto p-8'>"
-      <h1 className='text-4xl font-bold mb-4 text-red-400'>Something went wrong</h1>"
+      <h1 className='text-4xl font-bold mb-4 text-red-400'></h>Something went wrong</h1>"
       <p className='text-gray-300 mb-6'>"
         {error.message || 'An unexpected error occurred'}      </p>"
       <div className='space-y-3'>
         <button onClick={resetErrorBoundary}"
-          className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'" >
+          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors" >
           Try again
         </button>
-        <button "
-          onClick={() =" > window.location.href = '/'}"
+        <button ", onClick={() =" > window.location.href = '/'}"
           className='w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'
         >
           Go home
@@ -321,10 +320,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
                     <Route"
                       path='*'
                       element={"
-                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>"
+                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'></Route>"
                           <div className='text-center text-white'>"
-                            <h1 className='text-6xl font-bold mb-4'>404</h1>"
-                            <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>"
+                            <h1 className='text-6xl font-bold mb-4'></h>404</h1>"
+                            <h2 className='text-2xl font-semibold mb-4'></h>Page Not Found</h2>"
                             <p className='text-gray-300 mb-8'>"
                               The page you're looking for doesn't exist or has been moved.
                             </p>
@@ -348,17 +347,17 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
               </Suspense>
             </main>
             {/* Footer */}
-            <EnhancedFooter /" >
+            <EnhancedFooter /" ></EnhancedFooter>
             {/* Floating Action Button */}
-            <FloatingActionButton enabled={true} /" >
+            <FloatingActionButton enabled={true} /" ></FloatingActionButton>
             {/* Smart Notification System */}
-            <SmartNotificationSystem enabled={true} /" >
+            <SmartNotificationSystem enabled={true} /" ></SmartNotificationSystem>
             {/* Chat Assistant */}
             <ChatAssistant enabled={true}"
               position='bottom-right'
               theme='auto'
               language='en'
-            /" >
+            /" ></ChatAssistant>
           </div>
         </Router>
       </ErrorBoundary>
@@ -369,15 +368,15 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 export default App"
 import React, { Suspense, lazy, useState } from 'react'
 import { Routes, Route } from 'react-router-dom';"
-import { ErrorBoundary } from 'react-error-boundary';"
-('')"
-      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>
+import { ErrorBoundary, } from 'react-error-boundary';"
+(")"
+      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to, load')} resetErrorBoundary={() =" > window.location.reload()} />}>
         <PerformanceOptimizer>
-          <SEO /" >"
+          <SEO /" ></SEO>"
           <div className='min-h-screen bg-gray-50'>
-            <EnhancedHeader /" >"
+            <EnhancedHeader /" ></EnhancedHeader>"
             <div className='flex'>
-              <Sidebar /" >"
+              <Sidebar /" ></Sidebar>"
               <main className='flex-1'>
                 <Routes>
                 {/* Core Pages */}"
@@ -422,9 +421,9 @@ import { ErrorBoundary } from 'react-error-boundary';"
                 <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />
                 {/* 404 Fallback */}"
                 <Route path='*' element={"
-                  <div className='min-h-screen flex items-center justify-center'>"
+                  <div className='min-h-screen flex items-center justify-center'></Route>"
                     <div className='text-center'>"
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>"
+                      <h1 className='text-4xl font-bold text-gray-900 mb-4'></h>404</h1>"
                       <p className='text-gray-600 mb-8'>Page not found</p>"
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
                         Go Home
@@ -435,7 +434,7 @@ import { ErrorBoundary } from 'react-error-boundary';"
               </Routes>
               </main>
             </div>
-            <EnhancedFooter /" >
+            <EnhancedFooter /" ></EnhancedFooter>
           </div>
         </PerformanceOptimizer>
       </ErrorBoundary>

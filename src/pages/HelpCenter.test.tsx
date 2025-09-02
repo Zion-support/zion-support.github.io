@@ -5,12 +5,12 @@ import HelpCenter from './HelpCenter';
 "
 describe('HelpCenter', () => {"
   it('renders without crashing', () => {
-    render(<HelpCenter /" >);"
+    render(<HelpCenter /", ></HelpCenter>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<HelpCenter /" >);
+    render(<HelpCenter /", ></HelpCenter>);
     // Add more specific tests here,
 });,
 });

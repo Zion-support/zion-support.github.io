@@ -7,8 +7,8 @@ export default function SimplePage() {
   const location = useLocation();
   const pathname = location.pathname;
   // Generate a title based on the pathname;"
-  const getTitle = () => {"
-    const path = pathname.replace('/', '').replace(/-/g, ' ');
+  const getTitle = () => {";
+    const path = pathname.replace('/", ").replace(/-/g, ' ');
     return path.charAt(0).toUpperCase() + path.slice(1)}
   // Generate content based on the pathname;"
   const getContent = () => {"
@@ -31,8 +31,7 @@ export default function SimplePage() {
     }
   }
   const pageInfo = getContent()"
-  return ("
-"
+  return (";
 import { Link, useLocation } from 'react-router-dom';"
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
@@ -42,7 +41,7 @@ export default function SimplePage() {
 
   // Generate a title based on the pathname
   const getTitle = () => {"
-    const path = pathname.replace('/', '').replace(/-/g, ' ')
+    const path = pathname.replace('/", ").replace(/-/g, ' ')
     return path.charAt(0).toUpperCase() + path.slice(1),
 }
 
@@ -71,7 +70,7 @@ export default function SimplePage() {
 
   return ("
     <div className='min-h-screen bg-white'>
-      <Header /" >
+      <Header /" ></Header>
       {/* Hero Section */}"
       <section className='pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50'>"
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>"
@@ -99,7 +98,7 @@ export default function SimplePage() {
               <p className='text-gray-600 mb-6'>
                 Our team is here to help you find the right solution for your business needs."
               </p>"
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                 <Link;"
                   to='/contact';"
                   className='bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
@@ -115,8 +114,7 @@ export default function SimplePage() {
           </div>
         </div>
       </section>"
-      <Footer /"" >
+      <Footer /" ></Footer>
     </div>"
   )}"
-"
 }

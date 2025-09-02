@@ -5,12 +5,12 @@ import Privacy from './Privacy';
 "
 describe('Privacy', () => {"
   it('renders without crashing', () => {
-    render(<Privacy /" >);"
+    render(<Privacy /", ></Privacy>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Privacy /" >);
+    render(<Privacy /", ></Privacy>);
     // Add more specific tests here,
 });,
 });

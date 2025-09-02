@@ -5,12 +5,12 @@ import AiSolutions from './AiSolutions';
 "
 describe('AiSolutions', () => {"
   it('renders without crashing', () => {
-    render(<AiSolutions /" >);"
+    render(<AiSolutions /", ></AiSolutions>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<AiSolutions /" >);
+    render(<AiSolutions /", ></AiSolutions>);
     // Add more specific tests here,
 });,
 });

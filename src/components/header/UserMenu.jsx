@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';"
-import { Link } from 'react-router-dom';"
+import { Link, } from 'react-router-dom';"
 import { User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle } from 'lucide-react';
 
-export function UserMenu({ user }) {
+export function UserMenu({ user, }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (menuRef.current &&, !menuRef.current.contains(event.target)) {;
         setIsOpen(false);,
 }
     };
@@ -18,8 +18,8 @@ export function UserMenu({ user }) {
 }, []);
 
   const handleLogout = () => {
-    // Implement logout logic here"
-    console.log('Logging out...');
+    // Implement logout logic here";
+    console.log('Logging, out...');
     setIsOpen(false);,
 };
 
@@ -65,12 +65,12 @@ export function UserMenu({ user }) {
       href: '/help',
       icon: HelpCircle,"
       description: 'Get support',
-}
+};
   ];
 
   return ("
     <div className="relative" ref={menuRef}" >
-      <button onClick={() =" > setIsOpen(!isOpen)}"
+      <button, onClick={() =" > setIsOpen(!isOpen)}"
         className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
       >"
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"
@@ -89,8 +89,7 @@ export function UserMenu({ user }) {
           <div className="p-4 border-b border-zion-purple/20">"
             <div className="flex items-center space-x-3">"
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"
-                <span className="text-white font-semibold">"
-                  {user?.name?.charAt(0) || user?.email?.charAt(0) || 'U'}
+                <span className="text-white font-semibold">", {user?.name?.charAt(0) || user?.email?.charAt(0) || 'U'}
                 </span>
               </div>
               <div>"
@@ -106,15 +105,13 @@ export function UserMenu({ user }) {
 
           {/* Menu Items */}"
           <div className="py-2">
-            {menuItems.map((item) => (
-              <Link key={item.name}
+            {menuItems.map((item) => (<Link key={item.name}
                 to={item.href}"
-                className="flex items-center px-4 py-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
-                onClick={() =" > setIsOpen(false)}
+                className="flex items-center px-4 py-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors", onClick={() =" > setIsOpen(false)}
               >"
-                <item .icon className="h-4 w-4 mr-3 text-zion-cyan" /" >"
+                <item .icon className="h-4 w-4 mr-3 text-zion-cyan" /" ></item>"
                 <div className="flex-1">"
-                  <span className="font-medium">{item.name}</span>"
+                  <span className="font-medium"></spa>{item.name}</span>"
                   <p className="text-xs text-zion-slate-light">{item.description}</p>
                 </div>
               </Link>
@@ -124,9 +121,9 @@ export function UserMenu({ user }) {
           {/* Logout */}"
           <div className="p-4 border-t border-zion-purple/20">
             <button onClick={handleLogout}"
-              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors"" >"
-              <LogOut className="h-4 w-4 mr-3" /" >
-              <span>Sign Out</span>
+              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >"
+              <LogOut className="h-4 w-4 mr-3" /" ></LogOut>
+              <span></spa>Sign Out</span>
             </button>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react' import { Search, X, Filter, TrendingUp, Clock, Globe, Zap } from 'lucide-react' import { motion, AnimatePresence } from 'framer-motion' import { Link } from 'react-router-dom'  interface SearchResult {;
+import React, { useState, useEffect, useRef } from 'react' import { Search, X, Filter, TrendingUp, Clock, Globe, Zap } from 'lucide-react' ;import { motion, AnimatePresence } from 'framer-motion' ;import { Link, } from 'react-router-dom'  ;interface SearchResult {;
    id: string;
    title: string;
    description: string;"
@@ -12,6 +12,5 @@ import React, { useState, useEffect, useRef } from 'react' import { Search, X, F
    onSearch?: (query: string, filters: SearchFilters) => void} interface SearchFilters {
    type: string[];
    category: string[]"
-   tags: string[]} export const SearchComponent: React.FC<SearchComponentProps> = ({ className = '', placeholder = 'Search for AI services, solutions, and more...', showFilters = true, onSearch }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult []" >([]) const [filters, setFilters] = useState<SearchFilters>({ type: [], category: [], tags: [] }) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const [recentSearches, setRecentSearches] = useState<string []" >([]) const [trendingSearches, setTrendingSearches] = useState<string []" >([])  const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) ';'
-"
+   tags: string[]} export const SearchComponent: React.FC<SearchComponentProps></SearchComponentProps> = ({ className = ", placeholder = 'Search for AI services, solutions, and more...", showFilters = true, onSearch }) => { const [query, setQuery] = useState(") const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult []" ></SearchResult>([]) const [filters, setFilters] = useState<SearchFilters></SearchFilters>({ type: [], category: [], tags: [] }) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const [recentSearches, setRecentSearches] = useState<string []" ></string>([]) const [trendingSearches, setTrendingSearches] = useState<string []" ></string>([])  const searchRef = useRef<HTMLDivElement></HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement></HTMLInputElement>(null) ";"
 }

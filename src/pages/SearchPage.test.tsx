@@ -5,12 +5,12 @@ import SearchPage from './SearchPage';
 "
 describe('SearchPage', () => {"
   it('renders without crashing', () => {
-    render(<SearchPage /" >);"
+    render(<SearchPage /", ></SearchPage>);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<SearchPage /" >);
+    render(<SearchPage /", ></SearchPage>);
     // Add more specific tests here,
 });,
 });
