@@ -5,16 +5,21 @@
 //   'TEST_USER_EMAIL': 'test@example.com',
 //   'TEST_USER_PASSWORD': 'Password123'
 // }
-
 describe('register and login flow', () => {
   beforeEach(() => {
     // Ensure environment variables are loaded, or provide defaults for local runs if desired
+    // For this refactor, we assume they are set in cypress.env.json
+    if (!Cypress.env('TEST_USER_EMAIL')) {
+      throw new Error('TEST_USER_EMAIL environment variable is not set.');
+    }
+    if (!Cypress.env('TEST_USER_PASSWORD')) {
+      throw new Error('TEST_USER_PASSWORD environment variable is not set.');
+    }
     if (!Cypress.env('TEST_USER_DISPLAY_NAME')) {
       throw new Error(
         'TEST_USER_DISPLAY_NAME environment variable is not set.');
     }
   });
-
   it('registers, gets auto-logged in, and user data is available', () => {
     const uniqueEmail = `testuser-${Date.now()}@example.com`;
     const testPassword = Cypress.env('TEST_USER_PASSWORD');
@@ -63,6 +68,7 @@ describe('Login Flow Tests', () => {
         'TEST_USER_DISPLAY_NAME environment variable is not set.');
     }
   });
+
   it('should fail to login with invalid credentials and show error toast', () => {
     cy.visit('/login');
     cy.get('[data-testid="login-email-input"]').type(
@@ -71,7 +77,7 @@ describe('Login Flow Tests', () => {
     cy.get('[data-testid="login-submit-button"]').click();
     cy.url().should('include', '/login'); // Should remain on login page
     // Check for Sonner toast (common toast library)
-    // Adjust selector if your toast implementation differs.
+    // Adjust selector if your toast implementation differs
     // This selector targets a toast that is marked as destructive (error)
     cy.get('[data-sonner-toast][data-type="error"]', { timeout: 5000 })
       .should('be.visible')
@@ -81,6 +87,7 @@ describe('Login Flow Tests', () => {
         expect(text.toLowerCase()).to.include('invalid login credentials');
       });
   });
+
   it('should login successfully with valid credentials and redirect', () => {
     cy.visit('/login');
     cy.get('[data-testid="login-email-input"]').type(
