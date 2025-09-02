@@ -4,6 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Enhanced Components
+import { ErrorBoundary } from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { ChatAssistant } from './components/ChatAssistant';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import ComprehensiveOptimizer from './components/ComprehensiveOptimizer';
+import ComprehensiveSEOEnhancer from './components/ComprehensiveSEOEnhancer';
+
 // Simple loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -110,47 +120,74 @@ const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
 function App() {
   return (
     <HelmetProvider>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <SimpleHeader />
-        
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <AnimatePresence mode="wait">
-              <Routes>
-                {/* Core Routes */}
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route path="/help-center" element={<HelpCenter />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/terms-of-service" element={<TermsOfService />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                <Route path="/documentation" element={<Documentation />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/webinars" element={<Webinars />} />
-                <Route path="/research" element={<Research />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                
-                {/* Legacy routes for compatibility */}
-                <Route path="/privacy" element={<PrivacyPolicy />} />
-                <Route path="/terms" element={<TermsOfService />} />
-                <Route path="/help" element={<HelpCenter />} />
-              </Routes>
-            </AnimatePresence>
-          </Suspense>
-        </main>
-        
-        <SimpleFooter />
-      </div>
+      <ErrorBoundary>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <SimpleHeader />
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
+              <AnimatePresence mode="wait">
+                <Routes>
+                  {/* Core Routes */}
+                  <Route path="/" element={<Home />} />
+                  <Route path="/home" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/team" element={<Team />} />
+                  <Route path="/partners" element={<Partners />} />
+                  <Route path="/help-center" element={<HelpCenter />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/terms-of-service" element={<TermsOfService />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/pricing" element={<Pricing />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/careers" element={<Careers />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/marketplace" element={<Marketplace />} />
+                  <Route path="/documentation" element={<Documentation />} />
+                  <Route path="/training" element={<Training />} />
+                  <Route path="/webinars" element={<Webinars />} />
+                  <Route path="/research" element={<Research />} />
+                  <Route path="/sitemap" element={<Sitemap />} />
+                  
+                  {/* Legacy routes for compatibility */}
+                  <Route path="/privacy" element={<PrivacyPolicy />} />
+                  <Route path="/terms" element={<TermsOfService />} />
+                  <Route path="/help" element={<HelpCenter />} />
+                </Routes>
+              </AnimatePresence>
+            </Suspense>
+          </main>
+          
+          <SimpleFooter />
+          
+          {/* Enhanced Components */}
+          <ComprehensiveOptimizer
+            enabled={true}
+            showPanel={false}
+            position="top-left"
+            autoOptimize={true}
+          />
+          
+          <ComprehensiveSEOEnhancer
+            enabled={true}
+            showPanel={false}
+            position="bottom-right"
+            autoOptimize={true}
+          />
+          
+          <AccessibilityEnhancer
+            enabled={true}
+            showPanel={false}
+            position="top-right"
+          />
+          
+          <SmartNotificationSystem />
+          <ChatAssistant />
+          <MobileExperienceEnhancer />
+        </div>
+      </ErrorBoundary>
     </HelmetProvider>
   );
 }
