@@ -11,14 +11,8 @@ export interface Revolutionary2027ItService {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
+address: string;
+  };export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
     id: "2027-revolutionary-it",
     name: "2027 Revolutionary IT Platform",

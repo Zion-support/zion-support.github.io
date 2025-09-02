@@ -7,9 +7,7 @@
 
   animated = true}) => {
 
-  
-=======
-  if (animated) {
+if (animated) {
 
     return()
       <>
@@ -101,7 +99,6 @@ export function TableSkeleton(...args: any[]): any {
         </div>
       </div>
 
-      
       {/* Rows */}"
       <div className="divide-y divide-gray-200 dark: anydivide-gray-600">
         {Array.from({ length: rows }).map((_, rowIndex)  => ("

@@ -1,1 +1,0 @@
-// Assuming a general AppLayout for admin too, or an AdminLayout // Ensure this client has admin rights or appropriate RLS // Assuming recharts is available 

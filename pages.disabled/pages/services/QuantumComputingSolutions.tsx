@@ -1,1 +1,0 @@
-= ; export { function }; title="Quantum Computing Solutions - Zion Tech Group" description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions." keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security" /> 

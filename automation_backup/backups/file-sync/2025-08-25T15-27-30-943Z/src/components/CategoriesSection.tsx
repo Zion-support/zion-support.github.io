@@ -47,18 +47,7 @@ const categories = [;
     stats: '100+ Innovations';
   },;
   {;
-<<<<<<< HEAD
-<<<<<<< HEAD;
-    title: 'AI Hiring Platform',;
-    description: 'AI-powered recruitment and talent acquisition tools',;
-    icon: <ZapIcon className='w-10 h-10'                                                                                                                                                                              />,;
-    link: '/zion-hire-ai',;
-    color: 'from-zion-purple to-zion-purple-dark',;
-    featured: true;
-;
-=======;
-=======
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec
     title: 'AI Hiring Platform',;
     description: 'AI-powered recruitment and talent acquisition tools',;
     icon: <ZapIcon className='w-10 h-10'                                                                                                                                                                              />,;
@@ -85,39 +74,7 @@ const specialServices = [;
     link: '/cloud-solutions',;
     icon: <Globe className='w-5 h-5'                                                                                                                                                                              />,;
     description: 'Scalable cloud infrastructure';
-<<<<<<< HEAD
-<<<<<<< HEAD;
-  },;
-  {;
-    title: 'Security Services',;
-    link: '/security-services',;
-    icon: <Shield className='w-5 h-5'                                                                                                                                                                              />,;
-    description: 'Cybersecurity & compliance';
-;
-];
-interface CategoriesSectionProps {;
-  showTitle?: boolean;
-;
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-;
-;
-  };
-  const itemVariants = {;
-    hidden: { opacity: 0, y: 30 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.6, ease: 'easeOut' };
-;
-=======;
-=======
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec
   },;
   {;
     title: 'Security Services',;
@@ -375,19 +332,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className='inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group';
 ;
             Explore All Categories;
-<<<<<<< HEAD
-<<<<<<< HEAD;
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'                                                                                                                                                                              />;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )};
-=======;
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'                                                                                                                                                                              />;
-=======
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'              />;
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec
           </Link>;
         </motion.div>;
       </div>;
