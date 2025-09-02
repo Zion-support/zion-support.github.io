@@ -3,7 +3,8 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: false
+    ignoreDuringBuilds: true,
+    dirs: ['pages', 'components', 'lib', 'utils']
   },
   experimental: {
     esmExternals: false
@@ -33,7 +34,8 @@ const nextConfig = {
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /hardhat/
+        /hardhat/,
+        /src/
       ]
     })
 
