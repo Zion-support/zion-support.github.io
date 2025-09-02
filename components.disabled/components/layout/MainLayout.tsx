@@ -1,4 +1,13 @@
-import React from 'react';'import Header from './Header';'import Footer from './Footer';'import PerformanceOptimizer from '../PerformanceOptimizer';'import AccessibilityEnhancer from '../AccessibilityEnhancer';'import SEOEnhancer from '../SEOEnhancer';''interface MainLayoutProps {children: React.ReactNode;title?: string;
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import PerformanceOptimizer from '../PerformanceOptimizer';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import SEOEnhancer from '../SEOEnhancer';
+
+interface MainLayoutProps {
+  children: React.ReactNode;
+  title?: string;
   description?: string;
   keywords?: string;
   ogImage?: string;

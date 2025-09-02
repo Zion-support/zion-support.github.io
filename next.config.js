@@ -32,13 +32,14 @@ eslint: {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-/\.backup/,
+        /\.backup/,
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+        /^components\//,  // Exclude root components directory
       ],
     });
     

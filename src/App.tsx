@@ -1,1 +1,8 @@
-import React, { Suspense, lazy, useState } from 'react'; import { Routes, Route } from 'react-router-dom'; import { ErrorBoundary } from 'react-error-boundary';''
+import React from 'react';
+import HomePage from './pages/index';
+
+const App: React.FC = () => {
+  return <HomePage />;
+};
+
+export default App;
