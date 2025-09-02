@@ -35,6 +35,7 @@ const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
 
 // Service pages
+const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices2025'));
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const CloudServices = createLazyComponent(() => import('./pages/CloudServices'));
 const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'));
@@ -80,6 +81,7 @@ function App() {
                 <Route path="/events" element={<News />} />
 {/* Services */}
                 <Route path="/services" element={<Services />} />
+                <Route path="/comprehensive-services-2025" element={<ComprehensiveServices />} />
                 <Route path="/enterprise" element={<Enterprise />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/services/ai" element={<AIServices />} />
