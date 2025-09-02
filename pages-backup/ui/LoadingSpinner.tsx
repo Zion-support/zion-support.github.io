@@ -1,11 +1,9 @@
 
 
-
 type LoadingSpinnerProps = {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string};
-
 
       "
       <span className="sr-only">Loading...</span>
@@ -15,15 +13,12 @@ type LoadingSpinnerProps = {
 // Enhanced loading spinner with dots
 export function LoadingDots({
 
-
   size = 'md',
   color = 'text-cyan-400',
   text,
   className = ''
 }: LoadingSpinnerProps) {
 
-  
-  
   return()`
     <div className={`flex flex-col items-center justify-center ${className}`}>"
       <div className="flex space-x-2">
@@ -66,7 +61,6 @@ export function LoadingDots({
 // Skeleton loading component
 export function LoadingSkeleton({
 
-
   lines = 3,
   className = ''
 }: {
@@ -94,7 +88,6 @@ export function LoadingSkeleton({
 
 // Button loading state
 export function ButtonLoader({
-
 
   size = 'md',
   className = '' 
@@ -183,7 +176,6 @@ export function ContentPlaceholder({
   className?: string;
   variant?: 'default' | 'card' | 'list' | 'grid'}) {
 
-  
   return()`
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
@@ -247,7 +239,6 @@ export function ContentPlaceholder({
 // Enhanced app loading spinner for main app loading
 export function AppLoadingSpinner() {
 
-  
   return ("
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="relative">
@@ -330,7 +321,6 @@ export function AppLoadingSpinner() {
     </div>
   )}
 '"`
-=======
 export default function LoadingSpinner({ size = 'md', className = '', text }: LoadingSpinnerProps) {
   const sizeClasses: Record<string, string> = {
     sm: 'w-6 h-6',

@@ -11,7 +11,7 @@ const crypto = require('crypto');
 ;
 class FileIntegrityMonitor {;
   constructor() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.projectRoot = process.cwd();
     this.integrityChecks = 0;
     this.issuesFound = 0;
@@ -27,7 +27,7 @@ class FileIntegrityMonitor {;
     this.startMonitoring();
 ;
   ensureLogsDirectory() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
@@ -49,7 +49,7 @@ class FileIntegrityMonitor {;
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async startMonitoring() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.log('Starting file integrity monitoring...');
 ;
     // Schedule regular integrity checks;
@@ -75,7 +75,7 @@ class FileIntegrityMonitor {;
     this.log('File integrity monitoring started successfully');
 ;
   async performIntegrityCheck() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     if (this.monitoring) return;
 ;
     this.monitoring = true;
@@ -93,7 +93,7 @@ class FileIntegrityMonitor {;
       this.integrityChecks++;
 ;
     } catch (error) {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
       this.log(`Integrity check failed: ${error.message}`, 'ERROR');
     } finally {;
       this.monitoring = false;
@@ -218,7 +218,7 @@ class FileIntegrityMonitor {;
         'package.json',;
         'vite.config.ts',;
         'src/main.tsx';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
       ];
 ;
       for (const file of criticalFiles) {;
@@ -747,7 +747,7 @@ export default {;
     this.log('Cleaning up old files...');
 ;
     try {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
       const logsDir = path.join(this.projectRoot, 'logs');
       if (fs.existsSync(logsDir)) {;
         const files = fs.readdirSync(logsDir);
@@ -756,7 +756,7 @@ export default {;
 ;
         for (const file of files) {;
           if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
             const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
 ;
@@ -831,7 +831,7 @@ export default {;
 ;
   async stop() {;
     this.log('Stopping file integrity monitor...');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.monitoring = false;
     this.log('File integrity monitoring stopped');
   }
@@ -874,4 +874,4 @@ setInterval(() => {;
   monitor.log(`Monitor heartbeat - Checks: ${stats.integrityChecks}, Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 1800000); // Every 30 minutes;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+

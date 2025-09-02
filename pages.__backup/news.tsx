@@ -72,8 +72,7 @@ const NewsPage: React.FC = () => {
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react';
 import Link from 'next/link';
-=======
-  return (
+return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
         <Head>
@@ -145,7 +144,6 @@ import Link from 'next/link';
       readTime: "3 min read",
       image: "/images/news/financial-award.jpg",
       tags: ["Awards", "Financial Services", "Quantum Computing"]
-=======
 export default function News() {
   const featuredNews = [
     {
@@ -158,7 +156,6 @@ export default function News() {
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
       tags: ['AI', 'Quantum Computing', 'Innovation'],
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -420,8 +417,7 @@ export default function News() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-=======
-    'All News',
+'All News',
     'Company News',
     'Partnerships',
     'AI & Ethics',
@@ -727,8 +723,7 @@ export default function News() {
       </section>
 
 }
-=======
-                    <div className="flex items-center gap-3 mb-4">
+<div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>
                         {categories.find(c => c.id === article.category)?.name}
                       </span>
@@ -990,8 +985,7 @@ export default function News() {
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
                 Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1160,8 +1154,7 @@ export default function News() {
               <p className="text-xl text-gray-300 mb-8">
                 For press inquiries, media interviews, or additional information, 
                 please contact our communications team.
-=======
-              </p>
+</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -1175,8 +1168,7 @@ export default function News() {
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
                   Press Kit
-=======
-                </a>
+</a>
               </div>
             </motion.div>
           </div>
@@ -1217,12 +1209,10 @@ export default function News() {
         </div>
       </section>
     </div>
-=======
-    </UltraAdvancedFuturisticBackground>
+</UltraAdvancedFuturisticBackground>
   );
 }
-=======
-      {/* Call to Action */}
+{/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div 
@@ -1252,8 +1242,7 @@ export default function News() {
     </div>
   );
 }
-=======
-      title: "Partnership with TechCorp Announced for Cloud Infrastructure",
+title: "Partnership with TechCorp Announced for Cloud Infrastructure",
       excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
       date: "2025-01-18",
       category: "Partnerships",

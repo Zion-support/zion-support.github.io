@@ -1,1 +1,0 @@
-" " " const AIWorkflowAutomation = () => {} const features = [] {} icon: Brain, title: "AI-Powered Process Analysis"," description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential"," benefits["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"] }, {} 

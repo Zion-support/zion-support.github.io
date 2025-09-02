@@ -3,10 +3,39 @@ export interface InnovativeITService2024 {
   name: string;
   tagline: string;
   price: string;
-  variant: string;
+  period: string;
+  description: string;
   features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string;
+  integrations: string;
+  useCases: string;
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
   rating: number;
-  customers: string;
+  customers: number;
+  reviews: number;
 }
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
@@ -42,7 +71,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '2 hours',
     category: 'DevOps & Infrastructure',
     realService: true,
-    technology: ['React, Node.js, Python, Kubernetes, Docker, AWS, Azure, GCP'],
+    technology: 'React, Node.js, Python, Kubernetes, Docker, AWS, Azure, GCP',
     integrations: [
       'GitHub, GitLab, Jenkins, CircleCI, AWS CodePipeline, Azure DevOps',
     ],

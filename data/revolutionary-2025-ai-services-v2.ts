@@ -36,13 +36,7 @@ export interface RevolutionaryAI2025ServiceV2 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
+reviews: number;export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
   // AI Consciousness & Advanced Intelligence
   {
     id: 'ai-consciousness-simulator-pro',
