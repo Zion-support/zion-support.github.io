@@ -25,6 +25,17 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const quickLinks = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Whitepapers', href: '/whitepapers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'Documentation', href: '/documentation' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'System Status', href: '/status' },
+  ];
+
   const serviceCategories = [
     { name: 'Micro SaaS', href: '/services/micro-saas' },
     { name: 'IT Services', href: '/services/it-services' },
@@ -91,16 +102,66 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {serviceCategories.map((category) => (
+                        <Link
+                          key={category.name}
+                          href={category.href}
+                          className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg border border-transparent hover:border-blue-100"
+                        >
+                          <div className="font-medium">{category.name}</div>
+                          <div className="text-sm text-gray-500">
+                            {category.name === 'Micro SaaS' && 'Innovative software solutions'}
+                            {category.name === 'IT Services' && 'Enterprise technology services'}
+                            {category.name === 'AI Services' && 'Artificial intelligence solutions'}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <Link
+                        href="/services"
+                        className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        View All Services
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resources Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                  Resources
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {quickLinks.slice(0, 4).map((link) => (
+                        <Link
+                          key={link.name}
+                          href={link.href}
+                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg"
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <Link
+                        href="/resources"
+                        className="block w-full text-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                      >
+                        View All Resources
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -166,6 +227,21 @@ const Header: React.FC = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Mobile Resources */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-2">Resources</div>
+                  {quickLinks.slice(0, 6).map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
                     </Link>
                   ))}
                 </div>

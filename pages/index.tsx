@@ -2,7 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -228,6 +228,171 @@ const Home: NextPage = () => {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Innovations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our newest cutting-edge solutions that are transforming industries worldwide.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '🎬',
+                title: 'AI Video Editor Pro',
+                description: 'Revolutionary AI-powered video editing that creates professional videos automatically',
+                category: 'Micro SaaS',
+                price: 'From $49/month'
+              },
+              {
+                icon: '🔍',
+                title: 'AI Code Reviewer',
+                description: 'Intelligent code analysis with security vulnerability detection and optimization suggestions',
+                category: 'Micro SaaS',
+                price: 'From $79/month'
+              },
+              {
+                icon: '🌐',
+                title: 'Metaverse Development',
+                description: 'Complete metaverse solutions including virtual worlds, avatars, and NFT marketplaces',
+                category: 'IT Services',
+                price: 'From $50,000'
+              },
+              {
+                icon: '⚛️',
+                title: 'Quantum Computing Solutions',
+                description: 'Cutting-edge quantum applications for optimization, cryptography, and scientific research',
+                category: 'Micro SaaS',
+                price: 'From $999/month'
+              },
+              {
+                icon: '🤖',
+                title: 'AI Ethical Framework',
+                description: 'Comprehensive AI ethics and governance with bias detection and fairness metrics',
+                category: 'AI Services',
+                price: 'From $20,000'
+              },
+              {
+                icon: '🔄',
+                title: 'Digital Twin Platform',
+                description: 'Virtual replicas of physical assets for simulation, monitoring, and optimization',
+                category: 'IT Services',
+                price: 'From $30,000'
+              }
+            ].map((service, index) => (
+              <motion.div 
+                key={service.title}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+                    {service.category}
+                  </span>
+                  <span className="text-sm font-bold text-green-600">{service.price}</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <Link 
+                  href="/services" 
+                  className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
+                >
+                  Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to start your next project? Contact us today for a free consultation.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div 
+              className="text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="p-4 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-purple-100 transition-colors">
+                <Phone className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600 mb-4">Speak directly with our experts</p>
+              <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700 font-semibold">
+                +1 302 464 0950
+              </a>
+            </motion.div>
+
+            <motion.div 
+              className="text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="p-4 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-purple-100 transition-colors">
+                <Mail className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your project details</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 font-semibold">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div 
+              className="text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="p-4 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 group-hover:bg-purple-100 transition-colors">
+                <MapPin className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600 mb-4">Our headquarters location</p>
+              <address className="text-blue-600 hover:text-blue-700 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </address>
+            </motion.div>
           </div>
         </div>
       </section>
