@@ -1,1 +1,0 @@
-import React from 'react'; import { Link, useLocation } from 'react-router-dom'; import { ArrowRight, Home, ChevronRight } from 'lucide-react'; const SimplePage: React.FC = () => { const location = useLocation(); const pathname = location.pathname;
