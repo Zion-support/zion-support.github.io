@@ -7,6 +7,7 @@ This document describes the **Intelligent PM2 Automation System** that has been 
 ## 🎯 What's New
 
 ### 1. **AI-Powered Code Review Automation**
+
 - **File**: `scripts/automation/ai-code-review-automation.cjs`
 - **Schedule**: Every 4 hours
 - **Purpose**: Intelligently analyzes code changes and suggests improvements
@@ -19,6 +20,7 @@ This document describes the **Intelligent PM2 Automation System** that has been 
   - Intelligent suggestion generation
 
 ### 2. **Smart Dependency Intelligence System**
+
 - **File**: `scripts/automation/smart-dependency-intelligence.cjs`
 - **Schedule**: Every 6 hours
 - **Purpose**: Predicts dependency issues and automatically optimizes package management
@@ -31,6 +33,7 @@ This document describes the **Intelligent PM2 Automation System** that has been 
   - Risk assessment and mitigation
 
 ### 3. **Predictive Issue Detection System**
+
 - **File**: `scripts/automation/predictive-issue-detection.cjs`
 - **Schedule**: Every 3 hours
 - **Purpose**: Identifies potential problems before they occur using ML patterns and historical data
@@ -43,6 +46,7 @@ This document describes the **Intelligent PM2 Automation System** that has been 
   - Historical data learning
 
 ### 4. **Intelligent Build Pipeline Management**
+
 - **File**: `scripts/automation/intelligent-build-pipeline.cjs`
 - **Schedule**: Every 8 hours
 - **Purpose**: Optimizes build processes, detects bottlenecks, and automatically adjusts build strategies
@@ -57,6 +61,7 @@ This document describes the **Intelligent PM2 Automation System** that has been 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 16+ installed
 - PM2 installed globally: `npm install -g pm2`
 - Project dependencies installed: `npm install`
@@ -64,11 +69,13 @@ This document describes the **Intelligent PM2 Automation System** that has been 
 ### Quick Start
 
 1. **Start the Intelligent Automation System**:
+
    ```bash
    pm2 start ecosystem.config.cjs
    ```
 
 2. **Monitor all automations**:
+
    ```bash
    pm2 monit
    ```
@@ -102,6 +109,7 @@ node scripts/automation/intelligent-build-pipeline.cjs
 ## 📊 Output Examples
 
 ### AI Code Review Automation Output
+
 ```json
 {
   "timestamp": "2025-01-27T10:00:00Z",
@@ -120,6 +128,7 @@ node scripts/automation/intelligent-build-pipeline.cjs
 ```
 
 ### Smart Dependency Intelligence Output
+
 ```json
 {
   "timestamp": "2025-01-27T10:00:00Z",
@@ -138,6 +147,7 @@ node scripts/automation/intelligent-build-pipeline.cjs
 ```
 
 ### Predictive Issue Detection Output
+
 ```json
 {
   "timestamp": "2025-01-27T10:00:00Z",
@@ -155,6 +165,7 @@ node scripts/automation/intelligent-build-pipeline.cjs
 ```
 
 ### Intelligent Build Pipeline Output
+
 ```json
 {
   "timestamp": "2025-01-27T10:00:00Z",
@@ -174,13 +185,17 @@ node scripts/automation/intelligent-build-pipeline.cjs
 ## 🔧 Configuration
 
 ### Environment Variables
+
 All automations use the following environment variables:
+
 - `NODE_ENV`: Set to 'production' for production deployments
 - `LOG_LEVEL`: Controls logging verbosity (default: 'info')
 - `AUTOMATION_INTERVAL`: Custom interval for specific automations
 
 ### Log Files
+
 Each automation generates detailed logs:
+
 - `./logs/ai-code-review.log` - AI code review logs
 - `./logs/smart-dependency-intelligence.log` - Dependency intelligence logs
 - `./logs/predictive-issue-detection.log` - Issue detection logs
@@ -189,6 +204,7 @@ Each automation generates detailed logs:
 ## 📈 Monitoring and Maintenance
 
 ### Real-Time Monitoring
+
 ```bash
 # Monitor all processes
 pm2 monit
@@ -201,6 +217,7 @@ pm2 status
 ```
 
 ### Log Management
+
 ```bash
 # View real-time logs
 pm2 logs
@@ -213,6 +230,7 @@ pm2 flush
 ```
 
 ### Process Management
+
 ```bash
 # Restart specific automation
 pm2 restart ai-code-review-automation
@@ -243,7 +261,9 @@ pm2 delete ai-code-review-automation
    - Adjust memory limits in ecosystem.config.cjs
 
 ### Debug Mode
+
 Enable debug logging by setting environment variables:
+
 ```bash
 export LOG_LEVEL=debug
 pm2 restart all
@@ -252,6 +272,7 @@ pm2 restart all
 ## 🔮 Future Enhancements
 
 ### Planned Features
+
 - **Advanced ML Integration**: Deep learning models for better predictions
 - **Cloud-Native Optimizations**: AWS/GCP/Azure specific optimizations
 - **Real-Time Dashboards**: Grafana integration for advanced monitoring
@@ -259,7 +280,9 @@ pm2 restart all
 - **AI Training**: Continuous learning from project patterns
 
 ### Customization
+
 The system is designed to be easily extensible:
+
 - Add new automation scripts in `scripts/automation/`
 - Configure new processes in `ecosystem.config.cjs`
 - Customize logging and monitoring as needed
@@ -267,11 +290,13 @@ The system is designed to be easily extensible:
 ## 📚 Additional Resources
 
 ### Documentation
+
 - [PM2 Official Documentation](https://pm2.keymetrics.io/docs/)
 - [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [React Performance Optimization](https://react.dev/learn/render-and-commit)
 
 ### Support
+
 - Check logs for detailed error information
 - Review PM2 process status for system health
 - Monitor automation performance metrics
@@ -279,6 +304,7 @@ The system is designed to be easily extensible:
 ## 🎉 Success Metrics
 
 ### Expected Improvements
+
 - **Code Quality**: 20-40% reduction in code quality issues
 - **Performance**: 15-30% faster build times
 - **Security**: Proactive vulnerability detection and prevention

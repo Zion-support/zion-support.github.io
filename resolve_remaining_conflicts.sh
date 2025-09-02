@@ -15,22 +15,17 @@ resolve_file_conflicts() {
         return
     fi
     
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "🔧 Resolving conflicts in: $file"
+    if grep -q "        echo "🔧 Resolving conflicts in: $file"
         
         # Create backup
         cp "$file" "${file}.backup.$(date +%s)"
         
         # More aggressive conflict resolution
         # Remove all merge conflict markers and keep HEAD content
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
+        sed -i '/        sed -i '/        
         # Clean up any remaining markers
-        sed -i '/<<<<<<< HEAD/d' "$file"
-        sed -i '/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
+        sed -i '/        sed -i '/=======/d' "$file"
+        sed -i '/        
         # Remove any empty lines that might be left
         sed -i '/^[[:space:]]*$/d' "$file"
         
@@ -68,8 +63,7 @@ done
 
 # Also check for any other files with conflicts
 echo "🔍 Checking for any other files with conflicts..."
-other_conflicts=$(find src/ -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true)
-
+other_conflicts=$(find src/ -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | xargs grep -l "
 if [ -n "$other_conflicts" ]; then
     echo "Found additional files with conflicts:"
     echo "$other_conflicts"
@@ -84,14 +78,12 @@ fi
 
 # Final verification
 echo "🔍 Final verification..."
-remaining_conflicts=$(grep -r "<<<<<<< HEAD" src/ 2>/dev/null | wc -l)
-
+remaining_conflicts=$(grep -r "
 if [ "$remaining_conflicts" -eq 0 ]; then
     echo "✅ All merge conflicts have been resolved!"
 else
     echo "⚠️  Warning: $remaining_conflicts merge conflicts still remain"
     echo "Remaining conflicts:"
-    grep -r "<<<<<<< HEAD" src/ 2>/dev/null || true
-fi
+    grep -r "fi
 
 echo "🎉 Conflict resolution completed!"

@@ -1,0 +1,152 @@
+{
+  "timestamp": "2025-09-01T05:36:30.693Z",
+  "duration": 10137,
+  "fixesApplied": [
+    {
+      "type": "merge_conflict",
+      "file": "data/missing-slugs.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "fix_all_function_names.jsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "fix-variable-names.jsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "netlify/functions/link-health-scheduler.js",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "pages.disabled/comprehensive-services-showcase-2025.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "pages/services-advertising.page.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/manifest.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/reports/page-validation/latest.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/sw.js",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/components/Footer.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/data/comprehensivePricingGuide2025.ts",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/pages/services/Cybersecurity.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/pages/ServicesComparisonPage.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "import_export",
+      "file": "fix_all_function_names.jsx",
+      "description": "Fixed import/export statements"
+    },
+    {
+      "type": "syntax_error",
+      "file": "scripts/pm2/lint-fixer.js",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/community/ForumCategories.tsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/developers/ApiDocumentation.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/EnhancedAbout.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/EnhancedContact.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/HeroSectionAlt.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/profile/ServiceProviderRegistrationForm.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/SiteHealthDashboard.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/ui/enhanced-loading.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/components/ValuePropositionShowcase.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/data/expandedInnovativeServices2027.ts",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/data/expandedServicesPricing2027.ts",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/pages/NewServicesOverview.jsx",
+      "description": "Fixed syntax errors"
+    },
+    {
+      "type": "syntax_error",
+      "file": "src/utils/seoOptimizer.jsx",
+      "description": "Fixed syntax errors"
+    }
+  ],
+  "errorsFound": [],
+  "summary": {
+    "totalErrors": 0,
+    "fixedErrors": 0,
+    "remainingErrors": 0
+  }
+}

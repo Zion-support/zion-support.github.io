@@ -1,34 +1,10 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and private areas
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Block access to admin areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
-Disallow: /server/
-Disallow: /temp_working/
-Disallow: /broken_files_backup/
-Disallow: /automation/
-Disallow: /scripts/
-Disallow: /hooks/
-Disallow: /utils/
-Disallow: /types/
-Disallow: /lib/
-Disallow: /context/
-Disallow: /hoc/
-Disallow: /mobile/
-Disallow: /stories/
-Disallow: /__tests__/
-Disallow: /tests/
-Disallow: /tests.disabled/
-Disallow: /components.disabled/
-Disallow: /src.broken/
-Disallow: /styles_backup/
-Disallow: /zion-os.disabled/
-
-
-# Crawl-delay
-Crawl-delay: 1
-
-
-
+Disallow: /_next/
+Disallow: /private/

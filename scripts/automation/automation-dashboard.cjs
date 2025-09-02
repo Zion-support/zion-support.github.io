@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Zion Tech Group - PM2 Automation Dashboard
@@ -19,19 +19,19 @@ class AutomationDashboard {
       errored: 0,
       stopped: 0,
       totalMemory: 0,
-      totalCPU: 0
+      totalCPU: 0,
     };
   }
 
   async initialize() {
     return new Promise((resolve, reject) => {
-      pm2.connect((err) => {
+      pm2.connect(err => {
         if (err) {
           console.error(chalk.red('❌ Failed to connect to PM2'));
           reject(err);
           return;
         }
-        console.log(chalk.green('✅ Connected to PM2'));
+        console.log(`chalk.green('✅ Connected to PM2'));
         resolve();
       });
     });
@@ -55,37 +55,46 @@ class AutomationDashboard {
     this.stats = {
       total: this.processes.length,
       online: this.processes.filter(p => p.pm2_env.status === 'online').length,
-      errored: this.processes.filter(p => p.pm2_env.status === 'errored').length,
-      stopped: this.processes.filter(p => p.pm2_env.status === 'stopped').length,
-      totalMemory: this.processes.reduce((sum, p) => sum + (p.monit.memory || 0), 0),
-      totalCPU: this.processes.reduce((sum, p) => sum + (p.monit.cpu || 0), 0)
+      errored: this.processes.filter(p => p.pm2_env.status === 'errored')
+        .length,
+      stopped: this.processes.filter(p => p.pm2_env.status === 'stopped')
+        .length,
+      totalMemory: this.processes.reduce(
+        (sum, p) => sum + (p.monit.memory || 0),
+        0
+      ),
+      totalCPU: this.processes.reduce((sum, p) => sum + (p.monit.cpu || 0), 0),
     };
   }
 
   displayHeader() {
-    console.log('\n' + '='.repeat(80));
-    console.log(chalk.cyan.bold('🚀 Zion Tech Group - PM2 Automation Dashboard'));
-    console.log(chalk.gray('Real-time monitoring and control of automation processes'));
+    console.log(`'\n' + '='.repeat(80));
+    console.log(`
+      chalk.cyan.bold('🚀 Zion Tech Group - PM2 Automation Dashboard')
+    );
+    console.log(
+      chalk.gray('Real-time monitoring and control of automation processes')
+    );
     console.log('='.repeat(80));
   }
 
   displayStats() {
     const statsTable = new Table({
-      head: [
-        chalk.cyan('Metric'),
-        chalk.cyan('Value'),
-        chalk.cyan('Status')
-      ],
-      colWidths: [30, 20, 30]
+      head: ['chalk.cyan('Metric')', 'chalk.cyan('Value')', 'chalk.cyan('Status')'],
+      colWidths: ['30', '20', '30'],
     });
 
     statsTable.push(
-      ['Total Processes', this.stats.total.toString(), this.getStatusIcon('total')],
-      ['Online Processes', this.stats.online.toString(), chalk.green('✅ Running')],
-      ['Errored Processes', this.stats.errored.toString(), this.stats.errored > 0 ? chalk.red('❌ Issues') : chalk.green('✅ Clean')],
-      ['Stopped Processes', this.stats.stopped.toString(), this.stats.stopped > 0 ? chalk.yellow('⚠️  Stopped') : chalk.green('✅ All Running')],
-      ['Total Memory Usage', this.formatBytes(this.stats.totalMemory), this.getMemoryStatus()],
-      ['Total CPU Usage', this.stats.totalCPU.toFixed(1) + '%', this.getCPUStatus()]
+      ['Total Processes'', 'this.stats.total.toString()', 'this.getStatusIcon('total')', ''],
+      ['Online Processes'', 'this.stats.online.toString()', 'chalk.green('✅ Running')', ''],
+      ['Errored Processes'', 'this.stats.errored.toString()', 'this.stats.errored > 0
+          ? chalk.red('❌ Issues')
+          : chalk.green('✅ Clean')', ''],
+      ['Stopped Processes'', 'this.stats.stopped.toString()', 'this.stats.stopped > 0
+          ? chalk.yellow('⚠️  Stopped')
+          : chalk.green('✅ All Running')', ''],
+      ['Total Memory Usage'', 'this.formatBytes(this.stats.totalMemory)', 'this.getMemoryStatus()', ''],
+      ['Total CPU Usage', 'this.stats.totalCPU.toFixed(1) + '%'', 'this.getCPUStatus()', '']
     );
 
     console.log('\n' + chalk.blue.bold('📊 System Statistics:'));
@@ -124,16 +133,8 @@ class AutomationDashboard {
 
   displayProcessTable() {
     const table = new Table({
-      head: [
-        chalk.cyan('ID'),
-        chalk.cyan('Name'),
-        chalk.cyan('Status'),
-        chalk.cyan('Memory'),
-        chalk.cyan('CPU'),
-        chalk.cyan('Uptime'),
-        chalk.cyan('Restarts')
-      ],
-      colWidths: [5, 25, 12, 12, 8, 15, 10]
+      head: ['chalk.cyan('ID')', 'chalk.cyan('Name')', 'chalk.cyan('Status')', 'chalk.cyan('Memory')', 'chalk.cyan('CPU')', 'chalk.cyan('Uptime')', 'chalk.cyan('Restarts')', ''],
+      colWidths: ['5', '25', '12', '12', '8', '15', '10'],
     });
 
     this.processes.forEach(process => {
@@ -143,15 +144,7 @@ class AutomationDashboard {
       const uptime = this.formatUptime(process.pm2_env.pm_uptime);
       const restarts = process.pm2_env.restart_time || 0;
 
-      table.push([
-        process.pm_id.toString(),
-        chalk.white(process.name),
-        status,
-        memory,
-        cpu,
-        uptime,
-        restarts.toString()
-      ]);
+      table.push(['process.pm_id.toString()', 'chalk.white(process.name)', 'status', 'memory', 'cpu', 'uptime', 'restarts.toString()', '']);
     });
 
     console.log('\n' + chalk.blue.bold('🔄 Process Status:'));
@@ -174,21 +167,18 @@ class AutomationDashboard {
   }
 
   formatUptime(uptime) {
-    if (!uptime) return 'N/A';
+    if (!uptime) return '''N/A''';
     const seconds = Math.floor(uptime / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
 
-    if (days > 0) return `${days}d ${hours % 24}h`;
-    if (hours > 0) return `${hours}h ${minutes % 60}m`;
-    if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
-    return `${seconds}s`;
+    if (days > 0) return ${days}d ${hours % 24}h;if (hours > 0) return ${hours}h ${minutes % 60}m;if (minutes > 0`) return `${minutes}m ${seconds % 60}s`;return `${seconds}s`;
   }
 
   async restartProcess(processName) {
     return new Promise((resolve, reject) => {
-      pm2.restart(processName, (err) => {
+      pm2.restart(processName, err => {
         if (err) {
           reject(err);
           return;
@@ -200,7 +190,7 @@ class AutomationDashboard {
 
   async stopProcess(processName) {
     return new Promise((resolve, reject) => {
-      pm2.stop(processName, (err) => {
+      pm2.stop(processName, err => {
         if (err) {
           reject(err);
           return;
@@ -212,7 +202,7 @@ class AutomationDashboard {
 
   async startProcess(processName) {
     return new Promise((resolve, reject) => {
-      pm2.start(processName, (err) => {
+      pm2.start(processName, err => {
         if (err) {
           reject(err);
           return;
@@ -224,7 +214,9 @@ class AutomationDashboard {
 
   displayCommands() {
     console.log('\n' + chalk.blue.bold('🎮 Available Commands:'));
-    console.log(chalk.gray('  restart <process>  - Restart a specific process'));
+    console.log(
+      chalk.gray('  restart <process>  - Restart a specific process')
+    );
     console.log(chalk.gray('  stop <process>     - Stop a specific process'));
     console.log(chalk.gray('  start <process>    - Start a specific process'));
     console.log(chalk.gray('  refresh            - Refresh process list'));
@@ -235,10 +227,10 @@ class AutomationDashboard {
   async run() {
     try {
       await this.initialize();
-      
+
       while (true) {
         await this.getProcessList();
-        
+
         this.displayHeader();
         this.displayStats();
         this.displayProcessTable();

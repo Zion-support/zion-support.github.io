@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Project Health Dashboard - PM2 Automation
@@ -12,7 +12,10 @@ const { execSync } = require('child_process');
 class ProjectHealthDashboard {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs', 'project-health-dashboard.log');
+    this.logFile = path.join(
+      this.projectRoot,logs',
+      'project-health-dashboard.log'
+    );
     this.dashboardDir = path.join(this.projectRoot, 'logs', 'health-dashboard');
     this.ensureLogsDirectory();
   }
@@ -22,7 +25,7 @@ class ProjectHealthDashboard {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-    
+
     if (!fs.existsSync(this.dashboardDir)) {
       fs.mkdirSync(this.dashboardDir, { recursive: true });
     }
@@ -31,30 +34,27 @@ class ProjectHealthDashboard {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async generateHealthDashboard() {
     this.log('Generating comprehensive project health dashboard...');
-    
+
     try {
       // 1. Collect all health data
       const healthData = await this.collectHealthData();
-      
+
       // 2. Generate dashboard HTML
       const dashboardHtml = this.generateDashboardHtml(healthData);
-      
+
       // 3. Save dashboard files
       await this.saveDashboardFiles(dashboardHtml, healthData);
-      
+
       // 4. Generate summary report
       await this.generateSummaryReport(healthData);
-      
+
       this.log('Health dashboard generated successfully');
-      
-    } catch (error) {
-      this.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -65,19 +65,19 @@ class ProjectHealthDashboard {
         name: this.getProjectName(),
         version: this.getProjectVersion(),
         lastCommit: this.getLastCommit(),
-        branch: this.getCurrentBranch()
+        branch: this.getCurrentBranch(),
       },
       dependencies: await this.getDependencyHealth(),
       typescript: await this.getTypeScriptHealth(),
       build: await this.getBuildHealth(),
       files: await this.getFileHealth(),
       pm2: await this.getPM2Health(),
-      recommendations: []
+      recommendations: [],
     };
 
     // Generate recommendations based on health data
     healthData.recommendations = this.generateRecommendations(healthData);
-    
+
     return healthData;
   }
 
@@ -88,8 +88,7 @@ class ProjectHealthDashboard {
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
         return packageJson.name || 'Unknown';
       }
-    } catch (error) {
-      this.log(`Failed to get project name: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to get project name: ${error.message}`, 'WARN');
     }
     return 'Unknown';
   }
@@ -101,18 +100,17 @@ class ProjectHealthDashboard {
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
         return packageJson.version || 'Unknown';
       }
-    } catch (error) {
-      this.log(`Failed to get project version: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to get project version: ${error.message}`, 'WARN');
     }
     return 'Unknown';
   }
 
   getLastCommit() {
     try {
-      const result = execSync('git log -1 --format="%H %s %an %ad"', { 
-        cwd: this.projectRoot, 
+      const result = execSync('git log -1 --format="%H %s %an %ad"', {
+        cwd: this.projectRoot,
         stdio: 'pipe',
-        encoding: 'utf8'
+        encoding: 'utf8',
       });
       return result.trim();
     } catch (error) {
@@ -122,10 +120,10 @@ class ProjectHealthDashboard {
 
   getCurrentBranch() {
     try {
-      const result = execSync('git branch --show-current', { 
-        cwd: this.projectRoot, 
+      const result = execSync('git branch --show-current', {
+        cwd: this.projectRoot,
         stdio: 'pipe',
-        encoding: 'utf8'
+        encoding: 'utf8',
       });
       return result.trim();
     } catch (error) {
@@ -139,7 +137,7 @@ class ProjectHealthDashboard {
       issues: [],
       totalDeps: 0,
       outdatedDeps: 0,
-      corruptedDeps: 0
+      corruptedDeps: 0,
     };
 
     try {
@@ -149,12 +147,12 @@ class ProjectHealthDashboard {
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
         const deps = packageJson.dependencies || {};
         const devDeps = packageJson.devDependencies || {};
-        health.totalDeps = Object.keys(deps).length + Object.keys(devDeps).length;
-        
+        health.totalDeps =
+          Object.keys(deps).length + Object.keys(devDeps).length;
+
         // Check for invalid versions
-        for (const [dep, version] of Object.entries(deps)) {
-          if (typeof version !== 'string' || version.trim() === '') {
-            health.issues.push(`Invalid version for ${dep}: ${version}`);
+        for (const ['dep', 'version'] of Object.entries(deps)) {
+          if (typeof version !== 'string' || version.trim() === '') {health.issues.push(`Invalid version for ${dep}: ${version}`);
           }
         }
       }
@@ -164,9 +162,8 @@ class ProjectHealthDashboard {
       if (fs.existsSync(nodeModulesPath)) {
         const corrupted = await this.findCorruptedPackages(nodeModulesPath);
         health.corruptedDeps = corrupted.length;
-        
-        if (corrupted.length > 0) {
-          health.issues.push(`Found ${corrupted.length} corrupted packages`);
+
+        if (corrupted.length > 0) {health.issues.push(`Found ${corrupted.length} corrupted packages`);
         }
       } else {
         health.issues.push('node_modules directory not found');
@@ -176,9 +173,8 @@ class ProjectHealthDashboard {
       try {
         const outdated = await this.checkOutdatedDependencies();
         health.outdatedDeps = outdated.length;
-        
-        if (outdated.length > 0) {
-          health.issues.push(`Found ${outdated.length} outdated dependencies`);
+
+        if (outdated.length > 0) {health.issues.push(`Found ${outdated.length} outdated dependencies`);
         }
       } catch (error) {
         // npm outdated returns non-zero when there are outdated deps
@@ -192,9 +188,7 @@ class ProjectHealthDashboard {
       } else if (health.issues.length > 0) {
         health.status = 'WARNING';
       }
-
-    } catch (error) {
-      health.issues.push(`Dependency check failed: ${error.message}`);
+    } catch (error) {health.issues.push(`Dependency check failed: ${error.message}`);
       health.status = 'ERROR';
     }
 
@@ -203,16 +197,16 @@ class ProjectHealthDashboard {
 
   async findCorruptedPackages(nodeModulesPath) {
     const corrupted = [];
-    
+
     try {
       const packages = fs.readdirSync(nodeModulesPath);
-      
+
       for (const pkg of packages) {
         if (pkg.startsWith('.')) continue;
-        
+
         const pkgPath = path.join(nodeModulesPath, pkg);
         const pkgJsonPath = path.join(pkgPath, 'package.json');
-        
+
         if (fs.existsSync(pkgJsonPath)) {
           try {
             const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8'));
@@ -226,21 +220,20 @@ class ProjectHealthDashboard {
           corrupted.push(pkg);
         }
       }
-    } catch (error) {
-      this.log(`Error scanning packages: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Error scanning packages: ${error.message}`, 'WARN');
     }
-    
+
     return corrupted;
   }
 
   async checkOutdatedDependencies() {
     try {
-      const result = execSync('npm outdated --json', { 
-        cwd: this.projectRoot, 
+      const result = execSync('npm outdated --json', {
+        cwd: this.projectRoot,
         stdio: 'pipe',
-        encoding: 'utf8'
+        encoding: 'utf8',
       });
-      
+
       const outdated = JSON.parse(result);
       return Object.keys(outdated);
     } catch (error) {
@@ -262,11 +255,11 @@ class ProjectHealthDashboard {
       errors: 0,
       warnings: 0,
       files: 0,
-      issues: []
+      issues: [],
     };
 
     try {
-      // Count TypeScript/TSX files
+      // Count ''TypeScript/TSX'' files
       const srcPath = path.join(this.projectRoot, 'src');
       if (fs.existsSync(srcPath)) {
         health.files = await this.countTypeScriptFiles(srcPath);
@@ -274,30 +267,30 @@ class ProjectHealthDashboard {
 
       // Run type check
       try {
-        execSync('npm run type-check', { 
-          cwd: this.projectRoot, 
-          stdio: 'pipe' 
+        execSync('npm run type-check', {
+          cwd: this.projectRoot,
+          stdio: 'pipe',
         });
         health.status = 'HEALTHY';
       } catch (error) {
         const output = error.stdout || error.stderr || '';
-        const errorMatches = output.match(/error TS/g) || [];
-        const warningMatches = output.match(/warning TS/g) || [];
-        
+        const errorMatches = output.match(/error ''TS/g'') || [];
+        const warningMatches = output.match(/warning ''TS/g'') || [];
+
         health.errors = errorMatches.length;
         health.warnings = warningMatches.length;
-        
+
         if (health.errors > 0) {
           health.status = 'ERROR';
-          health.issues.push(`TypeScript compilation failed with ${health.errors} errors`);
+          health.issues.push(TypeScript compilation failed with ${health.errors} errors'
+          );
         } else if (health.warnings > 0) {
           health.status = 'WARNING';
-          health.issues.push(`TypeScript compilation succeeded with ${health.warnings} warnings`);
+          health.issues.push(TypeScript compilation succeeded with ${health.warnings} warnings'
+          );
         }
       }
-
-    } catch (error) {
-      health.issues.push(`TypeScript check failed: ${error.message}`);
+    } catch (error) {health.issues.push(`TypeScript check failed: ${error.message}`);
       health.status = 'ERROR';
     }
 
@@ -306,23 +299,30 @@ class ProjectHealthDashboard {
 
   async countTypeScriptFiles(dir) {
     let count = 0;
-    
+
     try {
       const items = fs.readdirSync(dir, { withFileTypes: true });
-      
+
       for (const item of items) {
         const fullPath = path.join(dir, item.name);
-        
-        if (item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules') {
+
+        if (
+          item.isDirectory() &&
+          !item.name.startsWith('.') &&
+          item.name !== 'node_modules'
+        ) {
           count += await this.countTypeScriptFiles(fullPath);
-        } else if (item.isFile() && (item.name.endsWith('.ts') || item.name.endsWith('.tsx'))) {
+        } else if (
+          item.isFile() &&
+          (item.name.endsWith('.ts') || item.name.endsWith('.tsx'))
+        ) {
           count++;
         }
       }
     } catch (error) {
       // Skip inaccessible directories
     }
-    
+
     return count;
   }
 
@@ -331,7 +331,7 @@ class ProjectHealthDashboard {
       status: 'UNKNOWN',
       issues: [],
       buildTime: null,
-      bundleSize: null
+      bundleSize: null,
     };
 
     try {
@@ -339,7 +339,7 @@ class ProjectHealthDashboard {
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-        
+
         if (!packageJson.scripts || !packageJson.scripts.build) {
           health.issues.push('Build script not found in package.json');
         }
@@ -348,11 +348,11 @@ class ProjectHealthDashboard {
       // Check build configuration files
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
-      
+
       if (!fs.existsSync(viteConfigPath)) {
         health.issues.push('Vite configuration not found');
       }
-      
+
       if (!fs.existsSync(tsConfigPath)) {
         health.issues.push('TypeScript configuration not found');
       }
@@ -360,19 +360,16 @@ class ProjectHealthDashboard {
       // Try to run build
       try {
         const startTime = Date.now();
-        execSync('npm run build', { 
-          cwd: this.projectRoot, 
-          stdio: 'pipe' 
+        execSync('npm run build', {
+          cwd: this.projectRoot,
+          stdio: 'pipe',
         });
         health.buildTime = Date.now() - startTime;
         health.status = 'HEALTHY';
-      } catch (error) {
-        health.issues.push(`Build failed: ${error.message}`);
+      } catch (error) {health.issues.push(`Build failed: ${error.message}`);
         health.status = 'ERROR';
       }
-
-    } catch (error) {
-      health.issues.push(`Build health check failed: ${error.message}`);
+    } catch (error) {health.issues.push(`Build health check failed: ${error.message}`);
       health.status = 'ERROR';
     }
 
@@ -385,7 +382,7 @@ class ProjectHealthDashboard {
       totalFiles: 0,
       corruptedFiles: 0,
       backupFiles: 0,
-      issues: []
+      issues: [],
     };
 
     try {
@@ -394,18 +391,18 @@ class ProjectHealthDashboard {
       if (fs.existsSync(srcPath)) {
         const corrupted = await this.scanForCorruptedFiles(srcPath);
         health.corruptedFiles = corrupted.length;
-        
+
         if (corrupted.length > 0) {
-          health.issues.push(`Found ${corrupted.length} corrupted source files`);
+          health.issues.push(Found ${corrupted.length} corrupted source files'
+          );
         }
       }
 
       // Find backup files
       const backupFiles = await this.findBackupFiles();
       health.backupFiles = backupFiles.length;
-      
-      if (backupFiles.length > 0) {
-        health.issues.push(`Found ${backupFiles.length} backup files`);
+
+      if (backupFiles.length > 0) {health.issues.push(`Found ${backupFiles.length} backup files`);
       }
 
       // Count total files
@@ -419,9 +416,7 @@ class ProjectHealthDashboard {
       } else if (health.issues.length > 0) {
         health.status = 'WARNING';
       }
-
-    } catch (error) {
-      health.issues.push(`File health check failed: ${error.message}`);
+    } catch (error) {health.issues.push(`File health check failed: ${error.message}`);
       health.status = 'ERROR';
     }
 
@@ -430,24 +425,29 @@ class ProjectHealthDashboard {
 
   async scanForCorruptedFiles(dir) {
     const corrupted = [];
-    
+
     try {
       const files = fs.readdirSync(dir, { withFileTypes: true });
-      
+
       for (const file of files) {
         const fullPath = path.join(dir, file.name);
-        
+
         if (file.isDirectory()) {
-          corrupted.push(...await this.scanForCorruptedFiles(fullPath));
-        } else if (file.isFile() && (file.name.endsWith('.tsx') || file.name.endsWith('.ts'))) {
+          corrupted.push(...(await this.scanForCorruptedFiles(fullPath)));
+        } else if (
+          file.isFile() &&
+          (file.name.endsWith('.tsx') || file.name.endsWith('.ts'))
+        ) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            
+
             // Check for corruption patterns
-            if (content.includes('import: {') || 
-                content.includes('const:') ||
-                content.includes('from,') ||
-                content.includes('}, from,')) {
+            if (
+              content.includes('import: {') ||
+              content.includes('const:') ||
+              content.includes('from,') ||
+              content.includes('}, from,')
+            ) {
               corrupted.push(fullPath);
             }
           } catch (error) {
@@ -455,26 +455,19 @@ class ProjectHealthDashboard {
           }
         }
       }
-    } catch (error) {
-      this.log(`Error scanning directory ${dir}: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Error scanning directory ${dir}: ${error.message}`, 'WARN');
     }
-    
+
     return corrupted;
   }
 
   async findBackupFiles() {
     const backupFiles = [];
-    const backupPatterns = [
-      '*.backup.*',
-      '*.old.*',
-      '*.bak',
-      '*_backup.*',
-      '*_old.*'
-    ];
-    
+    const backupPatterns = ['*.backup.*'', '*.old.*', '*.bak'', '*_backup.*', '*_old.*'', ''];
+
     try {
       const allFiles = await this.getAllFiles(this.projectRoot);
-      
+
       for (const file of allFiles) {
         const fileName = path.basename(file);
         for (const pattern of backupPatterns) {
@@ -484,24 +477,27 @@ class ProjectHealthDashboard {
           }
         }
       }
-    } catch (error) {
-      this.log(`Error finding backup files: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Error finding backup files: ${error.message}`, 'WARN');
     }
-    
+
     return backupFiles;
   }
 
   async getAllFiles(dir) {
     const files = [];
-    
+
     try {
       const items = fs.readdirSync(dir, { withFileTypes: true });
-      
+
       for (const item of items) {
         const fullPath = path.join(dir, item.name);
-        
-        if (item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules') {
-          files.push(...await this.getAllFiles(fullPath));
+
+        if (
+          item.isDirectory() &&
+          !item.name.startsWith('.') &&
+          item.name !== 'node_modules'
+        ) {
+          files.push(...(await this.getAllFiles(fullPath)));
         } else if (item.isFile()) {
           files.push(fullPath);
         }
@@ -509,7 +505,7 @@ class ProjectHealthDashboard {
     } catch (error) {
       // Skip directories we can't access
     }
-    
+
     return files;
   }
 
@@ -517,20 +513,23 @@ class ProjectHealthDashboard {
     const regex = pattern
       .replace(/\./g, '\\.')
       .replace(/\*/g, '.*')
-      .replace(/\?/g, '.');
-    return new RegExp(`^${regex}$`).test(fileName);
+      .replace(/\?/g, '.');return new RegExp(`^${regex}$`).test(fileName);
   }
 
   async countTotalFiles(dir) {
     let count = 0;
-    
+
     try {
       const items = fs.readdirSync(dir, { withFileTypes: true });
-      
+
       for (const item of items) {
         const fullPath = path.join(dir, item.name);
-        
-        if (item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules') {
+
+        if (
+          item.isDirectory() &&
+          !item.name.startsWith('.') &&
+          item.name !== 'node_modules'
+        ) {
           count += await this.countTotalFiles(fullPath);
         } else if (item.isFile()) {
           count++;
@@ -539,7 +538,7 @@ class ProjectHealthDashboard {
     } catch (error) {
       // Skip inaccessible directories
     }
-    
+
     return count;
   }
 
@@ -547,36 +546,35 @@ class ProjectHealthDashboard {
     const health = {
       status: 'UNKNOWN',
       processes: [],
-      issues: []
+      issues: [],
     };
 
     try {
       // Get PM2 process list
-      const result = execSync('pm2 list --json', { 
+      const result = execSync('pm2 list --json', {
         stdio: 'pipe',
-        encoding: 'utf8'
+        encoding: 'utf8',
       });
-      
+
       const processes = JSON.parse(result);
       health.processes = processes;
-      
+
       // Check for issues
       for (const process of processes) {
-        if (process.pm2_env.status === 'errored') {
-          health.issues.push(`Process ${process.name} is in error state`);
+        if (process.pm2_env.status === 'errored') {health.issues.push(`Process ${process.name} is in error state');
         }
-        
+
         if (process.pm2_env.restart_time > 10) {
-          health.issues.push(`Process ${process.name} has restarted ${process.pm2_env.restart_time} times`);
+          health.issues.push(Process ${process.name} has restarted ${process.pm2_env.restart_time} times'
+          );
         }
       }
-      
+
       if (health.issues.length === 0) {
         health.status = 'HEALTHY';
       } else {
         health.status = 'WARNING';
       }
-
     } catch (error) {
       health.issues.push(`PM2 health check failed: ${error.message}`);
       health.status = 'ERROR';
@@ -587,44 +585,50 @@ class ProjectHealthDashboard {
 
   generateRecommendations(healthData) {
     const recommendations = [];
-    
+
     // Dependency recommendations
     if (healthData.dependencies.status === 'CRITICAL') {
-      recommendations.push('Remove corrupted node_modules and package-lock.json, then run npm install');
+      recommendations.push(Remove corrupted node_modules and package-lock.json, then run npm install'
+      );
     }
-    
+
     if (healthData.dependencies.outdatedDeps > 0) {
-      recommendations.push(`Update ${healthData.dependencies.outdatedDeps} outdated dependencies`);
+      recommendations.push( `Update ${healthData.dependencies.outdatedDeps} outdated dependencies'
+      );
     }
-    
+
     // TypeScript recommendations
     if (healthData.typescript.errors > 0) {
-      recommendations.push(`Fix ${healthData.typescript.errors} TypeScript compilation errors`);
+      recommendations.push(Fix ${healthData.typescript.errors} TypeScript compilation errors'
+      );
     }
-    
+
     // Build recommendations
     if (healthData.build.status === 'ERROR') {
       recommendations.push('Fix build configuration issues');
     }
-    
+
     // File recommendations
     if (healthData.files.corruptedFiles > 0) {
-      recommendations.push(`Fix ${healthData.files.corruptedFiles} corrupted source files`);
+      recommendations.push(Fix ${healthData.files.corruptedFiles} corrupted source files'
+      );
     }
-    
+
     if (healthData.files.backupFiles > 0) {
-      recommendations.push(`Clean up ${healthData.files.backupFiles} backup files`);
+      recommendations.push(
+        `Clean up ${healthData.files.backupFiles} backup files'
+      );
     }
-    
+
     if (recommendations.length === 0) {
-      recommendations.push('Project appears healthy, no immediate action required');
+      recommendations.push(Project appears healthy, no immediate action required'
+      );
     }
-    
+
     return recommendations;
   }
 
-  generateDashboardHtml(healthData) {
-    return `
+  generateDashboardHtml(healthData) {return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -710,10 +714,13 @@ class ProjectHealthDashboard {
                     <span>Status:</span>
                     <span class="metric-value">${healthData.build.status}</span>
                 </div>
-                ${healthData.build.buildTime ? `<div class="metric">
+                ${
+                  healthData.build.buildTime
+                    ? `<div class="metric">
                     <span>Build Time:</span>
-                    <span class="metric-value">${healthData.build.buildTime}ms</span>
-                </div>` : ''}
+                    <span class="metric-value">${healthData.build.buildTime}ms</span></div>`
+                    : ''
+                }
                 ${this.renderIssues(healthData.build.issues)}
             </div>
             
@@ -761,15 +768,14 @@ class ProjectHealthDashboard {
             Generated at: ${new Date(healthData.timestamp).toLocaleString()}
         </div>
     </div>
-</body>
-</html>`;
+</body></html>`;
   }
 
   renderIssues(issues) {
     if (!issues || issues.length === 0) {
       return '<div class="issues-list"><div class="issue" style="background: #f0fdf4; color: #059669;">✓ No issues found</div></div>';
     }
-    
+
     return `<div class="issues-list">${issues.map(issue => `<div class="issue">⚠️ ${issue}</div>`).join('')}</div>`;
   }
 
@@ -777,11 +783,11 @@ class ProjectHealthDashboard {
     // Save HTML dashboard
     const htmlFile = path.join(this.dashboardDir, 'index.html');
     fs.writeFileSync(htmlFile, dashboardHtml);
-    
+
     // Save JSON data
     const jsonFile = path.join(this.dashboardDir, 'health-data.json');
     fs.writeFileSync(jsonFile, JSON.stringify(healthData, null, 2));
-    
+
     // Save timestamp
     const timestampFile = path.join(this.dashboardDir, 'last-updated.txt');
     fs.writeFileSync(timestampFile, new Date().toISOString());
@@ -794,34 +800,27 @@ class ProjectHealthDashboard {
       summary: {
         totalIssues: this.countTotalIssues(healthData),
         criticalIssues: this.countCriticalIssues(healthData),
-        recommendations: healthData.recommendations.length
+        recommendations: healthData.recommendations.length,
       },
       components: {
         dependencies: healthData.dependencies.status,
         typescript: healthData.typescript.status,
         build: healthData.build.status,
         files: healthData.files.status,
-        pm2: healthData.pm2.status
-      }
+        pm2: healthData.pm2.status,
+      },
     };
 
     const summaryFile = path.join(this.dashboardDir, 'summary.json');
     fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));
-    
-    this.log(`Summary report generated: ${summaryFile}`);
-    
+this.log(`Summary report generated: ${summaryFile}`);
+
     return summary;
   }
 
   calculateOverallStatus(healthData) {
-    const statuses = [
-      healthData.dependencies.status,
-      healthData.typescript.status,
-      healthData.build.status,
-      healthData.files.status,
-      healthData.pm2.status
-    ];
-    
+    const statuses = ['healthData.dependencies.status', 'healthData.typescript.status', 'healthData.build.status', 'healthData.files.status', 'healthData.pm2.status', ''];
+
     if (statuses.includes('CRITICAL')) return 'CRITICAL';
     if (statuses.includes('ERROR')) return 'ERROR';
     if (statuses.includes('WARNING')) return 'WARNING';
@@ -841,10 +840,10 @@ class ProjectHealthDashboard {
 
   countCriticalIssues(healthData) {
     let count = 0;
-    
+
     if (healthData.dependencies.status === 'CRITICAL') count++;
     if (healthData.files.status === 'CRITICAL') count++;
-    
+
     return count;
   }
 }
@@ -852,12 +851,11 @@ class ProjectHealthDashboard {
 // Main execution
 async function main() {
   const dashboard = new ProjectHealthDashboard();
-  
+
   try {
     await dashboard.generateHealthDashboard();
     process.exit(0);
-  } catch (error) {
-    dashboard.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
+  } catch (error) {dashboard.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
     process.exit(1);
   }
 }

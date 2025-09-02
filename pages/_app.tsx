@@ -1,10 +1,5 @@
-import type { AppProps } from 'next/app.ts';
-import '../styles/globals.css';
-import ModernLayout from "../components/layout/ModernLayout";
+import React, { useEffect } from 'react';
 
-export default function App(...args[]):  {
-  return (
-    <ModernLayout>
-      <Component {...pageProps} />
-    </ModernLayout>
-  )}
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}

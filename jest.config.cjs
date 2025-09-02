@@ -1,17 +1,19 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js', '@testing-library/jest-dom'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom', '<rootDir>/src/test/setup.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/src/__mocks__/fileMock.js',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/src/__mocks__/fileMock.js',
     // Handle image imports
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/src/__mocks__/fileMock.js',
     // Fix path mappings with more specific ordering
     '^@/pages/api/(.*)$': '<rootDir>/pages/api/$1',
     '^@/pages/(.*)$': ['<rootDir>/pages/$1', '<rootDir>/src/pages/$1'],
-    '^@/components/ui/CategoryCard$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/components/ui/CategoryCard$':
+      '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/components/ui/(.*)$': '<rootDir>/src/components/ui/$1',
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/i18n$': '<rootDir>/tests/__mocks__/i18n.js',
@@ -73,17 +75,23 @@ module.exports = {
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
   },
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/', '/.next/', '/out/', '/tests.disabled/'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/build/',
+    '/.next/',
+    '/out/',
+    '/tests.disabled/',
+  ],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.jest.json'
-    }]
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest',
   },
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
   collectCoverage: false,
   verbose: false,
   testEnvironmentOptions: {
-    customExportConditions: ['node', 'node-addons']
-  }
+    customExportConditions: ['node', 'node-addons'],
+  },
 };
