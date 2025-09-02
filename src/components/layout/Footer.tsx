@@ -11,35 +11,35 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { name: 'AI & Machine Learning', href: '/services/ai' },
-      { name: 'Cloud Solutions', href: '/services/cloud' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
-      { name: 'Software Development', href: '/services/development' },
-      { name: 'Digital Transformation', href: '/services/transformation' },
-      { name: 'Consulting', href: '/services/consulting' }
+      { name: 'AI Services', href: '/services/ai-services' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'Web Development', href: '/services/web-development' },
+      { name: 'Cloud Services', href: '/services/cloud-services' },
+      { name: 'AI Development', href: '/services/ai-development' }
     ],
     solutions: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { name: 'Startup Solutions', href: '/solutions/startup' },
-      { name: 'Government Solutions', href: '/solutions/government' },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-      { name: 'Financial Solutions', href: '/solutions/financial' }
+      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+      { name: 'Customer Support', href: '/solutions/customer-support' },
+      { name: 'Email Automation', href: '/solutions/email-automation' },
+      { name: 'Event Management', href: '/solutions/event-management' },
+      { name: 'Project Management', href: '/solutions/project-management' },
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about#team' },
       { name: 'Careers', href: '/careers' },
       { name: 'Partners', href: '/partners' },
-      { name: 'Press', href: '/press' },
-      { name: 'Case Studies', href: '/case-studies' }
+      { name: 'Contact', href: '/contact' },
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' }
     ],
     resources: [
       { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Developer Portal', href: '/developer' },
-      { name: 'Training', href: '/training' },
-      { name: 'Support', href: '/support' }
+      { name: 'Help Center', href: '/help' },
+      { name: 'Pricing Guide', href: '/pricing-guide' },
+      { name: 'Sitemap', href: '/sitemap' },
+      { name: 'Cookie Policy', href: '/cookies' }
     ]
   };
 
