@@ -1,16 +1,16 @@
 
-/**;
- * safeConsoleError function;
+/**;*/
+ * safeConsoleError function;*/
  * @param {*} params - Function parameters;*/
  * @returns {*} Function return value;*/
  */;
-function safeConsoleError (message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production' if (env === 'development') { console.error (message, error)  } } /**;
- * safeLocalStorage function;
+function safeConsoleError (message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production' if (env === 'development') { console.error (message, error)  } } /**;*/
+ * safeLocalStorage function;*/
  * @param {*} params - Function parameters;*/
  * @returns {*} Function return value;*/
  */;
-function safeLocalStorage () { try { if (typeof window !== 'undefined' && window.localStorage) { return window.localStorage } } catch (error) { safeConsoleError ('LocalStorage not available: ', error)  } return null } /**;
- * safeSessionStorage function;
+function safeLocalStorage () { try { if (typeof window !== 'undefined' && window.localStorage) { return window.localStorage } } catch (error) { safeConsoleError ('LocalStorage not available: ', error)  } return null } /**;*/
+ * safeSessionStorage function;*/
  * @param {*} params - Function parameters;*/
  * @returns {*} Function return value;*/
  */;

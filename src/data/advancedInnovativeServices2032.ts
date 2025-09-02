@@ -5,17 +5,17 @@ export interface AdvancedInnovativeService2032 {
    category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Twin' | 'Edge AI' | 'Quantum AI' | 'Neuromorphic Computing';
    subcategory: string;
    price: number;
-   currency: string;"
+   currency: string;""
    pricingModel: 'monthly' | 'yearly' | 'project' | 'hour' | 'usage-based';
    features: string[];
    benefits: string[];
    useCases: string[];
    targetAudience: string[];
    tags: string[];
-   estimatedDelivery: string;"
+   estimatedDelivery: string;""
    supportLevel: 'basic' | 'premium' | 'enterprise' | 'dedicated';
    marketPrice: string;
-   roi: string;"
+   roi: string;""
    innovationLevel: 'Emerging' | 'Advanced' | 'Revolutionary' | 'Breakthrough';
    contactInfo: { 
    phone: string;

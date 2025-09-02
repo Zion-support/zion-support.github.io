@@ -32,8 +32,7 @@ export const useToast = () => {
   }, []);
 
   return {
-    toast,
-    dismiss,
+    toast, dismiss,
     toasts
   };
 };

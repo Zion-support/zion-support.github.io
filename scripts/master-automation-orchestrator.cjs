@@ -10,8 +10,6 @@ class MasterAutomationOrchestrator {
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
     this.ensureDirectories();
-    this.automationResults = [];
-    this.startTime = Date.now();
   }
 
   ensureDirectories() {
@@ -20,373 +18,267 @@ class MasterAutomationOrchestrator {
     }
   }
 
-  log(message, level = 'info') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-  async runAutomationScript(scriptName, scriptPath, description) {
-    this.log(`🚀 Starting: ${scriptName} - ${description}`);
-
-    const automation = {
-      name: scriptName,
-      description,
-      scriptPath,
-      startTime: Date.now(),
-      status: 'running',
-    };
-
+  async runCommand(command, description) {
+    this.log(`🚀 Starting: ${description}`);
     try {
-      const result = execSync(`node ${scriptPath}`, {
+      const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 600000, // 10 minutes timeout
       });
-
-      automation.endTime = Date.now();
-      automation.duration = automation.endTime - automation.startTime;
-      automation.status = 'success';
-      automation.output = result.substring(0, 1000); // Limit output size
-
-      this.log(
-        `✅ Completed: ${scriptName} (${automation.duration}ms)`,
-        'success'
-      );
-      this.automationResults.push(automation);
-
-      return { success: true, output: result, duration: automation.duration };
+      this.log(`✅ Completed: ${description}`);
+      return { success: true, output: result };
     } catch (error) {
-      automation.endTime = Date.now();
-      automation.duration = automation.endTime - automation.startTime;
-      automation.status = 'failed';
-      automation.error = error.message;
-
-      this.log(`❌ Failed: ${scriptName} - ${error.message}`, 'error');
-      this.automationResults.push(automation);
-
-      return {
-        success: false,
-        error: error.message,
-        duration: automation.duration,
-      };
+      this.log(`❌ Failed: ${description} - ${error.message}`);
+      return { success: false, error: error.message };
     }
   }
 
-  async runCoreAutomations() {
-    this.log('🎯 Running core automation scripts...');
+  async runAutomationScript(scriptPath, description) {
+    this.log(`🎯 Running: ${description}`);
+    try {
+      const result = execSync(`node ${scriptPath}`, {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 900000, // 15 minutes timeout
+      });
+      this.log(`✅ Completed: ${description}`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ Failed: ${description} - ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
 
-    const coreScripts = [
+  async runErrorFixing() {
+    this.log('🔧 Running Error Fixing Automation');
+
+    const errorFixingScripts = [
       {
-        name: 'Enhanced Build & Test',
-        path: 'scripts/enhanced-build-test-automation.cjs',
-        description: 'Comprehensive build and test automation',
-      },
-      {
-        name: 'Intelligent Error Detector',
-        path: 'scripts/intelligent-error-detector-fixer.cjs',
-        description: 'Intelligent error detection and fixing',
+        script: 'scripts/comprehensive-error-fixer.cjs',
+        description: 'Comprehensive Error Fixer',
       },
     ];
 
-    for (const script of coreScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
+    const results = [];
+    for (const script of errorFixingScripts) {
+      const result = await this.runAutomationScript(
+        script.script,
         script.description
       );
+      results.push({ ...script, ...result });
     }
+
+    return results;
   }
 
-  async runQualityAutomations() {
-    this.log('🔍 Running quality assurance automations...');
+  async runTesting() {
+    this.log('🧪 Running Testing Automation');
 
-    const qualityScripts = [
+    const testingScripts = [
       {
-        name: 'Performance Monitor',
-        path: 'scripts/performance-monitor.js',
-        description: 'Performance monitoring and analysis',
-      },
-      {
-        name: 'Security Audit',
-        path: 'scripts/security-audit.js',
-        description: 'Security audit and vulnerability scanning',
-      },
-      {
-        name: 'Code Quality Check',
-        path: 'scripts/code-quality-automation.cjs',
-        description: 'Code quality analysis and improvement',
+        script: 'scripts/comprehensive-testing-automation.cjs',
+        description: 'Comprehensive Testing',
       },
     ];
 
-    for (const script of qualityScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
+    const results = [];
+    for (const script of testingScripts) {
+      const result = await this.runAutomationScript(
+        script.script,
         script.description
       );
+      results.push({ ...script, ...result });
     }
+
+    return results;
   }
 
-  async runMaintenanceAutomations() {
-    this.log('🔧 Running maintenance automations...');
+  async runPerformanceOptimization() {
+    this.log('⚡ Running Performance Optimization');
 
-    const maintenanceScripts = [
+    const performanceScripts = [
       {
-        name: 'Dependency Updater',
-        path: 'scripts/dependency-updater.js',
-        description: 'Update and manage dependencies',
-      },
-      {
-        name: 'Log Cleaner',
-        path: 'scripts/log-cleaner.js',
-        description: 'Clean up old log files',
-      },
-      {
-        name: 'Health Checker',
-        path: 'scripts/health-checker.js',
-        description: 'System health monitoring',
+        script: 'scripts/performance-optimization-automation.cjs',
+        description: 'Performance Optimization',
       },
     ];
 
-    for (const script of maintenanceScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
+    const results = [];
+    for (const script of performanceScripts) {
+      const result = await this.runAutomationScript(
+        script.script,
         script.description
       );
+      results.push({ ...script, ...result });
     }
+
+    return results;
   }
 
-  async runDeploymentAutomations() {
-    this.log('🚀 Running deployment automations...');
+  async runBuildAndDeployment() {
+    this.log('🏗️ Running Build and Deployment');
 
-    const deploymentScripts = [
+    const buildScripts = [
       {
-        name: 'Comprehensive Deployment',
-        path: 'scripts/comprehensive-deployment-automation.cjs',
-        description: 'Full deployment automation',
-      },
-      {
-        name: 'Sitemap Generator',
-        path: 'scripts/generate-sitemap.mjs',
-        description: 'Generate sitemap for SEO',
+        script: 'scripts/enhanced-build-deployment-automation.cjs',
+        description: 'Enhanced Build and Deployment',
       },
     ];
 
-    for (const script of deploymentScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
+    const results = [];
+    for (const script of buildScripts) {
+      const result = await this.runAutomationScript(
+        script.script,
         script.description
       );
+      results.push({ ...script, ...result });
     }
+
+    return results;
   }
 
-  async runCustomAutomations() {
-    this.log('⚡ Running custom automations...');
+  async runAdditionalAutomations() {
+    this.log('🔧 Running Additional Automations');
 
-    const customScripts = [
+    const additionalScripts = [
       {
-        name: 'SEO Optimizer',
-        path: 'scripts/seo-optimizer.js',
-        description: 'SEO optimization and analysis',
+        command: 'npm run lint:fix',
+        description: 'ESLint Auto-Fix',
       },
       {
-        name: 'Website Analyzer',
-        path: 'scripts/website-analyzer.js',
-        description: 'Website analysis and optimization',
+        command: 'npm run format',
+        description: 'Code Formatting',
       },
       {
-        name: 'Link Checker',
-        path: 'scripts/link-checker.js',
-        description: 'Check for broken links',
+        command: 'npm run sitemap',
+        description: 'Sitemap Generation',
+      },
+      {
+        command: 'npm run search:index',
+        description: 'Search Index Generation',
       },
     ];
 
-    for (const script of customScripts) {
-      await this.runAutomationScript(
-        script.name,
-        script.path,
-        script.description
-      );
+    const results = [];
+    for (const script of additionalScripts) {
+      const result = await this.runCommand(script.command, script.description);
+      results.push({ ...script, ...result });
     }
+
+    return results;
   }
 
-  async generateMasterReport() {
-    this.log('📊 Generating master automation report...');
-
-    const totalDuration = Date.now() - this.startTime;
-    const successfulAutomations = this.automationResults.filter(
-      a => a.status === 'success'
-    );
-    const failedAutomations = this.automationResults.filter(
-      a => a.status === 'failed'
-    );
+  async generateMasterReport(allResults) {
+    this.log('📊 Generating Master Automation Report');
 
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        totalAutomations: this.automationResults.length,
-        successfulAutomations: successfulAutomations.length,
-        failedAutomations: failedAutomations.length,
-        successRate: (
-          (successfulAutomations.length / this.automationResults.length) *
-          100
-        ).toFixed(2),
-        totalDuration: totalDuration,
+        totalAutomations: allResults.length,
+        successful: allResults.filter(r => r.success).length,
+        failed: allResults.filter(r => !r.success).length,
+        successRate:
+          (
+            (allResults.filter(r => r.success).length / allResults.length) *
+            100
+          ).toFixed(2) + '%',
       },
-      automations: this.automationResults,
-      recommendations: this.generateRecommendations(),
-      nextSteps: this.generateNextSteps(),
+      automationCategories: {
+        errorFixing: allResults.filter(r =>
+          r.description.includes('Error Fixer')
+        ),
+        testing: allResults.filter(r => r.description.includes('Testing')),
+        performance: allResults.filter(r =>
+          r.description.includes('Performance')
+        ),
+        build: allResults.filter(
+          r =>
+            r.description.includes('Build') ||
+            r.description.includes('Deployment')
+        ),
+        additional: allResults.filter(
+          r =>
+            r.description.includes('ESLint') ||
+            r.description.includes('Format') ||
+            r.description.includes('Sitemap') ||
+            r.description.includes('Search')
+        ),
+      },
+      details: allResults,
     };
 
     const reportFile = path.join(
       this.reportsDir,
-      `master-automation-report-${Date.now()}.json`
+      'master-automation-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Master report saved to: ${reportFile}`);
 
+    this.log(`📄 Master report saved to: ${reportFile}`);
     return report;
   }
 
-  generateRecommendations() {
-    const recommendations = [];
-    const failedAutomations = this.automationResults.filter(
-      a => a.status === 'failed'
-    );
-
-    if (failedAutomations.length > 0) {
-      recommendations.push({
-        type: 'error',
-        message: `${failedAutomations.length} automations failed. Review and fix issues.`,
-      });
-
-      failedAutomations.forEach(automation => {
-        recommendations.push({
-          type: 'fix',
-          message: `Fix ${automation.name}: ${automation.error}`,
-        });
-      });
-    }
-
-    const successRate =
-      (this.automationResults.filter(a => a.status === 'success').length /
-        this.automationResults.length) *
-      100;
-
-    if (successRate < 80) {
-      recommendations.push({
-        type: 'warning',
-        message: `Automation success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,
-      });
-    }
-
-    const longAutomations = this.automationResults.filter(
-      a => a.duration > 300000
-    ); // 5 minutes
-    if (longAutomations.length > 0) {
-      recommendations.push({
-        type: 'optimization',
-        message: `${longAutomations.length} automations took longer than 5 minutes. Consider optimizing.`,
-      });
-    }
-
-    return recommendations;
-  }
-
-  generateNextSteps() {
-    const nextSteps = [];
-
-    if (this.automationResults.every(a => a.status === 'success')) {
-      nextSteps.push(
-        'All automations completed successfully. Ready for deployment.'
-      );
-      nextSteps.push(
-        'Consider running deployment automation if not already done.'
-      );
-    } else {
-      nextSteps.push(
-        'Fix failed automations before proceeding with deployment.'
-      );
-      nextSteps.push('Review automation logs for detailed error information.');
-    }
-
-    nextSteps.push(
-      'Schedule regular automation runs for continuous improvement.'
-    );
-    nextSteps.push('Monitor automation reports for trends and improvements.');
-
-    return nextSteps;
-  }
-
-  displaySummary() {
-    const totalDuration = Date.now() - this.startTime;
-    const successfulAutomations = this.automationResults.filter(
-      a => a.status === 'success'
-    );
-    const failedAutomations = this.automationResults.filter(
-      a => a.status === 'failed'
-    );
-
-    console.log('\n' + '='.repeat(70));
-    console.log('🎯 MASTER AUTOMATION ORCHESTRATOR SUMMARY');
-    console.log('='.repeat(70));
-    console.log(`Total Automations: ${this.automationResults.length}`);
-    console.log(`✅ Successful: ${successfulAutomations.length}`);
-    console.log(`❌ Failed: ${failedAutomations.length}`);
-    console.log(
-      `📈 Success Rate: ${((successfulAutomations.length / this.automationResults.length) * 100).toFixed(1)}%`
-    );
-    console.log(`⏱️  Total Duration: ${Math.round(totalDuration / 1000)}s`);
-    console.log('='.repeat(70));
-
-    if (failedAutomations.length > 0) {
-      console.log('\n❌ FAILED AUTOMATIONS:');
-      failedAutomations.forEach((automation, index) => {
-        console.log(`${index + 1}. ${automation.name}: ${automation.error}`);
-      });
-    }
-
-    console.log('\n💡 NEXT STEPS:');
-    this.generateNextSteps().forEach((step, index) => {
-      console.log(`${index + 1}. ${step}`);
-    });
-
-    console.log('='.repeat(70));
-  }
-
   async run() {
+    this.log('🎯 Starting Master Automation Orchestrator');
+
     try {
-      this.log('🎯 Starting Master Automation Orchestrator');
+      const allResults = [];
 
-      await this.runCoreAutomations();
-      await this.runQualityAutomations();
-      await this.runMaintenanceAutomations();
-      await this.runDeploymentAutomations();
-      await this.runCustomAutomations();
+      // Run all automation categories
+      const errorFixingResults = await this.runErrorFixing();
+      allResults.push(...errorFixingResults);
 
-      const report = await this.generateMasterReport();
-      this.displaySummary();
+      const testingResults = await this.runTesting();
+      allResults.push(...testingResults);
 
-      this.log('🎉 Master Automation Orchestrator completed successfully');
-      return { success: true, report };
+      const performanceResults = await this.runPerformanceOptimization();
+      allResults.push(...performanceResults);
+
+      const buildResults = await this.runBuildAndDeployment();
+      allResults.push(...buildResults);
+
+      const additionalResults = await this.runAdditionalAutomations();
+      allResults.push(...additionalResults);
+
+      // Generate comprehensive report
+      const report = await this.generateMasterReport(allResults);
+
+      // Check overall success
+      const failedAutomations = allResults.filter(r => !r.success);
+      const success = failedAutomations.length === 0;
+
+      if (success) {
+        this.log('🎉 Master automation orchestration completed successfully');
+      } else {
+        this.log(`❌ ${failedAutomations.length} automations failed`);
+      }
+
+      return { success, report, failedAutomations };
     } catch (error) {
-      this.log(`💥 Master automation failed: ${error.message}`, 'error');
-      await this.generateMasterReport();
-      this.displaySummary();
+      this.log(`❌ Master automation orchestration failed: ${error.message}`);
       return { success: false, error: error.message };
     }
   }
 }
 
-// Run the orchestrator
+// Run the automation
 if (require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().then(result => {
-    process.exit(result.success ? 0 : 1);
+  const automation = new MasterAutomationOrchestrator();
+  automation.run().then(result => {
+    if (result.success) {
+      console.log('✅ Master automation orchestration completed successfully');
+      process.exit(0);
+    } else {
+      console.log('❌ Master automation orchestration failed');
+      process.exit(1);
+    }
   });
 }
 

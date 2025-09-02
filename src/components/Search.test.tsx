@@ -4,7 +4,7 @@ import { Search } from 'lucide-react';
 import Search from './Search';
 describe('Search', () => {
   it('renders without crashing', () => {
-    render(<Search />)"
+    render(<Search />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<Search />)

@@ -15,31 +15,39 @@ class SecurityAuditor {
 
   async checkEnvironmentVariables() {
     this.log('🔐 Checking environment variables');
-    
+
     const results = {
       issues: [],
-      recommendations: []
+      recommendations: [],
     };
-    
-    const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
-    
+
+    const envFiles = [
+      '.env',
+      '.env.local',
+      '.env.production',
+      '.env.development',
+    ];
+
     for (const envFile of envFiles) {
       const envPath = path.join(this.projectRoot, envFile);
       if (fs.existsSync(envPath)) {
         try {
           const content = fs.readFileSync(envPath, 'utf8');
           const lines = content.split('\n');
-          
+
           for (const line of lines) {
             if (line.includes('=') && !line.startsWith('#')) {
               const [key, value] = line.split('=');
-              
-              if (key.toLowerCase().includes('secret') || key.toLowerCase().includes('key')) {
+
+              if (
+                key.toLowerCase().includes('secret') ||
+                key.toLowerCase().includes('key')
+              ) {
                 if (value.length < 10) {
                   results.issues.push(`Weak ${key} in ${envFile}`);
                 }
               }
-              
+
               if (value === '' || value === 'undefined') {
                 results.issues.push(`Empty ${key} in ${envFile}`);
               }
@@ -50,85 +58,96 @@ class SecurityAuditor {
         }
       }
     }
-    
+
     return results;
   }
 
   async checkCodeSecurity() {
     this.log('🛡️ Checking code security');
-    
+
     const results = {
       issues: [],
-      recommendations: []
+      recommendations: [],
     };
-    
+
     const srcDir = path.join(this.projectRoot, 'src');
     if (!fs.existsSync(srcDir)) {
       results.issues.push('Source directory not found');
       return results;
     }
-    
+
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
-    
+
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8');
-        
+
         // Check for dangerous patterns
         if (content.includes('eval(') || content.includes('Function(')) {
           results.issues.push(`Use of eval() in ${file}`);
         }
-        
-        if (content.includes('dangerouslySetInnerHTML') && !content.includes('sanitize')) {
+
+        if (
+          content.includes('dangerouslySetInnerHTML') &&
+          !content.includes('sanitize')
+        ) {
           results.issues.push(`Unsanitized dangerouslySetInnerHTML in ${file}`);
         }
-        
-        if (content.includes('process.env') && !content.includes('NEXT_PUBLIC_')) {
+
+        if (
+          content.includes('process.env') &&
+          !content.includes('NEXT_PUBLIC_')
+        ) {
           results.issues.push(`Server-side env var in client code: ${file}`);
         }
-        
+
         if (content.includes('innerHTML') && !content.includes('sanitize')) {
           results.issues.push(`Unsanitized innerHTML in ${file}`);
         }
-        
       } catch (error) {
         results.issues.push(`Error reading ${file}: ${error.message}`);
       }
     }
-    
+
     return results;
   }
 
   async checkDependencies() {
     this.log('📦 Checking dependency security');
-    
+
     const results = {
       issues: [],
-      recommendations: []
+      recommendations: [],
     };
-    
+
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
+      const packageJson = JSON.parse(
+        fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
+      );
+      const dependencies = {
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies,
+      };
+
       // Check for known vulnerable packages
       const vulnerablePackages = {
-        'lodash': '< 4.17.21',
-        'axios': '< 0.21.1',
-        'moment': '< 2.29.1'
+        lodash: '< 4.17.21',
+        axios: '< 0.21.1',
+        moment: '< 2.29.1',
       };
-      
+
       for (const [pkg, minVersion] of Object.entries(vulnerablePackages)) {
         if (dependencies[pkg]) {
           results.issues.push(`Potentially vulnerable package: ${pkg}`);
-          results.recommendations.push(`Update ${pkg} to version ${minVersion} or higher`);
+          results.recommendations.push(
+            `Update ${pkg} to version ${minVersion} or higher`
+          );
         }
       }
-      
     } catch (error) {
       results.issues.push(`Error reading package.json: ${error.message}`);
     }
-    
+
     return results;
   }
 
@@ -158,41 +177,44 @@ class SecurityAuditor {
       dependencies: results.dependencies,
       summary: {
         overall: 'secure',
-        totalIssues: results.environment.issues.length + results.code.issues.length + results.dependencies.issues.length,
-        riskLevel: 'low'
-      }
+        totalIssues:
+          results.environment.issues.length +
+          results.code.issues.length +
+          results.dependencies.issues.length,
+        riskLevel: 'low',
+      },
     };
-    
+
     if (report.summary.totalIssues > 0) {
       report.summary.overall = 'needs_attention';
       report.summary.riskLevel = 'medium';
     }
-    
+
     if (report.summary.totalIssues > 5) {
       report.summary.overall = 'vulnerable';
       report.summary.riskLevel = 'high';
     }
-    
+
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Security audit report generated: ${this.reportFile}`);
-    
+
     return report;
   }
 
   async run() {
     this.log('🔒 Starting Security Audit');
-    
+
     try {
       const environment = await this.checkEnvironmentVariables();
       const code = await this.checkCodeSecurity();
       const dependencies = await this.checkDependencies();
-      
+
       const report = this.generateReport({
         environment,
         code,
-        dependencies
+        dependencies,
       });
-      
+
       this.log('✅ Security audit completed');
       return report;
     } catch (error) {
@@ -204,7 +226,8 @@ class SecurityAuditor {
 
 // Run the security auditor
 const auditor = new SecurityAuditor();
-auditor.run()
+auditor
+  .run()
   .then(report => {
     console.log('✅ Security audit completed successfully');
     process.exit(0);

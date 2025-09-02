@@ -6,7 +6,10 @@ const path = require('path');
 class SEOOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportFile = path.join(this.projectRoot, 'seo-optimization-report.json');
+    this.reportFile = path.join(
+      this.projectRoot,
+      'seo-optimization-report.json'
+    );
   }
 
   log(message) {
@@ -15,36 +18,42 @@ class SEOOptimizer {
 
   async checkMetaTags() {
     this.log('🏷️ Checking meta tags');
-    
+
     const results = {
       pages: [],
-      issues: []
+      issues: [],
     };
-    
+
     const pagesDir = path.join(this.projectRoot, 'src', 'pages');
     if (!fs.existsSync(pagesDir)) {
       results.issues.push('Pages directory not found');
       return results;
     }
-    
+
     const files = this.getAllFiles(pagesDir, ['.tsx', '.jsx', '.ts', '.js']);
-    
+
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8');
         const pageName = path.basename(file);
-        
+
         const pageAnalysis = {
           file: pageName,
           hasTitle: content.includes('<title>') || content.includes('title:'),
-          hasDescription: content.includes('description') || content.includes('meta name="description"'),
-          hasKeywords: content.includes('keywords') || content.includes('meta name="keywords"'),
-          hasOpenGraph: content.includes('og:') || content.includes('property="og:'),
-          hasTwitterCard: content.includes('twitter:') || content.includes('name="twitter:')
+          hasDescription:
+            content.includes('description') ||
+            content.includes('meta name="description"'),
+          hasKeywords:
+            content.includes('keywords') ||
+            content.includes('meta name="keywords"'),
+          hasOpenGraph:
+            content.includes('og:') || content.includes('property="og:'),
+          hasTwitterCard:
+            content.includes('twitter:') || content.includes('name="twitter:'),
         };
-        
+
         results.pages.push(pageAnalysis);
-        
+
         if (!pageAnalysis.hasTitle) {
           results.issues.push(`${pageName}: Missing title tag`);
         }
@@ -58,27 +67,28 @@ class SEOOptimizer {
         results.issues.push(`Error reading ${file}: ${error.message}`);
       }
     }
-    
+
     return results;
   }
 
   async checkSitemap() {
     this.log('🗺️ Checking sitemap');
-    
+
     const results = {
       exists: false,
       valid: false,
-      issues: []
+      issues: [],
     };
-    
+
     const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml');
     results.exists = fs.existsSync(sitemapPath);
-    
+
     if (results.exists) {
       try {
         const content = fs.readFileSync(sitemapPath, 'utf8');
-        results.valid = content.includes('<urlset') && content.includes('</urlset>');
-        
+        results.valid =
+          content.includes('<urlset') && content.includes('</urlset>');
+
         if (!results.valid) {
           results.issues.push('Invalid sitemap format');
         }
@@ -88,27 +98,28 @@ class SEOOptimizer {
     } else {
       results.issues.push('Sitemap not found');
     }
-    
+
     return results;
   }
 
   async checkRobotsTxt() {
     this.log('🤖 Checking robots.txt');
-    
+
     const results = {
       exists: false,
       valid: false,
-      issues: []
+      issues: [],
     };
-    
+
     const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt');
     results.exists = fs.existsSync(robotsPath);
-    
+
     if (results.exists) {
       try {
         const content = fs.readFileSync(robotsPath, 'utf8');
-        results.valid = content.includes('User-agent:') || content.includes('Sitemap:');
-        
+        results.valid =
+          content.includes('User-agent:') || content.includes('Sitemap:');
+
         if (!results.valid) {
           results.issues.push('Invalid robots.txt format');
         }
@@ -118,7 +129,7 @@ class SEOOptimizer {
     } else {
       results.issues.push('robots.txt not found');
     }
-    
+
     return results;
   }
 
@@ -148,39 +159,42 @@ class SEOOptimizer {
       robotsTxt: results.robotsTxt,
       summary: {
         overall: 'good',
-        totalIssues: results.metaTags.issues.length + results.sitemap.issues.length + results.robotsTxt.issues.length,
-        recommendations: []
-      }
+        totalIssues:
+          results.metaTags.issues.length +
+          results.sitemap.issues.length +
+          results.robotsTxt.issues.length,
+        recommendations: [],
+      },
     };
-    
+
     if (report.summary.totalIssues > 0) {
       report.summary.overall = 'needs_improvement';
     }
-    
+
     if (report.summary.totalIssues > 5) {
       report.summary.overall = 'poor';
     }
-    
+
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 SEO optimization report generated: ${this.reportFile}`);
-    
+
     return report;
   }
 
   async run() {
     this.log('🔍 Starting SEO Optimization Check');
-    
+
     try {
       const metaTags = await this.checkMetaTags();
       const sitemap = await this.checkSitemap();
       const robotsTxt = await this.checkRobotsTxt();
-      
+
       const report = this.generateReport({
         metaTags,
         sitemap,
-        robotsTxt
+        robotsTxt,
       });
-      
+
       this.log('✅ SEO optimization check completed');
       return report;
     } catch (error) {
@@ -192,7 +206,8 @@ class SEOOptimizer {
 
 // Run the SEO optimizer
 const optimizer = new SEOOptimizer();
-optimizer.run()
+optimizer
+  .run()
   .then(report => {
     console.log('✅ SEO optimization check completed successfully');
     process.exit(0);

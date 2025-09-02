@@ -19,8 +19,7 @@ function cartReducer(state, action) {
             }
             return { items };
         }
-        case 'REMOVE_ITEM':
-            return { items: state.items.filter(i => i.id !== action.payload) };
+        case 'REMOVE_ITEM': return { items: state.items.filter(i => i.id !== action.payload) };
         case 'UPDATE_QUANTITY': {
             const { id, quantity } = action.payload;
             return {
@@ -29,12 +28,9 @@ function cartReducer(state, action) {
                 )
             };
         }
-        case 'CLEAR_CART':
-            return { items: [] };
-        case 'SET_ITEMS':
-            return { items: action.payload };
-        default:
-            return state;
+        case 'CLEAR_CART': return { items: [] };
+        case 'SET_ITEMS': return { items: action.payload };
+        default: return state;
     }
 }
 
@@ -86,14 +82,8 @@ export function CartProvider({ children }) {
     }, [state.items, cartKey]);
 
     const value = {
-        items: state.items,
-        dispatch,
-        addItem: (item) => dispatch({ type: 'ADD_ITEM', payload: item }),
-        removeItem: (id) => dispatch({ type: 'REMOVE_ITEM', payload: id }),
-        updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }),
-        clearCart: () => dispatch({ type: 'CLEAR_CART' }),
-        getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0),
-        getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0)
+        items: state.items, dispatch,
+        addItem: (item) => dispatch({ type: 'ADD_ITEM', payload: item }), removeItem: (id) => dispatch({ type: 'REMOVE_ITEM', payload: id }), updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }), clearCart: () => dispatch({ type: 'CLEAR_CART' }), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0)
     };
 
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

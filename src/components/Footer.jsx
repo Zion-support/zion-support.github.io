@@ -1,18 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Youtube,
-  ArrowRight,
-  Shield,
-  Zap,
-  Users,
+  Mail, Phone, 
+  MapPin, Twitter, 
+  Linkedin, Facebook, 
+  Instagram, Youtube,
+  ArrowRight, Shield,
+  Zap, Users,
   Globe
 } from 'lucide-react';
 
@@ -21,17 +15,10 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: 'Services',
-      links: [
-        { name: 'AI Services', href: '/services/ai' },
-        { name: 'Cloud Solutions', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'IT Infrastructure', href: '/services/infrastructure' },
-        { name: 'Digital Transformation', href: '/services/transformation' },
-        { name: 'Consulting', href: '/services/consulting' }
+      title: 'Services', links: [
+        { name: 'AI Services', href: '/services/ai' }, { name: 'Cloud Solutions', href: '/services/cloud' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'IT Infrastructure', href: '/services/infrastructure' }, { name: 'Digital Transformation', href: '/services/transformation' }, { name: 'Consulting', href: '/services/consulting' }
       ]
-    },
-    {
+    }, {
       title: 'Solutions',
       links: [
         { name: 'Industry Solutions', href: '/solutions/industry' },
@@ -41,8 +28,7 @@ export function Footer() {
         { name: 'Retail', href: '/solutions/retail' },
         { name: 'Education', href: '/solutions/education' }
       ]
-    },
-    {
+    }, {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
@@ -52,8 +38,7 @@ export function Footer() {
         { name: 'News', href: '/news' },
         { name: 'Events', href: '/events' }
       ]
-    },
-    {
+    }, {
       title: 'Resources',
       links: [
         { name: 'Case Studies', href: '/case-studies' },
@@ -63,8 +48,7 @@ export function Footer() {
         { name: 'Webinars', href: '/webinars' },
         { name: 'Documentation', href: '/docs' }
       ]
-    },
-    {
+    }, {
       title: 'Support',
       links: [
         { name: 'Help Center', href: '/support' },
@@ -78,10 +62,8 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
   ];
 
@@ -89,7 +71,7 @@ export function Footer() {
     <footer className="bg-zion-blue-dark border-t border-zion-purple/20">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
@@ -133,7 +115,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group"
+                      className="text-zion-slate-light hover: text-zion-cyan transition-colors text-sm flex items-center group"
                     >
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {link.name}
@@ -154,7 +136,7 @@ export function Footer() {
             <p className="text-zion-slate-light mb-6">
               Get the latest insights on AI, cloud computing, cybersecurity, and digital transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -220,7 +202,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-all duration-300"
+                  className="p-2 text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-all duration-300"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />

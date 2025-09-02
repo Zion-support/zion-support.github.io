@@ -9,7 +9,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     });
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
-    const [messages, setMessages] = useState([]);"
+    const [messages, setMessages] = useState([]);""
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
@@ -17,7 +17,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     // Initialize chatbot
     useEffect(() => {
         if (isOpen && messages.length === 0) {
-            addBotMessage(welcomeMessage, {"
+            addBotMessage(welcomeMessage, {""
                 intent: 'greeting',
                 confidence: 1.0, suggestions: [
                     "Tell me about your services",
@@ -28,10 +28,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         }
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
-    useEffect(() => {"
+    useEffect(() => {""
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
     // Track chatbot interactions
-    const trackChatbotInteraction = useCallback((action, metadata) => {"
+    const trackChatbotInteraction = useCallback((action, metadata) => {""
         trackEvent('chatbot', action, 'chatbot_interaction', null, metadata)}, [trackEvent]);
     // Add message to chat
     const addMessage = useCallback((message) => {
@@ -44,8 +44,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             return updated.slice(-maxMessages)})
         // Update conversation context
         if (enableContext && message.content.length > 10) {
-            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed,
-}
+            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed, }
         return newMessage}, [maxMessages, enableContext]);
     // Add bot message with typing effect
     const addBotMessage = useCallback((content, metadata) => {
@@ -71,7 +70,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";
         }
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
-            return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";'
+            return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";''
         }
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
             return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?";
@@ -96,16 +95,15 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         // Track user input
         trackChatbotInteraction('user_input', {
             messageId: userMessage.id,
-            inputLength: input.length,
-})
-        // Clear input"
+            inputLength: input.length, })
+        // Clear input""
         setInputValue('');
         setIsTyping(true);
         try {
             // Get AI response
             const response = await simulateAIProcessing(input);
             // Add bot response
-            addBotMessage(response, {"
+            addBotMessage(response, {""
                 intent: 'response',
                 confidence: 0.9, suggestions: [
                     "Tell me more",
@@ -116,15 +114,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             // Track successful interaction
             trackChatbotInteraction('conversation_success', {
                 userInput: input,
-                responseLength: response.length,
-})}
+                responseLength: response.length, })}
         catch (error) {
             // Handle error
-            addBotMessage("I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.", {'
+            addBotMessage("I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.", {''
                 intent: 'error',
-                confidence: 0.8,
-})"
-            trackChatbotInteraction('conversation_error', {"
+                confidence: 0.8, })""
+            trackChatbotInteraction('conversation_error', {""
                 error: error instanceof Error ? error.message : 'Unknown error',
 })}
         finally {
@@ -136,29 +132,29 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         handleUserInput(inputValue)}, [inputValue, handleUserInput]);
     // Handle suggestion click
     const handleSuggestionClick = useCallback((suggestion) => {
-        handleUserInput(suggestion);"
+        handleUserInput(suggestion);""
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot
     const toggleChatbot = useCallback(() => {
-        setIsOpen(!isOpen);"
+        setIsOpen(!isOpen);""
         trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
     // Minimize/maximize
     const toggleMinimize = useCallback(() => {
-        setIsMinimized(!isMinimized);"
+        setIsMinimized(!isMinimized);""
         trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
     // Clear conversation
     const clearConversation = useCallback(() => {
         setMessages([]);
-        // setConversationContext([]); // This line was removed"
+        // setConversationContext([]); // This line was removed""
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
-    // Get typing indicator"
-    const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">"
+    // Get typing indicator""
+    const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">""
       <Bot className="w-5 h-5 text-blue-500"/" >"
-      <div className="flex space-x-1">"
+      <div className="flex space-x-1">""
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}" ></div>"
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}" ></div>"
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}" ></div>
-      </div>"
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}" ></div>"
+      </div>""
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
     </motion.div>);
     // Get message suggestions
@@ -197,10 +193,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
       <AnimatePresence>
         {isOpen && (<motion .div initial = {
   { opacity: 0, scale: 0.9,
-  y: 20,
-}} animate = {
-  { opacity: 1, scale: 1,
-  y: 0,
+  y: 20, }} animate = {
+  { opacity: 1, scale: 1, y: 0,
 }} exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
@@ -209,15 +203,15 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 
 
 
-",`
-}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}" >
-            {/* Header */}"
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"
-              <div className="flex items-center justify-between">"
-                <div className="flex items-center gap-2">"
+", `"
+}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}" >"
+            {/* Header */}""
+            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">""
+              <div className="flex items-center justify-between">""
+                <div className="flex items-center gap-2">""
                   <Bot className="w-5 h-5"/" >"
-                  <span className="font-semibold">AI Assistant</span>"
-                  <div className="flex items-center gap-1">"
+                  <span className="font-semibold">AI Assistant</span>""
+                  <div className="flex items-center gap-1">""
                     <Sparkles className="w-3 h-3 text-yellow-300"/" >"
                     <span className="text-xs">Powered by AI</span>
                   </div>
@@ -235,7 +229,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 
             {/* Chat Content */}
             {!isMinimized && (<>
-                {/* Messages */}"
+                {/* Messages */}""
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
                   {messages.map((message) => (<motion.div key={message.id} initial = {
   { opacity: 0, x: message.type === 'user' ? 20 : -20 
@@ -253,7 +247,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 
 
 
-",`
+", `"
 }} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}" >"`
                       <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}" >"`
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user'
@@ -261,29 +255,29 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                         : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}" >"
                           {message.type === 'user' ? <User className="w-4 h-4"/" > : <Bot className="w-4 h-4"/" >}
                         </div>
-"`
+"`"
                         <div className={`rounded-lg p-3 ${message.type === 'user'
                         ? 'bg-blue-500 text-white'`
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}" >"
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
 
-                          {/* Message Metadata */}"
-                          {message.metadata && (<div className="mt-2 text-xs opacity-70">"
+                          {/* Message Metadata */}""
+                          {message.metadata && (<div className="mt-2 text-xs opacity-70">""
                               {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
                             </div>)}
 
-                          {/* Suggestions */}"
-                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/" >)}
+                          {/* Suggestions */}""
+                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/" >)}"
                         </div>
                       </div>
                     </motion.div>))}
 
                   {/* Typing Indicator */}
-                  {isTyping && <TypingIndicator /" >}
+                  {isTyping && <TypingIndicator /" >}"
 
                   {/* Scroll anchor */}
-                  <div ref={messagesEndRef}/" >
+                  <div ref={messagesEndRef}/" >"
                 </div>
 
                 {/* Input Area */}

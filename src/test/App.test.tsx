@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest';"
+import { describe, it, expect } from 'vitest';""
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';"
+import { BrowserRouter } from 'react-router-dom';""
 import App from '../App';
 // Mock the components that might not exist yet
 vi.mock('../components/ChatAssistant', () => ({
@@ -16,7 +16,7 @@ describe('App', () => {
   it('renders without crashing', () => {
     render(
       <BrowserRouter>
-        <App /" >
+        <App /" >"
       </BrowserRouter>
     );
     // Basic test to ensure the app renders
@@ -25,9 +25,9 @@ describe('App', () => {
   it('renders main navigation elements', () => {
     render(
       <BrowserRouter>
-        <App /" >
+        <App /" >"
       </BrowserRouter>
     );
-    // Test that key components are rendered"
-    expect(screen.getByTestId('app-header')).toBeInTheDocument();"
-    expect(screen.getByTestId('footer')).toBeInTheDocument()})})"
+    // Test that key components are rendered""
+    expect(screen.getByTestId('app-header')).toBeInTheDocument();""
+    expect(screen.getByTestId('footer')).toBeInTheDocument()})})""

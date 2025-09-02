@@ -11,7 +11,7 @@ const optimizations = {
     maxFileSize: 500 * 1024, // 500KB
     maxTotalSize: 5 * 1024 * 1024, // 5MB
   },
-  
+
   // Image optimization
   images: {
     maxWidth: 1920,
@@ -19,13 +19,13 @@ const optimizations = {
     quality: 85,
     formats: ['webp', 'avif', 'jpg', 'png'],
   },
-  
+
   // Code optimization
   code: {
     removeUnusedImports: true,
     minifyInlineStyles: true,
     optimizeImports: true,
-  }
+  },
 };
 
 let totalOptimizations = 0;
@@ -40,16 +40,20 @@ function optimizeReactComponent(content, filePath) {
   if (optimizations.code.removeUnusedImports) {
     const importRegex = /import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*\n/g;
     const imports = content.match(importRegex) || [];
-    
+
     imports.forEach(importStatement => {
       // Check if imported items are actually used
-      const importedItems = importStatement.match(/{([^}]*)}/)?.[1]?.split(',').map(item => item.trim()) || [];
-      
+      const importedItems =
+        importStatement
+          .match(/{([^}]*)}/)?.[1]
+          ?.split(',')
+          .map(item => item.trim()) || [];
+
       importedItems.forEach(item => {
         const cleanItem = item.replace(/\s+as\s+\w+/, '').trim();
         const usageRegex = new RegExp(`\\b${cleanItem}\\b`, 'g');
         const usages = content.match(usageRegex) || [];
-        
+
         if (usages.length <= 1) {
           // Remove unused import
           optimized = optimized.replace(importStatement, '');
@@ -60,17 +64,20 @@ function optimizeReactComponent(content, filePath) {
   }
 
   // Optimize useEffect dependencies
-  const useEffectRegex = /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
+  const useEffectRegex =
+    /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
   const emptyUseEffects = optimized.match(useEffectRegex) || [];
-  
+
   if (emptyUseEffects.length > 0) {
-    console.log(`⚠️  Found ${emptyUseEffects.length} useEffect with empty dependencies in ${filePath}`);
+    console.log(
+      `⚠️  Found ${emptyUseEffects.length} useEffect with empty dependencies in ${filePath}`
+    );
   }
 
   // Add React.memo to functional components
   const componentRegex = /const\s+(\w+)\s*=\s*\(\s*{[^}]*}\s*\)\s*=>\s*{/g;
   const components = optimized.match(componentRegex) || [];
-  
+
   components.forEach(component => {
     const componentName = component.match(/const\s+(\w+)\s*=/)?.[1];
     if (componentName && !optimized.includes(`memo(${componentName})`)) {
@@ -100,15 +107,15 @@ function optimizeCSS(content, filePath) {
     // Remove empty rules
     optimized = optimized.replace(/\.[\w-]+\s*{\s*}/g, '');
     changes++;
-    
+
     // Remove duplicate properties
     const ruleRegex = /([^{]+)\s*{\s*([^}]+)\s*}/g;
     const rules = optimized.match(ruleRegex) || [];
-    
+
     rules.forEach(rule => {
       const properties = rule.match(/([^:]+):\s*([^;]+);/g) || [];
       const uniqueProperties = [...new Set(properties)];
-      
+
       if (uniqueProperties.length !== properties.length) {
         const selector = rule.match(/([^{]+)\s*{/)?.[1];
         const newRule = `${selector} {\n  ${uniqueProperties.join('\n  ')}\n}`;
@@ -168,12 +175,17 @@ function generatePerformanceReport() {
         'Optimize images to WebP/AVIF format',
         'Implement lazy loading for non-critical components',
         'Use CSS-in-JS libraries for better tree shaking',
-      ]
-    }
+      ],
+    },
   };
 
-  fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
-  console.log('📊 Performance report generated: performance-optimization-report.json');
+  fs.writeFileSync(
+    'performance-optimization-report.json',
+    JSON.stringify(report, null, 2)
+  );
+  console.log(
+    '📊 Performance report generated: performance-optimization-report.json'
+  );
 }
 
 // Main optimization function
@@ -184,7 +196,7 @@ async function main() {
     'src/**/*.{tsx,jsx,ts,js}',
     'pages/**/*.{tsx,jsx,ts,js}',
     'components/**/*.{tsx,jsx,ts,js}',
-    'styles/**/*.{css,scss}'
+    'styles/**/*.{css,scss}',
   ];
 
   const excludeDirs = [
@@ -197,12 +209,12 @@ async function main() {
     'automation_backup',
     'src.disabled',
     'pages.disabled',
-    'components.disabled'
+    'components.disabled',
   ];
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: excludeDirs.map(dir => `**/${dir}/**`)
+      ignore: excludeDirs.map(dir => `**/${dir}/**`),
     });
 
     for (const file of files) {

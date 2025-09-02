@@ -8,8 +8,8 @@ const CART_EXPIRY_KEY = 'zion_cart_expiry';
 const CART_EXPIRY_TIME = 24 * 60 * 60 * 1000;
 
 /**
- * Get cart from localStorage
- * @returns {Array} Cart items array
+ * Get cart from localStorage*/
+ * @returns {Array} Cart items array*/
  */
 export const getCartFromStorage = () => {
   try {
@@ -31,14 +31,14 @@ export const getCartFromStorage = () => {
 
     return JSON.parse(cartData);
   } catch (error) {
-    console.error('Error reading cart from storage:', error);
+    console.error('Error reading cart from storage: ', error);
     return [];
   }
 };
 
 /**
- * Save cart to localStorage
- * @param {Array} cart - Cart items array
+ * Save cart to localStorage*/
+ * @param {Array} cart - Cart items array*/
  */
 export const saveCartToStorage = (cart) => {
   try {
@@ -46,27 +46,27 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
   } catch (error) {
-    console.error('Error saving cart to storage:', error);
+    console.error('Error saving cart to storage: ', error);
   }
 };
 
 /**
- * Clear cart from localStorage
+ * Clear cart from localStorage*/
  */
 export const clearCartFromStorage = () => {
   try {
     localStorage.removeItem(CART_STORAGE_KEY);
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
-    console.error('Error clearing cart from storage:', error);
+    console.error('Error clearing cart from storage: ', error);
   }
 };
 
 /**
- * Add item to cart
- * @param {Array} currentCart - Current cart items
- * @param {Object} item - Item to add
- * @returns {Array} Updated cart
+ * Add item to cart*/
+ * @param {Array} currentCart - Current cart items*/
+ * @param {Object} item - Item to add*/
+ * @returns {Array} Updated cart*/
  */
 export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
@@ -80,36 +80,34 @@ export const addToCart = (currentCart, item) => {
     // Item already exists, update quantity
     const updatedCart = [...currentCart];
     updatedCart[existingItemIndex] = {
-      ...updatedCart[existingItemIndex],
-      quantity: updatedCart[existingItemIndex].quantity + (item.quantity || 1)
+      ...updatedCart[existingItemIndex], quantity: updatedCart[existingItemIndex].quantity + (item.quantity || 1)
     };
     return updatedCart;
   } else {
     // Add new item
     return [...currentCart, {
       ...item,
-      quantity: item.quantity || 1,
-      addedAt: new Date().toISOString()
+      quantity: item.quantity || 1, addedAt: new Date().toISOString()
     }];
   }
 };
 
 /**
- * Remove item from cart
- * @param {Array} currentCart - Current cart items
- * @param {string|number} itemId - ID of item to remove
- * @returns {Array} Updated cart
+ * Remove item from cart*/
+ * @param {Array} currentCart - Current cart items*/
+ * @param {string|number} itemId - ID of item to remove*/
+ * @returns {Array} Updated cart*/
  */
 export const removeFromCart = (currentCart, itemId) => {
   return currentCart.filter(item => item.id !== itemId);
 };
 
 /**
- * Update item quantity in cart
- * @param {Array} currentCart - Current cart items
- * @param {string|number} itemId - ID of item to update
- * @param {number} quantity - New quantity
- * @returns {Array} Updated cart
+ * Update item quantity in cart*/
+ * @param {Array} currentCart - Current cart items*/
+ * @param {string|number} itemId - ID of item to update*/
+ * @param {number} quantity - New quantity*/
+ * @returns {Array} Updated cart*/
  */
 export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
   if (quantity <= 0) {
@@ -124,17 +122,15 @@ export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
 };
 
 /**
- * Calculate cart total
- * @param {Array} cart - Cart items array
- * @returns {Object} Total information
+ * Calculate cart total*/
+ * @param {Array} cart - Cart items array*/
+ * @returns {Object} Total information*/
  */
 export const calculateCartTotal = (cart) => {
   if (!Array.isArray(cart) || cart.length === 0) {
     return {
-      subtotal: 0,
-      tax: 0,
-      total: 0,
-      itemCount: 0
+      subtotal: 0, tax: 0,
+      total: 0, itemCount: 0
     };
   }
 
@@ -151,36 +147,33 @@ export const calculateCartTotal = (cart) => {
   const itemCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0);
 
   return {
-    subtotal: Math.round(subtotal * 100) / 100,
-    tax: Math.round(tax * 100) / 100,
-    total: Math.round(total * 100) / 100,
-    itemCount
+    subtotal: Math.round(subtotal * 100) / 100, tax: Math.round(tax * 100) / 100, total: Math.round(total * 100) / 100, itemCount
   };
 };
 
 /**
- * Check if cart is empty
- * @param {Array} cart - Cart items array
- * @returns {boolean} True if cart is empty
+ * Check if cart is empty*/
+ * @param {Array} cart - Cart items array*/
+ * @returns {boolean} True if cart is empty*/
  */
 export const isCartEmpty = (cart) => {
   return !Array.isArray(cart) || cart.length === 0;
 };
 
 /**
- * Get cart item by ID
- * @param {Array} cart - Cart items array
- * @param {string|number} itemId - ID of item to find
- * @returns {Object|null} Cart item or null if not found
+ * Get cart item by ID*/
+ * @param {Array} cart - Cart items array*/
+ * @param {string|number} itemId - ID of item to find*/
+ * @returns {Object|null} Cart item or null if not found*/
  */
 export const getCartItemById = (cart, itemId) => {
   return cart.find(item => item.id === itemId) || null;
 };
 
 /**
- * Validate cart item
- * @param {Object} item - Item to validate
- * @returns {boolean} True if item is valid
+ * Validate cart item*/
+ * @param {Object} item - Item to validate*/
+ * @returns {boolean} True if item is valid*/
  */
 export const validateCartItem = (item) => {
   if (!item) return false;
@@ -197,10 +190,10 @@ export const validateCartItem = (item) => {
 };
 
 /**
- * Merge carts (useful for guest to user conversion)
- * @param {Array} cart1 - First cart
- * @param {Array} cart2 - Second cart
- * @returns {Array} Merged cart
+ * Merge carts (useful for guest to user conversion)*/
+ * @param {Array} cart1 - First cart*/
+ * @param {Array} cart2 - Second cart*/
+ * @returns {Array} Merged cart*/
  */
 export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
@@ -219,8 +212,7 @@ export const mergeCarts = (cart1, cart2) => {
     } else {
       // Add new item
       mergedCart.push({
-        ...item2,
-        addedAt: new Date().toISOString()
+        ...item2, addedAt: new Date().toISOString()
       });
     }
   });
@@ -229,10 +221,10 @@ export const mergeCarts = (cart1, cart2) => {
 };
 
 /**
- * Format price for display
- * @param {number} price - Price to format
- * @param {string} currency - Currency code (default: USD)
- * @returns {string} Formatted price
+ * Format price for display*/
+ * @param {number} price - Price to format*/
+ * @param {string} currency - Currency code (default: USD)*/
+ * @returns {string} Formatted price*/
  */
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
@@ -246,41 +238,37 @@ export const formatPrice = (price, currency = 'USD') => {
 };
 
 /**
- * Get cart summary for display
- * @param {Array} cart - Cart items array
- * @returns {Object} Cart summary
+ * Get cart summary for display*/
+ * @param {Array} cart - Cart items array*/
+ * @returns {Object} Cart summary*/
  */
 export const getCartSummary = (cart) => {
   const total = calculateCartTotal(cart);
 
   return {
-    itemCount: total.itemCount,
-    uniqueItems: cart.length,
-    subtotal: formatPrice(total.subtotal),
-    tax: formatPrice(total.tax),
-    total: formatPrice(total.total),
-    isEmpty: isCartEmpty(cart)
+    itemCount: total.itemCount, uniqueItems: cart.length,
+    subtotal: formatPrice(total.subtotal), tax: formatPrice(total.tax), total: formatPrice(total.total), isEmpty: isCartEmpty(cart)
   };
 };
 
 /**
- * Export cart data (useful for debugging or backup)
- * @param {Array} cart - Cart items array
- * @returns {string} JSON string of cart data
+ * Export cart data (useful for debugging or backup)*/
+ * @param {Array} cart - Cart items array*/
+ * @returns {string} JSON string of cart data*/
  */
 export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-    console.error('Error exporting cart data:', error);
+    console.error('Error exporting cart data: ', error);
     return '[]';
   }
 };
 
 /**
- * Import cart data (useful for restoring from backup)
- * @param {string} cartData - JSON string of cart data
- * @returns {Array} Parsed cart array
+ * Import cart data (useful for restoring from backup)*/
+ * @param {string} cartData - JSON string of cart data*/
+ * @returns {Array} Parsed cart array*/
  */
 export const importCartData = (cartData) => {
   try {
@@ -290,15 +278,15 @@ export const importCartData = (cartData) => {
     }
     return [];
   } catch (error) {
-    console.error('Error importing cart data:', error);
+    console.error('Error importing cart data: ', error);
     return [];
   }
 };
 
 /**
- * Get cart key for storage (useful for user-specific carts)
- * @param {string} userId - User ID (optional)
- * @returns {string} Cart storage key
+ * Get cart key for storage (useful for user-specific carts)*/
+ * @param {string} userId - User ID (optional)*/
+ * @returns {string} Cart storage key*/
  */
 export const getCartKey = (userId = null) => {
   if (userId) {
@@ -308,10 +296,10 @@ export const getCartKey = (userId = null) => {
 };
 
 /**
- * Merge cart items (alias for mergeCarts for backward compatibility)
- * @param {Array} cart1 - First cart
- * @param {Array} cart2 - Second cart
- * @returns {Array} Merged cart
+ * Merge cart items (alias for mergeCarts for backward compatibility)*/
+ * @param {Array} cart1 - First cart*/
+ * @param {Array} cart2 - Second cart*/
+ * @returns {Array} Merged cart*/
  */
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);

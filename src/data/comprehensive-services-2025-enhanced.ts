@@ -4,7 +4,7 @@ export interface EnhancedServiceItem {
    description: string;
    category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Edge Computing' | 'Quantum AI' | 'Sustainable Tech' | 'Digital Twin' | 'Smart Cities';
    shortDescription: string;
-   price: string;"
+   price: string;""
    billing: 'month' | 'project' | 'hour' | 'year';
    features: string[];
    capabilities: string[];

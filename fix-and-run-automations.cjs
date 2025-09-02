@@ -19,15 +19,25 @@ class AutomationScriptFixer {
   fixMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-      
-      if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+
+      if (
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
+        content.includes('>>>>>>>')
+      ) {
         this.log(`Fixing merge conflicts in: ${filePath}`);
-        
+
         // Simple merge conflict resolution - take the HEAD version
         let fixedContent = content
-          .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n/g, '$1')
-          .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*/g, '$1');
-        
+          .replace(
+            /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n/g,
+            '$1'
+          )
+          .replace(
+            /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*/g,
+            '$1'
+          );
+
         fs.writeFileSync(filePath, fixedContent);
         this.fixedCount++;
         return true;
@@ -43,12 +53,15 @@ class AutomationScriptFixer {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       let fixedContent = content;
-      
+
       // Fix common syntax errors
-      if (content.includes('console.log(`Checking: ${url}\');')) {
-        fixedContent = content.replace('console.log(`Checking: ${url}\');', 'console.log(`Checking: ${url}`);');
+      if (content.includes("console.log(`Checking: ${url}');")) {
+        fixedContent = content.replace(
+          "console.log(`Checking: ${url}');",
+          'console.log(`Checking: ${url}`);'
+        );
       }
-      
+
       if (fixedContent !== content) {
         fs.writeFileSync(filePath, fixedContent);
         this.fixedCount++;
@@ -71,7 +84,11 @@ class AutomationScriptFixer {
 
       if (stat.isDirectory()) {
         scriptFiles = scriptFiles.concat(this.getAllScriptFiles(fullPath));
-      } else if (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs')) {
+      } else if (
+        item.endsWith('.js') ||
+        item.endsWith('.cjs') ||
+        item.endsWith('.mjs')
+      ) {
         scriptFiles.push(fullPath);
       }
     }
@@ -146,16 +163,23 @@ class AutomationScriptFixer {
         errors: this.errors,
       };
 
-      const reportFile = path.join(this.projectRoot, 'automation-scripts-report.json');
+      const reportFile = path.join(
+        this.projectRoot,
+        'automation-scripts-report.json'
+      );
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
       this.log(`📊 Report generated: ${reportFile}`);
       this.log(`🎉 Automation Script Fixer and Runner Completed`);
-      this.log(`📊 Summary: ${report.summary.successfulRuns}/${report.summary.runScripts} scripts ran successfully`);
+      this.log(
+        `📊 Summary: ${report.summary.successfulRuns}/${report.summary.runScripts} scripts ran successfully`
+      );
 
       return report;
     } catch (error) {
-      this.log(`💥 Automation Script Fixer and Runner Failed: ${error.message}`);
+      this.log(
+        `💥 Automation Script Fixer and Runner Failed: ${error.message}`
+      );
       throw error;
     }
   }
@@ -163,12 +187,16 @@ class AutomationScriptFixer {
 
 // Run the automation script fixer and runner
 const fixer = new AutomationScriptFixer();
-fixer.run()
+fixer
+  .run()
   .then(report => {
     console.log('✅ Automation Script Fixer and Runner completed successfully');
     process.exit(0);
   })
   .catch(error => {
-    console.error('❌ Automation Script Fixer and Runner failed:', error.message);
+    console.error(
+      '❌ Automation Script Fixer and Runner failed:',
+      error.message
+    );
     process.exit(1);
   });

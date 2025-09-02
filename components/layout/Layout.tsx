@@ -2,7 +2,7 @@ React from
   'react'
 import Header from 'react'
   './Header';import Footer from 'react'
-  './Footer
+  './Footer'
 
 type LayoutProps = {children: React.ReactNode
 }

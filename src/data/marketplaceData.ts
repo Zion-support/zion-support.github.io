@@ -20,7 +20,7 @@ export interface MarketplaceItem {
   products', description: 'High-performance computing cluster optimized for AI workloads with GPU acceleration and scalable architecture., price: 25000, rating: 4.9, reviews: 127, views: 2847, likes: 156, image:,
   https: ''export interface MarketplaceItem {
   id: string;
-   title: string;"
+   title: string;""
    category: 'products' | 'talent' | 'equipment' | 'services';
    description: string;
    price: number;

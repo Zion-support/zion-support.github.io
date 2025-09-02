@@ -29,7 +29,7 @@ const ServicesPage = () => (
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
     <div className='container mx-auto px-4 py-16'>
       <div className='text-center mb-16'>
-        <h1 className='text-4xl md:text-6xl font-bold mb-6'>
+        <h1 className='text-4xl md: text-6xl font-bold mb-6'>
           Our{' '}
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
             Services
@@ -97,11 +97,11 @@ function App() {
                         404 - Page Not Found
                       </h1>
                       <p className='text-zion-slate-light mb-6'>
-                        The page you're looking for doesn't exist.
+                        The page you&apos;re looking for doesn&apos;t exist.
                       </p>
                       <a
                         href='/'
-                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors'
+                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'
                       >
                         Go Home
                       </a>

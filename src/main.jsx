@@ -24,10 +24,8 @@ import { ViewModeProvider } from './context/ViewModeContext';
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
-            retry: 1,
-            refetchOnWindowFocus: false,
-        },
-    },
+            retry: 1, refetchOnWindowFocus: false,
+        }, },
 });
 
 const rootElement = document.getElementById('root');
@@ -43,8 +41,7 @@ const renderApp = () => {
                                 <NotificationProvider>
                                     <AnalyticsProvider>
                                         <LanguageProvider authState={{
-                                            isAuthenticated: false,
-                                            user: null
+                                            isAuthenticated: false, user: null
                                         }}>
                                             <ViewModeProvider>
                                                 <AppLayout>
@@ -73,7 +70,7 @@ const renderApp = () => {
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
-            <div style="padding:20px;text-align:center;font-family:sans-serif;">
+            <div style="padding: 20px;text-align: center;font-family: sans-serif;">
                 <h1>Application Error</h1>
                 <p>${message}</p>
             </div>`;
@@ -83,11 +80,11 @@ function displayFatalError(message) {
 try {
     renderApp();
 } catch (error) {
-    console.error('Global error caught in main.jsx:', error);
+    console.error('Global error caught in main.jsx: ', error);
     displayFatalError(error.message);
 }
 
 window.addEventListener('error', (e) => {
-    console.error('Unhandled error:', e.error || e.message);
+    console.error('Unhandled error: ', e.error || e.message);
     displayFatalError(e.message);
 });

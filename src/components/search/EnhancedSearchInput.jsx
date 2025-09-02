@@ -2,11 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Search, X, TrendingUp, Clock, FileText, Users, Briefcase, Globe } from 'lucide-react';
 
 export function EnhancedSearchInput({ 
-  value, 
-  onChange, 
-  onSelectSuggestion, 
-  suggestions = [], 
-  placeholder = "Search...",
+  value, onChange, 
+  onSelectSuggestion, suggestions = [], placeholder = "Search...",
   className = ""
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,24 +42,20 @@ export function EnhancedSearchInput({
     if (!isOpen) return;
 
     switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
+      case 'ArrowDown': e.preventDefault();
         setHighlightedIndex(prev => 
           prev < filteredSuggestions.length - 1 ? prev + 1 : prev
         );
         break;
-      case 'ArrowUp':
-        e.preventDefault();
+      case 'ArrowUp': e.preventDefault();
         setHighlightedIndex(prev => prev > 0 ? prev - 1 : -1);
         break;
-      case 'Enter':
-        e.preventDefault();
+      case 'Enter': e.preventDefault();
         if (highlightedIndex >= 0 && filteredSuggestions[highlightedIndex]) {
           handleSuggestionSelect(filteredSuggestions[highlightedIndex]);
         }
         break;
-      case 'Escape':
-        setIsOpen(false);
+      case 'Escape': setIsOpen(false);
         inputRef.current?.blur();
         break;
     }
@@ -97,17 +90,13 @@ export function EnhancedSearchInput({
   };
 
   const recentSearches = [
-    'AI Services',
-    'Cloud Migration',
-    'Cybersecurity',
-    'Digital Transformation'
+    'AI Services', 'Cloud Migration',
+    'Cybersecurity', 'Digital Transformation'
   ];
 
   const popularSearches = [
-    'Micro SAAS',
-    'IT Infrastructure',
-    'DevOps',
-    'Machine Learning'
+    'Micro SAAS', 'IT Infrastructure',
+    'DevOps', 'Machine Learning'
   ];
 
   return (
@@ -121,7 +110,7 @@ export function EnhancedSearchInput({
           onKeyDown={handleKeyDown}
           onFocus={() => value.trim() && setIsOpen(true)}
           placeholder={placeholder}
-          className={`w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent transition-all duration-200 ${className}`}
+          className={`w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent transition-all duration-200 ${className}`}
         />
         {value && (
           <button
@@ -175,7 +164,7 @@ export function EnhancedSearchInput({
                 <button
                   key={search}
                   onClick={() => handleSuggestionSelect(search)}
-                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
                 >
                   <Clock className="h-4 w-4 mr-3 text-zion-slate-light" />
                   <span>{search}</span>
@@ -194,7 +183,7 @@ export function EnhancedSearchInput({
                 <button
                   key={search}
                   onClick={() => handleSuggestionSelect(search)}
-                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
                 >
                   <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan" />
                   <span>{search}</span>

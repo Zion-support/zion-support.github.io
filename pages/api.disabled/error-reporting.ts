@@ -45,7 +45,7 @@ export default async function handler(
     errorReports.push(errorReport);
 
     // Log for debugging
-    console.error('Error Report:', {
+    console.error('Error Report: ', {
       message: errorReport.error.message,
       stack: errorReport.error.stack,
       url: errorReport.url,
@@ -62,7 +62,7 @@ export default async function handler(
 
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Error Reporting API Error:', error);
+    console.error('Error Reporting API Error: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
@@ -71,7 +71,7 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
   try {
     // Sentry
     if (process.env.SENTRY_DSN) {
-      await fetch('https://sentry.io/api/0/projects/', {
+      await fetch('https: //sentry.io/api/0/projects/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,20 +100,23 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
 
     // LogRocket
     if (process.env.LOGROCKET_APP_ID) {
-      await fetch(`https://api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}`,
-        },
-        body: JSON.stringify({
-          message: errorReport.error.message,
-          stack: errorReport.error.stack,
-          url: errorReport.url,
-          userAgent: errorReport.userAgent,
-          timestamp: errorReport.timestamp,
-        }),
-      });
+      await fetch(
+        `https: //api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${process.env.LOGROCKET_API_KEY}`,
+          },
+          body: JSON.stringify({
+            message: errorReport.error.message,
+            stack: errorReport.error.stack,
+            url: errorReport.url,
+            userAgent: errorReport.userAgent,
+            timestamp: errorReport.timestamp,
+          }),
+        }
+      );
     }
 
     // Custom webhook
@@ -127,15 +130,15 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
       });
     }
   } catch (error) {
-    console.error('Failed to send to error monitoring services:', error);
+    console.error('Failed to send to error monitoring services: ', error);
   }
 }
 
 function parseStackTrace(stack?: string) {
   if (!stack) return [];
-  
+
   return stack.split('\n').map(line => {
-    const match = line.match(/at\s+(.+?)\s+\((.+?):(\d+):(\d+)\)/);
+    const match = line.match(/at\s+(.+?)\s+\((.+?): (\d+): (\d+)\)/);
     if (match) {
       return {
         function: match[1],
@@ -162,7 +165,7 @@ function isCriticalError(errorReport: ErrorReport): boolean {
     /script error/i,
   ];
 
-  return criticalPatterns.some(pattern => 
+  return criticalPatterns.some(pattern =>
     pattern.test(errorReport.error.message)
   );
 }
@@ -203,31 +206,33 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
         },
         body: JSON.stringify({
           text: `🚨 Critical Error Alert`,
-          attachments: [{
-            color: 'danger',
-            fields: [
-              {
-                title: 'Error Message',
-                value: errorReport.error.message,
-                short: false,
-              },
-              {
-                title: 'URL',
-                value: errorReport.url,
-                short: true,
-              },
-              {
-                title: 'Timestamp',
-                value: errorReport.timestamp,
-                short: true,
-              },
-            ],
-          }],
+          attachments: [
+            {
+              color: 'danger',
+              fields: [
+                {
+                  title: 'Error Message',
+                  value: errorReport.error.message,
+                  short: false,
+                },
+                {
+                  title: 'URL',
+                  value: errorReport.url,
+                  short: true,
+                },
+                {
+                  title: 'Timestamp',
+                  value: errorReport.timestamp,
+                  short: true,
+                },
+              ],
+            },
+          ],
         }),
       });
     }
   } catch (error) {
-    console.error('Failed to send critical error alert:', error);
+    console.error('Failed to send critical error alert: ', error);
   }
 }
 

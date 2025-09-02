@@ -1,5 +1,4 @@
-import { NextApiRequest, NextApiResponse } from
-  'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 interface WebVitalsData {
   name: string;
@@ -15,23 +14,20 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !==,
-  POST') {
-    return res.status(405).json({ error: 'Method not allowed });
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const data: WebVitalsData = req.body;
 
     // Validate required fields
-    if (!data.name || typeof data.value !==,
-  number') {
-      return res.status(400).json({ error: 'Invalid data format });
+    if (!data.name || typeof data.value !== 'number') {
+      return res.status(400).json({ error: 'Invalid data format' });
     }
 
-    // Log the web vitals data (in production, you,
-  d send this to your analytics service)
-    console.log('Web Vitals: , {
+    // Log the web vitals data (in production, you&apos;d send this to your analytics service)''
+    console.log('Web Vitals: ', {
       metric: data.name,
       value: data.value,
       url: data.url,
@@ -40,20 +36,16 @@ export default async function handler(
 
     // Here you would typically send the data to your analytics service
     // For example: Google Analytics, Mixpanel, or your own analytics database
-    
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({ 
-      success: true, 
-      message:
-  'Web vitals data received',
-      metric: data.name,
-      value: data.value 
-    });
 
+    // For now, we&apos;ll just acknowledge receipt''
+    res.status(200).json({
+      success: true,
+      message: 'Web vitals data received',
+      metric: data.name,
+      value: data.value,
+    });
   } catch (error) {
-    console.error(
-  'Error processing web vitals:,
-  , error);
-    res.status(500).json({ error: 'Internal server error });
+    console.error('Error processing web vitals: ', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 }

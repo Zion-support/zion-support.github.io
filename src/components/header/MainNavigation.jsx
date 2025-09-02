@@ -8,50 +8,26 @@ export function MainNavigation() {
 
   const navigationItems = [
     {
-      name: 'Home',
-      href: '/',
+      name: 'Home', href: '/',
       current: location.pathname === '/'
-    },
-    {
+    }, {
       name: 'Services',
-      href: '/services',
-      current: location.pathname.startsWith('/services'),
-      children: [
-        { name: 'AI Services', href: '/services/ai' },
-        { name: 'Cloud Solutions', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'IT Infrastructure', href: '/services/infrastructure' },
-        { name: 'Digital Transformation', href: '/services/transformation' },
-        { name: 'Consulting', href: '/services/consulting' }
+      href: '/services', current: location.pathname.startsWith('/services'), children: [
+        { name: 'AI Services', href: '/services/ai' }, { name: 'Cloud Solutions', href: '/services/cloud' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'IT Infrastructure', href: '/services/infrastructure' }, { name: 'Digital Transformation', href: '/services/transformation' }, { name: 'Consulting', href: '/services/consulting' }
       ]
-    },
-    {
+    }, {
       name: 'Solutions',
-      href: '/solutions',
-      current: location.pathname.startsWith('/solutions'),
-      children: [
-        { name: 'Industry Solutions', href: '/solutions/industry' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Retail', href: '/solutions/retail' }
+      href: '/solutions', current: location.pathname.startsWith('/solutions'), children: [
+        { name: 'Industry Solutions', href: '/solutions/industry' }, { name: 'Manufacturing', href: '/solutions/manufacturing' }, { name: 'Financial Services', href: '/solutions/financial' }, { name: 'Healthcare', href: '/solutions/healthcare' }, { name: 'Retail', href: '/solutions/retail' }
       ]
-    },
-    {
+    }, {
       name: 'About',
-      href: '/about',
-      current: location.pathname.startsWith('/about'),
-      children: [
-        { name: 'Company', href: '/about' },
-        { name: 'Team', href: '/about/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' }
+      href: '/about', current: location.pathname.startsWith('/about'), children: [
+        { name: 'Company', href: '/about' }, { name: 'Team', href: '/about/team' }, { name: 'Careers', href: '/careers' }, { name: 'Partners', href: '/partners' }
       ]
-    },
-    {
+    }, {
       name: 'Resources',
-      href: '#',
-      current: false,
+      href: '#', current: false,
       children: [
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Research & Development', href: '/research-development' },
@@ -61,16 +37,10 @@ export function MainNavigation() {
         { name: 'White Papers', href: '/white-papers' },
         { name: 'Webinars', href: '/webinars' }
       ]
-    },
-    {
+    }, {
       name: 'Support',
-      href: '/support',
-      current: location.pathname.startsWith('/support'),
-      children: [
-        { name: 'Help Center', href: '/support' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Training', href: '/training' },
-        { name: 'Contact', href: '/contact' }
+      href: '/support', current: location.pathname.startsWith('/support'), children: [
+        { name: 'Help Center', href: '/support' }, { name: 'Documentation', href: '/docs' }, { name: 'Training', href: '/training' }, { name: 'Contact', href: '/contact' }
       ]
     }
   ];
@@ -109,7 +79,7 @@ export function MainNavigation() {
                       <Link
                         key={child.name}
                         to={child.href}
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                        className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
                         onClick={() => setActiveDropdown(null)}
                       >
                         {child.name}

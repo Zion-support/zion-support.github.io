@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 
 export function Footer() {
-import React, { useState } from 'react.ts';"
-import { Link               } from 'react-router-dom.ts';"
+import React, { useState } from 'react.ts';""
+import { Link               } from 'react-router-dom.ts';""
 import { motion               } from 'framer-motion.ts';
 import { Twitter, Linkedin,
   Instagram, Globe,

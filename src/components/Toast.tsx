@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 
 interface Toast {
-  id: string;"
+  id: string;""
   type: 'success' | 'error' | 'warning' | 'info';
   title: string;
   message?: string;
@@ -33,15 +33,15 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     setToasts(prev => prev.filter(t => t.id !== id))}, []);
 
   return (
-    <ToastContext .Provider value={{ toasts, addToast, removeToast }}" >
+    <ToastContext .Provider value={{ toasts, addToast, removeToast }}" >"
       {children}
-      <ToastContainer toasts={toasts} removeToast={removeToast} /" >
+      <ToastContainer toasts={toasts} removeToast={removeToast} /" >"
     </ToastContext.Provider>
   )}
 
 export function useToast() {
   const context = useContext(ToastContext);
-  if (context === undefined) {"
+  if (context === undefined) {""
     throw new Error('useToast must be used within a ToastProvider')}
   return context}
 
@@ -50,7 +50,7 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
 
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {toasts.map(toast => (
-        <Toast key={toast.id} toast={toast} onRemove={removeToast} /" >
+        <Toast key={toast.id} toast={toast} onRemove={removeToast} /" >"
       ))}
     </div>
   )}
@@ -64,9 +64,9 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
   return (
     <div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}" >"
       <div className="flex items-start justify-between">
-        <div>"
+        <div>""
           <h4 className="font-medium">{toast.title}</h4>
-          {toast.message && ("
+          {toast.message && (""
             <p className="text-sm opacity-90 mt-1">{toast.message}</p>
           )}
         </div>
@@ -78,4 +78,4 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
         </button>
       </div>
     </div>
-  )}"`
+  )}"`"

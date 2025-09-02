@@ -16,11 +16,11 @@ export class SitemapGenerator {
 
   generateXML(): string {
     const { baseUrl, urls } = this.config;
-    const xmlUrls = urls.map(url => {"
+    const xmlUrls = urls.map(url => {""
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
-    <lastmod>${lastmod}</lastmod>"
+    <lastmod>${lastmod}</lastmod>""
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.5}</priority>
   </url>`;
@@ -32,8 +32,8 @@ ${xmlUrls}
   }
 
   async generateFile(): Promise<void> {
-    const xml = this.generateXML();"
-    const fs = await import('fs/promises');"
+    const xml = this.generateXML();""
+    const fs = await import('fs/promises');""
     await fs.writeFile(this.config.outputPath || 'sitemap.xml', xml, 'utf8')}
 }
 

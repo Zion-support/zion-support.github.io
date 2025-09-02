@@ -14,8 +14,8 @@ const Onboarding = lazy(() => import('../pages/Onboarding'));
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))
 const AuthRoutes: React.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner /" >}>
-      <Routes>"
+  return (<Suspense fallback={<LoadingSpinner /" >}>"
+      <Routes>""
         <Route path='/login' element={<Login /" >} />"
         <Route path='/signup' element={<Signup /" >} />"
         <Route path='/forgot-password' element={<ForgotPassword /" >} />"
@@ -24,20 +24,18 @@ const AuthRoutes: React.FC = () => {
         <Route path='/talent-onboarding' element={<TalentOnboarding /" >} />"
         <Route path='/service-onboarding' element={<ServiceOnboarding /" >} />"
         <Route path='/profile' element={
-          <ProtectedRoute" >
+          <ProtectedRoute" >"
             <div>Profile Page</div>
-          </ProtectedRoute>,
-} />"
+          </ProtectedRoute>, } />""
         <Route path='/dashboard' element={
-          <ProtectedRoute" >
+          <ProtectedRoute" >"
             <div>Dashboard</div>
           </ProtectedRoute>,
-} />"
+} />""
         <Route path='/settings' element={
-          <ProtectedRoute" >
+          <ProtectedRoute" >"
             <div>Settings</div>
-          </ProtectedRoute>,
-} />
+          </ProtectedRoute>, } />
       </Routes>
     </Suspense>
   )}

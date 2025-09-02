@@ -3,11 +3,11 @@ import { NextApiRequest, NextApiResponse } from 'next';
 interface CSPReport {
   'csp-report': {
     'document-uri': string;
-    'referrer': string;
+    referrer: string;
     'violated-directive': string;
     'effective-directive': string;
     'original-policy': string;
-    'disposition': string;
+    disposition: string;
     'blocked-uri': string;
     'line-number'?: number;
     'column-number'?: number;
@@ -33,26 +33,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const cspData = report['csp-report'];
 
     // Log the CSP violation (in production, you might want to send to a monitoring service)
-    console.warn('CSP Violation:', {
+    console.warn('CSP Violation: ', {
       documentUri: cspData['document-uri'],
       violatedDirective: cspData['violated-directive'],
       blockedUri: cspData['blocked-uri'],
       sourceFile: cspData['source-file'],
       lineNumber: cspData['line-number'],
       columnNumber: cspData['column-number'],
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
-    // Here you could send the violation to:
-    // - A monitoring service (Sentry, LogRocket, etc.)
+    // Here you could send the violation to: // - A monitoring service (Sentry, LogRocket, etc.)
     // - A security monitoring system
     // - A database for analysis
 
     // Return a 204 No Content response as per CSP reporting spec
     res.status(204).end();
-
   } catch (error) {
-    console.error('Error processing CSP report:', error);
+    console.error('Error processing CSP report: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }

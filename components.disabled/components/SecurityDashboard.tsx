@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';
+import {
+  Shield,
+  AlertTriangle,
+  CheckCircle,
+  Lock,
+  Database,
+  Activity,
+} from 'lucide-react';
 
 interface SecurityMetrics {
   overallScore: number;
@@ -25,9 +32,9 @@ const SecurityDashboard: React.FC = () => {
         critical: Math.floor(Math.random() * 2),
         high: Math.floor(Math.random() * 5),
         medium: Math.floor(Math.random() * 8),
-        low: Math.floor(Math.random() * 15)
+        low: Math.floor(Math.random() * 15),
       },
-      lastScan: new Date()
+      lastScan: new Date(),
     };
 
     setTimeout(() => {
@@ -72,9 +79,13 @@ const SecurityDashboard: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         className="mb-8"
       >
-        <div className={`${getScoreBgColor(security.overallScore)} rounded-lg p-6 text-center`}>
+        <div
+          className={`${getScoreBgColor(security.overallScore)} rounded-lg p-6 text-center`}
+        >
           <Shield className="w-12 h-12 mx-auto mb-4 text-gray-600" />
-          <div className={`text-4xl font-bold ${getScoreColor(security.overallScore)} mb-2`}>
+          <div
+            className={`text-4xl font-bold ${getScoreColor(security.overallScore)} mb-2`}
+          >
             {security.overallScore}
           </div>
           <div className="text-lg text-gray-600">Security Score</div>
@@ -90,25 +101,33 @@ const SecurityDashboard: React.FC = () => {
       >
         <div className="bg-red-50 rounded-lg p-4 text-center">
           <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-red-600" />
-          <div className="text-2xl font-bold text-red-600">{security.vulnerabilities.critical}</div>
+          <div className="text-2xl font-bold text-red-600">
+            {security.vulnerabilities.critical}
+          </div>
           <div className="text-sm text-red-600">Critical</div>
         </div>
 
         <div className="bg-orange-50 rounded-lg p-4 text-center">
           <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-orange-600" />
-          <div className="text-2xl font-bold text-orange-600">{security.vulnerabilities.high}</div>
+          <div className="text-2xl font-bold text-orange-600">
+            {security.vulnerabilities.high}
+          </div>
           <div className="text-sm text-orange-600">High</div>
         </div>
 
         <div className="bg-yellow-50 rounded-lg p-4 text-center">
           <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-yellow-600" />
-          <div className="text-2xl font-bold text-yellow-600">{security.vulnerabilities.medium}</div>
+          <div className="text-2xl font-bold text-yellow-600">
+            {security.vulnerabilities.medium}
+          </div>
           <div className="text-sm text-yellow-600">Medium</div>
         </div>
 
         <div className="bg-blue-50 rounded-lg p-4 text-center">
           <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-blue-600" />
-          <div className="text-2xl font-bold text-blue-600">{security.vulnerabilities.low}</div>
+          <div className="text-2xl font-bold text-blue-600">
+            {security.vulnerabilities.low}
+          </div>
           <div className="text-sm text-blue-600">Low</div>
         </div>
       </motion.div>

@@ -18,16 +18,11 @@ export function LanguageSelector() {
   }, []);
 
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'pt', name: 'Português', flag: '🇵🇹' },
-    { code: 'ja', name: '日本語', flag: '🇯🇵' },
-    { code: 'ko', name: '한국어', flag: '🇰🇷' },
-    { code: 'zh', name: '中文', flag: '🇨🇳' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' }
+    { code: 'en', name: 'English', flag: '🇺🇸' }, { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' }, { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'it', name: 'Italiano', flag: '🇮🇹' }, { code: 'pt', name: 'Português', flag: '🇵🇹' },
+    { code: 'ja', name: '日本語', flag: '🇯🇵' }, { code: 'ko', name: '한국어', flag: '🇰🇷' },
+    { code: 'zh', name: '中文', flag: '🇨🇳' }, { code: 'ar', name: 'العربية', flag: '🇸🇦' }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === selectedLanguage);
@@ -36,14 +31,14 @@ export function LanguageSelector() {
     setSelectedLanguage(languageCode);
     setIsOpen(false);
     // Implement language change logic here
-    console.log('Language changed to:', languageCode);
+    console.log('Language changed to: ', languageCode);
   };
 
   return (
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
         aria-label="Select language"
       >
         <Globe className="h-4 w-4" />

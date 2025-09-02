@@ -21,7 +21,7 @@ export function middleware(_request: NextRequest) {
     "img-src 'self' data: https:",
     "font-src 'self'",
     "connect-src 'self'",
-    "frame-ancestors 'none'"
+    "frame-ancestors 'none'",
   ].join('; ');
 
   response.headers.set('Content-Security-Policy', csp);

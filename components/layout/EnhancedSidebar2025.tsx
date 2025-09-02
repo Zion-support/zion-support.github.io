@@ -2,8 +2,8 @@ import React, { useState, useEffect               } from 'react'
   'react.ts'
 import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence               } from
   'framer-motion.ts'
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star } from
-  'lucide-react.ts'';interface SidebarItem {
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star } from'
+  'lucide-react.ts'';interface SidebarItem {'
   name: string
    href: string
    icon: React.ReactNode
@@ -20,12 +20,11 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
 const sidebarSections = [
   {
     title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap, , color: 'from-cyan-500 to-blue-600, items[, {
-  '
-        name: 'AI & Consciousness,'        href:
-  '/ai-services', icon: Brain, , description: 'Advanced AI consciousness and evolution platforms, subItems[, { name: 'AI Consciousness Evolution, href:, /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:, /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:, /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:, /ai-creativity-studio' }, { name: 'AI Education Platform, href:, /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:, /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:, /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:, /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:, /ai-legal-contract-analyzer' }
+  ''
+        name: 'AI & Consciousness,'        href: '/ai-services', icon: Brain, , description: 'Advanced AI consciousness and evolution platforms, subItems[, { name: 'AI Consciousness Evolution, href:, /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:, /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:, /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:, /ai-creativity-studio' }, { name: 'AI Education Platform, href:, /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:, /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:, /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:, /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:, /ai-legal-contract-analyzer' }'
   '        ]'      }, {
 
-        name: 'Quantum Computing, , href: '/quantum-services, icon: Atom,'        description:, Next-generation quantum computing solutions', subItems[
+        name: 'Quantum Computing, , href: '/quantum-services, icon: Atom, '        description:, Next-generation quantum computing solutions', subItems[
   '          { name: 'Quantum Cloud Infrastructure, href:, /quantum-cloud-infrastructure
   ' }, { name: 'Quantum Bio-Computing, href:, /quantum-bio-computing
   ' }, { name: 'Quantum Energy Platform, href:, /quantum-energy-platform
@@ -35,13 +34,12 @@ const sidebarSections = [
   ' }, { name: 'Quantum Logistics, href:, /quantum-logistics-optimization
   ' }, { name: 'Quantum Cybersecurity, href:, /quantum-cybersecurity-platform
   ' }'        ]
-  '      }, {
+  '      }, {'
 
-        name: 'Enterprise IT,'        href:
-  '/enterprise-it', icon: Shield, , description: 'Enterprise-grade IT infrastructure and security, subItems[, { name: 'Edge Computing Orchestrator, href:, /edge-computing-orchestration' }, { name: 'Zero Trust Security Platform, href:, /zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform, href:, /blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps, href:, /ai-powered-devops' }, { name: 'Quantum Networking, href:, /quantum-networking' }, { name: 'Autonomous IT Operations, href:, /autonomous-it-operations' }, { name: 'Quantum Data Center, href:, /quantum-data-center' }, { name: 'Quantum Cloud Migration, href:, /quantum-cloud-migration' }
+        name: 'Enterprise IT,'        href: '/enterprise-it', icon: Shield, , description: 'Enterprise-grade IT infrastructure and security, subItems[, { name: 'Edge Computing Orchestrator, href:, /edge-computing-orchestration' }, { name: 'Zero Trust Security Platform, href:, /zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform, href:, /blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps, href:, /ai-powered-devops' }, { name: 'Quantum Networking, href:, /quantum-networking' }, { name: 'Autonomous IT Operations, href:, /autonomous-it-operations' }, { name: 'Quantum Data Center, href:, /quantum-data-center' }, { name: 'Quantum Cloud Migration, href:, /quantum-cloud-migration' }'
   '        ]'      }, {
 
-        name: 'Micro SAAS, , href: '/micro-saas, icon: Rocket,'        description:, AI-powered micro SAAS solutions', subItems[
+        name: 'Micro SAAS, , href: '/micro-saas, icon: Rocket, '        description:, AI-powered micro SAAS solutions', subItems[
   '          { name: 'AI Content Factory Platform, href:, /ai-content-factory
   ' }, { name: 'CRM Intelligence & Automation, href:, /crm-intelligence-automation
   ' }, { name: 'AI Decision Engine Platform, href:, /ai-decision-engine
@@ -52,40 +50,38 @@ const sidebarSections = [
   ' }, { name: 'Marketing Automation Platform, href:, /marketing-automation-platform
   ' }, { name: 'Project Management AI, href:, /project-management-ai
   ' }'        ]
-  '      }, {
+  '      }, {'
 
-        name: 'Space Technology,'        href:
-  '/space-tech', icon: Globe, , description: 'Cutting-edge space exploration and mining, subItems[, { name: 'Space Mining Platform, href:, /space-mining-platform' }, { name: 'Satellite Technology, href:, /satellite-technology' }, { name: 'Space Resource Management, href:, /space-resource-management' }, { name: 'Interplanetary Communication, href:, /interplanetary-communication' }
+        name: 'Space Technology,'        href: '/space-tech', icon: Globe, , description: 'Cutting-edge space exploration and mining, subItems[, { name: 'Space Mining Platform, href:, /space-mining-platform' }, { name: 'Satellite Technology, href:, /satellite-technology' }, { name: 'Space Resource Management, href:, /space-resource-management' }, { name: 'Interplanetary Communication, href:, /interplanetary-communication' }'
   '        ]'      }, {
 
-        name: 'Emerging Tech, , href: '/emerging-tech, icon: Sparkles,'        description:, Future technologies and innovations', subItems[
+        name: 'Emerging Tech, , href: '/emerging-tech, icon: Sparkles, '        description:, Future technologies and innovations', subItems[
   '          { name: 'Brain-Computer Interface, href:, /brain-computer-interface
   ' }, { name: 'Autonomous Vehicle AI, href:, /autonomous-vehicle-ai
   ' }, { name: 'Advanced Robotics, href:, /advanced-robotics
   ' }, { name: 'Biotechnology Platform, href:, /biotechnology-platform
   ' }'        ]
-  '
+  ''
     ]
   }, {
 ursor/automate-test-fix-improve-and-merge-code-48f3
     ]
   }, {
     title: 'Comp & Resources, '    icon: Users, color:, from-green-500 to-emerald-600
-  ','    items[
-  '      {
+  ', '    items[
+  '      {'
         name: 'About Us, href: '/about
-  ','        icon: Users, description:, Learn about Zion Tech Group', '        subItems['          { name: 'Our Mission, href:, /mission' }, '          { name: 'Leadership Team, href:, /leadership
+  ', '        icon: Users, description:, Learn about Zion Tech Group', '        subItems['          { name: 'Our Mission, href:, /mission' }, '          { name: 'Leadership Team, href:, /leadership'
   ' },'          { name: 'Comp History, href:, /history' }, '          { name: 'Careers, href:, /careers
   ' }'        ]
-  '      }, {
+  '      }, {'
 
-        name: 'Resources,'        href:
-  '/resources', icon: BookOpen, , description: 'Educational content and documentation, subItems[, { name: 'Documentation, href:, /docs' }, { name: 'API Reference, href:, /api-docs' }, { name: 'Blog & News, href:, /blog' }, { name: 'Case Studies, href:, /case-studies' }, { name: 'Whitepapers, href:, /whitepapers' }, { name: 'Webinars, href:, /webinars' }
+        name: 'Resources,'        href: '/resources', icon: BookOpen, , description: 'Educational content and documentation, subItems[, { name: 'Documentation, href:, /docs' }, { name: 'API Reference, href:, /api-docs' }, { name: 'Blog & News, href:, /blog' }, { name: 'Case Studies, href:, /case-studies' }, { name: 'Whitepapers, href:, /whitepapers' }, { name: 'Webinars, href:, /webinars' }'
   '        ]'      }, {
 
-        name: 'Support, , href: '/support, icon: HelpCircle,'        description:, Get help and support', subItems[
+        name: 'Support, , href: '/support, icon: HelpCircle, '        description:, Get help and support', subItems[
   '          { name: 'Contact Support, href:, /contact-support
-  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'},'          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href:
+  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: '
   '/knowledge-base' }'        ]'      }]  }
 ]
 
@@ -116,12 +112,12 @@ export default function EnhancedSidebar2025(...args[]: any): {const [expandedSec
   useEffect(() => {
     if (isOpen) {
 document.body.style.overflow =
-  'hidden'} else {'
+  'hidden'} else {''
   '      document.body.style.overflow = 'unset
-  '}
+  '}'
    return () => {
       document.body.style.overflow =
-  'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (
+  'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return ('
     <>
       {/* Backdrop */}
       <AnimatePresence>
@@ -137,9 +133,9 @@ className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden''          
       <motion.div
 initial={{ x:, -100%
   ' }}'        animate={{ x: isOpen ? 0 :
-  '-100% }}
-, transition = {'
-  { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`
+  '-100% }}'
+, transition = {''
+  { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`'
         {/* Header */}
         <div className='sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6'>'          <div className='flex items-center justify-between mb-6'>'            <div className='flex items-center gap-3'>'              <div className='relative'>'                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>'                  <Zap className='w-6 h-6 text-white' />'                </div>'                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20'></div>'              </div>'              <div>'
                 <h2 className='text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent'>'                  Zion Tech Group'                </h2>

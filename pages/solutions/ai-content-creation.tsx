@@ -95,7 +95,7 @@ export default function AIContentCreation() {
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$1, 299',
       period: '/month',
       description: 'For large organizations with high content needs',
       features: [

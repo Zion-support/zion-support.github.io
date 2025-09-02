@@ -8,7 +8,7 @@ interface PerformanceOptimizerProps {
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [], preloadFonts = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
   ], criticalCSS
 }) => {
   useEffect(() => {
@@ -34,7 +34,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
       } catch (e) {
-        // Fallback for browsers that don't support all entry types
+        // Fallback for browsers that don&apos;t support all entry types''
         console.log('Performance monitoring not fully supported')
       }
 

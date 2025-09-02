@@ -17,27 +17,29 @@ class ComprehensiveSyntaxFixer {
 
   getAllFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
     const files = [];
-    
+
     if (!fs.existsSync(dir)) {
       return files;
     }
 
     const items = fs.readdirSync(dir);
-    
+
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+        if (
+          !['node_modules', '.git', '.next', 'dist', 'build'].includes(item)
+        ) {
           files.push(...this.getAllFiles(fullPath, extensions));
         }
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
       }
     }
-    
+
     return files;
   }
 
@@ -48,9 +50,9 @@ class ComprehensiveSyntaxFixer {
       let fixed = false;
 
       // Fix common syntax issues
-      
+
       // 1. Fix missing semicolons after imports
-      content = content.replace(/import\s+[^;]+$/gm, (match) => {
+      content = content.replace(/import\s+[^;]+$/gm, match => {
         if (!match.endsWith(';')) {
           fixed = true;
           return match + ';';
@@ -59,16 +61,19 @@ class ComprehensiveSyntaxFixer {
       });
 
       // 2. Fix malformed import statements
-      content = content.replace(/import\s+{[^}]*}\s+from\s+['"][^'"]*['"]\s*$/gm, (match) => {
-        if (!match.endsWith(';')) {
-          fixed = true;
-          return match + ';';
+      content = content.replace(
+        /import\s+{[^}]*}\s+from\s+['"][^'"]*['"]\s*$/gm,
+        match => {
+          if (!match.endsWith(';')) {
+            fixed = true;
+            return match + ';';
+          }
+          return match;
         }
-        return match;
-      });
+      );
 
       // 3. Fix unterminated string literals
-      content = content.replace(/['"][^'"]*$/gm, (match) => {
+      content = content.replace(/['"][^'"]*$/gm, match => {
         if (match.length > 1 && !match.endsWith('"') && !match.endsWith("'")) {
           fixed = true;
           return match + '"';
@@ -78,10 +83,14 @@ class ComprehensiveSyntaxFixer {
 
       // 4. Fix missing commas in arrays and objects
       content = content.replace(/([^,}])\s*\n\s*([}\]])/g, '$1,\n$2');
-      
+
       // 5. Fix missing semicolons after variable declarations
-      content = content.replace(/const\s+\w+\s*=\s*[^;]+$/gm, (match) => {
-        if (!match.endsWith(';') && !match.includes('{') && !match.includes('(')) {
+      content = content.replace(/const\s+\w+\s*=\s*[^;]+$/gm, match => {
+        if (
+          !match.endsWith(';') &&
+          !match.includes('{') &&
+          !match.includes('(')
+        ) {
           fixed = true;
           return match + ';';
         }
@@ -89,22 +98,33 @@ class ComprehensiveSyntaxFixer {
       });
 
       // 6. Fix export statements
-      content = content.replace(/export\s+default\s+function\s+\w+\(\)\s*{$/gm, (match) => {
-        if (!match.endsWith('{')) {
-          fixed = true;
-          return match + ' {';
+      content = content.replace(
+        /export\s+default\s+function\s+\w+\(\)\s*{$/gm,
+        match => {
+          if (!match.endsWith('{')) {
+            fixed = true;
+            return match + ' {';
+          }
+          return match;
         }
-        return match;
-      });
+      );
 
       // 7. Fix malformed JSX/TSX
-      content = content.replace(/<(\w+)\s*([^>]*)\s*>/g, (match, tag, attrs) => {
-        if (attrs && attrs.trim() && !attrs.endsWith('"') && !attrs.endsWith("'")) {
-          fixed = true;
-          return `<${tag} ${attrs.trim()}" >`;
+      content = content.replace(
+        /<(\w+)\s*([^>]*)\s*>/g,
+        (match, tag, attrs) => {
+          if (
+            attrs &&
+            attrs.trim() &&
+            !attrs.endsWith('"') &&
+            !attrs.endsWith("'")
+          ) {
+            fixed = true;
+            return `<${tag} ${attrs.trim()}" >`;
+          }
+          return match;
         }
-        return match;
-      });
+      );
 
       // 8. Fix missing closing braces
       const openBraces = (content.match(/\{/g) || []).length;
@@ -116,7 +136,7 @@ class ComprehensiveSyntaxFixer {
       }
 
       // 9. Fix malformed template literals
-      content = content.replace(/`[^`]*$/gm, (match) => {
+      content = content.replace(/`[^`]*$/gm, match => {
         if (!match.endsWith('`')) {
           fixed = true;
           return match + '`';
@@ -125,8 +145,12 @@ class ComprehensiveSyntaxFixer {
       });
 
       // 10. Fix missing semicolons after return statements
-      content = content.replace(/return\s+[^;]+$/gm, (match) => {
-        if (!match.endsWith(';') && !match.includes('{') && !match.includes('(')) {
+      content = content.replace(/return\s+[^;]+$/gm, match => {
+        if (
+          !match.endsWith(';') &&
+          !match.includes('{') &&
+          !match.includes('(')
+        ) {
           fixed = true;
           return match + ';';
         }
@@ -150,12 +174,12 @@ class ComprehensiveSyntaxFixer {
 
   async run() {
     this.log('🔧 Starting comprehensive syntax fixing...');
-    
+
     // Get all TypeScript and JavaScript files
     const files = this.getAllFiles(path.join(this.projectRoot, 'src'));
-    
+
     this.log(`Found ${files.length} files to check`);
-    
+
     let fixedCount = 0;
     for (const file of files) {
       if (this.fixFile(file)) {
@@ -164,7 +188,7 @@ class ComprehensiveSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} files`);
-    
+
     if (this.errors.length > 0) {
       this.log(`❌ ${this.errors.length} errors encountered`);
       this.errors.forEach(err => {

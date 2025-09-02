@@ -2,140 +2,90 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Target, 
-  Zap, 
-  Users, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  TrendingUp, 
-  BarChart3, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Star, 
-  Award, 
-  Lightbulb, 
-  Sparkles, 
-  Brain,
-  Megaphone,
-  Mail as MailIcon,
-  Calendar,
-  Share2,
-  Eye,
-  MousePointer,
-  Filter,
-  PieChart,
-  LineChart,
-  Globe,
-  Clock,
-  Send,
-  UserPlus,
-  UserCheck,
-  Activity,
+  Target, Zap, 
+  Users, Shield, 
+  CheckCircle, ArrowRight, 
+  TrendingUp, BarChart3, 
+  MessageCircle, Phone, 
+  Mail, MapPin, 
+  Star, Award, 
+  Lightbulb, Sparkles, 
+  Brain, Megaphone,
+  Mail as MailIcon, Calendar,
+  Share2, Eye,
+  MousePointer, Filter,
+  PieChart, LineChart,
+  Globe, Clock,
+  Send, UserPlus,
+  UserCheck, Activity,
   DollarSign
 } from 'lucide-react';
 
 const AIMarketingAutomation: React.FC = () => {
   const features = [
     {
-      icon: Target,
-      title: 'AI Audience Targeting',
-      description: 'Intelligent audience segmentation and targeting based on behavior and preferences',
-      color: 'from-blue-500 to-cyan-500'
+      icon: Target, title: 'AI Audience Targeting',
+      description: 'Intelligent audience segmentation and targeting based on behavior and preferences', color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: MailIcon,
-      title: 'Email Automation',
-      description: 'Automated email campaigns with personalized content and optimal send times',
-      color: 'from-green-500 to-emerald-500'
+      icon: MailIcon, title: 'Email Automation',
+      description: 'Automated email campaigns with personalized content and optimal send times', color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Share2,
-      title: 'Social Media Automation',
-      description: 'Automated social media posting, engagement, and content optimization',
-      color: 'from-purple-500 to-pink-500'
+      icon: Share2, title: 'Social Media Automation',
+      description: 'Automated social media posting, engagement, and content optimization', color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: MousePointer,
-      title: 'Lead Scoring',
-      description: 'AI-powered lead scoring and qualification for better conversion rates',
-      color: 'from-yellow-500 to-orange-500'
+      icon: MousePointer, title: 'Lead Scoring',
+      description: 'AI-powered lead scoring and qualification for better conversion rates', color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: BarChart3,
-      title: 'Campaign Analytics',
-      description: 'Real-time campaign performance tracking with AI-driven insights',
-      color: 'from-red-500 to-pink-500'
+      icon: BarChart3, title: 'Campaign Analytics',
+      description: 'Real-time campaign performance tracking with AI-driven insights', color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'Predict customer behavior and optimize campaigns for maximum ROI',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Brain, title: 'Predictive Analytics',
+      description: 'Predict customer behavior and optimize campaigns for maximum ROI', color: 'from-indigo-500 to-blue-500'
     }
   ];
 
   const marketingChannels = [
     {
-      title: 'Email Marketing',
-      description: 'Automated email campaigns with personalization and A/B testing',
-      icon: MailIcon,
-      benefits: ['Drip campaigns', 'Personalization', 'A/B testing', 'Analytics'],
-      pricing: '$49/month',
+      title: 'Email Marketing', description: 'Automated email campaigns with personalization and A/B testing',
+      icon: MailIcon, benefits: ['Drip campaigns', 'Personalization', 'A/B testing', 'Analytics'], pricing: '$49/month',
       color: 'from-blue-500 to-cyan-500'
-    },
-    {
+    }, {
       title: 'Social Media',
-      description: 'Automated social media management and content optimization',
-      icon: Share2,
-      benefits: ['Auto-posting', 'Engagement tracking', 'Content optimization', 'Influencer outreach'],
-      pricing: '$39/month',
+      description: 'Automated social media management and content optimization', icon: Share2,
+      benefits: ['Auto-posting', 'Engagement tracking', 'Content optimization', 'Influencer outreach'], pricing: '$39/month',
       color: 'from-green-500 to-emerald-500'
-    },
-    {
+    }, {
       title: 'SMS Marketing',
-      description: 'Automated SMS campaigns with high open rates and engagement',
-      icon: MessageCircle,
-      benefits: ['Bulk SMS', 'Personalization', 'Delivery tracking', 'Compliance'],
-      pricing: '$29/month',
+      description: 'Automated SMS campaigns with high open rates and engagement', icon: MessageCircle,
+      benefits: ['Bulk SMS', 'Personalization', 'Delivery tracking', 'Compliance'], pricing: '$29/month',
       color: 'from-purple-500 to-pink-500'
-    },
-    {
+    }, {
       title: 'Retargeting',
-      description: 'AI-powered retargeting campaigns across multiple platforms',
-      icon: Target,
-      benefits: ['Cross-platform', 'Dynamic ads', 'Audience insights', 'Conversion tracking'],
-      pricing: '$59/month',
+      description: 'AI-powered retargeting campaigns across multiple platforms', icon: Target,
+      benefits: ['Cross-platform', 'Dynamic ads', 'Audience insights', 'Conversion tracking'], pricing: '$59/month',
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
   const benefits = [
-    'Increase conversions by 200%',
-    'Reduce marketing costs by 50%',
-    '24/7 automated campaigns',
-    'Personalized experiences',
-    'Real-time optimization',
-    'Multi-channel integration',
-    'Advanced analytics',
-    'ROI tracking'
+    'Increase conversions by 200%', 'Reduce marketing costs by 50%',
+    '24/7 automated campaigns', 'Personalized experiences',
+    'Real-time optimization', 'Multi-channel integration',
+    'Advanced analytics', 'ROI tracking'
   ];
 
   const integrations = [
-    'Facebook Ads',
-    'Google Ads',
-    'Instagram',
-    'LinkedIn',
-    'Twitter',
-    'TikTok',
-    'Mailchimp',
-    'HubSpot',
-    'Salesforce',
-    'Shopify',
-    'WooCommerce',
-    'Zapier'
+    'Facebook Ads', 'Google Ads',
+    'Instagram', 'LinkedIn',
+    'Twitter', 'TikTok',
+    'Mailchimp', 'HubSpot',
+    'Salesforce', 'Shopify',
+    'WooCommerce', 'Zapier'
   ];
 
   return (
@@ -148,7 +98,7 @@ const AIMarketingAutomation: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
+      <section className="relative overflow-hidden py-20 lg: py-32">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -170,7 +120,7 @@ const AIMarketingAutomation: React.FC = () => {
               <p className="text-xl text-gray-300 leading-relaxed">
                 Transform your marketing with AI-powered automation. Create personalized campaigns, optimize performance, and maximize ROI across all channels with intelligent marketing tools.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm: flex-row gap-4">
                 <button className="btn-futuristic bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700">
                   <Target className="w-5 h-5" />
                   Start Campaign

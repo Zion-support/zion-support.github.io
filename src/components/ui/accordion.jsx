@@ -1,6 +1,6 @@
-'use client';"
-import * as React from 'react';"
-import * as AccordionPrimitive from '@radix-ui/react-accordion';"
+'use client';""
+import * as React from 'react';""
+import * as AccordionPrimitive from '@radix-ui/react-accordion';""
 import { ChevronDown    } from 'lucide-react';
 export default function Page() {
   import { cn } from '@/lib/utils';
@@ -18,5 +18,5 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
   </AccordionPrimitive.Content>));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-"
+""
 }}}}

@@ -2,9 +2,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
-'use client, ';'''
+'use client, ';''''
   'import Image from 'next/image
-  ';interface OptimizedImageProps {
+  ';interface OptimizedImageProps {'
   src: string
   alt: string
   width?: number
@@ -23,20 +23,13 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  sizes,
-  fill = false,
-  style,
-  onClick,
-  onLoad,
+  src, alt,
+  width, height,
+  className = '', priority = false,
+  quality = 75, placeholder = 'empty',
+  blurDataURL, sizes,
+  fill = false, style,
+  onClick, onLoad,
   onError
 }) => {
 
@@ -62,8 +55,7 @@ src, alt, width,  , ''
           setIsInView(true)
           observer.disconnect()
         }
-      },
-      {
+      }, {
         rootMargin: '50px', // Start loading 50px before the image comes into view
         threshold: 0.1
       }
@@ -99,7 +91,7 @@ const observer = new IntersectionObserver();([entry]) => {
   if (hasError) {
     return (
       <div
-        className={`bg-gray-200 dark:bg-gray-700 flex items-center justify-center ${className}`}
+        className={`bg-gray-200 dark: bg-gray-700 flex items-center justify-center ${className}`}
         style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
@@ -112,7 +104,7 @@ const observer = new IntersectionObserver();([entry]) => {
     return (
       <div
         ref={imageRef}
-        className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}
+        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}
         style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
       />
     )
@@ -127,7 +119,7 @@ const observer = new IntersectionObserver();([entry]) => {
     >
       {/* Loading overlay */}
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse z-10" />
+        <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10" />
       )}
       
       {/* Next.js Image component */}
@@ -161,9 +153,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   if (!isInView) {
 return()
       <div``        ref={imageRef}`'`'
-  '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%
+  '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%'
   ' : height }}'      />
-  '    )`  }
+  '    )`  }'
 
   return()
     <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
@@ -206,9 +198,9 @@ export const withImageOptimization = <P extends object>(
 export default OptimizedImage
         style={{, ''''
   '          objectFit: fill ? 'cover
-  ' : 'contain}}'      />
-  '
-      {/* Loading spinner */}'''      {isLoading && ('''        <div className='absolute inset-0 flex items-center justify-center z-20'>'''          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>'        </div>'      )}</div>  )
+  ' : 'contain}}'      />'
+  ''
+      {/* Loading spinner */}'''      {isLoading && ('''        <div className='absolute inset-0 flex items-center justify-center z-20'>'''          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>'        </div>'      )}</div>  )'
 }
 
 // HOC for wrapping components with image optimization
@@ -218,4 +210,4 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
     <Component {...props} />
   )
 }''`
-  '''export default OptimizedImage''`;''`''`
+  '''export default OptimizedImage''`;''`''`'

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import EnhancedMainPage from './EnhancedMainPage';
 describe('EnhancedMainPage', () => {
   it('renders without crashing', () => {
-    render(<EnhancedMainPage />)"
+    render(<EnhancedMainPage />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<EnhancedMainPage />)

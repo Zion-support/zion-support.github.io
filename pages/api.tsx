@@ -6,84 +6,57 @@ import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle,
 export default function API() {
   const apiEndpoints = [
     {
-      method: 'GET',
-      endpoint: '/api/v1/ai/models',
-      description: 'List all available AI models',
-      category: 'AI Services',
+      method: 'GET', endpoint: '/api/v1/ai/models',
+      description: 'List all available AI models', category: 'AI Services',
       auth: 'Required'
-    },
-    {
+    }, {
       method: 'POST',
-      endpoint: '/api/v1/ai/predict',
-      description: 'Make predictions using AI models',
-      category: 'AI Services',
-      auth: 'Required'
+      endpoint: '/api/v1/ai/predict', description: 'Make predictions using AI models',
+      category: 'AI Services', auth: 'Required'
     },
     {
-      method: 'GET',
-      endpoint: '/api/v1/cloud/status',
-      description: 'Get cloud service status',
-      category: 'Cloud Services',
+      method: 'GET', endpoint: '/api/v1/cloud/status',
+      description: 'Get cloud service status', category: 'Cloud Services',
       auth: 'Required'
-    },
-    {
+    }, {
       method: 'POST',
-      endpoint: '/api/v1/cloud/deploy',
-      description: 'Deploy application to cloud',
-      category: 'Cloud Services',
-      auth: 'Required'
+      endpoint: '/api/v1/cloud/deploy', description: 'Deploy application to cloud',
+      category: 'Cloud Services', auth: 'Required'
     },
     {
-      method: 'GET',
-      endpoint: '/api/v1/security/scan',
-      description: 'Perform security scan',
-      category: 'Security',
+      method: 'GET', endpoint: '/api/v1/security/scan',
+      description: 'Perform security scan', category: 'Security',
       auth: 'Required'
-    },
-    {
+    }, {
       method: 'POST',
-      endpoint: '/api/v1/security/audit',
-      description: 'Run security audit',
-      category: 'Security',
-      auth: 'Required'
+      endpoint: '/api/v1/security/audit', description: 'Run security audit',
+      category: 'Security', auth: 'Required'
     }
   ];
 
   const sdkLanguages = [
     {
-      name: 'Python',
-      version: 'v2.1.0',
-      description: 'Official Python SDK for Zion Tech Group APIs',
-      icon: '🐍',
+      name: 'Python', version: 'v2.1.0',
+      description: 'Official Python SDK for Zion Tech Group APIs', icon: '🐍',
       features: ['Async support', 'Type hints', 'Error handling', 'Documentation']
-    },
-    {
+    }, {
       name: 'JavaScript',
-      version: 'v1.8.0',
-      description: 'Node.js and browser-compatible JavaScript SDK',
-      icon: '🟨',
-      features: ['Promise-based', 'Browser support', 'TypeScript', 'Examples']
-    },
-    {
+      version: 'v1.8.0', description: 'Node.js and browser-compatible JavaScript SDK',
+      icon: '🟨', features: ['Promise-based', 'Browser support', 'TypeScript', 'Examples']
+    }, {
       name: 'Java',
-      version: 'v1.5.0',
-      description: 'Java SDK for enterprise applications',
-      icon: '☕',
-      features: ['Maven support', 'Async operations', 'Logging', 'Testing']
-    },
-    {
+      version: 'v1.5.0', description: 'Java SDK for enterprise applications',
+      icon: '☕', features: ['Maven support', 'Async operations', 'Logging', 'Testing']
+    }, {
       name: 'C#',
-      version: 'v1.3.0',
-      description: '.NET SDK for Windows applications',
-      icon: '🔷',
-      features: ['NuGet package', 'Async/await', 'LINQ support', 'Documentation']
+      version: 'v1.3.0', description: '.NET SDK for Windows applications',
+      icon: '🔷', features: ['NuGet package', 'Async/await', 'LINQ support', 'Documentation']
     }
   ];
 
   const codeExamples = [
     {
-      title: 'AI Model Prediction',
-      language: 'python',
+      title: 'AI Model Prediction', language: 'python',
       code: `import ziontech
 
 # Initialize client
@@ -91,16 +64,13 @@ client = ziontech.Client(api_key="your-api-key")
 
 # Make prediction
 result = client.ai.predict(
-    model_id="sentiment-analysis",
-    data={"text": "I love this product!"}
+    model_id="sentiment-analysis", data={"text": "I love this product!"}
 )
 
-print(result.prediction)  # "positive"`,
-      description: 'Use our AI services to analyze text sentiment'
+print(result.prediction)  # "positive"`, description: 'Use our AI services to analyze text sentiment'
     },
     {
-      title: 'Cloud Deployment',
-      language: 'javascript',
+      title: 'Cloud Deployment', language: 'javascript',
       code: `const ziontech = require('ziontech');
 
 const client = new ziontech.Client({
@@ -109,46 +79,35 @@ const client = new ziontech.Client({
 
 // Deploy to cloud
 const deployment = await client.cloud.deploy({
-  appName: 'my-app',
-  source: './dist',
+  appName: 'my-app', source: './dist',
   environment: 'production'
 });
 
-console.log(deployment.url);`,
-      description: 'Deploy your application to the cloud'
+console.log(deployment.url);`, description: 'Deploy your application to the cloud'
     },
     {
-      title: 'Security Scan',
-      language: 'curl',
+      title: 'Security Scan', language: 'curl',
       code: `curl -X POST "https://api.ziontechgroup.com/v1/security/scan" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-  -d '{
-    "target": "https://example.com",
-    "scan_type": "vulnerability"
-  }'`,
+  -d '{'
+    "target": "https://example.com", "scan_type": "vulnerability"
+  }'`,'
       description: 'Perform security scans using our API'
     }
   ];
 
   const rateLimits = [
     {
-      plan: 'Free',
-      requests: '1,000/month',
-      burst: '10/minute',
+      plan: 'Free', requests: '1,000/month', burst: '10/minute',
       features: ['Basic API access', 'Community support']
-    },
-    {
+    }, {
       plan: 'Professional',
-      requests: '100,000/month',
-      burst: '100/minute',
-      features: ['Full API access', 'Priority support', 'Webhooks']
-    },
-    {
+      requests: '100, 000/month',
+      burst: '100/minute', features: ['Full API access', 'Priority support', 'Webhooks']
+    }, {
       plan: 'Enterprise',
-      requests: 'Unlimited',
-      burst: '1,000/minute',
-      features: ['Unlimited access', 'Dedicated support', 'Custom limits']
+      requests: 'Unlimited', burst: '1,000/minute', features: ['Unlimited access', 'Dedicated support', 'Custom limits']
     }
   ];
 
@@ -163,7 +122,7 @@ console.log(deployment.url);`,
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 API Reference
@@ -241,7 +200,7 @@ console.log(deployment.url);`,
             
             <div className="space-y-4">
               {apiEndpoints.map((endpoint, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4">
                       <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
@@ -283,7 +242,7 @@ console.log(deployment.url);`,
 
         {/* SDKs */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Official SDKs
@@ -295,7 +254,7 @@ console.log(deployment.url);`,
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {sdkLanguages.map((sdk, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover: shadow-xl transition-shadow">
                   <div className="text-center mb-4">
                     <div className="text-4xl mb-2">{sdk.icon}</div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1">{sdk.name}</h3>
@@ -310,7 +269,7 @@ console.log(deployment.url);`,
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
                     Install SDK
                   </button>
                 </div>
@@ -321,7 +280,7 @@ console.log(deployment.url);`,
 
         {/* Code Examples */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Code Examples
@@ -354,7 +313,7 @@ console.log(deployment.url);`,
 
         {/* Rate Limits */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Rate Limits
@@ -393,7 +352,7 @@ console.log(deployment.url);`,
                   </ul>
                   <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
                     limit.plan === 'Professional' 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700' 
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}>
                     {limit.plan === 'Free' ? 'Get Started' : 'Upgrade Plan'}
@@ -406,7 +365,7 @@ console.log(deployment.url);`,
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -429,6 +388,6 @@ console.log(deployment.url);`,
           </div>
         </section>
       </main>
-    </>
+</>
   );
 }

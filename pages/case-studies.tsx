@@ -6,138 +6,88 @@ import { ArrowRight, TrendingUp, Users, Clock, Award, CheckCircle, Star, Buildin
 export default function CaseStudies() {
   const caseStudies = [
     {
-      title: 'Enterprise Cloud Migration Success',
-      client: 'Fortune 500 Manufacturing Company',
-      industry: 'Manufacturing',
-      challenge: 'Legacy system migration and digital transformation',
-      solution: 'Complete cloud migration with AI-powered automation',
-      results: [
+      title: 'Enterprise Cloud Migration Success', client: 'Fortune 500 Manufacturing Company',
+      industry: 'Manufacturing', challenge: 'Legacy system migration and digital transformation',
+      solution: 'Complete cloud migration with AI-powered automation', results: [
         '60% reduction in operational costs',
-        '40% improvement in system performance',
-        '99.9% uptime achieved',
+        '40% improvement in system performance', '99.9% uptime achieved',
         '50% faster deployment cycles'
-      ],
-      duration: '6 months',
-      team: '12 specialists',
-      icon: Cloud,
+      ], duration: '6 months',
+      team: '12 specialists', icon: Cloud,
       image: '/api/placeholder/600/400'
-    },
-    {
+    }, {
       title: 'AI-Powered Customer Service Revolution',
-      client: 'Leading E-commerce Platform',
-      industry: 'E-commerce',
-      challenge: 'High customer service volume and response times',
-      solution: 'AI chatbot implementation with natural language processing',
+      client: 'Leading E-commerce Platform', industry: 'E-commerce',
+      challenge: 'High customer service volume and response times', solution: 'AI chatbot implementation with natural language processing',
       results: [
-        '80% reduction in response time',
-        '90% customer satisfaction rate',
-        '24/7 automated support',
-        '70% cost savings on support staff'
-      ],
-      duration: '4 months',
-      team: '8 specialists',
-      icon: Target,
+        '80% reduction in response time', '90% customer satisfaction rate',
+        '24/7 automated support', '70% cost savings on support staff'
+      ], duration: '4 months',
+      team: '8 specialists', icon: Target,
       image: '/api/placeholder/600/400'
-    },
-    {
+    }, {
       title: 'Cybersecurity Transformation',
-      client: 'Financial Services Firm',
-      industry: 'Financial Services',
-      challenge: 'Advanced threat protection and compliance',
-      solution: 'Comprehensive security framework with AI monitoring',
+      client: 'Financial Services Firm', industry: 'Financial Services',
+      challenge: 'Advanced threat protection and compliance', solution: 'Comprehensive security framework with AI monitoring',
       results: [
-        '99.8% threat detection accuracy',
-        'Zero security breaches',
-        'SOC 2 Type II compliance',
-        '50% reduction in security incidents'
-      ],
-      duration: '8 months',
-      team: '15 specialists',
-      icon: Shield,
+        '99.8% threat detection accuracy', 'Zero security breaches',
+        'SOC 2 Type II compliance', '50% reduction in security incidents'
+      ], duration: '8 months',
+      team: '15 specialists', icon: Shield,
       image: '/api/placeholder/600/400'
-    },
-    {
+    }, {
       title: 'Data Analytics Platform Development',
-      client: 'Healthcare Provider Network',
-      industry: 'Healthcare',
-      challenge: 'Patient data analysis and predictive insights',
-      solution: 'Custom analytics platform with machine learning',
+      client: 'Healthcare Provider Network', industry: 'Healthcare',
+      challenge: 'Patient data analysis and predictive insights', solution: 'Custom analytics platform with machine learning',
       results: [
-        '30% improvement in patient outcomes',
-        '25% reduction in readmission rates',
-        'Real-time data insights',
-        'HIPAA compliance maintained'
-      ],
-      duration: '10 months',
-      team: '10 specialists',
-      icon: TrendingUp,
+        '30% improvement in patient outcomes', '25% reduction in readmission rates',
+        'Real-time data insights', 'HIPAA compliance maintained'
+      ], duration: '10 months',
+      team: '10 specialists', icon: TrendingUp,
       image: '/api/placeholder/600/400'
-    },
-    {
+    }, {
       title: 'Micro SaaS Development',
-      client: 'Startup Technology Company',
-      industry: 'Technology',
-      challenge: 'Rapid product development and market entry',
-      solution: 'Custom micro SaaS platform with scalable architecture',
+      client: 'Startup Technology Company', industry: 'Technology',
+      challenge: 'Rapid product development and market entry', solution: 'Custom micro SaaS platform with scalable architecture',
       results: [
-        '3x faster time to market',
-        '500% user growth in 6 months',
-        '99.5% platform reliability',
-        'Seamless scalability achieved'
-      ],
-      duration: '5 months',
-      team: '6 specialists',
-      icon: Lightbulb,
+        '3x faster time to market', '500% user growth in 6 months',
+        '99.5% platform reliability', 'Seamless scalability achieved'
+      ], duration: '5 months',
+      team: '6 specialists', icon: Lightbulb,
       image: '/api/placeholder/600/400'
-    },
-    {
+    }, {
       title: 'Digital Transformation Initiative',
-      client: 'Traditional Retail Chain',
-      industry: 'Retail',
-      challenge: 'Digital modernization and omnichannel experience',
-      solution: 'End-to-end digital transformation with AI integration',
+      client: 'Traditional Retail Chain', industry: 'Retail',
+      challenge: 'Digital modernization and omnichannel experience', solution: 'End-to-end digital transformation with AI integration',
       results: [
-        '45% increase in online sales',
-        '60% improvement in customer engagement',
-        'Unified omnichannel experience',
-        '40% reduction in operational costs'
-      ],
-      duration: '12 months',
-      team: '20 specialists',
-      icon: Building,
+        '45% increase in online sales', '60% improvement in customer engagement',
+        'Unified omnichannel experience', '40% reduction in operational costs'
+      ], duration: '12 months',
+      team: '20 specialists', icon: Building,
       image: '/api/placeholder/600/400'
     }
   ];
 
   const industries = [
-    { name: 'Manufacturing', count: 15, icon: Building },
-    { name: 'Healthcare', count: 12, icon: Shield },
-    { name: 'Financial Services', count: 18, icon: TrendingUp },
-    { name: 'E-commerce', count: 22, icon: Target },
-    { name: 'Technology', count: 25, icon: Lightbulb },
-    { name: 'Retail', count: 14, icon: Users }
+    { name: 'Manufacturing', count: 15, icon: Building }, { name: 'Healthcare', count: 12, icon: Shield },
+    { name: 'Financial Services', count: 18, icon: TrendingUp }, { name: 'E-commerce', count: 22, icon: Target },
+    { name: 'Technology', count: 25, icon: Lightbulb }, { name: 'Retail', count: 14, icon: Users }
   ];
 
   const testimonials = [
     {
-      quote: "Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we've seen significant improvements in efficiency and cost savings.",
+      quote: "Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we&apos;ve seen significant improvements in efficiency and cost savings.", '
       author: "Sarah Johnson",
-      title: "CTO",
-      company: "Manufacturing Corp",
+      title: "CTO", company: "Manufacturing Corp",
       rating: 5
-    },
-    {
+    }, {
       quote: "Their AI solutions revolutionized our customer service operations. We now provide 24/7 support with higher satisfaction rates than ever before.",
-      author: "Michael Chen",
-      title: "VP of Operations",
-      company: "E-commerce Platform",
-      rating: 5
+      author: "Michael Chen", title: "VP of Operations",
+      company: "E-commerce Platform", rating: 5
     },
     {
-      quote: "The cybersecurity implementation was flawless. We feel confident knowing our data is protected by the most advanced security measures available.",
-      author: "Dr. Emily Rodriguez",
-      title: "Chief Information Officer",
-      company: "Healthcare Network",
+      quote: "The cybersecurity implementation was flawless. We feel confident knowing our data is protected by the most advanced security measures available.", author: "Dr. Emily Rodriguez",
+      title: "Chief Information Officer", company: "Healthcare Network",
       rating: 5
     }
   ];
@@ -153,15 +103,15 @@ export default function CaseStudies() {
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Success Stories
               </h1>
               <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                Discover how we've helped businesses across industries achieve their goals through innovative technology solutions.
+                Discover how we&apos;ve helped businesses across industries achieve their goals through innovative technology solutions.''
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 <Link href="/contact">
                   <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
                     Start Your Project
@@ -206,7 +156,7 @@ export default function CaseStudies() {
 
         {/* Case Studies */}
         <section id="case-studies" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Featured Case Studies
@@ -218,7 +168,7 @@ export default function CaseStudies() {
             
             <div className="space-y-16">
               {caseStudies.map((study, index) => (
-                <div key={index} className={`flex flex-col lg:flex-row gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                <div key={index} className={`flex flex-col lg: flex-row gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   <div className="lg:w-1/2">
                     <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center">
                       <study.icon className="w-24 h-24 text-gray-400" />
@@ -269,7 +219,7 @@ export default function CaseStudies() {
                     </div>
                     
                     <Link href="/contact">
-                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
                         Start Similar Project
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
                       </button>
@@ -283,7 +233,7 @@ export default function CaseStudies() {
 
         {/* Testimonials */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Client Testimonials
@@ -322,14 +272,14 @@ export default function CaseStudies() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve similar results for your business.
+              Let&apos;s discuss how we can help you achieve similar results for your business.''
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link href="/contact">
                 <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Start Your Project
@@ -345,6 +295,6 @@ export default function CaseStudies() {
           </div>
         </section>
       </main>
-    </>
+</>
   );
 }

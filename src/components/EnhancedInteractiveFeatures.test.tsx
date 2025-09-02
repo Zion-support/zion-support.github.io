@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import EnhancedInteractiveFeatures from './EnhancedInteractiveFeatures';
 describe('EnhancedInteractiveFeatures', () => {
   it('renders without crashing', () => {
-    render(<EnhancedInteractiveFeatures />)"
+    render(<EnhancedInteractiveFeatures />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<EnhancedInteractiveFeatures />)

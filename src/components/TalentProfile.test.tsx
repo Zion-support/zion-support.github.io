@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import TalentProfile from './TalentProfile';
 describe('TalentProfile', () => {
   it('renders without crashing', () => {
-    render(<TalentProfile />)"
+    render(<TalentProfile />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<TalentProfile />)

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react' import { Search, X, F
    id: string;
    title: string;
    description: string;
-   url: string;"
+   url: string;""
    type: 'service' | 'solution' | 'page' | 'article';
    category?: string;
    tags?: string[]} interface SearchComponentProps {
