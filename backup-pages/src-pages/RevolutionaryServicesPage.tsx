@@ -127,42 +127,47 @@ import {
   WrenchIcon5,
   ToolIcon5,
   HammerIcon5,
-  ScrewdriverIcon5} from 'lucide-react.ts';
+  ScrewdriverIcon5} from
+  'lucide-react.ts';
 export function RevolutionaryServicesPage(...args: any[]): any {
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(,
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');
+  const [priceRange, setPriceRange] = useState('all
+  ');
+  const [sortBy, setSortBy] = useState('name
+  ');
 
-  
-  
-  
-  
-      
       let matchesPrice = true;
-      if (priceRange === 'low') {
+      if (priceRange === 'low
+  ') {
 
-        matchesPrice = service.price < 1500} else if (priceRange === 'medium') {
+        matchesPrice = service.price < 1500} else if (priceRange === 'medium
+  ') {
 
-        matchesPrice = service.price >= 1500 && service.price <= 3000} else if (priceRange === 'high') {
+        matchesPrice = service.price >= 1500 && service.price <= 3000} else if (priceRange === 'high
+  ') {
 
         matchesPrice = service.price > 3000}
 
       return matchesSearch && matchesCategory && matchesPrice}
   );
 
-  
-      case 'price-low':
-        return a.price - b.price;
-=======
-        return a.title.localeCompare(b.title);'      case 'price-low':
+      case 'price-low
+  ': return a.price - b.price;
+return a.title.localeCompare(b.title);'      case
+  'price-low':
         return a.price - b.price;'
-      case 'price-high':
+      case
+  'price-high':
         return b.price - a.price;
-      case 'category':
+      case
+  'category':
         return a.category.localeCompare(b.category);
-      case 'innovation':
+      case
+  'innovation:
         
         return()
           (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] ||
@@ -174,58 +179,82 @@ export function RevolutionaryServicesPage(...args: any[]): any {
         return 0}
   }) ;
 
-  
     return categoryData ? categoryData.icon : Globe};
 
-  
-    return categoryData ? categoryData.color : 'from-gray-500 to-slate-600'};
+    return categoryData ? categoryData.color :,
+  from-gray-500 to-slate-600'};
 
-  
-    if (price <= 3000) return 'medium';
-    return 'high'};
+    if (price <= 3000) return
+  'medium';
+    return
+  'high'};
 
-  
     switch (range) {
 
-      case 'low':'
-        return 'text-green-400';
-      case 'medium':'
-        return 'text-yellow-400';
-      case 'high':'
-        return 'text-red-400';
+      case
+  'low': '
+        return 'text-green-400
+  ';
+      case 'medium
+  ':'
+        return
+  'text-yellow-400';
+      case
+  'high':
+  '
+        return 'text-red-400
+  ';
       default:'
-        return 'text-gray-400'}
+        return
+  'text-gray-400}
   };
 
-  
     switch (range) {
 
-      case 'low':'
-        return 'bg-green-500/20 text-green-400';
-      case 'medium':'
-        return 'bg-yellow-500/20 text-yellow-400';
-      case 'high':'
-        return 'bg-red-500/20 text-red-400';
+      case,
+  low': '
+        return 'bg-green-500/20 text-green-400
+  ';
+      case 'medium
+  ':'
+        return
+  'bg-yellow-500/20 text-yellow-400';
+      case
+  'high':
+  '
+        return 'bg-red-500/20 text-red-400
+  ';
       default:'
-        return 'bg-gray-500/20 text-gray-400'}
+        return
+  'bg-gray-500/20 text-gray-400}
   };
 
-  
-      case 'Advanced':'
-        return 'text-blue-400';
-      case 'Standard':'
-        return 'text-green-400';
-      default:'
-        return 'text-gray-400'}
+      case,
+  Advanced': '
+        return 'text-blue-400
+  ';
+      case 'Standard
+  ':'
+        return
+  'text-green-400';
+      default:
+  '
+        return 'text-gray-400}
   };
 
-  
-      case 'Advanced':'
-        return 'bg-blue-500/20';
-      case 'Standard':'
-        return 'bg-green-500/20';
+      case,
+  Advanced
+  ': '
+        return
+  'bg-blue-500/20';
+      case
+  'Standard':
+  '
+        return 'bg-green-500/20
+  ';
       default:'
-        return 'bg-gray-500/20'}  };
+        return
+  'bg-gray-500/20}  };
 
   return()
     <div className="min-h-screen py-8">"
@@ -346,17 +375,22 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                     {React.createElement(getCategoryIcon(service.category), {
 
-                      className: 'w-8 h-8 text-white'})}
+                      className:,
+  w-8 h-8 text-white'})}
                   </div>"
                   <div className="text-right">
                     <div`
                       className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${getPriceRangeColor(service.price)}`}
                     >
-                      {getPriceRange(service.price) === 'low''
-                        ? 'Affordable''
-                        : getPriceRange(service.price) === 'medium''
-                          ? 'Premium''
-                          : 'Enterprise'}
+                      {getPriceRange(service.price) ===
+  'low''
+                        ?
+  'Affordable'': getPriceRange(service.price) ===
+  'medium''
+                          ?
+  'Premium''
+                          :
+  'Enterprise}
                     </div>
                   </div>
                 </div>"
@@ -511,7 +545,8 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                   </p>
                 </div>
 
-                {package_.pricing === 'Custom pricing based on requirements' ? ("
+                {package_.pricing ===
+  'Custom pricing based on requirements' ? ("
                   <div className="text-center mb-6">"
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
                       Custom Pricing
@@ -536,7 +571,8 @@ export function RevolutionaryServicesPage(...args: any[]): any {
 "
                 <div className="mb-6">"
                   <h4 className="text-sm font-semibold text-gray-300 mb-3">
-                    What's Included:
+                    What
+  's Included:
                   </h4>"
                   <div className="space-y-2">
                     {package_.features.map((feature, idx) => (
@@ -599,7 +635,8 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                 href={CONTACT_INFORMATION.website}"
                 className="text-green-400 hover:text-green-300 transition-colors"
               >
-                {CONTACT_INFORMATION.website.replace('https://',)}
+                {CONTACT_INFORMATION.website.replace(,
+  https: //,)}
               </a>
             </div>
 "

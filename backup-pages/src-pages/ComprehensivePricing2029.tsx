@@ -1,32 +1,38 @@
 
 export default function ComprehensivePricing2029(...args: any[]): any {
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [sortBy, setSortBy] = useState<any>('popularity');
+  const [selectedCategory, setSelectedCategory] = useState(,
+  All');
+  const [searchQuery, setSearchQuery] = useState('
+  ');
+  const [viewMode, setViewMode] = useState<any>('grid
+  ');
+  const [sortBy, setSortBy] = useState<any>('popularity
+  ');
 
-  
   // Combine all services
-  
-  
-    
+
     return matchesCategory && matchesSearch}) ;
 
   // Sort services
   
-      case 'rating':
-        return b.rating - a.rating;
-=======
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'      case 'rating':
-        return b.rating - a.rating;'
-      case 'popularity':
+      case 'rating
+  ': return b.rating - a.rating;
+return parseFloat(a.price.replace('$, ,
+  ').replace(
+  ',', '
+  ')) - parseFloat(b.price.replace('$
+  ', '').replace(
+  ',', '
+  '));'      case
+  'rating': return b.rating - a.rating;'
+      case
+  'popularity:
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
       default:
         return 0}
   }) ;
 
-  
     return iconMap[category] || Cpu};
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -158,9 +164,9 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                     onClick={() => setSelectedCategory(category)}`
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
 
-                      selectedCategory === category'
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg''
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'`
+                      selectedCategory === category,
+  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
+  ': 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20`
                     }`}
                   >
                     {category}
@@ -183,19 +189,25 @@ export default function ComprehensivePricing2029(...args: any[]): any {
 
               {/* View Mode Toggle */}"
               <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
-                <button'
-                  onClick={() => setViewMode('grid')}`
+                <button,
+  onClick={() => setViewMode(
+  'grid')}`
                   className={`p-2 rounded-md transition-all duration-300 ${
 
-                    viewMode === 'grid' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'`
+                    viewMode ===
+  'grid' ?
+  'bg-gradient-to-r from-cyan-500 to-purple-500 text-white': 'text-gray-400 hover:text-white`
                   }`}
                 >"
                   <Grid className="w-5 h-5"  />                </button>
-                <button'
-                  onClick={() => setViewMode('list')}`
+                <button,
+  onClick={() => setViewMode('list
+  ')}`
                   className={`p-2 rounded-md transition-all duration-300 ${
 
-                    viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'`
+                    viewMode === 'list
+  ' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white
+  ': 'text-gray-400 hover:text-white`
                   }`}
                 >"
                   <List className="w-5 h-5"  />                </button>
@@ -214,9 +226,13 @@ export default function ComprehensivePricing2029(...args: any[]): any {
             transition={{ duration: 0.8, delay: 0.7 }}`
             className={`grid gap-6 ${
 
-              viewMode === 'grid' '
-                ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' '
-                : 'grid-cols-1'`
+              viewMode ===,
+  grid
+  ' '
+                ?
+  'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
+  '
+                : 'grid-cols-1`
             }`}
           >
             <AnimatePresence>
@@ -228,15 +244,21 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                   transition={{ duration: 0.5, delay: index * 0.05 }}`
                   className={`group relative ${
 
-                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''`
+                    viewMode ===,
+  list
+  ' ? 'flex flex-col lg: flex-row
+  ' : '`
                   }`}
                 >`
                   <div className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 ${
 
-                    viewMode === 'list' ? 'flex-1' : ''`
+                    viewMode ===,
+  list' ?
+  'flex-1': '`
                   }`}>
                     {/* Service Header */}'`
-                    <div className={`p-6 ${service.popular ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20' : ''}`}>"
+                    <div className={`p-6 ${service.popular ?,
+  bg-gradient-to-r from-yellow-500/20 to-orange-500/20': '}`}>"
                       <div className="flex items-start justify-between mb-4">"
                         <div className="flex items-center space-x-3">"
                           <div className="text-3xl">{service.icon}</div>

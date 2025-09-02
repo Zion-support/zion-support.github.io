@@ -11,14 +11,8 @@ export interface EnterpriseIt2026ServiceV2 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
+address: string;
+  };export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
   {
     id: "2026-enterprise-it-v2",
     name: "2026 Enterprise IT Solutions V2",

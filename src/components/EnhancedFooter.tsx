@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -278,3 +279,40 @@ const Cookie = ({ className }: { className?: string }) => (";"";"
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />;";"
   </svg>;";"
 );";"";"
+=======
+import React from,
+  react'; import { Link } from
+  'react-router-dom'; import { motion } from
+  'framer-motion'; import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from
+  'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [ { title:
+  'Services, links: [ { name:,
+  AI Solutions', href: '/services/ai-services }, { name:,
+  IT & Security', href: '/services/it-services }, { name:,
+  Blockchain & Web3', href: '/services/blockchain-services }, { name:,
+  Sustainability', href: '/services/sustainability }, { name:,
+  Healthcare Tech', href: '/services/healthcare-tech }, { name:,
+  Edge Computing', href: '/services/edge-computing } ] }, { title:,
+  Solutions', links: [ { name:
+  'Enterprise, href:,
+  /solutions/enterprise' }, { name: 'Startups, href:,
+  /solutions/startups' }, { name: 'Healthcare, href:,
+  /solutions/healthcare' }, { name: 'Financial Services, href:,
+  /solutions/financial' }, { name: 'Manufacturing, href:,
+  /solutions/manufacturing' }, { name: 'Education, href:,
+  /solutions/education' } ] }, { title: 'Company, links: [ { name:,
+  About Us', href: '/about }, { name:,
+  Our Team', href: '/about/team }, { name:,
+  Careers', href: '/careers }, { name:,
+  Partners', href: '/partners }, { name:,
+  Press', href: '/press }, { name:,
+  Case Studies', href: '/case-studies } ] }, { title:,
+  Resources', links: [ { name:
+  'Blog, href:,
+  /blog' }, { name: 'Documentation, href:,
+  /docs' }, { name: 'API Reference, href:,
+  /api' }, { name: 'Developer Tools, href:,
+  /developer' }, { name: 'Training, href:,
+  /training' }, { name: 'Support, href:,
+  /support' } ] } ]; const socialLinks = [ { name: 'LinkedIn, href:,
+  https: ''
+>>>>>>> origin/main

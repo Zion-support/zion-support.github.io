@@ -2,27 +2,33 @@
   ;
   ;
   ;
-  xl: 'w-32 h-32';
+  xl:,
+  w-32 h-32';
 };
 ;
 
+  ;
 
+  '
+  primary: 'border-cyan-400,'
+  secondary:,
+  border-blue-400',
+  '
+  white: 'border-white,;  ;
   ;
-=======
-'
-  primary: 'border-cyan-400','
-  secondary: 'border-blue-400','
-  white: 'border-white',;  ;
   ;
   ;
-  ;
-  cyan: 'border-cyan-400'};
+  cyan:,
+  border-cyan-400
+  '};
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
-  size = 'md',
-  color = 'primary',
-  text = 'Loading...',
+  size = 'md,
+  color = 'primary
+  ',
+  text = 'Loading...
+  ',
   showText = true,
   className = ''
 }) => {
@@ -45,12 +51,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             repeat: Infinity,"
   ease: "linear"
 
-
 }}
         />
 
         {/* Center dot for larger sizes */}
-        {size === 'xl' && ("
+        {size ===
+  'xl' && ("
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">"
             <div className="w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
           </div>
@@ -63,9 +69,11 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}"
-          className="mt-4 text-center"
-'`
-          <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
+          className="mt-4 text-center",
+  `
+          <div className={`text-${color === 'white
+  ' ? 'white
+  ': 'cyan}-400 text-sm animate-pulse`}>
             {text}
           </div>;
         </motion.div>;
@@ -76,15 +84,21 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>;
   )};
 
-// Optimized spinner for inline use'
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
+// Optimized spinner for inline use,
+  export const InlineSpinner: React.FC<{ size?:
+  'sm' |
+  'md; className?: string }> = ({
 
-  size = 'sm',
-  className = ''
+  size =,
+  sm',
+  className = '
+  '
 }) => ("`
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
     <motion.div'`
-      className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
+      className={`${size ===
+  'sm' ?
+  'w-4 h-4': 'w-6 h-6} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}
       transition = {
 
@@ -93,7 +107,6 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
         duration: 1,
         repeat: Infinity,"
   ease: "linear"
-
 
 ;
 
@@ -109,10 +122,11 @@ export const FullScreenLoader: React.FC<{
   text?: string;
   showLogo?: boolean;
   className?: string}> = ({
-
-'  text = 'Loading amazing experiences...',
+  '  text = 'Loading amazing experiences...
+  ',
   showLogo = true,'
-  className = ''
+  className = '
+  '
 }) => (`
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>"
     <div className="relative text-center">
@@ -136,14 +150,17 @@ export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number}> = ({
 
-'  className = '',
+'  className = '
+  ',
   lines = 3}) => (`
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map(_: unknown, index: unknown (
       <div
         key={index};`
         className={`h-4 bg-gray-300 rounded mb-2 ${;
-          index === lines - 1 ? 'w-3/4' : 'w-full';`
+          index === lines - 1 ?,
+  w-3/4
+  ': 'w-full;`
         }`};      />;
     ))};
   </div>;

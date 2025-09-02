@@ -1,104 +1,96 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD;
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button';
+import React, { useState, useEffect, createContext, useContext } from,
+  react'; import { motion, AnimatePresence } from
+  'framer-motion'; ; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from
+  '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if (!context) {; throw new Error(
+  'useAccessibility must be used within an AccessibilityProvider'); ; return context; };import React, { useState, useEffect, createContext, useContext } from
+  'react';
+import { motion, AnimatePresence } from
+  'framer-motion';
+;
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from
+  '../ui/button';
 const AccessibilityContext = createContext(undefined);
 export const useAccessibility = () => {;
     const context = useContext(AccessibilityContext);
     if (!context) {;
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
+        throw new Error(
+  'useAccessibility must be used within an AccessibilityProvider');
 ;
     return context;
-};
-=======;
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-import { Button } from "../ui/button";
-const AccessibilityContext = createContext(null);
-export const useAccessibility = () => {;
-    const context = useContext(AccessibilityContext);
-    if (!context) {;
-        throw new Error('useAccessibility must be used within an AccessibilityProvider')};
-    return context};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-// Accessibility Provider Component;
+};// Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {;
     const [highContrast, setHighContrast] = useState(false);
     const [reducedMotion, setReducedMotion] = useState(false);
-    const [fontSize, setFontSize] = useState('medium');
-    const [colorBlindMode, setColorBlindMode] = useState('none');
+    const [fontSize, setFontSize] = useState(
+  'medium');
+    const [colorBlindMode, setColorBlindMode] = useState(
+  'none');
     // Load settings from localStorage;
     useEffect(() => {;
-        const savedSettings = localStorage.getItem('zion-accessibility-settings');
+        const savedSettings = localStorage.getItem(
+  'zion-accessibility-settings');
         if (savedSettings) {;
             const settings = JSON.parse(savedSettings);
             setHighContrast(settings.highContrast || false);
             setReducedMotion(settings.reducedMotion || false);
-            setFontSize(settings.fontSize || 'medium');
-<<<<<<< HEAD;
-            setColorBlindMode(settings.colorBlindMode || 'none');
+            setFontSize(settings.fontSize ||
+  'medium');
 ;
-=======;
-            setColorBlindMode(settings.colorBlindMode || 'none')};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-    }, []);
+            setColorBlindMode(settings.colorBlindMode ||
+  'none');
+;}, []);
     // Save settings to localStorage;
     useEffect(() => {;
         const settings = {;
   highContrast,;
             reducedMotion,;
             fontSize,;
-  <<<<<<< HEAD;
+  ;
             colorBlindMode;
 };
-        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-=======;
-  colorBlindMode;
-};
-        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
-    // Apply accessibility settings to document;
+        localStorage.setItem(
+  'zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);// Apply accessibility settings to document;
     useEffect(() => {;
         const root = document.documentElement;
         // High contrast mode;
         if (highContrast) {;
-<<<<<<< HEAD;
-            root.classList.add('high-contrast');
+;
+            root.classList.add(
+  'high-contrast');
 ;
         else {;
-            root.classList.remove('high-contrast');
+            root.classList.remove(
+  'high-contrast');
 ;
         // Reduced motion;
         if (reducedMotion) {;
-            root.classList.add('reduced-motion');
+            root.classList.add(
+  'reduced-motion');
 ;
         else {;
-            root.classList.remove('reduced-motion');
-;
-=======;
-            root.classList.add('high-contrast')};
-        else {;
-            root.classList.remove('high-contrast')};
-        // Reduced motion;
-        if (reducedMotion) {;
-            root.classList.add('reduced-motion')};
-        else {;
-            root.classList.remove('reduced-motion')};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-        // Font size;
-        root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
+            root.classList.remove(
+  'reduced-motion');
+;// Font size;
+        root.style.fontSize = fontSize ===
+  'small' ?
+  '14px': fontSize ===
+  'large' ?
+  '18px' :
+  '16px';
         // Color blind mode;
-        root.style.filter = colorBlindMode === 'none' ? 'none' :;
-            colorBlindMode === 'protanopia' ? 'url(#protanopia)' :;
-                colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :;
-<<<<<<< HEAD;
-                    'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const toggleHighContrast = () => setHighContrast(!highContrast);
-=======;
-                    'url(#tritanopia)';
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
-    const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+        root.style.filter = colorBlindMode ===
+  'none' ?
+  'none' :;
+            colorBlindMode ===
+  'protanopia' ?
+  'url(#protanopia)' :;
+                colorBlindMode ===
+  'deuteranopia' ?
+  'url(#deuteranopia)' :;
+;
+
+  'url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
     const value = {;
   highContrast,;
         reducedMotion,;
@@ -120,35 +112,28 @@ export const AccessibilityPanel = () => {;
     useEffect(() => {;
         const handleKeyDown = (event) => {;
             // Ctrl/Cmd + Shift + A to open accessibility panel;
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {;
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===
+  'A') {;
                 event.preventDefault();
-<<<<<<< HEAD;
+;
                 setIsOpen(!isOpen);
 ;
             // Ctrl/Cmd + Shift + H to toggle high contrast;
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {;
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===
+  'H') {;
                 event.preventDefault();
                 toggleHighContrast();
 ;
             // Ctrl/Cmd + Shift + M to toggle reduced motion;
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {;
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===
+  'M') {;
                 event.preventDefault();
                 toggleReducedMotion();
-;
-=======;
-                setIsOpen(!isOpen)};
-            // Ctrl/Cmd + Shift + H to toggle high contrast;
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {;
-                event.preventDefault();
-                toggleHighContrast()};
-            // Ctrl/Cmd + Shift + M to toggle reduced motion;
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {;
-                event.preventDefault();
-                toggleReducedMotion()};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-        };"
-        window.addEventListener('keydown', handleKeyDown);";"
-        return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";"
+;};"
+        window.addEventListener(
+  'keydown', handleKeyDown);";"
+        return () => window.removeEventListener(
+  'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";"
     return (<>;"";"
       {/* Floating Accessibility Button */}";"";"
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">";"";"
@@ -203,7 +188,10 @@ export const AccessibilityPanel = () => {;
                 <div>";"";"
                   <h3 className="text-white font-medium mb-3">Font Size</h3>";"";"
                   <div className="flex gap-2">";"";"
-                    {['small', 'medium', 'large'].map((size) => (<Button key={size} variant={fontSize === size ? "default" : "outline"} size="sm" onClick={() => setFontSize(size)} className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
+                    {[
+  'small',
+  'medium',
+  'large'].map((size) => (<Button key={size} variant={fontSize === size ? "default" : "outline"} size="sm" onClick={() => setFontSize(size)} className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
                         {size.charAt(0).toUpperCase() + size.slice(1)};
                       </Button>))};"
                   </div>;";"
@@ -212,7 +200,11 @@ export const AccessibilityPanel = () => {;
                 <div>";"";"
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>";"";"
                   <div className="grid grid-cols-2 gap-2">";"";"
-                    {['none', 'protanopia', 'deuteranopia', 'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
+                    {[
+  'none',
+  'protanopia',
+  'deuteranopia',
+  'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
                         {mode.charAt(0).toUpperCase() + mode.slice(1)};"
                       </Button>))};";"
                   </div>;";"
@@ -258,38 +250,32 @@ export const useFocusTrap = (isActive) => {;";"
     useEffect(() => {;";"
         if (!isActive);"";"
             return;";"";"
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-        const container = document.activeElement?.closest('[data-focus-trap]');
+        const focusableElements =,
+  button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])';
+        const container = document.activeElement?.closest(
+  '[data-focus-trap]');
         if (!container);
             return;
         const firstFocusableElement = focusableContent[0];
         const lastFocusableElement = focusableContent[focusableContent.length - 1];
         const handleTabKey = (e) => {;
-            if (e.key === 'Tab') {;
+            if (e.key ===
+  'Tab) {;
                 if (e.shiftKey) {;
                     if (document.activeElement === firstFocusableElement) {;
                         e.preventDefault();
-<<<<<<< HEAD;
+;
                         lastFocusableElement.focus();
 ;
                 else {;
                     if (document.activeElement === lastFocusableElement) {;
                         e.preventDefault();
                         firstFocusableElement.focus();
-;
-=======;
-                        lastFocusableElement.focus()};
-                };
-                else {;
-                    if (document.activeElement === lastFocusableElement) {;
-                        e.preventDefault();
-                        firstFocusableElement.focus()};
-                };
-            };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;"
-        };";"
-        document.addEventListener('keydown', handleTabKey);";"
-        return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};"";"
+;};";"
+        document.addEventListener(
+  'keydown', handleTabKey);";"
+        return () => document.removeEventListener(
+  'keydown', handleTabKey)}, [isActive])};"";"
 // Screen Reader Only Text";"";"
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";"
 export default AccessibilityPanel;"";"

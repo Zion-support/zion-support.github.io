@@ -1,36 +1,59 @@
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-
-  'AI & Customer Success': Brain,Blockchain & DeFi': Lock,Quantum Computing': Zap,AI & Healthcare': Heart,Metaverse & AR/VR': Eye,Autonomous Systems': Car,Green Tech': Leaf,Space Tech': Satellite,
+  'AI & Customer Success': Brain,Blockchain & DeFi
+  ': Lock,Quantum Computing': Zap,AI & Healthcare
+  ': Heart,Metaverse & AR/VR': Eye,Autonomous Systems
+  ': Car,Green Tech': Leaf,Space Tech
+  ': Satellite,
   FinTech: Banknote,IoT & Smart Cities': Building};
 
-const categoryColors: { [key: string]: string } = {
-
-  'AI & Customer Success': 'from-cyan-500 to-blue-600',Blockchain & DeFi': 'from-purple-500 to-indigo-600',Quantum Computing': 'from-violet-500 to-purple-600',AI & Healthcare': 'from-emerald-500 to-green-600',Metaverse & AR/VR': 'from-pink-500 to-rose-600',Autonomous Systems': 'from-orange-500 to-red-600',Green Tech': 'from-green-500 to-emerald-600',Space Tech': 'from-slate-500 to-gray-600',
-  FinTech: 'from-yellow-500 to-amber-600',IoT & Smart Cities': 'from-blue-500 to-cyan-600'};
+const categoryColors: { [key: string]: string } = {,
+  AI & Customer Success': 'from-cyan-500 to-blue-600,Blockchain & DeFi
+  ':,
+  from-purple-500 to-indigo-600
+  ',Quantum Computing': 'from-violet-500 to-purple-600,AI & Healthcare
+  ':,
+  from-emerald-500 to-green-600
+  ',Metaverse & AR/VR': 'from-pink-500 to-rose-600,Autonomous Systems
+  ':,
+  from-orange-500 to-red-600
+  ',Green Tech': 'from-green-500 to-emerald-600,Space Tech
+  ':,
+  from-slate-500 to-gray-600
+  ',
+  FinTech: 'from-yellow-500 to-amber-600,IoT & Smart Cities':,
+  from-blue-500 to-cyan-600'};
 
 export default function InnovativeServices2027() {
 
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('
-    'innovation'
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+  'all');
+  const [searchQuery, setSearchQuery] = useState('
+  ');
+  const [sortBy, setSortBy] = useState<'price
+  ' | 'innovation
+  ' | 'roi
+  '>('
+
+  'innovation'
   );
 
-  
-  
       return matchesCategory && matchesSearch}
   );
 
-  
-      case 'roi':
-=======
-        return a.price - b.price;'      case 'roi':
-        return ('
-          parseInt(b.roi.replace('%',)) - parseInt(a.roi.replace('%',))
+      case
+  'roi': return a.price - b.price;'      case
+  'roi':
+        return (
+  '
+          parseInt(b.roi.replace('%,)) - parseInt(a.roi.replace(,
+  %
+  ',))
         );
-      case 'innovation':'
-        return a.innovationLevel === 'revolutionary' ? 1 : -1;
+      case 'innovation
+  ': '
+        return a.innovationLevel ===
+  'revolutionary ? 1 : -1;
       default:
         return 0}
   }) ;
@@ -97,12 +120,14 @@ export default function InnovativeServices2027() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
 
-                    selectedCategory === category'
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg''
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'`
+                    selectedCategory === category,
+  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+  ': 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50`
                   }`}
                 >
-                  {category === 'all' ? 'All Services' : category}
+                  {category === 'all
+  ' ? 'All Services
+  ' : category}
                 </motion.button>) ) }
             </div>
 
@@ -150,15 +175,17 @@ export default function InnovativeServices2027() {
                   className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
                 >
                   {/* Service Header */}
-                  <div'`
-                    className={`p-6 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}
+                  <div,
+  `
+                    className={`p-6 bg-gradient-to-br ${categoryColors[service.category] ||
+  'from-gray-600 to-gray-700'}`}
                   >"
                     <div className="flex items-center justify-between mb-4">
                       {React.createElement()
                         categoryIcons[service.category] || Star,
                         {
 
-                          className: 'w-8 h-8 text-white',
+                          className: 'w-8 h-8 text-white,
                           size: 32}
                       )}"
                       <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
@@ -250,8 +277,10 @@ export default function InnovativeServices2027() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}"
-                      className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg"'
-                      onClick={() => (window.location.href = '/contact')}
+                      className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg"
+  '
+                      onClick={() => (window.location.href = '/contact
+  ')}
                     >
                       Get Started - Contact Us
                     </motion.button>
@@ -259,7 +288,8 @@ export default function InnovativeServices2027() {
                     {/* Contact Info */}"
                     <div className="mt-4 text-center">"
                       <p className="text-xs text-gray-500">
-                        Contact: {service.contactInfo.phone} |{' '}
+                        Contact: {service.contactInfo.phone} |{' 
+  '}
                         {service.contactInfo.email}
                       </p>
                     </div>
@@ -295,7 +325,8 @@ export default function InnovativeServices2027() {
               <button
                 onClick={() => {
 
-                  setSelectedCategory('all');
+                  setSelectedCategory('all
+  ');
                   setSearchQuery('')}}"                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
@@ -325,8 +356,10 @@ export default function InnovativeServices2027() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg"'
-                onClick={() => (window.location.href = '/contact')}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg"
+  '
+                onClick={() => (window.location.href = '/contact
+  ')}
               >
                 Schedule a Consultation
               </motion.button>
@@ -334,7 +367,8 @@ export default function InnovativeServices2027() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gray-800/50 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-lg"'
-                onClick={() => (window.location.href = '/pricing')}
+                onClick={() => (window.location.href =
+  '/pricing')}
               >
                 View Pricing Plans
               </motion.button>

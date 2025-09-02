@@ -1,6 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from
+  'react';
+import { Link } from
+  'react-router-dom';
+import { motion } from
+  'framer-motion';
 import {
   Shield,
   Lock,
@@ -48,103 +51,157 @@ import {
   Force,
   Chord,
   Treemap
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 export function Cybersecurity() {
   const features = [
     {
       icon: Shield,
-      title: 'Zero Trust Security',
-      description: 'Implement comprehensive security with zero-trust architecture',
-      benefits: ['Identity verification', 'Continuous monitoring', 'Least privilege access']
+      title:,
+  Zero Trust Security',
+      description: 'Implement comprehensive security with zero-trust architecture,
+      benefits: [
+  'Identity verification',
+  'Continuous monitoring',
+  'Least privilege access']
     },
     {
       icon: Brain,
-      title: 'AI-Powered Threat Detection',
-      description: 'Advanced AI algorithms for real-time threat identification',
-      benefits: ['Behavioral analysis', 'Anomaly detection', 'Predictive security']
+      title:,
+  AI-Powered Threat Detection',
+      description: 'Advanced AI algorithms for real-time threat identification,
+      benefits: [
+  'Behavioral analysis',
+  'Anomaly detection',
+  'Predictive security']
     },
     {
       icon: Lock,
-      title: 'Data Protection',
-      description: 'Comprehensive data encryption and privacy controls',
-      benefits: ['End-to-end encryption', 'Data classification', 'Compliance management']
+      title:,
+  Data Protection',
+      description: 'Comprehensive data encryption and privacy controls,
+      benefits: [
+  'End-to-end encryption',
+  'Data classification',
+  'Compliance management']
     },
     {
       icon: Network,
-      title: 'Network Security',
-      description: 'Protect network infrastructure from cyber threats',
-      benefits: ['Firewall management', 'Intrusion detection', 'Traffic monitoring']
+      title:,
+  Network Security',
+      description: 'Protect network infrastructure from cyber threats,
+      benefits: [
+  'Firewall management',
+  'Intrusion detection',
+  'Traffic monitoring']
     },
     {
       icon: Server,
-      title: 'Endpoint Security',
-      description: 'Secure all devices and endpoints in your network',
-      benefits: ['Device management', 'Malware protection', 'Access control']
+      title:,
+  Endpoint Security',
+      description: 'Secure all devices and endpoints in your network,
+      benefits: [
+  'Device management',
+  'Malware protection',
+  'Access control']
     },
     {
       icon: Eye,
-      title: 'Security Monitoring',
-      description: '24/7 security monitoring and incident response',
-      benefits: ['Real-time alerts', 'Incident response', 'Security analytics']
+      title:,
+  Security Monitoring',
+      description: '24/7 security monitoring and incident response,
+      benefits: [,
+  Real-time alerts',
+  'Incident response',
+  'Security analytics']
     }
   ];
 
   const services = [
     {
-      category: 'Security Assessment',
+      category: 'Security Assessment,
       icon: Search,
-      services: ['Vulnerability Assessment', 'Penetration Testing', 'Security Audits', 'Risk Analysis'],
-      color: 'from-blue-500 to-cyan-600'
+      services: [,
+  Vulnerability Assessment',
+  'Penetration Testing',
+  'Security Audits',
+  'Risk Analysis'],
+      color: 'from-blue-500 to-cyan-600
     },
     {
-      category: 'Incident Response',
+      category:
+  'Incident Response',
       icon: AlertTriangle,
-      services: ['Threat Hunting', 'Forensic Analysis', 'Incident Management', 'Recovery Planning'],
-      color: 'from-red-500 to-pink-600'
+      services: [,
+  Threat Hunting',
+  'Forensic Analysis',
+  'Incident Management',
+  'Recovery Planning'],
+      color: 'from-red-500 to-pink-600
     },
     {
-      category: 'Compliance & Governance',
+      category:
+  'Compliance & Governance',
       icon: ShieldCheck,
-      services: ['SOC 2 Compliance', 'ISO 27001', 'GDPR Compliance', 'Security Policies'],
-      color: 'from-green-500 to-emerald-600'
+      services: [,
+  SOC 2 Compliance',
+  'ISO 27001',
+  'GDPR Compliance',
+  'Security Policies'],
+      color: 'from-green-500 to-emerald-600
     },
     {
-      category: 'Security Training',
+      category:
+  'Security Training',
       icon: Users,
-      services: ['Security Awareness', 'Phishing Simulations', 'Incident Response Training', 'Best Practices'],
-      color: 'from-purple-500 to-indigo-600'
+      services: [,
+  Security Awareness',
+  'Phishing Simulations',
+  'Incident Response Training',
+  'Best Practices'],
+      color: 'from-purple-500 to-indigo-600
     }
   ];
 
   const technologies = [
-    { name: 'SIEM Systems', description: 'Security Information and Event Management', icon: Monitor },
-    { name: 'EDR Solutions', description: 'Endpoint Detection and Response', icon: Shield },
-    { name: 'Firewall Management', description: 'Next-generation firewall solutions', icon: Network },
-    { name: 'Identity Management', description: 'Multi-factor authentication and SSO', icon: Key },
-    { name: 'Encryption Tools', description: 'Data encryption and key management', icon: Lock },
-    { name: 'Threat Intelligence', description: 'Real-time threat feeds and analysis', icon: Brain }
+    { name:,
+  SIEM Systems', description: 'Security Information and Event Management, icon: Monitor },
+    { name:,
+  EDR Solutions', description: 'Endpoint Detection and Response, icon: Shield },
+    { name:,
+  Firewall Management', description: 'Next-generation firewall solutions, icon: Network },
+    { name:,
+  Identity Management', description: 'Multi-factor authentication and SSO, icon: Key },
+    { name:,
+  Encryption Tools', description: 'Data encryption and key management, icon: Lock },
+    { name:,
+  Threat Intelligence', description: 'Real-time threat feeds and analysis, icon: Brain }
   ];
 
   const complianceFrameworks = [
     {
-      name: 'SOC 2 Type II',
-      description: 'Service Organization Control 2 compliance for data security',
+      name:,
+  SOC 2 Type II',
+      description: 'Service Organization Control 2 compliance for data security,
       icon: ShieldCheck
     },
     {
-      name: 'ISO 27001',
-      description: 'International standard for information security management',
+      name:,
+  ISO 27001',
+      description: 'International standard for information security management,
       icon: Award
     },
     {
-      name: 'GDPR',
-      description: 'General Data Protection Regulation compliance',
+      name:,
+  GDPR',
+      description: 'General Data Protection Regulation compliance,
       icon: Lock
     },
     {
-      name: 'HIPAA',
-      description: 'Health Insurance Portability and Accountability Act',
+      name:,
+  HIPAA',
+      description: 'Health Insurance Portability and Accountability Act,
       icon: Heart
     }
   ];
@@ -185,8 +242,7 @@ export function Cybersecurity() {
               </Link>
             </div>
           </motion.div>
->>>>>>> cursor/website-audit-content-update-and-deployment-6c29
-        </div>
+</div>
       </section>
 
       {/* Features Section */}
@@ -204,7 +260,8 @@ export function Cybersecurity() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our cybersecurity services cover every aspect of digital security,
-              providing comprehensive protection for your organization's assets and data.
+              providing comprehensive protection for your organization
+  's assets and data.
             </p>
           </motion.div>
 

@@ -1,32 +1,44 @@
-import {
+:backup-pages/src-pages/ContactPage.tsximport {
 
   Phone,  Mail,
   MapPin,
   Clock,
-  MessageSquare,
-  Send,
+MessageSquare,Send,
   CheckCircle,
-  Users,
-  Building,
   Globe,
-  ArrowRight,
+:backup-pages/src-pages/ContactPage.tsxSend,
+  CheckCircle,
+  Globe,
+:backup-pages/src-pages/ContactPage.tsx
+ArrowRight,
   Linkedin,
   Twitter,
   Github,
   Facebook,
-  Instagram} from 'lucide-react.ts';
+  Instagram} from
+  'lucide-react.ts';
 
 export function ContactPage(...args: any[]): any {
 
   const [formData, setFormData] = useState({
 
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''});
+    firstName:,
+  ',
+lastName: ',email:,
+  ',
+    company: ',
+    phone:,
+  ',
+    service: ',
+:backup-pages/src-pages/ContactPage.tsxemail:,
+  ',
+    company: ',
+    phone:,
+  ',
+    service: ',
+:backup-pages/src-pages/ContactPage.tsx
+message: '
+  '});
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) };
@@ -46,18 +58,18 @@ export function ContactPage(...args: any[]): any {
       setIsSubmitted(false);
       setFormData({
 
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+        firstName:,
+  ',
+        lastName: ',
+        email:,
+  ',
+        company: ',
+        phone:,
+  ',
+        service: ',
         message: ''})}, 3000)};
 
-  
-  
-  
-  if (isSubmitted) {
+if (isSubmitted) {
 
     return()
       <div className="min-h-screen py-8 flex items-center justify-center">"
@@ -75,11 +87,13 @@ export function ContactPage(...args: any[]): any {
               Message Sent Successfully!
             </h2>"
             <p className="text-gray-400 mb-8">
-              Thank you for reaching out to Zion Tech Group. We've received your
+              Thank you for reaching out to Zion Tech Group. We
+  've received your
               message and will get back to you within 24 hours.
             </p>"
 
-            <div className="text-sm text-gray-500">'              You'll receive a confirmation email shortly.
+            <div className="text-sm text-gray-500">'              You
+  'll receive a confirmation email shortly.
             </div>
           </motion.div>
         </div>
@@ -97,7 +111,8 @@ export function ContactPage(...args: any[]): any {
             <h1 className="text-5xl font-bold text-white mb-6">Get in Touch</h1>"
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Ready to transform your business with cutting-edge technology?'
-              Let's discuss how our solutions can help you achieve your goals.
+              Let
+  's discuss how our solutions can help you achieve your goals.
             </p>
           </motion.div>
         </div>
@@ -124,11 +139,15 @@ export function ContactPage(...args: any[]): any {
                 <a
                   href={method.link}"
                   className="text-cyan-400 font-medium mb-2 hover:text-cyan-300 transition-colors cursor-pointer block"'
-                  target={method.link.startsWith('http') ? '_blank' : undefined}
+                  target={method.link.startsWith(
+  'http') ?
+  '_blank' : undefined}
                   rel={
 
-                    method.link.startsWith('http')
-                      ? 'noopener noreferrer'
+                    method.link.startsWith(
+  'http')
+                      ?
+  'noopener noreferrer'
                       : undefined
                   }
                 >
@@ -263,18 +282,14 @@ export function ContactPage(...args: any[]): any {
                     value={formData.service}
                     onChange={handleInputChange}"
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >"
-                    <option value="">Select a service</option>
-                    {services.map(service => (
-                      <option key={service} value={service}>
-                        {service}
-                      </option>
+>"<option value="">Select a service</option><option value="">Select a service</option>
+{services.map((service, index) => (
+                      <option key={index} value={service}>{service}</option>
                     ))}
                   </select>
                 </div>
-              </div>
 
-              <div>
+:backup-pages/src-pages/ContactPage.tsx<div>
                 <label"
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-300 mb-2"

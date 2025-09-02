@@ -49,37 +49,44 @@ import {
   Palette,
   PhoneCall,
   Mail as MailIcon,
-  MapPin as MapPinIcon'
-} from 'lucide-react';
+  MapPin as MapPinIcon,
+  } from 'lucide-react
+  ';
 
-  
-        'Quantum Computing - Next-gen computational power',;
-        'IoT Edge Computing - Smart device networks',;
-        'Space Tech - Space technology solutions',;
-        'Green IT - Sustainable technology solutions';
+        'Quantum Computing - Next-gen computational power
+  ',;
+        'IoT Edge Computing - Smart device networks
+  ',;
+        'Space Tech - Space technology solutions
+  ',;
+        'Green IT - Sustainable technology solutions
+  ';
       ]};
-=======
-      items: [;'
-        'Quantum Computing - Next-gen computational power',;'
-        'IoT Edge Computing - Smart device networks',;'
-        'Space Tech - Space technology solutions',;'        'Green IT - Sustainable technology solutions';
+items: [;'
+
+  'Quantum Computing - Next-gen computational power,;,
+  'IoT Edge Computing - Smart device networks',;'
+  'Space Tech - Space technology solutions',;'
+  'Green IT - Sustainable technology solutions';
       ]};
   ];
 
-  
     {;
-      title: 'Analytics Driven',;
-      description: 'Comprehensive analytics and performance monitoring',;
+      title: 'Analytics Driven,;
+      description:
+  'Comprehensive analytics and performance monitoring',;
       icon: BarChart3,;
-      color: 'from-blue-500 to-cyan-500'};
+      color:,
+  from-blue-500 to-cyan-500'};
   ];
 
-  
     {;
-      title: 'Security Enhanced',;
-      description: 'Advanced security measures and privacy protection',;
+      title: 'Security Enhanced,;
+      description:
+  'Advanced security measures and privacy protection',;
       icon: Shield,;
-      color: 'from-red-500 to-orange-500'};  ];
+      color:
+  'from-red-500 to-orange-500'};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -88,7 +95,10 @@ import {
         title="Comprehensive Improvements 2025 - Zion Tech Group""        description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
         keywords = {
 
-  ['platform improvements',AI services',technology enhancements',digital transformation',Zion Tech Group']
+  [
+  'platform improvements',AI services
+  ',technology enhancements',digital transformation
+  ',Zion Tech Group']
 
 }
        />
@@ -119,9 +129,11 @@ import {
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               Comprehensive"
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {' '}Improvements
+                {
+  ' '}Improvements
               </span>
-              {' '}2025
+              {
+  ' '}2025
             </h1>"
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Experience the future of business technology with our revolutionary platform enhancements. 

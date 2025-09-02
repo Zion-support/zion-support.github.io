@@ -3,97 +3,152 @@
     {
 
       id: 4,
-      title: 'Blockchain Implementation: Enterprise Case Study',
-      description: 'Real-world implementation of blockchain technology in supply chain management.',
-      category: 'case-studies',
-      type: 'Case Study',
-      author: 'Blockchain Team',
-      date: '2025-01-05',
-      readTime: '10 min read',
+      title:,
+  Blockchain Implementation: Enterprise Case Study,
+      description:,
+  Real-world implementation of blockchain technology in supply chain management.',
+      category: 'case-studies,
+      type:,
+  Case Study',
+      author: 'Blockchain Team,
+      date:,
+  2025-01-05',
+      readTime: '10 min read,
       downloads: 1560,
       rating: 4.6,
-      image: '/resources/blockchain-supply-chain.jpg',
-      tags['Blockchain',Supply Chain',Enterprise',Implementation'],;
+      image:
+  '/resources/blockchain-supply-chain.jpg',
+      tags[
+  'Blockchain',Supply Chain
+  ',Enterprise',Implementation
+  '],;
       featured: false,
-      fileSize: '2.1 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/blockchain-supply-chain.pdf'
+      fileSize:,
+  2.1 MB
+  ',
+      fileType: 'PDF,
+      downloadUrl:,
+  https: //ziontechgroup.com/resources/blockchain-supply-chain.pdf
     },
     {
 
       id: 5,
-      title: 'IoT Edge Computing: Architecture & Best Practices',
-      description: 'Technical deep-dive into IoT edge computing architecture and implementation best practices.',
-      category: 'white-papers',
-      type: 'White Paper',
-      author: 'Dr. Emily Watson',
-      date: '2024-12-28',
-      readTime: '20 min read',
+      title:,
+  IoT Edge Computing: Architecture & Best Practices,
+      description:,
+  Technical deep-dive into IoT edge computing architecture and implementation best practices.
+  ',
+      category: 'white-papers,
+      type:,
+  White Paper
+  ',
+      author: 'Dr. Emily Watson,
+      date:,
+  2024-12-28
+  ',
+      readTime: '20 min read,
       downloads: 2100,
       rating: 4.8,
-      image: '/resources/iot-edge-computing.jpg',
-      tags['IoT',Edge Computing',Architecture',Best Practices'],;
+      image: '/resources/iot-edge-computing.jpg
+  ',
+      tags['IoT
+  ',Edge Computing',Architecture
+  ',Best Practices'],;
       featured: false,
-      fileSize: '3.2 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/iot-edge-computing.pdf'
+      fileSize:,
+  3.2 MB',
+      fileType: 'PDF,
+      downloadUrl:,
+  https: //ziontechgroup.com/resources/iot-edge-computing.pdf
     },
     {
 
       id: 6,
-      title: 'AI Consciousness Research: Breakthrough Findings',
-      description: 'Latest research findings on AI consciousness simulation and its implications.',
-      category: 'white-papers',
-      type: 'Research Paper',
-      author: 'Dr. James Kim',
-      date: '2024-12-25',
-      readTime: '25 min read',
+      title:,
+  AI Consciousness Research: Breakthrough Findings,
+      description:,
+  Latest research findings on AI consciousness simulation and its implications.',
+      category: 'white-papers,
+      type:,
+  Research Paper',
+      author: 'Dr. James Kim,
+      date:,
+  2024-12-25',
+      readTime: '25 min read,
       downloads: 3200,
       rating: 4.9,
-      image: '/resources/ai-consciousness-research.jpg',
-      tags['AI Consciousness',Research',Breakthrough',Simulation'],;
+      image:
+  '/resources/ai-consciousness-research.jpg',
+      tags[
+  'AI Consciousness',Research
+  ',Breakthrough',Simulation
+  '],;
       featured: false,
-      items: ['
-        { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },
-        { title: 'Common Issues & Solutions', type: 'Troubleshooting', readTime: '8 min', featured: false },
-        { title: 'Support Contact Information', type: 'Contact', readTime: '2 min', featured: false },
-        { title: 'Training Resources', type: 'Training', readTime: '10 min', featured: false }
+      items: [,
+  { title: 'Getting Started FAQ, type:,
+  FAQ', readTime: '5 min, featured: false },
+        { title:,
+  Common Issues & Solutions', type: 'Troubleshooting, readTime:
+  '8 min', featured: false },
+        { title:,
+  Support Contact Information', type: 'Contact, readTime:
+  '2 min', featured: false },
+        { title:,
+  Training Resources', type: 'Training, readTime:
+  '10 min', featured: false }
       ]
     },
     {
 
-      id: 'pricing-guide-2025',
-      title: 'Pricing Guide 2025',
+      id:,
+  pricing-guide-2025',
+      title: 'Pricing Guide 2025,
       icon: DollarSign,
-      description: 'Complete pricing information',
-      color: 'from-emerald-500 to-green-500',
+      description:,
+  Complete pricing information',
+      color: 'from-emerald-500 to-green-500,
       featured: true,
-      items: ['
-        { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
-        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;
-        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;
-        { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
+      items: [,
+  { title: 'Service Pricing Overview, type:,
+  Pricing
+  ', readTime: '10 min, featured: true },
+        { title:,
+  Custom Quote Calculator
+  ', type: 'Tool, readTime: '5 min
+  ', featured: true },;
+        { title:,
+  Enterprise Pricing
+  ', type: 'Pricing, readTime: '8 min
+  ', featured: false },;
+        { title:,
+  ROI Analysis Guide
+  ', type: 'Analysis, readTime: '12 min
+  ', featured: false };
       ]};
   ];
 
-  
-      title: 'Community Forum',;
+      title: 'Community Forum
+  ',;
       icon: Users,;
-      description: 'Connect with peers and experts',;
-      color: 'from-orange-500 to-red-500',;
-      href: '/community'};
+      description:,
+  Connect with peers and experts
+  ',;
+      color: 'from-orange-500 to-red-500,;
+      href:,
+  /community
+  '};
   ];
 
-  
   ;
-=======
 '
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;  ;
+  phone: '+1 302 464 0950,
+,
+  email: 'kleber@ziontechgroup.com,;  ;
   ;
   ;
   ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
+  address: '364 E Main St STE 1008 Middletown DE 19709
+  ';
   };
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -184,10 +239,19 @@
                   <div className="flex items-center justify-between">`
                     <span className={`px-2 py-1 text-xs font-medium rounded-full ${
 
-                      resource.badge === 'Essential' ? 'bg-blue-500/20 text-blue-400' :'
-                      resource.badge === 'Popular' ? 'bg-green-500/20 text-green-400' :'
-                      resource.badge === 'Featured' ? 'bg-purple-500/20 text-purple-400' :'
-                      'bg-red-500/20 text-red-400'`
+                      resource.badge ===,
+  Essential
+  ' ? 'bg-blue-500/20 text-blue-400
+  ': '
+                      resource.badge ===
+  'Popular' ?
+  'bg-green-500/20 text-green-400' :
+  '
+                      resource.badge === 'Featured
+  ' ? 'bg-purple-500/20 text-purple-400
+  ' :'
+
+  'bg-red-500/20 text-red-400`
                     }`}>
                       {resource.badge}
                     </span>"
@@ -353,8 +417,10 @@
 }}
                 viewport={{ once: true }}"
                 className="group relative"
-              >'`
-                <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>`
+              >
+  '`
+                <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-
+  ')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>`
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
                     <category.icon className="w-8 h-8 text-white" />
                   </div>"
@@ -594,7 +660,8 @@
                 Need More Resources?
               </h2>"
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our team is here to help you access 
+                Can't find what you
+  're looking for? Our team is here to help you access 
                 the right resources and support for your needs.
               </p>
               

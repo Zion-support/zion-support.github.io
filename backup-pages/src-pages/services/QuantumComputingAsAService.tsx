@@ -1,44 +1,65 @@
 
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
-  
     {;
       icon: Target,;
-      title: 'Quantum Simulation',;
-      description: 'Molecular modeling, material science, and chemical reaction simulations',;
-      color: 'from-indigo-500 to-purple-500'};
-  ];
+      title:,
+  Quantum Simulation',;
+      description: Molecular modeling, material science, and chemical reaction simulations,
+  ,;
+      color: 'from-indigo-500 to-purple-500};
+  ];,
+  On-premise deployment options',;
 
-  
-        'On-premise deployment options',;
-        'Research partnerships';
+  'Research partnerships';
       ],;
-=======
-        'Unlimited quantum computing hours','
-        'Custom quantum hardware access','
-        'Dedicated quantum team','
-        '24/7 phone support','
-        'Custom integrations',;'
-        'On-premise deployment options',;'        'Research partnerships';
+
+  'Unlimited quantum computing hours',
+  '
+        'Custom quantum hardware access
+  ','
+
+  'Dedicated quantum team',
+  '
+        '24/7 phone support
+  ','
+
+  'Custom integrations',;'
+  'On-premise deployment options',;'
+  'Research partnerships';
       ],;'
-      cta: 'Contact Sales',;
+      cta: 'Contact Sales,;
       popular: false};
   ]},;
     {;
-      title: 'Logistics & Supply Chain',;
-      description: 'Route optimization, inventory management, and supply chain optimization',;
-      metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']};
+      title:,
+  Logistics & Supply Chain',;
+      description: Route optimization, inventory management, and supply chain optimization,
+  ,;
+      metrics: [
+  '40% cost reduction,Optimal route planning
+  ',Real-time optimization']};
   ];
 
-  
-    'Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;
-    'AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
-    'REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
+  'Python',Qiskit
+  ',Cirq',PennyLane
+  ',Q#',Julia
+  ',MATLAB',;
+
+  'AWS Braket',Azure Quantum
+  ',Google Cloud',IBM Quantum
+  ',;
+    'REST APIs
+  ',GraphQL',Webhooks
+  ',Docker',Kubernetes
+  ';
   ]},;
     {;
       icon: Clock,;
-      title: 'Immediate Access',;
-      description: 'Start using quantum computing today with our cloud-based platform'};  ];
+      title:,
+  Immediate Access
+  ',;
+      description: 'Start using quantum computing today with our cloud-based platform};  ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -222,8 +243,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 }}
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
                   plan.popular
-                    ? 'border-purple-500 relative'
-                    : 'border-slate-700'
+                    ?,
+  border-purple-500 relative
+  ': 'border-slate-700
                 }`}
 
                 {plan.popular && (;
@@ -256,8 +278,10 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                      ?,
+  bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600
+  '
+                      : 'bg-slate-700 text-white hover:bg-slate-600
                   }`}
 
                   {plan.cta}
@@ -336,21 +360,11 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -358,17 +372,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { duration: 0.6,
   delay: index * 0.1 
 
-
-
-
-
-
 }}`
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
 
-                  plan.popular'
-                    ? 'border-purple-500 relative''
-                    : 'border-slate-700'`
+                  plan.popular,
+  ?
+  'border-purple-500 relative'': 'border-slate-700`
                 }`}
 
                 {plan.popular && (;"
@@ -401,9 +410,10 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                   href="/contact"`
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
 
-                    plan.popular'
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600''
-                      : 'bg-slate-700 text-white hover:bg-slate-600'`
+                    plan.popular,
+  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600'
+  '
+                      : 'bg-slate-700 text-white hover:bg-slate-600`
                   }`}
                 >
                   {plan.cta}
@@ -435,32 +445,17 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700"
