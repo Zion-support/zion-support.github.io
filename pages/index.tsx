@@ -12,10 +12,10 @@ const Home: NextPage = () => {
   const aiServices = getServicesByCategory('ai-services');
 
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Award },
-    { number: '24/7', label: 'Support Available', icon: Clock },
+    { number: '1000+', label: 'Innovative Projects Delivered', icon: TrendingUp },
+    { number: '200+', label: 'Global Enterprise Clients', icon: Users },
+    { number: '99.99%', label: 'Uptime & Performance SLA', icon: Award },
+    { number: '24/7', label: 'Expert Support & Monitoring', icon: Clock },
   ];
 
   return (
@@ -39,10 +39,11 @@ const Home: NextPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, quantum-ready security, blockchain infrastructure, and innovative development services. 
-            From AI-powered micro SaaS applications to enterprise-grade autonomous systems, we deliver measurable results 
-            that drive growth, efficiency, and competitive advantage.
+            🚀 <strong>Revolutionary Technology Solutions</strong> - We're the pioneers of tomorrow's digital landscape, 
+            delivering cutting-edge AI services, quantum-ready infrastructure, and innovative micro SaaS solutions. 
+            From AI-powered business automation to space exploration technologies, we help enterprises achieve 
+            <span className="text-yellow-300 font-semibold"> 300% faster growth</span> and 
+            <span className="text-green-300 font-semibold"> 90% cost reduction</span> through intelligent innovation.
           </motion.p>
           
           <motion.div 
@@ -103,9 +104,12 @@ const Home: NextPage = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your digital transformation
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Revolutionary Technology Services</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              <strong>Transform your business with cutting-edge solutions</strong> - From AI-powered micro SaaS platforms 
+              to quantum computing infrastructure, we deliver <span className="text-blue-600 font-semibold">next-generation technologies</span> 
+              that drive <span className="text-green-600 font-semibold">exponential growth</span> and 
+              <span className="text-purple-600 font-semibold"> competitive advantage</span> in today's digital economy.
             </p>
           </motion.div>
 
@@ -121,11 +125,14 @@ const Home: NextPage = () => {
             >
               <div className="flex items-center mb-4">
                 <Zap className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">AI Services</h3>
+                <h3 className="text-2xl font-bold text-gray-900">🤖 AI Services</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Advanced artificial intelligence solutions including machine learning, natural language processing, 
-                and autonomous systems to revolutionize your business operations.
+                <strong>Next-generation AI solutions</strong> including genetic engineering, space exploration, 
+                and quantum machine learning. Transform your business with 
+                <span className="text-blue-600 font-semibold"> 40+ specialized AI services</span> that deliver 
+                <span className="text-green-600 font-semibold"> 500% ROI improvement</span> and 
+                <span className="text-purple-600 font-semibold"> breakthrough innovation</span>.
               </p>
               <ul className="space-y-2 mb-6">
                 {aiServices.slice(0, 3).map((service, index) => (
@@ -154,11 +161,13 @@ const Home: NextPage = () => {
             >
               <div className="flex items-center mb-4">
                 <Shield className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">IT Services</h3>
+                <h3 className="text-2xl font-bold text-gray-900">⚡ IT Services</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Comprehensive IT solutions including cloud migration, cybersecurity, infrastructure management, 
-                and 24/7 technical support to keep your business running smoothly.
+                <strong>Future-ready infrastructure solutions</strong> including quantum computing, 6G networks, 
+                and neuromorphic systems. Deploy <span className="text-green-600 font-semibold">30+ cutting-edge IT services</span> 
+                with <span className="text-blue-600 font-semibold">99.99% uptime guarantee</span> and 
+                <span className="text-purple-600 font-semibold"> enterprise-grade security</span>.
               </p>
               <ul className="space-y-2 mb-6">
                 {itServices.slice(0, 3).map((service, index) => (
@@ -187,11 +196,14 @@ const Home: NextPage = () => {
             >
               <div className="flex items-center mb-4">
                 <Globe className="w-8 h-8 text-purple-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Micro SaaS</h3>
+                <h3 className="text-2xl font-bold text-gray-900">💎 Micro SaaS</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Innovative micro SaaS applications and platforms that solve specific business problems 
-                with scalable, cost-effective solutions tailored to your needs.
+                <strong>Revolutionary micro SaaS platforms</strong> including AI video editing, smart contract auditing, 
+                and voice cloning. Launch <span className="text-purple-600 font-semibold">50+ innovative solutions</span> 
+                starting from <span className="text-green-600 font-semibold">$12/month</span> with 
+                <span className="text-blue-600 font-semibold"> instant deployment</span> and 
+                <span className="text-yellow-600 font-semibold"> 24/7 support</span>.
               </p>
               <ul className="space-y-2 mb-6">
                 {microSaasServices.slice(0, 3).map((service, index) => (
