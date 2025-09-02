@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -13,12 +12,14 @@ import {
   Network, 
   Rocket, 
   ShoppingCart, 
-  BarChart3 
+  BarChart3,
+  ChevronDown
 } from 'lucide-react';
 
-const SimpleNavigation: React.FC = () => {
+const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -31,18 +32,36 @@ const SimpleNavigation: React.FC = () => {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setServicesOpen(false);
   }, [router.pathname]);
 
-  const navigationItems = [
+  const mainNavigation = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'AI Services', href: '/services/ai-services', icon: Brain },
-    { name: 'Micro SAAS', href: '/services/micro-saas', icon: Code },
-    { name: 'IT Services', href: '/services/it-services', icon: Network },
-    { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket },
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-    { name: 'Services', href: '/services', icon: BarChart3 },
     { name: 'About', href: '/about', icon: Info },
-    { name: 'Contact', href: '/contact', icon: Phone }
+    { name: 'Contact', href: '/contact', icon: Phone },
+  ];
+
+  const serviceNavigation = [
+    { name: 'All Services', href: '/services' },
+    { name: 'AI Services', href: '/services/ai-services' },
+    { name: 'IT Services', href: '/services/it-services' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
+    { name: 'Emerging Tech', href: '/emerging-tech' },
+  ];
+
+  const resourceNavigation = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Documentation', href: '/documentation' },
+  ];
+
+  const businessNavigation = [
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Marketplace', href: '/marketplace' },
   ];
 
   return (
@@ -71,7 +90,7 @@ const SimpleNavigation: React.FC = () => {
 
             {/* Navigation Items */}
             <div className="flex items-center space-x-1">
-              {navigationItems.map((item) => (
+              {mainNavigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -85,6 +104,46 @@ const SimpleNavigation: React.FC = () => {
                   <span>{item.name}</span>
                 </Link>
               ))}
+
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    router.pathname.startsWith('/services') || router.pathname === '/emerging-tech'
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/25' 
+                      : 'text-gray-300 hover:text-white hover:bg-slate-800/30'
+                  }`}
+                >
+                  <BarChart3 className="w-4 h-4" />
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+
+                {servicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2">
+                    {serviceNavigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Resources Dropdown */}
+              <div className="relative">
+                <button
+                  className="px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 text-gray-300 hover:text-white hover:bg-slate-800/30"
+                >
+                  <span>Resources</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </div>
             </div>
 
             {/* CTA Button */}
@@ -133,17 +192,11 @@ const SimpleNavigation: React.FC = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="bg-slate-900/95 backdrop-blur-xl border-b border-blue-500/20 overflow-hidden"
-          >
+          <div className="bg-slate-900/95 backdrop-blur-xl border-b border-blue-500/20 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 py-6">
-              {/* Navigation Items */}
-              <div className="space-y-2">
-                {navigationItems.map((item) => (
+              {/* Main Navigation */}
+              <div className="space-y-2 mb-6">
+                {mainNavigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -161,8 +214,56 @@ const SimpleNavigation: React.FC = () => {
                 ))}
               </div>
 
+              {/* Services Section */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Services</h3>
+                <div className="space-y-1">
+                  {serviceNavigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-800/30 rounded-lg transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Resources Section */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Resources</h3>
+                <div className="space-y-1">
+                  {resourceNavigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-800/30 rounded-lg transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Business Section */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Business</h3>
+                <div className="space-y-1">
+                  {businessNavigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-800/30 rounded-lg transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               {/* Contact Info */}
-              <div className="mt-8 pt-6 border-t border-blue-500/20">
+              <div className="pt-6 border-t border-blue-500/20">
                 <div className="text-center">
                   <div className="text-blue-400 font-semibold mb-2">Contact Us</div>
                   <div className="text-sm text-gray-400 space-y-1">
@@ -174,7 +275,7 @@ const SimpleNavigation: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
       </nav>
 
@@ -184,4 +285,4 @@ const SimpleNavigation: React.FC = () => {
   );
 };
 
-export default SimpleNavigation;
+export default Navigation;
