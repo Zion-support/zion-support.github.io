@@ -1,12 +1,16 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';
 import {}
   Search,
   Lightbulb,
   BarChart3,
   Rocket,
-  GraduationCap,'
-  Globe} from 'lucide-react';
+  GraduationCap,
+  '
+  Globe} from 'lucide-react
+  ';
 const AIAutonomousResearchAssistant = () => {}
   return()
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -469,7 +473,8 @@ const AIAutonomousResearchAssistant = () => {}
             Ready to Transform Your Research?"
           </h2>""
           <p className="text-xl text-gray-300 mb-8">'
-            Join the future of autonomous research with Zion Tech Group's AI
+            Join the future of autonomous research with Zion Tech Group
+  's AI
             Research Assistant. Accelerate discoveries, uncover insights, and
             stay ahead of the competition."
           </p>""
@@ -494,4 +499,4 @@ const AIAutonomousResearchAssistant = () => {}
 
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
 export default AIAutonomousResearchAssistant;'"
-'"'"
+  '"'"
