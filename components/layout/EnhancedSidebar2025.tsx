@@ -132,83 +132,11 @@ const sidebarSections = [;
   ' }'        ]
   '
     ]
-  }, {;
+  }, {
 
-    title: 'Industry Solutions,'    icon: Target, color:,
-  from-purple-500 to-pink-600',
-  '    items['      {;
-
-        name: 'Healthcare, href:
-  '/healthcare-solutions',
-  '        icon: Heart, description:,
-  AI-powered healthcare diagnostics and solutions
-  ','        subItems[
-  '          { name: 'AI Healthcare Diagnostics, href:,
-  /ai-healthcare-diagnostics
-  ' },'          { name: 'Medical Imaging AI, href:,
-  /medical-imaging-ai' },
-  '          { name: 'Drug Discovery Platform, href:,
-  /drug-discovery-platform
-  ' }'        ]
-  '      }, {;
-
-        name: 'Financial Services,'        href:
-  '/financial-solutions', icon: BarChart3,
-,
-  description: 'Advanced financial intelligence and analytics, subItems[,
-  { name: 'AI Financial Intelligence, href:,
-  /ai-financial-intelligence' }, { name: 'Quantum Trading Platform, href:,
-  /quantum-financial-trading' }, { name: 'Risk Assessment AI, href:,
-  /risk-assessment-ai' }
-  '        ]'      }, {;
-
-        name: 'Manufacturing,
-,
-  href: '/manufacturing-solutions, icon: Settings,'        description:,
-  Industry 4.0 and smart manufacturing', subItems[
-  '          { name: 'Smart Factory Platform, href:,
-  /smart-factory-platform
-  ' }, { name: 'Predictive Maintenance AI, href:,
-  /predictive-maintenance-ai
-  ' }, { name: 'Quality Control AI, href:,
-  /quality-control-ai
-  ' }'        ]
-  '      }, {;
-
-        name: 'Retail & E-commerce,'        href:
-  '/retail-solutions', icon: Eye,
-,
-  description: 'E-commerce optimization and retail intelligence, subItems[,
-  { name: 'E-commerce Optimization, href:,
-  /ecommerce-optimization-platform' }, { name: 'Customer Behavior AI, href:,
-  /customer-behavior-ai' }, { name: 'Inventory Management AI, href:,
-  /inventory-management-ai' }
-  '        ]'      }, {;
-
-        name: 'Government & Defense,
-,
-  href: '/government-solutions, icon: Shield,'        description:,
-  Secure government and defense solutions', subItems[
-  '          { name: 'Cybersecurity Platform, href:,
-  /quantum-cybersecurity-platform
-  ' }, { name: 'Data Protection AI, href:,
-  /data-protection-ai
-  ' }, { name: 'Threat Detection AI, href:,
-  /threat-detection-ai
-  ' }'        ]
-  '      }, {;
-
-        name: 'Education,'        href:
-  '/education-solutions', icon: Award,
-,
-  description: 'AI-powered education and learning platforms, subItems[,
-  { name: 'AI Education Platform, href:,
-  /ai-education-platform' }, { name: 'Personalized Learning AI, href:,
-  /personalized-learning-ai' }, { name: 'Student Performance AI, href:,
-  /student-performance-ai' }
-  '        ]'
+ursor/automate-test-fix-improve-and-merge-code-48f3
     ]
-  }, {;
+  }, {
 
     title: 'Comp & Resources,
   '    icon: Users, color:,
@@ -334,8 +262,7 @@ initial={{ x:,
           {sidebarSections.map((section, sectionIndex) => (
             <div key={sectionIndex} className="space-y-3">"              <button"                onClick={() => toggleSection(section.title)}
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"""                <div className="flex items-center gap-3">"                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                    <section.icon className="w-4 h-4 text-white" />"                  </div>"                  <span className="text-white font-semibold">{section.title}</span>"                </div>"                <ChevronDown`                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${`
-                    expandedSections.has(section.title) ?,
-  rotate-180': ''                  }`}'                />`              </button><AnimatePresence>
+                    expandedSections.has(section.title) ?, rotate-180': ''                  }`}'                />`              </button><AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
                     initial = {
@@ -343,12 +270,8 @@ initial={{ x:,
 { opacity: 0, height: 0}}
                     animate = {
 
-{ opacity: 1,;
-  height:
-  'auto' '
-  '}}
+ursor/automate-test-fix-improve-and-merge-code-48f3
                     exit = {
-
 { opacity: 0, height: 0}}
                     transition={{ duration: 0.3 }}
 className="space-y-2 ml-6"""                    {section.items.map((item, itemIndex) => (
@@ -358,8 +281,7 @@ className="space-y-2 ml-6"""                    {section.items.map((item, itemIn
                           {item.subItems && item.subItems.length > 0 && (
                             <ChevronRight
                               className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${`
-                                expandedItems.has(item.name) ?,
-  rotate-90
+                                expandedItems.has(item.name) ?, rotate-90
   ': ''                              }`}'                            />`                          )}</button>
 
                         {/* Sub-items */}
@@ -372,11 +294,8 @@ className="space-y-2 ml-6"""                    {section.items.map((item, itemIn
 { opacity: 0, height: 0}}
                                 animate = {
 
-{ opacity: 1,;
-  height:
-  'auto' ''}}
+ursor/automate-test-fix-improve-and-merge-code-48f3
                                 exit = {
-
 { opacity: 0, height: 0}}
                                 transition={{ duration: 0.3 }}
 className="space-y-1 ml-6"""                                {item.subItems.map((subItem, subIndex) => (<Link

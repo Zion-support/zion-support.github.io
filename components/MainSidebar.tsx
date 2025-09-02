@@ -108,15 +108,17 @@ interface SidebarProps extends React.PropsWithChildren<{}> {
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections((prev) =>
-      prev.includes(section) ? prev.filter((s) => s !== section) : [...prev, section]
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    setExpandedSections(prev => ;
+      prev.includes(section) ;
+        ? prev.filter(s => s !== section);
+        : [...prev, section];
     );
   };
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 
   interface NavItem {
   name: string;
@@ -218,7 +220,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       )}
     </div>
-  );
+  )
 
   return (
     <>
@@ -261,16 +263,16 @@ className = "fixed inset-0 bg-black/50 z-40 lg: hidden""          onClick={onClo
   >`                <item.icon className="w-4 h-4 flex-shrink-0" />"                <span className="font-medium">{item.name}</span>"              </Link>"            ))}          </div>
 
           {/* Services Section */}
-          {renderNavSection('Services
+          {renderNavSection('Services'
   ', navigation.services, 'services
-  ')}''          {/* Solutions Section */}
+  ')}''          {/* Solutions Section */}'
           {renderNavSection(
   'Solutions', navigation.solutions,
-  'solutions')}'
-  '          {/* Resources Section */}
-          {renderNavSection('Resources
+  'solutions')}''
+  '          {/* Resources Section */}'
+          {renderNavSection('Resources'
   ', navigation.resources, 'resources
-  ')}''          {/* Comp Section */}
+  ')}''          {/* Comp Section */}'
           {renderNavSection(
   'Comp', navigation.company,
   'company')}

@@ -5,7 +5,6 @@ export default function CreatePostButton({ categoryId }) {
       Create New Post
     </Button>)}
 
-
 export { CreatePostButton };
 
 export { CreatePostButton };

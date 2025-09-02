@@ -327,8 +327,7 @@ const Startups: NextPage = () => {
           
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
-              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?,
-  ring-2 ring-blue-500
+              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?, ring-2 ring-blue-500
   ': '}`}>
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -382,7 +381,7 @@ const Startups: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Success Stories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we&apos;ve helped startups achieve their goals and scale successfully.'
+              See how we&aposve helped startups achieve their goals and scale successfully.''
             </p>
           </div>
           

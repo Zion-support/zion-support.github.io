@@ -24,16 +24,11 @@ import {   Home,
   'lucide-react';
 const NotFound: React.FC = () => {
   const quickLinks = [
-    { name: 'Home', url: '/', icon: Home },
-    { name: 'Services', url: '/services', icon: Briefcase },
-    { name: 'About', url: '/about', icon: Users },
-    { name: 'Contact', url: '/contact', icon: Phone },
-    { name: 'Blog', url: '/blog', icon: BookOpen },
-    { name: 'Pricing', url: '/pricing', icon: DollarSign },
-    { name: 'Team', url: '/team', icon: Award },
-    { name: 'Webinars', url: '/webinars', icon: Calendar },
-    { name: 'White Papers', url: '/white-papers', icon: FileText },
-    { name: 'Privacy Policy', url: '/privacy', icon: Shield },
+    { name: "Home", url: "/", icon: Home }, { name: "Services", url: "/services", icon: Briefcase },
+    { name: "About", url: "/about", icon: Users }, { name: "Contact", url: "/contact", icon: Phone },
+    { name: "Blog", url: "/blog", icon: BookOpen }, { name: "Pricing", url: "/pricing", icon: DollarSign },
+    { name: "Team", url: "/team", icon: Award }, { name: "Webinars", url: "/webinars", icon: Calendar },
+    { name: "White Papers", url: "/white-papers", icon: FileText }, { name: "Privacy Policy", url: "/privacy", icon: Shield }
   ];
 
   return (
@@ -68,9 +63,7 @@ const NotFound: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-8"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Page Not Found
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>
             <p className="text-xl text-gray-300 mb-6">
               Sorry, the page you
   're looking for doesn't exist or has been moved.
@@ -88,18 +81,18 @@ const NotFound: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <Button
-              size="lg"
+            <Button 
+              size="lg" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
               onClick={() => window.history.back()}
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </Button>
-            <Button
-              size="lg"
+            <Button 
+              size="lg" 
               variant="outline"
-              onClick={() => (window.location.href = '/')}
+              onClick={() => window.location.href = '/'}
             >
               <Home className="w-5 h-5 mr-2" />
               Go Home
@@ -113,9 +106,7 @@ const NotFound: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <Card className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Popular Pages
-              </h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Popular Pages</h3>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 {quickLinks.map((link, index) => (
                   <motion.a
@@ -144,12 +135,9 @@ const NotFound: React.FC = () => {
             className="mt-12"
           >
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Still Need Help?
-              </h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Still Need Help?</h3>
               <p className="text-gray-300 mb-6">
-                If you can&apos;t find what you&apos;re looking for, our team is
-                here to help.
+                If you can&apos;t find what you&apos;re looking for, our team is here to help.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a

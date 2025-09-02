@@ -20,26 +20,8 @@ export const useAccessibility = () => {;
 };// Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {;
     const [highContrast, setHighContrast] = useState(false);
-    const [reducedMotion, setReducedMotion] = useState(false);
-    const [fontSize, setFontSize] = useState(
-  'medium');
-    const [colorBlindMode, setColorBlindMode] = useState(
-  'none');
-    // Load settings from localStorage;
-    useEffect(() => {;
-        const savedSettings = localStorage.getItem(
-  'zion-accessibility-settings');
-        if (savedSettings) {;
-            const settings = JSON.parse(savedSettings);
-            setHighContrast(settings.highContrast || false);
-            setReducedMotion(settings.reducedMotion || false);
-            setFontSize(settings.fontSize ||
-  'medium');
-;
-            setColorBlindMode(settings.colorBlindMode ||
-  'none');
-;}, []);
-    // Save settings to localStorage;
+ursor/automate-test-fix-improve-and-merge-code-48f3
+;}, []);    // Save settings to localStorage;
     useEffect(() => {;
         const settings = {;
   highContrast,;
@@ -47,9 +29,7 @@ export const AccessibilityProvider = ({ children }) => {;
             fontSize,;
   ;
             colorBlindMode;
-};
-        localStorage.setItem(
-  'zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);// Apply accessibility settings to document;
+ursor/automate-test-fix-improve-and-merge-code-48f3
     useEffect(() => {;
         const root = document.documentElement;
         // High contrast mode;
@@ -109,9 +89,7 @@ export const AccessibilityPanel = () => {;
     // Keyboard shortcuts;
     useEffect(() => {;
         const handleKeyDown = (event) => {;
-            // Ctrl/Cmd + Shift + A to open accessibility panel;
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===
-  'A') {;
+ursor/automate-test-fix-improve-and-merge-code-48f3
                 event.preventDefault();
 ;
                 setIsOpen(!isOpen);
@@ -253,11 +231,8 @@ export const useFocusTrap = (isActive) => {';;
             return;
         const firstFocusableElement = focusableContent[0];
         const lastFocusableElement = focusableContent[focusableContent.length - 1];
-        const handleTabKey = (e) => {;
-            if (e.key ===
-  'Tab) {;
-                if (e.shiftKey) {;
-                    if (document.activeElement === firstFocusableElement) {;
+ursor/automate-test-fix-improve-and-merge-code-48f3
+                if (e.shiftKey) {;                    if (document.activeElement === firstFocusableElement) {;
                         e.preventDefault();
 ;
                         lastFocusableElement.focus();

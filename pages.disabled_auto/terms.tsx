@@ -36,7 +36,7 @@ import {
 } from 'lucide-react';
 
 const Terms: React.FC = () => {
-  const lastUpdated = "2025-01-15";
+  const lastUpdated = "2025-01-15"
 
   const sections = [
     {
@@ -119,7 +119,7 @@ const Terms: React.FC = () => {
               Terms of Service
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.'
+              These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.''
             </p>
             <div className="flex items-center justify-center text-gray-400">
               <Calendar className="w-4 h-4 mr-2" />

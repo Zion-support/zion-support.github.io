@@ -19,29 +19,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-    };
+      hasError: false, error: null,
+      errorInfo: null, };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true,
-      error,
-      errorInfo: null,
-    };
+      hasError: true, error,
+      errorInfo: null, };
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo,
+      error, errorInfo,
     });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary: ', error, errorInfo);
     }
 
     // Send error to monitoring service
@@ -58,8 +53,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Example: Send to analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
+          description: error.message, fatal: false,
         });
       }
 
@@ -67,22 +61,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       fetch('/api/error-reporting', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json', },
         body: JSON.stringify({
           error: {
-            message: error.message,
-            stack: error.stack,
-            name: error.name,
-          },
+            message: error.message, stack: error.stack,
+            name: error.name, },
           errorInfo: {
-            componentStack: errorInfo.componentStack,
-          },
-          timestamp: new Date().toISOString(),
-          userAgent: navigator.userAgent,
-          url: window.location.href,
-        }),
-      }).catch(() => {
+            componentStack: errorInfo.componentStack, },
+          timestamp: new Date().toISOString(), userAgent: navigator.userAgent,
+          url: window.location.href, }), }).catch(() => {
         // Silently fail if error reporting fails
       });
     } catch (reportingError) {
@@ -92,10 +79,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-    });
+      hasError: false, error: null,
+      errorInfo: null, });
   };
 
   private handleReload = () => {
@@ -134,7 +119,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Something went wrong
                 </h3>
                 <p className="text-sm text-gray-500">
-                  We're sorry, but something unexpected happened.
+                  We&apos;re sorry, but something unexpected happened.'
                 </p>
               </div>
             </div>
@@ -142,8 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             {this.props.showDetails && this.state.error && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
                 <h4 className="text-sm font-medium text-red-800 mb-2">
-                  Error Details:
-                </h4>
+                  Error Details: </h4>
                 <p className="text-sm text-red-700 font-mono">
                   {this.state.error.message}
                 </p>
@@ -163,7 +147,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="flex space-x-3">
               <button
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 Try Again
               </button>
@@ -180,7 +164,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 If this problem persists, please{' '}
                 <a
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: text-blue-500"
                 >
                   contact support
                 </a>

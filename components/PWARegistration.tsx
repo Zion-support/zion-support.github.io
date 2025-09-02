@@ -8,7 +8,6 @@ import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Sm
   ;
    platform: string;  }>;prompt(): Promise<void>;
 }
-
 const PWARegistration: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
@@ -16,11 +15,8 @@ const PWARegistration: React.FC = () => {
 
   useEffect(() => {
     // Check if app is already installed
-if (window.matchMedia(,
-  (display-mode: standalone)').matches) {
-  '      setIsInstalled(true);      return;
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
-
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {;e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);

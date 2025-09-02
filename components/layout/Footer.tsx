@@ -149,32 +149,16 @@ const Footer: React.FC = () => {
         </div>      </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-slate-700 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-6 mb-4 md:mb-0">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-              <div className="flex items-center space-x-4">
-                {legalLinks.map((link) => (
-                  <Link
+<div className="border-t border-slate-700 py-6">"        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"          <div className="flex flex-col md:flex-row items-center justify-between">"            <div className="flex items-center space-x-6 mb-4 md:mb-0">"              <p className="text-gray-400 text-sm">"                © {currentYear} Zion Tech Group. All rights reserved."              </p>
+              <div className="flex items-center space-x-4">"                {legalLinks.map((link) => ("                  <Link
                     key={link.name}
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
+                    className="text-gray-400 hover: text-white transition-colors text-sm""                  >"                    {link.name}</Link>
                 ))}
               </div>
             </div>
             
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>by Zion Tech Group</span>
-            </div>
-          </div>
+<div className="flex items-center space-x-2 text-gray-400 text-sm">"              <span>Made with</span>"              <Heart className="w-4 h-4 text-red-500" />"              <span>by Zion Tech Group</span>"            </div></div>
         </div>
       </div>
     </footer>

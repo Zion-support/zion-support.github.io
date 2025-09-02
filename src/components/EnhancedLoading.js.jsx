@@ -45,7 +45,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
     </div>)};
 export default EnhancedLoading;
 
-
 export { EnhancedLoading };
 
 export { EnhancedLoading };

@@ -8,19 +8,6 @@ declare global {
 interface AnalyticsProps {
   trackingId?: string;
 }
-
-const Analytics: React.FC<AnalyticsProps> = ({ 
-  trackingId = process.env['NEXT_PUBLIC_GA_TRACKING_ID'] 
-}) => {
-  useEffect(() => {
-    if (!trackingId || typeof window === 'undefined') return;
-    
-    // Load Google Analytics
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-    document.head.appendChild(script1);
-
     const script2 = document.createElement('script');
     script2.innerHTML = `
       window.dataLayer = window.dataLayer || [];

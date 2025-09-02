@@ -10,12 +10,8 @@ module.exports = {
   \.(css|less|scss|sass)$': 'identity-obj-proxy,
   },
   collectCoverageFrom: [
-  'src/**/*.{js,jsx,ts,tsx}',
-  '!src/**/*.d.ts',
-  '!src/index.tsx',
-  '!src/serviceWorker.ts',
-  ],
-  coverageThreshold: {
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  ],  coverageThreshold: {
     global: {
       branches: 70,
       functions: 70,

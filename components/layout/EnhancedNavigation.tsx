@@ -1,11 +1,6 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
-const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+ursor/automate-test-fix-improve-and-merge-code-48f3
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -28,13 +23,13 @@ const EnhancedNavigation: React.FC = () => {
             </Link>            
             {/* Services Dropdown */}
             <div className="relative group">
-              <button
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+              <button 
+                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                Services
-                <ChevronDown className="ml-1 w-4 h-4" />
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
               </button>
               <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
@@ -66,13 +61,13 @@ const EnhancedNavigation: React.FC = () => {
 
             {/* Solutions Dropdown */}
             <div className="relative group">
-              <button
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+              <button 
+                className="flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
-                Solutions
-                <ChevronDown className="ml-1 w-4 h-4" />
+                <span>Solutions</span>
+                <ChevronDown className="w-4 h-4" />
               </button>
               <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
@@ -96,22 +91,10 @@ const EnhancedNavigation: React.FC = () => {
               </div>
             </div>
 
-            <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Products
-            </Link>
-            <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Solutions
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/about" className="text-gray-700 hover: text-blue-600 transition-colors">
               About
             </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Blog
-            </Link>
-            <Link href="/careers" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Careers
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
               Contact
             </Link>
           </div>

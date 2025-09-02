@@ -133,12 +133,9 @@ const Team: React.FC = () => {
       title: "Client Success", description: "Our success is measured by the success of our clients",
       icon: Target
     }, {
-      title: "Ethical AI",
-      description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield
-    },
-    {
-      title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning",
-      icon: TrendingUp
+      title: "Ethical AI", description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield
+    }, {
+      title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning", icon: TrendingUp
     }
   ];
 
@@ -401,7 +398,7 @@ const Team: React.FC = () => {
               Join Our Team
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos;re always looking for talented individuals who share our passion for AI and innovation. '
+              We&apos;re always looking for talented individuals who share our passion for AI and innovation. ''
               Join us in building the future of technology.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">

@@ -125,7 +125,6 @@ export default function SitemapPage() {
       </div>
     </div>)}
 
-
 export { SitemapPage };
 
 export { SitemapPage };

@@ -95,7 +95,11 @@
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",

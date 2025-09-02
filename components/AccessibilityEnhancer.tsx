@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState('normal');
+const AccessibilityEnhancer: React.FC = () => {
+  const [highContrast, setHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('medium');
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -21,6 +17,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
 
+    setHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
+    setReducedMotion(prefersReducedMotion);
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
   }, []);
@@ -110,22 +109,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         Skip to main content      </a>
 
       {/* Screen reader only content */}
-      <div className="sr-only">
-        <h1>Zion Tech Group - Technology Solutions Provider</h1>
-        <p>Leading technology solutions provider helping businesses transform their digital presence 
+      <div className="sr-only">"        <h1>Zion Tech Group - Technology Solutions Provider</h1>"        <p>Leading technology solutions provider helping businesses transform their digital presence 
           with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
         </p>
       </div>
 
       {/* Main content wrapper with accessibility attributes */}
-      <main id="main-content" role="main" aria-label="Main content">
-        {children}
-      </main>
+<main id="main-content" role="main" aria-label="Main content">"        {children}"      </main>
 
       {/* Accessibility styles */}
-      <style jsx global>{`
-        /* High contrast mode */
-        .high-contrast {
+      <style jsx global>{``        /* High contrast mode */.high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;
         }
@@ -136,12 +129,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           border-color: black !important;
         }
         
-        .high-contrast button, .high-contrast a {
+.high-contrast button, .high-contrast a {
           border: 2px solid black !important;
         }
         
-        .high-contrast button:hover, .high-contrast a:hover {
-          background-color: black !important;
+        .high-contrast button: hover, .high-contrast a: hover {background-color: black !important;
           color: white !important;
         }
 
@@ -163,17 +155,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
 
         /* Reduced motion */
-        .reduced-motion *, .reduced-motion *::before,
-        .reduced-motion *::after {
-          animation-duration: 0.01ms !important;
+.reduced-motion *, .reduced-motion *: :before,
+        .reduced-motion *: :after {animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
           scroll-behavior: auto !important;
         }
 
         /* Focus indicators */
-        *:focus {
-          outline: 2px solid #3b82f6 !important;
+*: focus {outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
 
@@ -190,8 +180,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           border: 0;
         }
 
-        .focus\\:not-sr-only:focus {
-          position: static;
+.focus\\: not-sr-only: focus {;position: static;
           width: auto;
           height: auto;
           padding: inherit;
@@ -200,9 +189,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           clip: auto;
           white-space: normal;
         }
-      `}</style>
-    </>
-  );
+`}</style>`</>);
 };
 
 export default AccessibilityEnhancer;

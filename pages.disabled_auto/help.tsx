@@ -74,8 +74,7 @@ const Help: NextPage = () => {
   'Troubleshooting common issues',
   'Advanced features'
       ]
-    },
-    {
+    }, {
       icon: MessageCircle,
       title:,
   FAQ',
@@ -226,12 +225,10 @@ const Help: NextPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6">
-              Help Center
-            </h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">Help Center</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Find answers, get support, and learn how to make the most of our
-              services. We&apos;re here to help you succeed.'
+              Find answers, get support, and learn how to make the most of our services. 
+              We&aposre here to help you succeed.''
             </p>
           </div>
         </section>
@@ -254,32 +251,22 @@ const Help: NextPage = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Browse Help Topics
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Browse Help Topics</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Find the information you need organized by topic and category.
               </p>
             </div>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {helpCategories.map((category, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow"
-                >
+                <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
                   <category.icon className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {category.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.title}</h3>
                   <p className="text-gray-600 mb-4">{category.description}</p>
                   <ul className="space-y-2">
                     {category.articles.map((article, idx) => (
                       <li key={idx}>
-                        <Link
-                          href="#"
-                          className="text-blue-600 hover: text-blue-700 text-sm"
-                        >
+                        <Link href="#" className="text-blue-600 hover: text-blue-700 text-sm">
                           {article}
                         </Link>
                       </li>
@@ -295,21 +282,16 @@ const Help: NextPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Popular Articles
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Popular Articles</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Most viewed help articles and guides from our community.
               </p>
             </div>
-
+            
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 {popularArticles.map((article, index) => (
-                  <div
-                    key={index}
-                    className="border-b border-gray-200 last: border-b-0"
-                  >
+                  <div key={index} className="border-b border-gray-200 last: border-b-0">
                     <div className="p-6 hover:bg-gray-50 transition-colors">
                       <div className="flex justify-between items-start">
                         <div className="flex-1">
@@ -339,29 +321,19 @@ const Help: NextPage = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Need More Help?
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Need More Help?</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our support team is ready to assist you with any questions or
-                issues.
+                Our support team is ready to assist you with any questions or issues.
               </p>
             </div>
-
+            
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
               {supportOptions.map((option, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-lg p-6 text-center hover: shadow-lg transition-shadow"
-                >
+                <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover: shadow-lg transition-shadow">
                   <option.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {option.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{option.title}</h3>
                   <p className="text-gray-600 mb-3">{option.description}</p>
-                  <p className="text-sm text-gray-500 mb-4">
-                    {option.availability}
-                  </p>
+                  <p className="text-sm text-gray-500 mb-4">{option.availability}</p>
                   <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                     {option.action}
                   </button>
@@ -375,54 +347,30 @@ const Help: NextPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Quick Links
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Links</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Access important resources and information quickly.
               </p>
             </div>
-
+            
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <Link
-                href="/faq"
-                className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  FAQ
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Frequently asked questions
-                </p>
+              <Link href="/faq" className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">FAQ</h3>
+                <p className="text-gray-600 text-sm">Frequently asked questions</p>
               </Link>
-
-              <Link
-                href="/documentation"
-                className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Documentation
-                </h3>
+              
+              <Link href="/documentation" className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h3>
                 <p className="text-gray-600 text-sm">Technical documentation</p>
               </Link>
-
-              <Link
-                href="/status"
-                className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  System Status
-                </h3>
+              
+              <Link href="/status" className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">System Status</h3>
                 <p className="text-gray-600 text-sm">Check service status</p>
               </Link>
-
-              <Link
-                href="/contact"
-                className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Contact Us
-                </h3>
+              
+              <Link href="/contact" className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact Us</h3>
                 <p className="text-gray-600 text-sm">Get in touch</p>
               </Link>
             </div>

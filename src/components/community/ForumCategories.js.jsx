@@ -57,7 +57,6 @@ export default function ForumCategories() {}
         </div>))}
     </div>)}
 
-
 export { ForumCategories };
 
 export { ForumCategories };

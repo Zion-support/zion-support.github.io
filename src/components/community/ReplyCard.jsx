@@ -45,7 +45,6 @@ import React from 'react'; export default function ReplyCard({ reply, className 
       </div>
     </div>)}
 
-
 export { ReplyCard };
 
 export { ReplyCard };

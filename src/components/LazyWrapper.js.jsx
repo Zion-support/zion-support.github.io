@@ -58,7 +58,6 @@ const LazyWrapper = ({}
     </motion.div>)};
 export default LazyWrapper;
 
-
 export { LazyWrapper };
 
 export { LazyWrapper };

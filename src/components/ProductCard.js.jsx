@@ -149,7 +149,6 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
       </div>
     </div>)}
 
-
 export { ProductCard };
 
 export { ProductCard };

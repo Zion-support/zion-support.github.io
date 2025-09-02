@@ -106,7 +106,7 @@ const ContactPage: NextPage = () => {
       title: 'Business Hours', details: 'Mon-Fri: 9AM-6PM EST',
       link: null
     }
-  ];
+  ]
 
   const services = [
 :pages.disabled_auto/contact.tsx
@@ -275,7 +275,6 @@ const ContactPage: NextPage = () => {
     
     'Other'
   ];
-
   return (
     <MainLayout
       title="Contact Us - Zion Tech Group"
@@ -349,8 +348,8 @@ const ContactPage: NextPage = () => {
                 </div>
               )}
 
-              {submitStatus === 'error
-  ' && (
+              {submitStatus === 'error'
+  ' && ('
                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
                   There was an error sending your message. Please try again or contact us directly.
                 </div>
@@ -480,7 +479,7 @@ const ContactPage: NextPage = () => {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  We&apos;re here to help you transform your business with cutting-edge technology solutions. '
+                  We&aposre here to help you transform your business with cutting-edge technology solutions. ''
                   Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.
                 </p>
                 <p className="text-gray-600">

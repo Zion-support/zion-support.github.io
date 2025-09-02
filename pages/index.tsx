@@ -39,10 +39,7 @@ export default function Home() {
     <>
       <Head>
         <title>Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Leading technology solutions provider"
-        />
+        <meta name="description" content="Leading technology solutions provider" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="min-h-screen bg-white">
@@ -52,8 +49,7 @@ export default function Home() {
               Welcome to Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading provider of revolutionary technology solutions, AI
-              services, and cutting-edge innovations.
+              Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
             </p>
           </div>
 
@@ -76,6 +72,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+</>
   );
 }

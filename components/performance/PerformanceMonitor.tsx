@@ -21,7 +21,7 @@ const PerformanceMonitor: React.FC = () => {
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-contentful-paint') {
           metrics.fcp = entry.startTime;
-          console.log('FCP:', entry.startTime);
+          console.log('FCP: ', entry.startTime);
         }
       }
     });
@@ -32,7 +32,7 @@ const PerformanceMonitor: React.FC = () => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       metrics.lcp = lastEntry.startTime;
-      console.log('LCP:', lastEntry.startTime);
+      console.log('LCP: ', lastEntry.startTime);
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -40,7 +40,7 @@ const PerformanceMonitor: React.FC = () => {
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         metrics.fid = (entry as any).processingStart - entry.startTime;
-        console.log('FID:', metrics.fid);
+        console.log('FID: ', metrics.fid);
       }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -54,7 +54,7 @@ const PerformanceMonitor: React.FC = () => {
         }
       }
       metrics.cls = clsValue;
-      console.log('CLS:', clsValue);
+      console.log('CLS: ', clsValue);
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -62,7 +62,7 @@ const PerformanceMonitor: React.FC = () => {
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      console.log('TTFB:', metrics.ttfb);
+      console.log('TTFB: ', metrics.ttfb);
     }
 
     // First Meaningful Paint (FMP) - approximation
@@ -70,7 +70,7 @@ const PerformanceMonitor: React.FC = () => {
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-meaningful-paint') {
           metrics.fmp = entry.startTime;
-          console.log('FMP:', entry.startTime);
+          console.log('FMP: ', entry.startTime);
         }
       }
     });
@@ -81,17 +81,12 @@ const PerformanceMonitor: React.FC = () => {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         // Send to Google Analytics
         (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'Core Web Vitals',
+          event_category: 'Performance', event_label: 'Core Web Vitals',
           custom_map: {
-            metric_1: 'fcp',
-            metric_2: 'lcp',
-            metric_3: 'fid',
-            metric_4: 'cls',
+            metric_1: 'fcp', metric_2: 'lcp',
+            metric_3: 'fid', metric_4: 'cls',
             metric_5: 'ttfb'
-          },
-          value: Math.round(metrics.fcp || 0),
-          non_interaction: true
+          }, value: Math.round(metrics.fcp || 0), non_interaction: true
         });
       }
 
@@ -100,12 +95,9 @@ const PerformanceMonitor: React.FC = () => {
         fetch('/api/analytics/performance', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-          },
+            'Content-Type': 'application/json', },
           body: JSON.stringify({
-            url: window.location.href,
-            timestamp: Date.now(),
-            metrics
+            url: window.location.href, timestamp: Date.now(), metrics
           })
         }).catch(console.error);
       }
@@ -128,7 +120,7 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return null; // This component doesn&apos;t render anything'
 };
 
 export default PerformanceMonitor;

@@ -9,3 +9,4 @@ const Talent: React.FC = () => (;
 );
 
 export default Talent;
+

@@ -52,15 +52,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       // Preload critical resources
       preloadImages.forEach(image => {
-        addResourceHint(image, 'image');
-      });
-
-      preloadFonts.forEach(font => {
-        addResourceHint(font, 'style');
-      });
-    }
-  }, [preloadImages, preloadFonts]);
-
+ursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <Head>
       {/* Critical CSS inlined for above-the-fold content */}
@@ -93,26 +85,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         />      ))}
       
       {/* Performance hints */}
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
-
-      {/* Service Worker registration */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `
-            if ('serviceWorker' in navigator) {
-              window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js')
-                  .then(function(registration) {
-                    console.log('SW registered: ', registration);
-                  })
-                  .catch(function(registrationError) {
-                    console.log('SW registration failed: ', registrationError);
-                  });
-              });
-            }
-          `
-        }}
-      />
+ursor/automate-test-fix-improve-and-merge-code-48f3
+            }          ``        }}/>
     </Head>
   );
 };

@@ -36,7 +36,6 @@ const EnhancedScrollToTop = () => {
     </AnimatePresence>)};
 export default EnhancedScrollToTop;
 
-
 export { EnhancedScrollToTop };
 
 export { EnhancedScrollToTop };

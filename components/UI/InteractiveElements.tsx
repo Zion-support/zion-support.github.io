@@ -24,17 +24,7 @@ interface InteractiveButtonProps {
 }
 
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
-  children,
-  onClick,
-  variant =,
-  primary',
-  size =
-  'md',
-  disabled = false,
-  loading = false,
-  icon,
-  className = '
-  ',
+ursor/automate-test-fix-improve-and-merge-code-48f3
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -57,6 +47,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   ',
   };
 
+ursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <motion.button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
@@ -133,9 +124,7 @@ interface InteractiveStatsProps {
 }>;
 }
 
-export const InteractiveStats: React.FC<InteractiveStatsProps> = ({
-  stats,
-}) => (
+export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => (
   <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
     {stats.map((stat, index) => (
       <motion.div
@@ -149,13 +138,7 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({
         <motion.div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4" whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type:
   'spring', damping: 10 }}>          <stat.icon className="w-8 h-8 text-white" />
         </motion.div>
-        <motion.h3
-          className="text-3xl font-bold text-gray-900 dark:text-white mb-2"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-          viewport={{ once: true }}
-        >
+        <motion.h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }} viewport={{ once: true }}>
           {stat.number}
         </motion.h3>
         <p className="text-gray-600 dark:text-gray-400">{stat.label}</p>
@@ -213,11 +196,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
         {icon}
       </motion.button>
       {tooltip && showTooltip && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap"
-        >
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap">
           {tooltip}
           <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />
         </motion.div>
@@ -227,3 +206,4 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
 };
 
 export default { InteractiveButton, AnimatedCard, InteractiveStats };
+

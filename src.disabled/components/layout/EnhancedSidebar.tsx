@@ -47,7 +47,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
     <aside className="fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg">
       <div className="flex items-center justify-between px-4 h-14 border-b border-gray-200">
         <span className="font-semibold text-gray-900">Navigation</span>
-        <button onClick={onClose} aria-label="Close" className="text-gray-600 hover:text-gray-900">×</button>
+        <button onClick={onClose} aria-label="Close" className="text-gray-600 hover: text-gray-900">×</button>
       </div>
       <nav className="p-4 space-y-1">
         {items.map((item) => (

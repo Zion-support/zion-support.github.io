@@ -28,7 +28,7 @@ const Careers: NextPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Team</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Be part of a team that&apos;s transforming businesses through innovative technology solutions. '
+            Be part of a team that&apos;s transforming businesses through innovative technology solutions. ''
             Grow your career with us and make a real impact.
           </p>
           

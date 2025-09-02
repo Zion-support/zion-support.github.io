@@ -20,15 +20,14 @@
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 src, alt,
-  width, ,
-  '
-  '  height,''
-  '  className = '', priority = false,''
-  '  quality = 75, ''
+  width,  ,
+  ''
+  '  height, '''
+  '  className = '', priority = false, '''
+  '  quality = 75, '''
   '  placeholder = 'empty
-  ','  blurDataURL, sizes,
-  '  fill = false, style,
-  onClick, onLoad,onError}) => {
+  ', '  blurDataURL, sizes, '  fill = false, style, '
+  onClick, onLoad, onError}) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -44,12 +43,12 @@ const observer = new IntersectionObserver();([entry]) => {
         if (entry.isIntersecting) {
 
           setIsInView(true);
-          observer.disconnect();
+          observer.disconnect()
         }
 }, {
-'''''
-  '        rootMargin: '50px, // Start loading 50px before the image comes into view'        threshold: 0.1}
-  '    );if (imageRef.current) {
+''''''
+  '        rootMargin: '50px, // Start loading 50px before the image comes into view'        threshold: 0.1}'
+  '    );if (imageRef.current) {'
 
       observer.observe(imageRef.current);
     }
@@ -71,12 +70,7 @@ const handleError = () => {;setHasError(true);
   // Fallback image for errors
   if (hasError) {
 
-return();
-      <div''
-  '        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}`}',
-  '        style={{ width: fill ? '100% : width, height: fill ? '100%
-  ' : height }}'      >
-  '        <div className="text-center">"""          <svg"""            className="mx-auto h-8 w-8 mb-2""""            fill="none""""            viewBox="0 0 24 24""""            stroke="currentColor""          >"""            <path"""              strokeLinecap="round""""              strokeLinejoin="round""""              strokeWidth={2}"""              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z""            />"""          </svg>"""          <p className="text-xs">Image failed to load</p>"        </div>"      </div>`    );}
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
   // Loading skeleton
   if (!isInView) {
@@ -96,10 +90,9 @@ return();
       <Image
         src={src}
         alt={alt}
-width={fill ? undefined : width}``        height={fill ? undefined : height}```        className={`transition-opacity duration-300 ${`,
-  '''
+width={fill ? undefined : width}``        height={fill ? undefined : height}```        className={`transition-opacity duration-300 ${`, ''''
   '`'          isLoading ?
-  'opacity-0': 'opacity-100'``        }`}'        priority={priority}`        quality={quality}placeholder={placeholder}
+  'opacity-0': 'opacity-100'``        }`}'        priority={priority}`        quality={quality}placeholder={placeholder}'
         blurDataURL={blurDataURL}
         sizes={sizes}
         fill={fill}

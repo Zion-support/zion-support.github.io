@@ -184,16 +184,8 @@ export function AdvancedAIBusinessProcessAutomation() {;
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState(
-  'overview');
-    const [selectedCategory, setSelectedCategory] = useState(
-  'all');
-    const [selectedStatus, setSelectedStatus] = useState(
-  'all');
-    const [searchQuery, setSearchQuery] = useState('
-  ');
-    const [showAIInsights, setShowAIInsights] = useState(true);
-    const [showAutomation, setShowAutomation] = useState(true);
+ursor/automate-test-fix-improve-and-merge-code-48f3
+    const [showAIInsights, setShowAIInsights] = useState(true);    const [showAutomation, setShowAutomation] = useState(true);
     const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
     const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);

@@ -76,9 +76,12 @@ const caseStudies: CaseStudy[] = [;
   ', 'Python
   '], duration: '4 months'  }']
 
+const caseStudies: CaseStudy[] = [
+{;
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/CaseStudies.tsx
 export default function CaseStudies() {
   return (
-    <section className="py-24 sm: py-32 bg-gradient-to-br from-slate-50 to-blue-50">"      <div className="mx-auto max-w-7xl px-6 lg:px-8">"        {/* Header */}"        <div className="mx-auto max-w-2xl lg:text-center mb-16">"          <motion.h2 "            className="text-base font-semibold leading-7 text-blue-600""            initial={{ opacity: 0, y: 20 }}"            whileInView={{ opacity: 1, y: 0 }}viewport={{ once: true }}
+    <section className="py-24 sm: py-32 bg-gradient-to-br from-slate-50 to-blue-50">"      <div className="mx-auto max-w-7xl px-6 lg:px-8">"        {/* Header */}"        <div className="mx-auto max-w-2xl lg:text-center mb-16">"          <motion.h2 "            className="text-base font-semibold leading-7 text-blue-600""            initial={{ opacity: 0, y: 20 }}"            whileInView={{ opacity: 1, y: 0 }}viewport={{ once: true }}"
             transition={{ duration: 0.6 }}
           >
             Success Stories
@@ -106,7 +109,7 @@ className="mt-6 text-lg leading-8 text-gray-600""            initial={{ opacity:
             >
               <div className="p-8">"                {/* Header */}"                <div className="flex items-start justify-between mb-6">"                  <div>"                    <h3 className="text-xl font-semibold text-gray-900 mb-2">"                      {study.title}"                    </h3>
                     <p className="text-gray-600 mb-4">"                      {study.description}"                    </p>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">"                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">"                        {study.industry}"                      </span><span>Duration: {study.duration}</span>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">"                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">"                        {study.industry}"                      </span><span>Duration: {study.duration}</span>"
                     </div>
                   </div>
                 </div>
@@ -121,7 +124,7 @@ className="mt-6 text-lg leading-8 text-gray-600""            initial={{ opacity:
 
                 {/* Technologies */}
                 <div>
-<h4 className="text-sm font-semibold text-gray-700 mb-3">Technologies Used</h4>"                  <div className="flex flex-wrap gap-2">"                    {study.technologies.map((tech, idx) => ("                      <span
+<h4 className="text-sm font-semibold text-gray-700 mb-3">Technologies Used</h4>"                  <div className="flex flex-wrap gap-2">"                    {study.technologies.map((tech, idx) => ("                      <span"
                         key={idx}
                         className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm""                      >"                        {tech}</span>
                     ))}
@@ -140,7 +143,7 @@ className="text-center mt-12""          initial={{ opacity: 0, y: 20 }}"        
         >
           <p className="text-lg text-gray-600 mb-6">"            Ready to see similar results for your business?"          </p>
           <a
-            href="/contact""            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl""          >"            Start Your Project</a>
+            href="/contact""            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl""          >"            Start Your Project</a>"
         </motion.div>
       </div>
     </section>

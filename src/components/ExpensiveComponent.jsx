@@ -22,7 +22,6 @@ export default function ExpensiveComponent() {}
       </div>
     </div>)}
 
-
 export { ExpensiveComponent };
 
 export { ExpensiveComponent };

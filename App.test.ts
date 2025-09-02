@@ -18,7 +18,7 @@ describe(
   'displays correct content', () => {
     render(<App />);
     // Add specific content checks based on component functionality
-  });
+  })
 
   it(
   'handles user interactions', () => {

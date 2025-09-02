@@ -1,34 +1,42 @@
 import '@testing-library/jest-dom'
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', { writable: true,
-  value: vi.fn().mockImplementation(query => ({ matches: false,
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
     media: query,
     onchange: null,
-    addListener: vi.fn(), // deprecated
-    removeListener: vi.fn(), // deprecated
-    addEventListener: vi.fn(),
-    removeEventListener: vi.fn(),
-    dispatchEvent: vi.fn(),
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
   })),
 })
 
 // Mock IntersectionObserver
-global.IntersectionObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
+// @ts-expect-error jsdom global augmentation for tests
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
 }))
 
 // Mock ResizeObserver
-global.ResizeObserver = vi.fn().mockImplementation(() => ({ observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
+// @ts-expect-error jsdom global augmentation for tests
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
 }))
 
 // Mock scrollTo
-global.scrollTo = vi.fn()
+// @ts-expect-error jsdom global augmentation for tests
+global.scrollTo = jest.fn()
 
 // Mock console methods to reduce noise in tests
+// @ts-expect-error override console in test env
 global.console = {
   ...console,
   warn: vi.fn(),

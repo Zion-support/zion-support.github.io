@@ -18,27 +18,20 @@ interface ImageOptimizerProps {
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  quality = 85,
-  placeholder = 'blur',
-  blurDataURL,
-  sizes,
-  fill = false,
-  style,
-  onLoad,
-  onError
+  src, alt,
+  width, height,
+  className = '', priority = false,
+  quality = 85, placeholder = 'blur',
+  blurDataURL, sizes,
+  fill = false, style,
+  onLoad, onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   // Generate a simple blur placeholder if none provided
-  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+  const defaultBlurDataURL = 'data: image/jpeg;base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -62,8 +55,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
             observer.unobserve(entry.target);
           }
         });
-      },
-      {
+      }, {
         rootMargin: '50px 0px',
         threshold: 0.1
       }
@@ -108,10 +100,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         onLoad={handleLoad}
         onError={handleError}
         style={{
-          objectFit: 'cover',
-          width: fill ? '100%' : width,
-          height: fill ? '100%' : height,
-          ...style
+          objectFit: 'cover', width: fill ? '100%' : width,
+          height: fill ? '100%' : height, ...style
         }}
         loading={priority ? 'eager' : 'lazy'}
       />

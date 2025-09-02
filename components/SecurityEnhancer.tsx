@@ -6,11 +6,11 @@ const SecurityEnhancer: React.FC = () => {
     // Content Security Policy
     const csp = `
       default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src 'self' https://fonts.gstatic.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com;
+      style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com;
+      font-src 'self' https: //fonts.gstatic.com;
       img-src 'self' data: https: blob:;
-      connect-src 'self' https://www.google-analytics.com https://analytics.google.com;
+      connect-src 'self' https: //www.google-analytics.com https://analytics.google.com;
       frame-src 'none';
       object-src 'none';
       base-uri 'self';
@@ -24,10 +24,8 @@ const SecurityEnhancer: React.FC = () => {
 
     // Security headers
     const securityHeaders = {
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1; mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     };
 
@@ -46,7 +44,7 @@ const SecurityEnhancer: React.FC = () => {
         if (script.src && !script.src.startsWith(window.location.origin) && 
             !script.src.includes('googletagmanager.com') && 
             !script.src.includes('google-analytics.com')) {
-          console.warn('Potentially malicious script detected:', script.src);
+          console.warn('Potentially malicious script detected: ', script.src);
           script.remove();
         }
       });
@@ -60,7 +58,7 @@ const SecurityEnhancer: React.FC = () => {
         if (!iframe.src.startsWith(window.location.origin) && 
             !iframe.src.includes('youtube.com') && 
             !iframe.src.includes('vimeo.com')) {
-          console.warn('Potentially malicious iframe detected:', iframe.src);
+          console.warn('Potentially malicious iframe detected: ', iframe.src);
           iframe.remove();
         }
       });
@@ -71,10 +69,8 @@ const SecurityEnhancer: React.FC = () => {
         form.addEventListener('submit', (e) => {
           const formData = new FormData(form);
           const suspiciousPatterns = [
-            /<script/i,
-            /javascript:/i,
-            /on\w+\s*=/i,
-            /eval\(/i,
+            /<script/i, /javascript: /i,
+            /on\w+\s*=/i, /eval\(/i,
             /expression\(/i
           ];
 
@@ -82,7 +78,7 @@ const SecurityEnhancer: React.FC = () => {
             if (typeof value === 'string') {
               suspiciousPatterns.forEach(pattern => {
                 if (pattern.test(value)) {
-                  console.warn('Suspicious form data detected:', { key, value });
+                  console.warn('Suspicious form data detected: ', { key, value });
                   e.preventDefault();
                   alert('Suspicious content detected. Please check your input.');
                   return;

@@ -1,13 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
-
-const EnhancedFooter: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 text-white">
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  return (    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -103,7 +98,7 @@ const EnhancedFooter: React.FC = () => {
             </ul>
           </div>
 
-          {/* Company & Contact */}
+          {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 mb-6">
@@ -138,21 +133,15 @@ const EnhancedFooter: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <a href="tel:+1-555-123-4567" className="text-gray-300 hover:text-white transition-colors">
-                  +1 (555) 123-4567
-                </a>
+                <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="text-gray-300">
-                  123 Tech Street, Innovation District<br />
-                  San Francisco, CA 94105
-                </span>
+              <div className="flex items-start space-x-2">
+                <MapPin className="w-4 h-4 text-blue-400 mt-1" />
+                <span className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* Newsletter Section */}
       <div className="border-t border-gray-700 py-8">

@@ -15,14 +15,10 @@ interface PerformanceMetrics {
 
 const PerformanceEnhancer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    loadTime: null,
-    memoryUsage: null,
-  });
+    fcp: null, lcp: null,
+    fid: null, cls: null,
+    ttfb: null, loadTime: null,
+    memoryUsage: null, });
 
   const [isVisible, setIsVisible] = useState(false);
   // const optimizer = usePerformanceOptimization();
@@ -63,8 +59,7 @@ const PerformanceEnhancer: React.FC = () => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             setMetrics(prev => ({ 
-              ...prev, 
-              fid: entry.processingStart - entry.startTime 
+              ...prev, fid: entry.processingStart - entry.startTime 
             }));
           });
         });
@@ -88,8 +83,7 @@ const PerformanceEnhancer: React.FC = () => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             setMetrics(prev => ({ 
-              ...prev, 
-              ttfb: entry.responseStart - entry.requestStart 
+              ...prev, ttfb: entry.responseStart - entry.requestStart 
             }));
           });
         });
@@ -106,8 +100,7 @@ const PerformanceEnhancer: React.FC = () => {
           if ('memory' in performance) {
             const memory = (performance as any).memory;
             setMetrics(prev => ({ 
-              ...prev, 
-              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+              ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
             }));
           }
         };
@@ -134,11 +127,8 @@ const PerformanceEnhancer: React.FC = () => {
   const sendToAnalytics = useCallback((metricName: string, value: number) => {
     if (typeof gtag !== 'undefined') {
       gtag('event', 'web_vitals', {
-        name: metricName,
-        value: Math.round(value),
-        event_category: 'Performance',
-        event_label: metricName,
-        non_interaction: true,
+        name: metricName, value: Math.round(value), event_category: 'Performance',
+        event_label: metricName, non_interaction: true,
       });
     }
   }, []);
@@ -174,7 +164,7 @@ const PerformanceEnhancer: React.FC = () => {
       
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
-          <span>FCP:</span>
+          <span>FCP: </span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}
           </span>
@@ -229,11 +219,7 @@ const PerformanceEnhancer: React.FC = () => {
         <div className="text-xs text-gray-500">
           Overall Score: {(() => {
             const scores = [
-              getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 }),
-              getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 }),
-              getScoreText(metrics.fid, { good: 100, needsImprovement: 300 }),
-              getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 }),
-            ];
+              getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 }), getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 }), getScoreText(metrics.fid, { good: 100, needsImprovement: 300 }), getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 }),  ];
             
             const goodCount = scores.filter(score => score === 'Good').length;
             const totalCount = scores.filter(score => score !== 'Measuring...').length;

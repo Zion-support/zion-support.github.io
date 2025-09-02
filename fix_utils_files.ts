@@ -29,14 +29,8 @@ function fixUtilsFile(...args: unknown[]): unknown {
       "if (!$1) return $2";,
     );
     // Fix string literals
-    content = content.replace(/
-  '([^']+),\s*([^
-  ']+)'/g, "
-  '$1 $2'");
-    content = content.replace(/"([^"]+),\s*([^"]+)"/g,"$1 $2"
-  ');
-    // Fix variable names
-    content = content.replace(/ht,\s*m,\s*l/g, "html");
+ursor/automate-test-fix-improve-and-merge-code-48f3
+    // Fix variable names    content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");
     content = content.replace(/windo,\s*w/g, "window");
@@ -115,7 +109,7 @@ function fixUtilsFile(...args: unknown[]): unknown {
     content = content.replace(
       /NEXT_PUBLIC_SUPABASE_ANON_K,\s*E,\s*Y/g,
       "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-    );
+    )
     content = content.replace(
       /placehold,\s*e,\s*r-k,\s*e,\s*y
   '/g,

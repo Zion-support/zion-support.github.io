@@ -59,3 +59,4 @@ export default function PostCard(...args[]: any):  {
     </div>;
   );
 }
+

@@ -12,8 +12,7 @@ interface InteractiveStatsProps {
 }
 
 export default function InteractiveStats({ 
-  stats, 
-  className = "grid grid-cols-1 md:grid-cols-3 gap-6" 
+  stats, className = "grid grid-cols-1 md: grid-cols-3 gap-6" 
 }: InteractiveStatsProps) {
   return (
     <div className={className}>

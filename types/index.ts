@@ -235,7 +235,9 @@ export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 
-// Component prop types;export interface BaseComponentProps {
+// Component prop types
+
+export interface BaseComponentProps {
   className?: string;
    children?: React.ReactNode;
    id?: string';
@@ -252,7 +254,9 @@ export interface InputProps extends BaseComponentProps {
   required?: boolean;
 }
 
-// API types;export interface ApiError {
+// API types
+
+export interface ApiError {
   status: number;
    message: string;
    code?: string;
@@ -267,7 +271,8 @@ export interface ApiRequest {
    headers?: Record<string, string>;
 }
 
-// Environment types;
+// Environment types
+
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
    NEXT_PUBLIC_API_URL?: string';

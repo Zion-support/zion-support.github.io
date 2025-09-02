@@ -19,7 +19,7 @@ import {
   Rocket;
 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+
 import AccessibilityManager from '../components/AccessibilityManager';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 
@@ -101,7 +101,7 @@ const EnhancedHome: React.FC = () => {
         ogImage="/images/og-homepage.jpg"
       />
       
-      <PerformanceMonitor />
+
       <AccessibilityManager />
       <SecurityEnhancer />
 

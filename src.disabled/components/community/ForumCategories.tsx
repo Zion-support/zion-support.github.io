@@ -1,6 +1,7 @@
 :src.disabled/components/community/ForumCategories.tsx
 import React from 'react.ts';
 interface ForumCategoryInfo {
+
   id: string;
    name: string;
    description: string;

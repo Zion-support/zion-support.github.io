@@ -16,7 +16,7 @@ const FAQ: NextPage = () => {
         ? prev.filter(item => item !== index)
         : [...prev, index]
     );
-  };
+  }
 
   const faqCategories = [
     {

@@ -187,7 +187,7 @@ const AboutPage: NextPage = () => {
   return (
     <MainLayout
       title="About Us - Zion Tech Group"
-      description="Learn about Zion Tech Group&apos;s mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."'
+      description="Learn about Zion Tech Group&aposs mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."''
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -326,7 +326,7 @@ const AboutPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From humble beginnings to serving clients worldwide, here&apos;s our story of growth and innovation.'
+              From humble beginnings to serving clients worldwide, here&aposs our story of growth and innovation.''
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -412,7 +412,7 @@ const AboutPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Work Together?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let&apos;s discuss how our team can help transform your business with innovative '
+            Let&aposs discuss how our team can help transform your business with innovative ''
             technology solutions.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">

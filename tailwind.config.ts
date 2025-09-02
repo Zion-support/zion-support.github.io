@@ -1,12 +1,8 @@
 import type { Config } from,
   tailwindcss'
 export default {
-  content: [./pages/**/*.{js,ts,jsx,tsx,mdx}',
-,
-  ./components/**/*.{js,ts,jsx,tsx,mdx}',
-  './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  darkMode: 'class,
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  ],  darkMode: 'class,
   theme: {
     extend: {
       colors: {
@@ -84,48 +80,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: [,
-  Inter',
-  'ui-sans-serif',
-  'system-ui',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  'Segoe UI',
-  'Roboto',
-  'Helvetica Neue',
-  'Arial',
-  'Noto Sans',
-  'sans-serif',
-  'Apple Color Emoji',
-  'Segoe UI Emoji',
-  'Segoe UI Symbol',
-  'Noto Color Emoji',
-        ],
-        mono: [
-  'JetBrains Mono,
-,
-  Fira Code',
-  'Monaco',
-  'Consolas',
-  'Liberation Mono',
-  'Courier New',
-  'monospace',
-        ],
-        display: [
-  'Orbitron,
-,
-  ui-sans-serif',
-  'system-ui',
-  'sans-serif',
-        ],
-        body: [
-  'Rajdhani,
-,
-  ui-sans-serif',
-  'system-ui',
-  'sans-serif',
-        ],
-      },
+ursor/automate-test-fix-improve-and-merge-code-48f3
+        ],      },
       fontSize: {
   'xs': [
   '0.75rem, { lineHeight:,

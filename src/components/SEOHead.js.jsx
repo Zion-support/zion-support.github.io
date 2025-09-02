@@ -122,7 +122,6 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
     </Helmet>)};
 export default SEOHead;
 
-
 export { SEOHead };
 
 export { SEOHead };

@@ -38,6 +38,8 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
+    // Log error to monitoring service
+ursor/automate-test-fix-improve-and-merge-code-48f3
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
@@ -74,23 +76,14 @@ class ErrorBoundary extends Component<Props, State> {
                   </div>                  {this.state.errorInfo && (
                     <div>
                       <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
+                      <pre className="whitespace-pre-wrap mt-1">"                        {this.state.errorInfo.componentStack}"                      </pre></div>
                   )}
                 </div>
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
+<div className="flex flex-col sm: flex-row gap-3">"              <button"                onClick={this.handleRetry}
+                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200""              >"                <RefreshCw className="w-4 h-4 mr-2" />"                Try Again"              </button>
               
               <Link
                 href="/"
@@ -118,4 +111,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-export { ErrorBoundary };

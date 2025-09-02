@@ -42,7 +42,6 @@ import React from 'react'; const LoadingSpinner = ({; size = "md", color = "blue
     </div>)};
 export default LoadingSpinner;
 
-
 export { LoadingSpinner };
 
 export { LoadingSpinner };
