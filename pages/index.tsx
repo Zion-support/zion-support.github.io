@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+const React = dynamic(() => import('react'), { ssr: false });;
+const Head = dynamic(() => import('next/head'), { ssr: false });;
+const Link = dynamic(() => import('next/link'), { ssr: false });;
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';

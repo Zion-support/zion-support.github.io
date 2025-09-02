@@ -1,6 +1,6 @@
-import React from 'react';
+const React = dynamic(() => import('react'), { ssr: false });;
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+const SEO = dynamic(() => import('../components/SEO'), { ssr: false });;
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import {   Home,

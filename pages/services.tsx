@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+const React = dynamic(() => import('react'), { ssr: false });;
+const Link = dynamic(() => import('next/link'), { ssr: false });;
 import {
   ArrowRight,
   Brain,
@@ -35,7 +35,7 @@ import {
   CreditCard,
   Smartphone
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false });;
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group';

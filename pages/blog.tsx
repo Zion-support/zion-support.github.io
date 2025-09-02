@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import Layout from '../components/Layout';
-import Link from 'next/link';
+const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
+const Link = dynamic(() => import('next/link'), { ssr: false });;
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 
 const Blog: NextPage = () => {

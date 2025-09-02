@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import Layout from '../components/Layout';
-import Link from 'next/link';
+const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
+const Link = dynamic(() => import('next/link'), { ssr: false });;
 import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-react';
 
 const Pricing: NextPage = () => {

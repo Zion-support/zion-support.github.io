@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import MainLayout.dynamic from '../components/MainLayout.dynamic';
+import MainLayoutDynamic from '../components/MainLayout.dynamic';
 
 describe('MainLayout.dynamic', () => {
   test('renders without crashing', () => {
-    render(<MainLayout.dynamic />);
+    render(<MainLayoutDynamic />);
     expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<MainLayout.dynamic />);
+    render(<MainLayoutDynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<MainLayout.dynamic />);
+    render(<MainLayoutDynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<MainLayout.dynamic />);
+    render(<MainLayoutDynamic />);
     // Add styling tests if needed
   })})

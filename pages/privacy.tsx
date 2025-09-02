@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Layout from '../components/Layout';
+const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
 import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react';
 
 const Privacy: NextPage = () => {

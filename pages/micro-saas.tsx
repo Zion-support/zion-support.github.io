@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+const React = dynamic(() => import('react'), { ssr: false });;
+const Head = dynamic(() => import('next/head'), { ssr: false });;
+const Link = dynamic(() => import('next/link'), { ssr: false });;
 import {
   Code,
   Cloud,
@@ -34,7 +34,7 @@ import {
   Terminal,
   Calendar
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false });;
 
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';

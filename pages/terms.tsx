@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Layout from '../components/Layout';
+const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 const Terms: NextPage = () => {
