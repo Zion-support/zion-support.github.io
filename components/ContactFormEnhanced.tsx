@@ -35,7 +35,7 @@ const ContactFormEnhanced: React.FC = () => {
         <div className='text-center mb-8'>
           <h2 className='text-3xl font-bold text-gray-900 mb-4'>Get In Touch</h2>
           <p className='text-gray-600'>
-            Ready to transform your business? Let's discuss how our technology solutions can drive your success.'
+            Ready to transform your business? Let&apos;s discuss how our technology solutions can drive your success.'
           </p>
         </div>
         <form onSubmit={handleSubmit} className='space-y-6'>
@@ -129,7 +129,7 @@ const ContactFormEnhanced: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className='flex items-center space-x-2 text-green-600 bg-green-50 p-4 rounded-lg'>
               <CheckCircle className='w-5 h-5' />
-              <span>Message sent successfully! We'll get back to you soon.</span>'
+              <span>Message sent successfully! We&apos;ll get back to you soon.</span>'
             </motion.div>
           )}
           {submitStatus === 'error' && (

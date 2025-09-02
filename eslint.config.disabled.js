@@ -46,22 +46,31 @@ export default [
         expect: 'readonly',
         vi: 'readonly',
         Deno: 'readonly',
-        React: 'readonly'},
+        React: 'readonly',
+      },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true}}},
+          jsx: true,
+        },
+      },
+    },
     plugins: {
       react,
-      'react-hooks': reactHooks},
+      'react-hooks': reactHooks,
+    },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'no-undef': 'error'},
+      'no-undef': 'error',
+    },
     settings: {
       react: {
-        version: 'detect'}}},
+        version: 'detect',
+      },
+    },
+  },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -70,7 +79,9 @@ export default [
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true}},
+          jsx: true,
+        },
+      },
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -113,23 +124,33 @@ export default [
         RequestInit: 'readonly',
         Response: 'readonly',
         Headers: 'readonly',
-        HTMLElement: 'readonly'}},
+        HTMLElement: 'readonly',
+      },
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint},
+      '@typescript-eslint': tseslint,
+    },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-unused-vars': 'off',
       'no-console': 'warn',
-      'no-undef': 'off'},
+      'no-undef': 'off',
+    },
     settings: {
       react: {
-        version: 'detect'}}},
+        version: 'detect',
+      },
+    },
+  },
   {
     ignores: [
       'src/**',
@@ -253,6 +274,7 @@ export default [
       '**/components/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx'
-    ]}
+      'test*.tsx',
+    ],
+  },
 ];

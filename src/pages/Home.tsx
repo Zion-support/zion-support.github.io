@@ -53,7 +53,7 @@ export default React.memo(function Home() {
     <>
       <SEO "
         title="Zion Tech Group - Leading AI & Quantum Technology Solutions"
-        description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Enterprise-grade technology solutions for the future."'
+        description="Transform your business with Zion Tech Group&apos;s cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Enterprise-grade technology solutions for the future."'
         keywords="AI services, quantum computing, micro SAAS, IT infrastructure, cybersecurity, Zion Tech Group, technology solutions"
       />
       <EnhancedHero />

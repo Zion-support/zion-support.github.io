@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import MainSidebar.dynamic from '../components/MainSidebar.dynamic';
+import MainSidebardynamic from "../components/MainSidebar.dynamic";
 
-describe('MainSidebar.dynamic', () => {
+describe('MainSidebardynamic', () => {
   test('renders without crashing', () => {
-    render(<MainSidebar.dynamic />);
+    render(<MainSidebardynamic />);
     expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<MainSidebar.dynamic />);
+    render(<MainSidebardynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<MainSidebar.dynamic />);
+    render(<MainSidebardynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<MainSidebar.dynamic />);
+    render(<MainSidebardynamic />);
     // Add styling tests if needed
   })})

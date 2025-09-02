@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Header.dynamic from '../components/Header.dynamic';
+import Headerdynamic from "../components/Header.dynamic";
 
-describe('Header.dynamic', () => {
+describe('Headerdynamic', () => {
   test('renders without crashing', () => {
-    render(<Header.dynamic />);
+    render(<Headerdynamic />);
     expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<Header.dynamic />);
+    render(<Headerdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<Header.dynamic />);
+    render(<Headerdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<Header.dynamic />);
+    render(<Headerdynamic />);
     // Add styling tests if needed
   })})

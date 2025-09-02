@@ -82,12 +82,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ``;
                     id: `suggestion_${Date.now()}_1`, '''';
                     type: 'grammar', ''''';'
-                    text: 'it's', '
+                    text: 'it&apos;s', '
                     confidence: 0.95,';'
                     position: editorState.content.indexOf('its'), ''';'
                     length: 3, ''''';'
-                    reason: 'Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)', ''''';
-                    alternatives['it's', 'it is']'
+                    reason: 'Consider using 'it&apos;s' (contraction of 'it is') instead of 'its' (possessive)', ''''';
+                    alternatives['it&apos;s', 'it is']'
                 })}';'
             // Style suggestions'';
             if (editorState.content.includes('very')) {}

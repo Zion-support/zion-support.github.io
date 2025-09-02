@@ -67,7 +67,7 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              Ready to transform your business? Let's discuss how our technology solutions;'
+              Ready to transform your business? Let&apos;s discuss how our technology solutions;'
               can drive innovation and growth for your organization.
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function Contact() {
                   </svg>
                   <div>
                     <h3 className='text-lg font-semibold text-green-800'>Message Sent Successfully!</h3>
-                    <p className='text-green-700'>We'll get back to you within 24 hours.</p>'
+                    <p className='text-green-700'>We&apos;ll get back to you within 24 hours.</p>'
                   </div>
                 </div>
               </div>

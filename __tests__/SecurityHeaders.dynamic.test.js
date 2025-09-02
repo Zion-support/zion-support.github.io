@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SecurityHeaders.dynamic from '../components/SecurityHeaders.dynamic';
+import SecurityHeadersdynamic from "../components/SecurityHeaders.dynamic";
 
-describe('SecurityHeaders.dynamic', () => {
+describe('SecurityHeadersdynamic', () => {
   test('renders without crashing', () => {
-    render(<SecurityHeaders.dynamic />);
+    render(<SecurityHeadersdynamic />);
     expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<SecurityHeaders.dynamic />);
+    render(<SecurityHeadersdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<SecurityHeaders.dynamic />);
+    render(<SecurityHeadersdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<SecurityHeaders.dynamic />);
+    render(<SecurityHeadersdynamic />);
     // Add styling tests if needed
   })})

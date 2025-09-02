@@ -84,7 +84,7 @@ export default function About() {
                 innovation should drive growth, not complexity.
               </p>
               <p className='text-lg text-gray-600 leading-relaxed'>
-                Today, we're proud to serve clients across various industries, helping them;'
+                Today, we&apos;re proud to serve clients across various industries, helping them;'
                 navigate digital transformation, implement AI solutions, and build secure, scalable technology infrastructure.
               </p>
             </div>"
@@ -202,7 +202,7 @@ export default function About() {
             Ready to Work Together?
           </h2>
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-            Let's discuss how our team can help transform your business with innovative technology solutions.'
+            Let&apos;s discuss how our team can help transform your business with innovative technology solutions.'
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
             <Link

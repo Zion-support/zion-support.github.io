@@ -66,7 +66,7 @@ export default function Sitemap() {
     <>
       <SEO "
         title="Sitemap - Zion Tech Group | Complete Site Navigation"
-        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
+        description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
         keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
       /" >
       "
@@ -181,11 +181,13 @@ export default function Sitemap() {
             <motion .div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center max-w-2xl mx-auto"" >"
-              <h2 className="text-3xl font-bold text-white mb-6">"
-                Can't Find What You're Looking For?
-              </h2>"
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-2xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Can&apos;t Find What You&apos;re Looking For?
+              </h2>
+
               <p className="text-gray-300 mb-8">
                 Use our search functionality to find specific content across our website
               </p>

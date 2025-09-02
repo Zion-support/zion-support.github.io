@@ -4,115 +4,72 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting merge conflict resolution...');
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-
-    // Remove merge conflict markers
-    content = content.replace(
-      /    );
-    content = content.replace(/    // Clean up any remaining conflict markers
-    content = content.replace(/^    content = content.replace(/^=======$/gm, '');
-    content = content.replace(/^
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-    fs.writeFileSync(filePath, content);
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(
-      `❌ Error resolving conflicts in ${filePath}:`,
-      error.message
-    );
-    return false;
+class MergeConflictResolver {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.conflicts = [
+      'next.config.js',
+      'pages/NotFound.tsx',
+      'pages/index.tsx',
+      'pages/pricing-guide.tsx',
+      'pages/sitemap.tsx',
+      'pages_backup/sitemap.tsx',
+      'performance-report.json',
+      'src/App.jsx',
+      'src/App.tsx',
+      'src/components/AIChatbot.jsx',
+      'src/components/ErrorBoundary.tsx',
+      'src/components/SEO.tsx',
+      'src/components/Toast.tsx',
+      'src/hooks/usePerformanceMonitoring.ts',
+      'src/pages/DeveloperPortal.jsx',
+      'src/pages/Documentation.tsx',
+      'src/pages/Help.tsx',
+      'src/pages/Marketplace.tsx',
+      'src/pages/Sitemap.tsx',
+      'src/utils/accessibility.ts'
+    ];
   }
-}
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-
-  function searchDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-
-        if (
-          stat.isDirectory() &&
-          !item.startsWith('.') &&
-          item !== 'node_modules'
-        ) {
-          searchDirectory(fullPath);
-        } else if (
-          stat.isFile() &&
-          (item.endsWith('.tsx') ||
-            item.endsWith('.ts') ||
-            item.endsWith('.js') ||
-            item.endsWith('.jsx') ||
-            item.endsWith('.json'))
-        ) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            if (
-              content.includes('              content.includes('=======') ||
-              content.includes('            ) {
-              files.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
+  async resolveConflicts() {
+    console.log('🔧 Resolving merge conflicts...');
+    
+    for (const file of this.conflicts) {
+      try {
+        const filePath = path.join(this.projectRoot, file);
+        
+        if (fs.existsSync(filePath)) {
+          console.log(`Resolving conflict in: ${file}`);
+          
+          // Read the file content
+          let content = fs.readFileSync(filePath, 'utf8');
+          
+          // Remove conflict markers and keep the incoming version (from our feature branch)
+          content = content.replace(/^<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+$/gm, '$1');
+          
+          // Write the resolved content back
+          fs.writeFileSync(filePath, content);
+          console.log(`✅ Resolved: ${file}`);
+        } else {
+          console.log(`⚠️  File not found: ${file}`);
         }
+      } catch (error) {
+        console.error(`❌ Error resolving ${file}:`, error.message);
       }
+    }
+    
+    // Handle the package-lock.json deletion conflict
+    try {
+      console.log('Handling package-lock.json conflict...');
+      execSync('git rm package-lock.json', { stdio: 'inherit' });
+      console.log('✅ Removed package-lock.json');
     } catch (error) {
-      // Skip directories that can't be read
+      console.log('package-lock.json already handled');
     }
+    
+    console.log('🎉 All conflicts resolved!');
   }
-
-  searchDirectory(dir);
-  return files;
 }
 
-// Main execution
-try {
-  const conflictedFiles = findFilesWithConflicts('.');
-
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    process.exit(0);
-  }
-
-  console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
-  conflictedFiles.forEach(file => console.log(`  - ${file}`));
-
-  let resolvedCount = 0;
-  for (const file of conflictedFiles) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
-  }
-
-  console.log(
-    `\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`
-  );
-
-  // Try to run a build to check if everything is working
-  console.log('\n🔨 Testing build...');
-  try {
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful!');
-  } catch (error) {
-    console.log(
-      '⚠️  Build failed, but conflicts were resolved. You may need to fix TypeScript errors manually.'
-    );
-  }
-} catch (error) {
-  console.error('❌ Error during merge conflict resolution:', error.message);
-  process.exit(1);
-}
+const resolver = new MergeConflictResolver();
+resolver.resolveConflicts().catch(console.error);

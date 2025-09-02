@@ -5,93 +5,52 @@ import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 const Blog: NextPage = () => {
   const blogPosts = [
     {
-      id: 1,
-      title: 'The Future of AI in Business: Trends and Predictions for 2024',
-      excerpt:
-        'Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.',
-      author: 'Kleber Santos',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI & Machine Learning',
-      image: '/api/placeholder/600/400',
-      slug: 'future-of-ai-in-business-2024',
-    },
-    {
+      id: 1, title: 'The Future of AI in Business: Trends and Predictions for 2024',
+      excerpt: 'Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.',
+      author: 'Kleber Santos', date: '2024-01-15',
+      readTime: '5 min read', category: 'AI & Machine Learning',
+      image: '/api/placeholder/600/400', slug: 'future-of-ai-in-business-2024',
+    }, {
       id: 2,
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      excerpt:
-        'Learn the essential steps and strategies for successfully migrating your business to the cloud.',
-      author: 'Zion Tech Team',
-      date: '2024-01-10',
-      readTime: '8 min read',
-      category: 'Cloud Services',
-      image: '/api/placeholder/600/400',
-      slug: 'cloud-migration-best-practices',
-    },
-    {
+      title: 'Cloud Migration Best Practices: A Complete Guide', excerpt: 'Learn the essential steps and strategies for successfully migrating your business to the cloud.',
+      author: 'Zion Tech Team', date: '2024-01-10',
+      readTime: '8 min read', category: 'Cloud Services',
+      image: '/api/placeholder/600/400', slug: 'cloud-migration-best-practices',
+    }, {
       id: 3,
-      title: 'Building Scalable Web Applications with Modern Technologies',
-      excerpt:
-        'Discover the latest technologies and frameworks for creating robust, scalable web applications.',
-      author: 'Development Team',
-      date: '2024-01-05',
-      readTime: '6 min read',
-      category: 'Web Development',
-      image: '/api/placeholder/600/400',
-      slug: 'scalable-web-applications-modern-tech',
-    },
+      title: 'Building Scalable Web Applications with Modern Technologies', excerpt: 'Discover the latest technologies and frameworks for creating robust, scalable web applications.', author: 'Development Team',
+      date: '2024-01-05', readTime: '6 min read',
+      category: 'Web Development', image: '/api/placeholder/600/400',
+      slug: 'scalable-web-applications-modern-tech', },
     {
-      id: 4,
-      title: 'Cybersecurity in 2024: Protecting Your Digital Assets',
-      excerpt:
-        'Essential cybersecurity strategies and tools to protect your business from evolving threats.',
-      author: 'Security Team',
-      date: '2024-01-01',
-      readTime: '7 min read',
-      category: 'Cybersecurity',
-      image: '/api/placeholder/600/400',
-      slug: 'cybersecurity-2024-protecting-digital-assets',
-    },
+      id: 4, title: 'Cybersecurity in 2024: Protecting Your Digital Assets',
+      excerpt: 'Essential cybersecurity strategies and tools to protect your business from evolving threats.', author: 'Security Team',
+      date: '2024-01-01', readTime: '7 min read',
+      category: 'Cybersecurity', image: '/api/placeholder/600/400',
+      slug: 'cybersecurity-2024-protecting-digital-assets', },
     {
-      id: 5,
-      title: 'Mobile App Development: Native vs Cross-Platform',
-      excerpt:
-        'Compare native and cross-platform development approaches to choose the best solution for your mobile app.',
-      author: 'Mobile Team',
-      date: '2023-12-28',
-      readTime: '9 min read',
-      category: 'Mobile Development',
-      image: '/api/placeholder/600/400',
-      slug: 'mobile-app-development-native-vs-cross-platform',
-    },
+      id: 5, title: 'Mobile App Development: Native vs Cross-Platform',
+      excerpt: 'Compare native and cross-platform development approaches to choose the best solution for your mobile app.', author: 'Mobile Team',
+      date: '2023-12-28', readTime: '9 min read',
+      category: 'Mobile Development', image: '/api/placeholder/600/400',
+      slug: 'mobile-app-development-native-vs-cross-platform', },
     {
-      id: 6,
-      title: 'Blockchain Technology: Beyond Cryptocurrency',
-      excerpt:
-        'Explore real-world applications of blockchain technology in various industries beyond digital currencies.',
-      author: 'Blockchain Team',
-      date: '2023-12-25',
-      readTime: '6 min read',
-      category: 'Blockchain',
-      image: '/api/placeholder/600/400',
-      slug: 'blockchain-technology-beyond-cryptocurrency',
-    },
+      id: 6, title: 'Blockchain Technology: Beyond Cryptocurrency',
+      excerpt: 'Explore real-world applications of blockchain technology in various industries beyond digital currencies.', author: 'Blockchain Team',
+      date: '2023-12-25', readTime: '6 min read',
+      category: 'Blockchain', image: '/api/placeholder/600/400',
+      slug: 'blockchain-technology-beyond-cryptocurrency', },
   ];
   const categories = [
-    'All Posts',
-    'AI & Machine Learning',
-    'Cloud Services',
-    'Web Development',
-    'Mobile Development',
-    'Blockchain',
-    'Cybersecurity',
-    'IoT',
-    'Industry Insights',
-  ];
+    'All Posts', 'AI & Machine Learning',
+    'Cloud Services', 'Web Development',
+    'Mobile Development', 'Blockchain',
+    'Cybersecurity', 'IoT',
+    'Industry Insights',  ];
   return (
     <Layout
       title="Blog - Zion Tech Group"
-      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
+      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team."'
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -236,8 +195,8 @@ const Blog: NextPage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your
-            goals and stay ahead of the competition.'
+            Let&apos;s discuss how our technology solutions can help you achieve your'
+            goals and stay ahead of the competition.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link

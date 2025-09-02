@@ -2,123 +2,77 @@ import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import {
-  Check,
-  Star,
-  ArrowRight,
-  Zap,
-  Users,
-  Building,
-  Crown,
-} from 'lucide-react';
+  Check, Star,
+  ArrowRight, Zap,
+  Users, Building,
+  Crown, } from 'lucide-react';
 const Pricing: NextPage = () => {
   const pricingPlans = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
+      name: 'Starter', description: 'Perfect for small businesses and startups',
       price: '$2, 500',
-      period: 'per month',
-      icon: Zap,
-      color: 'blue',
-      features: [
+      period: 'per month', icon: Zap,
+      color: 'blue', features: [
         'Basic website development',
-        'Up to 5 pages',
-        'Mobile responsive design',
-        'Basic SEO optimization',
-        'Email support',
-        '3 months maintenance included',
-      ],
-      popular: false,
-    },
-    {
+        'Up to 5 pages', 'Mobile responsive design',
+        'Basic SEO optimization', 'Email support',
+        '3 months maintenance included',  ], popular: false,
+    }, {
       name: 'Professional',
-      description: 'Ideal for growing businesses',
-      price: '$5, 000',
-      period: 'per month',
-      icon: Users,
-      color: 'purple',
+      description: 'Ideal for growing businesses', price: '$5, 000', period: 'per month',
+      icon: Users, color: 'purple',
       features: [
-        'Custom web application development',
-        'Up to 15 pages',
-        'Advanced features and integrations',
-        'Advanced SEO optimization',
-        'Priority email support',
-        '6 months maintenance included',
-        'Performance optimization',
-        'Analytics setup',
-      ],
-      popular: true,
-    },
-    {
+        'Custom web application development', 'Up to 15 pages',
+        'Advanced features and integrations', 'Advanced SEO optimization',
+        'Priority email support', '6 months maintenance included',
+        'Performance optimization', 'Analytics setup',
+      ], popular: true,
+    }, {
       name: 'Enterprise',
-      description: 'For large organizations and complex projects',
-      price: 'Custom',
-      period: 'quote',
-      icon: Building,
-      color: 'green',
-      features: [
+      description: 'For large organizations and complex projects', price: 'Custom',
+      period: 'quote', icon: Building,
+      color: 'green', features: [
         'Full-stack enterprise solutions',
-        'Unlimited pages and features',
-        'Custom integrations and APIs',
-        'Advanced security features',
-        'Dedicated project manager',
-        '24/7 phone and email support',
-        '12 months maintenance included',
-        'Custom training and documentation',
-        'SLA guarantees',
-      ],
-      popular: false,
-    },
-  ];
+        'Unlimited pages and features', 'Custom integrations and APIs',
+        'Advanced security features', 'Dedicated project manager',
+        '24/7 phone and email support', '12 months maintenance included',
+        'Custom training and documentation', 'SLA guarantees',
+      ], popular: false,
+    },  ];
   const servicePricing = [
     {
-      service: 'AI Development',
-      description: 'Custom AI solutions and machine learning models',
+      service: 'AI Development', description: 'Custom AI solutions and machine learning models',
       startingPrice: '$10, 000',
       features: [
-        'Custom AI models',
-        'Data analysis',
-        'Integration support',
-        'Training and documentation',
-      ],
-    },
+        'Custom AI models', 'Data analysis',
+        'Integration support', 'Training and documentation',
+      ], },
     {
-      service: 'Cloud Services',
-      description: 'Cloud migration and infrastructure management',
-      startingPrice: '$5,000',
+      service: 'Cloud Services', description: 'Cloud migration and infrastructure management',
+      startingPrice: '$5, 000',
       features: [
-        'Cloud migration',
-        'Infrastructure setup',
-        'Monitoring and maintenance',
-        'Security implementation',
-      ],
-    },
+        'Cloud migration', 'Infrastructure setup',
+        'Monitoring and maintenance', 'Security implementation',
+      ], },
     {
-      service: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications',
-      startingPrice: '$8,000',
+      service: 'Mobile Development', description: 'Native and cross-platform mobile applications',
+      startingPrice: '$8, 000',
       features: [
-        'iOS and Android apps',
-        'Cross-platform solutions',
-        'App store deployment',
-        'Ongoing updates',
-      ],
-    },
+        'iOS and Android apps', 'Cross-platform solutions',
+        'App store deployment', 'Ongoing updates',
+      ], },
     {
-      service: 'Blockchain Solutions',
-      description: 'Blockchain development and smart contracts',
-      startingPrice: '$15,000',
+      service: 'Blockchain Solutions', description: 'Blockchain development and smart contracts',
+      startingPrice: '$15, 000',
       features: [
-        'Smart contract development',
-        'Blockchain integration',
-        'Security auditing',
-        'Deployment support',
-      ],
-    },
+        'Smart contract development', 'Blockchain integration',
+        'Security auditing', 'Deployment support',
+      ], },
   ];
   return (
     <Layout
       title="Pricing - Zion Tech Group"
-      description="Transparent pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget."
+      description="Transparent pricing for Zion Tech Group&apos;s technology services. Choose the plan that fits your business needs and budget."'
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -313,9 +267,9 @@ const Pricing: NextPage = () => {
 
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What's included in maintenance?
+                What&apos;s included in maintenance?'
               </h3>
-              '
+              ''
               <p className="text-gray-600">
                 Maintenance includes bug fixes, security updates, performance
                 optimization, and minor feature enhancements as specified in
@@ -329,7 +283,7 @@ const Pricing: NextPage = () => {
               </h3>
               <p className="text-gray-600">
                 Absolutely! You can upgrade or downgrade your plan at any time.
-                We'll work with you to ensure a smooth transition.'
+                We&apos;ll work with you to ensure a smooth transition.'
               </p>
             </div>
 

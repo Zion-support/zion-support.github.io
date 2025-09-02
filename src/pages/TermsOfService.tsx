@@ -6,7 +6,7 @@ export default function TermsOfService() {
     <>
       <SEO "
         title="Terms of Service - Zion Tech Group | Legal Terms & Conditions"
-        description="Read Zion Tech Group's terms of service and legal conditions. Understand your rights and responsibilities when using our services."'
+        description="Read Zion Tech Group&apos;s terms of service and legal conditions. Understand your rights and responsibilities when using our services."'
         keywords="terms of service, terms and conditions, legal terms, user agreement, Zion Tech Group"
       /" >
       "
@@ -45,7 +45,7 @@ export default function TermsOfService() {
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">
                 <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
                 <p className="text-gray-300 mb-4">
-                  By accessing and using Zion Tech Group's services, you accept and agree to be bound '
+                  By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound '
                   by the terms and provision of this agreement.
                 </p>"
                 <p className="text-gray-300">
@@ -57,7 +57,7 @@ export default function TermsOfService() {
                 <h2 className="text-2xl font-bold text-white mb-4">Use License</h2>"
                 <p className="text-gray-300 mb-4">
                   Permission is granted to temporarily download one copy of the materials on 
-                  Zion Tech Group's website for personal, non-commercial transitory viewing only.'
+                  Zion Tech Group&apos;s website for personal, non-commercial transitory viewing only.'
                 </p>
                 <p className="text-gray-300">
                   This is the grant of a license, not a transfer of title, and under this license you may not: </p>

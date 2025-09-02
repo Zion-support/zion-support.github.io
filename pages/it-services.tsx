@@ -580,8 +580,9 @@ export default function ITServices() {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Let's discuss how our IT services can optimize your technology
-              infrastructure. ' Get a free consultation and custom proposal.
+              Let&apos;s discuss how our IT services can optimize your
+              technology' infrastructure. ' Get a free consultation and custom
+              proposal.'
             </p>
             <div className="mt-10 grid grid-cols-1 gap-8 sm: grid-cols-3">
               <div className="text-center">

@@ -250,7 +250,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           Thank You!''''
         </h3>''''
         <p className='text-green-600 dark:text-green-300'>';'
-          Your message has been sent successfully. We'll get back to you soon!'
+          Your message has been sent successfully. We&apos;ll get back to you soon!'
         </p>
       </motion.div>)}
     return (<motion.div initial = {}

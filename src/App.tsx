@@ -287,13 +287,14 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                     <Route path='/cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 /" >} />{/* 404 Page */}
                     <Route"
                       path='*';
-                      element={"
-                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>"
-                          <div className='text-center text-white'>"
-                            <h1 className='text-6xl font-bold mb-4'>404</h1>"
-                            <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>"
-                            <p className='text-gray-300 mb-8'>"
-                              The page you're looking for doesn't exist or has been moved.
+                      element={
+                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+                          <div className='text-center text-white'>
+                            <h1 className='text-6xl font-bold mb-4'>404</h1>
+                            <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
+                            <p className='text-gray-300 mb-8'>
+                              The page you&apos;re looking for doesn&apos;t exist or has been moved.
+
                             </p>
                             <button;
                               onClick={() => window.history.back()}

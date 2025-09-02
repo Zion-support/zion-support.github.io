@@ -205,8 +205,8 @@ const About: NextPage = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Let's discuss how we can help transform your business with
-            innovative technology solutions.'
+            Let&apos;s discuss how we can help transform your business with'
+            innovative technology solutions.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link

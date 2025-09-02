@@ -23,7 +23,7 @@ category?: string;
 const sidebarSections = [
   {
 
-    title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary Services', icon: Zap,
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,
     color: 'from-cyan-500 to-blue-600', items[
       {
 
@@ -147,7 +147,7 @@ const sidebarSections = [
         name: 'Support',
         href: '/support', icon: HelpCircle,
         description: 'Get help and support', subItems[
-          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
+          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';
 },;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };

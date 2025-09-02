@@ -86,7 +86,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Something went wrong
                 </h3>
                 <p className='text-sm text-gray-500'>
-                  We're sorry, but something unexpected happened.''
+                  We&apos;re sorry, but something unexpected happened.'''
                 </p>
               </div>
             </div>

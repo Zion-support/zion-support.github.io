@@ -61,7 +61,7 @@ export default function Blog() {
     <>
       <SEO "
         title="Blog - Zion Tech Group | Technology Insights & Industry News"
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team."'
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."'
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
       /" >
       "

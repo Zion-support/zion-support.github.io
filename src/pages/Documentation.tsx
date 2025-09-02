@@ -248,9 +248,10 @@ export default function Documentation() {
               className="text-center max-w-4xl mx-auto"" >"
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need Help?
-              </h2>"
-              <p className="text-xl text-gray-300 mb-8">"
-                Can't find what you're looking for? Our support team is here to help 
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Can&apos;t find what you&apos;re looking for? Our support team is here to help 
+
                 you get the most out of our platform.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">

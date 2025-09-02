@@ -66,7 +66,7 @@ const Terms: React.FC = () => {
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Agreement to Terms</h2>
           <p className='text-gray-600 leading-relaxed'>
-            These Terms of Service ('Terms') govern your use of Zion Tech Group's website and services.;'
+            These Terms of Service ('Terms') govern your use of Zion Tech Group&apos;s website and services.;'
             By accessing or using our services, you agree to be bound by these Terms. If you disagree;
             with  part of these terms, then you may not access the service.
           </p>

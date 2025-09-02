@@ -88,7 +88,7 @@ export function ContactInfo() {
                   Business Hours''''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>';'
-                  We're available when you need us'
+                  We&apos;re available when you need us'
                 </CardDescription>
               </CardHeader>''''
               <CardContent>''''

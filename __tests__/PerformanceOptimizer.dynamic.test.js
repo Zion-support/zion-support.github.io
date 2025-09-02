@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PerformanceOptimizer.dynamic from '../components/PerformanceOptimizer.dynamic';
+import PerformanceOptimizerdynamic from "../components/PerformanceOptimizer.dynamic";
 
-describe('PerformanceOptimizer.dynamic', () => {
+describe('PerformanceOptimizerdynamic', () => {
   test('renders without crashing', () => {
-    render(<PerformanceOptimizer.dynamic />);
+    render(<PerformanceOptimizerdynamic />);
     expect(screen.getByTestId('performanceoptimizer.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<PerformanceOptimizer.dynamic />);
+    render(<PerformanceOptimizerdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<PerformanceOptimizer.dynamic />);
+    render(<PerformanceOptimizerdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<PerformanceOptimizer.dynamic />);
+    render(<PerformanceOptimizerdynamic />);
     // Add styling tests if needed
   })})
