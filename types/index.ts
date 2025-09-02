@@ -107,12 +107,12 @@ export interface SEOProps {
    type?: string;
    noindex?: boolean}
 export interface PerformanceMetrics {
-  fcp?: number;
-   // First Contentful Paint lcp?: number;
-   // Largest Contentful Paint fid?: number;
-   // First Input Delay cls?: number;
-   // Cumulative Layout Shift ttfb?: number;
-   // Time to First Byte}
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+}
 export interface AccessibilitySettings {
   highContrast: boolean;
    fontSize: number;

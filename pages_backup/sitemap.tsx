@@ -7,17 +7,8 @@ import {
   Map, ArrowRight,
   ExternalLink, Home,
   Users, Briefcase,
-  Phone, DollarSign,
-  FileText, BookOpen,
-  Award, Shield,
-  Globe, Search,
-  Filter, Calendar,
-  Star, TrendingUp,
-  Brain, Cloud,
-  Database, Zap,
-  Lock, Code,
-  Smartphone, Monitor,
-  Server, Network
+  Phone, BookOpen,
+  Shield, Search
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
