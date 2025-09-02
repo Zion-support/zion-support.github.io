@@ -23,24 +23,25 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       {/* Top bar with contact info */}
-      <div className="bg-blue-900 text-white py-2">
+      <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-4 mb-2 sm:mb-0">
-              <div className="flex items-center space-x-2">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-2 sm:mb-0">
+              <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="hover:underline">+1 302 464 0950</a>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">kleber@ziontechgroup.com</a>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 text-xs sm:text-sm">
               <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="hidden sm:inline">364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="sm:hidden">Middletown, DE</span>
             </div>
           </div>
         </div>
@@ -51,8 +52,10 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-blue-900">Zion Tech Group</div>
+            <Link href="/" className="flex items-center space-x-2 group">
+              <div className="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">
+                Zion Tech Group
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -91,7 +94,7 @@ const Header: React.FC = () => {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Get Quote
               </Link>
