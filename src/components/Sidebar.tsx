@@ -1,16 +1,38 @@
 import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  Database,
-  Network,
-  Users,
-  Award,
-  ShoppingCart,
-  HelpCircle,
-  ChevronRight} from 'lucide-react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { Award, Brain, ChevronRight, Cloud, Code, Common, Database, File, HelpCircle, Info, Mobile, Network, Quick, Shield, ShoppingCart, User, Users } from 'lucide-react';
 export const Sidebar: React.FC = () => {
   const serviceCategories = [
     {
@@ -68,7 +90,7 @@ export const Sidebar: React.FC = () => {
         { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
       ]}
   ];
-  const companyLinks = [
+  const compunknownLinks = [
     { name: 'About Us', href: '/about', icon: Users },
     { name: 'Our Team', href: '/team', icon: Award },
     { name: 'Careers', href: '/careers', icon: Users },
@@ -110,11 +132,11 @@ export const Sidebar: React.FC = () => {
             ))}
           </div>
         </div>
-        {/* Company Section */}
+        {/* Compunknown Section */}
         <div>
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Company</h3>
+          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Compunknown</h3>
           <ul className='space-y-2'>
-            {companyLinks.map((link, index) => (
+            {compunknownLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   to={link.href}

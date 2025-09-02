@@ -1,41 +1,39 @@
 import { Link } from 'react-router-dom';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Github,
-  Youtube,
-  ArrowRight,
-  Star,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Users,
-  Award,
-  TrendingUp,
-  MessageCircle,
-  HelpCircle,
-  BookOpen,
-  ShoppingCart,
-  Database,
-  Network,
-  BarChart3,
-  Code,
-  Server,
-  Building,
-  Handshake,
-  FileText,
-  Video,
-  GraduationCap,
-  Atom,
-  PenTool,
-  DollarSign} from 'lucide-react';
+import { ArrowRight, Atom, Award, Back, BarChart3, BookOpen, Bottom, Brain, Building, Center, Cloud, Code, Common, Cookie, Database, DollarSign, Facebook, FileText, Github, GraduationCap, Handshake, HelpCircle, Info, Instagram, Linkedin, Mail, MapPin, MessageCircle, Network, PenTool, Phone, Quick, Server, Shield, ShoppingCart, Star, Top, TrendingUp, Twitter, User, Users, Video, Youtube, Zap } from 'lucide-react';
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
@@ -69,7 +67,7 @@ export function EnhancedFooter() {
         { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
       ]},
     {
-      title: 'Company',
+      title: 'Compunknown',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Team', href: '/team', icon: Award },
@@ -90,7 +88,7 @@ export function EnhancedFooter() {
       ]}
   ];
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
@@ -110,7 +108,7 @@ export function EnhancedFooter() {
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
-          {/* Company Info */}
+          {/* Compunknown Info */}
           <div className='lg:col-span-2'>
             <div className='flex items-center space-x-3 mb-6'>
               <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center'>

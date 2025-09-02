@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'';
 import { motion, AnimatePresence } from 'framer-motion'';
-import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
+import { Activity, BarChart3, Clock3, Database, False, Grid, LineChart, Loader2, Monitor, Navigation, Network, PieChart, Positive, RefreshCw, Search, Server, Shield, TrendingDown, TrendingUp, Users } from 'lucide-react';
 
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,

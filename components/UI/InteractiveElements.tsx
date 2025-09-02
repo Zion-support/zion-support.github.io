@@ -1,4 +1,37 @@
 import React, { useEffect, useRef, useState } from 'react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient';
@@ -6,7 +39,7 @@ type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface InteractiveButtonProps {
   'react';
-import { motion, useAnimation, useInView  } from 'lucide-react';
+import { User, motion, useAnimation, useInView } from 'lucide-react';
 
 type ButtonVariant =;
   'primary' |;
@@ -125,7 +158,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         animate={{ x: isHovered ? [,
   -100%;
   ', '100%;
-  '] as any: '-100%, opacity: isHovered ? [0, 0.2, 0] as any : 0 }}        transition={{ duration: 0.6 }}
+  '] as unknown: '-100%, opacity: isHovered ? [0, 0.2, 0] as unknown : 0 }}        transition={{ duration: 0.6 }}
       />
       <div className='relative flex items-center gap-2'>
         {loading ? (
@@ -305,7 +338,7 @@ export default {
 interface InteractiveStatsProps {
   stats: Array<{ number: string
    label: string;
-   icon: React.ComponentType<any>}>}
+   icon: React.ComponentType<unknown>}>}
 export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => (
   <div className='grid grid-cols-2 md: grid-cols-4 gap-6'>
     {stats.map((stat, index) => (

@@ -17,7 +17,7 @@ export const useAccessibility = () => {
         throw new Error(
   'useAccessibility must be used within an AccessibilityProvider');
     return context}// Accessibility Provider Component;
-export const AccessibilityProvider = ({ children }) => {
+export const AccessibilityProvider = memo(({ children }) => {
     const [highContrast, setHighContrast] = useState(false);
 ursor/automate-test-fix-improve-and-merge-code-48f3}, [])    // Save settings to localStorage;
     useEffect(() => {
@@ -215,4 +215,4 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 export const SrOnly = ({ children }) => (<span className='sr-only'>{children}</span>)';
 export default AccessibilityPanel';'}}}}}}}}}}}}}}}'';"import React, { useState, useEffect, createContext, useContext } from 'react' import { motion, AnimatePresence    } from 'framer-motion'  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')  return context }
 
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X    } from 'lucide-react' import { Button } from '../ui/button' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context}
+import { Accessibility, Eye, EyeOff, High, Keyboard, Minimize, Open, Save, Settings, Skip, Volume2, VolumeX, X } from 'lucide-react'; import { Button } from '../ui/button' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context}

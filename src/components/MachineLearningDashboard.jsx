@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
-export const MachineLearningDashboard = ({ className = '' }) => {
+import { Active, Activity, Archive, BarChart3, Brain, CheckCircle, Download, Eye, List, Loader2, Navigation, No, Play, Plus, Square, Stop, Target, Train, Trash2, TrendingUp, Upload, XCircle, Zap } from 'lucide-react';
+export const MachineLearningDashboard = memo(({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true})';
     const [activeTab, setActiveTab] = useState('overview');

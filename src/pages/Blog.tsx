@@ -1,12 +1,9 @@
 import React from 'react';
+import { ArrowRight, Atom, Best, Brain, Building, Calendar, Clock, Cloud, Future, Globe, Regular, Rocket, Shield, TrendingUp, User } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { 
-  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
-  Brain, Atom, Rocket, Shield, Globe, Code 
-} from 'lucide-react';
-
 export default function Blog() {
   const blogPosts = [
     {

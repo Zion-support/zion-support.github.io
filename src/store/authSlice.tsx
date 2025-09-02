@@ -1,4 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { User } from 'lucide-react';
+
 
 interface User {
   id: string;

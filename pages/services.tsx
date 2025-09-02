@@ -1,40 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  ArrowRight,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Database,
-  Server,
-  Lock,
-  BarChart3,
-  Users,
-  Globe,
-  Code,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Clock,
-  Award,
-  Mail,
-  Calendar,
-  Settings,
-  Eye,
-  MessageSquare,
-  Palette,
-  Bot,
-  Cpu,
-  Link2,
-  Wifi,
-  HardDrive,
-  Monitor,
-  Activity,
-  Terminal,
-  CreditCard,
-  Smartphone
-} from 'lucide-react';
+import { Activity, ArrowRight, Award, Back, BarChart3, Bot, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, CreditCard, Cross, Database, Eye, For, From, Globe, Grid, HardDrive, Home, Image, Link2, Lock, Low, Mail, MessageSquare, Mobile, Monitor, Network, No, Palette, Phone, Secure, Server, Settings, Shield, Smartphone, Snowflake, Star, Terminal, Today, TrendingUp, Typical, Users, Wifi, Zap } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {

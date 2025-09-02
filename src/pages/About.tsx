@@ -1,3 +1,4 @@
+import { Cloud, To, Today } from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   return (    <>
       <SEO;
@@ -51,7 +52,7 @@ export default function About() {
   const milestones = [
     {
       year: '2020',
-      title: 'Company Founded',
+      title: 'Compunknown Founded',
       description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'},
     {
       year: '2021',
@@ -81,13 +82,13 @@ export default function About() {
               About Zion Tech Group
             </h1>
             <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              We are a forward-thinking technology company dedicated to empowering businesses;
+              We are a forward-thinking technology compunknown dedicated to empowering businesses;
               with innovative solutions that drive growth and competitive advantage.
             </p>
           </div>
         </div>
       </section>
-      {/* Company Story */}
+      {/* Compunknown Story */}
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
@@ -97,7 +98,7 @@ export default function About() {
               </h2>
               <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
                 Founded in 2020, Zion Tech Group emerged from a vision to bridge the gap between;
-                cutting-edge technology and practical business solutions. We recognized that many;
+                cutting-edge technology and practical business solutions. We recognized that munknown;
                 organizations struggle to harness the full potential of emerging technologies like;
                 AI, cloud computing, and cybersecurity.
               </p>

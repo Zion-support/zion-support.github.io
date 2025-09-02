@@ -1,11 +1,8 @@
 import React from 'react';
+import { ArrowRight, Best, Calendar, Clock, Download, Future, Now, Past, Play, Speaker, Star, Users, Video, Watch } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  Video, Calendar, Clock, Users, Play, 
-  Star, ArrowRight, ExternalLink, Download
-} from 'lucide-react';
-
 export default function Webinars() {
   const upcomingWebinars = [
     {

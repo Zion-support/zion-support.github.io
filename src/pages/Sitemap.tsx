@@ -1,18 +1,48 @@
 import React from 'react';
+import { ArrowRight, Brain, Can, Center, Common, Cookie, ExternalLink, File, For, Frequently, Globe, Home, Map, Navigation, Network, Quick, Search, User, Users } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  Globe, ArrowRight, ExternalLink, Search, 
-  Users, Code, Shield, Brain, Atom, Rocket
-} from 'lucide-react';
-
 export default function Sitemap() {
   const siteStructure = [
     {
       title: "Main Pages",
       pages: [
         { name: "Home", url: "/", description: "Welcome to Zion Tech Group" },
-        { name: "About", url: "/about", description: "Learn about our company and mission" },
+        { name: "About", url: "/about", description: "Learn about our compunknown and mission" },
         { name: "Services", url: "/services", description: "Our comprehensive technology services" },
         { name: "Contact", url: "/contact", description: "Get in touch with our team" }
       ]
@@ -45,12 +75,12 @@ export default function Sitemap() {
       ]
     },
     {
-      title: "Company",
+      title: "Compunknown",
       pages: [
         { name: "Our Team", url: "/team", description: "Meet our expert professionals" },
         { name: "Partners", url: "/partners", description: "Strategic partnerships" },
         { name: "Careers", url: "/careers", description: "Join our growing team" },
-        { name: "News", url: "/news", description: "Company announcements" }
+        { name: "News", url: "/news", description: "Compunknown announcements" }
       ]
     },
     {

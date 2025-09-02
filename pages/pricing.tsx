@@ -1,7 +1,40 @@
 import type { NextPage } from 'next';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-react';
+import { Absolutely, ArrowRight, Building, Can, Check, Cloud, Common, Cross, Crown, Fast, File, For, Mobile, Star, Up, Users, Yes, Zap } from 'lucide-react';
 
 const Pricing: NextPage = () => {
   const pricingPlans = [
@@ -260,7 +293,7 @@ const Pricing: NextPage = () => {
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>
               <p className="text-gray-600">
-                Absolutely! You can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition.
+                Absolutely! You can upgrade or downgrade your plan at unknown time. We'll work with you to ensure a smooth transition.
               </p>
             </div>
 

@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
+import { Award, Cloud, High, Server, Shield, Today, Users, Zap } from 'lucide-react';
+
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
-
 const CloudServices: NextPage = () => {
   return (
     <Layout

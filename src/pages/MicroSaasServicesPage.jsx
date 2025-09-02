@@ -1,3 +1,7 @@
  export default function MicroSAASServicesPage() {
-  import {MICRO_SAAS_SERVICES, import {Star, const microSAASServices = [{ id: 'crm - saas', title: 'ZionCRM Pro', description: 'Complete customer relationship management solution with sales automation, lead tracking, and analytics.', icon: <Users className='h-8 w-8 text-blue -500'/>, price: 29, currency: '$', features: [ 'Contact Management', 'Sales Pipeline', 'Lead Scoring', 'Email Automation', 'Analytics Dashboard', 'Mobile App' ], category: 'Business Tools', badge: 'Popular', link: "https:
+  import { 'Analytics Dashboard', 'Email Automation', 'Lead Scoring', 'Mobile App' ], 'Sales Pipeline', MICRO_SAAS_SERVICES, Mobile, Users, and analytics.', badge: 'Popular', category: 'Business Tools', const microSAASServices = [{ id: 'crm - saas', currency: '
+
+}, description: 'Complete customer relationship management solution with sales automation, features: [ 'Contact Management', icon: <Users className='h-8 w-8 text-blue -500'/>, import {Star, lead tracking, link: "https:
+import { Star, price: 29, title: 'ZionCRM Pro' } from 'lucide-react';
+
 }

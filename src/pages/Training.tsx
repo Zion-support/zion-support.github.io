@@ -1,11 +1,8 @@
 import React from 'react';
+import { ArrowRight, Award, Clock, Now, Star, Today, Users, Video } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  GraduationCap, Video, BookOpen, Users, Clock, 
-  Star, Award, Play, Download, ArrowRight
-} from 'lucide-react';
-
 export default function Training() {
   const courses = [
     {

@@ -1,4 +1,39 @@
 import { Link } from 'react-router-dom';
+import { Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,7 +57,7 @@ export default function Footer() {
         { name: 'Industry Solutions', href: '/solutions/industry' }
       ]},
     {
-      title: 'Company',
+      title: 'Compunknown',
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Story', href: '/about/story' },
@@ -62,7 +97,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
-          {/* Company Info */}
+          {/* Compunknown Info */}
           <div className='lg:col-span-2'>
             <div className='flex items-center space-x-3 mb-6'>
               <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>

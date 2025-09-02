@@ -1,4 +1,39 @@
 import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { Link } from 'react - router - dom' import {  ArrowRight, Play, Pause, ChevronLeft, ChevronRight, Brain, Atom, Rocket, Shield, Zap, TrendingUp, Users, Globe, Award } from 'lucide - react'  interface HeroSlide {
+import { ArrowRight, Atom, Award, Brain, ChevronLeft, ChevronRight, Common, File, Globe, Pause, Play, Rocket, Secure, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
    id: number;
    title: string;
    subtitle: string;
@@ -6,11 +41,11 @@ import React, { useState, useEffect } from 'react' import { motion, AnimatePrese
    ctaText: string;
    ctaLink: string;
    background: string;
-   icon: React.ComponentType < any>
+   icon: React.ComponentType < unknown>
    stats?: Array<{
    number: string;
    label: string;
-   icon: React.ComponentType < any>}> } export default React.memo(/**
+   icon: React.ComponentType < unknown>}> } export default React.memo(/**
  * EnhancedHero function
  * @param {*} params - Function parameters
  * @returns {*} Function return value

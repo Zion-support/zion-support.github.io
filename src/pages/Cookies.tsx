@@ -1,5 +1,38 @@
 import { motion } from 'framer-motion';
-import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { BarChart3, Common, Cookie, Eye, File, Party, Phone, Settings, Shield, User } from 'lucide-react';
 
 const Cookies: React.FC = () => {
   const cookieTypes = [{
@@ -157,7 +190,7 @@ const Cookies: React.FC = () => {
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>Cookie Consent</h3>
               <p className='text-gray-600'>
                 When you first visit our website, you'll see a cookie consent banner. You can choose;
-                which types of cookies to accept. You can change your preferences at any time by;
+                which types of cookies to accept. You can change your preferences at unknown time by;
                 clicking the cookie settings link in our footer.
               </p>
             </div>
@@ -200,7 +233,7 @@ const Cookies: React.FC = () => {
           className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Questions About Cookies?</h2>
           <p className='text-gray-600 mb-4'>
-            If you have any questions about our use of cookies, please contact us:
+            If you have unknown questions about our use of cookies, please contact us:
           </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>

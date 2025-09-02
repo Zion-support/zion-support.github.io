@@ -2,7 +2,7 @@ import { Link } from 'react - router - dom'';
 
 ;
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from 'lucide-react'
+import { Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, Now, Phone, Quick, Star } from 'lucide-react';
 export function ContactInfo() {
     return (<section className='py-20 bg-zion-blue-dark'>
       <div className='container mx-auto px-4'>

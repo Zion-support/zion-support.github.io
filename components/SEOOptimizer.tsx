@@ -1,4 +1,39 @@
 import React from 'react';
+import { User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Head from 'next/head';
 
 interface SEOOptimizerProps {
@@ -8,7 +43,7 @@ interface SEOOptimizerProps {
    ogImage?: string;
    ogType?: string;
    canonicalUrl?: string;
-   structuredData?: any;
+   structuredData?: unknown;
    noindex?: boolean;
    nofollow?: boolean;
 }
@@ -34,7 +69,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'contactType': 'customer service', 'availableLanguage': 'English'
     },
     'sameAs': [
-      'https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'
+      'https://linkedin.com/compunknown/zion-tech-group', 'https://twitter.com/ziontechgroup'
     ], 'foundingDate': '2020',
     'numberOfEmployees': '50+', 'industry': 'Technology Services'
   };

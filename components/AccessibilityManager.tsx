@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Save, Settings, Check } from 'lucide-react';
+
 
 interface AccessibilitySettings {
   highContrast: boolean;

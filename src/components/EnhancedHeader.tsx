@@ -1,13 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
-  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
-  Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,
-  Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';
+import { Atom, BarChart3, Brain, Building, Building2, Car, Center, Close, Cloud, Common, Cpu, File, Frequently, Grid, Home, Large, Lightweight, Mail, Network, Rocket, Shield, Truck, User, Users } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -229,7 +255,7 @@ export function EnhancedHeader() {
         { name: 'Research & Development', href: '/research-development', description: 'Innovation and discovery' },
         { name: 'Green IT Solutions', href: '/green-it', description: 'Sustainable technology' }]}
   ];
-  const companyLinks = [
+  const compunknownLinks = [
     { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
     { name: 'Our Team', href: '/team', description: 'Meet our expert professionals' },
     { name: 'Leadership', href: '/leadership', description: 'Executive team and vision' },
@@ -238,7 +264,7 @@ export function EnhancedHeader() {
     { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }];
   const resourceLinks = [
     { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
-    { name: 'News', href: '/news', description: 'Company announcements' },
+    { name: 'News', href: '/news', description: 'Compunknown announcements' },
     { name: 'Press', href: '/press', description: 'Media resources' },
     { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
     { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },

@@ -1,11 +1,8 @@
 import React from 'react';
+import { ArrowRight, Can, Download, ExternalLink, FileText, Quick, Search, Users, Video } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  BookOpen, Code, FileText, Video, Download, 
-  Search, ArrowRight, ExternalLink, Star, Users
-} from 'lucide-react';
-
 export default function Documentation() {
   const docCategories = [
     {

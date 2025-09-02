@@ -1,8 +1,41 @@
 import React from 'react';
+import { Common, File, Phone, Regular, Shield, User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';
-
 export default function PrivacyPolicy() {
   return (
     <>
@@ -102,7 +135,7 @@ export default function PrivacyPolicy() {
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
                 <p className="text-gray-300 mb-4">
-                  If you have any questions about this Privacy Policy, please contact us at:
+                  If you have unknown questions about this Privacy Policy, please contact us at:
                 </p>
                 <div className="text-gray-300">
                   <p>Email: privacy@ziontechgroup.com</p>

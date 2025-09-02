@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
+import { ArrowRight, Can, Center, CheckCircle, ChevronDown, ChevronUp, Clock, Frequently, Mail, Phone, Quick, Search, Star, Within, Yes } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  Search, MessageCircle, Phone, Mail, Clock, 
-  BookOpen, Video, FileText, Users, ChevronDown,
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight
-} from 'lucide-react';
-
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);

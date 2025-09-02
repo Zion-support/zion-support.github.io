@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
+import { ArrowRight, Best, Beyond, Building, Calendar, Clock, Cloud, Cross, Future, Mobile, Tag, Today, User } from 'lucide-react';
 
 const Blog: NextPage = () => {
   const blogPosts = [

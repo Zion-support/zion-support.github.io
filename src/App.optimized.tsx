@@ -1,187 +1,161 @@
-import React, { Suspense, lazy } from;
-  'react';
-import { Routes, Route } from;
-  'react-router-dom';
-import { HelmetProvider } from;
-  'react-helmet-async';
-export default function Page() {
-export default function Page() {
-// Core Components;
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-export default function Page() {
-export default function Page() {
-  import { SEO } from './components/SEO';
-export default function Page() {
-export default function Page() {
-  import { ErrorBoundary } from './components/ErrorBoundary';
-export default function Page() {
-export default function Page() {
-  import { LoadingSpinner  } from './components/ui/loading-spinner';
+import React, { Suspense, lazy, memo, useMemo } from 'react';
+import { Home, Layout } from 'lucide-react';
 
-export default function Page() {
-export default function Page() {
-// Layout Components;
+// Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
-export default function Page() {
-export default function Page() {
-  import { EnhancedFooter } from './components/EnhancedFooter';
+import { EnhancedFooter } from './components/EnhancedFooter';
+import { Sidebar } from './components/Sidebar';
 
-export default function Page() {
-export default function Page() {
-// Optimized lazy loading with preloading hints;
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)
-  return (props: any) => (
-<Suspense fallback={fallback || <LoadingSpinner />}><LazyComponent {...props} />
-    </Suspense>  )}
-;
-// Core pages with optimized imports;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-// Error Fallback Component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>
-    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>
-      <div className='text-red-400 text-6xl mb-4'>⚠️</div>
-      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>
-      <p className='text-gray-300 mb-6'>
-        {error.message ||, An unexpected error occurred. Please try again.'}'
-      </p>
-      <div className='space-y-3'>
-<button onClick={resetErrorBoundary} className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors'>Try again</button>
-ursor/automate-test-fix-improve-and-merge-code-48f3
-    </div>  </div>
-)
-function App() {
-  return(
-    <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error(
-  'App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
-        <PerformanceOptimizer>
-          <SEO />
-          <div className='min-h-screen bg-gray-50'>
-            <EnhancedHeader />
-            <main className='flex-1'>
-              <Routes>
-                {/* Core Pages */}
-                <Route path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/contact' element={<Contact />} />
-                <Route path='/careers' element={<Careers />} />
-                <Route path='/solutions' element={<Solutions />} />
-                <Route path='/research-development' element={<Solutions />} />
-                <Route path='/case-studies' element={<CaseStudies />} />
-                <Route path='/news' element={<News />} />
-                <Route path='/events' element={<News />} />{/* Services */}
-                <Route path='/services' element={<Services />} />
-                <Route path='/enterprise' element={<Enterprise />} />
-                <Route path='/request-quote' element={<RequestQuote />} />
-                <Route path='/services/ai' element={<AIServices />} />
-                <Route path='/services/cloud' element={<CloudServices />} />
-                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />
-                <Route path='/services/infrastructure' element={<InfrastructureServices />} />
-                <Route path='/services/transformation' element={<TransformationServices />} />
-                <Route path='/services/consulting' element={<ConsultingServices />} />{/* Legal */}
-                <Route path='/privacy' element={<Privacy />} />
-                <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}
-                <Route path='*' element={<div className='min-h-screen flex items-center justify-center'><div className='text-center'><h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1><p className='text-gray-600 mb-8'>Page not found</p><a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>Go Home</a></div></div>} />
-              </Routes>
-            </main>
-            <EnhancedFooter />
-          </div>
-        </PerformanceOptimizer>
-      </ErrorBoundary>
-    </HelmetProvider>
-  )}
-ursor/automate-test-fix-improve-and-merge-code-48f3
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)  return(props: any) => (
+// Types
+interface LazyComponentProps {
+  [key: string]: unknown;
+}
+
+type LazyComponent = React.LazyExoticComponent<React.ComponentType<LazyComponentProps>>;
+
+// Optimized loading component
+const LoadingSpinner = memo(() => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="flex flex-col items-center space-y-4">
+      <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent"></div>
+      <p className="text-gray-600 text-sm">Loading...</p>
+    </div>
+  </div>
+));
+
+LoadingSpinner.displayName = 'LoadingSpinner';
+
+// Optimized lazy loading with preloading hints and error boundaries
+const createLazyComponent = (importFn: () => Promise<{ default: React.ComponentType<LazyComponentProps> }>, fallback?: React.ReactNode): LazyComponent => {
+  const LazyComponent = lazy(importFn);
+  
+  return memo((props: LazyComponentProps) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
-  )}
-// Core pages with optimized imports;
-ursor/automate-test-fix-improve-and-merge-code-48f3
-        </button>      </div>
-    </div>
-  </div>
-)
-function App() {
-return(
-    <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error(
-  'App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
-  '        <PerformanceOptimizer>'          <SEO />
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader />'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}
-                <Route path='/' element={<Home />} />'                <Route path='/about' element={<About />} />'                <Route path='/contact' element={<Contact />} />'                <Route path='/careers' element={<Careers />} />'                <Route path='/solutions' element={<Solutions />} />'                <Route path='/research-development' element={<Solutions />} />'                <Route path='/case-studies' element={<CaseStudies />} />'                <Route path='/news' element={<News />} />'                <Route path='/events' element={<News />} />'                '                {/* Services */}
-                <Route path='/services' element={<Services />} />'                <Route path='/services/ai' element={<AIServices />} />'                <Route path='/services/cloud' element={<CloudServices />} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />'                <Route path='/services/infrastructure' element={<InfrastructureServices />} />'                <Route path='/services/transformation' element={<TransformationServices />} />'                <Route path='/services/consulting' element={<ConsultingServices />} />'                '                {/* Legal */}
-                <Route path='/privacy' element={<Privacy />} />'                <Route path='/terms' element={<Terms />} />'                '                {/* 404 Fallback */}'
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices />} />'
-                <Route path='/services/cloud' element={<CloudServices />} />
-                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />
-                <Route path='/services/infrastructure' element={<InfrastructureServices />} />
-                <Route path='/services/transformation' element={<TransformationServices />} />
-                <Route path='/services/consulting' element={<ConsultingServices />} />{/* Legal */}
-                <Route path='/privacy' element={<Privacy />} />
-                <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}
-                <Route path='*' element={
-                  <div className='min-h-screen flex items-center justify-center'>
-                    <div className='text-center'>
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
-                      <p className='text-gray-600 mb-8'>Page not found</p>
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
-                        Go Home
-                      </a>
+  ));
+};
+
+// Core pages with optimized imports
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+
+// AI Services pages
+const AIServices = createLazyComponent(() => import('./pages/ai-services'));
+const ITServices = createLazyComponent(() => import('./pages/it-services'));
+const MicroSaaS = createLazyComponent(() => import('./pages/micro-saas'));
+
+// Error boundary component
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // Log error to monitoring service
+    if (process.env.NODE_ENV === 'production') {
+      // Send to error tracking service
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+// Main App component
+const App: React.FC = memo(() => {
+  const routes = useMemo(() => [
+    { path: '/', component: Home, exact: true },
+    { path: '/about', component: About },
+    { path: '/contact', component: Contact },
+    { path: '/services', component: Services },
+    { path: '/pricing', component: Pricing },
+    { path: '/blog', component: Blog },
+    { path: '/help', component: Help },
+    { path: '/privacy', component: Privacy },
+    { path: '/terms', component: Terms },
+    { path: '/ai-services', component: AIServices },
+    { path: '/it-services', component: ITServices },
+    { path: '/micro-saas', component: MicroSaaS },
+  ], []);
+
+  return (
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+          <EnhancedHeader />
+          <div className="flex">
+            <Sidebar />
+            <main className="flex-1">
+              <Routes>
+                {routes.map(({ path, component: Component, exact }) => (
+                  <Route
+                    key={path}
+                    path={path}
+                    element={<Component />}
+                  />
+                ))}
+                {/* 404 Route */}
+                <Route
+                  path="*"
+                  element={
+                    <div className="min-h-screen flex items-center justify-center">
+                      <div className="text-center">
+                        <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
+                        <p className="text-gray-600 mb-4">Page not found</p>
+                        <a
+                          href="/"
+                          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                        >
+                          Go Home
+                        </a>
+                      </div>
                     </div>
-} />
+                  }
+                />
               </Routes>
             </main>
-            <EnhancedFooter />
           </div>
-        </PerformanceOptimizer>
-      </ErrorBoundary>
-    </HelmetProvider>  )}
-;
-// Core pages with optimized imports;
-const Home = createLazyComponent(() => import('./pages/Home'))';const About = createLazyComponent(() => import('./pages/About'))';const Contact = createLazyComponent(() => import('./pages/Contact'))';const Careers = createLazyComponent(() => import('./pages/Careers'))';const Services = createLazyComponent(() => import('./pages/Services'))';const Solutions = createLazyComponent(() => import('./pages/Solutions'))';const News = createLazyComponent(() => import('./pages/News'))';const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'))';const Privacy = createLazyComponent(() => import('./pages/Privacy'))';const Terms = createLazyComponent(() => import('./pages/Terms'))';// Service pages';
-const AIServices = createLazyComponent(() => import('./pages/AIServices'))';const CloudServices = createLazyComponent(() => import('./pages/CloudServices'))';const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'))';const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'))';const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'))';const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'))';// Error Fallback Component';
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => ('
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>'    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>'      <div className='text-red-400 text-6xl mb-4'>⚠️</div>'      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>'      <p className='text-gray-300 mb-6'>'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className='space-y-3'>'        <button'          onClick={resetErrorBoundary}'';
-          className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors''        >'          Try again</button><button';
-          onClick={() => window.location.href = '/'}'          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors''        >'          Go home'
-        </button>
-      </div>
-    </div>
-  </div>
-)
-function App() {
-return (
-    <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />'
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader />'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}'
-                <Route path='/' element={<Home />} />'                <Route path='/about' element={<About />} />'                <Route path='/contact' element={<Contact />} />'                <Route path='/careers' element={<Careers />} />'                <Route path='/solutions' element={<Solutions />} />'                <Route path='/research-development' element={<Solutions />} />'                <Route path='/case-studies' element={<CaseStudies />} />'                <Route path='/news' element={<News />} />'                <Route path='/events' element={<News />} />'                '                {/* Services */}'
-                <Route path='/services' element={<Services />} />'                <Route path='/services/ai' element={<AIServices />} />'                <Route path='/services/cloud' element={<CloudServices />} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />'                <Route path='/services/infrastructure' element={<InfrastructureServices />} />'                <Route path='/services/transformation' element={<TransformationServices />} />'                <Route path='/services/consulting' element={<ConsultingServices />} />'                '                {/* Legal */}'
-                <Route path='/privacy' element={<Privacy />} />'                <Route path='/terms' element={<Terms />} />'                '                {/* 404 Fallback */}''
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices />} />''
-                <Route path='/services/cloud' element={<CloudServices />} />'
-                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />'
-                <Route path='/services/infrastructure' element={<InfrastructureServices />} />'
-                <Route path='/services/transformation' element={<TransformationServices />} />'
-                <Route path='/services/consulting' element={<ConsultingServices />} />{/* Legal */}'
-                <Route path='/privacy' element={<Privacy />} />'
-                <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}'
-                <Route path='*' element={';
-                  <div className='min-h-screen flex items-center justify-center'>'
-                    <div className='text-center'>'
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'
-                      <p className='text-gray-600 mb-8'>Page not found</p>'
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
-                        Go Home
-                      </a>
-                    </div>
-} />
-              </Routes>
-            </main>
-            <EnhancedFooter />
-          </div>
-        </PerformanceOptimizer>
-      </ErrorBoundary>
-    </HelmetProvider>
-  )}';
+          <EnhancedFooter />
+        </div>
+      </Router>
+    </ErrorBoundary>
+  );
+});
+
+App.displayName = 'App';
+
+export default App;

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Cloud, Home, Mobile, Navigation } from 'lucide-react';
+
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {

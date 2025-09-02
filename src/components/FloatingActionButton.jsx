@@ -1,4 +1,6 @@
 import React, { useState } from 'react'';
+import { Close, Open } from 'lucide-react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import {}
   PlusIcon,
@@ -6,7 +8,7 @@ import {}
   ChatBubbleLeftRightIcon,
   PhoneIcon,';
   EnvelopeIcon} from '@heroicons/react/24/outline';
-const FloatingActionButton = ({ className = '' }) => {}
+const FloatingActionButton = memo(({ className = '' }) => {}
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const actionItems = []{}

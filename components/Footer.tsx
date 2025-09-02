@@ -1,6 +1,39 @@
 import React from 'react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Github, Info, Linkedin, Mail, MapPin, Phone, Twitter, User } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -20,7 +53,7 @@ const Footer: React.FC = () => {
       { name: 'Project Management', href: '/solutions/project-management' },
       { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
     ],
-    company: [
+    compunknown: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/about' },
       { name: 'Careers', href: '/about' },
@@ -39,7 +72,7 @@ const Footer: React.FC = () => {
     <footer className='bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
-          {/* Company Info */}
+          {/* Compunknown Info */}
           <div className='lg:col-span-2'>
             <h3 className='text-2xl font-bold mb-4'>Zion Tech Group</h3>
             <p className='text-gray-300 mb-6 max-w-md'>
@@ -106,11 +139,11 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          {/* Company & Resources */}
+          {/* Compunknown & Resources */}
           <div>
-            <h4 className='text-lg font-semibold mb-4'>Company</h4>
+            <h4 className='text-lg font-semibold mb-4'>Compunknown</h4>
             <ul className='space-y-2 mb-6'>
-              {footerLinks.company.map((link) => (
+              {footerLinks.compunknown.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

@@ -1,83 +1,52 @@
 import React, { useState              } from 'react.ts';
+import { CheckCircle, Users, Zap, Shield, Brain, Cloud, Database, Target, Phone, Mail, FileText, Search, ChevronDown, ChevronRight, User, Heart, Home, Info } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Link from 'next/link.ts';
 import { useRouter               } from 'next/router.ts';
-import { Home, 
-  Briefcase, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Shield, 
-  Handshake, 
-  ChevronDown, 
-  ChevronRight, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
-  Code, 
-  Palette, 
-  Target, 
-  Rocket, 
-  Eye, 
-  DollarSign, 
-  ShoppingCart, 
-  Clock, 
-  Cloud, 
-  Search, 
-  Building, 
-  Zap, 
-  Heart, 
-  Lightbulb, 
-  TrendingUp, 
-  BarChart3, 
-  Lock, 
-  AlertTriangle, 
-  Server, 
-  CheckCircle, 
-  Truck, 
-  Car, 
-  TestTube, 
-  PenTool, 
-  Building2, 
-  Atom, 
-  FileText, 
-  Quote, 
-  Newspaper, 
-  Calendar, 
-  Video, 
-  HelpCircle, 
-  LifeBuoy, 
-  Store, 
-  PieChart, 
-  Share2, 
-  Monitor, 
-  Smartphone,
-  Settings,
-  User,
-  Bell,
-  BookOpen,
-  Award,
-  Leaf,
-  Sun,
-  Wind
-  
-} from 'lucide-react.ts';
-
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  isOpen: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownboolean;
   onClose: ()               => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<any>([]);
+  const [expandedSections, setExpandedSections] = useState<unknown>([]);
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const toggleSection = (section: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring)              => {;
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
@@ -85,7 +54,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
+  const isActive = (path: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring)               => router.pathname === path;
 
   const navigation = {
 
@@ -123,12 +92,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' },
       { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
     ],
-    company: [
+    compunknown: [
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
+      { name: 'News', href: '/news', icon: Newspaper, description: 'Compunknown updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
     ]
   };
@@ -147,12 +116,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/compunknown/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },
     { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
+  const renderNavSection = (title: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring, items[], sectionKey: string)               => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
@@ -287,7 +256,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {renderNavSection('Resources', navigation.resources, 'resources')}
 
           {/* Comp Section */}
-          {renderNavSection('Comp', navigation.company, 'company')}
+          {renderNavSection('Comp', navigation.compunknown, 'compunknown')}
         </div>
 
         {/* Footer */}

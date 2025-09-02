@@ -1,11 +1,8 @@
 import React from 'react';
+import { ArrowRight, Calendar, Download, ExternalLink, FileText, Globe, Paper, Search, TrendingUp, Users } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  Search, FileText, Users, Calendar, ArrowRight, 
-  ExternalLink, Download, Star, TrendingUp, Globe
-} from 'lucide-react';
-
 export default function Research() {
   const researchAreas = [
     {

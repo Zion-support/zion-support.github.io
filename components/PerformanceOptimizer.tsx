@@ -1,4 +1,39 @@
 import React, { useEffect } from 'react';
+import { User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Head from 'next/head';
 
 interface PerformanceOptimizerProps {
@@ -20,10 +55,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP: ', entry.startTime)}
           if (entry.entryType === 'first-input') {
-            console.log('FID: ', (entry as any).processingStart - entry.startTime)}
+            console.log('FID: ', (entry as unknown).processingStart - entry.startTime)}
           if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              console.log('CLS: ', (entry as any).value)}
+            if (!(entry as unknown).hadRecentInput) {
+              console.log('CLS: ', (entry as unknown).value)}
           }
         }
       })

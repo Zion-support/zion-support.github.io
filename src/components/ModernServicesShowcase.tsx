@@ -1,8 +1,43 @@
 import React, { useState } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { Link } from 'react - router - dom' import {  Brain, Cloud, Shield, Globe, Zap, Database, Cpu, Lock, Network, Rocket, Target, TrendingUp } from 'lucide - react' import { ModernCard } from './ui / ModernCard' import { ModernButton } from './ui / ModernButton'  interface Service {
+import { Brain, Cloud, Common, Cpu, Database, File, Globe, Lock, Network, Rocket, Shield, Target, TrendingUp, Unlock, User, Zap } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
    id: string;
    title: string;
    description: string;
-   icon: React.ComponentType < any>
+   icon: React.ComponentType < unknown>
    color: string;
    gradient: string;
    features: string[];

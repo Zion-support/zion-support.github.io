@@ -1,5 +1,40 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
+import { User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 // import { usePerformanceOptimization } from '../src/utils/performanceOptimizer';
 
 interface PerformanceMetrics {
@@ -45,7 +80,7 @@ const PerformanceEnhancer: React.FC = () => {
         // Measure First Input Delay (FID);
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: unknown) => {
             setMetrics(prev => ({
               ...prev, fid: entry.processingStart - entry.startTime}))})})
         fidObserver.observe({ entryTypes: ['first-input'] })
@@ -53,7 +88,7 @@ const PerformanceEnhancer: React.FC = () => {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: unknown) => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
               setMetrics(prev => ({ ...prev, cls: clsValue }))}
@@ -62,7 +97,7 @@ const PerformanceEnhancer: React.FC = () => {
         // Measure Time to First Byte (TTFB);
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
+          entries.forEach((entry: unknown) => {
             setMetrics(prev => ({
               ...prev, ttfb: entry.responseStart - entry.requestStart}))})})
         navigationObserver.observe({ entryTypes: ['navigation'] })
@@ -73,7 +108,7 @@ const PerformanceEnhancer: React.FC = () => {
         // Measure memory usage;
         const updateMemoryUsage = () => {
           if ('memory' in performance) {
-            const memory = (performance as any).memory;
+            const memory = (performance as unknown).memory;
             setMetrics(prev => ({
               ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB}))}
         }

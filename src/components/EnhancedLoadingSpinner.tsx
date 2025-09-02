@@ -1,4 +1,6 @@
 import { motion     } from 'framer-motion';
+import { Center } from 'lucide-react';
+
 interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' text?: string className?: string}
 export default function EnhancedLoadingSpinner({

@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Users, Eye, MousePointer,
-  Clock} from 'lucide-react';
+import { Clock, Eye, MousePointer, Search, Users } from 'lucide-react';
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;

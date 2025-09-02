@@ -1,15 +1,10 @@
 import React from 'react';
+import { ArrowRight, Atom, Brain, CheckCircle, Globe, Home, Mail, MapPin, Phone, Rocket, Shield, Star, Today, Users } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import EnhancedHero from '../components/EnhancedHero';
-import { 
-  Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, 
-  Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, 
-  Database, Network, Smartphone, Building, Heart, Award, MessageCircle, 
-  Phone, Mail, MapPin 
-} from 'lucide-react';
-
 export default React.memo(function Home() {
   const features = [
     { 

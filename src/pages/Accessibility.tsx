@@ -1,5 +1,38 @@
 import { motion } from 'framer-motion';
-import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { Accessibility as AccessibilityIcon, Close, Common, Down, Ear, Eye, File, High, Home, Keyboard, Large, Mobile, MousePointer, Navigation, Phone, Skip, Smartphone, Up, User } from 'lucide-react';
 
 const Accessibility: React.FC = () => {
   const features = [
@@ -241,7 +274,7 @@ const Accessibility: React.FC = () => {
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Feedback and Support</h2>
           <p className='text-gray-600 mb-4'>
-            We welcome your feedback on the accessibility of our website. If you encounter any;
+            We welcome your feedback on the accessibility of our website. If you encounter unknown;
             accessibility barriers or have suggestions for improvement, please contact us:
           </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>

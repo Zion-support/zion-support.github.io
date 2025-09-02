@@ -1,3 +1,4 @@
+import { Carbon, Center, Cloud, Fast, High, Instant, User } from 'lucide-react';
 
 export default function ExpandedServicesPlus() {
   return (<div className='min-h-screen bg-slate-950 text-slate-100'>

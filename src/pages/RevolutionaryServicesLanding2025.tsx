@@ -1,7 +1,40 @@
 import { Link } from 'react-router-dom';
-import { revolutionaryMicroSaasServices2025, revolutionaryITServices2025, revolutionaryAIServices2025 } from '../data/revolutionaryServices2025';
-import { Phone, Mail, Globe, MapPin, ArrowRight, Star, TrendingUp, Users, Zap, Shield, Cloud, Brain, CheckCircle, Clock, DollarSign, Target, Rocket } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Clock, Cloud, Common, File, Globe, Info, Mail, MapPin, Now, Phone, Quick, Rapid, Rocket, Shield, Star, Target, User, Users, Zap } from 'lucide-react';
 
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { revolutionaryMicroSaasServices2025, revolutionaryITServices2025, revolutionaryAIServices2025 } from '../data/revolutionaryServices2025';
 const RevolutionaryServicesLanding2025: React.FC = () => {
   const featuredServices = [;
     revolutionaryMicroSaasServices2025[0], // AI Business Intelligence;
@@ -30,7 +63,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
     {
       icon: <DollarSign className='w-8 h-8' />,
       title: 'Competitive Pricing',
-      description: 'Affordable solutions that fit any business budget'}
+      description: 'Affordable solutions that fit unknown business budget'}
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'>
@@ -357,7 +390,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
             <div className='text-center'>
               <div className='text-3xl font-bold text-white mb-2'>+1 302 464 0950</div>
-              <div className='text-blue-100'>Call us anytime</div>
+              <div className='text-blue-100'>Call us unknowntime</div>
             </div>
             <div className='text-center'>
               <div className='text-lg font-semibold text-white mb-2'>kleber@ziontechgroup.com</div>

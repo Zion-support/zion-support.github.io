@@ -1,4 +1,6 @@
 import React, { useState } from 'react'';
+import { ArrowRight, Award, Brain, CheckCircle, Clock, Globe, Grid, Info, Navigation, Now, Rocket, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import {}
   Brain,

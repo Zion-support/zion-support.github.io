@@ -1,23 +1,9 @@
 import React from 'react';
+import { ArrowRight, Shield, Brain, Cloud, Database, User } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
 import { Button } from './ui/Button';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Code, 
-  Smartphone,
-  ArrowRight
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Code,
-  Smartphone,
-  ArrowRight } from 'lucide-react';
 const ServicesSection: React.FC = () => {
   const services = [{
       icon: Brain,

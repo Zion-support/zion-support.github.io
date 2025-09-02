@@ -1,36 +1,8 @@
 import React from 'react';
+import { ArrowRight, Award, BarChart3, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  Server,
-  Cloud,
-  Shield,
-  Database,
-  Network,
-  Monitor,
-  Smartphone,
-  Globe,
-  Lock,
-  Settings,
-  Zap,
-  Users,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Code,
-  Terminal,
-  FileText,
-  Mail,
-  Phone,
-  MapPin,
-  TrendingUp
-} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function ITServices() {

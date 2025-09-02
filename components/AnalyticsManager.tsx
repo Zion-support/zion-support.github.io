@@ -1,13 +1,48 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import { User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void}
+    gtag: (...args: unknown[]) => void}
 }
 
-declare const gtag: (...args: any[]) => void;
+declare const gtag: (...args: unknown[]) => void;
 
 interface AnalyticsEvent {
   name: string;
@@ -15,7 +50,7 @@ interface AnalyticsEvent {
   action?: string;
   label?: string;
   value?: number
-  custom_parameters?: Record<string, any>}
+  custom_parameters?: Record<string, unknown>}
 
 interface PerformanceMetrics {
   fcp: number;
@@ -155,7 +190,7 @@ const AnalyticsManager: React.FC = () => {
       })} catch (error) {
       console.error('Analytics: Failed to send event', error)}
   }, [])
-  const trackUserProperties = useCallback((properties: Record<string, any>) => {
+  const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
         custom_map: properties
@@ -216,10 +251,10 @@ const AnalyticsManager: React.FC = () => {
     const interval = setInterval(updateSessionDuration, 1000);
 
     // Store interval ID for cleanup
-    (window as any).analyticsSessionInterval = interval}, []);
+    (window as unknown).analyticsSessionInterval = interval}, []);
 
   const endSession = useCallback(() => {
-    const interval = (window as any).analyticsSessionInterval;
+    const interval = (window as unknown).analyticsSessionInterval;
     if (interval) {
       clearInterval(interval)}
 
@@ -286,7 +321,7 @@ const AnalyticsManager: React.FC = () => {
 
   // Expose analytics functions globally
   useEffect(() => {
-    (window as any).analytics = {
+    (window as unknown).analytics = {
       track: trackEvent,
       trackConversion,
       trackPerformance,
@@ -294,7 +329,7 @@ const AnalyticsManager: React.FC = () => {
     }
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
 
-  return null; // This component doesn't render anything
+  return null; // This component doesn't render unknownthing
 }
 
 export default AnalyticsManager

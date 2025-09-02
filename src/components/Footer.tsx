@@ -1,71 +1,44 @@
 import React, { useState } from 'react.ts';
+import { ArrowUp, Atom, Back, Bottom, Brain, Building, Building2, Carbon, Center, Cloud, Common, FileText, Home, Info, Mail, MapPin, Network, Phone, Shield, Top, User, Users, Zap } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { Link               } from 'react-router-dom.ts';
 import { motion               } from 'framer-motion.ts';
-import { Twitter,
-  Linkedin,
-  Instagram,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
-  Github,
-  Zap,
-  Brain,
-  Shield,
-  Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
-  FileText,
-  HelpCircle,
-  BarChart3,
-  ArrowUp,
-  Heart,
-  Star,
-  CheckCircle,
-  Award,
-  Lock,
-  Eye,
-  Atom,
-  Code,
-  Database,
-  Network,
-  Server;
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette} from 'lucide-react';
-export function Footer(...args: any[]): any {
+export function Footer(...args: unknown[]): unknown {
   const currentYear = new Date().getFullYear();
-  const [activeSection, setActiveSection] = useState<any>(null);
+  const [activeSection, setActiveSection] = useState<unknown>(null);
   const footerSections = [
     {
       title: 'Comp',
@@ -136,7 +109,7 @@ export function Footer(...args: any[]): any {
         { name: 'Emerging Tech', href: '/emerging-tech' }
       ]},
     {
-      title: 'Company',
+      title: 'Compunknown',
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/about/team' },
@@ -180,7 +153,7 @@ export function Footer(...args: any[]): any {
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
-          {/* Company Info */}
+          {/* Compunknown Info */}
           <div className='space-y-4'>
             <div className='flex items-center space-x-2'>
               <div className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center'>
@@ -234,7 +207,7 @@ export function Footer(...args: any[]): any {
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8'>
+        <div className='grid grid-cols-1 md: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknowngrid-cols-2 lg:grid-cols-4 gap-8'>
           {footerSections.map((section)               => (
             <div key={section.title} className='space-y-4'>
               <motion.button;
@@ -293,7 +266,7 @@ export function Footer(...args: any[]): any {
               </div>
             </div>
             <div className='flex space-x-4'>
-              <a href='https://linkedin.com/company/ziontechgroup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
+              <a href='https://linkedin.com/compunknown/ziontechgroup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
                 <Linkedin className='w-5 h-5' />
               </a>
               <a href='https://twitter.com/ziontechgroup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
@@ -347,11 +320,11 @@ export function Footer(...args: any[]): any {
               <li><Link to='/startup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Startup Solutions</Link></li>
             </ul>
           </div>
-          {/* Company & Resources */}
+          {/* Compunknown & Resources */}
           <div className='space-y-4'>
             <h3 className='text-zion-cyan font-semibold text-lg flex items-center'>
               <Building2 className='w-5 h-5 mr-2' />
-              Company
+              Compunknown
             </h3>
             <ul className='space-y-2 text-sm'>
               <li><Link to='/about' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>About Us</Link></li>

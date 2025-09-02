@@ -1,11 +1,44 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';
+import { Brain, Building2, ChevronDown, Cloud, Common, File, HardDrive, Home, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
 
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { Link } from 'react-router-dom';
 export function MainNavigation({ className = '' }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isCompunknownOpen, setIsCompunknownOpen] = useState(false);
   return(
     <nav className={`flex items-center space-x-8 ${className}`}>
       {/* Home */}
@@ -263,21 +296,21 @@ export function MainNavigation({ className = '' }) {
           </div>
         )}
       </div>
-      {/* Company Dropdown */}
+      {/* Compunknown Dropdown */}
       <div className='relative group'>
         <button;
-          onMouseEnter={() => setIsCompanyOpen(true)}
-          onMouseLeave={() => setIsCompanyOpen(false)}
+          onMouseEnter={() => setIsCompunknownOpen(true)}
+          onMouseLeave={() => setIsCompunknownOpen(false)}
           className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'
         >
           <Building2 className='w-4 h-4' />
-          <span>Company</span>
+          <span>Compunknown</span>
           <ChevronDown className='w-3 h-3' />
         </button>
-        {isCompanyOpen && (
+        {isCompunknownOpen && (
           <div;
-            onMouseEnter={() => setIsCompanyOpen(true)}
-            onMouseLeave={() => setIsCompanyOpen(false)}
+            onMouseEnter={() => setIsCompunknownOpen(true)}
+            onMouseLeave={() => setIsCompunknownOpen(false)}
             className='absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50'
           >
             <div className='p-4'>

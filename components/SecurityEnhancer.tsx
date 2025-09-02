@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { X, Check } from 'lucide-react';
+
 import Head from 'next/head';
 
 const SecurityEnhancer: React.FC = () => {
@@ -44,7 +46,7 @@ const SecurityEnhancer: React.FC = () => {
         if (script.src && !script.src.startsWith(window.location.origin) &&
              !script.src.includes('googletagmanager.com') &&
              !script.src.includes('google-analytics.com')) {
-          console.warn('Potentially malicious script detected: ', script.src);
+
           script.remove();
         }
       });
@@ -58,7 +60,7 @@ const SecurityEnhancer: React.FC = () => {
         if (!iframe.src.startsWith(window.location.origin) &&
              !iframe.src.includes('youtube.com') &&
              !iframe.src.includes('vimeo.com')) {
-          console.warn('Potentially malicious iframe detected: ', iframe.src);
+
           iframe.remove();
         }
       });
@@ -77,7 +79,7 @@ const SecurityEnhancer: React.FC = () => {
             if (typeof value === 'string') {
               suspiciousPatterns.forEach(pattern => {
                 if (pattern.test(value)) {
-                  console.warn('Suspicious form data detected: ', { key, value });
+
                   e.preventDefault();
                   alert('Suspicious content detected. Please check your input.');
                   return;

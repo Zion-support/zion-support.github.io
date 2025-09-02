@@ -1,39 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  Brain,
-  Zap,
-  Shield,
-  Database,
-  BarChart3,
-  Users,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Globe,
-  Lock,
-  Cpu,
-  Bot,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Settings,
-  Monitor,
-  Smartphone,
-  Cloud,
-  Server,
-  Network
-} from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Network, Phone, Search, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function AIServices() {

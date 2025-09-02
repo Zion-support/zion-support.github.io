@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { Home } from 'lucide-react';
+
 import Head from 'next/head';
 
 interface AnalyticsTrackerProps {

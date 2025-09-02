@@ -1,4 +1,6 @@
 import React from 'react';
+import { Lazy } from 'lucide-react';
+
 import { Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner';

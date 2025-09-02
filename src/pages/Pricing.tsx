@@ -1,11 +1,8 @@
 import React from 'react';
+import { ArrowRight, Atom, Brain, Check, Flexible, Rocket, Shield, Standard, Star, Up, Users } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  Check, Star, ArrowRight, Users, Zap, Shield, 
-  Brain, Atom, Rocket, Globe, Award
-} from 'lucide-react';
-
 export default function Pricing() {
   const pricingPlans = [
     {

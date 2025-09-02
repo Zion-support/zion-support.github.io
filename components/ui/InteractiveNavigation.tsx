@@ -1,4 +1,6 @@
 import React from 'react';
+import { Home } from 'lucide-react';
+
 import Link from 'next/link';
 
 const InteractiveNavigation: React.FC = () => {

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
+import { ChevronDown, Frequently, HelpCircle, Mail, MessageCircle, Phone, Yes } from 'lucide-react';
 
 const FAQ: React.FC = () => {
   const [openItems, setOpenItems] = React.useState<number[]>([]);

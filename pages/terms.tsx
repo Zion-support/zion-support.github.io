@@ -1,6 +1,39 @@
 import type { NextPage } from 'next';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Layout from '../components/Layout';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { AlertTriangle, By, CheckCircle, Cloud, Common, Copy, FileText, For, Late, Mobile, Phone, Scale, Shield, To, User, XCircle } from 'lucide-react';
 
 const Terms: NextPage = () => {
   return (
@@ -72,9 +105,9 @@ const Terms: NextPage = () => {
                 <li>Provide accurate and complete information</li>
                 <li>Use our services in compliance with applicable laws</li>
                 <li>Respect intellectual property rights</li>
-                <li>Not engage in any illegal or harmful activities</li>
-                <li>Maintain the confidentiality of any credentials provided</li>
-                <li>Notify us of any security breaches or unauthorized access</li>
+                <li>Not engage in unknown illegal or harmful activities</li>
+                <li>Maintain the confidentiality of unknown credentials provided</li>
+                <li>Notify us of unknown security breaches or unauthorized access</li>
               </ul>
             </div>
 
@@ -85,10 +118,10 @@ const Terms: NextPage = () => {
                 Prohibited Uses
               </h2>
               <p className="text-gray-600 mb-4">
-                You may not use our services for any of the following purposes:
+                You may not use our services for unknown of the following purposes:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>Violating any applicable laws or regulations</li>
+                <li>Violating unknown applicable laws or regulations</li>
                 <li>Transmitting malicious code or viruses</li>
                 <li>Attempting to gain unauthorized access to our systems</li>
                 <li>Interfering with the proper functioning of our services</li>
@@ -137,7 +170,7 @@ const Terms: NextPage = () => {
                 <li>Late payments may incur additional fees</li>
                 <li>Refunds are subject to our refund policy</li>
                 <li>Prices may change with reasonable notice</li>
-                <li>You are responsible for any applicable taxes</li>
+                <li>You are responsible for unknown applicable taxes</li>
               </ul>
             </div>
 
@@ -148,7 +181,7 @@ const Terms: NextPage = () => {
                 Limitation of Liability
               </h2>
               <p className="text-gray-600 mb-4">
-                To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                To the maximum extent permitted by law, Zion Tech Group shall not be liable for unknown indirect, incidental, special, consequential, or punitive damages, including but not limited to:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Loss of profits or revenue</li>
@@ -163,12 +196,12 @@ const Terms: NextPage = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Indemnification</h2>
               <p className="text-gray-600 mb-4">
-                You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from:
+                You agree to indemnify and hold harmless Zion Tech Group from unknown claims, damages, or expenses arising from:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your use of our services</li>
                 <li>Your violation of these Terms</li>
-                <li>Your violation of any third-party rights</li>
+                <li>Your violation of unknown third-party rights</li>
                 <li>Any content you submit or transmit</li>
               </ul>
             </div>
@@ -177,12 +210,12 @@ const Terms: NextPage = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Termination</h2>
               <p className="text-gray-600 mb-4">
-                We may terminate or suspend your access to our services at any time, with or without cause, with or without notice. Upon termination:
+                We may terminate or suspend your access to our services at unknown time, with or without cause, with or without notice. Upon termination:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your right to use our services will cease immediately</li>
                 <li>We may delete your account and data</li>
-                <li>You remain liable for any outstanding obligations</li>
+                <li>You remain liable for unknown outstanding obligations</li>
                 <li>Provisions that should survive termination will remain in effect</li>
               </ul>
             </div>
@@ -202,7 +235,7 @@ const Terms: NextPage = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to Terms</h2>
               <p className="text-gray-600 mb-4">
-                We reserve the right to modify these Terms at any time. We will notify users of any material changes by:
+                We reserve the right to modify these Terms at unknown time. We will notify users of unknown material changes by:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Posting the updated Terms on our website</li>
@@ -218,7 +251,7 @@ const Terms: NextPage = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
               <p className="text-gray-600 mb-4">
-                If you have any questions about these Terms of Service, please contact us:
+                If you have unknown questions about these Terms of Service, please contact us:
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2"><strong>Email:</strong> kleber@ziontechgroup.com</p>
@@ -246,7 +279,7 @@ const Terms: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Questions About Our Terms?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're here to help clarify any questions you may have about our Terms of Service.
+            We're here to help clarify unknown questions you may have about our Terms of Service.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react' import { Code, Search, Filter, Copy, Download, Star, Eye, Zap, FileText, Settings, Play, Save, Share2, Heart, MessageSquare, GitBranch, Clock, Users, TrendingUp, CheckCircle, AlertCircle, Loader, X } from 'lucide-react'  const mockCodeSnippets = [ { id: '1', title: 'React Custom Hook for API Calls', description: 'A reusable hook for making API calls with loading and error states', language: 'typescript', code: `import { useState, useEffect } from 'react'  interface UseApiOptions {
+import React, { useState, useEffect } from 'react' import { AlertCircle, CheckCircle, Clock, Code, Copy, Download, Eye, FileText, Filter, GitBranch, Heart, Loader, Map, MessageSquare, Play, Record, Save, Search, Settings, Share2, Star, TrendingUp, Users, X, Zap } from 'lucide-react';  const mockCodeSnippets = [ { id: '1', title: 'React Custom Hook for API Calls', description: 'A reusable hook for making API calls with loading and error states', language: 'typescript', code: `import { useState, useEffect } from 'react'  interface UseApiOptions {
    url: string;
    method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
    body?: any;

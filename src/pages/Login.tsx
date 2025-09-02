@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+import { ArrowRight, Back, Eye, EyeOff, Lock, Mail } from 'lucide-react';
 
 export default function Login() {
   const [formData, setFormData] = useState({

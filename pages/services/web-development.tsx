@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
+import { Award, Best, Code, Cross, Globe, Mobile, Regular, Smartphone, Today, User, Users, Zap } from 'lucide-react';
+
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { Code, Globe, Smartphone, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
-
 const WebDevelopment: NextPage = () => {
   return (
     <Layout

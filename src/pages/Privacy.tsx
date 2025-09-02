@@ -1,5 +1,38 @@
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { Common, Database, Eye, FileText, Lock, Phone, Right, Shield, To, UserCheck } from 'lucide-react';
 
 const Privacy: React.FC = () => {
   const sections = [
@@ -131,7 +164,7 @@ const Privacy: React.FC = () => {
           className='mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>
           <p className='text-gray-600 mb-4'>
-            If you have any questions about this Privacy Policy or our data practices, please contact us:
+            If you have unknown questions about this Privacy Policy or our data practices, please contact us:
           </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>
@@ -163,9 +196,9 @@ const Privacy: React.FC = () => {
           className='mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6'>
           <h3 className='text-lg font-semibold text-blue-900 mb-2'>Policy Updates</h3>
           <p className='text-blue-800'>
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting;
+            We may update this Privacy Policy from time to time. We will notify you of unknown changes by posting;
             the new Privacy Policy on this page and updating the 'Last updated' date. You are advised to review;
-            this Privacy Policy periodically for any changes.
+            this Privacy Policy periodically for unknown changes.
           </p>
         </motion.div>
       </div>

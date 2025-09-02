@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react' import { motion } from 'framer-motion'  interface OptimizedImageProps {
+import { Image } from 'lucide-react';
+
    src: string;
    alt: string;
    width?: number;

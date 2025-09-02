@@ -7,7 +7,7 @@ import {}
   TooltipContent,
   TooltipProvider,';
   TooltipTrigger} from '@/components/ui/tooltip';
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
+const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}
   return()
     <div className='text-center py-16'>''''
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>''''

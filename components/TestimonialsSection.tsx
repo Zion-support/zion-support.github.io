@@ -1,28 +1,61 @@
 import React from 'react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { motion } from 'framer-motion';
 import { Card, CardContent } from './ui/Card';
-import { Star } from 'lucide-react';
+import { Star, User } from 'lucide-react';
 
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'CEO',
-      company: 'TechStart Inc.',
+      compunknown: 'TechStart Inc.',
       content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
       rating: 5,
       avatar: '/api/placeholder/64/64'},
     {
       name: 'Michael Chen',
       role: 'CTO',
-      company: 'DataCorp',
+      compunknown: 'DataCorp',
       content: 'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
       rating: 5,
       avatar: '/api/placeholder/64/64'},
     {
       name: 'Emily Rodriguez',
       role: 'VP of Operations',
-      company: 'GrowthCo',
+      compunknown: 'GrowthCo',
       content: 'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
       rating: 5,
       avatar: '/api/placeholder/64/64'}
@@ -66,7 +99,7 @@ const TestimonialsSection: React.FC = () => {
                     </div>
                     <div>
                       <div className='font-semibold text-gray-900'>{testimonial.name}</div>
-                      <div className='text-sm text-gray-500'>{testimonial.role}, {testimonial.company}</div>
+                      <div className='text-sm text-gray-500'>{testimonial.role}, {testimonial.compunknown}</div>
                     </div>
                   </div>
                 </CardContent>

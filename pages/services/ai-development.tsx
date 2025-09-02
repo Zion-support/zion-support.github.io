@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
+import { Award, Brain, Cloud, Globe, Image, Target, Today, Users, Zap } from 'lucide-react';
+
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { Brain, Zap, Target, CheckCircle, ArrowRight, Users, Award, Globe } from 'lucide-react';
-
 const AIDevelopment: NextPage = () => {
   return (
     <Layout

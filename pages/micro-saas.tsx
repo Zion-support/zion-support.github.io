@@ -1,39 +1,8 @@
 import React from 'react';
+import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  Code,
-  Cloud,
-  Zap,
-  Users,
-  BarChart3,
-  Shield,
-  Smartphone,
-  Globe,
-  Database,
-  Settings,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  TrendingUp,
-  Target,
-  FileText,
-  MessageSquare,
-  Eye,
-  Brain,
-  Mail,
-  Phone,
-  MapPin,
-  Monitor,
-  Server,
-  Lock,
-  Cpu,
-  Network,
-  Terminal,
-  Calendar
-} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function MicroSaaS() {

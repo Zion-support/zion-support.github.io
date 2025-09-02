@@ -1,11 +1,8 @@
 import React from 'react';
+import { ArrowRight, Award, Building, CheckCircle, Cloud, Deep, ExternalLink, Globe, Grid, Star } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  Handshake, Globe, Award, Users, Building, 
-  Star, CheckCircle, ArrowRight, ExternalLink 
-} from 'lucide-react';
-
 export default function Partners() {
   const partners = [
     {

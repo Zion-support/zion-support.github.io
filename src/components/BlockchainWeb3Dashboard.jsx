@@ -1,7 +1,8 @@
 import { useState, useCallback } from 'react';
+import { Coins, Download, From, Image, Network, Plus, Quick, To, Wallet } from 'lucide-react';
+
 import { motion, AnimatePresence } from 'framer-motion';
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {
+export const BlockchainWeb3Dashboard = memo(({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true})';
     const [activeTab, setActiveTab] = useState('overview');

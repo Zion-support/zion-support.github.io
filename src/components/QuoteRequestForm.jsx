@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { AlertCircle, Building, CheckCircle, High, Low, Mail, Phone, To, Under, Within } from 'lucide-react';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/Button.jsx';
 import { Input } from './ui/input';

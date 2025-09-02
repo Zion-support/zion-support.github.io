@@ -5,8 +5,7 @@ export function usePerformanceMonitoring() {
   useEffect(() => {
     const sendToAnalytics = (metric) => {
       // Send to your analytics service
-      console.log('Performance metric:', metric);
-      
+
       // Example: Send to Google Analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', metric.name, {

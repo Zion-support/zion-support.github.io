@@ -1,8 +1,41 @@
 import React from 'react';
+import { By, Common, File, Phone, User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
-
 export default function TermsOfService() {
   return (
     <>
@@ -67,9 +100,9 @@ export default function TermsOfService() {
                 </p>
                 <ul className="text-gray-300 space-y-2 mt-4">
                   <li>• Modify or copy the materials</li>
-                  <li>• Use the materials for any commercial purpose</li>
-                  <li>• Attempt to reverse engineer any software</li>
-                  <li>• Remove any copyright or proprietary notations</li>
+                  <li>• Use the materials for unknown commercial purpose</li>
+                  <li>• Attempt to reverse engineer unknown software</li>
+                  <li>• Remove unknown copyright or proprietary notations</li>
                 </ul>
               </div>
 
@@ -80,8 +113,8 @@ export default function TermsOfService() {
                   uninterrupted access to our services.
                 </p>
                 <p className="text-gray-300">
-                  We reserve the right to modify, suspend, or discontinue any part of our 
-                  services at any time without notice.
+                  We reserve the right to modify, suspend, or discontinue unknown part of our 
+                  services at unknown time without notice.
                 </p>
               </div>
 
@@ -94,26 +127,26 @@ export default function TermsOfService() {
                   <li>• Provide accurate and complete information</li>
                   <li>• Maintain the security of your account credentials</li>
                   <li>• Use our services in compliance with applicable laws</li>
-                  <li>• Not engage in any harmful or illegal activities</li>
+                  <li>• Not engage in unknown harmful or illegal activities</li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">
                 <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>
                 <p className="text-gray-300 mb-4">
-                  In no event shall Zion Tech Group or its suppliers be liable for any damages 
+                  In no event shall Zion Tech Group or its suppliers be liable for unknown damages 
                   arising out of the use or inability to use our services.
                 </p>
                 <p className="text-gray-300">
                   This limitation applies to all claims, whether based on contract, tort, 
-                  or any other legal theory.
+                  or unknown other legal theory.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Information</h2>
                 <p className="text-gray-300 mb-4">
-                  If you have any questions about these Terms of Service, please contact us:
+                  If you have unknown questions about these Terms of Service, please contact us:
                 </p>
                 <div className="text-gray-300">
                   <p>Email: legal@ziontechgroup.com</p>

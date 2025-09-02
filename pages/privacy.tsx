@@ -1,6 +1,39 @@
 import type { NextPage } from 'next';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Layout from '../components/Layout';
-import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react';
+import { Common, Database, Eye, FileText, Lock, Party, Phone, Regular, Secure, Shield, UserCheck, With } from 'lucide-react';
 
 const Privacy: NextPage = () => {
   return (
@@ -175,7 +208,7 @@ const Privacy: NextPage = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to This Privacy Policy</h2>
               <p className="text-gray-600 mb-4">
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                We may update this Privacy Policy from time to time. We will notify you of unknown changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
               </p>
             </div>
 
@@ -186,7 +219,7 @@ const Privacy: NextPage = () => {
                 Contact Us
               </h2>
               <p className="text-gray-600 mb-4">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
+                If you have unknown questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2"><strong>Email:</strong> kleber@ziontechgroup.com</p>
@@ -203,7 +236,7 @@ const Privacy: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Questions About Your Privacy?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're here to help. Contact us if you have any questions about how we handle your personal information.
+            We're here to help. Contact us if you have unknown questions about how we handle your personal information.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

@@ -1,12 +1,8 @@
 import React from 'react';
+import { Atom, Award, Brain, CheckCircle, Deep, Globe, Mail, Open, Shield, Star, Users } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  Linkedin, Twitter, Github, Mail, Award, Users, 
-  Brain, Atom, Shield, Rocket, Globe, Code, 
-  Star, CheckCircle, TrendingUp, Target 
-} from 'lucide-react';
-
 export default function Team() {
   const teamMembers = [
     {

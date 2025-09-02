@@ -1,26 +1,40 @@
 import React from 'react';
+import { ArrowRight, Brain, Cloud, Network, Phone, Mail, User, Heart, Info } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Link from 'next/link';
-import {
-  Brain,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  Youtube,
-  Instagram,
-  ArrowRight,
-  Heart,
-  Cloud,
-  Database,
-  Code,
-  Shield,
-  Users,
-  BarChart3,
-  Settings,
-  Zap
-} from 'lucide-react';
 import { Button } from '../ui/Button';
 
 const Footer: React.FC = () => {
@@ -81,7 +95,7 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
@@ -99,7 +113,7 @@ const Footer: React.FC = () => {
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
-          {/* Company Info */}
+          {/* Compunknown Info */}
           <div className='lg:col-span-1'>
             <Link href='/' className='flex items-center space-x-2 mb-6'>
               <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>

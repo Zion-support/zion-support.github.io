@@ -1,8 +1,41 @@
-import React, { useState, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Brain, Shield, Cloud, BarChart3, Zap, Search, Filter, Star, Users, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, DollarSign, Clock, Target, Rocket, Globe, Cpu, Lock, Database, Network, Eye, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Heart, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Gauge    } from 'lucide-react' import { SEO } from '@/components/SEO'  interface Service {
+import React, { useState, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { ArrowRight, Atom, BarChart3, Better, BookOpen, Brain, Building, Car, CheckCircle, Clock, Cloud, Common, Cpu, Database, DollarSign, Eye, Factory, File, Filter, Gauge, Globe, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, MessageCircle, Monitor, Network, Phone, Rocket, Scale, Search, Server, Shield, ShoppingCart, Smartphone, Star, Target, TrendingUp, Users, Zap } from 'lucide-react'; import { SEO } from '@/components/SEO'  interface Service {
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
   id: string;
    title: string;
    description: string;
-   icon: React.ComponentType<any>
+   icon: React.ComponentType<unknown>
    category: string;
    price: { monthly: number;
    yearly: number;

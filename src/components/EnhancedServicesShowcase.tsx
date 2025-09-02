@@ -1,21 +1,8 @@
 
 ;
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Globe,
-  Zap,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
-  Search} from 'lucide-react';
+import { Atom, Brain, Cloud, Cpu, From, Shield } from 'lucide-react';
+
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [{
       title: 'AI Workflow Automation',

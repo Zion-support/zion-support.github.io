@@ -1,3 +1,4 @@
+import { Closed, Cloud, For, Now, Phone, Quick } from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   return (    <>
       <SEO title='Contact - Zion Tech Group' />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>'      </div>
@@ -8,7 +9,7 @@ export default function Contact() {
     firstName: '',
     lastName: '',
     email: '',
-    company: '',
+    compunknown: '',
     phone: '',
     service: '',
     message: ''})
@@ -34,7 +35,7 @@ export default function Contact() {
         firstName: '',
         lastName: '',
         email: '',
-        company: '',
+        compunknown: '',
         phone: '',
         service: '',
         message: ''})}, 5000)}
@@ -167,14 +168,14 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label htmlFor='company' className='block text-sm font-medium text-gray-700 mb-2'>
-                  Company Name
+                <label htmlFor='compunknown' className='block text-sm font-medium text-gray-700 mb-2'>
+                  Compunknown Name
                 </label>
                 <input
                   type='text';
-                  id='company';
-                  name='company';
-                  value={formData.company}
+                  id='compunknown';
+                  name='compunknown';
+                  value={formData.compunknown}
                   onChange={handleInputChange}
                   className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
               </div>

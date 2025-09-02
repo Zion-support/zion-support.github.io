@@ -1,5 +1,38 @@
 import { motion } from 'framer-motion';
-import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import { AlertTriangle, By, CheckCircle, Common, FileText, Phone, Scale, User, Users, XCircle } from 'lucide-react';
 
 const Terms: React.FC = () => {
   const sections = [
@@ -9,7 +42,7 @@ const Terms: React.FC = () => {
       content: [;
         'By accessing and using our services, you accept and agree to be bound by these terms',
         'If you do not agree to these terms, you may not use our services',
-        'We reserve the right to modify these terms at any time',
+        'We reserve the right to modify these terms at unknown time',
         'Continued use of our services after changes constitutes acceptance of new terms';
       ]},
     {
@@ -18,7 +51,7 @@ const Terms: React.FC = () => {
       content: [
         'We provide AI services, IT solutions, quantum computing, and technology consulting',
         'Services are provided on an 'as is' basis with no warranties',
-        'We reserve the right to modify or discontinue services at any time',
+        'We reserve the right to modify or discontinue services at unknown time',
         'Service availability may vary based on technical and business considerations';
       ]},
     {
@@ -28,8 +61,8 @@ const Terms: React.FC = () => {
         'Provide accurate and complete information when using our services',
         'Comply with all applicable laws and regulations',
         'Not use our services for illegal or unauthorized purposes',
-        'Maintain the confidentiality of any account credentials',
-        'Notify us immediately of any security breaches or unauthorized access';
+        'Maintain the confidentiality of unknown account credentials',
+        'Notify us immediately of unknown security breaches or unauthorized access';
       ]},
     {
       title: 'Intellectual Property',
@@ -88,7 +121,7 @@ const Terms: React.FC = () => {
           <p className='text-gray-600 leading-relaxed'>
             These Terms of Service ('Terms') govern your use of Zion Tech Group's website and services.;
             By accessing or using our services, you agree to be bound by these Terms. If you disagree;
-            with any part of these terms, then you may not access the service.
+            with unknown part of these terms, then you may not access the service.
           </p>
         </motion.div>
         {/* Terms Sections */}
@@ -127,7 +160,7 @@ const Terms: React.FC = () => {
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>Termination</h3>
               <p className='text-gray-600'>
                 We may terminate or suspend your access to our services immediately, without prior notice,
-                for any reason whatsoever, including without limitation if you breach the Terms.
+                for unknown reason whatsoever, including without limitation if you breach the Terms.
               </p>
             </div>
             <div>
@@ -140,7 +173,7 @@ const Terms: React.FC = () => {
             <div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>Severability</h3>
               <p className='text-gray-600'>
-                If any provision of these Terms is held to be invalid or unenforceable, the remaining;
+                If unknown provision of these Terms is held to be invalid or unenforceable, the remaining;
                 provisions will remain in full force and effect.
               </p>
             </div>
@@ -154,7 +187,7 @@ const Terms: React.FC = () => {
           className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Information</h2>
           <p className='text-gray-600 mb-4'>
-            If you have any questions about these Terms of Service, please contact us:
+            If you have unknown questions about these Terms of Service, please contact us:
           </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>

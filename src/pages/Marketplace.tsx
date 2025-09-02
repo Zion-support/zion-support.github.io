@@ -1,12 +1,8 @@
 import React from 'react';
+import { ArrowRight, Brain, Can, Database, ExternalLink, For, Heart, Rocket, Shield, Star } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
-  ShoppingCart, Star, Users, Code, Database, 
-  Shield, Rocket, Brain, ArrowRight, Filter,
-  Search, Grid, List, Heart, ExternalLink
-} from 'lucide-react';
-
 export default function Marketplace() {
   const products = [
     {

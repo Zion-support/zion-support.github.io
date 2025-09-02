@@ -1,4 +1,6 @@
 import React, { useState } from 'react'';
+import { Active, Activity, BarChart3, Brain, Cards, PieChart, Rocket, Shield, Star, Target, TrendingDown, TrendingUp, Users } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import {}
   TrendingUp,

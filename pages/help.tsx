@@ -1,7 +1,40 @@
 import type { NextPage } from 'next';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react';
+import { BookOpen, Can, CheckCircle, Clock, Common, FileText, Frequently, HelpCircle, Mail, MessageCircle, Phone, Quick, Search, Users, Video, Within, Yes } from 'lucide-react';
 
 const Help: NextPage = () => {
   const faqs = [
@@ -222,7 +255,7 @@ const Help: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Still Need Help?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Can't find what you're looking for? Our support team is ready to help you with any questions or concerns.
+            Can't find what you're looking for? Our support team is ready to help you with unknown questions or concerns.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

@@ -1,3 +1,4 @@
+import { Record } from 'lucide-react';
 interface ProfileRatingsProps {
   userId: string;
    averageRating?: number;

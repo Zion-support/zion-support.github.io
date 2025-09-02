@@ -1,4 +1,6 @@
 import React from 'react';
+import { Home } from 'lucide-react';
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 // Import all the page components

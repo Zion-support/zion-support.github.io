@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'';
+import { Filter, Grid, Info, Neon, Search } from 'lucide-react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices.jsx';
-const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)
+const ServiceCard = memo(({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)
     return (<motion.div initial = {}
   { opacity: 0, y: 50,
   scale: 0.9}} animate = {}

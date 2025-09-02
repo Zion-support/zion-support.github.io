@@ -1,4 +1,39 @@
 import React from 'react.ts';
+import { User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { Helmet              } from 'react-helmet-async.ts';
 import ModernHeader from "./ModernHeader";
 import ModernFooter from "./ModernFooter";
@@ -17,7 +52,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
+  canonical = 'https: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknown//ziontechgroup.com'
 })               => {
 
   return (
@@ -79,12 +114,6 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "addressRegion": "DE",
                 "postalCode": "19709",
   "addressCountry": "US"
-              
-
-
-
-
-
 
 },
               "contactPoint": {
@@ -95,7 +124,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "email": "kleber@ziontechgroup.com"
               },
               "sameAs"[
-                "https://linkedin.com/company/ziontechgroup",
+                "https://linkedin.com/compunknown/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
               ]

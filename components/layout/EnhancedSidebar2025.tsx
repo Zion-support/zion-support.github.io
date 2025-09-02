@@ -1,14 +1,41 @@
 import React, { useState, useEffect              } from 'react.ts';
-import Link from 'next/link.ts';
-import { useRouter               } from 'next/router.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
-              } from 'lucide-react.ts';
+import { Users, Zap, Shield, Globe, Award, Brain, Cloud, Target, Phone, Mail, X, ChevronDown, ChevronRight, Settings, User, Eye, Heart, Home } from 'lucide-react';
 
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import Link from 'next/link.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 interface SidebarItem {
 
   name: string;
@@ -23,23 +50,12 @@ interface SidebarItem {
   isPremium?: boolean;
 category?: string;
 
-
-
-
-
-
-
-
-
-
-
-
 }
 
 const sidebarSections = [
   {
 
-    title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary Services',
+    title: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknown'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items[
@@ -264,7 +280,7 @@ const sidebarSections = [
         description: 'Get help and support',
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
-{ name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
+{ name: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknown'Training Programs', href: '/training';
 },;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
@@ -279,7 +295,7 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
   isOpen: boolean;
   onClose: ()               => void}
 
-export default function EnhancedSidebar2025(...args[]: any):  {
+export default function EnhancedSidebar2025(...args[]: unknown):  {
 
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
@@ -314,7 +330,7 @@ export default function EnhancedSidebar2025(...args[]: any):  {
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
+  const isActive = (href: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring)               => router.pathname === href;
 
   return (
     <>
@@ -340,11 +356,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
 
   { type: 'spring', damping: 25,
   stiffness: 200 
-
-
-
-
-
 
 }}
         className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
@@ -428,32 +439,17 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   height: 'auto' 
 
-
-
-
-
-
 }}
                     exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                     transition={{ duration: 0.3 }}
@@ -494,32 +490,17 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }}
                                 animate = {
 
   { opacity: 1,
   height: 'auto' 
 
-
-
-
-
-
 }}
                                 exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                                 transition={{ duration: 0.3 }}

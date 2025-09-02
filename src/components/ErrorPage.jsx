@@ -1,4 +1,6 @@
 ;import { Link } from 'react-router-dom';
+import { Home } from 'lucide-react';
+
 export const ErrorPage = ({}
   statusCode = 404,';
   title = 'Page Not Found',';

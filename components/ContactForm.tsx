@@ -1,12 +1,45 @@
 import React, { useState } from 'react';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
 
 interface FormData {
 
   name: string;
   email: string;
-  company: string;
+  compunknown: string;
   service: string;
   message: string;
 }
@@ -17,7 +50,7 @@ const ContactForm: React.FC = () => {
 
     name: '',
     email: '',
-    company: '',
+    compunknown: '',
     service: '',
     message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -86,7 +119,7 @@ const ContactForm: React.FC = () => {
 
         name: '',
         email: '',
-        company: '',
+        compunknown: '',
         service: '',
         message: ''});
     }, 3000);
@@ -214,7 +247,7 @@ const ContactForm: React.FC = () => {
 
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder="john@company.com"
+                placeholder="john@compunknown.com"
               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -225,19 +258,19 @@ const ContactForm: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label
-                htmlFor="company"
+                htmlFor="compunknown"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Company
+                Compunknown
               </label>
               <input
                 type="text"
-                id="company"
-                name="company"
-                value={formData.company}
+                id="compunknown"
+                name="compunknown"
+                value={formData.compunknown}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Your Company"
+                placeholder="Your Compunknown"
               />
             </div>
 

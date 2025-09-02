@@ -1,6 +1,39 @@
 import type { NextPage } from 'next';
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 import Layout from '../components/Layout';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { CheckCircle, Clock, Closed, Cloud, Common, File, Mail, MapPin, Mobile, Now, Phone, Send, User } from 'lucide-react';
 
 const Contact: NextPage = () => {
   return (
@@ -70,15 +103,15 @@ const Contact: NextPage = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
+                  <label htmlFor="compunknown" className="block text-sm font-medium text-gray-700 mb-2">
+                    Compunknown
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
+                    id="compunknown"
+                    name="compunknown"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Company"
+                    placeholder="Your Compunknown"
                   />
                 </div>
 
