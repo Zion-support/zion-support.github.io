@@ -31,7 +31,8 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle
+  HelpCircle,
+  Network
 } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
@@ -118,11 +119,10 @@ const PricingGuide: React.FC = () => {
         "Patient data integration",
         "HIPAA compliance",
         "Clinical decision support",
-        "Training and certification"
       ],
-      price: "$15,000 - $35,000",
+      price: "$8,000 - $20,000",
       timeline: "8-12 weeks",
-      roi: "400% ROI within 8 months"
+      roi: "400% ROI within 9 months"
     }
   ];
 
