@@ -1,6 +1,9 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';'
+import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from
+  'lucide-react';
 export { function };
 export default function HealthcareSolutions() {}
     const solutions = []
@@ -210,10 +213,10 @@ export default function HealthcareSolutions() {}
 :pages.disabled/solutions/HealthcareSolutions.jsx
             Ready to Transform Healthcare?"
           </h2>""
-          <p className="text-xl text-gray-300 mb-8">'
-            Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency"
+          <p className="text-xl text-gray-300 mb-8">,
+  Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency"
           </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">""
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation"</Link>""
             <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
@@ -223,5 +226,6 @@ export default function HealthcareSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-    </div>);'"
-}}}}'"'"
+    </div>);"
+}}}}
+  '"'"

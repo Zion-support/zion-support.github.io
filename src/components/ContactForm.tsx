@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from
+  'react';
+import { motion } from
+  'framer-motion';
 import { 
   Mail, 
   Phone, 
@@ -10,23 +12,33 @@ import {
   User,
   Building,
   MessageSquare
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
+    firstName:,
+  ',
+    lastName: ',
+    email:,
+  ',
+    company: ',
+    phone:,
+  ',
+    service: ',
+    message:,
+  ',
+    budget: ',
+    timeline: '
+  '
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle
+  ' | 'success
+  ' | 'error
+  '>('idle
+  ');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -43,52 +55,60 @@ export const ContactForm: React.FC = () => {
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      setSubmitStatus(,
+  success
+  ');
       setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
-        timeline: ''
+        firstName: ',
+        lastName:,
+  ',
+        email: ',
+        company:,
+  ',
+        phone: ',
+        service:,
+  ',
+        message: ',
+        budget:,
+  ',
+        timeline: '
       });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus(
+  'error');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const services = [
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Enterprise Security',
-    'Digital Transformation',
-    'Micro SAAS Services',
-    'IT Onsite Services',
-    'Custom Development',
-    'Other'
+  'AI & Machine Learning',
+  'Cloud & DevOps',
+  'Enterprise Security',
+  'Digital Transformation',
+  'Micro SAAS Services',
+  'IT Onsite Services',
+  'Custom Development',
+  'Other'
   ];
 
   const budgets = [
-    'Under $10K',
-    '$10K - $50K',
-    '$50K - $100K',
-    '$100K - $500K',
-    'Over $500K'
+  'Under $10K',
+  '$10K - $50K',
+  '$50K - $100K',
+  '$100K - $500K',
+  'Over $500K'
   ];
 
   const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Long-term (6+ months)'
+  'Immediate (1-2 weeks)',
+  'Quick (1-2 months)',
+  'Standard (3-6 months)',
+  'Long-term (6+ months)'
   ];
 
-  if (submitStatus === 'success') {
+  if (submitStatus ===
+  'success') {
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -100,10 +120,12 @@ export const ContactForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-zion-slate-light mb-6">
-          Your message has been sent successfully. We'll get back to you within 24 hours.
+          Your message has been sent successfully. We
+  'll get back to you within 24 hours.
         </p>
         <button
-          onClick={() => setSubmitStatus('idle')}
+          onClick={() => setSubmitStatus('idle
+  ')}
           className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
         >
           Send Another Message
@@ -316,7 +338,8 @@ export const ContactForm: React.FC = () => {
             />
           </div>
 
-          {submitStatus === 'error' && (
+          {submitStatus ===
+  'error' && (
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">
               <AlertCircle className="w-5 h-5" />
               <span>There was an error sending your message. Please try again.</span>

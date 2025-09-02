@@ -1,4 +1,5 @@
-import React from 'react';
+import React from
+  'react';
 
 export default function ErrorBoundaryFallback({ error, resetError, retryCount = 0 }) {
   const maxRetries = 3;

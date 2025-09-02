@@ -1,5 +1,7 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from
+  'react';
+import { Link, useLocation } from
+  'react-router-dom';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -10,12 +12,18 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
 
   const items = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Enterprise', href: '/enterprise' },
-    { label: 'Request Quote', href: '/request-quote' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' }
+    { label:,
+  Home', href: '/ },
+    { label:,
+  Services', href: '/services },
+    { label:,
+  Enterprise', href: '/enterprise },
+    { label:,
+  Request Quote', href: '/request-quote },
+    { label:,
+  About', href: '/about },
+    { label:,
+  Contact', href: '/contact }
   ];
 
   if (!isOpen) return null;
@@ -32,7 +40,8 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
             key={item.href}
             to={item.href}
             className={`block rounded-md px-3 py-2 text-sm ${
-              location.pathname === item.href ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'
+              location.pathname === item.href ?,
+  bg-blue-50 text-blue-700': 'text-gray-700 hover:bg-gray-50
             }`}
           >
             {item.label}

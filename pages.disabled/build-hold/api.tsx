@@ -1,15 +1,62 @@
-import React from 'react';'import type { NextPage } from 'next';'import MainLayout from '../components/layout/MainLayout';'import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from 'lucide-react';'import Link from 'next/link';''const API: NextPage = () => {
+React from,
+  react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../components/layout/MainLayout';
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
+  'lucide-react';'import Link from
+  'next/link';'
+  'const API: NextPage = () => {
   const apiEndpoints = [;
     {;
-      method: 'GET', endpoint: '/api/v1/users','      description: 'Retrieve user information', category: 'Users''    },'    {;
-      method: 'POST', endpoint: '/api/v1/users','      description: 'Create a new user', category: 'Users''    },'    {;
-      method: 'GET', endpoint: '/api/v1/projects','      description: 'List all projects', category: 'Projects''    },'    {;
-      method: 'POST', endpoint: '/api/v1/projects','      description: 'Create a new project', category: 'Projects''    },'    {;
-      method: 'GET', endpoint: '/api/v1/analytics','      description: 'Get analytics data', category: 'Analytics''    },'    {;
-      method: 'POST', endpoint: '/api/v1/webhooks','      description: 'Create a webhook', category: 'Webhooks''    }'  ];
+      method: 'GET, endpoint:,
+  /api/v1/users
+  ','      description: 'Retrieve user information, category:,
+  Users''    },
+  '    {;
+      method: 'POST, endpoint:,
+  /api/v1/users
+  ','      description: 'Create a new user, category:,
+  Users''    },
+  '    {;
+      method: 'GET, endpoint:,
+  /api/v1/projects
+  ','      description: 'List all projects, category:,
+  Projects''    },
+  '    {;
+      method: 'POST, endpoint:,
+  /api/v1/projects
+  ','      description: 'Create a new project, category:,
+  Projects''    },
+  '    {;
+      method: 'GET, endpoint:,
+  /api/v1/analytics
+  ','      description: 'Get analytics data, category:,
+  Analytics''    },
+  '    {;
+      method: 'POST, endpoint:,
+  /api/v1/webhooks
+  ','      description: 'Create a webhook, category:,
+  Webhooks''    }
+  '  ];
 
   const sdkLanguages = [;
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' }, { name: 'Python', version: '1.8.2', icon: '🐍' },'    { name: 'PHP', version: '1.5.0', icon: '🐘' }, { name: 'Java', version: '1.3.0', icon: '☕' },'    { name: 'Go', version: '1.2.0', icon: '🐹' }, { name: 'Ruby', version: '1.1.0', icon: '💎' }'  ];'
+    { name: 'JavaScript, version:,
+  2.1.0
+  ', icon: '🟨 }, { name:,
+  Python
+  ', version: '1.8.2, icon:,
+  🐍
+  ' },'    { name: 'PHP, version:,
+  1.5.0', icon: '🐘 }, { name:,
+  Java', version: '1.3.0, icon:,
+  ☕' },
+  '    { name: 'Go, version:,
+  1.2.0
+  ', icon: '🐹 }, { name:,
+  Ruby
+  ', version: '1.1.0, icon: '💎
+  ' }'  ];'
   return (
     <MainLayout
       title="API Reference - Zion Tech Group""      description="Complete API reference and documentation for Zion Tech Group services.""    >"      {/* Hero Section */}
@@ -64,7 +111,14 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
           </div>
 
           <div className="max-w-6xl mx-auto">"            <div className="bg-white rounded-lg shadow-lg overflow-hidden">"              <div className="overflow-x-auto">"                <table className="w-full">"                  <thead className="bg-gray-50">"                    <tr>"                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Method</th>"                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Endpoint</th>"                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>"                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>"                    </tr>"                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">"                    {apiEndpoints.map((endpoint, index) => ("                      <tr key={index} className="hover: bg-gray-50">"                        <td className="px-6 py-4 whitespace-nowrap">"                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${"                            endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :'                            endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :'                            endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :'                            'bg-red-100 text-red-800''                          }`}>'                            {endpoint.method}`                          </span>
+                  <tbody className="bg-white divide-y divide-gray-200">"                    {apiEndpoints.map((endpoint, index) => ("                      <tr key={index} className="hover: bg-gray-50">"                        <td className="px-6 py-4 whitespace-nowrap">"                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${"                            endpoint.method ===,
+  GET' ?
+  'bg-green-100 text-green-800': '                            endpoint.method === 'POST
+  ' ? 'bg-blue-100 text-blue-800
+  ' :'                            endpoint.method ===
+  'PUT' ?
+  'bg-yellow-100 text-yellow-800' :
+  '                            'bg-red-100 text-red-800'                          }`}>'                            {endpoint.method}`                          </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">"                          {endpoint.endpoint}"                        </td>
                         <td className="px-6 py-4 text-sm text-gray-600">"                          {endpoint.description}"                        </td>
