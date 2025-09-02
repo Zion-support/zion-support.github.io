@@ -1,4 +1,22 @@
-import React from 'react';'import { Link } from 'react-router-dom';'import { ;'  Brain, Mail,
+import React from 'react';
+import Link from 'next/link';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 text-white py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <p className="text-sm text-gray-300">© {new Date().getFullYear()} Zion Tech Group</p>
+        <nav className="flex gap-6 text-sm">
+          <Link href="/privacy" className="hover:text-white text-gray-300">Privacy</Link>
+          <Link href="/terms" className="hover:text-white text-gray-300">Terms</Link>
+          <Link href="/contact" className="hover:text-white text-gray-300">Contact</Link>
+        </nav>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
   Phone, MapPin,
   Linkedin, Twitter,
   Github, Youtube,

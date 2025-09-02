@@ -210,10 +210,4 @@ This is a proprietary project for Zion Tech Group. For feature requests or bug r
 ---
 
 **Zion Tech Group** - Transforming businesses through innovative technology solutions.
-<<<<<<< HEAD
 
-
----
-Automation summary: README refreshed 2025-09-02T14:59:22.867Z
-=======
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
