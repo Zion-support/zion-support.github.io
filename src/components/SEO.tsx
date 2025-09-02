@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -45,7 +46,7 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Additional SEO */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -61,7 +62,7 @@ export const SEO: React.FC<SEOProps> = ({
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
+            "telephone": "+1-302-464-0950",
             "contactType": "customer service"
           }
         })}

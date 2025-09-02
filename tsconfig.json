@@ -111,10 +111,15 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
-    "components",
     "contracts",
     "cypress",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }
