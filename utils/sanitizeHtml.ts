@@ -1,9 +1,6 @@
 // HTML sanitization utility to prevent CSP violations
+import DOMPurify from 'isomorphic-dompurify';
+
 export const sanitizeHtml = (html: string): string => {
-  if (!html) return "";
-
-  let sanitized = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "");
-  sanitized = sanitized.replace(/\s*on\w+\s*=\s*[""][^""]*[""]/g, "");
-
-  return sanitized;
+  return DOMPurify.sanitize(html);
 };

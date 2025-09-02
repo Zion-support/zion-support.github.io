@@ -1,120 +1,141 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class SecurityScanner {
   constructor() {
+    this.projectRoot = process.cwd();
     this.vulnerabilities = [];
-    this.securityScore = 100;
+    this.recommendations = [];
   }
 
-  async scanSecurity() {
-    this.scanDependencies();
-    this.scanCode();
-    this.scanConfiguration();
+  async scanDependencies() {
+    console.log('🔍 Scanning dependencies for vulnerabilities...');
     
-    console.log(`Security scan completed. Score: ${this.securityScore}/100`);
-    return {
-      score: this.securityScore,
-      vulnerabilities: this.vulnerabilities
-    };
-  }
-
-  scanDependencies() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
-      // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash', 'moment']; // Example
-      for (const [pkg, version] of Object.entries(dependencies)) {
-        if (vulnerablePackages.includes(pkg)) {
-          this.vulnerabilities.push({
-            type: 'vulnerable-dependency',
-            package: pkg,
-            version: version,
-            severity: 'medium'
-          });
-          this.securityScore -= 10;
-        }
-      }
+      execSync('npm audit', { stdio: 'pipe' });
+      console.log('✅ No critical vulnerabilities found');
     } catch (error) {
-      console.error('Error scanning dependencies:', error.message);
+      this.vulnerabilities.push('Dependency vulnerabilities detected');
+      this.recommendations.push('Run npm audit fix');
     }
   }
 
-  scanCode() {
-    const patterns = [
-      { pattern: /eval\(/, description: 'Use of eval() function', severity: 'high' },
-      { pattern: /innerHTML/, description: 'Potential XSS vulnerability', severity: 'medium' },
-      { pattern: /localStorage/, description: 'Sensitive data in localStorage', severity: 'low' }
+  async scanSecrets() {
+    console.log('🔐 Scanning for exposed secrets...');
+    
+    const sensitivePatterns = [
+      /password\s*[:=]\s*['"][^'"]+['"]/gi,
+      /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi,
+      /secret\s*[:=]\s*['"][^'"]+['"]/gi,
+      /token\s*[:=]\s*['"][^'"]+['"]/gi
     ];
     
-    this.scanFiles(patterns);
-  }
-
-  scanConfiguration() {
-    // Check for security headers
-    const nextConfig = path.join(__dirname, '..', '..', 'next.config.js');
-    if (fs.existsSync(nextConfig)) {
-      const content = fs.readFileSync(nextConfig, 'utf8');
-      if (!content.includes('securityHeaders')) {
-        this.vulnerabilities.push({
-          type: 'missing-security-headers',
-          description: 'No security headers configured',
-          severity: 'medium'
-        });
-        this.securityScore -= 15;
-      }
-    }
-  }
-
-  scanFiles(patterns) {
-    const directories = ['pages', 'components', 'utils'];
-    
-    for (const dir of directories) {
-      const dirPath = path.join(__dirname, '..', '..', dir);
-      if (fs.existsSync(dirPath)) {
-        this.scanDirectory(dirPath, patterns);
-      }
-    }
-  }
-
-  scanDirectory(dir, patterns) {
-    const files = fs.readdirSync(dir);
+    const files = this.findSourceFiles();
     
     for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        for (const pattern of sensitivePatterns) {
+          if (pattern.test(content)) {
+            this.vulnerabilities.push(`Potential secret in ${path.relative(this.projectRoot, file)}`);
+            this.recommendations.push(`Review ${path.relative(this.projectRoot, file)} for exposed secrets`);
+          }
+        }
+      } catch (error) {
+        // Skip files that can't be read
+      }
+    }
+    
+    console.log('✅ Secret scanning completed');
+  }
+
+  findSourceFiles() {
+    const files = [];
+    const dirs = ['src', 'components', 'pages', 'utils', 'hooks'];
+    
+    dirs.forEach(dir => {
+      const fullPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(fullPath)) {
+        this.findFilesRecursively(fullPath, files);
+      }
+    });
+    
+    return files.filter(file => 
+      file.endsWith('.js') || 
+      file.endsWith('.jsx') || 
+      file.endsWith('.ts') || 
+      file.endsWith('.tsx')
+    );
+  }
+
+  findFilesRecursively(dir, files) {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        this.scanDirectory(filePath, patterns);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
-        this.scanFile(filePath, patterns);
+        this.findFilesRecursively(fullPath, files);
+      } else {
+        files.push(fullPath);
       }
     }
   }
 
-  scanFile(filePath, patterns) {
-    const content = fs.readFileSync(filePath, 'utf8');
+  async scanConfiguration() {
+    console.log('⚙️  Scanning configuration files...');
     
-    for (const pattern of patterns) {
-      if (pattern.pattern.test(content)) {
-        this.vulnerabilities.push({
-          type: 'code-vulnerability',
-          file: filePath,
-          description: pattern.description,
-          severity: pattern.severity
-        });
-        
-        if (pattern.severity === 'high') this.securityScore -= 20;
-        else if (pattern.severity === 'medium') this.securityScore -= 10;
-        else this.securityScore -= 5;
+    const configFiles = ['package.json', 'next.config.js', '.env', '.env.local'];
+    
+    for (const file of configFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+        try {
+          const content = fs.readFileSync(filePath, 'utf8');
+          
+          // Check for insecure configurations
+          if (content.includes('NODE_ENV=development') && file.includes('.env')) {
+            this.recommendations.push(`Review ${file} for production-ready configuration`);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
       }
+    }
+    
+    console.log('✅ Configuration scanning completed');
+  }
+
+  async runSecurityScan() {
+    console.log('🛡️  Starting security scan...\n');
+    
+    await this.scanDependencies();
+    await this.scanSecrets();
+    await this.scanConfiguration();
+    
+    console.log('\n📊 Security Scan Summary:');
+    console.log(`Vulnerabilities found: ${this.vulnerabilities.length}`);
+    console.log(`Recommendations: ${this.recommendations.length}`);
+    
+    if (this.vulnerabilities.length > 0) {
+      console.log('\n⚠️  Vulnerabilities:');
+      this.vulnerabilities.forEach((vuln, index) => console.log(`${index + 1}. ${vuln}`));
+    }
+    
+    if (this.recommendations.length > 0) {
+      console.log('\n💡 Recommendations:');
+      this.recommendations.forEach((rec, index) => console.log(`${index + 1}. ${rec}`));
+    }
+    
+    if (this.vulnerabilities.length === 0) {
+      console.log('\n🎉 No security issues found!');
     }
   }
 }
 
 const scanner = new SecurityScanner();
-scanner.scanSecurity();
+scanner.runSecurityScan().catch(console.error);
