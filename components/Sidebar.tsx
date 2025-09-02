@@ -86,7 +86,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Help & Support', href: '/help', icon: HelpCircle },
     { name: 'Training', href: '/training', icon: Users },
     { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign }
+    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
+    { name: 'Search', href: '/search', icon: Search },
+    { name: 'Sitemap', href: '/sitemap', icon: Globe }
   ];
 
   const legal = [
