@@ -21,16 +21,18 @@ const SecurityEnhancer: React.FC = () => {
     cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = csp;
     document.head.appendChild(cspMeta);
-;
-    // Security headers;
-    const securityHeaders = {;
-      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',;
-      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',;
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()';
+
+    // Security headers
+    const securityHeaders = {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1 mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     };
-;
-    // Add security headers via meta tags;
-    Object.entries(securityHeaders).forEach(([name, value]) => {;
+
+    // Add security headers via meta tags
+    Object.entries(securityHeaders).forEach(([name, value]) => {
       const meta = document.createElement('meta');
       meta.httpEquiv = name;
       meta.content = value;

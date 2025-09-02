@@ -12,37 +12,52 @@ interface SEOOptimizerProps {
    noindex?: boolean;
    nofollow?: boolean;
 }
-;
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
-  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',;
-  ogType = 'website', canonicalUrl,;
-  structuredData, noindex = false,;
-  nofollow = false}) => {;
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
+  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics',
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  canonicalUrl,
+  structuredData,
+  noindex = false,
+  nofollow = false
+}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-;
-  // Default structured data for organization;
-  const defaultStructuredData = {;
-    '@context': 'https://schema.org', '@type': 'Organization',;
-    'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',;
-    'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',;
-    'address': {;
-      '@type': 'PostalAddress', 'addressCountry': 'US';
-    },;
-    'contactPoint': {;
-      '@type': 'ContactPoint', 'telephone': '+1-XXX-XXX-XXXX',;
-      'contactType': 'customer service', 'availableLanguage': 'English';
-    },;
-    'sameAs': [;
-      'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup';
-    ], 'foundingDate': '2020',;
-    'numberOfEmployees': '50+', 'industry': 'Technology Services';
+
+  // Default structured data for organization
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Zion Tech Group',
+    'url': 'https://ziontechgroup.com',
+    'logo': 'https://ziontechgroup.com/logo.png',
+    'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressCountry': 'US'
+    },
+    'contactPoint': {
+      '@type': 'ContactPoint',
+      'telephone': '+1-XXX-XXX-XXXX',
+      'contactType': 'customer service',
+      'availableLanguage': 'English'
+    },
+    'sameAs': [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup'
+    ],
+    'foundingDate': '2020',
+    'numberOfEmployees': '50+',
+    'industry': 'Technology Services'
   };
-;
+
   const finalStructuredData = structuredData || defaultStructuredData;
-;
-  return (;
+
+  return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -92,9 +107,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
       {/* Structured Data */}
       <script
-        type='application/ld+json';
-        dangerouslySetInnerHTML={{;
-          __html: JSON.stringify(finalStructuredData, null, 2);
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(finalStructuredData, null, 2)
         }}
       />;
       {/* Performance Hints */}

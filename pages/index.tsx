@@ -1,11 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
+import SimpleNavigation from '../src/components/SimpleNavigation';
+import { SimpleFooter } from '../src/components/SimpleFooter';
 
 export default function Home() {
   const stats = [
@@ -37,10 +35,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zion Tech Group</title>
-        <meta name='description' content='Leading technology solutions provider' />
+        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
+        <meta name='description' content='Leading technology solutions provider specializing in AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology.' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
+      
+      <SimpleNavigation />
+      
       <main className='min-h-screen bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
           <div className='text-center'>
@@ -70,6 +71,8 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <SimpleFooter />
     </>
   );
 }
