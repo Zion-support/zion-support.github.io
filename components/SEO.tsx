@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/main
 
 interface SEOProps {
   title: string;
@@ -9,6 +12,7 @@ interface SEOProps {
   url?: string;
 }
 
+<<<<<<< HEAD
 export const SEO: React.FC<SEOProps> = ({ 
   title, 
   description, 
@@ -34,6 +38,10 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={image} />
     </Helmet>
   );
+=======
+const SEO: React.FC<SEOProps> = () => {
+  return null;
+>>>>>>> origin/main
 };
 
 export default SEO;

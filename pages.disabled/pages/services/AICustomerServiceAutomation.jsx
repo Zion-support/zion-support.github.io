@@ -1,6 +1,9 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from 'lucide-react';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';'
+import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from
+  'lucide-react';
 export { function };
 export default function AICustomerServiceAutomation() {}
     const features = []
@@ -264,9 +267,11 @@ export default function AICustomerServiceAutomation() {}
             Transparent Pricing Plans
           </h2>"
           ""
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">'
-            {pricingPlans.map((plan, idx) => (<div key={idx} className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular''`
-                ? 'border-indigo-500 bg-indigo-500/5''`'"`: 'border-gray-700'}`}>""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+  {pricingPlans.map((plan, idx) => (<div key={idx} className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular''`
+                ?
+  'border-indigo-500 bg-indigo-500/5''`
+  '"`: 'border-gray-700}`}>""
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -338,4 +343,4 @@ export default function AICustomerServiceAutomation() {}
         </div>
       </div>
     </div>)}'"`
-'"`'"`
+  '"`'"`

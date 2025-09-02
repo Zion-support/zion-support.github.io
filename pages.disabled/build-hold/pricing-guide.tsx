@@ -1,5 +1,14 @@
 :pages/pricing-guide.tsx
-import React from 'react';'import { motion } from 'framer-motion';'import { SEO } from '../components/SEO';'import { Button } from '../components/ui/Button';'import { Card } from '../components/ui/Card';'import { Badge } from '../components/ui/Badge';'import { ;'  CheckCircle, Star, 
+React from
+  'react';
+import { motion } from
+  'framer-motion';'{ SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';'{ Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';'import { ;'  CheckCircle, Star, 
   Zap, Shield, 
   Users, Globe, 
   Phone, Mail, 
@@ -13,7 +22,8 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
   Sparkles, Calculator,
   BookOpen, Lightbulb,
   HelpCircle
-} from 'lucide-react';''const PricingGuide: React.FC = () => {
+} from
+  'lucide-react';''const PricingGuide: React.FC = () => {
   const pricingFactors = [;
     {;
       factor: "Project Complexity", description: "The complexity of your AI solution directly impacts development time and cost","      details: ["        "Simple automation: $2, 000 - $5,000", "Custom AI models: $5,000 - $15, 000","        "Enterprise solutions: $15, 000 - $50,000+""      ], icon: Brain,"      color: "from-blue-500 to-cyan-500""    }, {"      factor: "Data Requirements","      description: "Amount and quality of data needed for training and implementation", details: ["        "Small datasets: $1,000 - $3, 000","        "Medium datasets: $3, 000 - $8,000", "Large datasets: $8,000 - $20, 000+""      ], icon: Database,"      color: "from-green-500 to-emerald-500""    }, {"      factor: "Integration Needs","      description: "Complexity of integrating with existing systems and platforms", details: ["        "Basic integrations: $1,500 - $4, 000","        "Complex integrations: $4, 000 - $10,000", "Enterprise integrations: $10,000 - $25, 000+""      ], icon: Network,"      color: "from-purple-500 to-pink-500""    }, {"      factor: "Timeline Requirements","      description: "How quickly you need the solution delivered", details: ["        "Standard timeline: Base price","        "Rush delivery (50% faster): +30% cost", "Emergency delivery (75% faster): +50% cost""      ], icon: Clock,"      color: "from-orange-500 to-red-500""    }"  ];const pricingExamples = [;

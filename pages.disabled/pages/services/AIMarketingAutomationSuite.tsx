@@ -10,7 +10,8 @@ import {}
   Brain,
   TrendingUp,
   MessageSquare,
-  Mail as MailIcon} from 'lucide-react.ts';
+  Mail as MailIcon} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
 export default function AIMarketingAutomationSuite(...args: any[]): any {return()
@@ -216,8 +217,8 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-          <div className="mt-4 text-sm text-zion-slate-light">'
-            Visit us at:{' '}"<a""
+          <div className="mt-4 text-sm text-zion-slate-light">,
+  Visit us at: {'}"<a""
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -230,4 +231,4 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
     </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
   )}'"
-'"'"
+  '"'"

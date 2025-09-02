@@ -15,23 +15,30 @@ ArrowRight,
   Twitter,
   Github,
   Facebook,
-  Instagram} from 'lucide-react.ts';
+  Instagram} from
+  'lucide-react.ts';
 
 export function ContactPage(...args: any[]): any {
 
   const [formData, setFormData] = useState({
 
-    firstName: '',
-lastName: '',email: '',
-    company: '',
-    phone: '',
-    service: '',
-:backup-pages/src-pages/ContactPage.tsxemail: '',
-    company: '',
-    phone: '',
-    service: '',
+    firstName:,
+  ',
+lastName: ',email:,
+  ',
+    company: ',
+    phone:,
+  ',
+    service: ',
+:backup-pages/src-pages/ContactPage.tsxemail:,
+  ',
+    company: ',
+    phone:,
+  ',
+    service: ',
 :backup-pages/src-pages/ContactPage.tsx
-message: ''});
+message: '
+  '});
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) };
@@ -51,12 +58,15 @@ message: ''});
       setIsSubmitted(false);
       setFormData({
 
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+        firstName:,
+  ',
+        lastName: ',
+        email:,
+  ',
+        company: ',
+        phone:,
+  ',
+        service: ',
         message: ''})}, 3000)};
 
 if (isSubmitted) {
@@ -77,11 +87,13 @@ if (isSubmitted) {
               Message Sent Successfully!
             </h2>"
             <p className="text-gray-400 mb-8">
-              Thank you for reaching out to Zion Tech Group. We've received your
+              Thank you for reaching out to Zion Tech Group. We
+  've received your
               message and will get back to you within 24 hours.
             </p>"
 
-            <div className="text-sm text-gray-500">'              You'll receive a confirmation email shortly.
+            <div className="text-sm text-gray-500">'              You
+  'll receive a confirmation email shortly.
             </div>
           </motion.div>
         </div>
@@ -99,7 +111,8 @@ if (isSubmitted) {
             <h1 className="text-5xl font-bold text-white mb-6">Get in Touch</h1>"
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Ready to transform your business with cutting-edge technology?'
-              Let's discuss how our solutions can help you achieve your goals.
+              Let
+  's discuss how our solutions can help you achieve your goals.
             </p>
           </motion.div>
         </div>
@@ -126,11 +139,15 @@ if (isSubmitted) {
                 <a
                   href={method.link}"
                   className="text-cyan-400 font-medium mb-2 hover:text-cyan-300 transition-colors cursor-pointer block"'
-                  target={method.link.startsWith('http') ? '_blank' : undefined}
+                  target={method.link.startsWith(
+  'http') ?
+  '_blank' : undefined}
                   rel={
 
-                    method.link.startsWith('http')
-                      ? 'noopener noreferrer'
+                    method.link.startsWith(
+  'http')
+                      ?
+  'noopener noreferrer'
                       : undefined
                   }
                 >
