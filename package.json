@@ -31,6 +31,8 @@
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "dev:vite": "vite",
     "type-check": "tsc --noEmit",
     "analyze": "ANALYZE=true npm run build",
@@ -73,6 +75,7 @@
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
+    "framer-motion": "^12.23.12",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -84,4 +87,12 @@
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "@types/react": "19.1.12",
+    "typescript": "5.9.2"
+  }
 }
