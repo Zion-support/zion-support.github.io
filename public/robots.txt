@@ -4,8 +4,6 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
-=======
 >>>>>>> 10d85f3b3670bc7145df6b26a320a41cd8913f2f
 =======
 >>>>>>> 4c670ec7752b0ba45905adeed77204747f1d9229

@@ -1,35 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "Zion Tech Group - Technology Solutions Provider",
-  "short_name": "Zion Tech",
-  "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0ea5e9",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en-US",
-  "categories": ["business", "technology", "productivity"],
-  "icons": [
-    {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-192x192.png",
-=======
   "name": "Zion Tech Group - Advanced Technology Solutions",
   "short_name": "Zion Tech",
   "description": "Leading provider of AI-powered technology solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
@@ -81,9 +50,6 @@
       "purpose": "any maskable"
     },
     {
-<<<<<<< HEAD
-      "src": "/android-chrome-512x512.png",
-=======
       "src": "/images/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
@@ -149,10 +115,6 @@
       "url": "/services",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/favicon-32x32.png",
-          "sizes": "32x32"
-=======
           "src": "/images/services-icon.png",
           "sizes": "96x96"
 >>>>>>> origin/pr-update-cursor/analyze-improve-and-deploy-application-6fbe
@@ -166,26 +128,6 @@
       "url": "/pricing",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/favicon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
-    },
-    {
-      "name": "About",
-      "short_name": "About",
-      "description": "Learn about Zion Tech Group",
-      "url": "/about",
-      "icons": [
-        {
-          "src": "/favicon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
-    }
-  ]
-=======
           "src": "/images/pricing-icon.png",
           "sizes": "96x96"
         }

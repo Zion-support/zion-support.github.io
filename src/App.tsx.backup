@@ -379,13 +379,6 @@ function App() {
                   <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
                   <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
 
-<<<<<<< HEAD
-                  {/* New AI Service Routes */}
-                  <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
-                  <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
-                  <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
-                  <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
-=======
                     {/* Additional service routes from remote branch */}
                     <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                     <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
