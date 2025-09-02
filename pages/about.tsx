@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { Users, Target, Award, Globe, Heart, Lightbulb, Shield, Zap } from 'lucide-react';
 
 export default function About() {
@@ -41,6 +43,8 @@ export default function About() {
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      
+      <Navigation />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -158,6 +162,8 @@ export default function About() {
           </div>
         </section>
       </main>
+      
+      <Footer />
     </>
   );
 }
