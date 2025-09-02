@@ -1,6 +1,9 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Cog } from 'lucide-react';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';'
+import { Cog } from
+  'lucide-react';
 ;
 const SpaceTech = () => {}
   return()
@@ -34,4 +37,4 @@ const SpaceTech = () => {}
 export { SpaceTech };
 :pages.disabled/pages/services/SpaceTech.jsx
 export default SpaceTech;'"
-'"'"
+  '"'"

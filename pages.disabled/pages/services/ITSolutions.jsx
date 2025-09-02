@@ -1,6 +1,8 @@
-import React from 'react';
+import React from
+  'react';
 import SEO from "@/components/SEO";'
-import { Shield, Database, Monitor } from 'lucide-react';
+import { Shield, Database, Monitor } from
+  'lucide-react';
 :pages.disabled/pages/services/ITSolutions.jsx
 const ITSolutions = () => {
     const features = [
@@ -225,7 +227,8 @@ const ITSolutions = () => {
         <div className="container mx-auto px-4 text-center">""
           <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT?</h2>""
 :pages.disabled/pages/services/ITSolutions.jsx
-          <p className="text-xl mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+  '
             Let's discuss how our IT solutions can improve your business operations and performance."</p>""
           <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Schedule a Consultation;
@@ -237,4 +240,5 @@ const ITSolutions = () => {
 export { ITSolutions };
 :pages.disabled/pages/services/ITSolutions.jsx
 export default ITSolutions;'"
-}}'"'"
+}}
+  '"'"

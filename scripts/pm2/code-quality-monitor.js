@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 ;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require(
+  'fs');
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
 ;
 class CodeQualityMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot,logs/pm2/code-quality-monitor.log');
+    this.logFile = path.join(this.projectRoot,logs/pm2/code-quality-monitor.log
+  ');
     this.reportFile = path.join(this.projectRoot,logs/pm2/code-quality-report.json');
     this.lastReport = null;
     this.startTime = Date.now();
@@ -23,18 +27,21 @@ class CodeQualityMonitor {
 
   async analyzeFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath,utf8');
+      const content = fs.readFileSync(filePath,utf8
+  ');
       const stats = fs.statSync(filePath);
 
       const analysis = {
         file: filePath,
         size: stats.size,
-        lines: content.split('\n').length,
+        lines: content.split('\n
+  ').length,
         issues: []
       };
 
       // Check for common code quality issues
-      const lines = content.split('\n');
+      const lines = content.split('\n
+  ');
 
       lines.forEach((line, index) => {
         const lineNum = index + 1;
@@ -43,49 +50,64 @@ class CodeQualityMonitor {
         if (line.match(/[ \t]+$/)) {
           analysis.issues.push({
             line: lineNum,
-            type: 'trailing-spaces',
-            message: 'Trailing spaces found',
-            severity: 'low'
+            type:,
+  trailing-spaces
+  ',
+            message: 'Trailing spaces found,
+            severity: 'low
+  '
           });
 
         // Long lines (over 120 characters)
         if (line.length > 120) {
           analysis.issues.push({
             line: lineNum,
-            type: 'long-line',
+            type: 'long-line
+  ',
             message: `Line is ${line.length} characters long (max: 120)`,
-            severity: 'medium'
+            severity: 'medium
+  '
           });
 
         // Console statements
         if (line.match(/console\.(log|warn|error|info|debug)/)) {
           analysis.issues.push({
             line: lineNum,
-            type: 'console-statement',
-            message: 'Console statement found - should be removed in production',
-            severity: 'medium'
+            type:,
+  console-statement
+  ',
+            message: 'Console statement found - should be removed in production,
+            severity: 'medium
+  '
           });
 
         // TODO/FIXME comments
         if (line.match(/TODO|FIXME|HACK|XXX/)) {
           analysis.issues.push({
             line: lineNum,
-            type: 'todo-comment',
-            message: 'TODO/FIXME comment found',
-            severity: 'low'
+            type:,
+  todo-comment
+  ',
+            message: 'TODO/FIXME comment found,
+            severity: 'low
+  '
           });
 
         // Unused imports (basic check)
-        if (line.match(/^import.*from/) && !line.includes('//')) {
+        if (line.match(/^import.*from/) && !line.includes('//
+  ')) {
           const importMatch = line.match(/import\s+(\w+)/);
           if (importMatch) {
             const importName = importMatch[1];
-            if (importName !== 'React' && !content.includes(importName)) {
+            if (importName !== 'React
+  ' && !content.includes(importName)) {
               analysis.issues.push({
                 line: lineNum,
-                type: 'unused-import',
+                type: 'unused-import
+  ',
                 message: `Potentially unused import: ${importName}`,
-                severity: 'medium'
+                severity: 'medium
+  '
               });
 
 
@@ -110,19 +132,28 @@ class CodeQualityMonitor {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-          if (!fullPath.includes('node_modules') &&
-              !fullPath.includes('.git') &&
-              !fullPath.includes('dist') &&
-              !fullPath.includes('build') &&
-              !fullPath.includes('.next') &&
-              !fullPath.includes('coverage') &&
-              !fullPath.includes('logs')) {
+          if (!fullPath.includes('node_modules
+  ') &&
+              !fullPath.includes('.git
+  ') &&
+              !fullPath.includes('dist
+  ') &&
+              !fullPath.includes('build
+  ') &&
+              !fullPath.includes('.next
+  ') &&
+              !fullPath.includes('coverage
+  ') &&
+              !fullPath.includes('logs
+  ')) {
             const subAnalyses = await this.walkDirectory(fullPath);
             analyses.push(...subAnalyses);
 
         } else if (stat.isFile()) {
           const ext = path.extname(fullPath);
-          if (['.js',.jsx',.ts',.tsx'].includes(ext)) {
+          if (['.js
+  ',.jsx',.ts
+  ',.tsx'].includes(ext)) {
             const analysis = await this.analyzeFile(fullPath);
             if (analysis) {
               analyses.push(analysis);
@@ -169,36 +200,47 @@ class CodeQualityMonitor {
   generateRecommendations(issuesByType, totalIssues) {
     const recommendations = [];
 
-    if (issuesByType['trailing-spaces'] > 0) {
+    if (issuesByType[,
+  trailing-spaces'] > 0) {
       recommendations.push({
-        type: 'trailing-spaces',
-        priority: 'low',
-        message: 'Remove trailing spaces from files',
-        action: 'Run the lint-fixer to automatically remove trailing spaces'
+        type: 'trailing-spaces,
+        priority:,
+  low',
+        message: 'Remove trailing spaces from files,
+        action:,
+  Run the lint-fixer to automatically remove trailing spaces'
       });
 
-    if (issuesByType['console-statement'] > 0) {
+    if (issuesByType[
+  'console-statement'] > 0) {
       recommendations.push({
-        type: 'console-statement',
-        priority: 'medium',
-        message: 'Remove console statements from production code',
-        action: 'Replace console statements with proper logging or remove them'
+        type: 'console-statement,
+        priority:,
+  medium',
+        message: 'Remove console statements from production code,
+        action:,
+  Replace console statements with proper logging or remove them'
       });
 
-    if (issuesByType['unused-import'] > 0) {
+    if (issuesByType[
+  'unused-import'] > 0) {
       recommendations.push({
-        type: 'unused-import',
-        priority: 'medium',
-        message: 'Remove unused imports',
-        action: 'Clean up unused imports to reduce bundle size'
+        type: 'unused-import,
+        priority:,
+  medium',
+        message: 'Remove unused imports,
+        action:,
+  Clean up unused imports to reduce bundle size'
       });
 
     if (totalIssues > 100) {
       recommendations.push({
-        type: 'general',
-        priority: 'high',
-        message: 'High number of code quality issues detected',
-        action: 'Run comprehensive code cleanup and establish coding standards'
+        type: 'general,
+        priority:,
+  high',
+        message: 'High number of code quality issues detected,
+        action:
+  'Run comprehensive code cleanup and establish coding standards'
       });
 
     return recommendations;
@@ -217,13 +259,16 @@ class CodeQualityMonitor {
 
   async checkGitStatus() {
     try {
-      const status = execSync('git status --porcelain', {
+      const status = execSync(
+  'git status --porcelain', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding:
+  'utf8'
       });
 
       if (status.trim()) {
-        this.log('⚠️  Uncommitted changes detected');
+        this.log(
+  '⚠️  Uncommitted changes detected');
         return false;
 
       return true;
@@ -233,11 +278,13 @@ class CodeQualityMonitor {
 
 
   async run() {
-    this.log('🔍 Starting Code Quality Monitor...');
+    this.log(
+  '🔍 Starting Code Quality Monitor...');
     this.log(`Project root: ${this.projectRoot}`);
 
     try {
-      // Create logs directory if it doesn't exist
+      // Create logs directory if it doesn
+  't exist
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
@@ -246,11 +293,14 @@ class CodeQualityMonitor {
       const isClean = await this.checkGitStatus();
 
       // Analyze all files
-      this.log('📁 Analyzing code files...');
+      this.log(,
+  📁 Analyzing code files...
+  ');
       const analyses = await this.walkDirectory(this.projectRoot);
 
       // Generate report
-      this.log('📊 Generating quality report...');
+      this.log('📊 Generating quality report...
+  ');
       const report = this.generateReport(analyses);
 
       // Save report
@@ -259,18 +309,20 @@ class CodeQualityMonitor {
       const duration = Date.now() - this.startTime;
 
       // Log summary
-      this.log('\n📊 Code Quality Report Summary:');
+      this.log('\n📊 Code Quality Report Summary: );
       this.log(`Files analyzed: ${report.summary.totalFiles}`);
       this.log(`Total issues: ${report.summary.totalIssues}`);
       this.log(`Duration: ${duration}ms`);
 
       if (report.summary.totalIssues > 0) {
-        this.log('\n🚨 Issues by type:');
+        this.log(,
+  \n🚨 Issues by type: );
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {
           this.log(`  ${type}: ${count}`);
         });
 
-        this.log('\n💡 Recommendations:');
+        this.log(,
+  \n💡 Recommendations: );
         report.recommendations.forEach(rec => {
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
@@ -278,7 +330,8 @@ class CodeQualityMonitor {
 
         // If there are many issues and git is clean, suggest running the lint fixer
         if (report.summary.totalIssues > 50 && isClean) {
-          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues');
+          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues
+  ');
 
       } else {
         this.log('✨ Excellent! No code quality issues found!');
