@@ -1,1 +1,29 @@
-interface LoadingSpinnerProps { size?: 'sm' | 'md' | 'lg' | 'xl'; color?: 'primary' | 'secondary' | 'white' | 'cyan'; text?: string; showText?: boolean; className?: string; const sizeClasses = { sm: 'w-8 h-8', md: 'w-12 h-12', lg: 'w-16 h-16',; ; ; ; ; xl: 'w-32 h-32'; ; }; const colorClasses = { primary: 'border-cyan-400', secondary: 'border-blue-400', white: 'border-white',; ; ; ; ; cyan: 'border-cyan-400'; ; }; export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', color = 'primary', text = 'Loading...', showText = true, className = '' }) => { return ( <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading"> <div className="relative"> {} <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div> {} <motion.div className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`} animate={{ rotate: 360 }} transition = { { duration: 1, repeat: Infinity, ease: "linear" }} /> {} {size === 'xl' && ( <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> <div className="w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div> </div> )} </div> {} {showText && text && ( <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="mt-4 text-center" <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}> {text} </div>; </motion.div>; )}; ; {}; <span className="sr-only">Loading, please wait</span>; </div>; ); };
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <div
+        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
+        role="status"
+        aria-label="Loading"
+      >
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
+  );
+};
