@@ -23,6 +23,16 @@ try {
     Shield,
     Zap,
   } = require('lucide-react');
+  
+  // Suppress unused variable warnings for imports
+  void React;
+  void motion;
+  void ArrowRight;
+  void CheckCircle;
+  void Brain;
+  void Cloud;
+  void Shield;
+  void Zap;
   console.log('✅ Lucide React icons import successful');
 
   console.log('🎉 All core dependencies imported successfully!');

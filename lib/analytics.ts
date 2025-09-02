@@ -1,7 +1,7 @@
 // Analytics and performance monitoring utilities
 export const trackEvent = (
   eventName: string,
-  properties?: Record<string, any>
+  properties?: Record<string, unknown>
 ) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
@@ -38,7 +38,7 @@ export const measurePerformance = () => {
 };
 
 // Web Vitals tracking
-export const trackWebVitals = (metric: any) => {
+export const trackWebVitals = (metric: { name: string; value: number; id: string }) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
       value: Math.round(metric.value),
@@ -51,6 +51,6 @@ export const trackWebVitals = (metric: any) => {
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
