@@ -26,13 +26,18 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon} from 'lucide-react';
+  Globe as GlobeIcon} from,
+  lucide-react';
 export default function ServicesPage() {
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [searchQuery, setSearchQuery] = useState('
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all
+  ');
+  const [sortBy, setSortBy] = useState('featured
+  ');
 
   // Filter and sort services
 
@@ -40,14 +45,19 @@ export default function ServicesPage() {
 
   // Sort services
   
-      case 'price-high':
-        return b.price - a.price;
-return a.price - b.price;'      case 'price-high':
+      case 'price-high
+  ': return b.price - a.price;
+return a.price - b.price;'      case
+  'price-high':
         return b.price - a.price;'
-      case 'newest':
-        return ('
-          new Date(b.createdAt || '2025-01-01').getTime() -'
-          new Date(a.createdAt || '2025-01-01').getTime()
+      case
+  'newest':
+        return (
+  '
+          new Date(b.createdAt || '2025-01-01
+  ').getTime() -'
+          new Date(a.createdAt ||
+  '2025-01-01).getTime()
         );
       default:
         return 0}
@@ -55,7 +65,8 @@ return a.price - b.price;'      case 'price-high':
 
     return cat ? cat.icon : Zap};
 
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
+    return cat ? cat.color :
+  'from-zion-cyan to-zion-blue'};
   return()
     <>
       <SEO title="Innovative Micro SAAS Services - Zion Tech Group"
@@ -166,8 +177,8 @@ return a.price - b.price;'      case 'price-high':
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
 
                   selectedCategory === category.id`
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`'
-                    : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'`
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
+  : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white`
                 }`}
               >"
                 <category.icon className="w-4 h-4" />
@@ -215,7 +226,8 @@ return a.price - b.price;'      case 'price-high':
             </div>
 "
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of{' '}
+              Showing {sortedServices.length} of{' 
+  '}
               {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
           </motion.div>
@@ -252,7 +264,8 @@ return a.price - b.price;'      case 'price-high':
                           {getCategoryIcon(service.category) &&
                             React.createElement()
                               getCategoryIcon(service.category),
-                              { className: 'w-6 h-6 text-white' }
+                              { className: 'w-6 h-6 text-white
+  ' }
                             )}
                         </div>"
                         <div className="text-right">"
@@ -284,9 +297,11 @@ return a.price - b.price;'      case 'price-high':
                         <span`
                           className={`px-2 py-1 rounded-full text-xs font-medium ${
 
-                            service.innovationLevel === 'Cutting-edge''
-                              ? 'bg-zion-cyan/20 text-zion-cyan''
-                              : 'bg-zion-purple/20 text-zion-purple'`
+                            service.innovationLevel ===,
+  Cutting-edge'
+  '
+                              ? 'bg-zion-cyan/20 text-zion-cyan'
+  ': 'bg-zion-purple/20 text-zion-purple`
                           }`}
                         >
                           {service.innovationLevel}
@@ -360,8 +375,10 @@ return a.price - b.price;'      case 'price-high':
                   onClick={() => {
 
                     setSearchQuery('');
-                    setSelectedCategory('all');
-                    setSelectedPriceRange('all')}}"                  className="btn-futuristic px-6 py-3"
+                    setSelectedCategory(
+  'all');
+                    setSelectedPriceRange(
+  'all')}}"                  className="btn-futuristic px-6 py-3"
                 >
                   View All Services
                 </button>
@@ -457,16 +474,18 @@ return a.price - b.price;'      case 'price-high':
                 📍 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <p>
-                📧{' '}
+                📧{,
+  '}
                 <a"
-                  href="mailto:kleber@ziontechgroup.com"
+                  href="mailto: kleber@ziontechgroup.com"
                   className="text-zion-cyan hover:underline"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </p>
               <p>
-                🌐{' '}
+                🌐{
+  '}
                 <a"
                   href="https://ziontechgroup.com"
                   target="_blank"

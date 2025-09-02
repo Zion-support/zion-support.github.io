@@ -1,6 +1,9 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { SEO } from '../../components/SEO';
+import React from
+  'react';'
+import { motion } from
+  'framer-motion';'
+import { SEO } from
+  '../../components/SEO';
 import {}
   Leaf,
   Zap,
@@ -16,8 +19,10 @@ import {}
   Cpu,
   Monitor,
   HardDrive,
-  Network,'
-  Battery} from 'lucide-react';
+  Network,
+  '
+  Battery} from 'lucide-react
+  ';
 
 :pages.disabled/pages/services/GreenIT.jsx
 export default function GreenIT() {
@@ -25,50 +30,80 @@ export default function GreenIT() {
     {
 
       icon: Leaf,'
-      title: 'Green Data Centers','
-      description: 'Energy-efficient data center design and optimization','
-      features: [''
-        'Renewable energy integration',Cooling system optimization',Energy monitoring',Carbon footprint reduction',
+      title:,
+  Green Data Centers',
+  '
+      description: 'Energy-efficient data center design and optimization,'
+      features: ['
+  '
+        'Renewable energy integration
+  ',Cooling system optimization',Energy monitoring
+  ',Carbon footprint reduction',
       ]},
     {
 
-      icon: Zap,'
-      title: 'Energy Management','
-      description: 'Smart energy monitoring and optimization systems','
+      icon: Zap,
+,
+  title: 'Energy Management,'
+      description:,
+  Smart energy monitoring and optimization systems',
+  '
       features: [''
-        'Real-time energy tracking',Automated optimization',Peak demand management',Energy cost reduction',
+  'Real-time energy tracking,Automated optimization
+  ',Peak demand management',Energy cost reduction
+  ',
       ]},
     {
 
       icon: Cloud,'
-      title: 'Cloud Optimization','
-      description: 'Eco-friendly cloud infrastructure and services','
-      features: [''
-        'Green cloud providers',Resource optimization',Carbon-aware computing',Sustainable scaling',
+      title:,
+  Cloud Optimization',
+  '
+      description: 'Eco-friendly cloud infrastructure and services,'
+      features: ['
+  '
+        'Green cloud providers
+  ',Resource optimization',Carbon-aware computing
+  ',Sustainable scaling',
       ]},
     {
 
-      icon: Server,'
-      title: 'Hardware Efficiency','
-      description: 'Energy-efficient hardware selection and management','
+      icon: Server,
+,
+  title: 'Hardware Efficiency,'
+      description:,
+  Energy-efficient hardware selection and management',
+  '
       features: [''
-        'Low-power processors',Efficient storage',Smart power management',Hardware lifecycle optimization',
+  'Low-power processors,Efficient storage
+  ',Smart power management',Hardware lifecycle optimization
+  ',
       ]},
     {
 
       icon: Network,'
-      title: 'Network Optimization','
-      description: 'Efficient network infrastructure and protocols','
-      features: [''
-        'Traffic optimization',Bandwidth management',Network virtualization',Green networking protocols',
+      title:,
+  Network Optimization',
+  '
+      description: 'Efficient network infrastructure and protocols,'
+      features: ['
+  '
+        'Traffic optimization
+  ',Bandwidth management',Network virtualization
+  ',Green networking protocols',
       ]},
     {
 
-      icon: Monitor,'
-      title: 'Software Efficiency','
-      description: 'Energy-efficient software development and deployment','
+      icon: Monitor,
+,
+  title: 'Software Efficiency,'
+      description:,
+  Energy-efficient software development and deployment',
+  '
       features: [''
-        'Code optimization',Resource management',Efficient algorithms',Green software practices',
+  'Code optimization,Resource management
+  ',Efficient algorithms',Green software practices
+  ',
       ]},
   ];
 
@@ -76,46 +111,63 @@ export default function GreenIT() {
     {
 
       icon: TrendingUp,'
-      title: 'Cost Reduction','
-      description: 'Lower energy costs and operational expenses'},
+      title:,
+  Cost Reduction',
+  '
+      description: 'Lower energy costs and operational expenses},
     {
 
       icon: Shield,'
-      title: 'Compliance','
-      description: 'Meet environmental regulations and standards'},
+      title:,
+  Compliance',
+  '
+      description: 'Meet environmental regulations and standards},
     {
 
       icon: Users,'
-      title: 'Brand Value','
-      description: 'Enhanced reputation and customer trust'},
+      title:,
+  Brand Value',
+  '
+      description: 'Enhanced reputation and customer trust},
     {
 
       icon: Award,'
-      title: 'Innovation','
-      description: 'Leading-edge sustainable technology solutions'},
+      title:,
+  Innovation',
+  '
+      description: 'Leading-edge sustainable technology solutions},
   ];
 
   const technologies = [
     {
 
       icon: Battery,'
-      title: 'Renewable Energy','
-      description: 'Solar, wind, and hydroelectric power integration'},
+      title:,
+  Renewable Energy',
+  '
+      description: Solar, wind, and hydroelectric power integration
+  '},
     {
 
       icon: Cpu,'
-      title: 'AI Optimization','
-      description: 'Machine learning for energy efficiency'},
+      title:,
+  AI Optimization',
+  '
+      description: 'Machine learning for energy efficiency},
     {
 
       icon: Database,'
-      title: 'Smart Monitoring','
-      description: 'IoT sensors and real-time analytics'},
+      title:,
+  Smart Monitoring',
+  '
+      description: 'IoT sensors and real-time analytics},
     {
 
       icon: Globe,'
-      title: 'Carbon Tracking','
-      description: 'Comprehensive carbon footprint measurement'},
+      title:,
+  Carbon Tracking',
+  '
+      description: 'Comprehensive carbon footprint measurement},
   ];
 
   return()
@@ -331,4 +383,4 @@ export default function GreenIT() {
   );
 :pages.disabled/pages/services/GreenIT.jsx
 }'"
-'"'"
+  '"'"
