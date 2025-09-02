@@ -32,7 +32,7 @@
     "perf:audit": "npm run perf:monitor",
     "dev": "next dev",
     "dev:vite": "vite",
-    "build": "vite build",
+    "build": "NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build",
     "build:vite": "vite build",
     "start": "next start",
     "start:vite": "vite preview",
@@ -46,19 +46,6 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@google-analytics/data": "^5.2.0",
-    "@google/generative-ai": "^0.24.1",
-    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
-    "@modelcontextprotocol/sdk": "^1.17.1",
-    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
-    "@modelcontextprotocol/server-memory": "^2025.8.4",
-    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-    "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.39.0",
-    "@types/react-datepicker": "^6.2.0",
-    "autoprefixer": "^10.4.21",
-=======
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -87,17 +74,16 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
->>>>>>> eb36f7602c9 (SEO + perf: add OG/Twitter/JSON-LD, resource hints; fix next.config eslint duplication; repair homepage build; fix utils cn imports; resolve duplicate services route; add missing deps)
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
-    "class-variance-authority": "^0.7.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cron-parser": "^5.3.0",
     "esbuild": "^0.25.9",
     "events": "^3.3.0",
-    "framer-motion": "^12.23.12",
+    "framer-motion": "5.6.0",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -109,17 +95,13 @@
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
-<<<<<<< HEAD
-    "react": "^18.3.1",
-=======
     "queue-microtask": "^1.2.3",
     "react": "^17.0.2",
->>>>>>> eb36f7602c9 (SEO + perf: add OG/Twitter/JSON-LD, resource hints; fix next.config eslint duplication; repair homepage build; fix utils cn imports; resolve duplicate services route; add missing deps)
     "react-datepicker": "^8.4.0",
-    "react-dom": "^18.3.1",
+    "react-dom": "^17.0.2",
     "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^6.26.2",
-    "tailwind-merge": "^2.5.2",
+    "react-router-dom": "^6.30.1",
+    "tailwind-merge": "^3.3.1",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -132,21 +114,19 @@
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
-<<<<<<< HEAD
-    "@vitejs/plugin-react": "^4.3.1",
-=======
     "autoprefixer": "^10.4.21",
->>>>>>> eb36f7602c9 (SEO + perf: add OG/Twitter/JSON-LD, resource hints; fix next.config eslint duplication; repair homepage build; fix utils cn imports; resolve duplicate services route; add missing deps)
     "eslint": "^9.32.0",
     "eslint-config-next": "^14.0.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-    "node": "^10.9.2",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
-    "vite": "^5.4.8"
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=18.18.0 <=22.x",
+    "npm": ">=10.0.0"
   }
 }
