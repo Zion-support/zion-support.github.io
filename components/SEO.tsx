@@ -75,7 +75,7 @@ const SEO: React.FC<SEOProps> = ({
               'https://twitter.com/ziontechgroup',
               'https://github.com/ziontechgroup'
             ]
-          });
+          })
         }}
       />
     </Head>

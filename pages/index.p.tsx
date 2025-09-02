@@ -34,7 +34,7 @@ export default function Index() {
               'sameAs': [
                 'https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'
               ]
-            });
+            })
           }}
         />
       </Head>

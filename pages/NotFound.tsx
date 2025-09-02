@@ -16,6 +16,7 @@ import {   Home,
   Award,
   Shield
 } from 'lucide-react';
+
 const NotFound: React.FC = () => {
   const quickLinks = [
     { name: 'Home', url: '/', icon: Home }, { name: 'Services', url: '/services', icon: Briefcase },
@@ -36,7 +37,7 @@ const NotFound: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        >
+        >;
           {/* 404 Error */}
           <motion.div
             initial={{ scale: 0.5 }}
@@ -57,11 +58,13 @@ const NotFound: React.FC = () => {
           >
             <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>
             <p className='text-xl text-gray-300 mb-6'>
-              Sorry, the page you're looking for doesn't exist or has been moved.
+              Sorry, the page you;
+  're looking for doesn't exist or has been moved.;
             </p>
             <p className='text-gray-400'>
-              Don't worry, we'll help you find what you're looking for.
-            </p>
+              Don;
+  't worry, we'll help you find what you;
+  're looking for.            </p>
           </motion.div>
           {/* Action Buttons */}
           <motion.div
@@ -96,15 +99,15 @@ const NotFound: React.FC = () => {
             <Card className='p-8'>
               <h3 className='text-2xl font-bold text-white mb-6'>Popular Pages</h3>
               <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
-                {quickLinks.map((link, index) => (
+                                 {quickLinks.map((link, index) => (
                   <motion.a
                     key={link.url}
                     href={link.url}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className='flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group'
-                  >
+                                         className='flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group'
+                   >
                     <link.icon className='w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2' />
                     <span className='text-gray-300 group-hover:text-white text-sm text-center'>
                       {link.name}
