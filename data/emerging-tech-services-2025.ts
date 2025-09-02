@@ -11,17 +11,15 @@ export interface EmergingTechService2025 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
-export const emergingTechServices2025: EmergingTechService2025[] = [
+address: string;
+  };export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform",
     name: "Metaverse Development Platform",
     tagline: "Create immersive virtual experiences",
     price: "$249/month",
     description: "Advanced metaverse development platform for building virtual worlds and experiences.",
-    features: [
+    features[
       "3D world building",
       "Avatar customization",
       "Virtual commerce",
@@ -35,6 +33,4 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+];}}}

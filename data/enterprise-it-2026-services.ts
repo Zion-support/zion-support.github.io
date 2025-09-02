@@ -11,17 +11,15 @@ export interface EnterpriseIt2026Service {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
-export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
+address: string;
+  };export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
   {
     id: "2026-enterprise-it",
     name: "2026 Enterprise IT Solutions",
     tagline: "Future-ready enterprise IT",
     price: "$399/month",
     description: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
-    features: [
+    features[
       "Enterprise architecture",
       "Future-ready solutions",
       "Scalable infrastructure",
@@ -35,6 +33,4 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+];}}}

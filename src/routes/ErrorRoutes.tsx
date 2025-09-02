@@ -1,13 +1,23 @@
 import React from 'react';
-// Next.js routing - no need for react-router-dom
-import NotFound from '@/pages/NotFound';
+import { Route, Routes    } from 'react-router-dom';
+export default function Page() {
+export default function Page() {
+  import { Suspense, lazy } from 'react';
+export default function Page() {
+export default function Page() {
+import LoadingSpinner from '../components/LoadingSpinner';
 
-import { Route, Routes } from "react-router-dom";
-import NotFound from "@/pages/NotFound";
-import Unauthorized from "@/pages/Unauthorized";
+// Lazy load error pages
+const NotFound = lazy(() => import('../pages/NotFound'));
 
-const ErrorRoutes = () => {
-  return (
-    <Route path="*" element={<NotFound />} />
+const ErrorRoutes: React.FC = () => {
+  return (<Suspense fallback={<LoadingSpinner />}>
+      <Routes>
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
-}
+};
+
+export default ErrorRoutes;

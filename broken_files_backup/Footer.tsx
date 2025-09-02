@@ -1,32 +1,14 @@
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
-import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
+import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from "react-router-dom";import { Link } from
+  'react-router-dom';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
   Youtube,
   Zap,
   Shield,
@@ -62,11 +44,9 @@ import {
   AlertCircle,
   Info,
   ExternalLink
-} from 'lucide-react';
-
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className = "bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -91,29 +71,27 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Youtube className="h-5 w-5" />
-              </a>
-=======
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
-import { motion, Variants } from 'framer-motion';
-
-const Footer: React.FC = () => {
+                <Instagram className="h-5 w-5" />;
+              </a>;
+              <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                <Youtube className="h-5 w-5" />;
+              </a>;
+;
+;import React from
+  'react';
+import { Link } from
+  'react-router-dom';
+import { Heart, Mail, Phone, MapPin, Globe import { motion, Variants } from
+  'framer-motion';
+const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
-    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+  const socialLinks = [;
+    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },;
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },;
+    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },;
+    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },;
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" };
   ];
-
   const footerSections = [
     {
       title: "Services",
@@ -152,62 +130,58 @@ const Footer: React.FC = () => {
     },
     {
       title: "Support",
-      links: [
-        { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support", path: "/support" },
-        { label: "Request Quote", path: "/request-quote" }
-      ]
-    }
+      links: [;
+        { label: "Contact Us", path: "/contact" },;
+        { label: "Help Center", path: "/help" },;
+        { label: "Support", path: "/support" },;
+        { label: "Request Quote", path: "/request-quote" };
+      ];
+    };
   ];
-
-  const contactInfo = [
-    { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
-    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+  const contactInfo = [;
+    { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },;
+    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },;
+    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },;
+    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" };
   ];
-
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
   };
-
   const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+},
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5,;
+        ease: "easeOut";
+      };
+    };
   };
-
   return (
-    <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white relative overflow-hidden">
+    <footer className = "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" />
-      <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-
+      <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay:,
+  1s' }} />
+      <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s }} />
       {/* Main Footer Content */}
-      <motion.div 
+      <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Company Info */}
           <motion.div className="lg:col-span-2" variants={itemVariants}>
@@ -221,7 +195,7 @@ const Footer: React.FC = () => {
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
               <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
-=======
+
             <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>
             <ul className="space-y-2 mb-6">
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
@@ -230,9 +204,8 @@ const Footer: React.FC = () => {
               <li><Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
-          
           <div>
-=======
+
             <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
             <ul className="space-y-2">
               <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
@@ -240,22 +213,21 @@ const Footer: React.FC = () => {
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
-=======
+
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg flex items-center gap-2">
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Services
-=======
+
               <span className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </div>
             <p className="text-zion-slate-light mb-8 max-w-md leading-relaxed text-lg">
-              Leading provider of innovative technology solutions, AI-powered services, 
+              Leading provider of innovative technology solutions, AI-powered services,
               and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
-            
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
               {contactInfo.map((contact, index) => (
@@ -265,7 +237,6 @@ const Footer: React.FC = () => {
                   className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group"
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
-                >
                   <contact.icon className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-sm">
                     <span className="font-medium text-white">{contact.label}:</span> {contact.value}
@@ -273,7 +244,6 @@ const Footer: React.FC = () => {
                 </motion.a>
               ))}
             </div>
-            
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -286,13 +256,11 @@ const Footer: React.FC = () => {
                   aria-label={`Follow us on ${social.name}`}
                   variants={itemVariants}
                   whileHover={{ y: -5 }}
-                >
                   {social.icon}
                 </motion.a>
               ))}
             </div>
           </motion.div>
-
           {/* Footer Sections */}
           {footerSections.map((section, sectionIndex) => (
             <motion.div key={section.title} variants={itemVariants}>
@@ -302,16 +270,18 @@ const Footer: React.FC = () => {
               </h3>
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
-                  <motion.li 
+                  <motion.li
                     key={link.label}
                     variants={itemVariants}
                     whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    transition = {
+  { type: "spring",
+  stiffness: 300 
+}}
                   >
                     <Link
                       to={link.path}
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
-                    >
                       <span className="w-1 h-1 bg-zion-cyan/50 rounded-full group-hover:bg-zion-cyan transition-colors duration-300" />
                       {link.label}
                     </Link>
@@ -322,24 +292,24 @@ const Footer: React.FC = () => {
           ))}
         </div>
       </motion.div>
-
       {/* Newsletter Signup */}
-      <motion.div 
+      <motion.div
         className="border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10"
         variants={itemVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
-            <h3 className="text-foreground font-semibold mb-4 text-lg">{t('footer.sections.newsletter.title')}</h3>
+            <h3 className="text-foreground font-semibold mb-4 text-lg">{t(
+  'footer.sections.newsletter.title')}</h3>
             <p className="text-foreground/80 mb-4 text-sm">
-              {t('footer.sections.newsletter.description')}
+              {t(
+  'footer.sections.newsletter.description')}
             </p>
             <FooterNewsletter />
-=======
+
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
@@ -356,7 +326,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-6 text-lg flex items-center">
@@ -396,7 +365,6 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
           {/* Resources */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
@@ -409,7 +377,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Newsletter Section */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="max-w-2xl mx-auto text-center">
@@ -429,7 +396,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -449,15 +415,15 @@ const Footer: React.FC = () => {
               <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Sitemap
               </Link>
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors"
-              >
-                {t('footer.bottom.api_status')}
+                {t(
+  'footer.bottom.api_status')}
               </Link>
-=======
+
             <h3 className="text-3xl font-bold text-white mb-4">
               Stay Updated with Our Latest <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Insights</span>
             </h3>
@@ -470,26 +436,23 @@ const Footer: React.FC = () => {
                 placeholder="Enter your email address"
                 className="flex-1 px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
               />
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25 border border-zion-cyan/30 hover:border-zion-cyan/60"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
                 Subscribe
               </motion.button>
             </div>
           </div>
         </div>
       </motion.div>
-
       {/* Bottom Footer */}
-      <motion.div 
+      <motion.div
         className="border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10"
         variants={itemVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-4 text-zion-slate-light text-sm mb-4 md:mb-0">
@@ -498,14 +461,20 @@ const Footer: React.FC = () => {
               <Link to="/privacy" className="hover:text-zion-cyan transition-colors duration-300">Privacy Policy</Link>
               <span className="w-1 h-1 bg-zion-cyan rounded-full" />
               <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+              <span className="w-1 h-1 bg-zion-cyan rounded-full" />;
+              <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </footer>;
   );
-}
-
+</div></div></div></div></div></div></div></div></div>}
+export default Footer;
+export default Footer;
+export default Footer;
+export default Footer;
+export default Footer;
+export default Footer;
+export default Footer;
 export default Footer;

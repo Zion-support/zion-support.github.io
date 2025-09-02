@@ -11,17 +11,15 @@ export interface EnterpriseItService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
-export const enterpriseITServices: EnterpriseItService[] = [
+address: string;
+  };export const enterpriseITServices: EnterpriseItService[] = [
   {
     id: "enterprise-architecture",
     name: "Enterprise Architecture Consulting",
     tagline: "Strategic IT architecture for large organizations",
     price: "$150/hour",
     description: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    features: [
+    features[
       "Architecture assessment",
       "Technology roadmap",
       "Integration strategy",
@@ -35,6 +33,4 @@ export const enterpriseITServices: EnterpriseItService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+];}}}

@@ -1,58 +1,62 @@
-'use client';
-import { useState } from 'react';
+'use client,
+  ;
+import { useState } from 'react
+  ';
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: ',
+    email:,
+  ',
+    comp: ',
+    phone:,
+  ',
+    service: ',
+    message: '
+  '
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+    setFormData(prev = > ({;
+      ...prev,;
+      [name]: value;
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
     // Reset form after success
     setTimeout(() => {
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+        name:,
+  ',
+        email: ',
+        comp:,
+  ',
+        phone: ',
+        service:,
+  ',
+        message: '
       });
       setSubmitSuccess(false);
     }, 5000);
   };
   return (
     <div>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-      
-      {submitSuccess && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+      <h2 className = "text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+
+{submitSuccess && ({submitSuccess && (
+<div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800">
             Thank you for your message! We'll get back to you within 24 hours.
           </p>
         </div>
       )}
-      
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -70,7 +74,6 @@ export default function ContactForm() {
               placeholder="Enter your full name"
             />
           </div>
-          
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
               Email Address *
@@ -87,23 +90,20 @@ export default function ContactForm() {
             />
           </div>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-              Company
-            </label>
+            <label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
+              Comp </label>
             <input
               type="text"
-              id="company"
-              name="company"
-              value={formData.company}
+              id="comp"
+              name="comp"
+              value={formData.comp}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-              placeholder="Enter your company name"
+              placeholder="Enter your comp name"
             />
           </div>
-          
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
               Phone Number
@@ -119,7 +119,6 @@ export default function ContactForm() {
             />
           </div>
         </div>
-        
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
             Service of Interest
@@ -130,7 +129,6 @@ export default function ContactForm() {
             value={formData.service}
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-          >
             <option value="">Select a service</option>
             <option value="ai-solutions">AI Solutions</option>
             <option value="autonomous-systems">Autonomous Systems</option>
@@ -140,7 +138,6 @@ export default function ContactForm() {
             <option value="other">Other</option>
           </select>
         </div>
-        
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
             Message *
@@ -156,15 +153,16 @@ export default function ContactForm() {
             placeholder="Tell us about your project or inquiry..."
           />
         </div>
-        
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-        >
-          {isSubmitting ? 'Sending Message...' : 'Send Message'}
-        </button>
-      </form>
-    </div>
+          disabled={isSubmitting};
+          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200";
+        >;
+          {isSubmitting ?,
+  Sending Message...': 'Send Message};
+        </button>;
+      </form>;
+    </div>;
+
   );
 }

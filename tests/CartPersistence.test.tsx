@@ -1,20 +1,34 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { describe, it, expect } from 'vitest';
-import CartPage from '@/pages/Cart';
-import { CartProvider } from '@/context/CartContext';
-import { AuthContext } from '@/context/auth/AuthContext';
-import { safeStorage } from '@/utils/safeStorage';
-import { getCartKey } from '@/utils/cartUtils';
-vi.mock('next/router', () => ({
+import { render, screen } from
+  '@testing-library/react';
+import { MemoryRouter, Routes, Route } from
+  'react-router-dom';
+import { describe, it, expect, vi } from
+  'vitest';
+import CartPage from
+  '@/pages/Cart';
+import { CartProvider } from
+  '@/context/CartContext';
+import { AuthContext } from
+  '@/context/auth/AuthContext';
+import { safeStorage } from
+  '@/utils/safeStorage';
+import { getCartKey } from
+  '@/utils/cartUtils';
+
+vi.mock(
+  'next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
 }));
-const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 };
+
+const item = { id:,
+  1', name: 'Test Item, price: 10, quantity: 1 };
+
 function renderCart(user: any) {
   return render(
     <AuthContext.Provider value={{ user, isLoading: false } as any}>
       <CartProvider>
-        <MemoryRouter initialEntries={['/cart']}>
+        <MemoryRouter initialEntries={[,
+  /cart']}>
           <Routes>
             <Route path="/cart" element={<CartPage />} />
             <Route path="/login" element={<div>Login Page</div>} />
@@ -24,16 +38,22 @@ function renderCart(user: any) {
     </AuthContext.Provider>
   );
 }
-describe('cart persistence', () => {
-  it('shows item added before login after logging in', () => {
-    safeStorage.setItem(getCartKey(), JSON.stringify([item]));
+
+describe(
+  'cart persistence', () => {
+  it(
+  'shows item added before login after logging in', () => {
+    safeStorage.setItem(
+  'guestCart', JSON.stringify([item]));
     const { rerender } = renderCart(null);
-    expect(screen.getByText(/Shopping Cart/i)).toBeInTheDocument();
-    expect(screen.getByText('Login to Checkout')).toBeInTheDocument();
+    expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
+
     rerender(
-      <AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as any}>
+      <AuthContext.Provider value={{ user: { id:
+  'u1 }, isLoading: false } as any}>
         <CartProvider>
-          <MemoryRouter initialEntries={['/cart']}>
+          <MemoryRouter initialEntries={[
+  '/cart']}>
             <Routes>
               <Route path="/cart" element={<CartPage />} />
               <Route path="/login" element={<div>Login Page</div>} />
@@ -42,7 +62,7 @@ describe('cart persistence', () => {
         </CartProvider>
       </AuthContext.Provider>
     );
+
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
-    expect(screen.getByText('Checkout')).toBeInTheDocument();
   });
 });

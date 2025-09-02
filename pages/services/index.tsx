@@ -1,81 +1,438 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import React from,
+  react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import { services, getServicesByCategory } from
+  '../../data/services';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from
+  'lucide-react';
+import Link from
+  'next/link';
+import { motion } from
+  'framer-motion';
+const ServicesPage: NextPage = () => {
+  const microSaasServices = getServicesByCategory(
+  'micro-saas');
+  const itServices = getServicesByCategory(
+  'it-services');
+  const aiServices = getServicesByCategory(
+  'ai-services');
 
-export default function ServicesIndex() {
+  const stats = [
+    { number:
+  '80+, label:
+  'Micro SaaS Solutions', icon: Zap },
+    { number:,
+  35+', label: 'IT Services, icon: Shield },
+    { number:,
+  30+', label: 'AI Services, icon: Globe },
+    { number:,
+  500+', label: 'Projects Completed, icon: TrendingUp },
+  ];
+
+  const benefits = [
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title:,
+  Competitive Pricing',
+      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title:,
+  Proven Results',
+      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.
+    },
+    {
+      icon: <Rocket className="w-8 h-8" />,
+      title:,
+  Fast Implementation',
+      description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title:,
+  Expert Support',
+      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
+    }
+  ];
+
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
-        <title>Services — Zion</title>
-        <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap." />
-      </Head>
-
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
-        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
-        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
-        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"><div className="twinkle-field absolute inset-0" /></div>
-        <div className="absolute inset-0 beams opacity-[0.06]" />
-      </div>
-
-      <header className="relative z-10">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="text-2xl font-bold tracking-wide">
-            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
-          </div>
-          <div className="hidden gap-6 md:flex text-white/80">
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/automation"><a>Automations</a></Link>
-            <Link href="/products"><a>Products</a></Link>
-            <Link href="/contact"><a>Contact</a></Link>
-          </div>
-        </nav>
-      </header>
-
-      <main className="relative z-10">
-        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-            Autonomous delivery with safety guardrails
-          </div>
-          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"><span className="gradient-text">Services</span></h1>
-          <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 pb-16">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },
-              { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },
-              { href: '/services/landing-page-generator', title: 'Landing Page Generator', desc: 'Spin up optimized pages with one prompt.' },
-              { href: '/services/price-intelligence-service', title: 'Price Intelligence', desc: 'Continuously monitor and adapt pricing.' },
-              { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },
-              { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
-              { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
-              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
-            ].map((s) => (
-              <Link key={s.href} href={s.href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-1 text-sm text-white/75">{s.desc}</p>
-                </a>
+    <MainLayout
+      title="Our Services - Zion Tech Group"
+      description="Comprehensive technology solutions including Micro SaaS, IT Services, and AI Services. Transform your business with our innovative solutions."
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h1 
+              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Comprehensive Technology Solutions
+            </motion.h1>
+            <motion.p 
+              className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions, 
+              we provide the technology foundation your business needs to thrive in the digital age.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
+                Get Started Today
               </Link>
+              <Link href="/solutions" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
+                View Solutions
+              </Link>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <motion.div 
+                    key={stat.label}
+                    className="text-center group"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="flex justify-center mb-2">
+                      <IconComponent className="w-8 h-8 text-blue-400 group-hover:text-purple-400 transition-colors" />
+                    </div>
+                    <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>
+                    <div className="text-gray-300">{stat.label}</div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We offer comprehensive technology solutions across three main categories, each designed to address specific business needs and challenges.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Micro SaaS Services */}
+            <motion.div 
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
+                <Zap className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.
+              </p>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• AI Content Generator Pro</li>
+                  <li>• AI Email Responder</li>
+                  <li>• Event Management Dashboard</li>
+                  <li>• AI SEO Optimizer</li>
+                  <li>• Quantum Computing Solutions</li>
+                </ul>
+              </div>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
+                <div className="text-lg font-semibold text-green-600">$12 - $9,999/month</div>
+              </div>
+              <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+                View All Micro SaaS <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+            {/* IT Services */}
+            <motion.div 
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
+                <Shield className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
+              <p className="text-gray-600 mb-6">
+                Comprehensive IT infrastructure, cloud migration, cybersecurity, and enterprise solutions for modern businesses.
+              </p>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• Cloud Migration Expert</li>
+                  <li>• Edge Computing Solutions</li>
+                  <li>• Blockchain Infrastructure</li>
+                  <li>• Zero Trust Security</li>
+                  <li>• 5G Network Implementation</li>
+                </ul>
+              </div>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
+                <div className="text-lg font-semibold text-green-600">$2,000 - $500,000/project</div>
+              </div>
+              <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+                View All IT Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+
+            {/* AI Services */}
+            <motion.div 
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
+                <Globe className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
+              <p className="text-gray-600 mb-6">
+                Cutting-edge artificial intelligence solutions to automate processes, gain insights, and achieve competitive advantages.
+              </p>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• AI Drug Discovery Platform</li>
+                  <li>• AI Climate Modeling</li>
+                  <li>• AI Space Exploration</li>
+                  <li>• AI Neuroscience Research</li>
+                  <li>• AI Financial Trading</li>
+                </ul>
+              </div>
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
+                <div className="text-lg font-semibold text-green-600">$4,000 - $2,000,000/project</div>
+              </div>
+              <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+                View All AI Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Services?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver exceptional results through innovative technology solutions, competitive pricing, and dedicated support.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div 
+                key={benefit.title}
+                className="text-center group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-blue-100 rounded-full group-hover:bg-purple-100 transition-colors">
+                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
+                      {benefit.icon}
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-7xl px-6 pb-24">
-          <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
-            <h3 className="text-2xl font-bold">Need something custom?</h3>
-            <p className="mx-auto mt-2 max-w-2xl text-white/80">We can assemble domain-specific agent factories to match your goals.</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>
-              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
+      {/* Contact and Pricing Guidance */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2">Talk to an Expert</h3>
+              <p className="text-gray-600 mb-4">Get a tailored recommendation and a quote within 24 hours.</p>
+              <ul className="text-sm text-gray-700 space-y-2 mb-4">
+                <li>• Mobile: +1 302 464 0950</li>
+                <li>• E-mail: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 underline">kleber@ziontechgroup.com</a></li>
+                <li>• Address: 364 E Main St STE 1008 Middletown DE 19709</li>
+              </ul>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded transition">Contact Sales</Link>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2">Typical Market Pricing</h3>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Micro SaaS: $19–$299/mo per workspace</li>
+                <li>• IT Services: $8k–$250k/project</li>
+                <li>• AI Solutions: $10k–$2M/project</li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-3">Pricing varies by scope, data complexity, security, and integration needs.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2">Useful Links</h3>
+              <ul className="text-sm text-blue-700 space-y-2">
+                <li><a className="underline" href="https://ziontechgroup.com">Website</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/services">All Services</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/contact">Contact</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/privacy">Privacy</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com/terms">Terms</a></li>
+              </ul>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+
+      {/* Featured Services */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our most popular and innovative solutions that are transforming businesses across industries.
+            </p>
+            <div className="mt-6">
+              <Link href="/services/expanded" className="inline-block text-blue-600 hover:text-blue-700 font-semibold underline">
+                Browse the expanded services catalog
+              </Link>
+            </div>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.slice(0, 6).map((service, index) => (
+              <motion.div 
+                key={service.id}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">{service.icon}</span>
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {service.name}
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
+                <div className="flex justify-between items-center">
+                  <div className="text-lg font-semibold text-green-600">
+                    From ${service.pricing.starter}/mo
+                  </div>
+                  <Link 
+                    href={service.link}
+                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm group-hover:text-purple-600 transition-colors inline-flex items-center"
+                  >
+                    Learn More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Link 
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg"
+            >
+              Get Custom Quote
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
+                Get Started Today
+              </Link>
+              <Link href="/about" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
+                Learn More About Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </MainLayout>
   );
-}
+};
+
+export default ServicesPage;

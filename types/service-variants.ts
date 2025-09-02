@@ -1,4 +1,4 @@
-export type ServiceVariant = 
+export type ServiceVariant =
   | 'default'
   | 'holographic'
   | 'quantum'
@@ -24,9 +24,7 @@ export type ServiceVariant =
   | 'quantum-iot'
   | 'quantum-logistics'
   | 'quantum-financial'
-  | 'quantum-holographic'
   | 'quantum-neural'
-  | 'quantum-cyberpunk'
   | 'neural-quantum-cyberpunk'
   | 'quantum-energy'
   | 'quantum-futuristic'
@@ -89,7 +87,6 @@ export type ServiceVariant =
   | 'quantum-security'
   | 'quantum-ai-interface'
   | 'ai-autonomous-vehicles'
-  | 'quantum-iot-revolutionary'
   | 'space-futuristic'
   | 'consulting-futuristic'
   | 'api-futuristic'

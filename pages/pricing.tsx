@@ -1,283 +1,298 @@
-import Head from 'next/head';
-import Link from 'next/link';
-export default function PricingPage() {
-  const pricingTiers = [
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
+import { 
+  CheckCircle, 
+  Star, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe, 
+  Phone, 
+  Mail, 
+  ArrowRight,
+  DollarSign,
+  TrendingUp,
+  Award,
+  Clock,
+  Target,
+  Brain,
+  Server,
+  Cloud,
+  Lock,
+  BarChart3,
+  Rocket,
+  Heart,
+  Sparkles
+} from
+  'lucide-react';
+
+const Pricing: React.FC = () => {
+  const pricingPlans = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: '$99',
-      period: '/month',
+      name: "Starter",
+      price: "$299",
+      period: "/month",
+      description: "Perfect for small businesses getting started with AI",
       features: [
-        'AI-Powered Analytics Dashboard',
-        'Basic Cloud Infrastructure',
-        'Email Support',
-        'Standard Security Features',
-        'Monthly Reports',
-        'Up to 5 Users'
+        "AI-powered analytics dashboard",
+        "Basic automation tools",
+        "Email support",
+        "Up to 5 team members",
+        "Standard integrations",
+        "Monthly reports"
       ],
-      cta: 'Get Started',
-      ctaLink: '/contact',
-      popular: false
+      popular: false,
+      color: "from-blue-500 to-cyan-500",
+      buttonText: "Get Started",
+      buttonVariant: "outline" as const
     },
     {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: '$299',
-      period: '/month',
+      name: "Professional",
+      price: "$799",
+      period: "/month",
+      description: "Ideal for growing businesses with advanced needs",
       features: [
-        'Everything in Starter',
-        'Advanced AI Decision Engine',
-        'Priority Support',
-        'Enhanced Security & Compliance',
-        'Custom Integrations',
-        'Up to 25 Users',
-        'Advanced Analytics',
-        'API Access'
+        "Advanced AI analytics",
+        "Custom automation workflows",
+        "Priority support",
+        "Up to 25 team members",
+        "Advanced integrations",
+        "Real-time reporting",
+        "API access",
+        "Custom branding"
       ],
-      cta: 'Start Free Trial',
-      ctaLink: '/contact',
-      popular: true
+      popular: true,
+      color: "from-purple-500 to-pink-500",
+      buttonText: "Start Free Trial",
+      buttonVariant: "default" as const
     },
     {
-      name: 'Enterprise',
-      description: 'For large organizations with complex needs',
-      price: 'Custom',
-      period: '',
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large organizations",
       features: [
-        'Everything in Professional',
-        'Custom AI Solutions',
-        '24/7 Dedicated Support',
-        'Enterprise Security',
-        'Custom Development',
-        'Unlimited Users',
-        'Advanced Compliance',
-        'Dedicated Account Manager',
-        'SLA Guarantees',
-        'On-Premise Options'
+        "Unlimited AI capabilities",
+        "Custom AI model training",
+        "Dedicated support team",
+        "Unlimited team members",
+        "White-label solutions",
+        "Advanced security",
+        "Custom integrations",
+        "24/7 phone support",
+        "SLA guarantee"
       ],
-      cta: 'Contact Sales',
-      ctaLink: '/contact',
-      popular: false
+      popular: false,
+      color: "from-orange-500 to-red-500",
+      buttonText: "Contact Sales",
+      buttonVariant: "outline" as const
     }
   ];
-  const addOnServices = [
+
+  const servicePricing = [
     {
-      name: 'AI Model Training',
-      description: 'Custom AI model development and training',
-      price: 'From $2,500',
-      features: ['Custom Data Processing', 'Model Optimization', 'Performance Tuning']
+      service: "AI Development",
+      startingPrice: "$5,000",
+      description: "Custom AI solutions and machine learning models",
+      features: ["Custom AI models", "Data analysis", "Integration support", "Training & documentation"]
     },
     {
-      name: 'Quantum Computing Access',
-      description: 'Access to quantum computing resources',
-      price: 'From $5,000',
-      features: ['Quantum Algorithm Development', 'Hardware Access', 'Expert Consultation']
+      service: "Cloud Migration",
+      startingPrice: "$3,000",
+      description: "Seamless migration to cloud infrastructure",
+      features: ["Infrastructure assessment", "Migration planning", "Data transfer", "Performance optimization"]
     },
     {
-      name: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment',
-      price: 'From $1,500',
-      features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
+      service: "Cybersecurity",
+      startingPrice: "$2,500",
+      description: "Comprehensive security solutions and monitoring",
+      features: ["Security audit", "Threat monitoring", "Incident response", "Compliance support"]
     },
     {
-      name: 'Cloud Migration',
-      description: 'Complete cloud infrastructure migration',
-      price: 'From $10,000',
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
+      service: "Digital Transformation",
+      startingPrice: "$10,000",
+      description: "End-to-end digital transformation consulting",
+      features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
     }
   ];
-  const faqs = [
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, bank transfers, and can accommodate custom payment terms for enterprise clients.'
-    },
-    {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
-    },
-    {
-      question: 'Is there a setup fee?',
-      answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation costs.'
-    },
-    {
-      question: 'What kind of support do you provide?',
-      answer: 'We provide email support for all plans, priority support for Professional and Enterprise plans, and 24/7 support for Enterprise clients.'
-    },
-    {
-      question: 'Do you offer discounts for annual payments?',
-      answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
-    },
-    {
-      question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
-    }
-  ];
+
   return (
-    <>
-      <Head>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Simple, Transparent Pricing
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Pricing - Zion Tech Group" 
+        description="Transparent pricing for AI-powered solutions. Choose the perfect plan for your business needs with flexible options and enterprise solutions."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge variant="secondary" className="mb-4">
+              <DollarSign className="w-4 h-4 mr-2" />
+              Transparent Pricing
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Choose Your Perfect Plan
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core AI and security features with no hidden costs.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your business. Start small and grow with us.
             </p>
-            <div className="flex items-center justify-center space-x-4 text-sm">
-              <span className="text-gray-400">Monthly</span>
-              <div className="relative">
-                <div className="w-12 h-6 bg-blue-600 rounded-full p-1">
-                  <div className="w-4 h-4 bg-white rounded-full ml-1"></div>
-                </div>
-              </div>
-              <span className="text-gray-400">Annual (20% off)</span>
-            </div>
-          </div>
-        </section>
-        {/* Pricing Tiers */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <div 
-                  key={index} 
-                  className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
-                    tier.popular 
-                      ? 'border-blue-400 border-2 scale-105' 
-                      : 'border-white border-opacity-10'
-                  }`}
-                >
-                  {tier.popular && (
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="relative"
+              >
+                <Card className={`p-8 h-full ${plan.popular ?,
+  ring-2 ring-purple-500 scale-105': '}`}>
+                  {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                        <Star className="w-4 h-4 mr-1" />
                         Most Popular
-                      </span>
+                      </Badge>
                     </div>
                   )}
                   
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-                    <p className="text-gray-300 mb-6">{tier.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="mb-4">
-                      <span className="text-4xl font-bold">{tier.price}</span>
-                      <span className="text-gray-400">{tier.period}</span>
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400">{plan.period}</span>
                     </div>
+                    <p className="text-gray-300">{plan.description}</p>
                   </div>
+
                   <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <svg className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    href={tier.ctaLink}
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                      tier.popular
-                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
-                    }`}
-                  >
-                    {tier.cta}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Add-on Services */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Additional Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Enhance your solution with our specialized add-on services
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index) => (
-                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
-                  <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                        <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link 
-                    href="/contact"
-                    className="text-blue-400 hover:text-blue-300 font-medium text-sm"
+
+                  <Button 
+                    variant={plan.buttonVariant}
+                    className={`w-full bg-gradient-to-r ${plan.color} text-white hover:opacity-90 transition-opacity`}
                   >
-                    Learn More →
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* FAQ Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300">
-                Get answers to common questions about our pricing and services
-              </p>
-            </div>
-            
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
-                  <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready to Get Started?
+                    {plan.buttonText}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Service Pricing */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Custom Service Pricing
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Choose the perfect plan for your business or contact us for a custom solution.
+            <p className="text-xl text-gray-300">
+              Tailored solutions for your specific business needs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {servicePricing.map((service, index) => (
+              <motion.div
+                key={service.service}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+              >
+                <Card className="p-6 h-full">
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-white mb-2">{service.service}</h3>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">
+                      {service.startingPrice}
+                    </div>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    
+                    <ul className="space-y-2 text-sm text-gray-300">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started today with a free consultation and discover how our AI solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Contact Sales
-              </Link>
-              <Link 
-                href="/services" 
-                className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                View Services
-              </Link>
+              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                <Phone className="w-5 h-5 mr-2" />
+                Schedule Free Consultation
+              </Button>
+              <Button size="lg" variant="outline">
+                <Mail className="w-5 h-5 mr-2" />
+                Contact Sales Team
+              </Button>
             </div>
-          </div>
-        </section>
-      </main>
-    </>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default Pricing;
