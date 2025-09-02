@@ -1,217 +1,248 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import Head from 'next/head';
 import SEO from '../components/SEO';
 import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import {;
-  Map, ArrowRight,;
-  ExternalLink, Home,;
-  Users, Briefcase,;
-  Phone, DollarSign,;
-  FileText, BookOpen,;
-  Award, Shield,;
-  Globe, Search,;
-  Filter, Calendar,;
-  Star, TrendingUp,;
-  Brain, Cloud,;
-  Database, Zap,;
-  Lock, Code,;
-  Smartphone, Monitor,;
-  Server, Network;
+import { 
+  Map, 
+  ArrowRight,
+  ExternalLink, 
+  Home,
+  Users, 
+  Briefcase,
+  Phone, 
+  DollarSign,
+  FileText, 
+  BookOpen,
+  Award, 
+  Shield,
+  Globe, 
+  Search,
+  Mail,
+  Calendar,
+  Code,
+  Database,
+  Cloud,
+  Brain,
+  Zap
 } from 'lucide-react';
-;
-const SitemapPage: React.FC = () => {;
-  const siteStructure = [
-    {;
-      category: 'Main Pages',;
-      icon: Home,;
-      pages: [;
-        { name: 'Home', path: '/', description: 'Main landing page' },;
-        { name: 'About', path: '/about', description: 'About Zion Tech Group' },;
-        { name: 'Contact', path: '/contact', description: 'Contact information' },;
-        { name: 'Pricing', path: '/pricing', description: 'Service pricing' },;
-        { name: 'Careers', path: '/careers', description: 'Job opportunities' }
-      ];
-    },;
-    {;
-      category: 'Services',;
-      icon: Briefcase,;
-      pages: [
-        { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },;
-        { name: 'IT Services', path: '/it-services', description: 'Information Technology services' },;
-        { name: 'Micro SaaS', path: '/micro-saas', description: 'Micro Software as a Service' },;
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud computing solutions' },;
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security services' },;
-        { name: 'Infrastructure', path: '/infrastructure', description: 'IT infrastructure services' }
-      ];
-    },;
-    {;
-      category: 'Resources',;
-      icon: BookOpen,;
-      pages: [
-        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and case studies' },;
-        { name: 'White Papers', path: '/white-papers', description: 'Technical white papers' },;
-        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },;
-        { name: 'Blog', path: '/blog', description: 'Latest news and insights' },;
-        { name: 'Documentation', path: '/documentation', description: 'Technical documentation' }
-      ];
-    },;
-    {;
-      category: 'Company',;
-      icon: Users,;
-      pages: [
-        { name: 'Team', path: '/team', description: 'Meet our team' },;
-        { name: 'Partners', path: '/partners', description: 'Our partners' },;
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },;
-        { name: 'Help', path: '/help', description: 'Help and support' }
-      ];
-    },;
-    {;
-      category: 'Legal',;
-      icon: Shield,;
-      pages: [
-        { name: 'Privacy Policy', path: '/privacy', description: 'Privacy policy and data protection' },;
-        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },;
-        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
-      ];
-    }
+
+export default function Sitemap() {
+  const mainPages = [
+    { name: 'Home', url: '/', icon: Home, description: 'Main landing page' },
+    { name: 'Services', url: '/services', icon: Briefcase, description: 'Our technology services' },
+    { name: 'About', url: '/about', icon: Users, description: 'About our company' },
+    { name: 'Contact', url: '/contact', icon: Phone, description: 'Get in touch with us' },
+    { name: 'Pricing', url: '/pricing', icon: DollarSign, description: 'Service pricing information' }
   ];
-;
-  return (;
-    <>;
+
+  const servicePages = [
+    { name: 'AI Services', url: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },
+    { name: 'Cloud Solutions', url: '/cloud-solutions', icon: Cloud, description: 'Cloud architecture and deployment' },
+    { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield, description: 'Security and compliance services' },
+    { name: 'Data Analytics', url: '/data-analytics', icon: Database, description: 'Data insights and analytics' },
+    { name: 'DevOps', url: '/devops', icon: Zap, description: 'Development and operations' },
+    { name: 'Custom Development', url: '/custom-development', icon: Code, description: 'Tailored software solutions' }
+  ];
+
+  const resourcePages = [
+    { name: 'Blog', url: '/blog', icon: BookOpen, description: 'Technology insights and updates' },
+    { name: 'Case Studies', url: '/case-studies', icon: FileText, description: 'Client success stories' },
+    { name: 'White Papers', url: '/white-papers', icon: FileText, description: 'Technical documentation' },
+    { name: 'Webinars', url: '/webinars', icon: Calendar, description: 'Educational webinars' },
+    { name: 'Team', url: '/team', icon: Award, description: 'Meet our experts' }
+  ];
+
+  const legalPages = [
+    { name: 'Privacy Policy', url: '/privacy', icon: Shield, description: 'Privacy and data protection' },
+    { name: 'Terms of Service', url: '/terms', icon: FileText, description: 'Terms and conditions' },
+    { name: 'Cookie Policy', url: '/cookies', icon: FileText, description: 'Cookie usage information' }
+  ];
+
+  const externalLinks = [
+    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: ExternalLink, description: 'Follow us on LinkedIn' },
+    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: ExternalLink, description: 'Follow us on Twitter' },
+    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: ExternalLink, description: 'View our open source projects' }
+  ];
+
+  return (
+    <>
       <SEO
-        title='Sitemap';
-        description='Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.';
-        keywords='sitemap, website navigation, pages, services, resources';
-      />;
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='text-center mb-12';
-          >;
-            <div className='flex items-center justify-center mb-6'>
-              <Map className='h-12 w-12 text-blue-600 mr-4' />
-              <h1 className='text-4xl font-bold text-gray-900'>Website Sitemap</h1>
-            </div>
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Navigate through all pages and sections of the Zion Tech Group website.;
-              Find exactly what you're looking for with our comprehensive site structure.;
-            </p>          </motion.div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {siteStructure.map((section, index) => (;
-              <motion.div
-                key={section.category}                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >;
-                <Card className='h-full'>
-                  <CardHeader>
-                    <div className='flex items-center mb-4'>
-                      <section.icon className='h-6 w-6 text-blue-600 mr-3' />
-                      <CardTitle className='text-xl'>{section.category}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className='space-y-3'>
-                      {section.pages.map((page, pageIndex) => (;
-                        <motion.div
-                          key={page.path}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: (index * 0.1) + (pageIndex * 0.05) }}
-                          className='flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors';
-                        >;
-                          <div className='flex-1'>
-                            <a
-                              href={page.path}
-                              className='text-blue-600 hover:text-blue-800 font-medium flex items-center';
-                            >;
-                              {page.name}
-                              <ExternalLink className='h-4 w-4 ml-2' />
-                            </a>
-                            <p className='text-sm text-gray-600 mt-1'>{page.description}</p>
-                          </div>
-                          <ArrowRight className='h-4 w-4 text-gray-400' />
-                        </motion.div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>              </motion.div>
-            ))}
+        title='Sitemap - Zion Tech Group'
+        description='Navigate through all pages and sections of the Zion Tech Group website. Find information about our services, resources, and company.'
+        keywords='sitemap, navigation, website structure, Zion Tech Group'
+      />
+      
+      <main className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20'>
+        <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h1 className='text-4xl font-bold text-white mb-4'>
+              <Map className='inline-block w-10 h-10 mr-3 text-blue-400' />
+              Site Map
+            </h1>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Navigate through all pages and sections of our website to find the information you need.
+            </p>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className='mt-12 text-center';
-          >;
-            <Card className='max-w-2xl mx-auto'>
-              <CardContent className='p-8'>
-                <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-                  Can't find what you're looking for?;
-                </h3>
-                <p className='text-gray-600 mb-6'>
-                  Use our search functionality or contact us directly for assistance.;
-                </p>
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                  <a
-                    href='/contact';
-                    className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center';
-                  >;
-                    <Phone className='h-4 w-4 mr-2' />
-                    Contact Us;
-                  </a>
-                  <a
-                    href='/help';
-                    className='border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center justify-center';
-                  >;
-                    <Search className='h-4 w-4 mr-2' />
-                    Get Help;
-                  </a>
+
+          <div className='grid gap-8 lg:grid-cols-2'>
+            {/* Main Pages */}
+            <Card className='bg-slate-800 border-slate-700'>
+              <CardHeader>
+                <CardTitle className='text-white flex items-center'>
+                  <Home className='w-5 h-5 mr-2 text-blue-400' />
+                  Main Pages
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className='space-y-3'>
+                  {mainPages.map((page) => (
+                    <div key={page.name} className='flex items-center justify-between p-3 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors'>
+                      <div className='flex items-center'>
+                        <page.icon className='w-5 h-5 mr-3 text-blue-400' />
+                        <div>
+                          <div className='text-white font-medium'>{page.name}</div>
+                          <div className='text-sm text-gray-400'>{page.description}</div>
+                        </div>
+                      </div>
+                      <ArrowRight className='w-4 h-4 text-gray-400' />
+                    </div>
+                  ))}
                 </div>
               </CardContent>
-            </Card>          </motion.div>
+            </Card>
+
+            {/* Service Pages */}
+            <Card className='bg-slate-800 border-slate-700'>
+              <CardHeader>
+                <CardTitle className='text-white flex items-center'>
+                  <Briefcase className='w-5 h-5 mr-2 text-green-400' />
+                  Services
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className='space-y-3'>
+                  {servicePages.map((page) => (
+                    <div key={page.name} className='flex items-center justify-between p-3 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors'>
+                      <div className='flex items-center'>
+                        <page.icon className='w-5 h-5 mr-3 text-green-400' />
+                        <div>
+                          <div className='text-white font-medium'>{page.name}</div>
+                          <div className='text-sm text-gray-400'>{page.description}</div>
+                        </div>
+                      </div>
+                      <ArrowRight className='w-4 h-4 text-gray-400' />
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Resource Pages */}
+            <Card className='bg-slate-800 border-slate-700'>
+              <CardHeader>
+                <CardTitle className='text-white flex items-center'>
+                  <BookOpen className='w-5 h-5 mr-2 text-purple-400' />
+                  Resources
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className='space-y-3'>
+                  {resourcePages.map((page) => (
+                    <div key={page.name} className='flex items-center justify-between p-3 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors'>
+                      <div className='flex items-center'>
+                        <page.icon className='w-5 h-5 mr-3 text-purple-400' />
+                        <div>
+                          <div className='text-white font-medium'>{page.name}</div>
+                          <div className='text-sm text-gray-400'>{page.description}</div>
+                        </div>
+                      </div>
+                      <ArrowRight className='w-4 h-4 text-gray-400' />
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Legal Pages */}
+            <Card className='bg-slate-800 border-slate-700'>
+              <CardHeader>
+                <CardTitle className='text-white flex items-center'>
+                  <Shield className='w-5 h-5 mr-2 text-red-400' />
+                  Legal & Policies
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className='space-y-3'>
+                  {legalPages.map((page) => (
+                    <div key={page.name} className='flex items-center justify-between p-3 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors'>
+                      <div className='flex items-center'>
+                        <page.icon className='w-5 h-5 mr-3 text-red-400' />
+                        <div>
+                          <div className='text-white font-medium'>{page.name}</div>
+                          <div className='text-sm text-gray-400'>{page.description}</div>
+                        </div>
+                      </div>
+                      <ArrowRight className='w-4 h-4 text-gray-400' />
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* External Links */}
+          <Card className='mt-8 bg-slate-800 border-slate-700'>
+            <CardHeader>
+              <CardTitle className='text-white flex items-center'>
+                <Globe className='w-5 h-5 mr-2 text-cyan-400' />
+                External Links
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className='grid gap-4 md:grid-cols-3'>
+                {externalLinks.map((link) => (
+                  <div key={link.name} className='flex items-center justify-between p-3 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors'>
+                    <div className='flex items-center'>
+                      <link.icon className='w-5 h-5 mr-3 text-cyan-400' />
+                      <div>
+                        <div className='text-white font-medium'>{link.name}</div>
+                        <div className='text-sm text-gray-400'>{link.description}</div>
+                      </div>
+                    </div>
+                    <ExternalLink className='w-4 h-4 text-gray-400' />
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Search Section */}
+          <Card className='mt-8 bg-slate-800 border-slate-700'>
+            <CardHeader>
+              <CardTitle className='text-white flex items-center'>
+                <Search className='w-5 h-5 mr-2 text-yellow-400' />
+                Can't Find What You're Looking For?
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className='text-gray-300 mb-4'>
+                Use our search functionality or contact us directly for assistance.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4'>
+                <button className='px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center'>
+                  <Search className='w-4 h-4 mr-2' />
+                  Search Site
+                </button>
+                <button className='px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors flex items-center justify-center'>
+                  <Mail className='w-4 h-4 mr-2' />
+                  Contact Support
+                </button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-      </div>
+      </main>
     </>
   );
-};
-;
-const Sitemap: React.FC = () => {;
-  const links = [
-    { name: 'Home', url: '/' },;
-    { name: 'About', url: '/about' },;
-    { name: 'Services', url: '/services' },;
-    { name: 'AI Services', url: '/services/ai-services' },;
-    { name: 'IT Services', url: '/services/it-services' },;
-    { name: 'Micro SaaS', url: '/services/micro-saas' },;
-    { name: 'Solutions', url: '/solutions' },;
-    { name: 'Enterprise', url: '/solutions/enterprise' },;
-    { name: 'Small Business', url: '/solutions/small-business' },;
-    { name: 'Startups', url: '/solutions/startups' },;
-    { name: 'Products', url: '/products' },;
-    { name: 'Contact', url: '/contact' },;
-    { name: 'Careers', url: '/careers' },;
-    { name: 'Privacy', url: '/privacy' },;
-    { name: 'Terms', url: '/terms' }];
-;
-  return (;
-    <div className='min-h-screen px-6 py-16 max-w-4xl mx-auto'>
-      <h1 className='text-3xl font-bold mb-6'>Sitemap</h1>
-      <p className='text-gray-600 mb-8'>Quick links to primary pages and sections.</p>
-      <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
-        {links.map((l) => (;
-          <li key={l.url}>
-            <a className='text-blue-600 hover:underline' href={l.url}>
-              {l.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-;
-export default SitemapPage;
+}
