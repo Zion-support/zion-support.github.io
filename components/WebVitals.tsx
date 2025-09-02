@@ -1,25 +1,42 @@
-import { useEffect } from 'react';'import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';''interface WebVitalsMetric {name: string;
+import React, { useEffect } from 'react';
+
+interface WebVitalsMetric {
+  name: string;
   value: number;
   delta: number;
   id: string;
 }
 
-const sendToAnalytics = (metric: WebVitalsMetric) => {;
-  // Send to your analytics service
-  if (typeof window !== 'undefined' && 'gtag' in window) {'    (window as any).gtag('event', metric.name, {'      event_category: 'Web Vitals', event_label: metric.id,'      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,'    });'  }
-  
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {'    console.log('Web Vital: ', metric);'  }'};
+const WebVitals: React.FC = () => {
+  useEffect(() => {
+    // Simple web vitals tracking without external dependencies
+    const trackWebVitals = () => {
+      // Track page load time
+      window.addEventListener('load', () => {
+        const loadTime = performance.now();
+        console.log('Page load time:', loadTime);
+      });
 
-export const WebVitals = () => {;useEffect(() => {
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
+      // Track first contentful paint
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'paint') {
+            console.log(`${entry.name}:`, entry.startTime);
+          }
+        }
+      });
+
+      try {
+        observer.observe({ entryTypes: ['paint'] });
+      } catch (e) {
+        // Paint timing not supported
+      }
+    };
+
+    trackWebVitals();
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default WebVitals;
