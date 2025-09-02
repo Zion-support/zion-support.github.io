@@ -82,25 +82,25 @@ export const Sidebar: React.FC = () => {
     { name: 'Equipment', href: '/marketplace/equipment', icon: Network }
   ]
   return(
-    <aside className='hidden lg:block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto'>
-      <div className='p-6 space-y-8'>
+    <aside className="hidden lg:block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">
+      <div className="p-6 space-y-8">
         {/* Services Section */}
         <div>
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Services</h3>
-          <div className='space-y-4'>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Services</h3>
+          <div className="space-y-4">
             {serviceCategories.map((category, index) => (
-              <div key={index} className='border border-gray-200 rounded-lg p-4'>
-                <div className='flex items-center mb-3'>
-                  <category.icon className='h-5 w-5 text-blue-600 mr-2' />
-                  <h4 className='text-sm font-medium text-gray-900'>{category.title}</h4>
+              <div key={index} className="border border-gray-200 rounded-lg p-4">
+                <div className="flex items-center mb-3">
+                  <category.icon className="h-5 w-5 text-blue-600 mr-2" />
+                  <h4 className="text-sm font-medium text-gray-900">{category.title}</h4>
                 </div>
-                <ul className='space-y-2'>
+                <ul className="space-y-2">
                   {category.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       <Link
                         to={link.href}
-                        className='flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors group'>
-                        <ChevronRight className='h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity' />
+                        className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors group">
+                        <ChevronRight className="h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                         {link.name}
                       </Link>
                     </li>
@@ -112,14 +112,14 @@ export const Sidebar: React.FC = () => {
         </div>
         {/* Company Section */}
         <div>
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Company</h3>
-          <ul className='space-y-2'>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Company</h3>
+          <ul className="space-y-2">
             {companyLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   to={link.href}
-                  className='flex items-center text-gray-700 hover:text-blue-600 transition-colors group'>
-                  <link.icon className='h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600' />
+                  className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                  <link.icon className="h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600" />
                   {link.name}
                 </Link>
               </li>
@@ -128,14 +128,14 @@ export const Sidebar: React.FC = () => {
         </div>
         {/* Marketplace Section */}
         <div>
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Marketplace</h3>
-          <ul className='space-y-2'>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Marketplace</h3>
+          <ul className="space-y-2">
             {marketplaceLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   to={link.href}
-                  className='flex items-center text-gray-700 hover:text-blue-600 transition-colors group'>
-                  <link.icon className='h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600' />
+                  className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                  <link.icon className="h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600" />
                   {link.name}
                 </Link>
               </li>
@@ -143,25 +143,25 @@ export const Sidebar: React.FC = () => {
           </ul>
         </div>
         {/* Quick Actions */}
-        <div className='bg-blue-50 rounded-lg p-4'>
-          <h3 className='text-sm font-semibold text-blue-900 mb-3'>Quick Actions</h3>
-          <div className='space-y-2'>
+        <div className="bg-blue-50 rounded-lg p-4">
+          <h3 className="text-sm font-semibold text-blue-900 mb-3">Quick Actions</h3>
+          <div className="space-y-2">
             <Link
               to='/contact';
-              className='block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors'>
+              className="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
               Get Quote
             </Link>
             <Link
               to='/help';
-              className='block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors'>
+              className="block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors">
               Support
             </Link>
           </div>
         </div>
         {/* Contact Info */}
-        <div className='bg-gray-50 rounded-lg p-4'>
-          <h3 className='text-sm font-semibold text-gray-900 mb-3'>Contact Info</h3>
-          <div className='space-y-2 text-sm text-gray-600'>
+        <div className="bg-gray-50 rounded-lg p-4">
+          <h3 className="text-sm font-semibold text-gray-900 mb-3">Contact Info</h3>
+          <div className="space-y-2 text-sm text-gray-600">
             <p>📞 +1 302 464 0950</p>
             <p>✉️ kleber@ziontechgroup.com</p>
             <p>📍 Middletown, DE</p>

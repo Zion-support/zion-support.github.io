@@ -25,7 +25,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
 
-  if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
+  if (!product || typeof product.id !== 'string' || typeof product.title !== 'string" || product.title.trim() === ") {
     captureException(new Error('Invalid product data received by ProductCard'), {
       extra: { product }
     });
@@ -109,9 +109,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
                 variant="outline"
                 size={isMobile ? "sm" : "default"}
                 onClick={handleWishlistToggle}
-                className={`flex-1 ${active ? 'text-red-500' : ''}`}
+                className="flex-1 ${active ? 'text-red-500' : "}"
               >
-                <Heart className={`h-4 w-4 ${active ? 'fill-current' : ''}`} />
+                <Heart className="h-4 w-4 ${active ? 'fill-current' : "}" />
                 {!isMobile && <span className="ml-2">{active ? 'Saved' : 'Save'}</span>}
               </Button>
             </TooltipTrigger>

@@ -123,7 +123,7 @@ export default function Marketplace() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <div className="w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4">
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
@@ -187,11 +187,11 @@ export default function Marketplace() {
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
-                            className={`w-4 h-4 ${
+                            className="w-4 h-4 ${
                               i < Math.floor(product.rating)
                                 ? 'text-yellow-400 fill-current'
                                 : 'text-gray-600'
-                            }`}
+                            }"
                           />
                         ))}
                       </div>

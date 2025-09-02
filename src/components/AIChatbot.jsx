@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
-export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
+export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group"s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
@@ -10,7 +10,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState([]);
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState(");
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
@@ -105,12 +105,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             content: input.trim()
         });
         // Track user input
-        trackChatbotInteraction('user_input', {
+        trackChatbotInteraction('user_input", {
             messageId: userMessage.id,
             inputLength: input.length
         });
         // Clear input
-        setInputValue('');
+        setInputValue(");
         setIsTyping(true);
         try {
             // Get AI response
@@ -236,7 +236,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
 
 
-}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}>
+}} className="fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">
               <div className="flex items-center justify-between">
@@ -281,17 +281,17 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
 
 
-}} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user'
+}} className="flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}">
+                      <div className="flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}">
+                        <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user'
                         ? 'bg-blue-500 text-white'
-                        : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}>
+                        : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}">
                           {message.type === 'user' ? <User className="w-4 h-4"/> : <Bot className="w-4 h-4"/>}
                         </div>
 
-                        <div className={`rounded-lg p-3 ${message.type === 'user'
+                        <div className="rounded-lg p-3 ${message.type === 'user'
                         ? 'bg-blue-500 text-white'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}>
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}">
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
 
                           {/* Message Metadata */}

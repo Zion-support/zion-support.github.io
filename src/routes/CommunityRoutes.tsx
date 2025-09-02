@@ -11,7 +11,7 @@ import CommunityProfilePage from '../pages/CommunityProfilePage';
 export default function CommunityRoutes() {
   return (
     <Routes>
-      <Route path="" element={<CommunityPage />} />
+      <Route path=" element={<CommunityPage />} />
       <Route path="category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="post/:postId" element={<ForumPostPage />} />
       <Route path="create" element={<CreatePostPage />} />

@@ -160,7 +160,7 @@ export default function Partners() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <div className="w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4">
                     <type.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>

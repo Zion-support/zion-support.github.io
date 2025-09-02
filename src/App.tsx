@@ -8,8 +8,8 @@ import { Sidebar } from './components/Sidebar';
 
 // Loading component
 const LoadingSpinner = () => (
-  <div className='flex items-center justify-center min-h-screen'>
-    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
   </div>
 )
 // Optimized lazy loading with preloading hints
@@ -170,20 +170,20 @@ const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (
-  <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-    <div className='text-center text-white max-w-md mx-auto p-8'>
-      <h1 className='text-4xl font-bold mb-4 text-red-400'>Something went wrong</h1>
-      <p className='text-gray-300 mb-6'>
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="text-center text-white max-w-md mx-auto p-8">
+      <h1 className="text-4xl font-bold mb-4 text-red-400">Something went wrong</h1>
+      <p className="text-gray-300 mb-6">
         {error.message || 'An unexpected error occurred'}      </p>
-      <div className='space-y-3'>
+      <div className="space-y-3">
         <button
           onClick={resetErrorBoundary}
-          className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >
+          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"        >
           Try again
         </button>
         <button;
           onClick={() => window.location.href = '/'}
-          className='w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'>
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">
           Go home
         </button>
       </div>
@@ -299,21 +299,21 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                     <Route
                       path='*';
                       element={
-                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-                          <div className='text-center text-white'>
-                            <h1 className='text-6xl font-bold mb-4'>404</h1>
-                            <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
-                            <p className='text-gray-300 mb-8'>
+                        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                          <div className="text-center text-white">
+                            <h1 className="text-6xl font-bold mb-4">404</h1>
+                            <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
+                            <p className="text-gray-300 mb-8">
                               The page you're looking for doesn't exist or has been moved.
                             </p>
                             <button;
                               onClick={() => window.history.back()}
-                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4'>
+                              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4">
                               Go Back
                             </button>
                             <button;
                               onClick={() => window.location.href = '/'}
-                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors'>
+                              className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
                               Go Home
                             </button>
                           </div>
@@ -345,45 +345,45 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
 export default App;
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
-('')
+import { ErrorBoundary } from 'react-error-boundary";
+(")
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
         <PerformanceOptimizer>
           <SEO />
-          <div className='min-h-screen bg-gray-50'>
+          <div className="min-h-screen bg-gray-50">
             <EnhancedHeader />
-            <div className='flex'>
+            <div className="flex">
               <Sidebar />
-              <main className='flex-1'>
+              <main className="flex-1">
                 <Routes>
                 {/* Core Pages */}
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contact' element={<Contact />} />
-                <Route path='/blog' element={<div className='p-8'><h1 className='text-3xl font-bold'>Blog</h1><p className='text-gray-600 mt-2'>Articles and insights from Zion Tech Group.</p></div>} />
-                <Route path='/faq' element={<div className='p-8'><h1 className='text-3xl font-bold'>FAQ</h1><p className='text-gray-600 mt-2'>Frequently asked questions.</p></div>} />
+                <Route path='/blog' element={<div className="p-8"><h1 className="text-3xl font-bold">Blog</h1><p className="text-gray-600 mt-2">Articles and insights from Zion Tech Group.</p></div>} />
+                <Route path='/faq' element={<div className="p-8"><h1 className="text-3xl font-bold">FAQ</h1><p className="text-gray-600 mt-2">Frequently asked questions.</p></div>} />
                 <Route path='/careers' element={<Careers />} />
-                <Route path='/partners' element={<div className='p-8'><h1 className='text-3xl font-bold'>Partners</h1><p className='text-gray-600 mt-2'>Our technology and delivery partners.</p></div>} />
+                <Route path='/partners' element={<div className="p-8"><h1 className="text-3xl font-bold">Partners</h1><p className="text-gray-600 mt-2">Our technology and delivery partners.</p></div>} />
                 <Route path='/solutions' element={<Solutions />} />
                 <Route path='/research-development' element={<Solutions />} />
                 <Route path='/case-studies' element={<CaseStudies />} />
                 <Route path='/news' element={<News />} />
                 <Route path='/events' element={<News />} />
-                <Route path='/team' element={<div className='p-8'><h1 className='text-3xl font-bold'>Team</h1><p className='text-gray-600 mt-2'>Meet the people behind Zion Tech Group.</p></div>} />
-                <Route path='/help' element={<div className='p-8'><h1 className='text-3xl font-bold'>Help Center</h1><p className='text-gray-600 mt-2'>How can we help you?</p></div>} />
-                <Route path='/security' element={<div className='p-8'><h1 className='text-3xl font-bold'>Security</h1><p className='text-gray-600 mt-2'>Our commitment to security.</p></div>} />
-                <Route path='/status' element={<div className='p-8'><h1 className='text-3xl font-bold'>Status</h1><p className='text-gray-600 mt-2'>All systems operational.</p></div>} />
-                <Route path='/sitemap' element={<div className='p-8'><h1 className='text-3xl font-bold'>Sitemap</h1><p className='text-gray-600 mt-2'>Browse all pages.</p></div>} />
-                <Route path='/login' element={<div className='p-8'><h1 className='text-3xl font-bold'>Login</h1></div>} />
-                <Route path='/signup' element={<div className='p-8'><h1 className='text-3xl font-bold'>Signup</h1></div>} />
-                <Route path='/request-quote' element={<div className='p-8'><h1 className='text-3xl font-bold'>Request a Quote</h1><p className='text-gray-600 mt-2'>Tell us about your project.</p></div>} />
-                <Route path='/green-it' element={<div className='p-8'><h1 className='text-3xl font-bold'>Green IT</h1><p className='text-gray-600 mt-2'>Sustainable technology initiatives.</p></div>} />
-                <Route path='/marketplace' element={<div className='p-8'><h1 className='text-3xl font-bold'>Marketplace</h1><p className='text-gray-600 mt-2'>Explore products, talent, and services.</p></div>} />
-                <Route path='/marketplace/products' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Products</h1></div>} />
-                <Route path='/marketplace/talent' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Talent</h1></div>} />
-                <Route path='/marketplace/equipment' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Equipment</h1></div>} />
-                <Route path='/micro-saas' element={<div className='p-8'><h1 className='text-3xl font-bold'>Micro SAAS</h1><p className='text-gray-600 mt-2'>Curated micro SaaS solutions.</p></div>} />
-                <Route path='/it-services' element={<div className='p-8'><h1 className='text-3xl font-bold'>IT Services</h1><p className='text-gray-600 mt-2'>Enterprise IT offerings.</p></div>} />{/* Services */}
+                <Route path='/team' element={<div className="p-8"><h1 className="text-3xl font-bold">Team</h1><p className="text-gray-600 mt-2">Meet the people behind Zion Tech Group.</p></div>} />
+                <Route path='/help' element={<div className="p-8"><h1 className="text-3xl font-bold">Help Center</h1><p className="text-gray-600 mt-2">How can we help you?</p></div>} />
+                <Route path='/security' element={<div className="p-8"><h1 className="text-3xl font-bold">Security</h1><p className="text-gray-600 mt-2">Our commitment to security.</p></div>} />
+                <Route path='/status' element={<div className="p-8"><h1 className="text-3xl font-bold">Status</h1><p className="text-gray-600 mt-2">All systems operational.</p></div>} />
+                <Route path='/sitemap' element={<div className="p-8"><h1 className="text-3xl font-bold">Sitemap</h1><p className="text-gray-600 mt-2">Browse all pages.</p></div>} />
+                <Route path='/login' element={<div className="p-8"><h1 className="text-3xl font-bold">Login</h1></div>} />
+                <Route path='/signup' element={<div className="p-8"><h1 className="text-3xl font-bold">Signup</h1></div>} />
+                <Route path='/request-quote' element={<div className="p-8"><h1 className="text-3xl font-bold">Request a Quote</h1><p className="text-gray-600 mt-2">Tell us about your project.</p></div>} />
+                <Route path='/green-it' element={<div className="p-8"><h1 className="text-3xl font-bold">Green IT</h1><p className="text-gray-600 mt-2">Sustainable technology initiatives.</p></div>} />
+                <Route path='/marketplace' element={<div className="p-8"><h1 className="text-3xl font-bold">Marketplace</h1><p className="text-gray-600 mt-2">Explore products, talent, and services.</p></div>} />
+                <Route path='/marketplace/products' element={<div className="p-8"><h1 className="text-2xl font-semibold">Products</h1></div>} />
+                <Route path='/marketplace/talent' element={<div className="p-8"><h1 className="text-2xl font-semibold">Talent</h1></div>} />
+                <Route path='/marketplace/equipment' element={<div className="p-8"><h1 className="text-2xl font-semibold">Equipment</h1></div>} />
+                <Route path='/micro-saas' element={<div className="p-8"><h1 className="text-3xl font-bold">Micro SAAS</h1><p className="text-gray-600 mt-2">Curated micro SaaS solutions.</p></div>} />
+                <Route path='/it-services' element={<div className="p-8"><h1 className="text-3xl font-bold">IT Services</h1><p className="text-gray-600 mt-2">Enterprise IT offerings.</p></div>} />{/* Services */}
                 <Route path='/services' element={<Services />} />
                 <Route path='/services/ai' element={<AIServices />} />
                 <Route path='/services/cloud' element={<CloudServices />} />
@@ -393,13 +393,13 @@ import { ErrorBoundary } from 'react-error-boundary';
                 <Route path='/services/consulting' element={<ConsultingServices />} />{/* Legal */}
                 <Route path='/privacy' element={<Privacy />} />
                 <Route path='/terms' element={<Terms />} />
-                <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />{/* 404 Fallback */}
+                <Route path='/cookies' element={<div className="p-8"><h1 className="text-3xl font-bold">Cookies</h1></div>} />{/* 404 Fallback */}
                 <Route path='*' element={
-                  <div className='min-h-screen flex items-center justify-center'>
-                    <div className='text-center'>
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
-                      <p className='text-gray-600 mb-8'>Page not found</p>
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                  <div className="min-h-screen flex items-center justify-center">
+                    <div className="text-center">
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
+                      <p className="text-gray-600 mb-8">Page not found</p>
+                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                         Go Home
                       </a>
                     </div>
@@ -414,8 +414,8 @@ import { ErrorBoundary } from 'react-error-boundary';
       </ErrorBoundary>
     </HelmetProvider>
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className='App'>
-        <div className='min-h-screen'>
+      <div className="App">
+        <div className="min-h-screen">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               {/* Main Pages */}

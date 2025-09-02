@@ -116,9 +116,9 @@ const Pricing: NextPage = () => {
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative bg-white rounded-2xl shadow-lg border-2 p-8 ${
+                className="relative bg-white rounded-2xl shadow-lg border-2 p-8 ${
                   plan.popular ? 'border-purple-500 transform scale-105' : 'border-gray-200'
-                }`}
+                }"
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -130,8 +130,8 @@ const Pricing: NextPage = () => {
                 )}
 
                 <div className="text-center mb-8">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${plan.color}-100 flex items-center justify-center`}>
-                    <plan.icon className={`w-8 h-8 text-${plan.color}-600`} />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-${plan.color}-100 flex items-center justify-center">
+                    <plan.icon className="w-8 h-8 text-${plan.color}-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 mb-4">{plan.description}</p>
@@ -152,11 +152,11 @@ const Pricing: NextPage = () => {
 
                 <Link
                   href="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  className="w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}
+                  }"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2 inline" />

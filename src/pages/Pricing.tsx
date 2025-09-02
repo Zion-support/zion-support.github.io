@@ -141,11 +141,11 @@ export default function Pricing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border ${
+                  className="relative bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border ${
                     plan.popular 
                       ? 'border-blue-400/50 ring-2 ring-blue-400/20' 
                       : 'border-slate-600/50'
-                  } hover:border-cyan-400/50 transition-all duration-300 hover:scale-105`}
+                  } hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -156,7 +156,7 @@ export default function Pricing() {
                   )}
 
                   <div className="text-center mb-8">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                    <div className="w-16 h-16 bg-gradient-to-br ${plan.color} rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Star className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -176,11 +176,11 @@ export default function Pricing() {
                     ))}
                   </ul>
 
-                  <button className={`w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${
+                  <button className="w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'border border-slate-600 text-gray-300 hover:bg-slate-700'
-                  }`}>
+                  }">
                     Get Started
                   </button>
                 </motion.div>

@@ -141,7 +141,7 @@ export default function Training() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <div className="w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4">
                     <type.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>
@@ -179,11 +179,11 @@ export default function Training() {
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      <span className="px-3 py-1 rounded-full text-xs font-medium ${
                         course.level === 'Beginner' ? 'bg-green-600/20 text-green-300 border border-green-400/30' :
                         course.level === 'Intermediate' ? 'bg-yellow-600/20 text-yellow-300 border border-yellow-400/30' :
                         'bg-red-600/20 text-red-300 border border-red-400/30'
-                      }`}>
+                      }">
                         {course.level}
                       </span>
                       {course.featured && (

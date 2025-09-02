@@ -126,8 +126,8 @@ const Help: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {supportChannels.map((channel, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center bg-${channel.color}-100`}>
-                  <channel.icon className={`w-8 h-8 text-${channel.color}-600`} />
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center bg-${channel.color}-100">
+                  <channel.icon className="w-8 h-8 text-${channel.color}-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{channel.title}</h3>
                 <p className="text-gray-600 mb-4">{channel.description}</p>

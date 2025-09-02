@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState } from 'react";
 
 interface OptimizedImageProps {
   src: string;
@@ -15,7 +15,7 @@ export default function OptimizedImage({
   alt,
   width = 800,
   height = 600,
-  className = '',
+  className = ",
   priority = false,
   quality = 75
 }: OptimizedImageProps) {
@@ -23,7 +23,7 @@ export default function OptimizedImage({
   const [hasError, setHasError] = useState(false);
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className="relative overflow-hidden ${className}">
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
@@ -34,7 +34,7 @@ export default function OptimizedImage({
         height={height}
         priority={priority}
         quality={quality}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        className="transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}"
         onLoad={() => setIsLoading(false)}
         onError={() => {
           setHasError(true);

@@ -54,7 +54,7 @@ import {
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
-import { comprehensiveServices } from '../data/comprehensiveServices';
+import { comprehensiveServices } from '../data/comprehensiveServices";
 
 interface Service {
   id: string;
@@ -85,7 +85,7 @@ interface Service {
 }
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(");
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
@@ -335,7 +335,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     {getCategoryIcon(service.category)}
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
+                      <span className="px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}">
                         {service.status}
                       </span>
                     </div>
@@ -435,7 +435,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     {getCategoryIcon(selectedService.category)}
                     <div>
                       <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}>
+                      <span className="px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}">
                         {selectedService.status}
                       </span>
                     </div>

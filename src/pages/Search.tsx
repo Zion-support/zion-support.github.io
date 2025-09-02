@@ -16,10 +16,10 @@ import {
   Bookmark,
   Share2
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO";
 
 const Search: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(");
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('relevance');
   const [results, setResults] = useState<any[]>([]);
@@ -129,10 +129,10 @@ const Search: React.FC = () => {
           return new Date(b.date).getTime() - new Date(a.date).getTime();
         case 'rating':
           return b.rating - a.rating;
-        case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        case "price-low":
+          return parseFloat(a.price.replace(/[^0-9.]/g, ")) - parseFloat(b.price.replace(/[^0-9.]/g, "));
+        case "price-high":
+          return parseFloat(b.price.replace(/[^0-9.]/g, ")) - parseFloat(a.price.replace(/[^0-9.]/g, "));
         default:
           return 0;
       }
@@ -243,11 +243,11 @@ const Search: React.FC = () => {
                         <button
                           key={category.id}
                           onClick={() => setActiveCategory(category.id)}
-                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                          className="w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
                             activeCategory === category.id
                               ? 'bg-blue-500 text-white'
                               : 'text-gray-300 hover:bg-slate-700/50'
-                          }`}
+                          }"
                         >
                           {category.name}
                           <span className="float-right text-xs opacity-75">({category.count})</span>
@@ -264,11 +264,11 @@ const Search: React.FC = () => {
                         <button
                           key={option.id}
                           onClick={() => setSortBy(option.id)}
-                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                          className="w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
                             sortBy === option.id
                               ? 'bg-purple-500 text-white'
                               : 'text-gray-300 hover:bg-slate-700/50'
-                          }`}
+                          }"
                         >
                           {option.name}
                         </button>

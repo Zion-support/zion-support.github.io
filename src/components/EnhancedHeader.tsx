@@ -7,10 +7,10 @@ import {
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react";
 export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(");
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
@@ -266,17 +266,17 @@ export const EnhancedHeader: React.FC = () => {
     { label: 'Contact', href: '/contact' }
   ]
   return(
-    <header className='bg-white shadow-lg'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center py-6'>
-          <div className='flex items-center'>
-            <a href='/' className='text-2xl font-bold text-blue-900'>
+    <header className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-6">
+          <div className="flex items-center">
+            <a href='/' className="text-2xl font-bold text-blue-900">
               Zion Tech Group
             </a>
           </div>
-          <nav className='hidden md:flex space-x-8'>
+          <nav className="hidden md:flex space-x-8">
             {navLinks.map((link, index) => (
-              <a key={index} href={link.href} className='text-gray-700 hover:text-blue-600'>
+              <a key={index} href={link.href} className="text-gray-700 hover:text-blue-600">
                 {link.label}
               </a>
             ))}
@@ -284,9 +284,9 @@ export const EnhancedHeader: React.FC = () => {
           <button;
             aria-label='Toggle navigation';
             onClick={() => setMobileOpen((v) => !v)}
-            className='md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
           >
-            <svg xmlns='http://www.w3.org/2000/svg' className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+            <svg xmlns='http://www.w3.org/2000/svg' className="h-6 w-6" fill='none' viewBox='0 0 24 24' stroke='currentColor'>
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
             </svg>
           </button>
