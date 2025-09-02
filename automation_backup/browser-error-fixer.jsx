@@ -77,7 +77,9 @@ class BrowserErrorFixer {
       // console.log(`⚠️  No fix strategy identified for this error`);
     }
   }
-<:automation_backup/browser-error-fixer.jsxidentifyFixStrategy(error) {
+<ursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
+
+  identifyFixStrategy(error) {
     const message = error.message || '';
     
     for (const [errorType, strategy] of Object.entries(this.fixPatterns)) {
@@ -114,7 +116,9 @@ class BrowserErrorFixer {
       console.error(`❌ Error applying fix strategy:`, error);
     }
   }
-<:automation_backup/browser-error-fixer.jsxasync findRelevantSourceFiles(error) {
+<ursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
+
+  async findRelevantSourceFiles(error) {
     const sourceFiles = [];
     const extensions = ['.js',.jsx',.ts',.tsx'];
     
@@ -147,7 +151,9 @@ class BrowserErrorFixer {
       return [];
     }
   }
-<:automation_backup/browser-error-fixer.jsxasync findFilesRecursively(dir, extensions, maxDepth = 3) {
+<ursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js
+
+  async findFilesRecursively(dir, extensions, maxDepth = 3) {
     const files = [];
     
     async function search(currentDir, depth) {

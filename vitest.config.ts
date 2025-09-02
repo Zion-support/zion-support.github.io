@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitest/config';
 import path from 'node:path';
-export { defineConfig };export default defineConfig({
+
+export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -13,6 +14,14 @@ export { defineConfig };export default defineConfig({
     globals: true,
     coverage: {
       provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+      exclude: [
+        'node_modules/',
+        'tests/',
+        '**/*.d.ts',
+        '**/*.config.*',
+        '**/coverage/**',
+      ],
     },
   },
 });

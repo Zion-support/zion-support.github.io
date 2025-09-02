@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
+import { Menu, X, ChevronDown } from 'lucide-react';
+const Header: React.FC = () => {;
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
   const navigation = [;
@@ -65,7 +68,10 @@ import { Menu, X, ChevronDown const Header: React.FC = () => {const [isMenuOpen,
                     setIsCompanyDropdownOpen(false);
                     setIsResourcesDropdownOpen(false);
                   }}
-{item.icon && <item.icon className="h-5 w-5" />}<div>
+                >
+                  {item.icon && <item.icon className = "h-5 w-5" />}
+
+                  <div>
                     <div className="font-medium">{item.name}</div>
                   </div>
                 </Link>;
