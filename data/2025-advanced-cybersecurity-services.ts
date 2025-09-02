@@ -35,13 +35,7 @@ export interface AdvancedCybersecurityService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const contact = {
+reviews: number;const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
@@ -51,12 +45,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   {
@@ -328,5 +316,4 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 52,
     rating: 4.5,
     reviews: 96
-
 ];}}

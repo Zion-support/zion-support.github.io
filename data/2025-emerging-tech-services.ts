@@ -9,12 +9,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const emergingTechServices2025: MicroSaasService[] = [
   // Quantum Computing Services
@@ -486,9 +480,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     customers: 9,
     rating: 4.9,
     reviews: 7
-
 ];
-<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {;
   return emergingTechServices2025.filter(service => service.popular)};
 export const getEmergingTechServicesByCategory = (category: string) => {;
@@ -501,12 +493,7 @@ export const getEmergingTechServicesByCategory = (category: string) => {;
 };
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return emergingTechServices2025.filter(service => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
-<<<<<<< HEAD
-    return price >= minPrice && price <= maxPrice;
+const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
+return price >= minPrice && price <= maxPrice;
   });
 };}
-=======
-    return price >= minPrice && price <= maxPrice})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

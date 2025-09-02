@@ -257,13 +257,6 @@ export const emergingTechInnovations2025 = [
         technologyStack['Robotics', 'Computer vision', 'AI/ML', 'IoT sensors', '5G networks'],
         innovationLevel: 'Advanced robotics with continuous AI and safety improvements',
         futureProofing: 'Next-generation robotics hardware and AI algorithms',
-<<<<<<< HEAD
-        researchPartnerships: ['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics']
-
-=======
-        researchPartnerships['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics']
-    }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-];
+researchPartnerships: ['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics']];
 export default emergingTechInnovations2025;
 }

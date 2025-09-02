@@ -292,8 +292,7 @@ export const advancedAIServices2025 = [
     tags['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response'],
     website: 'https://ziontechgroup.com/cybersecurity-ai',
     contact: {
-<<<<<<< HEAD
-      phone: '+1 302 464 0950',
+phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$173.5B',
@@ -301,13 +300,3 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
 
 ];}
-=======
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
-    },;
-    marketSize: '$173.5B',;
-    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
-    competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
-  };
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

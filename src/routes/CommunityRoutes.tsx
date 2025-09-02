@@ -1,15 +1,1 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-
-export default function CommunityRoutes() {
-  return (
-    <Routes>
-      <Route path="" element={<div>Community Page</div>} />
-      <Route path="category/:categorySlug" element={<div>Forum Category</div>} />
-      <Route path="post/:postId" element={<div>Forum Post</div>} />
-      <Route path="create" element={<div>Create Post</div>} />
-      <Route path="edit/:postId" element={<div>Edit Post</div>} />
-      <Route path="profile/:username" element={<div>Community Profile</div>} />
-    </Routes>
-  );
-}
+import { Route, Routes } from 'react-router-dom.ts'; import { ProtectedRoute } from '../components/ProtectedRoute'; import CommunityPage from '../pages/CommunityPage'; import ForumCategoryPage from '../pages/ForumCategoryPage'; import ForumPostPage from '../pages/ForumPostPage'; import CreatePostPage from '../pages/CreatePostPage'; import EditPostPage from '../pages/EditPostPage'; import CommunityProfilePage from '../pages/CommunityProfilePage'; ; export default function CommunityRoutes(...args: any[]): any {; return (; <>; <Route path = "" element={<CommunityPage />} />;";" </>;";" );"";" }";"";"

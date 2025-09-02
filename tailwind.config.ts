@@ -1,11 +1,9 @@
 import type { Config } from 'tailwindcss'
-
 export default {
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{html,js}',
-    './node_modules/tw-elements/dist/js/**/*.js'
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -42,6 +40,24 @@ export default {
           emerald: '#10b981',
           amber: '#f59e0b',
           rose: '#f43f5e',
+        }
+      },
+      animation: {
+        'gradient': 'gradient 6s ease infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
         }
       },
       fontFamily: {
@@ -84,57 +100,6 @@ export default {
           'sans-serif',
         ],
       },
-<<<<<<< HEAD
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
-        "fade-out": {
-          from: { opacity: "1" },
-          to: { opacity: "0" },
-        },
-        "slide-in-from-top": {
-          from: { transform: "translateY(-100%)" },
-          to: { transform: "translateY(0)" },
-        },
-        "slide-in-from-bottom": {
-          from: { transform: "translateY(100%)" },
-          to: { transform: "translateY(0)" },
-        },
-        "slide-in-from-left": {
-          from: { transform: "translateX(-100%)" },
-          to: { transform: "translateX(0)" },
-        },
-        "slide-in-from-right": {
-          from: { transform: "translateX(100%)" },
-          to: { transform: "translateX(0)" },
-        },
-        "glow-pulse": {
-          "0%, 100%": {
-            boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor"
-          },
-          "50%": {
-            boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor"
-          },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "matrix-rain": {
-          "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(100vh)" },
-        },
-=======
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
         'sm': ['0.875rem', { lineHeight: '1.25rem' }],
@@ -155,7 +120,6 @@ export default {
         '88': '22rem',
         '128': '32rem',
         '144': '36rem',
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       },
       animation: {
         // Enhanced animations

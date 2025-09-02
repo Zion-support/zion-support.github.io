@@ -5,6 +5,8 @@ module.exports = {
     node: true,
   },
   extends: [
+    'next/core-web-vitals',
+    'next/typescript',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
@@ -18,19 +20,27 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'no-console': 'warn',
+    '@typescript-eslint/no-unused-imports': 'warn',
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'automation/',
+    'components.disabled/',
+    'contracts/',
+    'hardhat/',
+    'cypress/',
+    '**/*.disabled',
+    '**/*.backup',
+    '**/*.tsbackup',
+  ],
 };

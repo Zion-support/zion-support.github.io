@@ -292,8 +292,7 @@ export const advancedMicroSaasServices2025 = [
     tags['AI', 'API Management', 'Security', 'Monitoring'],
     website: 'https://ziontechgroup.com/api-guardian-pro',
     contact: {
-<<<<<<< HEAD
-      phone: '+1 302 464 0950',
+phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$3.9B',
@@ -301,13 +300,3 @@ export const advancedMicroSaasServices2025 = [
     competitiveAdvantage: 'Advanced AI performance monitoring, comprehensive security automation, and seamless cloud platform integration'
 
 ];}
-=======
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
-    },;
-    marketSize: '$3.9B',;
-    targetAudience: 'API developers, DevOps teams, enterprise businesses, cloud platforms',;
-    competitiveAdvantage: 'Advanced AI performance monitoring, comprehensive security automation, and seamless cloud platform integration';
-  };
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

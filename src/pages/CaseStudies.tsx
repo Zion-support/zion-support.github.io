@@ -1,16 +1,18 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 
-export default function CaseStudies() {
+const CaseStudies: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <SEO title="Case Studies - Zion Tech Group" description="Client success stories and outcomes." />
-      <section className="py-24 text-center">
-        <h1 className="text-5xl font-bold mb-4">Case Studies</h1>
-        <p className="text-slate-300 max-w-2xl mx-auto">
-          Explore how we help clients achieve measurable results with AI, cloud, and cybersecurity.
-        </p>
-      </section>
-    </div>
+    <>
+      <SEO title="CaseStudies - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">CaseStudies</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default CaseStudies;

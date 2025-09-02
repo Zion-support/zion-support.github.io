@@ -35,13 +35,7 @@ export interface SpecializedAIService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const specializedAIServices: SpecializedAIService[] = [
+reviews: number;export const specializedAIServices: SpecializedAIService[] = [
   {
     id: 'ai-powered-legal-contract-analyzer',
     name: 'AI-Powered Legal Contract Analyzer',
@@ -500,5 +494,4 @@ export const specializedAIServices: SpecializedAIService[] = [
     customers: 267,
     rating: 4.6,
     reviews: 134
-
 ];}}

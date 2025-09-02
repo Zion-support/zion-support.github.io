@@ -11,14 +11,8 @@ export interface ComprehensiveItSolution {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
+address: string;
+  };export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
   {
     id: "full-stack-development",
     name: "Full-Stack Development Services",
@@ -39,6 +33,4 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-
-
 ];}}}

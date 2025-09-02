@@ -11,14 +11,8 @@ export interface QuantumAiService2025 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const quantumAIServices2025: QuantumAiService2025[] = [
+address: string;
+  };export const quantumAIServices2025: QuantumAiService2025[] = [
   {
     id: "quantum-ai-hybrid",
     name: "Quantum AI Hybrid Platform",
@@ -39,6 +33,4 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-
-
 ];}}}

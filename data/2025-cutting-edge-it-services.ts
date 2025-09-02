@@ -16,8 +16,7 @@ export const cuttingEdgeITServices2025 = [
       'Automated infrastructure management'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 399,
         period: 'month',
         features: ['Basic quantum infrastructure', 'Standard security protocols', 'Email support']
@@ -30,26 +29,7 @@ export const cuttingEdgeITServices2025 = [
       enterprise: {
         price: 2499,
         period: 'month',
-        features: ['Full quantum platform', 'Custom security protocols', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features['Basic quantum infrastructure', 'Standard security protocols', 'Email support'] 
-      },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features['Advanced quantum features', 'Enhanced security protocols', 'Priority support', 'Performance optimization'] 
-      },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features['Full quantum platform', 'Custom security protocols', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full quantum platform', 'Custom security protocols', 'Dedicated specialists', '24/7 support']},
     category: 'Quantum IT',
     tags['Quantum Computing', 'Cloud Infrastructure', 'Security', 'Performance', 'Scalability'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
@@ -87,8 +67,7 @@ export const cuttingEdgeITServices2025 = [
       'Performance optimization algorithms'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 299,
         period: 'month',
         features: ['Basic edge orchestration', 'Standard monitoring', 'Email support']
@@ -101,26 +80,7 @@ export const cuttingEdgeITServices2025 = [
       enterprise: {
         price: 1999,
         period: 'month',
-        features: ['Full edge platform', 'Custom AI models', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features['Basic edge orchestration', 'Standard monitoring', 'Email support'] 
-      },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features['Advanced orchestration', 'AI model deployment', 'Priority support', 'Performance optimization'] 
-      },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features['Full edge platform', 'Custom AI models', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full edge platform', 'Custom AI models', 'Dedicated specialists', '24/7 support']},
     category: 'Edge Computing',
     tags['Edge Computing', 'Orchestration', 'Real-time Processing', 'AI Deployment', 'Low Latency'],
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
@@ -158,8 +118,7 @@ export const cuttingEdgeITServices2025 = [
       'Comprehensive audit logging'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 499,
         period: 'month',
         features: ['Basic zero-trust features', 'Standard authentication', 'Email support']
@@ -172,26 +131,7 @@ export const cuttingEdgeITServices2025 = [
       enterprise: {
         price: 2999,
         period: 'month',
-        features: ['Full security platform', 'Custom security policies', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 499, 
-        period: 'month', 
-        features['Basic zero-trust features', 'Standard authentication', 'Email support'] 
-      },
-      professional: { 
-        price: 1299, 
-        period: 'month', 
-        features['Advanced security features', 'Behavioral analytics', 'Priority support', 'Custom policies'] 
-      },
-      enterprise: { 
-        price: 2999, 
-        period: 'month', 
-        features['Full security platform', 'Custom security policies', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full security platform', 'Custom security policies', 'Dedicated specialists', '24/7 support']},
     category: 'Cybersecurity',
     tags['Zero Trust', 'Security', 'Authentication', 'IAM', 'Threat Detection'],
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
@@ -229,8 +169,7 @@ export const cuttingEdgeITServices2025 = [
       'Comprehensive reporting and analytics'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 599,
         period: 'month',
         features: ['Basic blockchain features', 'Standard smart contracts', 'Email support']
@@ -243,26 +182,7 @@ export const cuttingEdgeITServices2025 = [
       enterprise: {
         price: 3499,
         period: 'month',
-        features: ['Full blockchain platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 599, 
-        period: 'month', 
-        features['Basic blockchain features', 'Standard smart contracts', 'Email support'] 
-      },
-      professional: { 
-        price: 1499, 
-        period: 'month', 
-        features['Advanced blockchain features', 'Custom smart contracts', 'Priority support', 'Performance optimization'] 
-      },
-      enterprise: { 
-        price: 3499, 
-        period: 'month', 
-        features['Full blockchain platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full blockchain platform', 'Custom development', 'Dedicated specialists', '24/7 support']},
     category: 'Blockchain',
     tags['Blockchain', 'Smart Contracts', 'Distributed Ledger', 'Enterprise', 'Automation'],
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform',
@@ -300,8 +220,7 @@ export const cuttingEdgeITServices2025 = [
       'Comprehensive analytics and reporting'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 399,
         period: 'month',
         features: ['Basic AI DevOps features', 'Standard automation', 'Email support']
@@ -314,26 +233,7 @@ export const cuttingEdgeITServices2025 = [
       enterprise: {
         price: 2499,
         period: 'month',
-        features: ['Full AI DevOps platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-
-=======
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features['Basic AI DevOps features', 'Standard automation', 'Email support'] 
-      },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features['Advanced AI features', 'Custom automation', 'Priority support', 'Performance optimization'] 
-      },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features['Full AI DevOps platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full AI DevOps platform', 'Custom development', 'Dedicated specialists', '24/7 support']},
     category: 'DevOps',
     tags['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance'],
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
@@ -349,24 +249,9 @@ export const cuttingEdgeITServices2025 = [
       'Continuous deployment pipelines',
       'Performance monitoring and optimization',
       'Incident response automation',
-<<<<<<< HEAD
-      'Quality assurance automation'
+'Quality assurance automation'
     ],
-<<<<<<< HEAD
-    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],
+integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],
     compliance: ['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols']
 
-];}}}}}}
-=======
-    integrations['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],
-    compliance['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols']
-  };
-=======;
-      'Quality assurance automation';
-    ],;
-    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],;
-    compliance: ['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols'];
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+];}}}}}}];

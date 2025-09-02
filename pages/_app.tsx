@@ -1,19 +1,23 @@
-<<<<<<< HEAD
-// // // import type { AppProps } from 'next/app'; // TODO: Remove or replace with appropriate type // TODO: Remove or replace with appropriate type // TODO: Remove or replace with appropriate type
-=======
-import type { AppProps } from 'next/app.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import '../styles/globals.css';
-import ModernLayout from "../components/layout/ModernLayout";
+import React, { useEffect } from 'react';
+import type { AppProps } from 'next/app';
+import { HelmetProvider } from 'react-helmet-async';
+import '../src/index.css';
 
-export default function App(...args[]):  {
+export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      const swUrl = '/service-worker.js';
+      navigator.serviceWorker
+        .register(swUrl)
+        .catch(() => {
+          // no-op: registration failed, ignore
+        });
+    }
+  }, []);
+
   return (
-    <ModernLayout>
+    <HelmetProvider>
       <Component {...pageProps} />
-    </ModernLayout>
-<<<<<<< HEAD
+    </HelmetProvider>
   );
 }
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
