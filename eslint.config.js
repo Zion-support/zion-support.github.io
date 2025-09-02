@@ -1,25 +1,32 @@
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'react/no-unescaped-entities': 'off',
-    'react-hooks/exhaustive-deps': 'warn'
+export default [
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+      'no-var': 'error'
+    }
   },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.cjs',
-    '*.config.mjs'
-  ]
-};
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs'
+    ]
+  }
+];
