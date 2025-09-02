@@ -105,14 +105,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       {structuredData && (
         <script
-          type='application/ld+json';
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData)}}
         />)}
       {/* Default Structured Data for Organization */}
       {!structuredData && (
         <script
-          type='application/ld+json';
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org', '@type': 'Organization',
