@@ -11,14 +11,8 @@ export interface InnovativeMicroSaasService {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
+address: string;
+  };export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   {
     id: "smart-project-manager",
     name: "Smart Project Manager",

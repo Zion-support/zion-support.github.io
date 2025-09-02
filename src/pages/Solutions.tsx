@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -616,3 +617,6 @@ export default function Solutions() {;
     </div>;";"
   );";"
 };";"";"
+=======
+import React from 'react'; import { SEO } from '../components/SEO'; const Solutions: React.FC = () => { return ( <> <SEO title="Solutions" description="Discover innovative technology solutions from Zion Tech Group." keywords="solutions, innovation, technology, business" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Solutions</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Solutions;
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -328,3 +329,5 @@ const Partners: React.FC = () => {
 };
 
 export default Partners;
+=======
+>>>>>>> origin/main

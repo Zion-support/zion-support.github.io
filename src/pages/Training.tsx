@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -589,3 +590,5 @@ const Training: React.FC = () => {
 };
 
 export default Training;
+=======
+>>>>>>> origin/main

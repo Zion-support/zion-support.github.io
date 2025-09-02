@@ -52,21 +52,18 @@ import {
   MapPin as MapPinIcon'
 } from 'lucide-react';
 
-  
         'Quantum Computing - Next-gen computational power',;
         'IoT Edge Computing - Smart device networks',;
         'Space Tech - Space technology solutions',;
         'Green IT - Sustainable technology solutions';
       ]};
-=======
-      items: [;'
+items: [;'
         'Quantum Computing - Next-gen computational power',;'
         'IoT Edge Computing - Smart device networks',;'
         'Space Tech - Space technology solutions',;'        'Green IT - Sustainable technology solutions';
       ]};
   ];
 
-  
     {;
       title: 'Analytics Driven',;
       description: 'Comprehensive analytics and performance monitoring',;
@@ -74,7 +71,6 @@ import {
       color: 'from-blue-500 to-cyan-500'};
   ];
 
-  
     {;
       title: 'Security Enhanced',;
       description: 'Advanced security measures and privacy protection',;

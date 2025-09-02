@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function Sustainability(...args: []):  {;
     };
@@ -283,3 +284,5 @@ export default function Sustainability(...args: []):  {;
     </div>;"
   )}";"
 '";"
+=======
+>>>>>>> origin/main

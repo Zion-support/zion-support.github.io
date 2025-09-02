@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, User, Building, Globe, ArrowRight } from 'lucide-react';
@@ -245,3 +246,5 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+=======
+>>>>>>> origin/main

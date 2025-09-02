@@ -16,8 +16,7 @@ export const quantumBreakthroughServices2025 = [
       '24/7 quantum security operations center'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 12999,
         period: 'month',
         features: ['Basic quantum security', 'Up to 1000 secure connections', 'Standard monitoring', 'Email support']
@@ -30,26 +29,7 @@ export const quantumBreakthroughServices2025 = [
       enterprise: {
         price: 49999,
         period: 'month',
-        features: ['Full quantum platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 12999, 
-        period: 'month', 
-        features['Basic quantum security', 'Up to 1000 secure connections', 'Standard monitoring', 'Email support'] 
-      },
-      professional: { 
-        price: 24999, 
-        period: 'month', 
-        features['Advanced quantum security', 'Unlimited connections', 'Custom protocols', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 49999, 
-        period: 'month', 
-        features['Full quantum platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full quantum platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'Quantum Internet & Security',
     tags['Quantum Computing', 'Internet Security', 'Cryptography', 'Network Security', 'Government Compliance'],
     website: 'https://ziontechgroup.com/quantum-internet-security-platform',
@@ -87,8 +67,7 @@ export const quantumBreakthroughServices2025 = [
       'API access for research institutions'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 8999,
         period: 'month',
         features: ['Basic bio-computing', 'Up to 100 simulations/month', 'Standard models', 'Email support']
@@ -101,26 +80,7 @@ export const quantumBreakthroughServices2025 = [
       enterprise: {
         price: 39999,
         period: 'month',
-        features: ['Full bio-computing platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 8999, 
-        period: 'month', 
-        features['Basic bio-computing', 'Up to 100 simulations/month', 'Standard models', 'Email support'] 
-      },
-      professional: { 
-        price: 19999, 
-        period: 'month', 
-        features['Advanced bio-computing', 'Unlimited simulations', 'Custom models', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 39999, 
-        period: 'month', 
-        features['Full bio-computing platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full bio-computing platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'Quantum Biology',
     tags['Quantum Computing', 'Biology', 'Drug Discovery', 'Medical Research', 'Protein Folding'],
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
@@ -158,8 +118,7 @@ export const quantumBreakthroughServices2025 = [
       'API for custom applications'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 15999,
         period: 'month',
         features: ['Basic neural interface', 'Up to 10 users', 'Standard monitoring', 'Email support']
@@ -172,26 +131,7 @@ export const quantumBreakthroughServices2025 = [
       enterprise: {
         price: 59999,
         period: 'month',
-        features: ['Full neural platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 15999, 
-        period: 'month', 
-        features['Basic neural interface', 'Up to 10 users', 'Standard monitoring', 'Email support'] 
-      },
-      professional: { 
-        price: 29999, 
-        period: 'month', 
-        features['Advanced neural interface', 'Up to 100 users', 'Custom development', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 59999, 
-        period: 'month', 
-        features['Full neural platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full neural platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'Neural Interfaces',
     tags['Brain-Computer Interface', 'Neural Networks', 'AI', 'Medical Technology', 'Human-AI Collaboration'],
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
@@ -229,8 +169,7 @@ export const quantumBreakthroughServices2025 = [
       'API for space operations'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 19999,
         period: 'month',
         features: ['Basic space mining', 'Up to 5 mining missions', 'Standard monitoring', 'Email support']
@@ -243,26 +182,7 @@ export const quantumBreakthroughServices2025 = [
       enterprise: {
         price: 79999,
         period: 'month',
-        features: ['Full space mining platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 19999, 
-        period: 'month', 
-        features['Basic space mining', 'Up to 5 mining missions', 'Standard monitoring', 'Email support'] 
-      },
-      professional: { 
-        price: 39999, 
-        period: 'month', 
-        features['Advanced space mining', 'Unlimited missions', 'Custom planning', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 79999, 
-        period: 'month', 
-        features['Full space mining platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full space mining platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'Space Technology',
     tags['Space Mining', 'Autonomous Systems', 'AI', 'Robotics', 'Resource Extraction'],
     website: 'https://ziontechgroup.com/space-mining-platform',
@@ -300,8 +220,7 @@ export const quantumBreakthroughServices2025 = [
       'API for energy management systems'
     ],
     pricing: {
-<<<<<<< HEAD
-      starter: {
+starter: {
         price: 7999,
         period: 'month',
         features: ['Basic energy optimization', 'Up to 1000 connections', 'Standard monitoring', 'Email support']
@@ -314,26 +233,7 @@ export const quantumBreakthroughServices2025 = [
       enterprise: {
         price: 29999,
         period: 'month',
-        features: ['Full energy platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-
-=======
-      starter: { 
-        price: 7999, 
-        period: 'month', 
-        features['Basic energy optimization', 'Up to 1000 connections', 'Standard monitoring', 'Email support'] 
-      },
-      professional: { 
-        price: 15999, 
-        period: 'month', 
-        features['Advanced energy optimization', 'Unlimited connections', 'Custom models', 'Priority support', 'API access'] 
-      },
-      enterprise: { 
-        price: 29999, 
-        period: 'month', 
-        features['Full energy platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
+        features: ['Full energy platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']},
     category: 'Quantum Energy',
     tags['Quantum Computing', 'Energy Management', 'Smart Grid', 'Renewable Energy', 'Optimization'],
     website: 'https://ziontechgroup.com/quantum-energy-platform',
@@ -349,24 +249,9 @@ export const quantumBreakthroughServices2025 = [
       'Renewable energy integration',
       'Energy storage management',
       'Demand response optimization',
-<<<<<<< HEAD
-      'Grid stability management'
+'Grid stability management'
     ],
-<<<<<<< HEAD
-    integrations: ['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],
+integrations: ['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],
     compliance: ['Energy regulations', 'Grid standards', 'SOC2', 'ISO 27001', 'Energy safety standards']
 
-];}}}}}}
-=======
-    integrations['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],
-    compliance['Energy regulations', 'Grid standards', 'SOC2', 'ISO 27001', 'Energy safety standards']
-  };
-=======;
-      'Grid stability management';
-    ],;
-    integrations: ['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],;
-    compliance: ['Energy regulations', 'Grid standards', 'SOC2', 'ISO 27001', 'Energy safety standards'];
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+];}}}}}}];

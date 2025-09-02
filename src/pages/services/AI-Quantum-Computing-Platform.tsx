@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -353,3 +354,5 @@ const AIQuantumComputingPlatform: React.FC = () => {;
 };";"
 ;"";"
 export default AIQuantumComputingPlatform;";"";"
+=======
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 interface ChatAssistantProps {
@@ -294,3 +295,5 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     </div>
   );
 };
+=======
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, MessageCircle, Phone, Mail, FileText, Video, BookOpen, Users, Zap, Shield, Brain } from 'lucide-react';
@@ -321,3 +322,5 @@ export default function Help() {;
     </div>;
   );"
 }";"
+=======
+>>>>>>> origin/main

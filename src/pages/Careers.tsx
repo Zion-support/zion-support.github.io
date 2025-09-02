@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -618,3 +619,6 @@ export default function Careers() {;
     </>;";"
   );"";"
 }";"";"
+=======
+import React from 'react'; import { SEO } from '../components/SEO'; const Careers: React.FC = () => { return ( <> <SEO title="Careers" description="Join the Zion Tech Group team and be part of the future of technology." keywords="careers, jobs, employment, technology careers" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Careers</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Careers;
+>>>>>>> origin/main

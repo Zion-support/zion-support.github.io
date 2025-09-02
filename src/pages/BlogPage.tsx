@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const BlogPage: React.FC = () => {
@@ -119,3 +120,5 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+=======
+>>>>>>> origin/main

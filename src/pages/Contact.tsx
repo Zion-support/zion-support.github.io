@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import { Phone,; Mail,; MapPin,; Clock,; MessageSquare,; Send,; CheckCircle,; AlertCircle,; User,; MessageSquare,; Building; } from 'lucide-react.ts';
@@ -582,3 +583,6 @@ export default function Contact(...args: any[]): any {;
     </div>;";"
   );";"
 };";"";"
+=======
+import React from 'react'; import { SEO } from '../components/SEO'; const Contact: React.FC = () => { return ( <> <SEO title="Contact Us" description="Get in touch with Zion Tech Group for your technology needs." keywords="contact, support, help, inquiry" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Contact;
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -449,3 +450,5 @@ const Marketplace: React.FC = () => {
 };
 
 export default Marketplace;
+=======
+>>>>>>> origin/main

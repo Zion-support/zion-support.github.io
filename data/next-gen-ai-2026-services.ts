@@ -11,14 +11,8 @@ export interface NextGenAi2026Service {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const nextGenAI2026Services: NextGenAi2026Service[] = [
+address: string;
+  };export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
     id: "2026-next-gen-ai",
     name: "2026 Next-Gen AI Platform",

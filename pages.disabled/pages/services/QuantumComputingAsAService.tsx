@@ -1,1 +1,0 @@
-const QuantumComputingAsAService: React.FC = (): JSX.Element => {} 

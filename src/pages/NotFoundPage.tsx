@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -52,3 +53,5 @@ const NotFoundPage: React.FC = () => {
 };
 
 export default NotFoundPage;
+=======
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, Zap, Shield, Users, Rocket } from 'lucide-react';
@@ -283,3 +284,5 @@ export default function Pricing() {;
     </div>;
   );"
 }";"
+=======
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -570,3 +571,5 @@ const WhitePapers: React.FC = () => {
 };
 
 export default WhitePapers;
+=======
+>>>>>>> origin/main

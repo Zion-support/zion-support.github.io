@@ -22,6 +22,5 @@ export const realServicesQ22025: RealServiceQ22025[] = [
     price: '$499',
     features: ['Advanced features', 'Enhanced performance', 'Full integration'],
     category: 'Q2 Services'
->>>>>>> origin/clean-merge-website-fixes
-  }
+}
 ];

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const SolutionsPage: React.FC = () => {
@@ -58,3 +59,5 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default SolutionsPage;
+=======
+>>>>>>> origin/main

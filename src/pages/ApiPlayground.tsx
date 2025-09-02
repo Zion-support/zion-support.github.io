@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Code, Play, Copy, Check } from 'lucide-react';
@@ -293,3 +294,5 @@ const ApiPlayground: React.FC = () => {
 };
 
 export default ApiPlayground;
+=======
+>>>>>>> origin/main

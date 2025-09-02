@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -421,3 +422,5 @@ const ServicesPricingPage: React.FC = () => {
 };
 
 export default ServicesPricingPage;
+=======
+>>>>>>> origin/main

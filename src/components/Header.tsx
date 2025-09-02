@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -125,3 +126,5 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+=======
+>>>>>>> origin/main

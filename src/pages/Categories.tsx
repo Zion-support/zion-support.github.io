@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -316,3 +317,5 @@ const Categories: React.FC = () => {
 };
 
 export default Categories;
+=======
+>>>>>>> origin/main

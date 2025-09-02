@@ -292,8 +292,7 @@ export const advancedEmergingTechServices2025 = [
     tags['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
     website: 'https://ziontechgroup.com/quantum-metaverse-pro',
     contact: {
-<<<<<<< HEAD
-      phone: '+1 302 464 0950',
+phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$6.8B',
@@ -301,13 +300,3 @@ export const advancedEmergingTechServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
 ];}
-=======
-      phone: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com';
-    },;
-    marketSize: '$6.8B',;
-    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
-    competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-  };
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

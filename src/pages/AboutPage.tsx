@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AboutPage: React.FC = () => {
@@ -126,3 +127,5 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+=======
+>>>>>>> origin/main

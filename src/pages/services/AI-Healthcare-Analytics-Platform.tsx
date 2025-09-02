@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ; Activity,; Heart,; Brain,; Shield,; Users,; CheckCircle,; ArrowRight,; Stethoscope,; Clock,; DollarSign,; BarChart3,; Target,; TrendingUp,; Phone,; Mail,; MapPin,; Database,; Zap,; Eye,; Lock; } from 'lucide-react';
@@ -424,3 +425,5 @@ const AIHealthcareAnalyticsPlatform = () => {;
 };
 ;"
 export default AIHealthcareAnalyticsPlatform;";"
+=======
+>>>>>>> origin/main

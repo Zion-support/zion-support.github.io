@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
       {/* Hero Section */}"";"
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">";"
@@ -336,3 +337,5 @@
     </div>;"
   )}";"
 '"`";"
+=======
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -432,3 +433,5 @@ const Research: React.FC = () => {
 };
 
 export default Research;
+=======
+>>>>>>> origin/main

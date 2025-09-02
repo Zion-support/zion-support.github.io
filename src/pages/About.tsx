@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Zap, Shield, Globe, Award, TrendingUp, Heart } from 'lucide-react';
@@ -259,3 +260,6 @@ export default function About() {;
     </div>;
   );"
 }";"
+=======
+import React from 'react'; import { SEO } from '../components/SEO'; const About: React.FC = () => { return ( <> <SEO title="About Us" description="Learn about Zion Tech Group's mission, vision, and commitment to technological innovation." keywords="about, company, mission, vision, team" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">About Zion Tech Group</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default About;
+>>>>>>> origin/main

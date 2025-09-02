@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ContactPage: React.FC = () => {
@@ -168,3 +169,5 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+=======
+>>>>>>> origin/main

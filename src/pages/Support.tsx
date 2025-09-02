@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -314,3 +315,5 @@ export default function Support() {
     </div>
   );
 }
+=======
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -332,3 +333,5 @@ export default function FAQ() {
     </>
   );
 }
+=======
+>>>>>>> origin/main

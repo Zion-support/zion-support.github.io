@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import { Brain,; Cloud,; Shield,; Rocket,; Zap,; Users,; Globe,; Cpu,; Lock,; Heart,; Star,; ArrowRight,; CheckCircle,; TrendingUp,; Code,; Database,; Network,; Smartphone,; BarChart3,; MessageSquare,; FileText,; ShoppingCart,; Headphones,; Mail,; Search,; Clock; } from 'lucide-react.ts';
@@ -409,3 +410,6 @@ const Services: React.FC = (): JSX.Element => {;
 };";"
 ;";"
 export default Services;";"";"
+=======
+import React from 'react'; import { SEO } from '../components/SEO'; const Services: React.FC = () => { return ( <> <SEO title="Our Services" description="Explore Zion Tech Group's comprehensive range of technology services." keywords="services, AI, IT, technology, solutions" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Our Services</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Services;
+>>>>>>> origin/main
