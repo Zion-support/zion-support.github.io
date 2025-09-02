@@ -4,11 +4,11 @@
     "buildSuccess": false,
     "buildDuration": 5,
     "lintErrors": 0,
-    "lintWarnings": 0,
+    "lintWarnings": 3,
     "typeErrors": 0,
     "diskUsage": 0,
-    "buildSize": 0,
-    "totalIssues": 1
+    "buildSize": "12K\t/workspace/dist\n1\n",
+    "totalIssues": 0
   },
   "details": {
     "lint": {
@@ -31,7 +31,7 @@
       "errorMessage": "Command failed: npm run build\n\n> Build error occurred\n[Error: ENOENT: no such file or directory, open '/workspace/.next/server/pages-manifest.json'] {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/workspace/.next/server/pages-manifest.json'\n}\n"
     },
     "buildSize": {
-      "size": 0,
+      "size": "12K\t/workspace/dist\n1\n",
       "files": 0
     },
     "diskSpace": {

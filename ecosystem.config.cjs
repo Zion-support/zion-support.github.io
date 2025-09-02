@@ -136,14 +136,12 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'ubuntu',
+      user: 'deploy',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/var/www/zion.app',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': 'mkdir -p /var/www/zion.app/logs'
+      repo: 'git@github.com:your-username/your-repo.git',
+      path: '/var/www/production',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
     }
   }
 };

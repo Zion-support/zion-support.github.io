@@ -11,22 +11,26 @@ vi.mock('next/router', () => ({
 }));
 
 // Helper to mock fetch
-const mockFetch = <T,>(data: T, ok = true, status = 200) => { // Used generic T for data
+const mockFetch = <T,>(data: T, ok = true, status = 200) => {
+  // Used generic T for data
   global.fetch = vi.fn().mockResolvedValue({
     ok,
     status,
     json: () => Promise.resolve(data),
-    text: () => Promise.resolve(typeof data === 'string' ? data : JSON.stringify(data)),
+    text: () =>
+      Promise.resolve(typeof data === 'string' ? data : JSON.stringify(data)),
   });
 };
 
 // Mock TalentDetails and NextHead to simplify testing TalentPage focus
 vi.mock('@/components/talent/TalentDetails', () => ({
   // Use TalentProfileData for the talent prop
-  default: ({ talent }: { talent: TalentProfileData }) => ( 
+  default: ({ talent }: { talent: TalentProfileData }) => (
     <div data-testid="talent-details">
       <h1>{talent.full_name}</h1>
-      {talent.skills.map((skill: string) => <span key={skill}>{skill}</span>)}
+      {talent.skills.map((skill: string) => (
+        <span key={skill}>{skill}</span>
+      ))}
     </div>
   ),
 }));
@@ -47,7 +51,8 @@ vi.mock('@/components/NotFound', () => ({
 
 describe('TalentPage', () => {
   it('should render skeleton loader when router is not ready', () => {
-    (useRouter as jest.Mock).mockReturnValue({ // Use jest.Mock for type safety on mockReturnValue
+    (useRouter as jest.Mock).mockReturnValue({
+      // Use jest.Mock for type safety on mockReturnValue
       query: { id: 't-001' },
       isReady: false,
     });
@@ -59,9 +64,9 @@ describe('TalentPage', () => {
   it('should render skeleton loader when initially loading data even if router is ready', () => {
     (useRouter as jest.Mock).mockReturnValue({
       query: { id: 't-001' },
-      isReady: true, 
+      isReady: true,
     });
-    global.fetch = vi.fn(() => new Promise(() => {})); 
+    global.fetch = vi.fn(() => new Promise(() => {}));
 
     render(<TalentPage />);
     expect(screen.getByTestId('talent-profile-skeleton')).toBeInTheDocument();
@@ -85,7 +90,9 @@ describe('TalentPage', () => {
     mockProfile.skills.forEach(skill => {
       expect(screen.getByText(skill)).toBeInTheDocument();
     });
-    expect(screen.queryByTestId('talent-profile-skeleton')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('talent-profile-skeleton')
+    ).not.toBeInTheDocument();
     expect(screen.queryByTestId('not-found-page')).not.toBeInTheDocument();
   });
 
@@ -103,7 +110,9 @@ describe('TalentPage', () => {
     });
 
     expect(screen.queryByTestId('talent-details')).not.toBeInTheDocument();
-    expect(screen.queryByTestId('talent-profile-skeleton')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('talent-profile-skeleton')
+    ).not.toBeInTheDocument();
   });
 
   it('should render generic error message when API returns a non-404 error', async () => {
@@ -116,13 +125,17 @@ describe('TalentPage', () => {
     render(<TalentPage />);
 
     await waitFor(() => {
-      expect(screen.getByText(/Failed to load talent profile./i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/Failed to load talent profile./i)
+      ).toBeInTheDocument();
     });
 
     expect(screen.getByText(/Status: 500/i)).toBeInTheDocument();
     expect(screen.getByText(/Message: Server error/i)).toBeInTheDocument();
     expect(screen.queryByTestId('talent-details')).not.toBeInTheDocument();
-    expect(screen.queryByTestId('talent-profile-skeleton')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('talent-profile-skeleton')
+    ).not.toBeInTheDocument();
     expect(screen.queryByTestId('not-found-page')).not.toBeInTheDocument();
   });
 });

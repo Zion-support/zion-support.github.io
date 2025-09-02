@@ -18,7 +18,7 @@ function shouldProcess(filePath) {
  */
 function cleanContent(content) {
   // Line-level fixes
-  const lines = content.split(/\r?\n/).map((line) =>
+  const lines = content.split(/\r?\n/).map(line =>
     line
       // Remove a single trailing apostrophe after common closing tokens
       .replace(/([;)}\]>])\s*'\s*$/u, '$1')
@@ -42,7 +42,8 @@ function cleanContent(content) {
 
 function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'node_modules' || entry.name.startsWith('.git')) continue;
+    if (entry.name === 'node_modules' || entry.name.startsWith('.git'))
+      continue;
     const p = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       walk(p, files);
@@ -75,4 +76,3 @@ function main() {
 if (require.main === module) {
   main();
 }
-
