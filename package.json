@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/optimize-build.js",
+    "build:optimized": "npm run build && node scripts/performance-optimizer.js && node scripts/seo-optimizer.js",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
