@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
 
 export default function AIFinancialAnalyticsPlatform(...args: unknown[]): unknown {
   const features = [
@@ -228,3 +229,5 @@ export default function AIFinancialAnalyticsPlatform(...args: unknown[]): unknow
     </div>
   );
 }
+=======
+>>>>>>> pr-10728:src/pages/services/AIFinancialAnalyticsPlatform.tsx

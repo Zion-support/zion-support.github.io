@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-pages/src-pages/EnhancedHome.tsx
 import {
   Users, 
   TrendingUp, 
@@ -349,3 +350,5 @@ const EnhancedHome: React.FC = () => {
       </div>
     </>) };
 export default EnhancedHome;'"`
+=======
+>>>>>>> pr-10728:src/pages/EnhancedHome.tsx

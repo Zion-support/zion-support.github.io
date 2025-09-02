@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from
   'react-helmet-async';'
   'interface SEOProps {title?: string;description?: string;
@@ -95,3 +96,5 @@ title = 'Zion Tech Group - Leading Technology Solutions', description = 'Leading
       <script type="application / ld + json">"        {JSON.stringify ({"          "@context": "https://schema.org", "@type": "Organization","          "name": "Zion Tech Group", "url": "https://ziontechgroup.com","          "logo": "https://ziontechgroup.com / logo.svg", "description": description,"          "sameAs": ["            "https://linkedin.com / company / zion - tech - group", "https: //twitter.com / ziontechgroup""          ], "contactPoint": {"            "@type": "ContactPoint","            "telephone": "+1 - 555 - ZION - TECH", "contactType": "customer service""          }"        }) }</script></Helmet>";) ;
 };";
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+=======
+>>>>>>> pr-10728

@@ -14,7 +14,14 @@ import {}
   'lucide-react.ts';
 
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+<<<<<<< HEAD
 export default function AIMarketingAutomationSuite(...args: any[]): any {return()
+=======
+export default function AIMarketingAutomationSuite(...args: any[]): any {
+
+export default function AIMarketingAutomationSuite(...args: any[]): any {}
+  return()
+>>>>>>> pr-10728
     <div className="min-h-screen bg-white">""
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">""
         <div className="max-w-5xl mx-auto px-6">""
@@ -22,7 +29,16 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+<<<<<<< HEAD
             AI Marketing Automation Suite"</h1>""
+=======
+            AI Marketing Automation Suite"
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing;
+          </div>""
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            AI Marketing Automation Suite;
+          </h1>""
+>>>>>>> pr-10728
           <p className="text-purple-100 text-xl">
             Transform your marketing with intelligent automation, predictive;
             analytics, and personalized customer experiences.
@@ -37,7 +53,21 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Revolutionary Marketing Features"
             </h2>""
+<<<<<<< HEAD
             <ul className="space-y-3">"{features.map(f => (""
+=======
+            <ul className="space-y-3">"
+      </section>
+""
+      <section className="py-16 max-w-6xl mx-auto px-6">""
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>""
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
+              Revolutionary Marketing Features;
+            </h2>""
+            <ul className="space-y-3">
+              {features.map(f => (""
+>>>>>>> pr-10728
                 <li key={f} className="flex items-start">""
                   <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
@@ -54,13 +84,37 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             </h3>""
             <div className="grid md: anygrid-cols-1 gap-4">
               {tiers.map(t => (
+<<<<<<< HEAD
                 <div"key={t.name}""
+=======
+                <div"
+              ))}
+            </ul>""
+            <div className="mt-6 text-sm text-zion-slate-light">
+              GDPR/CCPA compliant. 99.9% uptime SLA. Enterprise-grade security.
+            </div>
+          </div>""
+          <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">""
+            <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">
+              Marketing Plans;
+            </h3>""
+            <div className="grid md: anygrid-cols-1 gap-4">
+              {tiers.map(t => (
+                <div;
+                  key={t.name}""
+>>>>>>> pr-10728
                   className="rounded-lg p-4 border border-zion-slate-light/30""
                 >""
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-purple-600 mb-2">
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+<<<<<<< HEAD
                     {t.price}"</div>""
+=======
+                    {t.price}"
+                    {t.price}
+                  </div>""
+>>>>>>> pr-10728
                   <ul className="text-sm text-zion-slate-dark space-y-1">
                     {t.details.map(d => (
                       <li key={d}>{d}</li>
@@ -70,13 +124,27 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               ))}"
             </div>""
+<<<<<<< HEAD
             <div className="mt-6 flex flex-wrap gap-3">"<a""
+=======
+            <div className="mt-6 flex flex-wrap gap-3">"
+              ))}
+            </div>""
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a""
+>>>>>>> pr-10728
                 href="/pricing""
                 className="px-5 py-3 bg-purple-600/10 text-purple-600 rounded-lg hover:bg-purple-600/20 transition-colors inline-flex items-center""
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+<<<<<<< HEAD
               </a>"<a""
+=======
+              </a>"
+              </a>
+              <a""
+>>>>>>> pr-10728
                 href="https://ziontechgroup.com""
                 target="_blank""
                 rel="noreferrer""
@@ -93,7 +161,20 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Marketing Benefits"
             </h3>""
+<<<<<<< HEAD
             <ul className="space-y-3">"{benefits.map(b => (""
+=======
+            <ul className="space-y-3">"
+        </div>
+""
+        <div className="mt-12 grid md:grid-cols-2 gap-8">
+          <div>""
+            <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
+              Marketing Benefits;
+            </h3>""
+            <ul className="space-y-3">
+              {benefits.map(b => (""
+>>>>>>> pr-10728
                 <li key={b} className="flex items-start">""
                   <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
@@ -105,7 +186,18 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Use Cases"
             </h3>""
+<<<<<<< HEAD
             <ul className="space-y-3">"{useCases.map(u => (""
+=======
+            <ul className="space-y-3">"
+          </div>
+          <div>""
+            <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
+              Use Cases;
+            </h3>""
+            <ul className="space-y-3">
+              {useCases.map(u => (""
+>>>>>>> pr-10728
                 <li key={u} className="flex items-start">""
                   <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
@@ -121,7 +213,21 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {marketingChannels.map(c => (
+<<<<<<< HEAD
               <div"key={c}""
+=======
+              <div"
+        </div>
+""
+        <div className="mt-12">""
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">
+            Multi-Channel Marketing Support;
+          </h3>""
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {marketingChannels.map(c => (
+              <div;
+                key={c}""
+>>>>>>> pr-10728
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
               >""
                 <MessageSquare className="w-6 h-6 text-purple-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
@@ -137,7 +243,21 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {aiCapabilities.map(c => (
+<<<<<<< HEAD
               <div"key={c}""
+=======
+              <div"
+        </div>
+""
+        <div className="mt-12">""
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">
+            AI-Powered Capabilities;
+          </h3>""
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {aiCapabilities.map(c => (
+              <div;
+                key={c}""
+>>>>>>> pr-10728
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
               >""
                 <Brain className="w-6 h-6 text-purple-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
@@ -157,7 +277,25 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
                 1"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
+<<<<<<< HEAD
                 Data Collection"</h4>""
+=======
+                Data Collection"
+        </div>
+""
+        <div className="mt-12 bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-8">""
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">
+            Marketing Automation Workflow;
+          </h3>""
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            <div>""
+              <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
+                1;
+              </div>""
+              <h4 className="font-semibold text-zion-slate-dark mb-1">
+                Data Collection;
+              </h4>""
+>>>>>>> pr-10728
               <p className="text-sm text-zion-slate-light">
                 AI-powered audience insights;
               </p>
@@ -168,7 +306,19 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
                 2"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
+<<<<<<< HEAD
                 Segmentation"</h4>""
+=======
+                Segmentation"
+            </div>
+            <div>""
+              <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
+                2;
+              </div>""
+              <h4 className="font-semibold text-zion-slate-dark mb-1">
+                Segmentation;
+              </h4>""
+>>>>>>> pr-10728
               <p className="text-sm text-zion-slate-light">
                 Smart customer grouping;
               </p>
@@ -179,7 +329,19 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
                 3"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
+<<<<<<< HEAD
                 Automation"</h4>""
+=======
+                Automation"
+            </div>
+            <div>""
+              <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
+                3;
+              </div>""
+              <h4 className="font-semibold text-zion-slate-dark mb-1">
+                Automation;
+              </h4>""
+>>>>>>> pr-10728
               <p className="text-sm text-zion-slate-light">
                 Trigger-based campaigns;
               </p>
@@ -190,7 +352,19 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
                 4"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
+<<<<<<< HEAD
                 Optimization"</h4>""
+=======
+                Optimization"
+            </div>
+            <div>""
+              <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
+                4;
+              </div>""
+              <h4 className="font-semibold text-zion-slate-dark mb-1">
+                Optimization;
+              </h4>""
+>>>>>>> pr-10728
               <p className="text-sm text-zion-slate-light">
                 AI-driven improvements;
               </p>
@@ -203,13 +377,32 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to revolutionize your marketing?"
           </div>""
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+        </div>
+""
+        <div className="mt-14 text-center">""
+          <div className="text-sm text-zion-slate-light mb-2">
+            Ready to revolutionize your marketing?
+          </div>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a""
+>>>>>>> pr-10728
               href="tel:+13024640950""
               className="inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg""
             >""
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
+<<<<<<< HEAD
             </a>"<a""
+=======
+            </a>"
+              <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
+            </a>
+            <a""
+>>>>>>> pr-10728
               href="mailto:kleber@ziontechgroup.com""
               className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg""
             >""
@@ -217,13 +410,30 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
+<<<<<<< HEAD
           <div className="mt-4 text-sm text-zion-slate-light">,
   Visit us at: {'}"<a""
+=======
+          <div className="mt-4 text-sm text-zion-slate-light">'
+            Visit us at:{' '}"
+              <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com;
+            </a>
+          </div>""
+          <div className="mt-4 text-sm text-zion-slate-light">
+            Visit us at:{' '}
+            <a""
+>>>>>>> pr-10728
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+<<<<<<< HEAD
               className="text-purple-600 hover:underline">
+=======
+              className="text-purple-600 hover:underline"
+              className="text-purple-600 hover:underline""
+            >
+>>>>>>> pr-10728
               https://ziontechgroup.com            </a>
           </div>
         </div>
@@ -231,4 +441,10 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
     </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
   )}'"
+<<<<<<< HEAD
   '"'"
+=======
+'"'"
+  )}
+'""
+>>>>>>> pr-10728

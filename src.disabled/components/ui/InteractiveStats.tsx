@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/components/ui/InteractiveStats.tsx
 interface Stat {
   label: string;
   value: string;
@@ -25,3 +26,5 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
 };
 
 export default InteractiveStats;}}
+=======
+>>>>>>> pr-10728:src/components/ui/InteractiveStats.tsx

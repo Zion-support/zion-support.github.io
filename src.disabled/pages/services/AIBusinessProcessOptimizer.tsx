@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/pages/services/AIBusinessProcessOptimizer.tsx
 
 export default function AIBusinessProcessOptimizer(...args: unknown[]): unknown {
   const features = [
@@ -153,3 +154,5 @@ export default function AIBusinessProcessOptimizer(...args: unknown[]): unknown 
     </div>
   );
 }
+=======
+>>>>>>> pr-10728:src/pages/services/AIBusinessProcessOptimizer.tsx

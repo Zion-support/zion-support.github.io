@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect } from 'react';''interface PerformanceOptimizerProps {;
 
   children: React.ReactNode;
@@ -103,3 +104,5 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
   return <>{children}</>;
 };
+=======
+>>>>>>> pr-10728

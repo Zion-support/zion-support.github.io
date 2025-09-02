@@ -61,23 +61,52 @@ import {}
   Microscope,
   Flask,
   TestTube,
+<<<<<<< HEAD
   Beaker} from,
   lucide-react';: pages.disabled/pages/services/AI-Healthcare-Platform.tsx
 const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview
   ');
+=======
+  Beaker} from 'lucide-react';
+
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+const AIHealthcarePlatform: React.FC = () => {
+'
+const AIHealthcarePlatform: React.FC = () => {}
+  const [activeTab, setActiveTab] = useState('overview');
+>>>>>>> pr-10728
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {}
     setIsVisible(true)}, []);
 
+<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">"{/* Hero Section */}""
+=======
+  
+  
+  
+  
+  
+  
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">"
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      {/* Hero Section */}""
+>>>>>>> pr-10728
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8 }}""
+=======
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8 }}""
+>>>>>>> pr-10728
             className="mb-8""
           >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-300 text-sm font-medium mb-6">""
@@ -85,7 +114,16 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
               <Heart className="w-4 h-4 mr-2"  />              Healthcare Innovation"
             </div>""
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+<<<<<<< HEAD
               AI-Powered Healthcare Platform"</h1>""
+=======
+              AI-Powered Healthcare Platform"
+              <Heart className="w-4 h-4 mr-2"  />              Healthcare Innovation;
+            </div>""
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI-Powered Healthcare Platform;
+            </h1>""
+>>>>>>> pr-10728
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Revolutionary healthcare technology that combines artificial;
               intelligence with medical expertise to deliver superior patient;
@@ -99,13 +137,29 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             transition={{ duration: 0.8, delay: 0.2 }}""
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+<<<<<<< HEAD
           >"<Link""
+=======
+          >"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.2 }}""
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center""
+          >
+            <Link""
+>>>>>>> pr-10728
               to="/contact""
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105""
             >""
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
               <Heart className="w-5 h-5 mr-2"  />              Transform Healthcare
+<<<<<<< HEAD
             </Link>"<Link""
+=======
+            </Link>"
+              <Heart className="w-5 h-5 mr-2"  />              Transform Healthcare;
+            </Link>
+            <Link""
+>>>>>>> pr-10728
               to="#demo""
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300""
             >""
@@ -114,7 +168,17 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
             </Link>
           </motion.div>
         </div>
+<<<<<<< HEAD
 "{/* Floating Elements */}""
+=======
+"
+              <Eye className="w-5 h-5 mr-2"  />              Watch Demo;
+            </Link>
+          </motion.div>
+        </div>
+
+        {/* Floating Elements */}""
+>>>>>>> pr-10728
         <div className="absolute inset-0 overflow-hidden pointer-events-none">""
           <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>""
           <div className="absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>""
@@ -122,7 +186,13 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
 "{/* Healthcare Statistics */}""
+=======
+"
+
+      {/* Healthcare Statistics */}""
+>>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -131,7 +201,17 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
+=======
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+            {healthcareStats.map((stat, index (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.8, delay: 0.1 * index }}""
+>>>>>>> pr-10728
                 className="text-center bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-6 border border-green-500/20""
               >""
                 <div className="text-3xl font-bold text-white mb-2">
@@ -139,7 +219,16 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                   {stat.value}"
                 </div>""
                 <div className="text-lg font-semibold text-green-300 mb-2">
+<<<<<<< HEAD
                   {stat.metric}"</div>""
+=======
+                  {stat.metric}"
+                  {stat.value}
+                </div>""
+                <div className="text-lg font-semibold text-green-300 mb-2">
+                  {stat.metric}
+                </div>""
+>>>>>>> pr-10728
                 <div className="text-sm text-gray-300">{stat.description}</div>
               </motion.div>
             ))}
@@ -147,18 +236,36 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
 "{/* Features Section */}""
+=======
+"
+
+      {/* Features Section */}""
+>>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.4 }}""
+=======
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.4 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
               Advanced Healthcare Features"</h2>""
+=======
+              Advanced Healthcare Features"
+              Advanced Healthcare Features;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive healthcare solutions powered by cutting-edge AI;
               technology;
@@ -171,7 +278,20 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
+=======
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map(feature: unknown, index: unknown (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.8, delay: 0.1 * index }}""
+>>>>>>> pr-10728
                 className="bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:transform hover:scale-105""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">""
@@ -179,7 +299,16 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
+<<<<<<< HEAD
                   {feature.title}"</h3>""
+=======
+                  {feature.title}"
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>""
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>""
+>>>>>>> pr-10728
                 <p className="text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
@@ -189,31 +318,61 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
 "{/* Healthcare Modules Section */}""
+=======
+"
+
+      {/* Healthcare Modules Section */}""
+>>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-blue-900/30">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.6 }}""
+=======
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.6 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
               Comprehensive Healthcare Modules"</h2>""
+=======
+              Comprehensive Healthcare Modules"
+              Comprehensive Healthcare Modules;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Modular healthcare solutions that adapt to your specific medical;
               needs;
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
           </motion.div>"""
+=======
+          </motion.div>"
+          </motion.div>
+""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {healthcareModules.map(module: unknown, index: unknown;
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
+=======
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.8, delay: 0.1 * index }}""
+>>>>>>> pr-10728
                 className="bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20""
               >""
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">""
@@ -222,7 +381,17 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                 </h3>""
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
+<<<<<<< HEAD
                     <div"key={featureIndex}""
+=======
+                    <div"
+                  <Heart className="w-6 h-6 mr-3 text-green-400"  />                  {module.name}
+                </h3>""
+                <div className="space-y-3">
+                  {module.features.map((feature, featureIndex) => (
+                    <div;
+                      key={featureIndex}""
+>>>>>>> pr-10728
                       className="flex items-center text-gray-300""
                     >""
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0"  />                      {feature}
@@ -235,23 +404,47 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
 "{/* Use Cases Section */}""
+=======
+"
+
+      {/* Use Cases Section */}""
+>>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.8 }}""
+=======
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.8 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
               Healthcare Applications"</h2>""
+=======
+              Healthcare Applications"
+              Healthcare Applications;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform healthcare delivery across all medical specialties;
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
           </motion.div>"""
+=======
+          </motion.div>"
+          </motion.div>
+""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map(useCase: unknown, index: unknown;
               <motion.div;
@@ -260,7 +453,13 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                 animate={{}
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
+=======
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
+                transition={{ duration: 0.8, delay: 0.2 * index }}""
+>>>>>>> pr-10728
                 className="bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20""
               >""
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">""
@@ -269,7 +468,17 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                 </h3>""
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
+<<<<<<< HEAD
                     <div"key={appIndex}""
+=======
+                    <div"
+                  <Target className="w-6 h-6 mr-3 text-green-400"  />                  {useCase.industry}
+                </h3>""
+                <div className="space-y-3">
+                  {useCase.applications.map((app, appIndex) => (
+                    <div;
+                      key={appIndex}""
+>>>>>>> pr-10728
                       className="flex items-center text-gray-300""
                     >""
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0"  />                      {app}
@@ -282,18 +491,36 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
 "{/* Pricing Section */}""
+=======
+"
+
+      {/* Pricing Section */}""
+>>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-green-900/30">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 1.0 }}""
+=======
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 1.0 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
               Healthcare Platform Pricing"</h2>""
+=======
+              Healthcare Platform Pricing"
+              Healthcare Platform Pricing;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Access advanced healthcare AI technology at competitive prices;
             </p>
@@ -302,18 +529,45 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map(tier: unknown, index: unknown()
+<<<<<<< HEAD
               <motion.divkey={index}
+=======
+              <motion.div
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map(tier: unknown, index: unknown (
+              <motion.div;
+                key={index}
+>>>>>>> pr-10728
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
                 className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
   tier.popular'
   '
+=======
+                className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
+'
+                  tier.popular''
+                    ? 'border-green-500 scale-105'''`
+                    : 'border-green-500/20'``
+                }`}
+              >"
+                className={`relative bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${}
+                  tier.popular'
+>>>>>>> pr-10728
                     ? 'border-green-500 scale-105''
   '`: 'border-green-500/20``
                 }`}
+<<<<<<< HEAD
               >"{tier.popular && (""
+=======
+              >
+                {tier.popular && (""
+>>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -333,12 +587,37 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                     <span className="text-gray-400">{tier.period}</span>"
                   </div>""
                   <p className="text-gray-300 text-sm">{tier.description}</p>
+<<<<<<< HEAD
                 </div>"""
+=======
+                </div>"
+                )}
+""
+                <div className="text-center mb-8">""
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {tier.name}
+                  </h3>""
+                  <div className="mb-4">""
+                    <span className="text-4xl font-bold text-white">
+                      {tier.price}
+                    </span>""
+                    <span className="text-gray-400">{tier.period}</span>
+                  </div>""
+                  <p className="text-gray-300 text-sm">{tier.description}</p>
+                </div>
+""
+>>>>>>> pr-10728
                 <div className="mb-8">""
                   <div className="flex items-center justify-center mb-4">""
                     <span className="text-gray-400 line-through mr-2">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
                       {tier.marketPrice}"</span>""
+=======
+                      {tier.marketPrice}"
+                      {tier.marketPrice}
+                    </span>""
+>>>>>>> pr-10728
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">
                       Save {tier.savings}
                     </span>
@@ -348,7 +627,17 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
 ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
+<<<<<<< HEAD
                     <li"key={featureIndex}""
+=======
+                    <li"
+                </div>
+""
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li;
+                      key={featureIndex}""
+>>>>>>> pr-10728
                       className="flex items-start text-gray-300""
                     >""
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5"  />"                      <span className="text-sm">{feature}</span>
@@ -359,12 +648,28 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
 "
                 <Link""`
                   to="/contact"``
+<<<<<<< HEAD
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   tier.popular'
   '
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: from-green-700 hover:to-blue-700''
   '`
                       : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white``}`}
+=======
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+'
+                    tier.popular''
+                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'''`
+                      : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white'``
+
+                <Link""
+                  to="/contact"`
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                    tier.popular'
+                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700''
+                      : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white'`
+                  }`}
+>>>>>>> pr-10728
                 >
                   Get Started;
                 </Link>
@@ -374,18 +679,36 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
 "{/* Benefits Section */}""
+=======
+"
+
+      {/* Benefits Section */}""
+>>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 1.2 }}""
+=======
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 1.2 }}""
+>>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
               Why Choose Our Healthcare Platform?"</h2>""
+=======
+              Why Choose Our Healthcare Platform?"
+              Why Choose Our Healthcare Platform?
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform patient care with AI-powered healthcare technology;
             </p>
@@ -394,12 +717,28 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
+<<<<<<< HEAD
               <motion.divkey={index}
+=======
+              <motion.div
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map(benefit: unknown, index: unknown (
+              <motion.div;
+                key={index}
+>>>>>>> pr-10728
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{}
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
+=======
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
+                transition={{ duration: 0.8, delay: 0.2 * index }}""
+>>>>>>> pr-10728
                 className="bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mb-6">""
@@ -407,7 +746,16 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
+<<<<<<< HEAD
                   {benefit.title}"</h3>""
+=======
+                  {benefit.title}"
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>""
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {benefit.title}
+                </h3>""
+>>>>>>> pr-10728
                 <p className="text-gray-300 leading-relaxed">
                   {benefit.description}
                 </p>
@@ -417,7 +765,13 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
         </div>
       </section>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
 "{/* Contact Section */}""
+=======
+"
+
+      {/* Contact Section */}""
+>>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-blue-900/30">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -431,7 +785,20 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
               Join the healthcare revolution with AI-powered medical technology
+<<<<<<< HEAD
             </p>"""
+=======
+            </p>"
+            transition={{ duration: 0.8, delay: 1.4 }}
+          >""
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Healthcare?
+            </h2>""
+            <p className="text-xl text-gray-300 mb-8">
+              Join the healthcare revolution with AI-powered medical technology;
+            </p>
+""
+>>>>>>> pr-10728
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">""
               <div className="flex items-center text-gray-300">""
                 <Phone className="w-5 h-5 mr-2 text-green-400"  />
@@ -440,25 +807,56 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
               </div>""
               <div className="flex items-center text-gray-300">""
                 <Mail className="w-5 h-5 mr-2 text-green-400"  />
+<<<<<<< HEAD
                 <span>kleber@ziontechgroup.com</span>"</div>""
+=======
+                <span>kleber@ziontechgroup.com</span>"
+                <span>+1 302 464 0950</span>
+              </div>""
+              <div className="flex items-center text-gray-300">""
+                <Mail className="w-5 h-5 mr-2 text-green-400"  />
+                <span>kleber@ziontechgroup.com</span>
+              </div>""
+>>>>>>> pr-10728
               <div className="flex items-center text-gray-300">""
                 <MapPin className="w-5 h-5 mr-2 text-green-400"  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
             </div>"
 ""
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            </div>
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link""
+>>>>>>> pr-10728
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105""
               >""
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                 <Heart className="w-5 h-5 mr-2"  />                Schedule Healthcare Demo
+<<<<<<< HEAD
               </Link>"<Link""
+=======
+              </Link>"
+                <Heart className="w-5 h-5 mr-2"  />                Schedule Healthcare Demo;
+              </Link>
+              <Link""
+>>>>>>> pr-10728
                 to="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
+<<<<<<< HEAD
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website</Link>
+=======
+                <Globe className="w-5 h-5 mr-2"  />                Visit Our Website
+                <Globe className="w-5 h-5 mr-2"  />                Visit Our Website;
+              </Link>
+>>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
