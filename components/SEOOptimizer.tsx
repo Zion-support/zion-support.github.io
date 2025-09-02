@@ -13,24 +13,24 @@ interface SEOOptimizerProps {
    nofollow?: boolean;
 }
 ;
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
-  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',;
-  ogType = 'website', canonicalUrl,;
-  structuredData, noindex = false,;
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',
+  ogType = 'website', canonicalUrl,
+  structuredData, noindex = false,
   nofollow = false}) => {;
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
 ;
-  // Default structured data for organization;
-  const defaultStructuredData = {;
-    '@context': 'https://schema.org', '@type': 'Organization',;
-    'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',;
-    'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',;
-    'address': {;
-      '@type': 'PostalAddress', 'addressCountry': 'US';
-    },;
-    'contactPoint': {;
+  // Default structured data for organization
+  const defaultStructuredData = {
+    '@context': 'https://schema.org', '@type': 'Organization',
+    'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
+    'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
+    'address': {
+      '@type': 'PostalAddress', 'addressCountry': 'US'
+    },
+    'contactPoint': {
       '@type': 'ContactPoint', 'telephone': '+1-XXX-XXX-XXXX',;
       'contactType': 'customer service', 'availableLanguage': 'English';
     },;

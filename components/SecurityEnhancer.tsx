@@ -22,11 +22,11 @@ const SecurityEnhancer: React.FC = () => {
     cspMeta.content = csp;
     document.head.appendChild(cspMeta);
 ;
-    // Security headers;
-    const securityHeaders = {;
-      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',;
-      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',;
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()';
+    // Security headers
+    const securityHeaders = {
+      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     };
 ;
     // Add security headers via meta tags;
@@ -41,9 +41,9 @@ const SecurityEnhancer: React.FC = () => {
     const detectXSS = () => {;
       const scripts = document.querySelectorAll('script');
       scripts.forEach(script => {;
-        if (script.src && !script.src.startsWith(window.location.origin) &&;
-            !script.src.includes('googletagmanager.com') &&;
-            !script.src.includes('google-analytics.com')) {;
+                if (script.src && !script.src.startsWith(window.location.origin) &&
+             !script.src.includes('googletagmanager.com') &&
+             !script.src.includes('google-analytics.com')) {
           console.warn('Potentially malicious script detected: ', script.src);
           script.remove();
         }
@@ -55,9 +55,9 @@ const SecurityEnhancer: React.FC = () => {
       // Detect iframe injection attempts;
       const iframes = document.querySelectorAll('iframe');
       iframes.forEach(iframe => {;
-        if (!iframe.src.startsWith(window.location.origin) &&;
-            !iframe.src.includes('youtube.com') &&;
-            !iframe.src.includes('vimeo.com')) {;
+                if (!iframe.src.startsWith(window.location.origin) &&
+             !iframe.src.includes('youtube.com') &&
+             !iframe.src.includes('vimeo.com')) {
           console.warn('Potentially malicious iframe detected: ', iframe.src);
           iframe.remove();
         }

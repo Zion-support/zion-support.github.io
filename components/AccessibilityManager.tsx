@@ -8,13 +8,13 @@ interface AccessibilitySettings {
    screenReader: boolean;
 }
 ;
-const AccessibilityManager: React.FC = () => {;
-  const [settings, setSettings] = useState<AccessibilitySettings>({;
-    highContrast: false,;
-    fontSize: 'normal',;
-    reducedMotion: false,;
-    focusVisible: false,;
-    screenReader: false;
+const AccessibilityManager: React.FC = () => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    fontSize: 'normal',
+    reducedMotion: false,
+    focusVisible: false,
+    screenReader: false
   });
 ;
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +29,10 @@ const AccessibilityManager: React.FC = () => {;
     if (savedSettings) {;
       setSettings(JSON.parse(savedSettings));
     } else {;
-      setSettings(prev => ({;
-        ...prev,;
-        reducedMotion: prefersReducedMotion,;
-        highContrast: prefersHighContrast;
+      setSettings(prev => ({
+        ...prev,
+        reducedMotion: prefersReducedMotion,
+        highContrast: prefersHighContrast
       }));
     }
 ;
