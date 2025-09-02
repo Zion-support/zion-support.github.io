@@ -99,81 +99,62 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     ],
     services: [
       {
-        name: 'AI & Machine Learning',
+        name: 'AI Services',
         icon: Brain,
         children: [
+          { name: 'AI Services', href: '/services/ai-services' },
           { name: 'AI Development', href: '/services/ai-development' },
-          { name: 'Machine Learning', href: '/services/machine-learning' },
-          { name: 'Natural Language Processing', href: '/services/nlp' },
-          { name: 'Computer Vision', href: '/services/computer-vision' },
         ]
       },
       {
-        name: 'Cloud & Infrastructure',
-        icon: Cloud,
-        children: [
-          { name: 'Cloud Migration', href: '/services/cloud-migration' },
-          { name: 'DevOps', href: '/services/devops' },
-          { name: 'Microservices', href: '/services/microservices' },
-          { name: 'Containerization', href: '/services/containerization' },
-        ]
-      },
-      {
-        name: 'Web Development',
+        name: 'IT & Development',
         icon: Code,
         children: [
-          { name: 'Frontend Development', href: '/services/frontend' },
-          { name: 'Backend Development', href: '/services/backend' },
-          { name: 'Full-Stack Development', href: '/services/fullstack' },
-          { name: 'E-commerce Solutions', href: '/services/ecommerce' },
+          { name: 'IT Services', href: '/services/it-services' },
+          { name: 'Web Development', href: '/services/web-development' },
+          { name: 'Cloud Services', href: '/services/cloud-services' },
         ]
       },
       {
-        name: 'Cybersecurity',
-        icon: Shield,
+        name: 'SaaS Solutions',
+        icon: Cloud,
         children: [
-          { name: 'Security Audits', href: '/services/security-audits' },
-          { name: 'Penetration Testing', href: '/services/penetration-testing' },
-          { name: 'Compliance', href: '/services/compliance' },
-          { name: 'Incident Response', href: '/services/incident-response' },
+          { name: 'Micro SaaS', href: '/services/micro-saas' },
         ]
       },
     ],
     solutions: [
       {
-        name: 'Industry Solutions',
-        icon: Building2,
+        name: 'Automation Solutions',
+        icon: Zap,
         children: [
-          { name: 'Healthcare', href: '/solutions/healthcare' },
-          { name: 'Finance', href: '/solutions/finance' },
-          { name: 'Education', href: '/solutions/education' },
-          { name: 'Manufacturing', href: '/solutions/manufacturing' },
+          { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+          { name: 'Email Automation', href: '/solutions/email-automation' },
+          { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
         ]
       },
       {
-        name: 'Technology Solutions',
-        icon: Cpu,
+        name: 'Business Solutions',
+        icon: Target,
         children: [
-          { name: 'IoT Platforms', href: '/solutions/iot' },
-          { name: 'Blockchain', href: '/solutions/blockchain' },
-          { name: 'Quantum Computing', href: '/solutions/quantum' },
-          { name: 'AR/VR', href: '/solutions/ar-vr' },
+          { name: 'Customer Support', href: '/solutions/customer-support' },
+          { name: 'Event Management', href: '/solutions/event-management' },
+          { name: 'Project Management', href: '/solutions/project-management' },
         ]
       },
     ],
     resources: [
-      { name: 'Documentation', href: '/docs', icon: BookOpen },
-      { name: 'API Reference', href: '/api', icon: Code },
-      { name: 'Tutorials', href: '/tutorials', icon: Video },
-      { name: 'Case Studies', href: '/case-studies', icon: FileText },
-      { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video },
+      { name: 'Blog', href: '/blog', icon: BookOpen },
+      { name: 'Help Center', href: '/help', icon: HelpCircle },
+      { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
+      { name: 'Sitemap', href: '/sitemap', icon: Globe },
+      { name: 'Search', href: '/search', icon: Search },
     ],
     support: [
-      { name: 'Help Center', href: '/help', icon: HelpCircle },
-      { name: 'Contact Support', href: '/support', icon: LifeBuoy },
-      { name: 'Status Page', href: '/status', icon: Server },
-      { name: 'Community', href: '/community', icon: Users },
+      { name: 'Contact Us', href: '/contact', icon: Phone },
+      { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+      { name: 'Terms of Service', href: '/terms', icon: FileText },
+      { name: 'Cookie Policy', href: '/cookies', icon: Shield },
     ]
   };
 

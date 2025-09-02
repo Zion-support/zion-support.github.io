@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import EnhancedHeader from '../components/EnhancedHeader';
+import EnhancedFooter from '../components/EnhancedFooter';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
@@ -66,7 +66,7 @@ export default function Home() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       
-      <Navigation />
+      <EnhancedHeader />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -182,7 +182,7 @@ export default function Home() {
         </section>
       </main>
       
-      <Footer />
+      <EnhancedFooter />
     </>
   );
 }
