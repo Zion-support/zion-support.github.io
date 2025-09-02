@@ -4,54 +4,69 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-              >
-                {item.name}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link href="/" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Home
               </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
-            >
-              Get Started
-            </Link>
+              
+              <div className="relative">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown size={16} className="ml-1" />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      All Services
+                    </Link>
+                    <Link href="/services/ai" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Solutions
+                    </Link>
+                    <Link href="/services/cloud" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Cloud Services
+                    </Link>
+                    <Link href="/services/cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Cybersecurity
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
+              <Link href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                About
+              </Link>
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Contact
+              </Link>
+            </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="text-gray-900 hover:text-blue-600 p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -59,23 +74,18 @@ const EnhancedNavigation: React.FC = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Link
-                href="/contact"
-                className="block px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <Link href="/" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                Home
+              </Link>
+              <Link href="/services" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                Services
+              </Link>
+              <Link href="/about" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                About
+              </Link>
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+                Contact
               </Link>
             </div>
           </div>

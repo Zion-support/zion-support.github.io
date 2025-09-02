@@ -202,4 +202,5 @@ const DigitalTransformation = () => {
   )};
 :pages.disabled/pages/services/Transformation.tsx
 "
-export default DigitalTransformation}}}'"'"
+export default DigitalTransformation}}}
+  '"'"

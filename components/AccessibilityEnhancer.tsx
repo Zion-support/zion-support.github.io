@@ -31,7 +31,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
 
     // Apply font size
-    document.documentElement.setAttribute('data-font-size', fontSize);
+    document.documentElement.style.fontSize = fontSize === 'large' ? '18px' : 
+                                            fontSize === 'small' ? '14px' : '16px';
 
     // Apply reduced motion
     if (reducedMotion) {
@@ -47,29 +48,60 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     localStorage.setItem('highContrast', newValue.toString());
   };
 
-  const changeFontSize = (size: string) => {
+  const setFontSizePreference = (size: string) => {
     setFontSize(size);
     localStorage.setItem('fontSize', size);
   };
 
+  const toggleReducedMotion = () => {
+    const newValue = !reducedMotion;
+    setReducedMotion(newValue);
+    localStorage.setItem('reducedMotion', newValue.toString());
+  };
+
   return (
-    <>
-      {children}
-      <div className="accessibility-controls" style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
-        <button
-          onClick={toggleHighContrast}
-          className="accessibility-btn"
-          aria-label="Toggle high contrast mode"
-        >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
-        </button>
-        <div className="font-size-controls">
-          <button onClick={() => changeFontSize('small')}>A</button>
-          <button onClick={() => changeFontSize('normal')}>A</button>
-          <button onClick={() => changeFontSize('large')}>A</button>
+    <div className="accessibility-enhancer">
+      <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 border">
+        <h3 className="text-sm font-semibold mb-2">Accessibility Options</h3>
+        
+        <div className="space-y-2">
+          <label className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              checked={isHighContrast}
+              onChange={toggleHighContrast}
+              className="rounded"
+            />
+            <span className="text-sm">High Contrast</span>
+          </label>
+          
+          <label className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              checked={reducedMotion}
+              onChange={toggleReducedMotion}
+              className="rounded"
+            />
+            <span className="text-sm">Reduce Motion</span>
+          </label>
+          
+          <div className="flex items-center space-x-2">
+            <span className="text-sm">Font Size:</span>
+            <select
+              value={fontSize}
+              onChange={(e) => setFontSizePreference(e.target.value)}
+              className="text-sm border rounded px-1 py-0.5"
+            >
+              <option value="small">Small</option>
+              <option value="normal">Normal</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
         </div>
       </div>
-    </>
+      
+      {children}
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { Card } from '../components/ui/Card';
+import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { 
   Map, ArrowRight,
@@ -10,235 +10,217 @@ import {
   Phone, DollarSign,
   FileText, BookOpen,
   Award, Shield,
-  Calendar, Star, TrendingUp,
+  Globe, Search,
+  Filter, Calendar,
+  Star, TrendingUp,
   Brain, Cloud,
-  Database, Network,
-  Zap, Target,
-  CheckCircle
+  Database, Zap,
+  Lock, Code,
+  Smartphone, Monitor,
+  Server, Network
 } from 'lucide-react';
 
-const Sitemap: React.FC = () => {
-  const lastUpdated = new Date().toISOString().split('T')[0];
-
-  const mainPages = [
-    { name: "Home", url: "/", description: "Welcome to Zion Tech Group", icon: Home },
-    { name: "About", url: "/about", description: "Learn about our company and mission", icon: Users },
-    { name: "Services", url: "/services", description: "Our AI and technology solutions", icon: Briefcase },
-    { name: "Contact", url: "/contact", description: "Get in touch with our team", icon: Phone },
-    { name: "Careers", url: "/careers", description: "Join our team of experts", icon: Users },
-    { name: "Team", url: "/team", description: "Meet our leadership and experts", icon: Award },
-    { name: "Pricing", url: "/pricing", description: "Transparent pricing for our services", icon: DollarSign },
-    { name: "Blog", url: "/blog", description: "Latest insights and technology trends", icon: BookOpen },
-    { name: "Case Studies", url: "/case-studies", description: "Success stories from our clients", icon: TrendingUp },
-    { name: "White Papers", url: "/white-papers", description: "Research and insights", icon: FileText },
-    { name: "Webinars", url: "/webinars", description: "Expert-led educational sessions", icon: Calendar },
-    { name: "Privacy Policy", url: "/privacy", description: "How we protect your data", icon: Shield },
-    { name: "Terms of Service", url: "/terms", description: "Terms and conditions", icon: FileText }
+const SitemapPage: React.FC = () => {
+  const siteStructure = [
+    {
+      category: 'Main Pages',
+      icon: Home,
+      pages: [
+        { name: 'Home', path: '/', description: 'Main landing page' },
+        { name: 'About', path: '/about', description: 'About Zion Tech Group' },
+        { name: 'Contact', path: '/contact', description: 'Contact information' },
+        { name: 'Pricing', path: '/pricing', description: 'Service pricing' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities' }
+      ]
+    },
+    {
+      category: 'Services',
+      icon: Briefcase,
+      pages: [
+        { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },
+        { name: 'IT Services', path: '/it-services', description: 'Information Technology services' },
+        { name: 'Micro SaaS', path: '/micro-saas', description: 'Micro Software as a Service' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud computing solutions' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security services' },
+        { name: 'Infrastructure', path: '/infrastructure', description: 'IT infrastructure services' }
+      ]
+    },
+    {
+      category: 'Resources',
+      icon: BookOpen,
+      pages: [
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and case studies' },
+        { name: 'White Papers', path: '/white-papers', description: 'Technical white papers' },
+        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
+        { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
+        { name: 'Documentation', path: '/documentation', description: 'Technical documentation' }
+      ]
+    },
+    {
+      category: 'Company',
+      icon: Users,
+      pages: [
+        { name: 'Team', path: '/team', description: 'Meet our team' },
+        { name: 'Partners', path: '/partners', description: 'Our partners' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        { name: 'Help', path: '/help', description: 'Help and support' }
+      ]
+    },
+    {
+      category: 'Legal',
+      icon: Shield,
+      pages: [
+        { name: 'Privacy Policy', path: '/privacy', description: 'Privacy policy and data protection' },
+        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
+      ]
+    }
   ];
-
-  const servicePages = [
-    { name: "AI Services", url: "/ai-services", description: "Artificial Intelligence solutions", icon: Brain },
-    { name: "IT Services", url: "/it-services", description: "Information Technology services", icon: Network },
-    { name: "Micro SaaS", url: "/micro-saas", description: "Micro Software as a Service solutions", icon: Cloud },
-    { name: "AI Cybersecurity Platform", url: "/services/ai-autonomous-cybersecurity-platform", description: "AI-powered security solutions", icon: Shield },
-    { name: "AI Customer Experience", url: "/services/ai-customer-experience-platform", description: "AI-driven customer experience", icon: Users },
-    { name: "AI Healthcare Diagnostics", url: "/services/ai-healthcare-diagnostics", description: "AI medical diagnostic tools", icon: Brain },
-    { name: "AI Enterprise Orchestrator", url: "/services/ai-enterprise-orchestrator", description: "Enterprise AI orchestration", icon: Zap },
-    { name: "AI Healthcare Analytics", url: "/services/ai-healthcare-analytics-platform", description: "Healthcare data analytics", icon: Database },
-    { name: "AI Supply Chain", url: "/services/ai-autonomous-supply-chain", description: "Supply chain optimization", icon: Target },
-    { name: "AI Financial Planning", url: "/services/ai-financial-planning", description: "AI financial planning tools", icon: DollarSign }
-  ];
-
-  const contentPages = [
-    { name: "AI Insights", url: "/ai-insights", description: "Latest AI trends and insights", icon: Brain },
-    { name: "Technology News", url: "/tech-news", description: "Technology industry news", icon: TrendingUp },
-    { name: "Research Papers", url: "/research", description: "Technical research and papers", icon: FileText },
-    { name: "Tutorials", url: "/tutorials", description: "Learning resources and tutorials", icon: BookOpen }
-  ];
-
-  const allPages = [...mainPages, ...servicePages, ...contentPages];
 
   return (
     <>
-      <SEO
-        title="Sitemap - Zion Tech Group"
-        description="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources."
-        keywords="sitemap, navigation, pages, services, AI, technology"
+      <SEO 
+        title="Sitemap"
+        description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place."
+        keywords="sitemap, website navigation, pages, services, resources"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Site Map
-            </h1>
-            <p className="text-xl text-gray-600 mb-6">
-              Navigate through all our pages and services
+            <div className="flex items-center justify-center mb-6">
+              <Map className="h-12 w-12 text-blue-600 mr-4" />
+              <h1 className="text-4xl font-bold text-gray-900">Website Sitemap</h1>
+            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Navigate through all pages and sections of the Zion Tech Group website. 
+              Find exactly what you're looking for with our comprehensive site structure.
             </p>
-            <Badge variant="secondary" className="text-sm">
-              Last updated: {lastUpdated}
-            </Badge>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Main Pages */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <Card className="p-6 h-full">
-                <div className="flex items-center mb-4">
-                  <Home className="w-6 h-6 text-blue-600 mr-2" />
-                  <h2 className="text-2xl font-bold text-gray-900">Main Pages</h2>
-                </div>
-                <div className="space-y-3">
-                  {mainPages.map((page, index) => (
-                    <motion.div
-                      key={page.url}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                      className="border-l-4 border-blue-200 pl-4 py-2 hover:border-blue-400 transition-colors"
-                    >
-                      <a
-                        href={page.url}
-                        className="block group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {siteStructure.map((section, index) => (
+              <motion.div
+                key={section.category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="h-full">
+                  <CardHeader>
+                    <div className="flex items-center mb-4">
+                      <section.icon className="h-6 w-6 text-blue-600 mr-3" />
+                      <CardTitle className="text-xl">{section.category}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      {section.pages.map((page, pageIndex) => (
+                        <motion.div
+                          key={page.path}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.4, delay: (index * 0.1) + (pageIndex * 0.05) }}
+                          className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        >
+                          <div className="flex-1">
+                            <a 
+                              href={page.path}
+                              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                            >
                               {page.name}
-                            </h3>
-                            <p className="text-sm text-gray-600">{page.description}</p>
+                              <ExternalLink className="h-4 w-4 ml-2" />
+                            </a>
+                            <p className="text-sm text-gray-600 mt-1">{page.description}</p>
                           </div>
-                          <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                        </div>
-                      </a>
-                    </motion.div>
-                  ))}
-                </div>
-              </Card>
-            </motion.div>
-
-            {/* Service Pages */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Card className="p-6 h-full">
-                <div className="flex items-center mb-4">
-                  <Briefcase className="w-6 h-6 text-green-600 mr-2" />
-                  <h2 className="text-2xl font-bold text-gray-900">Services</h2>
-                </div>
-                <div className="space-y-3">
-                  {servicePages.map((page, index) => (
-                    <motion.div
-                      key={page.url}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                      className="border-l-4 border-green-200 pl-4 py-2 hover:border-green-400 transition-colors"
-                    >
-                      <a
-                        href={page.url}
-                        className="block group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h3 className="font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
-                              {page.name}
-                            </h3>
-                            <p className="text-sm text-gray-600">{page.description}</p>
-                          </div>
-                          <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
-                        </div>
-                      </a>
-                    </motion.div>
-                  ))}
-                </div>
-              </Card>
-            </motion.div>
-
-            {/* Content Pages */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <Card className="p-6 h-full">
-                <div className="flex items-center mb-4">
-                  <BookOpen className="w-6 h-6 text-purple-600 mr-2" />
-                  <h2 className="text-2xl font-bold text-gray-900">Content</h2>
-                </div>
-                <div className="space-y-3">
-                  {contentPages.map((page, index) => (
-                    <motion.div
-                      key={page.url}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
-                      className="border-l-4 border-purple-200 pl-4 py-2 hover:border-purple-400 transition-colors"
-                    >
-                      <a
-                        href={page.url}
-                        className="block group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
-                              {page.name}
-                            </h3>
-                            <p className="text-sm text-gray-600">{page.description}</p>
-                          </div>
-                          <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-colors" />
-                        </div>
-                      </a>
-                    </motion.div>
-                  ))}
-                </div>
-              </Card>
-            </motion.div>
+                          <ArrowRight className="h-4 w-4 text-gray-400" />
+                        </motion.div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Quick Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-12"
+            className="mt-12 text-center"
           >
-            <Card className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{mainPages.length}</div>
-                  <div className="text-gray-600">Main Pages</div>
+            <Card className="max-w-2xl mx-auto">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Can't find what you're looking for?
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Use our search functionality or contact us directly for assistance.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="/contact"
+                    className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+                  >
+                    <Phone className="h-4 w-4 mr-2" />
+                    Contact Us
+                  </a>
+                  <a 
+                    href="/help"
+                    className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center justify-center"
+                  >
+                    <Search className="h-4 w-4 mr-2" />
+                    Get Help
+                  </a>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">{servicePages.length}</div>
-                  <div className="text-gray-600">Services</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">{contentPages.length}</div>
-                  <div className="text-gray-600">Content Pages</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-indigo-600 mb-2">{allPages.length}</div>
-                  <div className="text-gray-600">Total Pages</div>
-                </div>
-              </div>
+              </CardContent>
             </Card>
           </motion.div>
         </div>
       </div>
     </>
+=======
+
+const Sitemap: React.FC = () => {
+  const links = [
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about' },
+    { name: 'Services', url: '/services' },
+    { name: 'AI Services', url: '/services/ai-services' },
+    { name: 'IT Services', url: '/services/it-services' },
+    { name: 'Micro SaaS', url: '/services/micro-saas' },
+    { name: 'Solutions', url: '/solutions' },
+    { name: 'Enterprise', url: '/solutions/enterprise' },
+    { name: 'Small Business', url: '/solutions/small-business' },
+    { name: 'Startups', url: '/solutions/startups' },
+    { name: 'Products', url: '/products' },
+    { name: 'Contact', url: '/contact' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Privacy', url: '/privacy' },
+    { name: 'Terms', url: '/terms' },
+  ];
+
+  return (
+    <div className="min-h-screen px-6 py-16 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6">Sitemap</h1>
+      <p className="text-gray-600 mb-8">Quick links to primary pages and sections.</p>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {links.map((l) => (
+          <li key={l.url}>
+            <a className="text-blue-600 hover:underline" href={l.url}>
+              {l.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+>>>>>>> main
   );
 };
 
-export default Sitemap;
+export default SitemapPage;

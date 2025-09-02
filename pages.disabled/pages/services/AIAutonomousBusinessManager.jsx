@@ -1,11 +1,15 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';
 import {}
   CogIcon,
   ChartBarIcon,
   ShieldCheckIcon,
-  RocketLaunchIcon,'
-  UserGroupIcon} from '@heroicons/react/24/outline';
+  RocketLaunchIcon,
+  '
+  UserGroupIcon} from '@heroicons/react/24/outline
+  ';
 const AIAutonomousBusinessManager = () => {}
   return()
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
@@ -342,7 +346,8 @@ const AIAutonomousBusinessManager = () => {}
             Ready to Transform Your Business?"
           </h2>""
           <p className="text-xl text-gray-300 mb-8">'
-            Join the future of autonomous business management with Zion Tech''
+            Join the future of autonomous business management with Zion Tech'
+  '
             Group's AI solutions."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -365,4 +370,4 @@ const AIAutonomousBusinessManager = () => {}
 };
 :pages.disabled/pages/services/AIAutonomousBusinessManager.jsx
 export default AIAutonomousBusinessManager;'"
-'"'"
+  '"'"

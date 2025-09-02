@@ -21,7 +21,8 @@ import {}
   Zap,
   Shield,
   Users,
-  GitBranch} from 'lucide-react.ts';
+  GitBranch} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousEcosystemManager.tsx
 const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
@@ -41,7 +42,9 @@ const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Business Ecosystem with""
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousEcosystemManager.tsx
@@ -198,4 +201,4 @@ const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousEcosystemManager.tsx
 export default AIAutonomousEcosystemManager;'"
-'"'"
+  '"'"
