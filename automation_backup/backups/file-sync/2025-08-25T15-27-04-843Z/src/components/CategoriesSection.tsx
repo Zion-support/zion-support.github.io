@@ -243,13 +243,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className='text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors';
 ;
             View All Categories;
-;
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300'                                                                                                                                                                              />;
+ursor/website-audit-content-update-and-deployment-efec
           </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )};</Link>;
         </motion.div>;
       </div>;
     </section>;

@@ -1,1 +1,0 @@
-import React from 'react'; export default function RequestQuotePage(): import("react/jsx-runtime").JSX.Element; 

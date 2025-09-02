@@ -36,7 +36,8 @@ function processFile(filePath) {
   } catch (error) {
     // // // // // // // console.log(`❌ Error processing ${filePath}:`, error.message);
     return false;
-console.log(`✅ Fixed: ${filePath}`);
+
+      console.log(`✅ Fixed: ${filePath}`);
       return true}
     return false} catch (error) {
     console.log(`❌ Error processing ${filePath}:`, error.message);
@@ -56,7 +57,8 @@ function walkDir(dir, extensions = ['.jsx', '.js', '.tsx', '.ts']) {
     // // // // // // // console.log(`⚠️ Could not read directory ${dir}:`, error.message);
   }
   return filesFixed;
-filesFixed++}
+
+          filesFixed++}
       }
     })} catch (error) {
     console.log(`⚠️ Could not read directory ${dir}:`, error.message)}
@@ -89,7 +91,8 @@ function main() {
   } else {
     // // // // // // // console.log('\n✅ No Next.js imports found to fix');
   }
-console.log('\n📝 Next steps:');
+
+    console.log('\n📝 Next steps:');
     console.log('1. Review the changes made');
     console.log('2. Test the application to ensure routing works correctly');
     console.log('3. Update  remaining Next.js specific patterns');

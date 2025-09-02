@@ -11,8 +11,9 @@ class LintErrorFixer {
     this.logFile = path.join(__dirname, 'logs', 'lint-error-fixer.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-this.ensureLogDirectory()}
+    this.ensureLogDirectory()}
   ensureLogDirectory() {
+
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true })}
@@ -112,7 +113,8 @@ this.ensureLogDirectory()}
       'hooks/**/*.{js,jsx,ts,tsx}'
     ];
     let totalFiles = 0;
-    for (const pattern of patterns) {
+    for (const pattern of patterns) {;
+
       const files = this.glob(pattern);
       for (const fixed = await this.fixFile(file);
         if (fixed) totalFixed++;
@@ -151,9 +153,9 @@ switch (command) {
   case 'file':
     if (filePath) {
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
-    }
-fixer.fixFile(filePath)} else {
+      fixer.fixFile(filePath)} else {
       console.log('Usage: node lint-error-fixer.js file <filepath>')}
+
     break;
   case 'all':
     fixer.fixAllFiles();
@@ -161,6 +163,6 @@ fixer.fixFile(filePath)} else {
   default:
     // // // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
     process.exit(1);
-}}}}}}}}}}}}}}}}}}}}}}}}}}
-console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
+
+    console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
     process.exit(1)}

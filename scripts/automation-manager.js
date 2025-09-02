@@ -78,7 +78,8 @@ class AutomationManager {
     } catch (error) {
       // // // // // // // console.error('❌ Failed to get status:', error.message);
     }
-console.log('⚠️  Some processes are not running. Use "check" to see details.')}
+
+        console.log('⚠️  Some processes are not running. Use "check" to see details.')}
     } catch (error) {
       console.error('❌ Failed to get status:', error.message)}
   }
@@ -101,7 +102,8 @@ console.log('⚠️  Some processes are not running. Use "check" to see details.
     } catch (error) {
       // // // // // // // console.error('❌ Failed to stop processes:', error.message);
     }
-console.log('✅ All automation processes stopped')} catch (error) {
+
+      console.log('✅ All automation processes stopped')} catch (error) {
       console.error('❌ Failed to stop processes:', error.message)}
   }
   async restartAll() {
@@ -120,7 +122,8 @@ console.log('✅ All automation processes stopped')} catch (error) {
     } catch (error) {
       // // // // // // // console.error(`❌ Failed to restart ${processName}:`, error.message);
     }
-console.error(`❌ Invalid process name: ${processName}`);
+
+      console.error(`❌ Invalid process name: ${processName}`);
       console.log('Valid processes:', this.automationProcesses.join(', '));
       return}
     console.log(`🔄 Restarting ${processName}...`);
@@ -141,7 +144,8 @@ console.error(`❌ Invalid process name: ${processName}`);
     } catch (error) {
       // // // // // // // console.error('❌ Failed to delete processes:', error.message);
     }
-console.log('✅ All automation processes deleted')} catch (error) {
+
+      console.log('✅ All automation processes deleted')} catch (error) {
       console.error('❌ Failed to delete processes:', error.message)}
   }
   async showLogs(processName) {
@@ -152,7 +156,8 @@ console.log('✅ All automation processes deleted')} catch (error) {
     } catch (error) {
       // // // // // // // console.error(`❌ Failed to show logs for ${processName}:`, error.message);
     }
-console.error(`❌ Invalid process name: ${processName}`);
+
+      console.error(`❌ Invalid process name: ${processName}`);
       console.log('Valid processes:', this.automationProcesses.join(', '));
       return}
     console.log(`📝 Showing logs for ${processName}...`);
@@ -188,7 +193,8 @@ console.error(`❌ Invalid process name: ${processName}`);
     } catch (error) {
       // // // // // // // console.error('❌ Failed to check health:', error.message);
     }
-console.log('✅ All automation processes are healthy');
+
+        console.log('✅ All automation processes are healthy');
         return}
       console.log(`⚠️  Found ${failedProcesses.length} failed processes:`);
       failedProcesses.forEach(proc => {
@@ -221,7 +227,8 @@ console.log('✅ All automation processes are healthy');
     } catch (error) {
       // // // // // // // console.error('❌ Failed to auto-fix:', error.message);
     }
-console.log('✅ No failed processes to fix');
+
+        console.log('✅ No failed processes to fix');
         return}
       console.log(`🔄 Restarting ${failedProcesses.length} failed processes...`);
       failedProcesses.forEach(proc => {
@@ -270,7 +277,8 @@ async function manager = new AutomationManager();
         // // // // // // // console.error('❌ Please specify a process name');
         // // // // // // // console.log('Example: node scripts/automation-manager.js logs console-error-fixer');
         return;
-console.error('❌ Please specify a process name');
+
+        console.error('❌ Please specify a process name');
         console.log('Example: node scripts/automation-manager.js logs console-error-fixer');
         return}
       await manager.showLogs(processName);

@@ -18,7 +18,9 @@ self.addEventListener('activate', event => {
       Promise.all(
         keyList.map(key => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-return caches.delete(key);})
+            return caches.delete(key)}
+
+        })
       )
     )
   );
@@ -31,20 +33,18 @@ self.addEventListener('fetch', event => {
         fetch(event.request)
           .then(response => {
             if (response.status === 200) {
-cache.put(event.request, response.clone());
-
-            return response;
-          })
+              cache.put(event.request, response.clone())}
+            return response})
           .catch(() => cache.match(event.request))
       )
     );
-    return;event.respondWith(
+    return}
+
+  event.respondWith(
     caches.match(event.request).then(response => {
       return (
         response ||
         fetch(event.request).catch(() => caches.match('/offline.html'))
-);
-    })
-  );
-});
-}}}
+      )})
+  )});
+

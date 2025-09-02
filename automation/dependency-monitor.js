@@ -6,10 +6,12 @@ const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 ;
 // // // // // // // // console.log('📦 Dependency Monitor Starting...\n');
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
 class DependencyMonitor {;
   constructor() {;
-this.projectRoot = process.cwd();
+
+    this.projectRoot = process.cwd();
     this.vulnerabilitiesFound = 0;
     this.dependenciesUpdated = 0;
     this.monitoring = false;
@@ -22,7 +24,8 @@ this.projectRoot = process.cwd();
     this.startMonitoring();
 ;
   ensureLogsDirectory() {;
-const logsDir = path.dirname(this.logFile);
+
+    const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
 ;
@@ -32,6 +35,7 @@ const logsDir = path.dirname(this.logFile);
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     // // // // // // // // console.log(logEntry.trim());
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
@@ -39,9 +43,11 @@ const logsDir = path.dirname(this.logFile);
       // // // // // // // console.error('Failed to write to log file:', error.message);
     };
   };
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async startMonitoring() {;
-this.log('Starting dependency monitoring...');
+
+    this.log('Starting dependency monitoring...');
 ;
     // Schedule regular dependency checks;
     cron.schedule('0 */2 * * *', () => {;
@@ -66,7 +72,8 @@ this.log('Starting dependency monitoring...');
     this.log('Dependency monitoring started successfully');
 ;
   async performDependencyCheck() {;
-if (this.monitoring) return;
+
+    if (this.monitoring) return;
 ;
     this.monitoring = true;
     this.log('Performing dependency check...');
@@ -81,7 +88,8 @@ if (this.monitoring) return;
         this.log('No dependency issues detected, all packages are up to date');
 ;
     } catch (error) {;
-this.log(`Dependency check failed: ${error.message}`, 'ERROR');
+
+      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
     } finally {;
       this.monitoring = false;
 ;
@@ -312,7 +320,8 @@ this.log(`Dependency check failed: ${error.message}`, 'ERROR');
     try {;
       // Create a report of what will be updated;
       const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>;
-`${pkg.name}: ${pkg.current} → ${pkg.latest}`;
+
+        `${pkg.name}: ${pkg.current} → ${pkg.latest}`;
       ).join('\n')}\n\nUpdating packages...`;
 ;
       fs.writeFileSync(reportPath, reportContent);
@@ -449,7 +458,8 @@ this.log(`Dependency check failed: ${error.message}`, 'ERROR');
 ;
         // Create a report for major updates;
         const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>;
-`${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`;
+
+          `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`;
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`;
 ;
         fs.writeFileSync(reportPath, reportContent);
@@ -515,7 +525,8 @@ this.log(`Dependency check failed: ${error.message}`, 'ERROR');
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
 ;
         for (const filePath = path.join(logsDir, file);
-const stats = fs.statSync(filePath);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+            const stats = fs.statSync(filePath);
 ;
             if (now - stats.mtime.getTime() > maxAge) {;
               fs.unlinkSync(filePath);
@@ -538,7 +549,8 @@ const stats = fs.statSync(filePath);
 ;
   async stop() {;
     this.log('Stopping dependency monitor...');
-this.monitoring = false;
+
+    this.monitoring = false;
     this.log('Dependency monitoring stopped');
   }
 }
@@ -580,3 +592,4 @@ setInterval(() => {;
   monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 900000); // Every 15 minutes;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
