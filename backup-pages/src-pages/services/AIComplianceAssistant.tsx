@@ -19,21 +19,18 @@ import {
   Search,
   Filter,
   Download,
-  Share2'
-} from 'lucide-react';
+  Share2
+  '
+} from 'lucide-react
+  ';
 
 export default function AIComplianceAssistant() {
-  
-  
-  
-  
-  
+
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
 =
-=======
-        title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
+title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
        />
       
       {/* Hero Section */}"
@@ -52,7 +49,8 @@ export default function AIComplianceAssistant() {
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Compliance"
               <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                {' '}Assistant
+                {' 
+  '}Assistant
               </span>
             </h1>"
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -346,7 +344,8 @@ export default function AIComplianceAssistant() {
             </ul>"
             <div className="mt-6 text-sm text-slate-400">
               References: {links.map((l, i) => ('"
-                <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ', : ''}</a>
+                <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ?,
+  ,: '}</a>
               ))}
             </div>
           </div>

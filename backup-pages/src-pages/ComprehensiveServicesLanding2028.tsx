@@ -3,8 +3,9 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null)};
-      company: "BioTech Innovations",;'"
-      content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",;
+      company: "BioTech Innovations",;,
+  "
+      content: "Their quantum AI drug discovery platform has accelerated our research by 10x. Were now able to analyze molecular interactions that were previously impossible to model.",;
       rating: 5,;"
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"};
   ];
@@ -18,28 +19,33 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       default: return Rocket}
   };
 
-  
-      'from-green-600 to-emerald-600',;
-      'from-red-600 to-orange-600',;
-      'from-indigo-600 to-purple-600',;
-      'from-yellow-600 to-orange-600',;
-      'from-teal-600 to-blue-600',;
-      'from-pink-600 to-red-600';
-=======
-      'from-blue-600 to-cyan-600','
-      'from-purple-600 to-pink-600',;'
-      'from-green-600 to-emerald-600',;'
-      'from-red-600 to-orange-600',;'
-      'from-indigo-600 to-purple-600',;'
-      'from-yellow-600 to-orange-600',;'
-      'from-teal-600 to-blue-600',;'      'from-pink-600 to-red-600';
+      'from-green-600 to-emerald-600
+  ',;
+      'from-red-600 to-orange-600
+  ',;
+      'from-indigo-600 to-purple-600
+  ',;
+      'from-yellow-600 to-orange-600
+  ',;
+      'from-teal-600 to-blue-600
+  ',;
+      'from-pink-600 to-red-600
+  ';
+'from-blue-600 to-cyan-600
+  ','
+
+  'from-purple-600 to-pink-600',;'
+  'from-green-600 to-emerald-600',;'
+  'from-red-600 to-orange-600',;'
+  'from-indigo-600 to-purple-600',;'
+  'from-yellow-600 to-orange-600',;'
+  'from-teal-600 to-blue-600',;'
+  'from-pink-600 to-red-600';
     ];
     return colors[Math.abs (category.length) % colors.length]};
 
-  
     setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) };
 
-  
     setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) };
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
@@ -93,11 +99,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.8,
   delay: 0.2 
 
-
-
-
-
-
 }}"
             className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
 
@@ -122,26 +123,23 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.8,
   delay: 0.4 
 
-
-
-
-
-
 }}"
             className="flex flex-wrap justify-center gap-4"
 
             <Button"
               size="lg"
-              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
-              onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors",
+  onClick={() => document.getElementById('services-section
+  ')?.scrollIntoView({ behavior: 'smooth })}
 
               Explore Services
             </Button>
             <Button"
               size="lg"
               variant="outline"
-              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
-              onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors",
+  onClick={() => document.getElementById(
+  'contact-section')?.scrollIntoView({ behavior: 'smooth })}
 
               Get Started
             </Button>
@@ -172,11 +170,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="text-center"
@@ -237,11 +230,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 group"
@@ -323,19 +311,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.6 
 
-
-
-
-
-
 }}"
             className="text-center mt-12"
 
             <Button"
               size="lg"
               variant="outline"
-              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
-              onClick={() => window.location.href = '/innovative-services-showcase-2028'}
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+  '
+              onClick={() => window.location.href = '/innovative-services-showcase-2028
+  '}
 
               View All Services
             </Button>
@@ -425,7 +410,9 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                     onClick={() => setCurrentTestimonial(index)}`
                     className={`w-3 h-3 rounded-full transition-colors ${
 
-                      index === currentTestimonial ? 'bg-zion-cyan' : 'bg-white/30'`
+                      index === currentTestimonial ?,
+  bg-zion-cyan
+  ': 'bg-white/30`
                     }`}
                   />) ) }
               </div>
@@ -486,11 +473,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.1 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -519,11 +501,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -554,11 +531,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.3 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -587,11 +559,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -622,11 +589,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.5 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -655,11 +617,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -695,11 +652,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }}"
             className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
@@ -862,11 +814,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.1 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -899,11 +846,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -938,11 +880,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.3 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -975,18 +912,14 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.4 
 
-
-
-
-
-
 }}"
             className="text-center mt-12"
 
             <Button"
               size="lg"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => window.location.href =
+  '/contact'}
 
               Schedule a Consultation
             </Button>;

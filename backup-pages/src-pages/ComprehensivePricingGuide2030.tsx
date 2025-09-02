@@ -1,78 +1,112 @@
 
-const ComprehensivePricingGuide2030: React.FC = () => {;'
-  const [activeCategory, setActiveCategory] = useState('all');'
-  const [searchTerm, setSearchTerm] = useState('');
+const ComprehensivePricingGuide2030: React.FC = () => {;,
+  const [activeCategory, setActiveCategory] = useState(
+  'all');'
+  const [searchTerm, setSearchTerm] = useState('
+  ');
 
-  
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
   ];
 
-  
-    
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
-  
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
-    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
+    { id: 'all, name: 'All Services
+  ', icon: Star, count: allServices.length },;
+    { id:,
+  ai
+  ', name: 'AI Services, icon: Brain, count: innovativeAIServices2030.length },;
+    { id:,
+  cybersecurity
+  ', name: 'Cybersecurity, icon: Shield, count: innovativeCybersecurityServices2030.length },;
+    { id:,
+  cloud
+  ', name: 'Cloud & DevOps, icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
-
-  const getCategoryIcon = (category: string) => {;'
-    if (category.toLowerCase().includes('ai')) return Brain;'
-    if (category.toLowerCase().includes('cybersecurity')) return Shield;'    if (category.toLowerCase().includes('cloud')) return Cloud;
+  const getCategoryIcon = (category: string) => {;,
+  if (category.toLowerCase().includes(
+  'ai')) return Brain;'
+    if (category.toLowerCase().includes(
+  'cybersecurity')) return Shield;'    if (category.toLowerCase().includes(
+  'cloud')) return Cloud;
     return Star};
 
-  
-    if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
-    if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
-    if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
-    return { tier: 'Premium', color: 'bg-orange-600/20 border-orange-500/30 text-orange-300' }};
+    if (price < 300) return { tier: 'Starter, color:,
+  bg-green-600/20 border-green-500/30 text-green-300' };
+    if (price < 600) return { tier: 'Professional, color:,
+  bg-blue-600/20 border-blue-500/30 text-blue-300' };
+    if (price < 1000) return { tier: 'Enterprise, color:,
+  bg-purple-600/20 border-purple-500/30 text-purple-300' };
+    return { tier: 'Premium, color:,
+  bg-orange-600/20 border-orange-500/30 text-orange-300' }};
 
-  
-        'Basic AI features',Email support',Up to 5 users',Standard integrations',Community forum access',Basic analytics',Mobile app access'
+  'Basic AI features',Email support
+  ',Up to 5 users',Standard integrations
+  ',Community forum access',Basic analytics
+  ',Mobile app access'
       ],;
-=======
-      features[;'
-        'Basic AI features','
-        'Email support','
-        'Up to 5 users','
-        'Standard integrations','
-        'Community forum access','
-        'Basic analytics','        'Mobile app access'
+features[;'
+  'Basic AI features',
+  '
+        'Email support
+  ','
+
+  'Up to 5 users',
+  '
+        'Standard integrations
+  ','
+
+  'Community forum access',
+  '
+        'Basic analytics
+  ',' 
+  'Mobile app access'
       ],;'
-      color: 'from-cyan-500 to-blue-600',
+      color: 'from-cyan-500 to-blue-600,
       popular: false,
-      bestFor: 'Small businesses, startups, individual professionals'
+      bestFor:,
+  Small businesses, startups, individual professionals'
     },
     {
 
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
+      name: 'Professional,
+      description:
+  'Ideal for growing businesses and teams',
       price: 999,
-      features[;
-        'Advanced AI capabilities',Priority support',Up to 25 users',Advanced integrations',API access',Custom branding',Advanced analytics dashboard',White-label options',Training and onboarding'
+      features[;,
+  Advanced AI capabilities',Priority support
+  ',Up to 25 users',Advanced integrations
+  ',API access',Custom branding
+  ',Advanced analytics dashboard',White-label options
+  ',Training and onboarding'
       ],;
-      color: 'from-purple-500 to-pink-600',
+      color: 'from-purple-500 to-pink-600,
       popular: true,
-      bestFor: 'Growing businesses, mid-size companies, agencies'
+      bestFor:,
+  Growing businesses, mid-size companies, agencies'
     },
     {
 
-      name: 'Enterprise',
-      description: 'For large organizations with complex needs',
+      name: 'Enterprise,
+      description:
+  'For large organizations with complex needs',
       price: 2999,
-      features[;
-        'Full AI suite access',24/7 dedicated support',Unlimited users',Custom integrations',White-label solutions',Advanced security features',SLA guarantees',Dedicated account manager',Custom development',On-premise deployment options'
+      features[;,
+  Full AI suite access',24/7 dedicated support
+  ',Unlimited users',Custom integrations
+  ',White-label solutions',Advanced security features
+  ',SLA guarantees',Dedicated account manager
+  ',Custom development',On-premise deployment options
+  '
       ],;
-      color: 'from-indigo-500 to-purple-600',
+      color: 'from-indigo-500 to-purple-600,
       popular: false,
-      bestFor: 'Large enterprises, government agencies, Fortune 500 companies'};
+      bestFor: 'Large enterprises, government agencies, Fortune 500 companies
+  '};
   ]};  ];
 
   return ("
@@ -160,9 +194,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
 
-                    activeCategory === category.id'
-                      ? 'bg-purple-600 border-purple-500 text-white''
-                      : 'bg-white/10 border-white/20 text-white hover:bg-white/20'`
+                    activeCategory === category.id,
+  ? 'bg-purple-600 border-purple-500 text-white'
+  ': 'bg-white/10 border-white/20 text-white hover:bg-white/20`
                   }`}
 "
                   <category.icon className="w-4 h-4" />
@@ -239,8 +273,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
         <div className="max-w-7xl mx-auto">;"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredServices.map((service, index) => {;
-              
-              
+
               return()
                 <motion.div
                   key = {service.id}
@@ -260,11 +293,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group"
@@ -347,7 +375,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-                  setActiveCategory('all')}}"                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
+                  setActiveCategory(
+  'all')}}"                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
               >
                 Clear all filters
               </button>
@@ -607,17 +636,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
         <div className="container mx-auto px-4 text-center">"
           <div className="max-w-3xl mx-auto">"
             <div className="text-slate-300 mb-6">
-              <strong>Zion Tech Group</strong> - Your partner in digital transformation and innovation.'
-              Visit us at{' '}
+              <strong>Zion Tech Group</strong> - Your partner in digital transformation and innovation.,
+  Visit us at{' 
+  '}
               <a "
-                href="https://ziontechgroup.com"
+                href="https: //ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 ziontechgroup.com
               </a>
-              {' '}to explore our full range of services and solutions.
+              {'}to explore our full range of services and solutions.
             </div>
             <div>"
               <h3 className = "text-white font-bold text-lg mb-4">Quick Links</h3>"

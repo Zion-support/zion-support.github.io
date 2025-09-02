@@ -63,6 +63,7 @@ class EnhancedErrorFixingAutomation {
     const logsDir = path.join(process.cwd(), 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
+>>>>>>> main
     }
   }
 
@@ -543,6 +544,7 @@ class EnhancedErrorFixingAutomation {
     }
 
     return files;
+>>>>>>> main
   }
 
   async generateReport() {
@@ -598,3 +600,4 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
+>>>>>>> main

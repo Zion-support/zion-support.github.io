@@ -1,1 +1,0 @@
-export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {): any {} return() <div className="min-h-screen bg-gray-900 text-white"> 

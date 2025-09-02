@@ -1,15 +1,17 @@
 
 
         count: services.length,
-        avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g,).split('/')[0]), 0) / services.length),
+        avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g,).split(
+  '/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
       }};
   
-    selectedCategory === 'All' || service.category === selectedCategory;
+    selectedCategory ===
+  'All' || service.category === selectedCategory;
   );
 
-  
-    if (categoryId === 'All') {;
+    if (categoryId ===
+  'All') {;
       return {;
         count: INNOVATIVE_SERVICES_2027.length,;
         avgPrice: Math.round (INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length) ,;
@@ -22,13 +24,11 @@
       avgRating: Math.round ( (services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
     }};
 
-  
     visible: {
       opacity: 1,;
       transition: {
         staggerChildren: 0.1}}};
 
-  
       opacity: 1,;
       transition: {
         duration: 0.5}}};
@@ -42,8 +42,10 @@
        />
 
       {/* Hero Section */}"
-      <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">'"
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+      <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">
+  '"
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg
+  ')] bg-center opacity-10"></div>
 "
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
@@ -123,14 +125,15 @@
           </div>;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category) => {;
-              
-              
+
               return()                <motion.div
                   key = {category.id}
                   variants={itemVariants}
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
 
-                    selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''`
+                    selectedCategory === category.id ?,
+  border-cyan-500 bg-zion-slate
+  ': '`
                   }`}
                   onClick={() => setSelectedCategory(category.id)}
 `
@@ -159,11 +162,16 @@
       <section className = "py-20 bg-zion-slate-dark">;"
         <div className="max-w-7xl mx-auto px-6">"
           <div className="flex items-center justify-between mb-12">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white">'`
-              {selectedCategory === 'All' ? 'All Services' : `${selectedCategory} Services`}
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+  '`
+              {selectedCategory === 'All
+  ' ? 'All Services
+  ' : `${selectedCategory} Services`}
             </h2>"
             <div className="text-gray-400">
-              {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} available
+              {filteredServices.length} service{filteredServices.length !== 1 ?,
+  s
+  ': '} available
             </div>
           </div>
 
@@ -360,11 +368,11 @@
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
 
-  
             </a>;
-=======
-'
-      case 'AI Services':;            </a>;
+
+  '
+      case 'AI Services
+  ':;            </a>;
           </div>;
         </div>;
       </section>;
@@ -374,17 +382,21 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
 
-  
     switch (category) {;
-      case 'AI Services':;"
+      case,
+  AI Services
+  ': ;"
         return <Brain className="w-5 h-5"  />;
-      case 'Cybersecurity':;"
+      case 'Cybersecurity
+  ':;"
         return <Shield className="w-5 h-5"  />;
-      case 'Emerging Technology':;"
+      case 'Emerging Technology
+  ':;"
         return <Zap className="w-5 h-5"  />;
-      case 'IT Services':;"
+      case 'IT Services
+  ':;"
         return <Code className="w-5 h-5"  />;
-      case 'Telecommunications':;"
+      case 'Telecommunications:;"
         return <Signal className="w-5 h-5"  />;
       default:;"
         return <Users className = "w-5 h-5"  />}};

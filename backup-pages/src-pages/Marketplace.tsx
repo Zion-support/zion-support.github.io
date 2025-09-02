@@ -16,66 +16,76 @@ import {
   TrendingUp,
   Award,
   Users,
-  ArrowRight} from 'lucide-react';
+  ArrowRight} from
+  'lucide-react';
 
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle} from '@/components/ui/card';
+  CardTitle} from
+  '@/components/ui/card';
 const Marketplace: React.FC = () => {
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(,
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');
+  const [selectedType, setSelectedType] = useState('all
+  ');
+  const [viewMode, setViewMode] = useState<'grid
+  ' | 'list
+  '>('grid
+  ');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
-  
-  
-  
-  
-    
     return matchesCategory && matchesSearch}) ;
 
-  
-      case 'price':
-=======
-        return b.rating - a.rating;'      case 'price':
-        return ('
-          parseFloat(a.price.replace(/[^0-9.]/g,)) -'
-          parseFloat(b.price.replace(/[^0-9.]/g,))
+      case 'price
+  ': return b.rating - a.rating;'      case
+  'price':
+        return (
+          parseFloat(a.price.replace(/[^0-9.]/g,)) -,
+  parseFloat(b.price.replace(/[^0-9.]/g,))
         );
-      case 'reviews':
-        return b.reviews - a.reviews;
-      case 'users':
+      case
+  'reviews': return b.reviews - a.reviews;
+      case
+  'users:
         return b.users - a.users;
       default:
         return b.reviews - a.reviews; // popularity
     }
   }) ;
 
-  
-      case 'service':'
-        return 'bg-green-500/20 text-green-400';
-      case 'hardware':'
-        return 'bg-orange-500/20 text-orange-400';
-      default:'
-        return 'bg-slate-500/20 text-slate-400'}
+      case,
+  service': '
+        return 'bg-green-500/20 text-green-400
+  ';
+      case 'hardware
+  ':'
+        return
+  'bg-orange-500/20 text-orange-400';
+      default:
+  '
+        return 'bg-slate-500/20 text-slate-400}
   };
 
-  
-      case 'popular':'
-        return 'bg-blue-500/20 text-blue-400';
-      case 'trending':'
-        return 'bg-green-500/20 text-green-400';
+      case,
+  popular
+  ': '
+        return
+  'bg-blue-500/20 text-blue-400';
+      case
+  'trending':
+  '
+        return 'bg-green-500/20 text-green-400
+  ';
       default:'
-        return 'bg-slate-500/20 text-slate-400'}
+        return
+  'bg-slate-500/20 text-slate-400}
   };
 
-  
-    
-    
     for (let i = 0; i < fullStars; i++) {
 
       stars.push()
@@ -88,32 +98,42 @@ const Marketplace: React.FC = () => {
         <Star key="half" className="w-4 h-4 text-yellow-400 fill-current"  />
       )}
 
-    
     for (let i = 0; i < emptyStars; i++) {
 "
       stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400"  />)}
 
     return stars};
 
-  
     return category ? category.icon : Globe};
 
-  
-    return category ? category.name : 'General'};
+    return category ? category.name :,
+  General'};
 
-  
-      case 'Best Seller':'
-        return 'bg-gradient-to-r from-green-500 to-emerald-500';
-      case 'Trending':'
-        return 'bg-gradient-to-r from-purple-500 to-pink-500';
-      case 'New':'
-        return 'bg-gradient-to-r from-blue-500 to-cyan-500';
-      case 'Innovative':'
-        return 'bg-gradient-to-r from-indigo-500 to-purple-500';
-      case 'Cost Effective':'
-        return 'bg-gradient-to-r from-teal-500 to-green-500';
+      case
+  'Best Seller': '
+        return 'bg-gradient-to-r from-green-500 to-emerald-500
+  ';
+      case 'Trending
+  ':'
+        return
+  'bg-gradient-to-r from-purple-500 to-pink-500';
+      case
+  'New':
+  '
+        return 'bg-gradient-to-r from-blue-500 to-cyan-500
+  ';
+      case 'Innovative
+  ':'
+        return
+  'bg-gradient-to-r from-indigo-500 to-purple-500';
+      case
+  'Cost Effective':
+  '
+        return 'bg-gradient-to-r from-teal-500 to-green-500
+  ';
       default:'
-        return 'bg-gradient-to-r from-gray-500 to-slate-500'}  };
+        return
+  'bg-gradient-to-r from-gray-500 to-slate-500}  };
 
   return()
     <>
@@ -175,9 +195,9 @@ const Marketplace: React.FC = () => {
                   onClick={() => setSelectedCategory(category.id)}`
                   className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
 
-                    selectedCategory === category.id'
-                      ? 'bg-zion-purple text-white shadow-lg''
-                      : 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20'`
+                    selectedCategory === category.id,
+  ? 'bg-zion-purple text-white shadow-lg'
+  ': 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20`
                   }`}
                 >"
                   <category.icon className="w-5 h-5" />
@@ -365,7 +385,8 @@ const Marketplace: React.FC = () => {
               viewport={{ once: true }}
             >"
               <h2 className="text-4xl font-bold text-white mb-6">
-                Can't Find What You're Looking For?
+                Can't Find What You
+  're Looking For?
               </h2>"
               <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
                 Our technology experts can help you find the perfect solution or

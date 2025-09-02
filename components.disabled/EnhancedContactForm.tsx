@@ -1,5 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useRef, useEffect } from,
+  react';
+import { motion, AnimatePresence } from
+  'framer-motion';
 import { 
   Send, 
   CheckCircle, 
@@ -13,7 +15,8 @@ import {
   Star,
   Clock,
   Shield
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 interface ContactFormData {
 
@@ -27,7 +30,11 @@ interface ContactFormData {
   budget: string;
   timeline: string;
   message: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
+  priority:
+  'low' |
+  'medium' |
+  'high' |
+  'urgent;
 
 }
 
@@ -41,25 +48,36 @@ interface ContactFormProps {
 }
 ;
 const EnhancedContactForm: React.FC<ContactFormProps> = {
-  onSubmit: unknown, className = ''
+  onSubmit: unknown, className = '
+  '
 }: unknown {
   const [formData, setFormData] = useState<ContactFormData>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
-    website: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    message: '',
-    priority: 'medium'
+    firstName:,
+  ',
+    lastName: ',
+    email:,
+  ',
+    phone: ',
+    company:,
+  ',
+    website: ',
+    service:,
+  ',
+    budget: ',
+    timeline:,
+  ',
+    message: ',
+    priority: 'medium
+  '
   });
 
   const [errors, setErrors] = useState<Partial<ContactFormData>>({});
   const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle
+  ' | 'success
+  ' | 'error
+  '>('idle
+  ');
   const [currentStep, setCurrentStep] = useState<typeof 1>(1);
   const [isValidating, setIsValidating] = useState<typeof false>(false);
 
@@ -80,28 +98,38 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
     const newErrors: Partial<ContactFormData> = {};
 
     // Required field validation
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (!formData.firstName.trim()) newErrors.firstName =,
+  First name is required
+  ';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required
+  ';
+    if (!formData.email.trim()) newErrors.email = 'Email is required
+  ';
+    if (!formData.message.trim()) newErrors.message = 'Message is required
+  ';
 
     // Email validation
     if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Please enter a valid email address
+  ';
     }
 
     // Phone validation (optional but if provided, must be valid)
     if (formData.phone && !/^[\+]?[1-9][\d]{0,15}$/.test(formData.phone.replace(/[\s\-\(\)]/g,))) {
-      newErrors.phone = 'Please enter a valid phone number';
+      newErrors.phone = 'Please enter a valid phone number
+  ';
     }
 
     // Website validation (optional but if provided, must be valid)
-    if (formData.website && !/^https?:\/\/.+/.test(formData.website)) {
-      newErrors.website = 'Please enter a valid website URL (include http:// or https://);
+    if (formData.website && !/^https?: \/\/.+/.test(formData.website)) {
+      newErrors.website =Please enter a valid website URL (include http:// or https://);
     }
-    if (!formData.company.trim()) newErrors.company = 'Company name is required';
-    if (!formData.service) newErrors.service = 'Please select a service';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (!formData.company.trim()) newErrors.company =
+  'Company name is required';
+    if (!formData.service) newErrors.service =
+  'Please select a service';
+    if (!formData.message.trim()) newErrors.message =
+  'Message is required';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -130,7 +158,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
       const firstErrorField = Object.keys(errors)[0];
       if (firstErrorField) {
         const errorElement = document.querySelector(`[name="${firstErrorField}"]`);
-        errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        errorElement?.scrollIntoView({ behavior:,
+  smooth', block: 'center });
       }
       return;
     }
@@ -151,22 +180,28 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
       // Reset form after successful submission
       setTimeout(: unknown {
         setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          company: '',
-          phone: '',
-          service: '',
-          budget: '',
-          timeline: '',
-          message: '',
-          priority: 'medium'
+          firstName:,
+  ',
+          lastName: ',
+          email:,
+  ',
+          company: ',
+          phone:,
+  ',
+          service: ',
+          budget:,
+  ',
+          timeline: ',
+          message:,
+  ',
+          priority: 'medium
         });
         setIsSubmitted(false);
       }, 5000);
       
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error(,
+  Form submission error: , error);
     } finally {
       setIsSubmitting(false);
     }
@@ -177,9 +212,12 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
     if (currentStep === 1) {
       if (!formData.firstName || !formData.lastName || !formData.email) {
         setErrors({
-          firstName: !formData.firstName ? 'First name is required' : undefined,
-          lastName: !formData.lastName ? 'Last name is required' : undefined,
-          email: !formData.email ? 'Email is required' : undefined
+          firstName: !formData.firstName ? 'First name is required
+  ' : undefined,
+          lastName: !formData.lastName ? 'Last name is required
+  ' : undefined,
+          email: !formData.email ? 'Email is required
+  ' : undefined
         });
         return;
       }
@@ -202,17 +240,24 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
 
   // Service options
   const serviceOptions = [
-    'AI Consciousness Evolution',Quantum Cybersecurity',Autonomous Systems',Space Technology',Cloud Infrastructure',Custom Solution',Other'
+    'AI Consciousness Evolution
+  ',Quantum Cybersecurity',Autonomous Systems
+  ',Space Technology',Cloud Infrastructure
+  ',Custom Solution',Other
+  '
   ];
 
   // Budget options
   const budgetOptions = [
-    'Under $10,000',$10,000 - $50,000',$50,000 - $100,000',$100,000 - $500,000',$500,000+',To be discussed'
+    'Under $10,000
+  ',$10,000 - $50,000',$50,000 - $100,000
+  ',$100,000 - $500,000',$500,000+
+  ',To be discussed'
   ];
 
   // Timeline options
   const timelineOptions = [
-    'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible'
+  'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible'
   ];
 
   if (isSubmitted) {
@@ -225,7 +270,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
         <p className="text-gray-300 mb-4">
-          Your message has been sent successfully. We'll get back to you within 24 hours.
+          Your message has been sent successfully. We,
+  ll get back to you within 24 hours.
         </p>
         <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
           <div className="flex items-center gap-1">
@@ -245,9 +291,11 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           <input
             type="text"
             value={formData.lastName}
-            onChange={(e handleInputChange('lastName', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.lastName ? 'border-red-500' : 'border-gray-600'
+            onChange={(e handleInputChange('lastName
+  ', e.target.value)}
+            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus: ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
+              errors.lastName ? 'border-red-500
+  ' : 'border-gray-600
             }`}
             placeholder="Enter your last name"
           />
@@ -268,9 +316,12 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           <input
             type="email"
             value={formData.email}
-            onChange={e: unknown handleInputChange('email', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.email ? 'border-red-500' : 'border-gray-600'
+            onChange={e: unknown handleInputChange(,
+  email
+  ', e.target.value)}
+            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus: ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
+              errors.email ? 'border-red-500
+  ' : 'border-gray-600
             }`}
             placeholder="your.email@company.com"
           />
@@ -289,9 +340,12 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           <input
             type="text"
             value={formData.company}
-            onChange={e: unknown handleInputChange('company', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.company ? 'border-red-500' : 'border-gray-600'
+            onChange={e: unknown handleInputChange(,
+  company
+  ', e.target.value)}
+            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus: ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
+              errors.company ? 'border-red-500
+  ' : 'border-gray-600
             }`}
             placeholder="Your company name"
           />
@@ -311,7 +365,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
         <input
           type="tel"
           value={formData.phone}
-          onChange={e: unknown handleInputChange('phone', e.target.value)}
+          onChange={e: unknown handleInputChange('phone
+  ', e.target.value)}
           className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
           placeholder="+1 (555) 123-4567"
         />
@@ -332,9 +387,12 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
         </label>
         <select
           value={formData.service}
-          onChange={(e handleInputChange('service', e.target.value)}
-          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-            errors.service ? 'border-red-500' : 'border-gray-600'
+          onChange={(e handleInputChange(,
+  service
+  ', e.target.value)}
+          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus: ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
+            errors.service ? 'border-red-500
+  ' : 'border-gray-600
           }`}
         >
           <option value="">Select a service</option>
@@ -359,7 +417,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           </label>
           <select
             value={formData.budget}
-            onChange={e: unknown handleInputChange('budget', e.target.value)}
+            onChange={e: unknown handleInputChange('budget
+  ', e.target.value)}
             className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
           >
             <option value="">Select budget range</option>
@@ -377,7 +436,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           </label>
           <select
             value={formData.timeline}
-            onChange={e: unknown handleInputChange('timeline', e.target.value)}
+            onChange={e: unknown handleInputChange('timeline
+  ', e.target.value)}
             className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
           >
             <option value="">Select timeline</option>
@@ -402,8 +462,9 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                 key={method.value}
                 className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${
                   formData.preferredContact === method.value
-                    ? 'border-cyan-500 bg-cyan-500/10'
-                    : 'border-gray-600 hover:border-gray-500'
+                    ?,
+  border-cyan-500 bg-cyan-500/10
+  ': 'border-gray-600 hover:border-gray-500
                 }`}
               >
                 <input
@@ -411,7 +472,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                   name="preferredContact"
                   value={method.value}
                   checked={formData.preferredContact === method.value}
-                  onChange={(e handleInputChange('preferredContact', e.target.value)}
+                  onChange={(e handleInputChange('preferredContact
+  ', e.target.value)}
                   className="sr-only"
                 />
                 <Icon className="w-5 h-5 mr-3 text-cyan-400" />
@@ -437,10 +499,13 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
         </label>
         <textarea
           value={formData.message}
-          onChange={(e handleInputChange('message', e.target.value)}
+          onChange={(e handleInputChange(,
+  message
+  ', e.target.value)}
           rows={6}
-          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none ${
-            errors.message ? 'border-red-500' : 'border-gray-600'
+          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus: ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none ${
+            errors.message ? 'border-red-500
+  ' : 'border-gray-600
           }`}
           placeholder="Tell us about your project, requirements, and goals..."
         />
@@ -460,7 +525,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           <input
             type="checkbox"
             checked={formData.newsletter}
-            onChange={e: unknown handleInputChange('newsletter', e.target.checked)}
+            onChange={e: unknown handleInputChange('newsletter
+  ', e.target.checked)}
             className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2"
           />
           <span className="ml-3 text-sm text-gray-300">
@@ -472,11 +538,13 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           <input
             type="checkbox"
             checked={formData.gdprConsent}
-            onChange={e: unknown handleInputChange('gdprConsent', e.target.checked)}
-            className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2 mt-1"
+            onChange={e: unknown handleInputChange(,
+  gdprConsent
+  ', e.target.checked)}
+            className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus: ring-cyan-500 focus:ring-2 mt-1"
           />
           <span className="ml-3 text-sm text-gray-300">
-            I consent to Zion Tech Group processing my personal data in accordance with the{' '}
+            I consent to Zion Tech Group processing my personal data in accordance with the{'}
             <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
               Privacy Policy
             </a>
@@ -548,12 +616,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="firstName"
                     name="firstName"
                     value={formData.firstName}
-                    onChange={(e handleInputChange('firstName', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.firstName ? 'border-red-400' : 'border-white/20'
+                    onChange={(e handleInputChange(,
+  firstName', e.target.value)}
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
+                      errors.firstName ?
+  'border-red-400' :
+  'border-white/20
                     }`}
                     placeholder="Enter your first name"
-                    aria-describedby={errors.firstName ? 'firstName-error' : undefined}
+                    aria-describedby={errors.firstName ?
+  'firstName-error' : undefined}
                   />
                   {errors.firstName && (
                     <p id="firstName-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
@@ -572,12 +644,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="lastName"
                     name="lastName"
                     value={formData.lastName}
-                    onChange={e: unknown handleInputChange('lastName', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.lastName ? 'border-red-400' : 'border-white/20'
+                    onChange={e: unknown handleInputChange(,
+  lastName', e.target.value)}
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
+                      errors.lastName ?
+  'border-red-400' :
+  'border-white/20
                     }`}
                     placeholder="Enter your last name"
-                    aria-describedby={errors.lastName ? 'lastName-error' : undefined}
+                    aria-describedby={errors.lastName ?
+  'lastName-error' : undefined}
                   />
                   {errors.lastName && (
                     <p id="lastName-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
@@ -597,12 +673,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                   id="email"
                   name="email"
                   value={formData.email}
-                  onChange={e: unknown handleInputChange('email', e.target.value)}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                    errors.email ? 'border-red-400' : 'border-white/20'
+                  onChange={e: unknown handleInputChange(,
+  email', e.target.value)}
+                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
+                    errors.email ?
+  'border-red-400' :
+  'border-white/20
                   }`}
                   placeholder="Enter your email address"
-                  aria-describedby={errors.email ? 'email-error' : undefined}
+                  aria-describedby={errors.email ?
+  'email-error' : undefined}
                 />
                 {errors.email && (
                   <p id="email-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
@@ -622,12 +702,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="phone"
                     name="phone"
                     value={formData.phone}
-                    onChange={e: unknown handleInputChange('phone', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.phone ? 'border-red-400' : 'border-white/20'
+                    onChange={e: unknown handleInputChange(,
+  phone', e.target.value)}
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
+                      errors.phone ?
+  'border-red-400' :
+  'border-white/20
                     }`}
                     placeholder="Enter your phone number"
-                    aria-describedby={errors.phone ? 'phone-error' : undefined}
+                    aria-describedby={errors.phone ?
+  'phone-error' : undefined}
                   />
                   {errors.phone && (
                     <p id="phone-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
@@ -645,7 +729,9 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="priority"
                     name="priority"
                     value={formData.priority}
-                    onChange={e: unknown handleInputChange('priority', e.target.value as ContactFormData['priority'])}
+                    onChange={e: unknown handleInputChange(
+  'priority', e.target.value as ContactFormData[
+  'priority'])}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                   >
                     <option value="low">Low Priority</option>
@@ -682,7 +768,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="company"
                     name="company"
                     value={formData.company}
-                    onChange={(e handleInputChange('company', e.target.value)}
+                    onChange={(e handleInputChange(
+  'company', e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                     placeholder="Enter your company name"
                   />
@@ -697,12 +784,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="website"
                     name="website"
                     value={formData.website}
-                    onChange={e: unknown handleInputChange('website', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.website ? 'border-red-400' : 'border-white/20'
+                    onChange={e: unknown handleInputChange(,
+  website', e.target.value)}
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
+                      errors.website ?
+  'border-red-400' :
+  'border-white/20
                     }`}
                     placeholder="https://yourcompany.com"
-                    aria-describedby={errors.website ? 'website-error' : undefined}
+                    aria-describedby={errors.website ?
+  'website-error' : undefined}
                   />
                   {errors.website && (
                     <p id="website-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
@@ -721,7 +812,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                   id="service"
                   name="service"
                   value={formData.service}
-                  onChange={e: unknown handleInputChange('service', e.target.value)}
+                  onChange={e: unknown handleInputChange(
+  'service', e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                 >
                   <option value="">Select a service</option>
@@ -740,7 +832,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="budget"
                     name="budget"
                     value={formData.budget}
-                    onChange={e: unknown handleInputChange('budget', e.target.value)}
+                    onChange={e: unknown handleInputChange(
+  'budget', e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                   >
                     <option value="">Select budget range</option>
@@ -758,7 +851,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                     id="timeline"
                     name="timeline"
                     value={formData.timeline}
-                    onChange={e: unknown handleInputChange('timeline', e.target.value)}
+                    onChange={e: unknown handleInputChange(
+  'timeline', e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                   >
                     <option value="">Select timeline</option>
@@ -794,12 +888,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
                   name="message"
                   rows={6}
                   value={formData.message}
-                  onChange={(e handleInputChange('message', e.target.value)}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none ${
-                    errors.message ? 'border-red-400' : 'border-white/20'
+                  onChange={(e handleInputChange(,
+  message', e.target.value)}
+                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none ${
+                    errors.message ?
+  'border-red-400' :
+  'border-white/20
                   }`}
                   placeholder="Tell us about your project, goals, and requirements..."
-                  aria-describedby={errors.message ? 'message-error' : undefined}
+                  aria-describedby={errors.message ?
+  'message-error' : undefined}
                 />
                 {errors.message && (
                   <p id="message-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">

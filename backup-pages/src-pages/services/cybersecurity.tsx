@@ -38,8 +38,7 @@
               <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">"
                 <Play className="mr-2 h-5 w-5"  />
                 Watch Demo
-=======
-              </button>
+</button>
             </div>
           </div>
         </div>;
@@ -162,7 +161,8 @@
               Ready to Secure Your Business?
             </h2>"
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how our cybersecurity solutions can protect your organization
+              Let
+  's discuss how our cybersecurity solutions can protect your organization
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
