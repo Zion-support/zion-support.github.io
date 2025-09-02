@@ -10,7 +10,8 @@ import {}
   Clock,
   Users,
   Target,
-  Award} from 'lucide-react.ts';
+  Award} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
 export default function AIBusinessProcessOptimizer(...args: any[]): any {return()
@@ -114,9 +115,10 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {return(
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
         </div>"
 ""
-        <div className="mt-12 grid md: anygrid-cols-3 gap-6">'
-          {[''
-            'Real-time monitoring',AI-powered insights',Process automation',
+        <div className="mt-12 grid md: anygrid-cols-3 gap-6">,
+  {[''
+  'Real-time monitoring',AI-powered insights
+  ',Process automation',
           ].map(t => (
             <div"key={t}""
               className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
@@ -124,8 +126,7 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {return(
               <BarChart3 className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{t}</div>
             </div>
-          ))}
-:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
+          ))}: pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
         </div>"
 ""
         <div className="mt-14 text-center">""
@@ -146,8 +147,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {return(
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-          <div className="mt-4 text-sm text-zion-slate-light">'
-            Visit us at:{' '}"<a""
+          <div className="mt-4 text-sm text-zion-slate-light">
+  '
+            Visit us at:{'}"<a""
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -160,4 +162,4 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {return(
     </div>
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
   )}'"
-'"'"
+  '"'"

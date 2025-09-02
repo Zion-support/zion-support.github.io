@@ -1,7 +1,10 @@
 <:src/pages/case-studies.tsx.backup.1756558703296
-import React, { useState } from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';import { CheckCircle,
+import React, { useState } from
+  'react.ts';
+import { motion          } from
+  'framer-motion.ts';
+import { Link          } from
+  'react-router-dom.ts';import { CheckCircle,
   TrendingUp,
   Users,
   DollarSign,
@@ -15,7 +18,8 @@ import { Link          } from 'react-router-dom.ts';import { CheckCircle,
   Cloud,
   Brain,
   Globe
-          } from 'lucide-react.ts';
+          } from
+  'lucide-react.ts';
 
 const caseStudies = [
   {
@@ -163,17 +167,36 @@ const caseStudies = [
     image: "/images/case-study-6.jpg"
 <:src/pages/case-studies.tsx.backup.1756558703296];
 
-const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
-const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
+const industries = [
+  'All',
+  'Technology',
+  'Healthcare',
+  'Finance',
+  'Banking',
+  'Manufacturing',
+  'Retail'];
+const technologies = [
+  'All',
+  'AI/ML',
+  'Cloud Computing',
+  'Cybersecurity',
+  'IoT',
+  'Data Analytics',
+  'DevOps'];
 
 export default function CaseStudies(...args: any[]): any {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedTechnology, setSelectedTechnology] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState(
+  'All');
+  const [selectedTechnology, setSelectedTechnology] = useState(
+  'All');
+  const [searchTerm, setSearchTerm] = useState('
+  ');
 
   const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
-    const matchesTechnology = selectedTechnology === 'All' ||
+    const matchesIndustry = selectedIndustry === 'All
+  ' || study.industry === selectedIndustry;
+    const matchesTechnology = selectedTechnology === 'All
+  ' ||
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||
