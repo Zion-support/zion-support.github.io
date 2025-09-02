@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';
+import ImprovedNavigation from './layout/ImprovedNavigation';
+import ImprovedFooter from './layout/ImprovedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -30,10 +30,11 @@ const Layout: React.FC<LayoutProps> = ({
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
+        <ImprovedNavigation />
         <main className="flex-grow">
           {children}
-        </main>        <EnhancedFooter />
+        </main>
+        <ImprovedFooter />
       </div>
     </>
   );

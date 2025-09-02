@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ArrowRight,
   Brain,
@@ -17,9 +17,9 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award,;
+  Award
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+// import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
 	const title =
@@ -28,7 +28,7 @@ export default function Services() {
   'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
 
 	return (
-		<PageTransition>
+		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -656,6 +656,6 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
+		</>
 	)
 }

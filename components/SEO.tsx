@@ -43,7 +43,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
       {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
+      <link rel="canonical" href={url || 'https://ziontechgroup.com'} />
 
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -81,8 +81,10 @@ const SEO: React.FC<SEOProps> = ({
             "https://github.com/ziontechgroup"
           ]
         })}
-      </script>    </Helmet>
+      </script>
+    </Head>
   );
 };
 
+export { SEO };
 export default SEO;

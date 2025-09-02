@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { SEO } from '../components/SEO';
+import Layout from '../components/Layout';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
@@ -34,14 +34,12 @@ const Home: React.FC = () => {
       href: "/micro-saas"
     }
   ];
-export default function Home() {
+
   return (
-    <>
-      <Head>
-        <title>Zion Tech Group</title>
-        <meta name="description" content="Leading technology solutions provider" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+    <Layout 
+      title="Zion Tech Group - Leading Technology Solutions Provider"
+      description="Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations."
+    >
       <main className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
           <div className="text-center">
@@ -72,6 +70,8 @@ export default function Home() {
           </div>
         </div>
       </main>
-</>
+    </Layout>
   );
-}
+};
+
+export default Home;
