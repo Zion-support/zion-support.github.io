@@ -28,7 +28,8 @@ const Home: NextPage = () => {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
+            with cutting-edge AI, cloud architecture, and innovative development services. From micro SaaS 
+            applications to enterprise AI solutions, we deliver measurable results that drive growth and efficiency.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -43,15 +44,15 @@ const Home: NextPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">500+</div>
+              <div className="text-3xl font-bold text-blue-400">1000+</div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">50+</div>
-              <div className="text-gray-300">Team Members</div>
+              <div className="text-3xl font-bold text-purple-400">75+</div>
+              <div className="text-gray-300">Expert Team Members</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-400">98%</div>
+              <div className="text-3xl font-bold text-indigo-400">99%</div>
               <div className="text-gray-300">Client Satisfaction</div>
             </div>
             <div className="text-center">
@@ -66,9 +67,10 @@ const Home: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive technology solutions to help your business thrive in the digital age.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Comprehensive Technology Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              From innovative micro SaaS applications to enterprise-grade AI solutions and cutting-edge IT services, 
+              we provide end-to-end technology solutions that drive measurable business results and competitive advantages.
             </p>
           </div>
           
@@ -80,7 +82,8 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
               <p className="text-gray-600 mb-6">
-                Innovative, focused software solutions that solve specific business problems with minimal overhead.
+                Innovative, focused software solutions that solve specific business problems with minimal overhead. 
+                Starting from $12/month, our micro SaaS applications deliver immediate ROI and scale with your business.
               </p>
               <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -94,7 +97,8 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
               <p className="text-gray-600 mb-6">
-                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses.
+                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses. 
+                From $2,000 to $75,000, our IT services ensure your infrastructure is secure, scalable, and optimized.
               </p>
               <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -108,7 +112,8 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
               <p className="text-gray-600 mb-6">
-                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
+                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages. 
+                From $4,000 to $100,000, our AI services transform your business with machine learning and automation.
               </p>
               <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -124,8 +129,9 @@ const Home: NextPage = () => {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help transform your business with cutting-edge technology solutions.
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join 1000+ successful businesses that have transformed their operations with our technology solutions. 
+            Get a free consultation and discover how we can accelerate your growth and efficiency.
           </p>
           <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
             Get Started Today
