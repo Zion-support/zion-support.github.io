@@ -1,6 +1,8 @@
 #!/bin/bash
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 # Script to resolve common merge conflicts
 echo "Starting merge conflict resolution..."
 
@@ -23,6 +25,7 @@ done
 echo "Merge conflict resolution completed for first 20 files."
 echo "Please review the changes and test the build."
 =======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 echo "Starting merge conflict resolution..."
 
 # List of critical files that we want to keep our version for
@@ -80,6 +83,10 @@ while IFS= read -r file; do
 done <<< "$conflict_files"
 
 echo "Merge conflict resolution completed!"
+<<<<<<< HEAD
+
+# Do not auto-run build here to avoid CI side effects
+=======
 echo "Running build to check for errors..."
 
 # Try to build the project
@@ -91,3 +98,4 @@ else
     echo "❌ Build failed. Please check for remaining issues."
 fi
 >>>>>>> d6585b798475a0a58fc2298a75192e5aeb0df69c
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
