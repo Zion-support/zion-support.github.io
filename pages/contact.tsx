@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 
 const ContactPage: NextPage = () => {
@@ -26,20 +26,37 @@ const ContactPage: NextPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+    try {
+      // TODO: Replace with actual API endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 2000);
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -175,14 +192,22 @@ const ContactPage: NextPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               
               {submitStatus === 'success' && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-                  Thank you for your message! We'll get back to you within 24 hours.
+                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 flex items-center">
+                  <CheckCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Message sent successfully!</p>
+                    <p className="text-sm">Thank you for your message. We will get back to you within 24 hours.</p>
+                  </div>
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
-                  There was an error sending your message. Please try again or contact us directly.
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6 flex items-center">
+                  <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium">Error sending message</p>
+                    <p className="text-sm">There was an error sending your message. Please try again or contact us directly at +1 302 464 0950.</p>
+                  </div>
                 </div>
               )}
 
