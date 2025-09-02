@@ -7,7 +7,8 @@ const { spawn } = require('child_process');
 class ContinuousErrorMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default
+    this.automationInterval =
+      parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default
     this.isRunning = false;
     this.lastRun = null;
     this.runCount = 0;
@@ -15,20 +16,24 @@ class ContinuousErrorMonitor {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}`);
+    console.log(
+      `[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}`
+    );
   }
 
   async start() {
-    this.log(`Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals`);
-    
+    this.log(
+      `Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals`
+    );
+
     // Run initial check
     await this.runErrorFixer();
-    
+
     // Set up continuous monitoring
     setInterval(async () => {
       await this.runErrorFixer();
     }, this.automationInterval);
-    
+
     this.log('Continuous error monitoring is now active');
   }
 
@@ -40,21 +45,22 @@ class ContinuousErrorMonitor {
 
     this.isRunning = true;
     this.runCount++;
-    
+
     try {
       this.log(`Running error fixer (run #${this.runCount})`);
-      
+
       // Run the comprehensive error fixer
       const result = await this.executeErrorFixer();
-      
+
       if (result.success) {
-        this.log(`Error fixer completed successfully. Applied ${result.fixesApplied} fixes.`);
+        this.log(
+          `Error fixer completed successfully. Applied ${result.fixesApplied} fixes.`
+        );
         this.lastRun = new Date();
       } else {
         this.errorCount++;
         this.log(`Error fixer failed: ${result.error}`);
       }
-      
     } catch (error) {
       this.errorCount++;
       this.log(`Error during error fixer execution: ${error.message}`);
@@ -64,20 +70,25 @@ class ContinuousErrorMonitor {
   }
 
   async executeErrorFixer() {
-    return new Promise((resolve) => {
-      const errorFixerPath = path.join(this.projectRoot, 'scripts', 'automation', 'comprehensive-error-fixer.cjs');
-      
+    return new Promise(resolve => {
+      const errorFixerPath = path.join(
+        this.projectRoot,
+        'scripts',
+        'automation',
+        'comprehensive-error-fixer.cjs'
+      );
+
       const child = spawn('node', [errorFixerPath], {
         cwd: this.projectRoot,
         stdio: ['pipe', 'pipe', 'pipe'],
-        env: { ...process.env, NODE_ENV: 'production' }
+        env: { ...process.env, NODE_ENV: 'production' },
       });
 
       let stdout = '';
       let stderr = '';
       let fixesApplied = 0;
 
-      child.stdout.on('data', (data) => {
+      child.stdout.on('data', data => {
         stdout += data.toString();
         // Parse fixes applied from output
         const fixMatch = data.toString().match(/Applied (\d+) fixes/);
@@ -86,34 +97,34 @@ class ContinuousErrorMonitor {
         }
       });
 
-      child.stderr.on('data', (data) => {
+      child.stderr.on('data', data => {
         stderr += data.toString();
       });
 
-      child.on('close', (code) => {
+      child.on('close', code => {
         if (code === 0) {
           resolve({
             success: true,
             fixesApplied,
             stdout,
-            stderr
+            stderr,
           });
         } else {
           resolve({
             success: false,
             error: stderr || `Process exited with code ${code}`,
             stdout,
-            stderr
+            stderr,
           });
         }
       });
 
-      child.on('error', (error) => {
+      child.on('error', error => {
         resolve({
           success: false,
           error: error.message,
           stdout,
-          stderr
+          stderr,
         });
       });
     });
@@ -126,19 +137,25 @@ class ContinuousErrorMonitor {
       totalRuns: this.runCount,
       errorCount: this.errorCount,
       lastRun: this.lastRun,
-      nextRun: this.lastRun ? new Date(this.lastRun.getTime() + this.automationInterval) : null,
+      nextRun: this.lastRun
+        ? new Date(this.lastRun.getTime() + this.automationInterval)
+        : null,
       automationInterval: this.automationInterval,
-      uptime: process.uptime()
+      uptime: process.uptime(),
     };
 
-    const reportPath = path.join(this.projectRoot, 'error-reports', 'continuous-monitor-status.json');
-    
+    const reportPath = path.join(
+      this.projectRoot,
+      'error-reports',
+      'continuous-monitor-status.json'
+    );
+
     // Ensure directory exists
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    
+
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Status report saved to: ${reportPath}`);
   }

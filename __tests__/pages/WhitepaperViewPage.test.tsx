@@ -15,12 +15,15 @@ interface MockUseAuthReturn {
 // Props for the page component - assuming it takes no specific props itself
 type WhitepaperViewPageProps = Record<string, never>;
 
-
 // Mock dependencies
 jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'), 
+  ...jest.requireActual('react-router-dom'),
   useParams: jest.fn(),
-  Link: jest.fn(({ children, to }: { children: React.ReactNode, to: string }) => <a href={to}>{children}</a>),
+  Link: jest.fn(
+    ({ children, to }: { children: React.ReactNode; to: string }) => (
+      <a href={to}>{children}</a>
+    )
+  ),
 }));
 
 jest.mock('@/lib/supabaseClient', () => ({
@@ -31,7 +34,9 @@ jest.mock('@/lib/supabaseClient', () => ({
   },
 }));
 
-jest.mock('@/components/WhitepaperPreviewPanel', () => jest.fn(() => <div data-testid="mock-preview-panel">Preview Panel</div>));
+jest.mock('@/components/WhitepaperPreviewPanel', () =>
+  jest.fn(() => <div data-testid="mock-preview-panel">Preview Panel</div>)
+);
 
 // Store the actual implementation
 const ActualPageModule = jest.requireActual('@/pages/WhitepaperViewPage');
@@ -43,8 +48,9 @@ jest.mock('@/pages/WhitepaperViewPage', () => {
   const OriginalModule = jest.requireActual('@/pages/WhitepaperViewPage');
   return {
     ...OriginalModule,
-    __esModule: true, 
-    default: jest.fn((props: WhitepaperViewPageProps) => { // Use defined props type
+    __esModule: true,
+    default: jest.fn((props: WhitepaperViewPageProps) => {
+      // Use defined props type
       // The mock for useAuth needs to be applied here or ensure it's hoisted/available
       // This setup is a bit complex due to mocking a hook used internally by the component being tested.
       // It's generally easier to mock the hook at the module level where it's defined.
@@ -61,7 +67,6 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
 
 // Get a reference to the mocked useAuth from the mocked module
 const { useAuth: mockUseAuth } = require('@/pages/WhitepaperViewPage');
-
 
 describe('WhitepaperViewPage', () => {
   beforeEach(() => {
@@ -89,21 +94,34 @@ describe('WhitepaperViewPage', () => {
     mockUseParams.mockReturnValue({ id: 'public-id' });
     (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
     mockSupabaseInvoke.mockResolvedValue({
-      data: { whitepaper_data: mockWhitepaperData, is_public: true, created_at: new Date().toISOString() },
+      data: {
+        whitepaper_data: mockWhitepaperData,
+        is_public: true,
+        created_at: new Date().toISOString(),
+      },
       error: null,
     });
 
     render(<OriginalWhitepaperViewPage />);
 
-    await waitFor(() => expect(mockSupabaseInvoke).toHaveBeenCalledWith('get-shared-whitepaper', { body: { id: 'public-id' } }));
-    await waitFor(() => expect(screen.getByTestId('mock-preview-panel')).toBeInTheDocument());
+    await waitFor(() =>
+      expect(mockSupabaseInvoke).toHaveBeenCalledWith('get-shared-whitepaper', {
+        body: { id: 'public-id' },
+      })
+    );
+    await waitFor(() =>
+      expect(screen.getByTestId('mock-preview-panel')).toBeInTheDocument()
+    );
     // Check props passed to the mocked WhitepaperPreviewPanel
-    expect(mockPreviewPanel).toHaveBeenCalledWith(expect.objectContaining({
+    expect(mockPreviewPanel).toHaveBeenCalledWith(
+      expect.objectContaining({
         tokenName: mockWhitepaperData.tokenName,
         tokenSupply: mockWhitepaperData.tokenSupply,
         sections: mockWhitepaperData.sections,
         distributionChartData: mockWhitepaperData.distributionChartData,
-    }), {});
+      }),
+      {}
+    );
   });
 
   test('displays error message if fetching fails', async () => {
@@ -114,18 +132,24 @@ describe('WhitepaperViewPage', () => {
       error: { message: 'Fetch error' },
     });
     render(<OriginalWhitepaperViewPage />);
-    await waitFor(() => expect(screen.getByText(/Error: Supabase function error: Fetch error/i)).toBeInTheDocument());
+    await waitFor(() =>
+      expect(
+        screen.getByText(/Error: Supabase function error: Fetch error/i)
+      ).toBeInTheDocument()
+    );
   });
 
   test('displays "not found" if no data is returned', async () => {
     mockUseParams.mockReturnValue({ id: 'not-found-id' });
     (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
     mockSupabaseInvoke.mockResolvedValue({
-      data: null, 
+      data: null,
       error: null,
     });
     render(<OriginalWhitepaperViewPage />);
-    await waitFor(() => expect(screen.getByText(/Whitepaper not found/i)).toBeInTheDocument());
+    await waitFor(() =>
+      expect(screen.getByText(/Whitepaper not found/i)).toBeInTheDocument()
+    );
   });
 
   describe('Access Control', () => {
@@ -133,38 +157,66 @@ describe('WhitepaperViewPage', () => {
       mockUseParams.mockReturnValue({ id: 'private-id' });
       (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
       mockSupabaseInvoke.mockResolvedValue({
-        data: { whitepaper_data: mockWhitepaperData, is_public: false, created_at: new Date().toISOString() },
+        data: {
+          whitepaper_data: mockWhitepaperData,
+          is_public: false,
+          created_at: new Date().toISOString(),
+        },
         error: null,
       });
       render(<OriginalWhitepaperViewPage />);
-      await waitFor(() => expect(screen.getByText(/Access Denied/i)).toBeInTheDocument());
-      expect(screen.getByText(/This whitepaper is not public/i)).toBeInTheDocument();
-      expect(screen.queryByTestId('mock-preview-panel')).not.toBeInTheDocument();
+      await waitFor(() =>
+        expect(screen.getByText(/Access Denied/i)).toBeInTheDocument()
+      );
+      expect(
+        screen.getByText(/This whitepaper is not public/i)
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByTestId('mock-preview-panel')
+      ).not.toBeInTheDocument();
     });
 
     test('allows access to a non-public whitepaper for admin user', async () => {
       mockUseParams.mockReturnValue({ id: 'private-id-admin' });
-      (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: true }); 
+      (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: true });
       mockSupabaseInvoke.mockResolvedValue({
-        data: { whitepaper_data: mockWhitepaperData, is_public: false, created_at: new Date().toISOString() },
+        data: {
+          whitepaper_data: mockWhitepaperData,
+          is_public: false,
+          created_at: new Date().toISOString(),
+        },
         error: null,
       });
       render(<OriginalWhitepaperViewPage />);
-      await waitFor(() => expect(screen.getByTestId('mock-preview-panel')).toBeInTheDocument());
-      expect(mockPreviewPanel).toHaveBeenCalledWith(expect.objectContaining(mockWhitepaperData), {});
-      expect(screen.getByText(/Private \(Admin View\)/i)).toBeInTheDocument(); 
+      await waitFor(() =>
+        expect(screen.getByTestId('mock-preview-panel')).toBeInTheDocument()
+      );
+      expect(mockPreviewPanel).toHaveBeenCalledWith(
+        expect.objectContaining(mockWhitepaperData),
+        {}
+      );
+      expect(screen.getByText(/Private \(Admin View\)/i)).toBeInTheDocument();
     });
 
     test('allows access to a public whitepaper for non-admin user', async () => {
-        mockUseParams.mockReturnValue({ id: 'public-id-non-admin' });
-        (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
-        mockSupabaseInvoke.mockResolvedValue({
-          data: { whitepaper_data: mockWhitepaperData, is_public: true, created_at: new Date().toISOString() },
-          error: null,
-        });
-        render(<OriginalWhitepaperViewPage />);
-        await waitFor(() => expect(screen.getByTestId('mock-preview-panel')).toBeInTheDocument());
-        expect(mockPreviewPanel).toHaveBeenCalledWith(expect.objectContaining(mockWhitepaperData), {});
+      mockUseParams.mockReturnValue({ id: 'public-id-non-admin' });
+      (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
+      mockSupabaseInvoke.mockResolvedValue({
+        data: {
+          whitepaper_data: mockWhitepaperData,
+          is_public: true,
+          created_at: new Date().toISOString(),
+        },
+        error: null,
       });
+      render(<OriginalWhitepaperViewPage />);
+      await waitFor(() =>
+        expect(screen.getByTestId('mock-preview-panel')).toBeInTheDocument()
+      );
+      expect(mockPreviewPanel).toHaveBeenCalledWith(
+        expect.objectContaining(mockWhitepaperData),
+        {}
+      );
+    });
   });
 });

@@ -1,7 +1,12 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { BrowserRouter as Router, Routes, Route, MemoryRouter } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  MemoryRouter,
+} from 'react-router-dom';
 import ResetPassword from '../../src/pages/ResetPassword'; // Adjust path as necessary
 // import * as authService from '../../src/services/auth'; // Adjust path
 
@@ -14,14 +19,19 @@ import ResetPassword from '../../src/pages/ResetPassword'; // Adjust path as nec
 // }));
 // jest.mock('../../src/services/auth');
 
-
 describe('ResetPassword Page', () => {
   // beforeEach(() => {
   //   mockNavigate.mockClear();
   //   authService.resetPassword.mockClear();
   // });
 
-  const renderWithRouter = (ui, { route = '/reset-password/testuid/testtoken', path = '/reset-password/:uid/:token' } = {}) => {
+  const renderWithRouter = (
+    ui,
+    {
+      route = '/reset-password/testuid/testtoken',
+      path = '/reset-password/:uid/:token',
+    } = {}
+  ) => {
     window.history.pushState({}, 'Test page', route);
     return render(
       <MemoryRouter initialEntries={[route]}>
@@ -33,18 +43,23 @@ describe('ResetPassword Page', () => {
     );
   };
 
-
   test('renders password inputs and submit button', () => {
     renderWithRouter(<ResetPassword />);
     expect(screen.getByLabelText(/new password/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/confirm new password/i)).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /reset password/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /reset password/i })
+    ).toBeInTheDocument();
   });
 
   test('shows error if passwords do not match', async () => {
     renderWithRouter(<ResetPassword />);
-    fireEvent.change(screen.getByLabelText(/new password/i), { target: { value: 'password123' } });
-    fireEvent.change(screen.getByLabelText(/confirm new password/i), { target: { value: 'password456' } });
+    fireEvent.change(screen.getByLabelText(/new password/i), {
+      target: { value: 'password123' },
+    });
+    fireEvent.change(screen.getByLabelText(/confirm new password/i), {
+      target: { value: 'password456' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /reset password/i }));
 
     await waitFor(() => {
@@ -56,8 +71,12 @@ describe('ResetPassword Page', () => {
     // authService.resetPassword.mockResolvedValueOnce({ message: 'Password reset successfully' });
     renderWithRouter(<ResetPassword />);
 
-    fireEvent.change(screen.getByLabelText(/new password/i), { target: { value: 'newpassword123' } });
-    fireEvent.change(screen.getByLabelText(/confirm new password/i), { target: { value: 'newpassword123' } });
+    fireEvent.change(screen.getByLabelText(/new password/i), {
+      target: { value: 'newpassword123' },
+    });
+    fireEvent.change(screen.getByLabelText(/confirm new password/i), {
+      target: { value: 'newpassword123' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /reset password/i }));
 
     // await waitFor(() => {
@@ -67,18 +86,26 @@ describe('ResetPassword Page', () => {
     //   expect(screen.getByText(/password has been reset successfully/i)).toBeInTheDocument();
     // });
     // await waitFor(() => expect(mockNavigate).toHaveBeenCalledWith('/login'));
-    console.log("Mock test: Simulating successful password reset and navigation.");
-     await waitFor(() => {
-       expect(screen.getByText(/password reset successfully \(mocked\)/i)).toBeInTheDocument();
-     });
+    console.log(
+      'Mock test: Simulating successful password reset and navigation.'
+    );
+    await waitFor(() => {
+      expect(
+        screen.getByText(/password reset successfully \(mocked\)/i)
+      ).toBeInTheDocument();
+    });
   });
 
   test('shows error message on failed submission (mocked)', async () => {
     // authService.resetPassword.mockRejectedValueOnce(new Error('Invalid token'));
     renderWithRouter(<ResetPassword />);
 
-    fireEvent.change(screen.getByLabelText(/new password/i), { target: { value: 'newpassword123' } });
-    fireEvent.change(screen.getByLabelText(/confirm new password/i), { target: { value: 'newpassword123' } });
+    fireEvent.change(screen.getByLabelText(/new password/i), {
+      target: { value: 'newpassword123' },
+    });
+    fireEvent.change(screen.getByLabelText(/confirm new password/i), {
+      target: { value: 'newpassword123' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /reset password/i }));
 
     // await waitFor(() => {
@@ -87,6 +114,6 @@ describe('ResetPassword Page', () => {
     // await waitFor(() => {
     //   expect(screen.getByText(/failed to reset password/i)).toBeInTheDocument();
     // });
-    console.log("Mock test: Simulating failed password reset.");
+    console.log('Mock test: Simulating failed password reset.');
   });
 });

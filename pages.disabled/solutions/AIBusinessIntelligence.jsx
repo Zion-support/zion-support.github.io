@@ -1,18 +1,13 @@
 import React from 'react';'
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
 const AIBusinessIntelligence = () => {
-    const benefits = [
-=======
-const AIBusinessIntelligence = () => {}
-    const benefits = []
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-        "Data-driven decision making across all business areas",""
+    const benefits = ["Data-driven decision making across all business areas",""
         "Real-time insights and instant access to critical information",""
         "Automated reporting and reduced manual analysis time",""
         "Predictive capabilities for proactive business planning",""
         "Improved operational efficiency and cost optimization",""
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
         "Enhanced customer understanding and engagement"
     ];
     const implementation = [
@@ -59,56 +54,13 @@ const AIBusinessIntelligence = () => {}
             duration: "2-4 weeks"
 "
     ];""
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-=======
-        "Enhanced customer understanding and engagement""
-    ];
-    const implementation = []
-        {}
-""
-            phase: "Data Assessment",""
-            description: "Evaluate current data sources and quality",""
-            duration: "2-3 weeks""
-        },
-        {}
-""
-            phase: "BI Strategy",""
-            description: "Define business intelligence goals and requirements",""
-            duration: "3-4 weeks""
-        },
-        {}
-""
-            phase: "Data Integration",""
-            description: "Connect and integrate data sources",""
-            duration: "6-10 weeks""
-        },
-        {}
-""
-            phase: "AI Model Development",""
-            description: "Build and train AI models for analytics",""
-            duration: "8-12 weeks""
-        },
-        {}
-""
-            phase: "Dashboard Development",""
-            description: "Create interactive dashboards and reports",""
-            duration: "6-8 weeks""
-        },
-        {}
-""
-            phase: "Deployment & Training",""
-            description: "Deploy system and train users",""
-            duration: "2-4 weeks""
-    ];""
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-      {/* Hero Section */}""
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
             <div className="inline-flex items-center px-4 py-2 bg-violet-500/10 text-violet-400 rounded-full text-sm font-medium mb-6">""
               <BarChart3 className="w-4 h-4 mr-2"/>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
               AI BI Solution"
             </div>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
@@ -121,23 +73,7 @@ const AIBusinessIntelligence = () => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#features" className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Explore Features"
-=======
-              AI BI Solution;
-            </div>""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI""
-              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent"> Business Intelligence</span>
-            </h1>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with AI-powered analytics and insights;
-              that drive intelligent decision making and growth.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <a href="#features" className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Explore Features;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-              </a>""
+                Explore Features"</a>""
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Get Started;
               </a>
@@ -145,41 +81,25 @@ const AIBusinessIntelligence = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-      {/* BI Features */}""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+"{/* BI Features */}""
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-              Business Intelligence Features"
-=======
-              Business Intelligence Features;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-            </h2>""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+              Business Intelligence Features"</h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI-powered BI platform provides comprehensive analytics;
               and insights for informed decision making.
             </p>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-          </div>"
-=======
-          </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+          </div>"""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             {biFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-                  <feature.icon className="w-8 h-8 text-white"/>"
-=======
-                  <feature.icon className="w-8 h-8 text-white"/>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-                </div>""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+                  <feature.icon className="w-8 h-8 text-white"/>"</div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
                 <p className="text-gray-300 mb-4">{feature.description}</p>""
                 <ul className="space-y-2">""
@@ -192,41 +112,25 @@ const AIBusinessIntelligence = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-      {/* BI Solutions */}""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+"{/* BI Solutions */}""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-              BI Solutions"
-=======
-              BI Solutions;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-            </h2>""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+              BI Solutions"</h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive business intelligence solutions covering all;
               aspects of your business operations.
             </p>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-          </div>"
-=======
-          </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+          </div>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {biSolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-                  <solution.icon className="w-8 h-8 text-white"/>"
-=======
-                  <solution.icon className="w-8 h-8 text-white"/>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-                </div>""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+                  <solution.icon className="w-8 h-8 text-white"/>"</div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>""
                 <p className="text-gray-300 mb-4">{solution.description}</p>""
                 <ul className="space-y-2">""
@@ -239,7 +143,7 @@ const AIBusinessIntelligence = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
 "
       {/* Benefits Section */}""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
@@ -251,46 +155,22 @@ const AIBusinessIntelligence = () => {}
               </h2>""
               <p className="text-lg text-gray-300 mb-6">
                 Our AI-powered BI platform transforms raw data into actionable
-                insights that drive business growth and success."
-=======
-
-      {/* Benefits Section */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose AI Business Intelligence?
-              </h2>""
-              <p className="text-lg text-gray-300 mb-6">
-                Our AI-powered BI platform transforms raw data into actionable;
-                insights that drive business growth and success.
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-              </p>""
+                insights that drive business growth and success."</p>""
               <ul className="space-y-3">""
                 {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
                     <div className="w-2 h-2 bg-violet-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-              </ul>"
-=======
-              </ul>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-            </div>""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+              </ul>"</div>""
             <div className="bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">""
               <div className="text-center">""
                 <Lightbulb className="w-24 h-24 text-violet-400 mx-auto mb-4"/>""
                 <h3 className="text-2xl font-bold text-white mb-2">Data Intelligence</h3>""
                 <p className="text-gray-300 mb-6">
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
                   Transform your data into intelligent insights that drive
-                  better decisions and business outcomes."
-=======
-                  Transform your data into intelligent insights that drive;
-                  better decisions and business outcomes.
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-                </p>""
+                  better decisions and business outcomes."</p>""
                 <div className="text-sm text-gray-400">
                   <p>• AI-powered analytics</p>
                   <p>• Real-time insights</p>
@@ -301,39 +181,23 @@ const AIBusinessIntelligence = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-      {/* Implementation Process */}""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+"{/* Implementation Process */}""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-            Implementation Process"
-=======
-            Implementation Process;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-          </h2>""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+            Implementation Process"</h2>""
           <p className="text-xl text-gray-300 mb-8">
             A structured approach to implementing AI-powered business;
             intelligence in your organization.
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-          </p>"
-=======
-          </p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+          </p>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {implementation.map((phase, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-                  {index + 1}"
-=======
-                  {index + 1}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-                </div>""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+                  {index + 1}"</div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>""
                 <p className="text-gray-300 mb-2">{phase.description}</p>""
                 <p className="text-sm text-violet-400">{phase.duration}</p>
@@ -341,16 +205,12 @@ const AIBusinessIntelligence = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-      {/* CTA Section */}""
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
+"{/* CTA Section */}""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
             Ready to Transform Your Business Intelligence?"
           </h2>""
           <p className="text-xl text-gray-300 mb-8">
@@ -359,19 +219,7 @@ const AIBusinessIntelligence = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Your Journey"
-=======
-            Ready to Transform Your Business Intelligence?
-          </h2>""
-          <p className="text-xl text-gray-300 mb-8">
-            Start making data-driven decisions with AI-powered business;
-            intelligence and analytics.
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Your Journey;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx
-            </a>""
+              Start Your Journey"</a>""
             <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Solutions;
             </a>
@@ -381,10 +229,6 @@ const AIBusinessIntelligence = () => {}
     </div>);
 };
 export { AIBusinessIntelligence };
-<<<<<<< HEAD:pages.disabled/solutions/AIBusinessIntelligence.jsx
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
 export default AIBusinessIntelligence;'"
 }}}}'"'"
-=======
-export default AIBusinessIntelligence;
-}}}}'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/solutions/AIBusinessIntelligence.jsx

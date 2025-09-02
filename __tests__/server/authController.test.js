@@ -15,7 +15,10 @@ describe('authController.forgotPassword', () => {
   });
 
   it('sends an email via SendGrid', async () => {
-    const req = createRequest({ method: 'POST', body: { email: 'test@example.com' } });
+    const req = createRequest({
+      method: 'POST',
+      body: { email: 'test@example.com' },
+    });
     const res = createResponse();
     await forgotPassword(req, res);
     expect(mockedSend).toHaveBeenCalled();

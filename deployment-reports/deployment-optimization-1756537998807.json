@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-08-30T07:13:18.807Z",
+  "summary": {
+    "totalBuilds": 0,
+    "averageBuildTime": 0,
+    "latestBundleSize": 0,
+    "deploymentFrequency": 0,
+    "successRate": 0
+  },
+  "metrics": {
+    "buildTimes": [],
+    "bundleSizes": [],
+    "deploymentFrequency": 0,
+    "successRate": 0,
+    "optimizationSuggestions": [
+      {
+        "type": "compression",
+        "priority": "medium",
+        "description": "Enable build compression for smaller bundle sizes",
+        "action": "Add compression plugin to vite.config.ts"
+      },
+      {
+        "type": "dependency_optimization",
+        "priority": "medium",
+        "description": "Consider optimizing large dependencies: date-fns, framer-motion",
+        "action": "Use tree-shaking or replace with lighter alternatives"
+      },
+      {
+        "type": "quality_gates",
+        "priority": "high",
+        "description": "Low deployment success rate",
+        "action": "Implement pre-deployment quality gates and automated testing"
+      },
+      {
+        "type": "compression",
+        "priority": "medium",
+        "description": "Enable build compression for smaller bundle sizes",
+        "action": "Add compression plugin to vite.config.ts"
+      },
+      {
+        "type": "dependency_optimization",
+        "priority": "medium",
+        "description": "Consider optimizing large dependencies: date-fns, framer-motion",
+        "action": "Use tree-shaking or replace with lighter alternatives"
+      },
+      {
+        "type": "quality_gates",
+        "priority": "high",
+        "description": "Low deployment success rate",
+        "action": "Implement pre-deployment quality gates and automated testing"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "type": "compression",
+      "priority": "medium",
+      "description": "Enable build compression for smaller bundle sizes",
+      "action": "Add compression plugin to vite.config.ts"
+    },
+    {
+      "type": "dependency_optimization",
+      "priority": "medium",
+      "description": "Consider optimizing large dependencies: date-fns, framer-motion",
+      "action": "Use tree-shaking or replace with lighter alternatives"
+    },
+    {
+      "type": "quality_gates",
+      "priority": "high",
+      "description": "Low deployment success rate",
+      "action": "Implement pre-deployment quality gates and automated testing"
+    },
+    {
+      "type": "compression",
+      "priority": "medium",
+      "description": "Enable build compression for smaller bundle sizes",
+      "action": "Add compression plugin to vite.config.ts"
+    },
+    {
+      "type": "dependency_optimization",
+      "priority": "medium",
+      "description": "Consider optimizing large dependencies: date-fns, framer-motion",
+      "action": "Use tree-shaking or replace with lighter alternatives"
+    },
+    {
+      "type": "quality_gates",
+      "priority": "high",
+      "description": "Low deployment success rate",
+      "action": "Implement pre-deployment quality gates and automated testing"
+    }
+  ]
+}

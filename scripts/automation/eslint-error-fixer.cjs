@@ -7,17 +7,26 @@ const path = require('path');
 class ESLintErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/eslint-error-fixer.log');
-    this.errorLogFile = path.join(this.projectRoot, 'automation/logs/eslint-error-fixer-error.log');
-    this.reportFile = path.join(this.projectRoot, 'eslint-error-fixer-report.json');
-    
+    this.logFile = path.join(
+      this.projectRoot,
+      'automation/logs/eslint-error-fixer.log'
+    );
+    this.errorLogFile = path.join(
+      this.projectRoot,
+      'automation/logs/eslint-error-fixer-error.log'
+    );
+    this.reportFile = path.join(
+      this.projectRoot,
+      'eslint-error-fixer-report.json'
+    );
+
     this.ensureLogsDirectory();
-    
+
     this.errors = [];
     this.fixes = {
       applied: [],
       failed: [],
-      skipped: []
+      skipped: [],
     };
   }
 
@@ -31,13 +40,13 @@ class ESLintErrorFixer {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;
-    
+
     fs.appendFileSync(this.logFile, logMessage);
-    
+
     if (type === 'error') {
       fs.appendFileSync(this.errorLogFile, logMessage);
     }
-    
+
     console.log(`[${type.toUpperCase()}] ${message}`);
   }
 
@@ -47,21 +56,21 @@ class ESLintErrorFixer {
         stdio: 'pipe',
         shell: true,
         cwd: this.projectRoot,
-        ...options
+        ...options,
       });
 
       let stdout = '';
       let stderr = '';
 
-      child.stdout.on('data', (data) => {
+      child.stdout.on('data', data => {
         stdout += data.toString();
       });
 
-      child.stderr.on('data', (data) => {
+      child.stderr.on('data', data => {
         stderr += data.toString();
       });
 
-      child.on('close', (code) => {
+      child.on('close', code => {
         if (code === 0) {
           resolve({ stdout, stderr, code });
         } else {
@@ -69,7 +78,7 @@ class ESLintErrorFixer {
         }
       });
 
-      child.on('error', (error) => {
+      child.on('error', error => {
         reject({ error, stdout, stderr });
       });
     });
@@ -77,7 +86,7 @@ class ESLintErrorFixer {
 
   async detectESLintErrors() {
     this.log('Detecting ESLint errors...');
-    
+
     try {
       const result = await this.runCommand('npm', { args: ['run', 'lint'] });
       this.log('No ESLint errors detected');
@@ -91,7 +100,7 @@ class ESLintErrorFixer {
   parseESLintErrors(stderr) {
     const errors = [];
     const lines = stderr.split('\n');
-    
+
     for (const line of lines) {
       if (line.includes('error')) {
         const match = line.match(/(.+\.(jsx?|tsx?)):(\d+):(\d+)/);
@@ -103,49 +112,51 @@ class ESLintErrorFixer {
             column: parseInt(match[4]),
             message: line.split(' - ')[1] || line,
             rule: ruleMatch ? ruleMatch[1] : null,
-            type: 'eslint'
+            type: 'eslint',
           });
         }
       }
     }
-    
+
     return errors;
   }
 
   async fixESLintErrors(errors) {
     this.log(`Fixing ${errors.length} ESLint errors...`);
-    
+
     // First try auto-fix
     try {
       await this.runCommand('npm', { args: ['run', 'lint', '--', '--fix'] });
       this.log('ESLint auto-fix completed');
-      
+
       // Check if auto-fix resolved all issues
       const remainingErrors = await this.detectESLintErrors();
       if (remainingErrors.length === 0) {
         this.log('All ESLint errors were auto-fixed');
         return;
       }
-      
-      this.log(`${remainingErrors.length} errors remain after auto-fix, applying manual fixes`);
+
+      this.log(
+        `${remainingErrors.length} errors remain after auto-fix, applying manual fixes`
+      );
       errors = remainingErrors;
     } catch (error) {
       this.log('ESLint auto-fix failed, applying manual fixes', 'warn');
     }
-    
+
     // Apply manual fixes for remaining errors
     for (const error of errors) {
       try {
         await this.fixESLintError(error);
         this.fixes.applied.push({
           error,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         });
       } catch (fixError) {
         this.fixes.failed.push({
           error,
           fixError: fixError.message,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         });
       }
     }
@@ -161,17 +172,29 @@ class ESLintErrorFixer {
     const lines = content.split('\n');
 
     // Handle different ESLint error types
-    if (error.rule === 'no-unused-vars' || error.message.includes('unused variable')) {
+    if (
+      error.rule === 'no-unused-vars' ||
+      error.message.includes('unused variable')
+    ) {
       await this.fixUnusedVariableError(error, lines);
-    } else if (error.rule === 'semi' || error.message.includes('missing semicolon')) {
+    } else if (
+      error.rule === 'semi' ||
+      error.message.includes('missing semicolon')
+    ) {
       await this.fixMissingSemicolonError(error, lines);
     } else if (error.rule === 'quotes' || error.message.includes('quotes')) {
       await this.fixQuotesError(error, lines);
     } else if (error.rule === 'indent' || error.message.includes('indent')) {
       await this.fixIndentError(error, lines);
-    } else if (error.rule === 'no-console' || error.message.includes('console')) {
+    } else if (
+      error.rule === 'no-console' ||
+      error.message.includes('console')
+    ) {
       await this.fixConsoleError(error, lines);
-    } else if (error.rule === 'prefer-const' || error.message.includes('prefer const')) {
+    } else if (
+      error.rule === 'prefer-const' ||
+      error.message.includes('prefer const')
+    ) {
       await this.fixPreferConstError(error, lines);
     } else {
       await this.fixGenericESLintError(error, lines);
@@ -182,17 +205,19 @@ class ESLintErrorFixer {
     if (error.line > lines.length) return;
 
     const targetLine = lines[error.line - 1];
-    const varMatch = error.message.match(/['"]([^'"]+)['"] is defined but never used/);
-    
+    const varMatch = error.message.match(
+      /['"]([^'"]+)['"] is defined but never used/
+    );
+
     if (varMatch) {
       const varName = varMatch[1];
-      
+
       // Remove unused variable declaration
       const fixedLine = targetLine.replace(
         new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?`, 'g'),
         ''
       );
-      
+
       if (fixedLine !== targetLine) {
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join('\n'));
@@ -204,18 +229,19 @@ class ESLintErrorFixer {
     if (error.line > lines.length) return;
 
     const targetLine = lines[error.line - 1];
-    
+
     // Add missing semicolon if line doesn't end with one
-    if (!targetLine.trim().endsWith(';') && 
-        !targetLine.trim().endsWith('{') && 
-        !targetLine.trim().endsWith('}') &&
-        !targetLine.trim().endsWith('(') &&
-        !targetLine.trim().endsWith('[') &&
-        !targetLine.trim().endsWith(')') &&
-        !targetLine.trim().endsWith(']') &&
-        !targetLine.trim().endsWith(',') &&
-        !targetLine.trim().endsWith(':')) {
-      
+    if (
+      !targetLine.trim().endsWith(';') &&
+      !targetLine.trim().endsWith('{') &&
+      !targetLine.trim().endsWith('}') &&
+      !targetLine.trim().endsWith('(') &&
+      !targetLine.trim().endsWith('[') &&
+      !targetLine.trim().endsWith(')') &&
+      !targetLine.trim().endsWith(']') &&
+      !targetLine.trim().endsWith(',') &&
+      !targetLine.trim().endsWith(':')
+    ) {
       lines[error.line - 1] = targetLine + ';';
       fs.writeFileSync(error.file, lines.join('\n'));
     }
@@ -225,7 +251,7 @@ class ESLintErrorFixer {
     if (error.line > lines.length) return;
 
     const targetLine = lines[error.line - 1];
-    
+
     // Convert single quotes to double quotes or vice versa
     if (error.message.includes('single quotes')) {
       const fixedLine = targetLine.replace(/'/g, '"');
@@ -247,11 +273,11 @@ class ESLintErrorFixer {
 
     const targetLine = lines[error.line - 1];
     const expectedIndent = error.message.match(/Expected (\d+) spaces/);
-    
+
     if (expectedIndent) {
       const expectedSpaces = parseInt(expectedIndent[1]);
       const currentIndent = targetLine.match(/^(\s*)/)[1].length;
-      
+
       if (currentIndent !== expectedSpaces) {
         const newIndent = ' '.repeat(expectedSpaces);
         const fixedLine = newIndent + targetLine.trimLeft();
@@ -265,7 +291,7 @@ class ESLintErrorFixer {
     if (error.line > lines.length) return;
 
     const targetLine = lines[error.line - 1];
-    
+
     // Comment out console statements
     if (targetLine.includes('console.')) {
       const fixedLine = '// ' + targetLine;
@@ -278,7 +304,7 @@ class ESLintErrorFixer {
     if (error.line > lines.length) return;
 
     const targetLine = lines[error.line - 1];
-    
+
     // Convert let to const
     if (targetLine.includes('let ')) {
       const fixedLine = targetLine.replace(/let /g, 'const ');
@@ -293,21 +319,21 @@ class ESLintErrorFixer {
     if (error.line > lines.length) return;
 
     const targetLine = lines[error.line - 1];
-    
+
     // Generic fixes for common ESLint issues
     let fixedLine = targetLine;
-    
+
     // Remove trailing spaces
     fixedLine = fixedLine.replace(/\s+$/, '');
-    
+
     // Fix multiple spaces
     fixedLine = fixedLine.replace(/[ ]{2,}/g, ' ');
-    
+
     // Fix missing spaces around operators
     fixedLine = fixedLine.replace(/([^=!<>])=([^=])/g, '$1 = $2');
     fixedLine = fixedLine.replace(/([^=!<>])==([^=])/g, '$1 == $2');
     fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, '$1 === $2');
-    
+
     if (fixedLine !== targetLine) {
       lines[error.line - 1] = fixedLine;
       fs.writeFileSync(error.file, lines.join('\n'));
@@ -316,12 +342,12 @@ class ESLintErrorFixer {
 
   async updateESLintConfig() {
     this.log('Updating ESLint configuration...');
-    
+
     const eslintConfigPath = path.join(this.projectRoot, '.eslintrc.js');
-    
+
     if (fs.existsSync(eslintConfigPath)) {
       let config = fs.readFileSync(eslintConfigPath, 'utf8');
-      
+
       // Update rules to be less strict for error fixing
       const updatedConfig = `module.exports = {
   env: {
@@ -457,7 +483,7 @@ class ESLintErrorFixer {
     },
   },
 };`;
-      
+
       fs.writeFileSync(eslintConfigPath, updatedConfig);
       this.log('Updated ESLint configuration for error fixing');
     }
@@ -470,16 +496,16 @@ class ESLintErrorFixer {
         totalErrors: this.errors.length,
         fixesApplied: this.fixes.applied.length,
         fixesFailed: this.fixes.failed.length,
-        fixesSkipped: this.fixes.skipped.length
+        fixesSkipped: this.fixes.skipped.length,
       },
       errors: this.errors,
       fixes: this.fixes,
-      recommendations: this.generateRecommendations()
+      recommendations: this.generateRecommendations(),
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
-    
+
     return report;
   }
 
@@ -490,7 +516,7 @@ class ESLintErrorFixer {
       recommendations.push({
         priority: 'high',
         message: 'Consider updating ESLint configuration',
-        action: 'Review ESLint rules and update configuration'
+        action: 'Review ESLint rules and update configuration',
       });
     }
 
@@ -498,7 +524,7 @@ class ESLintErrorFixer {
       recommendations.push({
         priority: 'medium',
         message: 'Some ESLint errors could not be automatically fixed',
-        action: 'Manually review failed fixes and apply corrections'
+        action: 'Manually review failed fixes and apply corrections',
       });
     }
 
@@ -507,24 +533,24 @@ class ESLintErrorFixer {
 
   async run() {
     this.log('Starting ESLint Error Fixer...');
-    
+
     try {
       // Update ESLint configuration
       await this.updateESLintConfig();
-      
+
       // Detect ESLint errors
       this.errors = await this.detectESLintErrors();
-      
+
       if (this.errors.length > 0) {
         // Fix ESLint errors
         await this.fixESLintErrors(this.errors);
       } else {
         this.log('No ESLint errors detected');
       }
-      
+
       const report = this.generateReport();
       this.log('ESLint Error Fixer completed successfully');
-      
+
       return report;
     } catch (error) {
       this.log(`ESLint Error Fixer failed: ${error.message}`, 'error');
@@ -536,12 +562,13 @@ class ESLintErrorFixer {
 // Run the ESLint error fixer
 if (require.main === module) {
   const fixer = new ESLintErrorFixer();
-  fixer.run()
-    .then((report) => {
+  fixer
+    .run()
+    .then(report => {
       console.log('ESLint Error Fixer completed successfully');
       process.exit(0);
     })
-    .catch((error) => {
+    .catch(error => {
       console.error('ESLint Error Fixer failed:', error);
       process.exit(1);
     });
