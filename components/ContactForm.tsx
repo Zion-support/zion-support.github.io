@@ -1,4 +1,6 @@
-import React, { useState } from 'react';'import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';''interface FormData {name: string;
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+'interface FormData {name: string;
   email: string;
   company: string;
   service: string;
@@ -18,14 +20,18 @@ const [formData, setFormData] = useState<FormData>({;
 
     if (!formData.name.trim()) {
 
-newErrors.name = 'Name is required';'    }'
+newErrors.name = 'Name is required';
+    }'
     if (!formData.email.trim()) {
 
-      newErrors.email = 'Email is required';'    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {'
-      newErrors.email = 'Email is invalid';'    }'
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {'
+      newErrors.email = 'Email is invalid';
+    }'
     if (!formData.message.trim()) {
 
-      newErrors.message = 'Message is required';'    }'setErrors(newErrors);
+      newErrors.message = 'Message is required';
+    }'setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 

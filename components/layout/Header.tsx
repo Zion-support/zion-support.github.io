@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';'import { Link, useLocation } from 'react-router-dom';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  Menu, X, 
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ;'  Menu, X, 
   Home, Users, 
   Briefcase, Phone, 
   Mail, ChevronDown,
@@ -10,7 +13,10 @@ import React, { useState, useEffect } from 'react';'import { Link, useLocation }
   FileText, Award,
   Globe, Search,
   ArrowRight
-} from 'lucide-react';'import { Button } from '../ui/Button';'import { Badge } from '../ui/Badge';''const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
+} from 'lucide-react';
+import { Button } from '../ui/Button';
+import { Badge } from '../ui/Badge';
+'const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
