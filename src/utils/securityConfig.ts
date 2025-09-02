@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // Security Configuration and Utilities
 export const securityConfig = {
   // Content Security Policy
@@ -156,3 +158,4 @@ export const securityMiddleware = {
 
 
 export default securityConfig;
+>>>>>>> c6ca43fbc2fee654cff88d9e7844c587eb164c81
