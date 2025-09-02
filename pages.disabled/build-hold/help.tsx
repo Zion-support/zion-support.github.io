@@ -146,5 +146,4 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
       </div>
     </MainLayout>
   )}
-;
 export default Help

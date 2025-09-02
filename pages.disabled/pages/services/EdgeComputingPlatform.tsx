@@ -736,5 +736,4 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx)}''`;
 export default EdgeComputingPlatform}}}}}}''`''`)}
-;
 export default EdgeComputingPlatform}}}}}}''`

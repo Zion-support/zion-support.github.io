@@ -52,6 +52,5 @@ const AutomatedFollowUps: React.FC = () => {
       </div>
     </div>
   )}
-;
 export default AutomatedFollowUps;
 "

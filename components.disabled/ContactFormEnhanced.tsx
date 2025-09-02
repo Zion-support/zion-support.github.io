@@ -63,5 +63,4 @@ type='submit''            disabled={isSubmitting}'            whileHover={{ scal
       </motion.div>
     </div>
   )}
-;
 export default ContactFormEnhanced

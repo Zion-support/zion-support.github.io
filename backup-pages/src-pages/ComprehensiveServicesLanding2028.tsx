@@ -23,9 +23,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   'from-purple-600 to-pink-600',';from-green-600 to-emerald-600',';from-red-600 to-orange-600',';from-indigo-600 to-purple-600',';from-yellow-600 to-orange-600',';from-teal-600 to-blue-600',';from-pink-600 to-red-600';
     ];
     return colors[Math.abs (category.length) % colors.length]}
-;
     setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) }
-;
     setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) }
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple'>

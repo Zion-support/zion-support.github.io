@@ -483,7 +483,6 @@ export default function News() {
       day:,
   numeric;
   '})}
-;
   const getCategoryColor = (category: string) => {
     const colors = {
       ai: 'from-cyan-500 to-blue-500,

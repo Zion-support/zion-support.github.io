@@ -1,5 +1,4 @@
-import { test, expect } from '@playwright/test';
-
+import { test, expect } from '@playwright/test'
 test('Performance test - Page load time', async ({ page }) => {
   const startTime = Date.now();
   await page.goto('/');

@@ -133,5 +133,4 @@ import { Badge } from;
       </section>
     </div>
   )}
-;
 export default Blog

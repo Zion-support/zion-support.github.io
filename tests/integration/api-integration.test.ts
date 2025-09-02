@@ -7,7 +7,6 @@ import React from 'react';
 const YourApiComponent = () => {
   return React.createElement(
   'div', null'test data')}
-;
 describe(
   'API Integration', () => {
   it(

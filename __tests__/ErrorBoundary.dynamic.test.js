@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ErrorBoundary.dynamic from '../components/ErrorBoundary.dynamic';
+import ErrorBoundarydynamic from "../components/ErrorBoundary.dynamic";
 
-describe('ErrorBoundary.dynamic', () => {
+describe('ErrorBoundarydynamic', () => {
   test('renders without crashing', () => {
-    render(<ErrorBoundary.dynamic />);
+    render(<ErrorBoundarydynamic />);
     expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<ErrorBoundary.dynamic />);
+    render(<ErrorBoundarydynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<ErrorBoundary.dynamic />);
+    render(<ErrorBoundarydynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<ErrorBoundary.dynamic />);
+    render(<ErrorBoundarydynamic />);
     // Add styling tests if needed
   })})

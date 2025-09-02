@@ -30,7 +30,6 @@ class NetlifyBuildMonitor {
       buildTimeout: 30 * 60 * 1000, // 30 minutes;
       autoFixEnabled: true,
       notificationEnabled: true}
-;
     this.buildHistory = [];
     this.issuePatterns = new Map();
     this.fixStrategies = new Map();
@@ -54,7 +53,6 @@ class NetlifyBuildMonitor {
         console.error(
   'Failed to write to log file:', error.message)}
     }
-;
     this.error = (message, error) => {
       const timestamp = new Date().toISOString();
       const errorMessage = `[${timestamp}] ERROR: ${message}${error ? ` - ${error.message}` :,
@@ -619,7 +617,6 @@ class NetlifyBuildMonitor {
           noUnusedParameters: true,
           skipLibCheck: true,
           forceConsistentCasingInFileNames: true}
-;
         fs.writeFileSync('tsconfig.json;
   ', JSON.stringify(config, null, 2))}
       this.log('TypeScript configuration updated;

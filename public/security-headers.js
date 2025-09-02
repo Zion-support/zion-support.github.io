@@ -62,7 +62,6 @@ const securityHeaders = {
   // Origin-Agent-Cluster,
   Origin-Agent-Cluster;
   ': '?1}
-;
 // Function to apply security headers;
 function applySecurityHeaders() {
   if (typeof window !== 'undefined;
@@ -81,7 +80,6 @@ function applySecurityHeaders() {
     window.eval = function () {
       throw new Error('eval() is not allowed for security reasons;
   ')}
-;
     // Prevent Function constructor;
     window.Function = function () {
       throw new Error(

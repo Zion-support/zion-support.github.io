@@ -23,7 +23,6 @@ class LintMonitor {
   'lint-monitor.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-;
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -155,11 +154,9 @@ class LintMonitor {
     if (this.checkInterval) {
       clearInterval(this.checkInterval);
       this.checkInterval = null}
-;
     if (this.watcher) {
       this.watcher.close();
       this.watcher = null}
-;
     this.log(
   '🛑 Lint Monitor stopped')}
   status() {
@@ -168,10 +165,7 @@ class LintMonitor {
       errorCount: this.errorCount,
       lastCheck: this.lastCheck,
   uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0;
-;
-;
 }
-;
     this.log(`📊 Status: ${status.running ?,
   Running': 'Stopped}`);
     this.log(`📊 Error Count: ${status.errorCount}`);
@@ -184,8 +178,6 @@ class LintMonitor {
       totalErrors: 0,
       autoFixes: 0,
   filesWatched: 0;
-;
-;
 }
     try {
       const lines = logContent.split(,
@@ -235,7 +227,6 @@ switch (command) {
     // // // // // // // // console.log(,
   Usage: node lint-monitor.js [start|stop|status|stats]');
     process.exit(1);
-;
     console.log(
   'Usage: node lint-monitor.js [start|stop|status|stats]);
     process.exit(1)}

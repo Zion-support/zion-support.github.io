@@ -59,7 +59,6 @@ const categories: Array < any> = [];
     availability: Math.random () > 0.8 ? 'limited' : 'available','`;
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor (Math.random () * 8) + 2}-${Math.floor (Math.random () * 4) + 4} weeks`,'`;
     warranty: category === 'talent' ? 'N / A' : `${Math.floor (Math.random () * 3) + 1} year${Math.floor (Math.random () * 3) + 1 > 1 ? 's' : ''}`}
-;
   const listings: MarketplaceItem[] = [];
 :pages.disabled/utils/generateRandomListing.tsx
   for (let i = 0 i < count i++) {

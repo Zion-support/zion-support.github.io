@@ -131,5 +131,4 @@ import { Users, Briefcase, Heart, Zap, CheckCircle } from;
       </section>
     </Layout>
   )}
-;
 export default Careers

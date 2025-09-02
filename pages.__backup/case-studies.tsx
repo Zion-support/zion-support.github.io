@@ -632,6 +632,5 @@ const CaseStudies: NextPage = () => {
       <Footer />
     </div>
   )}
-;
 export default CaseStudies;
 export default CaseStudies

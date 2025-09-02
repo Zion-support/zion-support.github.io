@@ -2,7 +2,7 @@
   'next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-eslint: {
+  eslint: {
     ignoreDuringBuilds: true,
   },
   experimental: {
@@ -16,15 +16,14 @@ eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,},
+    ignoreBuildErrors: true,
+  },
   images: {
-    domains: [
-  'ziontechgroup.com'],
+    domains: ['ziontechgroup.com'],
     unoptimized: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV ===
-  'production',
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -35,16 +34,17 @@ eslint: {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-/\.backup/,
+        /\.backup/,
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+        /^components\//,  // Exclude root components directory
       ],
     });
-    
+
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -52,15 +52,11 @@ eslint: {
       net: false,
       tls: false,
     };
-    
-    return config
+
+    return config;
   },
   // Try to exclude problematic directories at the Next.js level
-  pageExtensions: [
-  'tsx',
-  'ts',
-  'jsx',
-  'js'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer

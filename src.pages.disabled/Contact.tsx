@@ -1,6 +1,5 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
+import React from 'react'
+import { SEO } from '../components/SEO'
 export default function Page() {
 export default function Page() {
 const Contact: React.FC = () => {
@@ -14,5 +13,4 @@ const Contact: React.FC = () => {
       </div>
     </>
   )}
-;
 export default Contact

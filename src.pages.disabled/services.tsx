@@ -13,7 +13,6 @@ const Services: React.FC = () => {
       </div>
     </>
   )}
-;
 :src/pages/services.tsx;
 const featuredServices: Service[] = [
   {

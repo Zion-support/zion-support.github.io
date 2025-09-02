@@ -159,7 +159,6 @@ export default function Services2026ShowcaseEnhancedPage() {
   ')) return 'neural;
   ';
     return 'default}
-;
   const contactInfo = {
     mobile:,
   +1 302 464 0950;
@@ -169,7 +168,6 @@ export default function Services2026ShowcaseEnhancedPage() {
   364 E Main St STE 1008 Middletown DE 19709;
   ',
     website: 'https://ziontechgroup.com  }
-;
   // Combine all 2026 services including new ones;
   const all2026Services = [
     ...innovative2026MicroSaasServicesV2,

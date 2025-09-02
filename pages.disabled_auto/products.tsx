@@ -386,5 +386,4 @@ const Products: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default Products

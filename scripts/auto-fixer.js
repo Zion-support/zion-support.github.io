@@ -34,7 +34,6 @@ class AutoFixer {
       error: error ? {
         message: error.message,
         stack: error.stack} : null}
-;
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (error) {
       console.error(error)}
@@ -326,7 +325,6 @@ class AutoFixer {
       status: this.fixesFailed.length === 0 ?,
   success;
   ': 'partial}
-;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('info;
   ', `Auto-fixer report generated: ${reportFile}`);

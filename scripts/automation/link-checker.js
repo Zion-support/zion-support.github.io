@@ -109,7 +109,6 @@ async function checkLinks() {
     // Don;
   't exit, just log the error and continue;
   summary: 'Link check completed}
-;
     const reportPath = path.join(process.cwd(), ,
   link-checker-report.json;
   ');

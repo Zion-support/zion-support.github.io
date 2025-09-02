@@ -65,6 +65,5 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx;
 export { CustomerSupportChatbot }export default CustomerSupportChatbot'';''"

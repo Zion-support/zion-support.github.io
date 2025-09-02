@@ -1,6 +1,5 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
+import React from 'react'
+import { SEO } from '../components/SEO'
 export default function Page() {
 export default function Page() {
 const Home: React.FC = () => {
@@ -34,5 +33,4 @@ const Home: React.FC = () => {
       </div>
     </>
   )}
-;
 export default Home

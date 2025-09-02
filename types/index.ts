@@ -1,4 +1,4 @@
-// Global types for the Zion Tech Group application;
+// Global types for the Zion Tech Group application
 export interface Service {
   id: string;
    name: string;
@@ -107,17 +107,18 @@ export interface SEOProps {
    type?: string;
    noindex?: boolean}
 export interface PerformanceMetrics {
-  fcp?: number;
-   // First Contentful Paint lcp?: number;
-   // Largest Contentful Paint fid?: number;
-   // First Input Delay cls?: number;
-   // Cumulative Layout Shift ttfb?: number;
-   // Time to First Byte}
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+}
 export interface AccessibilitySettings {
   highContrast: boolean;
-   fontSize: number;
-   reducedMotion: boolean;
-   screenReader: boolean}
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
    language: string;
@@ -154,7 +155,7 @@ contact: {phone: string;
 export interface ErrorInfo {
   message: string;
    code?: string;
-   details?: any;
+   details?: Record<string, unknown>;
    timestamp: string;
    userAgent?: string;
    url?: string}
@@ -177,7 +178,7 @@ export interface FormField {
     message?: string}
 }
 export interface FormState {
-  values: Record<string, any>
+  values: Record<string, string | number | boolean>
    errors: Record<string, string>
    touched: Record<string, boolean>
    isSubmitting: boolean;
@@ -186,7 +187,6 @@ export interface FormState {
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]}
-;
 // Component prop types;
 export interface BaseComponentProps {
   className?: string;
@@ -215,12 +215,12 @@ export interface ApiError {
   status: number;
    message: string;
    code?: string;
-   details?: any}
+   details?: Record<string, unknown>}
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
-  data?: any;
-  params?: Record<string, any>;
+  data?: Record<string, unknown>;
+  params?: Record<string, string | number | boolean>;
   headers?: Record<string, string>}
 // Environment types;
 export interface Environment {

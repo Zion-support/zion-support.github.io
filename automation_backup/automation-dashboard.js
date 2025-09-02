@@ -190,7 +190,6 @@ class AutomationDashboard {
       systems: this.getAllSystems(),
       metrics: this.getAllMetrics(),
       alerts: this.getAlerts()}
-;
     return report}
 }
 // Export the class;

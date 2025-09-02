@@ -38,7 +38,6 @@ class BuildErrorMonitor {
         skipped: []},
       buildTime: null,
       suggestions: []}
-;
     try {
       const startTime = Date.now();
       const buildResult = await this.runBuild();

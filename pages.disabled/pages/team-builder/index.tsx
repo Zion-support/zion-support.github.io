@@ -99,7 +99,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       toast.error(error.message || 'An error occurred while generating the team.')} finally {}
       setIsLoading(false)}
   }
-;
     if (!projectBriefSubmitted) {
       toast.error('Cannot send invite without a project context.');
       return}';
@@ -119,7 +118,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       toast.error(`Failed to send invite: ${error.message}`)}
   }
     if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available}
-;
     try {}
         body: JSON.stringify(invitePayload)})
       if (!response.ok) {}
@@ -129,7 +127,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       // console.error('Error sending invite:', error)`;
       toast.error(`Failed to send invite: ${error.message}`)}
   }
-;
     if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
     return()
       <TeamRecommendationDisplay recommendation = {teamRecommendation}        projectBrief={projectBriefSubmitted}
@@ -418,7 +415,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       </div>
     </AppLayout>
   )}
-;
 :pages.disabled/pages/team-builder/index.tsx;
 export { TeamBuilderPage }export default TeamBuilderPage''`;
 ''`''`;

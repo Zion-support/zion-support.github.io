@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PWARegistration.dynamic from '../components/PWARegistration.dynamic';
+import PWARegistrationdynamic from "../components/PWARegistration.dynamic";
 
-describe('PWARegistration.dynamic', () => {
+describe('PWARegistrationdynamic', () => {
   test('renders without crashing', () => {
-    render(<PWARegistration.dynamic />);
+    render(<PWARegistrationdynamic />);
     expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<PWARegistration.dynamic />);
+    render(<PWARegistrationdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<PWARegistration.dynamic />);
+    render(<PWARegistrationdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<PWARegistration.dynamic />);
+    render(<PWARegistrationdynamic />);
     // Add styling tests if needed
   })})

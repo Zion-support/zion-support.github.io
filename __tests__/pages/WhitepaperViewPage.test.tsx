@@ -80,7 +80,6 @@ describe(
   Intro', content: 'Hello }],
     distributionChartData: [{ name:;
   'Team', value: 50 }]}
-;
   test('displays loading state initially'', () => {
     mockUseParams.mockReturnValue({ id: 'test-id })
     (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false }) // Setup mock for useAuth

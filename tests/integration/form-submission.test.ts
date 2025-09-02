@@ -18,7 +18,6 @@ const YourFormComponent = () => {
   'button', { type: 'submit },
 ,
   Submit'))}
-;
 describe(
   'Form Submission Integration', () => {
   it(

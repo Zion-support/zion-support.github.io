@@ -735,5 +735,4 @@ const AIAutonomousVehiclePlatform = () => {
       </section>
     </div>
   )}
-;
 export default AIAutonomousVehiclePlatform";

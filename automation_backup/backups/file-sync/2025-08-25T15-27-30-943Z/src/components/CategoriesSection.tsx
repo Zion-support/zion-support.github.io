@@ -130,10 +130,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   }
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 30;
-;
-
-},
+  y: 30},
     visible: {
       opacity: 1,
       y: 0,
@@ -158,17 +155,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             initial = {
   { opacity: 0,
   y: 30;
-;
-;
 }}
             animate = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
             transition={{ duration: 0.8 }}
-;
             <GradientHeading>Explore Categories</GradientHeading>
             <p className=,
   text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed'>
@@ -242,20 +234,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial = {
   { opacity: 0,
   y: 30;
-;
-;
 }}
           animate = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4;
-;
-;
 }}
         >
           <h3 className=,
@@ -267,20 +253,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 initial = {
   { opacity: 0,
   scale: 0.9;
-;
-;
 }}
                 animate = {
   { opacity: 1,
   scale: 1;
-;
-;
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.5 + index * 0.1;
-;
-;
 }}
               >
                 <Link
@@ -310,20 +290,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial = {
   { opacity: 0,
   y: 30;
-;
-;
 }}
           animate = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6;
-;
-;
 }}
         >
           <Link

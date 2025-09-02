@@ -1,14 +1,10 @@
 import { Route, Routes    } from 'react-router-dom';
-export default function Page() {
+import { Lazy } from 'lucide-react';
+
 export default function Page() {
   import { Suspense, lazy } from 'react';
-export default function Page() {
-export default function Page() {
-  import { ProtectedRoute, } from '../components/ProtectedRoute';
-export default function Page() {
-export default function Page() {
+  import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
-
 // Lazy load dashboard pages;
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
@@ -19,50 +15,49 @@ const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
 const DashboardRoutes: React.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner />}>
-      <Routes>
+  return (<Suspense fallback={<LoadingSpinner /" >}>
+      <Routes>"
         <Route path='/dashboard' element={
-          <ProtectedRoute></Rout></Route>
-            <Dashboard />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <Dashboard /" >
+          </ProtectedRoute>,
+} />"
         <Route path='/client-dashboard' element={
-          <ProtectedRoute></Rout></Route>
-            <ClientDashboard />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <ClientDashboard /" >
+          </ProtectedRoute>,
+} />"
         <Route path='/talent-dashboard' element={
-          <ProtectedRoute></Rout></Route>
-            <TalentDashboard />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <TalentDashboard /" >
+          </ProtectedRoute>,
+} />"
         <Route path='/creator-dashboard' element={
-          <ProtectedRoute></Rout></Route>
-            <CreatorDashboard />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <CreatorDashboard /" >
+          </ProtectedRoute>,
+} />"
         <Route path='/analytics' element={
-          <ProtectedRoute></Rout></Route>
-            <Analytics />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <Analytics /" >
+          </ProtectedRoute>,
+} />"
         <Route path='/project-milestones' element={
-          <ProtectedRoute></Rout></Route>
-            <ProjectMilestones />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <ProjectMilestones /" >
+          </ProtectedRoute>,
+} />"
         <Route path='/project-details' element={
-          <ProtectedRoute></Rout></Route>
-            <ProjectDetails />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <ProjectDetails /" >
+          </ProtectedRoute>,
+} />"
         <Route path='/project-room' element={
-          <ProtectedRoute></Rout></Route>
-            <ProjectRoom />
-          </ProtectedRoute>
-        } />
+          <ProtectedRoute" >
+            <ProjectRoom /" >
+          </ProtectedRoute>,
+} />
       </Routes>
-    </Suspense>;
-  )};
+    </Suspense>
+  )}
 ;
-export default DashboardRoutes

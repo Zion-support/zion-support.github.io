@@ -277,5 +277,4 @@ const FAQ: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default FAQ

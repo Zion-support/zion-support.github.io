@@ -76,7 +76,6 @@ const report = {
   totalFilesProcessed: totalProcessed,
   totalFilesFixed: totalFixed,
   patterns: patterns}
-;
 fs.writeFileSync('import-concatenation-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to: import-concatenation-fix-report.json')}
 main().catch(console.error);

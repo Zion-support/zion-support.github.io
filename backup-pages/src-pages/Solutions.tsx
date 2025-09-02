@@ -26,7 +26,6 @@
     ],
     color: 'from-gray-500 to-slate-600}
 ];
-;
     ],
     price:,
   Starting at $1,800/month',

@@ -185,7 +185,6 @@ const categories = [
   ')) return Users;
     if (variant.includes('customer)) return CheckCircle;
     return Sparkles}
-;
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai;
   ')) return 'from-blue-500 to-cyan-500;

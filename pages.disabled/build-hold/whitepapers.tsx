@@ -157,5 +157,4 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
       </section>
     </MainLayout>
   )}
-;
 export default Whitepapers

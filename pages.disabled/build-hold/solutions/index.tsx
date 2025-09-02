@@ -141,5 +141,4 @@ import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRi
       </section>
     </MainLayout>
   )}
-;
 export default Solutions

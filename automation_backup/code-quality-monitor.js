@@ -16,14 +16,12 @@ class CodeQualityMonitor {
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {
       // // // // // // // console.error(
   'Failed to write to log file:', error.message)}
-;
     this.metrics = {
   complexity: 0,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
-  lastUpdated: new Date().toISOString();
-}
+  lastUpdated: new Date().toISOString()}
     this.logFile = path.join(__dirname,
 ,
   logs',
@@ -53,7 +51,6 @@ class CodeQualityMonitor {
   'ERROR');
       return null}
   }
-;
   async startMonitoring() {
     this.log(
   'Starting code quality monitoring...');
@@ -90,7 +87,6 @@ class CodeQualityMonitor {
 ,
   ERROR')} finally {
       this.monitoring = false;
-;
   async detectQualityIssues() {
     const issues = [];
     // Check for syntax errors;
@@ -105,7 +101,6 @@ class CodeQualityMonitor {
       return Math.min(Math.floor(totalComplexity), 100)} catch (error) {
       return Math.floor(Math.random() * 10) + 1}
   }
-;
   async checkSyntaxErrors() {
     try {
       // Use TypeScript compiler to check syntax;
@@ -126,7 +121,6 @@ class CodeQualityMonitor {
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {
       return Math.floor(Math.random() * 100) + 50}
   }
-;
   async checkUnusedImports() {
     try {
       // Use ESLint to check for unused imports;
@@ -147,7 +141,6 @@ class CodeQualityMonitor {
         .map(line => line.trim());
         .filter(line => line.length > 0);
       return unusedImportErrors.slice(0, 10);
-;
   async checkFormatting() {
     try {
       // Use Prettier to check formatting;
@@ -167,7 +160,6 @@ class CodeQualityMonitor {
         .map(line => line.trim());
         .filter(line => line.length > 0);
       return formattingErrors;
-;
   async checkPotentialBugs() {
     const bugs = [];
     try {
@@ -207,8 +199,7 @@ class CodeQualityMonitor {
   'TODO:') || this.findLineNumber(content,
   'FIXME:')})} catch (error) {
           // Skip files that can;
-  't be processed;
-} catch (error) {
+  't be processed} catch (error) {
       this.log(`Bug detection failed: ${error.message}`, ,
   WARN;
   ');
@@ -219,7 +210,6 @@ class CodeQualityMonitor {
     for (let i = 0 i < lines.length i++) {
       if (lines[i].includes(searchTerm)) {
         return i + 1;
-;
     return 0;
   async autoFixQualityIssues(issues) {
     this.log('Attempting to auto-fix quality issues...;
@@ -244,7 +234,6 @@ class CodeQualityMonitor {
             break} catch (error) {
         this.log(`Failed to fix issue ${issue.type}: ${error.message}`, 'WARN;
   ');
-;
     this.log('Auto-fix attempts completed;
   ');
   async fixSyntaxErrors(errors) {
@@ -267,7 +256,6 @@ class CodeQualityMonitor {
   ');
     // Try to auto-fix some common syntax issues;
     await this.autoFixCommonSyntaxIssues()}
-;
   async autoFixCommonSyntaxIssues() {
     this.log('Attempting to auto-fix common syntax issues...;
   ');
@@ -284,14 +272,12 @@ class CodeQualityMonitor {
           newContent = newContent.replace(/// debugger // TODO: Remove in production/g, ,
   // // debugger // TODO: Remove in production // TODO: Remove in production);
           modified = true}
-;
         if (newContent.includes('// // // // // // // // console.log(
   ') && !file.includes('.test.;
   ')) {
           newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(
   ');
           modified = true}
-;
         if (modified) {
           fs.writeFileSync(file, newContent, 'utf8;
   ');
@@ -299,9 +285,7 @@ class CodeQualityMonitor {
       } catch (error) {
         // Skip files that can't be processed}
     }
-;
     this.log(`Auto-fixed common syntax issues in ${fixedCount} files`)}
-;
   async fixUnusedImports(errors) {
     this.log(
   'Attempting to fix unused imports...');
@@ -319,7 +303,6 @@ class CodeQualityMonitor {
   WARN');
       // Fallback: manual cleanup;
       await this.manualCleanupUnusedImports();
-;
   async manualCleanupUnusedImports() {
     this.log(
   'Performing manual unused import cleanup...);
@@ -348,7 +331,6 @@ class CodeQualityMonitor {
   ');
           cleanedCount++} catch (error) {
         // Skip files that can't be processed;
-;
     this.log(`Manually cleaned up unused imports in ${cleanedCount} files`);
   async fixFormattingIssues() {
     this.log(
@@ -365,7 +347,6 @@ class CodeQualityMonitor {
   ')} catch (error) {
       this.log(`Prettier formatting failed: ${error.message}`, 'ERROR;
   ');
-;
   async fixPotentialBugs(bugs) {
     this.log('Fixing potential bugs...;
   ');
@@ -393,11 +374,9 @@ class CodeQualityMonitor {
           if (modified) {
             fs.writeFileSync(filePath, newContent,
   'utf8');
-            fixedCount++;
-} catch (error) {
+            fixedCount++} catch (error) {
         this.log(`Failed to fix bug in ${bug.file}: ${error.message}`,
   'WARN');
-;
     this.log(`Fixed ${fixedCount} potential bugs`);
   async performDeepAnalysis() {
     this.log(
@@ -413,7 +392,6 @@ class CodeQualityMonitor {
   'Deep analysis completed')} catch (error) {
       this.log(`Deep analysis failed: ${error.message}`,
   'ERROR');
-;
   async performWeeklyCleanup() {
     this.log(
   'Performing weekly code cleanup...');
@@ -428,7 +406,6 @@ class CodeQualityMonitor {
   'Weekly cleanup completed')} catch (error) {
       this.log(`Weekly cleanup failed: ${error.message}`,
   'ERROR');
-;
   async checkCodeComplexity() {
     this.log(
   'Checking code complexity...');
@@ -459,7 +436,6 @@ class CodeQualityMonitor {
       this.log(
   'Security vulnerabilities detected, consider running npm audit fix',
   'WARN');
-;
   async cleanupOldReports() {
     this.log(
   'Cleaning up old reports...');
@@ -474,12 +450,9 @@ class CodeQualityMonitor {
             const stats = fs.statSync(filePath);
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
-              this.log(`Removed old report: ${file}`);
-;
-} catch (error) {
+              this.log(`Removed old report: ${file}`)} catch (error) {
       this.log(`Report cleanup failed: ${error.message}`,
   'WARN');
-;
   async optimizeCodeStructure() {
     this.log(
   'Optimizing code structure...');
@@ -515,7 +488,6 @@ class CodeQualityMonitor {
   '.tsx')) {
           files.push(fullPath)}
       })}
-;
     walkDir(projectRoot);
     return files}
   saveMetrics() {
