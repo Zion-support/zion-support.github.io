@@ -32,7 +32,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     };
     // Track user engagement
     const trackEngagement = () => {
-      let startTime = Date.now();
+      const startTime = Date.now();
       let isActive = true;
       const trackTimeOnPage = () => {
         if (isActive) {

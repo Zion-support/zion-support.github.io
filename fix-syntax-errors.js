@@ -126,7 +126,7 @@ function main() {
   const files = findFiles(srcDir);
   
   let fixedCount = 0;
-  let totalCount = files.length;
+  const totalCount = files.length;
   
   console.log(`Found ${totalCount} files to check...`);
   

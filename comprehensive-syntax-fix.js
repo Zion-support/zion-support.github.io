@@ -112,8 +112,8 @@ function fixSpecificPatterns(content) {
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let { content: fixedContent, modified } = fixSpecificPatterns(content);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const { content: fixedContent, modified } = fixSpecificPatterns(content);
     
     if (modified) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
@@ -159,7 +159,7 @@ function main() {
   const files = findFiles(srcDir);
   
   let fixedCount = 0;
-  let totalCount = files.length;
+  const totalCount = files.length;
   
   console.log(`Found ${totalCount} files to check...`);
   
