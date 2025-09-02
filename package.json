@@ -32,19 +32,11 @@
     "perf:audit": "npm run perf:monitor",
     "dev": "next dev",
     "dev:vite": "vite",
-<<<<<<< HEAD
     "build": "NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build",
     "build:vite": "vite build",
     "start": "next start",
     "start:vite": "vite preview",
-    "lint": "eslint .",
-=======
-    "build": "next build",
-    "build:vite": "vite build",
-    "start": "next start",
-    "start:vite": "vite preview",
     "lint": "next lint",
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     "type-check": "tsc --noEmit",
     "analyze": "ANALYZE=true npm run build",
     "format": "prettier --write .",
@@ -54,10 +46,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@esbuild/linux-x64": "^0.25.9",
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -90,18 +79,12 @@
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
-<<<<<<< HEAD
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cron-parser": "^5.3.0",
     "esbuild": "^0.25.9",
     "events": "^3.3.0",
-    "framer-motion": "5.6.0",
-=======
-    "cron-parser": "^5.3.0",
-    "events": "^3.3.0",
     "framer-motion": "^12.23.12",
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
