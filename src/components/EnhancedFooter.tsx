@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 import { 
   Zap, Mail, Phone, MapPin, Globe, Twitter, Linkedin, 
   Facebook, Instagram, Youtube, Github, ArrowRight,
@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 export function EnhancedFooter() {
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [
@@ -28,7 +28,7 @@ export function EnhancedFooter() {
         { name: 'Careers', href: '/careers', description: 'Join our team' },
         { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
         { name: 'News', href: '/news', description: 'Latest updates' },
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       ]
     },
     {
@@ -43,7 +43,7 @@ export function EnhancedFooter() {
         { name: 'Autonomous Systems', href: '/services/ai-autonomous-vehicle-management-platform', description: 'AI-powered automation' },
         { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
         { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       ]
     },
     {
@@ -55,7 +55,7 @@ export function EnhancedFooter() {
         { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industry 4.0' },
         { name: 'Research & Development', href: '/research-development', description: 'Innovation labs' },
         { name: 'Green IT', href: '/green-it', description: 'Sustainable technology' },
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       ]
     },
     {
@@ -67,7 +67,7 @@ export function EnhancedFooter() {
         { name: 'Webinars', href: '/webinars', description: 'Educational content' },
         { name: 'Documentation', href: '/documentation', description: 'Technical guides' },
         { name: 'API Reference', href: '/api', description: 'Developer resources' },
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       ]
     },
     {
@@ -149,8 +149,7 @@ export function EnhancedFooter() {
               </div>
               <span className="text-2xl font-bold">Zion Tech Group</span>
             </div>
-            
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading the future of technology with cutting-edge AI solutions, 
               quantum computing, and innovative micro SAAS services. 
@@ -195,7 +194,7 @@ export function EnhancedFooter() {
                   </a>
                 ))}
               </div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
             </div>
           </div>
 
@@ -212,7 +211,7 @@ export function EnhancedFooter() {
               </h3>
               
               <ul className="space-y-3">
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -228,7 +227,7 @@ export function EnhancedFooter() {
                           {link.description}
                         </div>
                       </div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                     </Link>
                   </li>
                 ))}
@@ -264,7 +263,7 @@ export function EnhancedFooter() {
                 Subscribe
               </button>
             </form>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
           </div>
         </div>
       </div>
@@ -290,7 +289,7 @@ export function EnhancedFooter() {
                 >
                   {link.name}
                 </Link>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
               ))}
             </div>
           </div>
@@ -324,4 +323,4 @@ export function EnhancedFooter() {
     </footer>
   );
 }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

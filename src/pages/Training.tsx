@@ -4,7 +4,7 @@ import { BookOpen, Users, Clock, Star, Play, Award, CheckCircle } from 'lucide-r
 
 const Training = () => {
   const courses = [
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     {
       id: 1,
       title: "AI Fundamentals",
@@ -96,7 +96,7 @@ const Training = () => {
             <div key={index} className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                 <stat.icon className="w-8 h-8 text-white" />
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-300">{stat.label}</div>
@@ -117,8 +117,7 @@ const Training = () => {
               <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                 <BookOpen className="w-16 h-16 text-white/50" />
               </div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
-              
+
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full">
@@ -195,7 +194,7 @@ const Training = () => {
             </button>
           </div>
         </motion.div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       </div>
     </div>
   );

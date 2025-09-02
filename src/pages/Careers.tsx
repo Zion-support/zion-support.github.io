@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, Search, Filter, Briefcase, Star, Globe } from 'lucide-react';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 const Careers = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -81,7 +80,7 @@ const Careers = () => {
       posted: '5 days ago',
       featured: false
     }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   ];
 
   const locations = [
@@ -89,7 +88,7 @@ const Careers = () => {
     { id: 'remote', name: 'Remote', count: 8 },
     { id: 'new-york', name: 'New York, NY', count: 2 },
     { id: 'san-francisco', name: 'San Francisco, CA', count: 2 }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   ];
 
   const departments = [
@@ -142,7 +141,7 @@ const Careers = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
               />
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
             </div>
             <select
               value={selectedLocation}
@@ -307,7 +306,7 @@ const Careers = () => {
         </motion.div>
       </div>
     </div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   );
 };
 

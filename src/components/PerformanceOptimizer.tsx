@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 interface PerformanceMetrics {
   fcp: number;
@@ -9,7 +8,7 @@ interface PerformanceMetrics {
   cls: number;
   ttfb: number;
   loadTime: number;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 }
 
 interface PerformanceOptimizerProps {
@@ -192,7 +191,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     ];
 
     criticalResources.forEach((resource) => {
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -248,9 +247,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       autoOptimizePerformance(metricsRef.current);
     }
   };
-=======
-  }, [enabled]);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   // Initialize performance monitoring
   useEffect(() => {
@@ -346,4 +342,4 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </>
   );
 };
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

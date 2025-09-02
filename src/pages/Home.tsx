@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -66,7 +66,6 @@ import {
   Home
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -189,7 +188,7 @@ export default function Home() {
       description: "End-to-end digital transformation consulting and implementation",
       color: "from-green-500 to-emerald-500",
       link: "/services/digital-transformation"
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     }
   ];
 
@@ -199,8 +198,6 @@ export default function Home() {
     { number: "25+", label: "Countries Served", icon: Globe },
     { number: "99%", label: "Client Satisfaction", icon: Star }
   ];
-
-
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -248,7 +245,7 @@ export default function Home() {
                   >
                     <span>{slide.cta}</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                   </Link>
                 </div>
               </motion.div>
@@ -277,7 +274,7 @@ export default function Home() {
               Zion Tech Group
             </h1>
           </motion.div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
         </div>
       </section>
 
@@ -302,7 +299,7 @@ export default function Home() {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-zinc-300">{stat.label}</div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
               </motion.div>
             ))}
           </div>
@@ -312,7 +309,7 @@ export default function Home() {
       {/* Services Section */}
       <section className="relative z-10 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -338,7 +335,7 @@ export default function Home() {
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 <span>View All Services</span>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
               </Link>
             </div>
           </motion.div>
@@ -347,4 +344,4 @@ export default function Home() {
     </div>
   );
 }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

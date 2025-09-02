@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search,
   Filter,
-=======
+
   ArrowRight,
   Star,
   Clock,
@@ -55,7 +55,7 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
-=======
+
       icon: Search,
       title: "AI-Powered SEO Platform",
       description: "Intelligent SEO optimization using AI to boost search rankings and drive organic traffic",
@@ -431,30 +431,15 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"

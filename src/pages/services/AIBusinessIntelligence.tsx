@@ -3,7 +3,7 @@ import React from 'react.ts';
   Cpu,
   Lock
 } from 'lucide-react';
-=======
+
 import { motion              } from 'framer-motion.ts';
 import { Brain,
   BarChart3,

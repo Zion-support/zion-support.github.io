@@ -8,18 +8,7 @@ const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
     <div className="text-center">;
       <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>;
       <p className="text-xl">;
-=======
-  availability_type?: string};
-=======
-interface TalentProfileWithSocial extends TalentProfile {;
-  social?: Record<string, string>};
-// Simple error component to replace Next.js ErrorPage;
-const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (;
-  <div className = 'min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center'>;
-    <div className='text-center'>;
-      <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>;
-      <p className='text-xl'>;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
         {statusCode === 404 ? 'Talent not found' : 'Something went wrong'};
       </p>;
     </div>;
@@ -47,13 +36,7 @@ const TalentProfilePage: React.FC = () => {;
       try {
         // For now, we'll simulate a profile since we don't have the API
         // In a real app, this would be: const res = await fetch(`/api/talent/${id}`);
-=======
-        setTimeout(() => {;
-          const mockProfile: TalentProfileWithSocial = {;
-            full_name: `Talent ${id}`,;
-            };
-=======
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
             skills: ['React', 'TypeScript', 'Node.js'],;
             availability_type: 'Full-time',;
             social: {;
@@ -105,7 +88,7 @@ const TalentProfilePage: React.FC = () => {;
                   {platform};
                 </a>;
               ))};
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
             </div>;
           </div>;
         )};

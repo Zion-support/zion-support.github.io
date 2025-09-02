@@ -9,7 +9,7 @@ interface ThemeToggleProps {
 }
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   const [theme, setTheme] = useState<Theme>('system');
   const [mounted, setMounted] = useState(false);
 
@@ -19,14 +19,14 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     if (savedTheme) {
       setTheme(savedTheme);
     }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   }, []);
 
   useEffect(() => {
     if (!mounted) return;
 
       root.classList.toggle('dark', theme === 'dark');
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     }
     
     localStorage.setItem('theme', theme);
@@ -163,4 +163,4 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 };
 
 export default ThemeToggle;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

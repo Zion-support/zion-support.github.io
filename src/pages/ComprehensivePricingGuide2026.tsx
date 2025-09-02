@@ -92,7 +92,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 import { INNOVATIVE_IT_SERVICES_2026 } from '../data/innovativeITServices2026';
 import { INNOVATIVE_AI_SERVICES_2026 } from '../data/innovativeAIServices2026';
-=======
+
   HelpCircle,
   FileText,
   Cpu,
@@ -220,7 +220,7 @@ export default function ComprehensivePricingGuide2026() {
     const avgPrice = prices.reduce((a, b) => a + b, 0) / prices.length;
     const minPrice = Math.min(...prices);
     const maxPrice = Math.max(...prices);
-=======
+
     const selectedPriceRange = priceRanges.find(range => range.id === priceRange);
     
     return INNOVATIVE_SERVICES_2026

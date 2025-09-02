@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 import { 
   Server, 
   Users, 
@@ -105,7 +105,6 @@ interface SubCategory {
   equipment: number;
 }
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 export default function Categories() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [expandedSubCategory, setExpandedSubCategory] = useState<string | null>(null);
@@ -117,7 +116,7 @@ export default function Categories() {
       icon: Globe,
       color: 'from-cyan-500 to-blue-500',
       count: 182
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     },
     {
       id: 'ai-ml',
@@ -204,7 +203,7 @@ export default function Categories() {
         name: 'Cloud Architecture',
         description: 'Scalable and resilient cloud infrastructure design',
         icon: Building,
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
         services: 14,
         talent: 9,
         equipment: 5
@@ -224,7 +223,7 @@ export default function Categories() {
         services: 16,
         talent: 10,
         equipment: 6
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       }
     ],
     'cybersecurity': [
@@ -239,7 +238,7 @@ export default function Categories() {
       {
         name: 'Security Auditing',
         description: 'Comprehensive security assessments and compliance',
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
         icon: Lock,
         services: 9,
         talent: 6,
@@ -260,7 +259,7 @@ export default function Categories() {
         services: 7,
         talent: 5,
         equipment: 1
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       }
     ],
     'data': [
@@ -270,7 +269,7 @@ export default function Categories() {
         icon: Database,
         services: 15,
         talent: 10,
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
         equipment: 6
       },
       {
@@ -296,14 +295,14 @@ export default function Categories() {
         services: 14,
         talent: 9,
         equipment: 5
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       }
     ],
     'development': [
       {
         name: 'Web Development',
         description: 'Modern web applications and responsive design',
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
         icon: Code,
         services: 22,
         talent: 15,
@@ -314,7 +313,7 @@ export default function Categories() {
         description: 'iOS and Android mobile applications',
         icon: Smartphone,
         services: 19,
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
         talent: 12,
         equipment: 6
       },
@@ -333,7 +332,7 @@ export default function Categories() {
         services: 25,
         talent: 18,
         equipment: 10
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       }
     ]
   };
@@ -351,7 +350,6 @@ export default function Categories() {
     const category = mainCategories.find(cat => cat.id === categoryId);
     return category ? category.icon : Globe;
   };
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   return (
     <>
@@ -571,7 +569,7 @@ export default function Categories() {
                 </a>
               </div>
             </motion.div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
           </div>
         </section>
       </div>

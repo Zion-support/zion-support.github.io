@@ -21,7 +21,7 @@ import {
   Headphones
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
+
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones              } from 'lucide-react.ts';

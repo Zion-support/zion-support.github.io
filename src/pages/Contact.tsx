@@ -20,7 +20,6 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +36,6 @@ const Contact: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   const departments = [
     { value: 'general', label: 'General Inquiry' },
@@ -170,7 +168,7 @@ const Contact: React.FC = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold text-zion-cyan mb-6">
               Get in Touch
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
               Ready to transform your business with cutting-edge AI and technology solutions? 
@@ -316,7 +314,7 @@ const Contact: React.FC = () => {
                     <label htmlFor="company" className="block text-sm font-medium text-zion-cyan mb-2">
                       Company
                     </label>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                     <input
                       type="text"
                       id="company"
@@ -325,7 +323,7 @@ const Contact: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-slate-darker border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                       placeholder="Enter your company name"
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                     />
                   </div>
 
@@ -373,7 +371,7 @@ const Contact: React.FC = () => {
                     <label htmlFor="subject" className="block text-sm font-medium text-zion-cyan mb-2">
                       Subject *
                     </label>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                     <input
                       type="text"
                       id="subject"
@@ -383,7 +381,7 @@ const Contact: React.FC = () => {
                       required
                       className="w-full px-4 py-3 bg-zion-slate-darker border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                       placeholder="Enter message subject"
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                     />
                   </div>
 
@@ -746,7 +744,7 @@ const Contact: React.FC = () => {
               </div>
             </motion.div>
           </div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
         </div>
       </section>
 

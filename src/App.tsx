@@ -85,7 +85,6 @@ const SimpleFooter = () => (
     </div>
   </footer>
 );
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -126,6 +125,11 @@ const AIAutonomousDevOpsPlatform = createLazyComponent(() => import('./pages/ser
 const AIAutonomousSalesPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Sales-Platform'));
 const AIAutonomousHRPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-HR-Platform'));
 
+// New Innovative AI Services 2025
+const AIIntelligentContractAnalyzer = createLazyComponent(() => import('./pages/services/AI-Intelligent-Contract-Analyzer'));
+const AISustainabilityAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Sustainability-Analytics-Platform'));
+const AIHealthcarePredictiveAnalytics = createLazyComponent(() => import('./pages/services/AI-Healthcare-Predictive-Analytics'));
+
 // New Autonomous AI Services Showcase 2025
 const NewAutonomousAIServicesShowcase2025 = createLazyComponent(() => import('./pages/NewAutonomousAIServicesShowcase2025'));
 
@@ -133,7 +137,6 @@ const NewAutonomousAIServicesShowcase2025 = createLazyComponent(() => import('./
 const AdminDashboard = createLazyComponent(() => import('./pages/AdminDashboard'));
 const TestingDashboard = createLazyComponent(() => import('./components/testing/TestingDashboard'));
 const MonitoringDashboard = createLazyComponent(() => import('./components/monitoring/MonitoringDashboard'));
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 function App() {
   return (
@@ -176,6 +179,11 @@ function App() {
                   <Route path="/services/ai-autonomous-sales-platform" element={<AIAutonomousSalesPlatform />} />
                   <Route path="/services/ai-autonomous-hr-platform" element={<AIAutonomousHRPlatform />} />
                   
+                  {/* New Innovative AI Services 2025 */}
+                  <Route path="/services/ai-intelligent-contract-analyzer" element={<AIIntelligentContractAnalyzer />} />
+                  <Route path="/services/ai-sustainability-analytics-platform" element={<AISustainabilityAnalyticsPlatform />} />
+                  <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
+                  
                   {/* Showcase pages */}
                   <Route path="/new-autonomous-ai-services-2025" element={<NewAutonomousAIServicesShowcase2025 />} />
                   
@@ -188,7 +196,6 @@ function App() {
                   <Route path="/privacy" element={<PrivacyPolicy />} />
                   <Route path="/terms" element={<TermsOfService />} />
                   <Route path="/help" element={<HelpCenter />} />
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
                 </Routes>
               </AnimatePresence>
             </Suspense>

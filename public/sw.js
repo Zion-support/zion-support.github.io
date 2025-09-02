@@ -30,7 +30,7 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       })
   );
 });
@@ -51,4 +51,4 @@ self.addEventListener('activate', (event) => {
     })
   );
 });
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

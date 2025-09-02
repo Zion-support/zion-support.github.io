@@ -148,4 +148,4 @@ export function CartProvider({ children }) {
 }
 
 export default CartContext;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

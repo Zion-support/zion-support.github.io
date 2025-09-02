@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 interface Message {
   id: string;
@@ -33,7 +32,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -227,4 +225,4 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     </div>
   );
 };
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

@@ -476,7 +476,6 @@ export default function ServicesOverview(...args: any[]): any {
       link: "/help"
     }
   };
-=======
 
   const getCategoryColor = (category: string) => {
     switch (category) {

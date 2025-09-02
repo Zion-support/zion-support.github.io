@@ -49,7 +49,7 @@ import { Users,
 } from 'lucide-react';
 
 export default function AICustomerExperiencePlatform() {
-=======
+
   Headphones
               } from 'lucide-react.ts';
 
@@ -233,7 +233,7 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-=======
+
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
               <motion.div
@@ -285,7 +285,7 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-=======
+
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)               => (
               <motion.div
@@ -485,7 +485,7 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
         </div>
       </section>
     </div>
-=======
+
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

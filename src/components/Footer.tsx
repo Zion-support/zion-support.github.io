@@ -33,7 +33,7 @@ import { Twitter,
   Database,
   Network,
   Server
-=======
+
   Rocket,
   Target,
   Handshake,
@@ -177,9 +177,6 @@ export function Footer(...args: any[]): any {
     { name: "Startup Solutions", href: "/solutions/startup" }
   ];
 
-=======
-
-=======
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       {/* Main Footer Content */}
@@ -296,7 +293,7 @@ export function Footer(...args: any[]): any {
                   <MapPin className="w-4 h-4 text-cyan-400" />
                   <span>123 Innovation Drive, Tech City, TC 12345</span>
                 </div>
-=======
+
               <div className="flex items-center text-zion-slate-light text-sm">
                 <MapPin className="w-4 h-4 mr-2 text-zion-cyan" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>

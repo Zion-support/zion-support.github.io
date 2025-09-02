@@ -3,7 +3,7 @@ import { Helmet               } from 'react-helmet-async.ts';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
 export default function DigitalTwin(...args: []):  {
-=======
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database } from 'lucide-react';
@@ -66,7 +66,7 @@ export default function DigitalTwin() {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-=======
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -220,7 +220,6 @@ export default function DigitalTwin() {
             </div>
           </div>
         </section>
-=======
 
         {/* Benefits Section */}
         <section className="py-20 bg-slate-800/30">

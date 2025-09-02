@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-=======
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -56,55 +56,15 @@ import { Search,
 
 interface SEOAnalysis {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
 lastUpdated: Date;
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 interface SEOIssue {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   id: string;
   type: 'error' | 'warning' | 'info';
@@ -114,35 +74,9 @@ interface SEOIssue {
   fixable: boolean;
 category: 'content' | 'technical' | 'performance' | 'accessibility';
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 interface SEOSuggestion {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   id: string;
   title: string;
@@ -151,35 +85,9 @@ interface SEOSuggestion {
   effort: 'low' | 'medium' | 'high';
 estimatedImpact: number;
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 interface SEOMetrics {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   pageSpeed: number;
   mobileFriendliness: number;
@@ -325,11 +233,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ;
   low: 1 ;
 
-
-
-
-
-
 };
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     }) || [];
@@ -383,7 +286,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     ]
   }
 };
-=======
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   enabled = true,
@@ -599,6 +501,5 @@ export const useSEOOptimization = () => {;
     optimizePage
   }};
 export default SEOOptimizer;
-=======
-=======
+
 export default SEOOptimizer;

@@ -10,7 +10,7 @@ const cron = require('node-cron');
 ;
 class DependencyMonitor {;
   constructor() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.projectRoot = process.cwd();
     this.vulnerabilitiesFound = 0;
     this.dependenciesUpdated = 0;
@@ -24,7 +24,7 @@ class DependencyMonitor {;
     this.startMonitoring();
 ;
   ensureLogsDirectory() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
@@ -46,7 +46,7 @@ class DependencyMonitor {;
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async startMonitoring() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.log('Starting dependency monitoring...');
 ;
     // Schedule regular dependency checks;
@@ -72,7 +72,7 @@ class DependencyMonitor {;
     this.log('Dependency monitoring started successfully');
 ;
   async performDependencyCheck() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     if (this.monitoring) return;
 ;
     this.monitoring = true;
@@ -88,7 +88,7 @@ class DependencyMonitor {;
         this.log('No dependency issues detected, all packages are up to date');
 ;
     } catch (error) {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
       this.log(`Dependency check failed: ${error.message}`, 'ERROR');
     } finally {;
       this.monitoring = false;
@@ -320,7 +320,7 @@ class DependencyMonitor {;
     try {;
       // Create a report of what will be updated;
       const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
         `${pkg.name}: ${pkg.current} → ${pkg.latest}`;
       ).join('\n')}\n\nUpdating packages...`;
 ;
@@ -458,7 +458,7 @@ class DependencyMonitor {;
 ;
         // Create a report for major updates;
         const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
           `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`;
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`;
 ;
@@ -549,7 +549,7 @@ class DependencyMonitor {;
 ;
   async stop() {;
     this.log('Stopping dependency monitor...');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.monitoring = false;
     this.log('Dependency monitoring stopped');
   }
@@ -592,4 +592,4 @@ setInterval(() => {;
   monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 900000); // Every 15 minutes;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+

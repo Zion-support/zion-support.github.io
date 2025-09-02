@@ -116,7 +116,7 @@ export default function Events(...args: any[]): any {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan"
               />
-=======
+
       {/* Filters Section */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -398,7 +398,7 @@ export default function Events(...args: any[]): any {
                   </div>
                 </motion.article>
               ))}
-=======
+
                   </motion.div>
                 );
               })}

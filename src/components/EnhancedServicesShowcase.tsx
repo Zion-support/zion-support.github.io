@@ -16,21 +16,6 @@ import { Brain,
 
 interface Service {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   id: string;
   icon: React.ComponentType<any>;
   title: string;
@@ -147,7 +132,6 @@ export function EnhancedServicesShowcase() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [currentPage, setCurrentPage] = useState(1);
   const servicesPerPage = 12;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   const filteredServices = useMemo(() => {
     let filtered = services.filter(service => {
@@ -296,8 +280,7 @@ export function EnhancedServicesShowcase() {
             </select>
 
 }}
-=======
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 export const EnhancedServicesShowcase: React.FC = (): JSX.Element => {
   const services = [
     {
@@ -501,239 +484,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
             </motion.div>
           ))}
         </motion.div>
-=======
-    return filtered;
-  }, [selectedCategory, searchQuery, priceRange, sortBy]);
 
-  const handleServiceClick = (service: Service) => {
-    // Simulate loading for demo purposes
-    setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 1000);
-  };
-
-  if (isLoading) {
-    return <ServicesGridSkeleton />;
-  }
-
-  return (
-    <div className="py-16 bg-gradient-to-br from-slate-50 to-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
-          >
-            Revolutionary Technology Services
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Transform your business with cutting-edge AI, quantum computing, and cloud solutions
-          </motion.p>
-        </div>
-
-        {/* Filters and Search */}
-        <div className="mb-12 space-y-6">
-          {/* Search Bar */}
-          <div className="relative max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search services..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-
-          {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  selectedCategory === category
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Price Range and Sort */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">Price Range:</span>
-              <input
-                type="range"
-                min="0"
-                max="50000"
-                step="1000"
-                value={priceRange[1]}
-                onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
-                className="w-32"
-              />
-              <span className="text-sm text-gray-600">${priceRange[1].toLocaleString()}</span>
-            </div>
-            
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="name">Sort by Name</option>
-              <option value="price">Sort by Price</option>
-              <option value="marketSize">Sort by Market Size</option>
-            </select>
-          </div>
-        </div>
-
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="relative group"
-              >
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                  {/* Badges */}
-                  <div className="absolute top-4 right-4 z-10 flex gap-2">
-                    {service.popular && (
-                      <span className="px-2 py-1 bg-yellow-500 text-white text-xs font-bold rounded-full">
-                        Popular
-                      </span>
-                    )}
-                    {service.new && (
-                      <span className="px-2 py-1 bg-green-500 text-white text-xs font-bold rounded-full">
-                        New
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Header */}
-                  <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>
-                    <div className="flex items-center justify-between mb-4">
-                      <service.icon className="w-8 h-8" />
-                      <div className="text-right">
-                        <div className="text-2xl font-bold">${service.price.monthly.toLocaleString()}</div>
-                        <div className="text-sm opacity-90">/month</div>
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-sm opacity-90">{service.description}</p>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    {/* Market Info */}
-                    <div className="flex items-center justify-between mb-4 text-sm text-gray-600">
-                      <div className="flex items-center gap-1">
-                        <TrendingUp className="w-4 h-4" />
-                        <span>{service.growthRate}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Globe2 className="w-4 h-4" />
-                        <span>{service.marketSize}</span>
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* CTA */}
-
-                    <Link
-                      to={service.link}
-                      onClick={() => handleServiceClick(service)}
-                      className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 group-hover:shadow-lg"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-
-        {/* Empty State */}
-        {filteredServices.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-16"
-          >
-            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>
-            <p className="text-gray-500">Try adjusting your search criteria or filters</p>
-          </motion.div>
-        )}
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mt-16"
-        >
-          {categories.map((category, index)               => (
-            <motion.button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              viewport={{ once: true }}
-              transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-}}
-            >
-              View All Services
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              Call +1 302 464 0950
-            </a>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
           </div>
         </motion.div>
       </div>

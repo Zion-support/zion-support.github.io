@@ -35,9 +35,4 @@ prerender().catch((err) => {
   process.exit(1);
 });
 }
-=======
-  console.log('Pre-rendered homepage to dist/index.html')}
-prerender().catch((err) => {
-  console.error('Error prerendering:', err);
-  process.exit(1)});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+

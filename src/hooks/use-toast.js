@@ -34,7 +34,6 @@ export const useToast = () => {
   const clearAll = useCallback(() => {
     setToasts([]);
   }, []);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   return {
     toast,
@@ -45,4 +44,4 @@ export const useToast = () => {
 };
 
 export default useToast;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

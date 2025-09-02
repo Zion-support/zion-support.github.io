@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback               } from 'react.ts';
-=======
+
 import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
 import { Button               } from './ui/button';
 import { Badge               } from './ui/badge';
@@ -23,20 +23,6 @@ import { User,
 
 interface UserPreference {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   name: string;
   value: string | boolean | number;
@@ -44,38 +30,12 @@ interface UserPreference {
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
-=======
+
 description: string;
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
 interface UserActivity {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   id: string;
   action: string;
@@ -83,58 +43,20 @@ interface UserActivity {
   duration?: number;
   success: boolean;
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
-=======
+
 category: 'navigation' | 'interaction' | 'search' | 'purchase';
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
 interface AccessibilityFeature {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   id: string;
   name: string;
   enabled: boolean;
   description: string;
   impact: 'high' | 'medium' | 'low';
-=======
+
 impact: 'high' | 'medium' | 'low';
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

@@ -3,7 +3,6 @@ import { Helmet               } from 'react-helmet-async.ts';
 
 interface EnhancedSEOProps extends React.PropsWithChildren<{}> {
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -202,7 +201,7 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
       document.head.appendChild(link);
     });
   }, [ogImage]);
-=======
+
   const metaDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 

@@ -36,7 +36,7 @@
     security: string[];
     compliance: string[];
   };
-=======
+
   competitors?: string[];
   marketSize?: string;
 import { ProductListing              } from '@/types/listings';
@@ -1271,5 +1271,5 @@ export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Updates": "Regular feature updates and security patches included",
   "Training": "Comprehensive onboarding and training included"
 };
-=======
+
 export default INNOVATIVE_SERVICES_2025;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 import { 
   Brain, Cloud, Shield, Zap, Rocket, Atom, Globe, Cpu, 
   Database, Lock, Smartphone, BarChart3, Code, Server, 
@@ -466,7 +466,7 @@ const ServicesPricingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -480,7 +480,7 @@ const ServicesPricingPage: React.FC = () => {
                 {category.name}
               </button>
             ))}
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
           </div>
         </div>
       </section>
@@ -702,7 +702,7 @@ const ServicesPricingPage: React.FC = () => {
         </div>
       )}
     </div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   );
 };
 

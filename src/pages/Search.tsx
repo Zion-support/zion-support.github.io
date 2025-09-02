@@ -4,7 +4,7 @@ import { SEO } from '@/components/SEO';
 import { Link, useSearchParams } from 'react-router-dom';
 import { 
   Search as SearchIcon, 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   Filter, 
   MapPin, 
   Briefcase, 
@@ -384,7 +384,7 @@ export default function Search() {
   useEffect(() => {
     if (searchQuery) {
       setSearchParams({ q: searchQuery });
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     }
   }, [searchQuery, setSearchParams]);
 
@@ -393,8 +393,7 @@ export default function Search() {
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
-    
+
     const matchesCategory = selectedCategory === 'All' || result.category === selectedCategory;
     
     const matchesRating = result.rating && result.rating >= filters.rating;
@@ -420,7 +419,6 @@ export default function Search() {
 
   const allTags = Array.from(new Set(searchResults.flatMap(result => result.tags)));
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Search is handled by useEffect
@@ -432,7 +430,7 @@ export default function Search() {
       rating: 0,
       tags: [],
       dateRange: 'all'
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     });
     setSortBy('relevance');
   };
@@ -480,7 +478,7 @@ export default function Search() {
                   <button
                     type="submit"
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-300"
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                   >
                     Search
                   </button>
@@ -566,7 +564,7 @@ export default function Search() {
                           }`}
                         >
                           {tag}
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                         </button>
                       ))}
                     </div>
@@ -608,7 +606,7 @@ export default function Search() {
                           viewMode === 'grid' 
                             ? 'bg-cyan-500 text-white' 
                             : 'text-gray-400 hover:text-white'
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                         }`}
                       >
                         <Grid className="w-5 h-5" />
@@ -619,7 +617,7 @@ export default function Search() {
                           viewMode === 'list' 
                             ? 'bg-cyan-500 text-white' 
                             : 'text-gray-400 hover:text-white'
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                         }`}
                       >
                         <List className="w-5 h-5" />
@@ -805,7 +803,7 @@ export default function Search() {
             </motion.div>
           </div>
         </section>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       </div>
     </>
   );

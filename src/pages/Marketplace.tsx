@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, ShoppingCart, Heart, Eye, ArrowRight, Tag, Users, Clock } from 'lucide-react';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 const Marketplace = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -324,4 +323,4 @@ const Marketplace = () => {
 };
 
 export default Marketplace;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

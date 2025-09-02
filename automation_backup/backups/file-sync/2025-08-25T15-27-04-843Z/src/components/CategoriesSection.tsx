@@ -244,9 +244,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
             View All Categories;
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300'                                                                                                                                                                              />;
-=======
-            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300'              />;
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec
           </Link>;
         </motion.div>;
       </div>;

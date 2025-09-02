@@ -31,7 +31,7 @@ import {
   ChevronDown, 
   ChevronRight,
   Home,
-=======
+
   Zap,
   Cloud,
   ShoppingCart,
@@ -48,7 +48,7 @@ import {
   Network,
   Palette,
   Video,
-=======
+
   PenTool,
   Atom,
   Server,
@@ -65,7 +65,6 @@ import {
  
 } from 'lucide-react.ts';
 
-=======
   Building2,
   TestTube,
   Newspaper,
@@ -82,38 +81,12 @@ import {
 
 interface SidebarItem {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -173,7 +146,6 @@ export function MainSidebar(...args: any[]): any {
   const location = useLocation();
 
   const toggleSection = (section: string) => {
-=======
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setExpandedSections(prev => 
@@ -262,7 +234,7 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
-=======
+
       name: 'Emerging Tech',
       href: '#',
       icon: Rocket,
@@ -380,7 +352,7 @@ export function MainSidebar(...args: any[]): any {
           icon: MessageCircle,
           description: 'Support Resources'
         },
-=======
+
       title: 'Resources',
       items: [
         {
@@ -613,7 +585,6 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
-=======
           />
         )}
       </div>

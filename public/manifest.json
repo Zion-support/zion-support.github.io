@@ -9,7 +9,7 @@
   "orientation": "portrait-primary",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -22,7 +22,7 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     }
   ],
   "shortcuts": [
@@ -30,7 +30,7 @@
       "name": "Services",
       "short_name": "Services",
       "description": "View our technology services",
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       "url": "/services",
       "icons": [
         {
@@ -40,7 +40,7 @@
       ]
     },
     {
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       "name": "Contact",
       "short_name": "Contact",
       "description": "Get in touch with us",
@@ -64,6 +64,6 @@
         }
       ]
     }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   ]
 }

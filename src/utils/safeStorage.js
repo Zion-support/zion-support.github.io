@@ -2,7 +2,6 @@
  * Safe storage utilities with error handling
  * Provides safe access to localStorage with fallbacks
  */
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 function safeConsoleError(message, error) {
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
@@ -113,4 +112,3 @@ export const safeStorage = {
 };
 
 export default safeStorage;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685

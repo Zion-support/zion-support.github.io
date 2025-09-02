@@ -41,8 +41,7 @@ export default function ContactForm() {
   return (
     <div>
       <h2 className = "text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-      
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
       {submitSuccess && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
@@ -156,6 +155,6 @@ export default function ContactForm() {
         </button>;
       </form>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   );
 }

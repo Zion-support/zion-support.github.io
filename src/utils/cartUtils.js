@@ -8,7 +8,6 @@ const CART_STORAGE_KEY = 'zion_cart';
 const DEFAULT_TAX_RATE = 0.08; // 8% tax rate
 const MAX_QUANTITY = 99;
 const MIN_QUANTITY = 1;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 /**
  * Validate cart item structure
@@ -44,7 +43,7 @@ export const validateCartItem = (item) => {
   }
 
   return true;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 };
 
 /**
@@ -57,7 +56,7 @@ export const addToCart = (cart, newItem) => {
   if (!validateCartItem(newItem)) {
     console.warn('Invalid cart item:', newItem);
     return cart;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   }
 
   const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
@@ -85,7 +84,7 @@ export const addToCart = (cart, newItem) => {
   } else {
     // Add new item
     return [...cart, { ...newItem }];
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   }
 };
 
@@ -109,7 +108,7 @@ export const removeFromCart = (cart, itemId) => {
 export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
   if (newQuantity < MIN_QUANTITY) {
     return removeFromCart(cart, itemId);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   }
 
   if (newQuantity > MAX_QUANTITY) {
@@ -130,7 +129,7 @@ export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
  */
 export const clearCart = (cart) => {
   return [];
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 };
 
 /**
@@ -154,7 +153,6 @@ export const getCartItemCount = (cart) => {
   
   return cart.reduce((total, item) => total + item.quantity, 0);
 };
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 /**
  * Get unique item count in cart
@@ -206,7 +204,6 @@ export const calculateCartTotal = (cart, taxRate = DEFAULT_TAX_RATE) => {
   const tax = calculateTax(subtotal, taxRate);
   const total = subtotal + tax;
   const itemCount = getCartItemCount(cart);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   return {
     subtotal,
@@ -446,5 +443,5 @@ export default {
   mergeCartItems,
   getCartStats,
   sortCartItems
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 };
