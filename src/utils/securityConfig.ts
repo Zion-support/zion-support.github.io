@@ -1,1 +1,1 @@
-export const securityConfig = {
+<<<<<<< HEAD =======
