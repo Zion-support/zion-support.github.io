@@ -1,1 +1,0 @@
-import React, { useEffect, useRef } from 'react'; export const FuturisticAnimatedBackground: React.FC = () => {; const canvasRef = useRef<HTMLCanvasElement>(null); useEffect(() => { const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext('2d'); if (!ctx) return;

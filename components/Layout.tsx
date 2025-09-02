@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,7 +7,6 @@ interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-  showNavigation?: boolean;
 }
 
 const Layout: React.FC<LayoutProps> = ({ 
@@ -16,17 +15,6 @@ const Layout: React.FC<LayoutProps> = ({
   description = 'Leading technology solutions for modern businesses',
   showNavigation = true
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navigationItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/products', label: 'Products' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
-  ];
-
   return (
     <>
       <Head>

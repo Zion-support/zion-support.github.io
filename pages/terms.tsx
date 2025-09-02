@@ -1,221 +1,330 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { FileText, Scale, Shield, AlertTriangle, Users, Gavel } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+import { 
+  FileText,
+  Scale,
+  AlertTriangle,
+  CheckCircle,
+  Calendar,
+  Globe,
+  Mail,
+  Phone,
+  ArrowRight,
+  Shield,
+  Users,
+  DollarSign,
+  Clock,
+  BookOpen
+} from 'lucide-react';
 
-const Terms: NextPage = () => {
+const Terms: React.FC = () => {
+  const lastUpdated = "2025-01-15";
+
+  const sections = [
+    {
+      id: "acceptance-of-terms",
+      title: "Acceptance of Terms",
+      icon: CheckCircle,
+      content: [
+        "By accessing and using Zion Tech Group services, you accept and agree to be bound by these Terms of Service",
+        "If you do not agree to these terms, you may not access or use our services",
+        "These terms apply to all visitors, users, and others who access or use our services",
+        "We reserve the right to modify these terms at any time without prior notice"
+      ]
+    },
+    {
+      id: "service-description",
+      title: "Service Description",
+      icon: BookOpen,
+      content: [
+        "Zion Tech Group provides AI-powered solutions, consulting services, and technology products",
+        "Our services include but are not limited to AI development, cloud migration, and cybersecurity solutions",
+        "We reserve the right to modify, suspend, or discontinue any part of our services at any time",
+        "Service availability may vary based on geographic location and technical requirements"
+      ]
+    },
+    {
+      id: "user-responsibilities",
+      title: "User Responsibilities",
+      icon: Users,
+      content: [
+        "Provide accurate and complete information when using our services",
+        "Maintain the confidentiality of your account credentials",
+        "Use our services in compliance with applicable laws and regulations",
+        "Not engage in any activities that may harm or disrupt our services"
+      ]
+    },
+    {
+      id: "payment-terms",
+      title: "Payment Terms",
+      icon: DollarSign,
+      content: [
+        "Payment terms are specified in individual service agreements",
+        "All fees are non-refundable unless otherwise specified",
+        "We reserve the right to change pricing with 30 days notice",
+        "Late payments may result in service suspension or termination"
+      ]
+    },
+    {
+      id: "intellectual-property",
+      title: "Intellectual Property",
+      icon: Shield,
+      content: [
+        "All content, trademarks, and intellectual property belong to Zion Tech Group",
+        "Users retain ownership of their data and content",
+        "We grant limited license to use our services as specified in these terms",
+        "Unauthorized use of our intellectual property is strictly prohibited"
+      ]
+    },
+    {
+      id: "limitation-of-liability",
+      title: "Limitation of Liability",
+      icon: AlertTriangle,
+      content: [
+        "Our services are provided 'as is' without warranties of any kind",
+        "We are not liable for any indirect, incidental, or consequential damages",
+        "Our total liability is limited to the amount paid for the specific service",
+        "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
+      ]
+    }
+  ];
+
+  const contactInfo = {
+    email: "legal@ziontechgroup.com",
+    phone: "+1 (555) 123-4567",
+    address: "123 Technology Drive, San Francisco, CA 94105"
+  };
+
   return (
-    <MainLayout
-      title="Terms of Service - Zion Tech Group"
-      description="Read our terms of service and understand the conditions for using Zion Tech Group's services."
-    >
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Terms of Service - Zion Tech Group" 
+        description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group's AI services and solutions."
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Terms of Service</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Please read these terms carefully before using our services.
-          </p>
-          <div className="text-sm text-gray-300">
-            Last updated: January 27, 2024
-          </div>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge variant="secondary" className="mb-4">
+              <Scale className="w-4 h-4 mr-2" />
+              Legal Terms
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Terms of Service
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              These terms and conditions govern your use of Zion Tech Group's services and solutions.
+            </p>
+            <div className="flex items-center justify-center text-gray-400">
+              <Calendar className="w-4 h-4 mr-2" />
+              Last updated: {new Date(lastUpdated).toLocaleDateString()}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Quick Navigation */}
+      <section className="py-10 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4">Quick Navigation</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {sections.map((section, index) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="px-4 py-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  {section.title}
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Terms Content */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="prose prose-lg max-w-none">
-            
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-12"
+          >
             {/* Introduction */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <FileText className="w-8 h-8 text-blue-600 mr-3" />
-                Agreement to Terms
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                These Terms of Service ("Terms") govern your use of the Zion Tech Group website located at 
-                https://ziontechgroup.com and our services (collectively, the "Service") operated by Zion Tech Group 
-                ("us," "we," or "our").
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any 
-                part of these terms, then you may not access the Service.
-              </p>
-            </div>
+            <Card className="p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-gray-300 mb-4">
+                  Welcome to Zion Tech Group. These Terms of Service ("Terms") govern your use of our website, 
+                  services, and products. By accessing or using our services, you agree to be bound by these Terms.
+                </p>
+                <p className="text-gray-300 mb-4">
+                  Please read these Terms carefully before using our services. If you disagree with any part of 
+                  these terms, then you may not access our services.
+                </p>
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+                  <div className="flex items-start">
+                    <AlertTriangle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-blue-400 font-semibold mb-2">Important Notice</h4>
+                      <p className="text-gray-300 text-sm">
+                        These Terms may be updated from time to time. Continued use of our services after 
+                        changes constitutes acceptance of the new Terms.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
 
-            {/* Acceptance of Terms */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Scale className="w-8 h-8 text-blue-600 mr-3" />
-                Acceptance of Terms
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                By using our Service, you represent and warrant that:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>You are at least 18 years old or have parental consent</li>
-                <li>You have the legal capacity to enter into these Terms</li>
-                <li>You will comply with all applicable laws and regulations</li>
-                <li>You will not use the Service for any unlawful purpose</li>
-              </ul>
-            </div>
+            {/* Terms Sections */}
+            {sections.map((section, index) => (
+              <motion.div
+                key={section.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+              >
+                <Card className="p-8" id={section.id}>
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mr-4">
+                      <section.icon className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-white">{section.title}</h2>
+                  </div>
+                  
+                  <ul className="space-y-3">
+                    {section.content.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              </motion.div>
+            ))}
 
-            {/* Use of Service */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Users className="w-8 h-8 text-blue-600 mr-3" />
-                Use of Service
-              </h2>
-              
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Permitted Uses</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                You may use our Service for lawful purposes only. You agree to use the Service in accordance with 
-                these Terms and all applicable laws and regulations.
-              </p>
-
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Prohibited Uses</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                You may not use our Service:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>For any unlawful purpose or to solicit others to perform unlawful acts</li>
-                <li>To violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances</li>
-                <li>To infringe upon or violate our intellectual property rights or the intellectual property rights of others</li>
-                <li>To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate</li>
-                <li>To submit false or misleading information</li>
-                <li>To upload or transmit viruses or any other type of malicious code</li>
-                <li>To spam, phish, pharm, pretext, spider, crawl, or scrape</li>
-                <li>For any obscene or immoral purpose</li>
-                <li>To interfere with or circumvent the security features of the Service</li>
-              </ul>
-            </div>
-
-            {/* Intellectual Property */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Shield className="w-8 h-8 text-blue-600 mr-3" />
-                Intellectual Property Rights
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                The Service and its original content, features, and functionality are and will remain the exclusive 
-                property of Zion Tech Group and its licensors. The Service is protected by copyright, trademark, 
-                and other laws. Our trademarks and trade dress may not be used in connection with any product or 
-                service without our prior written consent.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                You retain ownership of any content you submit to the Service, but grant us a license to use, 
-                modify, and distribute such content in connection with the Service.
-              </p>
-            </div>
-
-            {/* User Accounts */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">User Accounts</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                When you create an account with us, you must provide information that is accurate, complete, 
-                and current at all times. You are responsible for safeguarding the password and for all activities 
-                that occur under your account.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                You agree to notify us immediately of any unauthorized use of your account or any other breach 
-                of security. We will not be liable for any losses caused by any unauthorized use of your account.
-              </p>
-            </div>
-
-            {/* Privacy Policy */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Your privacy is important to us. Please review our Privacy Policy, which also governs your use 
-                of the Service, to understand our practices.
-              </p>
-            </div>
-
-            {/* Service Availability */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Availability</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                We strive to provide continuous service availability, but we do not guarantee that the Service 
-                will be available at all times. We may experience hardware, software, or other problems or need 
-                to perform maintenance related to the Service, resulting in interruptions, delays, or errors.
-              </p>
-            </div>
-
-            {/* Limitation of Liability */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <AlertTriangle className="w-8 h-8 text-blue-600 mr-3" />
-                Limitation of Liability
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, 
-                or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, 
-                including without limitation, loss of profits, data, use, goodwill, or other intangible losses, 
-                resulting from your use of the Service.
-              </p>
-            </div>
-
-            {/* Disclaimer */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Disclaimer</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                The information on this Service is provided on an "as is" basis. To the fullest extent permitted 
-                by law, this Company:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>Excludes all representations and warranties relating to this Service and its contents</li>
-                <li>Excludes all liability for damages arising out of or in connection with your use of this Service</li>
-              </ul>
-            </div>
+            {/* Termination */}
+            <Card className="p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Termination</h2>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-gray-300 mb-4">
+                  We may terminate or suspend your access to our services immediately, without prior notice or 
+                  liability, for any reason whatsoever, including without limitation if you breach the Terms.
+                </p>
+                <p className="text-gray-300 mb-4">
+                  Upon termination, your right to use the services will cease immediately. If you wish to 
+                  terminate your account, you may simply discontinue using the services.
+                </p>
+                <p className="text-gray-300">
+                  All provisions of the Terms which by their nature should survive termination shall survive 
+                  termination, including, without limitation, ownership provisions, warranty disclaimers, 
+                  indemnity, and limitations of liability.
+                </p>
+              </div>
+            </Card>
 
             {/* Governing Law */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Gavel className="w-8 h-8 text-blue-600 mr-3" />
-                Governing Law
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                These Terms shall be interpreted and governed by the laws of the State of Delaware, United States, 
-                without regard to its conflict of law provisions. Our failure to enforce any right or provision 
-                of these Terms will not be considered a waiver of those rights.
-              </p>
-            </div>
-
-            {/* Changes to Terms */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to Terms</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
-                If a revision is material, we will try to provide at least 30 days notice prior to any new 
-                terms taking effect.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                By continuing to access or use our Service after those revisions become effective, you agree 
-                to be bound by the revised terms.
-              </p>
-            </div>
+            <Card className="p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Governing Law</h2>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-gray-300 mb-4">
+                  These Terms shall be interpreted and governed by the laws of the State of California, 
+                  United States, without regard to its conflict of law provisions.
+                </p>
+                <p className="text-gray-300 mb-4">
+                  Our failure to enforce any right or provision of these Terms will not be considered a 
+                  waiver of those rights.
+                </p>
+                <p className="text-gray-300">
+                  If any provision of these Terms is held to be invalid or unenforceable by a court, 
+                  the remaining provisions of these Terms will remain in effect.
+                </p>
+              </div>
+            </Card>
 
             {/* Contact Information */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
+            <Card className="p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
+              <p className="text-gray-300 mb-6">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Zion Tech Group</strong></p>
-                <p className="text-gray-700 mb-2">364 E Main St STE 1008</p>
-                <p className="text-gray-700 mb-2">Middletown, DE 19709</p>
-                <p className="text-gray-700 mb-2">Phone: +1 302 464 0950</p>
-                <p className="text-gray-700 mb-2">Email: legal@ziontechgroup.com</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Email</h3>
+                  <p className="text-gray-300 text-sm">{contactInfo.email}</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-3">
+                    <Phone className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Phone</h3>
+                  <p className="text-gray-300 text-sm">{contactInfo.phone}</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-3">
+                    <Globe className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Address</h3>
+                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
+                </div>
               </div>
-            </div>
-          </div>
+            </Card>
+
+            {/* Changes to Terms */}
+            <Card className="p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Changes to Terms</h2>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-gray-300 mb-4">
+                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
+                  If a revision is material, we will try to provide at least 30 days notice prior to any new 
+                  terms taking effect.
+                </p>
+                <p className="text-gray-300 mb-4">
+                  What constitutes a material change will be determined at our sole discretion. By continuing 
+                  to access or use our services after those revisions become effective, you agree to be bound 
+                  by the revised terms.
+                </p>
+                <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
+                  <div className="flex items-start">
+                    <Clock className="w-5 h-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-yellow-400 font-semibold mb-2">Stay Updated</h4>
+                      <p className="text-gray-300 text-sm">
+                        We recommend that you review these Terms periodically for any changes. 
+                        Changes to these Terms are effective when they are posted on this page.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
         </div>
       </section>
-    </MainLayout>
+    </div>
   );
 };
 

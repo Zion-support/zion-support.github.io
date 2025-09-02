@@ -1,1 +1,0 @@
-export const cleanConsoleStatements = (code: string): string => { if (process.env.NODE_ENV === 'production') { return code .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, '') .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g, '') .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\
