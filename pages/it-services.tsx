@@ -3,7 +3,8 @@ import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud,
 
 import Head from 'next/head';
 import Link from 'next/link';
-import PageTransition from '../src/components/PageTransition';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
   const description =
@@ -592,13 +593,15 @@ export default function ITServices() {
     },
   ];
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https: //ziontechgroup.com/it-services" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
+
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm:py-32">
@@ -854,6 +857,8 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-    </PageTransition>
+      
+      <Footer />
+    </>
   );
 }
