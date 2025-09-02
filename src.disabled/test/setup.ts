@@ -1,8 +1,13 @@
+<<<<<<< HEAD:src.disabled/test/setup.ts
 import
   '@testing-library/jest-dom'';'// Mock window.matchMedia
 Object.defineProperty(window,
   'matchMedia', {
   '  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,;
+=======
+import '@testing-library/jest-dom'''// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {'  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/test/setup.ts
     onchange: null, addListener: vi.fn(), // deprecated,;
   removeListener: vi.fn(), // deprecated,
   addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn(), })), })

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 React from
   'react';
 import Header from
   './Header';'import Footer from
   './Footer';''type LayoutProps = {children: React.ReactNode;
+=======
+import React from 'react'
+import  Header from './Header''import Footer from './Footer'''type LayoutProps = {children: React.ReactNode;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 };
 
 export default function Layout({ children }: LayoutProps) {

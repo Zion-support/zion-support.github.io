@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from
   'react';
 import type { NextPage } from
@@ -8,10 +9,18 @@ import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } fr
   'lucide-react';
 import Link from
   'next/link';
+=======
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../../components/layout/MainLayout'
+import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const CustomDevelopment: NextPage = () => {
   const developmentServices = [
     {
+<<<<<<< HEAD
       icon: Code,
       title:,
   Web Application Development',
@@ -76,11 +85,36 @@ const CustomDevelopment: NextPage = () => {
   'Authentication systems',
   'Data validation',
   'Security audits']
+=======
+      icon: Code, title: 'Web Application Development',
+      description: 'Custom web applications built with modern frameworks and technologies.', features: ['React, Vue.js, AngularNode.js, Python, PHPResponsive design', 'API integration']
+    }, {
+      icon: Smartphone,
+      title: 'Mobile App Development', description: 'Native and cross-platform mobile applications for iOS and Android.',
+      features: ['React Native, FlutterSwift, KotlinApp Store optimization', 'Push notifications']
+    }, {
+      icon: Globe,
+      title: 'E-commerce Solutions', description: 'Complete e-commerce platforms with payment integration and inventory management.',
+      features: ['Shopping cart functionalityPayment gateway integrationInventory management', 'Order tracking']
+    }, {
+      icon: Database,
+      title: 'Database Design & Management', description: 'Custom database solutions optimized for performance and scalability.',
+      features: ['MySQL, PostgreSQL, MongoDBData modelingPerformance optimization', 'Backup & recovery']
+    }, {
+      icon: Zap,
+      title: 'API Development', description: 'RESTful and GraphQL APIs for seamless integration between systems.',
+      features: ['RESTful APIsGraphQL endpointsAuthentication & authorization', 'Rate limiting']
+    }, {
+      icon: Shield,
+      title: 'Security Implementation', description: 'Comprehensive security measures to protect your applications and data.',
+      features: ['SSL/TLS encryptionAuthentication systemsData validation', 'Security audits']
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const developmentProcess = [
     {
+<<<<<<< HEAD
       step: '01,
       title:,
   Discovery & Planning',
@@ -118,8 +152,29 @@ const CustomDevelopment: NextPage = () => {
       title: 'Maintenance & Support,
       description:,
   Ongoing support and maintenance to keep your solution running smoothly.'
+=======
+      step: '01', title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project roadmap.'
+    }, {
+      step: '02',
+      title: 'Design & Architecture', description: 'Our team designs the system architecture and user interface.'
+    },
+    {
+      step: '03', title: 'Development',
+      description: 'We build your solution using agile methodologies and best practices.'
+    }, {
+      step: '04',
+      title: 'Testing & Quality Assurance', description: 'Comprehensive testing ensures your solution works flawlessly.'
+    },
+    {
+      step: '05', title: 'Deployment & Launch',
+      description: 'We deploy your solution and provide launch support.'
+    }, {
+      step: '06',
+      title: 'Maintenance & Support', description: 'Ongoing support and maintenance to keep your solution running smoothly.'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const technologies = [
     { name: 'React, category:,
@@ -158,7 +213,7 @@ const CustomDevelopment: NextPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Custom Development Solutions</h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">Custom Development Solutions</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Transform your ideas into powerful digital solutions with our expert development team. 
               We build scalable, secure, and innovative applications tailored to your business needs.
@@ -176,9 +231,9 @@ const CustomDevelopment: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {developmentServices.map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
                   <service.icon className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -206,9 +261,9 @@ const CustomDevelopment: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {developmentProcess.map((process, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-white rounded-lg p-6 text-center hover: shadow-lg transition-shadow">
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                     {process.step}
                   </div>
@@ -230,9 +285,9 @@ const CustomDevelopment: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
               {technologies.map((tech, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-shadow">
+                <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover: shadow-md transition-shadow">
                   <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
                   <span className="text-sm text-gray-600">{tech.category}</span>
                 </div>
@@ -251,7 +306,7 @@ const CustomDevelopment: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="text-center">
                 <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
@@ -278,9 +333,9 @@ const CustomDevelopment: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Project?</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your custom development needs and create a solution that drives your business forward.
+              Let&aposs discuss your custom development needs and create a solution that drives your business forward.'
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"

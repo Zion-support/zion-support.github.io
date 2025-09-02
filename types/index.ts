@@ -246,10 +246,14 @@ export interface BaseComponentProps {
 }
 
 export interface ButtonProps extends BaseComponentProps {
+<<<<<<< HEAD
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;
+=======
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }

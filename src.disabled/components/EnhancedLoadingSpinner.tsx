@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/components/EnhancedLoadingSpinner.tsx
 import React from,
   react''import { motion } from
   'framer-motion'';'interface EnhancedLoadingSpinnerProps {
@@ -21,6 +22,17 @@ export default function EnhancedLoadingSpinner({
   text-sm', md: 'text-base,
 ,
   lg: 'text-lg'  }'
+=======
+import React from 'react''import { motion } from 'framer-motion'''interface EnhancedLoadingSpinnerProps {'
+  size?: 'sm' | 'md' | 'lg''  text?: string'  className?: string
+}
+
+export default function EnhancedLoadingSpinner({ 
+  size = 'md', text = 'Loading...','  className = '''}: EnhancedLoadingSpinnerProps) {'  const sizeClasses = {'
+    sm: 'w-8 h-8', md: 'w-12 h-12','    lg: 'w-16 h-16''  }''
+  const textSizes = {
+    sm: 'text-sm', md: 'text-base','    lg: 'text-lg''  }''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/EnhancedLoadingSpinner.tsx
   return (
     <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>`      <motion.div
         className={`${sizeClasses[size]} relative`}`        animate={{ rotate: 360 }}

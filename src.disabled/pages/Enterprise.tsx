@@ -14,7 +14,7 @@ const Enterprise: React.FC = () => {
         <li>Zero Trust cybersecurity and compliance</li>
         <li>Scalable infrastructure and observability</li>
       </ul>
-      <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover:bg-blue-700">
+      <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">
         Talk to an expert
       </a>
     </div>

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
+=======
+import React from 'react'
+import  Link from 'next/link''import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'''const EnhancedFooter: React.FC = () => {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -20,6 +25,7 @@ const EnhancedFooter: React.FC = () => {
               Leading technology solutions provider helping businesses transform their digital presence 
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
+<<<<<<< HEAD
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
@@ -45,27 +51,85 @@ const EnhancedFooter: React.FC = () => {
               <li><Link href="/services/it-services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
               <li><Link href="/services/cloud-services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
+=======
+<div className="flex space-x-4">"              <a href="https: //linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Linkedin className="w-5 h-5" />"              </a>"              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Twitter className="w-5 h-5" />"              </a>"              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Github className="w-5 h-5" />"              </a>"              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Facebook className="w-5 h-5" />"              </a>"            </div></div>"
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>"            <ul className="space-y-2">"              <li>"                <Link href="/services/ai-development" className="text-gray-300 hover:text-white transition-colors">"                  AI Development"                </Link>"
+              </li>
+              <li>
+                <Link href="/services/cloud-services" className="text-gray-300 hover:text-white transition-colors">"                  Cloud Services"                </Link>
+              </li>
+              <li>
+                <Link href="/services/web-development" className="text-gray-300 hover:text-white transition-colors">"                  Web Development"                </Link>
+              </li>
+              <li>
+                <Link href="/services/mobile-development" className="text-gray-300 hover:text-white transition-colors">"                  Mobile Development"                </Link>
+              </li>
+              <li>
+                <Link href="/services/blockchain-solutions" className="text-gray-300 hover:text-white transition-colors">"                  Blockchain Solutions"                </Link>
+              </li>
+              <li>
+                <Link href="/services/iot-platforms" className="text-gray-300 hover:text-white transition-colors">"                  IoT Platforms"                </Link>
+              </li>
+              <li>
+                <Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">"                  Cybersecurity"                </Link></li>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </ul>
           </div>
 
           {/* Solutions */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li><Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
               <li><Link href="/solutions/startups" className="text-gray-300 hover:text-white transition-colors">Startups</Link></li>
               <li><Link href="/solutions/small-business" className="text-gray-300 hover:text-white transition-colors">Small Business</Link></li>
               <li><Link href="/solutions/digital-transformation" className="text-gray-300 hover:text-white transition-colors">Digital Transformation</Link></li>
+=======
+<h3 className="text-lg font-semibold mb-4">Solutions</h3>"            <ul className="space-y-2">"              <li>"                <Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">"                  Enterprise Solutions"                </Link>"
+              </li>
+              <li>
+                <Link href="/solutions/small-business" className="text-gray-300 hover:text-white transition-colors">"                  Small Business"                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/startups" className="text-gray-300 hover:text-white transition-colors">"                  Startups"                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/healthcare" className="text-gray-300 hover:text-white transition-colors">"                  Healthcare"                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/finance" className="text-gray-300 hover:text-white transition-colors">"                  Finance"                </Link></li>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
                 <span className="text-gray-300">contact@ziontechgroup.com</span>
+=======
+<h3 className="text-lg font-semibold mb-4">Company</h3>"            <ul className="space-y-2 mb-6">"              <li>"                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">"                  About Us"                </Link>"
+              </li>
+              <li>
+                <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">"                  Careers"                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">"                  Blog"                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-gray-300 hover:text-white transition-colors">"                  Products"                </Link>
+              </li>
+            </ul>
+            
+<h3 className="text-lg font-semibold mb-4">Contact</h3>"            <div className="space-y-3">"              <div className="flex items-center space-x-2">"                <Mail className="w-4 h-4 text-blue-400" />"                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">"                  info@ziontechgroup.com"                </a>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-blue-400" />
@@ -79,6 +143,7 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -90,6 +155,19 @@ const EnhancedFooter: React.FC = () => {
               <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link>
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</Link>
             </div>
+=======
+      {/* Newsletter Section */}
+<div className="border-t border-gray-700 py-8">"        <div className="container mx-auto px-4">"          <div className="text-center">"            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>"            <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest tech insights and updates.</p>"            <div className="flex max-w-md mx-auto">"              <input"                type="email""                placeholder="Enter your email""                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500""              />"              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors">"                Subscribe"              </button></div>"
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Footer */}
+<div className="border-t border-gray-700 py-6">"        <div className="container mx-auto px-4">"          <div className="flex flex-col md:flex-row justify-between items-center">"            <p className="text-gray-300 text-sm">"              &copy; 2024 Zion Tech Group. All rights reserved."            </p>"
+            <div className="flex space-x-6 mt-4 md: mt-0">"              <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">"                Privacy Policy"              </Link>"
+              <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">"                Terms of Service"              </Link>
+              <Link href="/sitemap" className="text-gray-300 hover:text-white text-sm transition-colors">"                Sitemap"              </Link></div>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
           </div>
         </div>
       </div>

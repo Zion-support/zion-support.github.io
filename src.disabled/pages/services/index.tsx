@@ -1,7 +1,12 @@
+<<<<<<< HEAD:src.disabled/pages/services/index.tsx
 import React from,
   react';
 import { Link } from
   'react-router-dom';
+=======
+import React from 'react'
+import { Link } from 'react-router-dom'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/services/index.tsx
 
 const ServicesIndex: React.FC = () => {
   const links = [
@@ -23,9 +28,9 @@ const ServicesIndex: React.FC = () => {
     <div className="max-w-5xl mx-auto px-4 py-12 text-white">
       <h1 className="text-4xl font-bold mb-6">Services</h1>
       <p className="text-gray-300 mb-6">Explore our core offerings.</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm: grid-cols-2 gap-4">
         {links.map((l) => (
-          <Link key={l.to} to={l.to} className="p-4 rounded border border-white/10 hover:bg-white/5">
+          <Link key={l.to} to={l.to} className="p-4 rounded border border-white/10 hover: bg-white/5">
             {l.label}
           </Link>
         ))}

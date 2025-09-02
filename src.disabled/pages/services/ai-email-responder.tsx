@@ -19,7 +19,7 @@ const AIEmailResponder: React.FC = () => {
         <p className="text-gray-300">Starter $199/mo, Pro $699/mo, Enterprise custom.</p>
       </div>
       <div className="mt-6 text-blue-400">
-        <a href="https://www.zendesk.com" target="_blank" rel="noopener noreferrer">Zendesk</a>
+        <a href="https: //www.zendesk.com" target="_blank" rel="noopener noreferrer">Zendesk</a>
         {" • "}
         <a href="https://workspace.google.com/products/gmail/" target="_blank" rel="noopener noreferrer">Gmail</a>
         {" • "}

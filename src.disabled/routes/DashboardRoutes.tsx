@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/routes/DashboardRoutes.tsx
 { Route, Routes } from
   'react-router-dom';
 import { Suspense, lazy } from
@@ -23,6 +24,12 @@ const ProjectMilestones = lazy(() => import(
 
 const ProjectRoom = lazy(() => import(
   '../pages/ProjectRoom'));''const DashboardRoutes: React.FC = () => {
+=======
+import { Route, Routes } from 'react-router-dom'
+import  { Suspense, lazy } from 'react''import { ProtectedRoute } from '../components/ProtectedRoute'
+import  LoadingSpinner from '../components/LoadingSpinner'''// Lazy load dashboard pages'
+const Dashboard = lazy(() => import('../pages/Dashboard'))'const ClientDashboard = lazy(() => import('../pages/ClientDashboard'))'const TalentDashboard = lazy(() => import('../pages/TalentDashboard'))'const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'))'const Analytics = lazy(() => import('../pages/Analytics'))'const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'))'const ProjectDetails = lazy(() => import('../pages/ProjectDetails'))'const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))''const DashboardRoutes: React.FC = () => {'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/routes/DashboardRoutes.tsx
   return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
         <Route path="/dashboard" element={"          <ProtectedRoute>"            <Dashboard />

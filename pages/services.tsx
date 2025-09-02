@@ -16,7 +16,7 @@ export default function Services() {
 	return (
 		<PageTransition>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<div className="flex items-center justify-center mb-4">
@@ -34,7 +34,7 @@ export default function Services() {
 			</section>
 
 			{/* Services Grid */}
-			<section className="py-24 sm:py-32">
+			<section className="py-24 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="grid gap-8 lg:grid-cols-2">
 						{/* AI Autonomous Systems */}
@@ -124,7 +124,7 @@ export default function Services() {
 								</div>
 								<Link
 									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
+									className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
 									aria-label="Get started with cloud services"
 								>
 									Get started with Cloud
@@ -423,7 +423,7 @@ export default function Services() {
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.
 						</p>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+					<div className="grid grid-cols-1 md: grid-cols-4 gap-8">
 						<div className="text-center group">
 							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
 								<span className="text-2xl font-bold text-blue-600">1</span>
@@ -464,12 +464,12 @@ export default function Services() {
 							Ready to get started?
 						</h2>
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Let's discuss your project requirements and how we can help you achieve your goals.
+							Let&aposs discuss your project requirements and how we can help you achieve your goals.'
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
 								to="/contact"
-								className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"
+								className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105"
 								aria-label="Contact us to get started"
 							>
 								Contact Us

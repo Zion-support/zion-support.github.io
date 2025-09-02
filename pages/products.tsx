@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from,
   react';
 import type { NextPage } from
@@ -8,10 +9,18 @@ import Link from
   'next/link';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from
   'lucide-react';
+=======
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import Link from 'next/link'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from 'lucide-react'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Products: NextPage = () => {
   const products = [
     {
+<<<<<<< HEAD
       title:
   'AI Business Intelligence Platform,
       description:,
@@ -126,10 +135,65 @@ const Products: NextPage = () => {
       users:,
   100+',
       image: '/products/iot-edge-platform.jpg
+=======
+      title: 'AI Business Intelligence Platform', description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
+      features: [
+        'Real-time data visualizationPredictive analyticsCustom dashboard creation', 'Automated reporting',
+        'Multi-source data integration'
+      ], pricing: 'Starting at $299/month',
+      category: 'AI & Analytics', rating: 4.9,
+      users: '500+', image: '/products/ai-bi-platform.jpg'
+    },
+    {
+      title: 'Cloud Migration Suite', description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
+      features: [
+        'Automated migration planningZero-downtime migrationCost optimization analysis', 'Security compliance checks',
+        '24/7 migration support'
+      ], pricing: 'Starting at $199/month',
+      category: 'Cloud Computing', rating: 4.8,
+      users: '300+', image: '/products/cloud-migration.jpg'
+    },
+    {
+      title: 'Cybersecurity Monitoring System', description: 'Protect your business with our advanced threat detection and response platform.',
+      features: [
+        'Real-time threat monitoringAutomated incident responseCompliance reporting', 'Security awareness training',
+        '24/7 SOC support'
+      ], pricing: 'Starting at $399/month',
+      category: 'Cybersecurity', rating: 4.9,
+      users: '200+', image: '/products/cybersecurity-monitoring.jpg'
+    },
+    {
+      title: 'Micro SaaS Development Kit', description: 'Build and launch your own micro SaaS products with our comprehensive development framework.',
+      features: [
+        'Pre-built templatesPayment integrationUser management system', 'Analytics dashboard',
+        'Deployment automation'
+      ], pricing: 'Starting at $149/month',
+      category: 'SaaS Development', rating: 4.7,
+      users: '150+', image: '/products/micro-saas-kit.jpg'
+    },
+    {
+      title: 'Digital Transformation Hub', description: 'Accelerate your digital transformation with our integrated suite of modernization tools.',
+      features: [
+        'Process automationLegacy system integrationWorkflow optimization', 'Change management tools',
+        'ROI tracking'
+      ], pricing: 'Starting at $249/month',
+      category: 'Digital Transformation', rating: 4.8,
+      users: '400+', image: '/products/digital-transformation.jpg'
+    },
+    {
+      title: 'IoT Edge Computing Platform', description: 'Connect and manage your IoT devices with our powerful edge computing solution.',
+      features: [
+        'Device managementEdge analyticsReal-time processing', 'Data synchronization',
+        'Remote monitoring'
+      ], pricing: 'Starting at $179/month',
+      category: 'IoT & Edge Computing', rating: 4.6,
+      users: '100+', image: '/products/iot-edge-platform.jpg'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const categories = [
+<<<<<<< HEAD
   'All Products',
   'AI & Analytics',
   'Cloud Computing',
@@ -138,6 +202,11 @@ const Products: NextPage = () => {
   'Digital Transformation',
   'IoT & Edge Computing'
   ];
+=======
+    'All ProductsAI & AnalyticsCloud Computing', 'CybersecuritySaaS DevelopmentDigital Transformation',
+    'IoT & Edge Computing'
+  ]
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
   return (
     <MainLayout
@@ -147,7 +216,7 @@ const Products: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Products</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -176,9 +245,9 @@ const Products: NextPage = () => {
           </div>
 
           {/* Products Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
@@ -223,9 +292,14 @@ const Products: NextPage = () => {
                   
                   <div className="flex gap-3">
                     <Link 
+<<<<<<< HEAD
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g,
   '-')}`}
                       className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
+=======
+                      href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                     >
                       Learn More
                     </Link>
@@ -252,7 +326,7 @@ const Products: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-blue-600" />

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -37,134 +38,104 @@ import {
   Search
 } from
   'lucide-react';
+=======
+import React from 'react'
+import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
+import { Button } from '../components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Badge } from '../components/ui/Badge'
+import { 
+  TrendingUp, Users,
+  DollarSign, Clock,
+  Target, CheckCircle,
+  ArrowRight, Star,
+  Award, BarChart3,
+  Brain, Shield,
+  Cloud, Database,
+  Network, Zap,
+  Globe, Phone,
+  Mail, Eye,
+  Download, Share2,
+  Filter, Search
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const CaseStudies: React.FC = () => {
   const caseStudies = [
     {
-      id: 1,
-      title: "AI-Powered Supply Chain Optimization for Global Manufacturing",
-      company: "TechCorp Industries",
-      industry: "Manufacturing",
-      challenge: "Inefficient supply chain operations leading to 30% inventory waste and delayed deliveries",
-      solution: "Implemented AI-driven demand forecasting and autonomous logistics optimization",
+      id: 1, title: "AI-Powered Supply Chain Optimization for Global Manufacturing",
+      company: "TechCorp Industries", industry: "Manufacturing",
+      challenge: "Inefficient supply chain operations leading to 30% inventory waste and delayed deliveries", solution: "Implemented AI-driven demand forecasting and autonomous logistics optimization",
       results: [
-        "40% reduction in inventory costs",
-        "60% improvement in delivery times",
-        "25% increase in customer satisfaction",
-        "$2.5M annual cost savings"
-      ],
-      duration: "6 months",
-      teamSize: "12 experts",
-      technologies: ["Machine Learning", "IoT", "Predictive Analytics", "Cloud Computing"],
-      image: "/api/placeholder/600/400",
+        "40% reduction in inventory costs", "60% improvement in delivery times",
+        "25% increase in customer satisfaction", "$2.5M annual cost savings"
+      ], duration: "6 months",
+      teamSize: "12 experts", technologies: ["Machine Learning", "IoT", "Predictive Analytics", "Cloud Computing"], image: "/api/placeholder/600/400",
       featured: true
-    },
-    {
+    }, {
       id: 2,
-      title: "Healthcare AI Platform for Diagnostic Accuracy",
-      company: "MedTech Solutions",
-      industry: "Healthcare",
-      challenge: "High diagnostic error rates and lengthy patient wait times",
-      solution: "Developed AI-powered medical imaging analysis and clinical decision support system",
-      results: [
+      title: "Healthcare AI Platform for Diagnostic Accuracy", company: "MedTech Solutions",
+      industry: "Healthcare", challenge: "High diagnostic error rates and lengthy patient wait times",
+      solution: "Developed AI-powered medical imaging analysis and clinical decision support system", results: [
         "95% diagnostic accuracy improvement",
-        "50% reduction in patient wait times",
-        "30% increase in patient throughput",
+        "50% reduction in patient wait times", "30% increase in patient throughput",
         "Compliance with HIPAA regulations"
-      ],
-      duration: "8 months",
-      teamSize: "15 experts",
-      technologies: ["Computer Vision", "Deep Learning", "Medical AI", "Data Security"],
-      image: "/api/placeholder/600/400",
+      ], duration: "8 months",
+      teamSize: "15 experts", technologies: ["Computer Vision", "Deep Learning", "Medical AI", "Data Security"], image: "/api/placeholder/600/400",
       featured: false
-    },
-    {
+    }, {
       id: 3,
-      title: "Financial Services AI Risk Assessment Platform",
-      company: "FinSecure Bank",
-      industry: "Financial Services",
-      challenge: "Manual risk assessment processes causing delays and inconsistencies",
-      solution: "Built comprehensive AI risk assessment and fraud detection system",
-      results: [
+      title: "Financial Services AI Risk Assessment Platform", company: "FinSecure Bank",
+      industry: "Financial Services", challenge: "Manual risk assessment processes causing delays and inconsistencies",
+      solution: "Built comprehensive AI risk assessment and fraud detection system", results: [
         "80% faster loan processing",
-        "90% reduction in false positives",
-        "35% decrease in fraud losses",
+        "90% reduction in false positives", "35% decrease in fraud losses",
         "Full regulatory compliance"
-      ],
-      duration: "10 months",
-      teamSize: "18 experts",
-      technologies: ["Risk Analytics", "Fraud Detection", "Regulatory AI", "Real-time Processing"],
-      image: "/api/placeholder/600/400",
+      ], duration: "10 months",
+      teamSize: "18 experts", technologies: ["Risk Analytics", "Fraud Detection", "Regulatory AI", "Real-time Processing"], image: "/api/placeholder/600/400",
       featured: false
-    },
-    {
+    }, {
       id: 4,
-      title: "Retail AI Customer Experience Transformation",
-      company: "ShopSmart Retail",
-      industry: "Retail",
-      challenge: "Poor customer experience and low conversion rates",
-      solution: "Implemented AI-powered personalization and customer service automation",
-      results: [
+      title: "Retail AI Customer Experience Transformation", company: "ShopSmart Retail",
+      industry: "Retail", challenge: "Poor customer experience and low conversion rates",
+      solution: "Implemented AI-powered personalization and customer service automation", results: [
         "45% increase in conversion rates",
-        "60% improvement in customer satisfaction",
-        "25% reduction in support costs",
+        "60% improvement in customer satisfaction", "25% reduction in support costs",
         "40% increase in average order value"
-      ],
-      duration: "5 months",
-      teamSize: "10 experts",
-      technologies: ["Personalization AI", "NLP", "Recommendation Engines", "Chatbots"],
-      image: "/api/placeholder/600/400",
+      ], duration: "5 months",
+      teamSize: "10 experts", technologies: ["Personalization AI", "NLP", "Recommendation Engines", "Chatbots"], image: "/api/placeholder/600/400",
       featured: false
-    },
-    {
+    }, {
       id: 5,
-      title: "Energy Sector Predictive Maintenance System",
-      company: "PowerGrid Energy",
-      industry: "Energy",
-      challenge: "Unexpected equipment failures causing costly downtime",
-      solution: "Deployed AI-powered predictive maintenance and asset optimization platform",
-      results: [
+      title: "Energy Sector Predictive Maintenance System", company: "PowerGrid Energy",
+      industry: "Energy", challenge: "Unexpected equipment failures causing costly downtime",
+      solution: "Deployed AI-powered predictive maintenance and asset optimization platform", results: [
         "70% reduction in unplanned downtime",
-        "50% decrease in maintenance costs",
-        "35% improvement in equipment efficiency",
+        "50% decrease in maintenance costs", "35% improvement in equipment efficiency",
         "$5M annual savings"
-      ],
-      duration: "7 months",
-      teamSize: "14 experts",
-      technologies: ["IoT Analytics", "Predictive Maintenance", "Asset Optimization", "Edge Computing"],
-      image: "/api/placeholder/600/400",
+      ], duration: "7 months",
+      teamSize: "14 experts", technologies: ["IoT Analytics", "Predictive Maintenance", "Asset Optimization", "Edge Computing"], image: "/api/placeholder/600/400",
       featured: false
-    },
-    {
+    }, {
       id: 6,
-      title: "Education AI Learning Platform",
-      company: "EduTech Academy",
-      industry: "Education",
-      challenge: "One-size-fits-all learning approach limiting student success",
-      solution: "Created personalized AI learning platform with adaptive content delivery",
-      results: [
+      title: "Education AI Learning Platform", company: "EduTech Academy",
+      industry: "Education", challenge: "One-size-fits-all learning approach limiting student success",
+      solution: "Created personalized AI learning platform with adaptive content delivery", results: [
         "40% improvement in student performance",
-        "60% increase in course completion rates",
-        "50% reduction in learning time",
+        "60% increase in course completion rates", "50% reduction in learning time",
         "95% student satisfaction rate"
-      ],
-      duration: "9 months",
-      teamSize: "16 experts",
-      technologies: ["Adaptive Learning", "Educational AI", "Content Personalization", "Learning Analytics"],
-      image: "/api/placeholder/600/400",
+      ], duration: "9 months",
+      teamSize: "16 experts", technologies: ["Adaptive Learning", "Educational AI", "Content Personalization", "Learning Analytics"], image: "/api/placeholder/600/400",
       featured: false
     }
   ];
 
   const industries = [
-    { name: "All Industries", count: 24, active: true },
-    { name: "Manufacturing", count: 6, active: false },
-    { name: "Healthcare", count: 4, active: false },
-    { name: "Financial Services", count: 5, active: false },
-    { name: "Retail", count: 3, active: false },
-    { name: "Energy", count: 3, active: false },
-    { name: "Education", count: 2, active: false },
-    { name: "Other", count: 1, active: false }
+    { name: "All Industries", count: 24, active: true }, { name: "Manufacturing", count: 6, active: false },
+    { name: "Healthcare", count: 4, active: false }, { name: "Financial Services", count: 5, active: false },
+    { name: "Retail", count: 3, active: false }, { name: "Energy", count: 3, active: false },
+    { name: "Education", count: 2, active: false }, { name: "Other", count: 1, active: false }
   ];
 
   const featuredCaseStudy = caseStudies.find(study => study.featured);
@@ -177,7 +148,7 @@ const CaseStudies: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,8 +163,12 @@ const CaseStudies: React.FC = () => {
               Case Studies
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Discover how we
   've helped businesses across industries achieve remarkable results with AI-powered solutions.
+=======
+              Discover how we&aposve helped businesses across industries achieve remarkable results with AI-powered solutions.'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </p>
           </motion.div>
         </div>
@@ -201,7 +176,7 @@ const CaseStudies: React.FC = () => {
 
       {/* Featured Case Study */}
       {featuredCaseStudy && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -256,7 +231,7 @@ const CaseStudies: React.FC = () => {
       )}
 
       {/* Case Studies Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
@@ -350,7 +325,7 @@ const CaseStudies: React.FC = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:w-1/3">
+            <div className="lg: w-1/3">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -417,7 +392,7 @@ const CaseStudies: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

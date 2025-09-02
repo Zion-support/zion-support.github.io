@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from,
   react';
 import type { NextPage } from
@@ -8,10 +9,18 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
   'lucide-react';
 import Link from
   'next/link';
+=======
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../../components/layout/MainLayout'
+import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from 'lucide-react'
+import Link from 'next/link'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const SmallBusiness: NextPage = () => {
   const solutions = [
     {
+<<<<<<< HEAD
       title:
   'Cloud-Based Business Management,
       description:
@@ -58,12 +67,37 @@ const SmallBusiness: NextPage = () => {
   'Regular security audits',
   'Backup and recovery',
   'Employee training'
+=======
+      title: 'Cloud-Based Business Management', description: 'Complete business management suite in the cloud',
+      icon: <Globe className="w-8 h-8" />, features: [
+        'Customer relationship managementInventory trackingFinancial reporting',
+        'Team collaboration tools'
+      ]
+    }, {
+      title: 'AI-Powered Customer Support',
+      description: 'Automated customer service with human touch', icon: <Users className="w-8 h-8" />,
+      features: [
+        '24/7 chatbot supportTicket management systemKnowledge base integration', 'Performance analytics'
+      ]
+    }, {
+      title: 'Digital Marketing Automation',
+      description: 'Streamline your marketing efforts with AI', icon: <Zap className="w-8 h-8" />,
+      features: [
+        'Email marketing campaignsSocial media managementContent generation', 'Lead nurturing automation'
+      ]
+    }, {
+      title: 'Cybersecurity Protection',
+      description: 'Comprehensive security for your business data', icon: <Shield className="w-8 h-8" />,
+      features: [
+        'Data encryptionRegular security auditsBackup and recovery', 'Employee training'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       ]
     }
-  ];
+  ]
 
   const benefits = [
     {
+<<<<<<< HEAD
       icon: <DollarSign className="w-6 h-6" />,
       title:,
   Cost Effective',
@@ -86,11 +120,26 @@ const SmallBusiness: NextPage = () => {
       title:,
   Dedicated Support',
       description: 'Personal support team for your business needs
+=======
+      icon: <DollarSign className="w-6 h-6" />, title: 'Cost Effective',
+      description: 'Reduce operational costs by up to 40% with our efficient solutions'
+    }, {
+      icon: <Clock className="w-6 h-6" />,
+      title: 'Quick Implementation', description: 'Get up and running in weeks, not months'
+    }, {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Scalable Growth', description: 'Solutions that grow with your business'
+    },
+    {
+      icon: <Users className="w-6 h-6" />, title: 'Dedicated Support',
+      description: 'Personal support team for your business needs'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const pricing = [
     {
+<<<<<<< HEAD
       name:,
   Starter',
       price: '$299,
@@ -136,6 +185,27 @@ const SmallBusiness: NextPage = () => {
   '24/7 phone support',
   'Custom development',
   'Advanced security features'
+=======
+      name: 'Starter', price: '$299',
+      period: '/month', description: 'Perfect for small businesses just getting started',
+      features: [
+        'Up to 5 usersBasic CRM functionalityEmail support', 'Standard security features',
+        'Monthly reporting'
+      ]
+    }, {
+      name: 'Growth',
+      price: '$599', period: '/month',
+      description: 'Ideal for growing small businesses', features: [
+        'Up to 15 usersAdvanced CRM featuresAI customer support',
+        'Priority supportAdvanced analyticsCustom integrations'
+      ]
+    }, {
+      name: 'Professional',
+      price: '$999', period: '/month',
+      description: 'Complete solution for established small businesses', features: [
+        'Unlimited usersFull feature accessDedicated account manager',
+        '24/7 phone supportCustom developmentAdvanced security features'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       ]
     }
   ];
@@ -148,7 +218,7 @@ const SmallBusiness: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Small Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -156,7 +226,7 @@ const SmallBusiness: NextPage = () => {
             Streamline operations, reduce costs, and accelerate growth with our tailored approach.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
             </Link>
@@ -229,7 +299,7 @@ const SmallBusiness: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="text-blue-600 mb-4 flex justify-center">
@@ -253,7 +323,7 @@ const SmallBusiness: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="text-center mb-6">
@@ -276,7 +346,7 @@ const SmallBusiness: NextPage = () => {
                 
                 <Link
                   href="/contact"
-                  className="w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors bg-blue-600 hover: bg-blue-700 text-white"
                 >
                   Get Started
                 </Link>
@@ -295,7 +365,7 @@ const SmallBusiness: NextPage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join hundreds of small businesses that have already transformed their operations with our solutions.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <Link href="/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
             Start Your Transformation
           </Link>
         </div>

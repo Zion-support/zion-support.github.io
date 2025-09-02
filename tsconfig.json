@@ -95,7 +95,8 @@
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",
@@ -114,6 +115,7 @@
     "components",
     "contracts",
     "cypress",
+<<<<<<< HEAD
     "**/*.backup",
     "**/*.disabled",
     "temp_working",
@@ -140,5 +142,15 @@
     "src/services/**",
     "src/types/**",
     "src/utils/**"
+=======
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled"
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   ]
 }

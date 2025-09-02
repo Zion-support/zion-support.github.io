@@ -1,15 +1,20 @@
 /** @type {import(,
   tailwindcss').Config} */
 module.exports = {
+<<<<<<< HEAD
 content: [./pages/**/*.{js,ts,jsx,tsx}',
   './src/**/*.{js,ts,jsx,tsx}',
   './components/**/*.{js,ts,jsx,tsx}',
+=======
+content: [
+    './pages/**/*.{js,ts,jsx,tsx}./src/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-};
+}
 
 /** @type {import(
   'tailwindcss').Config} */

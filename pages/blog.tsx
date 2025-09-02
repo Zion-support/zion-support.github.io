@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -39,94 +40,84 @@ import {
   Mail
 } from
   'lucide-react';
+=======
+import React from 'react'
+import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
+import { Button } from '../components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Badge } from '../components/ui/Badge'
+import { 
+  Calendar, Clock,
+  User, ArrowRight,
+  Search, Filter,
+  Tag, BookOpen,
+  TrendingUp, Star,
+  Eye, MessageCircle,
+  Share2, Heart,
+  Brain, Zap,
+  Shield, Cloud,
+  Database, Network,
+  Code, Rocket,
+  Target, Globe,
+  Phone, Mail
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Blog: React.FC = () => {
   const blogPosts = [
     {
-      id: 1,
-      title: "The Future of AI in Business: 2025 Trends and Predictions",
-      excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.",
-      author: "Sarah Johnson",
-      date: "2025-01-15",
-      readTime: "8 min read",
-      category: "AI Trends",
-      image: "/api/placeholder/600/400",
-      tags: ["AI", "Business", "Trends", "2025"],
-      featured: true
+      id: 1, title: "The Future of AI in Business: 2025 Trends and Predictions",
+      excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.", author: "Sarah Johnson",
+      date: "2025-01-15", readTime: "8 min read",
+      category: "AI Trends", image: "/api/placeholder/600/400",
+      tags: ["AI", "Business", "Trends", "2025"], featured: true
     },
     {
-      id: 2,
-      title: "Building Scalable AI Solutions: Best Practices and Architecture",
-      excerpt: "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.",
-      author: "Michael Chen",
-      date: "2025-01-12",
-      readTime: "12 min read",
-      category: "Technical",
-      image: "/api/placeholder/600/400",
-      tags: ["AI Architecture", "Scalability", "Best Practices"],
-      featured: false
+      id: 2, title: "Building Scalable AI Solutions: Best Practices and Architecture",
+      excerpt: "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.", author: "Michael Chen",
+      date: "2025-01-12", readTime: "12 min read",
+      category: "Technical", image: "/api/placeholder/600/400",
+      tags: ["AI Architecture", "Scalability", "Best Practices"], featured: false
     },
     {
-      id: 3,
-      title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
-      excerpt: "Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.",
-      author: "Emily Rodriguez",
-      date: "2025-01-10",
-      readTime: "10 min read",
-      category: "Security",
-      image: "/api/placeholder/600/400",
-      tags: ["Cybersecurity", "AI Security", "Threat Protection"],
-      featured: false
+      id: 3, title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
+      excerpt: "Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.", author: "Emily Rodriguez",
+      date: "2025-01-10", readTime: "10 min read",
+      category: "Security", image: "/api/placeholder/600/400",
+      tags: ["Cybersecurity", "AI Security", "Threat Protection"], featured: false
     },
     {
-      id: 4,
-      title: "Cloud Migration Strategies: A Complete Guide for 2025",
-      excerpt: "Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.",
-      author: "David Kim",
-      date: "2025-01-08",
-      readTime: "15 min read",
-      category: "Cloud",
-      image: "/api/placeholder/600/400",
-      tags: ["Cloud Migration", "Strategy", "Best Practices"],
-      featured: false
+      id: 4, title: "Cloud Migration Strategies: A Complete Guide for 2025",
+      excerpt: "Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.", author: "David Kim",
+      date: "2025-01-08", readTime: "15 min read",
+      category: "Cloud", image: "/api/placeholder/600/400",
+      tags: ["Cloud Migration", "Strategy", "Best Practices"], featured: false
     },
     {
-      id: 5,
-      title: "AI-Powered Customer Experience: Transforming Business Interactions",
+      id: 5, title: "AI-Powered Customer Experience: Transforming Business Interactions",
       excerpt: "How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
-      author: "Lisa Wang",
-      date: "2025-01-05",
-      readTime: "9 min read",
-      category: "Customer Experience",
-      image: "/api/placeholder/600/400",
-      tags: ["Customer Experience", "AI", "Automation"],
-      featured: false
+      author: "Lisa Wang", date: "2025-01-05",
+      readTime: "9 min read", category: "Customer Experience",
+      image: "/api/placeholder/600/400", tags: ["Customer Experience", "AI", "Automation"], featured: false
     },
     {
-      id: 6,
-      title: "Data Analytics and Machine Learning: Driving Business Intelligence",
-      excerpt: "Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
-      author: "James Wilson",
-      date: "2025-01-03",
-      readTime: "11 min read",
-      category: "Analytics",
-      image: "/api/placeholder/600/400",
-      tags: ["Data Analytics", "Machine Learning", "Business Intelligence"],
-      featured: false
+      id: 6, title: "Data Analytics and Machine Learning: Driving Business Intelligence",
+      excerpt: "Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.", author: "James Wilson",
+      date: "2025-01-03", readTime: "11 min read",
+      category: "Analytics", image: "/api/placeholder/600/400",
+      tags: ["Data Analytics", "Machine Learning", "Business Intelligence"], featured: false
     }
   ];
 
   const categories = [
-    { name: "All", count: 24, active: true },
-    { name: "AI Trends", count: 6, active: false },
-    { name: "Technical", count: 8, active: false },
-    { name: "Security", count: 4, active: false },
-    { name: "Cloud", count: 3, active: false },
-    { name: "Customer Experience", count: 2, active: false },
+    { name: "All", count: 24, active: true }, { name: "AI Trends", count: 6, active: false },
+    { name: "Technical", count: 8, active: false }, { name: "Security", count: 4, active: false },
+    { name: "Cloud", count: 3, active: false }, { name: "Customer Experience", count: 2, active: false },
     { name: "Analytics", count: 1, active: false }
   ];
 
-  const featuredPost = blogPosts.find(post => post.featured);
+  const featuredPost = blogPosts.find(post => post.featured)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -136,7 +127,7 @@ const Blog: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -159,7 +150,7 @@ const Blog: React.FC = () => {
 
       {/* Featured Post */}
       {featuredPost && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -210,7 +201,7 @@ const Blog: React.FC = () => {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
@@ -275,7 +266,7 @@ const Blog: React.FC = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:w-1/3">
+            <div className="lg: w-1/3">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -314,7 +305,7 @@ const Blog: React.FC = () => {
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
                       Subscribe
@@ -327,7 +318,7 @@ const Blog: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">Popular Tags</h3>
                   <div className="flex flex-wrap gap-2">
                     {["AI", "Machine Learning", "Cloud", "Security", "Automation", "Analytics", "IoT", "Blockchain"].map((tag, index) => (
-                      <Badge key={index} variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">
+                      <Badge key={index} variant="outline" className="cursor-pointer hover: bg-blue-500 hover:text-white transition-colors">
                         {tag}
                       </Badge>
                     ))}
@@ -340,7 +331,7 @@ const Blog: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

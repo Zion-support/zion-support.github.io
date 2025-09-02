@@ -1,38 +1,30 @@
+<<<<<<< HEAD:src.disabled/pages/services/ai-autonomous-vehicle-platform.tsx
 import React from
   'react';
 import { motion } from
   'framer-motion';
 import { Link } from
   'react-router-dom';
+=======
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/services/ai-autonomous-vehicle-platform.tsx
 import { 
-  Car, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  MapPin,
-  Clock,
-  DollarSign,
-  Star,
-  Rocket,
-  Target,
-  Cpu,
-  Network,
-  Eye,
-  Activity,
-  TrendingUp,
-  Lock,
-  Smartphone,
-  Cloud,
-  Server,
-  Database,
-  Workflow,
-  MessageCircle,
-  Phone,
+  Car, Brain, 
+  Shield, Zap, 
+  Globe, BarChart3, 
+  Users, CheckCircle, 
+  ArrowRight, MapPin,
+  Clock, DollarSign,
+  Star, Rocket,
+  Target, Cpu,
+  Network, Eye,
+  Activity, TrendingUp,
+  Lock, Smartphone,
+  Cloud, Server,
+  Database, Workflow,
+  MessageCircle, Phone,
   Mail
 } from
   'lucide-react';
@@ -40,145 +32,101 @@ import {
 const AIAutonomousVehiclePlatform = () => {
   const features = [
     {
-      title: "Advanced Perception Systems",
-      description: "Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness",
-      icon: Eye,
+      title: "Advanced Perception Systems", description: "Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness", icon: Eye,
       color: "text-blue-400"
-    },
-    {
+    }, {
       title: "AI Decision Making",
-      description: "Real-time neural networks for instant decision making in complex traffic scenarios",
-      icon: Brain,
+      description: "Real-time neural networks for instant decision making in complex traffic scenarios", icon: Brain,
       color: "text-purple-400"
-    },
-    {
+    }, {
       title: "Predictive Analytics",
-      description: "ML-powered prediction of traffic patterns, pedestrian behavior, and road conditions",
-      icon: TrendingUp,
+      description: "ML-powered prediction of traffic patterns, pedestrian behavior, and road conditions", icon: TrendingUp,
       color: "text-green-400"
-    },
-    {
+    }, {
       title: "Edge Computing",
-      description: "On-board processing for ultra-low latency responses and offline operation capability",
-      icon: Cpu,
+      description: "On-board processing for ultra-low latency responses and offline operation capability", icon: Cpu,
       color: "text-cyan-400"
-    },
-    {
+    }, {
       title: "Cybersecurity",
-      description: "Advanced threat detection and prevention for vehicle systems and communications",
-      icon: Shield,
+      description: "Advanced threat detection and prevention for vehicle systems and communications", icon: Shield,
       color: "text-red-400"
-    },
-    {
+    }, {
       title: "Cloud Integration",
-      description: "Seamless cloud connectivity for updates, data sharing, and fleet management",
-      icon: Cloud,
+      description: "Seamless cloud connectivity for updates, data sharing, and fleet management", icon: Cloud,
       color: "text-indigo-400"
     }
   ];
 
   const useCases = [
     {
-      title: "Autonomous Taxis",
-      description: "Self-driving taxi services for urban transportation",
-      icon: Car,
-      benefits: ["24/7 availability", "Reduced costs", "Improved safety"]
-    },
-    {
+      title: "Autonomous Taxis", description: "Self-driving taxi services for urban transportation",
+      icon: Car, benefits: ["24/7 availability", "Reduced costs", "Improved safety"]
+    }, {
       title: "Logistics & Delivery",
-      description: "Autonomous delivery vehicles for last-mile logistics",
-      icon: Globe,
+      description: "Autonomous delivery vehicles for last-mile logistics", icon: Globe,
       benefits: ["Faster delivery", "Cost efficiency", "Scalable operations"]
-    },
-    {
+    }, {
       title: "Public Transportation",
-      description: "Self-driving buses and shuttles for public transit",
-      icon: Users,
+      description: "Self-driving buses and shuttles for public transit", icon: Users,
       benefits: ["Consistent schedules", "Reduced accidents", "Lower operational costs"]
-    },
-    {
+    }, {
       title: "Industrial Applications",
-      description: "Autonomous vehicles for mining, construction, and agriculture",
-      icon: Target,
+      description: "Autonomous vehicles for mining, construction, and agriculture", icon: Target,
       benefits: ["Hazardous environment operation", "24/7 productivity", "Precision operations"]
     }
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,999",
-      period: "/month",
-      description: "For small fleets and pilot programs",
-      features: [
+      name: "Starter", price: "$2,999", period: "/month",
+      description: "For small fleets and pilot programs", features: [
         "Up to 10 vehicles",
-        "Basic AI perception",
-        "Standard safety features",
-        "Cloud monitoring",
-        "Email support",
+        "Basic AI perception", "Standard safety features",
+        "Cloud monitoring", "Email support",
         "Basic analytics"
-      ],
-      cta: "Start Free Trial",
+      ], cta: "Start Free Trial",
       popular: false
-    },
-    {
+    }, {
       name: "Professional",
-      price: "$7,999",
-      period: "/month",
-      description: "For growing fleets and commercial use",
+      price: "$7, 999",
+      period: "/month", description: "For growing fleets and commercial use",
       features: [
-        "Up to 50 vehicles",
-        "Advanced AI perception",
-        "Enhanced safety systems",
-        "Real-time analytics",
-        "Priority support",
-        "Custom integrations",
+        "Up to 50 vehicles", "Advanced AI perception",
+        "Enhanced safety systems", "Real-time analytics",
+        "Priority support", "Custom integrations",
         "Fleet management tools"
-      ],
-      cta: "Get Started",
+      ], cta: "Get Started",
       popular: true
-    },
-    {
+    }, {
       name: "Enterprise",
-      price: "$19,999",
-      period: "/month",
-      description: "For large fleets and enterprise deployment",
+      price: "$19, 999",
+      period: "/month", description: "For large fleets and enterprise deployment",
       features: [
-        "Unlimited vehicles",
-        "Full AI autonomy",
-        "Advanced cybersecurity",
-        "Custom AI models",
-        "24/7 dedicated support",
-        "White-label solutions",
+        "Unlimited vehicles", "Full AI autonomy",
+        "Advanced cybersecurity", "Custom AI models",
+        "24/7 dedicated support", "White-label solutions",
         "Compliance certifications"
-      ],
-      cta: "Contact Sales",
+      ], cta: "Contact Sales",
       popular: false
     }
   ];
 
   const benefits = [
     {
-      icon: Shield,
-      title: "Enhanced Safety",
+      icon: Shield, title: "Enhanced Safety",
       description: "AI-powered systems reduce human error and improve road safety by up to 90%"
-    },
-    {
+    }, {
       icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Lower operational costs through reduced fuel consumption and maintenance"
+      title: "Cost Reduction", description: "Lower operational costs through reduced fuel consumption and maintenance"
     },
     {
-      icon: Clock,
-      title: "24/7 Operation",
+      icon: Clock, title: "24/7 Operation",
       description: "Continuous operation without driver fatigue or breaks"
-    },
-    {
+    }, {
       icon: TrendingUp,
-      title: "Scalability",
-      description: "Easy fleet expansion and management through cloud-based systems"
+      title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems"
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -208,7 +156,7 @@ const AIAutonomousVehiclePlatform = () => {
               Experience unprecedented safety, efficiency, and scalability in autonomous transportation.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
               <Link
                 to="/contact"
                 className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1"
@@ -228,10 +176,8 @@ const AIAutonomousVehiclePlatform = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
-                { number: "99.9%", label: "Safety Rate", icon: Shield },
-                { number: "24/7", label: "Operation", icon: Clock },
-                { number: "90%", label: "Cost Reduction", icon: DollarSign },
-                { number: "1000+", label: "Vehicles Supported", icon: Car }
+                { number: "99.9%", label: "Safety Rate", icon: Shield }, { number: "24/7", label: "Operation", icon: Clock },
+                { number: "90%", label: "Cost Reduction", icon: DollarSign }, { number: "1000+", label: "Vehicles Supported", icon: Car }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -275,7 +221,7 @@ const AIAutonomousVehiclePlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -315,7 +261,7 @@ const AIAutonomousVehiclePlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
@@ -525,7 +471,7 @@ const AIAutonomousVehiclePlatform = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                <a href="mailto: kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>

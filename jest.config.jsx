@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 const nextJest = require(,
   next/jest');
 ;
+=======
+const nextJest = require('next/jest');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files
   dir: './
 });
 
-// Add any custom config to be passed to Jest;
+// Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: [,
   <rootDir>/jest.setup.js'],
