@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -68,24 +68,25 @@ const Home: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity">
+              <Button className="h-11 px-6 rounded-md bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="border-blue-400 text-blue-300 hover:bg-blue-500/20">
+              <Button className="h-11 px-6 rounded-md border-blue-400 text-blue-300 hover:bg-blue-500/20" variant="outline">
                 <Phone className="w-5 h-5 mr-2" />
                 Schedule Consultation
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-blue-200 text-sm">{stat.label}</div>
-                </div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="inline-flex items-center text-blue-300 hover:text-white transition-colors">
+                <Mail className="w-5 h-5 mr-2" />
+                Contact Us
+              </Link>
+              <Link href="/about" className="inline-flex items-center text-blue-300 hover:text-white transition-colors">
+                Learn More About Us
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
           </div>
         </div>
@@ -109,7 +110,7 @@ const Home: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <Link to={service.href}>
+                <Link href={service.href}>
                   <Button variant="outline" className="w-full">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
