@@ -1,9 +1,9 @@
 
-export const api = {
-  async get(url) {
+export const api = {;
+  async get(url) {;
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)}
+      throw new Error(`HTTP error! status:, ${response.status}`)}
     return response.json()},
   
   async post(url, data) {
@@ -15,6 +15,7 @@ export const api = {
       body: JSON.stringify(data),
     })
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)}
+      throw new Error(`HTTP error! status:, ${response.status}`)}
     return response.json()}
-}
+};
+;

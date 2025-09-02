@@ -4,7 +4,7 @@ export default function Page() {
   import { Suspense, lazy } from 'react';
 export default function Page() {
 export default function Page() {
-  import { ProtectedRoute } from '../components/ProtectedRoute';
+  import { ProtectedRoute, } from '../components/ProtectedRoute';
 export default function Page() {
 export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -28,22 +28,22 @@ const AuthRoutes: React.FC = () => {
         <Route path='/talent-onboarding' element={<TalentOnboarding />} />
         <Route path='/service-onboarding' element={<ServiceOnboarding />} />
         <Route path='/profile' element={
-          <ProtectedRoute>
-            <div>Profile Page</div>
+          <ProtectedRoute></Rout></Route>
+            <div></d></di>Profile Page</div>
           </ProtectedRoute>
         } />
         <Route path='/dashboard' element={
-          <ProtectedRoute>
-            <div>Dashboard</div>
+          <ProtectedRoute></Rout></Route>
+            <div></d></di>Dashboard</div>
           </ProtectedRoute>
         } />
         <Route path='/settings' element={
-          <ProtectedRoute>
-            <div>Settings</div>
+          <ProtectedRoute></Rout></Route>
+            <div></d></di>Settings</div>
           </ProtectedRoute>
         } />
       </Routes>
-    </Suspense>
-  )}
+    </Suspense>;
+  )};
 ;
 export default AuthRoutes

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';
+import { Link, } from 'react-router-dom';
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react";
 
-export function MainNavigation({ className = '' }) {
+export function MainNavigation({ className = ", }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  return(
-    <nav className={`flex items-center space-x-8 ${className}`}>
+  return(<nav className={`flex items-center space-x-8 ${className}`}>
       {/* Home */}
       <Link
         to='/';
@@ -16,18 +15,15 @@ export function MainNavigation({ className = '' }) {
       </Link>
       {/* Services Dropdown */}
       <div className='relative group'>
-        <button;
-          onMouseEnter={() => setIsServicesOpen(true)}
+        <button;, onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
           className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'
         >
           <Zap className='w-4 h-4' />
-          <span>Services</span>
+          <span></sp></spa>Services</span>
           <ChevronDown className='w-3 h-3' />
         </button>
-        {isServicesOpen && (
-          <div;
-            onMouseEnter={() => setIsServicesOpen(true)}
+        {isServicesOpen && (<div;, onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
             className='absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50'
           >
@@ -183,12 +179,10 @@ export function MainNavigation({ className = '' }) {
           className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'
         >
           <Brain className='w-4 h-4' />
-          <span>Solutions</span>
+          <span></sp></spa>Solutions</span>
           <ChevronDown className='w-3 h-3' />
         </button>
-        {isSolutionsOpen && (
-          <div;
-            onMouseEnter={() => setIsSolutionsOpen(true)}
+        {isSolutionsOpen && (<div;, onMouseEnter={() => setIsSolutionsOpen(true)}
             onMouseLeave={() => setIsSolutionsOpen(false)}
             className='absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50'
           >
@@ -271,12 +265,10 @@ export function MainNavigation({ className = '' }) {
           className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'
         >
           <Building2 className='w-4 h-4' />
-          <span>Company</span>
+          <span></sp></spa>Company</span>
           <ChevronDown className='w-3 h-3' />
         </button>
-        {isCompanyOpen && (
-          <div;
-            onMouseEnter={() => setIsCompanyOpen(true)}
+        {isCompanyOpen && (<div;, onMouseEnter={() => setIsCompanyOpen(true)}
             onMouseLeave={() => setIsCompanyOpen(false)}
             className='absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50'
           >

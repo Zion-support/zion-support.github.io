@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, } from 'react";
 
 interface OptimizedImageProps {
   src: string;
@@ -15,7 +15,7 @@ export default function OptimizedImage({
   alt,
   width = 800,
   height = 600,
-  className = '',
+  className = ",
   priority = false,
   quality = 75
 }: OptimizedImageProps) {
@@ -35,16 +35,16 @@ export default function OptimizedImage({
         priority={priority}
         quality={quality}
         className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-        onLoad={() => setIsLoading(false)}
+        onLoad={() =></Imag></Image> setIsLoading(false)}
         onError={() => {
           setHasError(true);
-          setIsLoading(false)}}
+          setIsLoading(false)}
         placeholder="blur"
         blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
       />
       {hasError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-          <span className="text-gray-500">Failed to load image</span>
+          <span className="text-gray-500"></sp></spa>Failed to load image</span>
         </div>
       )}
     </div>

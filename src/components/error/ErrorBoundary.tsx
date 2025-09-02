@@ -12,13 +12,13 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+export class ErrorBoundary extends Component<Props, State></Prop></Props> {
+  constructor(props:, Props) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error:, Error): State {
     return { hasError: true, error };
   }
 
@@ -26,7 +26,7 @@ export class ErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
     
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV ===, 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
@@ -36,7 +36,7 @@ export class ErrorBoundary extends Component<Props, State> {
     }
 
     // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV ===, 'production') {
       // Here you would typically send the error to a service like Sentry
       console.error('Production error:', error, errorInfo);
     }
@@ -72,7 +72,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
-                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:</h4>
+                <h4 className="text-sm font-medium text-red-800 mb-2"></h>Error Details:</h4>
                 <pre className="text-xs text-red-700 overflow-auto">
                   {this.state.error.toString()}
                 </pre>
@@ -101,7 +101,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
             <div className="mt-4 text-center">
               <p className="text-xs text-gray-400">
-                If the problem persists, please{' '}
+                If the problem persists, please{"}
                 <a href="/contact" className="text-blue-600 hover:text-blue-500">
                   contact support
                 </a>

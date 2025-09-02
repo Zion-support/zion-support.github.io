@@ -3,8 +3,8 @@ import TrustScoreBadge from './TrustScoreBadge';
 
 describe('TrustScoreBadge', () => {
   it('renders without crashing', () => {
-    render(<TrustScoreBadge />)
+    render(<TrustScoreBadge, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<TrustScoreBadge />)
+    render(<TrustScoreBadge, />)
     // Add specific test assertions based on component content})})

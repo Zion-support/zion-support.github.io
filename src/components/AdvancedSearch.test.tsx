@@ -3,8 +3,8 @@ import AdvancedSearch from './AdvancedSearch';
 
 describe('AdvancedSearch', () => {
   it('renders without crashing', () => {
-    render(<AdvancedSearch />)
+    render(<AdvancedSearch, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<AdvancedSearch />)
+    render(<AdvancedSearch, />)
     // Add specific test assertions based on component content})})

@@ -1,100 +1,46 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Search, MessageCircle, Phone, Mail, Clock, 
   BookOpen, Video, FileText, Users, ChevronDown,
   ChevronUp, HelpCircle, CheckCircle, ArrowRight
-} from 'lucide-react';
+} from 'lucide-react";
 
 export default function Help() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const [searchQuery, setSearchQuery] = useState(");
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null></numbe></number>(null);
 
-  const faqs = [
-    {
-      id: 1,
-      question: "How do I get started with Zion Tech Group services?",
-      answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business.",
-      category: "Getting Started"
-    },
-    {
-      id: 2,
-      question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.",
-      category: "AI Services"
-    },
-    {
-      id: 3,
-      question: "Do you provide quantum computing solutions?",
-      answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.",
-      category: "Quantum Computing"
-    },
-    {
-      id: 4,
-      question: "What is your pricing structure?",
-      answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.",
-      category: "Pricing"
-    }
-  ];
+  const faqs = [{
+      id: 1, question: "How do I get started with Zion Tech Group services?", answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business.", category: "Getting Started"
+    }, {
+      id: 2, question: "What AI services do you offer?", answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.", category: "AI Services"
+    }, {
+      id: 3, question: "Do you provide quantum computing solutions?", answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.", category: "Quantum Computing"
+    }, {
+      id: 4, question: "What is your pricing structure?", answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing";
+    };];
 
-  const helpCategories = [
-    {
-      title: "Getting Started",
-      description: "New to Zion Tech Group? Start here",
-      icon: BookOpen,
-      articles: 12,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "AI Services",
-      description: "Learn about our AI and machine learning solutions",
-      icon: MessageCircle,
-      articles: 25,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Quantum Computing",
-      description: "Explore quantum computing capabilities",
-      icon: Star,
-      articles: 18,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Technical Support",
-      description: "Get help with technical issues",
-      icon: HelpCircle,
-      articles: 30,
-      color: "from-green-500 to-emerald-500"
-    }
-  ];
+  const helpCategories = [{
+      title: "Getting Started", description: "New to Zion Tech Group? Start here", icon: BookOpen, articles: 12, color: "from-blue-500 to-cyan-500"
+    }, {
+      title: "AI Services", description: "Learn about our AI and machine learning solutions", icon: MessageCircle, articles: 25, color: "from-purple-500 to-pink-500"
+    }, {
+      title: "Quantum Computing", description: "Explore quantum computing capabilities", icon: Star, articles: 18, color: "from-orange-500 to-red-500"
+    }, {
+      title: "Technical Support", description: "Get help with technical issues", icon: HelpCircle, articles: 30, color: "from-green-500 to-emerald-500";
+    };];
 
-  const contactMethods = [
-    {
-      title: "Live Chat",
-      description: "Get instant help from our support team",
-      icon: MessageCircle,
-      availability: "24/7 Available",
-      responseTime: "Immediate"
-    },
-    {
-      title: "Phone Support",
-      description: "Speak directly with our technical experts",
-      icon: Phone,
-      availability: "Mon-Fri 9AM-6PM EST",
-      responseTime: "Immediate"
-    },
-    {
-      title: "Email Support",
-      description: "Send us your questions and we'll respond quickly",
-      icon: Mail,
-      availability: "24/7 Available",
-      responseTime: "Within 4 hours"
-    }
-  ];
+  const contactMethods = [{
+      title: "Live Chat", description: "Get instant help from our support team", icon: MessageCircle, availability: "24/7 Available", responseTime: "Immediate"
+    }, {
+      title: "Phone Support", description: "Speak directly with our technical experts", icon: Phone, availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate"
+    }, {
+      title: "Email Support", description: "Send us your questions and we'll respond quickly", icon: Mail, availability: "24/7 Available", responseTime: "Within 4 hours";
+    };];
 
-  const toggleFAQ = (id: number) => {
-    setExpandedFAQ(expandedFAQ === id ? null : id);
+  const toggleFAQ = (id:, number) => {;
+    setExpandedFAQ(expandedFAQ === id ? null :, id);
   };
 
   return (
@@ -110,11 +56,11 @@ export default function Help() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motio></motion>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Help Center
               </h1>
@@ -130,7 +76,7 @@ export default function Help() {
                     type="text"
                     placeholder="Search for help articles, guides, or FAQs..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e) =></inpu></input> setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -143,12 +89,12 @@ export default function Help() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Browse by Category</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Browse by Category</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Find the help you need organized by topic and service area
               </p>
@@ -158,18 +104,18 @@ export default function Help() {
               {helpCategories.map((category, index) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer"
-                >
+                ></motio></motion>
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{category.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-blue-400 text-sm">{category.articles} articles</span>
+                    <span className="text-blue-400 text-sm"></sp></spa>{category.articles} articles</span>
                     <ArrowRight className="w-5 h-5 text-gray-400" />
                   </div>
                 </motion.div>
@@ -182,12 +128,12 @@ export default function Help() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Frequently Asked Questions</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Quick answers to the most common questions about our services
               </p>
@@ -197,11 +143,11 @@ export default function Help() {
               {faqs.map((faq, index) => (
                 <motion.div
                   key={faq.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden"
-                >
+                ></motio></motion>
                   <button
                     onClick={() => toggleFAQ(faq.id)}
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors"
@@ -212,7 +158,7 @@ export default function Help() {
                           {faq.category}
                         </span>
                       </div>
-                      <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
+                      <h3 className="text-lg font-semibold text-white"></h>{faq.question}</h3>
                     </div>
                     {expandedFAQ === faq.id ? (
                       <ChevronUp className="w-6 h-6 text-gray-400" />
@@ -222,12 +168,12 @@ export default function Help() {
                   </button>
                   {expandedFAQ === faq.id && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      initial={{ opacity: 0, height: 0 }
+                      animate={{ opacity: 1, height: "auto" }
+                      exit={{ opacity: 0, height: 0 }
+                      transition={{ duration: 0.3 }
                       className="px-6 pb-6"
-                    >
+                    ></motio></motion>
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </motion.div>
                   )}
@@ -241,12 +187,12 @@ export default function Help() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Contact Support</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Can't find what you're looking for? Our support team is here to help
               </p>
@@ -256,15 +202,15 @@ export default function Help() {
               {contactMethods.map((method, index) => (
                 <motion.div
                   key={method.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                >
+                ></motio></motion>
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
                     <method.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{method.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{method.description}</p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-sm text-gray-400">

@@ -3,8 +3,8 @@ import ServiceComparisonTool from './ServiceComparisonTool';
 
 describe('ServiceComparisonTool', () => {
   it('renders without crashing', () => {
-    render(<ServiceComparisonTool />)
+    render(<ServiceComparisonTool, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<ServiceComparisonTool />)
+    render(<ServiceComparisonTool, />)
     // Add specific test assertions based on component content})})

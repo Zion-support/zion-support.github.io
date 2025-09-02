@@ -3,8 +3,8 @@ import EnhancedFooter from './EnhancedFooter';
 
 describe('EnhancedFooter', () => {
   it('renders without crashing', () => {
-    render(<EnhancedFooter />)
+    render(<EnhancedFooter, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<EnhancedFooter />)
+    render(<EnhancedFooter, />)
     // Add specific test assertions based on component content})})

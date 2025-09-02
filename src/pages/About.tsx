@@ -1,75 +1,29 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   return (    <>
       <SEO;
-        title='About Us - Zion Tech Group''        description='Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.'''      />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>About Zion Tech Group</h1>'          <p className='text-lg text-gray-600 mb-6'>'            Zion Tech Group is a leading technology solutions provider dedicated to helping '            organizations transform their digital infrastructure and achieve their business goals.'
+        title="About Us - Zion Tech Group"        description="Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions."      />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'></h>About Zion Tech Group</h1>'          <p className='text-lg text-gray-600 mb-6'>'            Zion Tech Group is a leading technology solutions provider dedicated to helping '            organizations transform their digital infrastructure and achieve their business goals.'
           </p>
           <p className='text-lg text-gray-600'>'            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services.'          </p></div>
       </div>
 </>)}
 ;
 export default function About() {
-  const values = [
-    {
-      icon: '🚀',
-      title: 'Innovation First',
-      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.'},
-    {
-      icon: '🤝',
-      title: 'Client Partnership',
-      description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.'},
-    {
-      icon: '💡',
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.'},
-    {
-      icon: '🌱',
-      title: 'Continuous Learning',
-      description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.'}
-  ];
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'Founder & CEO',
-      description: 'Technology visionary with over 15 years of experience in AI, cloud computing, and digital transformation.',
-      image: '👨‍💼'},
-    {
-      name: 'AI & ML Team',
-      role: 'Machine Learning Engineers',
-      description: 'Expert data scientists and ML engineers specializing in AI solutions and predictive analytics.',
-      image: '🤖'},
-    {
-      name: 'Cloud & DevOps',
-      role: 'Infrastructure Specialists',
-      description: 'Cloud architects and DevOps engineers focused on scalable, secure infrastructure solutions.',
-      image: '☁️'},
-    {
-      name: 'Cybersecurity',
-      role: 'Security Experts',
-      description: 'Certified security professionals dedicated to protecting your digital assets and infrastructure.',
-      image: '🔒'}
-  ];
-  const milestones = [
-    {
-      year: '2020',
-      title: 'Company Founded',
-      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'},
-    {
-      year: '2021',
-      title: 'First AI Solutions',
-      description: 'Successfully delivered our first AI-powered business intelligence solutions to enterprise clients.'},
-    {
-      year: '2022',
-      title: 'Cloud Expansion',
-      description: 'Expanded services to include comprehensive cloud migration and DevOps solutions.'},
-    {
-      year: '2023',
-      title: 'Industry Recognition',
-      description: 'Recognized as a leading technology solutions provider in the Delaware region.'},
-    {
-      year: '2024',
-      title: 'Global Reach',
-      description: 'Extended our services to serve clients across multiple industries and geographies.'}
-  ]
+  const values = [{
+      icon: '🚀', title: 'Innovation First', description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.'}, {
+      icon: '🤝', title: 'Client Partnership', description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.'}, {
+      icon: '💡', title: 'Excellence', description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.'}, {;
+      icon: '🌱', title: 'Continuous Learning', description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.'};];
+  const team = [{
+      name: 'Kleber Santos', role: 'Founder & CEO', description: 'Technology visionary with over 15 years of experience in AI, cloud computing, and digital transformation.', image: '👨‍💼'}, {
+      name: 'AI & ML Team', role: 'Machine Learning Engineers', description: 'Expert data scientists and ML engineers specializing in AI solutions and predictive analytics.', image: '🤖'}, {
+      name: 'Cloud & DevOps', role: 'Infrastructure Specialists', description: 'Cloud architects and DevOps engineers focused on scalable, secure infrastructure solutions.', image: '☁️'}, {;
+      name: 'Cybersecurity', role: 'Security Experts', description: 'Certified security professionals dedicated to protecting your digital assets and infrastructure.', image: '🔒'};];
+  const milestones = [{
+      year: '2020', title: 'Company Founded', description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, {
+      year: '2021', title: 'First AI Solutions', description: 'Successfully delivered our first AI-powered business intelligence solutions to enterprise clients.'}, {
+      year: '2022', title: 'Cloud Expansion', description: 'Expanded services to include comprehensive cloud migration and DevOps solutions.'}, {
+      year: '2023', title: 'Industry Recognition', description: 'Recognized as a leading technology solutions provider in the Delaware region.'}, {
+      year: '2024', title: 'Global Reach', description: 'Extended our services to serve clients across multiple industries and geographies.'}]
   return(
     <div className='min-h-screen bg-white'>
       <Header />
@@ -79,8 +33,8 @@ export default function About() {
           <div className='text-center'>
             <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
               About Zion Tech Group
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+            </h1>;
+            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>;
               We are a forward-thinking technology company dedicated to empowering businesses;
               with innovative solutions that drive growth and competitive advantage.
             </p>
@@ -114,8 +68,8 @@ export default function About() {
             </div>
             <div className='bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 text-white'>
               <div className='text-center'>
-                <div className='text-6xl mb-4'>🏢</div>
-                <h3 className='text-2xl font-bold mb-4'>Our Mission</h3>
+                <div className='text-6xl mb-4'></d></di>🏢</div>
+                <h3 className='text-2xl font-bold mb-4'></h>Our Mission</h3>
                 <p className='text-blue-100 leading-relaxed'>
                   To empower businesses with innovative technology solutions that accelerate growth,
                   enhance efficiency, and create sustainable competitive advantages in the digital age.
@@ -139,7 +93,7 @@ export default function About() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {values.map((value, index) => (
               <div key={index} className='text-center'>
-                <div className='text-5xl mb-4'>{value.icon}</div>
+                <div className='text-5xl mb-4'></d></di>{value.icon}</div>
                 <h3 className='text-xl font-bold text-gray-900 mb-3'>
                   {value.title}
                 </h3>
@@ -165,7 +119,7 @@ export default function About() {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {team.map((member, index) => (
               <div key={index} className='bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow'>
-                <div className='text-6xl mb-4'>{member.image}</div>
+                <div className='text-6xl mb-4'></d></di>{member.image}</div>
                 <h3 className='text-2xl font-bold text-gray-900 mb-2'>
                   {member.name}
                 </h3>
@@ -193,12 +147,12 @@ export default function About() {
           </div>
           <div className='relative'>
             {/* Timeline Line */}
-            <div className='absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200'></div>
+            <div className='absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200'></d></di></div>
             <div className='space-y-12'>
               {milestones.map((milestone, index) => (
                 <div key={index} className={`relative flex items-center ${
                   index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>{/* Timeline Dot */}
-                  <div className='absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg'></div>
+                  <div className='absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg'></d></di></div>
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className='bg-white rounded-lg p-6 shadow-lg'>

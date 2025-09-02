@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, } from 'framer-motion';
 import { 
   Search as SearchIcon, 
   Filter, 
@@ -16,43 +16,21 @@ import {
   Bookmark,
   Share2
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, } from '../components/SEO";
 
 const Search: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(");
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('relevance');
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<any[]></an></any>([]);
   const [loading, setLoading] = useState(false);
 
-  const categories = [
-    { id: 'all', name: 'All Categories', count: 0 },
-    { id: 'services', name: 'Services', count: 0 },
-    { id: 'talent', name: 'Talent', count: 0 },
-    { id: 'equipment', name: 'Equipment', count: 0 },
-    { id: 'companies', name: 'Companies', count: 0 }
-  ];
+  const categories = [{ id: 'all', name: 'All Categories', count: 0 }, { id: 'services', name: 'Services', count: 0 }, { id: 'talent', name: 'Talent', count: 0 }, { id: 'equipment', name: 'Equipment', count: 0 }, { id: 'companies', name: 'Companies', count: 0 };];
 
-  const sortOptions = [
-    { id: 'relevance', name: 'Relevance' },
-    { id: 'newest', name: 'Newest' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' }
-  ];
+  const sortOptions = [{ id: 'relevance', name: 'Relevance' }, { id: 'newest', name: 'Newest' }, { id: 'rating', name: 'Highest Rated' }, { id: 'price-low', name: 'Price: Low to High' }, { id: 'price-high', name: 'Price: High to Low' };];
 
-  const mockResults = [
-    {
-      id: 1,
-      title: 'AI-Powered Business Intelligence Platform',
-      description: 'Advanced analytics and business intelligence solution powered by machine learning algorithms.',
-      type: 'services',
-      price: '$5,000/month',
-      rating: 4.8,
-      reviews: 127,
-      location: 'Remote',
-      company: 'Zion Tech Group',
-      tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'],
+  const mockResults = [{
+      id: 1, title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics and business intelligence solution powered by machine learning algorithms.', type: 'services', price: '$5, 000/month', rating: 4.8, reviews: 127, location: 'Remote', company: 'Zion Tech Group', tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'],
       featured: true,
       date: '2024-12-01'
     },
@@ -96,8 +74,8 @@ const Search: React.FC = () => {
       company: 'Zion Tech Group',
       tags: ['HPC', 'Computing', 'Data Processing', 'ML'],
       featured: false,
-      date: '2024-11-20'
-    }
+      date: '2024-11-20';
+    };
   ];
 
   useEffect(() => {
@@ -106,16 +84,16 @@ const Search: React.FC = () => {
     }
   }, [searchQuery, activeCategory, sortBy]);
 
-  const performSearch = async () => {
+  const performSearch = async () => {;
     setLoading(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
     
     // Filter results based on search query and category
     const filteredResults = mockResults.filter(result => {
-      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesQuery =, result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                          result.tags.some((tag:, string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
 
@@ -129,10 +107,10 @@ const Search: React.FC = () => {
           return new Date(b.date).getTime() - new Date(a.date).getTime();
         case 'rating':
           return b.rating - a.rating;
-        case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        case 'price-low":
+          return parseFloat(a.price.replace(/[^0-9.]/g, ")) - parseFloat(b.price.replace(/[^0-9.]/g, "));
+        case 'price-high":
+          return parseFloat(b.price.replace(/[^0-9.]/g, ")) - parseFloat(a.price.replace(/[^0-9.]/g, "));
         default:
           return 0;
       }
@@ -142,16 +120,16 @@ const Search: React.FC = () => {
     setLoading(false);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e:, React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       performSearch();
     }
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'services':
+  const getTypeIcon = (type:, string) => {
+    switch (type) {;
+      case 'services':;
         return <Server className="w-5 h-5 text-blue-400" />;
       case 'talent':
         return <Users className="w-5 h-5 text-purple-400" />;
@@ -162,9 +140,9 @@ const Search: React.FC = () => {
     }
   };
 
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'services':
+  const getTypeLabel = (type:, string) => {
+    switch (type) {;
+      case 'services':;
         return 'Service';
       case 'talent':
         return 'Talent';
@@ -188,11 +166,11 @@ const Search: React.FC = () => {
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.6 }
               className="text-center mb-8"
-            >
+            ></motio></motion>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Search Zion Tech Group
               </h1>
@@ -208,7 +186,7 @@ const Search: React.FC = () => {
                 <input
                   type="text"
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) =></inpu></input> setSearchQuery(e.target.value)}
                   placeholder="Search for services, talent, equipment, companies..."
                   className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
                 />
@@ -237,12 +215,10 @@ const Search: React.FC = () => {
 
                   {/* Categories */}
                   <div className="mb-6">
-                    <h4 className="text-white font-medium mb-3">Categories</h4>
+                    <h4 className="text-white font-medium mb-3"></h>Categories</h4>
                     <div className="space-y-2">
-                      {categories.map((category) => (
-                        <button
-                          key={category.id}
-                          onClick={() => setActiveCategory(category.id)}
+                      {categories.map((category) => (<button
+                          key={category.id}, onClick={() => setActiveCategory(category.id)}
                           className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
                             activeCategory === category.id
                               ? 'bg-blue-500 text-white'
@@ -250,7 +226,7 @@ const Search: React.FC = () => {
                           }`}
                         >
                           {category.name}
-                          <span className="float-right text-xs opacity-75">({category.count})</span>
+                          <span className="float-right text-xs opacity-75"></sp></spa>({category.count})</span>
                         </button>
                       ))}
                     </div>
@@ -258,12 +234,10 @@ const Search: React.FC = () => {
 
                   {/* Sort Options */}
                   <div>
-                    <h4 className="text-white font-medium mb-3">Sort By</h4>
+                    <h4 className="text-white font-medium mb-3"></h>Sort By</h4>
                     <div className="space-y-2">
-                      {sortOptions.map((option) => (
-                        <button
-                          key={option.id}
-                          onClick={() => setSortBy(option.id)}
+                      {sortOptions.map((option) => (<button
+                          key={option.id}, onClick={() => setSortBy(option.id)}
                           className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
                             sortBy === option.id
                               ? 'bg-purple-500 text-white'
@@ -282,7 +256,7 @@ const Search: React.FC = () => {
               <div className="lg:col-span-3">
                 {loading ? (
                   <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></d></di></div>
                     <p className="text-gray-400">Searching...</p>
                   </div>
                 ) : results.length > 0 ? (
@@ -290,11 +264,11 @@ const Search: React.FC = () => {
                     {results.map((result, index) => (
                       <motion.div
                         key={result.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        initial={{ opacity: 0, y: 20 }
+                        animate={{ opacity: 1, y: 0 }
+                        transition={{ duration: 0.6, delay: index * 0.1 }
                         className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
-                      >
+                      ></motio></motion>
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex items-center gap-3">
                             {getTypeIcon(result.type)}
@@ -311,12 +285,12 @@ const Search: React.FC = () => {
                           </div>
                           <div className="flex items-center gap-2">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                            <span className="text-white text-sm">{result.rating}</span>
-                            <span className="text-gray-400 text-sm">({result.reviews})</span>
+                            <span className="text-white text-sm"></sp></spa>{result.rating}</span>
+                            <span className="text-gray-400 text-sm"></sp></spa>({result.reviews})</span>
                           </div>
                         </div>
 
-                        <h3 className="text-white font-semibold text-xl mb-2">{result.title}</h3>
+                        <h3 className="text-white font-semibold text-xl mb-2"></h>{result.title}</h3>
                         <p className="text-gray-300 mb-4">{result.description}</p>
 
                         <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
@@ -360,13 +334,13 @@ const Search: React.FC = () => {
                 ) : searchQuery ? (
                   <div className="text-center py-12">
                     <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                    <h3 className="text-white text-xl font-semibold mb-2">No results found</h3>
+                    <h3 className="text-white text-xl font-semibold mb-2"></h>No results found</h3>
                     <p className="text-gray-400">Try adjusting your search terms or filters.</p>
                   </div>
                 ) : (
                   <div className="text-center py-12">
                     <SearchIcon className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                    <h3 className="text-white text-xl font-semibold mb-2">Start your search</h3>
+                    <h3 className="text-white text-xl font-semibold mb-2"></h>Start your search</h3>
                     <p className="text-gray-400">Enter a search term to find services, talent, equipment, and companies.</p>
                   </div>
                 )}

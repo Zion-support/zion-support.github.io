@@ -1,70 +1,25 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Video, Calendar, Clock, Users, Play, 
   Star, ArrowRight, ExternalLink, Download
 } from 'lucide-react';
 
 export default function Webinars() {
-  const upcomingWebinars = [
-    {
-      id: 1,
-      title: "AI Revolution: Transforming Business Operations",
-      description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.",
-      date: "2025-01-15",
-      time: "2:00 PM EST",
-      duration: "60 minutes",
-      speaker: "Dr. Sarah Chen",
-      attendees: 1250,
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Quantum Computing: The Future is Now",
-      description: "Explore the latest developments in quantum computing and their real-world applications.",
-      date: "2025-01-20",
-      time: "3:00 PM EST",
-      duration: "45 minutes",
-      speaker: "Prof. Michael Rodriguez",
-      attendees: 890,
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Micro SaaS Success Stories",
-      description: "Hear from successful micro SaaS entrepreneurs and learn their strategies for growth.",
-      date: "2025-01-25",
-      time: "1:00 PM EST",
-      duration: "50 minutes",
-      speaker: "Alex Thompson",
-      attendees: 567,
-      featured: false
-    }
-  ];
+  const upcomingWebinars = [{
+      id: 1, title: "AI Revolution: Transforming Business Operations", description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.", date: "2025-01-15", time: "2:00 PM EST", duration: "60 minutes", speaker: "Dr. Sarah Chen", attendees: 1250, featured: true
+    }, {
+      id: 2, title: "Quantum Computing: The Future is Now", description: "Explore the latest developments in quantum computing and their real-world applications.", date: "2025-01-20", time: "3:00 PM EST", duration: "45 minutes", speaker: "Prof. Michael Rodriguez", attendees: 890, featured: true
+    }, {
+      id: 3, title: "Micro SaaS Success Stories", description: "Hear from successful micro SaaS entrepreneurs and learn their strategies for growth.", date: "2025-01-25", time: "1:00 PM EST", duration: "50 minutes", speaker: "Alex Thompson", attendees: 567, featured: false;
+    };];
 
-  const pastWebinars = [
-    {
-      id: 4,
-      title: "Cybersecurity Best Practices 2025",
-      description: "Essential cybersecurity practices for modern applications and infrastructure.",
-      date: "2025-01-10",
-      duration: "55 minutes",
-      speaker: "Lisa Park",
-      views: 2340,
-      rating: 4.8
-    },
-    {
-      id: 5,
-      title: "Digital Transformation Strategies",
-      description: "Comprehensive guide to successful digital transformation initiatives.",
-      date: "2025-01-05",
-      duration: "65 minutes",
-      speaker: "David Kumar",
-      views: 1890,
-      rating: 4.7
-    }
-  ];
+  const pastWebinars = [{
+      id: 4, title: "Cybersecurity Best Practices 2025", description: "Essential cybersecurity practices for modern applications and infrastructure.", date: "2025-01-10", duration: "55 minutes", speaker: "Lisa Park", views: 2340, rating: 4.8
+    }, {
+      id: 5, title: "Digital Transformation Strategies", description: "Comprehensive guide to successful digital transformation initiatives.", date: "2025-01-05", duration: "65 minutes", speaker: "David Kumar", views: 1890, rating: 4.7;
+    };];
 
   return (
     <>
@@ -79,11 +34,11 @@ export default function Webinars() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motio></motion>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Expert Webinars
               </h1>
@@ -102,12 +57,12 @@ export default function Webinars() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Upcoming Webinars</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Upcoming Webinars</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Don't miss these exclusive sessions with industry experts
               </p>
@@ -117,11 +72,11 @@ export default function Webinars() {
               {upcomingWebinars.map((webinar, index) => (
                 <motion.div
                   key={webinar.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                >
+                ></motio></motion>
                   <div className="flex items-start justify-between mb-4">
                     <span className="px-3 py-1 bg-green-600/20 border border-green-400/30 rounded-full text-green-300 text-xs">
                       Upcoming
@@ -133,7 +88,7 @@ export default function Webinars() {
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">{webinar.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{webinar.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{webinar.description}</p>
 
                   <div className="space-y-2 mb-4">
@@ -169,12 +124,12 @@ export default function Webinars() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Past Webinars</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Past Webinars</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Watch recordings of our previous expert sessions
               </p>
@@ -184,22 +139,22 @@ export default function Webinars() {
               {pastWebinars.map((webinar, index) => (
                 <motion.div
                   key={webinar.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                >
+                ></motio></motion>
                   <div className="flex items-start justify-between mb-4">
                     <span className="px-3 py-1 bg-gray-600/20 border border-gray-400/30 rounded-full text-gray-300 text-xs">
                       Past Webinar
                     </span>
                     <div className="flex items-center text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm">{webinar.rating}</span>
+                      <span className="ml-1 text-sm"></sp></spa>{webinar.rating}</span>
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">{webinar.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{webinar.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{webinar.description}</p>
 
                   <div className="space-y-2 mb-4">
@@ -241,11 +196,11 @@ export default function Webinars() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motio></motion>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Stay Updated
               </h2>

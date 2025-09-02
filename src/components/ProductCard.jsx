@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
+import { Heart, } from 'lucide-react';
+import { useWishlist, } from '@/hooks/useWishlist';
+import { Button, } from '@/components/ui/button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
 } from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
-import { useMediaQuery } from 'usehooks-ts';
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { captureException } from '@sentry/nextjs';
+import { useDispatch, } from 'react-redux';
+import { addItem, } from '@/store/cartSlice';
+import { useAuth, } from '@/context/auth/AuthProvider';
+import { useRouter, } from 'next/router';
+import { useMediaQuery, } from 'usehooks-ts';
+import { useEnqueueSnackbar, } from '@/context/SnackbarContext';
+import { captureException, } from '@sentry/nextjs';
 
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const { isAuthenticated } = useAuth();
@@ -25,8 +25,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
 
-  if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
-    captureException(new Error('Invalid product data received by ProductCard'), {
+  if (!product || typeof product.id !== 'string' || typeof product.title !== 'string" ||, product.title.trim() === ") {
+    captureException(new Error('Invalid product data received by, ProductCard'), {
       extra: { product }
     });
     return (
@@ -38,9 +38,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
 
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery('(max-width:, 768px)');
 
-  const handleWishlistToggle = (e) => {
+  const handleWishlistToggle = (e) => {;
     e.preventDefault();
     e.stopPropagation();
     if (!isAuthenticated) {
@@ -50,7 +50,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     toggle(product.id, product);
   };
 
-  const handleAddToCart = (e) => {
+  const handleAddToCart = (e) => {;
     e.preventDefault();
     e.stopPropagation();
     if (!isAuthenticated) {
@@ -67,12 +67,11 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     enqueueSnackbar('Item added to cart', { variant: 'success' });
   };
 
-  const handleCardClick = () => {
+  const handleCardClick = () => {;
     router.push(`/products/${product.id}`);
   };
 
-  return (
-    <div 
+  return (<div 
       className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover:shadow-lg transition-shadow"
       onClick={handleCardClick}
       data-testid="product-card"
@@ -83,12 +82,11 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             src={imageError ? '/placeholder-product.jpg' : product.image || '/placeholder-product.jpg'}
             alt={product.title}
             fill
-            className="object-cover rounded-md"
-            onError={() => setImageError(true)}
+            className="object-cover rounded-md", onError={() =></Imag></Image> setImageError(true)}
           />
         </div>
         
-        <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}</h3>
+        <h3 className="font-semibold text-lg mb-2 line-clamp-2"></h>{product.title}</h3>
         
         {product.description && (
           <p className="text-muted-foreground text-sm mb-3 line-clamp-3">
@@ -109,10 +107,10 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
                 variant="outline"
                 size={isMobile ? "sm" : "default"}
                 onClick={handleWishlistToggle}
-                className={`flex-1 ${active ? 'text-red-500' : ''}`}
+                className={`flex-1 ${active ? 'text-red-500" : "}`}
               >
-                <Heart className={`h-4 w-4 ${active ? 'fill-current' : ''}`} />
-                {!isMobile && <span className="ml-2">{active ? 'Saved' : 'Save'}</span>}
+                <Heart className={`h-4 w-4 ${active ? 'fill-current" : "}`} />
+                {!isMobile && <span className="ml-2"></sp></spa>{active ? 'Saved' : 'Save'}</span>}
               </Button>
             </TooltipTrigger>
             <TooltipContent>

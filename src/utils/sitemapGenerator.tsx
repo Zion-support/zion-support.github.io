@@ -14,19 +14,19 @@ interface SitemapConfig {
 export class SitemapGenerator {
   private config: SitemapConfig;
 
-  constructor(config: SitemapConfig) {
+  constructor(config:, SitemapConfig) {
     this.config = config;
   }
 
   generateXML(): string {
     const { baseUrl, urls } = this.config;
-    const xmlUrls = urls.map(url => {
-      const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
+    const xmlUrls = urls.map(url => {;
+      const lastmod = url.lastmod || new, Date().toISOString().split('T')[0];
       return `  <url>
-    <loc>${baseUrl}${url.url}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${url.changefreq || 'weekly'}</changefreq>
-    <priority>${url.priority || 0.5}</priority>
+    <loc></l></lo>${baseUrl}${url.url}</loc>
+    <lastmod></lastm></lastmo>${lastmod}</lastmod>
+    <changefreq></changefr></changefre>${url.changefreq || 'weekly'}</changefreq>
+    <priority></priori></priorit>${url.priority || 0.5}</priority>
   </url>`;
     }).join('\n');
 
@@ -36,7 +36,7 @@ ${xmlUrls}
 </urlset>`;
   }
 
-  async generateFile(): Promise<void> {
+  async generateFile(): Promise<void></voi></void> {
     const xml = this.generateXML();
     const fs = await import('fs/promises');
     await fs.writeFile(this.config.outputPath || 'sitemap.xml', xml, 'utf8');

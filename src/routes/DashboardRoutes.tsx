@@ -4,7 +4,7 @@ export default function Page() {
   import { Suspense, lazy } from 'react';
 export default function Page() {
 export default function Page() {
-  import { ProtectedRoute } from '../components/ProtectedRoute';
+  import { ProtectedRoute, } from '../components/ProtectedRoute';
 export default function Page() {
 export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -22,47 +22,47 @@ const DashboardRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner />}>
       <Routes>
         <Route path='/dashboard' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <Dashboard />
           </ProtectedRoute>
         } />
         <Route path='/client-dashboard' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <ClientDashboard />
           </ProtectedRoute>
         } />
         <Route path='/talent-dashboard' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <TalentDashboard />
           </ProtectedRoute>
         } />
         <Route path='/creator-dashboard' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <CreatorDashboard />
           </ProtectedRoute>
         } />
         <Route path='/analytics' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <Analytics />
           </ProtectedRoute>
         } />
         <Route path='/project-milestones' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <ProjectMilestones />
           </ProtectedRoute>
         } />
         <Route path='/project-details' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <ProjectDetails />
           </ProtectedRoute>
         } />
         <Route path='/project-room' element={
-          <ProtectedRoute>
+          <ProtectedRoute></Rout></Route>
             <ProjectRoom />
           </ProtectedRoute>
         } />
       </Routes>
-    </Suspense>
-  )}
+    </Suspense>;
+  )};
 ;
 export default DashboardRoutes

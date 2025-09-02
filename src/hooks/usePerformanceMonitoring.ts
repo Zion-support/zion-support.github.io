@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 export function usePerformanceMonitoring() {
   useEffect(() => {
-    const sendToAnalytics = (metric) => {
-      // Send to your analytics service
+    const sendToAnalytics = (metric) => {;
+      // Send to your analytics service;
       console.log('Performance metric:', metric);
       
       // Example: Send to Google Analytics
-      if (typeof gtag !== 'undefined') {
+      if (typeof gtag !==, 'undefined') {
         gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,

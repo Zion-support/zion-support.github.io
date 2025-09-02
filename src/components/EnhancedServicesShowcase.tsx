@@ -1,7 +1,7 @@
 
 ;
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motion, } from 'framer-motion';
+import { Link, } from 'react-router-dom';
 import {
   Brain,
   Shield,
@@ -18,13 +18,7 @@ import {
   Search} from 'lucide-react';
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [{
-      title: 'AI Workflow Automation',
-      description: 'Transform business operations with intelligent automation that learns and scales',
-      price: 'From $299/month',
-      path: '/services/ai-workflow-automation',
-              icon: GitFork,
-      category: 'AI & Automation',
-      features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'],
+      title: 'AI Workflow Automation', description: 'Transform business operations with intelligent automation that learns and scales', price: 'From $299/month', path: '/services/ai-workflow-automation', icon: GitFork, category: 'AI & Automation', features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'],
       benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%'],
       color: 'from-cyan-500 to-blue-600',
       glowColor: 'cyan'},
@@ -81,8 +75,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
       category: 'Sales AI',
       features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],
       benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],
-      color: 'from-pink-500 to-rose-600',
-      glowColor: 'pink'}
+      color: 'from-pink-500 to-rose-600',;
+      glowColor: 'pink'};
   ];
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -90,10 +84,10 @@ export const EnhancedServicesShowcase: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1}
-    }
-  }
+    };
+  };
 ;
-const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3']
+const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 ;
-export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [hoveredService, setHoveredService] = useState<string | null>(null)
+export default function EnhancedServicesShowcase() {  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [hoveredService, setHoveredService] = useState<string | null></strin></string>(null)

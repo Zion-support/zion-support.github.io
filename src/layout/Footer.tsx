@@ -1,62 +1,23 @@
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const footerSections = [
-    {
-      title: 'Services',
-      links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'Financial Solutions', href: '/services/financial-solutions' },
-        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
-      ]},
+  const footerSections = [{
+      title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }]},
     {
       title: 'Solutions',
-      links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Startup Solutions', href: '/solutions/startup' },
-        { name: 'Space Technology', href: '/solutions/space-tech' },
-        { name: 'Supply Chain', href: '/solutions/supply-chain' },
-        { name: 'Industry Solutions', href: '/solutions/industry' }
-      ]},
+      links: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise' }, { name: 'Startup Solutions', href: '/solutions/startup' }, { name: 'Space Technology', href: '/solutions/space-tech' }, { name: 'Supply Chain', href: '/solutions/supply-chain' }, { name: 'Industry Solutions', href: '/solutions/industry' }]},
     {
       title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Story', href: '/about/story' },
-        { name: 'Team', href: '/about/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Contact', href: '/contact' }
-      ]},
+      links: [{ name: 'About Us', href: '/about' }, { name: 'Our Story', href: '/about/story' }, { name: 'Team', href: '/about/team' }, { name: 'Careers', href: '/careers' }, { name: 'Partners', href: '/partners' }, { name: 'Contact', href: '/contact' }]},
     {
       title: 'Resources',
-      links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Training', href: '/training' },
-        { name: 'Documentation', href: '/docs' }
-      ]},
+      links: [{ name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Training', href: '/training' }, { name: 'Documentation', href: '/docs' }]},
     {
-      title: 'Support',
-      links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Support', href: '/support' },
-        { name: 'System Status', href: '/system-status' },
-        { name: 'Request Quote', href: '/request-quote' }
-      ]}
+      title: 'Support',;
+      links: [{ name: 'Help Center', href: '/help' }, { name: 'FAQ', href: '/faq' }, { name: 'Support', href: '/support' }, { name: 'System Status', href: '/system-status' }, { name: 'Request Quote', href: '/request-quote' }]};
   ];
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms of Service', href: '/terms-of-service' },
-    { name: 'Cookie Policy', href: '/cookie-policy' },
-    { name: 'Accessibility', href: '/accessibility' }
-  ];
+  const legalLinks = [{ name: 'Privacy Policy', href: '/privacy-policy' }, { name: 'Terms of Service', href: '/terms-of-service' }, { name: 'Cookie Policy', href: '/cookie-policy' }, { name: 'Accessibility', href: '/accessibility' };];
   return(
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
@@ -66,10 +27,10 @@ export default function Footer() {
           <div className='lg:col-span-2'>
             <div className='flex items-center space-x-3 mb-6'>
               <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>
-                <span className='text-white font-bold text-2xl'>Z</span>
+                <span className='text-white font-bold text-2xl'></sp></spa>Z</span>
               </div>
               <div>
-                <h3 className='text-xl font-bold'>Zion Tech Group</h3>
+                <h3 className='text-xl font-bold'></h>Zion Tech Group</h3>
                 <p className='text-gray-400 text-sm'>Innovation & Technology</p>
               </div>
             </div>
@@ -96,11 +57,9 @@ export default function Footer() {
             </div>
           </div>
           {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h4 className='text-white font-semibold mb-4'>{section.title}</h4>
-              <ul className='space-y-2'>
-                {section.links.map((link) => (
+          {footerSections.map((section) => (<div key={section.title}>
+              <h4 className='text-white font-semibold mb-4'></h>{section.title}</h4>
+              <ul className='space-y-2'>, {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}

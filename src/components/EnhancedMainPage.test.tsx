@@ -3,8 +3,8 @@ import EnhancedMainPage from './EnhancedMainPage';
 
 describe('EnhancedMainPage', () => {
   it('renders without crashing', () => {
-    render(<EnhancedMainPage />)
+    render(<EnhancedMainPage, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<EnhancedMainPage />)
+    render(<EnhancedMainPage, />)
     // Add specific test assertions based on component content})})

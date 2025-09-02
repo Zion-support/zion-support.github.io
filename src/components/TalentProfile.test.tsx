@@ -3,8 +3,8 @@ import TalentProfile from './TalentProfile';
 
 describe('TalentProfile', () => {
   it('renders without crashing', () => {
-    render(<TalentProfile />)
+    render(<TalentProfile, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<TalentProfile />)
+    render(<TalentProfile, />)
     // Add specific test assertions based on component content})})

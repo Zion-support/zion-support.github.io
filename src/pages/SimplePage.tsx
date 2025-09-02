@@ -8,8 +8,8 @@ export default function SimplePage() {
   const location = useLocation();
   const pathname = location.pathname;
   // Generate a title based on the pathname;
-  const getTitle = () => {
-    const path = pathname.replace('/', '').replace(/-/g, ' ');
+  const getTitle = () => {;
+    const path = pathname.replace('/", ").replace(/-/g, ");
     return path.charAt(0).toUpperCase() + path.slice(1)}
 ;
   // Generate content based on the pathname;
@@ -34,8 +34,8 @@ export default function SimplePage() {
         title: getTitle(),
         description: 'Welcome to this page.',
         content: 'This page is under development. Please check back soon for updated content.'}
-    }
-  }
+    };
+  };
 ;
   const pageInfo = getContent()
   return (
@@ -68,8 +68,8 @@ export default function SimplePage() {
               <p className='text-gray-600 mb-6'>
                 Our team is here to help you find the right solution for your business needs.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+                <Link;
                   to='/contact';
                   className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
                   Contact Us

@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+import { motion, } from 'framer-motion';
+import { Link, } from 'react-router-dom';
+import { SEO, } from '../components/SEO';
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react";
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: ",
+    password: "
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e:, React.FormEvent) => {;
     e.preventDefault();
     setIsLoading(true);
     // Handle login logic here
     setTimeout(() => setIsLoading(false), 2000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e:, React.ChangeEvent<HTMLInputElement></HTMLInputElemen></HTMLInputElement>) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+      ...formData,;
+      [e.target.name]: e.target.value;
     });
   };
 
@@ -37,11 +37,11 @@ export default function Login() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }
+            animate={{ opacity: 1, y: 0 }
+            transition={{ duration: 0.8 }
             className="text-center"
-          >
+          ></motio></motion>
             <h2 className="text-4xl font-bold text-white mb-2">
               Welcome Back
             </h2>
@@ -51,11 +51,11 @@ export default function Login() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }
+            animate={{ opacity: 1, y: 0 }
+            transition={{ duration: 0.8, delay: 0.2 }
             className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50"
-          >
+          ></motio></motion>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -128,7 +128,7 @@ export default function Login() {
                 className="w-full flex justify-center items-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
               >
                 {isLoading ? (
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></d></di></div>
                 ) : (
                   <>
                     Sign In
@@ -144,7 +144,7 @@ export default function Login() {
                   <div className="w-full border-t border-gray-600" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-slate-800 text-gray-400">Or continue with</span>
+                  <span className="px-2 bg-slate-800 text-gray-400"></sp></spa>Or continue with</span>
                 </div>
               </div>
 
@@ -156,21 +156,21 @@ export default function Login() {
                     <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                     <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                   </svg>
-                  <span className="ml-2">Google</span>
+                  <span className="ml-2"></sp></spa>Google</span>
                 </button>
 
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-600 rounded-lg bg-slate-800/50 text-sm font-medium text-gray-300 hover:bg-slate-700/50 transition-colors">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
-                  <span className="ml-2">Facebook</span>
+                  <span className="ml-2"></sp></spa>Facebook</span>
                 </button>
               </div>
             </div>
 
             <div className="mt-6 text-center">
               <p className="text-gray-300">
-                Don't have an account?{' '}
+                Don"t have an account?{"}
                 <Link to="/signup" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">
                   Sign up here
                 </Link>

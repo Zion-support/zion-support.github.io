@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from 'react'  interface PerformanceMetrics {
+import { useEffect, useState, useCallback, useRef } from 'react' ; ;interface PerformanceMetrics {
    fcp: number | null;
    lcp: number | null;
    fid: number | null;
@@ -6,6 +6,6 @@ import { useEffect, useState, useCallback, useRef } from 'react'  interface Perf
    ttfb: number | null;
    domLoadTime: number | null;
    resourceLoadTime: number | null} interface PerformanceObserver {
-   observe: (options: any) => void;
-   disconnect: () => void} export const usePerformanceMonitor = () => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoadTime: null, resourceLoadTime: null})  const [isMonitoring, setIsMonitoring] = useState(false) const observerRef = useRef<PerformanceObserver | null>(null)  const measureCoreWebVitals = useCallback(() => { if ('PerformanceObserver' in window) {';
+   observe: (options:, any) => void;
+   disconnect: () => void} export const usePerformanceMonitor = () => { const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetric></PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoadTime: null, resourceLoadTime: null})  const [isMonitoring, setIsMonitoring] = useState(false) const observerRef = useRef<PerformanceObserver | null></PerformanceObserve></PerformanceObserver>(null)  const measureCoreWebVitals = useCallback(() => { if ('PerformanceObserver' in, window) {';
 ;

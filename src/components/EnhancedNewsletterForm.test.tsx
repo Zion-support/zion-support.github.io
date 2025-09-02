@@ -3,8 +3,8 @@ import EnhancedNewsletterForm from './EnhancedNewsletterForm';
 
 describe('EnhancedNewsletterForm', () => {
   it('renders without crashing', () => {
-    render(<EnhancedNewsletterForm />)
+    render(<EnhancedNewsletterForm, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<EnhancedNewsletterForm />)
+    render(<EnhancedNewsletterForm, />)
     // Add specific test assertions based on component content})})

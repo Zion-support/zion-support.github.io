@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   ShoppingCart, Star, Users, Code, Database, 
   Shield, Rocket, Brain, ArrowRight, Filter,
@@ -8,18 +8,8 @@ import {
 } from 'lucide-react';
 
 export default function Marketplace() {
-  const products = [
-    {
-      id: 1,
-      name: "AI Content Generator Pro",
-      description: "Advanced AI-powered content creation tool with natural language processing",
-      price: "$99/month",
-      category: "AI Tools",
-      rating: 4.8,
-      reviews: 124,
-      image: "/api/placeholder/300/200",
-      featured: true,
-      tags: ["AI", "Content", "NLP"]
+  const products = [{
+      id: 1, name: "AI Content Generator Pro", description: "Advanced AI-powered content creation tool with natural language processing", price: "$99/month", category: "AI Tools", rating: 4.8, reviews: 124, image: "/api/placeholder/300/200", featured: true, tags: ["AI", "Content", "NLP"]
     },
     {
       id: 2,
@@ -55,17 +45,11 @@ export default function Marketplace() {
       reviews: 67,
       image: "/api/placeholder/300/200",
       featured: false,
-      tags: ["Security", "Enterprise", "Protection"]
-    }
+      tags: ["Security", "Enterprise", "Protection"];
+    };
   ];
 
-  const categories = [
-    { name: "AI Tools", icon: Brain, count: 25, color: "from-purple-500 to-pink-500" },
-    { name: "Analytics", icon: Database, count: 18, color: "from-blue-500 to-cyan-500" },
-    { name: "Development", icon: Code, count: 32, color: "from-green-500 to-emerald-500" },
-    { name: "Security", icon: Shield, count: 15, color: "from-red-500 to-orange-500" },
-    { name: "Micro SaaS", icon: Rocket, count: 28, color: "from-indigo-500 to-blue-500" }
-  ];
+  const categories = [{ name: "AI Tools", icon: Brain, count: 25, color: "from-purple-500 to-pink-500" }, { name: "Analytics", icon: Database, count: 18, color: "from-blue-500 to-cyan-500" }, { name: "Development", icon: Code, count: 32, color: "from-green-500 to-emerald-500" }, { name: "Security", icon: Shield, count: 15, color: "from-red-500 to-orange-500" }, { name: "Micro SaaS", icon: Rocket, count: 28, color: "from-indigo-500 to-blue-500" };];
 
   return (
     <>
@@ -80,11 +64,11 @@ export default function Marketplace() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motio></motion>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Technology Marketplace
               </h1>
@@ -103,12 +87,12 @@ export default function Marketplace() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Browse Categories</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Browse Categories</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our curated collection of technology solutions organized by category
               </p>
@@ -118,15 +102,15 @@ export default function Marketplace() {
               {categories.map((category, index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer"
-                >
+                ></motio></motion>
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2"></h>{category.name}</h3>
                   <p className="text-gray-400 text-sm">{category.count} products</p>
                 </motion.div>
               ))}
@@ -138,12 +122,12 @@ export default function Marketplace() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Featured Products</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Featured Products</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Handpicked solutions that deliver exceptional value and performance
               </p>
@@ -153,11 +137,11 @@ export default function Marketplace() {
               {products.map((product, index) => (
                 <motion.div
                   key={product.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-                >
+                ></motio></motion>
                   <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                     <div className="text-6xl opacity-20">
                       {product.category === "AI Tools" && <Brain />}
@@ -179,16 +163,15 @@ export default function Marketplace() {
                       )}
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2"></h>{product.name}</h3>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">{product.description}</p>
                     
                     <div className="flex items-center mb-4">
                       <div className="flex items-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
+                        {[...Array(5)].map((_, i) => (<Star
                             key={i}
                             className={`w-4 h-4 ${
-                              i < Math.floor(product.rating)
+                              i <, Math.floor(product.rating)
                                 ? 'text-yellow-400 fill-current'
                                 : 'text-gray-600'
                             }`}
@@ -196,12 +179,12 @@ export default function Marketplace() {
                         ))}
                       </div>
                       <span className="text-gray-400 text-sm ml-2">
-                        {product.rating} ({product.reviews} reviews)
+                        {product.rating} ({product.reviews}, reviews)
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl font-bold text-white">{product.price}</span>
+                      <span className="text-2xl font-bold text-white"></sp></spa>{product.price}</span>
                       <button className="text-gray-400 hover:text-red-400 transition-colors">
                         <Heart className="w-5 h-5" />
                       </button>
@@ -238,11 +221,11 @@ export default function Marketplace() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motio></motion>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Can't Find What You're Looking For?
               </h2>

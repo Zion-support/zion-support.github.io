@@ -1,21 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Handshake, Globe, Award, Users, Building, 
   Star, CheckCircle, ArrowRight, ExternalLink 
 } from 'lucide-react';
 
 export default function Partners() {
-  const partners = [
-    {
-      id: 1,
-      name: "Microsoft",
-      category: "Technology Partner",
-      description: "Strategic partnership in cloud computing and AI solutions",
-      logo: "/api/placeholder/200/100",
-      website: "https://microsoft.com",
-      benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"]
+  const partners = [{
+      id: 1, name: "Microsoft", category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions", logo: "/api/placeholder/200/100", website: "https://microsoft.com", benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"]
     },
     {
       id: 2,
@@ -60,49 +53,21 @@ export default function Partners() {
       description: "Advanced processor technologies and AI optimization",
       logo: "/api/placeholder/200/100",
       website: "https://intel.com",
-      benefits: ["Processor Tech", "AI Optimization", "Performance"]
-    }
+      benefits: ["Processor Tech", "AI Optimization", "Performance"];
+    };
   ];
 
-  const partnershipTypes = [
-    {
-      title: "Technology Partners",
-      description: "Leading technology companies providing cutting-edge solutions",
-      icon: Building,
-      count: 12,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Cloud Partners",
-      description: "Global cloud providers enabling scalable infrastructure",
-      icon: Globe,
-      count: 8,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Research Partners",
-      description: "Academic institutions and research organizations",
-      icon: Award,
-      count: 15,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Channel Partners",
-      description: "Distribution and implementation partners worldwide",
-      icon: Handshake,
-      count: 25,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+  const partnershipTypes = [{
+      title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions", icon: Building, count: 12, color: "from-blue-500 to-cyan-500"
+    }, {
+      title: "Cloud Partners", description: "Global cloud providers enabling scalable infrastructure", icon: Globe, count: 8, color: "from-green-500 to-emerald-500"
+    }, {
+      title: "Research Partners", description: "Academic institutions and research organizations", icon: Award, count: 15, color: "from-purple-500 to-pink-500"
+    }, {
+      title: "Channel Partners", description: "Distribution and implementation partners worldwide", icon: Handshake, count: 25, color: "from-orange-500 to-red-500";
+    };];
 
-  const benefits = [
-    "Access to cutting-edge technology and platforms",
-    "Joint research and development opportunities",
-    "Global market reach and distribution channels",
-    "Technical support and training programs",
-    "Co-marketing and go-to-market strategies",
-    "Priority access to new features and updates"
-  ];
+  const benefits = ["Access to cutting-edge technology and platforms", "Joint research and development opportunities", "Global market reach and distribution channels", "Technical support and training programs", "Co-marketing and go-to-market strategies", "Priority access to new features and updates";];
 
   return (
     <>
@@ -117,11 +82,11 @@ export default function Partners() {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motio></motion>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Our Partners
               </h1>
@@ -140,12 +105,12 @@ export default function Partners() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Partnership Categories</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Partnership Categories</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We work with diverse partners across technology, research, and distribution to deliver comprehensive solutions
               </p>
@@ -155,17 +120,17 @@ export default function Partners() {
               {partnershipTypes.map((type, index) => (
                 <motion.div
                   key={type.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-                >
+                ></motio></motion>
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
                     <type.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{type.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{type.description}</p>
-                  <div className="text-2xl font-bold text-blue-400">{type.count}+</div>
+                  <div className="text-2xl font-bold text-blue-400"></d></di>{type.count}+</div>
                 </motion.div>
               ))}
             </div>
@@ -176,12 +141,12 @@ export default function Partners() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Our Strategic Partners</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Our Strategic Partners</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Leading technology companies and organizations that share our vision of innovation
               </p>
@@ -191,13 +156,13 @@ export default function Partners() {
               {partners.map((partner, index) => (
                 <motion.div
                   key={partner.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-                >
+                ></motio></motion>
                   <div className="h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <div className="text-4xl opacity-20 font-bold text-white">{partner.name.charAt(0)}</div>
+                    <div className="text-4xl opacity-20 font-bold text-white"></d></di>{partner.name.charAt(0)}</div>
                   </div>
                   
                   <div className="mb-3">
@@ -206,11 +171,11 @@ export default function Partners() {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{partner.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{partner.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Benefits</h4>
+                    <h4 className="text-sm font-semibold text-white mb-2"></h>Key Benefits</h4>
                     <div className="space-y-1">
                       {partner.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-xs text-gray-400">
@@ -227,7 +192,7 @@ export default function Partners() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                   >
-                    <span className="text-sm">Visit Website</span>
+                    <span className="text-sm"></sp></spa>Visit Website</span>
                     <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
                 </motion.div>
@@ -240,12 +205,12 @@ export default function Partners() {
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Partnership Benefits</h2>
+            ></motio></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Partnership Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our strategic partnerships provide mutual value and enable us to deliver superior solutions
               </p>
@@ -255,11 +220,11 @@ export default function Partners() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
-                >
+                ></motio></motion>
                   <div className="flex items-start">
                     <Star className="w-6 h-6 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                     <p className="text-gray-300">{benefit}</p>
@@ -274,11 +239,11 @@ export default function Partners() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
               className="text-center max-w-4xl mx-auto"
-            >
+            ></motio></motion>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Become a Partner
               </h2>

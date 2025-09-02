@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link               } from 'react-router-dom.ts';
-import { motion               } from 'framer-motion.ts';
+import { Link, } from 'react-router-dom.ts';
+import { motion, } from 'framer-motion.ts';
 import { Twitter,
   Linkedin,
   Instagram,
@@ -63,118 +63,41 @@ import { Twitter,
   Users2,
   Settings,
   Palette} from 'lucide-react';
-export function Footer(...args: any[]): any {
+export function Footer(...args:, any[]): any {
   const currentYear = new Date().getFullYear();
-  const [activeSection, setActiveSection] = useState<any>(null);
-  const footerSections = [
-    {
-      title: 'Comp',
-      icon: Building,
-      links: [{ name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Story', path: '/about/story', icon: FileText },
-        { name: 'Team', path: '/about/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Network },
-        { name: 'Press', path: '/press', icon: Newspaper },
-        { name: 'Contact', path: '/contact', icon: Phone }
-      ]},
+  const [activeSection, setActiveSection] = useState<any></an></any>(null);
+  const footerSections = [{
+      title: 'Comp', icon: Building, links: [{ name: 'About Us', path: '/about', icon: Users }, { name: 'Our Story', path: '/about/story', icon: FileText }, { name: 'Team', path: '/about/team', icon: Users }, { name: 'Careers', path: '/careers', icon: Briefcase }, { name: 'Partners', path: '/partners', icon: Network }, { name: 'Press', path: '/press', icon: Newspaper }, { name: 'Contact', path: '/contact', icon: Phone }]},
     {
       title: 'AI & Quantum Solutions',
       icon: Brain,
       category: 'Core Services',
-      services: [
-        { name: 'AI Customer Success Automation', href: '/services/ai-customer-success-automation', badge: 'Popular' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', badge: 'New' },
-        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management-enhanced', badge: 'Featured' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-enhanced', badge: 'Trending' },
-        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation-platform', badge: 'Innovative' },
-        { name: 'AI Mental Health Support', href: '/services/ai-mental-health-support-platform', badge: 'Healthcare' },
-        { name: 'AI Smart Home Energy Management', href: '/services/ai-smart-home-energy-management-platform', badge: 'IoT' },
-        { name: 'AI Autonomous Logistics', href: '/services/ai-autonomous-logistics-platform', badge: 'Logistics' },
-        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', badge: 'Marketing' },
-        { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing-solutions', badge: 'Quantum' },
-        { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', badge: 'Space Tech' },
-        { name: 'AI Carbon Footprint Management', href: '/services/ai-carbon-footprint-management-platform', badge: 'Green Tech' },
-        { name: 'AI Autonomous Manufacturing', href: '/services/ai-autonomous-manufacturing-platform', badge: 'Manufacturing' },
-        { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', badge: 'ERP' },
-        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', badge: 'Automation' },
-        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform', badge: 'Analytics' }
-      ]},
+      services: [{ name: 'AI Customer Success Automation', href: '/services/ai-customer-success-automation', badge: 'Popular' }, { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', badge: 'New' }, { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management-enhanced', badge: 'Featured' }, { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-enhanced', badge: 'Trending' }, { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation-platform', badge: 'Innovative' }, { name: 'AI Mental Health Support', href: '/services/ai-mental-health-support-platform', badge: 'Healthcare' }, { name: 'AI Smart Home Energy Management', href: '/services/ai-smart-home-energy-management-platform', badge: 'IoT' }, { name: 'AI Autonomous Logistics', href: '/services/ai-autonomous-logistics-platform', badge: 'Logistics' }, { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', badge: 'Marketing' }, { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing-solutions', badge: 'Quantum' }, { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', badge: 'Space Tech' }, { name: 'AI Carbon Footprint Management', href: '/services/ai-carbon-footprint-management-platform', badge: 'Green Tech' }, { name: 'AI Autonomous Manufacturing', href: '/services/ai-autonomous-manufacturing-platform', badge: 'Manufacturing' }, { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', badge: 'ERP' }, { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', badge: 'Automation' }, { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform', badge: 'Analytics' }]},
     {
       title: 'AI Cybersecurity & Infrastructure',
       icon: Shield,
       category: 'Security & Infrastructure',
-      services: [
-        { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', badge: 'New' },
-        { name: 'AI-Powered Cybersecurity Suite', href: '/services/ai-powered-cybersecurity-suite', badge: 'Security' },
-        { name: 'Enterprise IT Infrastructure Management', href: '/services/enterprise-it-infrastructure-management', badge: 'Infrastructure' },
-        { name: 'Cloud Migration & Optimization', href: '/services/cloud-migration-and-optimization', badge: 'Cloud' },
-        { name: 'AI Data Analytics Platform', href: '/services/ai-data-analytics-platform', badge: 'Analytics' },
-        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation', badge: 'DevOps' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', badge: 'Edge' }
-      ]},
+      services: [{ name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', badge: 'New' }, { name: 'AI-Powered Cybersecurity Suite', href: '/services/ai-powered-cybersecurity-suite', badge: 'Security' }, { name: 'Enterprise IT Infrastructure Management', href: '/services/enterprise-it-infrastructure-management', badge: 'Infrastructure' }, { name: 'Cloud Migration & Optimization', href: '/services/cloud-migration-and-optimization', badge: 'Cloud' }, { name: 'AI Data Analytics Platform', href: '/services/ai-data-analytics-platform', badge: 'Analytics' }, { name: 'AI DevOps Automation', href: '/services/ai-devops-automation', badge: 'DevOps' }, { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', badge: 'Edge' }]},
     {
       title: 'Micro SaaS Solutions',
       icon: Code,
       category: 'Micro SaaS',
-      services: [
-        { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', badge: 'New' },
-        { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', badge: 'New' },
-        { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', badge: 'New' },
-        { name: 'Micro CRM', href: '/services/micro-crm', badge: 'Popular' },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', badge: 'Support' },
-        { name: 'Website Analytics', href: '/services/website-analytics', badge: 'Analytics' }
-      ]},
+      services: [{ name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', badge: 'New' }, { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', badge: 'New' }, { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', badge: 'New' }, { name: 'Micro CRM', href: '/services/micro-crm', badge: 'Popular' }, { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', badge: 'Support' }, { name: 'Website Analytics', href: '/services/website-analytics', badge: 'Analytics' }]},
     {
       title: 'Solutions',
-      links: [
-        { name: 'Enterprise Solutions', href: '/enterprise' },
-        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
-        { name: 'Financial Solutions', href: '/financial-solutions' },
-        { name: 'Manufacturing', href: '/manufacturing-solutions' },
-        { name: 'Industry Solutions', href: '/industry-solutions' },
-        { name: 'Emerging Tech', href: '/emerging-tech' }
-      ]},
+      links: [{ name: 'Enterprise Solutions', href: '/enterprise' }, { name: 'Healthcare Tech', href: '/solutions/healthcare' }, { name: 'Financial Solutions', href: '/financial-solutions' }, { name: 'Manufacturing', href: '/manufacturing-solutions' }, { name: 'Industry Solutions', href: '/industry-solutions' }, { name: 'Emerging Tech', href: '/emerging-tech' }]},
     {
       title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' }
-      ]},
+      links: [{ name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about/team' }, { name: 'Careers', href: '/careers' }, { name: 'Partners', href: '/partners' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' }]},
     {
       title: 'Quantum Computing & Emerging Tech',
       icon: Atom,
-      services: [
-        { name: 'AI-Quantum Hybrid Computing Platform', href: '/services/ai-quantum-hybrid-platform' },
-        { name: 'Quantum Computing as a Service', href: '/services/quantum-computing-as-a-service' },
-        { name: 'AI Space Technology Platform', href: '/services/ai-space-technology-platform' },
-        { name: 'AI IoT Edge Computing Platform', href: '/services/ai-iot-edge-computing-platform' }
-      ]},
+      services: [{ name: 'AI-Quantum Hybrid Computing Platform', href: '/services/ai-quantum-hybrid-platform' }, { name: 'Quantum Computing as a Service', href: '/services/quantum-computing-as-a-service' }, { name: 'AI Space Technology Platform', href: '/services/ai-space-technology-platform' }, { name: 'AI IoT Edge Computing Platform', href: '/services/ai-iot-edge-computing-platform' }]},
     {
-      title: 'Resources',
-      links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Support Center', href: '/help' },
-        { name: 'Training', href: '/training' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Research', href: '/research-development' }
-      ]}
+      title: 'Resources',;
+      links: [{ name: 'Documentation', href: '/docs' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Support Center', href: '/help' }, { name: 'Training', href: '/training' }, { name: 'Blog', href: '/blog' }, { name: 'Research', href: '/research-development' }]};
   ];
-  const solutions = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-    { name: 'Financial Solutions', href: '/solutions/financial' },
-    { name: 'Government Solutions', href: '/solutions/government' },
-    { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
-    { name: 'Retail Solutions', href: '/solutions/retail' },
-    { name: 'Education Solutions', href: '/solutions/education' },
-    { name: 'Startup Solutions', href: '/solutions/startup' }
-  ]
+  const solutions = [{ name: 'Enterprise Solutions', href: '/solutions/enterprise' }, { name: 'Healthcare Solutions', href: '/solutions/healthcare' }, { name: 'Financial Solutions', href: '/solutions/financial' }, { name: 'Government Solutions', href: '/solutions/government' }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' }, { name: 'Retail Solutions', href: '/solutions/retail' }, { name: 'Education Solutions', href: '/solutions/education' }, { name: 'Startup Solutions', href: '/solutions/startup' }]
   return(
     <footer className='bg-zion-blue-dark border-t border-zion-purple/30'>
       {/* Main Footer Content */}
@@ -186,9 +109,9 @@ export function Footer(...args: any[]): any {
               <div className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center'>
                 <Zap className='w-6 h-6 text-white' />
               </div>
-              <span className='text-xl font-bold text-white'>Zion Tech Group</span>
-            </div>
-            <p className='text-zion-slate-light text-sm leading-relaxed'>
+              <span className='text-xl font-bold text-white'></sp></spa>Zion Tech Group</span>
+            </div>;
+            <p className='text-zion-slate-light text-sm leading-relaxed'>;
               Leading provider of innovative AI, IT, and Micro SAAS solutions.;
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
@@ -207,26 +130,24 @@ export function Footer(...args: any[]): any {
               </div>
               <div className='flex items-center text-zion-slate-light text-sm'>
                 <MapPin className='w-4 h-4 mr-2 text-zion-cyan' />
-                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+                <span></spa>364 E Main St STE 1008<br />Middletown, DE 19709</span>
               </div>
             </div>
           </div>
           {/* Service Sections */}
-          {footerSections.slice(1, 6).map((section) => (
-            <div key={section.title} className='space-y-4'>
+          {footerSections.slice(1, 6).map((section) => (<div key={section.title} className='space-y-4'>
               <div className='flex items-center space-x-2'>
                 <section.icon className='w-5 h-5 text-cyan-400' />
-                <h3 className='font-semibold text-white'>{section.title}</h3>
+                <h3 className='font-semibold text-white'></h>{section.title}</h3>
               </div>
-              <div className='space-y-2'>
-                {section.links.map((link) => (
+              <div className='space-y-2'>, {section.links.map((link) => (
                   <Link
                     key={link.name}
                     to={link.path}
                     className='block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group';
                     <div className='flex items-center space-x-2'>
                       <link.icon className='w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200' />
-                      <span>{link.name}</span>
+                      <span></sp></spa>{link.name}</span>
                     </div>
                   </Link>
                 ))}
@@ -235,21 +156,19 @@ export function Footer(...args: any[]): any {
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8'>
-          {footerSections.map((section)               => (
-            <div key={section.title} className='space-y-4'>
-              <motion.button;
-                onClick={() => setActiveSection(activeSection === section.title ? null : section.title)}
+          {footerSections.map((section)               => (<div key={section.title} className='space-y-4'>
+              <motion.button;, onClick={() =></motio></motion> setActiveSection(activeSection === section.title ? null :, section.title)}
                 className='flex items-center space-x-2 text-lg font-semibold text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2'
                 aria-expanded={activeSection === section.title}
               >
                 <section.icon className='w-5 h-5' />
-                <span>{section.title}</span>
+                <span></sp></spa>{section.title}</span>
               </motion.button>
               <motion.div
                 initial={false}
-                animate={{ height: activeSection === section.title ? 'auto' : 0, opacity: activeSection === section.title ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
-                className='overflow-hidden'>
+                animate={{ height: activeSection === section.title ? 'auto' : 0, opacity: activeSection === section.title ? 1 : 0 }
+                transition={{ duration: 0.3 }
+                className='overflow-hidden'></motio></motion>
                 <div className='space-y-2'>
                   {section.links.map((link) => (
                     <Link
@@ -257,7 +176,7 @@ export function Footer(...args: any[]): any {
                       to={link.path}
                       className='flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group'>
                       <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-                      <span className='text-sm'>{link.name}</span>
+                      <span className='text-sm'></sp></spa>{link.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -272,24 +191,24 @@ export function Footer(...args: any[]): any {
             <div className='space-y-4'>
               <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Mail className='w-5 h-5 text-cyan-400' />
-                <span>Get in Touch</span>
+                <span></sp></spa>Get in Touch</span>
               </h3>
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-400'>
                   <Mail className='w-4 h-4 text-cyan-400' />
-                  <span>contact@ziontechgroup.com</span>
+                  <span></sp></spa>contact@ziontechgroup.com</span>
                 </div>
                 <div className='flex items-center space-x-3 text-gray-400'>
                   <Phone className='w-4 h-4 text-cyan-400' />
-                  <span>+1 (555) 123-4567</span>
+                  <span></sp></spa>+1 (555) 123-4567</span>
                 </div>
                 <div className='flex items-center space-x-3 text-gray-400'>
                   <MapPin className='w-4 h-4 text-cyan-400' />
-                  <span>123 Innovation Drive, Tech City, TC 12345</span>
+                  <span></sp></spa>123 Innovation Drive, Tech City, TC 12345</span>
                 </div>
               <div className='flex items-center text-zion-slate-light text-sm'>
                 <MapPin className='w-4 h-4 mr-2 text-zion-cyan' />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span></sp></spa>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             <div className='flex space-x-4'>
@@ -320,14 +239,14 @@ export function Footer(...args: any[]): any {
               Services
             </h3>
             <ul className='space-y-2 text-sm'>
-              <li><Link to='/ai-services' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>AI Services</Link></li>
-              <li><Link to='/it-services' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>IT Services</Link></li>
-              <li><Link to='/micro-saas' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Micro SAAS</Link></li>
-              <li><Link to='/cloud-devops' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Cloud & DevOps</Link></li>
-              <li><Link to='/cybersecurity' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Cybersecurity</Link></li>
-              <li><Link to='/quantum-computing' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Quantum Computing</Link></li>
-              <li><Link to='/blockchain' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Blockchain Solutions</Link></li>
-              <li><Link to='/digital-transformation' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Digital Transformation</Link></li>
+              <li></l><Link to='/ai-services' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>AI Services</Link></li>
+              <li></l><Link to='/it-services' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>IT Services</Link></li>
+              <li></l><Link to='/micro-saas' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Micro SAAS</Link></li>
+              <li></l><Link to='/cloud-devops' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Cloud & DevOps</Link></li>
+              <li></l><Link to='/cybersecurity' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Cybersecurity</Link></li>
+              <li></l><Link to='/quantum-computing' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Quantum Computing</Link></li>
+              <li></l><Link to='/blockchain' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Blockchain Solutions</Link></li>
+              <li></l><Link to='/digital-transformation' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Digital Transformation</Link></li>
             </ul>
           </div>
           {/* Solutions */}
@@ -337,14 +256,14 @@ export function Footer(...args: any[]): any {
               Solutions
             </h3>
             <ul className='space-y-2 text-sm'>
-              <li><Link to='/enterprise' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Enterprise Solutions</Link></li>
-              <li><Link to='/healthcare' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Healthcare Tech</Link></li>
-              <li><Link to='/financial' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Financial Solutions</Link></li>
-              <li><Link to='/manufacturing' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Manufacturing</Link></li>
-              <li><Link to='/retail' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Retail Solutions</Link></li>
-              <li><Link to='/government' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Government</Link></li>
-              <li><Link to='/education' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Education</Link></li>
-              <li><Link to='/startup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Startup Solutions</Link></li>
+              <li></l><Link to='/enterprise' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Enterprise Solutions</Link></li>
+              <li></l><Link to='/healthcare' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Healthcare Tech</Link></li>
+              <li></l><Link to='/financial' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Financial Solutions</Link></li>
+              <li></l><Link to='/manufacturing' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Manufacturing</Link></li>
+              <li></l><Link to='/retail' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Retail Solutions</Link></li>
+              <li></l><Link to='/government' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Government</Link></li>
+              <li></l><Link to='/education' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Education</Link></li>
+              <li></l><Link to='/startup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Startup Solutions</Link></li>
             </ul>
           </div>
           {/* Company & Resources */}
@@ -354,13 +273,13 @@ export function Footer(...args: any[]): any {
               Company
             </h3>
             <ul className='space-y-2 text-sm'>
-              <li><Link to='/about' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>About Us</Link></li>
-              <li><Link to='/team' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Our Team</Link></li>
-              <li><Link to='/careers' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Careers</Link></li>
-              <li><Link to='/partners' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Partners</Link></li>
-              <li><Link to='/news' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>News</Link></li>
-              <li><Link to='/events' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Events</Link></li>
-              <li><Link to='/contact' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Contact</Link></li>
+              <li></l><Link to='/about' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>About Us</Link></li>
+              <li></l><Link to='/team' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Our Team</Link></li>
+              <li></l><Link to='/careers' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Careers</Link></li>
+              <li></l><Link to='/partners' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Partners</Link></li>
+              <li></l><Link to='/news' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>News</Link></li>
+              <li></l><Link to='/events' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Events</Link></li>
+              <li></l><Link to='/contact' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Contact</Link></li>
             </ul>
           </div>
         </div>
@@ -400,39 +319,39 @@ export function Footer(...args: any[]): any {
         <div className='mt-8 pt-6 border-t border-zion-purple/20'>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-6 text-sm'>
             <div>
-              <h4 className='text-zion-cyan font-medium mb-3'>Resources</h4>
+              <h4 className='text-zion-cyan font-medium mb-3'></h>Resources</h4>
               <ul className='space-y-2 text-zion-slate-light'>
-                <li><Link to='/blog' className='hover:text-zion-cyan transition-colors'>Blog</Link></li>
-                <li><Link to='/docs' className='hover:text-zion-cyan transition-colors'>Documentation</Link></li>
-                <li><Link to='/white-papers' className='hover:text-zion-cyan transition-colors'>White Papers</Link></li>
-                <li><Link to='/webinars' className='hover:text-zion-cyan transition-colors'>Webinars</Link></li>
+                <li></l><Link to='/blog' className='hover:text-zion-cyan transition-colors'></Li></Lin>Blog</Link></li>
+                <li></l><Link to='/docs' className='hover:text-zion-cyan transition-colors'></Li></Lin>Documentation</Link></li>
+                <li></l><Link to='/white-papers' className='hover:text-zion-cyan transition-colors'></Li></Lin>White Papers</Link></li>
+                <li></l><Link to='/webinars' className='hover:text-zion-cyan transition-colors'></Li></Lin>Webinars</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className='text-zion-cyan font-medium mb-3'>Support</h4>
+              <h4 className='text-zion-cyan font-medium mb-3'></h>Support</h4>
               <ul className='space-y-2 text-zion-slate-light'>
-                <li><Link to='/help' className='hover:text-zion-cyan transition-colors'>Help Center</Link></li>
-                <li><Link to='/contact' className='hover:text-zion-cyan transition-colors'>Contact Support</Link></li>
-                <li><Link to='/training' className='hover:text-zion-cyan transition-colors'>Training</Link></li>
-                <li><Link to='/faq' className='hover:text-zion-cyan transition-colors'>FAQ</Link></li>
+                <li></l><Link to='/help' className='hover:text-zion-cyan transition-colors'></Li></Lin>Help Center</Link></li>
+                <li></l><Link to='/contact' className='hover:text-zion-cyan transition-colors'></Li></Lin>Contact Support</Link></li>
+                <li></l><Link to='/training' className='hover:text-zion-cyan transition-colors'></Li></Lin>Training</Link></li>
+                <li></l><Link to='/faq' className='hover:text-zion-cyan transition-colors'></Li></Lin>FAQ</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className='text-zion-cyan font-medium mb-3'>Legal</h4>
+              <h4 className='text-zion-cyan font-medium mb-3'></h>Legal</h4>
               <ul className='space-y-2 text-zion-slate-light'>
-                <li><Link to='/privacy' className='hover:text-zion-cyan transition-colors'>Privacy Policy</Link></li>
-                <li><Link to='/terms' className='hover:text-zion-cyan transition-colors'>Terms of Service</Link></li>
-                <li><Link to='/security' className='hover:text-zion-cyan transition-colors'>Security</Link></li>
-                <li><Link to='/compliance' className='hover:text-zion-cyan transition-colors'>Compliance</Link></li>
+                <li></l><Link to='/privacy' className='hover:text-zion-cyan transition-colors'></Li></Lin>Privacy Policy</Link></li>
+                <li></l><Link to='/terms' className='hover:text-zion-cyan transition-colors'></Li></Lin>Terms of Service</Link></li>
+                <li></l><Link to='/security' className='hover:text-zion-cyan transition-colors'></Li></Lin>Security</Link></li>
+                <li></l><Link to='/compliance' className='hover:text-zion-cyan transition-colors'></Li></Lin>Compliance</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className='text-zion-cyan font-medium mb-3'>Connect</h4>
+              <h4 className='text-zion-cyan font-medium mb-3'></h>Connect</h4>
               <ul className='space-y-2 text-zion-slate-light'>
-                <li><Link to='/marketplace' className='hover:text-zion-cyan transition-colors'>Marketplace</Link></li>
-                <li><Link to='/talent' className='hover:text-zion-cyan transition-colors'>Talent Network</Link></li>
-                <li><Link to='/community' className='hover:text-zion-cyan transition-colors'>Community</Link></li>
-                <li><Link to='/research-development' className='hover:text-zion-cyan transition-colors'>R&D</Link></li>
+                <li></l><Link to='/marketplace' className='hover:text-zion-cyan transition-colors'></Li></Lin>Marketplace</Link></li>
+                <li></l><Link to='/talent' className='hover:text-zion-cyan transition-colors'></Li></Lin>Talent Network</Link></li>
+                <li></l><Link to='/community' className='hover:text-zion-cyan transition-colors'></Li></Lin>Community</Link></li>
+                <li></l><Link to='/research-development' className='hover:text-zion-cyan transition-colors'></Li></Lin>R&D</Link></li>
               </ul>
             </div>
           </div>
@@ -443,14 +362,14 @@ export function Footer(...args: any[]): any {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='flex items-center space-x-4 text-sm text-zion-slate-light'>
-              <span>&copy {currentYear} Zion Tech Group. All rights reserved.</span>
-              <span className='hidden md:inline'>•</span>
-              <span className='hidden md:inline'>Empowering Innovation</span>
+              <span></sp></spa>&copy {currentYear} Zion Tech Group. All rights reserved.</span>
+              <span className='hidden md:inline'></sp></spa>•</span>
+              <span className='hidden md:inline'></sp></spa>Empowering Innovation</span>
             </div>
             <div className='flex items-center space-x-6 text-sm'>
-              <Link to='/sitemap' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Sitemap</Link>
-              <Link to='/accessibility' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>Accessibility</Link>
-              <Link to='/status' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>System Status</Link>
+              <Link to='/sitemap' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Sitemap</Link>
+              <Link to='/accessibility' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>Accessibility</Link>
+              <Link to='/status' className='text-zion-slate-light hover:text-zion-cyan transition-colors'></Li></Lin>System Status</Link>
             </div>
           </div>
         </div>

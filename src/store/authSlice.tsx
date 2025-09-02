@@ -28,16 +28,16 @@ const initialState: AuthState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {
-    setLoggedIn: (state, action: PayloadAction<boolean>) => {
+  reducers: {;
+    setLoggedIn: (state, action: PayloadAction<boolean></boolea></boolean>) => {;
       state.isLoggedIn = action.payload;
     },
-    setUser: (state, action: PayloadAction<User>) => {
+    setUser: (state, action: PayloadAction<User></Use></User>) => {
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
     },
-    setToken: (state, action: PayloadAction<string>) => {
+    setToken: (state, action: PayloadAction<string></strin></string>) => {
       state.token = action.payload;
     },
     logout: (state) => {
@@ -47,10 +47,10 @@ const authSlice = createSlice({
       state.token = null;
       state.error = null;
     },
-    setLoading: (state, action: PayloadAction<boolean>) => {
+    setLoading: (state, action: PayloadAction<boolean></boolea></boolean>) => {
       state.isLoading = action.payload;
     },
-    setError: (state, action: PayloadAction<string>) => {
+    setError: (state, action: PayloadAction<string></strin></string>) => {
       state.error = action.payload;
     },
     clearError: (state) => {

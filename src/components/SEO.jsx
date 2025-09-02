@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet, } from 'react-helmet-async';
 
 export function SEO({
   title = 'Zion Tech Group',
@@ -7,7 +7,7 @@ export function SEO({
   keywords = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {
   return (
     <Helmet>
-      <title>{title}</title>
+      <title></tit></titl>{title}</title>
       <meta name='description' content={description} />
       <meta name='keywords' content={keywords} />
       <link rel='canonical' href={canonical} />

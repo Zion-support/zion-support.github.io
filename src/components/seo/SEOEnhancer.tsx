@@ -12,7 +12,7 @@ interface SEOEnhancerProps {
   structuredData?: any;
 }
 
-export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+export const SEOEnhancer: React.FC<SEOEnhancerProps></SEOEnhancerProp></SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting',
@@ -24,21 +24,21 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 }) => {
   useEffect(() => {
     // Update page title dynamically
-    if (typeof document !== 'undefined') {
+    if (typeof document !==, 'undefined') {
       document.title = title;
     }
 
     // Add performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+    if (typeof window !== 'undefined' && 'performance' in, window) {
+      const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'navigation') {
+          if (entry.entryType ===, 'navigation') {
             console.log('Page load time:', entry.duration);
           }
         });
       });
-      observer.observe({ entryTypes: ['navigation'] });
+      observer.observe({ entryTypes: ['navigation'], });
     }
   }, [title]);
 
@@ -64,13 +64,13 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://ziontechgroup.com"
-    ]
+      "https://ziontechgroup.com";
+    ];
   };
 
   return (
     <Head>
-      <title>{title}</title>
+      <title></tit></titl>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,7 +97,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData || defaultStructuredData)
-        }}
+        }
       />
       
       {/* Performance hints */}

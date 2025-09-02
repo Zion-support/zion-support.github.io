@@ -1,26 +1,25 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3;
-  return (    <>
-      <SEO title='Contact - Zion Tech Group' />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>'      </div>
-</>)}
+  return (<>
+      <SEO title='Contact - Zion Tech Group' />'      <div className='min-h-screen bg-white py-20'></d></di>'        <div className='max-w-4xl mx-auto px-4'></d></di>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'></h>Contact</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>"      </div>, </>)}
 ;
 export default function Contact() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''})
+    firstName: ",
+    lastName: ",
+    email: ",
+    company: ",
+    phone: ",
+    service: ",
+    message: "})
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false)
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement |, HTMLSelectElement></HTMLInputElemen></HTMLInputElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value}))}
 ;
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e:, React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission;
@@ -31,50 +30,22 @@ export default function Contact() {
     setTimeout(() => {
       setSubmitSuccess(false);
       setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''})}, 5000)}
+        firstName: ",
+        lastName: ",
+        email: ",
+        company: ",
+        phone: ",
+        service: ",
+        message: "})}, 5000)}
 ;
-  const services = [
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Financial Solutions',
-    'Manufacturing Solutions',
-    'Other';
-  ];
-  const contactMethods = [
-    {
-      icon: '📍',
-      title: 'Office Address',
-      details: '364 E Main St STE 1008, Middletown DE 19709',
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
-    {
-      icon: '📧',
-      title: 'Email',
-      details: 'kleber@ziontechgroup.com',
-      link: 'mailto:kleber@ziontechgroup.com'},
-    {
-      icon: '📱',
-      title: 'Phone',
-      details: '+1 (302) 464-0950',
-      link: 'tel:+13024640950'},
-    {
-      icon: '🌐',
-      title: 'Website',
-      details: 'ziontechgroup.com',
-      link: 'https://ziontechgroup.com'}
-  ];
-  const officeHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
-    { day: 'Sunday', hours: 'Closed' }
-  ]
+  const services = ['AI & Machine Learning', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation', 'Financial Solutions', 'Manufacturing Solutions', ;
+    'Other';];
+  const contactMethods = [{
+      icon: '📍', title: 'Office Address', details: '364 E Main St STE 1008, Middletown DE 19709', link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'}, {
+      icon: '📧', title: 'Email', details: 'kleber@ziontechgroup.com', link: 'mailto:kleber@ziontechgroup.com'}, {
+      icon: '📱', title: 'Phone', details: '+1 (302) 464-0950', link: 'tel:+13024640950'}, {;
+      icon: '🌐', title: 'Website', details: 'ziontechgroup.com', link: 'https://ziontechgroup.com'};];
+  const officeHours = [{ day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' }, { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' }, { day: 'Sunday', hours: 'Closed' }]
   return(
     <div className='min-h-screen bg-white'>
       <Header />
@@ -84,8 +55,8 @@ export default function Contact() {
           <div className='text-center'>
             <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
               Get In Touch
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+            </h1>;
+            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>;
               Ready to transform your business? Let's discuss how our technology solutions;
               can drive innovation and growth for your organization.
             </p>
@@ -96,7 +67,7 @@ export default function Contact() {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
           {/* Contact Form */}
           <div>
-            <h2 className='text-3xl font-bold text-gray-900 mb-8'>Send us a Message</h2>
+            <h2 className='text-3xl font-bold text-gray-900 mb-8'></h>Send us a Message</h2>
             {submitSuccess ? (
               <div className='bg-green-50 border border-green-200 rounded-lg p-6 mb-8'>
                 <div className='flex items-center'>
@@ -104,7 +75,7 @@ export default function Contact() {
                     <path fillRule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clipRule='evenodd' />
                   </svg>
                   <div>
-                    <h3 className='text-lg font-semibold text-green-800'>Message Sent Successfully!</h3>
+                    <h3 className='text-lg font-semibold text-green-800'></h>Message Sent Successfully!</h3>
                     <p className='text-green-700'>We'll get back to you within 24 hours.</p>
                   </div>
                 </div>
@@ -187,8 +158,8 @@ export default function Contact() {
                   name='service';
                   value={formData.service}
                   onChange={handleInputChange}
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'>
-                  <option value=''>Select a service</option>
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <option value="></opti></optio>Select a service</option>
                   {services.map((service, index) => (
                     <option key={index} value={service}>
                       {service}
@@ -219,21 +190,19 @@ export default function Contact() {
           </div>
           {/* Contact Information */}
           <div>
-            <h2 className='text-3xl font-bold text-gray-900 mb-8'>Contact Information</h2>
+            <h2 className='text-3xl font-bold text-gray-900 mb-8'></h>Contact Information</h2>
             <div className='space-y-8'>
               {/* Contact Methods */}
               <div>
-                <h3 className='text-xl font-semibold text-gray-900 mb-4'>Get in Touch</h3>
+                <h3 className='text-xl font-semibold text-gray-900 mb-4'></h>Get in Touch</h3>
                 <div className='space-y-4'>
-                  {contactMethods.map((method, index) => (
-                    <div key={index} className='flex items-start space-x-4'>
-                      <div className='text-2xl'>{method.icon}</div>
+                  {contactMethods.map((method, index) => (<div key={index} className='flex items-start space-x-4'>
+                      <div className='text-2xl'></d></di>{method.icon}</div>
                       <div>
-                        <h4 className='font-medium text-gray-900'>{method.title}</h4>
+                        <h4 className='font-medium text-gray-900'></h>{method.title}</h4>
                         <a
-                          href={method.link}
-                          target={method.link.startsWith('http') ? '_blank' : '_self'}
-                          rel={method.link.startsWith('http') ? 'noopener noreferrer' : ''}
+                          href={method.link}, target={method.link.startsWith('http') ? '_blank' : '_self'}
+                          rel={method.link.startsWith('http') ? 'noopener noreferrer" : "}
                           className='text-blue-600 hover:text-blue-700 hover:underline'>{method.details}
                         </a>
                       </div>
@@ -243,19 +212,19 @@ export default function Contact() {
               </div>
               {/* Office Hours */}
               <div>
-                <h3 className='text-xl font-semibold text-gray-900 mb-4'>Office Hours</h3>
+                <h3 className='text-xl font-semibold text-gray-900 mb-4'></h>Office Hours</h3>
                 <div className='space-y-2'>
                   {officeHours.map((schedule, index) => (
                     <div key={index} className='flex justify-between'>
-                      <span className='text-gray-600'>{schedule.day}</span>
-                      <span className='font-medium text-gray-900'>{schedule.hours}</span>
+                      <span className='text-gray-600'></sp></spa>{schedule.day}</span>
+                      <span className='font-medium text-gray-900'></sp></spa>{schedule.hours}</span>
                     </div>
                   ))}
                 </div>
               </div>
               {/* Quick Links */}
               <div>
-                <h3 className='text-xl font-semibold text-gray-900 mb-4'>Quick Links</h3>
+                <h3 className='text-xl font-semibold text-gray-900 mb-4'></h>Quick Links</h3>
                 <div className='space-y-2'>
                   <Link to='/services' className='block text-blue-600 hover:text-blue-700 hover:underline'>
                     View Our Services
@@ -273,7 +242,7 @@ export default function Contact() {
               </div>
               {/* Emergency Support */}
               <div className='bg-blue-50 border border-blue-200 rounded-lg p-6'>
-                <h3 className='text-lg font-semibold text-blue-900 mb-2'>Need Immediate Support?</h3>
+                <h3 className='text-lg font-semibold text-blue-900 mb-2'></h>Need Immediate Support?</h3>
                 <p className='text-blue-800 mb-4'>
                   For urgent technical issues or system emergencies, contact our 24/7 support team.
                 </p>

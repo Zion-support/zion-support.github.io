@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link, } from 'react-router-dom';
+import { motion, } from 'framer-motion';
 import {
   Phone,
   Mail,
@@ -38,73 +38,23 @@ import {
   DollarSign} from 'lucide-react';
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
-  const footerSections = [
-    {
-      title: 'Featured Services',
-      links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true },
-        { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true },
-        { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true },
-        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
-      ]},
+  const footerSections = [{
+      title: 'Featured Services', links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }]},
     {
       title: 'Core Services',
-      links: [
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code },
-        { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Infrastructure', href: '/it-services', icon: Server },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Star }
-      ]},
+      links: [{ name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code }, { name: 'AI Services', href: '/ai-services', icon: Brain }, { name: 'IT Infrastructure', href: '/it-services', icon: Server }, { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom }, { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield }, { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star }, { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Star }]},
     {
       title: 'Solutions',
-      links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users },
-        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server },
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
-      ]},
+      links: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }, { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users }, { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server }, { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }, { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }]},
     {
       title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Award },
-        { name: 'Careers', href: '/careers', icon: Users },
-        { name: 'News & Press', href: '/press', icon: BookOpen },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Partners', href: '/partners', icon: Handshake }
-      ]},
+      links: [{ name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award }, { name: 'Careers', href: '/careers', icon: Users }, { name: 'News & Press', href: '/press', icon: BookOpen }, { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }, { name: 'Partners', href: '/partners', icon: Handshake }]},
     {
-      title: 'Resources',
-      links: [
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'Documentation', href: '/documentation', icon: FileText },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Webinars', href: '/webinars', icon: Video },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Training', href: '/training', icon: GraduationCap }
-      ]}
+      title: 'Resources',;
+      links: [{ name: 'Blog', href: '/blog', icon: BookOpen }, { name: 'Documentation', href: '/documentation', icon: FileText }, { name: 'Help Center', href: '/help', icon: HelpCircle }, { name: 'Webinars', href: '/webinars', icon: Video }, { name: 'White Papers', href: '/white-papers', icon: FileText }, { name: 'Training', href: '/training', icon: GraduationCap }]};
   ];
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
-  ];
-  const quickLinks = [
-    { name: 'Contact Us', href: '/contact', icon: MessageCircle },
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
-    { name: 'Support', href: '/help', icon: HelpCircle },
-    { name: 'Privacy Policy', href: '/privacy', icon: Shield },
-    { name: 'Terms of Service', href: '/terms', icon: FileText },
-    { name: 'Cookie Policy', href: '/cookies', icon: Shield }
-  ];
+  const socialLinks = [{ name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' }, { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }, { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' };];
+  const quickLinks = [{ name: 'Contact Us', href: '/contact', icon: MessageCircle }, { name: 'Request Quote', href: '/request-quote', icon: DollarSign }, { name: 'Support', href: '/help', icon: HelpCircle }, { name: 'Privacy Policy', href: '/privacy', icon: Shield }, { name: 'Terms of Service', href: '/terms', icon: FileText }, { name: 'Cookie Policy', href: '/cookies', icon: Shield };];
   return(
     <footer className='bg-zinc-900 border-t border-white/20'>
       {/* Main Footer Content */}
@@ -117,7 +67,7 @@ export function EnhancedFooter() {
                 <Zap className='w-7 h-7 text-white' />
               </div>
               <div>
-                <h3 className='text-2xl font-bold text-white'>Zion Tech Group</h3>
+                <h3 className='text-2xl font-bold text-white'></h>Zion Tech Group</h3>
                 <p className='text-blue-400 text-sm font-medium'>Innovation Group</p>
               </div>
             </div>
@@ -127,20 +77,20 @@ export function EnhancedFooter() {
             <div className='space-y-3'>
               <div className='flex items-center space-x-3 text-gray-300'>
                 <Phone className='w-4 h-4 text-blue-400' />
-                <span>+1 302 464 0950</span>
+                <span></sp></spa>+1 302 464 0950</span>
               </div>
               <div className='flex items-center space-x-3 text-gray-300'>
                 <Mail className='w-4 h-4 text-green-400' />
-                <span>kleber@ziontechgroup.com</span>
+                <span></sp></spa>kleber@ziontechgroup.com</span>
               </div>
               <div className='flex items-start space-x-3 text-gray-300'>
                 <MapPin className='w-4 h-4 text-purple-400 mt-0.5' />
-                <span className='max-w-xs'>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <span className='max-w-xs'></spa>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
             {/* Social Links */}
             <div className='mt-6'>
-              <h4 className='text-white font-semibold mb-3'>Follow Us</h4>
+              <h4 className='text-white font-semibold mb-3'></h>Follow Us</h4>
               <div className='flex space-x-4'>
                 {socialLinks.map((social) => (
                   <a
@@ -158,20 +108,18 @@ export function EnhancedFooter() {
             </div>
           </div>
           {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h4 className='text-lg font-semibold text-white mb-4'>{section.title}</h4>
-              <ul className='space-y-3'>
-                {section.links.map((link) => (
+          {footerSections.map((section) => (<div key={section.title}>
+              <h4 className='text-lg font-semibold text-white mb-4'></h>{section.title}</h4>
+              <ul className='space-y-3'>, {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
                       className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${
-                        link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : ''}`}
+                        link.featured ? 'font-medium text-blue-300 hover:text-blue-200" : "}`}
                     >
                       <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
                         link.featured ? 'text-blue-400' : 'text-blue-400'}`} />
-                      <span className='text-sm'>{link.name}</span>
+                      <span className='text-sm'></sp></spa>{link.name}</span>
                       {link.featured && (
                         <Star className='w-3 h-3 text-yellow-400 ml-1' />
                       )}
@@ -191,7 +139,7 @@ export function EnhancedFooter() {
                 to={link.href}
                 className='flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group'>
                 <link.icon className='w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform' />
-                <span className='text-sm'>{link.name}</span>
+                <span className='text-sm'></sp></spa>{link.name}</span>
               </Link>
             ))}
           </div>
@@ -249,15 +197,15 @@ export function EnhancedFooter() {
       </div>
       {/* Floating Contact Button */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className='fixed bottom-6 right-6 z-50'>
+        initial={{ opacity: 0, y: 20 }
+        animate={{ opacity: 1, y: 0 }
+        transition={{ delay: 0.5 }
+        className='fixed bottom-6 right-6 z-50'></motio></motion>
         <Link
           to='/contact';
           className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
           <MessageCircle className='w-5 h-5 group-hover:scale-110 transition-transform' />
-          <span className='hidden sm:block font-medium'>Contact Us</span>
+          <span className='hidden sm:block font-medium'></sp></spa>Contact Us</span>
         </Link>
       </motion.div>
     </footer>

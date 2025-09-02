@@ -18,7 +18,7 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock IntersectionObserver
 // @ts-expect-error jsdom global augmentation for tests
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
+  observe:, jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()
 }));
@@ -26,7 +26,7 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 // Mock ResizeObserver
 // @ts-expect-error jsdom global augmentation for tests
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
+  observe:, jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()
 }));

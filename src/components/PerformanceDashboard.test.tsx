@@ -3,8 +3,8 @@ import PerformanceDashboard from './PerformanceDashboard';
 
 describe('PerformanceDashboard', () => {
   it('renders without crashing', () => {
-    render(<PerformanceDashboard />)
+    render(<PerformanceDashboard, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<PerformanceDashboard />)
+    render(<PerformanceDashboard, />)
     // Add specific test assertions based on component content})})

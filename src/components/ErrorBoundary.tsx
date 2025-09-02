@@ -6,16 +6,16 @@ interface Props {
 interface State {
   hasError: boolean;
    error?: Error}
-export class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State></Prop></Props> {
   public state: State = { hasError: false}
 ;
-  public static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error:, Error): State {
     return { hasError: true, error }
   }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     // Log to external service in production;
-    if(process.env.NODE_ENV === 'production') {
+    if(process.env.NODE_ENV ===, 'production') {
       // You can integrate with services like Sentry here
       console.error('Production error:', { error, errorInfo })}
   }
@@ -30,7 +30,7 @@ export class ErrorBoundary extends Component<Props, State> {
               </svg>
             </div>
             <div className='mt-4 text-center'>
-              <h3 className='text-lg font-medium text-gray-900'>Something went wrong</h3>
+              <h3 className='text-lg font-medium text-gray-900'></h>Something went wrong</h3>
               <p className='mt-2 text-sm text-gray-500'>
                 We're sorry, but something unexpected happened.Please try refreshing the page.</p>
               <div className='mt-6'>

@@ -3,8 +3,8 @@ import ResponsiveNavigation from './ResponsiveNavigation';
 
 describe('ResponsiveNavigation', () => {
   it('renders without crashing', () => {
-    render(<ResponsiveNavigation />)
+    render(<ResponsiveNavigation, />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {
-    render(<ResponsiveNavigation />)
+    render(<ResponsiveNavigation, />)
     // Add specific test assertions based on component content})})
