@@ -5,6 +5,7 @@ import { services, getServicesByCategory } from '../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import ImageOptimizer from '../components/performance/ImageOptimizer';
 
 const Home: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
@@ -18,8 +19,32 @@ const Home: NextPage = () => {
     { number: '24/7', label: 'Support Available', icon: Clock },
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ziontechgroup.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    }
+  };
+
   return (
-    <MainLayout>
+    <MainLayout
+      title="Zion Tech Group - Transform Your Business with Future Technology Solutions"
+      description="Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide."
+      keywords="AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics, business transformation"
+      canonical="https://ziontechgroup.com"
+      structuredData={structuredData}
+    >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
