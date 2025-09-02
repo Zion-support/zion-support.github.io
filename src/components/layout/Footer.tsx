@@ -124,115 +124,7 @@ const footerSections = [
   }
 ];
 
-  const footerSections = [
-    {
-      title: "AI & Automation Services",
-      icon: Brain,
-      links: [
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
-        { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
-        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform", icon: TrendingUp },
-        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Building2 },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
-        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
-        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
-        { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
-        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
-        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
-        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Building2 },
-        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
-        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
-      ]
-    },
-    {
-      title: "Cloud & Infrastructure",
-      icon: Cloud,
-      links: [
-        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
-        { name: "Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },
-        { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },
-        { name: "Blockchain Enterprise", href: "/services/blockchain-enterprise-solutions", icon: Network },
-        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", icon: Atom },
-        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", icon: DollarSign },
-        { name: "Digital Transformation", href: "/services/digital-transformation", icon: Sparkles },
-        { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Target,
-      links: [
-        { name: "Healthcare Solutions", href: "/solutions/healthcare", icon: Heart },
-        { name: "Financial Services", href: "/solutions/financial", icon: DollarSign },
-        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory },
-        { name: "Government Solutions", href: "/solutions/government", icon: Building2 },
-        { name: "Retail Solutions", href: "/solutions/retail", icon: Briefcase },
-        { name: "Enterprise Solutions", href: "/enterprise", icon: Building2 },
-        { name: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },
-        { name: "Industry Overview", href: "/industry-solutions", icon: Target }
-      ]
-    },
-    {
-      title: "Emerging Technologies",
-      icon: Sparkles,
-      links: [
-        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
-        { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions", icon: Atom },
-        { name: "Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
-        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
-        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
-        { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
-        { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
-        { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
-        { name: "Future Technologies", href: "/innovative-services-showcase-2032", icon: Rocket }
-      ]
-    },
-    {
-      title: "Legal & Education",
-      icon: BookOpen,
-      links: [
-        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: Scale },
-        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
-        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
-        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText }
-      ]
-    },
-    {
-      title: "Company & About",
-      icon: Building2,
-      links: [
-        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart },
-        { name: "Financial Services", href: "/solutions/financial", icon: DollarSign },
-        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory },
-        { name: "Retail & E-commerce", href: "/solutions/retail", icon: Store },
-        { name: "Transportation & Logistics", href: "/solutions/transportation", icon: Truck },
-        { name: "Energy & Utilities", href: "/solutions/energy", icon: Zap },
-        { name: "Education", href: "/solutions/education", icon: GraduationCap },
-        { name: "Government", href: "/solutions/government", icon: Building2 },
-        { name: "Real Estate", href: "/solutions/real-estate", icon: Home },
-        { name: "Media & Entertainment", href: "/solutions/media", icon: Video },
-        { name: "Telecommunications", href: "/solutions/telecommunications", icon: Phone },
-        { name: "Aerospace & Defense", href: "/solutions/aerospace", icon: Plane }
-      ]
-    },
-    {
-      title: "Resources & Support",
-      icon: BookOpen,
-      links: [
-        { name: "Training Programs", href: "/training", icon: GraduationCap },
-        { name: "Webinars", href: "/webinars", icon: Video },
-        { name: "White Papers", href: "/white-papers", icon: FileText },
-        { name: "Research & Development", href: "/research", icon: Lightbulb },
-        { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
-        { name: "Training & Certification", href: "/training", icon: GraduationCap },
-        { name: "Webinars", href: "/webinars", icon: Monitor },
-        { name: "Help & Support", href: "/help", icon: Headphones },
-        { name: "Research & Development", href: "/research-development", icon: Lightbulb }
-      ]
-    }
-  ];
+
 
   const contactInfo = {
     phone: '+1 (302) 464-0950',
@@ -263,7 +155,6 @@ const footerSections = [
     { name: "Contact", href: "/contact", icon: Phone },
     { name: "Legal", href: "/legal", icon: Scale }
   ];
-  ];
 
   const socialLinks = [
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
@@ -273,12 +164,7 @@ const footerSections = [
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
 
-  const contactInfo = [
-    { icon: Mail, text: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
-    { icon: Phone, text: "+1 (302) 464-0950", href: "tel:+13024640950" },
-    { icon: MapPin, text: "United States", href: "#" },
-    { icon: Globe, text: "ziontechgroup.com", href: "https://ziontechgroup.com" }
-  ];
+
 
 export const Footer: React.FC = () => {
   return (
@@ -332,7 +218,7 @@ export const Footer: React.FC = () => {
                 </h3>
                 <p className="text-sm text-slate-400 font-medium">Innovation • Technology • Growth</p>
               </div>
-            </Link>
+            </div>
             <p className="text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Leading the future of technology with cutting-edge AI solutions, quantum computing innovations, 
               and transformative digital experiences that empower businesses to achieve unprecedented growth.
