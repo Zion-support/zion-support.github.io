@@ -42,4 +42,4 @@ export { GDPRCookieCompliance };
 export default GDPRCookieCompliance;
 :pages.disabled/pages/services/GDPRCookieCompliance.tsx
 "
-'"'"
+  '"'"

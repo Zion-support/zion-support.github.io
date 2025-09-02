@@ -1,93 +1,127 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from,
+  react';'
+import { Link } from
+  'react-router-dom';
 import {}
   Building2,
   Shield,
   Globe,
   Zap,
   Users,
-  BarChart3,'
-  Lock} from 'lucide-react';
-
-:pages.disabled/solutions/Enterprise.jsx
+  BarChart3,
+  '
+  Lock} from 'lucide-react
+  ';: pages.disabled/solutions/Enterprise.jsx
 const EnterpriseSolutions = () => {
   const solutions = [
     {
 '
-      title: 'AI-Powered Business Intelligence','
-      description:''
-        'Transform your data into actionable insights with our advanced AI analytics platform.','
-      features: [''
-        'Real-time data processing',Predictive analytics',Custom dashboards',Automated reporting',Multi-source integration',],
-      icon: BarChart3,'
-      href: '/services/ai-autonomous-systems'},
+      title:
+  'AI-Powered Business Intelligence,
+,
+  description: ''
+  'Transform your data into actionable insights with our advanced AI analytics platform.,
+,
+  features: [''
+  'Real-time data processing,Predictive analytics
+  ',Custom dashboards',Automated reporting
+  ',Multi-source integration',],
+      icon: BarChart3,
+,
+  href: '/services/ai-autonomous-systems},
 :pages.disabled/solutions/Enterprise.jsx
-    {
-'
-      title: 'Enterprise Cybersecurity Suite','
-      description:''
-        'Comprehensive security solutions designed for large organizations.','
-      features: [''
-        'Threat detection & response',Compliance management',Identity & access control',Security monitoring',Incident response',],
-      icon: Shield,'
-      href: '/services/cybersecurity'},
+    {,
+  title: 'Enterprise Cybersecurity Suite,
+,
+  description: ''
+  'Comprehensive security solutions designed for large organizations.,
+,
+  features: [''
+  'Threat detection & response,Compliance management
+  ',Identity & access control',Security monitoring
+  ',Incident response',],
+      icon: Shield,
+,
+  href: '/services/cybersecurity},
 :pages.disabled/solutions/Enterprise.jsx
-    {
-'
-      title: 'Cloud Infrastructure Management','
-      description:''
-        'Scalable cloud solutions optimized for enterprise workloads.','
-      features: [''
-        'Multi-cloud strategy',Cost optimization',Performance monitoring',Disaster recovery',Security compliance',],
-      icon: Globe,'
-      href: '/services/it-infrastructure'},
+    {,
+  title: 'Cloud Infrastructure Management,
+,
+  description: ''
+  'Scalable cloud solutions optimized for enterprise workloads.,
+,
+  features: [''
+  'Multi-cloud strategy,Cost optimization
+  ',Performance monitoring',Disaster recovery
+  ',Security compliance',],
+      icon: Globe,
+,
+  href: '/services/it-infrastructure},
 :pages.disabled/solutions/Enterprise.jsx
-    {
-'
-      title: 'AI Process Automation','
-      description:''
-        'Streamline operations with intelligent automation across all departments.','
-      features: [''
-        'Workflow automation',Document processing',Customer service bots',Supply chain optimization',Quality control',
+    {,
+  title: 'AI Process Automation,
+,
+  description: ''
+  'Streamline operations with intelligent automation across all departments.,
+,
+  features: [''
+  'Workflow automation,Document processing
+  ',Customer service bots',Supply chain optimization
+  ',Quality control',
       ],
-      icon: Zap,'
-      href: '/services/ai-autonomous-systems'},
+      icon: Zap,
+,
+  href: '/services/ai-autonomous-systems},
   ];
   const industries = [
-    {
-'
-      name: 'Healthcare','
-      description:''
-        'AI-powered healthcare solutions for hospitals and medical facilities.',
-      icon: Users,'
-      solutions: [''
-        'Patient care automation',Medical imaging AI',Drug discovery',Compliance management',
+    {,
+  name: 'Healthcare,
+,
+  description: ''
+  'AI-powered healthcare solutions for hospitals and medical facilities.,
+      icon: Users,
+,
+  solutions: [''
+  'Patient care automation,Medical imaging AI,
+  ,Drug discovery',Compliance management
+  ',
       ]},
     {
 '
-      name: 'Financial Services','
-      description:''
-        'Secure, compliant solutions for banks and financial institutions.',
-      icon: Lock,'
-      solutions: [''
-        'Fraud detection',Risk assessment',Compliance automation',Customer analytics',
+      name: 'Financial Services,
+,
+  description: ''Secure, compliant solutions for banks and financial institutions.',
+      icon: Lock,
+,
+  solutions: [''
+  'Fraud detection,Risk assessment,
+  ,Compliance automation',Customer analytics
+  ',
       ]},
     {
 '
-      name: 'Manufacturing','
-      description:''
-        'Smart manufacturing solutions for Industry 4.0 transformation.',
-      icon: Building2,'
-      solutions: [''
-        'Predictive maintenance',Quality control',Supply chain optimization',Energy management',
+      name: 'Manufacturing,
+,
+  description: ''
+  'Smart manufacturing solutions for Industry 4.0 transformation.,
+      icon: Building2,
+,
+  solutions: [''
+  'Predictive maintenance,Quality control,
+  ,Supply chain optimization',Energy management
+  ',
       ]},
     {
 '
-      name: 'Retail','
-      description: 'Omnichannel retail solutions for modern commerce.',
+      name: 'Retail,
+,
+  description: 'Omnichannel retail solutions for modern commerce.,
       icon: Globe,'
-      solutions: [''
-        'Customer personalization',Inventory management',Demand forecasting',E-commerce optimization',
+      solutions: ['
+  '
+        'Customer personalization
+  ',Inventory management',Demand forecasting
+  ',E-commerce optimization',
       ]},
   ];
   return()
@@ -232,23 +266,25 @@ const EnterpriseSolutions = () => {
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-'
-                title: 'Scalable Architecture','
-                description:''
-                  'Our solutions grow with your business, from startup to enterprise.',
+              {,
+  title: 'Scalable Architecture,'
+                description:'
+  '
+                  'Our solutions grow with your business, from startup to enterprise.
+  ',
                 icon: Building2},
-              {
-'
-                title: 'Security First','
-                description:''
-                  'Enterprise-grade security with compliance certifications.',
+              {,
+  title: 'Security First,
+,
+  description: ''
+  'Enterprise-grade security with compliance certifications.,
                 icon: Shield},
-              {
-'
-                title: '24/7 Support','
-                description:''
-                  'Round-the-clock support with dedicated account managers.',
+              {,
+  title: '24/7 Support,'
+                description:'
+  '
+                  'Round-the-clock support with dedicated account managers.
+  ',
                 icon: Users},
             ].map((benefit, index) => {
 
@@ -275,7 +311,8 @@ const EnterpriseSolutions = () => {
               Ready to Transform Your Enterprise?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8">'
-              Let's discuss how our AI solutions can drive innovation and growth
+              Let
+  's discuss how our AI solutions can drive innovation and growth
               in your organization."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -300,4 +337,4 @@ const EnterpriseSolutions = () => {
 
 :pages.disabled/solutions/Enterprise.jsx
 export default EnterpriseSolutions;'"
-'"'"
+  '"'"

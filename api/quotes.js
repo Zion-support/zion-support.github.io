@@ -1,10 +1,15 @@
-const { withErrorLogging } = require('./withErrorLogging.cjs');
+const { withErrorLogging } = require(,
+  ./withErrorLogging.cjs');
 
 async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !==
+  'POST') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader(
+  'Allow',
+  'POST');
+    res.end(
+  'Method Not Allowed');
     return;
   }
 
@@ -12,11 +17,12 @@ async function handler(req, res) {
     const { name, email, phone, details, country, service } = req.body || {};
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
-      res.json({ error: 'Missing required fields' });
+      res.json({ error: 'Missing required fields });
       return;
     }
 
-    console.log('New quote request:', {
+    console.log(
+  'New quote request:', {
       name,
       email,
       phone,
@@ -30,9 +36,12 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ success: true });
   } catch (err) {
-    console.error('Quote API error:', err);
+    console.error(
+  'Quote API error:,
+  , err);
     res.statusCode = 500;
-    res.json({ error: err.message || 'Quote submission failed' });
+    res.json({ error: err.message ||
+  'Quote submission failed });
   }
 }
 module.exports = withErrorLogging(handler);
