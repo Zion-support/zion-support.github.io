@@ -2,102 +2,59 @@ import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import {
-  HelpCircle,
-  Search,
-  MessageCircle,
-  Phone,
-  Mail,
-  BookOpen,
-  Video,
-  FileText,
-  Users,
-  Clock,
-  CheckCircle,
-} from 'lucide-react';
+  HelpCircle, Search,
+  MessageCircle, Phone,
+  Mail, BookOpen,
+  Video, FileText,
+  Users, Clock,
+  CheckCircle, } from 'lucide-react';
 const Help: NextPage = () => {
   const faqs = [
     {
-      question: 'What services does Zion Tech Group offer?',
-      answer:
-        'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.',
-    },
-    {
+      question: 'What services does Zion Tech Group offer?', answer: 'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.',
+    }, {
       question: 'How do I get started with a project?',
-      answer:
-        "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal.",
+      answer: "Contact us through our website, email, or phone to schedule a consultation. We&apos;ll discuss your requirements and provide a customized solution proposal.",
     },
     {
-      question: 'What is your typical project timeline?',
-      answer:
-        'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.',
-    },
+      question: 'What is your typical project timeline?', answer: 'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.', },
     {
-      question: 'Do you provide ongoing support and maintenance?',
-      answer:
-        'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.',
-    },
+      question: 'Do you provide ongoing support and maintenance?', answer: 'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.', },
     {
-      question: 'What technologies do you work with?',
-      answer:
-        'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.',
-    },
+      question: 'What technologies do you work with?', answer: 'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.', },
     {
-      question: 'How do you ensure data security?',
-      answer:
-        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.',
-    },
+      question: 'How do you ensure data security?', answer: 'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.', },
   ];
   const supportChannels = [
     {
-      icon: Mail,
-      title: 'Email Support',
-      description: 'Get help via email with detailed responses',
-      contact: 'kleber@ziontechgroup.com',
-      responseTime: 'Within 24 hours',
-      color: 'blue',
-    },
-    {
+      icon: Mail, title: 'Email Support',
+      description: 'Get help via email with detailed responses', contact: 'kleber@ziontechgroup.com',
+      responseTime: 'Within 24 hours', color: 'blue',
+    }, {
       icon: Phone,
-      title: 'Phone Support',
-      description: 'Speak directly with our technical team',
-      contact: '+1 (302) 464-0950',
-      responseTime: 'Mon-Fri 9AM-6PM EST',
-      color: 'green',
-    },
+      title: 'Phone Support', description: 'Speak directly with our technical team',
+      contact: '+1 (302) 464-0950', responseTime: 'Mon-Fri 9AM-6PM EST',
+      color: 'green', },
     {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Get instant help through our live chat',
-      contact: 'Available on website',
-      responseTime: 'Real-time',
-      color: 'purple',
-    },
-  ];
+      icon: MessageCircle, title: 'Live Chat',
+      description: 'Get instant help through our live chat', contact: 'Available on website',
+      responseTime: 'Real-time', color: 'purple',
+    },  ];
   const resources = [
     {
-      icon: BookOpen,
-      title: 'Documentation',
-      description: 'Comprehensive guides and API documentation',
-      link: '/docs',
-    },
-    {
+      icon: BookOpen, title: 'Documentation',
+      description: 'Comprehensive guides and API documentation', link: '/docs',
+    }, {
       icon: Video,
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides and tutorials',
-      link: '/tutorials',
-    },
+      title: 'Video Tutorials', description: 'Step-by-step video guides and tutorials',
+      link: '/tutorials', },
     {
-      icon: FileText,
-      title: 'Knowledge Base',
-      description: 'Searchable articles and troubleshooting guides',
-      link: '/knowledge-base',
-    },
-    {
+      icon: FileText, title: 'Knowledge Base',
+      description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base',
+    }, {
       icon: Users,
-      title: 'Community Forum',
-      description: 'Connect with other users and get peer support',
-      link: '/community',
-    },
+      title: 'Community Forum', description: 'Connect with other users and get peer support',
+      link: '/community', },
   ];
   return (
     <Layout
@@ -115,8 +72,8 @@ const Help: NextPage = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            We're here to help you succeed. Find answers, get support, and
-            access resources to make the most of our services.'
+            We&apos;re here to help you succeed. Find answers, get support, and'
+            access resources to make the most of our services.''
           </p>
         </div>
       </section>
@@ -283,7 +240,7 @@ const Help: NextPage = () => {
             Still Need Help?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Can't find what you're looking for? Our support team is ready to
+            Can&apos;t find what you&apos;re looking for? Our support team is ready to
             help you with any questions or concerns.
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">

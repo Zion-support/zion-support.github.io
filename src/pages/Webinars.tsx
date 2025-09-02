@@ -84,7 +84,7 @@ export default function Webinars() {
             >
               <h2 className="text-4xl font-bold text-white mb-4">Upcoming Webinars</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't miss these exclusive sessions with industry experts'
+                Don&apos;t miss these exclusive sessions with industry experts'
               </p>
             </motion.div>
 

@@ -22,11 +22,11 @@ class ComprehensiveWebsiteAnalyzer {
     this.checkedUrls.add(url);
 
     try {
-      console.log(`Checking: ${url}');
+      console.log(`Checking: ${url}`);
       const response = await axios.get(url, {
         timeout: 10000,
         validateStatus: status => status < 500,
-        headers: {User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)',
+        headers: {'User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)',
         },
       });
 

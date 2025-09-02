@@ -47,7 +47,7 @@ export default function Marketplace() {
     <>
       <SEO 
         title="Marketplace - Zion Tech Group | Technology Solutions & Tools"
-        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace."'
+        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace."'
         keywords="marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
       />
       
@@ -219,7 +219,7 @@ export default function Marketplace() {
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Can't Find What You're Looking For?
+                Can&apos;t Find What You&apos;re Looking For?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 We offer custom development services to create tailored solutions 

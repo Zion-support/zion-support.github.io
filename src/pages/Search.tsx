@@ -117,7 +117,7 @@ const Search: React.FC = () => {
     <>
       <SEO 
         title="Search - Zion Tech Group"
-        description="Search for services, talent, equipment, and companies across Zion Tech Group's comprehensive technology marketplace."'
+        description="Search for services, talent, equipment, and companies across Zion Tech Group&apos;s comprehensive technology marketplace."'
         keywords="search, services, talent, equipment, companies, technology marketplace, Zion Tech Group"
       />
       

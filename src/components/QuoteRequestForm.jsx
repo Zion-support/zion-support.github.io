@@ -122,7 +122,7 @@ export const QuoteRequestForm = () => {}
       <CardHeader className='text-center'>''''
         <CardTitle className='text-3xl font-bold'>Request a Quote</CardTitle>
         <CardDescription>';'
-          Tell us about your project and we'll provide you with a customized;'
+          Tell us about your project and we&apos;ll provide you with a customized;'
           quote
         </CardDescription>''''
       </CardHeader>''''

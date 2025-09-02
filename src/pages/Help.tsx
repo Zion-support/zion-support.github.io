@@ -11,7 +11,7 @@ export default function Help() {
   const faqs = [
     {
       id: 1, question: "How do I get started with Zion Tech Group services?",
-      answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
+      answer: "Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
       category: "Getting Started"
     },
     {
@@ -58,7 +58,7 @@ export default function Help() {
       availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate"
     },
     {
-      title: "Email Support", description: "Send us your questions and we'll respond quickly", '
+      title: "Email Support", description: "Send us your questions and we&apos;ll respond quickly", '
       icon: Mail,
       availability: "24/7 Available", responseTime: "Within 4 hours"
     }
@@ -217,7 +217,7 @@ export default function Help() {
             >
               <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Can't find what you're looking for? Our support team is here to help
+                Can&apos;t find what you&apos;re looking for? Our support team is here to help
               </p>
             </motion.div>
 

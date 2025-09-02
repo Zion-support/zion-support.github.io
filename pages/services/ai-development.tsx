@@ -247,8 +247,8 @@ const AIDevelopment: NextPage = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how AI can solve your specific business challenges and
-            drive growth.'
+            Let&apos;s discuss how AI can solve your specific business
+            challenges and' drive growth.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link

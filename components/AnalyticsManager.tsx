@@ -306,6 +306,6 @@ const AnalyticsManager: React.FC = () => {
       trackUserProperties,
     };
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
-  return null; // This component doesn't render anything'
+  return null; // This component doesn&apos;t render anything'
 };
 export default AnalyticsManager;

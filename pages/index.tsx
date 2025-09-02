@@ -326,8 +326,8 @@ export default function Home() {
                 What Our Clients Say
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what our satisfied
-                clients have to say about working with us.
+                Don&apos;t just take our word for it. Here&apos;s what our
+                satisfied clients have to say about working with us.
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">

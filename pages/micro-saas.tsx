@@ -680,8 +680,8 @@ export default function MicroSaaS() {
               Ready to Build Your Custom SaaS Solution?
             </h2>
             <p className="mt-6 text-lg leading-8 text-orange-100">
-              Let's discuss your requirements and create a custom solution that
-              drives your business forward. ' Get a free consultation and
+              Let&apos;s discuss your requirements and create a custom solution
+              that' drives your business forward. ' Get a free consultation and'
               project estimate.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

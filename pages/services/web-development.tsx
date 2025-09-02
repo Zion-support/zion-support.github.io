@@ -253,8 +253,8 @@ const WebDevelopment: NextPage = () => {
             Ready to Build Your Web Application?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss your web development needs and create a solution that
-            drives your business forward.'
+            Let&apos;s discuss your web development needs and create a solution
+            that' drives your business forward.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link

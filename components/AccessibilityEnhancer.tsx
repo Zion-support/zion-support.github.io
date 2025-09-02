@@ -10,7 +10,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
   useEffect(() => {
-    // Check for user's motion preferences'
+    // Check for user&apos;s motion preferences'
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
