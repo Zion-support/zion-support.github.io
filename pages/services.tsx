@@ -1,42 +1,31 @@
 import React from 'react';
 import Link from 'next/link';
-import {;
-  ArrowRight,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Database,;
-  Server,;
-  Lock,;
-  BarChart3,;
-  Users,;
-  Globe,;
-  Code,;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Clock,;
-  Award;
+import {
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Server,
+  Lock,
+  BarChart3,
+  Users,
+  Globe,
+  Code,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Clock,
+  Award
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 
 export default function Services() {
-	const title =
-  'Services — Zion Tech Group'
-	const description =
-  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const title = 'Services — Zion Tech Group';
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
-		<PageTransition>
-import PageTransition from '../src/components/PageTransition';
-
-export default function Services() {
-	const title =;
-  'Services — Zion Tech Group';
-	const description =;
-  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-	return (;
 		<PageTransition>
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>
@@ -47,10 +36,10 @@ export default function Services() {
 							<span className='text-base font-semibold leading-7 text-blue-600'>Our Services</span>
 						</div>
 						<h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-							Our Services;
+							Our Services
 						</h1>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.;
+							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
 						</p>
 					</div>
 				</div>
@@ -71,7 +60,7 @@ export default function Services() {
 								</div>
 							</div>
 							<p className='text-gray-600 mb-6'>
-								Transform your operations with intelligent automation and AI-powered decision making.;
+								Transform your operations with intelligent automation and AI-powered decision making.
 							</p>
 							<ul className='space-y-3 mb-6'>
 								<li className='flex items-center gap-x-3'>
@@ -97,11 +86,11 @@ export default function Services() {
 									<span>2-4 weeks delivery</span>
 								</div>
 								<Link
-									href='/contact';
-									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group';
-									aria-label='Get started with AI services';
-								>;
-									Get started with AI;
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group'
+									aria-label='Get started with AI services'
+								>
+									Get started with AI
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -118,7 +107,7 @@ export default function Services() {
 								</div>
 							</div>
 							<p className='text-gray-600 mb-6'>
-								Build scalable, resilient cloud infrastructure that grows with your business.;
+								Build scalable, resilient cloud infrastructure that grows with your business.
 							</p>
 							<ul className='space-y-3 mb-6'>
 								<li className='flex items-center gap-x-3'>
@@ -144,11 +133,11 @@ export default function Services() {
 									<span>4-8 weeks delivery</span>
 								</div>
 								<Link
-									href='/contact';
-									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group';
-									aria-label='Get started with cloud services';
-								>;
-									Get started with Cloud;
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group'
+									aria-label='Get started with cloud services'
+								>
+									Get started with Cloud
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -165,7 +154,7 @@ export default function Services() {
 								</div>
 							</div>
 							<p className='text-gray-600 mb-6'>
-								Protect your business with enterprise-grade security frameworks and compliance automation.;
+								Protect your business with enterprise-grade security frameworks and compliance automation.
 							</p>
 							<ul className='space-y-3 mb-6'>
 								<li className='flex items-center gap-x-3'>
@@ -191,11 +180,11 @@ export default function Services() {
 									<span>3-6 weeks delivery</span>
 								</div>
 								<Link
-									href='/contact';
-									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group';
-									aria-label='Get started with cybersecurity services';
-								>;
-									Get started with Security;
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group'
+									aria-label='Get started with cybersecurity services'
+								>
+									Get started with Security
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -212,7 +201,7 @@ export default function Services() {
 								</div>
 							</div>
 							<p className='text-gray-600 mb-6'>
-								Custom software solutions tailored to your specific business needs and workflows.;
+								Custom software solutions tailored to your specific business needs and workflows.
 							</p>
 							<ul className='space-y-3 mb-6'>
 								<li className='flex items-center gap-x-3'>
@@ -238,11 +227,11 @@ export default function Services() {
 									<span>6-12 weeks delivery</span>
 								</div>
 								<Link
-									href='/contact';
-									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group';
-									aria-label='Get started with custom software services';
-								>;
-									Get started with SaaS;
+									href='/contact'
+									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
+									aria-label='Get started with custom software services'
+								>
+									Get started with SaaS
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -256,15 +245,12 @@ export default function Services() {
 					<div className='mx-auto max-w-3xl text-center mb-14'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Expanded Service Catalog</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							More real, production-ready services across AI, IT, and Micro SaaS. Transparent starting prices and clear outcomes. Visit our website at;
-							{' '}
-							<a href='https: //ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.;
+							More real, production-ready services across AI, IT, and Micro SaaS. Transparent starting prices and clear outcomes. Visit our website at{' '}
+							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.
 						</p>
 						<p className='mt-3 text-sm text-gray-500'>
-							Average market price ranges referenced from public agency rate cards and vendor quotes.;
-							For tailored pricing, see our;
-							{' '}
-							<Link href='/pricing-guide' className='text-blue-600 hover:text-blue-500 underline'>Pricing Guide</Link>.;
+							Average market price ranges referenced from public agency rate cards and vendor quotes. For tailored pricing, see our{' '}
+							<Link href='/pricing-guide' className='text-blue-600 hover:text-blue-500 underline'>Pricing Guide</Link>.
 						</p>
 					</div>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -555,13 +541,10 @@ export default function Services() {
 						</div>
 					</div>
 					<div className='mt-10 text-center text-sm text-gray-500'>
-						Need something custom? Email;
-						{' '}
-						<a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup.com</a>
-						{' '}
-						or call;
-						{' '}
-						<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>.;
+						Need something custom? Email{' '}
+						<a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup.com</a>{' '}
+						or call{' '}
+						<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>.
 					</div>
 				</div>
 			</section>
@@ -570,10 +553,10 @@ export default function Services() {
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 					<div className='mx-auto max-w-2xl lg:text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-							Our Delivery Process;
+							Our Delivery Process
 						</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							We follow a proven methodology that ensures quality, speed, and successful outcomes.;
+							We follow a proven methodology that ensures quality, speed, and successful outcomes.
 						</p>
 					</div>
 					<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
@@ -613,25 +596,25 @@ export default function Services() {
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 					<div className='mx-auto max-w-2xl text-center'>
 						<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-							Ready to get started?;
+							Ready to get started?
 						</h2>
 						<p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.'';
+							Let&aposs discuss your project requirements and how we can help you achieve your goals.
 						</p>
 						<div className='mt-10 flex items-center justify-center gap-x-6'>
 							<Link
-								href='/contact';
-								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105';
-								aria-label='Contact us to get started';
-							>;
-								Contact Us;
+								href='/contact'
+								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
+								aria-label='Contact us to get started'
+							>
+								Contact Us
 								<ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />
 							</Link>
 							<Link
-								href='/';
-								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group';
-								aria-label='Back to homepage';
-							>;
+								href='/'
+								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
+								aria-label='Back to homepage'
+							>
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
 							</Link>
 						</div>
@@ -641,4 +624,3 @@ export default function Services() {
 		</PageTransition>
 	);
 }
-;

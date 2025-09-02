@@ -2,37 +2,37 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import {;
-  ArrowRight,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Users,;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Globe,;
-  Code,;
-  Database,;
-  Lock,;
-  Rocket;
+import {
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Globe,
+  Code,
+  Database,
+  Lock,
+  Rocket
 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 import AccessibilityManager from '../components/AccessibilityManager';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 
-const EnhancedHome: React.FC = () => {;
+const EnhancedHome: React.FC = () => {
   const features = [
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
-      description: 'Cutting-edge artificial intelligence to transform your business operations and decision-making processes.',;
-      color: 'from-purple-500 to-pink-500';
-    },;
-    {;
-      icon: Cloud,;
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence to transform your business operations and decision-making processes.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Cloud,
       title: 'Cloud Architecture',;
       description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',;
       color: 'from-blue-500 to-cyan-500';
