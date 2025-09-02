@@ -125,5 +125,3 @@ const itemVariants = {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
