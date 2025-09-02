@@ -7,10 +7,8 @@ interface ImageOptimizerProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
+
+
   fill?: boolean;
   style?: React.CSSProperties;
   onLoad?: () => void;
@@ -24,10 +22,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   height,
   className = '',
   priority = false,
-  quality = 85,
-  placeholder = 'blur',
-  blurDataURL,
-  sizes,
+
+
   fill = false,
   style,
   onLoad,
@@ -37,8 +33,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  // Generate a simple blur placeholder if none provided
-  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+
 
   const handleLoad = () => {
     setIsLoaded(true);

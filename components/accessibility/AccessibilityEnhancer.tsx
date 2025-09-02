@@ -28,6 +28,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', handleSkipToContent);
       return () => document.removeEventListener('keydown', handleSkipToContent);
     }
+    return () => {}; // Return empty cleanup function when skipToContent is false
   }, [skipToContent]);
 
   useEffect(() => {
@@ -61,7 +62,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               }
             };
             
-            modal.addEventListener('keydown', handleTabKey);
+            modal.addEventListener('keydown', handleTabKey as EventListener);
           }
         });
       };
@@ -75,6 +76,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       
       return () => observer.disconnect();
     }
+    return () => {}; // Return empty cleanup function when focusManagement is false
   }, [focusManagement]);
 
   useEffect(() => {
@@ -115,6 +117,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyboardNavigation);
       return () => document.removeEventListener('keydown', handleKeyboardNavigation);
     }
+    return () => {}; // Return empty cleanup function when keyboardNavigation is false
   }, [keyboardNavigation]);
 
   return (

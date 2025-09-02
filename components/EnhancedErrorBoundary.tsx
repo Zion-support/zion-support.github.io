@@ -33,7 +33,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
@@ -56,8 +56,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // like Sentry, LogRocket, or Bugsnag
     try {
       // Example: Send to analytics
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'exception', {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'exception', {
           description: error.message,
           fatal: false,
         });
@@ -102,7 +102,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 
-interface WebVitalsMetric {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-}
+// WebVitalsMetric interface for future use
+// interface WebVitalsMetric {
+//   name: string;
+//   value: number;
+//   delta: number;
+//   id: string;
+// }
 
 const WebVitals: React.FC = () => {
   useEffect(() => {

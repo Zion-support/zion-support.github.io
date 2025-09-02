@@ -54,7 +54,9 @@ const PerformanceEnhancer: React.FC = () => {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          if (lastEntry) {
+            setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          }
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -124,6 +126,7 @@ const PerformanceEnhancer: React.FC = () => {
           clearInterval(memoryInterval);
         };
       }
+      return () => {}; // Return empty cleanup function if PerformanceObserver is not available
     };
 
     const cleanup = measurePerformance();
@@ -132,8 +135,8 @@ const PerformanceEnhancer: React.FC = () => {
 
   // Send metrics to analytics
   const sendToAnalytics = useCallback((metricName: string, value: number) => {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'web_vitals', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'web_vitals', {
         name: metricName,
         value: Math.round(value),
         event_category: 'Performance',

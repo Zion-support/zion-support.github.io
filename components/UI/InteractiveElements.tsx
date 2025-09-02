@@ -1,7 +1,5 @@
-import React, { useEffect, useRef, useState } from
-  'react';
-import { motion, useAnimation, useInView } from
-  'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 type ButtonVariant =
   'primary' |
@@ -27,36 +25,26 @@ interface InteractiveButtonProps {
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   children,
   onClick,
-  variant =,
-  primary',
-  size =
-  'md',
+  variant = 'primary',
+  size = 'md',
   disabled = false,
   loading = false,
   icon,
-  className = '
-  ',
+  className = ''
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden;
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
   const variantClasses: Record<ButtonVariant, string> = {
-    primary:,
-  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500,
-    secondary:,
-  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600,
-    ghost:,
-  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800,
-    gradient:,
-  bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-500,
+    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
+    ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
+    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500',
   };
   const sizeClasses: Record<ButtonSize, string> = {
-    sm:,
-  px-3 py-2 text-sm
-  ',
-    md: 'px-4 py-2 text-base,
-    lg: 'px-6 py-3 text-lg
-  ',
+    sm: 'px-3 py-2 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg',
   };
 
   return (
@@ -71,16 +59,12 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
     >
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0"
-        animate={{ x: isHovered ? [,
-  -100%
-  ', '100%
-  '] as any: '-100%, opacity: isHovered ? [0, 0.2, 0] as any : 0 }}
+        animate={{ x: isHovered ? ['-100%', '100%'] : '-100%', opacity: isHovered ? [0, 0.2, 0] : 0 }}
         transition={{ duration: 0.6 }}
       />
       <div className="relative flex items-center gap-2">
         {loading ? (
-          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear
-  ' }} />
+          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} />
         ) : (
           icon && <span className="flex-shrink-0">{icon}</span>
         )}
@@ -94,23 +78,34 @@ interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  direction?: 'up
-  ' | 'down
-  ' | 'left
-  ' | 'right
-  ';
+  direction?: 'up' | 'down' | 'left' | 'right';
 }
 
 export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = '', delay = 0, direction =
   'up' }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: true, margin:
-  '-100px' });
+  const [isInView, setIsInView] = useState(false);
   const controls = useAnimation();
 
   useEffect(() => {
-    if (isInView) controls.start(
-  'visible');
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry && entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.1, rootMargin: '-100px' }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (isInView) controls.start('visible');
   }, [isInView, controls]);
 
   const directionVariants = {
@@ -167,40 +162,23 @@ interface FloatingActionButtonProps {
   icon: React.ReactNode;
   onClick: () => void;
   tooltip?: string;
-  position?:,
-  bottom-right' |
-  'bottom-left' |
-  'top-right' |
-  'top-left';
-  color?: 'blue' |
-  'green' |
-  'purple' |
-  'red;
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+  color?: 'blue' | 'green' | 'purple' | 'red';
 }
 
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position =,
-  bottom-right', color =
-  'blue' }) => {
+export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position = 'bottom-right', color = 'blue' }) => {
   const [showTooltip, setShowTooltip] = useState(false);
-  const positionClasses: Record<NonNullable<FloatingActionButtonProps[
-  'position]>, string> = {,
-  bottom-right': 'bottom-6 right-6,
-,
-  bottom-left': 'bottom-6 left-6,
-,
-  top-right': 'top-6 right-6,
-,
-  top-left': 'top-6 left-6,
+  const positionClasses: Record<NonNullable<FloatingActionButtonProps['position']>, string> = {
+    'bottom-right': 'bottom-6 right-6',
+    'bottom-left': 'bottom-6 left-6',
+    'top-right': 'top-6 right-6',
+    'top-left': 'top-6 left-6',
   };
-  const colorClasses: Record<NonNullable<FloatingActionButtonProps[,
-  color']>, string> = {
-    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500,
-    green:,
-  bg-green-600 hover: bg-green-700 focus:ring-green-500,
-    purple:,
-  bg-purple-600 hover: bg-purple-700 focus:ring-purple-500,
-    red:,
-  bg-red-600 hover: bg-red-700 focus:ring-red-500,
+  const colorClasses: Record<NonNullable<FloatingActionButtonProps['color']>, string> = {
+    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500',
+    green: 'bg-green-600 hover:bg-green-700 focus:ring-green-500',
+    purple: 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-500',
+    red: 'bg-red-600 hover:bg-red-700 focus:ring-red-500',
   };
 
   return (

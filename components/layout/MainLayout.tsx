@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import EnhancedNavigation from './EnhancedNavigation';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
@@ -26,14 +26,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         keywords={keywords}
       />
       <PerformanceOptimizer />
-      <AccessibilityEnhancer />
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-      </div>
+      <AccessibilityEnhancer>
+        <div className="min-h-screen flex flex-col">
+          <EnhancedNavigation />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </AccessibilityEnhancer>
     </>
   );
 };

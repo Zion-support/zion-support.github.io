@@ -34,14 +34,19 @@ const PerformanceMonitor: React.FC = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        if (lastEntry) {
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          const fidEntry = entry as any;
+          if (fidEntry.processingStart) {
+            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+          }
         }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });

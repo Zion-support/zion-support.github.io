@@ -63,7 +63,6 @@ const SecurityEnhancer: React.FC = () => {
       const forms = document.querySelectorAll('form');
       forms.forEach(form => {
         form.addEventListener('submit', (e) => {
-          const formData = new FormData(form as HTMLFormElement);
           let isValid = true;
 
           // Validate required fields
@@ -177,7 +176,7 @@ const SecurityEnhancer: React.FC = () => {
       let clickCount = 0;
       let lastClickTime = 0;
       
-      document.addEventListener('click', (e) => {
+      document.addEventListener('click', () => {
         const now = Date.now();
         if (now - lastClickTime < 100) { // Less than 100ms between clicks
           clickCount++;
@@ -195,7 +194,7 @@ const SecurityEnhancer: React.FC = () => {
       let formSubmissionCount = 0;
       let lastFormSubmission = 0;
 
-      document.addEventListener('submit', (e) => {
+      document.addEventListener('submit', () => {
         const now = Date.now();
         if (now - lastFormSubmission < 1000) { // Less than 1 second between submissions
           formSubmissionCount++;

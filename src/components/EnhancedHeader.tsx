@@ -55,6 +55,9 @@ export function EnhancedHeader() {
       icon: Brain,
       color: 'from-blue-500 to-indigo-500',
       services: [
+        { name: 'AI Content Generator', href: '/services/ai-content-generator', description: 'Create high-quality content 10x faster' },
+        { name: 'AI Email Automation', href: '/services/ai-email-automation', description: 'Intelligent email marketing automation' },
+        { name: 'Data Analytics Platform', href: '/services/data-analytics', description: 'AI-powered analytics and insights' },
         { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
@@ -94,7 +97,7 @@ export function EnhancedHeader() {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: [
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced AI-powered security' },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity', description: 'Advanced threat detection with 99.9% accuracy' },
         { name: 'AI Cybersecurity Operations', href: '/services/ai-cybersecurity-operations-center', description: 'Autonomous security operations center' },
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening' },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', description: 'GDPR/CCPA compliance' },
@@ -106,6 +109,7 @@ export function EnhancedHeader() {
       icon: Truck,
       color: 'from-green-500 to-blue-600',
       services: [
+        { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', description: 'AI-powered inventory optimization' },
         { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-management-platform', description: 'Self-learning supply chain management' },
         { name: 'Autonomous Logistics', href: '/services/autonomous-logistics', description: 'Smart supply chain automation' },
       ]
@@ -174,35 +178,35 @@ export function EnhancedHeader() {
   // Featured services for quick access
   const services = [
     {
-      name: 'AI Email Automation Suite',
-      description: 'Intelligent email management & automation',
-      href: '/services/ai-email-automation-suite',
-      icon: Mail,
+      name: 'AI Content Generator',
+      description: 'Create high-quality content 10x faster',
+      href: '/services/ai-content-generator',
+      icon: PenTool,
       color: 'from-blue-500 to-indigo-500',
       featured: true
     },
     {
-      name: 'AI Social Media Scheduler',
-      description: 'AI-powered social media automation',
-      href: '/services/ai-social-media-scheduler',
-      icon: Share2,
-      color: 'from-purple-500 to-pink-500',
-      featured: true
-    },
-    {
-      name: 'AI Customer Insights Platform',
-      description: 'Advanced customer analytics & insights',
-      href: '/services/ai-customer-insights-platform',
-      icon: Users,
+      name: 'Smart Inventory Management',
+      description: 'AI-powered inventory optimization',
+      href: '/services/smart-inventory-management',
+      icon: Package,
       color: 'from-green-500 to-emerald-500',
       featured: true
     },
     {
-      name: 'AI-Powered DevOps Automation',
-      description: 'Intelligent CI/CD & infrastructure automation',
-      href: '/services/ai-powered-devops-automation',
-      icon: Workflow,
-      color: 'from-blue-500 to-indigo-500',
+      name: 'AI Cybersecurity Platform',
+      description: 'Advanced threat detection with 99.9% accuracy',
+      href: '/services/ai-cybersecurity',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      featured: true
+    },
+    {
+      name: 'AI Email Automation',
+      description: 'Intelligent email marketing automation',
+      href: '/services/ai-email-automation',
+      icon: Mail,
+      color: 'from-purple-500 to-pink-500',
       featured: true
     },
     {
