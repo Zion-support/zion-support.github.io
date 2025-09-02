@@ -6,23 +6,21 @@ import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
 
-// Loading component;
-const LoadingSpinner = () => (;
+// Loading component
+const LoadingSpinner = () => (
   <div className='flex items-center justify-center min-h-screen'>
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
   </div>
 );
-;
-// Optimized lazy loading with preloading hints;
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {;
+// Optimized lazy loading with preloading hints
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
-  return (props: any) => (;
-    <Suspense fallback={fallback || <LoadingSpinner />}>;
+  return (props: any) => (
+    <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
   );
 };
-;
 // Core pages with optimized imports;
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
@@ -44,7 +42,6 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Research = createLazyComponent(() => import('./pages/Research'));
 const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
-;
 // Additional required components;
 const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
