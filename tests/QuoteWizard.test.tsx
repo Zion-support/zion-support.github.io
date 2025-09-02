@@ -1,6 +1,23 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { QuoteWizard } from '@/components/quote/QuoteWizard';
-import { vi } from 'vitest';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { QuoteWizard } from '@/components/quote/QuoteWizard'
+import { vi } from 'vitest'
+beforeEach(() => {
+  global.fetch = vi.fn((url) => {
+    if (url ===
+  '/api/services?type=quote') {
+      return Promise.resolve({
+        ok: true, json: async () => [
+          { id:, 1', title: 'Service A }, { id:, 2', title: 'Service B }]})
+    }
+    if (url ===
+  '/api/quotes') {
+      return Promise.resolve({
+        ok: true, json: async () => ({ success: true }), // Mock for submit
+      })
+    }
+    return Promise.reject(new Error(`Unhandled fetch: ${url}`))
+  }) as any
+})
 
 beforeEach(() => {
   global.fetch = vi.fn((url) => {

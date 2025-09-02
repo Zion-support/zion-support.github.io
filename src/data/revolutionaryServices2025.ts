@@ -534,4 +534,4 @@ export const revolutionaryAIServices2025: AIService[] = [{
       'Voice assistants';
     ], technologies: ['Python', 'Transformers', 'BERT', 'GPT models', 'PostgreSQL', 'Redis']
   }
-];
+]

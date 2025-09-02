@@ -1,5 +1,5 @@
-'use client';
-import { useState } from 'react';
+'use client'
+import { useState } from 'react'
 interface InstanceCardProps {
   instance: { id: string;
    name: string;

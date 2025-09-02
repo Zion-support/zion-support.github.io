@@ -1,7 +1,6 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
-
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react'
 const AIContentGenerator: React.FC = () => {
   return (
     <Layout

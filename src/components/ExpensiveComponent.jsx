@@ -2,7 +2,7 @@
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {}
-    // Simulate expensive computation;
+    // Simulate expensive computation
     const timer = setTimeout(() => {}
       const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
       setData(expensiveData);

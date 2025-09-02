@@ -1,9 +1,10 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { LoginForm } from '@/components/auth/login';
-import * as authService from '@/services/authService';
-import * as authHook from '@/hooks/useAuth';
-import { vi } from 'vitest';
+import { render, screen, fireEvent } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
+import { LoginForm } from '@/components/auth/login'
+import * as authService from '@/services/authService'
+import * as authHook from '@/hooks/useAuth'
+import { vi } from 'vitest'
+vi.spyOn(authHook'useAuth').mockReturnValue({ isLoading: false, login: vi.fn() } as any)
 
 vi.spyOn(authHook'useAuth').mockReturnValue({ isLoading: false, login: vi.fn() } as any);
 describe(

@@ -1,11 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { describe, it, expect, vi } from 'vitest';
-import CartPage from '@/pages/Cart';
-import { CartProvider } from '@/context/CartContext';
-import { AuthContext } from '@/context/auth/AuthContext';
-import { safeStorage } from '@/utils/safeStorage';
-import { getCartKey } from '@/utils/cartUtils';
+import { render, screen } from '@testing-library/react'
+import { MemoryRouter, Routes, Route } from 'react-router-dom'
+import { describe, it, expect, vi } from 'vitest'
+import CartPage from '@/pages/Cart'
+import { CartProvider } from '@/context/CartContext'
+import { AuthContext } from '@/context/auth/AuthContext'
+import { safeStorage } from '@/utils/safeStorage'
+import { getCartKey } from '@/utils/cartUtils'
+vi.mock(
+  'next/router', () => ({
+  useRouter: () => ({ push: vi.fn() })
+}))
 
 vi.mock(
   'next/router', () => ({

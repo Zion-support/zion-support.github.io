@@ -10,7 +10,7 @@ export const Link: React.FC<LinkProps> = ({ to, href, children, className, onCli
   const resolved = to || href || '/'
   return (
     <NextLink href={resolved} legacyBehavior>
-      <a className={className} onClick={onClick}>{children as React.ReactNode}</a>
+      <a className={className} onClick={onClick}>{children}</a>
     </NextLink>
   )}
 export function useLocation() {
@@ -20,10 +20,12 @@ export function useLocation() {
   const hashIndex = asPath.indexOf('#');
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
-    pathname: path, search: query ? `?${query}` : '',
-    hash, state: undefined as unknown,
+    pathname: path, 
+    search: query ? `?${query}` : '',
+    hash, 
+    state: undefined as unknown,
     key: 'next'
-  } as { pathname: string; search: string; hash: string; state: unknown; key: string }}
+  }}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
 export const MemoryRouter = BrowserRouter;
 export const HashRouter = BrowserRouter;

@@ -1,4 +1,4 @@
-// Global types for the Zion Tech Group application;
+// Global types for the Zion Tech Group application
 export interface Service {
   id: string;
    name: string;
@@ -155,7 +155,7 @@ contact: {phone: string;
 export interface ErrorInfo {
   message: string;
    code?: string;
-   details?: unknown;
+   details?: Record<string, unknown>;
    timestamp: string;
    userAgent?: string;
    url?: string}
@@ -178,7 +178,7 @@ export interface FormField {
     message?: string}
 }
 export interface FormState {
-  values: Record<string, unknown>
+  values: Record<string, string | number | boolean>
    errors: Record<string, string>
    touched: Record<string, boolean>
    isSubmitting: boolean;
@@ -215,12 +215,12 @@ export interface ApiError {
   status: number;
    message: string;
    code?: string;
-   details?: unknown}
+   details?: Record<string, unknown>}
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
-  data?: unknown;
-  params?: Record<string, unknown>;
+  data?: Record<string, unknown>;
+  params?: Record<string, string | number | boolean>;
   headers?: Record<string, string>}
 // Environment types;
 export interface Environment {
