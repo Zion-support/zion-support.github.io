@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   typescript: {
@@ -10,11 +9,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-=======
-  typescript: {
-    ignoreBuildErrors: true,
-  },
->>>>>>> origin/pr-update-cursor/analyze-improve-and-deploy-application-6fbe
   experimental: {
     esmExternals: false,
     optimizeCss: false,
@@ -31,11 +25,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
-<<<<<<< HEAD
-    // Exclude contracts directory from compilation
-=======
     // Exclude problematic directories from the build
->>>>>>> origin/pr-update-cursor/analyze-improve-and-deploy-application-6fbe
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       include: [
@@ -55,26 +45,16 @@ const nextConfig = {
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-<<<<<<< HEAD
         /cypress/,
-      ],
-    });
-    
-    // Exclude contracts directory specifically
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'hardhat/config': false,
-=======
         /hardhat/,
       ],
     });
     
-    // Exclude contracts directory from compilation
+    // Exclude contracts and hardhat from resolution
     config.resolve.alias = {
       ...config.resolve.alias,
       'hardhat/config': false,
       'hardhat': false,
->>>>>>> origin/pr-update-cursor/analyze-improve-and-deploy-application-6fbe
     };
     
     // Add fallback for problematic modules
