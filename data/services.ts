@@ -4847,6 +4847,148 @@ export const services: Service[] = [
     technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
     link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
     icon: '📈'
+  },
+  {
+    id: 'ai-compliance-monitoring-suite',
+    name: 'AI Compliance Monitoring Suite',
+    category: 'ai-services',
+    description: 'Automated monitoring for SOC 2, HIPAA, and GDPR controls with evidence collection and auditor-ready reports.',
+    features: [
+      'Continuous control monitoring',
+      'Automated evidence capture',
+      'Policy change detection',
+      'Vendor risk scoring',
+      'Real-time alerts and dashboards',
+      'Auditor collaboration workspace',
+      'API and SIEM integrations',
+      'Report exports (PDF/CSV)'
+    ],
+    pricing: { starter: 8000, professional: 30000, enterprise: 120000, currency: 'USD' },
+    benefits: [
+      'Reduce audit preparation time by 70%',
+      'Lower compliance risk',
+      'Single source of truth for controls',
+      'Auditor-ready evidence'
+    ],
+    useCases: ['SOC 2 Type I/II readiness', 'HIPAA compliance', 'GDPR DPIA tracking', 'Vendor risk management'],
+    technologies: ['OpenAI', 'Supabase/Postgres', 'Node.js', 'React', 'SIEM APIs'],
+    link: 'https://ziontechgroup.com/services/ai-compliance-monitoring-suite',
+    icon: '✅'
+  },
+  {
+    id: 'mlops-foundation-pack',
+    name: 'MLOps Foundation Pack',
+    category: 'it-services',
+    description: 'Production-grade MLOps setup with feature store, CI/CD for models, monitoring, and governance.',
+    features: [
+      'Model registry and versioning',
+      'Feature store setup',
+      'CI/CD pipelines for training and deploy',
+      'Data and model lineage',
+      'Model performance monitoring',
+      'Shadow/canary deployments',
+      'RBAC and audit trails',
+      'Playbooks and enablement'
+    ],
+    pricing: { starter: 25000, professional: 90000, enterprise: 250000, currency: 'USD' },
+    benefits: [
+      'Faster model time-to-production',
+      'Reduced operational risk',
+      'Repeatable, governed workflows',
+      'Improved reliability of ML systems'
+    ],
+    useCases: ['Forecasting platforms', 'Recommendation engines', 'Fraud detection', 'NLP copilots'],
+    technologies: ['Docker/K8s', 'MLflow', 'dbt', 'Argo/GitHub Actions', 'Prometheus/Grafana'],
+    link: 'https://ziontechgroup.com/services/mlops-foundation-pack',
+    icon: '🧰'
+  },
+  {
+    id: 'ai-knowledge-base-copilot',
+    name: 'AI Knowledge Base Copilot',
+    category: 'micro-saas',
+    description: 'Self-serve AI assistant that answers from your docs, tickets, and wikis with citations and guardrails.',
+    features: [
+      'RAG with citations',
+      'Connector library (Confluence, Notion, Zendesk)',
+      'Feedback loops and fine-tuning',
+      'Admin console with redaction',
+      'Multilingual support',
+      'Embeddings and vector search',
+      'Access controls and SSO',
+      'Analytics and deflection rates'
+    ],
+    pricing: { starter: 39, professional: 129, enterprise: 399, currency: 'USD' },
+    benefits: ['Higher case deflection', 'Faster onboarding', 'Consistent answers with sources', 'Reduced support costs'],
+    useCases: ['Customer support portals', 'Internal IT helpdesk', 'Partner enablement', 'Product documentation'],
+    technologies: ['OpenAI', 'Vector DB', 'Next.js', 'Node.js', 'SSO/OAuth'],
+    link: 'https://ziontechgroup.com/services/ai-knowledge-base-copilot',
+    icon: '📚'
+  },
+  {
+    id: 'cloud-cost-optimizer',
+    name: 'Cloud Cost Optimizer',
+    category: 'it-services',
+    description: 'FinOps assessment and automation to reduce AWS, GCP, and Azure spend without sacrificing performance.',
+    features: [
+      'Billing and usage analysis',
+      'Right-sizing and auto-scheduling',
+      'Reserved/Savings Plans modeling',
+      'Storage and data transfer optimization',
+      'Kubernetes cost allocation',
+      'Alerting and anomaly detection',
+      'Monthly optimization reports',
+      'Automation-as-code delivery'
+    ],
+    pricing: { starter: 5000, professional: 20000, enterprise: 80000, currency: 'USD' },
+    benefits: ['Cut 20–40% of cloud spend', 'Visibility by team/service', 'No performance regression', 'Continuous savings'],
+    useCases: ['SaaS platforms', 'Data pipelines', 'Ecommerce workloads', 'ML training clusters'],
+    technologies: ['AWS/GCP/Azure', 'Kubecost', 'Terraform', 'BigQuery/Athena', 'Looker/Data Studio'],
+    link: 'https://ziontechgroup.com/services/cloud-cost-optimizer',
+    icon: '💸'
+  },
+  {
+    id: 'ai-security-copilot-managed',
+    name: 'AI Security Copilot (Managed)',
+    category: 'ai-services',
+    description: 'Managed AI assistant for SecOps that triages alerts, summarizes incidents, and suggests playbooks.',
+    features: [
+      'Alert triage and deduplication',
+      'Incident summarization',
+      'Playbook recommendations',
+      'SOAR ticket enrichment',
+      'Threat intel enrichment',
+      'Knowledge base citations',
+      'SOC metrics and QA',
+      'On-prem or SaaS options'
+    ],
+    pricing: { starter: 12000, professional: 45000, enterprise: 180000, currency: 'USD' },
+    benefits: ['Faster MTTR', 'Reduced alert fatigue', 'Consistent response', 'Improved analyst productivity'],
+    useCases: ['SOC augmentation', 'Managed detection and response', 'IR playbook automation'],
+    technologies: ['SIEM/SOAR', 'RAG', 'OpenAI', 'K8s', 'Elasticsearch'],
+    link: 'https://ziontechgroup.com/services/ai-security-copilot-managed',
+    icon: '🛡️'
+  },
+  {
+    id: 'sales-enablement-studio',
+    name: 'Sales Enablement Studio',
+    category: 'micro-saas',
+    description: 'Personalized microsites, proposals, and ROI calculators auto-generated for every prospect with analytics.',
+    features: [
+      'Prospect microsite generator',
+      'ROI calculator builder',
+      'Proposal templates with e-sign',
+      'CRM and MAP integrations',
+      'AI copy and design suggestions',
+      'Engagement analytics',
+      'ABM asset personalization',
+      'Team collaboration'
+    ],
+    pricing: { starter: 59, professional: 149, enterprise: 399, currency: 'USD' },
+    benefits: ['Higher win rates', 'Shorter sales cycles', 'On-brand experiences at scale', 'Deal intelligence'],
+    useCases: ['B2B SaaS sales', 'Agencies', 'Channel/partner sales', 'Enterprise pursuits'],
+    technologies: ['Next.js', 'Stripe', 'HubSpot/Salesforce', 'OpenAI'],
+    link: 'https://ziontechgroup.com/services/sales-enablement-studio',
+    icon: '🧾'
   }
 ];
 

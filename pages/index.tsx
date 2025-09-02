@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <Link to={service.href}>
+                <Link href={service.href} className="inline-block w-full">
                   <Button variant="outline" className="w-full">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
