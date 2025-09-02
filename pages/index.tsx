@@ -35,8 +35,11 @@ const Home: NextPage = () => {
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Explore Services
+            <Link href="/pricing" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              View Pricing
+            </Link>
+            <Link href="/case-studies" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              See Success Stories
             </Link>
           </div>
 
@@ -118,6 +121,59 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {/* Latest Innovations */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Innovations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay ahead with our cutting-edge technology solutions and industry-leading innovations.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg">
+              <div className="text-blue-600 mb-4">
+                <Globe className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum Computing</h3>
+              <p className="text-gray-600 mb-4">
+                Revolutionary quantum computing solutions for complex problem-solving and advanced simulations.
+              </p>
+              <Link href="/services/quantum-computing-simulator" className="text-blue-600 hover:text-blue-700 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg">
+              <div className="text-purple-600 mb-4">
+                <Zap className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Drug Discovery</h3>
+              <p className="text-gray-600 mb-4">
+                Accelerate pharmaceutical research with our AI-powered drug discovery platform.
+              </p>
+              <Link href="/services/ai-drug-discovery" className="text-purple-600 hover:text-purple-700 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg">
+              <div className="text-green-600 mb-4">
+                <Shield className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum Security</h3>
+              <p className="text-gray-600 mb-4">
+                Future-proof your security with quantum-resistant cryptography and quantum key distribution.
+              </p>
+              <Link href="/services/quantum-security-implementation" className="text-green-600 hover:text-green-700 font-semibold">
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
@@ -127,9 +183,14 @@ const Home: NextPage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help transform your business with cutting-edge technology solutions.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-            Get Started Today
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              Get Started Today
+            </Link>
+            <Link href="/pricing" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              View Pricing
+            </Link>
+          </div>
         </div>
       </section>
     </MainLayout>

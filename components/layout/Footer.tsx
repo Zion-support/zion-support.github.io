@@ -11,38 +11,44 @@ const Footer: React.FC = () => {
       services: [
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'Project Management', href: '/services/project-management-suite' },
-        { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
-        { name: 'Expense Tracker', href: '/services/expense-tracker' },
-        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
-        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
-        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
-        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
+        { name: 'Blockchain NFT Platform', href: '/services/blockchain-nft-platform' },
+        { name: 'IoT Device Management', href: '/services/iot-device-management' },
+        { name: 'AR/VR Showroom', href: '/services/ar-vr-showroom' },
+        { name: 'Crypto Portfolio Tracker', href: '/services/crypto-portfolio-tracker' },
+        { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
+        { name: 'Metaverse Event Platform', href: '/services/metaverse-event-platform' },
+        { name: 'Quantum Computing Simulator', href: '/services/quantum-computing-simulator' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
       ]
     },
     {
       title: 'IT Services',
       services: [
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        { name: 'Quantum Security Implementation', href: '/services/quantum-security-implementation' },
+        { name: '5G Network Optimization', href: '/services/5g-network-optimization' },
+        { name: 'Satellite Communication', href: '/services/satellite-communication-setup' },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform' },
         { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
         { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
         { name: 'Database Optimization', href: '/services/database-optimization' },
         { name: 'Network Security Audit', href: '/services/network-security-audit' },
         { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
-        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
-        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
       ]
     },
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
+        { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
+        { name: 'AI Space Exploration', href: '/services/ai-space-exploration' },
+        { name: 'AI Robotics Control', href: '/services/ai-robotics-control' },
+        { name: 'AI Neuroscience Research', href: '/services/ai-neuroscience-research' },
         { name: 'Custom AI Models', href: '/services/custom-ai-models' },
         { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
         { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
         { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
         { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
-        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
-        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
       ]
     }
   ];
@@ -107,6 +113,9 @@ const Footer: React.FC = () => {
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
+                <li><Link href="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors">Pricing</Link></li>
+                <li><Link href="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors">Case Studies</Link></li>
+                <li><Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors">Blog</Link></li>
                 <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
                 <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>

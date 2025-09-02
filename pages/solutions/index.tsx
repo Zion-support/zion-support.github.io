@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
+import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
-import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain, Cloud, Database, Lock } from 'lucide-react';
 
 const Solutions: NextPage = () => {
   return (
-    <Layout
+    <MainLayout
       title="Technology Solutions - Zion Tech Group"
       description="Discover comprehensive technology solutions tailored for enterprises, small businesses, startups, and specific industries. Transform your business with Zion Tech Group."
     >
@@ -22,16 +22,71 @@ const Solutions: NextPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact">
-              <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Get Your Solution
-              </a>
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              Get Your Solution
             </Link>
-            <Link href="/services">
-              <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                View All Services
-              </a>
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              View All Services
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Technology Stack</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technologies to deliver innovative solutions that drive business growth and digital transformation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg">
+              <div className="text-blue-600 mb-4">
+                <Zap className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Technologies</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• React & Next.js for frontend</li>
+                <li>• Node.js & Python for backend</li>
+                <li>• PostgreSQL & MongoDB databases</li>
+                <li>• AWS & Azure cloud platforms</li>
+                <li>• Docker & Kubernetes containers</li>
+                <li>• Stripe & PayPal payment integration</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg">
+              <div className="text-green-600 mb-4">
+                <Shield className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Infrastructure</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• AWS, Azure, Google Cloud</li>
+                <li>• Kubernetes orchestration</li>
+                <li>• Terraform infrastructure as code</li>
+                <li>• Jenkins & GitLab CI/CD</li>
+                <li>• Prometheus & Grafana monitoring</li>
+                <li>• Vault & Consul security</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg">
+              <div className="text-purple-600 mb-4">
+                <Brain className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI & Machine Learning</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• TensorFlow & PyTorch</li>
+                <li>• OpenAI GPT & Claude</li>
+                <li>• Computer Vision & NLP</li>
+                <li>• Apache Spark & Hadoop</li>
+                <li>• MLflow & Kubeflow</li>
+                <li>• CUDA & GPU acceleration</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -364,7 +419,7 @@ const Solutions: NextPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </MainLayout>
   );
 };
 
