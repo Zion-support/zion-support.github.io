@@ -548,6 +548,122 @@ export default function Services() {
 						<a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup.com</a>{' '}
 						or call{' '}
 						<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>.
+						<br />
+						<span className='text-xs text-gray-400 mt-2 block'>
+							Visit us at <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> | 
+							Address: 364 E Main St STE 1008, Middletown DE 19709
+						</span>
+					</div>
+				</div>
+			</section>
+			{/* Pricing Section */}
+			<section className='py-24 sm:py-32 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Transparent Pricing</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Competitive market rates with flexible pricing options. All prices include setup, training, and initial support.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+						{/* Starter Plan */}
+						<div className='rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition'>
+							<div className='text-center mb-6'>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>Starter</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$199/mo</div>
+								<p className='text-sm text-gray-600'>Perfect for small businesses</p>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Basic AI automation tools
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Email support
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Standard integrations
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Monthly reporting
+								</li>
+							</ul>
+							<Link href='/contact' className='block w-full text-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors'>
+								Get Started
+							</Link>
+						</div>
+						{/* Professional Plan */}
+						<div className='rounded-2xl border-2 border-blue-600 p-8 shadow-lg relative'>
+							<div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
+								<span className='bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium'>Most Popular</span>
+							</div>
+							<div className='text-center mb-6'>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>Professional</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$999/mo</div>
+								<p className='text-sm text-gray-600'>Ideal for growing companies</p>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Advanced AI solutions
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Priority support
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Custom integrations
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Real-time analytics
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Training sessions
+								</li>
+							</ul>
+							<Link href='/contact' className='block w-full text-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors'>
+								Get Started
+							</Link>
+						</div>
+						{/* Enterprise Plan */}
+						<div className='rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition'>
+							<div className='text-center mb-6'>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>Enterprise</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>Custom</div>
+								<p className='text-sm text-gray-600'>Tailored for large organizations</p>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Full AI suite
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									24/7 dedicated support
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Custom development
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									Advanced security
+								</li>
+								<li className='flex items-center text-sm text-gray-700'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2' />
+									SLA guarantees
+								</li>
+							</ul>
+							<Link href='/contact' className='block w-full text-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors'>
+								Contact Sales
+							</Link>
+						</div>
 					</div>
 				</div>
 			</section>

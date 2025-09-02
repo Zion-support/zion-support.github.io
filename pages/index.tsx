@@ -147,6 +147,10 @@ export default function Home() {
                 kleber@ziontechgroup.com
               </a>
             </div>
+            <div className='mt-4 text-center text-blue-100'>
+              <p className='text-sm'>364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className='text-sm mt-1'>Visit us at <a href='https://ziontechgroup.com' className='underline hover:text-white' target='_blank' rel='noreferrer'>ziontechgroup.com</a></p>
+            </div>
             <div className='mt-8'>
               <Link href='/contact'>
                 <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>

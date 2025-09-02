@@ -31,7 +31,8 @@ import {
   Monitor,
   Smartphone,
   Cloud,
-  Server
+  Server,
+  Network
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -159,6 +160,150 @@ export default function AIServices() {
       pricing: '$3,500 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Search AI'
+    },
+    {
+      title: 'AI Voice & Speech Processing',
+      description: 'Advanced voice recognition, synthesis, and real-time translation services',
+      icon: Mic,
+      features: [
+        'Real-time speech-to-text with 99% accuracy',
+        'Multi-language voice synthesis',
+        'Voice cloning and personalization',
+        'Real-time translation and interpretation',
+        'Voice biometric authentication',
+        'Audio content analysis and insights'
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '5-8 weeks',
+      category: 'Voice AI'
+    },
+    {
+      title: 'AI-Powered Fraud Detection',
+      description: 'Real-time fraud prevention and risk assessment using machine learning',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Anomaly detection algorithms',
+        'Risk scoring and decision automation',
+        'Multi-channel fraud prevention',
+        'Compliance reporting and audit trails'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'Security AI'
+    },
+    {
+      title: 'AI Recommendation Engine',
+      description: 'Personalized recommendation system for e-commerce, content, and services',
+      icon: Star,
+      features: [
+        'Collaborative and content-based filtering',
+        'Real-time personalization',
+        'A/B testing and optimization',
+        'Cross-platform recommendation sync',
+        'Performance analytics and insights',
+        'Custom algorithm development'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-7 weeks',
+      category: 'Recommendation AI'
+    },
+    {
+      title: 'AI-Powered Video Analytics',
+      description: 'Intelligent video processing for security, marketing, and business insights',
+      icon: Video,
+      features: [
+        'Real-time video object detection',
+        'Facial recognition and tracking',
+        'Emotion and sentiment analysis',
+        'Video content summarization',
+        'Automated video editing and optimization',
+        'Live streaming analytics'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-12 weeks',
+      category: 'Video AI'
+    },
+    {
+      title: 'AI Process Mining & Optimization',
+      description: 'Intelligent process analysis and optimization for business workflows',
+      icon: Settings,
+      features: [
+        'Automated process discovery',
+        'Bottleneck identification and analysis',
+        'Process optimization recommendations',
+        'Compliance monitoring and reporting',
+        'Real-time process monitoring',
+        'Predictive process analytics'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '10-16 weeks',
+      category: 'Process AI'
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automation',
+      icon: Network,
+      features: [
+        'Demand forecasting and planning',
+        'Supplier risk assessment',
+        'Route optimization and logistics',
+        'Inventory optimization algorithms',
+        'Supply chain visibility and tracking',
+        'Risk mitigation and contingency planning'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '12-20 weeks',
+      category: 'Supply Chain AI'
+    },
+    {
+      title: 'AI Customer Sentiment Analysis',
+      description: 'Real-time customer sentiment monitoring across all communication channels',
+      icon: MessageSquare,
+      features: [
+        'Multi-channel sentiment monitoring',
+        'Real-time emotion detection',
+        'Trend analysis and reporting',
+        'Automated alert system',
+        'Customer journey sentiment mapping',
+        'Integration with CRM and support tools'
+      ],
+      pricing: '$2,500 - $8,000/month',
+      delivery: '3-5 weeks',
+      category: 'Sentiment AI'
+    },
+    {
+      title: 'AI-Powered Code Generation',
+      description: 'Intelligent code generation and software development assistance',
+      icon: Code,
+      features: [
+        'Automated code generation from specifications',
+        'Code review and optimization suggestions',
+        'Bug detection and fixing recommendations',
+        'Documentation generation',
+        'Test case generation and validation',
+        'Integration with development workflows'
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '6-10 weeks',
+      category: 'Development AI'
+    },
+    {
+      title: 'AI-Powered Market Research',
+      description: 'Intelligent market analysis and competitive intelligence platform',
+      icon: BarChart3,
+      features: [
+        'Automated market trend analysis',
+        'Competitor monitoring and analysis',
+        'Consumer behavior insights',
+        'Price optimization recommendations',
+        'Market opportunity identification',
+        'Real-time market intelligence reports'
+      ],
+      pricing: '$5,000 - $18,000/month',
+      delivery: '6-12 weeks',
+      category: 'Market AI'
     }
   ];
 
