@@ -6,20 +6,10 @@ export function middleware(_request: NextRequest) {
 
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
-<<<<<<< HEAD
   response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set(
-    'Permissions-Policy',
-    'camera=(), microphone=(), geolocation=()'
-  );
-
-=======
   response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   // Content Security Policy
   const csp = [
     "default-src 'self'",

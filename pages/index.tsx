@@ -7,33 +7,7 @@ import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Award,
-  Clock,
-  Brain,
-  Cloud,
-  Database,
-  Network,
-  Target,
-  Phone,
-  Mail,
-} from 'lucide-react';
-=======
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Code, BarChart3, Lock } from 'lucide-react';
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
-
->>>>>>> main
 export default function Home() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
