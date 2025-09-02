@@ -44,8 +44,24 @@ const MicroSaasPage: NextPage = () => {
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
               Powerful, affordable SaaS applications designed to solve specific business challenges 
-              and streamline your operations.
+              and streamline your operations. From AI-powered automation to smart analytics, our micro SaaS 
+              solutions deliver enterprise-grade functionality at startup-friendly prices.
             </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-blue-300">Starting at $12/month</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-green-300">30-day free trial</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-purple-300">No setup fees</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-orange-300">24/7 support</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
                 <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">

@@ -31,6 +31,15 @@ const Header: React.FC = () => {
     { name: 'AI Services', href: '/services/ai-services' },
   ];
 
+  const featuredServices = [
+    { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
+    { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
+    { name: 'AI Video Generator Studio', href: '/services/ai-video-generator' },
+    { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
+    { name: 'AI Cybersecurity Defense', href: '/services/ai-cybersecurity-defense' },
+    { name: 'Autonomous Systems Architecture', href: '/services/autonomous-systems-architecture' },
+  ];
+
   const solutionCategories = [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Custom Development', href: '/solutions/custom-development' },
@@ -49,20 +58,23 @@ const Header: React.FC = () => {
       {/* Top bar with contact info */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col xs:flex-row items-center space-y-1 xs:space-y-0 xs:space-x-4 mb-2 lg:mb-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <span className="hidden sm:inline">+1 302 464 0950</span>
+                <span className="sm:hidden">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <span className="hidden md:inline">kleber@ziontechgroup.com</span>
+                <span className="md:hidden">kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="hidden lg:inline">364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="lg:hidden">Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -78,7 +90,7 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
               <Link
                 href="/"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -94,16 +106,30 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-80 xl:w-96 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="p-4">
+                    <div className="text-sm font-semibold text-gray-500 mb-3">Service Categories</div>
+                    {serviceCategories.map((category) => (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
+                    <div className="border-t border-gray-200 my-3"></div>
+                    <div className="text-sm font-semibold text-gray-500 mb-3">Featured Services</div>
+                    {featuredServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -197,7 +223,7 @@ const Header: React.FC = () => {
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-3">Services</div>
+                  <div className="text-gray-700 font-medium mb-3">Service Categories</div>
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
@@ -206,6 +232,17 @@ const Header: React.FC = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}
+                    </Link>
+                  ))}
+                  <div className="text-gray-700 font-medium mb-3 mt-4">Featured Services</div>
+                  {featuredServices.slice(0, 4).map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block py-2 pl-4 text-sm text-gray-500 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
                     </Link>
                   ))}
                 </div>

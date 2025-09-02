@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -44,6 +44,19 @@ const Home: NextPage = () => {
             From AI-powered micro SaaS applications to enterprise-grade autonomous systems, we deliver measurable results 
             that drive growth, efficiency, and competitive advantage. Trusted by 500+ companies worldwide.
           </motion.p>
+          
+          <motion.div 
+            className="flex flex-wrap justify-center gap-3 mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <span className="bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium">AI-Powered Solutions</span>
+            <span className="bg-purple-600/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">Quantum Computing</span>
+            <span className="bg-green-600/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium">Autonomous Systems</span>
+            <span className="bg-orange-600/20 text-orange-300 px-4 py-2 rounded-full text-sm font-medium">Blockchain Infrastructure</span>
+            <span className="bg-pink-600/20 text-pink-300 px-4 py-2 rounded-full text-sm font-medium">Metaverse Development</span>
+          </motion.div>
           
           <motion.div 
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
@@ -67,7 +80,7 @@ const Home: NextPage = () => {
 
           {/* Stats Section */}
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -109,7 +122,7 @@ const Home: NextPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* AI Services */}
             <motion.div 
               className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
@@ -206,6 +219,134 @@ const Home: NextPage = () => {
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services Showcase */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Solutions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our cutting-edge services that are shaping the future of technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+            >
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold mb-3">Quantum Computing</h3>
+              <p className="text-gray-300 mb-4">
+                Harness exponential computational power with our quantum computing infrastructure and algorithm development services.
+              </p>
+              <Link href="/services/quantum-computing-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+            >
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold mb-3">Autonomous Systems</h3>
+              <p className="text-gray-300 mb-4">
+                Build fully autonomous systems for vehicles, drones, and robotics with advanced AI integration.
+              </p>
+              <Link href="/services/autonomous-systems-architecture" className="text-blue-400 hover:text-blue-300 font-medium">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+            >
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-bold mb-3">Metaverse Development</h3>
+              <p className="text-gray-300 mb-4">
+                Create immersive virtual worlds, NFT marketplaces, and metaverse experiences for your business.
+              </p>
+              <Link href="/services/metaverse-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+            >
+              <div className="text-4xl mb-4">🧬</div>
+              <h3 className="text-xl font-bold mb-3">AI Personalized Medicine</h3>
+              <p className="text-gray-300 mb-4">
+                Revolutionary AI platform for personalized medicine with genetic analysis and treatment optimization.
+              </p>
+              <Link href="/services/ai-personalized-medicine" className="text-blue-400 hover:text-blue-300 font-medium">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+            >
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-bold mb-3">AI Cybersecurity Defense</h3>
+              <p className="text-gray-300 mb-4">
+                Advanced AI-powered cybersecurity with real-time threat detection and automated response systems.
+              </p>
+              <Link href="/services/ai-cybersecurity-defense" className="text-blue-400 hover:text-blue-300 font-medium">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+            >
+              <div className="text-4xl mb-4">🎬</div>
+              <h3 className="text-xl font-bold mb-3">AI Video Generator</h3>
+              <p className="text-gray-300 mb-4">
+                Create professional marketing videos, product demos, and social media content from text prompts.
+              </p>
+              <Link href="/services/ai-video-generator" className="text-blue-400 hover:text-blue-300 font-medium">
+                Learn More →
               </Link>
             </motion.div>
           </div>

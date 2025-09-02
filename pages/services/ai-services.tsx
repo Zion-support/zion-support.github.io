@@ -44,8 +44,24 @@ const AIServicesPage: NextPage = () => {
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
               Leverage the power of artificial intelligence to automate processes, gain insights, 
-              and create competitive advantages for your business.
+              and create competitive advantages for your business. From quantum computing to personalized medicine, 
+              our AI solutions are transforming industries and driving innovation.
             </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-blue-300">Custom AI models</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-green-300">Quantum computing</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-purple-300">Autonomous systems</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-orange-300">Predictive analytics</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
                 <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">

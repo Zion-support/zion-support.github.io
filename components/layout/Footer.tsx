@@ -11,6 +11,11 @@ const Footer: React.FC = () => {
       services: [
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
+        { name: 'AI Video Generator Studio', href: '/services/ai-video-generator' },
+        { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
+        { name: 'AI Code Review Assistant', href: '/services/ai-code-reviewer' },
+        { name: 'AI Customer Insights', href: '/services/ai-customer-insights' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
         { name: 'Mobile Survey Platform', href: '/services/mobile-survey-platform' },
         { name: 'Event Management Dashboard', href: '/services/event-management-dashboard' },
         { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
@@ -30,6 +35,10 @@ const Footer: React.FC = () => {
       title: 'IT Services',
       services: [
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        { name: 'Quantum Computing Infrastructure', href: '/services/quantum-computing-infrastructure' },
+        { name: 'Autonomous Systems Architecture', href: '/services/autonomous-systems-architecture' },
+        { name: 'Metaverse Infrastructure', href: '/services/metaverse-infrastructure' },
+        { name: 'IoT Ecosystem Management', href: '/services/iot-ecosystem-management' },
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
         { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
         { name: 'Zero Trust Security', href: '/services/zero-trust-security' },
@@ -47,6 +56,10 @@ const Footer: React.FC = () => {
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Cybersecurity Defense', href: '/services/ai-cybersecurity-defense' },
+        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
+        { name: 'AI Sustainable Energy', href: '/services/ai-sustainable-energy' },
+        { name: 'AI Education Personalization', href: '/services/ai-education-personalization' },
         { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
         { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
         { name: 'AI Space Exploration', href: '/services/ai-space-exploration' },
