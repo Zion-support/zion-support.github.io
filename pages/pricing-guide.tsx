@@ -31,7 +31,8 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle
+  HelpCircle,
+  Network
 } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {

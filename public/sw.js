@@ -4,12 +4,9 @@ const urlsToCache = [
   '/about',
   '/services',
   '/contact',
-  '/careers',
-  '/manifest.json',
-  '/favicon.ico',
-  '/apple-touch-icon.png',
-  '/favicon-32x32.png',
-  '/favicon-16x16.png'
+  '/static/css/2e74b0ea3f71b425.css',
+  '/static/js/main-ff6f2027f4136cc1.js',
+  '/static/js/framework-a070cbfff3c750c5.js'
 ];
 
 // Install event - cache resources
@@ -29,17 +26,16 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
+        return response || fetch(event.request);
       }
-)););
+    )
+  );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-event.waitUntil(caches.keys().then((cacheNames) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
