@@ -192,12 +192,12 @@ const Privacy: NextPage = () => {
                 policies.
               </p>
             </div>
-            {/* Children's Privacy */}'
+            {/* Children&apos;s Privacy */}'
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Children's Privacy
+                Children&apos;s Privacy'
               </h2>
-              '
+              ''
               <p className="text-gray-600 mb-4">
                 Our services are not intended for children under 13 years of
                 age. We do not knowingly collect personal information from
@@ -249,8 +249,8 @@ const Privacy: NextPage = () => {
             Questions About Your Privacy?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're here to help. Contact us if you have any questions about how
-            we handle your personal information.'
+            We&apos;re here to help. Contact us if you have any questions about
+            how' we handle your personal information.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <a

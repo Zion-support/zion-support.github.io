@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
-export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
+export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true, enableUserBehaviorTracking: true
     });
@@ -74,7 +74,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";
         }
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
-            return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";'
+            return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";'
         }
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
             return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?";
@@ -86,7 +86,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";
         }
         // Default response with suggestions
-        return "I understand you're asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you're looking for?";
+        return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";
     }, [responseDelay]);
     // Handle user input
     const handleUserInput = useCallback(async (input) => {
@@ -123,7 +123,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             })}
         catch (error) {
             // Handle error
-            addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {'
+            addBotMessage("I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.", {'
                 intent: 'error',
                 confidence: 0.8
             });

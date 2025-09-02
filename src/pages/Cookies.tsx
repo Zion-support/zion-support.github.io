@@ -135,7 +135,7 @@ const Cookies: React.FC = () => {
             <div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>Cookie Consent</h3>
               <p className='text-gray-600'>
-                When you first visit our website, you'll see a cookie consent banner. You can choose;'
+                When you first visit our website, you&apos;ll see a cookie consent banner. You can choose;'
                 which types of cookies to accept. You can change your preferences at any time by;
                 clicking the cookie settings link in our footer.
               </p>

@@ -1,5 +1,8 @@
 // Analytics and performance monitoring utilities
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const trackEvent = (
+  eventName: string,
+  properties?: Record<string, any>
+) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
   }
@@ -15,13 +18,20 @@ export const trackPageView = (url: string) => {
 
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    
+    const navigation = performance.getEntriesByType(
+      'navigation'
+    )[0] as PerformanceNavigationTiming;
+
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+      domContentLoaded:
+        navigation.domContentLoadedEventEnd -
+        navigation.domContentLoadedEventStart,
+      firstPaint:
+        performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+      firstContentfulPaint:
+        performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
+        0,
     };
   }
   return null;

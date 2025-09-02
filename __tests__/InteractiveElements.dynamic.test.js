@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import InteractiveElements.dynamic from '../components/InteractiveElements.dynamic';
+import InteractiveElementsdynamic from "../components/InteractiveElements.dynamic";
 
-describe('InteractiveElements.dynamic', () => {
+describe('InteractiveElementsdynamic', () => {
   test('renders without crashing', () => {
-    render(<InteractiveElements.dynamic />);
+    render(<InteractiveElementsdynamic />);
     expect(screen.getByTestId('interactiveelements.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<InteractiveElements.dynamic />);
+    render(<InteractiveElementsdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<InteractiveElements.dynamic />);
+    render(<InteractiveElementsdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<InteractiveElements.dynamic />);
+    render(<InteractiveElementsdynamic />);
     // Add styling tests if needed
   })})

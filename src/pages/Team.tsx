@@ -174,7 +174,7 @@ export default function Team() {
                 Join Our Team
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                We're always looking for exceptional talent to join our mission of advancing technology '
+                We&apos;re always looking for exceptional talent to join our mission of advancing technology '
                 and solving complex challenges. Explore opportunities to work with the best minds in tech.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">

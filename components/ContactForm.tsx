@@ -96,7 +96,8 @@ const ContactForm: React.FC = () => {
           Message Sent!
         </h3>
         <p className="text-green-600">
-          Thank you for reaching out. We'll get back to you within 24 hours.'
+          Thank you for reaching out. We&apos;ll get back to you within 24
+          hours.'
         </p>
       </motion.div>
     );
@@ -107,8 +108,8 @@ const ContactForm: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business? Let's discuss how our technology'
-          solutions can drive your success.
+          Ready to transform your business? Let&apos;s discuss how our
+          technology' solutions can drive your success.
         </p>
       </div>
 
