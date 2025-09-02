@@ -1,9 +1,26 @@
+<<<<<<< HEAD
 import React from 'react';\nimport { motion } from 'framer-motion';''interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';'  className?: string;'}
+=======
+React from,
+  react';
+import { motion } from
+  'framer-motion';'
+  'interface LoadingSpinnerProps {
+  size?: 'sm
+  ' | 'md
+  ' | 'lg
+  ';'  className?: string;}
+>>>>>>> origin/main
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', className = '' '}) => {'  const sizeClasses = {;
-    sm: 'w-4 h-4', md: 'w-8 h-8','    lg: 'w-12 h-12''  };'
+  size =,
+  md', className = '
+  ' '}) => {
+  '  const sizeClasses = {;
+    sm: 'w-4 h-4, md:,
+  w-8 h-8
+  ','    lg: 'w-12 h-12'  };'
   return (
     <div className={`flex items-center justify-center ${className}`}>`      <motion.div
         className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full`}`        animate={{ rotate: 360 }}

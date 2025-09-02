@@ -1,4 +1,12 @@
-import React from 'react';'import { motion } from 'framer-motion';'import { SEO } from '../components/SEO';'import { Card } from '../components/ui/Card';'import { Badge } from '../components/ui/Badge';'import { ;'  Shield, Lock,
+React from
+  'react';
+import { motion } from
+  'framer-motion';'{ SEO } from
+  '../components/SEO';
+import { Card } from
+  '../components/ui/Card';'{ Badge } from
+  '../components/ui/Badge';
+import { ;'  Shield, Lock,
   Eye, Database,
   Users, Mail,
   Phone, Calendar,
@@ -6,7 +14,8 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
   AlertTriangle, Globe,
   Settings, Trash2,
   Download, ArrowRight
-} from 'lucide-react';''const Privacy: React.FC = () => {
+} from
+  'lucide-react';''const Privacy: React.FC = () => {
   const lastUpdated = "2025-01-15";""  const sections = [;
     {
       id: "information-we-collect", title: "Information We Collect","      icon: Database, content: ["        "Personal Information: Name, email address, phone number, company information", "Usage Data: Website interactions, service usage patterns, and performance metrics","        "Technical Data: IP address, browser type, device information, and cookies","        "Communication Data: Messages, emails, and other communications with us""      ]"    }, {;

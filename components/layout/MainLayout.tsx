@@ -1,9 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import SEOEnhancer from '../SEOEnhancer';
+=======
+import React from
+  'react';
+import Header from
+  './Header';
+import Footer from
+  './Footer';
+import PerformanceOptimizer from
+  '../PerformanceOptimizer';
+import AccessibilityEnhancer from
+  '../AccessibilityEnhancer';
+import SEOEnhancer from
+  '../SEOEnhancer';
+>>>>>>> origin/main
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -20,14 +35,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
   ogImage = '/og-image.jpg'
 }) => {
+<<<<<<< HEAD
   return (
     <>
+=======
+  return (<>
+>>>>>>> origin/main
       <SEOEnhancer 
         title={title}
         description={description}
         keywords={keywords}
         ogImage={ogImage}
       />
+<<<<<<< HEAD
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
       <div className="min-h-screen flex flex-col">
@@ -39,6 +59,22 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
     </>
   );
+=======
+      
+      <PerformanceOptimizer 
+        preloadImages={[
+  '/hero-bg.jpg',
+  '/services-bg.jpg',
+  '          '/team-bg.jpg'
+  '        ]}'        preloadFonts={[
+  'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'        ]}'      />
+      
+      <AccessibilityEnhancer>
+<div className="min-h-screen flex flex-col">"          <Header />"          <main id="main-content" className="flex-grow" role="main">"            {children}"          </main>
+          <Footer />
+        </div></AccessibilityEnhancer>
+</>);
+>>>>>>> origin/main
 };
 
 export default MainLayout;

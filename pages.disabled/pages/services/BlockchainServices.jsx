@@ -1,11 +1,13 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from,
+  react';'
+import { Link } from
+  'react-router-dom';
 const BlockchainServices = () => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">""
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""
         <div className="absolute inset-0 bg-black/20"></div>""
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
 :pages.disabled/pages/services/BlockchainServices.jsx
             Blockchain & Web3 Services"</h1>""
@@ -22,8 +24,9 @@ const BlockchainServices = () => {}
 :pages.disabled/pages/services/BlockchainServices.jsx
             Coming Soon"
           </h2>""
-          <p className="text-xl text-slate-600 mb-8">'
-            We're developing comprehensive blockchain and Web3 services. Check
+          <p className="text-xl text-slate-600 mb-8">
+  '
+            Were developing comprehensive blockchain and Web3 services. Check
             back soon!
           </p>"
           <Link""
@@ -38,4 +41,4 @@ const BlockchainServices = () => {}
 };
 :pages.disabled/pages/services/BlockchainServices.jsx
 export default BlockchainServices;'"
-'"'"
+  '"'"

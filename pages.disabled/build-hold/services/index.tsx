@@ -1,9 +1,40 @@
-import React from 'react';'import type { NextPage } from 'next';'import MainLayout from '../../components/layout/MainLayout';'import { services, getServicesByCategory } from '../../data/services';'import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';'import Link from 'next/link';'import { motion } from 'framer-motion';'const ServicesPage: NextPage = () => {'  const microSaasServices = getServicesByCategory('micro-saas');'  const itServices = getServicesByCategory('it-services');'  const aiServices = getServicesByCategory('ai-services');''  const stats = [;
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },'    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp },'  ];'
+React from,
+  react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../../components/layout/MainLayout';
+import { services, getServicesByCategory } from
+  '../../data/services';'{ ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from
+  'lucide-react';
+import Link from
+  'next/link';'import { motion } from
+  'framer-motion';'const ServicesPage: NextPage = () => {
+  '  const microSaasServices = getServicesByCategory('micro-saas
+  ');'  const itServices = getServicesByCategory(
+  'it-services');'  const aiServices = getServicesByCategory(
+  'ai-services');'
+  '  const stats = [;
+    { number: '80+, label: 'Micro SaaS Solutions
+  ', icon: Zap }, { number:,
+  35+
+  ', label: 'IT Services, icon: Shield },'    { number:,
+  30+', label: 'AI Services, icon: Globe }, { number:,
+  500+', label: 'Projects Completed, icon: TrendingUp },
+  '  ];'
   const benefits = [;
     {
-      icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing','      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.''    },'    {;
-      icon: <Target className="w-8 h-8" />, title: 'Proven Results','      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.''    }, {'      icon: <Rocket className="w-8 h-8" />,"      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.''    }, {'      icon: <Award className="w-8 h-8" />,"      title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.''    }'  ];
+      icon: <DollarSign className="w-8 h-8" />, title:,
+  Competitive Pricing',
+  '      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
+  '    },'    {;
+      icon: <Target className="w-8 h-8" />, title:,
+  Proven Results',
+  '      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'    }, {'      icon: <Rocket className="w-8 h-8" />,"      title:,
+  Fast Implementation', description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.''    }, {
+  '      icon: <Award className="w-8 h-8" />,"      title:,
+  Expert Support
+  ', description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
+  '    }'  ];
 
   return (
     <MainLayout
@@ -184,7 +215,8 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">"              Ready to Transform Your Business?"            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">"              Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.''            </p>'            <div className="flex flex-col sm: flex-row justify-center gap-4">"              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">"                Get Started Today"              </Link>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">"              Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.'
+  '            </p>'            <div className="flex flex-col sm: flex-row justify-center gap-4">"              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">"                Get Started Today"              </Link>
               <Link href="/about" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">"                Learn More About Us"              </Link>
             </div>
           </motion.div>
