@@ -34,9 +34,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.remove('high-contrast');
     }
 
+<<<<<<< HEAD
     root.classList.remove('font-small', 'font-normal', 'font-large');
     root.classList.add(`font-${fontSize}`);
 
+=======
+    // Font size adjustments
+    root.style.setProperty('--font-size-multiplier', fontSize === 'large' ? '1.2' : fontSize === 'small' ? '0.8' : '1');
+
+    // Reduced motion
+>>>>>>> origin/main
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
@@ -58,6 +65,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   };
 
   return (
+<<<<<<< HEAD
     <div className="accessibility-enhanced">
       {/* Accessibility Controls */}
       <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4">
@@ -87,6 +95,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         </div>
       </div>
       
+=======
+    <div className="accessibility-enhancer">
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 9999 }}>
+        <button onClick={toggleHighContrast} className="accessibility-btn">
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+        </button>
+        <div className="font-size-controls">
+          <button onClick={() => changeFontSize('small')} className="accessibility-btn">A-</button>
+          <button onClick={() => changeFontSize('normal')} className="accessibility-btn">A</button>
+          <button onClick={() => changeFontSize('large')} className="accessibility-btn">A+</button>
+        </div>
+      </div>
+>>>>>>> origin/main
       {children}
     </div>
   );

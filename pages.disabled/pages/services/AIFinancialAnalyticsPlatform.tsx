@@ -10,7 +10,8 @@ import {}
   Target,
   PieChart,
   Calculator,
-  Shield} from 'lucide-react.ts';
+  Shield} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {return()
@@ -243,8 +244,8 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-          <div className="mt-4 text-sm text-zion-slate-light">'
-            Visit us at:{' '}"<a""
+          <div className="mt-4 text-sm text-zion-slate-light">,
+  Visit us at: {'}"<a""
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -257,4 +258,4 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
     </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
   )}'"
-'"'"
+  '"'"

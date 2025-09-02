@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 interface WebVitalsMetric {name: string;
+=======
+{ useEffect } from
+  'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'lucide-react';
+  'web-vitals';'
+  'interface WebVitalsMetric {name: string;
+>>>>>>> origin/main
   value: number;
   delta: number;
   id: string;
@@ -8,11 +16,25 @@ interface WebVitalsMetric {name: string;
 
 const sendToAnalytics = (metric: WebVitalsMetric) => {;
   // Send to your analytics service
-  if (typeof window !== 'undefined' && 'gtag' in window) {'    (window as any).gtag('event', metric.name, {'      event_category: 'Web Vitals', event_label: metric.id,'      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,'    });'  }
+  if (typeof window !==,
+  undefined
+  ' && 'gtag
+  ' in window) {'    (window as any).gtag(
+  'event', metric.name, {
+  '      event_category: 'Web Vitals, event_label: metric.id,'      value: Math.round(metric.name ===
+  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
+,
+  });'  }
   
   // Log to console in development
+<<<<<<< HEAD
   if (process.env.NODE_ENV === 'development') {'    console.log('Web Vital: ', metric);'
         }'};
+=======
+  if (process.env.NODE_ENV ===
+  'development') {
+  '    console.log('Web Vital: , metric);'  }'};
+>>>>>>> origin/main
 
 export const WebVitals = () => {;useEffect(() => {
     getCLS(sendToAnalytics);

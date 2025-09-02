@@ -1,7 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedFooter from './layout/EnhancedFooter';
+=======
+  'react';
+import Head from 'next/head';
+  'next/head';
+import EnhancedNavigation from
+  './layout/EnhancedNavigation';
+import EnhancedFooter from
+  './layout/EnhancedFooter';
+>>>>>>> origin/main
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,8 +21,15 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
+<<<<<<< HEAD
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+=======
+  title =
+  'Zion Tech Group - Leading Technology Solutions Provider',
+  description =
+  'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+>>>>>>> origin/main
 }) => {
   return (
     <>
@@ -40,4 +57,8 @@ const Layout: React.FC<LayoutProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default Layout;
+=======
+export default Layout;
+>>>>>>> origin/main

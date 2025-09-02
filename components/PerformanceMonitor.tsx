@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 interface PerformanceMetrics {fcp?: number;
+=======
+  'react';'
+  'interface PerformanceMetrics {fcp?: number;
+>>>>>>> origin/main
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -11,25 +16,51 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-if (typeof window === 'undefined') return;''    // Only show in development or for admin users
-    const isDev = process.env.NODE_ENV === 'development';'    const isAdmin = localStorage.getItem('admin_mode') === 'true';'    '    if (!isDev && !isAdmin) return;
+if (typeof window ===,
+  undefined
+  ') return;''    // Only show in development or for admin users
+    const isDev = process.env.NODE_ENV ===
+  'development;
+   const isAdmin = localStorage.getItem(
+  'admin_mode') ===
+  'true';'
+  '    if (!isDev && !isAdmin) return;
 
     const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
       
       entries.forEach((entry) => {
         switch (entry.entryType) {
-case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
+case 'paint
+  ': if (entry.name === 'first-contentful-paint
+  ') {              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
             break;
-          case 'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case 'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));'            break;'          case 'layout-shift': if (!(entry as any).hadRecentInput) {'              setMetrics(prev => ({ '                ...prev, cls: (prev.cls || 0) + (entry as any).value 
+          case
+  'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case
+  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));,
+  break;'          case
+  'layout-shift': if (!(entry as any).hadRecentInput) {
+  '              setMetrics(prev => ({                ...prev, cls: (prev.cls || 0) + (entry as any).value 
               }));
             }
             break;
-          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));'            break;'        }});
+          case
+  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));,
+  break;'        }});
     });
 
     // Observe different types of performance entries
     try {
-observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });'    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });'    }'
+observer.observe({ entryTypes: [
+  'paint,
+,
+  largest-contentful-paint',
+  'first-input',
+  'layout-shift',
+  'navigation'] });'    } catch (e) {
+  '      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: [
+  'paint,
+  'largest-contentful-paint'] });'    }
+  '
     // Show metrics after 3 seconds
     const timer = setTimeout(() => {;setIsVisible(true);
     }, 3000);
@@ -43,9 +74,21 @@ observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-inpu
   if (!isVisible) return null;
 
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-if (value <= thresholds.good) return 'text-green-600';'    if (value <= thresholds.poor) return 'text-yellow-600';'    return 'text-red-600';'  };'
+if (value <= thresholds.good) return 'text-green-600
+  ;
+   if (value <= thresholds.poor) return
+  'text-yellow-600;
+   return
+  'text-red-600;
+ };'
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';'    if (value <= thresholds.poor) return 'Needs Improvement';'    return 'Poor';'  };'
+    if (value <= thresholds.good) return
+  'Good;
+   if (value <= thresholds.poor) return
+  'Needs Improvement;
+   return
+  'Poor;
+ };'
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">"      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs">"        {metrics.fcp && ("          <div className="flex justify-between">"            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})</span>
           </div>

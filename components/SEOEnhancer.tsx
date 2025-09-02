@@ -22,6 +22,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   noindex = false,
   nofollow = false
 }) => {
+<<<<<<< HEAD
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -73,16 +74,25 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
+=======
+>>>>>>> origin/main
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
+=======
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      
+      {/* Open Graph */}
+>>>>>>> origin/main
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
+<<<<<<< HEAD
       <link rel="canonical" href={canonicalUrl} />
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
@@ -90,6 +100,26 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
       />
+=======
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      )}
+>>>>>>> origin/main
     </Head>
   );
 };

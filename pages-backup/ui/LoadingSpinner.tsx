@@ -1,7 +1,11 @@
 
 
 type LoadingSpinnerProps = {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?:
+  'sm' |
+  'md' |
+  'lg' |
+  'xl';
   className?: string;
   text?: string};
 
@@ -13,10 +17,13 @@ type LoadingSpinnerProps = {
 // Enhanced loading spinner with dots
 export function LoadingDots({
 
-  size = 'md',
-  color = 'text-cyan-400',
+  size =
+  'md',
+  color =
+  'text-cyan-400',
   text,
-  className = ''
+  className = '
+  '
 }: LoadingSpinnerProps) {
 
   return()`
@@ -89,15 +96,21 @@ export function LoadingSkeleton({
 // Button loading state
 export function ButtonLoader({
 
-  size = 'md',
-  className = '' 
+  size =,
+  md',
+  className = '
+  ' 
 }: {
 
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm
+  ' | 'md
+  ' | 'lg
+  ' | 'xl;
   className?: string}) {
 
   return ('
-    <div className={cn('inline-flex items-center', className)}>"
+    <div className={cn(
+  'inline-flex items-center', className)}>"
       <LoadingSpinner size={size} color="white"  />"
       <span className="ml-2">Loading...</span>
     </div>
@@ -108,7 +121,8 @@ export function PageLoaderOverlay({
 
 "
   text = "Loading...",
-  className = '' 
+  className = '
+  ' 
 }: {
 
   text?: string;
@@ -169,16 +183,22 @@ export function FullPageLoader({
 // Content loading placeholder
 export function ContentPlaceholder({
 
-  className = '',
-  variant = 'default'
+  className =,
+  ',
+  variant = 'default
+  '
 }: {
 
   className?: string;
-  variant?: 'default' | 'card' | 'list' | 'grid'}) {
+  variant?: 'default
+  ' | 'card
+  ' | 'list
+  ' | 'grid}) {
 
   return()`
     <div className={`${variants[variant]} ${className}`}>
-      {variant === 'card' ? (
+      {variant === 'card
+  ' ? (
         // Card placeholders
         Array.from({ length: 6 }).map(_: unknown, index: unknown (
           <motion.div
@@ -193,7 +213,8 @@ export function ContentPlaceholder({
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
           </motion.div>;
         ));
-      ) : variant === 'list' ? (
+      ) : variant === 'list
+  ' ? (
         // List placeholders
         Array.from({ length: 5 }).map(_: unknown, index: unknown (
           <motion.div
@@ -207,7 +228,8 @@ export function ContentPlaceholder({
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>;
         ))
-      ) : variant === 'grid' ? (;
+      ) : variant === 'grid
+  ' ? (;
         // Grid placeholders
         Array.from({ length: 8 }).map(_: unknown, index: unknown (
           <motion.div
@@ -244,9 +266,12 @@ export function AppLoadingSpinner() {
       <div className="relative">
         {/* Main spinning ring */}"
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">"
-          <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>'"
-          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>'"
-          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>,
+  "
+          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse, animationDuration:,
+  1.5s' }}></div>
+  '"
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s }}></div>
         </div>
 
         {/* Floating icons */}
@@ -256,8 +281,10 @@ export function AppLoadingSpinner() {
             className="absolute text-2xl"
             style={{
 
-              top: '50%',
-              left: '50%',
+              top:,
+  50%
+  ',
+              left: '50%,
               transform: 'translate(-50%, -50%)
             }}
             animate={{
@@ -276,7 +303,8 @@ export function AppLoadingSpinner() {
             <span
               style={{
 
-                position: 'absolute',`
+                position:
+  'absolute',`
                 top: `${Math.cos(index * Math.PI / 2) * 60}px`,`
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`
               }}
@@ -320,13 +348,16 @@ export function AppLoadingSpinner() {
       </div>
     </div>
   )}
-'"`
-export default function LoadingSpinner({ size = 'md', className = '', text }: LoadingSpinnerProps) {
+  '"`
+export default function LoadingSpinner({ size = 'md
+  ', className = '', text }: LoadingSpinnerProps) {
   const sizeClasses: Record<string, string> = {
-    sm: 'w-6 h-6',
-    md: 'w-10 h-10',
-    lg: 'w-14 h-14',
-    xl: 'w-20 h-20'
+    sm:,
+  w-6 h-6',
+    md: 'w-10 h-10,
+    lg:,
+  w-14 h-14',
+    xl: 'w-20 h-20
   };
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>

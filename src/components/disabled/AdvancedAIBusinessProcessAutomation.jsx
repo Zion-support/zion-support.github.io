@@ -1,141 +1,207 @@
-import React, { useState, useRef } from 'react'; ; export function AdvancedAIBusinessProcessAutomation () {;import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from,
+  react'; ; export function AdvancedAIBusinessProcessAutomation () {;import React, { useState, useRef } from
+  'react';
 ;
 export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProcesses = [;
     {;
-        id: 'bp-001',;
-        name: 'Invoice Processing & Approval',;
-        description: 'Automated invoice processing with AI-powered validation and approval workflows',;
-        category: 'finance',;
-        status: 'active',;
-        priority: 'high',;
-        automationLevel: 'fully-automated',;
-        aiInsights[;
-            'Pattern detected: 15% of invoices require manual review',Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12,000/month through automation';
+        id: 'bp-001,;
+        name:,
+  Invoice Processing & Approval',;
+        description: 'Automated invoice processing with AI-powered validation and approval workflows,;
+        category:,
+  finance',;
+        status: 'active,;
+        priority:,
+  high',;
+        automationLevel: 'fully-automated,;
+        aiInsights[;,
+  Pattern detected: 15% of invoices require manual review,Optimization opportunity: Reduce approval time by 40%
+  ',Cost savings potential: $12,000/month through automation';
         ],;
         efficiency: 92,;
         costSavings: 12000,;
         timeReduction: 65,;
-        stakeholders['Finance Team',AP Department',Vendors'],;
-        lastExecuted: new Date('2024-01-15T10:30:00Z'),;
-        nextExecution: new Date('2024-01-16T09:00:00Z'),;
+        stakeholders[,
+  Finance Team',AP Department
+  ',Vendors'],;
+        lastExecuted: new Date(
+  '2024-01-15T10:30:00Z),;
+        nextExecution: new Date(,
+  2024-01-16T09: 00:00Z),;
         executionHistory[;
             {;
-                id: 'exec-001',;
-                timestamp: new Date('2024-01-15T10:30:00Z'),;
-                status: 'success',;
+                id:,
+  exec-001',;
+                timestamp: new Date(
+  '2024-01-15T10:30:00Z),;
+                status:
+  'success',;
                 duration: 45,;
-                aiDecisions['Auto-approved 85% of invoices',Flagged 3 suspicious entries'],;
+                aiDecisions[
+  'Auto-approved 85% of invoices',Flagged 3 suspicious entries
+  '],;
                 manualInterventions: 2,;
                 cost: 150,;
                 efficiency: 94;
         ],;
         rules[;
             {;
-                id: 'rule-001',;
-                name: 'Auto-approve under $1000',;
-                condition: 'amount < 1000 AND vendor_verified = true',;
-                action: 'auto_approve',;
+                id:,
+  rule-001
+  ',;
+                name: 'Auto-approve under $1000,;
+                condition:,
+  amount < 1000 AND vendor_verified = true
+  ',;
+                action: 'auto_approve,;
                 priority: 1,;
                 isActive: true,;
                 aiOptimized: true,;
-                lastTriggered: new Date('2024-01-15T10:30:00Z'),;
+                lastTriggered: new Date(,
+  2024-01-15T10: 30:00Z),;
                 triggerCount: 156;
         ],;
-        dependencies['vendor_verification',budget_approval'];
+        dependencies[,
+  vendor_verification
+  ',budget_approval'];
     },;
     {;
-        id: 'bp-002',;
-        name: 'Employee Onboarding',;
-        description: 'Streamlined employee onboarding with automated document processing and task assignment',;
-        category: 'hr',;
-        status: 'active',;
-        priority: 'medium',;
-        automationLevel: 'semi-automated',;
-        aiInsights[;
-            'Bottleneck identified: IT setup takes 3 days on average',Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA';
+        id: 'bp-002,;
+        name:,
+  Employee Onboarding',;
+        description: 'Streamlined employee onboarding with automated document processing and task assignment,;
+        category:,
+  hr',;
+        status: 'active,;
+        priority:,
+  medium',;
+        automationLevel: 'semi-automated,;
+        aiInsights[;,
+  Bottleneck identified: IT setup takes 3 days on average,Recommendation: Implement parallel processing for faster onboarding,
+  ,Success rate: 98% completion within SLA;
         ],;
         efficiency: 87,;
         costSavings: 8000,;
         timeReduction: 55,;
-        stakeholders['HR Team',IT Department',New Employees'],;
-        lastExecuted: new Date('2024-01-14T14:15:00Z'),;
-        nextExecution: new Date('2024-01-17T09:00:00Z'),;
+        stakeholders[,
+  HR Team',IT Department
+  ',New Employees'],;
+        lastExecuted: new Date(
+  '2024-01-14T14:15:00Z),;
+        nextExecution: new Date(,
+  2024-01-17T09: 00:00Z),;
         executionHistory[;
             {;
-                id: 'exec-002',;
-                timestamp: new Date('2024-01-14T14:15:00Z'),;
-                status: 'success',;
+                id:,
+  exec-002',;
+                timestamp: new Date(
+  '2024-01-14T14:15:00Z),;
+                status:
+  'success',;
                 duration: 120,;
-                aiDecisions['Optimized task sequence',Identified resource conflicts'],;
+                aiDecisions[
+  'Optimized task sequence',Identified resource conflicts
+  '],;
                 manualInterventions: 1,;
                 cost: 200,;
                 efficiency: 89;
         ],;
         rules[;
             {;
-                id: 'rule-002',;
-                name: 'Auto-assign IT tasks',;
-                condition: 'employee_type = "full_time" AND department != "contractor"',;
-                action: 'assign_it_tasks',;
+                id:,
+  rule-002
+  ',;
+                name: 'Auto-assign IT tasks,;
+                condition:,
+  employee_type = "full_time" AND department != "contractor"
+  ',;
+                action: 'assign_it_tasks,;
                 priority: 2,;
                 isActive: true,;
                 aiOptimized: true,;
-                lastTriggered: new Date('2024-01-14T14:15:00Z'),;
+                lastTriggered: new Date(,
+  2024-01-14T14: 15:00Z),;
                 triggerCount: 23;
         ],;
-        dependencies['background_check',document_verification'];
+        dependencies[,
+  background_check
+  ',document_verification'];
     },;
     {;
-        id: 'bp-003',;
-        name: 'Customer Support Ticket Routing',;
-        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',;
-        category: 'operations',;
-        status: 'active',;
-        priority: 'critical',;
-        automationLevel: 'fully-automated',;
-        aiInsights[;
-            'AI accuracy: 94% correct ticket classification',Response time improved by 60%',Customer satisfaction increased by 25%';
+        id: 'bp-003,;
+        name:,
+  Customer Support Ticket Routing',;
+        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise,;
+        category:,
+  operations',;
+        status: 'active,;
+        priority:,
+  critical',;
+        automationLevel: 'fully-automated,;
+        aiInsights[;,
+  AI accuracy: 94% correct ticket classification,Response time improved by 60%
+  ',Customer satisfaction increased by 25%';
         ],;
         efficiency: 96,;
         costSavings: 15000,;
         timeReduction: 70,;
-        stakeholders['Support Team',Customers',Product Team'],;
-        lastExecuted: new Date('2024-01-15T16:45:00Z'),;
-        nextExecution: new Date('2024-01-15T17:00:00Z'),;
+        stakeholders[,
+  Support Team',Customers
+  ',Product Team'],;
+        lastExecuted: new Date(
+  '2024-01-15T16:45:00Z),;
+        nextExecution: new Date(,
+  2024-01-15T17: 00:00Z),;
         executionHistory[;
             {;
-                id: 'exec-003',;
-                timestamp: new Date('2024-01-15T16:45:00Z'),;
-                status: 'success',;
+                id:,
+  exec-003',;
+                timestamp: new Date(
+  '2024-01-15T16:45:00Z),;
+                status:
+  'success',;
                 duration: 15,;
-                aiDecisions['Classified 47 tickets by priority',Assigned to optimal agents'],;
+                aiDecisions[
+  'Classified 47 tickets by priority',Assigned to optimal agents
+  '],;
                 manualInterventions: 0,;
                 cost: 50,;
                 efficiency: 98;"
         ],;";"
         rules[;";"
             {;"";"
-                id: 'rule-003',";"";"
-                name: 'Priority-based routing',";"";"
-                condition: 'priority = "critical" AND category = "technical"',;
-                action: 'route_to_senior_agent',;
+                id:,
+  rule-003
+  ',";"";"
+                name: 'Priority-based routing,";"";"
+                condition:,
+  priority = "critical" AND category = "technical"
+  ',;
+                action: 'route_to_senior_agent,;
                 priority: 1,;
                 isActive: true,;
                 aiOptimized: true,;
-                lastTriggered: new Date('2024-01-15T16:45:00Z'),;
+                lastTriggered: new Date(,
+  2024-01-15T16: 45:00Z),;
                 triggerCount: 8;
         ],;
-        dependencies['ticket_classification',agent_availability'];
+        dependencies[,
+  ticket_classification
+  ',agent_availability'];
     };
 ];
 export function AdvancedAIBusinessProcessAutomation() {;
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedStatus, setSelectedStatus] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
+    const [activeTab, setActiveTab] = useState(
+  'overview');
+    const [selectedCategory, setSelectedCategory] = useState(
+  'all');
+    const [selectedStatus, setSelectedStatus] = useState(
+  'all');
+    const [searchQuery, setSearchQuery] = useState('
+  ');
     const [showAIInsights, setShowAIInsights] = useState(true);
     const [showAutomation, setShowAutomation] = useState(true);
     const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
@@ -144,37 +210,69 @@ export function AdvancedAIBusinessProcessAutomation() {;
     const containerRef = useRef(null);
     const getStatusColor = (status) => {;
         switch (status) {;
-            case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
-            case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20';
-            case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-            case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'};
+            case 'active
+  ': return 'text-green-500 bg-green-100 dark:bg-green-900/20
+  ';
+            case 'paused
+  ': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20
+  ';
+            case 'completed
+  ': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20
+  ';
+            case 'failed
+  ': return 'text-red-500 bg-red-100 dark:bg-red-900/20
+  ';
+            case 'draft
+  ': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20
+  ';
+            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20};
     };
     const getPriorityColor = (priority) => {;
         switch (priority) {;
-            case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
-            case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'};
+            case,
+  critical
+  ': return 'text-red-600 bg-red-100 dark:bg-red-900/20
+  ';
+            case 'high
+  ': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20
+  ';
+            case 'medium
+  ': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20
+  ';
+            case 'low
+  ': return 'text-green-600 bg-green-100 dark:bg-green-900/20
+  ';
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20};
     };
     const getAutomationLevelColor = (level) => {;
         switch (level) {;
-            case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
-            case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'};"
+            case,
+  fully-automated
+  ': return 'text-green-600 bg-green-100 dark:bg-green-900/20
+  ';
+            case 'semi-automated
+  ': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20
+  ';
+            case 'manual
+  ': return 'text-red-600 bg-red-100 dark:bg-red-900/20
+  ';
+            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20};"
     };";"
     const getCategoryIcon = (category) => {;";"
-        switch (category) {;";"";"
-'";"";"
-            case 'finance': return <DollarSign className="w-4 h-4"/>;'";"";"
-            case 'hr': return <Users className="w-4 h-4"/>;'";"";"
-            case 'operations': return <Settings className="w-4 h-4"/>;'";"";"
-            case 'sales': return <TrendingUp className="w-4 h-4"/>;'";"";"
-            case 'marketing': return <Target className="w-4 h-4"/>;'";"";"
-            case 'it': return <Server className="w-4 h-4"/>;";"";"
+        switch (category) {;";"";",
+  ";"";"
+            case
+  'finance': return <DollarSign className="w-4 h-4"/>;'";"";"
+            case
+  'hr': return <Users className="w-4 h-4"/>;'";"";"
+            case
+  'operations': return <Settings className="w-4 h-4"/>;'";"";"
+            case
+  'sales': return <TrendingUp className="w-4 h-4"/>;'";"";"
+            case
+  'marketing': return <Target className="w-4 h-4"/>;'";"";"
+            case
+  'it: return <Server className="w-4 h-4"/>;";"";"
             default: return <FileText className="w-4 h-4"/>};
     };
     const formatPercentage = (value) => {;
@@ -185,8 +283,10 @@ export function AdvancedAIBusinessProcessAutomation() {;
         await new Promise (resolve => setTimeout (resolve, 2000) ) ;
         setIsExecuting (false) ;
         // Update process status;
-        setBusinessProcesses(prev => prev.map(p => p.id === processId';
-            ? { ...p, lastExecuted: new Date(), status: 'active' };
+        setBusinessProcesses(prev => prev.map(p => p.id === processId
+  ';
+            ? { ...p, lastExecuted: new Date(), status: 'active
+  ' };
             : p))};
     const filteredProcesses = businessProcesses.filter(process => {;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;"
@@ -214,7 +314,8 @@ export function AdvancedAIBusinessProcessAutomation() {;
           </button>;";"
         </div>;";"
       </div>)}'`;"";"
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>";"";"
+    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ?,
+  inset-4': 'bottom-4 right-4 w-[1400px] h-[900px]}`} ref={containerRef}>";"";"
       {/* Header */}";"";"
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">";"";"
         <div className="flex items-center gap-3">";"";"
@@ -279,16 +380,22 @@ export function AdvancedAIBusinessProcessAutomation() {;
         </div>;";"
       </div>;";"";"
       {/* Tabs */}";"";"
-      <div className="flex border-b border-zion-slate-light">'`;
-        {['overview',processes',automation',analytics',optimization'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === tab';
-                ? 'text-zion-blue border-b-2 border-zion-blue''`;
-                : 'text-zion-slate-light hover:text-zion-slate'}`}>;"
+      <div className="flex border-b border-zion-slate-light">,
+  `;
+        {['overview
+  ',processes',automation
+  ',analytics',optimization
+  '].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === tab';
+                ?
+  'text-zion-blue border-b-2 border-zion-blue''`;: 'text-zion-slate-light hover:text-zion-slate}`}>;"
             {tab.charAt(0).toUpperCase() + tab.slice(1)};";"
           </button>))};";"
       </div>;";"";"
       {/* Content */}";"";"
-      <div className="flex-1 overflow-auto p-6">'";"";"
-        {activeTab === 'overview' && (<div className="space-y-6">";"";"
+      <div className="flex-1 overflow-auto p-6">
+  '";"";"
+        {activeTab === 'overview
+  ' && (<div className="space-y-6">";"";"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">";"";"
               <div className="bg-gradient-to-br from-zion-blue to-zion-purple text-white p-6 rounded-xl">";"";"
                 <div className="flex items-center justify-between">";"";"
@@ -304,7 +411,8 @@ export function AdvancedAIBusinessProcessAutomation() {;
                   <div>";"";"
                     <p className="text-green-100 text-sm">Active Processes</p>";"";"
                     <p className="text-3xl font-bold">;";"
-                      {businessProcesses.filter(p => p.status === 'active').length};"";"
+                      {businessProcesses.filter(p => p.status === 'active
+  ').length};"";"
                     </p>";"";"
                   </div>";"";"
                   <CheckCircle className="w-12 h-12 text-white/50"/>;"";"
@@ -364,11 +472,16 @@ export function AdvancedAIBusinessProcessAutomation() {;
                           {process.lastExecuted.toLocaleDateString()};"";"
                         </p>";"";"
                       </div>";"";"
-                      <div className="flex items-center gap-2">'`;"
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${process.executionHistory[0]?.status === 'success'';";"
-                    ? 'bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400''`;";"
-                    : 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400'}`}>;"";"
-                          {process.executionHistory[0]?.status || 'Unknown'}";"";"
+                      <div className="flex items-center gap-2">,
+  `;"
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${process.executionHistory[0]?.status ===
+  'success'';";"
+                    ?
+  'bg-green-100 text-green-700 dark: bg-green-900/20 dark:text-green-400''`;";"
+                    :
+  'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400}`}>;"";"
+                          {process.executionHistory[0]?.status ||
+  'Unknown'}";"";"
                         </span>";"";"
                         <span className="text-xs text-zion-slate-light">;
                           {process.executionHistory[0]?.duration || 0}s;
@@ -379,8 +492,9 @@ export function AdvancedAIBusinessProcessAutomation() {;
               </div>;";"
             </div>;"";"
           </div>)}";"";"
-'";"";"
-        {activeTab === 'processes' && (<div className="space-y-4">";"";"
+  '";"";"
+        {activeTab === 'processes
+  ' && (<div className="space-y-4">";"";"
             {filteredProcesses.map(process => (<div key={process.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:shadow-lg transition-shadow">";"";"
                 <div className="flex items-start justify-between mb-4">";"";"
                   <div className="flex items-start gap-3">";"";"
@@ -428,7 +542,8 @@ export function AdvancedAIBusinessProcessAutomation() {;
                     {process.priority};
                   </span>`;"
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>;";"
-                    {process.automationLevel.replace('-',)};";"
+                    {process.automationLevel.replace('-
+  ',)};";"
                   </span>;"";"
                 </div>";";"";"
                 {showAIInsights && (<div className="mb-4">";"";"
@@ -452,10 +567,14 @@ export function AdvancedAIBusinessProcessAutomation() {;
                       {process.rules.map(rule => (<div key={rule.id} className="p-3 bg-zion-slate-light/10 rounded-lg">";"";"
                           <div className="flex items-center justify-between mb-2">";"";"
                             <span className="font-medium text-sm">{rule.name}</span>`;
-                            <span className={`px-2 py-1 rounded-full text-xs ${rule.isActive';"
-                            ? 'bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400''`;";"
-                            : 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400'}`}>;";"
-                              {rule.isActive ? 'Active' : 'Inactive'};"";"
+                            <span className={`px-2 py-1 rounded-full text-xs ${rule.isActive,
+  ;"
+                            ?
+  'bg-green-100 text-green-700 dark: bg-green-900/20 dark:text-green-400''`;";"
+                            :
+  'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400}`}>;";"
+                              {rule.isActive ?,
+  Active': 'Inactive};"";"
                             </span>";"";"
                           </div>";"";"
                           <p className="text-xs text-zion-slate-light mb-2">If: {rule.condition}</p>";"";"
@@ -473,8 +592,9 @@ export function AdvancedAIBusinessProcessAutomation() {;
                   </div>)};";"
               </div>))};"";"
           </div>)}";"";"
-'";"";"
-        {activeTab === 'automation' && (<div className="space-y-6">";"";"
+  '";"";"
+        {activeTab === 'automation
+  ' && (<div className="space-y-6">";"";"
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">";"";"
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">";"";"
                                  <Settings className="w-5 h-5 text-zion-blue"/>;"";"
@@ -521,15 +641,23 @@ export function AdvancedAIBusinessProcessAutomation() {;
                       </div>";"";"
                     </div>";"";"
                     <div className="flex items-center gap-3">`;
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.isActive';
-                    ? 'bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400''`;
-                    : 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400'}`}>;
-                        {rule.isActive ? 'Active' : 'Inactive'};
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.isActive,
+  ;
+                    ?
+  'bg-green-100 text-green-700 dark: bg-green-900/20 dark:text-green-400''`;
+                    :
+  'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400}`}>;
+                        {rule.isActive ?,
+  Active': 'Inactive};
                       </span>`;"
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.aiOptimized';";"
-                    ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/20 dark:text-purple-400''`;";"
-                    : 'bg-gray-100 text-gray-700 dark:bg-gray-900/20 dark:text-gray-400'}`}>;"";"
-                        {rule.aiOptimized ? 'AI Optimized' : 'Manual'}";"";"
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.aiOptimized,
+  ;";"
+                    ? 'bg-purple-100 text-purple-700 dark: bg-purple-900/20 dark:text-purple-400'
+  '`;";"
+                    : 'bg-gray-100 text-gray-700 dark:bg-gray-900/20 dark:text-gray-400}`}>;"";"
+                        {rule.aiOptimized ?,
+  AI Optimized
+  ': 'Manual}";"";"
                       </span>";"";"
                       <button className="p-2 text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/10 rounded-lg">";"";"
                         <Edit3 className="w-4 h-4"/>;
@@ -540,7 +668,8 @@ export function AdvancedAIBusinessProcessAutomation() {;
             </div>;"";"
           </div>)}";"";"
 '";"";"
-        {activeTab === 'analytics' && (<div className="space-y-6">";"";"
+        {activeTab ===
+  'analytics' && (<div className="space-y-6">";"";"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">";"";"
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">";"";"
                 <h3 className="text-lg font-semibold mb-4">Efficiency Trends</h3>";"";"
@@ -603,8 +732,9 @@ export function AdvancedAIBusinessProcessAutomation() {;
               </div>;";"
             </div>;"";"
           </div>)}";"";"
-'";"";"
-        {activeTab === 'optimization' && (<div className="space-y-6">";"";"
+  '";"";"
+        {activeTab === 'optimization
+  ' && (<div className="space-y-6">";"";"
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">";"";"
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">";"";"
                 <Brain className="w-5 h-5 text-zion-blue"/>;"";"
@@ -613,11 +743,17 @@ export function AdvancedAIBusinessProcessAutomation() {;
               <div className="space-y-4">";"";"
                 {businessProcesses.map(process => (<div key={process.id} className="p-4 bg-zion-slate-light/10 rounded-lg">";"";"
                     <div className="flex items-start justify-between mb-3">";"";"
-                      <h4 className="font-medium">{process.name}</h4>'`;
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${process.automationLevel === 'fully-automated'';"
-                    ? 'bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400''`;";"
-                    : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-400'}`}>;";"
-                        {process.automationLevel === 'fully-automated' ? 'Optimized' : 'Optimization Available'};"";"
+                      <h4 className="font-medium">{process.name}</h4>,
+  `;
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${process.automationLevel ===
+  'fully-automated'';"
+                    ?
+  'bg-green-100 text-green-700 dark: bg-green-900/20 dark:text-green-400''`;";"
+                    :
+  'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-400}`}>;";"
+                        {process.automationLevel ===,
+  fully-automated' ?
+  'Optimized': 'Optimization Available};"";"
                       </span>";"";"
                     </div>";"";"
                     <div className="space-y-2">";"";"
@@ -625,8 +761,10 @@ export function AdvancedAIBusinessProcessAutomation() {;
                           <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0"/>";"";"
                           <span className="text-zion-slate">{insight}</span>;"";"
                         </div>))}";"";"
-                    </div>'";"";"
-                    {process.automationLevel !== 'fully-automated' && (<div className="mt-3 pt-3 border-t border-zion-slate-light/50">";"";"
+                    </div>
+  '";"";"
+                    {process.automationLevel !== 'fully-automated
+  ' && (<div className="mt-3 pt-3 border-t border-zion-slate-light/50">";"";"
                         <button className="px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue-dark text-sm">;
                           Apply AI Optimization;
                         </button>;"
@@ -646,7 +784,8 @@ export function AdvancedAIBusinessProcessAutomation() {;
                     <span className="font-medium text-yellow-800 dark:text-yellow-200">Manual Processes</span>";"";"
                   </div>";"";"
                   <p className="text-sm text-yellow-700 dark:text-yellow-300 mb-3">;"";"
-                    {businessProcesses.filter(p => p.automationLevel === 'manual').length} processes still require manual intervention";"";"
+                    {businessProcesses.filter(p => p.automationLevel === 'manual
+  ').length} processes still require manual intervention";"";"
                   </p>";"";"
                   <button className="px-3 py-1 bg-yellow-600 text-white rounded text-sm hover:bg-yellow-700">;";"
                     View Details;"";"
