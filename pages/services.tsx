@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Activity, ArrowRight, Award, Back, BarChart3, Bot, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, CreditCard, Cross, Database, Eye, For, From, Globe, Grid, HardDrive, Home, Image, Link2, Lock, Low, Mail, MessageSquare, Mobile, Monitor, Network, No, Palette, Phone, Secure, Server, Settings, Shield, Smartphone, Snowflake, Star, Terminal, Today, TrendingUp, Typical, Users, Wifi, Zap } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 
 export default function Services() {
   const title = 'Services — Zion Tech Group';
@@ -9,7 +10,9 @@ export default function Services() {
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
   return (
-    <PageTransition>
+    <>
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -2248,6 +2251,8 @@ export default function Services() {
           </div>
         </div>
       </section>
-    </PageTransition>
+      
+      <Footer />
+    </>
   );
 }

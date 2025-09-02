@@ -1,9 +1,10 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
-import PageTransition from '../src/components/PageTransition';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description =
@@ -644,13 +645,15 @@ export default function MicroSaaS() {
     },
   ];
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
       </Head>
+
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-32">
@@ -926,6 +929,8 @@ export default function MicroSaaS() {
           </div>
         </div>
       </section>
-    </PageTransition>
+      
+      <Footer />
+    </>
   );
 }
