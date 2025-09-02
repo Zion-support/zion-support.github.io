@@ -400,6 +400,272 @@ export default function MicroSaaS() {
       category: 'Customer Support SaaS'
     },
     {
+      title: 'AI-Powered Real Estate Investment Analyzer',
+      description: 'Comprehensive real estate investment analysis with market predictions and ROI calculations',
+      icon: Home,
+      features: [
+        'Automated property valuation and market analysis',
+        'ROI and cash flow projections with AI predictions',
+        'Neighborhood trend analysis and growth forecasting',
+        'Risk assessment and investment scoring',
+        'Portfolio optimization recommendations',
+        'Integration with MLS and property databases'
+      ],
+      pricing: '$299 - $1,499/month',
+      delivery: '4-6 weeks',
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'Smart Healthcare Appointment Scheduler',
+      description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',
+      icon: Heart,
+      features: [
+        'Intelligent appointment scheduling with patient preferences',
+        'Automated reminder system with multiple channels',
+        'Resource optimization and capacity planning',
+        'Patient flow analytics and wait time reduction',
+        'Integration with EHR and practice management systems',
+        'Telehealth appointment support and management'
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '3-5 weeks',
+      category: 'Healthcare SaaS'
+    },
+    {
+      title: 'AI-Powered Fleet Management System',
+      description: 'Intelligent fleet tracking and optimization with predictive maintenance and route planning',
+      icon: Car,
+      features: [
+        'Real-time GPS tracking and route optimization',
+        'Predictive maintenance scheduling and alerts',
+        'Fuel consumption monitoring and optimization',
+        'Driver behavior analysis and safety scoring',
+        'Automated compliance reporting and documentation',
+        'Integration with telematics and IoT devices'
+      ],
+      pricing: '$399 - $1,999/month',
+      delivery: '5-8 weeks',
+      category: 'Fleet Management SaaS'
+    },
+    {
+      title: 'Smart Environmental Monitoring Platform',
+      description: 'IoT-based environmental monitoring with AI analytics and compliance reporting',
+      icon: TreePine,
+      features: [
+        'Real-time air quality, temperature, and humidity monitoring',
+        'AI-powered environmental trend analysis and predictions',
+        'Automated compliance reporting for environmental regulations',
+        'Alert system for threshold violations and anomalies',
+        'Integration with IoT sensors and weather APIs',
+        'Custom dashboard and reporting for stakeholders'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '4-6 weeks',
+      category: 'Environmental SaaS'
+    },
+    {
+      title: 'AI-Powered Satellite Data Analytics',
+      description: 'Advanced satellite imagery analysis for agriculture, urban planning, and environmental monitoring',
+      icon: Satellite,
+      features: [
+        'Automated satellite imagery processing and analysis',
+        'Crop health monitoring and yield prediction',
+        'Urban development tracking and change detection',
+        'Environmental impact assessment and monitoring',
+        'Custom AI model training for specific use cases',
+        'API access for integration with existing systems'
+      ],
+      pricing: '$999 - $4,999/month',
+      delivery: '6-10 weeks',
+      category: 'Geospatial SaaS'
+    },
+    {
+      title: 'Intelligent Voice Analytics Platform',
+      description: 'AI-powered voice analysis for call centers, sales teams, and customer service optimization',
+      icon: Mic,
+      features: [
+        'Real-time speech-to-text with sentiment analysis',
+        'Call quality scoring and performance analytics',
+        'Automated compliance monitoring and reporting',
+        'Customer emotion detection and escalation alerts',
+        'Sales conversation analysis and coaching insights',
+        'Integration with CRM and call center systems'
+      ],
+      pricing: '$299 - $1,299/month',
+      delivery: '4-6 weeks',
+      category: 'Voice Analytics SaaS'
+    },
+    {
+      title: 'Smart Invoice Generator Pro',
+      description: 'AI-powered invoice creation with automated data extraction, smart categorization, and payment tracking',
+      icon: FileText,
+      features: [
+        'Automated invoice generation from purchase orders and contracts',
+        'Smart data extraction from emails and documents',
+        'Intelligent categorization and tax calculations',
+        'Automated payment reminders and follow-ups',
+        'Multi-currency support and exchange rate updates',
+        'Integration with accounting software and payment gateways',
+        'Fraud detection and duplicate invoice prevention',
+        'Custom branding and template management'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '2-3 weeks',
+      category: 'Finance SaaS'
+    },
+    {
+      title: 'Real Estate Analytics Intelligence Platform',
+      description: 'Advanced real estate market analysis with AI-powered predictions and investment insights',
+      icon: Home,
+      features: [
+        'Comprehensive market trend analysis and forecasting',
+        'Property valuation with AI-powered algorithms',
+        'Investment opportunity scoring and risk assessment',
+        'Neighborhood growth prediction and demographic analysis',
+        'Rental yield optimization and cash flow projections',
+        'Integration with MLS, Zillow, and property databases',
+        'Custom market reports and client presentations',
+        'Portfolio performance tracking and optimization'
+      ],
+      pricing: '$399 - $1,999/month',
+      delivery: '4-6 weeks',
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'Health Monitoring Dashboard Pro',
+      description: 'Comprehensive health tracking platform with AI insights and predictive health analytics',
+      icon: Heart,
+      features: [
+        'Multi-device health data integration (wearables, medical devices)',
+        'AI-powered health trend analysis and anomaly detection',
+        'Predictive health risk assessment and early warning system',
+        'Personalized health recommendations and goal setting',
+        'Integration with healthcare providers and EHR systems',
+        'Medication tracking and adherence monitoring',
+        'Telehealth appointment scheduling and management',
+        'Family health monitoring and caregiver notifications'
+      ],
+      pricing: '$149 - $699/month',
+      delivery: '3-5 weeks',
+      category: 'Healthcare SaaS'
+    },
+    {
+      title: 'Supply Chain Optimizer AI',
+      description: 'Intelligent supply chain management with predictive analytics and automated optimization',
+      icon: Network,
+      features: [
+        'AI-powered demand forecasting and inventory optimization',
+        'Automated supplier performance monitoring and risk assessment',
+        'Real-time supply chain visibility and tracking',
+        'Predictive maintenance for logistics and transportation',
+        'Cost optimization and route planning algorithms',
+        'Integration with ERP, WMS, and TMS systems',
+        'Sustainability tracking and carbon footprint analysis',
+        'Crisis management and disruption response automation'
+      ],
+      pricing: '$2,999 - $12,999/month',
+      delivery: '6-10 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
+      title: 'Social Media Scheduler Pro',
+      description: 'Advanced social media management with AI content creation and optimal posting strategies',
+      icon: Globe,
+      features: [
+        'AI-powered content creation and curation',
+        'Optimal posting time analysis and automation',
+        'Hashtag research and trending topic identification',
+        'Cross-platform content adaptation and optimization',
+        'Engagement prediction and audience targeting',
+        'Influencer collaboration and campaign management',
+        'Brand sentiment monitoring and crisis management',
+        'ROI tracking and performance analytics dashboard'
+      ],
+      pricing: '$299 - $1,299/month',
+      delivery: '3-4 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
+      title: 'Smart Learning Management System',
+      description: 'AI-powered educational platform with personalized learning paths and progress tracking',
+      icon: Brain,
+      features: [
+        'Personalized learning path recommendations',
+        'Adaptive content delivery based on learning style',
+        'Automated assessment and grading with AI',
+        'Progress tracking and performance analytics',
+        'Gamification and engagement features',
+        'Integration with video conferencing and collaboration tools'
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '5-8 weeks',
+      category: 'EdTech SaaS'
+    },
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent legal document review and analysis with contract risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and risk identification',
+        'Legal precedent research and case law analysis',
+        'Compliance checking against regulations and standards',
+        'Document comparison and version control',
+        'Automated legal research and citation verification',
+        'Integration with legal practice management systems'
+      ],
+      pricing: '$499 - $2,499/month',
+      delivery: '6-10 weeks',
+      category: 'LegalTech SaaS'
+    },
+    {
+      title: 'Smart Restaurant Management Platform',
+      description: 'Comprehensive restaurant operations management with AI-powered inventory and staff optimization',
+      icon: Heart,
+      features: [
+        'AI-powered demand forecasting and inventory management',
+        'Dynamic pricing optimization based on demand and competition',
+        'Staff scheduling optimization and labor cost management',
+        'Customer preference analysis and menu optimization',
+        'Real-time performance analytics and KPI tracking',
+        'Integration with POS, delivery, and reservation systems'
+      ],
+      pricing: '$299 - $1,499/month',
+      delivery: '4-7 weeks',
+      category: 'Restaurant SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Finance Manager',
+      description: 'Intelligent personal finance tracking with budgeting, investment advice, and goal setting',
+      icon: TrendingUp,
+      features: [
+        'Automated expense categorization and budgeting',
+        'AI-powered investment recommendations and portfolio optimization',
+        'Goal-based savings and investment planning',
+        'Bill payment automation and reminder system',
+        'Credit score monitoring and improvement suggestions',
+        'Integration with banks, credit cards, and investment accounts'
+      ],
+      pricing: '$9.99 - $49.99/month',
+      delivery: '3-5 weeks',
+      category: 'FinTech SaaS'
+    },
+    {
+      title: 'Smart Home Automation Platform',
+      description: 'AI-powered home automation with energy optimization and security management',
+      icon: Home,
+      features: [
+        'Intelligent energy consumption monitoring and optimization',
+        'Automated security system management and alerts',
+        'Smart device integration and control via voice/phone',
+        'Predictive maintenance for home appliances',
+        'Energy cost analysis and savings recommendations',
+        'Integration with popular smart home ecosystems'
+      ],
+      pricing: '$19.99 - $99.99/month',
+      delivery: '4-6 weeks',
+      category: 'Smart Home SaaS'
+    },
+    {
       title: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive content generation platform for blogs, social media, and marketing materials',
       icon: FileText,
@@ -686,6 +952,470 @@ export default function MicroSaaS() {
       pricing: '$25,000 - $500,000/month',
       delivery: '16-32 weeks',
       category: 'SpaceTech SaaS'
+    },
+    {
+      title: 'AI-Powered Real Estate Investment Analyzer',
+      description: 'Intelligent property investment platform with market analysis and ROI prediction',
+      icon: TrendingUp,
+      features: [
+        'AI-driven property valuation and market analysis',
+        'ROI prediction and investment recommendations',
+        'Neighborhood trend analysis and forecasting',
+        'Rental income optimization strategies',
+        'Risk assessment and portfolio diversification',
+        'Integration with MLS and property databases'
+      ],
+      pricing: '$299 - $1,499/month',
+      delivery: '4-6 weeks',
+      category: 'PropTech SaaS'
+    },
+    {
+      title: 'Smart Waste Management Platform',
+      description: 'AI-powered waste optimization system with route planning and recycling analytics',
+      icon: TreePine,
+      features: [
+        'Intelligent waste collection route optimization',
+        'Recycling rate tracking and improvement',
+        'Predictive maintenance for waste equipment',
+        'Carbon footprint reduction analytics',
+        'Community engagement and education tools',
+        'Integration with IoT sensors and smart bins'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '6-8 weeks',
+      category: 'CleanTech SaaS'
+    },
+    {
+      title: 'AI-Powered Language Learning Platform',
+      description: 'Personalized language learning with AI tutors and real-time conversation practice',
+      icon: Brain,
+      features: [
+        'AI-powered personalized learning paths',
+        'Real-time pronunciation and accent correction',
+        'Conversational AI practice partners',
+        'Cultural context and immersion experiences',
+        'Progress tracking and adaptive difficulty',
+        'Integration with voice recognition and translation APIs'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '6-10 weeks',
+      category: 'EdTech SaaS'
+    },
+    {
+      title: 'Intelligent Restaurant Management System',
+      description: 'AI-driven restaurant operations platform with demand forecasting and inventory optimization',
+      icon: Heart,
+      features: [
+        'AI-powered demand forecasting and menu optimization',
+        'Dynamic pricing and revenue management',
+        'Inventory tracking and waste reduction',
+        'Customer preference analysis and personalization',
+        'Staff scheduling and performance optimization',
+        'Integration with POS systems and delivery platforms'
+      ],
+      pricing: '$199 - $1,299/month',
+      delivery: '4-6 weeks',
+      category: 'FoodTech SaaS'
+    },
+    {
+      title: 'AI-Powered Pet Care Platform',
+      description: 'Comprehensive pet health and wellness platform with AI diagnostics and care recommendations',
+      icon: Heart,
+      features: [
+        'AI-powered health monitoring and diagnostics',
+        'Personalized nutrition and exercise plans',
+        'Veterinary appointment scheduling and reminders',
+        'Behavioral analysis and training recommendations',
+        'Emergency detection and alert system',
+        'Integration with wearable pet devices and vet records'
+      ],
+      pricing: '$49 - $299/month',
+      delivery: '4-6 weeks',
+      category: 'PetTech SaaS'
+    },
+    {
+      title: 'Smart City Traffic Optimization Platform',
+      description: 'AI-driven urban traffic management with real-time optimization and congestion reduction',
+      icon: Car,
+      features: [
+        'Real-time traffic flow optimization',
+        'Predictive congestion modeling and prevention',
+        'Smart traffic light coordination',
+        'Emergency vehicle priority routing',
+        'Air quality monitoring and pollution reduction',
+        'Integration with city infrastructure and IoT sensors'
+      ],
+      pricing: '$10,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'Smart City SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Stylist Platform',
+      description: 'Intelligent fashion and style recommendation system with virtual try-on capabilities',
+      icon: Eye,
+      features: [
+        'AI-powered style analysis and recommendations',
+        'Virtual try-on with AR technology',
+        'Wardrobe organization and outfit planning',
+        'Size prediction and fit optimization',
+        'Trend analysis and personal style evolution',
+        'Integration with fashion retailers and social media'
+      ],
+      pricing: '$99 - $599/month',
+      delivery: '6-8 weeks',
+      category: 'FashionTech SaaS'
+    },
+    {
+      title: 'Intelligent Home Security System',
+      description: 'AI-powered home security platform with facial recognition and behavioral analysis',
+      icon: Shield,
+      features: [
+        'AI-powered facial recognition and access control',
+        'Behavioral anomaly detection and alerts',
+        'Smart camera analytics and object recognition',
+        'Automated emergency response coordination',
+        'Integration with smart home devices',
+        'Privacy-focused local processing and storage'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '4-6 weeks',
+      category: 'Security SaaS'
+    },
+    {
+      title: 'AI-Powered Music Composition Platform',
+      description: 'Intelligent music creation platform with AI composition and collaboration tools',
+      icon: Mic,
+      features: [
+        'AI-powered music composition and arrangement',
+        'Style transfer and genre adaptation',
+        'Real-time collaboration and version control',
+        'Lyrics generation and vocal synthesis',
+        'Copyright detection and royalty management',
+        'Integration with DAWs and music streaming platforms'
+      ],
+      pricing: '$149 - $799/month',
+      delivery: '6-10 weeks',
+      category: 'MusicTech SaaS'
+    },
+    {
+      title: 'Smart Water Quality Monitoring System',
+      description: 'AI-driven water quality analysis platform with contamination detection and treatment optimization',
+      icon: TreePine,
+      features: [
+        'Real-time water quality monitoring and analysis',
+        'Contamination detection and early warning systems',
+        'Treatment optimization and chemical dosing',
+        'Predictive maintenance for water infrastructure',
+        'Compliance monitoring and reporting',
+        'Integration with IoT sensors and SCADA systems'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '8-12 weeks',
+      category: 'WaterTech SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Trainer Platform',
+      description: 'Intelligent fitness coaching platform with personalized workout plans and form analysis',
+      icon: Heart,
+      features: [
+        'AI-powered personalized workout and nutrition plans',
+        'Real-time form analysis and correction',
+        'Progress tracking and goal optimization',
+        'Injury prevention and recovery recommendations',
+        'Integration with fitness wearables and equipment',
+        'Virtual personal training sessions'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '4-6 weeks',
+      category: 'FitnessTech SaaS'
+    },
+    {
+      title: 'Intelligent Supply Chain Risk Management',
+      description: 'AI-powered supply chain resilience platform with risk prediction and mitigation strategies',
+      icon: Network,
+      features: [
+        'AI-powered risk assessment and prediction',
+        'Supply chain disruption early warning',
+        'Alternative supplier identification and evaluation',
+        'Cost optimization and procurement automation',
+        'Sustainability tracking and carbon footprint analysis',
+        'Integration with ERP and logistics systems'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '8-12 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
+      title: 'AI-Powered Sleep Optimization Platform',
+      description: 'Intelligent sleep analysis and improvement platform with personalized recommendations',
+      icon: Heart,
+      features: [
+        'AI-powered sleep pattern analysis and optimization',
+        'Personalized sleep environment recommendations',
+        'Sleep quality tracking and improvement plans',
+        'Integration with smart home devices and wearables',
+        'Sleep disorder detection and medical referrals',
+        'Circadian rhythm optimization and light therapy'
+      ],
+      pricing: '$49 - $299/month',
+      delivery: '4-6 weeks',
+      category: 'HealthTech SaaS'
+    },
+    {
+      title: 'Smart Parking Management System',
+      description: 'AI-driven parking optimization platform with real-time availability and pricing',
+      icon: Car,
+      features: [
+        'Real-time parking space detection and availability',
+        'Dynamic pricing and demand-based optimization',
+        'Reservation system and mobile payments',
+        'Traffic flow optimization and congestion reduction',
+        'Integration with navigation apps and city systems',
+        'Revenue optimization and analytics dashboard'
+      ],
+      pricing: '$1,500 - $10,000/month',
+      delivery: '6-8 weeks',
+      category: 'Smart City SaaS'
+    },
+    {
+      title: 'AI-Powered Wine Recommendation Engine',
+      description: 'Intelligent wine discovery platform with taste profiling and food pairing recommendations',
+      icon: Heart,
+      features: [
+        'AI-powered taste profile analysis and matching',
+        'Food pairing recommendations and menu optimization',
+        'Wine cellar management and inventory tracking',
+        'Price optimization and deal alerts',
+        'Social features and community recommendations',
+        'Integration with wine retailers and sommelier databases'
+      ],
+      pricing: '$99 - $599/month',
+      delivery: '4-6 weeks',
+      category: 'FoodTech SaaS'
+    },
+    {
+      title: 'Intelligent Elderly Care Platform',
+      description: 'AI-powered senior care management system with health monitoring and family communication',
+      icon: Heart,
+      features: [
+        'AI-powered health monitoring and fall detection',
+        'Medication management and reminder systems',
+        'Family communication and care coordination',
+        'Emergency response and medical alert integration',
+        'Cognitive health tracking and stimulation activities',
+        'Integration with medical devices and healthcare providers'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '6-8 weeks',
+      category: 'HealthTech SaaS'
+    },
+    {
+      title: 'AI-Powered Carbon Footprint Tracker',
+      description: 'Intelligent environmental impact monitoring with reduction strategies and offset recommendations',
+      icon: TreePine,
+      features: [
+        'AI-powered carbon footprint calculation and tracking',
+        'Personalized reduction strategies and recommendations',
+        'Carbon offset marketplace and verification',
+        'Sustainability goal setting and progress tracking',
+        'Integration with transportation and energy usage data',
+        'Corporate sustainability reporting and compliance'
+      ],
+      pricing: '$49 - $299/month',
+      delivery: '3-4 weeks',
+      category: 'CleanTech SaaS'
+    },
+    {
+      title: 'Smart Retail Analytics Platform',
+      description: 'AI-driven retail optimization with customer behavior analysis and inventory management',
+      icon: BarChart3,
+      features: [
+        'AI-powered customer behavior analysis and prediction',
+        'Dynamic pricing and promotion optimization',
+        'Inventory management and demand forecasting',
+        'Store layout optimization and heat mapping',
+        'Customer journey tracking and personalization',
+        'Integration with POS systems and loyalty programs'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '6-8 weeks',
+      category: 'RetailTech SaaS'
+    },
+    {
+      title: 'AI-Powered Customer Success Platform',
+      description: 'Intelligent customer success management with predictive churn prevention and automated engagement',
+      icon: Users,
+      features: [
+        'Predictive churn analysis and prevention',
+        'Automated customer health scoring',
+        'Personalized engagement campaigns',
+        'Success milestone tracking and alerts',
+        'Integration with CRM and support systems',
+        'Advanced analytics and reporting dashboard'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Customer Success SaaS'
+    },
+    {
+      title: 'Smart Contract Management Platform',
+      description: 'AI-powered contract lifecycle management with automated review and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract review and risk assessment',
+        'Smart clause extraction and analysis',
+        'Compliance monitoring and alerts',
+        'Contract renewal and expiration tracking',
+        'Digital signature integration',
+        'Advanced search and analytics'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '3-5 weeks',
+      category: 'LegalTech SaaS'
+    },
+    {
+      title: 'Intelligent Inventory Forecasting System',
+      description: 'AI-driven inventory optimization with demand prediction and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Demand forecasting with 95%+ accuracy',
+        'Automated reorder point optimization',
+        'Seasonal trend analysis and adjustment',
+        'Multi-location inventory synchronization',
+        'Supplier performance tracking',
+        'Cost optimization recommendations'
+      ],
+      pricing: '$1,500 - $6,000/month',
+      delivery: '2-4 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
+      title: 'AI-Powered Sales Coaching Platform',
+      description: 'Intelligent sales performance optimization with real-time coaching and analytics',
+      icon: Target,
+      features: [
+        'Real-time sales call analysis and feedback',
+        'Performance benchmarking and improvement suggestions',
+        'Automated coaching recommendations',
+        'Sales pipeline optimization',
+        'Team performance analytics',
+        'Integration with CRM and communication tools'
+      ],
+      pricing: '$2,500 - $10,000/month',
+      delivery: '3-5 weeks',
+      category: 'SalesTech SaaS'
+    },
+    {
+      title: 'Smart Employee Wellness Platform',
+      description: 'Comprehensive employee wellness tracking with AI insights and personalized recommendations',
+      icon: Heart,
+      features: [
+        'Health and wellness tracking dashboard',
+        'AI-powered wellness recommendations',
+        'Mental health monitoring and support',
+        'Team wellness challenges and gamification',
+        'Integration with fitness trackers and health apps',
+        'Privacy-compliant analytics and reporting'
+      ],
+      pricing: '$1,000 - $4,000/month',
+      delivery: '2-3 weeks',
+      category: 'HRTech SaaS'
+    },
+    {
+      title: 'AI-Powered Content Moderation Platform',
+      description: 'Intelligent content moderation with real-time detection and automated action',
+      icon: Shield,
+      features: [
+        'Real-time content analysis and flagging',
+        'Multi-language content moderation',
+        'Custom moderation rule configuration',
+        'Automated action and escalation workflows',
+        'Detailed analytics and reporting',
+        'API integration for seamless deployment'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '3-4 weeks',
+      category: 'Content Safety SaaS'
+    },
+    {
+      title: 'Smart Energy Management Platform',
+      description: 'AI-driven energy optimization for buildings and facilities with cost reduction',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'Predictive energy usage optimization',
+        'Automated demand response management',
+        'Cost analysis and savings recommendations',
+        'Integration with smart building systems',
+        'Sustainability reporting and compliance'
+      ],
+      pricing: '$1,500 - $6,000/month',
+      delivery: '3-5 weeks',
+      category: 'EnergyTech SaaS'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Intelligent educational platform with personalized learning paths and progress tracking',
+      icon: Brain,
+      features: [
+        'Personalized learning path generation',
+        'Adaptive content delivery and assessment',
+        'Progress tracking and performance analytics',
+        'Gamification and engagement features',
+        'Multi-modal content support',
+        'Integration with existing educational tools'
+      ],
+      pricing: '$2,000 - $7,000/month',
+      delivery: '4-6 weeks',
+      category: 'EdTech SaaS'
+    },
+    {
+      title: 'Intelligent Property Management Platform',
+      description: 'AI-powered property management with automated maintenance and tenant services',
+      icon: Home,
+      features: [
+        'Automated maintenance scheduling and tracking',
+        'Tenant communication and service requests',
+        'Property performance analytics',
+        'Financial management and reporting',
+        'Integration with IoT devices and sensors',
+        'Mobile app for tenants and managers'
+      ],
+      pricing: '$1,500 - $5,000/month',
+      delivery: '3-4 weeks',
+      category: 'PropTech SaaS'
+    },
+    {
+      title: 'AI-Powered Compliance Monitoring System',
+      description: 'Automated compliance tracking and reporting with regulatory change management',
+      icon: Shield,
+      features: [
+        'Real-time compliance monitoring and alerts',
+        'Automated regulatory change detection',
+        'Compliance reporting and documentation',
+        'Risk assessment and mitigation recommendations',
+        'Integration with existing business systems',
+        'Audit trail and evidence management'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Compliance SaaS'
+    },
+    {
+      title: 'Smart Fleet Maintenance Platform',
+      description: 'Predictive fleet maintenance with IoT integration and cost optimization',
+      icon: Car,
+      features: [
+        'Predictive maintenance scheduling',
+        'Real-time vehicle health monitoring',
+        'Maintenance cost optimization',
+        'Driver behavior analysis and coaching',
+        'Route optimization and fuel efficiency',
+        'Integration with fleet management systems'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '3-5 weeks',
+      category: 'FleetTech SaaS'
     }
   ];
 

@@ -1,4 +1,4 @@
-:src.pages.disabled/AISolutions.test.tsx
-describe ('AISolutions', () => {}'; it ('renders without crashing', () => {} render (<AISolutions />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<AISolutions />) 
+:src.pages.disabled/AiSolutions.test.tsx
+describe ('AiSolutions', () => {}'; it ('renders without crashing', () => {} render (<AiSolutions />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<AiSolutions />) 
 
-describe ('AISolutions', () => {}'; it ('renders without crashing', () => {} render (<AISolutions />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<AISolutions />) ''
+describe ('AiSolutions', () => {}'; it ('renders without crashing', () => {} render (<AiSolutions />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<AiSolutions />) ''

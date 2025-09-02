@@ -1,4 +1,4 @@
-:src.disabled/pages/News.tsx;
+:src.disabled/pages/news.tsx;
 React from;
   'react';
 import { SEO } from;

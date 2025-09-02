@@ -1,16 +1,16 @@
 import React from 'react';"
 import { render, screen } from '@testing-library/react';"
 import '@testing-library/jest-dom';"
-import AISolutions from './AISolutions';
+import AiSolutions from './AiSolutions';
 "
-describe('AISolutions', () => {"
+describe('AiSolutions', () => {"
   it('renders without crashing', () => {
-    render(<AISolutions /" >);"
+    render(<AiSolutions /" >);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<AISolutions /" >);
+    render(<AiSolutions /" >);
     // Add more specific tests here,
 });,
 });

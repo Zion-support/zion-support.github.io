@@ -1,16 +1,16 @@
 import React from 'react';"
 import { render, screen } from '@testing-library/react';"
 import '@testing-library/jest-dom';"
-import MicroSAAS from './MicroSAAS';
+import MicroSaaS from './MicroSaaS';
 "
-describe('MicroSAAS', () => {"
+describe('MicroSaaS', () => {"
   it('renders without crashing', () => {
-    render(<MicroSAAS /" >);"
+    render(<MicroSaaS /" >);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<MicroSAAS /" >);
+    render(<MicroSaaS /" >);
     // Add more specific tests here,
 });,
 });
