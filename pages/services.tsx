@@ -33,7 +33,9 @@ import {
   Activity,
   Terminal,
   CreditCard,
-  Smartphone
+  Smartphone,
+  Phone,
+  MapPin
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -1319,6 +1321,104 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
+			{/* Contact Information Section */}
+			<section className='py-24 sm:py-32 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Get in Touch with Zion Tech Group
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation and custom solution proposal.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
+						<div className='text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-blue-50 to-blue-100'>
+							<div className='p-3 rounded-full bg-blue-600 w-fit mx-auto mb-4'>
+								<Phone className='w-6 h-6 text-white' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Phone</h3>
+							<a 
+								href='tel:+13024640950'
+								className='text-blue-600 hover:text-blue-500 font-medium block mb-2'
+							>
+								+1 302 464 0950
+							</a>
+							<p className='text-sm text-gray-600'>Call us for immediate assistance</p>
+						</div>
+						<div className='text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-green-50 to-green-100'>
+							<div className='p-3 rounded-full bg-green-600 w-fit mx-auto mb-4'>
+								<Mail className='w-6 h-6 text-white' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Email</h3>
+							<a 
+								href='mailto:kleber@ziontechgroup.com'
+								className='text-green-600 hover:text-green-500 font-medium block mb-2'
+							>
+								kleber@ziontechgroup.com
+							</a>
+							<p className='text-sm text-gray-600'>Send us a detailed message</p>
+						</div>
+						<div className='text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-purple-50 to-purple-100'>
+							<div className='p-3 rounded-full bg-purple-600 w-fit mx-auto mb-4'>
+								<MapPin className='w-6 h-6 text-white' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Address</h3>
+							<a 
+								href='https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+								target='_blank'
+								rel='noreferrer'
+								className='text-purple-600 hover:text-purple-500 font-medium block mb-2'
+							>
+								364 E Main St STE 1008<br />
+								Middletown, DE 19709
+							</a>
+							<p className='text-sm text-gray-600'>Visit our office</p>
+						</div>
+						<div className='text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow bg-gradient-to-br from-orange-50 to-orange-100'>
+							<div className='p-3 rounded-full bg-orange-600 w-fit mx-auto mb-4'>
+								<Globe className='w-6 h-6 text-white' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Website</h3>
+							<a 
+								href='https://ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'
+								className='text-orange-600 hover:text-orange-500 font-medium block mb-2'
+							>
+								ziontechgroup.com
+							</a>
+							<p className='text-sm text-gray-600'>Visit our online platform</p>
+						</div>
+					</div>
+					<div className='bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 text-center'>
+						<h3 className='text-2xl font-bold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h3>
+						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-left'>
+							<div className='flex items-start space-x-3'>
+								<Award className='h-6 w-6 text-blue-600 mt-1 flex-shrink-0' />
+								<div>
+									<h4 className='font-semibold text-gray-900 mb-1'>Proven Expertise</h4>
+									<p className='text-sm text-gray-600'>Over 10 years of experience delivering enterprise-grade solutions</p>
+								</div>
+							</div>
+							<div className='flex items-start space-x-3'>
+								<Clock className='h-6 w-6 text-green-600 mt-1 flex-shrink-0' />
+								<div>
+									<h4 className='font-semibold text-gray-900 mb-1'>Fast Delivery</h4>
+									<p className='text-sm text-gray-600'>Rapid development cycles with agile methodologies</p>
+								</div>
+							</div>
+							<div className='flex items-start space-x-3'>
+								<Shield className='h-6 w-6 text-purple-600 mt-1 flex-shrink-0' />
+								<div>
+									<h4 className='font-semibold text-gray-900 mb-1'>Enterprise Security</h4>
+									<p className='text-sm text-gray-600'>Bank-level security and compliance standards</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			{/* CTA Section */}
 			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -1327,9 +1427,10 @@ export default function Services() {
 							Ready to get started?
 						</h2>
 						<p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.
+							Let&aposs discuss your project requirements and how we can help you achieve your goals. 
+							Contact us today for a free consultation and custom solution proposal.
 						</p>
-						<div className='mt-10 flex items-center justify-center gap-x-6'>
+						<div className='mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-4'>
 							<Link
 								href='/contact'
 								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
@@ -1338,6 +1439,14 @@ export default function Services() {
 								Contact Us
 								<ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />
 							</Link>
+							<a
+								href='tel:+13024640950'
+								className='group rounded-md bg-transparent border-2 border-white px-8 py-4 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-all duration-200'
+								aria-label='Call us directly'
+							>
+								Call +1 302 464 0950
+								<Phone className='ml-2 h-4 w-4 inline group-hover:scale-110 transition-transform' />
+							</a>
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'

@@ -29,7 +29,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  Brain
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -309,6 +310,214 @@ export default function ITServices() {
       pricing: '$8,000 - $60,000/month',
       delivery: '10-24 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, optimization, and hybrid classical-quantum systems',
+      icon: Cpu,
+      features: [
+        'Quantum hardware integration and optimization',
+        'Quantum algorithm development and testing',
+        'Hybrid classical-quantum system architecture',
+        'Quantum error correction and mitigation',
+        'Quantum simulation and modeling',
+        'Quantum advantage analysis and benchmarking'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '20-40 weeks',
+      category: 'Quantum Computing Services'
+    },
+    {
+      title: '5G & Edge Network Solutions',
+      description: '5G network deployment, edge computing, and ultra-low latency applications',
+      icon: Wifi,
+      features: [
+        '5G network planning and deployment',
+        'Edge computing infrastructure setup',
+        'Ultra-low latency application development',
+        'Network slicing and optimization',
+        'IoT connectivity and management',
+        'Real-time data processing and analytics'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-32 weeks',
+      category: '5G & Edge Services'
+    },
+    {
+      title: 'Advanced Cybersecurity Operations',
+      description: 'Next-generation security operations center (SOC) and threat hunting services',
+      icon: Shield,
+      features: [
+        '24/7 Security Operations Center (SOC)',
+        'Advanced threat hunting and analysis',
+        'Incident response and forensics',
+        'Security orchestration and automation',
+        'Threat intelligence and attribution',
+        'Zero-trust architecture implementation'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '8-20 weeks',
+      category: 'Advanced Security Services'
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'AI/ML infrastructure setup, model deployment, and machine learning operations',
+      icon: Brain,
+      features: [
+        'AI/ML infrastructure design and deployment',
+        'Model training and deployment pipelines',
+        'MLOps and model lifecycle management',
+        'GPU cluster optimization and management',
+        'Model monitoring and drift detection',
+        'AI governance and compliance'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '10-24 weeks',
+      category: 'AI Infrastructure Services'
+    },
+    {
+      title: 'Green IT & Carbon Neutral Solutions',
+      description: 'Sustainable IT infrastructure and carbon-neutral technology solutions',
+      icon: Globe,
+      features: [
+        'Carbon footprint assessment and optimization',
+        'Green data center design and migration',
+        'Renewable energy integration',
+        'Energy-efficient hardware and software',
+        'Sustainability reporting and compliance',
+        'Circular economy IT practices'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-20 weeks',
+      category: 'Green IT Services'
+    },
+    {
+      title: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and business continuity solutions',
+      icon: Shield,
+      features: [
+        'Disaster recovery planning and testing',
+        'Business continuity strategy development',
+        'Multi-site backup and replication',
+        'RTO/RPO optimization and monitoring',
+        'Crisis management and communication',
+        'Compliance and audit support'
+      ],
+      pricing: '$5,000 - $40,000/month',
+      delivery: '6-16 weeks',
+      category: 'Disaster Recovery Services'
+    },
+    {
+      title: 'API Management & Integration',
+      description: 'Enterprise API management, microservices architecture, and system integration',
+      icon: Network,
+      features: [
+        'API gateway setup and management',
+        'Microservices architecture design',
+        'Legacy system integration and modernization',
+        'API security and rate limiting',
+        'Developer portal and documentation',
+        'API analytics and monitoring'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '8-18 weeks',
+      category: 'API & Integration Services'
+    },
+    {
+      title: 'Compliance & Regulatory Solutions',
+      description: 'Industry-specific compliance automation and regulatory technology solutions',
+      icon: FileText,
+      features: [
+        'GDPR, HIPAA, SOX compliance automation',
+        'Regulatory reporting and documentation',
+        'Audit trail and evidence management',
+        'Risk assessment and mitigation',
+        'Policy management and enforcement',
+        'Compliance monitoring and alerting'
+      ],
+      pricing: '$7,000 - $45,000/month',
+      delivery: '10-22 weeks',
+      category: 'Compliance Services'
+    },
+    {
+      title: 'Performance Engineering & Optimization',
+      description: 'Application performance optimization, load testing, and scalability solutions',
+      icon: TrendingUp,
+      features: [
+        'Performance testing and optimization',
+        'Load testing and capacity planning',
+        'Application profiling and bottleneck analysis',
+        'Database optimization and tuning',
+        'Caching strategies and implementation',
+        'Scalability architecture design'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-14 weeks',
+      category: 'Performance Services'
+    },
+    {
+      title: 'Mobile & Cross-Platform Development',
+      description: 'Native and cross-platform mobile application development and optimization',
+      icon: Smartphone,
+      features: [
+        'Native iOS and Android development',
+        'Cross-platform development (React Native, Flutter)',
+        'Progressive Web App (PWA) development',
+        'Mobile app performance optimization',
+        'App store deployment and management',
+        'Mobile security and compliance'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '8-20 weeks',
+      category: 'Mobile Development Services'
+    },
+    {
+      title: 'Data Privacy & Protection Solutions',
+      description: 'Comprehensive data privacy, protection, and governance solutions',
+      icon: Lock,
+      features: [
+        'Data privacy impact assessments',
+        'Data classification and tagging',
+        'Privacy-preserving analytics',
+        'Data anonymization and pseudonymization',
+        'Consent management and tracking',
+        'Privacy compliance automation'
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-18 weeks',
+      category: 'Data Privacy Services'
+    },
+    {
+      title: 'Hybrid Cloud & Multi-Cloud Management',
+      description: 'Hybrid and multi-cloud architecture design, migration, and management',
+      icon: Cloud,
+      features: [
+        'Multi-cloud strategy and architecture',
+        'Cloud migration planning and execution',
+        'Hybrid cloud connectivity and security',
+        'Cloud cost optimization and FinOps',
+        'Cloud governance and compliance',
+        'Disaster recovery across clouds'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'Multi-Cloud Services'
+    },
+    {
+      title: 'IT Asset Management & Optimization',
+      description: 'Comprehensive IT asset lifecycle management and optimization',
+      icon: Settings,
+      features: [
+        'IT asset discovery and inventory',
+        'Software license management and optimization',
+        'Hardware lifecycle management',
+        'Asset tracking and monitoring',
+        'Cost optimization and vendor management',
+        'Compliance and audit support'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-12 weeks',
+      category: 'Asset Management Services'
     }
   ];
 
