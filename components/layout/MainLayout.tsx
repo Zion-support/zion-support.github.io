@@ -5,6 +5,8 @@ import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import SEOEnhancer from '../SEOEnhancer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import ErrorBoundary from '../ErrorBoundary';
+import PerformanceMonitor from '../PerformanceMonitor';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -22,7 +24,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   ogImage = '/og-image.jpg'
 }) => {
   return (
-    <>
+    <ErrorBoundary>
       <PerformanceOptimizer />
       <SEOEnhancer 
         title={title}
@@ -33,13 +35,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main id="main-content" className="flex-grow">
+        <main id="main-content" className="flex-grow pt-16">
           {children}
         </main>
         <Footer />
         <AccessibilityEnhancer />
+        <PerformanceMonitor />
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

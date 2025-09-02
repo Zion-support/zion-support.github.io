@@ -4,123 +4,50 @@ import Head from 'next/head';
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg'
-      ];
+    const preloadResources = () => {
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = '/fonts/inter-var.woff2';
+      fontLink.as = 'font';
+      fontLink.type = 'font/woff2';
+      fontLink.crossOrigin = 'anonymous';
+      document.head.appendChild(fontLink);
 
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-      });
+      // Preload critical images
+      const imageLink = document.createElement('link');
+      imageLink.rel = 'preload';
+      imageLink.href = '/images/hero-bg.jpg';
+      imageLink.as = 'image';
+      document.head.appendChild(imageLink);
     };
 
-    // Lazy load non-critical images
-    const lazyLoadImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            observer.unobserve(img);
+    preloadResources();
+
+    // Add performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
           }
-        });
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
       });
 
-      images.forEach(img => imageObserver.observe(img));
-    };
-
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false;
-      
-      const updateScrollPosition = () => {
-        // Add scroll-based animations or effects here
-        ticking = false;
-      };
-
-      const requestTick = () => {
-        if (!ticking) {
-          requestAnimationFrame(updateScrollPosition);
-          ticking = true;
-        }
-      };
-
-      window.addEventListener('scroll', requestTick, { passive: true });
-      
-      return () => {
-        window.removeEventListener('scroll', requestTick);
-      };
-    };
-
-    // Initialize optimizations
-    preloadCriticalResources();
-    lazyLoadImages();
-    const cleanup = optimizeScroll();
-
-    return cleanup;
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+    }
   }, []);
 
   return (
     <Head>
-      {/* Performance hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Resource hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Critical CSS inline */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          /* Critical above-the-fold styles */
-          .hero-section {
-            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #3730a3 100%);
-          }
-          
-          /* Smooth scrolling */
-          html {
-            scroll-behavior: smooth;
-          }
-          
-          /* Optimize animations */
-          * {
-            will-change: auto;
-          }
-          
-          .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient 6s ease infinite;
-          }
-          
-          @keyframes gradient {
-            0%, 100% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-          }
-          
-          /* Reduce motion for accessibility */
-          @media (prefers-reduced-motion: reduce) {
-            * {
-              animation-duration: 0.01ms !important;
-              animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important;
-            }
-          }
-        `
-      }} />
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="color-scheme" content="light dark" />
     </Head>
   );
 };
