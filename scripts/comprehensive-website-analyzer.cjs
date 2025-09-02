@@ -43,8 +43,8 @@ class ComprehensiveWebsiteAnalyzer {
         // Extract links from HTML content if it's an HTML page
         if (response.headers['content-type']?.includes('text/html')) {
           const links = this.extractLinks(response.data, url);
-          for (const link of links) {
-            if (link.startsWith('/') || link.startsWith(this.baseUrl)) {
+          for (const link of links) {`);
+            if (link.startsWith('/') || link.startsWith(this.baseUrl)) {`);
               const fullUrl = link.startsWith('/')? `${this.baseUrl}${link}`
                 : link;
               await this.checkUrl(fullUrl, url);
@@ -275,14 +275,14 @@ class ComprehensiveWebsiteAnalyzer {
 
 // Run the analysis
 async function main() {
-  const analyzer = new ComprehensiveWebsiteAnalyzer(https://ziontechgroup.com'
+  const analyzer = new ComprehensiveWebsiteAnalyzer(https://ziontechgroup.com`);
   );
 
   try {
     await analyzer.analyzeWebsite();
     const report = await analyzer.saveReport();
-
-    console.log('\n=== ANALYSIS SUMMARY ===');
+`);
+    console.log('\n=== ANALYSIS SUMMARY ===');`);
     console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);console.log(`Working links: ${report.summary.workingLinks}`);console.log(`Broken links: ${report.summary.brokenLinks}`);console.log(`Success rate: ${report.summary.successRate}`);console.log(`Duration: ${report.summary.duration}`);
 
     if (report.brokenLinks.length > 0) {

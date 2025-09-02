@@ -97,7 +97,7 @@ class AutoCommitFixes {
       const status = file.status;
       const fileName = file.file;
       if (status === 'A;
-  ' || status === '??;
+  ' || status === '?.;
   ') {
         changes.added.push(fileName)} else if (status === 'M;
   ') {

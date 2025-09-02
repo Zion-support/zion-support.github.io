@@ -64,11 +64,11 @@ class AutomationDashboard {
         0
       ),
       totalCPU: this.processes.reduce((sum, p) => sum + (p.monit.cpu || 0), 0),
-    };
-  }
-
-  displayHeader() {
-    console.log(`'\n' + '='.repeat(80));
+    };`);
+  }`);
+`);
+  displayHeader() {`);
+    console.log(`'\n' + '='.repeat(80));`);
     console.log(`
       chalk.cyan.bold('🚀 Zion Tech Group - PM2 Automation Dashboard')
     );
@@ -169,10 +169,10 @@ class AutomationDashboard {
   formatUptime(uptime) {
     if (!uptime) return '''N/A''';
     const seconds = Math.floor(uptime / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
-
+    const minutes = Math.floor(seconds / 60);`);
+    const hours = Math.floor(minutes / 60);`);
+    const days = Math.floor(hours / 24);`);
+`);
     if (days > 0) return ${days}d ${hours % 24}h;if (hours > 0) return ${hours}h ${minutes % 60}m;if (minutes > 0`) return `${minutes}m ${seconds % 60}s`;return `${seconds}s`;
   }
 

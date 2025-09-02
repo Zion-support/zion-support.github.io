@@ -88,10 +88,10 @@ class PM2SyncAutomation {
       await this.performFullSync();
       await this.performBuild();
       await this.runTests();
-      await this.runSecurityScan();
-
-      this.log('PM2 Sync Automation System initialized successfully');
-      this.isRunning = true;
+      await this.runSecurityScan();`);
+`);
+      this.log('PM2 Sync Automation System initialized successfully');`);
+      this.isRunning = true;`);
     } catch (error) {this.log(Initialization failed: ${error.message}, 'ERROR'`);
       this.errorCount++;
       this.restartAfterDelay();

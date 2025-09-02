@@ -15,11 +15,11 @@ class AICodeQualityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'ai-code-quality-enhancer.log'
     );
     this.improvementsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'ai-improvements.json'
     );
     this.patternsLog = path.join(this.projectRoot, 'logs', 'ai-patterns.json');

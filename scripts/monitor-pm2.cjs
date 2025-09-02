@@ -208,9 +208,9 @@ class PM2Monitor {
         // Generate and display summary
         const summary = this.generateSummary(status);
         console.log('\n📈 Summary Statistics:');console.log(`   Total Processes: ${summary.total}`);console.log(`   Online: ${summary.online} ✅`);console.log(`   Errored: ${summary.errored} ❌`);console.log(`   Stopped: ${summary.stopped} ⏸️`);console.log(`   Launching: ${summary.launching} 🔄`);console.log(`   Total Restarts: ${summary.totalRestarts}');
-        console.log(   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB'
-        );
-        console.log(
+        console.log(   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`);
+        );`);
+        console.log(`);`);
           `   Total Memory: ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB`
         );
 

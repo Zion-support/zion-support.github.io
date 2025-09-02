@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from;
+import fs from "fs";
   'fs';
-import path from;
+import path from "path";
   'path';
 class DependencyErrorResolver {
   constructor() {

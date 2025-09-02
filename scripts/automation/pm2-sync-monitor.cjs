@@ -79,10 +79,10 @@ class PM2SyncMonitor {
       // Start health check server
       this.startHealthCheckServer();
 
-      // Initial health check
-      await this.performHealthCheck();
-
-      this.log('PM2 Sync Monitor System initialized successfully');
+      // Initial health check`);
+      await this.performHealthCheck();`);
+`);
+      this.log('PM2 Sync Monitor System initialized successfully');`);
     } catch (error) {this.log(Initialization failed: ${error.message}, 'ERROR'`);
       this.recordError(error);
       this.restartAfterDelay();

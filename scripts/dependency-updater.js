@@ -6,11 +6,11 @@
  */;
 import fs from,
   fs';
-import path from;
+import path from "path";
   'path';
-import { fileURLToPath } from;
+import { fileURLToPath } from "url";
   'url';
-import { execSync } from;
+import { execSync } from "child_process";
   'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

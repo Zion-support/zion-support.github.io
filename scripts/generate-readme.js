@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-import fs from;
+import fs from "fs";
   'fs';
-import path from;
+import path from "path";
   'path';
 // Simple README maintenance: append an automation run footer with timestamp;
 function main() {

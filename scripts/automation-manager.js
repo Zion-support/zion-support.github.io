@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
-import { execSync } from;
+import { execSync } from "child_process";
   'child_process';
-import fs from;
+import fs from "fs";
   'fs';
-import path from;
+import path from "path";
   'path';
-import { fileURLToPath } from;
+import { fileURLToPath } from "url";
   'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
@@ -47,8 +47,8 @@ class AutomationManager {
 📋 Examples:;
   node scripts/automation-manager.js status;
   node scripts/automation-manager.js logs console-error-fixer;
-  node scripts/automation-manager.js restart security-audit;
-  node scripts/automation-manager.js health;
+  node scripts/automation-manager.js restart security-audit;`);
+  node scripts/automation-manager.js health;`);
     `)}
   async getStatus() {
     try {

@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🤖 Starting AI Code Analyzer...');
+console.log(`🤖 Starting AI Code Analyzer...`);
 
 // Get automation interval from environment variable (default: 4 hours)
 const AUTOMATION_INTERVAL =
@@ -51,11 +51,11 @@ class AICodeAnalyzer {
 
       // Calculate scores
       this.calculateScores();
-
-      // Generate report
-      await this.generateReport();
-
-      console.log(`'✅ AI code analysis completed successfully');
+`);
+      // Generate report`);
+      await this.generateReport();`);
+`);
+      console.log(`✅ AI code analysis completed successfully`);
     } catch (error) {
       console.error('❌ AI code analysis failed:', error.message);
     }
@@ -94,7 +94,7 @@ class AICodeAnalyzer {
   }
 
   async analyzeReactComponents() {
-    console.log(`'⚛️ Analyzing React components...');
+    console.log(`⚛️ Analyzing React components...`);
     const reactFiles = this.findFiles('./src', ['.tsx', '.jsx']);
 
     for (const file of reactFiles) {
@@ -150,7 +150,7 @@ class AICodeAnalyzer {
   }
 
   async analyzeSecurityPatterns() {
-    console.log(`'🔒 Analyzing security patterns...');
+    console.log(`🔒 Analyzing security patterns...`);
     const allFiles = this.findFiles('./src', ['.ts', '.tsx', '.js', '.jsx']);
 
     for (const file of allFiles) {
@@ -342,7 +342,7 @@ console.log(📊 AI analysis report saved to ${reportPath});
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(`🤖 Starting AI code analyzer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
+  console.log(`🤖 Starting AI code analyzer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
 
   const analyzer = new AICodeAnalyzer();
@@ -354,8 +354,8 @@ async function runContinuous() {
   setInterval(async () => {
     await analyzer.analyzeCodebase();
   }, AUTOMATION_INTERVAL);
-
-  console.log( ✅ AI code analyzer running. Next analysis in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+`);
+  console.log( ✅ AI code analyzer running. Next analysis in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
   `);
 }
 
