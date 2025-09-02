@@ -1,82 +1,126 @@
-import React, { useState } from 'react';'import Link from 'next/link';'import { Menu, X, ChevronDown } from 'lucide-react';''const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X, ChevronDown } from 'lucide-react';
+
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services', submenu: [
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'AI Services', href: '/services/ai-services' }
+    ]},
+    { name: 'Products', href: '/products' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ];
 
   return (
-<nav className="bg-white shadow-lg sticky top-0 z-50">"      <div className="container mx-auto px-4">"        <div className="flex justify-between items-center py-4">"          {/* Logo */}"          <Link href="/" className="flex items-center space-x-2">"            <div className="flex items-center space-x-2">"              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"                <span className="text-white font-bold text-xl">Z</span>"              </div>"              <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>"            </div>"          </Link>
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg: flex items-center space-x-8">"            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">"              Home"            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">"              <button "                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors""                onMouseEnter={() => setServicesOpen(true)}"                onMouseLeave={() => setServicesOpen(false)}
-              >
-                Services
-<ChevronDown className="ml-1 w-4 h-4" />"              </button>"              <div 
-                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}'                onMouseEnter={() => setServicesOpen(true)}'                onMouseLeave={() => setServicesOpen(false)}`              >
-                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600">"                  AI Development"                </Link>
-                <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Cloud Services"                </Link>
-                <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Web Development"                </Link>
-                <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Mobile Development"                </Link>
-                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Blockchain Solutions"                </Link>
-                <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  IoT Platforms"                </Link>
-                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Cybersecurity"                </Link></div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                  >
+                    {item.name}
+                    {item.submenu && <ChevronDown className="ml-1 h-4 w-4" />}
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  {item.submenu && (
+                    <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="py-1">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-
-            {/* Solutions Dropdown */}
-            <div className="relative group">"              <button "                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors""                onMouseEnter={() => setSolutionsOpen(true)}"                onMouseLeave={() => setSolutionsOpen(false)}
-              >
-                Solutions
-<ChevronDown className="ml-1 w-4 h-4" />"              </button>"              <div 
-                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}'                onMouseEnter={() => setSolutionsOpen(true)}'                onMouseLeave={() => setSolutionsOpen(false)}`              >
-                <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600">"                  Enterprise Solutions"                </Link>
-                <Link href="/solutions/small-business" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Small Business"                </Link>
-                <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Startups"                </Link>
-                <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Healthcare"                </Link>
-                <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Finance"                </Link>
-              </div>
-            </div>
-
-            <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">"              Products"            </Link>
-            <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors">"              Solutions"            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">"              About"            </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">"              Blog"            </Link>
-            <Link href="/careers" className="text-gray-600 hover:text-blue-600 transition-colors">"              Careers"            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">"              Contact"            </Link></div>
+          </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">"            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block">"              Get Started"            </Link></div>
+          <div className="hidden md:block">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
 
           {/* Mobile menu button */}
-          <button
-className="lg:hidden text-gray-600 hover:text-gray-900""            onClick={() => setIsOpen(!isOpen)}"          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"          </button>"        </div>
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">"            <div className="space-y-2">"              <Link href="/" className="block py-2 text-gray-600 hover:text-blue-600">"                Home"              </Link>
-              <div className="py-2">"                <div className="text-gray-600 font-semibold mb-2">Services</div>"                <div className="pl-4 space-y-2">"                  <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600">"                    AI Development"                  </Link>
-                  <Link href="/services/cloud-services" className="block py-1 text-gray-500 hover:text-blue-600">"                    Cloud Services"                  </Link>
-                  <Link href="/services/web-development" className="block py-1 text-gray-500 hover:text-blue-600">"                    Web Development"                  </Link>
-                  <Link href="/services/mobile-development" className="block py-1 text-gray-500 hover:text-blue-600">"                    Mobile Development"                  </Link>
-                  <Link href="/services/blockchain-solutions" className="block py-1 text-gray-500 hover:text-blue-600">"                    Blockchain Solutions"                  </Link>
-                  <Link href="/services/iot-platforms" className="block py-1 text-gray-500 hover:text-blue-600">"                    IoT Platforms"                  </Link>
-                  <Link href="/services/cybersecurity" className="block py-1 text-gray-500 hover:text-blue-600">"                    Cybersecurity"                  </Link>
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.submenu && (
+                    <div className="pl-4">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm transition-colors"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
+              ))}
+              <div className="pt-4">
+                <Link
+                  href="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
               </div>
-              <div className="py-2">"                <div className="text-gray-600 font-semibold mb-2">Solutions</div>"                <div className="pl-4 space-y-2">"                  <Link href="/solutions/enterprise" className="block py-1 text-gray-500 hover:text-blue-600">"                    Enterprise Solutions"                  </Link>
-                  <Link href="/solutions/small-business" className="block py-1 text-gray-500 hover:text-blue-600">"                    Small Business"                  </Link>
-                  <Link href="/solutions/startups" className="block py-1 text-gray-500 hover:text-blue-600">"                    Startups"                  </Link>
-                  <Link href="/solutions/healthcare" className="block py-1 text-gray-500 hover:text-blue-600">"                    Healthcare"                  </Link>
-                  <Link href="/solutions/finance" className="block py-1 text-gray-500 hover:text-blue-600">"                    Finance"                  </Link>
-                </div>
-              </div>
-              <Link href="/products" className="block py-2 text-gray-600 hover:text-blue-600">"                Products"              </Link>
-              <Link href="/about" className="block py-2 text-gray-600 hover:text-blue-600">"                About"              </Link>
-              <Link href="/blog" className="block py-2 text-gray-600 hover:text-blue-600">"                Blog"              </Link>
-              <Link href="/careers" className="block py-2 text-gray-600 hover:text-blue-600">"                Careers"              </Link>
-              <Link href="/contact" className="block py-2 text-gray-600 hover:text-blue-600">"                Contact"              </Link>
-              <div className="pt-4">"                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center">"                  Get Started"                </Link></div>
             </div>
           </div>
         )}

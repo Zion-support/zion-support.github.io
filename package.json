@@ -94,7 +94,6 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-<<<<<<< HEAD
     "postcss": "^8.4.32",
     "queue-microtask": "^1.2.3",
     "react": "^17.0.2",
