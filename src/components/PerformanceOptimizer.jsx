@@ -1,1 +1,23 @@
-export const PerformanceOptimizer = ({ children }) => { const location = useLocation(); ;
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export const PerformanceOptimizer = ({ children }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        if ('startViewTransition' in document) {
+          try {
+            // @ts-ignore - experimental API
+            document.startViewTransition?.(() => {});
+          } catch {}
+        }
+      });
+    }
+  }, [location.pathname]);
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;

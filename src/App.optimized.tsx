@@ -23,24 +23,24 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 };
 
 // Core pages with optimized imports
-const Home = createLazyComponent(() => import('./pages/Home'));
-const About = createLazyComponent(() => import('./pages/About'));
-const Contact = createLazyComponent(() => import('./pages/Contact'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Services = createLazyComponent(() => import('./pages/Services'));
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const News = createLazyComponent(() => import('./pages/News'));
-const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));
-const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Home = createLazyComponent(() => import('./pages/Home.tsx'));
+const About = createLazyComponent(() => import('./pages/About.tsx'));
+const Contact = createLazyComponent(() => import('./pages/Contact.tsx'));
+const Careers = createLazyComponent(() => import('./pages/Careers.tsx'));
+const Services = createLazyComponent(() => import('./pages/Services.tsx'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions.tsx'));
+const News = createLazyComponent(() => import('./pages/News.tsx'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudiesPage.tsx'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy.tsx'));
+const Terms = createLazyComponent(() => import('./pages/Terms.tsx'));
 
 // Service pages
-const AIServices = createLazyComponent(() => import('./pages/AIServices'));
-const CloudServices = createLazyComponent(() => import('./pages/CloudServices'));
-const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'));
-const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'));
-const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'));
-const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'));
+const AIServices = createLazyComponent(() => import('./pages/AIServices.tsx'));
+const CloudServices = createLazyComponent(() => import('./pages/CloudServices.tsx'));
+const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices.tsx'));
+const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices.tsx'));
+const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices.tsx'));
+const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices.tsx'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void  }) => (
