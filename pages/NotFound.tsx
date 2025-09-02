@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import {   Home,
+import {
+  Home,
   ArrowLeft,
   Phone,
   Mail,
