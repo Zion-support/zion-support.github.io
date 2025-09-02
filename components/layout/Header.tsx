@@ -20,15 +20,18 @@ const Header: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
   const serviceCategories = [
+    { name: 'AI Development', href: '/services/ai-development' },
+    { name: 'Cloud Services', href: '/services/cloud-services' },
     { name: 'Micro SaaS', href: '/services/micro-saas' },
     { name: 'IT Services', href: '/services/it-services' },
-    { name: 'AI Services', href: '/services/ai-services' },
   ];
 
   const solutionCategories = [
@@ -129,6 +132,18 @@ const Header: React.FC = () => {
               </div>
 
               <Link
+                href="/blog"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/case-studies"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Case Studies
+              </Link>
+              <Link
                 href="/about"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
@@ -225,6 +240,20 @@ const Header: React.FC = () => {
                   ))}
                 </div>
 
+                <Link
+                  href="/blog"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/case-studies"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Case Studies
+                </Link>
                 <Link
                   href="/about"
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
