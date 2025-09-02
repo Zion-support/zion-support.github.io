@@ -8,8 +8,9 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-    { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -24,20 +25,21 @@ const Header: React.FC = () => {
       {/* Top bar with contact info */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 lg:mb-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="hover:text-blue-300 transition-colors">+1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300 transition-colors">kleber@ziontechgroup.com</a>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 text-center">
               <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="hidden sm:inline">364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="sm:hidden">Middletown, DE</span>
             </div>
           </div>
         </div>
@@ -53,31 +55,33 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors relative group"
                 >
                   {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
               
               {/* Services Dropdown */}
               <div className="relative group">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center relative">
                   Services
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
                       href={category.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
                     >
                       {category.name}
                     </Link>
@@ -88,7 +92,7 @@ const Header: React.FC = () => {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105"
               >
                 Get Quote
               </Link>
@@ -109,13 +113,13 @@ const Header: React.FC = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="lg:hidden border-t border-gray-200 py-4 bg-white shadow-lg">
               <div className="flex flex-col space-y-4">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-4 rounded-lg hover:bg-blue-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -124,12 +128,12 @@ const Header: React.FC = () => {
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-2">Services</div>
+                  <div className="text-gray-700 font-semibold mb-3 px-4">Services</div>
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
                       href={category.href}
-                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="block py-2 px-6 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg mx-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}
@@ -138,13 +142,15 @@ const Header: React.FC = () => {
                 </div>
 
                 {/* Mobile CTA */}
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Quote
-                </Link>
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    href="/contact"
+                    className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mx-4"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Get Quote
+                  </Link>
+                </div>
               </div>
             </div>
           )}

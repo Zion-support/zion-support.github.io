@@ -11,38 +11,40 @@ const Footer: React.FC = () => {
       services: [
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'Project Management', href: '/services/project-management-suite' },
-        { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
-        { name: 'Expense Tracker', href: '/services/expense-tracker' },
-        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
-        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
-        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
-        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
+        { name: 'AI Document Processor', href: '/services/ai-document-processor' },
+        { name: 'Smart Calendar Scheduler', href: '/services/smart-calendar-scheduler' },
+        { name: 'AI Code Reviewer', href: '/services/ai-code-reviewer' },
+        { name: 'AI Translation Service', href: '/services/ai-translation-service' },
+        { name: 'Smart Inventory Forecasting', href: '/services/smart-inventory-forecasting' },
+        { name: 'AI Customer Insights', href: '/services/ai-customer-insights' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
       ]
     },
     {
       title: 'IT Services',
       services: [
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        { name: 'Blockchain Integration', href: '/services/blockchain-integration' },
+        { name: 'IoT Solutions', href: '/services/iot-solutions' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-consulting' },
+        { name: 'Edge Computing', href: '/services/edge-computing-setup' },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-security' },
         { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
         { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
-        { name: 'Database Optimization', href: '/services/database-optimization' },
-        { name: 'Network Security Audit', href: '/services/network-security-audit' },
-        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
-        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
-        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
       ]
     },
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
+        { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
+        { name: 'AI Robotics Control', href: '/services/ai-robotics-control' },
+        { name: 'AI Financial Modeling', href: '/services/ai-financial-modeling' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' },
         { name: 'Custom AI Models', href: '/services/custom-ai-models' },
-        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
+        { name: 'Computer Vision', href: '/services/computer-vision-solutions' },
         { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
-        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
-        { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
-        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
-        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
       ]
     }
   ];

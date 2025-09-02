@@ -1,6 +1,6 @@
-import React, { useState              } from 'react.ts';
-import Link from 'next/link.ts';
-import { useRouter               } from 'next/router.ts';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Home, 
   Briefcase, 
   Users, 
@@ -65,27 +65,26 @@ import { Home,
   Sun,
   Wind
   
-} from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()               => void}
+  isOpen: boolean;
+  onClose: () => void;
+}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-
   const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<any>([]);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    setExpandedSections(prev => ;
-      prev.includes(section) ;
-        ? prev.filter(s => s !== section);
-        : [...prev, section];
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
     );
   };
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
+  const isActive = (path: string) => router.pathname === path;
 
   const navigation = {
 
@@ -100,12 +99,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
     services: [
-      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' },
-      { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' },
-      { name: 'Data & Analytics', href: '/services/data', icon: Database, description: 'Data pipelines & ML ops' },
-      { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' },
-      { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },
+      { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Innovative SaaS solutions' },
+      { name: 'IT Services', href: '/services/it-services', icon: Server, description: 'Infrastructure & security' },
+      { name: 'AI Services', href: '/services/ai-services', icon: Brain, description: 'Advanced AI solutions' },
+      { name: 'Blockchain', href: '/services/blockchain-integration', icon: Link, description: 'Blockchain solutions' },
+      { name: 'IoT Solutions', href: '/services/iot-solutions', icon: Network, description: 'Internet of Things' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing-consulting', icon: Atom, description: 'Quantum solutions' },
     ],
     solutions: [
       { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' },
