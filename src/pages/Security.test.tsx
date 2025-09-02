@@ -1,1 +1,1 @@
-describe('Security', () => {}' it('renders without crashing', () => {} render(<Security />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Security />) 
+describe(&apos;Security&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<Security />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<Security />) 

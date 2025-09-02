@@ -1,1 +1,1 @@
-describe('AIServices', () => {}' it('renders without crashing', () => {} render(<AIServices />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<AIServices />) 
+describe(&apos;AIServices&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<AIServices />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<AIServices />) 

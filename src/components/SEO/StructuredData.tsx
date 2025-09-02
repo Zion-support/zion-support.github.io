@@ -1,3 +1,3 @@
-import Head from 'next/head' interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';
-   data?: any} export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:'''
+import Head from &apos;next/head&apos; interface StructuredDataProps {
+  type?: &apos;Organization&apos; | &apos;WebSite&apos; | &apos;WebPage&apos; | &apos;Service&apos; | &apos;Article';
+   data?: any}&apos;&apos; export const StructuredData: React.FC<StructuredDataProps> = ({ type = &apos;Organization&apos;, data}) => {&apos;} const getDefaultData = () => { switch (type) { case &apos;Organization&apos;: return { &apos;@context&apos;: &apos;https:&apos;&apos;'';}}}'

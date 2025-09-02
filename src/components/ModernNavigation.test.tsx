@@ -1,10 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import ModernNavigation from './ModernNavigation';
+import { render, screen } from &apos;@testing-library/react';
+import ModernNavigation from &apos;./ModernNavigation';
 
-describe('ModernNavigation', () => {
-  it('renders without crashing', () => {
-    render(<ModernNavigation />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<ModernNavigation />)
+describe(&apos;ModernNavigation&apos;, () => {
+  it(&apos;renders without crashing&apos;, () => {
+    render(&apos;}}&apos;<ModernNavigation />)
+    expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
+  it(&apos;displays expected content&apos;, () => {
+    render(&apos;}<ModernNavigation />)
     // Add specific test assertions based on component content})})

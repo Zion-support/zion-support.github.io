@@ -20,4 +20,4 @@
    contactInfo: { phone: string;
    email: string;
    website: string;
-   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';
+   addres,s: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,y: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [&apos;';&apos;'

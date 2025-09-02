@@ -1,1 +1,1 @@
-describe('Signup', () => {}' it('renders without crashing', () => {} render(<Signup />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Signup />) 
+describe(&apos;Signup&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<Signup />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<Signup />) 

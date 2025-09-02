@@ -1,10 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import ListingCard from './ListingCard';
+import { render, screen } from &apos;@testing-library/react';
+import ListingCard from &apos;./ListingCard';
 
-describe('ListingCard', () => {
-  it('renders without crashing', () => {
-    render(<ListingCard />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<ListingCard />)
+describe(&apos;ListingCard&apos;, () => {
+  it(&apos;renders without crashing&apos;, () => {
+    render(&apos;}}&apos;<ListingCard />)
+    expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
+  it(&apos;displays expected content&apos;, () => {
+    render(&apos;}<ListingCard />)
     // Add specific test assertions based on component content})})

@@ -1,1 +1,1 @@
-describe('MicroSaaS', () => {}' it('renders without crashing', () => {} render(<MicroSaaS />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<MicroSaaS />) 
+describe(&apos;MicroSaaS&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<MicroSaaS />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<MicroSaaS />) 

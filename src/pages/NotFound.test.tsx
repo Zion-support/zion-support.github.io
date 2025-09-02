@@ -1,1 +1,1 @@
-describe('NotFound', () => {}' it('renders without crashing', () => {} render(<NotFound />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<NotFound />) 
+describe(&apos;NotFound&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<NotFound />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<NotFound />) 

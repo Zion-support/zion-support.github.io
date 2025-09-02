@@ -1,1 +1,1 @@
-describe('DigitalTwin', () => {}' it('renders without crashing', () => {} render(<DigitalTwin />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<DigitalTwin />) 
+describe(&apos;DigitalTwin&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<DigitalTwin />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<DigitalTwin />) 

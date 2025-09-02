@@ -1,5 +1,5 @@
 export const securityConfig = {
-  contentSecurityPolicy: 'default-src;
-  'self''}
-  contentSecurityPolicy: 'default - src 'self''}
-;
+  contentSecurityPolicy: &apos;default-src;
+  &apos;self&apos;&apos;}
+  contentSecurityPolicy: &apos;default - src &apos;self&apos;&apos;}
+;&apos;'

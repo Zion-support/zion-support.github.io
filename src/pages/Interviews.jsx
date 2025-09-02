@@ -1,1 +1,1 @@
- export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {
+ export default function Interviews () {} function InterviewsContent () {} const ;{ interviews, isLoading, fetchInterviews } = useInterviews ()  const;const [activeTab, setActiveTab] = useState(&quot;upcoming&quot;) useEffect(() => {";}"

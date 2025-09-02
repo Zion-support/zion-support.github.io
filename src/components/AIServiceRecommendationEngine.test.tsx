@@ -1,10 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import AIServiceRecommendationEngine from './AIServiceRecommendationEngine';
+import { render, screen } from &apos;@testing-library/react';
+import AIServiceRecommendationEngine from &apos;./AIServiceRecommendationEngine';
 
-describe('AIServiceRecommendationEngine', () => {
-  it('renders without crashing', () => {
-    render(<AIServiceRecommendationEngine />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<AIServiceRecommendationEngine />)
+describe(&apos;AIServiceRecommendationEngine&apos;, () => {
+  it(&apos;renders without crashing&apos;, () => {
+    render(&apos;}}&apos;<AIServiceRecommendationEngine />)
+    expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
+  it(&apos;displays expected content&apos;, () => {
+    render(&apos;}<AIServiceRecommendationEngine />)
     // Add specific test assertions based on component content})})

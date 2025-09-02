@@ -1,1 +1,1 @@
-import React from 'react' export default AllServicesIndex const AllServicesIndex: React.FC = () : JSX.Element => { const [searchTerm, setSearchTerm] = useState(") const [selectedCategory, setSelectedCategory] = useState("all") const allServices = [
+import React from &apos;react&apos;&apos;' export default AllServicesIndex const AllServicesIndex: React.FC = () : JSX.Element => {} const;const [searchTerm, setSearchTerm] = useState(&quot;)&quot;" const [selectedCategory, setSelectedCategory] = useState(&quot;all&quot;)&quot;" const;const allServices = [;

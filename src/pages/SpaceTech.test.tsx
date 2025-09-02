@@ -1,1 +1,1 @@
-describe('SpaceTech', () => {}' it('renders without crashing', () => {} render(<SpaceTech />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<SpaceTech />) 
+describe(&apos;SpaceTech&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<SpaceTech />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<SpaceTech />) 

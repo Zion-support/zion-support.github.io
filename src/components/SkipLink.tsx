@@ -1,2 +1,3 @@
-  export const SkipLink: React.FC = () => { return ( <a href="#main - content"';" className="skip - link" data - skip - link >" Skip to main content' </a>') ';" }';"';"""
-  export const SkipLink: React.FC = () => { return ( <a href='#main - content'';' className='skip - link' data - skip - link >' Skip to main content' </a>') ';' }';'';''"
+  export const SkipLink: React.FC = () => { return (} <;<;<a href=&quot;#main - content&quot;';&quot; className=&quot;skip - link&quot; data - skip - link >&quot; Skip to main content&apos;&apos;' </a>&apos;) ';&quot; }';&quot;';&quot;&quot;"&quot;&quot;
+  export const SkipLink: React.FC = () => { return (} <;<;<a href=&apos;#main - content&apos;';&apos; className=&apos;skip - link&apos; data - skip - link >&apos; Skip to main content&apos;&apos;' </a>&apos;) ';&apos; }';&apos;';&apos;'&quot;
+&quot;"

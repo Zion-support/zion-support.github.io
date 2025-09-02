@@ -1,16 +1,16 @@
 
 export const api = {
-  async get(url) {
-    const response = await fetch(url);
+  async get(url) {}}
+    const;const;const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)}
     return response.json()},
   
-  async post(url, data) {
+  async post(url, data) {}
     const response = await fetch(url, {
-      method: 'POST',
+      method: &apos;POST&apos;,
       headers: {
-        'Content-Type': 'application/json',
+        &apos;Content-Type&apos;: &apos;application/json&apos;,
       },
       body: JSON.stringify(data),
     })
@@ -18,3 +18,4 @@ export const api = {
       throw new Error(`HTTP error! status: ${response.status}`)}
     return response.json()}
 }
+';'

@@ -1,163 +1,163 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React from &apos;react';
+import { motion } from &apos;framer-motion';
+import { SEO } from &apos;../components/SEO';
 import { 
   Video, Calendar, Clock, Users, Play, 
   Star, ArrowRight, ExternalLink, Download
-} from 'lucide-react';
+} from &apos;lucide-react';&apos;&apos;
 
-export default function Webinars() {
+export default function Webinars() {}
   const upcomingWebinars = [
-    {
+    ;{
       id: 1,
-      title: "AI Revolution: Transforming Business Operations",
-      description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.",
-      date: "2025-01-15",
-      time: "2:00 PM EST",
-      duration: "60 minutes",
-      speaker: "Dr. Sarah Chen",
+      title: &quot;AI Revolutio,n: Transforming Business Operations&quot;,
+      description: &quot;Learn how AI is revolutionizing business operations and discover practical implementation strategies.&quot;,
+      date: &quot;2025-01-15&quot;,
+      time: &quot;,2:00 PM EST&quot;,
+      duration: &quot;60 minutes&quot;,
+      speaker: &quot;Dr. Sarah Chen&quot;,
       attendees: 1250,
       featured: true
     },
     {
       id: 2,
-      title: "Quantum Computing: The Future is Now",
-      description: "Explore the latest developments in quantum computing and their real-world applications.",
-      date: "2025-01-20",
-      time: "3:00 PM EST",
-      duration: "45 minutes",
-      speaker: "Prof. Michael Rodriguez",
+      title: &quot;Quantum Computin,g: The Future is Now&quot;,
+      description: &quot;Explore the latest developments in quantum computing and their real-world applications.&quot;,
+      date: &quot;2025-01-20&quot;,
+      time: &quot;,3:00 PM EST&quot;,
+      duration: &quot;45 minutes&quot;,
+      speaker: &quot;Prof. Michael Rodriguez&quot;,
       attendees: 890,
       featured: true
     },
     {
       id: 3,
-      title: "Micro SaaS Success Stories",
-      description: "Hear from successful micro SaaS entrepreneurs and learn their strategies for growth.",
-      date: "2025-01-25",
-      time: "1:00 PM EST",
-      duration: "50 minutes",
-      speaker: "Alex Thompson",
+      title: &quot;Micro SaaS Success Stories&quot;,
+      description: &quot;Hear from successful micro SaaS entrepreneurs and learn their strategies for growth.&quot;,
+      date: &quot;2025-01-25&quot;,
+      time: &quot;,1:00 PM EST&quot;,
+      duration: &quot;50 minutes&quot;,
+      speaker: &quot;Alex Thompson&quot;,
       attendees: 567,
       featured: false
     }
-  ];
+  ];&quot;
 
   const pastWebinars = [
     {
       id: 4,
-      title: "Cybersecurity Best Practices 2025",
-      description: "Essential cybersecurity practices for modern applications and infrastructure.",
-      date: "2025-01-10",
-      duration: "55 minutes",
-      speaker: "Lisa Park",
+      title: &quot;Cybersecurity Best Practices 2025&quot;,
+      description: &quot;Essential cybersecurity practices for modern applications and infrastructure.&quot;,
+      date: &quot;2025-01-10&quot;,
+      duration: &quot;55 minutes&quot;,
+      speaker: &quot;Lisa Park&quot;,
       views: 2340,
       rating: 4.8
     },
     {
       id: 5,
-      title: "Digital Transformation Strategies",
-      description: "Comprehensive guide to successful digital transformation initiatives.",
-      date: "2025-01-05",
-      duration: "65 minutes",
-      speaker: "David Kumar",
+      title: &quot;Digital Transformation Strategies&quot;,
+      description: &quot;Comprehensive guide to successful digital transformation initiatives.&quot;,
+      date: &quot;2025-01-05&quot;,
+      duration: &quot;65 minutes&quot;,
+      speaker: &quot;David Kumar&quot;,
       views: 1890,
       rating: 4.7
     }
   ];
 
-  return (
+  return (&quot;
     <>
       <SEO 
-        title="Webinars - Zion Tech Group | Technology Education & Insights"
-        description="Join our expert-led webinars on AI, quantum computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
-        keywords="webinars, technology education, AI insights, quantum computing, cybersecurity, online learning, Zion Tech Group"
-      />
+        title=&quot;Webinars - Zion Tech Group | Technology Education & Insights&quot;
+        description=&quot;Join our expert-led webinars on AI, quantum computing, cybersecurity, and emerging technologies. Learn from industry leaders and stay ahead of the curve.&quot;
+        keywords=&quot;webinars, technology education, AI insights, quantum computing, cybersecurity, online learning, Zion Tech Group&quot;
+      />&quot;
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
+        {/* Hero Section */}&quot;
+        <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
+          <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Expert Webinars
+              className=&quot;text-center max-w-4xl mx-auto&quot;
+            >&quot;
+              <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
+                Expert Webinars&quot;
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join our expert-led webinars and learn from industry leaders about 
-                the latest trends in AI, quantum computing, and emerging technologies
+                the latest trends in AI, quantum computing, and emerging technologies&quot;
               </p>
-              <div className="flex items-center justify-center">
-                <Video className="w-16 h-16 text-blue-400" />
+              <div className=&quot;flex items-center justify-center&quot;>&quot;"
+                <Video className=&quot;w-16 h-16 text-blue-400&quot; />&quot;
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Upcoming Webinars */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-16&quot;>&quot;"
+          <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Upcoming Webinars</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't miss these exclusive sessions with industry experts
+              className=&quot;text-center mb-12&quot;
+            >&quot;
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Upcoming Webinars&quot;</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+                Don&apos;t miss these exclusive sessions with industry experts&apos;
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {upcomingWebinars.map((webinar, index) => (
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-3 gap-8&quot;>
+              {upcomingWebinars.map((webinar, index) => (&quot;}
                 <motion.div
                   key={webinar.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="px-3 py-1 bg-green-600/20 border border-green-400/30 rounded-full text-green-300 text-xs">
-                      Upcoming
+                  className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot;
+                >&quot;
+                  <div className=&quot;flex items-start justify-between mb-4&quot;>&quot;"
+                    <span className=&quot;px-3 py-1 bg-green-600/20 border border-green-400/30 rounded-full text-green-300 text-xs&quot;>
+                      Upcoming&quot;
                     </span>
-                    {webinar.featured && (
-                      <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">
-                        Featured
+                    {webinar.featured && (}
+                      <span className=&quot;px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs&quot;>
+                        Featured&quot;
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">{webinar.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{webinar.description}</p>
+                  <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{webinar.title}&quot;</h3>
+                  <p className=&quot;text-gray-300 text-sm mb-4&quot;>{webinar.description}&quot;</p>
 
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {new Date(webinar.date).toLocaleDateString()}
+                  <div className=&quot;space-y-2 mb-4&quot;>&quot;"
+                    <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
+                      <Calendar className=&quot;w-4 h-4 mr-2&quot; />
+                      {new Date(webinar.date).toLocaleDateString()}&quot;
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Clock className="w-4 h-4 mr-2" />
-                      {webinar.time} • {webinar.duration}
+                    <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
+                      <Clock className=&quot;w-4 h-4 mr-2&quot; />
+                      {webinar.time} • {webinar.duration}&quot;
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Users className="w-4 h-4 mr-2" />
-                      {webinar.attendees} registered
+                    <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
+                      <Users className=&quot;w-4 h-4 mr-2&quot; />
+                      {webinar.attendees} registered&quot;
                     </div>
                   </div>
 
-                  <div className="mb-4">
-                    <p className="text-sm text-gray-400">Speaker:</p>
-                    <p className="text-blue-400 font-medium">{webinar.speaker}</p>
+                  <div className=&quot;mb-4&quot;>&quot;"
+                    <p className=&quot;text-sm text-gray-400&quot;>Speaker:&quot;</p>
+                    <p className=&quot;text-blue-400 font-medium&quot;>{webinar.speaker}&quot;</p>
                   </div>
 
-                  <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-                    Register Now
+                  <button className=&quot;w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r:to-purple-700 transition-all duration-200&quot;>
+                    Register Now&quot;
                   </button>
                 </motion.div>
               ))}
@@ -166,69 +166,69 @@ export default function Webinars() {
         </section>
 
         {/* Past Webinars */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
+          <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Past Webinars</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Watch recordings of our previous expert sessions
+              className=&quot;text-center mb-12&quot;
+            >&quot;
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Past Webinars&quot;</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+                Watch recordings of our previous expert sessions&quot;
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {pastWebinars.map((webinar, index) => (
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
+              {pastWebinars.map((webinar, index) => (&quot;}
                 <motion.div
                   key={webinar.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="px-3 py-1 bg-gray-600/20 border border-gray-400/30 rounded-full text-gray-300 text-xs">
-                      Past Webinar
+                  className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot;
+                >&quot;
+                  <div className=&quot;flex items-start justify-between mb-4&quot;>&quot;"
+                    <span className=&quot;px-3 py-1 bg-gray-600/20 border border-gray-400/30 rounded-full text-gray-300 text-xs&quot;>
+                      Past Webinar&quot;
                     </span>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm">{webinar.rating}</span>
+                    <div className=&quot;flex items-center text-yellow-400&quot;>&quot;"
+                      <Star className=&quot;w-4 h-4 fill-current&quot; />&quot;
+                      <span className=&quot;ml-1 text-sm&quot;>{webinar.rating}&quot;</span>
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">{webinar.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{webinar.description}</p>
+                  <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{webinar.title}&quot;</h3>
+                  <p className=&quot;text-gray-300 text-sm mb-4&quot;>{webinar.description}&quot;</p>
 
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {new Date(webinar.date).toLocaleDateString()}
+                  <div className=&quot;space-y-2 mb-4&quot;>&quot;"
+                    <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
+                      <Calendar className=&quot;w-4 h-4 mr-2&quot; />
+                      {new Date(webinar.date).toLocaleDateString()}&quot;
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Clock className="w-4 h-4 mr-2" />
-                      {webinar.duration}
+                    <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
+                      <Clock className=&quot;w-4 h-4 mr-2&quot; />
+                      {webinar.duration}&quot;
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Users className="w-4 h-4 mr-2" />
-                      {webinar.views} views
+                    <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
+                      <Users className=&quot;w-4 h-4 mr-2&quot; />
+                      {webinar.views} views&quot;
                     </div>
                   </div>
 
-                  <div className="mb-4">
-                    <p className="text-sm text-gray-400">Speaker:</p>
-                    <p className="text-blue-400 font-medium">{webinar.speaker}</p>
+                  <div className=&quot;mb-4&quot;>&quot;"
+                    <p className=&quot;text-sm text-gray-400&quot;>Speaker:&quot;</p>
+                    <p className=&quot;text-blue-400 font-medium&quot;>{webinar.speaker}&quot;</p>
                   </div>
 
-                  <div className="flex gap-2">
-                    <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-                      <Play className="w-4 h-4 inline mr-2" />
-                      Watch Now
+                  <div className=&quot;flex gap-2&quot;>&quot;"
+                    <button className=&quot;flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200&quot;>&quot;"
+                      <Play className=&quot;w-4 h-4 inline mr-2&quot; />
+                      Watch Now&quot;
                     </button>
-                    <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hover:bg-slate-700 transition-colors">
-                      <Download className="w-4 h-4" />
+                    <button className=&quot;px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hove,r:bg-slate-700 transition-colors&quot;>&quot;"
+                      <Download className=&quot;w-4 h-4&quot; />&quot;
                     </button>
                   </div>
                 </motion.div>
@@ -238,35 +238,35 @@ export default function Webinars() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-20&quot;>&quot;"
+          <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Stay Updated
+              className=&quot;text-center max-w-4xl mx-auto&quot;
+            >&quot;
+              <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
+                Stay Updated&quot;
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Subscribe to our newsletter to get notified about upcoming webinars 
-                and exclusive technology insights.
+                and exclusive technology insights.&quot;
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
                 <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
-                >
-                  <Video className="w-5 h-5 mr-2" />
-                  Subscribe to Updates
+                  href=&quot;/contact&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot;
+                >&quot;
+                  <Video className=&quot;w-5 h-5 mr-2&quot; />
+                  Subscribe to Updates&quot;
                 </a>
                 <a
-                  href="/training"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
-                >
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  View Training Programs
+                  href=&quot;/training&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
+                >&quot;
+                  <ArrowRight className=&quot;w-5 h-5 mr-2&quot; />
+                  View Training Programs&quot;
                 </a>
               </div>
             </motion.div>

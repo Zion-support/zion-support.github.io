@@ -1,10 +1,10 @@
-import '@testing-library/jest-dom';
+import &apos;@testing-library/jest-dom';
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, &apos;matchMedia&apos;, {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
-    matches: false,
+    matche,s: false,
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecated
@@ -42,3 +42,4 @@ global.console = {
   warn: jest.fn(),
   error: jest.fn(),
 }
+&apos;'

@@ -1,1 +1,1 @@
-describe('PricingPage', () => {}' it('renders without crashing', () => {} render(<PricingPage />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<PricingPage />) 
+describe(&apos;PricingPage&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<PricingPage />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<PricingPage />) 

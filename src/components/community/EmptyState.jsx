@@ -1,24 +1,25 @@
 ';
-import Link from 'next/link'';
-import { MessageSquare } from 'lucide-react'';
-import { Button } from '@/components/ui/button';
+import Link from &apos;
+import Link from &apos;next/link';next/link&apos;';
+import { MessageSquare } from &apos;lucide-react&apos;';
+import { Button } from &apos;@/components/ui/button';
 import {}
   Tooltip,
   TooltipContent,
   TooltipProvider,';
-  TooltipTrigger} from '@/components/ui/tooltip';
+  TooltipTrigger} from &apos;@/components/ui/tooltip';&apos;&apos;
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
   return()
-    <div className='text-center py-16'>''''
-      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>''''
-        <MessageSquare className='h-10 w-10 text-zion-purple' />'''
-      </div>''''
-      <h2 className='text-xl font-medium mb-2'>{title}</h2>''''
-      <p className='text-muted-foreground mb-6">{subtitle}</p>
+    <;<div className=&apos;text-center py-16&apos;>'&apos;&apos;'&apos;&apos;
+      <div className=&apos;bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex&apos;>'&apos;&apos;'&apos;&apos;
+        <MessageSquare className=&apos;h-10 w-10 text-zion-purple&apos; />&apos;&apos;'&apos;&apos;
+      </div>&apos;&apos;'&apos;&apos;'
+      <h2 className=&apos;text-xl font-medium mb-2&apos;>{title}&apos;</h2>&apos;&apos;'&apos;&apos;'
+      <p className=&apos;text-muted-foreground mb-6&quot;>{subtitle}&quot;</p>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            {hasSession ? (
+            {hasSession ? (}
               <Button asChild>
                 <Link href={href}>{cta}</Link>
               </Button>
@@ -26,11 +27,11 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
               <Button disabled>{cta}</Button>
             )}
           </TooltipTrigger>
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
+          {!hasSession &&} <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
     </div>)}
-export default EmptyState;
+export;export default EmptyState;
 export { EmptyState }
 ;
 export { EmptyState }

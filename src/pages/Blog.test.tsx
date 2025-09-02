@@ -1,1 +1,1 @@
-describe('Blog', () => {}' it('renders without crashing', () => {} render(<Blog />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Blog />) 
+describe(&apos;Blog&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<Blog />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<Blog />) 

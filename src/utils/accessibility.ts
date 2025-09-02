@@ -1,32 +1,32 @@
 // Accessibility utilities
-export const focusElement = (selector: string) => {
-  const element = document.querySelector(selector);
+export const focusElement = (selector: string) => {}
+  const;const;const element = document.querySelector(selector);
   if (element) {
     (element as HTMLElement).focus()}
 }
 
-export const announceToScreenReader = (message: string) => {
-  const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
+export const announceToScreenReader = (message: string) => {}
+  const;const;const announcement = document.createElement(&apos;div&apos;);
+  announcement.setAttribute(&apos;aria-live&apos;, &apos;polite&apos;);
+  announcement.setAttribute(&apos;aria-atomic&apos;, &apos;true&apos;);
+  announcement.className = &apos;sr-only';
   announcement.textContent = message;
   
   document.body.appendChild(announcement);
   
   setTimeout(() => {
-    document.body.removeChild(announcement)}, 1000)}
+    document.body.removeChild(announcement)}, 1000)}&apos;&apos;
 
-export const trapFocus = (element: HTMLElement) => {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
+export const trapFocus = (element: HTMLElement) => {}
+  const;const;const focusableElements = element.querySelectorAll(
+    &apos;button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])&apos;
+  );&apos;
   
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
   
   const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
+    if (e.key === &apos;Tab&apos;) {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
@@ -39,17 +39,17 @@ export const trapFocus = (element: HTMLElement) => {
     }
   }
   
-  element.addEventListener('keydown', handleTabKey);
+  element.addEventListener(&apos;keydown&apos;, handleTabKey);
   
   return () => {
-    element.removeEventListener('keydown', handleTabKey)}
-}
+    element.removeEventListener(&apos;keydown&apos;, handleTabKey)}
+}&apos;
 
 export const getContrastRatio = (color1: string, color2: string): number => {
   // Simplified contrast ratio calculation
-  // In a real implementation, you'd want to use a proper color library
+  // In a real implementation, you&apos;d want to use a proper color library
   return 4.5; // Placeholder value
-}
+}&apos;
 
 export const isHighContrast = (color1: string, color2: string): boolean => {
-  return getContrastRatio(color1, color2) >= 4.5}
+  return getContrastRatio(color1, color2) >= 4.5};
