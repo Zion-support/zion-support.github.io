@@ -102,28 +102,28 @@ const EnhancedAnalytics: React.FC = () => {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
         <StatCard;
-          title='Page Views';
+          title='Page Views'
           value={analyticsData.pageViews.toLocaleString()}
           icon={<Eye className='w-6 h-6 text-blue-600' />}
           change={12.5}
           color='blue'
         />
         <StatCard;
-          title='Unique Visitors';
+          title='Unique Visitors'
           value={analyticsData.uniqueVisitors.toLocaleString()}
           icon={<Users className='w-6 h-6 text-green-600' />}
           change={8.3}
           color='green'
         />
         <StatCard;
-          title='Bounce Rate';
+          title='Bounce Rate'
           value={`${analyticsData.bounceRate}%`}
           icon={<MousePointer className='w-6 h-6 text-orange-600' />}
           change={-2.1}
           color='orange'
         />
         <StatCard;
-          title='Avg. Session Duration';
+          title='Avg. Session Duration'
           value={`${analyticsData.avgSessionDuration}m`}
           icon={<Clock className='w-6 h-6 text-purple-600' />}
           change={5.7}

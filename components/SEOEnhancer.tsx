@@ -119,7 +119,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
       <link rel='dns-prefetch' href='//www.googletagmanager.com' />
       {/* Structured Data */}      <script
-        type='application/ld+json';
+        type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(finalStructuredData)}}
       />{/* Additional Performance Hints */}

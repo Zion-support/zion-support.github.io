@@ -1,49 +1,36 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix syntax errors in a file
+// Function to fix common syntax errors
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix common syntax errors
+    // Fix common patterns
     const fixes = [
-      // Fix extra semicolons in object literals and function calls
-      { pattern: /(\w+)\s*\(\s*;/g, replacement: '$1(' },
-      { pattern: /{\s*;/g, replacement: '{' },
-      { pattern: /}\s*;/g, replacement: '}' },
-      { pattern: /,\s*;/g, replacement: ',' },
-      { pattern: /;\s*;/g, replacement: ';' },
-      { pattern: /\(\s*;/g, replacement: '(' },
-      { pattern: /;\s*\)/g, replacement: ')' },
-      { pattern: /;\s*}/g, replacement: '}' },
-      { pattern: /;\s*{/g, replacement: '{' },
-      { pattern: /;\s*,/g, replacement: ',' },
-      { pattern: /,\s*;/g, replacement: ',' },
-      // Fix semicolons in import statements
-      { pattern: /import\s*{\s*([^}]+);\s*}/g, replacement: 'import { $1 }' },
-      // Fix semicolons in function declarations
-      { pattern: /\)\s*=>\s*{;/g, replacement: ') => {' },
-      { pattern: /}\s*\)\s*;/g, replacement: '})' },
-      // Fix semicolons in JSX
-      { pattern: /className={cn\(\s*;/g, replacement: 'className={cn(' },
-      { pattern: /}\s*\)\s*}/g, replacement: '})}' },
+      // Fix 'use client';'' -> 'use client';
+      { pattern: /'use client';''/g, replacement: "'use client';" },
+      // Fix import statements with extra quotes
+      { pattern: /import ([^;]+);''/g, replacement: "import $1;" },
+      // Fix empty lines with quotes
+      { pattern: /^''$/gm, replacement: "" },
+      // Fix semicolons in JSX attributes
+      { pattern: /(\w+)='([^']*)';/g, replacement: "$1='$2'" },
+      // Fix extra semicolons in JSX
+      { pattern: /(\/>);/g, replacement: "$1" },
     ];
 
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
+      if (fix.pattern.test(content)) {
+        content = content.replace(fix.pattern, fix.replacement);
         modified = true;
       }
     });
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -64,7 +51,7 @@ function fixFilesInDirectory(dir) {
 
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
       fixedCount += fixFilesInDirectory(filePath);
-    } else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(file)) {
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
       }
@@ -75,6 +62,7 @@ function fixFilesInDirectory(dir) {
 }
 
 // Main execution
-console.log('🔧 Starting syntax error fixes...');
-const fixedCount = fixFilesInDirectory('.');
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+console.log('Starting syntax error fixes...');
+const fixedCount = fixFilesInDirectory('./components');
+const fixedCount2 = fixFilesInDirectory('./pages');
+console.log(`Fixed ${fixedCount + fixedCount2} files`);

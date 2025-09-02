@@ -97,7 +97,7 @@ const ServicesSection: React.FC = () => {
                     ))}
                   </ul>
                   <Button
-                    variant='outline';
+                    variant='outline'
                     className='w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-colors'>
                     Learn More
                     <ArrowRight className='ml-2 h-4 w-4' />

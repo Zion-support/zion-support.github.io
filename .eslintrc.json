@@ -1,2 +1,22 @@
 {
-  "root": true}
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "no-unused-vars": "off",
+    "no-console": "warn",
+    "react/no-unescaped-entities": "off"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "dist/",
+    "build/",
+    "*.config.js",
+    "*.config.ts",
+    "scripts/",
+    "automation/",
+    "**/*.cjs",
+    "**/*.mjs",
+    "src/**"
+  ]
+}

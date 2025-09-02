@@ -10,9 +10,10 @@ export default function Document() {
         <link rel='dns-prefetch' href='https://cdn.gpteng.co' />
         {/* Optimized font loading */}
         <link
-          href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-          rel='stylesheet';
-        />{/* Favicon and manifest */}
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+          rel='stylesheet'
+        />
+        {/* Favicon and manifest */}
         <link rel='icon' href='/favicon.ico' />
         <link rel='apple-touch-icon' href='/icon-192.png' />
         <link rel='manifest' href='/manifest.json' />
@@ -32,7 +33,7 @@ export default function Document() {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js')})}
             `}}
-        />;
+        />
       </Head>
       <body>
         <Main />

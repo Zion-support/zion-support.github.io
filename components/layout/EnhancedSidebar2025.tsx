@@ -584,6 +584,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
           </div>;
         </div>;
       </motion.div>;
-    </>;
+    </>
   );
 }

@@ -63,15 +63,15 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       {preloadImages.map((image, index) => (
         <link
           key={`preload-image-${index}`}
-          rel='preload';
-          as='image';
+          rel='preload'
+          as='image'
           href={image}
         />))}
       {preloadFonts.map((font, index) => (
         <link;
           key={`preload-font-${index}`}
-          rel='preload';
-          as='style';
+          rel='preload'
+          as='style'
           href={font}
           onLoad={() => {
             const link = document.querySelector(`link[href='${font}']`)

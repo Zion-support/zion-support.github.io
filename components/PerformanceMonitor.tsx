@@ -1,5 +1,5 @@
-'use client';'
-''
+'use client';
+
 import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -63,7 +63,7 @@ const PerformanceMonitor: React.FC = () => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
 '
-''
+
           if (entry.entryType === 'first-input') {
 
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
@@ -98,7 +98,7 @@ const PerformanceMonitor: React.FC = () => {
     // Measure Time to First Byte (TTFB)''
     if ('performance' in window) {
 '
-''
+
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
 
@@ -113,12 +113,12 @@ const PerformanceMonitor: React.FC = () => {
 
   const getScoreColor = (metric: string, value: number | null): string => {
 '
-''
+
     if (value === null) return 'text-gray-500';
     
     switch (metric) {
 '
-''
+
       case 'fcp':''
         return value <= 1800 ? 'text-green-500' : value <= 3000 ? 'text-yellow-500' : 'text-red-500';''
       case 'lcp':''
@@ -134,12 +134,12 @@ const PerformanceMonitor: React.FC = () => {
 
   const getScoreLabel = (metric: string, value: number | null): string => {
 '
-''
+
     if (value === null) return 'N/A';
     
     switch (metric) {
 '
-''
+
       case 'fcp':''
         return value <= 1800 ? 'Good' : value <= 3000 ? 'Needs Improvement' : 'Poor';''
       case 'lcp':''

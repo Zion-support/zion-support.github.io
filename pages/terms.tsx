@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
@@ -252,9 +253,9 @@ const Terms: NextPage = () => {
             <a href="mailto:kleber@ziontechgroup.com" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Contact Us
             </a>
-            <a href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get in Touch
-            </a>
+            </Link>
           </div>
         </div>
       </section>

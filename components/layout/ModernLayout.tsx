@@ -109,9 +109,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <main className="flex-1 pt-20">
           {children};
         </main>;
-        <ModernFooter />;
+        <ModernFooter />
       </div>;
-    </>;
+    </>
   );
 };
 

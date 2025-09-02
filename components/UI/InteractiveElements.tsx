@@ -121,7 +121,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     </motion.button>
     >
       <motion.div
-        className='absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0';
+        className='absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0'
         animate={{ x: isHovered ? [,
   -100%;
   ', '100%;
@@ -196,7 +196,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className 
       ref={ref}
       className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}
       variants={directionVariants[direction]}
-      initial='hidden';
+      initial='hidden'
       animate={controls}
       transition={{ duration: 0.6, delay }}
       whileHover={{ y: -5 }}
@@ -311,7 +311,7 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
     {stats.map((stat, index) => (
       <motion.div
         key={index}
-        className='text-center';
+        className='text-center'
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: index * 0.1 }}

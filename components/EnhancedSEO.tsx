@@ -59,7 +59,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel='canonical' href={currentUrl} />
       {/* Structured Data */}
       <script
-        type='application/ld+json';
+        type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',

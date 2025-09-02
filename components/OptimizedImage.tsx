@@ -1,6 +1,6 @@
-'use client';'
-''
-import Image from 'next/image';''
+'use client';
+
+import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
@@ -59,7 +59,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
       {
 '
-''
+
         rootMargin: '50px', // Start loading 50px before the image comes into view
         threshold: 0.1}
     );
@@ -158,7 +158,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         onError={handleError}
         style={{
 '
-''
+
           objectFit: fill ? 'cover' : 'contain'}}
       />
 

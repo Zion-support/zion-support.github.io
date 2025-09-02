@@ -1,5 +1,5 @@
-'use client';'
-''
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -37,7 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to console in development''
     if (process.env.NODE_ENV === 'development') {
 '
-''
+
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
@@ -161,7 +161,7 @@ class ErrorBoundary extends Component<Props, State> {
 export const useErrorHandler = () => {
   const handleError = (error: Error, errorInfo?: ErrorInfo) => {
 '
-''
+
     console.error('Error caught by useErrorHandler:', error, errorInfo);
     
     // You can add custom error handling logic here
