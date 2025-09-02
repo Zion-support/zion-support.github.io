@@ -15,13 +15,23 @@ describe('ForgotPassword Page', () => {
   });
 
   test('renders email input and submit button', () => {
-    render(<Router><ForgotPassword /></Router>);
+    render(
+      <Router>
+        <ForgotPassword />
+      </Router>
+    );
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /send reset link/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /send reset link/i })
+    ).toBeInTheDocument();
   });
 
   test('allows typing in email input', () => {
-    render(<Router><ForgotPassword /></Router>);
+    render(
+      <Router>
+        <ForgotPassword />
+      </Router>
+    );
     const emailInput = screen.getByLabelText(/email address/i);
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
     expect(emailInput.value).toBe('test@example.com');
@@ -29,25 +39,41 @@ describe('ForgotPassword Page', () => {
 
   test('shows success message on successful submission (mocked)', async () => {
     // require('../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: 'Reset link sent' });
-    render(<Router><ForgotPassword /></Router>);
-    fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'success@example.com' } });
+    render(
+      <Router>
+        <ForgotPassword />
+      </Router>
+    );
+    fireEvent.change(screen.getByLabelText(/email address/i), {
+      target: { value: 'success@example.com' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /send reset link/i }));
 
     // await waitFor(() => {
     //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
     // });
     // expect(require('../../src/services/auth').forgotPassword).toHaveBeenCalledWith('success@example.com');
-    console.log("Mock test: Simulating successful submission message check.");
+    console.log('Mock test: Simulating successful submission message check.');
     // For now, the component directly sets a message:
     await waitFor(() => {
-      expect(screen.getByText(/password reset instructions sent to your email if it exists in our system./i)).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          /password reset instructions sent to your email if it exists in our system./i
+        )
+      ).toBeInTheDocument();
     });
   });
 
   test('shows error message on failed submission (mocked)', async () => {
     // require('../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error('Failed to send link'));
-    render(<Router><ForgotPassword /></Router>);
-    fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'error@example.com' } });
+    render(
+      <Router>
+        <ForgotPassword />
+      </Router>
+    );
+    fireEvent.change(screen.getByLabelText(/email address/i), {
+      target: { value: 'error@example.com' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /send reset link/i }));
 
     // This test needs the actual API call to be implemented in the component and mocked here.
@@ -56,6 +82,8 @@ describe('ForgotPassword Page', () => {
     //   expect(screen.getByText(/failed to send link/i)).toBeInTheDocument();
     // });
     // expect(require('../../src/services/auth').forgotPassword).toHaveBeenCalledWith('error@example.com');
-    console.log("Mock test: Simulating error message check (currently not implemented in component this way).");
+    console.log(
+      'Mock test: Simulating error message check (currently not implemented in component this way).'
+    );
   });
 });

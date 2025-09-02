@@ -22,7 +22,11 @@ const originalFetch = global.fetch;
 // It should be typed to align with how global.fetch is typed or how it's used.
 // global.fetch returns Promise<Response>, Response has a .json() method returning Promise<any>
 // So, the mock should resolve to something that has a json method.
-const mockFetchImplementation = (responseData: UserProfile | { success: boolean } | Partial<UserProfile>, ok = true, status = 200) => 
+const mockFetchImplementation = (
+  responseData: UserProfile | { success: boolean } | Partial<UserProfile>,
+  ok = true,
+  status = 200
+) =>
   vi.fn().mockResolvedValue({
     ok,
     status,
@@ -42,12 +46,12 @@ describe('Profile Page', () => {
   });
 
   test('fetches profile on mount', async () => {
-    const mockProfileData: UserProfile = { 
-      id: '1', 
-      name: 'Jane', 
-      email: 'jane@example.com', 
-      avatarUrl: '', 
-      notifications: { email: true, push: false } 
+    const mockProfileData: UserProfile = {
+      id: '1',
+      name: 'Jane',
+      email: 'jane@example.com',
+      avatarUrl: '',
+      notifications: { email: true, push: false },
     };
     global.fetch = mockFetchImplementation(mockProfileData);
 
@@ -58,46 +62,51 @@ describe('Profile Page', () => {
   });
 
   test('saves updated profile', async () => {
-    const initialProfileData: UserProfile = { 
-      id: '1', 
-      name: 'Jane', 
-      email: 'jane@example.com', 
-      avatarUrl: '', 
-      notifications: { email: true, push: false } 
+    const initialProfileData: UserProfile = {
+      id: '1',
+      name: 'Jane',
+      email: 'jane@example.com',
+      avatarUrl: '',
+      notifications: { email: true, push: false },
     };
-    const updatedProfileData: UserProfile = { ...initialProfileData, name: 'New Name' };
+    const updatedProfileData: UserProfile = {
+      ...initialProfileData,
+      name: 'New Name',
+    };
 
     // Mock initial fetch
     global.fetch = mockFetchImplementation(initialProfileData);
-    
+
     render(<Profile />);
     await screen.findByDisplayValue('Jane'); // Ensure initial data is loaded
 
     // Mock the PUT request response
     (global.fetch as vi.Mock).mockResolvedValueOnce({
-        ok: true,
-        status: 200,
-        json: () => Promise.resolve(updatedProfileData), // This is the response for the PUT
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve(updatedProfileData), // This is the response for the PUT
     });
 
-    fireEvent.change(screen.getByLabelText('Name'), { target: { value: 'New Name' } });
+    fireEvent.change(screen.getByLabelText('Name'), {
+      target: { value: 'New Name' },
+    });
     fireEvent.click(screen.getByText('Save'));
 
-    await waitFor(() => 
+    await waitFor(() =>
       expect(global.fetch).toHaveBeenCalledWith(
-        '/api/users/me', 
+        '/api/users/me',
         expect.objectContaining({
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: 'New Name' }) // Only 'name' should be in the body for this update
+          body: JSON.stringify({ name: 'New Name' }), // Only 'name' should be in the body for this update
         })
       )
     );
     // The fetch for GET (initial) + PUT (save)
-    expect(global.fetch).toHaveBeenCalledTimes(2); 
-    
+    expect(global.fetch).toHaveBeenCalledTimes(2);
+
     // Verify the input field is updated (optimistic update or re-fetch might occur)
     // If the component re-fetches or updates state from PUT response:
-    await screen.findByDisplayValue('New Name'); 
+    await screen.findByDisplayValue('New Name');
   });
 });

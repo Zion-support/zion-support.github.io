@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from "@/components/SEO";'
 import { Shield, Database, Monitor } from 'lucide-react';
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
 const ITSolutions = () => {
     const features = [
         {
@@ -28,32 +28,7 @@ const ITSolutions = () => {
             title: "IT Security",""
             description: "Multi-layered security for your IT infrastructure"
 
-    ];"
-=======
-const ITSolutions = () => {}
-    const features = []
-        {}
-            icon: Settings,""
-            title: "System Integration",""
-            description: "Seamless integration of existing and new IT systems""
-        },
-        {}
-            icon: Monitor,""
-            title: "IT Support",""
-            description: "24/7 IT support and maintenance services""
-        },
-        {}
-            icon: Database,""
-            title: "Data Management",""
-            description: "Comprehensive data management and backup solutions""
-        },
-        {}
-            icon: Shield,""
-            title: "IT Security",""
-            description: "Multi-layered security for your IT infrastructure""
-    ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-    const benefits = [""
+    ];"const benefits = [""
         "Improved system reliability and performance",""
         "Reduced IT operational costs",""
         "Enhanced data security and compliance",""
@@ -62,16 +37,12 @@ const ITSolutions = () => {}
     ];""
     return (<div className="min-h-screen bg-background">""
       <SEO title="IT Solutions - Zion Tech Group" description="Comprehensive IT solutions to optimize your business operations and technology infrastructure." keywords="IT solutions, system integration, IT support, data management, IT security" canonical="https://ziontechgroup.com/services/it-solutions"/>
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-      {/* Hero Section */}""
+:pages.disabled/pages/services/ITSolutions.jsx
+"{/* Hero Section */}""
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">""
         <div className="absolute inset-0 bg-black/20"></div>""
         <div className="relative container mx-auto px-4 text-center">""
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
 
   { opacity: 0,
@@ -104,37 +75,11 @@ const ITSolutions = () => {}
   delay: 0.2
 
 }}>
-            Optimize your IT infrastructure with our comprehensive solutions designed to improve
-=======
-          <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {}
-  { opacity: 0,
-  y: 20;
-}} animate = {}
-  { opacity: 1,
-  y: 0;
-}} transition={{ duration: 0.8 }}>
-            IT Solutions for""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">""
-              {" "}Modern Business;
-            </span>
-          </motion.h1>""
-          <motion.p className="text-xl md:text-2xl text-teal-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {}
-  { opacity: 0,
-  y: 20;
-}} animate = {}
-  { opacity: 1,
-  y: 0;
-}} transition = {}
-  { duration: 0.8,
-  delay: 0.2;
-}}>
-            Optimize your IT infrastructure with our comprehensive solutions designed to improve;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-            efficiency, security, and performance across your organization.
+            Optimize your IT infrastructure with our comprehensive solutions designed to improveefficiency, security, and performance across your organization.
           </motion.p>
           <motion.div initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
   y: 20
 
 }} animate = {
@@ -145,22 +90,10 @@ const ITSolutions = () => {}
 }} transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
   delay: 0.4
 
-}}>"
-=======
-  delay: 0.4 
-
-
-
-
-
-"
-}}>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITSolutions.jsx
-=======
-  y: 20;
+}}>"y: 20;
 }} animate = {}
   { opacity: 1,
   y: 0;
@@ -168,19 +101,14 @@ const ITSolutions = () => {}
   { duration: 0.8,
   delay: 0.4;
 }}>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-            <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+<button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
               Optimize Your IT;
             </button>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-      {/* Features Section */}""
+:pages.disabled/pages/services/ITSolutions.jsx
+"{/* Features Section */}""
       <section className="py-20 bg-white">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
@@ -188,7 +116,7 @@ const ITSolutions = () => {}
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               End-to-end IT solutions to modernize your business operations;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
           </div>"
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
@@ -205,30 +133,14 @@ const ITSolutions = () => {}
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
   delay: index * 0.1
 
 }} viewport={{ once: true }}>"
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <feature.icon className="w-8 h-8 text-teal-600"/>
                 </div>"
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>"
-=======
-  delay: index * 0.1 
-
-
-
-
-
-"
-}} viewport={{ once: true }}>""
-                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">""
-                  <feature.icon className="w-8 h-8 text-teal-600"/>"
-                </div>""
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITSolutions.jsx
-=======
-          </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>"</div>
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {}
@@ -245,25 +157,20 @@ const ITSolutions = () => {}
                   <feature.icon className="w-8 h-8 text-teal-600"/>
                 </div>""
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-                <p className="text-gray-600">{feature.description}</p>
+<p className="text-gray-600">{feature.description}</p>
               </motion.div>))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-      {/* Benefits Section */}""
+:pages.disabled/pages/services/ITSolutions.jsx
+"{/* Benefits Section */}""
       <section className="py-20 bg-gray-50">""
         <div className="container mx-auto px-4">""
           <div className="max-w-4xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Solutions?</h2>""
               <p className="text-xl text-gray-600">
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
                 Experience the benefits of optimized IT infrastructure
               </p>
             </div>"
@@ -282,28 +189,13 @@ const ITSolutions = () => {}
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
   delay: index * 0.1
 
 }} viewport={{ once: true }}>"
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">"
                     <TrendingUp className="w-4 h-4 text-teal-600"/>
-                  </div>"
-=======
-  delay: index * 0.1 
-
-
-
-
-
-"
-}} viewport={{ once: true }}>""
-                  <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">""
-                    <TrendingUp className="w-4 h-4 text-teal-600"/>"
-                  </div>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITSolutions.jsx
-=======
-                Experience the benefits of optimized IT infrastructure;
+                  </div>"Experience the benefits of optimized IT infrastructure;
               </p>
             </div>
 ""
@@ -321,30 +213,20 @@ const ITSolutions = () => {}
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">""
                     <TrendingUp className="w-4 h-4 text-teal-600"/>
                   </div>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-                  <span className="text-lg text-gray-700">{benefit}</span>
+<span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>))}
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-      {/* CTA Section */}""
+:pages.disabled/pages/services/ITSolutions.jsx
+"{/* CTA Section */}""
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">""
         <div className="container mx-auto px-4 text-center">""
           <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT?</h2>""
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
           <p className="text-xl mb-8 max-w-3xl mx-auto">'
-            Let's discuss how our IT solutions can improve your business operations and performance."
-=======
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our IT solutions can improve your business operations and performance.
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx
-          </p>""
+            Let's discuss how our IT solutions can improve your business operations and performance."</p>""
           <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Schedule a Consultation;
           </button>
@@ -353,10 +235,6 @@ const ITSolutions = () => {}
     </div>);
 };
 export { ITSolutions };
-<<<<<<< HEAD:pages.disabled/pages/services/ITSolutions.jsx
+:pages.disabled/pages/services/ITSolutions.jsx
 export default ITSolutions;'"
 }}'"'"
-=======
-export default ITSolutions;
-}}'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITSolutions.jsx

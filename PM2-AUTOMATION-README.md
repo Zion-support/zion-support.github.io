@@ -1,220 +1,222 @@
-# PM2 Error Fixing Automation System
+# PM2 Automation System for Zion Tech Group
 
-This PM2 automation system continuously monitors your project for errors and automatically fixes common issues to prevent build failures and maintain code quality.
+This document describes the PM2 automation system that automatically detects and fixes common project errors.
 
-## 🎯 What It Does
+## Overview
 
-The system consists of 5 automated services that work together to:
+The PM2 automation system consists of multiple specialized error fixers that run continuously to maintain code quality and prevent errors from accumulating.
 
-1. **Monitor for errors** - Continuously checks build, lint, and TypeScript errors
-2. **Fix syntax issues** - Automatically resolves common syntax errors and merge conflicts
-3. **Maintain build health** - Ensures dependencies and build assets are healthy
-4. **Resolve merge conflicts** - Intelligently resolves Git merge conflicts
-5. **Self-healing** - Automatically restarts services and triggers fixes when issues are detected
+## Architecture
 
-## 🚀 Quick Start
+### Core Components
+
+1. **PM2 Ecosystem Config** (`ecosystem.config.cjs`)
+   - Manages all automation processes
+   - Configures restart policies and resource limits
+   - Handles environment-specific configurations
+
+2. **Error Fixer Scripts**
+   - `console-error-fixer.cjs` - Fixes console and logging errors (runs every 15 min)
+   - `typescript-error-fixer.cjs` - Fixes TypeScript type errors (runs every 45 min)
+   - `jsx-error-fixer.cjs` - Fixes JSX syntax errors (runs every 40 min)
+   - `comprehensive-error-fixer.cjs` - Handles multiple error types (runs every 30 min)
+   - `master-error-fixer.cjs` - Coordinates all fixers (runs every hour)
+
+3. **Supporting Scripts**
+   - `start-automation.sh` - Bootstrap script for the entire system
+   - Log rotation and monitoring
+
+## Quick Start
+
+### 1. Install Dependencies
 
 ```bash
-# Start the entire automation system
-./start-pm2-automation.sh
+yarn add -D pm2
+```
 
-# View all services status
+### 2. Start the Automation System
+
+```bash
+chmod +x start-automation.sh
+./start-automation.sh
+```
+
+### 3. Monitor the System
+
+```bash
+# View all processes
 pm2 status
 
-# Monitor all services in real-time
+# Monitor in real-time
 pm2 monit
 
-# View logs from all services
+# View logs
 pm2 logs
+
+# View specific process logs
+pm2 logs console-error-fixer
 ```
 
-## 🔧 Services Overview
+## Manual Control
 
-### 1. Error Monitor (`error-monitor`)
-- **Frequency**: Every 5 minutes
-- **Purpose**: Detects build, lint, and TypeScript errors
-- **Actions**: Triggers appropriate fix services when errors are found
-- **Logs**: `./logs/error-monitor.log`
+### Start All Automations
 
-### 2. Syntax Fixer (`syntax-fixer`)
-- **Frequency**: Every 10 minutes (or when triggered by error monitor)
-- **Purpose**: Fixes common syntax errors automatically
-- **Fixes**:
-  - Unterminated strings in JSX/React components
-  - Malformed lazy import statements
-  - Object property syntax errors
-  - Missing semicolons and quotes
-- **Logs**: `./logs/syntax-fixer.log`
+```bash
+pm2 start ecosystem.config.cjs
+```
 
-### 3. Build Health Check (`build-health-check`)
+### Stop All Automations
+
+```bash
+pm2 stop all
+```
+
+### Restart All Automations
+
+```bash
+pm2 restart all
+```
+
+### View Process Status
+
+```bash
+pm2 status
+```
+
+## Error Fixer Details
+
+### Console Error Fixer
 - **Frequency**: Every 15 minutes
-- **Purpose**: Monitors overall project build health
-- **Checks**:
-  - Dependencies health (`node_modules` status)
-  - Configuration file validity
-  - Build asset generation
-- **Auto-fixes**: Reinstalls dependencies when needed
-- **Logs**: `./logs/build-health.log`
+- **Purpose**: Detects and fixes console.log, console.error, etc.
+- **Logs**: `logs/console-error-fixer.log`
 
-### 4. Merge Conflict Resolver (`merge-conflict-resolver`)
+### TypeScript Error Fixer
+- **Frequency**: Every 45 minutes
+- **Purpose**: Fixes TypeScript type errors, import issues, property access
+- **Logs**: `logs/typescript-error-fixer.log`
+
+### JSX Error Fixer
+- **Frequency**: Every 40 minutes
+- **Purpose**: Fixes JSX syntax errors, closing tags, expressions
+- **Logs**: `logs/jsx-error-fixer.log`
+
+### Comprehensive Error Fixer
 - **Frequency**: Every 30 minutes
-- **Purpose**: Automatically resolves Git merge conflicts
-- **Strategy**: Smart merging with backup creation
-- **Features**:
-  - Creates backups before resolving conflicts
-  - Intelligent conflict resolution based on content type
-  - Handles imports, object properties, and code blocks
-- **Logs**: `./logs/merge-resolver.log`
+- **Purpose**: Runs multiple checks and applies auto-fixes
+- **Logs**: `logs/comprehensive-error-fixer.log`
 
-### 5. Main Application (`zion-app`)
-- **Purpose**: Your main application server
-- **Features**: Auto-restart, memory management, health monitoring
-- **Logs**: `./logs/app-combined.log`
+### Master Error Fixer
+- **Frequency**: Every hour
+- **Purpose**: Coordinates all fixers, ensures system health
+- **Logs**: `logs/master-error-fixer.log`
 
-## 📊 Monitoring & Reports
+## Log Management
 
-All services generate detailed reports in the `./logs/` directory:
+### Log Rotation
+- **Max Size**: 10MB per log file
+- **Retention**: 30 log files
+- **Compression**: Enabled
+- **Format**: YYYY-MM-DD_HH-mm-ss
 
-- `error-report.json` - Latest error detection results
-- `syntax-fixes.json` - Syntax fixes applied
-- `build-health-report.json` - Build health status
-- `merge-conflicts-resolved.json` - Merge conflict resolution results
+### Log Locations
+- All logs are stored in the `logs/` directory
+- Each fixer has its own log file
+- Error logs are separated for easier debugging
 
-## 🔧 Manual Operations
+## Configuration
 
-### Restart Specific Services
+### Environment Variables
+- `NODE_ENV`: Set to 'production' for production deployments
+- `AUTOMATION_INTERVAL`: Override default intervals (in milliseconds)
+
+### PM2 Settings
+- **Auto-restart**: Enabled for all processes
+- **Memory limits**: 512MB for fixers, 1GB for main apps
+- **Watch mode**: Disabled (processes restart on completion)
+
+## Troubleshooting
+
+### Common Issues
+
+1. **PM2 not found**
+   ```bash
+   npm install -g pm2
+   ```
+
+2. **Permission denied on startup script**
+   ```bash
+   chmod +x start-automation.sh
+   ```
+
+3. **Processes not starting**
+   ```bash
+   pm2 kill
+   pm2 start ecosystem.config.cjs
+   ```
+
+4. **Log rotation not working**
+   ```bash
+   pm2 install pm2-logrotate
+   pm2 set pm2-logrotate:max_size 10M
+   ```
+
+### Debug Mode
+
+To run a fixer in debug mode:
+
 ```bash
-pm2 restart error-monitor        # Restart error monitoring
-pm2 restart syntax-fixer         # Restart syntax fixer
-pm2 restart build-health-check   # Restart build health checker
-pm2 restart merge-conflict-resolver # Restart merge conflict resolver
+node scripts/automation/console-error-fixer.cjs
 ```
 
-### Trigger Immediate Fixes
+## Development
+
+### Adding New Error Fixers
+
+1. Create a new script in `scripts/automation/`
+2. Follow the existing pattern with a class-based structure
+3. Add the process to `ecosystem.config.cjs`
+4. Update this README
+
+### Testing Fixers
+
 ```bash
-pm2 restart syntax-fixer         # Trigger immediate syntax fixing
-pm2 restart merge-conflict-resolver # Trigger immediate conflict resolution
+# Test individual fixer
+node scripts/automation/typescript-error-fixer.cjs
+
+# Test with PM2
+pm2 start ecosystem.config.cjs --only typescript-error-fixer
 ```
 
-### View Service Logs
+## Production Deployment
+
+### Startup Script
+The system automatically sets up PM2 to start on system boot:
+
 ```bash
-pm2 logs error-monitor           # View error monitor logs
-pm2 logs syntax-fixer           # View syntax fixer logs
-pm2 logs build-health-check     # View build health logs
-pm2 logs merge-conflict-resolver # View merge resolver logs
+pm2 startup
+pm2 save
 ```
 
-### Stop/Start All Services
-```bash
-pm2 stop all                    # Stop all services
-pm2 start ecosystem.config.js   # Start all services
-pm2 restart all                 # Restart all services
-```
+### Monitoring
+- Use `pm2 monit` for real-time monitoring
+- Set up external monitoring for PM2 processes
+- Configure log aggregation for centralized logging
 
-## 🛠️ Configuration
+## Security Considerations
 
-### Adjusting Check Frequencies
+- All fixers run with limited permissions
+- No external network access by default
+- Logs contain only error information, no sensitive data
+- Processes restart automatically on failures
 
-Edit `ecosystem.config.js` and modify the `cron_restart` values:
+## Support
 
-```javascript
-cron_restart: '*/5 * * * *'   // Every 5 minutes
-cron_restart: '*/10 * * * *'  // Every 10 minutes
-cron_restart: '*/15 * * * *'  // Every 15 minutes
-cron_restart: '*/30 * * * *'  // Every 30 minutes
-```
+For issues with the automation system:
+1. Check PM2 status: `pm2 status`
+2. Review logs: `pm2 logs`
+3. Restart processes: `pm2 restart all`
+4. Check system resources: `pm2 monit`
 
-### Memory Limits
+## License
 
-Adjust `max_memory_restart` in `ecosystem.config.js` for each service:
-
-```javascript
-max_memory_restart: '1G'      // Main app
-max_memory_restart: '500M'    // Error monitor
-max_memory_restart: '300M'    // Health check
-```
-
-## 🚨 Troubleshooting
-
-### Service Won't Start
-```bash
-pm2 delete all                  # Remove all processes
-./start-pm2-automation.sh       # Restart from scratch
-```
-
-### High Memory Usage
-```bash
-pm2 monit                       # Monitor memory usage
-pm2 restart [service-name]      # Restart specific service
-```
-
-### Logs Not Rotating
-```bash
-pm2 install pm2-logrotate       # Reinstall log rotation
-pm2 set pm2-logrotate:max_size 10M
-```
-
-### Check System Status
-```bash
-pm2 status                      # Overall status
-pm2 info [service-name]         # Detailed service info
-pm2 describe [service-name]     # Service configuration
-```
-
-## 🔄 Backup & Recovery
-
-- **Merge conflict backups**: `./backups/merge-conflicts/`
-- **PM2 configuration**: Saved automatically with `pm2 save`
-- **Log files**: Rotated automatically (7 days retention)
-
-### Restore from Backup
-```bash
-# If automated fixes cause issues, restore from backup
-cp ./backups/merge-conflicts/[backup-file] [original-file]
-```
-
-## 📈 Performance Impact
-
-The automation system is designed to be lightweight:
-
-- **CPU Usage**: Minimal (runs only during scheduled checks)
-- **Memory Usage**: ~100-500MB total for all services
-- **Disk Usage**: Log rotation keeps disk usage minimal
-- **Network**: No external network calls
-
-## 🔐 Security Considerations
-
-- Scripts only modify files within the project directory
-- Backups are created before making changes
-- No external dependencies or network requests
-- All operations are logged for audit trail
-
-## 📞 Support
-
-- **Check logs**: `./logs/` directory for detailed information
-- **View status**: `pm2 status` for current service status
-- **Monitor real-time**: `pm2 monit` for live monitoring
-- **Service details**: `pm2 describe [service-name]` for configuration
-
-## 🎯 Common Issues Fixed Automatically
-
-1. **Syntax Errors**:
-   - Unterminated strings
-   - Malformed imports
-   - Missing quotes/semicolons
-
-2. **Merge Conflicts**:
-   - Git merge markers
-   - Duplicate imports
-   - Conflicting code blocks
-
-3. **Build Issues**:
-   - Missing dependencies
-   - Invalid configuration files
-   - Build asset problems
-
-4. **Type Errors**:
-   - TypeScript compilation issues
-   - Missing type definitions
-
-This system ensures your project maintains high quality and builds successfully by automatically detecting and fixing common development issues before they become problems.
+This automation system is part of the Zion Tech Group project.
