@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
-import { motion } from 'framer-motion';"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 import { SEO } from '../components/SEO';
 import { 
   Globe, ArrowRight, ExternalLink, Search, 
-  Users, Code, Shield, Brain, Atom, Rocket;",
+  Users, Code, Shield, Brain, Atom, Rocket
 } from 'lucide-react';
 export default function Sitemap() {
   const siteStructure = [

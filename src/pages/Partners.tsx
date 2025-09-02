@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
-import { motion } from 'framer-motion';"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 import { SEO } from '../components/SEO';
 import { 
   Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink 
