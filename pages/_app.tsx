@@ -1,23 +1,24 @@
-import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
-import { HelmetProvider } from 'react-helmet-async';
-import '../src/index.css';
+import '../styles/globals.css';
+import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
+
+const PWARegistration = dynamic(() => import('../components/PWARegistration'), { ssr: false });
+const WebVitals = dynamic(() => import('../components/WebVitals'), { ssr: false });
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-      const swUrl = '/service-worker.js';
-      navigator.serviceWorker
-        .register(swUrl)
-        .catch(() => {
-          // no-op: registration failed, ignore
-        });
+    // Ensure service worker is registered in production only
+    if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
     }
   }, []);
 
   return (
-    <HelmetProvider>
+    <>
+      <PWARegistration />
+      <WebVitals />
       <Component {...pageProps} />
-    </HelmetProvider>
+    </>
   );
 }
