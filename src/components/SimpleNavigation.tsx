@@ -1,11 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3 } from 'lucide-react';
+import React, {useState, useEffect } from 'react';
+import {Link, useLocation } from 'react-router-dom';
+import {motion } from 'framer-motion';
+import {Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3 } from 'lucide-react';
 
-const SimpleNavigation: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
+const SimpleNavigation: React.FC = () => {const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -17,32 +16,28 @@ const SimpleNavigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileMenuOpen(false);
+  useEffect(() => {setMobileMenuOpen(false);
   }, [location.pathname]);
 
-  const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Code },
-    { name: 'IT Services', href: '/it-services', icon: Network },
-    { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket },
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-    { name: 'Services', href: '/services', icon: BarChart3 },
-    { name: 'About', href: '/about', icon: Info },
-    { name: 'Contact', href: '/contact', icon: Phone }
+  const navigationItems = [{name: 'Home', href: '/', icon: Home },
+    {name: 'AI Services', href: '/ai-services', icon: Brain },
+    {name: 'Micro SAAS', href: '/micro-saas', icon: Code },
+    {name: 'IT Services', href: '/it-services', icon: Network },
+    {name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket },
+    {name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    {name: 'Services', href: '/services', icon: BarChart3 },
+    {name: 'About', href: '/about', icon: Info },
+    {name: 'Contact', href: '/contact', icon: Phone }
   ];
 
   return (
     <>
-      <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent'
-      }`}>
+      <nav className={`hidden lg: block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${ scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-xl">Z</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
@@ -57,13 +52,7 @@ const SimpleNavigation: React.FC = () => {
 
             <div className="flex items-center space-x-1">
               {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-                    location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
-                  }`}
-                >
+                <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${ location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover: text-white hover:bg-zion-slate-light/30' }`} >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
                 </Link>
@@ -71,7 +60,7 @@ const SimpleNavigation: React.FC = () => {
             </div>
 
             <div className="flex items-center space-x-3">
-              <button className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
+              <button className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
                 Get Started
               </button>
             </div>
@@ -80,9 +69,7 @@ const SimpleNavigation: React.FC = () => {
       </nav>
 
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">
-        <div className={`transition-all duration-500 ${
-          scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent'
-        }`}>
+        <div className={`transition-all duration-500 ${ scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-between h-20">
               <Link to="/" className="flex items-center space-x-3">
@@ -97,9 +84,8 @@ const SimpleNavigation: React.FC = () => {
                 </div>
               </Link>
 
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-gray-400 hover: text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -108,23 +94,11 @@ const SimpleNavigation: React.FC = () => {
         </div>
 
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
-          >
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden" >
             <div className="max-w-7xl mx-auto px-6 py-6">
               <div className="space-y-2">
                 {navigationItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                      location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'
-                    }`}
-                  >
+                  <Link key={item.name} to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${ location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover: text-white hover:bg-zion-slate-light/30' }`} >
                     <div className="flex items-center space-x-3">
                       <item.icon className="w-4 h-4" />
                       <span>{item.name}</span>

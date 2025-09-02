@@ -1,5 +1,4 @@
-export interface ComprehensiveAiService {
-  id: string;
+export interface ComprehensiveAiService {id: string;
    title: string;
    description: string;
    category: string;
@@ -19,4 +18,4 @@ export interface ComprehensiveAiService {
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_AI_SERVICES_2025: ComprehensiveAiService[] = [;
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_AI_SERVICES_2025: ComprehensiveAiService[] = [;

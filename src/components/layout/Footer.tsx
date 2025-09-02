@@ -1,61 +1,54 @@
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
+import {Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 
-export default function Footer() {
-  const scrollToTop = () => {
+export default function Footer()   {const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    services: [
-      { name: 'AI & Machine Learning', href: '/services/ai' },
-      { name: 'Cloud Solutions', href: '/services/cloud' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
-      { name: 'Software Development', href: '/services/development' },
-      { name: 'Digital Transformation', href: '/services/transformation' },
-      { name: 'Consulting', href: '/services/consulting' }
+  const footerLinks = {services: [{ name: 'AI & Machine Learning', href: '/services/ai' },
+      {name: 'Cloud Solutions', href: '/services/cloud' },
+      {name: 'Cybersecurity', href: '/services/cybersecurity' },
+      {name: 'Software Development', href: '/services/development' },
+      {name: 'Digital Transformation', href: '/services/transformation' },
+      {name: 'Consulting', href: '/services/consulting' }
     ],
-    solutions: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { name: 'Startup Solutions', href: '/solutions/startup' },
-      { name: 'Government Solutions', href: '/solutions/government' },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-      { name: 'Financial Solutions', href: '/solutions/financial' }
+    solutions: [{name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+      {name: 'Startup Solutions', href: '/solutions/startup' },
+      {name: 'Government Solutions', href: '/solutions/government' },
+      {name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+      {name: 'Financial Solutions', href: '/solutions/financial' }
     ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about#team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Press', href: '/press' },
-      { name: 'Case Studies', href: '/case-studies' }
+    company: [{name: 'About Us', href: '/about' },
+      {name: 'Our Team', href: '/about#team' },
+      {name: 'Careers', href: '/careers' },
+      {name: 'Partners', href: '/partners' },
+      {name: 'Press', href: '/press' },
+      {name: 'Case Studies', href: '/case-studies' }
     ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Developer Portal', href: '/developer' },
-      { name: 'Training', href: '/training' },
-      { name: 'Support', href: '/support' }
+    resources: [{name: 'Blog', href: '/blog' },
+      {name: 'Documentation', href: '/docs' },
+      {name: 'API Reference', href: '/api' },
+      {name: 'Developer Portal', href: '/developer' },
+      {name: 'Training', href: '/training' },
+      {name: 'Support', href: '/support' }
     ]
   };
 
-  const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }
+  const socialLinks = [{name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
+    {name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
+    {name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
+    {name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg: col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>
@@ -88,10 +81,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                  <Link to={link.href} className="text-gray-400 hover: text-white transition-colors" >
                     {link.name}
                   </Link>
                 </li>
@@ -105,10 +95,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                  <Link to={link.href} className="text-gray-400 hover: text-white transition-colors" >
                     {link.name}
                   </Link>
                 </li>
@@ -122,10 +109,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                  <Link to={link.href} className="text-gray-400 hover: text-white transition-colors" >
                     {link.name}
                   </Link>
                 </li>
@@ -136,20 +120,13 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex items-center space-x-4">
               {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social.name}
-                >
+                <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover: text-white transition-colors" aria-label={social.name} >
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
@@ -159,11 +136,7 @@ export default function Footer() {
       </div>
 
       {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-colors z-50"
-        aria-label="Scroll to top"
-      >
+      <button onClick={scrollToTop} className="fixed bottom-8 right-8 bg-cyan-500 hover: bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-colors z-50" aria-label="Scroll to top" >
         <ArrowUp className="w-5 h-5" />
       </button>
     </footer>

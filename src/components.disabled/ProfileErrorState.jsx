@@ -1,4 +1,4 @@
-;import { AlertCircle, RefreshCw } from 'lucide-react';
+;import {AlertCircle, RefreshCw } from 'lucide-react';
 export const ProfileErrorState = ({}
 ';'
 '';
@@ -25,17 +25,13 @@ export const ProfileErrorState = ({}
 ''''
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               {onRetry && (
-                <Button''';'
-                  onClick={onRetry}'''';
-                  className='flex items-center space-x-2''''>'''''
+                <Button''';' onClick={onRetry}''''; className='flex items-center space-x-2''''>'''''
                   <RefreshCw className='w-4 h-4' />
                   <span>Try Again</span>
                 </Button>
               )}
 ''''
-              <Button''''';'
-                variant='outline''';
-                onClick={() => (window.location.href = '/')}
+              <Button''''';' variant='outline'''; onClick={() => (window.location.href = '/')}
               >
                 Go Home
               </Button>

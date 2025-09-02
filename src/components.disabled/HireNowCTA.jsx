@@ -1,4 +1,4 @@
-;import { MessageCircle, Calendar, Star } from 'lucide-react';
+;import {MessageCircle, Calendar, Star } from 'lucide-react';
 export const HireNowCTA = ({}
   hourlyRate, availability,
   rating, reviewCount}) => {}
@@ -27,16 +27,7 @@ export const HireNowCTA = ({}
 ''''
           <div className='flex items-center justify-between'>''''
             <span className='text-gray-600'>Availability</span>''
-            <Badge''
-              variant={availability === 'available' ? 'default' : 'secondary'}
-              className={}
-';'
-'';
-''';'
-                availability === 'available''''';
-                  ? 'bg-green-100 text-green-800''''';
-                  : ''}
-            >{availability}
+            <Badge'' variant={availability === 'available' ? 'default' : 'secondary'} className={} ';' ''; ''';' availability === 'available'''''; ? 'bg-green-100 text-green-800'''''; : ''} >{availability}
             </Badge>
           </div>
         </div>''';'

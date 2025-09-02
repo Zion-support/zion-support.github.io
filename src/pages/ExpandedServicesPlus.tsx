@@ -1,7 +1,6 @@
-import { Carbon, Center, Cloud, Fast, High, Instant, User } from 'lucide-react';
+import {Carbon, Center, Cloud, Fast, High, Instant, User } from 'lucide-react';
 
-export default function ExpandedServicesPlus() {
-  return (<div className='min-h-screen bg-slate-950 text-slate-100'>
+export default function ExpandedServicesPlus()   {return (<div className='min-h-screen bg-slate-950 text-slate-100'>
       <section className='py-12 border-b border-slate-800'>
         <div className='container mx-auto px-4 sm: px-6 lg:px-8'>
           <div className='mb-6 inline-flex items-center rounded-full border border-slate-700 bg-slate-800/60 px-4 py-1 text-sm text-slate-300'>

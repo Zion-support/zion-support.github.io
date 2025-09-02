@@ -1,28 +1,19 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';"
-import { SEO } from '../components/SEO';"
-import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
-import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
-export default function TermsOfService() {
-  return (
+import {motion } from 'framer-motion';
+import {SEO } from '../components/SEO';
+import {motion } from 'framer-motion';"
+import {SEO } from '../components/SEO';"
+import {FileText, Scale, Shield, Users, Globe } from 'lucide-react';
+import {FileText, Scale, Shield, Users, Globe } from 'lucide-react';
+export default function TermsOfService()   {return (
     <>
-      <SEO "
-        title="Terms of Service - Zion Tech Group | Legal Terms & Conditions"
-        description="Read Zion Tech Group&apos;s terms of service and legal conditions. Understand your rights and responsibilities when using our services."'
-        keywords="terms of service, terms and conditions, legal terms, user agreement, Zion Tech Group"
-      /" >
+      <SEO " title="Terms of Service - Zion Tech Group | Legal Terms & Conditions" description="Read Zion Tech Group&apos;s terms of service and legal conditions. Understand your rights and responsibilities when using our services."' keywords="terms of service, terms and conditions, legal terms, user agreement, Zion Tech Group" /" >
       "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
           <div className="container mx-auto px-4">
-            <motion .div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto"" >"
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <motion .div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}" className="text-center max-w-4xl mx-auto"" >"
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
                 Terms of Service
               </h1>"
               <p className="text-xl text-gray-300 mb-8">
@@ -39,12 +30,7 @@ export default function TermsOfService() {
         {/* Content */}"
         <section className="py-16">"
           <div className="container mx-auto px-4 max-w-4xl">
-            <motion .div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="prose prose-lg prose-invert max-w-none"
-            >
+            <motion .div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="prose prose-lg prose-invert max-w-none" >
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">
                 <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
                 <p className="text-gray-300 mb-4">

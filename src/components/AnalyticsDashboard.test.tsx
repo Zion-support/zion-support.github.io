@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import AnalyticsDashboard from './AnalyticsDashboard';
-describe('AnalyticsDashboard', () => {
-  it('renders without crashing', () => {
+describe('AnalyticsDashboard', () => {it('renders without crashing', () => {
     render(<AnalyticsDashboard />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

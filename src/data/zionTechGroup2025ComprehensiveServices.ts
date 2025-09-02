@@ -1,5 +1,4 @@
-export interface ZionService {
-   id: string;
+export interface ZionService {id: string;
    title: string;
    description: string;
    category: 'Micro SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech';

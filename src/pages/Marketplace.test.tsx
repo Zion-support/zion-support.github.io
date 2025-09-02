@@ -1,16 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Marketplace from './Marketplace';
 
-describe('Marketplace', () => {
-  it('renders without crashing', () => {
+describe('Marketplace', () => {it('renders without crashing', () => {
     render(<Marketplace />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
-  it('displays expected content', () => {
-    render(<Marketplace />);
+  it('displays expected content', () => {render(<Marketplace />);
     // Add more specific tests here
   });
 });

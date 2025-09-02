@@ -1,21 +1,15 @@
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Phone, Mail,
-  MapPin, Linkedin,
-  Twitter, Facebook,
-  Instagram, Github,
-  Youtube, ArrowRight,
-  Star, Shield,
-  Zap, Brain,
-  Cloud, Users,
-  Award, TrendingUp,
-  MessageCircle, HelpCircle,
-  BookOpen, ShoppingCart,
-  Database, Network,
-  BarChart3, Code,
-  Server, Building,
-  Handshake, FileText,
-  Video, GraduationCap,
-  Atom, PenTool,
-  DollarSign} from 'lucide-react';
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function EnhancedFooter() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="EnhancedFooter - Zion Tech Group" description="Professional EnhancedFooter services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">EnhancedFooter</h1>
+        <p className="text-gray-300 text-lg">
+          Professional EnhancedFooter services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

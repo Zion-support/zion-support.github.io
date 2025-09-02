@@ -1,9 +1,8 @@
-import { Route, Routes    } from 'react-router-dom';
-import { Lazy, Settings } from 'lucide-react';
+import {Route, Routes    } from 'react-router-dom';
+import {Lazy, Settings } from 'lucide-react';
 
-export default function Page() {
-  import { Suspense, lazy } from 'react';
-  import { ProtectedRoute } from '../components/ProtectedRoute';
+export default function Page()   {import { Suspense, lazy } from 'react';
+  import {ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load auth pages;
 const Login = lazy(() => import('../pages/Login'));
@@ -13,8 +12,7 @@ const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));
 const Onboarding = lazy(() => import('../pages/Onboarding'));
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))
-const AuthRoutes: React.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner /" >}>
+const AuthRoutes: React.FC = () => {return (<Suspense fallback={<LoadingSpinner /" >}>
       <Routes>"
         <Route path='/login' element={<Login /" >} />"
         <Route path='/signup' element={<Signup /" >} />"
@@ -23,18 +21,15 @@ const AuthRoutes: React.FC = () => {
         <Route path='/onboarding' element={<Onboarding /" >} />"
         <Route path='/talent-onboarding' element={<TalentOnboarding /" >} />"
         <Route path='/service-onboarding' element={<ServiceOnboarding /" >} />"
-        <Route path='/profile' element={
-          <ProtectedRoute" >
+        <Route path='/profile' element={<ProtectedRoute" >
             <div>Profile Page</div>
           </ProtectedRoute>,
 } />"
-        <Route path='/dashboard' element={
-          <ProtectedRoute" >
+        <Route path='/dashboard' element={<ProtectedRoute" >
             <div>Dashboard</div>
           </ProtectedRoute>,
 } />"
-        <Route path='/settings' element={
-          <ProtectedRoute" >
+        <Route path='/settings' element={<ProtectedRoute" >
             <div>Settings</div>
           </ProtectedRoute>,
 } />

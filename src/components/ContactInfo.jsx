@@ -1,10 +1,9 @@
-import { Link } from 'react - router - dom'';'
+import {Link } from 'react - router - dom'';'
 
 ;
-import { Link } from 'react-router-dom';
-import { Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, Now, Phone, Quick, Star } from 'lucide-react';
-export function ContactInfo() {
-    return (<section className='py-20 bg-zion-blue-dark'>
+import {Link } from 'react-router-dom';
+import {Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, Now, Phone, Quick, Star } from 'lucide-react';
+export function ContactInfo() {return (<section className='py-20 bg-zion-blue-dark'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
             Get In Touch''''
@@ -68,11 +67,7 @@ export function ContactInfo() {
                   </div>''''
                   <div>''''
                     <p className='text-white font-medium'>Website</p>''''
-                    <a'''';
-                      href='https: //ziontechgroup.com'''';'
-                      target='_blank'''';'
-                      rel='noopener noreferrer'''';'
-                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
+                    <a''''; href='https: //ziontechgroup.com'''';' target='_blank'''';' rel='noopener noreferrer'''';' className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
                       ziontechgroup.com''''
                       <ExternalLink className='h-4 w-4' /" >
                     </a>
@@ -114,9 +109,7 @@ export function ContactInfo() {
                       <span className='text-zion-cyan font-medium'>
                         24/7 Support
                       </span>''''
-                      <Badge''''
-                        variant='secondary'''';'
-                        className='bg-green-500/20 text-green-400 border-green-500/30 '>
+                      <Badge'''' variant='secondary'''';' className='bg-green-500/20 text-green-400 border-green-500/30 '>
                         Available
                       </Badge>
                     </div>
@@ -145,17 +138,13 @@ export function ContactInfo() {
                 </Link>''';'
 ''''
                 <Link to='/comprehensive-services'>''''
-                  <Button''''
-                    variant='outline'''';'
-                    className='w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 '>
+                  <Button'''' variant='outline'''';' className='w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 '>
                     View All Services
                   </Button>
                 </Link>''';'
 ''''
                 <Link to='/it-onsite-services'>''''
-                  <Button''''
-                    variant='outline'''';'
-                    className='w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 '>
+                  <Button'''' variant='outline'''';' className='w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 '>
                     IT Onsite Services
                   </Button>
                 </Link>''';'
@@ -223,17 +212,12 @@ export function ContactInfo() {
             </p>''''
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
               <Link to='/request-quote'>''''
-                <Button''''
-                  size='lg'''';'
-                  className='bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 '>
+                <Button'''' size='lg'''';' className='bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 '>
                   Get Free Consultation
                 </Button>''''
               </Link>''''
               <a href='tel:+13024640950'>''''
-                <Button''''
-                  size='lg'''';'
-                  variant='outline'''';'
-                  className='border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 '>
+                <Button'''' size='lg'''';' variant='outline'''';' className='border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 '>
                   Call Now: +1 302 464 0950
                 </Button>
               </a>

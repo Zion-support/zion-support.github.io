@@ -1,16 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import NotFoundPage from './NotFoundPage';
 
-describe('NotFoundPage', () => {
-  it('renders without crashing', () => {
+describe('NotFoundPage', () => {it('renders without crashing', () => {
     render(<NotFoundPage />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
-  it('displays expected content', () => {
-    render(<NotFoundPage />);
+  it('displays expected content', () => {render(<NotFoundPage />);
     // Add more specific tests here
   });
 });

@@ -1,5 +1,4 @@
-export interface AdvancedMicroSaasService2028 {
-  id: string;
+export interface AdvancedMicroSaasService2028 {id: string;
    title: string;
    description: string;
    category: string;

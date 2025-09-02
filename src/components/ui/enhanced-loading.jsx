@@ -1,1 +1,15 @@
-'; import { motion } from 'framer-motion'' import { Sparkles, Zap, Shield, Rocket } from 'lucide-react' const sizeClasses = {}';'; sm: 'w-8 h-8', ''' md: 'w-12 h-12', ''' lg: 'w-16 h-16', ''' xl: 'w-24 h-24' } const iconSizes = {}'; sm: 'w-4 h-4', ' md: 'w-6 h-6', ' lg: 'w-8 h-8', ' xl: 'w-12 h-12' }'; export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) {} const containerVariants = {} hidden: { opacity: 0 }, visible: {} opacity: 1, transition: {} staggerChildren: 0.1, delayChildren: 0.2 } const iconVariants = {} hidden: { scale: 0, opacity: 0 }, visible: {} scale: 1, opacity: 1, transition: {} duration: 0.5, ease: 'easeOut''' }, hover: {} scale: 1.1, rotate: 360, ' transition: {}'';''' duration: 0.3, '''' ease: 'easeInOut'' }' const pulseVariants = {}'';'''';'''''';''';'
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function enhancedloading() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="enhancedloading - Zion Tech Group" description="Professional enhancedloading services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">enhancedloading</h1>
+        <p className="text-gray-300 text-lg">
+          Professional enhancedloading services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

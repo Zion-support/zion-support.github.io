@@ -1,16 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Security from './Security';
 
-describe('Security', () => {
-  it('renders without crashing', () => {
+describe('Security', () => {it('renders without crashing', () => {
     render(<Security />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
-  it('displays expected content', () => {
-    render(<Security />);
+  it('displays expected content', () => {render(<Security />);
     // Add more specific tests here
   });
 });

@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import EnhancedFooter from './EnhancedFooter';
-describe('EnhancedFooter', () => {
-  it('renders without crashing', () => {
+describe('EnhancedFooter', () => {it('renders without crashing', () => {
     render(<EnhancedFooter />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

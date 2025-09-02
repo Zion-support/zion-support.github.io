@@ -1,9 +1,7 @@
-import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
-const Categories: React.FC = () => {
-  const categories = [
-    { name: 'AI Services', icon: Brain, count: 25 }, { name: 'Cloud Solutions', icon: Cloud, count: 15 },
-    { name: 'Cybersecurity', icon: Shield, count: 12 }, { name: 'Development', icon: Code, count: 18 },
-    { name: 'Data Analytics', icon: Database, count: 10 }, { name: 'Infrastructure', icon: Network, count: 8 }
+import {Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
+const Categories: React.FC = () => {const categories = [{ name: 'AI Services', icon: Brain, count: 25 }, {name: 'Cloud Solutions', icon: Cloud, count: 15 },
+    {name: 'Cybersecurity', icon: Shield, count: 12 }, {name: 'Development', icon: Code, count: 18 },
+    {name: 'Data Analytics', icon: Database, count: 10 }, {name: 'Infrastructure', icon: Network, count: 8 }
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
@@ -22,9 +20,7 @@ const Categories: React.FC = () => {
               <p className='text-gray-600 mb-4'>
                 {category.count} services available in this category
               </p>
-              <a
-                href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}
-                className='text-blue-600 hover: text-blue-700 font-medium'>
+              <a href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`} className='text-blue-600 hover: text-blue-700 font-medium'>
                 View Services →
               </a>
             </div>

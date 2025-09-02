@@ -1,5 +1,4 @@
-export interface RevolutionaryMicroSaasService {
-  id: string;
+export interface RevolutionaryMicroSaasService {id: string;
    title: string;
    description: string;
    category: string;
@@ -19,4 +18,4 @@ export interface RevolutionaryMicroSaasService {
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [;
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: {headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [;

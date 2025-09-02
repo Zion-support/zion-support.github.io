@@ -1,87 +1,75 @@
-import { Link } from 'react-router-dom';
-import { Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
+import {Link } from 'react-router-dom';
+import {Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
 
 // Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
+interface ApiResponse<T = unknown> {data: T;
   status: number;
   message?: string;
 }
 
-interface User {
-  id: string;
+interface User {id: string;
   email: string;
   name: string;
   role: 'admin' | 'user' | 'guest';
 }
 
-interface Service {
-  id: string;
+interface Service {id: string;
   name: string;
   description: string;
   price: number;
   category: string;
 }
 
-interface FormData {
-  [key: string]: string | number | boolean | File;
+interface FormData {[key: string]: string | number | boolean | File;
 }
 
-interface ComponentProps {
-  className?: string;
+interface ComponentProps {className?: string;
   children?: React.ReactNode;
   [key: string]: unknown;
 }
 
 
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  const footerSections = [
-    {
-      title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
-      ]}, {
-      title: 'Solutions',
+export default function Footer()   {const currentYear = new Date().getFullYear();
+  const footerSections = [{
+      title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, {name: 'Cloud & DevOps', href: '/services/cloud-devops' }, {name: 'Cybersecurity', href: '/services/cybersecurity' }, {name: 'Digital Transformation', href: '/services/digital-transformation' }, {name: 'Financial Solutions', href: '/services/financial-solutions' }, {name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
+      ]}, {title: 'Solutions',
       links: ["
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },"
-        { name: 'Startup Solutions', href: '/solutions/startup' },"
-        { name: 'Space Technology', href: '/solutions/space-tech' },"
-        { name: 'Supply Chain', href: '/solutions/supply-chain' },"
-        { name: 'Industry Solutions', href: '/solutions/industry' }
+        {name: 'Startup Solutions', href: '/solutions/startup' },"
+        {name: 'Space Technology', href: '/solutions/space-tech' },"
+        {name: 'Supply Chain', href: '/solutions/supply-chain' },"
+        {name: 'Industry Solutions', href: '/solutions/industry' }
       ]},
-    {
-      title: 'Compunknown',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Story', href: '/about/story' },
-        { name: 'Team', href: '/about/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Contact', href: '/contact' }
-      ]}, {
-      title: 'Resources',
+    {title: 'Compunknown',
+      links: [{ name: 'About Us', href: '/about' },
+        {name: 'Our Story', href: '/about/story' },
+        {name: 'Team', href: '/about/team' },
+        {name: 'Careers', href: '/careers' },
+        {name: 'Partners', href: '/partners' },
+        {name: 'Contact', href: '/contact' }
+      ]}, {title: 'Resources',
       links: ["
         { name: 'Blog', href: '/blog' },"
-        { name: 'Case Studies', href: '/case-studies' },"
-        { name: 'White Papers', href: '/white-papers' },"
-        { name: 'Webinars', href: '/webinars' },"
-        { name: 'Training', href: '/training' },"
-        { name: 'Documentation', href: '/docs' }
-      ]}, {
-      title: 'Support',
+        {name: 'Case Studies', href: '/case-studies' },"
+        {name: 'White Papers', href: '/white-papers' },"
+        {name: 'Webinars', href: '/webinars' },"
+        {name: 'Training', href: '/training' },"
+        {name: 'Documentation', href: '/docs' }
+      ]}, {title: 'Support',
       links: ["
         { name: 'Help Center', href: '/help' },"
-        { name: 'FAQ', href: '/faq' },"
-        { name: 'Support', href: '/support' },"
-        { name: 'System Status', href: '/system-status' },"
-        { name: 'Request Quote', href: '/request-quote' }
+        {name: 'FAQ', href: '/faq' },"
+        {name: 'Support', href: '/support' },"
+        {name: 'System Status', href: '/system-status' },"
+        {name: 'Request Quote', href: '/request-quote' }
       ]}
   ];
   const legalLinks = ["
-    { name: 'Privacy Policy', href: '/privacy-policy' },"
-    { name: 'Terms of Service', href: '/terms-of-service' },"
-    { name: 'Cookie Policy', href: '/cookie-policy' },"
-    { name: 'Accessibility', href: '/accessibility' }
+    {name: 'Privacy Policy', href: '/privacy-policy' },"
+    {name: 'Terms of Service', href: '/terms-of-service' },"
+    {name: 'Cookie Policy', href: '/cookie-policy' },"
+    {name: 'Accessibility', href: '/accessibility' }
   ];
   return("
     <footer className='bg-gray-900 text-white'>
@@ -89,7 +77,7 @@ export default function Footer() {
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
           {/* Compunknown Info */}
-          <div className='lg:col-span-2'>
+          <div className='lg: col-span-2'>
             <div className='flex items-center space-x-3 mb-6'>
               <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>
                 <span className='text-white font-bold text-2xl'>Z</span>
@@ -121,16 +109,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          {/* Footer Sections */}
-          {footerSections.map((section) => (
+          {/* Footer Sections */}, {footerSections.map((section) => (
             <div key={section.title}" >"
               <h4 className='text-white font-semibold mb-4'>{section.title}</h4>"
               <ul className='space-y-2'>
                 {section.links.map((link) => (
                   <li key={link.name}" >
-                    <Link
-                      to={link.href}
-                      className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
+                    <Link to={link.href} className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
                     </Link>
                   </li>
                 ))}
@@ -148,10 +133,7 @@ export default function Footer() {
             </div>"
             <div className='flex space-x-6'>
               {legalLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
+                <Link key={link.name} to={link.href} className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
                 </Link>
               ))}
             </div>

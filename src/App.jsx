@@ -1,8 +1,8 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.tsx';
+import React, {Suspense, lazy } from 'react';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {AppHeader } from './layout/AppHeader.jsx';
+import {Footer } from './components/Footer.jsx';
+import {ChatAssistant } from './components/ChatAssistant.tsx';
 
 // Home and main pages
 const Home = lazy(() => import('./pages/Home.tsx'));
@@ -29,7 +29,7 @@ const ServicesPage = () => (
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
     <div className='container mx-auto px-4 py-16'>
       <div className='text-center mb-16'>
-        <h1 className='text-4xl md:text-6xl font-bold mb-6'>
+        <h1 className='text-4xl md: text-6xl font-bold mb-6'>
           Our{' '}
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
             Services
@@ -39,7 +39,7 @@ const ServicesPage = () => (
           Comprehensive technology solutions to drive your business forward
         </p>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
           <h3 className='text-xl font-bold text-white mb-4'>
             AI & Machine Learning
@@ -67,8 +67,7 @@ const ServicesPage = () => (
   </div>
 );
 
-function App() {
-  return (
+function App() {return (
     <Router>
       <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
         <AppHeader />
@@ -88,10 +87,7 @@ function App() {
               {/* Services routes */}
               <Route path='/services' element={<ServicesPage />} />
               {/* Catch-all route for 404 */}
-              <Route
-                path='*'
-                element={
-                  <div className='flex items-center justify-center min-h-screen'>
+              <Route path='*' element={<div className='flex items-center justify-center min-h-screen'>
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
                         404 - Page Not Found
@@ -99,10 +95,7 @@ function App() {
                       <p className='text-zion-slate-light mb-6'>
                         The page you're looking for doesn't exist.
                       </p>
-                      <a
-                        href='/'
-                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors'
-                      >
+                      <a href='/' className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors' >
                         Go Home
                       </a>
                     </div>

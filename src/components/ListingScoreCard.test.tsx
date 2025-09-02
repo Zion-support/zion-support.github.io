@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import ListingScoreCard from './ListingScoreCard';
-describe('ListingScoreCard', () => {
-  it('renders without crashing', () => {
+describe('ListingScoreCard', () => {it('renders without crashing', () => {
     render(<ListingScoreCard />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

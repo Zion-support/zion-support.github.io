@@ -1,4 +1,4 @@
-const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}
+const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
   return()
     <div className='min-h-screen bg-background flex items-center justify-center p-4'>''''
       <div className='max-w-md w-full space-y-8'>''''
@@ -18,19 +18,15 @@ const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}
               </pre>
             </details>
           )}
-          <button''''
-            onClick={resetErrorBoundary}'''';
-            className='w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium''';
-            Try Again;
-          </button" >
+          <button'''' onClick={resetErrorBoundary}''''; className='w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium'''; Try Again; </button" >
         </div>
       </div>
     </div>
   )}
 export default LoginErrorFallback;
-export { LoginErrorFallback }
-export { LoginErrorFallback }
-export { LoginErrorFallback }
-export { LoginErrorFallback }
+export {LoginErrorFallback }
+export {LoginErrorFallback }
+export {LoginErrorFallback }
+export {LoginErrorFallback }
 
-export { LoginErrorFallback }"
+export {LoginErrorFallback }"

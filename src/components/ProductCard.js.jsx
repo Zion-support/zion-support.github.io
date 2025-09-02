@@ -1,26 +1,24 @@
 import Link from 'next/link';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
+import {Heart } from 'lucide-react';
+import {useWishlist } from '@/hooks/useWishlist';
+import {Button } from '@/components/ui/button';
+import {Tooltip,
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger;
 } from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
+import {useDispatch } from 'react-redux';
+import {addItem } from '@/store/cartSlice';
 import Image from 'next/image';
-import React, { useState } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
-import { useMediaQuery } from 'usehooks-ts';
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { captureException } from '@/utils/sentry';
+import React, {useState } from 'react';
+import {useAuth } from '@/context/auth/AuthProvider';
+import {useRouter } from 'next/router';
+import {useMediaQuery } from 'usehooks-ts';
+import {useEnqueueSnackbar } from '@/context/SnackbarContext';
+import {captureException } from '@/utils/sentry';
 
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {
-  const { isAuthenticated } = useAuth();
-  const { isWishlisted, toggle } = useWishlist();
+export default function ProductCard(  {product, onBuy, buyDisabled = false }) {const { isAuthenticated } = useAuth();
+  const {isWishlisted, toggle } = useWishlist();
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
@@ -30,8 +28,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     typeof product.id !== 'string' ||
     typeof product.title !== 'string' ||
     product.title.trim() === ''
-  ) {
-    captureException(
+  ) {captureException(
       new Error('Invalid product data received by ProductCard'),
       { extra: { product } }
     );
@@ -47,20 +44,17 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
 
-  const handleWishlistToggle = () => {
-    if (!isAuthenticated) {
+  const handleWishlistToggle = () => {if (!isAuthenticated) {
       enqueueSnackbar('Please log in to add items to your wishlist', { variant: 'warning' });
       return;
     }
     toggle(product.id);
   };
 
-  const handleBuy = () => {
-    if (onBuy) {
+  const handleBuy = () => {if (onBuy) {
       onBuy(product);
-    } else {
-      dispatch(addItem(product));
-      enqueueSnackbar(`${product.title} added to cart`, { variant: 'success' });
+    } else {dispatch(addItem(product));
+      enqueueSnackbar(`${product.title} added to cart`, {variant: 'success' });
     }
   };
 
@@ -73,12 +67,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
           <Link href={`/products/${product.id}`}>
             <div className='relative w-full h-48 bg-gray-100 rounded-lg overflow-hidden cursor-pointer'>
               {product.image && !imageError ? (
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className='object-cover'
-                  onError={() => setImageError(true)}
+                <Image src={product.image} alt={product.title} fill className='object-cover' onError={() => setImageError(true)}
                 />
               ) : (
                 <div className='w-full h-full flex items-center justify-center text-gray-400'>
@@ -91,17 +80,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button
-                  variant='ghost'
-                  size='icon'
-                  className='absolute top-2 right-2 h-8 w-8 bg-white/80 hover:bg-white'
-                  onClick={handleWishlistToggle}
-                >
-                  <Heart
-                    className={`h-4 w-4 ${
-                      active ? 'fill-red-500 text-red-500' : 'text-gray-600'
-                    }`}
-                  />
+                <Button variant='ghost' size='icon' className='absolute top-2 right-2 h-8 w-8 bg-white/80 hover: bg-white' onClick={handleWishlistToggle} >
+                  <Heart className={`h-4 w-4 ${ active ? 'fill-red-500 text-red-500' : 'text-gray-600' }`} />
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
@@ -113,7 +93,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
 
         <div className='text-left'>
           <Link href={`/products/${product.id}`}>
-            <h3 className='font-semibold text-lg mb-2 line-clamp-2 hover:text-primary cursor-pointer'>
+            <h3 className='font-semibold text-lg mb-2 line-clamp-2 hover: text-primary cursor-pointer'>
               {product.title}
             </h3>
           </Link>
@@ -138,12 +118,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         </div>
       </div>
 
-      <Button
-        onClick={handleBuy}
-        disabled={buyDisabled}
-        className='w-full'
-        size={isMobile ? 'sm' : 'default'}
-      >
+      <Button onClick={handleBuy} disabled={buyDisabled} className='w-full' size={isMobile ? 'sm' : 'default'} >
         {buyDisabled ? 'Out of Stock' : 'Add to Cart'}
       </Button>
     </div>

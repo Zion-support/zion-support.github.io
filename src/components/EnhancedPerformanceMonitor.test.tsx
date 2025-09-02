@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor';
-describe('EnhancedPerformanceMonitor', () => {
-  it('renders without crashing', () => {
+describe('EnhancedPerformanceMonitor', () => {it('renders without crashing', () => {
     render(<EnhancedPerformanceMonitor />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-interface PerformanceMetrics {
-  loadTime: number;
+import React, {useEffect, useState } from 'react';
+interface PerformanceMetrics {loadTime: number;
   renderTime: number;
   memoryUsage: number;
   networkLatency: number}
 
-export const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
+export const PerformanceOptimizer: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
   const [isOptimized, setIsOptimized] = useState(false);
   useEffect(() => {
     const measurePerformance = () => {"
@@ -24,31 +22,13 @@ export const PerformanceOptimizer: React.FC = () => {
           memoryUsage, networkLatency
         });
         // Check if performance is optimized
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
-        setIsOptimized(isGoodPerformance);
-      }
-    };
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    // Measure performance after page load"
-    if (document.readyState === 'complete') {
-      measurePerformance()} else {"
-      window.addEventListener('load', measurePerformance)}
-
-    return () => {"
+        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50; setIsOptimized(isGoodPerformance); } }; // Measure performance after page load if (document.readyState === 'complete') {measurePerformance(); } else {window.addEventListener('load', measurePerformance); } // Measure performance after page load" if (document.readyState === 'complete') {measurePerformance()} else {" window.addEventListener('load', measurePerformance)} return () => {"
       window.removeEventListener('load', measurePerformance)}
   }, []);
-  const optimizePerformance = () => {
-    // Implement performance optimizations"
+  const optimizePerformance = () => {// Implement performance optimizations"
     if (typeof window !== 'undefined') {
       // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2', '/images/hero-bg.jpg'
+      const criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg'
       ];
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
@@ -61,19 +41,16 @@ export const PerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
       });
       // Enable service worker for caching
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').catch(console.error);
+      if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').catch(console.error);
       }
 
       setIsOptimized(true);
     }
   };
-  if (!metrics) {
-    return null;
+  if (!metrics) {return null;
   }
 
-  if (!metrics) {
-    return null}
+  if (!metrics) {return null}
 
   return ("
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"
@@ -84,7 +61,7 @@ export const PerformanceOptimizer: React.FC = () => {
       "
       <div className="space-y-2 text-xs">"
         <div className="flex justify-between">"
-          <span className="text-gray-600">Load Time:</span>"
+          <span className="text-gray-600">Load Time: </span>"
           <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}" >
             {metrics.loadTime.toFixed(0)}ms
           </span>
@@ -110,10 +87,7 @@ export const PerformanceOptimizer: React.FC = () => {
       </div>
 
       {!isOptimized && (
-        <button
-          onClick={optimizePerformance}
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"
-        >
+        <button onClick={optimizePerformance} className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors" >
           Optimize Performance
         </button>
       )}

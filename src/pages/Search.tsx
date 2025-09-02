@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';"
-import { motion } from 'framer-motion';
-import { 
-  Search as SearchIcon, Filter, 
-  Server, Users, 
-  Building, Star,
-  MapPin, Clock,
-  DollarSign, ArrowUpDown,
-  Calendar, Eye,
-  Bookmark, Share2
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function Search() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="Search - Zion Tech Group" description="Professional Search services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">Search</h1>
+        <p className="text-gray-300 text-lg">
+          Professional Search services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

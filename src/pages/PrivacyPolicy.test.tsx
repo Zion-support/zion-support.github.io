@@ -1,16 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PrivacyPolicy from './PrivacyPolicy';
 
-describe('PrivacyPolicy', () => {
-  it('renders without crashing', () => {
+describe('PrivacyPolicy', () => {it('renders without crashing', () => {
     render(<PrivacyPolicy />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
-  it('displays expected content', () => {
-    render(<PrivacyPolicy />);
+  it('displays expected content', () => {render(<PrivacyPolicy />);
     // Add more specific tests here
   });
 });

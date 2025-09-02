@@ -1,16 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Resources from './Resources';
 
-describe('Resources', () => {
-  it('renders without crashing', () => {
+describe('Resources', () => {it('renders without crashing', () => {
     render(<Resources />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
-  it('displays expected content', () => {
-    render(<Resources />);
+  it('displays expected content', () => {render(<Resources />);
     // Add more specific tests here
   });
 });

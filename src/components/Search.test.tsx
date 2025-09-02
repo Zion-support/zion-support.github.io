@@ -1,9 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import { Search } from 'lucide-react';
+import {render, screen } from '@testing-library/react';
+import {Search } from 'lucide-react';
 
 import Search from './Search';
-describe('Search', () => {
-  it('renders without crashing', () => {
+describe('Search', () => {it('renders without crashing', () => {
     render(<Search />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import SimpleFooter from './SimpleFooter';
-describe('SimpleFooter', () => {
-  it('renders without crashing', () => {
+describe('SimpleFooter', () => {it('renders without crashing', () => {
     render(<SimpleFooter />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

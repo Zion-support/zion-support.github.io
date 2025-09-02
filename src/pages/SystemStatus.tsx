@@ -1,12 +1,9 @@
-import { CheckCircle, AlertCircle, XCircle, Server, Database, Cloud } from 'lucide-react';
-const SystemStatus: React.FC = () => {
-  const services = [
-    { name: 'Website', status: 'operational', icon: Server }, { name: 'API Services', status: 'operational', icon: Database },
-    { name: 'Cloud Infrastructure', status: 'operational', icon: Cloud }, { name: 'AI Services', status: 'operational', icon: CheckCircle },
-    { name: 'Support System', status: 'operational', icon: CheckCircle }
+import {CheckCircle, AlertCircle, XCircle, Server, Database, Cloud } from 'lucide-react';
+const SystemStatus: React.FC = () => {const services = [{ name: 'Website', status: 'operational', icon: Server }, {name: 'API Services', status: 'operational', icon: Database },
+    {name: 'Cloud Infrastructure', status: 'operational', icon: Cloud }, {name: 'AI Services', status: 'operational', icon: CheckCircle },
+    {name: 'Support System', status: 'operational', icon: CheckCircle }
   ];
-  const getStatusIcon = (status: string) => {
-    switch (status) {
+  const getStatusIcon = (status: string) => {switch (status) {
       case 'operational': return <CheckCircle className='h-5 w-5 text-green-500' />
       case 'degraded':
         return <AlertCircle className='h-5 w-5 text-yellow-500' />
@@ -19,7 +16,7 @@ const SystemStatus: React.FC = () => {
 
   return("
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>"
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>"
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>"
         <div className='text-center mb-12'>"
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>System Status</h1>"
           <p className='text-xl text-gray-600'>All systems are operational</p>

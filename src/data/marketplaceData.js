@@ -1,7 +1,6 @@
 // Marketplace data and search suggestions for Zion Tech Group
 
-export const generateSearchSuggestions = () => [
-  // Services
+export const generateSearchSuggestions = () => [// Services
   'AI Services',
   'Cloud Migration',
   'Cybersecurity',
@@ -80,9 +79,7 @@ export const generateSearchSuggestions = () => [
   'Event Sourcing'
 ];
 
-export const serviceCategories = [
-  {
-    id: 'ai-ml',
+export const serviceCategories = [{id: 'ai-ml',
     name: 'AI & Machine Learning',
     description: 'Intelligent solutions powered by artificial intelligence',
     icon: '🤖',
@@ -97,13 +94,11 @@ export const serviceCategories = [
       'Neural Networks'
     ]
   },
-  {
-    id: 'cloud-devops',
+  {id: 'cloud-devops',
     name: 'Cloud & DevOps',
     description: 'Scalable infrastructure and automated operations',
     icon: '☁️',
-    services: [
-      'Cloud Migration',
+    services: ['Cloud Migration',
       'DevOps Automation',
       'Container Orchestration',
       'Infrastructure as Code',
@@ -113,13 +108,11 @@ export const serviceCategories = [
       'Load Balancing'
     ]
   },
-  {
-    id: 'cybersecurity',
+  {id: 'cybersecurity',
     name: 'Cybersecurity',
     description: 'Protection and compliance solutions',
     icon: '🔒',
-    services: [
-      'Security Audits',
+    services: ['Security Audits',
       'Penetration Testing',
       'Vulnerability Assessment',
       'Incident Response',
@@ -129,13 +122,11 @@ export const serviceCategories = [
       'Data Protection'
     ]
   },
-  {
-    id: 'digital-transformation',
+  {id: 'digital-transformation',
     name: 'Digital Transformation',
     description: 'Business evolution through technology',
     icon: '🚀',
-    services: [
-      'Process Automation',
+    services: ['Process Automation',
       'Workflow Optimization',
       'Change Management',
       'Digital Strategy',
@@ -147,9 +138,7 @@ export const serviceCategories = [
   }
 ];
 
-export const industrySolutions = [
-  {
-    id: 'manufacturing',
+export const industrySolutions = [{id: 'manufacturing',
     name: 'Manufacturing',
     description: 'Smart factory and Industry 4.0 solutions',
     icon: '🏭',
@@ -162,13 +151,11 @@ export const industrySolutions = [
       'Performance Monitoring'
     ]
   },
-  {
-    id: 'financial',
+  {id: 'financial',
     name: 'Financial Services',
     description: 'FinTech and banking solutions',
     icon: '💳',
-    solutions: [
-      'Digital Banking',
+    solutions: ['Digital Banking',
       'Payment Processing',
       'Risk Analytics',
       'Compliance Automation',
@@ -176,13 +163,11 @@ export const industrySolutions = [
       'Fraud Detection'
     ]
   },
-  {
-    id: 'healthcare',
+  {id: 'healthcare',
     name: 'Healthcare',
     description: 'Digital health and medical technology',
     icon: '🏥',
-    solutions: [
-      'Electronic Health Records',
+    solutions: ['Electronic Health Records',
       'Telemedicine Platforms',
       'Medical Imaging',
       'Patient Management',
@@ -190,13 +175,11 @@ export const industrySolutions = [
       'Healthcare Analytics'
     ]
   },
-  {
-    id: 'retail',
+  {id: 'retail',
     name: 'Retail',
     description: 'E-commerce and omnichannel solutions',
     icon: '🛒',
-    solutions: [
-      'E-commerce Platforms',
+    solutions: ['E-commerce Platforms',
       'Inventory Management',
       'Customer Analytics',
       'Omnichannel Integration',
@@ -206,9 +189,7 @@ export const industrySolutions = [
   }
 ];
 
-export const testimonials = [
-  {
-    id: 1,
+export const testimonials = [{id: 1,
     name: 'Sarah Johnson',
     title: 'CTO',
     company: 'TechCorp Industries',
@@ -216,8 +197,7 @@ export const testimonials = [
     rating: 5,
     avatar: '/avatars/sarah.jpg'
   },
-  {
-    id: 2,
+  {id: 2,
     name: 'Michael Chen',
     title: 'VP of Engineering',
     company: 'InnovateBank',
@@ -225,8 +205,7 @@ export const testimonials = [
     rating: 5,
     avatar: '/avatars/michael.jpg'
   },
-  {
-    id: 3,
+  {id: 3,
     name: 'Emily Rodriguez',
     title: 'Operations Director',
     company: 'GreenManufacturing Co.',
@@ -236,9 +215,7 @@ export const testimonials = [
   }
 ];
 
-export const caseStudies = [
-  {
-    id: 'cloud-migration-bank',
+export const caseStudies = [{id: 'cloud-migration-bank',
     title: 'Major Bank Cloud Migration',
     industry: 'Financial Services',
     challenge: 'Legacy on-premise systems causing scalability issues and high maintenance costs',
@@ -250,27 +227,23 @@ export const caseStudies = [
     ],
     technologies: ['AWS', 'Azure', 'Kubernetes', 'Terraform', 'Jenkins']
   },
-  {
-    id: 'ai-manufacturing',
+  {id: 'ai-manufacturing',
     title: 'AI-Powered Manufacturing Optimization',
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes and high defect rates',
     solution: 'Machine learning models for predictive maintenance and quality control',
-    results: [
-      '30% reduction in production downtime',
+    results: ['30% reduction in production downtime',
       '25% improvement in product quality',
       '15% increase in overall efficiency'
     ],
     technologies: ['Python', 'TensorFlow', 'IoT Sensors', 'Real-time Analytics']
   },
-  {
-    id: 'cybersecurity-healthcare',
+  {id: 'cybersecurity-healthcare',
     title: 'Healthcare Security Enhancement',
     industry: 'Healthcare',
     challenge: 'Increasing cyber threats and compliance requirements',
     solution: 'Comprehensive security framework with 24/7 monitoring',
-    results: [
-      '100% compliance with HIPAA regulations',
+    results: ['100% compliance with HIPAA regulations',
       'Zero security breaches in 2 years',
       '50% faster incident response time'
     ],

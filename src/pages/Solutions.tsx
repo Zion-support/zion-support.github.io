@@ -1,6 +1,5 @@
-import { SEO } from '../components/SEO';
-export default function Page() {
-const Solutions: React.FC = () => {
+import {SEO } from '../components/SEO';
+export default function Page()   {const Solutions: React.FC = () => {
   return (<>"
       <SEO title='Solutions - Zion Tech Group' /" >"
       <div className='min-h-screen bg-white py-20'>"

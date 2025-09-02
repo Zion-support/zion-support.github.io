@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import PageTransition from './PageTransition';
-describe('PageTransition', () => {
-  it('renders without crashing', () => {
+describe('PageTransition', () => {it('renders without crashing', () => {
     render(<PageTransition />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

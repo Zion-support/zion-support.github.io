@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import ProductReviews from './ProductReviews';
-describe('ProductReviews', () => {
-  it('renders without crashing', () => {
+describe('ProductReviews', () => {it('renders without crashing', () => {
     render(<ProductReviews />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {

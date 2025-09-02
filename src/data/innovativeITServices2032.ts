@@ -1,5 +1,4 @@
-export interface InnovativeITService {
-  id: string;
+export interface InnovativeITService {id: string;
    title: string;
    description: string;
    category: string;

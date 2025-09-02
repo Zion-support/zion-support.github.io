@@ -1,10 +1,10 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, {Suspense, lazy } from 'react';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout Components;
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
-import { Sidebar } from './components/Sidebar';
+import {EnhancedHeader } from './components/EnhancedHeader';
+import {EnhancedFooter } from './components/EnhancedFooter';
+import {Sidebar } from './components/Sidebar';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -13,8 +13,7 @@ const LoadingSpinner = () => (
   </div>
 );
 // Optimized lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-  const LazyComponent = lazy(importFn);
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn);
   return (props: any) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
@@ -177,21 +176,18 @@ const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 ;
 // Error Fallback Component;
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (;
+const ErrorFallback = ({error, resetErrorBoundary }: {error: Error; resetErrorBoundary: () => void }) => (;
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
     <div className='text-center text-white max-w-md mx-auto p-8'>
       <h1 className='text-4xl font-bold mb-4 text-red-400'>Something went wrong</h1>
       <p className='text-gray-300 mb-6'>
         {error.message || 'An unexpected error occurred'}      </p>
       <div className='space-y-3'>
-        <button
-          onClick={resetErrorBoundary}
-          className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >;
+        <button onClick={resetErrorBoundary} className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors' >;
           Try again;
         </button>
-        <button;
-          onClick={() => window.location.href = '/'}
-          className='w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors';
+        <button; onClick={() => window.location.href = '/'}
+          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors';
         >;
           Go home;
         </button>
@@ -321,25 +317,20 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
                     <Route path='/zion-cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />;
                     <Route path='/cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />;
                     {/* 404 Page */}
-                    <Route
-                      path='*';
-                      element={;
-                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+                    <Route path='*'; element={; <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
                           <div className='text-center text-white'>
                             <h1 className='text-6xl font-bold mb-4'>404</h1>
                             <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
                             <p className='text-gray-300 mb-8'>
                               The page you're looking for doesn't exist or has been moved.;
                             </p>
-                            <button;
-                              onClick={() => window.history.back()}
-                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4';
+                            <button; onClick={() => window.history.back()}
+                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover: bg-blue-600 transition-colors mr-4';
                             >;
                               Go Back;
                             </button>
-                            <button;
-                              onClick={() => window.location.href = '/'}
-                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors';
+                            <button; onClick={() => window.location.href = '/'}
+                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors';
                             >;
                               Go Home;
                             </button>
@@ -358,12 +349,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
             {/* Smart Notification System */}
             <SmartNotificationSystem enabled={true} />
             {/* Chat Assistant */}
-            <ChatAssistant
-              enabled={true}
-              position='bottom-right';
-              theme='auto';
-              language='en';
-            />;
+            <ChatAssistant enabled={true} position='bottom-right'; theme='auto'; language='en'; />;
           </div>
         </Router>
       </ErrorBoundary>
@@ -372,9 +358,9 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 };
 ;
 export default App;
-import React, { Suspense, lazy, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import React, {Suspense, lazy, useState } from 'react';
+import {Routes, Route } from 'react-router-dom';
+import {ErrorBoundary } from 'react-error-boundary';
 ('');
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>;
         <PerformanceOptimizer>
@@ -426,12 +412,11 @@ import { ErrorBoundary } from 'react-error-boundary';
                 <Route path='/terms' element={<Terms />} />;
                 <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />;
                 {/* 404 Fallback */}
-                <Route path='*' element={
-                  <div className='min-h-screen flex items-center justify-center'>;
+                <Route path='*' element={<div className='min-h-screen flex items-center justify-center'>;
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
                       <p className='text-gray-600 mb-8'>Page not found</p>
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
                         Go Home;
                       </a>
                     </div>
