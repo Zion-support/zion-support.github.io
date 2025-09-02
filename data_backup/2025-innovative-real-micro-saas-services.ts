@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaasService {;
+export interface InnovativeMicroSaasService {
   id: string;
    name: string;
    tagline: string;
@@ -34,7 +34,7 @@ export interface InnovativeMicroSaasService {;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;const contact = {;
+reviews: number;const contact = {
   mobile:,;
   +1 302 464 0950',;
   email: 'kleber@ziontechgroup.com,;

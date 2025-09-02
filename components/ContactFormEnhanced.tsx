@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';
-;
+
 const ContactFormEnhanced: React.FC = () => {;
   const [formData, setFormData] = useState({;
     name: '',;
@@ -38,28 +38,28 @@ const ContactFormEnhanced: React.FC = () => {;
   };
 ;
   return (;
-    <div className='max-w-2xl mx-auto p-6'>;
-      <motion.div;
+    <div className='max-w-2xl mx-auto p-6'>
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className='bg-white rounded-xl shadow-lg p-8';
       >;
-        <div className='text-center mb-8'>;
-          <h2 className='text-3xl font-bold text-gray-900 mb-4'>Get In Touch</h2>;
-          <p className='text-gray-600'>;
+        <div className='text-center mb-8'>
+          <h2 className='text-3xl font-bold text-gray-900 mb-4'>Get In Touch</h2>
+          <p className='text-gray-600'>
             Ready to transform your business? Let's discuss how our technology solutions can drive your success.;
-          </p>;
-        </div>;
-        <form onSubmit={handleSubmit} className='space-y-6'>;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-            <div>;
-              <label htmlFor='name' className='block text-sm font-medium text-gray-700 mb-2'>;
+          </p>
+        </div>
+        <form onSubmit={handleSubmit} className='space-y-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div>
+              <label htmlFor='name' className='block text-sm font-medium text-gray-700 mb-2'>
                 Full Name *;
-              </label>;
-              <div className='relative'>;
-                <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
-                <input;
+              </label>
+              <div className='relative'>
+                <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+                <input
                   type='text';
                   id='name';
                   name='name';
@@ -69,15 +69,15 @@ const ContactFormEnhanced: React.FC = () => {;
                   className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
                   placeholder='Your full name';
                 />;
-              </div>;
-            </div>;
-            <div>;
-              <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-2'>;
+              </div>
+            </div>
+            <div>
+              <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-2'>
                 Email Address *;
-              </label>;
-              <div className='relative'>;
-                <Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
-                <input;
+              </label>
+              <div className='relative'>
+                <Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+                <input
                   type='email';
                   id='email';
                   name='email';
@@ -87,14 +87,14 @@ const ContactFormEnhanced: React.FC = () => {;
                   className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
                   placeholder='your@email.com';
                 />;
-              </div>;
-            </div>;
-          </div>;
-          <div>;
-            <label htmlFor='subject' className='block text-sm font-medium text-gray-700 mb-2'>;
+              </div>
+            </div>
+          </div>
+          <div>
+            <label htmlFor='subject' className='block text-sm font-medium text-gray-700 mb-2'>
               Subject *;
-            </label>;
-            <input;
+            </label>
+            <input
               type='text';
               id='subject';
               name='subject';
@@ -104,14 +104,14 @@ const ContactFormEnhanced: React.FC = () => {;
               className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
               placeholder='What can we help you with?';
             />;
-          </div>;
-          <div>;
-            <label htmlFor='message' className='block text-sm font-medium text-gray-700 mb-2'>;
+          </div>
+          <div>
+            <label htmlFor='message' className='block text-sm font-medium text-gray-700 mb-2'>
               Message *;
-            </label>;
-            <div className='relative'>;
-              <MessageSquare className='absolute left-3 top-3 text-gray-400 w-5 h-5' />;
-              <textarea;
+            </label>
+            <div className='relative'>
+              <MessageSquare className='absolute left-3 top-3 text-gray-400 w-5 h-5' />
+              <textarea
                 id='message';
                 name='message';
                 value={formData.message}
@@ -121,9 +121,9 @@ const ContactFormEnhanced: React.FC = () => {;
                 className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
                 placeholder='Tell us about your project or requirements...';
               />;
-            </div>;
-          </div>;
-          <motion.button;
+            </div>
+          </div>
+          <motion.button
             type='submit';
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
@@ -132,40 +132,40 @@ const ContactFormEnhanced: React.FC = () => {;
           >;
             {isSubmitting ? (;
               <>;
-                <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white'></div>;
-                <span>Sending...</span>;
-              </>;
+                <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white'></div>
+                <span>Sending...</span>
+              </>
             ) : (;
               <>;
-                <Send className='w-5 h-5' />;
-                <span>Send Message</span>;
-              </>;
+                <Send className='w-5 h-5' />
+                <span>Send Message</span>
+              </>
             )}
-          </motion.button>;
+          </motion.button>
           {submitStatus === 'success' && (;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className='flex items-center space-x-2 text-green-600 bg-green-50 p-4 rounded-lg';
             >;
-              <CheckCircle className='w-5 h-5' />;
-              <span>Message sent successfully! We'll get back to you soon.</span>;
-            </motion.div>;
+              <CheckCircle className='w-5 h-5' />
+              <span>Message sent successfully! We'll get back to you soon.</span>
+            </motion.div>
           )}
 ;
           {submitStatus === 'error' && (;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className='flex items-center space-x-2 text-red-600 bg-red-50 p-4 rounded-lg';
             >;
-              <AlertCircle className='w-5 h-5' />;
-              <span>Something went wrong. Please try again.</span>;
-            </motion.div>;
+              <AlertCircle className='w-5 h-5' />
+              <span>Something went wrong. Please try again.</span>
+            </motion.div>
           )}
-        </form>;
-      </motion.div>;
-    </div>;
+        </form>
+      </motion.div>
+    </div>
   );
 };
 ;

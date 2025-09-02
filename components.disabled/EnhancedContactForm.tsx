@@ -18,7 +18,7 @@ import {;
 } from;
   'lucide-react';
 ;
-interface ContactFormData {;
+interface ContactFormData {
   firstName: string;
    lastName: string;
    email: string;
@@ -32,7 +32,7 @@ interface ContactFormData {;
    priority: 'low' | 'medium' | 'high' | 'urgent;
 }
 ;
-interface ContactFormProps {;
+interface ContactFormProps {
   // Add your props here onSubmit?: data: ContactFormData void;
    className?: string;
 }
@@ -84,7 +84,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   }, []);
 ;
   // Validate form data;
-  const validateForm = (): boolean => {;
+  const validateForm = (): boolean => {
     const newErrors: Partial<ContactFormData> = {};
 ;
     // Required field validation;
@@ -229,7 +229,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   const getStepProgress = : unknown (currentStep / totalSteps) * 100;
 ;
   // Service options;
-  const serviceOptions = [;
+  const serviceOptions = [
     'AI Consciousness Evolution;
   ',Quantum Cybersecurity',Autonomous Systems;
   ',Space Technology',Cloud Infrastructure;
@@ -238,7 +238,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   ];
 ;
   // Budget options;
-  const budgetOptions = [;
+  const budgetOptions = [
     'Under $10,000;
   ',$10,000 - $50,000',$50,000 - $100,000;
   ',$100,000 - $500,000',$500,000+;
@@ -246,38 +246,38 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   ];
 ;
   // Timeline options;
-  const timelineOptions = [;
+  const timelineOptions = [
   'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible';
   ];
 ;
   if (isSubmitted) {;
     return;
-      <motion.div;
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         className={`text-center p-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl border border-green-400/20 ${className}`}
       >;
-        <CheckCircle className='w-16 h-16 text-green-400 mx-auto mb-4' />;
-        <h3 className='text-2xl font-bold text-white mb-2'>Thank You!</h3>;
-        <p className='text-gray-300 mb-4'>;
+        <CheckCircle className='w-16 h-16 text-green-400 mx-auto mb-4' />
+        <h3 className='text-2xl font-bold text-white mb-2'>Thank You!</h3>
+        <p className='text-gray-300 mb-4'>
           Your message has been sent successfully. We,;
   ll get back to you within 24 hours.;
-        </p>;
-        <div className='flex items-center justify-center gap-4 text-sm text-gray-400'>;
-          <div className='flex items-center gap-1'>;
-            <Clock className='w-4 h-4' />;
-            <span>24h response</span>;
-          </div>;
-          <div className='flex items-center gap-1'>;
-            <Shield className='w-4 h-4' />;
-            <span>Secure</span>;
-          </div>;
-        </div>;
-        <div>;
-          <label className='block text-sm font-medium text-gray-300 mb-2'>;
+        </p>
+        <div className='flex items-center justify-center gap-4 text-sm text-gray-400'>
+          <div className='flex items-center gap-1'>
+            <Clock className='w-4 h-4' />
+            <span>24h response</span>
+          </div>
+          <div className='flex items-center gap-1'>
+            <Shield className='w-4 h-4' />
+            <span>Secure</span>
+          </div>
+        </div>
+        <div>
+          <label className='block text-sm font-medium text-gray-300 mb-2'>
             Last Name *;
-          </label>;
-          <input;
+          </label>
+          <input
             type='text';
             value={formData.lastName}
             onChange={(e handleInputChange('lastName;
@@ -289,19 +289,19 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
             placeholder='Enter your last name';
           />;
           {errors.lastName && (;
-            <p className='mt-1 text-sm text-red-400 flex items-center'>;
-              <AlertCircle className='w-4 h-4 mr-1' />;
+            <p className='mt-1 text-sm text-red-400 flex items-center'>
+              <AlertCircle className='w-4 h-4 mr-1' />
               {errors.lastName}
-            </p>;
+            </p>
           )}
-        </div>;
-      </div>;
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-        <div>;
-          <label className='block text-sm font-medium text-gray-300 mb-2'>;
+        </div>
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <div>
+          <label className='block text-sm font-medium text-gray-300 mb-2'>
             Email Address *;
-          </label>;
-          <input;
+          </label>
+          <input
             type='email';
             value={formData.email}
             onChange={e: unknown handleInputChange(,;
@@ -314,17 +314,17 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
             placeholder='your.email@company.com';
           />;
           {errors.email && (;
-            <p className='mt-1 text-sm text-red-400 flex items-center'>;
-              <AlertCircle className='w-4 h-4 mr-1' />;
+            <p className='mt-1 text-sm text-red-400 flex items-center'>
+              <AlertCircle className='w-4 h-4 mr-1' />
               {errors.email}
-            </p>;
+            </p>
           )}
-        </div>;
-        <div>;
-          <label className='block text-sm font-medium text-gray-300 mb-2'>;
+        </div>
+        <div>
+          <label className='block text-sm font-medium text-gray-300 mb-2'>
             Company Name *;
-          </label>;
-          <input;
+          </label>
+          <input
             type='text';
             value={formData.company}
             onChange={e: unknown handleInputChange(,;
@@ -337,18 +337,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
             placeholder='Your company name';
           />;
           {errors.company && (;
-            <p className='mt-1 text-sm text-red-400 flex items-center'>;
-              <AlertCircle className='w-4 h-4 mr-1' />;
+            <p className='mt-1 text-sm text-red-400 flex items-center'>
+              <AlertCircle className='w-4 h-4 mr-1' />
               {errors.company}
-            </p>;
+            </p>
           )}
-        </div>;
-      </div>;
-      <div>;
-        <label className='block text-sm font-medium text-gray-300 mb-2'>;
+        </div>
+      </div>
+      <div>
+        <label className='block text-sm font-medium text-gray-300 mb-2'>
           Phone Number;
-        </label>;
-        <input;
+        </label>
+        <input
           type='tel';
           value={formData.phone}
           onChange={e: unknown handleInputChange('phone;
@@ -356,22 +356,22 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
           className='w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all';
           placeholder='+1 (555) 123-4567';
         />;
-      </div>;
-    </motion.div>;
+      </div>
+    </motion.div>
   );
 ;
   const renderStep2 = : unknown;
-    <motion.div;
+    <motion.div
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -20 }}
       className='space-y-6';
     >;
-      <div>;
-        <label className='block text-sm font-medium text-gray-300 mb-2'>;
+      <div>
+        <label className='block text-sm font-medium text-gray-300 mb-2'>
           Service of Interest *;
-        </label>;
-        <select;
+        </label>
+        <select
           value={formData.service}
           onChange={(e handleInputChange(,;
   service;
@@ -381,67 +381,67 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   ' : 'border-gray-600;
           }`}
         >;
-          <option value=''>Select a service</option>;
+          <option value=''>Select a service</option>
           {services.map(service: unknown (;
-            <option key={service} value={service}>;
+            <option key={service} value={service}>
               {service}
-            </option>;
+            </option>
           ))}
-        </select>;
+        </select>
         {errors.service && (;
-          <p className='mt-1 text-sm text-red-400 flex items-center'>;
-            <AlertCircle className='w-4 h-4 mr-1' />;
+          <p className='mt-1 text-sm text-red-400 flex items-center'>
+            <AlertCircle className='w-4 h-4 mr-1' />
             {errors.service}
-          </p>;
+          </p>
         )}
-      </div>;
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-        <div>;
-          <label className='block text-sm font-medium text-gray-300 mb-2'>;
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <div>
+          <label className='block text-sm font-medium text-gray-300 mb-2'>
             Budget Range;
-          </label>;
-          <select;
+          </label>
+          <select
             value={formData.budget}
             onChange={e: unknown handleInputChange('budget;
   ', e.target.value)}
             className='w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all';
           >;
-            <option value=''>Select budget range</option>;
+            <option value=''>Select budget range</option>
             {budgets.map(budget: unknown (;
-              <option key={budget} value={budget}>;
+              <option key={budget} value={budget}>
                 {budget}
-              </option>;
+              </option>
             ))}
-          </select>;
-        </div>;
-        <div>;
-          <label className='block text-sm font-medium text-gray-300 mb-2'>;
+          </select>
+        </div>
+        <div>
+          <label className='block text-sm font-medium text-gray-300 mb-2'>
             Timeline;
-          </label>;
-          <select;
+          </label>
+          <select
             value={formData.timeline}
             onChange={e: unknown handleInputChange('timeline;
   ', e.target.value)}
             className='w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all';
           >;
-            <option value=''>Select timeline</option>;
+            <option value=''>Select timeline</option>
             {timelines.map(timeline: unknown (;
-              <option key={timeline} value={timeline}>;
+              <option key={timeline} value={timeline}>
                 {timeline}
-              </option>;
+              </option>
             ))}
-          </select>;
-        </div>;
-      </div>;
-      <div>;
-        <label className='block text-sm font-medium text-gray-300 mb-2'>;
+          </select>
+        </div>
+      </div>
+      <div>
+        <label className='block text-sm font-medium text-gray-300 mb-2'>
           Preferred Contact Method;
-        </label>;
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+        </label>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           {contactMethods.map(method: unknown {;
             const Icon = method.icon;
             return;
-              <label;
+              <label
                 key={method.value}
                 className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${;
                   formData.preferredContact === method.value;
@@ -450,7 +450,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   ': 'border-gray-600 hover:border-gray-500;
                 }`}
               >;
-                <input;
+                <input
                   type='radio';
                   name='preferredContact';
                   value={method.value}
@@ -459,28 +459,28 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   ', e.target.value)}
                   className='sr-only';
                 />;
-                <Icon className='w-5 h-5 mr-3 text-cyan-400' />;
-                <span className='text-sm font-medium'>{method.label}</span>;
-              </label>;
+                <Icon className='w-5 h-5 mr-3 text-cyan-400' />
+                <span className='text-sm font-medium'>{method.label}</span>
+              </label>
             );
           })}
-        </div>;
-      </div>;
-    </motion.div>;
+        </div>
+      </div>
+    </motion.div>
   );
 ;
   const renderStep3 = : unknown;
-    <motion.div;
+    <motion.div
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -20 }}
       className='space-y-6';
     >;
-      <div>;
-        <label className='block text-sm font-medium text-gray-300 mb-2'>;
+      <div>
+        <label className='block text-sm font-medium text-gray-300 mb-2'>
           Project Details *;
-        </label>;
-        <textarea;
+        </label>
+        <textarea
           value={formData.message}
           onChange={(e handleInputChange(,;
   message;
@@ -493,30 +493,30 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
           placeholder='Tell us about your project, requirements, and goals...';
         />;
         {errors.message && (;
-          <p className='mt-1 text-sm text-red-400 flex items-center'>;
-            <AlertCircle className='w-4 h-4 mr-1' />;
+          <p className='mt-1 text-sm text-red-400 flex items-center'>
+            <AlertCircle className='w-4 h-4 mr-1' />
             {errors.message}
-          </p>;
+          </p>
         )}
-        <p className='mt-2 text-sm text-gray-400'>;
+        <p className='mt-2 text-sm text-gray-400'>
           {formData.message.length}/1000 characters;
-        </p>;
-      </div>;
-      <div className='space-y-4'>;
-        <label className='flex items-center cursor-pointer'>;
-          <input;
+        </p>
+      </div>
+      <div className='space-y-4'>
+        <label className='flex items-center cursor-pointer'>
+          <input
             type='checkbox';
             checked={formData.newsletter}
             onChange={e: unknown handleInputChange('newsletter;
   ', e.target.checked)}
             className='w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2';
           />;
-          <span className='ml-3 text-sm text-gray-300'>;
+          <span className='ml-3 text-sm text-gray-300'>
             Subscribe to our newsletter for technology insights and updates;
-          </span>;
-        </label>;
-        <label className='flex items-start cursor-pointer'>;
-          <input;
+          </span>
+        </label>
+        <label className='flex items-start cursor-pointer'>
+          <input
             type='checkbox';
             checked={formData.gdprConsent}
             onChange={e: unknown handleInputChange(,;
@@ -524,54 +524,54 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   ', e.target.checked)}
             className='w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus: ring-cyan-500 focus:ring-2 mt-1';
           />;
-          <span className='ml-3 text-sm text-gray-300'>;
+          <span className='ml-3 text-sm text-gray-300'>
             I consent to Zion Tech Group processing my personal data in accordance with the{'}
-            <a href='/privacy' className='text-cyan-400 hover:text-cyan-300 underline'>;
+            <a href='/privacy' className='text-cyan-400 hover:text-cyan-300 underline'>
               Privacy Policy;
-            </a>;
+            </a>
             . *;
-          </span>;
-        </label>;
+          </span>
+        </label>
         {errors.gdprConsent && (;
-          <p className='mt-1 text-sm text-red-400 flex items-center'>;
-            <AlertCircle className='w-4 h-4 mr-1' />;
+          <p className='mt-1 text-sm text-red-400 flex items-center'>
+            <AlertCircle className='w-4 h-4 mr-1' />
             {errors.gdprConsent}
-          </p>;
+          </p>
         )}
-      </div>;
-    </motion.div>;
+      </div>
+    </motion.div>
   );
 ;
   return (;
-    <div className={`bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-8 ${className}`}>;
+    <div className={`bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-8 ${className}`}>
       {/* Header */}
-      <div className='text-center mb-8'>;
-        <h2 className='text-3xl font-bold text-white mb-4'>Get Started Today</h2>;
-        <p className='text-gray-300 max-w-2xl mx-auto'>;
+      <div className='text-center mb-8'>
+        <h2 className='text-3xl font-bold text-white mb-4'>Get Started Today</h2>
+        <p className='text-gray-300 max-w-2xl mx-auto'>
           Ready to transform your business with cutting-edge AI, quantum computing, and autonomous solutions?;
           Let's discuss your project and create something extraordinary together.;
-        </p>;
-      </div>;
+        </p>
+      </div>
       {/* Progress Bar */}
-      <div className='mb-8'>;
-        <div className='flex items-center justify-between mb-2'>;
-          <span className='text-sm text-gray-400'>Step {currentStep} of {totalSteps}</span>;
-          <span className='text-sm text-white'>{Math.round(getStepProgress())}%</span>;
-        </div>;
-        <div className='w-full bg-white/20 rounded-full h-2'>;
-          <motion.div;
+      <div className='mb-8'>
+        <div className='flex items-center justify-between mb-2'>
+          <span className='text-sm text-gray-400'>Step {currentStep} of {totalSteps}</span>
+          <span className='text-sm text-white'>{Math.round(getStepProgress())}%</span>
+        </div>
+        <div className='w-full bg-white/20 rounded-full h-2'>
+          <motion.div
             className='h-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full';
             initial={{ width: 0 }}
             animate={{ width: `${getStepProgress()}%` }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           />;
-        </div>;
-      </div>;
+        </div>
+      </div>
       {/* Form */}
-      <form ref={formRef} onSubmit={handleSubmit} className='space-y-6'>;
-        <AnimatePresence mode='wait'>;
+      <form ref={formRef} onSubmit={handleSubmit} className='space-y-6'>
+        <AnimatePresence mode='wait'>
           {currentStep === 1 &&;
-            <motion.div;
+            <motion.div
               key='step1';
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -579,16 +579,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
               transition={{ duration: 0.3 }}
               className='space-y-6';
             >;
-              <h3 className='text-xl font-semibold text-white mb-4 flex items-center gap-2'>;
-                <User className='w-5 h-5 text-cyan-400' />;
+              <h3 className='text-xl font-semibold text-white mb-4 flex items-center gap-2'>
+                <User className='w-5 h-5 text-cyan-400' />
                 Basic Information;
-              </h3>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                <div>;
-                  <label htmlFor='firstName' className='block text-sm font-medium text-white mb-2'>;
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div>
+                  <label htmlFor='firstName' className='block text-sm font-medium text-white mb-2'>
                     First Name *;
-                  </label>;
-                  <input;
+                  </label>
+                  <input
                     ref={firstInputRef}
                     type='text';
                     id='firstName';
@@ -606,17 +606,17 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'firstName-error' : undefined}
                   />;
                   {errors.firstName && (;
-                    <p id='firstName-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>;
-                      <AlertCircle className='w-4 h-4' />;
+                    <p id='firstName-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>
+                      <AlertCircle className='w-4 h-4' />
                       {errors.firstName}
-                    </p>;
+                    </p>
                   )}
-                </div>;
-                <div>;
-                  <label htmlFor='lastName' className='block text-sm font-medium text-white mb-2'>;
+                </div>
+                <div>
+                  <label htmlFor='lastName' className='block text-sm font-medium text-white mb-2'>
                     Last Name *;
-                  </label>;
-                  <input;
+                  </label>
+                  <input
                     type='text';
                     id='lastName';
                     name='lastName';
@@ -633,18 +633,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'lastName-error' : undefined}
                   />;
                   {errors.lastName && (;
-                    <p id='lastName-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>;
-                      <AlertCircle className='w-4 h-4' />;
+                    <p id='lastName-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>
+                      <AlertCircle className='w-4 h-4' />
                       {errors.lastName}
-                    </p>;
+                    </p>
                   )}
-                </div>;
-              </div>;
-              <div>;
-                <label htmlFor='email' className='block text-sm font-medium text-white mb-2'>;
+                </div>
+              </div>
+              <div>
+                <label htmlFor='email' className='block text-sm font-medium text-white mb-2'>
                   Email Address *;
-                </label>;
-                <input;
+                </label>
+                <input
                   type='email';
                   id='email';
                   name='email';
@@ -661,18 +661,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'email-error' : undefined}
                 />;
                 {errors.email && (;
-                  <p id='email-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>;
-                    <AlertCircle className='w-4 h-4' />;
+                  <p id='email-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>
+                    <AlertCircle className='w-4 h-4' />
                     {errors.email}
-                  </p>;
+                  </p>
                 )}
-              </div>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                <div>;
-                  <label htmlFor='phone' className='block text-sm font-medium text-white mb-2'>;
+              </div>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div>
+                  <label htmlFor='phone' className='block text-sm font-medium text-white mb-2'>
                     Phone Number;
-                  </label>;
-                  <input;
+                  </label>
+                  <input
                     type='tel';
                     id='phone';
                     name='phone';
@@ -689,17 +689,17 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'phone-error' : undefined}
                   />;
                   {errors.phone && (;
-                    <p id='phone-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>;
-                      <AlertCircle className='w-4 h-4' />;
+                    <p id='phone-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>
+                      <AlertCircle className='w-4 h-4' />
                       {errors.phone}
-                    </p>;
+                    </p>
                   )}
-                </div>;
-                <div>;
-                  <label htmlFor='priority' className='block text-sm font-medium text-white mb-2'>;
+                </div>
+                <div>
+                  <label htmlFor='priority' className='block text-sm font-medium text-white mb-2'>
                     Priority Level;
-                  </label>;
-                  <select;
+                  </label>
+                  <select
                     id='priority';
                     name='priority';
                     value={formData.priority}
@@ -708,18 +708,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'priority'])}
                     className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300';
                   >;
-                    <option value='low'>Low Priority</option>;
-                    <option value='medium'>Medium Priority</option>;
-                    <option value='high'>High Priority</option>;
-                    <option value='urgent'>Urgent</option>;
-                  </select>;
-                </div>;
-              </div>;
-            </motion.div>;
+                    <option value='low'>Low Priority</option>
+                    <option value='medium'>Medium Priority</option>
+                    <option value='high'>High Priority</option>
+                    <option value='urgent'>Urgent</option>
+                  </select>
+                </div>
+              </div>
+            </motion.div>
           )}
 ;
           {currentStep === 2 &&;
-            <motion.div;
+            <motion.div
               key='step2';
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -727,16 +727,16 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
               transition={{ duration: 0.3 }}
               className='space-y-6';
             >;
-              <h3 className='text-xl font-semibold text-white mb-4 flex items-center gap-2'>;
-                <Building className='w-5 h-5 text-blue-400' />;
+              <h3 className='text-xl font-semibold text-white mb-4 flex items-center gap-2'>
+                <Building className='w-5 h-5 text-blue-400' />
                 Company & Project Details;
-              </h3>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                <div>;
-                  <label htmlFor='company' className='block text-sm font-medium text-white mb-2'>;
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div>
+                  <label htmlFor='company' className='block text-sm font-medium text-white mb-2'>
                     Company Name;
-                  </label>;
-                  <input;
+                  </label>
+                  <input
                     type='text';
                     id='company';
                     name='company';
@@ -746,12 +746,12 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
                     className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300';
                     placeholder='Enter your company name';
                   />;
-                </div>;
-                <div>;
-                  <label htmlFor='website' className='block text-sm font-medium text-white mb-2'>;
+                </div>
+                <div>
+                  <label htmlFor='website' className='block text-sm font-medium text-white mb-2'>
                     Website;
-                  </label>;
-                  <input;
+                  </label>
+                  <input
                     type='url';
                     id='website';
                     name='website';
@@ -768,18 +768,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'website-error' : undefined}
                   />;
                   {errors.website && (;
-                    <p id='website-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>;
-                      <AlertCircle className='w-4 h-4' />;
+                    <p id='website-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>
+                      <AlertCircle className='w-4 h-4' />
                       {errors.website}
-                    </p>;
+                    </p>
                   )}
-                </div>;
-              </div>;
-              <div>;
-                <label htmlFor='service' className='block text-sm font-medium text-white mb-2'>;
+                </div>
+              </div>
+              <div>
+                <label htmlFor='service' className='block text-sm font-medium text-white mb-2'>
                   Service of Interest;
-                </label>;
-                <select;
+                </label>
+                <select
                   id='service';
                   name='service';
                   value={formData.service}
@@ -787,18 +787,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'service', e.target.value)}
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300';
                 >;
-                  <option value=''>Select a service</option>;
+                  <option value=''>Select a service</option>
                   {serviceOptions.map(service: unknown (;
-                    <option key={service} value={service}>{service}</option>;
+                    <option key={service} value={service}>{service}</option>
                   ))}
-                </select>;
-              </div>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                <div>;
-                  <label htmlFor='budget' className='block text-sm font-medium text-white mb-2'>;
+                </select>
+              </div>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div>
+                  <label htmlFor='budget' className='block text-sm font-medium text-white mb-2'>
                     Budget Range;
-                  </label>;
-                  <select;
+                  </label>
+                  <select
                     id='budget';
                     name='budget';
                     value={formData.budget}
@@ -806,17 +806,17 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'budget', e.target.value)}
                     className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300';
                   >;
-                    <option value=''>Select budget range</option>;
+                    <option value=''>Select budget range</option>
                     {budgetOptions.map(budget: unknown (;
-                      <option key={budget} value={budget}>{budget}</option>;
+                      <option key={budget} value={budget}>{budget}</option>
                     ))}
-                  </select>;
-                </div>;
-                <div>;
-                  <label htmlFor='timeline' className='block text-sm font-medium text-white mb-2'>;
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor='timeline' className='block text-sm font-medium text-white mb-2'>
                     Project Timeline;
-                  </label>;
-                  <select;
+                  </label>
+                  <select
                     id='timeline';
                     name='timeline';
                     value={formData.timeline}
@@ -824,18 +824,18 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'timeline', e.target.value)}
                     className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300';
                   >;
-                    <option value=''>Select timeline</option>;
+                    <option value=''>Select timeline</option>
                     {timelineOptions.map(timeline: unknown (;
-                      <option key={timeline} value={timeline}>{timeline}</option>;
+                      <option key={timeline} value={timeline}>{timeline}</option>
                     ))}
-                  </select>;
-                </div>;
-              </div>;
-            </motion.div>;
+                  </select>
+                </div>
+              </div>
+            </motion.div>
           )}
 ;
           {currentStep === 3 &&;
-            <motion.div;
+            <motion.div
               key='step3';
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -843,15 +843,15 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
               transition={{ duration: 0.3 }}
               className='space-y-6';
             >;
-              <h3 className='text-xl font-semibold text-white mb-4 flex items-center gap-2'>;
-                <MessageSquare className='w-5 h-5 text-purple-400' />;
+              <h3 className='text-xl font-semibold text-white mb-4 flex items-center gap-2'>
+                <MessageSquare className='w-5 h-5 text-purple-400' />
                 Project Details;
-              </h3>;
-              <div>;
-                <label htmlFor='message' className='block text-sm font-medium text-white mb-2'>;
+              </h3>
+              <div>
+                <label htmlFor='message' className='block text-sm font-medium text-white mb-2'>
                   Project Description *;
-                </label>;
-                <textarea;
+                </label>
+                <textarea
                   id='message';
                   name='message';
                   rows={6}
@@ -868,72 +868,72 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {;
   'message-error' : undefined}
                 />;
                 {errors.message && (;
-                  <p id='message-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>;
-                    <AlertCircle className='w-4 h-4' />;
+                  <p id='message-error' className='mt-1 text-sm text-red-400 flex items-center gap-1'>
+                    <AlertCircle className='w-4 h-4' />
                     {errors.message}
-                  </p>;
+                  </p>
                 )}
-              </div>;
+              </div>
               {/* Trust Indicators */}
-              <div className='bg-white/5 rounded-lg p-4'>;
-                <div className='flex items-center justify-center gap-6 text-sm text-gray-400'>;
-                  <div className='flex items-center gap-2'>;
-                    <Shield className='w-4 h-4 text-green-400' />;
-                    <span>Secure & Private</span>;
-                  </div>;
-                  <div className='flex items-center gap-2'>;
-                    <Clock className='w-4 h-4 text-blue-400' />;
-                    <span>24h Response</span>;
-                  </div>;
-                  <div className='flex items-center gap-2'>;
-                    <Star className='w-4 h-4 text-yellow-400' />;
-                    <span>Expert Team</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
+              <div className='bg-white/5 rounded-lg p-4'>
+                <div className='flex items-center justify-center gap-6 text-sm text-gray-400'>
+                  <div className='flex items-center gap-2'>
+                    <Shield className='w-4 h-4 text-green-400' />
+                    <span>Secure & Private</span>
+                  </div>
+                  <div className='flex items-center gap-2'>
+                    <Clock className='w-4 h-4 text-blue-400' />
+                    <span>24h Response</span>
+                  </div>
+                  <div className='flex items-center gap-2'>
+                    <Star className='w-4 h-4 text-yellow-400' />
+                    <span>Expert Team</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           )}
-        </AnimatePresence>;
+        </AnimatePresence>
         {/* Navigation Buttons */}
-        <div className='flex justify-between pt-6'>;
-          <button;
+        <div className='flex justify-between pt-6'>
+          <button
             type='button';
             onClick={handlePrevStep}
             disabled={currentStep === 1}
             className='px-6 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black';
           >;
             Previous;
-          </button>;
-          {currentStep < totalSteps ? (;
+          </button>
+          {currentStep < totalSteps ? (
             <button;
               type='button';
               onClick={handleNextStep}
               className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black';
             >;
               Next Step;
-            </button>;
+            </button>
           ) : (;
-            <button;
+            <button
               type='submit';
               disabled={isSubmitting || isValidating}
               className='px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2';
             >;
               {isSubmitting ? (;
                 <>;
-                  <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin' />;
+                  <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin' />
                   Sending...;
-                </>;
+                </>
               ) : (;
                 <>;
-                  <Send className='w-4 h-4' />;
+                  <Send className='w-4 h-4' />
                   Send Message;
-                </>;
+                </>
               )}
-            </button>;
+            </button>
           )}
-        </div>;
-      </form>;
-    </div>;
+        </div>
+      </form>
+    </div>
   );
 };
 ;

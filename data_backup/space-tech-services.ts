@@ -1,4 +1,4 @@
-export interface SpaceTechService {;
+export interface SpaceTechService {
   id: string;
    name: string;
    tagline: string;

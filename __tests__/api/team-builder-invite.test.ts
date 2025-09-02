@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import inviteHandler from '@/pages/api/team-builder/invite';
 import { supabase } from '@/integrations/supabase/client'; // To be mocked;
 import { TeamInvite } from '@/types';
-;
+
 // Mock Supabase;
 jest.mock(;
   '@/integrations/supabase/client', () => ({;
@@ -14,7 +14,7 @@ jest.mock(;
     single: jest.fn()}}));
 ;
 describe(;
-  '/api/team-builder/invite API Endpoint', () => {;
+  '/api/team-builder/invite API Endpoint', () => {
   // Define mockInsert separately to allow chaining;
   const mockSingle = jest.fn();
   const mockSelect = jest.fn().mockReturnThis();
@@ -94,7 +94,7 @@ describe(;
   });
 ;
   it(,;
-  should return 201 with invite data on successful insert', async () => {;
+  should return 201 with invite data on successful insert', async () => {
     const mockInvite: Partial<TeamInvite> = {;
       id:;
   'invite-123,;

@@ -30,6 +30,6 @@ target.style.backgroundImage = `url (${target.dataset.src}) `;              targ
       observer.disconnect () ;
     };
   }, []) ;
-;  return <>{children}</>;
+;  return <>{children}</>
 };
 ;

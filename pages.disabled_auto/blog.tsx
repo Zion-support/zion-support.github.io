@@ -127,7 +127,7 @@ const Blog: React.FC = () => {;
       tags: ['Data Analytics', 'Machine Learning', 'Business Intelligence'],;
       featured: false}];
 ;
-  const categories = [;
+  const categories = [
     { name: 'All', count: 24, active: true },;
     { name: 'AI Trends', count: 6, active: false },;
     { name: 'Technical', count: 8, active: false },;
@@ -139,185 +139,185 @@ const Blog: React.FC = () => {;
   const featuredPost = blogPosts.find(post => post.featured);
 ;
   return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-      <SEO;
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <SEO
         title='Blog - Zion Tech Group';
         description='Stay updated with the latest insights on AI, technology trends, and business innovation. Expert articles and thought leadership from Zion Tech Group.';
       />;
       {/* Hero Section */}
-      <section className='relative py-20 px-4 sm: px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto text-center'>;
-          <motion.div;
+      <section className='relative py-20 px-4 sm: px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >;
-            <Badge variant='secondary' className='mb-4'>;
-              <BookOpen className='w-4 h-4 mr-2' />;
+            <Badge variant='secondary' className='mb-4'>
+              <BookOpen className='w-4 h-4 mr-2' />
               Latest Insights;
-            </Badge>;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
+            </Badge>
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               Technology Blog;
-            </h1>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Stay ahead with expert insights on AI, technology trends, and;
               business innovation.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </p>
+          </motion.div>
+        </div>
+      </section>
       {/* Featured Post */}
       {featuredPost && (;
-        <section className='py-20 px-4 sm: px-6 lg:px-8'>;
-          <div className='max-w-7xl mx-auto'>;
-            <motion.div;
+        <section className='py-20 px-4 sm: px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >;
-              <h2 className='text-3xl font-bold text-white mb-8'>;
+              <h2 className='text-3xl font-bold text-white mb-8'>
                 Featured Article;
-              </h2>;
-              <Card className='overflow-hidden'>;
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>;
-                  <div className='relative h-64 lg:h-full'>;
-                    <img;
+              </h2>
+              <Card className='overflow-hidden'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>
+                  <div className='relative h-64 lg:h-full'>
+                    <img
                       src={featuredPost.image}
                       alt={featuredPost.title}
                       className='w-full h-full object-cover';
                     />;
-                    <div className='absolute top-4 left-4'>;
-                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>;
-                        <Star className='w-4 h-4 mr-1' />;
+                    <div className='absolute top-4 left-4'>
+                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>
+                        <Star className='w-4 h-4 mr-1' />
                         Featured;
-                      </Badge>;
-                    </div>;
-                  </div>;
-                  <div className='p-8'>;
-                    <div className='flex items-center mb-4'>;
-                      <Badge variant='outline' className='mr-3'>;
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className='p-8'>
+                    <div className='flex items-center mb-4'>
+                      <Badge variant='outline' className='mr-3'>
                         {featuredPost.category}
-                      </Badge>;
-                      <span className='text-gray-400 text-sm'>;
+                      </Badge>
+                      <span className='text-gray-400 text-sm'>
                         {featuredPost.readTime}
-                      </span>;
-                    </div>;
-                    <h3 className='text-2xl font-bold text-white mb-4'>;
+                      </span>
+                    </div>
+                    <h3 className='text-2xl font-bold text-white mb-4'>
                       {featuredPost.title}
-                    </h3>;
-                    <p className='text-gray-300 mb-6'>{featuredPost.excerpt}</p>;
-                    <div className='flex items-center justify-between'>;
-                      <div className='flex items-center text-gray-400 text-sm'>;
-                        <User className='w-4 h-4 mr-2' />;
+                    </h3>
+                    <p className='text-gray-300 mb-6'>{featuredPost.excerpt}</p>
+                    <div className='flex items-center justify-between'>
+                      <div className='flex items-center text-gray-400 text-sm'>
+                        <User className='w-4 h-4 mr-2' />
                         {featuredPost.author}
-                        <Calendar className='w-4 h-4 ml-4 mr-2' />;
+                        <Calendar className='w-4 h-4 ml-4 mr-2' />
                         {new Date(featuredPost.date).toLocaleDateString()}
-                      </div>;
-                      <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>;
+                      </div>
+                      <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                         Read More;
-                        <ArrowRight className='w-4 h-4 ml-2' />;
-                      </Button>;
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>;
-            </motion.div>;
-          </div>;
-        </section>;
+                        <ArrowRight className='w-4 h-4 ml-2' />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
       )}
 ;
       {/* Blog Posts Grid */}
-      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>;
-        <div className='max-w-7xl mx-auto'>;
-          <div className='flex flex-col lg:flex-row gap-8'>;
+      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='flex flex-col lg:flex-row gap-8'>
             {/* Main Content */}
-            <div className='lg:w-2/3'>;
-              <motion.div;
+            <div className='lg:w-2/3'>
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className='mb-8';
               >;
-                <h2 className='text-3xl font-bold text-white mb-6'>;
+                <h2 className='text-3xl font-bold text-white mb-6'>
                   Latest Articles;
-                </h2>;
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+                </h2>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                   {blogPosts;
                     .filter(post => !post.featured);
                     .map((post, index) => (;
-                      <motion.div;
+                      <motion.div
                         key={post.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 * index }}
                       >;
-                        <Card className='overflow-hidden h-full'>;
-                          <div className='relative h-48'>;
-                            <img;
+                        <Card className='overflow-hidden h-full'>
+                          <div className='relative h-48'>
+                            <img
                               src={post.image}
                               alt={post.title}
                               className='w-full h-full object-cover';
                             />;
-                            <div className='absolute top-4 left-4'>;
-                              <Badge variant='outline'>{post.category}</Badge>;
-                            </div>;
-                          </div>;
-                          <div className='p-6'>;
-                            <div className='flex items-center mb-3 text-sm text-gray-400'>;
-                              <User className='w-4 h-4 mr-2' />;
+                            <div className='absolute top-4 left-4'>
+                              <Badge variant='outline'>{post.category}</Badge>
+                            </div>
+                          </div>
+                          <div className='p-6'>
+                            <div className='flex items-center mb-3 text-sm text-gray-400'>
+                              <User className='w-4 h-4 mr-2' />
                               {post.author}
-                              <Calendar className='w-4 h-4 ml-4 mr-2' />;
+                              <Calendar className='w-4 h-4 ml-4 mr-2' />
                               {new Date(post.date).toLocaleDateString()}
-                              <Clock className='w-4 h-4 ml-4 mr-2' />;
+                              <Clock className='w-4 h-4 ml-4 mr-2' />
                               {post.readTime}
-                            </div>;
-                            <h3 className='text-xl font-bold text-white mb-3'>;
+                            </div>
+                            <h3 className='text-xl font-bold text-white mb-3'>
                               {post.title}
-                            </h3>;
-                            <p className='text-gray-300 mb-4 text-sm'>;
+                            </h3>
+                            <p className='text-gray-300 mb-4 text-sm'>
                               {post.excerpt}
-                            </p>;
-                            <div className='flex items-center justify-between'>;
-                              <div className='flex flex-wrap gap-2'>;
+                            </p>
+                            <div className='flex items-center justify-between'>
+                              <div className='flex flex-wrap gap-2'>
                                 {post.tags.slice(0, 2).map((tag, tagIndex) => (;
-                                  <Badge;
+                                  <Badge
                                     key={tagIndex}
                                     variant='secondary';
                                     className='text-xs';
                                   >;
-                                    <Tag className='w-3 h-3 mr-1' />;
+                                    <Tag className='w-3 h-3 mr-1' />
                                     {tag}
-                                  </Badge>;
+                                  </Badge>
                                 ))}
-                              </div>;
-                              <Button variant='outline' size='sm'>;
+                              </div>
+                              <Button variant='outline' size='sm'>
                                 Read More;
-                                <ArrowRight className='w-4 h-4 ml-2' />;
-                              </Button>;
-                            </div>;
-                          </div>;
-                        </Card>;
-                      </motion.div>;
+                                <ArrowRight className='w-4 h-4 ml-2' />
+                              </Button>
+                            </div>
+                          </div>
+                        </Card>
+                      </motion.div>
                     ))}
-                </div>;
-              </motion.div>;
-            </div>;
+                </div>
+              </motion.div>
+            </div>
             {/* Sidebar */}
-            <div className='lg: w-1/3'>;
-              <motion.div;
+            <div className='lg: w-1/3'>
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='space-y-8';
               >;
                 {/* Categories */}
-                <Card className='p-6'>;
-                  <h3 className='text-xl font-bold text-white mb-4'>;
+                <Card className='p-6'>
+                  <h3 className='text-xl font-bold text-white mb-4'>
                     Categories;
-                  </h3>;
-                  <div className='space-y-2'>;
+                  </h3>
+                  <div className='space-y-2'>
                     {categories.map((category, index) => (;
-                      <button;
+                      <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${;
 :pages.disabled_auto/blog.tsx;
@@ -329,40 +329,40 @@ const Blog: React.FC = () => {;
                             : 'text-gray-300 hover:bg-slate-700';
                         }`}
                       >;
-                        <span>{category.name}</span>;
-                        <Badge variant='secondary' className='text-xs'>;
+                        <span>{category.name}</span>
+                        <Badge variant='secondary' className='text-xs'>
                           {category.count}
-                        </Badge>;
-                      </button>;
+                        </Badge>
+                      </button>
                     ))}
-                  </div>;
-                </Card>;
+                  </div>
+                </Card>
                 {/* Newsletter Signup */}
-                <Card className='p-6'>;
-                  <h3 className='text-xl font-bold text-white mb-4'>;
+                <Card className='p-6'>
+                  <h3 className='text-xl font-bold text-white mb-4'>
                     Stay Updated;
-                  </h3>;
-                  <p className='text-gray-300 mb-4 text-sm'>;
+                  </h3>
+                  <p className='text-gray-300 mb-4 text-sm'>
                     Get the latest AI insights and technology trends delivered;
                     to your inbox.;
-                  </p>;
-                  <div className='space-y-3'>;
-                    <input;
+                  </p>
+                  <div className='space-y-3'>
+                    <input
                       type='email';
                       placeholder='Enter your email';
                       className='w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500';
                     />;
-                    <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>;
+                    <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                       Subscribe;
-                    </Button>;
-                  </div>;
-                </Card>;
+                    </Button>
+                  </div>
+                </Card>
                 {/* Popular Tags */}
-                <Card className='p-6'>;
-                  <h3 className='text-xl font-bold text-white mb-4'>;
+                <Card className='p-6'>
+                  <h3 className='text-xl font-bold text-white mb-4'>
                     Popular Tags;
-                  </h3>;
-                  <div className='flex flex-wrap gap-2'>;
+                  </h3>
+                  <div className='flex flex-wrap gap-2'>
                     {[;
                       'AI',;
                       'Machine Learning',;
@@ -372,53 +372,53 @@ const Blog: React.FC = () => {;
                       'Analytics',;
                       'IoT',;
                       'Blockchain'].map((tag, index) => (;
-                      <Badge;
+                      <Badge
                         key={index}
                         variant='outline';
                         className='cursor-pointer hover: bg-blue-500 hover:text-white transition-colors';
                       >;
                         {tag}
-                      </Badge>;
+                      </Badge>
                     ))}
-                  </div>;
-                </Card>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                  </div>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className='py-20 px-4 sm: px-6 lg:px-8'>;
-        <div className='max-w-4xl mx-auto text-center'>;
-          <motion.div;
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>;
+            </h2>
+            <p className='text-xl text-gray-300 mb-8'>
               Let our experts help you implement the latest AI technologies and;
               drive innovation in your organization.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <Button;
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Button
                 size='lg';
                 className='bg-gradient-to-r from-blue-500 to-purple-600 text-white';
               >;
-                <Phone className='w-5 h-5 mr-2' />;
+                <Phone className='w-5 h-5 mr-2' />
                 Schedule Consultation;
-              </Button>;
-              <Button size='lg' variant='outline'>;
-                <Mail className='w-5 h-5 mr-2' />;
+              </Button>
+              <Button size='lg' variant='outline'>
+                <Mail className='w-5 h-5 mr-2' />
                 Contact Us;
-              </Button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 ;

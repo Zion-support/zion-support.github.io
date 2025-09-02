@@ -150,8 +150,8 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     return (<>''';
       {/* Floating Action Button */}'''';
       <motion.button onClick={() => setIsOpen(true)} className='fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>'''';
-        <FileText className='w-6 h-6'/>;
-      </motion.button>;
+        <FileText className='w-6 h-6'/>
+      </motion.button>
 ''';
       {/* Modal */}'''';
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4' onClick={() => setIsOpen(false)}>;
@@ -177,10 +177,10 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                   ✕;
                 </button>''';
               </div>'''';
-              <p className='text-purple-100 mt-2'>;
+              <p className='text-purple-100 mt-2'>
                 Analyze and improve content quality across all website pages;
-              </p>;
-            </div>;
+              </p>
+            </div>
 ''';
             {/* Content */}'''';
             <div className='p-6 space-y-6'>''';
@@ -200,8 +200,8 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                   </div>'''';
                   <div className='bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center'>'''';
                     <div className='text-2xl font-bold text-blue-400'>{report.pagesWithMetaDescriptions}</div>'''';
-                    <div className='text-blue-400 text-sm'>With Meta Descriptions</div>;
-                  </div>;
+                    <div className='text-blue-400 text-sm'>With Meta Descriptions</div>
+                  </div>
                 </div>) }
 ''';
               {/* Actions */}'''';
@@ -226,20 +226,20 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 ? 'bg-blue-500 text-white''`'`;
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     Low;
-                  </button>;
+                  </button>
                 </div>''';
 '''';
                 <button onClick={startAnalysis} disabled={isAnalyzing} className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2'>'''';
                   {isAnalyzing ? (<Zap className='w-4 h-4 animate-spin'/>) : (<Search className='w-4 h-4'/>)}';
-                  <span>{isAnalyzing ? 'Analyzing...' : 'Analyze Content'}</span>;
-                </button>;
-              </div>;
+                  <span>{isAnalyzing ? 'Analyzing...' : 'Analyze Content'}</span>
+                </button>
+              </div>
 ''';
               {/* Search */}'''';
               <div className='relative'>'''';
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'/>'''';
                 <input type='text' placeholder='Search issues by page title or description...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'/>;
-              </div>;
+              </div>
 ''';
               {/* Issues Table */}'''';
               <div className='bg-gray-800 rounded-lg overflow-hidden'>'''';
@@ -247,24 +247,24 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                   <table className='w-full'>'''';
                     <thead className='bg-gray-700'>''';
                       <tr>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Severity''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Page''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Issue Type''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Description''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Status''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Actions;
-                        </th>;
+                        </th>
                       </tr>''';
                     </thead>'''';
                     <tbody className='divide-y divide-gray-700'>'''';
@@ -272,9 +272,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                           <td className='px-6 py-4 whitespace-nowrap'>'''';
                             <div className='flex items-center space-x-2'>`;
                               {getSeverityIcon(issue.severity)}``;
-                              <span className={`text-sm font-medium ${getSeverityColor(issue.severity)}`}>;
+                              <span className={`text-sm font-medium ${getSeverityColor(issue.severity)}`}>
                                 {issue.severity.charAt(0).toUpperCase() + issue.severity.slice(1)}
-                              </span>;
+                              </span>
                             </div>''';
                           </td>'''';
                           <td className='px-6 py-4 whitespace-nowrap'>'''';
@@ -282,24 +282,24 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                               <div className='text-sm font-medium text-white'>';
                                 {issue.pageTitle || 'Untitled'}''';
                               </div>'''';
-                              <a href={issue.pageUrl} target='_blank' rel='noopener noreferrer' className='text-purple-400 hover:text-purple-300 transition-colors text-xs truncate block'>;
+                              <a href={issue.pageUrl} target='_blank' rel='noopener noreferrer' className='text-purple-400 hover:text-purple-300 transition-colors text-xs truncate block'>
                                 {issue.pageUrl}
-                              </a>;
+                              </a>
                             </div>''';
                           </td>'''';
                           <td className='px-6 py-4 whitespace-nowrap'>'''';
-                            <span className='px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded'>;
+                            <span className='px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded'>
                               {getIssueTypeLabel(issue.issueType)}
                             </span>''';
                           </td>'''';
                           <td className='px-6 py-4'>'''';
                             <div className='max-w-md'>'''';
-                              <div className='text-sm text-gray-300 mb-2'>;
+                              <div className='text-sm text-gray-300 mb-2'>
                                 {issue.description}''';
                               </div>'''';
-                              <div className='text-xs text-purple-400'>;
+                              <div className='text-xs text-purple-400'>
                                 <strong>Recommendation:</strong> {issue.recommendation}
-                              </div>;
+                              </div>
                             </div>''';
                           </td>''`;
                           <td className='px-6 py-4 whitespace-nowrap'>``;
@@ -316,56 +316,56 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                                 <CheckCircle className='w-4 h-4'/>''';
                               </button>'''';
                               <button className='p-2 text-yellow-400 hover:text-yellow-300 transition-colors' title='Edit'>'''';
-                                <Edit3 className='w-4 h-4'/>;
-                              </button>;
-                            </div>;
-                          </td>;
+                                <Edit3 className='w-4 h-4'/>
+                              </button>
+                            </div>
+                          </td>
                         </tr>) ) }
-                    </tbody>;
-                  </table>;
-                </div>;
-              </div>;
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 ''';
               {/* Quick Actions */}'''';
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>'''';
                 <div className='bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4'>'''';
                   <h3 className='text-lg font-semibold text-green-400 mb-2 flex items-center'>'''';
-                    <CheckCircle className='w-5 h-5 mr-2'/>;
+                    <CheckCircle className='w-5 h-5 mr-2'/>
                     Quick Fixes''';
                   </h3>'''';
-                  <ul className='text-green-200 text-sm space-y-1'>;
-                    <li>• Add missing page titles</li>;
-                    <li>• Include meta descriptions</li>;
-                    <li>• Add proper heading structure</li>;
-                  </ul>;
+                  <ul className='text-green-200 text-sm space-y-1'>
+                    <li>• Add missing page titles</li>
+                    <li>• Include meta descriptions</li>
+                    <li>• Add proper heading structure</li>
+                  </ul>
                 </div>''';
 '''';
                 <div className='bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-lg p-4'>'''';
                   <h3 className='text-lg font-semibold text-blue-400 mb-2 flex items-center'>'''';
-                    <BarChart3 className='w-5 h-5 mr-2'/>;
+                    <BarChart3 className='w-5 h-5 mr-2'/>
                     Content Metrics''';
                   </h3>'''';
-                  <ul className='text-blue-200 text-sm space-y-1'>;
-                    <li>• Target: 300+ words per page</li>;
-                    <li>• Include 2-3 images per page</li>;
-                    <li>• Use proper heading hierarchy</li>;
-                  </ul>;
+                  <ul className='text-blue-200 text-sm space-y-1'>
+                    <li>• Target: 300+ words per page</li>
+                    <li>• Include 2-3 images per page</li>
+                    <li>• Use proper heading hierarchy</li>
+                  </ul>
                 </div>''';
 '''';
                 <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/20 rounded-lg p-4'>'''';
                   <h3 className='text-lg font-semibold text-purple-400 mb-2 flex items-center'>'''';
-                    <TrendingUp className='w-5 h-5 mr-2'/>;
+                    <TrendingUp className='w-5 h-5 mr-2'/>
                     SEO Impact''';
                   </h3>'''';
-                  <ul className='text-purple-200 text-sm space-y-1'>;
-                    <li>• Better search rankings</li>;
-                    <li>• Improved user engagement</li>;
-                    <li>• Higher conversion rates</li>;
-                  </ul>;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
+                  <ul className='text-purple-200 text-sm space-y-1'>
+                    <li>• Better search rankings</li>
+                    <li>• Improved user engagement</li>
+                    <li>• Higher conversion rates</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>)}
     </>)};
 export default ContentQualityAnalyzer;

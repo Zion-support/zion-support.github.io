@@ -46,42 +46,42 @@ import { Badge } from;
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>'        <div className='max-w-7xl mx-auto text-center'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
-            <Badge variant='secondary' className='mb-4'>'              <Award className='w-4 h-4 mr-2' />'              Success Stories'            </Badge>;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>'              Case Studies'            </h1>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>'              Discover how we&apos;ve helped businesses across industries achieve remarkable results with AI-powered solutions.''            </p>;
-  '          </motion.div>;
-        </div>;
-      </section>;
+          >
+            <Badge variant='secondary' className='mb-4'>'              <Award className='w-4 h-4 mr-2' />'              Success Stories'            </Badge>
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>'              Case Studies'            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>'              Discover how we&apos;ve helped businesses across industries achieve remarkable results with AI-powered solutions.''            </p>
+  '          </motion.div>
+        </div>
+      </section>
       {/* Featured Case Study */}
       {featuredCaseStudy && (;
         <section className='py-20 px-4 sm: px-6 lg:px-8'>'          <div className='max-w-7xl mx-auto'>'            <motion.div'              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-            >;
+            >
               <h2 className='text-3xl font-bold text-white mb-8'>Featured Success Story</h2>'              <Card className='overflow-hidden'>'                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>'                  <div className='relative h-64 lg:h-full'>'                    <img '                      src={featuredCaseStudy.image} ;
                       alt={featuredCaseStudy.title}
-                      className='w-full h-full object-cover''                    />'                    <div className='absolute top-4 left-4'>'                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>'                        <Star className='w-4 h-4 mr-1' />'                        Featured'                      </Badge>;
-                    </div>;
-                  </div>;
-                  <div className='p-8'>'                    <div className='flex items-center mb-4'>'                      <Badge variant='outline' className='mr-3'>{featuredCaseStudy.industry}</Badge>'                      <span className='text-gray-400 text-sm'>{featuredCaseStudy.duration}</span>'                    </div>'                    <h3 className='text-2xl font-bold text-white mb-4'>{featuredCaseStudy.title}</h3>'                    <p className='text-gray-300 mb-6'>{featuredCaseStudy.solution}</p>'                    '                    <div className='grid grid-cols-2 gap-4 mb-6'>'                      <div className='text-center'>'                        <div className='text-2xl font-bold text-green-400'>{featuredCaseStudy.results[0]}</div>'                        <div className='text-sm text-gray-400'>Key Result</div>'                      </div>'                      <div className='text-center'>'                        <div className='text-2xl font-bold text-blue-400'>{featuredCaseStudy.teamSize}</div>'                        <div className='text-sm text-gray-400'>Team Size</div>'                      </div>'                    </div>;
-                    <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                      Read Full Case Study'                      <ArrowRight className='w-4 h-4 ml-2' />'                    </Button>'                  </div>;
-                </div>;
-              </Card>;
-            </motion.div>;
-          </div>;
-        </section>;
+                      className='w-full h-full object-cover''                    />'                    <div className='absolute top-4 left-4'>'                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>'                        <Star className='w-4 h-4 mr-1' />'                        Featured'                      </Badge>
+                    </div>
+                  </div>
+                  <div className='p-8'>'                    <div className='flex items-center mb-4'>'                      <Badge variant='outline' className='mr-3'>{featuredCaseStudy.industry}</Badge>'                      <span className='text-gray-400 text-sm'>{featuredCaseStudy.duration}</span>'                    </div>'                    <h3 className='text-2xl font-bold text-white mb-4'>{featuredCaseStudy.title}</h3>'                    <p className='text-gray-300 mb-6'>{featuredCaseStudy.solution}</p>'                    '                    <div className='grid grid-cols-2 gap-4 mb-6'>'                      <div className='text-center'>'                        <div className='text-2xl font-bold text-green-400'>{featuredCaseStudy.results[0]}</div>'                        <div className='text-sm text-gray-400'>Key Result</div>'                      </div>'                      <div className='text-center'>'                        <div className='text-2xl font-bold text-blue-400'>{featuredCaseStudy.teamSize}</div>'                        <div className='text-sm text-gray-400'>Team Size</div>'                      </div>'                    </div>
+                    <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                      Read Full Case Study'                      <ArrowRight className='w-4 h-4 ml-2' />'                    </Button>'                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
       )}
 ;
       {/* Case Studies Grid */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>'        <div className='max-w-7xl mx-auto'>'          <div className='flex flex-col lg:flex-row gap-8'>'            {/* Main Content */}'            <div className='lg:w-2/3'>'              <motion.div'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className='mb-8''              >'                <div className='flex items-center justify-between mb-6'>'                  <h2 className='text-3xl font-bold text-white'>All Case Studies</h2>'                  <div className='flex items-center gap-4'>'                    <div className='relative'>'                      <Search className='w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400' />'                      <input'                        type='text''                        placeholder='Search case studies...''                        className='pl-10 pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500''                      />'                    </div>;
-                    <Button variant='outline' size='sm'>'                      <Filter className='w-4 h-4 mr-2' />'                      Filter'                    </Button>;
-                  </div>;
-                </div>;
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>'                  {caseStudies.filter(study => !study.featured).map((study, index) => ('                    <motion.div;
+                className='mb-8''              >'                <div className='flex items-center justify-between mb-6'>'                  <h2 className='text-3xl font-bold text-white'>All Case Studies</h2>'                  <div className='flex items-center gap-4'>'                    <div className='relative'>'                      <Search className='w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400' />'                      <input'                        type='text''                        placeholder='Search case studies...''                        className='pl-10 pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500''                      />'                    </div>
+                    <Button variant='outline' size='sm'>'                      <Filter className='w-4 h-4 mr-2' />'                      Filter'                    </Button>
+                  </div>
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>'                  {caseStudies.filter(study => !study.featured).map((study, index) => ('                    <motion.div
                       key={study.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -89,21 +89,21 @@ import { Badge } from;
                     >;
                       <Card className='overflow-hidden h-full'>'                        <div className='relative h-48'>'                          <img '                            src={study.image} ;
                             alt={study.title}
-                            className='w-full h-full object-cover''                          />'                          <div className='absolute top-4 left-4'>'                            <Badge variant='outline'>{study.industry}</Badge>'                          </div>'                        </div>;
-                        <div className='p-6'>'                          <h3 className='text-xl font-bold text-white mb-3'>{study.title}</h3>'                          <p className='text-gray-300 mb-4 text-sm'>{study.solution}</p>'                          '                          <div className='grid grid-cols-2 gap-4 mb-4'>'                            <div className='text-center'>'                              <div className='text-lg font-bold text-green-400'>{study.results[0]}</div>'                              <div className='text-xs text-gray-400'>Key Result</div>'                            </div>'                            <div className='text-center'>'                              <div className='text-lg font-bold text-blue-400'>{study.duration}</div>'                              <div className='text-xs text-gray-400'>Duration</div>'                            </div>'                          </div>;
-                          <div className='flex flex-wrap gap-2 mb-4'>'                            {study.technologies.slice(0, 3).map((tech, techIndex) => ('                              <Badge key={techIndex} variant='secondary' className='text-xs'>'                                {tech}'                              </Badge>;
+                            className='w-full h-full object-cover''                          />'                          <div className='absolute top-4 left-4'>'                            <Badge variant='outline'>{study.industry}</Badge>'                          </div>'                        </div>
+                        <div className='p-6'>'                          <h3 className='text-xl font-bold text-white mb-3'>{study.title}</h3>'                          <p className='text-gray-300 mb-4 text-sm'>{study.solution}</p>'                          '                          <div className='grid grid-cols-2 gap-4 mb-4'>'                            <div className='text-center'>'                              <div className='text-lg font-bold text-green-400'>{study.results[0]}</div>'                              <div className='text-xs text-gray-400'>Key Result</div>'                            </div>'                            <div className='text-center'>'                              <div className='text-lg font-bold text-blue-400'>{study.duration}</div>'                              <div className='text-xs text-gray-400'>Duration</div>'                            </div>'                          </div>
+                          <div className='flex flex-wrap gap-2 mb-4'>'                            {study.technologies.slice(0, 3).map((tech, techIndex) => ('                              <Badge key={techIndex} variant='secondary' className='text-xs'>'                                {tech}'                              </Badge>
                             ))}
-                          </div>;
-                          <div className='flex items-center justify-between'>'                            <Button variant='outline' size='sm'>'                              <Eye className='w-4 h-4 mr-2' />'                              View Details'                            </Button>;
-                            <div className='flex gap-2'>'                              <Button variant='outline' size='sm'>'                                <Download className='w-4 h-4' />'                              </Button>'                              <Button variant='outline' size='sm'>'                                <Share2 className='w-4 h-4' />'                              </Button>'                            </div>;
-                          </div>;
-                        </div>;
-                      </Card>;
-                    </motion.div>;
+                          </div>
+                          <div className='flex items-center justify-between'>'                            <Button variant='outline' size='sm'>'                              <Eye className='w-4 h-4 mr-2' />'                              View Details'                            </Button>
+                            <div className='flex gap-2'>'                              <Button variant='outline' size='sm'>'                                <Download className='w-4 h-4' />'                              </Button>'                              <Button variant='outline' size='sm'>'                                <Share2 className='w-4 h-4' />'                              </Button>'                            </div>
+                          </div>
+                        </div>
+                      </Card>
+                    </motion.div>
                   ))}
-                </div>;
-              </motion.div>;
-            </div>;
+                </div>
+              </motion.div>
+            </div>
             {/* Sidebar */}
             <div className='lg: w-1/3'>'              <motion.div'                initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -114,38 +114,38 @@ import { Badge } from;
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${`                          industry.active;
                             ?,;
   bg-gradient-to-r from-blue-500 to-purple-600 text-white;
-  ' ': 'text-gray-300 hover:bg-slate-700'                        }`}'                      >`                        <span>{industry.name}</span>;
-                        <Badge variant='secondary' className='text-xs'>'                          {industry.count}'                        </Badge>;
-                      </button>;
+  ' ': 'text-gray-300 hover:bg-slate-700'                        }`}'                      >`                        <span>{industry.name}</span>
+                        <Badge variant='secondary' className='text-xs'>'                          {industry.count}'                        </Badge>
+                      </button>
                     ))}
-                  </div>;
-                </Card>;
+                  </div>
+                </Card>
                 {/* Success Metrics */}
-                <Card className='p-6'>'                  <h3 className='text-xl font-bold text-white mb-4'>Our Success Metrics</h3>'                  <div className='space-y-4'>'                    <div className='text-center'>'                      <div className='text-3xl font-bold text-green-400'>95%</div>'                      <div className='text-sm text-gray-400'>Client Satisfaction</div>'                    </div>'                    <div className='text-center'>'                      <div className='text-3xl font-bold text-blue-400'>$50M+</div>'                      <div className='text-sm text-gray-400'>Cost Savings Delivered</div>'                    </div>'                    <div className='text-center'>'                      <div className='text-3xl font-bold text-purple-400'>200+</div>'                      <div className='text-sm text-gray-400'>Projects Completed</div>'                    </div>'                  </div>;
-                </Card>;
+                <Card className='p-6'>'                  <h3 className='text-xl font-bold text-white mb-4'>Our Success Metrics</h3>'                  <div className='space-y-4'>'                    <div className='text-center'>'                      <div className='text-3xl font-bold text-green-400'>95%</div>'                      <div className='text-sm text-gray-400'>Client Satisfaction</div>'                    </div>'                    <div className='text-center'>'                      <div className='text-3xl font-bold text-blue-400'>$50M+</div>'                      <div className='text-sm text-gray-400'>Cost Savings Delivered</div>'                    </div>'                    <div className='text-center'>'                      <div className='text-3xl font-bold text-purple-400'>200+</div>'                      <div className='text-sm text-gray-400'>Projects Completed</div>'                    </div>'                  </div>
+                </Card>
                 {/* CTA */}
-                <Card className='p-6'>'                  <h3 className='text-xl font-bold text-white mb-4'>Ready to Start Your Success Story?</h3>'                  <p className='text-gray-300 mb-4 text-sm'>'                    Let us help you achieve similar results with our AI-powered solutions.'                  </p>;
-                  <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                    <Phone className='w-4 h-4 mr-2' />'                    Schedule Consultation'                  </Button>;
-                </Card>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                <Card className='p-6'>'                  <h3 className='text-xl font-bold text-white mb-4'>Ready to Start Your Success Story?</h3>'                  <p className='text-gray-300 mb-4 text-sm'>'                    Let us help you achieve similar results with our AI-powered solutions.'                  </p>
+                  <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                    <Phone className='w-4 h-4 mr-2' />'                    Schedule Consultation'                  </Button>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>'        <div className='max-w-4xl mx-auto text-center'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
-            <h2 className='text-4xl font-bold text-white mb-6'>'              Ready to Write Your Success Story?'            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>'              Join the ranks of successful businesses that have transformed their operations with our AI solutions.'            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                <Phone className='w-5 h-5 mr-2' />'                Start Your Project'              </Button>;
-              <Button size='lg' variant='outline'>'                <Mail className='w-5 h-5 mr-2' />'                Download Case Study"              </Button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+          >
+            <h2 className='text-4xl font-bold text-white mb-6'>'              Ready to Write Your Success Story?'            </h2>
+            <p className='text-xl text-gray-300 mb-8'>'              Join the ranks of successful businesses that have transformed their operations with our AI solutions.'            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                <Phone className='w-5 h-5 mr-2' />'                Start Your Project'              </Button>
+              <Button size='lg' variant='outline'>'                <Mail className='w-5 h-5 mr-2' />'                Download Case Study"              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 ;

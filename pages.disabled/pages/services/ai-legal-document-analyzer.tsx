@@ -46,8 +46,8 @@ import {}
 '';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
   return();
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-      <SEO'';
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <SEO''
         title='AI Legal Document Analyzer - Zion Tech Group'';
         description='Transform legal document analysis with AI-powered insights, risk assessment, and compliance monitoring. Streamline your legal practice with cutting-edge technology.'';
         keywords='AI legal document analysis, legal tech, contract review, compliance monitoring, risk assessment, legal automation'';
@@ -56,7 +56,7 @@ import {}
       {/* Hero Section */}'';
       <section className='relative py-20 overflow-hidden'>'';
         <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />'';
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div'';
             className='text-center'';
             initial={{ opacity: 0, y: 20 }}
@@ -65,18 +65,18 @@ import {}
           >'';
             <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6'>'';
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Legal Technology;
-            </div>;
+            </div>
 '';
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               AI Legal Document'';
-              <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>;
+              <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
                 Analyzer;
-              </span>;
+              </span>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
             </h1>';
-            </h1>;
+            </h1>
 '';
-            <p className='text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed'>;
+            <p className='text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
               Transform your legal practice with AI-powered document analysis.;
               Automate contract review, risk assessment, and compliance;
               monitoring to save time and reduce legal risks.;
@@ -90,27 +90,27 @@ import {}
               >';
                 View Pricing'';
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>';
-              <a'';
+              <a''
                 href='mailto:kleber@ziontechgroup.com'';
                 className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200';
             </p>;
 '';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a'';
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a''
                 href='#pricing'';
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl'';
               >;
                 View Pricing'';
-                <ArrowRight className='ml-2 w-5 h-5'  />              </a>;
-              <a'';
+                <ArrowRight className='ml-2 w-5 h-5'  />              </a>
+              <a''
                 href='mailto:kleber@ziontechgroup.com'';
                 className='inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200'';
               >;
                 Schedule Demo;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
+              </a>
+            </div>
+          </motion.div>
+        </div>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
       </section>';
       {/* Features Section */}'';
@@ -123,12 +123,12 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Powerful Features for Legal Professionals';
-      </section>;
+      </section>
       {/* Features Section */}'';
       <section className='py-20'>'';
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 20 }}
@@ -136,17 +136,17 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Powerful Features for Legal Professionals;
             </h2>'';
-            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Leverage cutting-edge AI technology to streamline your legal;
               document workflow;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index();
               <motion.div';
                 key={index}'';
@@ -159,11 +159,11 @@ import {}
                 <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4'>'';
                   <feature.icon className='w-6 h-6 text-white' />';
                 </div>'';
-                <h3 className='text-xl font-semibold text-white mb-3'>;
+                <h3 className='text-xl font-semibold text-white mb-3'>
                   {feature.title}';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index (;
               <motion.div;
                 key={index}'';
@@ -174,16 +174,16 @@ import {}
                 viewport={{ once: true }}
               >'';
                 <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4'>'';
-                  <feature.icon className='w-6 h-6 text-white' />;
+                  <feature.icon className='w-6 h-6 text-white' />
                 </div>'';
-                <h3 className='text-xl font-semibold text-white mb-3'>;
+                <h3 className='text-xl font-semibold text-white mb-3'>
                   {feature.title}
                 </h3>'';
-                <p className='text-slate-300'>{feature.description}</p>;
-              </motion.div>;
+                <p className='text-slate-300'>{feature.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
       </section>';
       {/* Use Cases Section */}'';
@@ -196,12 +196,12 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Real-World Applications';
-      </section>;
+      </section>
       {/* Use Cases Section */}'';
       <section className='py-20 bg-slate-800/30'>'';
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 20 }}
@@ -209,16 +209,16 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Real-World Applications;
             </h2>'';
-            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               See how AI document analysis transforms various legal workflows;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown();
               <motion.div';
                 key={index}'';
@@ -231,11 +231,11 @@ import {}
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6'>'';
                   <useCase.icon className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3 className='text-2xl font-semibold text-white mb-4'>;
+                <h3 className='text-2xl font-semibold text-white mb-4'>
                   {useCase.title}';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown (;
               <motion.div;
                 key={index}'';
@@ -246,16 +246,16 @@ import {}
                 viewport={{ once: true }}
               >'';
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6'>'';
-                  <useCase.icon className='w-8 h-8 text-white' />;
+                  <useCase.icon className='w-8 h-8 text-white' />
                 </div>'';
-                <h3 className='text-2xl font-semibold text-white mb-4'>;
+                <h3 className='text-2xl font-semibold text-white mb-4'>
                   {useCase.title}
                 </h3>'';
-                <p className='text-slate-300 text-lg'>{useCase.description}</p>;
-              </motion.div>;
+                <p className='text-slate-300 text-lg'>{useCase.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
       </section>';
       {/* Pricing Section */}'';
@@ -268,12 +268,12 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Transparent Pricing';
-      </section>;
+      </section>
       {/* Pricing Section */}'';
       <section id='pricing' className='py-20'>'';
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 20 }}
@@ -281,18 +281,18 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Transparent Pricing;
             </h2>'';
-            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Choose the plan that fits your practice size and needs;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown();
-              <motion.div;
+              <motion.div
                 key={index}
                 className={`relative rounded-xl p-8 ${;
 ';
@@ -301,7 +301,7 @@ import {}
                     : 'bg-slate-800/50 border border-slate-700/50'``;
           </motion.div>;
 '';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -319,51 +319,51 @@ import {}
               >;
                 {plan.popular && ('';
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                    <span className='bg-gradient-to-r from-blue-400 to-purple-400 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
+                    <span className='bg-gradient-to-r from-blue-400 to-purple-400 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular;
-                    </span>;
-                  </div>;
+                    </span>
+                  </div>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
                 )}';
 '';
                 <div className='text-center mb-8'>'';
-                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}';
                   </h3>'';
                   <div className='flex items-baseline justify-center'>'';
-                    <span className='text-4xl font-bold text-white'>;
+                    <span className='text-4xl font-bold text-white'>
                       {plan.price}';
                     </span>'';
                     <span className='text-slate-300 ml-1'>{plan.period}</span>';
                   </div>'';
-                  <p className='text-slate-300 mt-2'>{plan.description}</p>;
+                  <p className='text-slate-300 mt-2'>{plan.description}</p>
                 </div>';
 '';
                 <ul className='space-y-4 mb-8'>';
                 )}
 '';
                 <div className='text-center mb-8'>'';
-                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
                   </h3>'';
                   <div className='flex items-baseline justify-center'>'';
-                    <span className='text-4xl font-bold text-white'>;
+                    <span className='text-4xl font-bold text-white'>
                       {plan.price}
                     </span>'';
-                    <span className='text-slate-300 ml-1'>{plan.period}</span>;
+                    <span className='text-slate-300 ml-1'>{plan.period}</span>
                   </div>'';
-                  <p className='text-slate-300 mt-2'>{plan.description}</p>;
-                </div>;
+                  <p className='text-slate-300 mt-2'>{plan.description}</p>
+                </div>
 '';
-                <ul className='space-y-4 mb-8'>;
+                <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='flex items-center'>'';
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-slate-300'>{feature}</span>;
-                    </li>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-slate-300'>{feature}</span>
+                    </li>
                   ))}
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
                 </ul>';
-                <a''`;
+                <a''`
                   href='mailto:kleber@ziontechgroup.com?subject=AI Legal Document Analyzer - {plan.name} Plan'``;
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${;
 ';
@@ -371,7 +371,7 @@ import {}
                       ? 'bg-white text-blue-600 hover:bg-slate-100'''`;
                       : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'``;
                 </ul>;
-                <a'';
+                <a''
                   href='mailto:kleber@ziontechgroup.com?subject=AI Legal Document Analyzer - {plan.name} Plan'`;
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
                     plan.popular';
@@ -380,11 +380,11 @@ import {}
                   }`}
                 >;
                   Get Started;
-                </a>;
-              </motion.div>;
+                </a>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
       </section>';
       {/* Contact Section */}'';
@@ -397,12 +397,12 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Legal Practice?';
-      </section>;
+      </section>
       {/* Contact Section */}'';
       <section className='py-20 bg-slate-800/30'>'';
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 20 }}
@@ -410,13 +410,13 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Legal Practice?;
             </h2>'';
-            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Contact us today to learn how AI document analysis can streamline;
               your workflow;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
           </motion.div>';
 '';
@@ -431,7 +431,7 @@ import {}
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4'>'';
                 <Phone className='w-8 h-8 text-white'  />';
               </div>'';
-              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>;
+              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>
             </motion.div>';
             <motion.div'';
               className='text-center';
@@ -443,9 +443,9 @@ import {}
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4'>'';
                 <Mail className='w-8 h-8 text-white'  />';
               </div>'';
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Email Us';
-              </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>;
+              </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>
             </motion.div>';
             <motion.div'';
               className='text-center';
@@ -457,11 +457,11 @@ import {}
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4'>'';
                 <MapPin className='w-8 h-8 text-white'  />';
               </div>'';
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Visit Us';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <motion.div'';
               className='text-center'';
               initial={{ opacity: 0, y: 20 }}
@@ -470,10 +470,10 @@ import {}
               viewport={{ once: true }}
             >'';
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4'>'';
-                <Phone className='w-8 h-8 text-white'  />;
+                <Phone className='w-8 h-8 text-white'  />
               </div>'';
-              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>;
-            </motion.div>;
+              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'              <p className='text-slate-300'>+1 302 464 0950</p>
+            </motion.div>
             <motion.div'';
               className='text-center'';
               initial={{ opacity: 0, y: 20 }}
@@ -482,12 +482,12 @@ import {}
               viewport={{ once: true }}
             >'';
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4'>'';
-                <Mail className='w-8 h-8 text-white'  />;
+                <Mail className='w-8 h-8 text-white'  />
               </div>'';
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Email Us;
-              </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>;
-            </motion.div>;
+              </h3>'              <p className='text-slate-300'>kleber@ziontechgroup.com</p>
+            </motion.div>
             <motion.div'';
               className='text-center'';
               initial={{ opacity: 0, y: 20 }}
@@ -496,19 +496,19 @@ import {}
               viewport={{ once: true }}
             >'';
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4'>'';
-                <MapPin className='w-8 h-8 text-white'  />;
+                <MapPin className='w-8 h-8 text-white'  />
               </div>'';
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Visit Us;
               </h3>'';
-              <p className='text-slate-300'>;
+              <p className='text-slate-300'>
                 364 E Main St STE 1008;
-                <br />;
+                <br />
                 Middletown DE 19709;
-              </p>            </motion.div>;
+              </p>            </motion.div>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
           </div>';
-          <motion.div'';
+          <motion.div''
             className='text-center mt-12';
           </div>;
           <motion.div'';
@@ -524,16 +524,16 @@ import {}
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl';
             >';
           >;
-            <a'';
+            <a''
               href='mailto:kleber@ziontechgroup.com?subject=AI Legal Document Analyzer Demo Request'';
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl'';
             >;
               Request Demo'';
-              <ArrowRight className='ml-2 w-5 h-5'  />            </a>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              <ArrowRight className='ml-2 w-5 h-5'  />            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   )};
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
 export default AILegalDocumentAnalyzer''`;

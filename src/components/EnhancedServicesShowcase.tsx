@@ -80,7 +80,7 @@ export const EnhancedServicesShowcase: React.FC = () => {;
       color: 'from-blue-500 to-cyan-600',;
       glowColor: 'blue';
     },;
-    {;
+    {
       title: 'AI Sales Copilot',;
       description: 'Automate sales processes and boost conversion rates with AI',;
       price: 'From $1,500/month',;
@@ -96,7 +96,7 @@ export const EnhancedServicesShowcase: React.FC = () => {;
 ;
   const containerVariants = {;
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       transition: {;
         staggerChildren: 0.1;
@@ -104,7 +104,7 @@ export const EnhancedServicesShowcase: React.FC = () => {;
     };
   };
 ;
-const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
+const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3']
 ;
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);

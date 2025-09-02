@@ -1,7 +1,7 @@
 export default resourceMonitor;
 ;
 :pages.disabled/utils/resourceMonitor.tsx;
-interface ResourceError {;
+interface ResourceError {
   url: string;
    type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
    error: string;
@@ -129,7 +129,7 @@ class ResourceMonitor {}
   private handleResourceError (url: string,;
 ,;
   type: ResourceError['type],:pages.disabled/utils/resourceMonitor.tsx;
-    error: string) {;
+    error: string) {
     const resourceError: ResourceError = {;
       url,;
       type,;

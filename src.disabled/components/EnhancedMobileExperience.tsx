@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from,;
   react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Smartphone,; Tablet,; Monitor,; MousePointer,; Hand,; Wifi,; Battery,; Settings,; X,; Check,; AlertTriangle,; Info,; RotateCcw,; ZoomIn,; ZoomOut,; Maximize,; Minimize,; Smartphone as PhoneIcon,; Tablet as TabletIcon,; Monitor as DesktopIcon,; Activity; } from;
-  'lucide-react'; ; interface MobileSettings {;
+  'lucide-react'; ; interface MobileSettings {
    touchOptimization: boolean;
    gestureNavigation: boolean;
    mobileFirst: boolean;
@@ -15,7 +15,7 @@ import React, { useState, useEffect, useCallback, useMemo } from,;
    viewportMode: 'mobile' | 'tablet' | 'desktop' | 'auto';
    touchSensitivity: 'low' | 'medium' | 'high;
    mobileAnimations: boolean;
-}; interface MobileExperienceProps {;
+}; interface MobileExperienceProps {
    enabled?: boolean;
    showControls?: boolean;
    onSettingsChange?: (settings: MobileSettings) => void;

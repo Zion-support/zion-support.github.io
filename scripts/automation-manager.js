@@ -99,7 +99,7 @@ class AutomationManager {;
   ⚠️  Some processes are not running. Use 'check' to see details.;
   ');
       }
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error('❌ Failed to get status: , error.message);
     }
 ;
@@ -134,7 +134,7 @@ class AutomationManager {;
       // // // // // // // console.log(,;
   ✅ All automation processes stopped;
   ');
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error('❌ Failed to stop processes: , error.message);
     }
 ;
@@ -191,7 +191,7 @@ class AutomationManager {;
       // // // // // // // console.log(,;
   ✅ All automation processes deleted;
   ');
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error('❌ Failed to delete processes: , error.message);
     }
 ;
@@ -258,7 +258,7 @@ class AutomationManager {;
       // // // // // // // console.log(,;
   \n💡 Use 'fix' command to automatically restart failed processes;
   ');
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error('❌ Failed to check health: , error.message);
     }
 ;
@@ -304,7 +304,7 @@ class AutomationManager {;
       // // // // // // // console.log(,;
   ✅ Auto-fix completed;
   ');
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error('❌ Failed to auto-fix: , error.message);
     }
 ;

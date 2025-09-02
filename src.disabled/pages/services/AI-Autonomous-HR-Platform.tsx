@@ -1,80 +1,80 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-;
+
 const AIAutonomousHRPlatform: React.FC = () => {;
   return (;
     <>;
-      <Helmet>;
-        <title>AI Autonomous HR Platform | Zion Tech Group</title>;
-        <meta name='description' content='Revolutionary AI-powered HR platform that autonomously manages recruitment, employee engagement, performance tracking, and workforce optimization with intelligent automation and predictive analytics.' />;
-        <meta name='keywords' content='AI HR platform, autonomous HR, recruitment automation, employee management, HR analytics, workforce optimization' />;
-        <link rel='canonical' href='https://ziontechgroup.com/services/ai-autonomous-hr-platform' />;
-      </Helmet>;
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>;
+      <Helmet>
+        <title>AI Autonomous HR Platform | Zion Tech Group</title>
+        <meta name='description' content='Revolutionary AI-powered HR platform that autonomously manages recruitment, employee engagement, performance tracking, and workforce optimization with intelligent automation and predictive analytics.' />
+        <meta name='keywords' content='AI HR platform, autonomous HR, recruitment automation, employee management, HR analytics, workforce optimization' />
+        <link rel='canonical' href='https://ziontechgroup.com/services/ai-autonomous-hr-platform' />
+      </Helmet>
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>
         {/* Hero Section */}
-        <motion.section;
+        <motion.section
           className='relative py-20 px-4';
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >;
-          <div className='max-w-7xl mx-auto text-center'>;
-            <motion.div;
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
               className='mb-8';
             >;
-              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-6'>;
-                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' />;
-                </svg>;
-              </div>;
-              <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-6'>
+                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' />
+                </svg>
+              </div>
+              <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 AI Autonomous HR Platform;
-              </h1>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              </h1>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Revolutionary AI-powered HR platform that autonomously manages recruitment, employee engagement, performance tracking, and workforce optimization with intelligent automation and predictive analytics.;
-              </p>;
-            </motion.div>;
-            <motion.div;
+              </p>
+            </motion.div>
+            <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
               className='flex flex-col sm:flex-row gap-4 justify-center';
             >;
-              <a;
+              <a
                 href='tel:+13024640950';
                 className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300';
               >;
                 Call Now: +1 302 464 0950;
-              </a>;
-              <a;
+              </a>
+              <a
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300';
               >;
                 Email Us;
-              </a>;
-            </motion.div>;
-          </div>;
-        </motion.section>;
+              </a>
+            </motion.div>
+          </div>
+        </motion.section>
         {/* Features Section */}
-        <motion.section;
+        <motion.section
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+          <div className='max-w-7xl mx-auto'>
+            <div className='text-center mb-16'>
+              <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Comprehensive AI-driven HR capabilities that transform your human resources operations;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {[;
                 {;
                   icon: '🎯',;
@@ -107,36 +107,36 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                   description: 'Comprehensive HR insights with predictive modeling, trend analysis, and strategic recommendations.';
                 }
               ].map((feature, index) => (;
-                <motion.div;
+                <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20';
                 >;
-                  <div className='text-4xl mb-4'>{feature.icon}</div>;
-                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>;
-                  <p className='text-gray-300'>{feature.description}</p>;
-                </motion.div>;
+                  <div className='text-4xl mb-4'>{feature.icon}</div>
+                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
+                  <p className='text-gray-300'>{feature.description}</p>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </motion.section>;
+            </div>
+          </div>
+        </motion.section>
         {/* Pricing Section */}
-        <motion.section;
+        <motion.section
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>;
-              <p className='text-xl text-gray-300'>Choose the perfect plan for your HR needs</p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
-              {[;
+          <div className='max-w-7xl mx-auto'>
+            <div className='text-center mb-16'>
+              <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>
+              <p className='text-xl text-gray-300'>Choose the perfect plan for your HR needs</p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {[
                 {;
                   name: 'Starter',;
                   price: '$99',;
@@ -170,7 +170,7 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                   price: '$799',;
                   period: '/month',;
                   description: 'For large organizations',;
-                  features: [;
+                  features: [
                     'Unlimited employees',;
                     'Full AI capabilities',;
                     'Custom AI models',;
@@ -180,7 +180,7 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                   ];
                 }
               ].map((plan, index) => (;
-                <motion.div;
+                <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
@@ -190,29 +190,29 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                   } relative`}
                 >;
                   {plan.popular && (;
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
-                      <span className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                      <span className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                         Most Popular;
-                      </span>;
-                    </div>;
+                      </span>
+                    </div>
                   )}
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>;
-                  <p className='text-gray-300 mb-6'>{plan.description}</p>;
-                  <div className='mb-6'>;
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>;
-                    <span className='text-gray-300'>{plan.period}</span>;
-                  </div>;
-                  <ul className='space-y-3 mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
+                  <p className='text-gray-300 mb-6'>{plan.description}</p>
+                  <div className='mb-6'>
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>
+                    <span className='text-gray-300'>{plan.period}</span>
+                  </div>
+                  <ul className='space-y-3 mb-8'>
                     {plan.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex} className='flex items-center text-gray-300'>;
-                        <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>;
-                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />;
-                        </svg>;
+                      <li key={featureIndex} className='flex items-center text-gray-300'>
+                        <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>
+                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
+                        </svg>
                         {feature}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                  <a;
+                  </ul>
+                  <a
                     href='tel:+13024640950';
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${;
                       plan.popular;
@@ -221,31 +221,31 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                     }`}
                   >;
                     Get Started;
-                  </a>;
-                </motion.div>;
+                  </a>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </motion.section>;
+            </div>
+          </div>
+        </motion.section>
         {/* Benefits Section */}
-        <motion.section;
+        <motion.section
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+          <div className='max-w-7xl mx-auto'>
+            <div className='text-center mb-16'>
+              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Transform your HR operations with AI-powered automation and intelligent workforce management;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>;
-              <div>;
-                <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>;
-                <div className='space-y-6'>;
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
+              <div>
+                <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
+                <div className='space-y-6'>
                   {[;
                     'Reduce recruitment time by 70% with AI automation',;
                     'Improve employee retention by 45% through predictive analytics',;
@@ -254,77 +254,77 @@ const AIAutonomousHRPlatform: React.FC = () => {;
                     'Boost employee satisfaction by 60% with engagement optimization',;
                     'Scale HR operations across unlimited employees efficiently';
                   ].map((benefit, index) => (;
-                    <div key={index} className='flex items-start'>;
-                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4 mt-1'>;
-                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>;
-                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />;
-                        </svg>;
-                      </div>;
-                      <p className='text-gray-300 text-lg'>{benefit}</p>;
-                    </div>;
+                    <div key={index} className='flex items-start'>
+                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4 mt-1'>
+                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
+                        </svg>
+                      </div>
+                      <p className='text-gray-300 text-lg'>{benefit}</p>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-              <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20'>;
-                <h4 className='text-2xl font-bold text-white mb-6'>HR Impact</h4>;
-                <div className='space-y-4'>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>Recruitment Time</span>;
-                    <span className='text-green-400 font-bold'>-70%</span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>Employee Retention</span>;
-                    <span className='text-green-400 font-bold'>+45%</span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>Hiring Quality</span>;
-                    <span className='text-green-400 font-bold'>+80%</span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>Time Savings</span>;
-                    <span className='text-green-400 font-bold'>25+ hrs/week</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </motion.section>;
+                </div>
+              </div>
+              <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20'>
+                <h4 className='text-2xl font-bold text-white mb-6'>HR Impact</h4>
+                <div className='space-y-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-300'>Recruitment Time</span>
+                    <span className='text-green-400 font-bold'>-70%</span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-300'>Employee Retention</span>
+                    <span className='text-green-400 font-bold'>+45%</span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-300'>Hiring Quality</span>
+                    <span className='text-green-400 font-bold'>+80%</span>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-300'>Time Savings</span>
+                    <span className='text-green-400 font-bold'>25+ hrs/week</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
         {/* CTA Section */}
-        <motion.section;
+        <motion.section
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >;
-          <div className='max-w-4xl mx-auto text-center'>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
+          <div className='max-w-4xl mx-auto text-center'>
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your HR?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>;
+            </h2>
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of HR teams already using our AI-powered platform to revolutionize their human resources operations.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a;
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
                 href='tel:+13024640950';
                 className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300';
               >;
                 Call +1 302 464 0950;
-              </a>;
-              <a;
+              </a>
+              <a
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300';
               >;
                 Email kleber@ziontechgroup.com;
-              </a>;
-            </div>;
-            <div className='mt-8 text-gray-400'>;
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
-            </div>;
-          </div>;
-        </motion.section>;
-      </div>;
-    </>;
+              </a>
+            </div>
+            <div className='mt-8 text-gray-400'>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
+          </div>
+        </motion.section>
+      </div>
+    </>
   );
 };
 ;

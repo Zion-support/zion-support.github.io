@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import EquipmentPage from './EquipmentPage';
-;
+
 describe('EquipmentPage', () => {;
   it('renders without crashing', () => {;
     render(<EquipmentPage />);

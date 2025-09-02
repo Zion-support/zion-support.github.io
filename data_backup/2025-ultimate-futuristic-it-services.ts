@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface UltimateFuturisticITService {;
+export interface UltimateFuturisticITService {
   id: string;
    name: string;
    tagline: string;

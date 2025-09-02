@@ -22,7 +22,7 @@ const cron = require(;
 const https = require(;
   'https');
 ;
-class NetlifyBuildAutomation {;
+class NetlifyBuildAutomation {
   constructor() {;
     this.config = {;
       netlifySiteId: process.env.NETLIFY_SITE_ID,;
@@ -277,7 +277,7 @@ class NetlifyBuildAutomation {;
     }
   }
 ;
-  async triggerBuild() {;
+  async triggerBuild() {
     try {;
       this.log('Triggering new Netlify build...;
   ');
@@ -909,7 +909,7 @@ class NetlifyBuildAutomation {;
     }
   }
 ;
-  async optimizeBuildProcess() {;
+  async optimizeBuildProcess() {
     this.log(;
   'Optimizing build process...');
 ;
@@ -938,7 +938,7 @@ class NetlifyBuildAutomation {;
       // Add optimized build script;
       const packageJson = JSON.parse(fs.readFileSync('package.json;
   ',utf8'));
-      if (packageJson.scripts) {;
+      if (packageJson.scripts) {
         packageJson.scripts[;
   'build: optimized'] =;
   'NODE_OPTIONS='--max-old-space-size=4096' npm run build;
@@ -1127,7 +1127,7 @@ class NetlifyBuildAutomation {;
       const packageJson = JSON.parse(fs.readFileSync(;
   'package.json',utf8;
   '));
-      if (packageJson.scripts) {;
+      if (packageJson.scripts) {
         packageJson.scripts['build: fast;
   '] =;
           'NODE_OPTIONS='--max-old-space-size=4096' npm run build;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ComprehensiveServicesLanding2026 from './ComprehensiveServicesLanding2026';
-;
+
 describe('ComprehensiveServicesLanding2026', () => {;
   it('renders without crashing', () => {;
     render(<ComprehensiveServicesLanding2026 />);

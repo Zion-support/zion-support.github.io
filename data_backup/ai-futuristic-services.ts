@@ -1,4 +1,4 @@
-export interface AIFuturisticService {;
+export interface AIFuturisticService {
   id: string;
    name: string;
    tagline: string;

@@ -16,7 +16,7 @@ class CodeQualityMonitor {;
     // // // // // // // // console.log(logEntry.trim());
     try {;
       fs.appendFileSync(this.logFile, logEntry);
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error(;
   'Failed to write to log file:', error.message);
     this.metrics = {;
@@ -512,7 +512,7 @@ class CodeQualityMonitor {;
     this.log(;
   'Quality rules update completed');
   findSourceFiles() {;
-    const extensions = [;
+    const extensions = [
   '.ts',;
   '.tsx',;
   '.js',;

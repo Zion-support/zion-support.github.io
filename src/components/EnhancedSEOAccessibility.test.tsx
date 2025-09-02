@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedSEOAccessibility from './EnhancedSEOAccessibility';
-;
+
 describe('EnhancedSEOAccessibility', () => {;
   it('renders without crashing', () => {;
     render(<EnhancedSEOAccessibility />);

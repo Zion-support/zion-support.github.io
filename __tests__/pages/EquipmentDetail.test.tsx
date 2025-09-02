@@ -4,7 +4,7 @@ import { render, screen, fireEvent, act } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';
 import EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail';
-;
+
 // Mock functions need to be declared before they are used in mock factories;
 const mockNavigate = jest.fn();
 const mockDispatch = jest.fn();
@@ -58,7 +58,7 @@ describe(;
       JSON.parse(JSON.stringify(originalSampleEquipment));
     );
 ;
-    if (!SAMPLE_EQUIPMENT[testProductId]) {;
+    if (!SAMPLE_EQUIPMENT[testProductId]) {
       SAMPLE_EQUIPMENT[testProductId] = {;
         id: testProductId,;
         name:,;

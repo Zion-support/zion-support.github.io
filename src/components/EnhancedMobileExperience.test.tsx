@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedMobileExperience from './EnhancedMobileExperience';
-;
+
 describe('EnhancedMobileExperience', () => {;
   it('renders without crashing', () => {;
     render(<EnhancedMobileExperience />);

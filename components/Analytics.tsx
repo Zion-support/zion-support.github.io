@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-;
+
 // Declare gtag function for TypeScript;
-declare global {;
+declare global {
   function gtag(...args: any[]): void;
 }
 ;

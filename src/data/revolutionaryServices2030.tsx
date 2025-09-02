@@ -1,4 +1,4 @@
-export interface RevolutionaryService2030 {;
+export interface RevolutionaryService2030 {
   id: string;
    title: string;
    description: string;
@@ -10,7 +10,7 @@ export interface RevolutionaryService2030 {;
    currency: string;
    pricingModel: string;
    marketPrice: string;
-}; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; technologies: string[]; integrations: string[]; support: string[]; website: string; contactEmail: string; phone: string; email: string; website: string; address: string} ; export interface MicroSaasService {;
+}; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; technologies: string[]; integrations: string[]; support: string[]; website: string; contactEmail: string; phone: string; email: string; website: string; address: string} ; export interface MicroSaasService {
   id: number;
    name: string;
    category: string;
@@ -34,7 +34,7 @@ export interface RevolutionaryService2030 {;
    innovationLevel: string;
    marketSize: string;
    growthRate: string;
-} ; export interface ITService {;
+} ; export interface ITService {
   id: number;
    name: string;
    category: string;

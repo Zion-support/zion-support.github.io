@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-;
+
 console.log('🚀 Advanced Build Optimizer Starting...');
 ;
 class BuildOptimizer {;
@@ -48,7 +48,7 @@ class BuildOptimizer {;
       let config = fs.readFileSync(nextConfigPath, 'utf8');
 ;
       // Add performance optimizations;
-      const optimizations = [;
+      const optimizations = [
         'experimental: { optimizeCss: true }',;
         'swcMinify: true',;
         'compress: true',;
@@ -72,7 +72,7 @@ class BuildOptimizer {;
     }
   }
 ;
-  async optimizeTypeScriptConfig() {;
+  async optimizeTypeScriptConfig() {
     console.log('🔧 Optimizing TypeScript configuration...');
 ;
     const tsConfigPath = 'tsconfig.json';
@@ -98,7 +98,7 @@ class BuildOptimizer {;
     }
   }
 ;
-  async optimizePackageScripts() {;
+  async optimizePackageScripts() {
     console.log('🔧 Optimizing package.json scripts...');
 ;
     const packagePath = 'package.json';
@@ -126,7 +126,7 @@ class BuildOptimizer {;
     }
   }
 ;
-  async createOptimizedBuildScript() {;
+  async createOptimizedBuildScript() {
     console.log('🔧 Creating optimized build script...');
 ;
     const buildScript = `#!/bin/bash;
@@ -173,7 +173,7 @@ fi;
     this.optimizations.push('Created optimized build script');
   }
 ;
-  async generatePerformanceReport() {;
+  async generatePerformanceReport() {
     console.log('📊 Generating performance report...');
 ;
     const report = {;
@@ -181,7 +181,7 @@ fi;
       optimizations: this.optimizations,;
       errors: this.errors,;
       warnings: this.warnings,;
-      recommendations: [;
+      recommendations: [
         'Use npm run build:optimized for production builds',;
         'Enable SWC minification for faster builds',;
         'Use incremental TypeScript compilation',;

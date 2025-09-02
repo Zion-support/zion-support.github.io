@@ -1,18 +1,18 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
-;
-const FAQ: React.FC = () => {;
+
+const FAQ: React.FC = () => {
   const [openItems, setOpenItems] = React.useState<number[]>([]);
 ;
   const toggleItem = (index: number) => {;
     setOpenItems(prev =>;
       prev.includes(index);
         ? prev.filter(i => i !== index);
-        : [...prev, index];
+        : [...prev, index]
     );
   };
 ;
-  const faqs = [;
+  const faqs = [
     {;
       question: 'What services does Zion Tech Group offer?',;
       answer: 'We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.';
@@ -56,26 +56,26 @@ const FAQ: React.FC = () => {;
   ];
 ;
   return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>;
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         {/* Header */}
-        <motion.div;
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className='text-center mb-12';
         >;
-          <div className='flex items-center justify-center mb-4'>;
-            <HelpCircle className='h-8 w-8 text-blue-600 mr-3' />;
-            <h1 className='text-4xl font-bold text-gray-900'>Frequently Asked Questions</h1>;
-          </div>;
-          <p className='text-xl text-gray-600 max-w-2xl mx-auto'>;
+          <div className='flex items-center justify-center mb-4'>
+            <HelpCircle className='h-8 w-8 text-blue-600 mr-3' />
+            <h1 className='text-4xl font-bold text-gray-900'>Frequently Asked Questions</h1>
+          </div>
+          <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
             Find answers to common questions about our services, processes, and solutions.;
-          </p>;
-        </motion.div>;
+          </p>
+        </motion.div>
         {/* FAQ Items */}
-        <div className='space-y-4'>;
+        <div className='space-y-4'>
           {faqs.map((faq, index) => (;
-            <motion.div;
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,71 +86,71 @@ const FAQ: React.FC = () => {;
                 onClick={() => toggleItem(index)}
                 className='w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors';
               >;
-                <span className='text-lg font-semibold text-gray-900 pr-4'>;
+                <span className='text-lg font-semibold text-gray-900 pr-4'>
                   {faq.question}
-                </span>;
-                <ChevronDown;
+                </span>
+                <ChevronDown
                   className={`h-5 w-5 text-gray-500 transition-transform ${;
                     openItems.includes(index) ? 'rotate-180' : '';
                   }`}
                 />;
-              </button>;
+              </button>
               {openItems.includes(index) && (;
-                <motion.div;
+                <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   className='px-6 pb-4';
                 >;
-                  <p className='text-gray-600 leading-relaxed'>;
+                  <p className='text-gray-600 leading-relaxed'>
                     {faq.answer}
-                  </p>;
-                </motion.div>;
+                  </p>
+                </motion.div>
               )}
-            </motion.div>;
+            </motion.div>
           ))}
-        </div>;
+        </div>
         {/* Contact Section */}
-        <motion.div;
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           className='mt-16 bg-white rounded-lg shadow-sm border border-gray-200 p-8';
         >;
-          <div className='text-center'>;
-            <h2 className='text-2xl font-bold text-gray-900 mb-4'>;
+          <div className='text-center'>
+            <h2 className='text-2xl font-bold text-gray-900 mb-4'>
               Still have questions?;
-            </h2>;
-            <p className='text-gray-600 mb-6'>;
+            </h2>
+            <p className='text-gray-600 mb-6'>
               Our team is here to help. Get in touch with us for personalized assistance.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a;
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
                 href='/contact';
                 className='inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors';
               >;
-                <MessageCircle className='h-5 w-5 mr-2' />;
+                <MessageCircle className='h-5 w-5 mr-2' />
                 Contact Us;
-              </a>;
-              <a;
+              </a>
+              <a
                 href='tel:+13024640950';
                 className='inline-flex items-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors';
               >;
-                <Phone className='h-5 w-5 mr-2' />;
+                <Phone className='h-5 w-5 mr-2' />
                 Call Us;
-              </a>;
-              <a;
+              </a>
+              <a
                 href='mailto:kleber@ziontechgroup.com';
                 className='inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors';
               >;
-                <Mail className='h-5 w-5 mr-2' />;
+                <Mail className='h-5 w-5 mr-2' />
                 Email Us;
-              </a>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
 };
 ;

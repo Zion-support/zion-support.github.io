@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaasSolution {;
+export interface InnovativeMicroSaasSolution {
   id: string;
    name: string;
    tagline: string;
@@ -45,7 +45,7 @@ export interface InnovativeMicroSaasSolution {;
   'Trade Secret' |;
   'Open Source';
   aiCapabilities: string[];
-marketDisruption: string;const contact = {;
+marketDisruption: string;const contact = {
   mobile:;
   '+1 302 464 0950,;
   email:,;

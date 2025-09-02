@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import EnhancedHomePage from './EnhancedHomePage';
-;
+
 describe('EnhancedHomePage', () => {;
   it('renders without crashing', () => {;
     render(<EnhancedHomePage />);

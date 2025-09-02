@@ -17,7 +17,7 @@ import {}
   Award'''';
 } from 'lucide-react'';
 import { Link } from 'react-router-dom';
-;
+
 // Import the new service data;
 ;
 ;
@@ -98,7 +98,7 @@ export function ComprehensiveServicesShowcase() {}
   }';';
   return ('''';
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'''';
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header Section */}''';
         <motion.div '''';
           className='text-center mb-16''';
@@ -112,13 +112,13 @@ export function ComprehensiveServicesShowcase() {}
 }}
           transition={{ duration: 0.6 }}''';
         >'''';
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             Revolutionary 2027 Services''';
           </h2>'''';
-          <p className='text-xl text-zion-cyan-light max-w-3xl mx-auto'>;
+          <p className='text-xl text-zion-cyan-light max-w-3xl mx-auto'>
             Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and innovative AI services;
             designed to transform your business and drive exponential growth.;
-          </p>;
+          </p>
           ''';
           {/* Contact Information */}'''';
           <div className='mt-8 p-6 bg-zion-slate-dark/50 rounded-2xl border border-zion-cyan/20'>'''';
@@ -134,21 +134,21 @@ export function ComprehensiveServicesShowcase() {}
               </div>'''';
               <div className='flex items-center justify-center space-x-2'>'''';
                 <Award className='w-5 h-5 text-zion-cyan' />'''';
-                <span className='text-white'>Proven Results</span>;
+                <span className='text-white'>Proven Results</span>
               </div>''';
             </div>'''';
             <div className='mt-4 text-center'>'''';
-              <p className='text-zion-cyan-light'>;
+              <p className='text-zion-cyan-light'>
                 <strong>Contact:</strong> +1 302 464 0950 | kleber@ziontechgroup.com''';
               </p>'''';
-              <p className='text-zion-cyan-light text-sm'>;
+              <p className='text-zion-cyan-light text-sm'>
                 364 E Main St STE 1008 Middletown DE 19709;
-              </p>;
-            </div>;
-          </div>;
-        </motion.div>;
+              </p>
+            </div>
+          </div>
+        </motion.div>
         {/* Category Navigation */}''';
-        <motion.div '''';
+        <motion.div ''''
           className='flex flex-wrap justify-center gap-4 mb-12''';
           initial = {}
   { opacity: 0,;
@@ -176,11 +176,11 @@ export function ComprehensiveServicesShowcase() {}
               }`}
             >;
               {category.icon}
-              <span>{category.name}</span>;
+              <span>{category.name}</span>
             </button>) ) }
-        </motion.div>;
+        </motion.div>
         {/* Services Grid */}''';
-        <motion.div'''';
+        <motion.div''''
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'''';
           variants={containerVariants}'''';
           initial='hidden'''';
@@ -209,18 +209,18 @@ export function ComprehensiveServicesShowcase() {}
                 <div className='flex items-start justify-between mb-4'>'''';
                   <div className='text-4xl'>{service.icon}</div>''';
                   {service.popular && ('''';
-                    <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium'>;
+                    <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium'>
                       Popular;
                     </div>) }
-                </div>;
+                </div>
 ''';
                 {/* Service Info */}'''';
-                <h3 className='text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors'>;
+                <h3 className='text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors'>
                   {service.name}''';
                 </h3>'''';
-                <p className='text-zion-cyan-light text-sm mb-4 line-clamp-2'>;
+                <p className='text-zion-cyan-light text-sm mb-4 line-clamp-2'>
                   {service.tagline}
-                </p>;
+                </p>
 ''';
                 {/* Pricing */}'''';
                 <div className='flex items-center justify-between mb-4'>'''';
@@ -232,26 +232,26 @@ export function ComprehensiveServicesShowcase() {}
                   <div className='flex items-center space-x-1'>'''';
                     <Star className='w-4 h-4 text-yellow-400 fill-current' />'''';
                     <span className='text-white text-sm'>{service.rating}</span>'''';
-                    <span className='text-zion-cyan-light text-sm'>({service.reviews})</span>;
-                  </div>;
-                </div>;
+                    <span className='text-zion-cyan-light text-sm'>({service.reviews})</span>
+                  </div>
+                </div>
 ''';
                 {/* Features Preview */}'''';
                 <div className='mb-4'>'''';
-                  <div className='flex flex-wrap gap-2'>;
+                  <div className='flex flex-wrap gap-2'>
                     {service.features.slice(0, 3).map((feature, index) => (;
-                      <span''';
+                      <span'''
                         key={index}'''';
                         className='bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full '>;
                         {feature}
-                      </span>;
+                      </span>
                     ))}''';
                     {service.features.length > 3 && ('''';
-                      <span className='bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full'>;
+                      <span className='bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full'>
                         +{service.features.length-3} more;
                       </span>) }
-                  </div>;
-                </div>;
+                  </div>
+                </div>
 ''';
                 {/* Market Info */}'''';
                 <div className='mb-4 p-3 bg-zion-slate/30 rounded-lg'>'''';
@@ -261,25 +261,25 @@ export function ComprehensiveServicesShowcase() {}
                   </div>'''';
                   <div className='flex items-center justify-between text-xs mt-1'>'''';
                     <span className='text-zion-cyan-light'>Growth Rate:</span>'''';
-                    <span className='text-green-400 font-medium'>{service.growthRate}</span>;
-                  </div>;
-                </div>;
+                    <span className='text-green-400 font-medium'>{service.growthRate}</span>
+                  </div>
+                </div>
 ''';
                 {/* CTA Button */}'''';
-                <div className='flex items-center justify-between'>;
+                <div className='flex items-center justify-between'>
                   <Link''';
                     to={service.link}'''';
                     className='flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105 '>''';
                     <span>Learn More</span>'''';
                     <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />''';
                   </Link>'''';
-                  <div className='text-xs text-zion-cyan-light'>;
+                  <div className='text-xs text-zion-cyan-light'>
                     {service.trialDays} day trial;
-                  </div>;
-                </div>;
-              </motion.div>;
-            </motion.div>;) ) }
-        </motion.div>;
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>) ) }
+        </motion.div>
         {/* Call to Action */}''';
         <motion.div '''';
           className='text-center mt-16''';
@@ -297,30 +297,30 @@ export function ComprehensiveServicesShowcase() {}
 }}''';
         >'''';
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>'''';
-            <h3 className='text-2xl font-bold text-white mb-4'>;
+            <h3 className='text-2xl font-bold text-white mb-4'>
               Ready to Get Started?''';
             </h3>'''';
-            <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>;
+            <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>
               Join thousands of businesses already transforming their operations with our revolutionary services.;
               Get expert consultation and custom implementation tailored to your needs.''';
             </p>'''';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''';
-              <Link'''';
+              <Link''''
                 to='/contact'''';
                 className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 '>;
                 Schedule Consultation;
               </Link>''';
-              <a'''';
+              <a''''
                 href='tel:+13024640950'''';
                 className='bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 '>;
                 Call Now: +1 302 464 0950;
-              </a>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
       {/* Service Detail Modal */}
-      <AnimatePresence>;
+      <AnimatePresence>
         {selectedService && (''';
           <motion.div'''';
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4''';
@@ -346,12 +346,12 @@ export function ComprehensiveServicesShowcase() {}
               onClick={(e) => e.stopPropagation()}''';
             >'''';
               <div className='flex items-start justify-between mb-6'>'''';
-                <div className='text-6xl'>{selectedService.icon}</div>;
+                <div className='text-6xl'>{selectedService.icon}</div>
                 <button''';
                   onClick={() => setSelectedService(null)}'''';
                   className='text-zion-cyan-light hover:text-white transition-colors '>;
                   ✕;
-                </button>;
+                </button>
               </div>''';
 '''';
               <h2 className='text-3xl font-bold text-white mb-4'>{selectedService.name}</h2>'''';
@@ -364,11 +364,11 @@ export function ComprehensiveServicesShowcase() {}
                     {selectedService.features.map((feature, index) => ('''';
                       <li key={index} className='flex items-center space-x-2'>'''';
                         <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />'''';
-                        <span className='text-zion-cyan-light'>{feature}</span>;
-                      </li>;
+                        <span className='text-zion-cyan-light'>{feature}</span>
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
 ''';
                 <div>'''';
                   <h3 className='text-xl font-semibold text-white mb-4'>Service Details</h3>'''';
@@ -391,34 +391,34 @@ export function ComprehensiveServicesShowcase() {}
                     </div>'''';
                     <div className='flex justify-between'>'''';
                       <span className='text-zion-cyan-light'>Rating:</span>'''';
-                      <span className='text-white font-medium'>{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>;
-                    </div>;
+                      <span className='text-white font-medium'>{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>
+                    </div>
                   </div>''';
 '''';
                   <div className='mt-6'>'''';
                     <h4 className='text-lg font-semibold text-white mb-2'>ROI</h4>'''';
-                    <p className='text-zion-cyan-light text-sm'>{selectedService.roi}</p>;
-                  </div>;
-                </div>;
+                    <p className='text-zion-cyan-light text-sm'>{selectedService.roi}</p>
+                  </div>
+                </div>
               </div>''';
 '''';
               <div className='mt-8 pt-6 border-t border-zion-cyan/20'>'''';
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-                  <Link''';
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link'''
                     to={selectedService.link}'''';
                     className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-center '>;
                     Get Started Now;
                   </Link>''';
-                  <a'''';
+                  <a''''
                     href='tel:+13024640950'''';
                     className='bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center '>;
                     Call for Consultation;
-                  </a>;
-                </div>;
-              </div>;
-            </motion.div>;
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>) }
-      </AnimatePresence>;
-    </section>;
+      </AnimatePresence>
+    </section>
   )}''`;
 ''`'"`;

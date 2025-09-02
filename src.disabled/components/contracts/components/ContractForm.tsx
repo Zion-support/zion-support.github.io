@@ -1,4 +1,4 @@
-export type ContractFormValues = z.infer<typeof formSchema>; interface ContractFormProps {;
+export type ContractFormValues = z.infer<typeof formSchema> interface ContractFormProps {;
    talent: TalentProfile;
    clientName: string;
    initialValues?: ContractFormValues;

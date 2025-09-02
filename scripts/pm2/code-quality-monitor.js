@@ -22,7 +22,7 @@ class CodeQualityMonitor {;
 ;
     try {;
       fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {;
+    } catch (error) {
   async analyzeFile(filePath) {;
     try {;
       const content = fs.readFileSync(filePath,utf8;
@@ -163,7 +163,7 @@ class CodeQualityMonitor {;
     const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0);
 ;
     const issuesByType = { /* empty */ };
-    const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+    const issuesBySeverity = { low: 0, medium: 0, high: 0 }
 ;
     analyses.forEach(analysis => {;
       analysis.issues.forEach(issue => {;

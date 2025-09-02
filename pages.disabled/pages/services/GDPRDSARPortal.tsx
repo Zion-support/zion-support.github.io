@@ -14,14 +14,14 @@ export default function GDPRDSARPortal(...args: any[]): any {return()    <div cl
           <div className='max-w-3xl'>'';
             <h1 className='text-3xl sm:text-5xl font-bold flex items-center gap-3'>'';
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
-              <Shield className='w-8 h-8 text-cyan-400'  /> GDPR/CCPA DSAR Portal'</h1>''            <p className='mt-4 text-slate-300'>;
+              <Shield className='w-8 h-8 text-cyan-400'  /> GDPR/CCPA DSAR Portal'</h1>''            <p className='mt-4 text-slate-300'>
               Launch a branded privacy request portal with ID verification,;
               workflow, SLAs, redaction, and audit-ready exports. Integrates;
               with common CRMs and ticketing tools.;
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
             </p>';
 '';
-            <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>;
+            <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>
               {[;
                 {,;
   title: 'Identity verification & consent,';
@@ -47,8 +47,8 @@ export default function GDPRDSARPortal(...args: any[]): any {return()    <div cl
                   <div className='flex items-center gap-2 text-cyan-300 font-semibold'>'';
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
                     <CheckCircle className='w-4 h-4'  /> {f.title}';
-                  </div>'                  <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>;
-                </div>;
+                  </div>'                  <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>
+                </div>
               ))}
             </div>';
 '';
@@ -66,19 +66,19 @@ export default function GDPRDSARPortal(...args: any[]): any {return()    <div cl
                 target='_blank'';
                 rel='noreferrer'';
               >'';
-                OneTrust pricing <ExternalLink className='w-3 h-3'  />;
+                OneTrust pricing <ExternalLink className='w-3 h-3'  />
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
               </a>'<a''                className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-2  00'';
                 href='https://transcend.io/pricing/'';
                 target='_blank'';
                 rel='noreferrer'';
-              >'                Transcend pricing <ExternalLink className='w-3 h-3'  />;
-              </a>;
+              >'                Transcend pricing <ExternalLink className='w-3 h-3'  />
+              </a>
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
             </div>';
 '';
             <div className='mt-10 flex flex-wrap gap-3'>';
-              <Link'';
+              <Link''
                 to='/contact'';
                 className='rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500';
               >;
@@ -93,10 +93,10 @@ export default function GDPRDSARPortal(...args: any[]): any {return()    <div cl
               >'';
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
                 <Phone className='w-4 h-4'  /> +1 302 464 0950;
-              </a>;
-            </div>;
+              </a>
+            </div>
           </div>'''          <div className='w-full lg:w-96 rounded-2xl border border-white/10 bg-white/5 p-6 h-max'>'';
-            <div className='text-sm text-slate-300'>;
+            <div className='text-sm text-slate-300'>
               Looking for our existing DSAR implementation page?;
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
             </div>'<Link''              to='/services/dsr-portal'';
@@ -104,11 +104,11 @@ export default function GDPRDSARPortal(...args: any[]): any {return()    <div cl
             >'';
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
               Go to DSAR Portal <ExternalLink className='w-3 h-3'  />'</Link>'            <div className='mt-6 text-xs text-slate-400'>              364 E Main St STE 1008, Middletown DE 19709;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/GDPRDSARPortal.tsx;
   )}'';
   '''';

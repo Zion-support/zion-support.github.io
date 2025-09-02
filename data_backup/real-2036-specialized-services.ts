@@ -1,4 +1,4 @@
-export type Real2036SpecializedService = {;
+export type Real2036SpecializedService = {
   id: string;
   name: string;
   tagline: string;
@@ -60,7 +60,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Autonomous systems',;
   'Cognitive computing',;
   'Energy-efficient AI'],;
-    technology[;
+    technology[
   'Neuromorphic chips',;
   'Spiking neural networks',;
   'Analog computing',;
@@ -108,7 +108,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Biofuel production',;
   'Environmental remediation',;
   'Agricultural optimization'],;
-    technology[;
+    technology[
   'CRISPR',;
   'Gene editing',;
   'DNA synthesis',;
@@ -156,7 +156,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Secure communications',;
   'Internet infrastructure',;
   'Government networks'],;
-    technology[;
+    technology[
   'Quantum protocols',;
   'Network standards',;
   'Security frameworks',;
@@ -204,7 +204,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Medical research',;
   'Gaming and entertainment',;
   'Human augmentation'],;
-    technology[;
+    technology[
   'EEG',;
   'Neural implants',;
   'Signal processing',;
@@ -252,7 +252,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Digital real estate',;
   'Educational experiences',;
   'Social platforms'],;
-    technology[;
+    technology[
   '3D graphics',;
   'Virtual reality',;
   'Augmented reality',;
@@ -300,7 +300,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Autonomous trucks',;
   'Delivery robots',;
   'Public transportation'],;
-    technology[;
+    technology[
   'Computer vision',;
   'Machine learning',;
   'Sensor fusion',;
@@ -348,7 +348,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Energy storage',;
   'Electronics',;
   'Manufacturing'],;
-    technology[;
+    technology[
   'Quantum computing',;
   'Machine learning',;
   'Materials science',;
@@ -396,7 +396,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Policy planning',;
   'Environmental research',;
   'Risk assessment'],;
-    technology[;
+    technology[
   'Machine learning',;
   'Climate models',;
   'Data analysis',;
@@ -444,7 +444,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Research applications',;
   'Commercial AI',;
   'Scientific computing'],;
-    technology[;
+    technology[
   'Quantum computing',;
   'Neural networks',;
   'Machine learning',;
@@ -494,7 +494,7 @@ integration: [;
   Training programs',;
   'Safety management',;
   'Customer experience'],;
-    technology: [;
+    technology: [
   'Space systems,;
   'Safety protocols',;
   'Training technology',;

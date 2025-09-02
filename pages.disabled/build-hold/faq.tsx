@@ -4,18 +4,18 @@ import type { NextPage } from;
   'next';MainLayout from;
   '../components/layout/MainLayout';
 import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
-  'lucide-react'';const FAQ: NextPage = () => {;
+  'lucide-react'';const FAQ: NextPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 ;
   const toggleItem = (index: number) => {;
     setOpenItems(prev =>;
       prev.includes(index);
         ? prev.filter(item => item !== index);
-        : [...prev, index];
+        : [...prev, index]
     );
   };
 ;
-  const faqCategories = [;
+  const faqCategories = [
     {;
       title:,;
   General Questions;
@@ -35,7 +35,7 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
     }, {;
       title: 'Services & Solutions,;
 ,;
-  questions: ['        {;
+  questions: ['        {
           question:;
   'What is micro SaaS development?, answer:,;
   Micro SaaS refers to small, focused software-as-a-service applications that solve specific business problems. These applications are typically lightweight, cost-effective, and designed to address niche market needs with minimal overhead.''        }, {;
@@ -51,7 +51,7 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
     }, {;
       title: 'Pricing & Billing,;
 ,;
-  questions: ['        {;
+  questions: ['        {
           question:;
   'How do you price your services?, answer:,;
   Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs.''        },;
@@ -68,7 +68,7 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
     }, {;
       title: 'Technical Support,;
 ,;
-  questions: ['        {;
+  questions: ['        {
           question:;
   'What kind of technical support do you provide?, answer:,;
   We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently.''        },;
@@ -88,54 +88,54 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
   return (;
     <MainLayout;
       title='Frequently Asked Questions - Zion Tech Group''      description='Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs.'''      keywords='FAQ, frequently asked questions, support, help, services, pricing, technical support''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Frequently Asked Questions</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Find answers to common questions about our services, pricing, and support. '              Can&apos;t find what you&apos;re looking for? Contact us directly.;
-            </p>;
-          </div>;
-        </section>;
+            </p>
+          </div>
+        </section>
         {/* FAQ Categories */}
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4 max-w-4xl'>'            {faqCategories.map((category, categoryIndex) => ('              <div key={categoryIndex} className='mb-12'>'                <h2 className='text-2xl font-bold text-gray-900 mb-6'>{category.title}</h2>'                <div className='space-y-4'>'                  {category.questions.map((item, itemIndex) => {'                    const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
 ;
                     return (;
                       <div key={itemIndex} className='border border-gray-200 rounded-lg'>'                        <button'                          className='w-full px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50 transition-colors                           onClick={() => toggleItem(globalIndex)}'>;
-                          <span className='font-semibold text-gray-900'>{item.question}</span>'                          {isOpen ? ('                            <ChevronUp className='w-5 h-5 text-gray-500' />'                          ) : ('                            <ChevronDown className='w-5 h-5 text-gray-500' />'                          )}'                        </button>;
+                          <span className='font-semibold text-gray-900'>{item.question}</span>'                          {isOpen ? ('                            <ChevronUp className='w-5 h-5 text-gray-500' />'                          ) : ('                            <ChevronDown className='w-5 h-5 text-gray-500' />'                          )}'                        </button>
                         {isOpen && (;
                           <div className='px-6 pb-4'>'                            <p className='text-gray-600 leading-relaxed'>{item.answer}</p>'                          </div>'                        )}
-                      </div>;
+                      </div>
                     );
                   })}
-                </div>;
-              </div>;
+                </div>
+              </div>
             ))}
-          </div>;
-        </section>;
+          </div>
+        </section>
         {/* Contact Support */}
-        <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Still Have Questions?</h2>'              <p className='text-lg text-gray-600 max-w-2xl mx-auto'>'                Our team is here to help. Contact us directly for personalized assistance.'              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto'>'              <div className='bg-white rounded-lg p-6 text-center shadow-lg'>'                <Phone className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Call Us</h3>'                <p className='text-gray-600 mb-4'>Speak directly with our support team</p>'                <a href='tel:+13024640950' className='text-blue-600 font-semibold hover:text-blue-700'>'                  +1 302 464 0950'                </a>;
-              </div>;
-              <div className='bg-white rounded-lg p-6 text-center shadow-lg'>'                <Mail className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Email Us</h3>'                <p className='text-gray-600 mb-4'>Send us your questions via email</p>'                <a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 font-semibold hover:text-blue-700'>'                  kleber@ziontechgroup.com'                </a>;
-              </div>;
-              <div className='bg-white rounded-lg p-6 text-center shadow-lg'>'                <MessageCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Live Chat</h3>'                <p className='text-gray-600 mb-4'>Chat with us in real-time</p>'                <button className='text-blue-600 font-semibold hover:text-blue-700'>'                  Start Chat'                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+        <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Still Have Questions?</h2>'              <p className='text-lg text-gray-600 max-w-2xl mx-auto'>'                Our team is here to help. Contact us directly for personalized assistance.'              </p>
+            </div>
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto'>'              <div className='bg-white rounded-lg p-6 text-center shadow-lg'>'                <Phone className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Call Us</h3>'                <p className='text-gray-600 mb-4'>Speak directly with our support team</p>'                <a href='tel:+13024640950' className='text-blue-600 font-semibold hover:text-blue-700'>'                  +1 302 464 0950'                </a>
+              </div>
+              <div className='bg-white rounded-lg p-6 text-center shadow-lg'>'                <Mail className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Email Us</h3>'                <p className='text-gray-600 mb-4'>Send us your questions via email</p>'                <a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 font-semibold hover:text-blue-700'>'                  kleber@ziontechgroup.com'                </a>
+              </div>
+              <div className='bg-white rounded-lg p-6 text-center shadow-lg'>'                <MessageCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Live Chat</h3>'                <p className='text-gray-600 mb-4'>Chat with us in real-time</p>'                <button className='text-blue-600 font-semibold hover:text-blue-700'>'                  Start Chat'                </button>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Help Resources */}
-        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Additional Resources</h2>'              <p className='text-lg text-gray-600 max-w-2xl mx-auto'>'                Explore our additional resources for more information and support.'              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto'>'              <div className='text-center p-6'>'                <HelpCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Help Center</h3>'                <p className='text-gray-600 mb-4'>Comprehensive guides and tutorials</p>'                <a href='/help' className='text-blue-600 font-semibold hover:text-blue-700'>'                  Visit Help Center →'                </a>;
-              </div>;
-              <div className='text-center p-6'>'                <MessageCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Documentation</h3>'                <p className='text-gray-600 mb-4'>Technical documentation and APIs</p>'                <a href='/documentation' className='text-blue-600 font-semibold hover:text-blue-700'>'                  View Documentation →'                </a>;
-              </div>;
-              <div className='text-center p-6'>'                <HelpCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Community</h3>'                <p className='text-gray-600 mb-4'>Connect with other users</p>'                <a href='/community' className='text-blue-600 font-semibold hover:text-blue-700'>'                  Join Community →'                </a>;
-              </div>;
-              <div className='text-center p-6'>'                <MessageCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Status Page</h3>'                <p className='text-gray-600 mb-4'>Check system status and updates</p>'                <a href='/status' className='text-blue-600 font-semibold hover:text-blue-700'>'                  View Status →'                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
+        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Additional Resources</h2>'              <p className='text-lg text-gray-600 max-w-2xl mx-auto'>'                Explore our additional resources for more information and support.'              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto'>'              <div className='text-center p-6'>'                <HelpCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Help Center</h3>'                <p className='text-gray-600 mb-4'>Comprehensive guides and tutorials</p>'                <a href='/help' className='text-blue-600 font-semibold hover:text-blue-700'>'                  Visit Help Center →'                </a>
+              </div>
+              <div className='text-center p-6'>'                <MessageCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Documentation</h3>'                <p className='text-gray-600 mb-4'>Technical documentation and APIs</p>'                <a href='/documentation' className='text-blue-600 font-semibold hover:text-blue-700'>'                  View Documentation →'                </a>
+              </div>
+              <div className='text-center p-6'>'                <HelpCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Community</h3>'                <p className='text-gray-600 mb-4'>Connect with other users</p>'                <a href='/community' className='text-blue-600 font-semibold hover:text-blue-700'>'                  Join Community →'                </a>
+              </div>
+              <div className='text-center p-6'>'                <MessageCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Status Page</h3>'                <p className='text-gray-600 mb-4'>Check system status and updates</p>'                <a href='/status' className='text-blue-600 font-semibold hover:text-blue-700'>'                  View Status →'                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
   );
 };
 ;

@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useState } from 'react';
-;
-interface ModernUIEnhancerProps {;
+
+interface ModernUIEnhancerProps {
   children?: React.ReactNode;
    enabled?: boolean;
    enableDarkMode?: boolean;
@@ -50,7 +50,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
     root.style.setProperty('--font-weight-bold', '700');
   }, [enabled]);
 ;
-  const enhanceColorScheme = useCallback(() => {;
+  const enhanceColorScheme = useCallback(() => {
     if (!enabled || !enableDarkMode) return;
 ;
     const root = document.documentElement;
@@ -89,7 +89,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
     }
   }, [enabled, enableDarkMode, isDarkMode]);
 ;
-  const enhanceSpacing = useCallback(() => {;
+  const enhanceSpacing = useCallback(() => {
     if (!enabled) return;
 ;
     const root = document.documentElement;
@@ -135,7 +135,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
     root.style.setProperty('--glass-shadow', '0 8px 32px 0 rgba(31, 38, 135, 0.37)');
   }, [enabled, enableGlassmorphism]);
 ;
-  const enhanceGradients = useCallback(() => {;
+  const enhanceGradients = useCallback(() => {
     if (!enabled || !enableGradients) return;
 ;
     const root = document.documentElement;
@@ -216,7 +216,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
     root.style.setProperty('--loading-text', 'var(--text-primary)');
   }, [enabled, enableLoadingStates]);
 ;
-  const enhanceScrollProgress = useCallback(() => {;
+  const enhanceScrollProgress = useCallback(() => {
     if (!enabled || !enableScrollProgress) return;
 ;
     // Add scroll progress indicator;
@@ -312,9 +312,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
     document.documentElement.style.setProperty('--color-primary', color);
   }, []);
 ;
-  return (;
-    <div className='modern-ui-enhancer'>;
+  return (
+    <div className='modern-ui-enhancer'>
       {children}
-    </div>;
+    </div>
   );
 };

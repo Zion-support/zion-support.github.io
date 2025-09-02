@@ -79,7 +79,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         setFontSize,;
   setColorBlindMode;
 };
-    return (<AccessibilityContext.Provider value={value}>;
+    return (<AccessibilityContext.Provider value={value}>
       {children};
     </AccessibilityContext.Provider>)};
 // Accessibility Panel Component;
@@ -201,22 +201,22 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     </div>'';';
                     <div className='flex justify-between'>';';
                       <span>Reduced Motion:</span>'';';
-                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>Ctrl/Cmd + Shift + M</kbd>;
+                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>Ctrl/Cmd + Shift + M</kbd>
                     </div>';
                   </div>';;
                 </div>';;
               </div>';';
               {/* Footer */}'';';
-              <div className='mt-6 pt-4 border-t border-zion-cyan/20'>'';';                <p className='text-xs text-zion-slate-light text-center'>;
+              <div className='mt-6 pt-4 border-t border-zion-cyan/20'>'';';                <p className='text-xs text-zion-slate-light text-center'>
                   These settings are saved locally and will persist across sessions.;
-                </p>;
+                </p>
               </div>';;
             </motion.div>';';
           </motion.div>)}';;';
       </AnimatePresence>';;';
 </>)}';';';
 // Skip to Content Link'';';;
-export const SkipToContent = () => (<a href='#main-content' className='sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300'>;
+export const SkipToContent = () => (<a href='#main-content' className='sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300'>
     Skip to main content;
   </a>);
 // Focus Trap Hook';
@@ -249,4 +249,4 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 // Screen Reader Only Text'';';
 export const SrOnly = ({ children }) => (<span className='sr-only'>{children}</span>)';;
 export default AccessibilityPanel';';
-}}}}}}}}}}}}}}}'';";import React, { useState, useEffect, createContext, useContext } from 'react'; import { motion, AnimatePresence    } from 'framer-motion'; ; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context; }; ; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X    } from 'lucide-react'; import { Button } from '../ui/button'; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}; ;
+}}}}}}}}}}}}}}}'';";import React, { useState, useEffect, createContext, useContext } from 'react'; import { motion, AnimatePresence    } from 'framer-motion';  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context; }; ; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X    } from 'lucide-react'; import { Button } from '../ui/button'; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}; ;

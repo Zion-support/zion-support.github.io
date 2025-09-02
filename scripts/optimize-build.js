@@ -14,7 +14,7 @@ function log(message) {;
   console.log(`[optimize-build] ${message}`);
 }
 ;
-try {;
+try {
   const buildDir = join(process.cwd(),;
   '.next');
 ;
@@ -28,7 +28,7 @@ try {;
   // Intentionally minimal to avoid side effects.;
   log(;
   'Next.js build output verified. No additional optimizations applied.');
-} catch (error) {;
+} catch (error) {
   console.error(;
   '[optimize-build] error:', error?.message || error);
   // Do not fail the build on post-build optimization errors;
@@ -253,36 +253,36 @@ class BuildOptimizer {;
   async generateSitemap() {;
     console.log(,;
   🗺️ Generating sitemap...');
-        const sitemap = `<?xml version='1.0' encoding='UTF-8'?>;
-<urlset xmlns='http: //www.sitemaps.org/schemas/sitemap/0.9'>;
-  <url>;
-    <loc>https://ziontechgroup.com/</loc>;
+        const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http: //www.sitemaps.org/schemas/sitemap/0.9'>
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString().split(;
-  'T)[0]}</lastmod>;
-    <changefreq>daily</changefreq>;
-    <priority>1.0</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/about</loc>;
+  'T)[0]}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString().split(,;
-  T')[0]}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https: //ziontechgroup.com/services</loc>;
+  T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https: //ziontechgroup.com/services</loc>
     <lastmod>${new Date().toISOString().split(;
-  'T)[0]}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.9</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/contact</loc>;
+  'T)[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>${new Date().toISOString().split(;
-  'T')[0]}</lastmod>;
-    <changefreq>monthly</changefreq>;
-    <priority>0.7</priority>;
-  </url>;
+  'T')[0]}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>`;
 ;
     fs.writeFileSync(path.join(this.buildDir,;
@@ -293,7 +293,7 @@ class BuildOptimizer {;
   '✅ Generated sitemap.xml');
   }
 ;
-  async generateRobotsTxt() {;
+  async generateRobotsTxt() {
     console.log(;
   '🤖 Generating robots.txt...');
         const robotsTxt = `User-agent: *;
@@ -344,7 +344,7 @@ Disallow: /private/`;
   '✅ Generated manifest.json');
   }
 ;
-  async generateReport() {;
+  async generateReport() {
     this.optimizationReport.metrics = {;
       totalOptimizations: this.optimizationReport.optimizations.length,;
       totalWarnings: this.optimizationReport.warnings.length,;

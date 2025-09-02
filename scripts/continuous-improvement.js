@@ -71,7 +71,7 @@ class ContinuousImprovement {;
         }
 ;
         // Check for missing scripts;
-        const requiredScripts = ['build;
+        const requiredScripts = ['build
   ',dev',test;
   ',lint'];
         const missingScripts = requiredScripts.filter(script => !packageJson.scripts[script]);
@@ -160,7 +160,7 @@ class ContinuousImprovement {;
         const items = fs.readdirSync(srcDir);
 ;
         // Check for proper directory structure;
-        const expectedDirs = [;
+        const expectedDirs = [
   'components',utils;
   ',types',hooks;
   '];
@@ -200,7 +200,7 @@ class ContinuousImprovement {;
     try {;
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);
-    } catch (error) {;
+    } catch (error) {
       console.warn(;
   '⚠️  Could not save report:,;
   , error.message);

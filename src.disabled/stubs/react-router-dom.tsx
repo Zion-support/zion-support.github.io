@@ -1,16 +1,16 @@
 import React from 'react';
-;
+
 export const Link: React.FC<{ to?: string; href?: string; className?: string; children?: React.ReactNode } & React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({ to, href, children, ...rest }) => {;
-	return (;
-		<a href={to || href || '#'} {...rest}>;
+	return (
+		<a href={to || href || '#'} {...rest}>
 			{children}
-		</a>;
+		</a>
 	);
 };
 ;
-export const BrowserRouter: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>;
-export const Routes: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>;
-export const Route: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>;
+export const BrowserRouter: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>
+export const Routes: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>
+export const Route: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>
 export const useNavigate = () => () => {};
 export default { Link };
 ;

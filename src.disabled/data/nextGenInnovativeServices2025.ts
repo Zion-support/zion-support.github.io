@@ -1,5 +1,5 @@
 import React from;
-  'react'; export interface NextGenInnovativeService {;
+  'react'; export interface NextGenInnovativeService {
   id: string;
    title: string;
    description: string;
@@ -21,4 +21,4 @@ import React from;
    contactInfo: { phone: string;
    email: string;
    website: string;
-}; technicalSpecs: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string} ; export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';
+}; technicalSpecs: { technology: string[] integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string} ; export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';

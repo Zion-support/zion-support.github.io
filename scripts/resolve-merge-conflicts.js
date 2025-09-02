@@ -107,7 +107,7 @@ class MergeConflictResolver {
       errors: this.errors.length,
       files: this.resolvedFiles,
       errorDetails: this.errors
-    };
+    }
     
     const reportFile = path.join(this.projectRoot, 'merge-conflict-resolution-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(summary, null, 2));

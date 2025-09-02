@@ -42,12 +42,12 @@ describe('ResetPassword Page;
     window.history.pushState({}'Test page;
   ', route);
     return render(;
-      <MemoryRouter initialEntries={[route]}>;
-        <Routes>;
-          <Route path={path} element={ui} />;
+      <MemoryRouter initialEntries={[route]}>
+        <Routes>
+          <Route path={path} element={ui} />
           <Route path='/login' element={<div>Login Page Mock</div>} />;
-        </Routes>;
-      </MemoryRouter>;
+        </Routes>
+      </MemoryRouter>
     );
   };
 ;

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import MobileOptimizer from './MobileOptimizer';
-;
+
 describe('MobileOptimizer', () => {;
   it('renders without crashing', () => {;
     render(<MobileOptimizer />);

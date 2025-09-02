@@ -1,4 +1,4 @@
-export interface QuantumAIService {;
+export interface QuantumAIService {
   id: string;
    name: string;
    tagline: string;

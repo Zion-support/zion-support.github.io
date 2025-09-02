@@ -89,13 +89,13 @@ class LintErrorAutoFixer {;
         stdio: 'pipe,;
         timeout: 120000 // 2 minutes timeout      }).toString();
 ;
-      return {;
+      return {
         success: true,;
         errors: [],;
         warnings: this.parseLintOutput(output,;
   'warning'),;
         output      };
-    } catch (error) {;
+    } catch (error) {
       const output = error.stdout;
         ? error.stdout.toString();
         : error.stderr.toString();
@@ -196,7 +196,7 @@ class LintErrorAutoFixer {;
       const originalContent = content;
 ;
       // Apply specific fixes based on ESLint rules;
-      switch (rule) {;
+      switch (rule) {
         case 'no-unused-vars;
   ':;
           modified = this.fixUnusedVars(lines, line - 1, message);

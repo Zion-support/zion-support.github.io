@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { QuoteWizard } from '@/components/quote/QuoteWizard';
 import { vi } from 'vitest';
-;
+
 beforeEach(() => {;
   global.fetch = vi.fn((url) => {;
     if (url ===;

@@ -21,7 +21,7 @@ const ServicesIndex: React.FC = () => {;
   'AI SEO Optimizer' },;
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
+
 const ServicesIndex: React.FC = () => {;
   const links = [;
     { to: '/ai-services', label: 'AI Services' },;

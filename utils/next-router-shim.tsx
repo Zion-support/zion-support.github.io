@@ -1,8 +1,8 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-;
-type LinkProps = React.PropsWithChildren<{;
+
+type LinkProps = React.PropsWithChildren<{
   to?: string;
   href?: string;
   className?: string;
@@ -11,10 +11,10 @@ type LinkProps = React.PropsWithChildren<{;
 ;
 export const Link: React.FC<LinkProps> = ({ to, href, children, className, onClick }) => {;
   const resolved = to || href || '/';
-  return (;
-    <NextLink href={resolved} legacyBehavior>;
-      <a className={className} onClick={onClick}>{children as any}</a>;
-    </NextLink>;
+  return (
+    <NextLink href={resolved} legacyBehavior>
+      <a className={className} onClick={onClick}>{children as any}</a>
+    </NextLink>
   );
 };
 ;
@@ -32,7 +32,7 @@ export function useLocation() {;
     key: 'next'} as any;
 }
 ;
-export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>;
+export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
 export const MemoryRouter = BrowserRouter;
 export const HashRouter = BrowserRouter;
 ;

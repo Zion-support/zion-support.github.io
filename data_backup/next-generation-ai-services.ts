@@ -1,4 +1,4 @@
-export interface NextGenerationAIService {;
+export interface NextGenerationAIService {
   id: string;
    name: string;
    tagline: string;

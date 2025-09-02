@@ -21,9 +21,9 @@ describe(;
   test(;
   'renders email input and submit button', () => {;
     render(;
-      <Router>;
-        <ForgotPassword />;
-      </Router>;
+      <Router>
+        <ForgotPassword />
+      </Router>
     );
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
     expect(;
@@ -34,9 +34,9 @@ describe(;
 ;
   test('allows typing in email input'', () => {;
     render(;
-      <Router>;
-        <ForgotPassword />;
-      </Router>;
+      <Router>
+        <ForgotPassword />
+      </Router>
     );
     const emailInput = screen.getByLabelText(/email address/i);
     fireEvent.change(emailInput, { target: { value:;
@@ -50,9 +50,9 @@ describe(;
     // require(;
   '../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: 'Reset link sent });
     render(;
-      <Router>;
-        <ForgotPassword />;
-      </Router>;
+      <Router>
+        <ForgotPassword />
+      </Router>
     );
     fireEvent.change(screen.getByLabelText(/email address/i), {;
       target: { value:;
@@ -84,9 +84,9 @@ describe(;
   '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(;
   'Failed to send link'));
     render(;
-      <Router>;
-        <ForgotPassword />;
-      </Router>;
+      <Router>
+        <ForgotPassword />
+      </Router>
     );
     fireEvent.change(screen.getByLabelText(/email address/i), {;
       target: { value:;

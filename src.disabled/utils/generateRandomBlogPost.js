@@ -1,4 +1,4 @@
-export const generateRandomBlogPost = () => {;
+export const generateRandomBlogPost = () => {
   return {;
     id: Math.random().toString(36).substr(2, 9),;
     title: 'Sample Blog Post',;

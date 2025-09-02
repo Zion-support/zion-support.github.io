@@ -8,7 +8,7 @@ const AIWorkflowAutomation = () => {}
             icon: Brain,;
             title: 'AI-Powered Process Analysis','';
             description: 'Intelligent analysis of existing workflows to identify optimization opportunities and automation potential','';
-            benefits['Process mapping', 'Bottleneck identification', 'Efficiency scoring', 'Automation recommendations'];
+            benefits['Process mapping', 'Bottleneck identification', 'Efficiency scoring', 'Automation recommendations']
         },;
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
         {;
@@ -17,7 +17,7 @@ const AIWorkflowAutomation = () => {}
             icon: GitFork,'';
             title: 'Intelligent Workflow Design','';
             description: 'AI-driven workflow design that adapts to business needs and automatically optimizes for performance','';
-            benefits['Dynamic workflows', 'Conditional logic', 'Exception handling', 'Performance optimization'];
+            benefits['Dynamic workflows', 'Conditional logic', 'Exception handling', 'Performance optimization']
         },;
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
         {;
@@ -26,7 +26,7 @@ const AIWorkflowAutomation = () => {}
             icon: Zap,'';
             title: 'Automated Decision Making','';
             description: 'AI algorithms that make intelligent decisions based on data, rules, and historical patterns','';
-            benefits['Rule-based decisions', 'Machine learning', 'Risk assessment', 'Compliance checking'];
+            benefits['Rule-based decisions', 'Machine learning', 'Risk assessment', 'Compliance checking']
         },;
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
         {;
@@ -35,11 +35,11 @@ const AIWorkflowAutomation = () => {}
             icon: Clock,'';
             title: 'Real-time Monitoring','';
             description: 'Continuous monitoring of workflow performance with instant alerts and proactive optimization','';
-            benefits['Performance tracking', 'Real-time alerts', 'Predictive maintenance', 'KPI monitoring'];
+            benefits['Performance tracking', 'Real-time alerts', 'Predictive maintenance', 'KPI monitoring']
         }
     ];
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
-    const solutions = [;
+    const solutions = [
         {;
 ';
 '';
@@ -50,7 +50,7 @@ const AIWorkflowAutomation = () => {}
 '';
             category: 'Document Processing',;
             icon: Database,;
-            solutions = ['';
+            solutions = [''
                 'Automated document classification','';
                 'Intelligent data extraction','';
                 'Form processing automation','';
@@ -71,7 +71,7 @@ const AIWorkflowAutomation = () => {}
 '';
             category: 'Customer Service',;
             icon: Users,;
-            solutions = ['';
+            solutions = [''
                 'Ticket routing and prioritization','';
                 'Automated responses','';
                 'Customer inquiry handling','';
@@ -92,7 +92,7 @@ const AIWorkflowAutomation = () => {}
 '';
             category: 'Financial Operations',;
             icon: TrendingUp,;
-            solutions = ['';
+            solutions = [''
                 'Invoice processing automation','';
                 'Payment approval workflows','';
                 'Expense report processing','';
@@ -113,7 +113,7 @@ const AIWorkflowAutomation = () => {}
 '';
             category: 'HR & Recruitment',;
             icon: Users,;
-            solutions = ['';
+            solutions = [''
                 'Resume screening automation','';
                 'Interview scheduling','';
                 'Onboarding workflows','';
@@ -238,7 +238,7 @@ const AIWorkflowAutomation = () => {}
             y: 0,;
             opacity: 1,;
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
-            transition: {;
+            transition: {
                 duration: 0.5;
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
@@ -248,10 +248,10 @@ const AIWorkflowAutomation = () => {}
 >            transition: {}
                 duration: 0.5;
     }';
-    return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+    return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       {/* Hero Section */}'';
       <div className='relative overflow-hidden'>'';
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'/>;
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'/>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 ';
     }';
@@ -260,9 +260,9 @@ const AIWorkflowAutomation = () => {}
       <div className='relative overflow-hidden'>'';
         <div className='absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'/>';
 '';
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>;
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>
           <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} animate = {;
@@ -270,14 +270,14 @@ const AIWorkflowAutomation = () => {}
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 0;
 }} transition={{ duration: 0.8 }} className='text-center'>;
-            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6'>;
+            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6'>
 =;
   y: 0;
 ';
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 }} transition={{ duration: 0.8 }} className='text-center'>';
             <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6'>';
->              <Zap className='w-10 h-10 text-white'/>;
+>              <Zap className='w-10 h-10 text-white'/>
             </div>';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
 '';
@@ -286,16 +286,16 @@ const AIWorkflowAutomation = () => {}
               <Zap className='w-10 h-10 text-white'/>';
             </div>'';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'';
-              <span className='bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent'>;
+              <span className='bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent'>
                 AI Workflow Automation;
               </span>';
             </h1>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Transform your business processes with intelligent automation that learns, adapts, and optimizes;
               workflows for maximum efficiency and productivity.';
             </p>'';
             <div className='flex flex-wrap justify-center gap-4'>'';
-              <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>;
+              <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>
                 Get Started';
   y: 20;
 }} animate = {}
@@ -303,77 +303,77 @@ const AIWorkflowAutomation = () => {}
   y: 0';
 }} transition={{ duration: 0.8 }} className='text-center'>'';
             <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6'>'';
-              <Zap className='w-10 h-10 text-white'/>;
+              <Zap className='w-10 h-10 text-white'/>
             </div>'';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'';
-              <span className='bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent'>;
+              <span className='bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent'>
                 AI Workflow Automation;
-              </span>;
+              </span>
             </h1>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Transform your business processes with intelligent automation that learns, adapts, and optimizes;
               workflows for maximum efficiency and productivity.;
             </p>'';
             <div className='flex flex-wrap justify-center gap-4'>'';
-              <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>;
+              <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>
                 Get Started;
               </Link>'';
-              <Link to='/services-showcase' className='border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300'>;
+              <Link to='/services-showcase' className='border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300'>
                 View All Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 ';
       {/* Features Section */}'';
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20'>'';
         <motion.div variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }} className='text-center mb-16'>'';
           <h2 className='text-4xl font-bold text-white mb-6'>Key Features</h2>'';
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
             Our AI Workflow Automation platform combines artificial intelligence with advanced workflow;
             management to create intelligent, adaptive business processes.;
-          </p>;
+          </p>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
         </motion.div>';
-        </motion.div>;
+        </motion.div>
 '';
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>'';
           {features.map((feature, index) => (<motion.div key={feature.title} variants={itemVariants} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-orange-500/50 transition-all duration-300'>'';
               <div className='flex items-start mb-4'>'';
                 <div className='w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0'>'';
-                  <feature.icon className='w-6 h-6 text-white'/>;
+                  <feature.icon className='w-6 h-6 text-white'/>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
                 </div>';
-                </div>;
+                </div>
                 <div>'';
                   <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                  <p className='text-gray-400 text-sm leading-relaxed'>{feature.description}</p>;
-                </div>;
+                  <p className='text-gray-400 text-sm leading-relaxed'>{feature.description}</p>
+                </div>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
               </div>';
-              </div>;
+              </div>
 '';
               <div className='ml-16'>'';
                 <h4 className='text-sm font-medium text-gray-300 mb-3'>Key Benefits:</h4>'';
                 <ul className='space-y-2'>'';
                   {feature.benefits.map((benefit, idx) => (<li key={idx} className='flex items-center text-sm text-gray-400'>'';
-                      <div className='w-2 h-2 bg-orange-500 rounded-full mr-3'></div>;
+                      <div className='w-2 h-2 bg-orange-500 rounded-full mr-3'></div>
                       {benefit}
                     </li>))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             </motion.div>))}
-        </div>;
-      </div>;
+        </div>
+      </div>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 ';
       {/* Solutions by Department */}'';
       <div className='bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20'>'';
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
           <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} whileInView = {;
@@ -381,7 +381,7 @@ const AIWorkflowAutomation = () => {}
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 0;
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center mb-16'>;
-            <h2 className='text-4xl font-bold text-white mb-6'>Solutions by Department</h2>;
+            <h2 className='text-4xl font-bold text-white mb-6'>Solutions by Department</h2>
 =;
   y: 0;
 ';
@@ -397,17 +397,17 @@ const AIWorkflowAutomation = () => {}
   y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-white mb-6'>Solutions by Department</h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Tailored workflow automation solutions designed to address the unique challenges;
               and processes in different business departments.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {solutions.map((category, index) => (<motion.div key={category.category} initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} whileInView = {;
@@ -418,8 +418,8 @@ const AIWorkflowAutomation = () => {}
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   delay: index * 0.1;
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6'>;
-                <div className='flex items-center mb-6'>;
-                  <div className='w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4'>;
+                <div className='flex items-center mb-6'>
+                  <div className='w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4'>
 =;
   delay: index * 0.1;
 ';
@@ -427,7 +427,7 @@ const AIWorkflowAutomation = () => {}
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6'>';
                 <div className='flex items-center mb-6'>';
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4'>';
->                    <category.icon className='w-6 h-6 text-white'/>;
+>                    <category.icon className='w-6 h-6 text-white'/>
                   </div>';
 '';
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6'>'';
@@ -435,7 +435,7 @@ const AIWorkflowAutomation = () => {}
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4'>'';
                     <category.icon className='w-6 h-6 text-white'/>';
                   </div>'';
-                  <h3 className='text-xl font-semibold text-white'>{category.category}</h3>;
+                  <h3 className='text-xl font-semibold text-white'>{category.category}</h3>
                 </div>';
   y: 20;
 }} whileInView = {}
@@ -447,27 +447,27 @@ const AIWorkflowAutomation = () => {}
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6'>'';
                 <div className='flex items-center mb-6'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4'>'';
-                    <category.icon className='w-6 h-6 text-white'/>;
+                    <category.icon className='w-6 h-6 text-white'/>
                   </div>'';
-                  <h3 className='text-xl font-semibold text-white'>{category.category}</h3>;
-                </div>;
+                  <h3 className='text-xl font-semibold text-white'>{category.category}</h3>
+                </div>
 '';
                 <ul className='space-y-3'>'';
                   {category.solutions.map((solution, idx) => (<li key={idx} className='flex items-center text-sm text-gray-400'>'';
-                      <div className='w-2 h-2 bg-orange-500 rounded-full mr-3'></div>;
+                      <div className='w-2 h-2 bg-orange-500 rounded-full mr-3'></div>
                       {solution}
                     </li>))}
-                </ul>;
+                </ul>
               </motion.div>))}
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 ';
       {/* Benefits Section */}'';
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
         <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} whileInView = {;
@@ -475,7 +475,7 @@ const AIWorkflowAutomation = () => {}
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 0;
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center mb-16'>;
-          <h2 className='text-4xl font-bold text-white mb-6'>Business Benefits</h2>;
+          <h2 className='text-4xl font-bold text-white mb-6'>Business Benefits</h2>
 =;
   y: 0;
 ';
@@ -491,17 +491,17 @@ const AIWorkflowAutomation = () => {}
   y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center mb-16'>'';
           <h2 className='text-4xl font-bold text-white mb-6'>Business Benefits</h2>'';
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
             AI Workflow Automation delivers measurable results that directly impact your operational;
             efficiency, cost structure, and competitive position.;
-          </p>;
+          </p>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
         </motion.div>';
-        </motion.div>;
+        </motion.div>
 '';
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} whileInView = {;
@@ -512,14 +512,14 @@ const AIWorkflowAutomation = () => {}
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   delay: index * 0.1;
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+              <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 =;
   delay: index * 0.1;
 ';
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300'>';
               <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>';
->                <benefit.icon className='w-8 h-8 text-white'/>;
+>                <benefit.icon className='w-8 h-8 text-white'/>
               </div>';
               <h3 className='text-lg font-semibold text-white mb-2'>{benefit.title}</h3>';
 '';
@@ -537,20 +537,20 @@ const AIWorkflowAutomation = () => {}
   delay: index * 0.1';
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300'>'';
               <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
-                <benefit.icon className='w-8 h-8 text-white'/>;
+                <benefit.icon className='w-8 h-8 text-white'/>
               </div>'';
               <h3 className='text-lg font-semibold text-white mb-2'>{benefit.title}</h3>'';
-              <p className='text-gray-400 text-sm'>{benefit.description}</p>;
+              <p className='text-gray-400 text-sm'>{benefit.description}</p>
             </motion.div>))}
-        </div>;
-      </div>;
+        </div>
+      </div>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 ';
       {/* Technology Stack */}'';
       <div className='bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20'>'';
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
           <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} whileInView = {;
@@ -558,7 +558,7 @@ const AIWorkflowAutomation = () => {}
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 0;
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center mb-16'>;
-            <h2 className='text-4xl font-bold text-white mb-6'>Technology Stack</h2>;
+            <h2 className='text-4xl font-bold text-white mb-6'>Technology Stack</h2>
 =;
   y: 0;
 ';
@@ -574,17 +574,17 @@ const AIWorkflowAutomation = () => {}
   y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-white mb-6'>Technology Stack</h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Built on cutting-edge AI and workflow technologies to ensure scalability,;
               performance, and reliability for enterprise automation.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} whileInView = {;
@@ -595,14 +595,14 @@ const AIWorkflowAutomation = () => {}
 <:pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   delay: index * 0.1;
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300'>;
-                <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 =;
   delay: index * 0.1;
 ';
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300'>';
                 <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>';
->                  <tech.icon className='w-8 h-8 text-white'/>;
+>                  <tech.icon className='w-8 h-8 text-white'/>
                 </div>';
                 <h3 className='text-lg font-semibold text-white mb-2'>{tech.name}</h3>';
 '';
@@ -620,20 +620,20 @@ const AIWorkflowAutomation = () => {}
   delay: index * 0.1';
 }} className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300'>'';
                 <div className='w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
-                  <tech.icon className='w-8 h-8 text-white'/>;
+                  <tech.icon className='w-8 h-8 text-white'/>
                 </div>'';
                 <h3 className='text-lg font-semibold text-white mb-2'>{tech.name}</h3>'';
-                <p className='text-gray-400 text-sm'>{tech.description}</p>;
+                <p className='text-gray-400 text-sm'>{tech.description}</p>
               </motion.div>))}
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
 ';
       {/* CTA Section */}'';
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
         <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;
   y: 20;
 }} whileInView = {;
@@ -648,38 +648,38 @@ const AIWorkflowAutomation = () => {}
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center'>';
 >'';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center'>'';
-          <h2 className='text-4xl font-bold text-white mb-6'>;
+          <h2 className='text-4xl font-bold text-white mb-6'>
             Ready to Automate Your Workflows?';
           </h2>'';
-          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
             Let our AI workflow experts help you implement intelligent automation that will;
             transform your business processes and drive operational excellence.';
           </p>'';
           <div className='flex flex-wrap justify-center gap-4'>'';
-            <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>;
+            <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>
               Schedule Consultation';
   y: 20;
 }} whileInView = {}
   { opacity: 1,;
   y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className='text-center'>'';
-          <h2 className='text-4xl font-bold text-white mb-6'>;
+          <h2 className='text-4xl font-bold text-white mb-6'>
             Ready to Automate Your Workflows?;
           </h2>'';
-          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
             Let our AI workflow experts help you implement intelligent automation that will;
             transform your business processes and drive operational excellence.;
           </p>'';
           <div className='flex flex-wrap justify-center gap-4'>'';
-            <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>;
+            <Link to='/contact' className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>
               Schedule Consultation;
             </Link>'';
-            <Link to='/case-studies' className='border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300'>;
+            <Link to='/case-studies' className='border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300'>
               View Case Studies;
-            </Link>;
-          </div>;
-        </motion.div>;
-      </div>;
+            </Link>
+          </div>
+        </motion.div>
+      </div>
     </div>)};
 export { AIWorkflowAutomation };
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Status from './Status';
-;
+
 describe('Status', () => {;
   it('renders without crashing', () => {;
     render(<Status />);

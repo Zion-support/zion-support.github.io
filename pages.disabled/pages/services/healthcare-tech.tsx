@@ -2,10 +2,10 @@
 export { function };export default function HealthcareTech(...args: []):  {}
   return();
     <>;
-      <Helmet>;
-        <title>Healthcare Technology Solutions - Zion Tech Group</title>;
+      <Helmet>
+        <title>Healthcare Technology Solutions - Zion Tech Group</title>
         <meta name = 'description' content='Transform healthcare delivery with AI-powered medical technology, patient monitoring, and digital health solutions. Improve patient outcomes and operational efficiency.' />'';
-        <meta name='keywords' content='healthcare technology, medical AI, digital health, patient monitoring, telemedicine, healthcare analytics, medical devices' />;
+        <meta name='keywords' content='healthcare technology, medical AI, digital health, patient monitoring, telemedicine, healthcare analytics, medical devices' />
 :pages.disabled/pages/services/healthcare-tech.tsx;
       </Helmet>';
 '';
@@ -20,8 +20,8 @@ export { function };export default function HealthcareTech(...args: []):  {}
 '';
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
                 Healthcare'';
-                <span className='bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent'> Technology</span>;
-              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>;
+                <span className='bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent'> Technology</span>
+              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Revolutionize healthcare delivery with cutting-edge technology solutions. AI-powered diagnostics,;
                 patient monitoring, and digital health platforms for better patient outcomes.;
 :pages.disabled/pages/services/healthcare-tech.tsx;
@@ -36,24 +36,24 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <ArrowRight className='ml-2 w-5 h-5'  />';
                 </Link>'';
                 <button className='inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200'>'';
-                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>;
-            </div>;
-          </div>;
-        </section>;
+                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/healthcare-tech.tsx;
 '{/* Features Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/healthcare-tech.tsx;
-                Advanced Healthcare Solutions'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Advanced Healthcare Solutions'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our healthcare technology platform provides comprehensive solutions for modern healthcare delivery,;
                 from AI diagnostics to patient management systems.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/healthcare-tech.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[;
                 {;
 ';
@@ -95,26 +95,26 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
                     <feature.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                  <p className='text-slate-300'>{feature.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{feature.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/healthcare-tech.tsx;
 '{/* Healthcare Applications Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/healthcare-tech.tsx;
-                Healthcare Technology Applications'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Healthcare Technology Applications'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Discover how our technology solutions can transform different aspects of healthcare delivery.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/healthcare-tech.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -129,7 +129,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'Patient Management','';
                   description: 'Comprehensive patient care management with integrated health records.',';
                   icon: Users,'';
-                  benefits: ['Health records', 'Care coordination', 'Patient engagement'];
+                  benefits: ['Health records', 'Care coordination', 'Patient engagement']
                 },;
                 {;
 ';
@@ -137,7 +137,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'Drug Discovery','';
                   description: 'AI-driven pharmaceutical research and drug development acceleration.',';
                   icon: Stethoscope,'';
-                  benefits: ['Molecular modeling', 'Clinical trials', 'Drug optimization'];
+                  benefits: ['Molecular modeling', 'Clinical trials', 'Drug optimization']
                 },;
                 {;
 ';
@@ -145,7 +145,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'Preventive Care','';
                   description: 'Predictive analytics for early disease detection and prevention strategies.',';
                   icon: Activity,'';
-                  benefits: ['Risk assessment', 'Early detection', 'Prevention strategies'];
+                  benefits: ['Risk assessment', 'Early detection', 'Prevention strategies']
                 },;
                 {;
 ';
@@ -153,7 +153,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'Clinical Trials','';
                   description: 'Streamlined clinical trial management and patient recruitment.',';
                   icon: BarChart3,'';
-                  benefits: ['Trial management', 'Patient recruitment', 'Data analysis'];
+                  benefits: ['Trial management', 'Patient recruitment', 'Data analysis']
                 },;
                 {;
 ';
@@ -161,7 +161,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'Healthcare Analytics','';
                   description: 'Data-driven insights for improved healthcare outcomes and operational efficiency.',';
                   icon: Database,'';
-                  benefits: ['Performance metrics', 'Outcome analysis', 'Operational insights'];
+                  benefits: ['Performance metrics', 'Outcome analysis', 'Operational insights']
                 }';
               ].map((application, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -172,24 +172,24 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <p className='text-slate-300 mb-4'>{application.description}</p>'';
                   <ul className='space-y-1'>'{application.benefits.map((benefit, benefitIndex) => (''                      <li key={benefitIndex} className='text-sm text-pink-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {benefit}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/healthcare-tech.tsx;
 '{/* AI in Healthcare Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/healthcare-tech.tsx;
-                AI-Powered Healthcare'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                AI-Powered Healthcare'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Leverage artificial intelligence to enhance diagnostic accuracy, improve patient outcomes,;
                 and optimize healthcare operations.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/healthcare-tech.tsx;
             </div>';
 '';
@@ -203,10 +203,10 @@ export { function };export default function HealthcareTech(...args: []):  {}
                     'Intelligent chatbots for patient triage and healthcare information'';
                   ].map((capability, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-6 h-6 text-pink-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{capability}</span>;
-                    </div>;
+                      <CheckCircle className='w-6 h-6 text-pink-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{capability}</span>
+                    </div>
                   ))}
-                </div>;
+                </div>
 :pages.disabled/pages/services/healthcare-tech.tsx;
               </div>';
 '';
@@ -219,28 +219,28 @@ export { function };export default function HealthcareTech(...args: []):  {}
                     { benefit: 'Better Outcomes', metric: '40%', description: 'Patient outcomes' }'].map((item, index)  => (''                    <div key={index} className='text-center p-4 bg-slate-700/50 rounded-lg'>'';
                       <div className='text-2xl font-bold text-pink-400 mb-1'>{item.metric}</div>'';
                       <div className='text-sm text-slate-300'>{item.benefit}</div>'';
-                      <div className='text-xs text-slate-400'>{item.description}</div>;
-                    </div>;
+                      <div className='text-xs text-slate-400'>{item.description}</div>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/healthcare-tech.tsx;
 '{/* Compliance & Security Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/healthcare-tech.tsx;
-                Healthcare Compliance & Security'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Healthcare Compliance & Security'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Built-in compliance features ensure your healthcare technology meets all regulatory requirements.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/healthcare-tech.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -255,7 +255,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'FDA Approval','';
                   description: 'FDA-cleared medical devices and software for clinical use.',';
                   icon: Target,'';
-                  features: ['Medical device clearance', 'Clinical validation', 'Safety standards'];
+                  features: ['Medical device clearance', 'Clinical validation', 'Safety standards']
                 },;
                 {;
 ';
@@ -263,7 +263,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'SOC 2 Type II','';
                   description: 'SOC 2 compliance for data security and operational controls.',';
                   icon: Lock,'';
-                  features: ['Security controls', 'Operational controls', 'Continuous monitoring'];
+                  features: ['Security controls', 'Operational controls', 'Continuous monitoring']
                 },;
                 {;
 ';
@@ -271,7 +271,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'GDPR Compliance','';
                   description: 'European data protection compliance for international healthcare operations.',';
                   icon: Globe,'';
-                  features: ['Data protection', 'Privacy controls', 'Right to be forgotten'];
+                  features: ['Data protection', 'Privacy controls', 'Right to be forgotten']
                 },;
                 {;
 ';
@@ -279,7 +279,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'HITECH Act','';
                   description: 'Health Information Technology for Economic and Clinical Health Act compliance.',';
                   icon: Activity,'';
-                  features: ['Electronic health records', 'Meaningful use', 'Interoperability'];
+                  features: ['Electronic health records', 'Meaningful use', 'Interoperability']
                 },;
                 {;
 ';
@@ -287,7 +287,7 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   title: 'ISO 27001','';
                   description: 'Information security management system certification.',';
                   icon: Settings,'';
-                  features: ['Security framework', 'Risk management', 'Continuous improvement'];
+                  features: ['Security framework', 'Risk management', 'Continuous improvement']
                 }';
               ].map((compliance, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -298,27 +298,27 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <p className='text-slate-300 mb-4'>{compliance.description}</p>'';
                   <ul className='space-y-1'>'{compliance.features.map((feature, featureIndex) => (''                      <li key={featureIndex} className='text-sm text-pink-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {feature}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/healthcare-tech.tsx;
 '{/* Implementation Process Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/healthcare-tech.tsx;
-                Implementation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Implementation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our systematic approach ensures successful healthcare technology implementation.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/healthcare-tech.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[;
                 {;
 ';
@@ -352,20 +352,20 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 <div key={index} className='text-center'>'';
                   <div className='w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                     <span className='text-white font-bold text-xl'>{step.step}</span>'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>'';
-                  <p className='text-slate-300'>{step.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{step.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/healthcare-tech.tsx;
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-pink-500/10 to-red-600/10'>';
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/healthcare-tech.tsx;
               Ready to Transform Healthcare Delivery?';
             </h2>'';
-            <p className='text-xl text-slate-300 mb-8'>;
+            <p className='text-xl text-slate-300 mb-8'>
               Leverage cutting-edge technology to improve patient outcomes and operational efficiency.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
@@ -378,11 +378,11 @@ export { function };export default function HealthcareTech(...args: []):  {}
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200'>                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
 :pages.disabled/pages/services/healthcare-tech.tsx;
     </>';
   )}}}}}}

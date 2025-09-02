@@ -1,4 +1,4 @@
-export interface CartItem {;
+export interface CartItem {
   id: string;
    name: string;
    price: number;
@@ -14,10 +14,10 @@ export interface CartItem {;
 };
   vendor?: string;
   tags?: string[];
-  metadata?: Record<string, any>;
+  metadata?: Record<string, any>
 }
 ;
-export interface Cart {;
+export interface Cart {
   items: CartItem[];
    total: number;
    subtotal: number;
@@ -29,7 +29,7 @@ export interface Cart {;
 }
 ;
 // Calculate cart totals;
-export const calculateCartTotals = (items: CartItem[]): Omit<Cart, 'items' | 'lastUpdated'> => {;
+export const calculateCartTotals = (items: CartItem[]): Omit<Cart, 'items' | 'lastUpdated'> => {
   const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const tax = subtotal * 0.08; // 8% tax rate;
   const shipping = subtotal > 100 ? 0 : 10; // Free shipping over $100;
@@ -57,7 +57,7 @@ export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {;
     );
   }
 ;
-  return [...cart, item];
+  return [...cart, item]
 };
 ;
 // Remove item from cart;
@@ -67,7 +67,7 @@ export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => 
 ;
 // Update item quantity;
 export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {;
-  if (quantity <= 0) {;
+  if (quantity <= 0) {
     return removeFromCart(cart, itemId);
   }
 ;
@@ -99,7 +99,7 @@ export const getCartItem = (cart: CartItem[], itemId: string): CartItem | undefi
 };
 ;
 // Apply discount to cart;
-export const applyDiscount = (cart: CartItem[], discountCode: string): { cart: CartItem[]; discount: number } => {;
+export const applyDiscount = (cart: CartItem[], discountCode: string): { cart: CartItem[]; discount: number } => {
   // This is a simplified discount logic;
   const discountMap: Record<string, number> = {;
     'SAVE10': 0.1,;
@@ -110,7 +110,7 @@ export const applyDiscount = (cart: CartItem[], discountCode: string): { cart: C
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const discount = subtotal * discountRate;
 ;
-  return {;
+  return {
     cart,;
     discount: Math.round(discount * 100) / 100};
 };
@@ -134,7 +134,7 @@ export const validateCartItems = (cart: CartItem[]): { isValid: boolean; errors:
     }
   });
 ;
-  return {;
+  return {
     isValid: errors.length === 0,;
     errors};
 };
@@ -176,7 +176,7 @@ export const mergeCarts = (cart1: CartItem[], cart2: CartItem[]): CartItem[] => 
 };
 ;
 // Get cart summary;
-export const getCartSummary = (cart: CartItem[]) => {;
+export const getCartSummary = (cart: CartItem[]) => {
   const totals = calculateCartTotals(cart);
   const itemCount = getCartItemCount(cart);
 ;

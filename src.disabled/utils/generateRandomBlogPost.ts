@@ -1,5 +1,5 @@
 import { BlogPost } from;
-  '../types/blog'; ; const topics = [';Artificial Intelligence',';Machine Learning',';Quantum Computing',';Cybersecurity',';Cloud Computing',';Blockchain',';Internet of Things',';Data Science',';DevOps',';Software Development'; ]; ; const adjectives = [';Revolutionary',';Innovative',';Cutting-edge',';Advanced',';Modern',';Efficient',';Scalable',';Secure',';Intelligent',';Automated'; ]; ; const nouns = [';Solutions',';Technologies',';Platforms',';Systems',';Applications',';Infrastructure',';Architecture',';Frameworks',';Tools',';Services'; ]; ; const contentSnippets = [';In today\'s rapidly evolving technological landscape, businesses are constantly seeking innovative solutions to stay ahead of the competition.;
+  '../types/blog'; ; const topics = ['Artificial Intelligence',';Machine Learning',';Quantum Computing',';Cybersecurity',';Cloud Computing',';Blockchain',';Internet of Things',';Data Science',';DevOps',';Software Development'; ]; ; const adjectives = ['Revolutionary',';Innovative',';Cutting-edge',';Advanced',';Modern',';Efficient',';Scalable',';Secure',';Intelligent',';Automated'; ]; ; const nouns = ['Solutions',';Technologies',';Platforms',';Systems',';Applications',';Infrastructure',';Architecture',';Frameworks',';Tools',';Services'; ]; ; const contentSnippets = ['In today\'s rapidly evolving technological landscape, businesses are constantly seeking innovative solutions to stay ahead of the competition.;
   ',';The integration of artificial intelligence and machine learning has transformed how organizations approach complex problem-solving.;
   ',';Quantum computing represents the next frontier in computational power, offering unprecedented capabilities for scientific research and business applications.;
   ',';Cybersecurity has become paramount as digital transformation accelerates across all industries.;
@@ -15,4 +15,4 @@ import { BlogPost } from;
   Technology;
   ', 'Innovation;
   ', 'Guide;
-  '],; image: '/images/blog-placeholder.jpg,; readTime: Math.floor(Math.random() * 10) + 5}; }; export function generateMultipleBlogPosts(count: number): BlogPost[] {; const posts: BlogPost[] = []; for (let i = 0; i < count; i++) {; posts.push(generateRandomBlogPost()); }; return posts; }';`;
+  '],; image: '/images/blog-placeholder.jpg,; readTime: Math.floor(Math.random() * 10) + 5}; }; export function generateMultipleBlogPosts(count: number): BlogPost[] { const posts: BlogPost[] = []; for (let i = 0; i < count; i++) {; posts.push(generateRandomBlogPost()); }; return posts; }';`;

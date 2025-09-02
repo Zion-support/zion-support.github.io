@@ -70,10 +70,10 @@ import React, { useState, useEffect } from;
   ' }, { name: 'Blog, href:,;
   /blog;
   ' }, { name: 'Contact, href: '/contact;
-  ' } ]; const contactInfo = [ { icon: Phone, text:,;
+  ' } ]; const contactInfo = [ { icon: Phone, text:,
   +1 302 464 0950;
   ', href: 'tel:+13024640950 }, { icon: Mail, text:,;
   kleber@ziontechgroup.com;
   ', href: 'mailto:kleber@ziontechgroup.com }, { icon: MapPin, text:,;
   364 E Main St STE 1008, Middletown DE 19709;
-  ', href: '# } ]; const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name); }; const closeMobileMenu = () => { setIsOpen(false); setActiveDropdown(null); }; const handleSearch = (e: React.FormEvent) => { e.preventDefault(); if (searchQuery.trim()) {'';
+  ', href: '# } ]; const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) }; const closeMobileMenu = () => { setIsOpen(false); setActiveDropdown(null); }; const handleSearch = (e: React.FormEvent) => { e.preventDefault(); if (searchQuery.trim()) {'';

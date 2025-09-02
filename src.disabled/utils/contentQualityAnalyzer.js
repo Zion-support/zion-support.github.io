@@ -12,7 +12,7 @@ export class ContentQualityAnalyzer {;
     return ContentQualityAnalyzer.instance;
   }
 ;
-  analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {;
+  analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {
     const analysis = {;
       url: pageUrl,;
       title: title,;

@@ -1,4 +1,4 @@
-export interface EnterpriseItService {;
+export interface EnterpriseItService {
   id: string;
    name: string;
    tagline: string;

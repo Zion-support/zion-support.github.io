@@ -3,16 +3,16 @@ import { render, screen } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';
-;
+
 // Mock react-markdown;
 jest.mock(;
   'react-markdown', () => (props: { children: React.ReactNode }) => (;
-  <div data-testid='mock-markdown'>{props.children}</div>;
+  <div data-testid='mock-markdown'>{props.children}</div>
 ));
 ;
 // Define a type for Pie props for better type safety;
 interface MockPieProps {;
-  data: Array<{ name: string;
+  data: Array<{ name: string
    value: number }>;
   children?: React.ReactNode;
   // Add other props if used by the actual Pie component and needed for the mock;
@@ -24,19 +24,19 @@ jest.mock(;
   const MockResponsiveContainer = ({;
     children}: {;
     children: React.ReactNode;
-  }) => <div data-testid='mock-responsive-container'>{children}</div>;
+  }) => <div data-testid='mock-responsive-container'>{children}</div>
   const MockPieChart = ({ children }: { children: React.ReactNode }) => (;
-    <div data-testid='mock-pie-chart'>{children}</div>;
+    <div data-testid='mock-pie-chart'>{children}</div>
   );
   const MockPie = (props: MockPieProps) => (;
-    <div data-testid='mock-pie' data-data={JSON.stringify(props.data)}>;
+    <div data-testid='mock-pie' data-data={JSON.stringify(props.data)}>
       {props.children}
-    </div>;
+    </div>
   ); // Use MockPieProps;
-  const MockCell = () => <div data-testid='mock-cell' />;
-  const MockTooltip = () => <div data-testid='mock-tooltip' />;
-  const MockLegend = () => <div data-testid='mock-legend' />;
-  return {;
+  const MockCell = () => <div data-testid='mock-cell' />
+  const MockTooltip = () => <div data-testid='mock-tooltip' />
+  const MockLegend = () => <div data-testid='mock-legend' />
+  return {
     ResponsiveContainer: MockResponsiveContainer,;
     PieChart: MockPieChart,;
     Pie: MockPie,;
@@ -45,7 +45,7 @@ jest.mock(;
     Legend: MockLegend};
 });
 ;
-const mockSections = [;
+const mockSections = [
   { id:,;
   1', title: 'Introduction, content:,;
   This is the intro.' },;
@@ -58,7 +58,7 @@ const mockSections = [;
     content:,;
   How tokens are distributed.'}];
 ;
-const mockDistributionData = [;
+const mockDistributionData = [
   { name: 'Team, value: 20 },;
   { name:;
   'Marketing', value: 30 }];
@@ -68,7 +68,7 @@ describe(;
   test(;
   'renders token name and supply if provided', () => {;
     render(;
-      <WhitepaperPreviewPanel;
+      <WhitepaperPreviewPanel
         sections={[]}
         distributionChartData={[]}
         tokenName='MyToken';
@@ -82,7 +82,7 @@ describe(;
   test(;
   'renders all sections with titles and content using react-markdown', () => {;
     render(;
-      <WhitepaperPreviewPanel;
+      <WhitepaperPreviewPanel
         sections={mockSections}
         distributionChartData={[]}
       />;
@@ -117,7 +117,7 @@ describe(;
   test(;
   'renders distribution chart in 'Token Distribution' section if data is provided', () => {;
     render(;
-      <WhitepaperPreviewPanel;
+      <WhitepaperPreviewPanel
         sections={mockSections} // includes 'Token Distribution';
         distributionChartData={mockDistributionData}
       />;
@@ -157,7 +157,7 @@ describe(;
   test(;
   'does not render distribution chart if data is empty', () => {;
     render(;
-      <WhitepaperPreviewPanel;
+      <WhitepaperPreviewPanel
         sections={mockSections}
         distributionChartData={[]} // Empty data;
       />;
@@ -177,7 +177,7 @@ describe(;
   'token distribution');
     );
     render(;
-      <WhitepaperPreviewPanel;
+      <WhitepaperPreviewPanel
         sections={sectionsWithoutDistribution}
         distributionChartData={mockDistributionData}
       />;

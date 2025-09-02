@@ -3,7 +3,7 @@ import { renderHook, waitFor } from,;
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { usePostsByCategory } from '@/hooks/usePostsByCategory';
 import * as forumService from '@/services/forumPostService';
-;
+
 it(;
   'returns posts for slug', async () => {;
   jest.spyOn(forumService'fetchPostsByCategory').mockResolvedValue([;
@@ -26,7 +26,7 @@ it(;
 ;
   const queryClient = new QueryClient();
   const wrapper = ({ children }: { children: React.ReactNode }) => (;
-    <div />;
+    <div />
   );
 ;
   const { result } = renderHook(() => usePostsByCategory(;

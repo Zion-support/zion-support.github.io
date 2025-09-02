@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Revolutionary2025AdvancedMicroSaasService {;
+export interface Revolutionary2025AdvancedMicroSaasService {
   id: string;
    name: string;
    tagline: string;
@@ -36,7 +36,7 @@ export interface Revolutionary2025AdvancedMicroSaasService {;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;const contact = {;
+reviews: number;const contact = {
   mobile:,;
   +1 302 464 0950',;
   email: 'kleber@ziontechgroup.com,;

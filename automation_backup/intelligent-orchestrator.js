@@ -40,7 +40,7 @@ class IntelligentOrchestrator {;
   }
 ;
   loadAutomationSystems() {;
-    const systems = [;
+    const systems = [
       { name: 'lint-monitor, path:,;
   lint-monitor.js', status: 'available },;
       {;
@@ -255,7 +255,7 @@ class IntelligentOrchestrator {;
   isDependencyUsed(dependency) {;
     // Simplified check - in reality, you;
   'd scan all source files for imports;
-    const commonDeps = ['react;
+    const commonDeps = ['react
   ',react-dom',next;
   ',vite',typescript;
   '];
@@ -365,7 +365,7 @@ class IntelligentOrchestrator {;
     }
   }
 ;
-  getSystemStatus() {;
+  getSystemStatus() {
     const status = {;
       timestamp: new Date().toISOString(),;
       monitoring: this.monitoring,;

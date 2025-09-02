@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from;
   'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Eye,; EyeOff,; Volume2,; VolumeX,; Move,; Type,; Contrast,; Accessibility,; X,; Settings,; Keyboard,; MousePointer,; Monitor,; Smartphone; } from;
-  'lucide-react'; ; interface AccessibilityFeatures {;
+  'lucide-react'; ; interface AccessibilityFeatures {
    highContrast: boolean;
    reducedMotion: boolean;
    largeText: boolean;
@@ -12,11 +12,11 @@ import React, { useEffect, useRef, useState, useCallback } from;
    cursorEnhancement: boolean;
    keyboardNavigation: boolean;
    colorBlindnessSupport: boolean;
-}; interface FocusTrapConfig {;
-   containerRef: React.RefObject<HTMLElement>;
+}; interface FocusTrapConfig {
+   containerRef: React.RefObject<HTMLElement>
    onEscape?: () => void;
    returnFocus?: boolean;
-}; interface AccessibilityAnnouncement {;
+}; interface AccessibilityAnnouncement {
    message: string;
    priority: 'polite' | 'assertive';
    id: number;

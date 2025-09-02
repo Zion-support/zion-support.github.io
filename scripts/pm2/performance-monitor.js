@@ -70,14 +70,14 @@ class PerformanceMonitor {;
         calculateSize(;
   'dist');
 ;
-      return {;
+      return {
         buildTime,;
         buildSize,;
         fileCount,;
         success: true;
       };
 ;
-    } catch (error) {;
+    } catch (error) {
       return {;
         success: false,;
         error: error.message,;
@@ -86,7 +86,7 @@ class PerformanceMonitor {;
         fileCount: 0;
       };
 ;
-  async checkBundleAnalysis() {;
+  async checkBundleAnalysis() {
     try {;
       this.log(,;
   📊 Analyzing bundle...');
@@ -95,7 +95,7 @@ class PerformanceMonitor {;
   'dist')) {;
         return { error: 'No build output found };
 ;
-      const bundleStats = {;
+      const bundleStats = {
         totalSize: 0,;
         jsFiles: [],;
         cssFiles: [],;
@@ -111,7 +111,7 @@ class PerformanceMonitor {;
 ;
           if (stat.isDirectory()) {;
             analyzeDirectory(fullPath);
-          } else {;
+          } else {
             const relativePath = fullPath.replace(this.projectRoot +;
   '/dist/',);
             const fileInfo = {;
@@ -138,7 +138,7 @@ class PerformanceMonitor {;
   'dist');
 ;
       // Sort files by size to find largest;
-      const allFiles = [...bundleStats.jsFiles, ...bundleStats.cssFiles, ...bundleStats.assetFiles];
+      const allFiles = [...bundleStats.jsFiles, ...bundleStats.cssFiles, ...bundleStats.assetFiles]
       bundleStats.largestFiles = allFiles;
         .sort((a, b) => b.size - a.size);
         .slice(0, 10);
@@ -147,7 +147,7 @@ class PerformanceMonitor {;
 ;
       return bundleStats;
 ;
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
 ;
   async checkDependencies() {;
@@ -185,13 +185,13 @@ class PerformanceMonitor {;
   't access;
         });
 ;
-      return {;
+      return {
         dependencies: dependencies.length,;
         devDependencies: devDependencies.length,;
         largePackages: largePackages.sort((a, b) => b.size - a.size);
       };
 ;
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
 ;
   calculateDirectorySize(dir) {;
@@ -221,18 +221,18 @@ class PerformanceMonitor {;
       try {;
         execSync(;
   'lighthouse --version', { stdio: 'pipe });
-      } catch (error) {;
+      } catch (error) {
         return { error:,;
   Lighthouse not installed. Install with: npm install -g lighthouse };
 ;
       // For now, just check if we can run it;
-      return { available: true, message:;
+      return { available: true, message:
   'Lighthouse available for performance testing' };
 ;
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
 ;
-  async checkWebpackBundleAnalyzer() {;
+  async checkWebpackBundleAnalyzer() {
     try {;
       this.log(;
   '📈 Checking bundle analyzer availability...');
@@ -256,7 +256,7 @@ class PerformanceMonitor {;
           null;
       };
 ;
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
 ;
   async generateReport(buildStats, bundleStats, dependencyStats, lighthouseStats, analyzerStats) {;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AIHealthcarePlatform from './AIHealthcarePlatform';
-;
+
 describe('AIHealthcarePlatform', () => {;
   it('renders without crashing', () => {;
     render(<AIHealthcarePlatform />);

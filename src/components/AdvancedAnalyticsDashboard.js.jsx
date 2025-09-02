@@ -113,7 +113,7 @@ const AdvancedAnalyticsDashboard = () => {}
       revenue: 340000,';
       status: 'stable'}
   ]';
-  const categoryDistribution = ['';
+  const categoryDistribution = [''
     { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },';
     { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },';
     { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },';
@@ -130,7 +130,7 @@ const AdvancedAnalyticsDashboard = () => {}
       case 'declining':'''';
         return <TrendingDown className='w-4 h-4 text-red-500' />';';
       default:'''';
-        return <Activity className='w-4 h-4 text-gray-500' />;
+        return <Activity className='w-4 h-4 text-gray-500' />
     }
   };
   const getStatusColor = status => {}
@@ -147,7 +147,7 @@ const AdvancedAnalyticsDashboard = () => {}
     }
   }';';
   return ('''';
-    <div className='max-w-7xl mx-auto p-6'>;
+    <div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}''';
@@ -156,13 +156,13 @@ const AdvancedAnalyticsDashboard = () => {}
       >'''';
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>''';
           <div>'''';
-            <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>;
+            <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>
               Advanced Analytics Dashboard''';
             </h1>'''';
-            <p className='text-zion-slate-light'>;
+            <p className='text-zion-slate-light'>
               Real-time insights into service performance, client metrics, and;
               business intelligence;
-            </p>;
+            </p>
           </div>''';
 '''';
           <div className='flex gap-2'>';
@@ -174,13 +174,13 @@ const AdvancedAnalyticsDashboard = () => {}
                 onClick={() => setTimeRange(range)}
               >;
                 {range}
-              </Button>;
+              </Button>
             ))}
-          </div>;
-        </div>;
-      </motion.div>;
+          </div>
+        </div>
+      </motion.div>
       {/* Metrics Cards */}
-      <motion.div;
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}''';
         transition={{ delay: 0.1 }}'''';
@@ -194,8 +194,8 @@ const AdvancedAnalyticsDashboard = () => {}
           >'''';
             <Card className='h-full hover:shadow-lg transition-shadow'>'''';
               <CardHeader className='pb-3'>'''';
-                <div className='flex items-center justify-between'>;
-                  <div;
+                <div className='flex items-center justify-between'>
+                  <div
                     className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}
                   >;
                     {metric.icon}''';
@@ -204,28 +204,28 @@ const AdvancedAnalyticsDashboard = () => {}
                     {metric.changeType === 'increase' ? ('''';
                       <ArrowUpRight className='w-4 h-4 text-green-500' />''';
                     ) : ('''';
-                      <ArrowDownRight className='w-4 h-4 text-red-500' />;
+                      <ArrowDownRight className='w-4 h-4 text-red-500' />
                     )}'`;
-                    <span'`'`;
+                    <span'`'`
                       className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}
                     >;
                       {metric.change}%;
-                    </span>;
-                  </div>;
-                </div>;
+                    </span>
+                  </div>
+                </div>
               </CardHeader>''';
               <CardContent>'''';
-                <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>;
+                <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>
                   {metric.value}''';
                 </h3>'''';
-                <p className='text-sm text-zion-slate-light'>{metric.title}</p>;
-              </CardContent>;
-            </Card>;
-          </motion.div>;
+                <p className='text-sm text-zion-slate-light'>{metric.title}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </motion.div>;
+      </motion.div>
       {/* Service Performance Table */}
-      <motion.div;
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}''';
         transition={{ delay: 0.2 }}'''';
@@ -233,36 +233,36 @@ const AdvancedAnalyticsDashboard = () => {}
         <Card>''';
           <CardHeader>'''';
             <CardTitle className='flex items-center gap-2'>'''';
-              <BarChart3 className='w-5 h-5 text-zion-cyan' />;
+              <BarChart3 className='w-5 h-5 text-zion-cyan' />
               Service Performance Overview;
-            </CardTitle>;
+            </CardTitle>
           </CardHeader>''';
           <CardContent>'''';
             <div className='overflow-x-auto'>'''';
               <table className='w-full'>''';
                 <thead>'''';
                   <tr className='border-b border-zion-slate-light/20'>'''';
-                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>;
+                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>
                       Service''';
                     </th>'''';
-                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>;
+                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>
                       Performance''';
                     </th>'''';
-                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>;
+                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>
                       Growth''';
                     </th>'''';
-                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>;
+                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>
                       Clients''';
                     </th>'''';
-                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>;
+                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>
                       Revenue''';
                     </th>'''';
-                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>;
+                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>
                       Status;
-                    </th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
                   {servicePerformance.map((service, index) => (;
                     <motion.tr;
                       key={index}
@@ -272,7 +272,7 @@ const AdvancedAnalyticsDashboard = () => {}
                       className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5'''';
                     >'''';
                       <td className='py-3 px-4'>'''';
-                        <div className='font-medium text-zion-blue-dark'>;
+                        <div className='font-medium text-zion-blue-dark'>
                           {service.name}
                         </div>''';
                       </td>'''';
@@ -284,45 +284,45 @@ const AdvancedAnalyticsDashboard = () => {}
                               style={{ width: `${service.performance}%` }}
                             ></div>''';
                           </div>'''';
-                          <span className='text-sm font-medium'>;
+                          <span className='text-sm font-medium'>
                             {service.performance}%;
-                          </span>;
+                          </span>
                         </div>''';
                       </td>'''';
                       <td className='py-3 px-4'>'''';
                         <div className='flex items-center gap-1'>'''';
                           <TrendingUp className='w-4 h-4 text-green-500' />'''';
-                          <span className='text-green-600 font-medium'>;
+                          <span className='text-green-600 font-medium'>
                             +{service.growth}%;
-                          </span>;
+                          </span>
                         </div>''';
                       </td>'''';
                       <td className='py-3 px-4'>'''';
                         <span className='font-medium'>{service.clients}</span>''';
                       </td>'''';
                       <td className='py-3 px-4'>'''';
-                        <span className='font-medium'>;
+                        <span className='font-medium'>
                           ${(service.revenue / 1000).toFixed(0)}K;
                         </span>''';
                       </td>'''';
                       <td className='py-3 px-4'>''';
                         <Badge className={getStatusColor(service.status)}>'''';
-                          <div className='flex items-center gap-1'>;
+                          <div className='flex items-center gap-1'>
                             {getStatusIcon(service.status)}
                             {service.status}
-                          </div>;
-                        </Badge>;
-                      </td>;
-                    </motion.tr>;
+                          </div>
+                        </Badge>
+                      </td>
+                    </motion.tr>
                   ))}
-                </tbody>;
-              </table>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </motion.div>;
+                </tbody>
+              </table>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
       {/* Charts and Insights */}
-      <motion.div;
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}''';
         transition={{ delay: 0.3 }}'''';
@@ -331,12 +331,12 @@ const AdvancedAnalyticsDashboard = () => {}
         <Card>''';
           <CardHeader>'''';
             <CardTitle className='flex items-center gap-2'>'''';
-              <PieChart className='w-5 h-5 text-zion-purple' />;
+              <PieChart className='w-5 h-5 text-zion-purple' />
               Service Category Distribution;
-            </CardTitle>;
+            </CardTitle>
           </CardHeader>''';
           <CardContent>'''';
-            <div className='space-y-3'>;
+            <div className='space-y-3'>
               {categoryDistribution.map((category, index) => (;
                 <motion.div;
                   key={index}
@@ -349,7 +349,7 @@ const AdvancedAnalyticsDashboard = () => {}
                     <div``;
                       className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}''';
                     ></div>'''';
-                    <span className='font-medium text-zion-slate-dark'>;
+                    <span className='font-medium text-zion-slate-dark'>
                       {category.label}
                     </span>''';
                   </div>'''';
@@ -360,65 +360,65 @@ const AdvancedAnalyticsDashboard = () => {}
                         style={{ width: `${category.value}%` }}
                       ></div>''';
                     </div>'''';
-                    <span className='text-sm font-medium text-zion-slate-light'>;
+                    <span className='text-sm font-medium text-zion-slate-light'>
                       {category.value}%;
-                    </span>;
-                  </div>;
-                </motion.div>;
+                    </span>
+                  </div>
+                </motion.div>
               ))}
-            </div>;
-          </CardContent>;
-        </Card>;
+            </div>
+          </CardContent>
+        </Card>
         {/* Key Insights */}
         <Card>''';
           <CardHeader>'''';
             <CardTitle className='flex items-center gap-2'>'''';
-              <Brain className='w-5 h-5 text-zion-cyan' />;
+              <Brain className='w-5 h-5 text-zion-cyan' />
               Key Insights;
-            </CardTitle>;
+            </CardTitle>
           </CardHeader>''';
           <CardContent>'''';
             <div className='space-y-4'>'''';
               <div className='flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg'>'''';
                 <TrendingUp className='w-5 h-5 text-zion-green mt-1' />''';
                 <div>'''';
-                  <h4 className='font-semibold text-zion-slate-dark'>;
+                  <h4 className='font-semibold text-zion-slate-dark'>
                     AI Services Growth''';
                   </h4>'''';
-                  <p className='text-sm text-zion-slate-light'>;
+                  <p className='text-sm text-zion-slate-light'>
                     AI and ML services showing 35% growth, highest performing;
                     category;
-                  </p>;
-                </div>;
+                  </p>
+                </div>
               </div>''';
 '''';
               <div className='flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg'>'''';
                 <Users className='w-5 h-5 text-zion-blue mt-1' />''';
                 <div>'''';
-                  <h4 className='font-semibold text-zion-slate-dark'>;
+                  <h4 className='font-semibold text-zion-slate-dark'>
                     Client Acquisition''';
                   </h4>'''';
-                  <p className='text-sm text-zion-slate-light'>;
+                  <p className='text-sm text-zion-slate-light'>
                     New client acquisition rate increased by 18% this quarter;
-                  </p>;
-                </div>;
+                  </p>
+                </div>
               </div>''';
 '''';
               <div className='flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg'>'''';
                 <Star className='w-5 h-5 text-zion-purple mt-1' />''';
                 <div>'''';
-                  <h4 className='font-semibold text-zion-slate-dark'>;
+                  <h4 className='font-semibold text-zion-slate-dark'>
                     Satisfaction Score''';
                   </h4>'''';
-                  <p className='text-sm text-zion-slate-light'>;
+                  <p className='text-sm text-zion-slate-light'>
                     Client satisfaction reached 4.8/5, highest in comp history;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </motion.div>;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
       {/* CTA Section */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
@@ -428,7 +428,7 @@ const AdvancedAnalyticsDashboard = () => {}
       >'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
           <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics</h3>'''';
-          <p className='text-xl mb-6 max-w-2xl mx-auto'>;
+          <p className='text-xl mb-6 max-w-2xl mx-auto'>
             Access comprehensive analytics, custom reports, and real-time;
             insights to optimize your business performance and make data-driven;
             decisions.''';
@@ -442,7 +442,7 @@ const AdvancedAnalyticsDashboard = () => {}
                 );
               }''';
             >'''';
-              <Rocket className='w-5 h-5 mr-2' />;
+              <Rocket className='w-5 h-5 mr-2' />
               Request Access;
             </Button>''';
             <Button'''';
@@ -450,12 +450,12 @@ const AdvancedAnalyticsDashboard = () => {}
               className='border-white text-white hover:bg-white hover:text-zion-purple''';
               onClick={() => window.open('tel:+13024640950',_blank')}''';
             >'''';
-              <Shield className='w-5 h-5 mr-2' />;
+              <Shield className='w-5 h-5 mr-2' />
               Schedule Demo;
-            </Button>;
-          </div>;
-        </div>;
-      </motion.div>;
+            </Button>
+          </div>
+        </div>
+      </motion.div>
     </div>)};
 export default AdvancedAnalyticsDashboard;
 ;

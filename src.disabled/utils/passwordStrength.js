@@ -2,7 +2,7 @@
 /**;
  * Password strength levels;
  */;
-export const PASSWORD_STRENGTH = {;
+export const PASSWORD_STRENGTH = {
   VERY_WEAK: 'very-weak',;
   WEAK: 'weak',;
   MEDIUM: 'medium',;
@@ -13,7 +13,7 @@ export const PASSWORD_STRENGTH = {;
 /**;
  * Password strength colors;
  */;
-export const PASSWORD_COLORS = {;
+export const PASSWORD_COLORS = {
   [PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',;
   [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',;
   [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',;
@@ -24,7 +24,7 @@ export const PASSWORD_COLORS = {;
 /**;
  * Password strength labels;
  */;
-export const PASSWORD_LABELS = {;
+export const PASSWORD_LABELS = {
   [PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',;
   [PASSWORD_STRENGTH.WEAK]: 'Weak',;
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',;
@@ -170,7 +170,7 @@ export const getPasswordFeedback = (password) => {;
  * @param {string} password - Password to validate;
  * @returns {Object} Validation result;
  */;
-export const validatePassword = (password) => {;
+export const validatePassword = (password) => {
   const score = calculatePasswordScore(password);
   const strength = getPasswordStrength(password);
   const feedback = getPasswordFeedback(password);

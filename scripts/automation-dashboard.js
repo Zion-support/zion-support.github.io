@@ -253,7 +253,7 @@ class AutomationDashboard {;
         status: proc.pm2_env.status,;
         restarts: proc.pm2_env.restart_time;
       })),;
-      summary: {;
+      summary: {
         totalMemory: this.processes.reduce((sum, p) => sum + p.monit.memory, 0),;
         averageCPU: this.processes.reduce((sum, p) => sum + p.monit.cpu, 0) / this.processes.length,;
         totalRestarts: this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0);

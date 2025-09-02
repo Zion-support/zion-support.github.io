@@ -1,7 +1,7 @@
 import { GradientHeading } from './GradientHeading';
 import { Link } from;
   'react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users const categories = [;
+import { Briefcase, HardDrive, Lightbulb, Users const categories = [
   {;
     title: 'AI Services',;
     description: 'Cutting-edge AI solutions, chatbots, and machine learning',;
@@ -32,7 +32,7 @@ import { Briefcase, HardDrive, Lightbulb, Users const categories = [;
     gradient: 'from-zion-purple-light to-zion-purple',;
   },;
 ];
-const specialServices = [;
+const specialServices = [
   {;
     title: 'IT Onsite Services',;
     link: '/it-onsite-services';
@@ -41,7 +41,7 @@ const specialServices = [;
     title: 'Comprehensive Services',;
     link: '/comprehensive-services';
   },;
-  {;
+  {
     title: 'Services Comparison',;
     link: '/services-comparison';
   };
@@ -51,7 +51,7 @@ interface CategoriesSectionProps {;
 }
 const containerVariants = {;
   hidden: { opacity: 0 },;
-  visible: {;
+  visible: {
     opacity: 1,;
     transition: {;
       staggerChildren: 0.1,;
@@ -64,7 +64,7 @@ const itemVariants = {;
   hidden: { y: 20,;
   opacity: 0;
 },;
-  visible: {;
+  visible: {
     y: 0,;
     opacity: 1,;
     transition: {;
@@ -77,10 +77,10 @@ const itemVariants = {;
   delay: 0.4;
 }}
         >;
-          <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>;
-          <div className='flex flex-wrap justify-center gap-4'>;
+          <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>
+          <div className='flex flex-wrap justify-center gap-4'>
             {specialServices.map((service) => (;
-              <motion.div;
+              <motion.div
                 key={service.title}
                 href={service.link}
                 className='px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300';
@@ -89,12 +89,12 @@ const itemVariants = {;
                   className='px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2';
                   {service.title}
                   <ArrowRight className='w-4 h-4' />;
-                </Link>;
-              </motion.div>;
+                </Link>
+              </motion.div>
             ))}
-          </div>;
-        </motion.div>;
-        <motion.div;
+          </div>
+        </motion.div>
+        <motion.div
           className='mt-12 flex justify-center';
           initial = {;
   { opacity: 0,;
@@ -110,16 +110,16 @@ const itemVariants = {;
   delay: 0.6;
 }}
         >;
-          <Link;
+          <Link
             href='/categories';
             className='text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors';
             View All Categories;
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
 ;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 ;

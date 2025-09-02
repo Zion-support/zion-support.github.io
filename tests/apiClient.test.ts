@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import apiClient from '@/services/apiClient';
 import { supabase } from '@/integrations/supabase/client';
-;
+
 vi.mock(;
   '@/integrations/supabase/client', () => ({;
   supabase: { auth: { signOut: vi.fn().mockResolvedValue({}) } }

@@ -1,5 +1,5 @@
 import React from;
-  'react'; export interface PricingTier {;
+  'react'; export interface PricingTier {
   id: string;
    name: string;
    price: number;

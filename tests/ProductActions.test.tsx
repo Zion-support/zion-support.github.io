@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 import { ProductActions } from '@/components/ProductActions';
-;
+
 vi.mock(;
   'react-toastify', () => ({ toast: vi.fn() }));
 ;

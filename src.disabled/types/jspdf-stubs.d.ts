@@ -1,4 +1,4 @@
-declare module 'jspdf' {;
+declare module 'jspdf' {
   export class jsPDF {;
     constructor(options?: any);
     text(...args: any[]): void;

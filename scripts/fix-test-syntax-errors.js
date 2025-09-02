@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { glob } from 'glob';
-;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -27,7 +27,7 @@ class TestSyntaxErrorFixer {;
       // Find all test files;
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {;
         cwd: this.projectRoot,;
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**'];
+        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**']
       });
 ;
       console.log(`📁 Found ${testFiles.length} test files`);
@@ -99,7 +99,7 @@ class TestSyntaxErrorFixer {;
 ;
     // Fix import statements with semicolons in the middle;
     content = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
-;
+
     return content;
   }
 ;

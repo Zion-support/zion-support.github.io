@@ -1,14 +1,14 @@
 import { Route, Routes    } from 'react-router-dom';
-export default function Page() {;
-export default function Page() {;
+export default function Page() {
+export default function Page() {
   import { Suspense, lazy } from 'react';
-export default function Page() {;
-export default function Page() {;
+export default function Page() {
+export default function Page() {
   import { ProtectedRoute } from '../components/ProtectedRoute';
-export default function Page() {;
-export default function Page() {;
+export default function Page() {
+export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
-;
+
 // Lazy load auth pages;
 const Login = lazy(() => import('../pages/Login'));
 const Signup = lazy(() => import('../pages/Signup'));
@@ -19,8 +19,8 @@ const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
 ;
 const AuthRoutes: React.FC = () => {;
-  return (<Suspense fallback={<LoadingSpinner />}>;
-      <Routes>;
+  return (<Suspense fallback={<LoadingSpinner />}>
+      <Routes>
         <Route path='/login' element={<Login />} />;
         <Route path='/signup' element={<Signup />} />;
         <Route path='/forgot-password' element={<ForgotPassword />} />;
@@ -28,23 +28,23 @@ const AuthRoutes: React.FC = () => {;
         <Route path='/onboarding' element={<Onboarding />} />;
         <Route path='/talent-onboarding' element={<TalentOnboarding />} />;
         <Route path='/service-onboarding' element={<ServiceOnboarding />} />;
-        <Route path='/profile' element={;
+        <Route path='/profile' element={
           <ProtectedRoute>;
-            <div>Profile Page</div>;
-          </ProtectedRoute>;
+            <div>Profile Page</div>
+          </ProtectedRoute>
         } />;
-        <Route path='/dashboard' element={;
+        <Route path='/dashboard' element={
           <ProtectedRoute>;
-            <div>Dashboard</div>;
-          </ProtectedRoute>;
+            <div>Dashboard</div>
+          </ProtectedRoute>
         } />;
-        <Route path='/settings' element={;
+        <Route path='/settings' element={
           <ProtectedRoute>;
-            <div>Settings</div>;
-          </ProtectedRoute>;
+            <div>Settings</div>
+          </ProtectedRoute>
         } />;
-      </Routes>;
-    </Suspense>;
+      </Routes>
+    </Suspense>
   );
 };
 ;

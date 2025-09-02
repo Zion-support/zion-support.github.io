@@ -207,7 +207,7 @@ class DependencyMonitor {;
     }
   }
 ;
-  getStats() {;
+  getStats() {
     return {;
       vulnerabilitiesFound: this.vulnerabilitiesFound,;
       dependenciesUpdated: this.dependenciesUpdated,;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ai-services from './ai-services';
-;
+
 describe('ai-services', () => {;
   it('renders without crashing', () => {;
     render(<ai-services />);

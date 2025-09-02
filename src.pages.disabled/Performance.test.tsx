@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Performance from './Performance';
-;
+
 describe('Performance', () => {;
   it('renders without crashing', () => {;
     render(<Performance />);

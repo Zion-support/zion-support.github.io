@@ -1,4 +1,4 @@
-export interface Ultimate2026Service {;
+export interface Ultimate2026Service {
   id: string;
    name: string;
    tagline: string;

@@ -1,6 +1,6 @@
 const CACHE_NAME =;
   'zion-tech-group-v1';
-const urlsToCache = [;
+const urlsToCache = [
   '/',;
   '/about',;
   '/services',;

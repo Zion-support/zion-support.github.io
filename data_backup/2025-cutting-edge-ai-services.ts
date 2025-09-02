@@ -22,7 +22,7 @@ starter: {;
         price: 399,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic consciousness development,;
   'Up to 200 interactions/month',;
   'Standard analytics',;
@@ -32,7 +32,7 @@ starter: {;
         price: 999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced consciousness models,;
   'Unlimited interactions',;
   'Custom training',;
@@ -82,7 +82,7 @@ starter: {;
   'AI development tools',;
   'Neuroscience equipment',;
   'Academic databases'],;
-    compliance[;
+    compliance[
   'GDPR',;
   'CCPA',;
   'SOC2',;
@@ -111,7 +111,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic quantum-AI processing,;
   'Up to 200 quantum operations/month',;
   'Standard analytics',;
@@ -121,7 +121,7 @@ starter: {;
         price: 1999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced quantum-AI models,;
   'Unlimited quantum operations',;
   'Custom algorithms',;
@@ -171,7 +171,7 @@ starter: {;
   'Cloud services',;
   'Research tools',;
   'Enterprise systems'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'FedRAMP',;
@@ -200,7 +200,7 @@ starter: {;
         price: 599,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic autonomous features,;
   'Up to 100 autonomous operations/month',;
   'Standard monitoring',;
@@ -210,7 +210,7 @@ starter: {;
         price: 1499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced autonomous capabilities,;
   'Unlimited operations',;
   'Custom workflows',;
@@ -260,7 +260,7 @@ starter: {;
   'IoT devices',;
   'AI frameworks',;
   'Monitoring tools'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'FedRAMP',;
@@ -289,7 +289,7 @@ starter: {;
         price: 299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic ethics monitoring,;
   'Up to 50 AI models',;
   'Standard reporting',;
@@ -299,7 +299,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced ethics tools,;
   'Unlimited models',;
   'Custom frameworks',;
@@ -349,7 +349,7 @@ starter: {;
   'Monitoring systems',;
   'Reporting tools',;
   'Training platforms'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'GDPR',;
@@ -378,7 +378,7 @@ starter: {;
         price: 199,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic creative tools,;
   'Up to 100 creations/month',;
   'Standard templates',;
@@ -388,7 +388,7 @@ starter: {;
         price: 599,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced creative capabilities,;
   'Unlimited creations',;
   'Custom models',;
@@ -439,7 +439,7 @@ integrations: [;
   'Marketing platforms',;
   'Content management systems',;
   'Collaboration tools'],;
-    compliance: [;
+    compliance: [
   'SOC2,;
   'ISO 27001',;
   'GDPR',;

@@ -10,7 +10,7 @@ declare module 'react-resizable-panels';
 declare module '@radix-ui/react-toggle-group';
 declare module '@radix-ui/react-toggle';
 declare module;
-  '*.module.css' {;
+  '*.module.css' {
   const classes: { [key: string]: string };
   export default classes;
 declare module,;
@@ -25,11 +25,11 @@ declare module;
    declare module 'lucide-react { import { FC, SVGProps;
 } from;
   'react';
-  export interface LucideProps extends SVGProps<SVGSVGElement> {;
+  export interface LucideProps extends SVGProps<SVGSVGElement> {
     color?: string;
     size?: number | string;
     strokeWidth?: number | string;
-  export type LucideIcon = FC<LucideProps>;
+  export type LucideIcon = FC<LucideProps>
   export const Award: LucideIcon;
   export const Building: LucideIcon;
   export const Crown: LucideIcon;
@@ -127,24 +127,24 @@ declare module;
 declare module;
   'react-helmet-async';
 declare module;
-  'react-hook-form {;
+  'react-hook-form {
   import type { ComponentType, ReactElement, ReactNode } from;
   'react';
   // Minimal generic typings to satisfy local usage without full type defs;
-  export type FieldValues = Record<string, any>;
+  export type FieldValues = Record<string, any>
   export type FieldPath<TFieldValues extends FieldValues> =;
     keyof TFieldValues & string;
   export type Control<TFieldValues extends FieldValues = FieldValues> =  export interface UseFormReturn<;
     TFieldValues extends FieldValues = FieldValues,;
   > {;
-    control: Control<TFieldValues>;
+    control: Control<TFieldValues>
 handleSubmit: any;
     register: any;
     formState: any;
     [key: string]: any;
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues,;
-  >(options?: any): UseFormReturn<TFieldValues>;
+  >(options?: any): UseFormReturn<TFieldValues>
   export function useFieldArray<;
     TFieldValues extends FieldValues = FieldValues,;
   >(options: any): any;
@@ -153,7 +153,7 @@ handleSubmit: any;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,;
   > {;
     name: TName;
-    control?: Control<TFieldValues>;
+    control?: Control<TFieldValues>
     rules?: any;
     defaultValue?: any;
     render: (props: any) => ReactElement;

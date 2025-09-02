@@ -1,4 +1,4 @@
-const contact = {;
+const contact = {
   mobile:,;
   +1 302 464 0950',;
     email: 'kleber@ziontechgroup.com,;
@@ -82,7 +82,7 @@ export const ultimateInnovativeServices2025 = [;
   'Investment Management',;
   'Trading',;
   'Risk Management'],;
-        compliance[;
+        compliance[
   'SOX',;
   'GLBA',;
   'PCI-DSS',;
@@ -164,7 +164,7 @@ export const ultimateInnovativeServices2025 = [;
   'Pharmaceuticals',;
   'Government',;
   'Technology'],;
-        compliance[;
+        compliance[
   'GDPR',;
   'HIPAA',;
   'FERPA',;
@@ -245,7 +245,7 @@ export const ultimateInnovativeServices2025 = [;
   'Energy',;
   'Transportation',;
   'Smart Cities'],;
-        compliance[;
+        compliance[
   'ISO 27001',;
   'SOC 2 Type II',;
   'GDPR',;
@@ -327,7 +327,7 @@ export const ultimateInnovativeServices2025 = [;
   'E-commerce',;
   'Logistics',;
   'Distribution'],;
-        compliance[;
+        compliance[
   'ISO 9001',;
   'SOC 2 Type II',;
   'GDPR'];
@@ -407,7 +407,7 @@ export const ultimateInnovativeServices2025 = [;
   'Defense',;
   'Pharmaceuticals',;
   'Finance'],;
-        compliance[;
+        compliance[
   'ITAR',;
   'SOC 2 Type II',;
   'ISO 27001'];
@@ -487,7 +487,7 @@ export const ultimateInnovativeServices2025 = [;
   'Services',;
   'Technology',;
   'Healthcare'],;
-        compliance[;
+        compliance[
   'SOX',;
   'SOC 2 Type II',;
   'GDPR',;
@@ -567,7 +567,7 @@ export const ultimateInnovativeServices2025 = [;
   'Pharmaceuticals',;
   'Research',;
   'Medical Devices'],;
-        compliance[;
+        compliance[
   'HIPAA',;
   'HITECH',;
   'SOC 2 Type II',;
@@ -648,7 +648,7 @@ export const ultimateInnovativeServices2025 = [;
   'SaaS',;
   'Marketing Agencies',;
   'Retail'],;
-        compliance[;
+        compliance[
   'GDPR',;
   'CCPA',;
   'SOC 2 Type II'];
@@ -728,7 +728,7 @@ export const ultimateInnovativeServices2025 = [;
   'Healthcare',;
   'Government',;
   'Enterprise'],;
-        compliance[;
+        compliance[
   'SOC 2 Type II',;
   'ISO 27001',;
   'PCI-DSS',;

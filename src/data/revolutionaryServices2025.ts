@@ -1,11 +1,11 @@
-export interface ServiceContact {;
+export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
   address: string;
 }
 ;
-export interface MicroSaasService {;
+export interface MicroSaasService {
   id: string;
   name: string;
   category: string;
@@ -32,7 +32,7 @@ export interface MicroSaasService {;
   technologies: string[];
 }
 ;
-export interface ITService {;
+export interface ITService {
   id: string;
   name: string;
   category: string;
@@ -59,7 +59,7 @@ export interface ITService {;
   technologies: string[];
 }
 ;
-export interface AIService {;
+export interface AIService {
   id: string;
   name: string;
   category: string;
@@ -87,7 +87,7 @@ export interface AIService {;
 }
 ;
 // Zion Tech Group Contact Information;
-export const zionContact: ServiceContact = {;
+export const zionContact: ServiceContact = {
   phone: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   website: 'https://ziontechgroup.com',;
@@ -147,7 +147,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Operational efficiency tracking',;
       'Market trend analysis';
     ],;
-    technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis'];
+    technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis']
   },;
   {;
     id: 'customer-support-automation-2025',;
@@ -200,7 +200,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'FAQ responses',;
       'Appointment scheduling';
     ],;
-    technologies: ['Vue.js', 'Python', 'OpenAI GPT', 'MongoDB', 'WebSocket', 'Redis'];
+    technologies: ['Vue.js', 'Python', 'OpenAI GPT', 'MongoDB', 'WebSocket', 'Redis']
   },;
   {;
     id: 'content-creation-platform-2025',;
@@ -253,7 +253,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Product descriptions',;
       'Ad copy generation';
     ],;
-    technologies: ['Next.js', 'Python', 'OpenAI API', 'PostgreSQL', 'AWS S3', 'Cloudinary'];
+    technologies: ['Next.js', 'Python', 'OpenAI API', 'PostgreSQL', 'AWS S3', 'Cloudinary']
   },;
   {;
     id: 'project-management-ai-2025',;
@@ -306,7 +306,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Product launches',;
       'Client project delivery';
     ],;
-    technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis'];
+    technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis']
   },;
   {;
     id: 'inventory-management-ai-2025',;
@@ -359,7 +359,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Seasonal demand planning',;
       'Supplier coordination';
     ],;
-    technologies: ['Vue.js', 'Python', 'Scikit-learn', 'PostgreSQL', 'Redis', 'Docker'];
+    technologies: ['Vue.js', 'Python', 'Scikit-learn', 'PostgreSQL', 'Redis', 'Docker']
   },;
   {;
     id: 'hr-automation-platform-2025',;
@@ -412,7 +412,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Training management',;
       'Compliance reporting';
     ],;
-    technologies: ['Angular', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS'];
+    technologies: ['Angular', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS']
   },;
   {;
     id: 'financial-analytics-ai-2025',;
@@ -465,7 +465,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Budget management',;
       'Compliance reporting';
     ],;
-    technologies: ['React', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Docker'];
+    technologies: ['React', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Docker']
   },;
   {;
     id: 'marketing-automation-ai-2025',;
@@ -518,7 +518,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Customer segmentation',;
       'Campaign optimization';
     ],;
-    technologies: ['Vue.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS'];
+    technologies: ['Vue.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS']
   },;
   {;
     id: 'sales-automation-ai-2025',;
@@ -571,7 +571,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Meeting scheduling',;
       'Performance tracking';
     ],;
-    technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis'];
+    technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis']
   },;
   {;
     id: 'compliance-automation-ai-2025',;
@@ -624,7 +624,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [;
       'Policy enforcement',;
       'Incident reporting';
     ],;
-    technologies: ['Angular', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Docker'];
+    technologies: ['Angular', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Docker']
   }
 ];
 ;
@@ -681,7 +681,7 @@ export const revolutionaryITServices2025: ITService[] = [;
       'Compliance reporting',;
       'Incident investigation';
     ],;
-    technologies: ['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker', 'Kubernetes'];
+    technologies: ['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker', 'Kubernetes']
   },;
   {;
     id: 'cloud-infrastructure-optimization-2025',;
@@ -734,7 +734,7 @@ export const revolutionaryITServices2025: ITService[] = [;
       'Compliance management',;
       'Disaster recovery';
     ],;
-    technologies: ['Python', 'Terraform', 'Kubernetes', 'Prometheus', 'Grafana', 'AWS SDK'];
+    technologies: ['Python', 'Terraform', 'Kubernetes', 'Prometheus', 'Grafana', 'AWS SDK']
   },;
   {;
     id: 'devops-automation-platform-2025',;
@@ -787,7 +787,7 @@ export const revolutionaryITServices2025: ITService[] = [;
       'Monitoring and alerting',;
       'Security scanning';
     ],;
-    technologies: ['Python', 'Jenkins', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'];
+    technologies: ['Python', 'Jenkins', 'Docker', 'Kubernetes', 'Terraform', 'Ansible']
   }
 ];
 ;
@@ -844,7 +844,7 @@ export const revolutionaryAIServices2025: AIService[] = [;
       'Financial operations',;
       'Supply chain optimization';
     ],;
-    technologies: ['Python', 'TensorFlow', 'PyTorch', 'Kubernetes', 'PostgreSQL', 'Redis'];
+    technologies: ['Python', 'TensorFlow', 'PyTorch', 'Kubernetes', 'PostgreSQL', 'Redis']
   },;
   {;
     id: 'ai-predictive-analytics-2025',;
@@ -897,7 +897,7 @@ export const revolutionaryAIServices2025: AIService[] = [;
       'Market analysis',;
       'Performance prediction';
     ],;
-    technologies: ['Python', 'Scikit-learn', 'TensorFlow', 'PyTorch', 'PostgreSQL', 'Apache Spark'];
+    technologies: ['Python', 'Scikit-learn', 'TensorFlow', 'PyTorch', 'PostgreSQL', 'Apache Spark']
   },;
   {;
     id: 'ai-natural-language-processing-2025',;
@@ -950,6 +950,6 @@ export const revolutionaryAIServices2025: AIService[] = [;
       'Language translation',;
       'Voice assistants';
     ],;
-    technologies: ['Python', 'Transformers', 'BERT', 'GPT models', 'PostgreSQL', 'Redis'];
+    technologies: ['Python', 'Transformers', 'BERT', 'GPT models', 'PostgreSQL', 'Redis']
   }
 ];

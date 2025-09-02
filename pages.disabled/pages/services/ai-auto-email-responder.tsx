@@ -2,10 +2,10 @@
 export { function };export default function AIAutoEmailResponder(...args: []):  {}
   return();
     <>;
-      <Helmet>;
-        <title>AI Auto Email Responder - Zion Tech Group</title>;
+      <Helmet>
+        <title>AI Auto Email Responder - Zion Tech Group</title>
         <meta name = 'description' content='Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation.' />'';
-        <meta name='keywords' content='AI email responder, email automation, email management, CRM integration, auto reply, email bot' />;
+        <meta name='keywords' content='AI email responder, email automation, email management, CRM integration, auto reply, email bot' />
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
       </Helmet>';
 '';
@@ -20,8 +20,8 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
 '';
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
                 AI Auto Email'';
-                <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'> Responder</span>;
-              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>;
+                <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'> Responder</span>
+              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Transform your email management with AI-powered automation. Get faster replies,;
                 intelligent responses, and seamless CRM integration for better customer communication.;
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
@@ -36,24 +36,24 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   <ArrowRight className='ml-2 w-5 h-5'  />';
                 </Link>'';
                 <button className='inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200'>'';
-                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>;
-            </div>;
-          </div>;
-        </section>;
+                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
 '{/* Features Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
-                Intelligent Email Automation'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Intelligent Email Automation'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our AI email responder provides comprehensive automation capabilities for;
                 efficient email management and customer communication.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[;
                 {;
 ';
@@ -95,26 +95,26 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>'';
                     <feature.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                  <p className='text-slate-300'>{feature.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{feature.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
 '{/* Use Cases Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
-                Email Automation Use Cases'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Email Automation Use Cases'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Discover how AI email automation can transform different aspects of your business communication.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -129,7 +129,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Sales & Marketing','';
                   description: 'Lead nurturing, follow-ups, and automated sales communication.',';
                   icon: Target,'';
-                  benefits: ['Lead nurturing', 'Follow-ups', 'Sales automation'];
+                  benefits: ['Lead nurturing', 'Follow-ups', 'Sales automation']
                 },;
                 {;
 ';
@@ -137,7 +137,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Appointment Booking','';
                   description: 'Automated scheduling, confirmations, and reminder emails.',';
                   icon: Clock,'';
-                  benefits: ['Scheduling', 'Confirmations', 'Reminders'];
+                  benefits: ['Scheduling', 'Confirmations', 'Reminders']
                 },;
                 {;
 ';
@@ -145,7 +145,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Order Management','';
                   description: 'Order confirmations, shipping updates, and delivery notifications.',';
                   icon: Activity,'';
-                  benefits: ['Order confirmations', 'Shipping updates', 'Delivery tracking'];
+                  benefits: ['Order confirmations', 'Shipping updates', 'Delivery tracking']
                 },;
                 {;
 ';
@@ -153,7 +153,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Internal Communication','';
                   description: 'Team notifications, project updates, and comp announcements.',';
                   icon: MessageCircle,'';
-                  benefits: ['Team notifications', 'Project updates', 'Announcements'];
+                  benefits: ['Team notifications', 'Project updates', 'Announcements']
                 },;
                 {;
 ';
@@ -161,7 +161,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Feedback Collection','';
                   description: 'Automated surveys, review requests, and customer feedback gathering.',';
                   icon: BarChart3,'';
-                  benefits: ['Surveys', 'Review requests', 'Feedback collection'];
+                  benefits: ['Surveys', 'Review requests', 'Feedback collection']
                 }';
               ].map((useCase, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -172,27 +172,27 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   <p className='text-slate-300 mb-4'>{useCase.description}</p>'';
                   <ul className='space-y-1'>'{useCase.benefits.map((benefit, benefitIndex) => (''                      <li key={benefitIndex} className='text-sm text-blue-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {benefit}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
 '{/* How It Works Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
-                How AI Email Automation Works'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                How AI Email Automation Works'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our intelligent system processes emails and provides appropriate responses automatically.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[;
                 {;
 ';
@@ -226,21 +226,21 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                 <div key={index} className='text-center'>'';
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                     <span className='text-white font-bold text-xl'>{step.step}</span>'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>'';
-                  <p className='text-slate-300'>{step.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{step.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
 '{/* Benefits Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
-                Transform Your Email Management'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Transform Your Email Management'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Experience unprecedented efficiency and customer satisfaction with AI-powered email automation.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
             </div>';
 '';
@@ -254,10 +254,10 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                     'Provide 24/7 customer support and communication'';
                   ].map((benefit, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>;
-                    </div>;
+                      <CheckCircle className='w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>
+                    </div>
                   ))}
-                </div>;
+                </div>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
               </div>';
 '';
@@ -269,28 +269,28 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
                     { metric: '95%', label: 'Customer Satisfaction' }'].map((item, index)  => (''                    <div key={index} className='flex justify-between items-center'>'';
                       <span className='text-slate-300'>{item.label}</span>'';
-                      <span className='text-2xl font-bold text-blue-400'>{item.metric}</span>;
-                    </div>;
+                      <span className='text-2xl font-bold text-blue-400'>{item.metric}</span>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
 '{/* Integration Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
-                Seamless Integrations'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Seamless Integrations'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Connect with your existing tools and platforms for a unified email management experience.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -305,7 +305,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'CRM Systems','';
                   description: 'Salesforce, HubSpot, Pipedrive, and other CRM platforms.',';
                   icon: Database,'';
-                  features: ['Salesforce', 'HubSpot', 'Pipedrive', 'Custom CRM'];
+                  features: ['Salesforce', 'HubSpot', 'Pipedrive', 'Custom CRM']
                 },;
                 {;
 ';
@@ -313,7 +313,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Business Tools','';
                   description: 'Slack, Teams, Zapier, and other business applications.',';
                   icon: Settings,'';
-                  features: ['Slack', 'Teams', 'Zapier', 'API Integration'];
+                  features: ['Slack', 'Teams', 'Zapier', 'API Integration']
                 },;
                 {;
 ';
@@ -321,7 +321,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Analytics Platforms','';
                   description: 'Google Analytics, Mixpanel, and other analytics tools.',';
                   icon: BarChart3,'';
-                  features: ['Google Analytics', 'Mixpanel', 'Custom Analytics'];
+                  features: ['Google Analytics', 'Mixpanel', 'Custom Analytics']
                 },;
                 {;
 ';
@@ -329,7 +329,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Marketing Tools','';
                   description: 'Mailchimp, Constant Contact, and email marketing platforms.',';
                   icon: Target,'';
-                  features: ['Mailchimp', 'Constant Contact', 'Email Marketing'];
+                  features: ['Mailchimp', 'Constant Contact', 'Email Marketing']
                 },;
                 {;
 ';
@@ -337,7 +337,7 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   title: 'Support Systems','';
                   description: 'Zendesk, Freshdesk, and customer support platforms.',';
                   icon: Users,'';
-                  features: ['Zendesk', 'Freshdesk', 'Support Systems'];
+                  features: ['Zendesk', 'Freshdesk', 'Support Systems']
                 }';
               ].map((integration, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -348,22 +348,22 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
                   <p className='text-slate-300 mb-4'>{integration.description}</p>'';
                   <ul className='space-y-1'>'{integration.features.map((feature, featureIndex) => (''                      <li key={featureIndex} className='text-sm text-blue-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {feature}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-blue-500/10 to-indigo-600/10'>';
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
               Ready to Automate Your Email Management?';
             </h2>'';
-            <p className='text-xl text-slate-300 mb-8'>;
+            <p className='text-xl text-slate-300 mb-8'>
               Transform your email communication with AI-powered automation and intelligent responses.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
@@ -376,11 +376,11 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200'>                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
 :pages.disabled/pages/services/ai-auto-email-responder.tsx;
     </>';
   )}}}}}}

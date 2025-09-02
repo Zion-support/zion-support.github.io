@@ -1,4 +1,4 @@
-export interface EmergingTechService2027 {;
+export interface EmergingTechService2027 {
   id: string;
    title: string;
    description: string;
@@ -24,7 +24,7 @@ export interface EmergingTechService2027 {;
   innovationLevel: string;
   marketSize: string;
   competitors: string[];
-  technicalSpecs: {;
+  technicalSpecs: {
     performance: string;
     scalability: string;
     security: string;
@@ -110,7 +110,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       performance: 'Quantum speed advantage',;
       scalability: 'Global quantum network',;
       security: 'Quantum-secured',;
-      compliance['NIST', 'ISO 27001', 'FedRAMP', 'SOC 2'];
+      compliance['NIST', 'ISO 27001', 'FedRAMP', 'SOC 2']
     },;
     roi: '1000-2000%',;
     estimatedDelivery: '24-36 weeks',;
@@ -193,7 +193,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       performance: 'Space-optimized quantum processing',;
       scalability: 'Multi-satellite constellation',;
       security: 'Space-grade security',;
-      compliance['NASA standards', 'Space safety', 'International treaties'];
+      compliance['NASA standards', 'Space safety', 'International treaties']
     },;
     roi: '1500-3000%',;
     estimatedDelivery: '36-48 weeks',;
@@ -276,7 +276,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       performance: 'Biological parallel processing',;
       scalability: 'Cellular network expansion',;
       security: 'Biological security protocols',;
-      compliance['FDA', 'NIH', 'Research ethics', 'Biosafety'];
+      compliance['FDA', 'NIH', 'Research ethics', 'Biosafety']
     },;
     roi: '800-1500%',;
     estimatedDelivery: '18-24 weeks',;
@@ -359,7 +359,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       performance: 'Neuromorphic processing',;
       scalability: 'Neural network expansion',;
       security: 'Cognitive security',;
-      compliance['AI ethics', 'Research standards', 'Industry best practices'];
+      compliance['AI ethics', 'Research standards', 'Industry best practices']
     },;
     roi: '600-1200%',;
     estimatedDelivery: '20-28 weeks',;
@@ -442,11 +442,11 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       performance: 'Fusion-powered computing',;
       scalability: 'Modular fusion systems',;
       security: 'Energy security protocols',;
-      compliance['Nuclear safety', 'Environmental standards', 'Energy regulations'];
+      compliance['Nuclear safety', 'Environmental standards', 'Energy regulations']
     },;
     roi: '1200-2500%',;
     estimatedDelivery: '48-60 weeks',;
-    contactInfo: {;
+    contactInfo: {
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;

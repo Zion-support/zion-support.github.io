@@ -3,7 +3,7 @@ import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCir
   'down' |;
   'stable'; status: 'good' |;
   'warning' |;
-  'critical; icon: React.ComponentType<any>; interface PerformanceData { timestamp: number; metrics: PerformanceMetric[]; alerts: string[]; recommendations: string[]; const PerformanceAnalytics: React.FC = () => {; const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null); const [isMonitoring, setIsMonitoring] = useState(false); const [selectedTimeframe, setSelectedTimeframe] = useState<;
+  'critical; icon: React.ComponentType<any> interface PerformanceData { timestamp: number; metrics: PerformanceMetric[]; alerts: string[]; recommendations: string[]; const PerformanceAnalytics: React.FC = () => {; const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null); const [isMonitoring, setIsMonitoring] = useState(false); const [selectedTimeframe, setSelectedTimeframe] = useState<;
   '1h' |;
   '24h' |;
   '7d' |;

@@ -7,10 +7,10 @@ import React, { useState, useEffect, useCallback } from;
    uniqueVisitors: number;
    bounceRate: number;
    avgSessionDuration: number;
-   topPages: Array<{ page: string;
+   topPages: Array<{ page: string
    views: number;
    change: number;
-}>; trafficSources: Array<{ source: string; percentage: number; color: string }>; deviceTypes: Array<{ device: string; percentage: number; color: string }>; geographicData: Array<{ country: string; visitors: number; change: number }>; hourlyTraffic: Array<{ hour: number; visitors: number }>; weeklyTrends: Array<{ week: string; visitors: number; pageViews: number }>; }; interface AnalyticsDashboardProps {;
+}>; trafficSources: Array<{ source: string percentage: number; color: string }>; deviceTypes: Array<{ device: string percentage: number; color: string }>; geographicData: Array<{ country: string visitors: number; change: number }>; hourlyTraffic: Array<{ hour: number visitors: number }>; weeklyTrends: Array<{ week: string visitors: number; pageViews: number }>; }; interface AnalyticsDashboardProps {
    showPanel?: boolean;
    autoRefresh?: boolean;
    refreshInterval?: number;

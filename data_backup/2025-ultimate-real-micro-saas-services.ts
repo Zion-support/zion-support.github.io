@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface UltimateRealMicroSaasService {;
+export interface UltimateRealMicroSaasService {
   id: string;
    name: string;
    tagline: string;

@@ -21,7 +21,7 @@ function walk(dir, filelist = []) {;
 ;
 function main() {;
   const repoRoot = process.cwd();
-  const srcDirs = [path.join(repoRoot,;
+  const srcDirs = [path.join(repoRoot,
   'pages'), path.join(repoRoot,;
   'src'), path.join(repoRoot,;
   'components')];  const index = [];

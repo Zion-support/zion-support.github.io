@@ -2,7 +2,7 @@ import { render, screen, waitFor } from,;
   @testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import React from 'react';
-;
+
 // Mock component for testing;
 const YourApiComponent = () => {;
   return React.createElement(;

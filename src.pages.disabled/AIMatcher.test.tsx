@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AIMatcher from './AIMatcher';
-;
+
 describe('AIMatcher', () => {;
   it('renders without crashing', () => {;
     render(<AIMatcher />);

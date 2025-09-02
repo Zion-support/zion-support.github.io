@@ -1,4 +1,4 @@
-export interface Service {;
+export interface Service {
   id: string;
    name: string;
    category: 'micro-saas' | 'it-services' | 'ai-services';

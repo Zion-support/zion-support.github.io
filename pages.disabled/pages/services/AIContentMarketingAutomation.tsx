@@ -54,7 +54,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
     'ROI tracking and attribution modeling';
   ];
 ;
-  const benefits: any = [';
+  const benefits: any = ['
     'Increase content production by 300%',';
     'Improve engagement rates by 45%',';
     'Reduce content creation costs by 60%',';
@@ -62,7 +62,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
     'Automate 80% of marketing workflows';
   ];
 ;
-  const useCases: any = ['';
+  const useCases: any = [''
     'E-commerce content marketing','';
     'B2B lead generation campaigns',';
     'Social media management',';
@@ -143,8 +143,8 @@ export default function AIContentMarketingAutomation(...args[]):  {}
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
   ];
 ;
-  return ('';
-    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+  return (''
+    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
 <:pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
       <SEO;
@@ -154,13 +154,13 @@ export default function AIContentMarketingAutomation(...args[]):  {}
         description='Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically.';
        />        title='AI Content Marketing Automation Platform - Zion Tech Group''        description='Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically.';
        />';
-      <SEO '';
+      <SEO ''
         title='AI Content Marketing Automation Platform - Zion Tech Group'';
         description='Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically.'';
        />;
       {/* Hero Section */}'';
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto text-center'>;
+        <div className='max-w-7xl mx-auto text-center'>
           <motion.div;
             initial = {}
   { opacity: 0,;
@@ -188,12 +188,12 @@ export default function AIContentMarketingAutomation(...args[]):  {}
                 {' '}Automation Platform;
               </span>';
             </h1>'';
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically.;
               Increase engagement, reduce costs, and scale your marketing efforts effortlessly.';
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <motion.button;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <motion.button
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200';
@@ -211,39 +211,39 @@ export default function AIContentMarketingAutomation(...args[]):  {}
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6'>'';
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Marketing;
             </div>'';
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               AI Content Marketing'';
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>'';
                 {' '}Automation Platform;
-              </span>;
+              </span>
             </h1>'';
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically.;
               Increase engagement, reduce costs, and scale your marketing efforts effortlessly.;
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <motion.button;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200'';
                 Start Free Trial;
               </motion.button>;
-              <motion.button;
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200'';
                 Watch Demo;
               </motion.button>;
-            </div>;
-          </motion.div>;
-        </div>;
+            </div>
+          </motion.div>
+        </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Features Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
@@ -273,21 +273,21 @@ export default function AIContentMarketingAutomation(...args[]):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
 '';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Powerful Features for Modern Marketing;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Everything you need to automate and optimize your content marketing strategy;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index();
-              <motion.div;
+              <motion.div
           </motion.div>;
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index (;
               <motion.div;
                 key={index}
@@ -321,25 +321,25 @@ export default function AIContentMarketingAutomation(...args[]):  {}
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300'';
 '';
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
-                  <CheckCircle className='w-6 h-6 text-white'  />;
+                  <CheckCircle className='w-6 h-6 text-white'  />
   delay: index * 0.1 ';
 }}'';
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300'';
 '';
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
                   <CheckCircle className='w-6 h-6 text-white'  />';
-                </div>'                <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3>;
-              </motion.div>;
+                </div>'                <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Benefits Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
@@ -369,21 +369,21 @@ export default function AIContentMarketingAutomation(...args[]):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
 '';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Transform Your Marketing Results;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               See measurable improvements in your content marketing performance;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           </motion.div>;
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -417,25 +417,25 @@ export default function AIContentMarketingAutomation(...args[]):  {}
                 className='text-center'';
 '';
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
-                  <TrendingUp className='w-10 h-10 text-white'  />;
+                  <TrendingUp className='w-10 h-10 text-white'  />
   delay: index * 0.1 ';
 }}'';
                 className='text-center'';
 '';
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <TrendingUp className='w-10 h-10 text-white'  />';
-                </div>'                <p className='text-lg text-white font-medium'>{benefit}</p>;
-              </motion.div>;
+                </div>'                <p className='text-lg text-white font-medium'>{benefit}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Pricing Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
@@ -465,21 +465,21 @@ export default function AIContentMarketingAutomation(...args[]):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
 '';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Simple, Transparent Pricing;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Choose the plan that fits your business needs and scale as you grow;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           </motion.div>;
 '';
-          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -521,10 +521,10 @@ export default function AIContentMarketingAutomation(...args[]):  {}
 ;
                 {plan.popular && (';
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                    <span className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium'>;
+                    <span className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium'>
                       Most Popular;
-                    </span>;
-                  </div>;
+                    </span>
+                  </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
                 )}';
                 )}
@@ -534,23 +534,23 @@ export default function AIContentMarketingAutomation(...args[]):  {}
                   <p className='text-gray-400 mb-4'>{plan.description}</p>'';
                   <div className='flex items-baseline justify-center'>'';
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
-                    <span className='text-gray-400 ml-1'>{plan.period}</span>;
-                  </div>;
+                    <span className='text-gray-400 ml-1'>{plan.period}</span>
+                  </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
                 </div>';
 '';
                 <ul className='space-y-4 mb-8'>';
-                </div>;
+                </div>
 '';
-                <ul className='space-y-4 mb-8'>;
+                <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='flex items-start'>'';
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>;
-                    </li>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
+                    </li>
                   ))}
-                </ul>;
+                </ul>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
-                <motion.button;
+                <motion.button
                   whileHover={{ scale: 1.02 }}`;
                   whileTap={{ scale: 0.98 }}``;
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${;
@@ -568,17 +568,17 @@ export default function AIContentMarketingAutomation(...args[]):  {}
                   }`}
                   {plan.cta}
                 </motion.button>;
-              </motion.div>;
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Use Cases Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
@@ -608,21 +608,21 @@ export default function AIContentMarketingAutomation(...args[]):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
 '';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Perfect for Every Marketing Need;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               From startups to enterprises, our platform adapts to your business requirements;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           </motion.div>;
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -656,25 +656,25 @@ export default function AIContentMarketingAutomation(...args[]):  {}
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300'';
 '';
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
-                  <Target className='w-8 h-8 text-white'  />;
+                  <Target className='w-8 h-8 text-white'  />
   delay: index * 0.1 ';
 }}'';
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300'';
 '';
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
                   <Target className='w-8 h-8 text-white'  />';
-                </div>'                <h3 className='text-lg font-semibold text-white'>{useCase}</h3>;
-              </motion.div>;
+                </div>'                <h3 className='text-lg font-semibold text-white'>{useCase}</h3>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
       </section>';
-      </section>;
+      </section>
       {/* CTA Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>';
-        <div className='max-w-4xl mx-auto text-center'>;
-          <motion.div;
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
             initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
@@ -695,11 +695,11 @@ export default function AIContentMarketingAutomation(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Ready to Transform Your Content Marketing?';
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of businesses that have already automated their content marketing with AI';
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <motion.button;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <motion.button
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200';
@@ -715,50 +715,50 @@ export default function AIContentMarketingAutomation(...args[]):  {}
 }}
             transition={{ duration: 0.8 }}
 '';
-            <h2 className='text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Content Marketing?;
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of businesses that have already automated their content marketing with AI;
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <motion.button;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200'';
                 Start Free Trial;
               </motion.button>;
-              <motion.button;
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200'';
                 Schedule Demo;
               </motion.button>;
             </div>'';
-            <p className='text-sm text-gray-400 mt-4'>;
+            <p className='text-sm text-gray-400 mt-4'>
               No credit card required • 14-day free trial • Cancel time;
-            </p>;
-          </motion.div>;
-        </div>;
+            </p>
+          </motion.div>
+        </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Contact Info */}'';
       <section className='py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50'>';
         <div className='max-w-4xl mx-auto text-center'>'';
-          <p className='text-gray-400 mb-4'>;
+          <p className='text-gray-400 mb-4'>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
             Need help choosing the right plan? Contact our sales team';
             Need help choosing the right plan? Contact our sales team;
           </p>'';
-          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400'>;
-            <span>📞 +1 302 464 0950</span>;
-            <span>📧 kleber@ziontechgroup.com</span>;
-            <span>🌐 https://ziontechgroup.com</span>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400'>
+            <span>📞 +1 302 464 0950</span>
+            <span>📧 kleber@ziontechgroup.com</span>
+            <span>🌐 https://ziontechgroup.com</span>
+          </div>
+        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx;
   )}''`;
 ''`''`;

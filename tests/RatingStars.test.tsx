@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { RatingStars } from '@/components/RatingStars';
-;
+
 test(;
   'rating 4.7 shows 4 filled and 1 half star', () => {;
   const { container } = render(<RatingStars value={4.7} />);

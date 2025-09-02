@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Legal from './Legal';
-;
+
 describe('Legal', () => {;
   it('renders without crashing', () => {;
     render(<Legal />);

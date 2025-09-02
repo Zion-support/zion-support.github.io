@@ -133,14 +133,14 @@ class BrowserErrorFixer {;
 <ursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js;
   async findRelevantSourceFiles(error) {;
     const sourceFiles = [];
-    const extensions = [,;
+    const extensions = [,
   .js;
   ',.jsx',.ts;
   ',.tsx'];
 ;
     try {;
       // Search for source files in common directories;
-      const searchDirs = [;
+      const searchDirs = [
   'src',components;
   ',pages',utils;
   ',hooks'];
@@ -310,7 +310,7 @@ class BrowserErrorFixer {;
 ;
   async fixReferenceError(variableName, filePath) {;
     // Try to find where this variable should be defined;
-    const commonFixes = [;
+    const commonFixes = [
       `const ${variableName} = null; // Auto-fix: Variable declaration`,;
       `let ${variableName}; // Auto-fix: Variable declaration`,;
       `var ${variableName}; // Auto-fix: Variable declaration`;
@@ -399,7 +399,7 @@ if (require.main === module) {;
   const fixer = new BrowserErrorFixer();
 ;
   // Example usage;
-  const sampleErrors = [;
+  const sampleErrors = [
     { message: 'Cannot read property;
   'length of null' },;
     { message: 'ReferenceError: userData is not defined' },;

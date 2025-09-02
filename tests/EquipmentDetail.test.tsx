@@ -18,11 +18,11 @@ describe('EquipmentDetail page'', () => {;
     (router.useParams as jest.Mock).mockReturnValue({ id: 'pro-camera-x1000 });
 ;
     const { asFragment, getByText, container } = render(;
-      <MemoryRouter>;
-        <AppLayout>;
-          <EquipmentDetail />;
-        </AppLayout>;
-      </MemoryRouter>;
+      <MemoryRouter>
+        <AppLayout>
+          <EquipmentDetail />
+        </AppLayout>
+      </MemoryRouter>
     );
     expect(getByText(/Pro Camera X1000/i)).toBeInTheDocument();
     expect(getByText(/Full-frame CMOS/i)).toBeInTheDocument();
@@ -46,14 +46,14 @@ describe('EquipmentDetail page'', () => {;
 ;
     const assignMock = jest.fn();
     delete (window as any).location;
-    (window as any).location = { assign: assignMock, href:' };
+    (window as any).location = { assign: assignMock, href:' }
 ;
     const { getByText } = render(;
-      <MemoryRouter>;
-        <AppLayout>;
-          <EquipmentDetail />;
-        </AppLayout>;
-      </MemoryRouter>;
+      <MemoryRouter>
+        <AppLayout>
+          <EquipmentDetail />
+        </AppLayout>
+      </MemoryRouter>
     );
 ;
     getByText('Buy Now;

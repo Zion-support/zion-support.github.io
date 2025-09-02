@@ -27,7 +27,7 @@ import React from,;
 ,;
   ; description: '';Built to grow with your business needs, from startup to enterprise scale.',; icon: TrendingUp,;
 ,;
-  ; color: 'from-orange-500 to-red-500}; ]';; const benefits = [';
+  ; color: 'from-orange-500 to-red-500}; ]';; const benefits = ['
   ';Increase efficiency and productivity;
   ', Reduce operational costs',Improve accuracy and quality;
   ', Enable 24/7 automated operations',Scale operations seamlessly;

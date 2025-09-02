@@ -19,13 +19,13 @@ icon: Globe,';
     'Continuous updates and feature improvements';
 :pages.disabled/pages/services/MicroSAAS.tsx;
   ]';
-    {';
+    {'
       name: 'Cloud',';
       description: 'AWS, Azure, GCP with containerization and orchestration',';
       icon: Globe,';
       features: ['Cloud platforms', 'Containerization', 'Auto-scaling', 'Load balancing']};
   ]},';
-    {';
+    {'
       title: 'E-commerce',';      description: 'Online marketplace and retail management solutions',;
       icon: Package};
   ]';
@@ -33,19 +33,19 @@ icon: Globe,';
     <div className = 'min-h-screen bg-slate-900 text-white'>';
   ];
 ;
-    {';
+    {'
       name: 'Cloud',';
       description: 'AWS, Azure, GCP with containerization and orchestration',;
       icon: Globe,';
       features: ['Cloud platforms', 'Containerization', 'Auto-scaling', 'Load balancing']};
   ]},;
-    {';
+    {'
       title: 'E-commerce',';      description: 'Online marketplace and retail management solutions',;
       icon: Package};
   ];
 ;
   return ('';
-    <div className = 'min-h-screen bg-slate-900 text-white'>;
+    <div className = 'min-h-screen bg-slate-900 text-white'>
       {/* Hero Section */}'';
       <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto text-center'>'';
@@ -58,49 +58,49 @@ icon: Globe,';
               Build Your'';
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> SAAS Empire</span>';
             </h1>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               We help entrepreneurs and businesses build scalable, profitable software-as-a-service;
               applications that generate recurring revenue and scale globally.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Explore Services';
               <Package className='w-4 h-4 mr-2' />              MicroSAAS;
             </div>'';
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               Build Your'';
-              <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> SAAS Empire</span>;
+              <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> SAAS Empire</span>
             </h1>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               We help entrepreneurs and businesses build scalable, profitable software-as-a-service;
               applications that generate recurring revenue and scale globally.;
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Explore Services;
               </a>'';
-              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>;
+              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
                 Get Started;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
+              </a>
+            </div>
+          </div>
+        </div>
 :pages.disabled/pages/services/MicroSAAS.tsx;
       </section>';
-      </section>;
+      </section>
       {/* MicroSAAS Services Grid */}'';
       <section id='services' className='py-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSAAS.tsx;
               Our MicroSAAS Services';
               Our MicroSAAS Services;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Comprehensive SAAS development services that help you build, launch,;
               and scale profitable software businesses.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/MicroSAAS.tsx;
           </div>';
 '';
@@ -109,47 +109,47 @@ icon: Globe,';
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300'>'';
                 <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <service.icon className='w-8 h-8 text-white'/>';
-          </div>;
+          </div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {microsaasServices.map((service, index) => ('';
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300'>'';
                 <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
-                  <service.icon className='w-8 h-8 text-white'/>;
+                  <service.icon className='w-8 h-8 text-white'/>
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'';
                 <p className='text-gray-300 mb-4'>{service.description}</p>'';
                 <p className='text-lg font-semibold text-indigo-400 mb-4'>{service.price}</p>'';
 :pages.disabled/pages/services/MicroSAAS.tsx;
                 <ul className='space-y-2'>';
-                <ul className='space-y-2'>;
+                <ul className='space-y-2'>
                   {service.features.map((feature, idx) => ('';
                     <li key={idx} className='text-sm text-gray-400 flex items-start'>'';
-                      <div className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>;
+                      <div className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/MicroSAAS.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Technologies */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSAAS.tsx;
               Technologies We Use';
               Technologies We Use;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Modern, scalable technologies to build robust and efficient;
               SAAS applications.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/MicroSAAS.tsx;
           </div>';
 '';
@@ -162,43 +162,43 @@ icon: Globe,';
                 <h3 className='text-xl font-semibold text-white mb-3'>{tech.name}</h3>'';
                 <p className='text-gray-300 mb-4'>{tech.description}</p>'';
                 <ul className='space-y-2'>';
-          </div>;
+          </div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {technologies.map((tech, index) => ('';
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300'>'';
                 <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
-                  <tech.icon className='w-8 h-8 text-white'/>;
+                  <tech.icon className='w-8 h-8 text-white'/>
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-3'>{tech.name}</h3>'';
                 <p className='text-gray-300 mb-4'>{tech.description}</p>'';
-                <ul className='space-y-2'>;
+                <ul className='space-y-2'>
                   {tech.features.map((feature, idx) => ('';
-                    <li key={idx} className='text-sm text-gray-400'>;
+                    <li key={idx} className='text-sm text-gray-400'>
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/MicroSAAS.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Industries */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSAAS.tsx;
               Industries We Serve';
               Industries We Serve;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Specialized SAAS solutions for various industries with;
               domain-specific expertise and compliance requirements.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/MicroSAAS.tsx;
           </div>';
 '';
@@ -207,20 +207,20 @@ icon: Globe,';
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300'>'';
                 <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
                   <industry.icon className='w-6 h-6 text-white'/>';
-          </div>;
+          </div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {industries.map((industry, index) => ('';
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300'>'';
                 <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
-                  <industry.icon className='w-6 h-6 text-white'/>;
+                  <industry.icon className='w-6 h-6 text-white'/>
                 </div>'';
                 <h3 className='text-lg font-semibold text-white mb-2'>{industry.title}</h3>'';
-                <p className='text-gray-400 text-sm'>{industry.description}</p>;
-              </div>;
+                <p className='text-gray-400 text-sm'>{industry.description}</p>
+              </div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/MicroSAAS.tsx;
       </section>';
       {/* Benefits Section */}'';
@@ -228,37 +228,37 @@ icon: Globe,';
         <div className='max-w-7xl mx-auto'>'';
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>';
             <div>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Why Choose MicroSAAS?';
               </h2>'';
-              <p className='text-lg text-gray-300 mb-6'>;
+              <p className='text-lg text-gray-300 mb-6'>
                 MicroSAAS solutions offer entrepreneurs and businesses a proven path;
                 to building profitable, scalable software businesses with recurring revenue.';
               </p>'';
               <ul className='space-y-3'>';
-      </section>;
+      </section>
       {/* Benefits Section */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>'';
         <div className='max-w-7xl mx-auto'>'';
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
             <div>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Why Choose MicroSAAS?;
               </h2>'';
-              <p className='text-lg text-gray-300 mb-6'>;
+              <p className='text-lg text-gray-300 mb-6'>
                 MicroSAAS solutions offer entrepreneurs and businesses a proven path;
                 to building profitable, scalable software businesses with recurring revenue.;
               </p>'';
-              <ul className='space-y-3'>;
+              <ul className='space-y-3'>
                 {benefits.map((benefit, index) => ('';
                   <li key={index} className='flex items-center text-gray-300'>'';
-                    <div className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>;
+                    <div className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>
                     {benefit}
-                  </li>;
+                  </li>
                 ))}
 :pages.disabled/pages/services/MicroSAAS.tsx;
               </ul>';
-              </ul>;
+              </ul>
             </div>'';
             <div className='bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30'>'';
               <div className='text-center'>'';
@@ -267,26 +267,26 @@ icon: Globe,';
 :pages.disabled/pages/services/MicroSAAS.tsx;
                 <p className='text-gray-300 mb-6'>'                  We've helped numerous entrepreneurs build successful SAAS businesses;
                   that generate millions in recurring revenue.';
-                <p className='text-gray-300 mb-6'>;
+                <p className='text-gray-300 mb-6'>
                   We've helped numerous entrepreneurs build successful SAAS businesses;
                   that generate millions in recurring revenue.;
                 </p>'';
-                <div className='text-sm text-gray-400'>;
-                  <p>• Proven business models</p>;
-                  <p>• Scalable architecture</p>;
-                  <p>• Revenue optimization</p>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
+                <div className='text-sm text-gray-400'>
+                  <p>• Proven business models</p>
+                  <p>• Scalable architecture</p>
+                  <p>• Revenue optimization</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 :pages.disabled/pages/services/MicroSAAS.tsx;
       </section>';
-      </section>;
+      </section>
       {/* CTA Section */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-4xl mx-auto text-center'>'';
-          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/MicroSAAS.tsx;
             Ready to Build Your SAAS Empire?';
           </h2>'';
@@ -295,25 +295,25 @@ icon: Globe,';
             scalable software-as-a-service business.';
           </p>'';
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
               Get Started';
             Ready to Build Your SAAS Empire?;
           </h2>'';
-          <p className='text-xl text-gray-300 mb-8'>;
+          <p className='text-xl text-gray-300 mb-8'>
             Let's discuss how we can help you build a profitable,;
             scalable software-as-a-service business.;
           </p>'';
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
               Get Started;
             </a>'';
-            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>;
+            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
               View All Services;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/MicroSAAS.tsx;
   )}'';
 export default MicroSAAS}}}}'''';

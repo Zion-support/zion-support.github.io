@@ -1,7 +1,7 @@
 import React, { useState } from;
   'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Phone,; Mail,; MapPin,; MessageSquare,; Calendar,; Clock,; Globe,; X,; Copy,; CheckCircle,; ExternalLink; } from;
-  'lucide-react'; ; interface EnhancedContactIntegrationProps {;
+  'lucide-react'; ; interface EnhancedContactIntegrationProps {
    onClose: () => void;
    serviceTitle?: string;
 }; export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProps> = ({; onClose,; serviceTitle; }) => {; const [copiedField, setCopiedField] = useState<string | null>(null); const [activeTab, setActiveTab] = useState<,;

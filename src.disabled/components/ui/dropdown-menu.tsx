@@ -1,29 +1,29 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-;
-interface DropdownMenuContextType {;
+
+interface DropdownMenuContextType {
   isOpen: boolean;
    setIsOpen: (open: boolean) => void;
 }
 ;
 const DropdownMenuContext = createContext<DropdownMenuContextType | undefined>(undefined);
 ;
-interface DropdownMenuProps {;
+interface DropdownMenuProps {
   children: ReactNode;
 }
 ;
 export function DropdownMenu({ children }: DropdownMenuProps) {;
   const [isOpen, setIsOpen] = useState(false);
 ;
-  return (;
-    <DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>;
-      <div className='relative'>;
+  return (
+    <DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>
+      <div className='relative'>
         {children}
-      </div>;
-    </DropdownMenuContext.Provider>;
+      </div>
+    </DropdownMenuContext.Provider>
   );
 }
 ;
-interface DropdownMenuTriggerProps {;
+interface DropdownMenuTriggerProps {
   children: ReactNode;
    asChild?: boolean;
 }
@@ -38,18 +38,18 @@ export function DropdownMenuTrigger({ children, asChild = false }: DropdownMenuT
     return (;
       <div onClick={() => context.setIsOpen(!context.isOpen)}>;
         {children}
-      </div>;
+      </div>
     );
   }
 ;
   return (;
     <div onClick={() => context.setIsOpen(!context.isOpen)}>;
       {children}
-    </div>;
+    </div>
   );
 }
 ;
-interface DropdownMenuContentProps {;
+interface DropdownMenuContentProps {
   children: ReactNode;
    align?: 'start' | 'center' | 'end';
    className?: string;
@@ -65,20 +65,20 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     return null;
   }
 ;
-  const alignClasses = {;
+  const alignClasses = {
     start: 'left-0',;
     center: 'left-1/2 transform -translate-x-1/2',;
     end: 'right-0';
   };
 ;
-  return (;
-    <div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>;
+  return (
+    <div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
       {children}
-    </div>;
+    </div>
   );
 }
 ;
-interface DropdownMenuItemProps {;
+interface DropdownMenuItemProps {
   children: ReactNode;
    onClick?: () => void;
    asChild?: boolean;
@@ -99,19 +99,19 @@ export function DropdownMenuItem({ children, onClick, asChild = false, className
   };
 ;
   if (asChild) {;
-    return (;
-      <div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>;
+    return (
+      <div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>
         {children}
-      </div>;
+      </div>
     );
   }
 ;
-  return (;
-    <button;
+  return (
+    <button
       className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`}
       onClick={handleClick}
     >;
       {children}
-    </button>;
+    </button>
   );
 }

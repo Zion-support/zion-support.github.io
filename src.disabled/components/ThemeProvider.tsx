@@ -31,4 +31,4 @@ import React, { createContext, useContext, useEffect, useState } from;
   '(prefers-color-scheme: dark)'); mediaQuery.addEventListener(;
   'change, updateTheme); return () => mediaQuery.removeEventListener(;
   'change', updateTheme); } }, [theme]); useEffect(() => { localStorage.setItem(;
-  'theme', theme); }, [theme]); const value = { theme, setTheme, isDark}; return ( <ThemeContext.Provider value={value}> {children} </ThemeContext.Provider> ); }';
+  'theme', theme); }, [theme]); const value = { theme, setTheme, isDark}; return ( <ThemeContext.Provider value={value}> {children} </ThemeContext.Provider> ) }';

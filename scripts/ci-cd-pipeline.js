@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
-;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -40,7 +40,7 @@ class CICDPipeline {;
       console.log(`📝 Commit: ${this.pipelineLog.commit}`);
 ;
       // Define pipeline stages;
-      const pipelineStages = [;
+      const pipelineStages = [
         {;
           name: 'Source Code Checkout',;
           description: 'Checkout source code from repository',;
@@ -148,7 +148,7 @@ class CICDPipeline {;
       return;
     }
 ;
-    try {;
+    try {
       const result = await this.runStageCommand(stage);
       const duration = Date.now() - startTime;
 ;
@@ -168,7 +168,7 @@ class CICDPipeline {;
 ;
       console.log(`✅ ${stage.name} completed successfully (${duration}ms)`);
 ;
-    } catch (error) {;
+    } catch (error) {
       const duration = Date.now() - startTime;
 ;
       const stageResult = {;
@@ -198,7 +198,7 @@ class CICDPipeline {;
     this.pipelineLog.summary.total++;
   }
 ;
-  async runStageCommand(stage) {;
+  async runStageCommand(stage) {
     // Define commands for each stage;
     const stageCommands = {;
       'Source Code Checkout': 'git status',;

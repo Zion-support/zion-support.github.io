@@ -1,7 +1,7 @@
 // import { NextPage   } from 'next.ts'; // Removed';
 :pages.disabled/pages/team-builder/index.tsx;
 // Define Zod schema for form validation}).optional()});
-type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
+type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 // const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
   const [currentStep, setCurrentStep] = useState<typeof 0>(0);
   const [isLoading, setIsLoading] = useState<typeof false>(false);
@@ -65,7 +65,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       createdAt: new Date().toISOString(),;
       ...data,;
       techStack: data.techStack?.split(',).map(s   => s.trim()).filter(s => s) || [],;
-      talentFilters: any{ // Ensure talentFilters is structured correctly;
+      talentFilters: any{ // Ensure talentFilters is structured correctly
 :pages.disabled/pages/team-builder/index.tsx;
         verifiedOnly: data.talentFilters?.verifiedOnly,;
 :pages.disabled/pages/team-builder/index.tsx;
@@ -150,7 +150,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available;
     return();
       <TeamRecommendationDisplay recommendation = {teamRecommendation}        projectBrief={projectBriefSubmitted}
-        onInviteTalent={handleInviteTalent};
+        onInviteTalent={handleInviteTalent}
         />;
     )};
 :pages.disabled/pages/team-builder/index.tsx;
@@ -167,35 +167,35 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   return();
     <AppLayout>'';
       <div className = 'container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl'> {/* Increased max-width */}'';
-        <Card className='mb-8'>;
+        <Card className='mb-8'>
           <CardHeader>'';
-            <CardTitle className='text-2xl font-bold tracking-tight sm:text-3xl'>Team Builder</CardTitle>;
-            <CardDescription>Describe your project and get an AI-recommended team.</CardDescription>;
-          </CardHeader>;
+            <CardTitle className='text-2xl font-bold tracking-tight sm:text-3xl'>Team Builder</CardTitle>
+            <CardDescription>Describe your project and get an AI-recommended team.</CardDescription>
+          </CardHeader>
 :pages.disabled/pages/team-builder/index.tsx;
         </Card>';
-        </Card>;
+        </Card>
         {isLoading && ('';
           <div className='flex justify-center items-center py-10'>'';
             <Loader2 className='h-12 w-12 animate-spin text-primary' />'';
-            <p className='ml-4 text-lg'>Generating your dream team...</p>;
-          </div>;
+            <p className='ml-4 text-lg'>Generating your dream team...</p>
+          </div>
         )}
         {!isLoading && teamRecommendation && projectBriefSubmitted && renderRecommendation()}
 :pages.disabled/pages/team-builder/index.tsx;
         {!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading;
           <Card>';
         {!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading;
-          <Card>;
+          <Card>
             <CardHeader>'';
-               <Steps currentStep={currentStep} className='mb-6'>;
+               <Steps currentStep={currentStep} className='mb-6'>
                 {steps.map((step: unknown, index: unknown();
                   <Step key={index} label={step.name}  />                ))}
-              </Steps>;
+              </Steps>
 :pages.disabled/pages/team-builder/index.tsx;
             </CardHeader>';
             <form onSubmit={handleSubmit(onSubmit)}>'';
-              <CardContent className='space-y-6'>;
+              <CardContent className='space-y-6'>
                 {currentStep === 0 && (;
                   <>';
                     <div>'';
@@ -212,28 +212,28 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         name='goals'';
                         control={control}'';
                         render={({ field }) => <Textarea id='goals' {...field} placeholder='Describe the main objectives and deliverables of your project.' rows={4}  />}';
-            </CardHeader>;
+            </CardHeader>
             <form onSubmit={handleSubmit(onSubmit)}>'';
-              <CardContent className='space-y-6'>;
+              <CardContent className='space-y-6'>
                 {currentStep === 0 && (;
                   <>;
                     <div>'';
-                      <Label htmlFor='projectName'>Project Name</Label>;
+                      <Label htmlFor='projectName'>Project Name</Label>
                       <Controller'';
                         name='projectName'';
                         control={control}'';
                         render={({ field }) => <Input id='projectName' {...field} placeholder='e.g., Acme Corp Website Redesign'  />}
                       />'                      {errors.projectName && <p className='text-sm text-red-600 mt-1'>{errors.projectName.message}</p>}
-                    </div>;
+                    </div>
                     <div>'';
-                      <Label htmlFor='goals'>Goals / Scope</Label>;
+                      <Label htmlFor='goals'>Goals / Scope</Label>
                       <Controller'';
                         name='goals'';
                         control={control}'';
                         render={({ field }) => <Textarea id='goals' {...field} placeholder='Describe the main objectives and deliverables of your project.' rows={4}  />}
                       />'                      {errors.goals && <p className='text-sm text-red-600 mt-1'>{errors.goals.message}</p>}
-                    </div>;
-                  </>;
+                    </div>
+                  </>
                 )}
                 {currentStep === 1 && (;
 :pages.disabled/pages/team-builder/index.tsx;
@@ -267,14 +267,14 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         name='lockTimeline';
                         control={control}
                         render={({ field }) => (';
-                          <Switch'';
+                          <Switch''
                             id='lockTimeline'                            checked={field.value}';
                             onCheckedChange={field.onChange}'';
                             aria-label='Lock Timeline';
                            />;
                         )}';
                       />'';
-                      <Label htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>;
+                      <Label htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>
                         Lock Timeline (Prioritize meeting this timeline);
                       </Label>';
                     </div>'';
@@ -285,14 +285,14 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         name='lockBudget';
                         control={control}
                         render={({ field }) => (';
-                          <Switch'';
+                          <Switch''
                             id='lockBudget'                            checked={field.value}';
                             onCheckedChange={field.onChange}'';
                             aria-label='Lock Budget';
                            />;
                         )}';
                       />'';
-                      <Label htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>;
+                      <Label htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>
                         Lock Budget (Prioritize staying within this budget);
                       </Label>';
                     </div>'';
@@ -305,101 +305,101 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                           name='talentFilters.verifiedOnly';
                           control={control}
                           render={({ field }) => (';
-                            <Switch'';
+                            <Switch''
                               id='verifiedOnly'                              checked={field.value || false} // Ensure value is boolean';
                               onCheckedChange={field.onChange}'';
                               aria-label='Verified Talent Only';
                              />;
                           )}';
                         />'';
-                        <Label htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>;
+                        <Label htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>
                           Only Verified Talent;
                         </Label>';
                       </div>'';
                       {errors.talentFilters?.verifiedOnly && <p className='text-sm text-red-600 mt-1'>{errors.talentFilters.verifiedOnly.message}</p>}';
                   <>;
                     <div>'';
-                      <Label htmlFor='timeline'>Timeline</Label>;
+                      <Label htmlFor='timeline'>Timeline</Label>
                       <Controller'';
                         name='timeline'';
                         control={control}'';
                         render={({ field }) => <Input id='timeline' {...field} placeholder='e.g., 3 months, Q4 2024'  />}
                       />'                      {errors.timeline && <p className='text-sm text-red-600 mt-1'>{errors.timeline.message}</p>}
-                    </div>;
+                    </div>
                     <div>'';
-                      <Label htmlFor='budget'>Budget</Label>;
+                      <Label htmlFor='budget'>Budget</Label>
                       <Controller'';
                         name='budget'';
                         control={control}'';
                         render={({ field }) => <Input id='budget' {...field} placeholder='e.g., $10,000 - $20,000, < $50k'  />}
                       />'                      {errors.budget && <p className='text-sm text-red-600 mt-1'>{errors.budget.message}</p>}
-                    </div>;
+                    </div>
                     <div>'';
-                      <Label htmlFor='techStack'>Tech Stack or Areas (Optional, comma-separated)</Label>;
+                      <Label htmlFor='techStack'>Tech Stack or Areas (Optional, comma-separated)</Label>
                       <Controller'';
                         name='techStack'';
                         control={control}'';
                         render={({ field }) => <Textarea id='techStack' {...field} placeholder='e.g., React, Node.js, Python, AWS, Machine Learning' rows={3}  />}
                       />'                      {errors.techStack && <p className='text-sm text-red-600 mt-1'>{errors.techStack.message}</p>}
                     </div>'';
-                    <div className='flex items-center space-x-2 mt-4 pt-2'>;
+                    <div className='flex items-center space-x-2 mt-4 pt-2'>
                       <Controller'';
                         name='lockTimeline'';
                         control={control}
                         render={({ field }) => (;
-                          <Switch'';
+                          <Switch''
                             id='lockTimeline'                            checked={field.value}
                             onCheckedChange={field.onChange}'';
                             aria-label='Lock Timeline'';
                            />;
                         )}
                       />'';
-                      <Label htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>;
+                      <Label htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>
                         Lock Timeline (Prioritize meeting this timeline);
-                      </Label>;
+                      </Label>
                     </div>'';
                     {errors.lockTimeline && <p className='text-sm text-red-600 mt-1'>{errors.lockTimeline.message}</p>}
 '';
-                    <div className='flex items-center space-x-2 mt-3'>;
+                    <div className='flex items-center space-x-2 mt-3'>
                       <Controller'';
                         name='lockBudget'';
                         control={control}
                         render={({ field }) => (;
-                          <Switch'';
+                          <Switch''
                             id='lockBudget'                            checked={field.value}
                             onCheckedChange={field.onChange}'';
                             aria-label='Lock Budget'';
                            />;
                         )}
                       />'';
-                      <Label htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>;
+                      <Label htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>
                         Lock Budget (Prioritize staying within this budget);
-                      </Label>;
+                      </Label>
                     </div>'';
                     {errors.lockBudget && <p className='text-sm text-red-600 mt-1'>{errors.lockBudget.message}</p>}
 '';
                     <div className='mt-6 pt-6 border-t'>'';
                       <Label className='text-base font-medium'>Talent Filters (Optional)</Label>'';
-                      <div className='flex items-center space-x-2 mt-3'>;
+                      <div className='flex items-center space-x-2 mt-3'>
                         <Controller'';
                           name='talentFilters.verifiedOnly'';
                           control={control}
                           render={({ field }) => (;
-                            <Switch'';
+                            <Switch''
                               id='verifiedOnly'                              checked={field.value || false} // Ensure value is boolean;
                               onCheckedChange={field.onChange}'';
                               aria-label='Verified Talent Only'';
                              />;
                           )}
                         />'';
-                        <Label htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>;
+                        <Label htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>
                           Only Verified Talent;
-                        </Label>;
+                        </Label>
                       </div>'';
                       {errors.talentFilters?.verifiedOnly && <p className='text-sm text-red-600 mt-1'>{errors.talentFilters.verifiedOnly.message}</p>}
 '';
                       <div className='mt-3'>'';
-                        <Label htmlFor='talentRegions' className='text-sm font-medium'>;
+                        <Label htmlFor='talentRegions' className='text-sm font-medium'>
                           Preferred Regions (Comma-separated, e.g., LATAM, Europe);
 :pages.disabled/pages/team-builder/index.tsx;
                         </Label>';
@@ -407,19 +407,19 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                           name='talentFilters.regions';
                           control={control}
                           render={({ field }) => (';
-                            <Input'';
+                            <Input''
                               id='talentRegions';
                               {...field}'';
                               value={field.value || ''} // Ensure value is string'';
                               placeholder='e.g., North America, LATAM, Global''                              className='mt-1';
                              />;
                           )}';
-                        </Label>;
+                        </Label>
                         <Controller'';
                           name='talentFilters.regions'';
                           control={control}
                           render={({ field }) => (;
-                            <Input'';
+                            <Input''
                               id='talentRegions'';
                               {...field}
                               value={field.value || ''} // Ensure value is string'';
@@ -429,36 +429,36 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                           )}
                         />'';
                          {errors.talentFilters?.regions && <p className='text-sm text-red-600 mt-1'>{errors.talentFilters.regions.message}</p>}
-                      </div>;
-                    </div>;
-                  </>;
+                      </div>
+                    </div>
+                  </>
                 )}
 :pages.disabled/pages/team-builder/index.tsx;
                 {currentStep === 2 && (';
                 {currentStep === 2 && (;
                   <div>'';
-                    <h3 className='text-lg font-medium'>Review Your Project Brief</h3>;
-                    <p>Review your project details below. If everything looks good, submit to get your team recommendation.</p>;
+                    <h3 className='text-lg font-medium'>Review Your Project Brief</h3>
+                    <p>Review your project details below. If everything looks good, submit to get your team recommendation.</p>
                     {/* Add a summary of the entered data here later if needed */}
-                  </div>;
+                  </div>
 :pages.disabled/pages/team-builder/index.tsx;
                 )}';
               </CardContent>'';
               <CardFooter className='flex justify-between'>';
                 )}
               </CardContent>'';
-              <CardFooter className='flex justify-between'>;
-                {currentStep > 0 && currentStep <= 2 && ('';
+              <CardFooter className='flex justify-between'>
+                {currentStep > 0 && currentStep <= 2 && (''
                   <Button type='button' variant='outline' onClick={handlePreviousStep}>;
                     Previous;
-                  </Button>;
+                  </Button>
 :pages.disabled/pages/team-builder/index.tsx;
                 )}';
                 )}
-                {currentStep < 2 && ('';
+                {currentStep < 2 && (''
                   <Button type='button' onClick={handleNextStep}>;
                     Next;
-                  </Button>;
+                  </Button>
 :pages.disabled/pages/team-builder/index.tsx;
                 )}';
                 )}
@@ -466,14 +466,14 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                   <Button type='submit' disabled={isLoading}>'';
                     {isLoading ? <Loader2 className='mr-2 h-4 w-4 animate-spin' /> : null}
                     Get Team Recommendation;
-                  </Button>;
+                  </Button>
                 )}
-              </CardFooter>;
-            </form>;
-          </Card>;
+              </CardFooter>
+            </form>
+          </Card>
         )}
-      </div>;
-    </AppLayout>;
+      </div>
+    </AppLayout>
   )};
 ;
 :pages.disabled/pages/team-builder/index.tsx;

@@ -29,9 +29,9 @@ export function MainNavigation({ className }) {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   return (
-    <nav className={cn('hidden md: flex items-center space-x-6', className)}>;
+    <nav className={cn('hidden md: flex items-center space-x-6', className)}>
       {' '};
-      <NavLink;
+      <NavLink
         to='/';
         className={({ isActive }) =>;
           cn(';text-sm font-medium transition-colors hover: text-primary flex items-center',;
@@ -43,7 +43,7 @@ export function MainNavigation({ className }) {;
         <Home className='w-4 h-4 mr-1' /> Home{' '};
       </NavLink>{' '};
       {}{' '}';
-      <div className='relative group'>;
+      <div className='relative group'>
         {' '};
         <button;
           onMouseEnter={() => setIsServicesOpen(true)};
@@ -61,21 +61,21 @@ export function MainNavigation({ className }) {;
             className='absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50';
           >;
             {' '}';
-            <div className='p-4'>;
+            <div className='p-4'>
               {' '}';
-              <div className='grid grid-cols-2 gap-4'>;
+              <div className='grid grid-cols-2 gap-4'>
                 {' '};
-                <div>;
+                <div>
                   {' '}';
-                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>;
+                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>
                     {' '}';
                     <Brain className='w-4 h-4 mr-2' /> AI Solutions{' '};
                   </h4>{' '}';
-                  <ul className='space-y-2 text-sm'>;
+                  <ul className='space-y-2 text-sm'>
                     {' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services/ai'';
                         className='text-zion-slate-light hover: text-zion-cyan transition-colors';
                       >;
@@ -83,9 +83,9 @@ export function MainNavigation({ className }) {;
                         Business Intelligence{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services/ai'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -93,9 +93,9 @@ export function MainNavigation({ className }) {;
                         Process Automation{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services/ai'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -103,9 +103,9 @@ export function MainNavigation({ className }) {;
                         Machine Learning{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services/ai'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -115,17 +115,17 @@ export function MainNavigation({ className }) {;
                     </li>{' '};
                   </ul>{' '};
                 </div>{' '};
-                <div>;
+                <div>
                   {' '}';
-                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>;
+                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>
                     {' '}';
                     <Shield className='w-4 h-4 mr-2' /> IT Services{' '};
                   </h4>{' '}';
-                  <ul className='space-y-2 text-sm'>;
+                  <ul className='space-y-2 text-sm'>
                     {' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services/cloud'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -133,9 +133,9 @@ export function MainNavigation({ className }) {;
                         Cloud Migration{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services/infrastructure'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -143,9 +143,9 @@ export function MainNavigation({ className }) {;
                         IT Infrastructure{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -153,9 +153,9 @@ export function MainNavigation({ className }) {;
                         DevOps{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/services/cybersecurity'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -166,9 +166,9 @@ export function MainNavigation({ className }) {;
                   </ul>{' '};
                 </div>{' '};
               </div>{' '}';
-              <div className='mt-4 pt-4 border-t border-zion-purple/20'>;
+              <div className='mt-4 pt-4 border-t border-zion-purple/20'>
                 {' '};
-                <Link';
+                <Link'
                   to='/services'';
                   className='text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center';
                 >;
@@ -177,11 +177,11 @@ export function MainNavigation({ className }) {;
                 </Link>{' '};
               </div>{' '};
             </div>{' '};
-          </div>;
+          </div>
         )}{' '};
       </div>{' '};
       {}{' '}';
-      <div className='relative group'>;
+      <div className='relative group'>
         {' '};
         <button;
           onMouseEnter={() => setIsSolutionsOpen(true)};
@@ -199,21 +199,21 @@ export function MainNavigation({ className }) {;
             className='absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50';
           >;
             {' '}';
-            <div className='p-4'>;
+            <div className='p-4'>
               {' '}';
-              <div className='grid grid-cols-2 gap-4'>;
+              <div className='grid grid-cols-2 gap-4'>
                 {' '};
-                <div>;
+                <div>
                   {' '}';
-                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>;
+                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>
                     {' '}';
                     <Building className='w-4 h-4 mr-2' /> Industries{' '};
                   </h4>{' '}';
-                  <ul className='space-y-2 text-sm'>;
+                  <ul className='space-y-2 text-sm'>
                     {' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover: text-zion-cyan transition-colors';
                       >;
@@ -221,9 +221,9 @@ export function MainNavigation({ className }) {;
                         Manufacturing{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -231,9 +231,9 @@ export function MainNavigation({ className }) {;
                         Healthcare{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -241,9 +241,9 @@ export function MainNavigation({ className }) {;
                         Financial Services{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -253,17 +253,17 @@ export function MainNavigation({ className }) {;
                     </li>{' '};
                   </ul>{' '};
                 </div>{' '};
-                <div>;
+                <div>
                   {' '}';
-                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>;
+                  <h4 className='text-zion-cyan font-semibold mb-3 flex items-center'>
                     {' '}';
                     <Target className='w-4 h-4 mr-2' /> Business Solutions{' '};
                   </h4>{' '}';
-                  <ul className='space-y-2 text-sm'>;
+                  <ul className='space-y-2 text-sm'>
                     {' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -271,9 +271,9 @@ export function MainNavigation({ className }) {;
                         Process Optimization{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -281,9 +281,9 @@ export function MainNavigation({ className }) {;
                         Digital Transformation{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -291,9 +291,9 @@ export function MainNavigation({ className }) {;
                         Data Analytics{' '};
                       </Link>{' '};
                     </li>{' '};
-                    <li>;
+                    <li>
                       {' '};
-                      <Link';
+                      <Link'
                         to='/solutions'';
                         className='text-zion-slate-light hover:text-zion-cyan transition-colors';
                       >;
@@ -304,9 +304,9 @@ export function MainNavigation({ className }) {;
                   </ul>{' '};
                 </div>{' '};
               </div>{' '}';
-              <div className='mt-4 pt-4 border-t border-zion-purple/20'>;
+              <div className='mt-4 pt-4 border-t border-zion-purple/20'>
                 {' '};
-                <Link';
+                <Link'
                   to='/solutions'';
                   className='text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center';
                 >;
@@ -316,25 +316,25 @@ export function MainNavigation({ className }) {;
                 </Link>{' '};
               </div>{' '};
             </div>{' '};
-          </div>;
+          </div>
         )}{' '};
       </div>{' '};
       {}{' '};
-      <Link';
+      <Link'
         to='/case-studies'';
         className='text-zinc-300 hover: text-white transition-colors flex items-center';
       >;
         {' '}';
         <FileText className='w-4 h-4 mr-1' /> Case Studies{' '};
       </Link>{' '};
-      <Link';
+      <Link'
         to='/about'';
         className='text-zinc-300 hover:text-white transition-colors flex items-center';
       >;
         {' '}';
         <User className='w-4 h-4 mr-1' /> About Us{' '};
       </Link>{' '};
-      <Link';
+      <Link'
         to='/contact'';
         className='text-zinc-300 hover:text-white transition-colors flex items-center';
       >;
@@ -342,7 +342,7 @@ export function MainNavigation({ className }) {;
         <MessageCircle className='w-4 h-4 mr-1' /> Contact{' '};
       </Link>{' '};
       {}{' '};
-      <NavLink';
+      <NavLink'
         to='/contact';
         className={({ isActive }) =>;
           cn(';text-sm font-medium transition-colors hover: text-primary flex items-center bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1',;
@@ -353,7 +353,7 @@ export function MainNavigation({ className }) {;
         {' '}';
         <Rocket className='w-4 h-4 mr-1' /> Get Started{' '};
       </NavLink>{' '};
-    </nav>;
+    </nav>
   );
 };
 ('')";;

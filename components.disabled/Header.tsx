@@ -22,31 +22,31 @@ const Header: React.FC = () => {;
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 ;
-  const navigationItems = [;
+  const navigationItems = [
     { name: 'Home', href: '/' },;
     { name: 'Services', href: '/services' },;
     { name: 'About', href: '/about' },;
     { name: 'Contact', href: '/contact' }];
 ;
   return (;
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${;
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent';
     }`}>;
-      <div className='container mx-auto px-4'>;
-        <div className='flex justify-between items-center h-16'>;
+      <div className='container mx-auto px-4'>
+        <div className='flex justify-between items-center h-16'>
           {/* Logo */}
-          <div className='flex items-center'>;
-            <Link href='/' className='flex items-center space-x-2'>;
-              <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>;
-                <Brain className='w-5 h-5 text-white' />;
-              </div>;
-              <span className='text-xl font-bold text-gray-900'>Zion Tech Group</span>;
-            </Link>;
-          </div>;
+          <div className='flex items-center'>
+            <Link href='/' className='flex items-center space-x-2'>
+              <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
+                <Brain className='w-5 h-5 text-white' />
+              </div>
+              <span className='text-xl font-bold text-gray-900'>Zion Tech Group</span>
+            </Link>
+          </div>
           {/* Desktop Navigation */}
-          <div className='hidden md:flex items-center space-x-8'>;
+          <div className='hidden md:flex items-center space-x-8'>
             {navigationItems.map((item) => (;
-              <Link;
+              <Link
                 key={item.name}
                 href={item.href}
                 className={`transition-colors duration-200 font-medium ${;
@@ -56,35 +56,35 @@ const Header: React.FC = () => {;
                 }`}
               >;
                 {item.name}
-              </Link>;
+              </Link>
             ))}
-            <Link;
+            <Link
               href='/contact';
               className='bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium';
             >;
               Get Started;
-            </Link>;
-          </div>;
+            </Link>
+          </div>
           {/* Mobile menu button */}
-          <div className='md:hidden'>;
+          <div className='md:hidden'>
             <button;
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-700 hover:text-blue-600 transition-colors duration-200';
             >;
               {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
-            </button>;
-          </div>;
-        </div>;
+            </button>
+          </div>
+        </div>
         {/* Mobile Navigation */}
-        <AnimatePresence>;
+        <AnimatePresence>
           {isOpen && (;
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className='md:hidden overflow-hidden';
             >;
-              <div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t'>;
+              <div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t'>
                 {navigationItems.map((item) => (;
                   <Link;
                     key={item.name}
@@ -97,7 +97,7 @@ const Header: React.FC = () => {;
                     onClick={() => setIsOpen(false)}
                   >;
                     {item.name}
-                  </Link>;
+                  </Link>
                 ))}
                 <Link;
                   href='/contact';
@@ -105,13 +105,13 @@ const Header: React.FC = () => {;
                   onClick={() => setIsOpen(false)}
                 >;
                   Get Started;
-                </Link>;
-              </div>;
-            </motion.div>;
+                </Link>
+              </div>
+            </motion.div>
           )}
-        </AnimatePresence>;
-      </div>;
-    </header>;
+        </AnimatePresence>
+      </div>
+    </header>
   );
 };
 ;

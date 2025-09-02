@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaasService2034 {;
+export interface InnovativeMicroSaasService2034 {
    id: string;
    title: string;
    description: string;
@@ -21,4 +21,4 @@ export interface InnovativeMicroSaasService2034 {;
    email: string;
    website: string;
    address: string;
-}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]; compliance: string[];  }; competitors: string[]; marketTrend: string; aiModel?: string; trainingData?: string; marketingContent: { headline: string; valueProposition: string; keyFeatures: string[]; competitiveAdvantages: string[]; testimonials?: string[]; caseStudies?: string[];  }; }; export const INNOVATIVE_MICRO_SAAS_SERVICES_2034: InnovativeMicroSaasService2034[] = [;
+}; technicalSpecs?: { technology: string[] integrations: string[]; apiEndpoints: number; uptime: string; security: string[]; compliance: string[];  }; competitors: string[]; marketTrend: string; aiModel?: string; trainingData?: string; marketingContent: { headline: string valueProposition: string; keyFeatures: string[]; competitiveAdvantages: string[]; testimonials?: string[]; caseStudies?: string[];  }; }; export const INNOVATIVE_MICRO_SAAS_SERVICES_2034: InnovativeMicroSaasService2034[] = [;

@@ -35,7 +35,7 @@ class AutomationFactory {;
     } catch (error) {;
       this.log(`Error loading status: ${error.message}`)}
   }
-  saveStatus() {;
+  saveStatus() {
     try {;
       const status = {;
   timestamp: new Date().toISOString(),;
@@ -92,7 +92,7 @@ const path = require(;
   'path');
 const { execSync } = require(;
   'child_process');
-class CodeQualityMonitor {;
+class CodeQualityMonitor {
   constructor() {;
     this.metrics = {;
   complexity: 0,;
@@ -166,7 +166,7 @@ class CodeQualityMonitor {;
   calculatePerformance() {;
     // Placeholder for performance calculation;
     return Math.floor(Math.random() * 100) + 70}
-  getTypeScriptFiles() {;
+  getTypeScriptFiles() {
     const projectRoot = path.resolve(__dirname,;
   '..');
     const files = [];
@@ -241,7 +241,7 @@ class PerformanceOptimizer {;
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage)}
-  async optimizePerformance() {;
+  async optimizePerformance() {
     try {;
       this.log(;
   'Starting performance optimization...');
@@ -275,7 +275,7 @@ class PerformanceOptimizer {;
         totalSize: '2.1MB,;
         gzippedSize:;
   '650KB',;
-        recommendations[;
+        recommendations[
   'Consider code splitting',;
   'Remove unused dependencies'];
       }} catch (error) {;
@@ -310,7 +310,7 @@ class PerformanceOptimizer {;
     // Placeholder for unused dependency detection;
     return [;
   'example-unused-package']}
-  generateRecommendations() {;
+  generateRecommendations() {
     return [;
   'Implement code splitting for better performance',;
   'Optimize images using WebP format',;

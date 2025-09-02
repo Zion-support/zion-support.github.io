@@ -38,19 +38,19 @@ export interface APIParameter {;
 }
 export interface APIRequestBody {;
   required: boolean;
-   content: Record<string, APIContent>;
+   content: Record<string, APIContent>
    description?: string;
 }
 export interface APIContent {;
   schema: APISchema;
    example?;
-  examples?: Record<string, APIExample>;
+  examples?: Record<string, APIExample>
 }
 export interface APIResponse {;
   code: string;
    description: string;
-   content?: Record<string, APIContent>;
-   headers?: Record<string, APIHeader>;
+   content?: Record<string, APIContent>
+   headers?: Record<string, APIHeader>
 }
 export interface APIHeader {;
   description: string;
@@ -61,7 +61,7 @@ export interface APISchema {;
   type?: string;
    format?: string;
    description?: string;
-   properties?: Record<string, APISchema>;
+   properties?: Record<string, APISchema>
    items?: APISchema;
    required?: string[];
    enum?[];
@@ -90,12 +90,12 @@ export interface APIExample {;
 export interface ExampleRequest {;
   method: string;
    url: string;
-   headers: Record<string, string>;
+   headers: Record<string, string>
    body?;
 }
 export interface ExampleResponse {;
   status: number;
-   headers: Record<string, string>;
+   headers: Record<string, string>
    body;
 }
 export interface RateLimit {;
@@ -114,13 +114,13 @@ export interface DocumentationConfig {;
    includeSchemas: boolean;
    includeAuthentication: boolean;
    includeRateLimits: boolean;
-   customStyling?: Record<string, any>;
+   customStyling?: Record<string, any>
    branding?: { logo?: string;
    primaryColor?: string;
    compName?: string;
 }}
 export class APIDocGeneratorService {;
-  private supportedFrameworks = [';express',;
+  private supportedFrameworks = ['express',;
   'fastify',;
   'koa',;
   'hapi',;
@@ -131,7 +131,7 @@ export class APIDocGeneratorService {;
   'aspnet',;
   'laravel';
   ];
-  private supportedLanguages = [';javascript',;
+  private supportedLanguages = ['javascript',;
   'typescript',;
   'python',;
   'java',;
@@ -153,7 +153,7 @@ export class APIDocGeneratorService {;
       endpoints[],;
       schemas[],;
       examples[],;
-      metadata: {;
+      metadata: {
         lastGenerated: new Date(),;
         languages[],;
         frameworks[];
@@ -673,7 +673,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`}
   async updateDocumentation(;
     documentationId: string,;
-    changes: Partial<APIDocumentation>;
+    changes: Partial<APIDocumentation>
   ): Promise<APIDocumentation> {;
     // Simulate documentation update;
     return {;

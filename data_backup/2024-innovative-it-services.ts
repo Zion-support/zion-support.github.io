@@ -1,4 +1,4 @@
-export interface InnovativeITService2024 {;
+export interface InnovativeITService2024 {
   id: string;
    name: string;
    tagline: string;

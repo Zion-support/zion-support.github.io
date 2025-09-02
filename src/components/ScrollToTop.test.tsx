@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ScrollToTop from './ScrollToTop';
-;
+
 describe('ScrollToTop', () => {;
   it('renders without crashing', () => {;
     render(<ScrollToTop />);

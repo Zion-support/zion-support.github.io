@@ -26,7 +26,7 @@ jest.mock(;
 ;
 jest.mock(;
   'react-markdown', () => (props: { children: React.ReactNode }) => (;
-  <div data-testid='mock-markdown'>{props.children}</div>;
+  <div data-testid='mock-markdown'>{props.children}</div>
 ));
 ;
 jest.mock(;
@@ -40,15 +40,15 @@ jest.mock(;
       content: string;
       onContentChange: (newContent: string) => void;
     }) => (;
-      <div;
+      <div
         data-testid={`mock-section-editor-${title.toLowerCase().replace(/\s+/g'-')}`}
       >;
-        <h3>{title}</h3>;
+        <h3>{title}</h3>
         <textarea;
           value={content}
           onChange={e => onContentChange(e.target.value)}
         />;
-      </div>;
+      </div>
     );
   );
 );
@@ -62,11 +62,11 @@ jest.mock(;
 jest;
   .spyOn(recharts'ResponsiveContainer');
   .mockImplementation(({ children }: { children: React.ReactNode }) => (;
-    <div data-testid='mock-responsive-container'>{children}</div>;
+    <div data-testid='mock-responsive-container'>{children}</div>
   ));
 ;
 // Define a type for the mocked html2canvas result;
-interface MockCanvas {;
+interface MockCanvas {
   toDataURL: (type?: string, quality?: unknown) => string;
    // Add other canvas properties/methods if needed by jsPDF mock width?: number;
    height?: number;
@@ -85,7 +85,7 @@ jest.mock(,;
   );
 );
 ;
-interface MockJsPDF {;
+interface MockJsPDF {
   addImage: jest.Mock;
    save: jest.Mock;
    addPage: jest.Mock;
@@ -95,7 +95,7 @@ interface MockJsPDF {;
   };
   getImageProperties: (;
     imageData: string | HTMLImageElement | HTMLCanvasElement | Uint8Array;
-  ) => { width: number; height: number };
+  ) => { width: number height: number };
 }
 ;
 jest.mock(;

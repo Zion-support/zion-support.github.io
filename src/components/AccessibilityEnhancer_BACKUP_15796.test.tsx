@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import AccessibilityEnhancer_BACKUP_15796 from './AccessibilityEnhancer_BACKUP_15796';
-;
+
 describe('AccessibilityEnhancer_BACKUP_15796', () => {;
   it('renders without crashing', () => {;
     render(<AccessibilityEnhancer_BACKUP_15796 />);

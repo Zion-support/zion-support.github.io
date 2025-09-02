@@ -11,39 +11,39 @@ export default function HealthcareSolutions() {}
             icon: Heart,;
             title: 'Patient Care AI','';
             description: 'AI-powered patient monitoring and personalized care recommendations','';
-            features: ['Real-time Monitoring', 'Predictive Analytics', 'Personalized Treatment Plans', 'Remote Patient Care'];
+            features: ['Real-time Monitoring', 'Predictive Analytics', 'Personalized Treatment Plans', 'Remote Patient Care']
         },;
 :pages.disabled/solutions/HealthcareSolutions.jsx;
         {;
 'icon: Stethoscope,''            title: 'Diagnostic Assistance','';
             description: 'Advanced AI diagnostics and medical imaging analysis','';
-            features: ['Medical Image Analysis', 'Symptom Assessment', 'Disease Prediction', 'Treatment Recommendations'];
+            features: ['Medical Image Analysis', 'Symptom Assessment', 'Disease Prediction', 'Treatment Recommendations']
         },;
 :pages.disabled/solutions/HealthcareSolutions.jsx;
         {;
 'icon: Shield,''            title: 'Healthcare Security','';
             description: 'HIPAA-compliant security and data protection solutions','';
-            features: ['Data Encryption', 'Access Control', 'Audit Trails', 'Compliance Monitoring'];
+            features: ['Data Encryption', 'Access Control', 'Audit Trails', 'Compliance Monitoring']
         },;
 :pages.disabled/solutions/HealthcareSolutions.jsx;
         {;
 'icon: Database,''            title: 'Health Data Management','';
             description: 'Secure and efficient healthcare data infrastructure','';
-            features: ['Electronic Health Records', 'Data Interoperability', 'Analytics Platform', 'Cloud Storage'];
+            features: ['Electronic Health Records', 'Data Interoperability', 'Analytics Platform', 'Cloud Storage']
         },;
 :pages.disabled/solutions/HealthcareSolutions.jsx;
         {;
 'icon: Brain,''            title: 'Clinical Decision Support','';
             description: 'AI-powered clinical decision support systems','';
-            features: ['Evidence-based Guidelines', 'Risk Assessment', 'Drug Interaction Checking', 'Clinical Pathways'];
+            features: ['Evidence-based Guidelines', 'Risk Assessment', 'Drug Interaction Checking', 'Clinical Pathways']
         },;
 :pages.disabled/solutions/HealthcareSolutions.jsx;
         {;
 'icon: Activity,''            title: 'Operational Efficiency','';
             description: 'Streamlined healthcare operations and resource management','';
-            features: ['Resource Optimization', 'Workflow Automation', 'Performance Analytics', 'Cost Management'];
+            features: ['Resource Optimization', 'Workflow Automation', 'Performance Analytics', 'Cost Management']
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-    ]';const benefits = [''        'Improved patient outcomes and care quality','';
+    ]';const benefits = [''        'Improved patient outcomes and care quality',''
         'Reduced medical errors and diagnostic time','';
         'Enhanced operational efficiency and cost savings','';
         'Better patient engagement and satisfaction','';
@@ -72,41 +72,41 @@ export default function HealthcareSolutions() {}
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>'{/* Hero Section */}''      <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center'>'';
-            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
               Healthcare Solutions';
             </h1>'';
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionizing healthcare delivery with AI-powered solutions that improve patient outcomes and operational efficiency';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <Link to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105'>;
-                Get Healthcare Quote'</Link>''              <Link to='/services/ai-autonomous-systems' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300'>;
+              <Link to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105'>
+                Get Healthcare Quote'</Link>''              <Link to='/services/ai-autonomous-systems' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300'>
                 Explore AI Solutions;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
+              </Link>
+            </div>
+          </div>
+        </div>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
 '{/* Background Elements */}''        <div className='absolute inset-0 overflow-hidden pointer-events-none'>'';
           <div className='absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>'';
           <div className='absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse'></div>'';
-          <div className='absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce'></div>;
-        </div>;
-      </section>;
+          <div className='absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce'></div>
+        </div>
+      </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
 '{/* Solutions Grid */}''      <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-              Comprehensive Healthcare Solutions'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Comprehensive Healthcare Solutions'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               From patient care to operational efficiency, we provide end-to-end healthcare technology solutions;
-            </p>;
+            </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
           </div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {solutions.map((solution, index) => {;
 ';
             const Icon = solution.icon';
@@ -116,43 +116,43 @@ export default function HealthcareSolutions() {}
                   <p className='text-gray-300 mb-6'>{solution.description}</p>'';
                   <ul className='space-y-2'>'';
                     {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className='flex items-center text-sm text-gray-400'>'';
-                        <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'/>;
+                        <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'/>
                         {feature}
                       </li>))}
-                  </ul>;
+                  </ul>
                 </div>);
         })}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
 '{/* Benefits Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-              Healthcare Transformation Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Healthcare Transformation Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Measurable improvements in patient care and operational efficiency;
-            </p>;
+            </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'';
             {benefits.map((benefit, index) => (<div key={index} className='text-center'>'';
                 <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-                  <TrendingUp className='w-8 h-8 text-white'/>'</div>''                <p className='text-gray-300 text-lg'>{benefit}</p>;
+                  <TrendingUp className='w-8 h-8 text-white'/>'</div>''                <p className='text-gray-300 text-lg'>{benefit}</p>
               </div>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
 '{/* Case Studies */}''      <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-              Healthcare Success Stories'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Healthcare Success Stories'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Real results from healthcare organizations using our solutions;
-            </p>;
+            </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
           </div>'''          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>'';
             {caseStudies.map((study, index) => (<div key={index} className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8'>'';
@@ -165,27 +165,27 @@ export default function HealthcareSolutions() {}
                 <div className='space-y-3 mb-6'>';
                   <div>'';
                     <h4 className='font-semibold text-cyan-400 mb-1'>Challenge:</h4>'';
-                    <p className='text-gray-300'>{study.challenge}</p>;
+                    <p className='text-gray-300'>{study.challenge}</p>
                   </div>';
                   <div>'';
                     <h4 className='font-semibold text-cyan-400 mb-1'>Solution:</h4>'';
-                    <p className='text-gray-300'>{study.solution}</p>;
+                    <p className='text-gray-300'>{study.solution}</p>
                   </div>';
                   <div>'';
                     <h4 className='font-semibold text-cyan-400 mb-1'>Results:</h4>'';
-                    <p className='text-gray-300'>{study.results}</p>;
+                    <p className='text-gray-300'>{study.results}</p>
                   </div>';
                 </div>'';
-                <Link to='/case-studies' className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>'Read Full Case Study''                  <ArrowRight className='w-4 h-4 ml-2'/>;
-                </Link>;
+                <Link to='/case-studies' className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>'Read Full Case Study''                  <ArrowRight className='w-4 h-4 ml-2'/>
+                </Link>
               </div>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
 '{/* CTA Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10'>'';
         <div className='max-w-4xl mx-auto text-center'>'';
-          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
             Ready to Transform Healthcare?';
           </h2>'';
@@ -193,13 +193,13 @@ export default function HealthcareSolutions() {}
   Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency';
           </p>'';
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>'';
-            <Link to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105'>;
-              Schedule Consultation'</Link>''            <Link to='/services-overview' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300'>;
+            <Link to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105'>
+              Schedule Consultation'</Link>''            <Link to='/services-overview' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300'>
               View All Services;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
+            </Link>
+          </div>
+        </div>
+      </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx;
     </div>)';
 }}}}

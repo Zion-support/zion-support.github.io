@@ -38,7 +38,7 @@ import {;
 interface SidebarItem {;
   name: string;
    path: string;
-   icon: React.ComponentType<{ className?: string;
+   icon: React.ComponentType<{ className?: string
 }>;
   children?: SidebarItem[];
   badge?: string;
@@ -194,42 +194,42 @@ export function Sidebar() {;
         { name:,;
   Reports', path: '/analytics/reports, icon: BarChart }]}];
 ;
-  const toggleItem = (itemName: string) => {;
+  const toggleItem = (itemName: string) => {
     setExpandedItems(prev =>;
       prev.includes(itemName);
         ? prev.filter(name => name !== itemName);
-        : [...prev, itemName];
+        : [...prev, itemName]
     );
   };
 ;
   const isActive = (path: string) => location.pathname === path;
 ;
   return (;
-    <div;
+    <div
       className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${;
         isOpen ?,;
   translate-x-0': 'translate-x-full;
       }`}
     >;
-      <div className='flex flex-col h-full'>;
+      <div className='flex flex-col h-full'>
         {/* Header */}
-        <div className='flex items-center justify-between p-6 border-b border-white/10'>;
-          <h2 className='text-xl font-semibold text-white'>Navigation</h2>;
-          <button;
+        <div className='flex items-center justify-between p-6 border-b border-white/10'>
+          <h2 className='text-xl font-semibold text-white'>Navigation</h2>
+          <button
             onClick={onClose}
             className='p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors';
             aria-label='Close sidebar';
           >;
-            <X className='h-5 w-5' />;
-          </button>;
-        </div>;
+            <X className='h-5 w-5' />
+          </button>
+        </div>
         {/* Navigation Items */}
-        <nav className='flex-1 overflow-y-auto p-6'>;
-          <div className='space-y-2'>;
+        <nav className='flex-1 overflow-y-auto p-6'>
+          <div className='space-y-2'>
             {sidebarItems.map(item => (;
-              <div key={item.name}>;
+              <div key={item.name}>
                 {item.children ? (;
-                  <div>;
+                  <div>
                     <button;
                       onClick={() => toggleItem(item.name)}
                       className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${;
@@ -238,21 +238,21 @@ export function Sidebar() {;
   bg-blue-600/20 text-white': 'text-gray-300 hover:text-white hover:bg-white/10;
                       }`}
                     >;
-                      <div className='flex items-center space-x-3'>;
-                        <item.icon className='h-5 w-5' />;
-                        <span className='font-medium'>{item.name}</span>;
-                      </div>;
-                      <ChevronDown;
+                      <div className='flex items-center space-x-3'>
+                        <item.icon className='h-5 w-5' />
+                        <span className='font-medium'>{item.name}</span>
+                      </div>
+                      <ChevronDown
                         className={`h-4 w-4 transition-transform ${;
                           expandedItems.includes(item.name) ?,;
   rotate-180': ';
                         }`}
                       />;
-                    </button>;
+                    </button>
                     {expandedItems.includes(item.name) && (;
-                      <div className='ml-6 mt-2 space-y-1'>;
+                      <div className='ml-6 mt-2 space-y-1'>
                         {item.children.map(child => (;
-                          <Link;
+                          <Link
                             key={child.path}
                             to={child.path}
                             className={`flex items-center space-x-3 p-2 rounded-lg transition-colors ${;
@@ -263,15 +263,15 @@ export function Sidebar() {;
                             }`}
                             onClick={onClose}
                           >;
-                            <child.icon className='h-4 w-4' />;
-                            <span className='text-sm'>{child.name}</span>;
-                          </Link>;
+                            <child.icon className='h-4 w-4' />
+                            <span className='text-sm'>{child.name}</span>
+                          </Link>
                         ))}
-                      </div>;
+                      </div>
                     )}
-                  </div>;
+                  </div>
                 ) : (;
-                  <Link;
+                  <Link
                     to={item.path}
                     className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${;
                       isActive(item.path);
@@ -281,38 +281,38 @@ export function Sidebar() {;
                     }`}
                     onClick={onClose}
                   >;
-                    <item.icon className='h-5 w-5' />;
-                    <span className='font-medium'>{item.name}</span>;
-                  </Link>;
+                    <item.icon className='h-5 w-5' />
+                    <span className='font-medium'>{item.name}</span>
+                  </Link>
                 )}
-              </div>;
+              </div>
             ))}
-          </div>;
-        </nav>;
+          </div>
+        </nav>
         {/* Footer */}
-        <div className='p-6 border-t border-white/10'>;
-          <div className='text-center'>;
-            <p className='text-gray-400 text-sm mb-3'>Need help?</p>;
-            <Link;
+        <div className='p-6 border-t border-white/10'>
+          <div className='text-center'>
+            <p className='text-gray-400 text-sm mb-3'>Need help?</p>
+            <Link
               to='/contact';
               className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center';
               onClick={onClose}
             >;
               Contact Support;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 ;
-interface SidebarProps {;
+interface SidebarProps {
   isOpen: boolean;
    onClose: () => void;
 }
 ;
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {;
-  return <Sidebar isOpen={isOpen} onClose={onClose} />;
+  return <Sidebar isOpen={isOpen} onClose={onClose} />
 }
 ;

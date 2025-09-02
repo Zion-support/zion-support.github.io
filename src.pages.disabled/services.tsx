@@ -1,22 +1,22 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
+
 const Services: React.FC = () => {;
-  return (;
+  return (
     <>;
-      <SEO title='Services - Zion Tech Group' />;
-      <div className='min-h-screen bg-white py-20'>;
-        <div className='max-w-4xl mx-auto px-4'>;
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>;
-          <p className='text-lg text-gray-600'>Content coming soon...</p>;
-        </div>;
-      </div>;
-    </>;
+      <SEO title='Services - Zion Tech Group' />
+      <div className='min-h-screen bg-white py-20'>
+        <div className='max-w-4xl mx-auto px-4'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>
+          <p className='text-lg text-gray-600'>Content coming soon...</p>
+        </div>
+      </div>
+    </>
   );
 };
 ;
 :src/pages/services.tsx;
-const featuredServices: Service[] = [;
+const featuredServices: Service[] = [
   {;
     title: 'AI Autonomous Business Manager',;
     description: 'Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction.',;
@@ -58,7 +58,7 @@ const featuredServices: Service[] = [;
     priceRange: '$6,000 - $60,000',;
     learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum'}];
 ;
-const microSaaS: Service[] = [;
+const microSaaS: Service[] = [
   {;
     title: 'AI Email Automation Suite',;
     description: 'Transform your email management with intelligent automation, smart responses, and advanced analytics.',;
@@ -108,7 +108,7 @@ const microSaaS: Service[] = [;
 const Services: React.FC = (): JSX.Element => {;
   const [activeCategory, setActiveCategory] = useState('all');
 ;
-  const serviceCategories = [;
+  const serviceCategories = [
     { id: 'all', name: 'All Services', icon: Sparkles },;
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },;
@@ -419,66 +419,66 @@ const Services: React.FC = (): JSX.Element => {;
     ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory);
 ;
   return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-      <div className='container mx-auto px-4 py-20 text-white'>;
-        <header className='text-center max-w-4xl mx-auto'>;
-          <h1 className='text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
+      <div className='container mx-auto px-4 py-20 text-white'>
+        <header className='text-center max-w-4xl mx-auto'>
+          <h1 className='text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
             Services & Micro SaaS;
-          </h1>;
-          <p className='text-base md:text-xl text-slate-300'>;
+          </h1>
+          <p className='text-base md:text-xl text-slate-300'>
             Practical, production-grade solutions with transparent pricing and modern stacks.;
-          </p>;
-        </header>;
-        <section className='mt-14'>;
-          <h2 className='text-2xl font-semibold text-cyan-300 mb-6'>Enterprise Services</h2>;
-          <div className='grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6'>;
+          </p>
+        </header>
+        <section className='mt-14'>
+          <h2 className='text-2xl font-semibold text-cyan-300 mb-6'>Enterprise Services</h2>
+          <div className='grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6'>
             {featuredServices.map((s)              => (;
-              <div key={s.title} className='bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors'>;
-                <h3 className='text-xl font-bold mb-2'>{s.title}</h3>;
-                <p className='text-slate-300 mb-4'>{s.description}</p>;
-                <div className='flex items-center justify-between'>;
-                  <span className='text-cyan-300 font-semibold'>{s.priceRange}</span>;
+              <div key={s.title} className='bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors'>
+                <h3 className='text-xl font-bold mb-2'>{s.title}</h3>
+                <p className='text-slate-300 mb-4'>{s.description}</p>
+                <div className='flex items-center justify-between'>
+                  <span className='text-cyan-300 font-semibold'>{s.priceRange}</span>
                   {s.learnMoreUrl && (;
-                    <a className='text-sm text-cyan-400 hover:text-cyan-300 underline' href={s.learnMoreUrl} target='_blank' rel='noreferrer'>;
+                    <a className='text-sm text-cyan-400 hover:text-cyan-300 underline' href={s.learnMoreUrl} target='_blank' rel='noreferrer'>
                       Reference;
-                    </a>;
+                    </a>
                   )}
-                </div>;
-              </div>;
+                </div>
+              </div>
             ))}
-          </div>;
-        </section>;
-        <section className='mt-16'>;
-          <h2 className='text-2xl font-semibold text-purple-300 mb-6'>Micro SaaS Products</h2>;
-          <div className='grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6'>;
+          </div>
+        </section>
+        <section className='mt-16'>
+          <h2 className='text-2xl font-semibold text-purple-300 mb-6'>Micro SaaS Products</h2>
+          <div className='grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6'>
             {microSaaS.map((s)              => (;
-              <div key={s.title} className='bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors'>;
-                <h3 className='text-xl font-bold mb-2'>{s.title}</h3>;
-                <p className='text-slate-300 mb-4'>{s.description}</p>;
-                <div className='flex items-center justify-between'>;
-                  <span className='text-purple-300 font-semibold'>{s.priceRange}</span>;
+              <div key={s.title} className='bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors'>
+                <h3 className='text-xl font-bold mb-2'>{s.title}</h3>
+                <p className='text-slate-300 mb-4'>{s.description}</p>
+                <div className='flex items-center justify-between'>
+                  <span className='text-purple-300 font-semibold'>{s.priceRange}</span>
                   {s.learnMoreUrl && (;
-                    <a className='text-sm text-purple-300 hover:text-purple-200 underline' href={s.learnMoreUrl} target='_blank' rel='noreferrer'>;
+                    <a className='text-sm text-purple-300 hover:text-purple-200 underline' href={s.learnMoreUrl} target='_blank' rel='noreferrer'>
                       Learn more;
-                    </a>;
+                    </a>
                   )}
-                </div>;
-              </div>;
+                </div>
+              </div>
             ))}
-          </div>;
-        </section>;
-        <section className='mt-16 text-center'>;
-          <div className='inline-flex flex-col items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-6'>;
-            <p className='text-slate-300'>Have a project in mind? Get a tailored proposal.</p>;
-            <div className='flex gap-3 flex-wrap justify-center'>;
-              <a href='tel:+13024640950' className='bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Call +1 302 464 0950</a>;
-              <a href='mailto:kleber@ziontechgroup.com' className='bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Email kleber@ziontechgroup.com</a>;
-              <a href='/request-quote' className='bg-white/10 hover:bg-white/15 border border-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Request a Quote</a>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </div>;
+          </div>
+        </section>
+        <section className='mt-16 text-center'>
+          <div className='inline-flex flex-col items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-6'>
+            <p className='text-slate-300'>Have a project in mind? Get a tailored proposal.</p>
+            <div className='flex gap-3 flex-wrap justify-center'>
+              <a href='tel:+13024640950' className='bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Call +1 302 464 0950</a>
+              <a href='mailto:kleber@ziontechgroup.com' className='bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Email kleber@ziontechgroup.com</a>
+              <a href='/request-quote' className='bg-white/10 hover:bg-white/15 border border-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Request a Quote</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 }
 ;

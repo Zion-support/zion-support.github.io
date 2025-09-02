@@ -43,7 +43,7 @@ const Sitemap = () => {}
             { path: '/comprehensive-services-showcase', label: 'Comprehensive Services Showcase', description: 'Complete overview of all services' },';
             { path: '/innovative-services-2025', label: 'Innovative Services 2025', description: 'Latest innovative services' }
         ],;
-        legal[';
+        legal['
             { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy policy and data handling' },';
             { path: '/terms', label: 'Terms of Service', description: 'Terms and conditions of service' }
         ];
@@ -52,9 +52,9 @@ const Sitemap = () => {}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'''';
         <div className='text-center mb-12'>'''';
           <h2 className='text-3xl font-bold text-slate-900 mb-4'>Site Map</h2>'''';
-          <p className='text-lg text-slate-600 max-w-2xl mx-auto'>;
+          <p className='text-lg text-slate-600 max-w-2xl mx-auto'>
             Navigate through all our pages and services to find exactly what you need;
-          </p>;
+          </p>
         </div>''';
 '''';
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>''';
@@ -65,11 +65,11 @@ const Sitemap = () => {}
               {sitemapData.main.map((item) => (<li key={item.path}>'''';
                   <Link to={item.path} className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                     <div className='font-medium text-slate-900'>{item.label}</div>'''';
-                    <div className='text-sm text-slate-600'>{item.description}</div>;
-                  </Link>;
+                    <div className='text-sm text-slate-600'>{item.description}</div>
+                  </Link>
                 </li>) ) }
-            </ul>;
-          </div>;
+            </ul>
+          </div>
 ''';
           {/* Core Services */}'''';
           <div className='bg-white rounded-lg shadow-sm p-6'>'''';
@@ -78,11 +78,11 @@ const Sitemap = () => {}
               {sitemapData.services.map((item) => (<li key={item.path}>'''';
                   <Link to={item.path} className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                     <div className='font-medium text-slate-900'>{item.label}</div>'''';
-                    <div className='text-sm text-slate-600'>{item.description}</div>;
-                  </Link>;
+                    <div className='text-sm text-slate-600'>{item.description}</div>
+                  </Link>
                 </li>) ) }
-            </ul>;
-          </div>;
+            </ul>
+          </div>
 ''';
           {/* AI Autonomous Services */}'''';
           <div className='bg-white rounded-lg shadow-sm p-6'>'''';
@@ -91,11 +91,11 @@ const Sitemap = () => {}
               {sitemapData.aiAutonomous.map((item) => (<li key={item.path}>'''';
                   <Link to={item.path} className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                     <div className='font-medium text-slate-900'>{item.label}</div>'''';
-                    <div className='text-sm text-slate-600'>{item.description}</div>;
-                  </Link>;
+                    <div className='text-sm text-slate-600'>{item.description}</div>
+                  </Link>
                 </li>) ) }
-            </ul>;
-          </div>;
+            </ul>
+          </div>
 ''';
           {/* Pricing & Showcase */}'''';
           <div className='bg-white rounded-lg shadow-sm p-6'>'''';
@@ -104,17 +104,17 @@ const Sitemap = () => {}
               {sitemapData.pricing.map((item) => (<li key={item.path}>'''';
                   <Link to={item.path} className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                     <div className='font-medium text-slate-900'>{item.label}</div>'''';
-                    <div className='text-sm text-slate-600'>{item.description}</div>;
-                  </Link>;
+                    <div className='text-sm text-slate-600'>{item.description}</div>
+                  </Link>
                 </li>))}''';
               {sitemapData.showcase.map((item) => (<li key={item.path}>'''';
                   <Link to={item.path} className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                     <div className='font-medium text-slate-900'>{item.label}</div>'''';
-                    <div className='text-sm text-slate-600'>{item.description}</div>;
-                  </Link>;
+                    <div className='text-sm text-slate-600'>{item.description}</div>
+                  </Link>
                 </li>) ) }
-            </ul>;
-          </div>;
+            </ul>
+          </div>
 ''';
           {/* Legal & Resources */}'''';
           <div className='bg-white rounded-lg shadow-sm p-6'>'''';
@@ -123,40 +123,40 @@ const Sitemap = () => {}
               {sitemapData.legal.map((item) => (<li key={item.path}>'''';
                   <Link to={item.path} className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                     <div className='font-medium text-slate-900'>{item.label}</div>'''';
-                    <div className='text-sm text-slate-600'>{item.description}</div>;
-                  </Link>;
+                    <div className='text-sm text-slate-600'>{item.description}</div>
+                  </Link>
                 </li>))}''';
               <li>'''';
                 <Link to='/ai-consumer-willingness-to-try' className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                   <div className='font-medium text-slate-900'>AI Consumer Research</div>'''';
-                  <div className='text-sm text-slate-600'>Research on AI consumer adoption</div>;
-                </Link>;
+                  <div className='text-sm text-slate-600'>Research on AI consumer adoption</div>
+                </Link>
               </li>''';
               <li>'''';
                 <Link to='/ai-consumer-willingness-to-use' className='block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200'>'''';
                   <div className='font-medium text-slate-900'>AI Consumer Insights</div>'''';
-                  <div className='text-sm text-slate-600'>Consumer insights for AI products</div>;
-                </Link>;
-              </li>;
-            </ul>;
-          </div>;
+                  <div className='text-sm text-slate-600'>Consumer insights for AI products</div>
+                </Link>
+              </li>
+            </ul>
+          </div>
 ''';
           {/* Quick Links */}'''';
           <div className='bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6'>'''';
             <h3 className='text-xl font-semibold text-slate-900 mb-4'>Quick Links</h3>'''';
             <div className='space-y-3'>'''';
-              <Link to='/contact' className='block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>;
+              <Link to='/contact' className='block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>
                 Get Started''';
               </Link>'''';
-              <Link to='/comprehensive-pricing-2025' className='block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200'>;
+              <Link to='/comprehensive-pricing-2025' className='block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200'>
                 View Pricing''';
               </Link>'''';
-              <Link to='/services' className='block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200'>;
+              <Link to='/services' className='block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200'>
                 Explore Services;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
+              </Link>
+            </div>
+          </div>
+        </div>
 ''';
         {/* Additional AI Services Grid */}'''';
         <div className='mt-12'>'''';
@@ -168,11 +168,11 @@ const Sitemap = () => {}
 '''';
             const path = '/' + service.toLowerCase().replace(/\s+/g,-').replace(/ai-autonomous-/,ai-autonomous-')';'';
             return (<Link key={service} to={path} className='block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-center'>'''';
-                  <div className='font-medium text-slate-900 text-sm">{service}</div>;
+                  <div className='font-medium text-slate-900 text-sm">{service}</div>
                 </Link>)})}
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </div>)};
 export default Sitemap;
 ;

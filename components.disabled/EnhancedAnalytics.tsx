@@ -14,12 +14,12 @@ import {;
    uniqueVisitors: number;
    bounceRate: number;
    avgSessionDuration: number;
-   topPages: Array<{ page: string;
+   topPages: Array<{ page: string
    views: number;
 }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
-  deviceTypes: Array<{ device: string; percentage: number }>;
-userEngagement: {;scrollDepth: number;
+  trafficSources: Array<{ source: string percentage: number }>;
+  deviceTypes: Array<{ device: string percentage: number }>;
+userEngagement: {scrollDepth: number;
     clickThroughRate: number;
     timeOnPage: number;
     socialShares: number;
@@ -28,7 +28,7 @@ userEngagement: {;scrollDepth: number;
   conversionRate: number;
 }
 ;
-interface EnhancedAnalyticsProps {;
+interface EnhancedAnalyticsProps {
   showRealTime?: boolean;
    autoRefresh?: boolean;
    refreshInterval?: number;
@@ -119,12 +119,12 @@ const formatNumber = (num: number): string => {;
   'tablet': return Tablet';      default: return Globe;    }};
 ;
   if (!analytics) {;
-    return (;
+    return (
 <div className='flex items-center justify-center p-8'>'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    );
   }
 ;
   return (;
-    <div className='space-y-6'>'      {/* Header */}'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center'>'          <BarChart3 className='w-6 h-6 mr-2 text-blue-500' />'          Analytics Dashboard'        </h2>;
+    <div className='space-y-6'>'      {/* Header */}'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center'>'          <BarChart3 className='w-6 h-6 mr-2 text-blue-500' />'          Analytics Dashboard'        </h2>
         <div className='flex items-center space-x-4'>'          <select'            value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as any)}
             className='px-3 py-1 border border-gray-300 rounded-md text-sm focus: outline-none focus:ring-2 focus:ring-blue-500''          >'            <option value='24h'>Last 24 Hours</option>'            <option value='7d'>Last 7 Days</option>'            <option value='30d'>Last 30 Days</option>'            <option value='90d'>Last 90 Days</option>'          </select>'          <button;
@@ -132,105 +132,105 @@ const formatNumber = (num: number): string => {;
             disabled={isLoading}
             className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 text-sm''          >'            {isLoading ?,;
   Refreshing...': 'Refresh}
-  '          </button>'        </div></div>;
+  '          </button>'        </div></div>
       {/* Real-time Users */}
       {showRealTime && (;
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-className='bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-lg''        >'          <div className='flex items-center justify-between'>'            <div>'              <h3 className='text-lg font-semibold'>Real-time Users</h3>'              <p className='text-blue-100'>Currently active on the site</p>'            </div>'            <div className='text-3xl font-bold'>{analytics.realTimeUsers}</div>'          </div>'        </motion.div>;
+className='bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-lg''        >'          <div className='flex items-center justify-between'>'            <div>'              <h3 className='text-lg font-semibold'>Real-time Users</h3>'              <p className='text-blue-100'>Currently active on the site</p>'            </div>'            <div className='text-3xl font-bold'>{analytics.realTimeUsers}</div>'          </div>'        </motion.div>
       )}
 ;
       {/* Key Metrics */}
       <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4'>'        <motion.div'          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Page Views</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {formatNumber(analytics.pageViews)}'              </p>;
-            </div>;
+          className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Page Views</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {formatNumber(analytics.pageViews)}'              </p>
+            </div>
             <Eye className='w-8 h-8 text-blue-500' />'          </div>'        </motion.div><motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Unique Visitors</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {formatNumber(analytics.uniqueVisitors)}'              </p>;
-            </div>;
+className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Unique Visitors</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {formatNumber(analytics.uniqueVisitors)}'              </p>
+            </div>
             <Users className='w-8 h-8 text-green-500' />'          </div>'        </motion.div><motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Bounce Rate</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {analytics.bounceRate.toFixed(1)}%'              </p>;
-            </div>;
+className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Bounce Rate</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {analytics.bounceRate.toFixed(1)}%'              </p>
+            </div>
             <MousePointer className='w-8 h-8 text-orange-500' />'          </div>'        </motion.div><motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Avg. Session</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {formatDuration(analytics.avgSessionDuration)}'              </p>;
-            </div>;
-            <Clock className='w-8 h-8 text-purple-500' />'          </div>'        </motion.div>;
-      </div>;
+className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <div className='flex items-center justify-between'>'            <div>'              <p className='text-sm text-gray-600 dark:text-gray-400'>Avg. Session</p>'              <p className='text-2xl font-bold text-gray-900 dark:text-white'>'                {formatDuration(analytics.avgSessionDuration)}'              </p>
+            </div>
+            <Clock className='w-8 h-8 text-purple-500' />'          </div>'        </motion.div>
+      </div>
       {/* Charts and Detailed Analytics */}
       <div className='grid grid-cols-1 lg: grid-cols-2 gap-6'>'        {/* Top Pages */}'        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            Top Pages'          </h3>;
-          <div className='space-y-3'>'            {analytics.topPages.map((page, index) => ('              <div key={page.page} className='flex items-center justify-between'>'                <div className='flex items-center space-x-3'>'                  <div className='w-8 h-8 bg-blue-100 dark: bg-blue-900 rounded-full flex items-center justify-center'>'                    <span className='text-sm font-bold text-blue-600 dark:text-blue-400'>'                      {index + 1}'                    </span>;
-                  </div>;
+          className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            Top Pages'          </h3>
+          <div className='space-y-3'>'            {analytics.topPages.map((page, index) => ('              <div key={page.page} className='flex items-center justify-between'>'                <div className='flex items-center space-x-3'>'                  <div className='w-8 h-8 bg-blue-100 dark: bg-blue-900 rounded-full flex items-center justify-center'>'                    <span className='text-sm font-bold text-blue-600 dark:text-blue-400'>'                      {index + 1}'                    </span>
+                  </div>
                   <span className='text-sm text-gray-700 dark:text-gray-300'>'                    {page.page ===;
   '/' ?;
   'Home' : page.page}
-  '                  </span>'                </div>;
-                <span className='text-sm font-semibold text-gray-900 dark:text-white'>'                  {formatNumber(page.views)}'                </span></div>;
+  '                  </span>'                </div>
+                <span className='text-sm font-semibold text-gray-900 dark:text-white'>'                  {formatNumber(page.views)}'                </span></div>
             ))}
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
         {/* Traffic Sources */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            Traffic Sources'          </h3>;
-          <div className='space-y-3'>'            {analytics.trafficSources.map((source, index) => ('              <div key={source.source} className='space-y-1'>'                <div className='flex items-center justify-between'>'                  <span className='text-sm text-gray-700 dark: text-gray-300'>'                    {source.source}'                  </span>;
-                  <span className='text-sm font-semibold text-gray-900 dark:text-white'>'                    {source.percentage}%'                  </span>;
-                </div>;
-                <div className='w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2'>'                  <div'                    className='bg-blue-500 h-2 rounded-full transition-all duration-500                     style={{ width: `${source.percentage}%` }}'></div>`                </div></div>;
+className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            Traffic Sources'          </h3>
+          <div className='space-y-3'>'            {analytics.trafficSources.map((source, index) => ('              <div key={source.source} className='space-y-1'>'                <div className='flex items-center justify-between'>'                  <span className='text-sm text-gray-700 dark: text-gray-300'>'                    {source.source}'                  </span>
+                  <span className='text-sm font-semibold text-gray-900 dark:text-white'>'                    {source.percentage}%'                  </span>
+                </div>
+                <div className='w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2'>'                  <div'                    className='bg-blue-500 h-2 rounded-full transition-all duration-500                     style={{ width: `${source.percentage}%` }}'></div>`                </div></div>
             ))}
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
         {/* Device Types */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            Device Types'          </h3>;
+className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            Device Types'          </h3>
           <div className='space-y-3'>'            {analytics.deviceTypes.map((device) => {'              const IconComponent = getDeviceIcon(device.device);
-              return (;
-                <div key={device.device} className='flex items-center justify-between'>'                  <div className='flex items-center space-x-3'>'                    <IconComponent className='w-5 h-5 text-gray-600 dark: text-gray-400' />'                    <span className='text-sm text-gray-700 dark:text-gray-300'>'                      {device.device}'                    </span>;
-                  </div>;
-                  <span className='text-sm font-semibold text-gray-900 dark:text-white'>'                    {device.percentage}%'                  </span></div>;
+              return (
+                <div key={device.device} className='flex items-center justify-between'>'                  <div className='flex items-center space-x-3'>'                    <IconComponent className='w-5 h-5 text-gray-600 dark: text-gray-400' />'                    <span className='text-sm text-gray-700 dark:text-gray-300'>'                      {device.device}'                    </span>
+                  </div>
+                  <span className='text-sm font-semibold text-gray-900 dark:text-white'>'                    {device.percentage}%'                  </span></div>
               );
             })}
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
         {/* User Engagement */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            User Engagement'          </h3>;
-          <div className='grid grid-cols-2 gap-4'>'            <div className='text-center'>'              <div className='text-2xl font-bold text-blue-500'>'                {analytics.userEngagement.scrollDepth.toFixed(0)}%'              </div>;
-              <div className='text-xs text-gray-600 dark: text-gray-400'>Scroll Depth</div>'            </div>'            <div className='text-center'>'              <div className='text-2xl font-bold text-green-500'>'                {analytics.userEngagement.clickThroughRate.toFixed(1)}%'              </div>;
-              <div className='text-xs text-gray-600 dark: text-gray-400'>Click Rate</div>'            </div>'            <div className='text-center'>'              <div className='text-2xl font-bold text-purple-500'>'                {formatDuration(analytics.userEngagement.timeOnPage)}'              </div>;
-              <div className='text-xs text-gray-600 dark: text-gray-400'>Time on Page</div>'            </div>'            <div className='text-center'>'              <div className='text-2xl font-bold text-orange-500'>'                {analytics.userEngagement.socialShares}'              </div>;
-              <div className='text-xs text-gray-600 dark:text-gray-400'>Social Shares</div>'            </div>'          </div></motion.div>;
-      </div>;
+className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''        >'          <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>'            User Engagement'          </h3>
+          <div className='grid grid-cols-2 gap-4'>'            <div className='text-center'>'              <div className='text-2xl font-bold text-blue-500'>'                {analytics.userEngagement.scrollDepth.toFixed(0)}%'              </div>
+              <div className='text-xs text-gray-600 dark: text-gray-400'>Scroll Depth</div>'            </div>'            <div className='text-center'>'              <div className='text-2xl font-bold text-green-500'>'                {analytics.userEngagement.clickThroughRate.toFixed(1)}%'              </div>
+              <div className='text-xs text-gray-600 dark: text-gray-400'>Click Rate</div>'            </div>'            <div className='text-center'>'              <div className='text-2xl font-bold text-purple-500'>'                {formatDuration(analytics.userEngagement.timeOnPage)}'              </div>
+              <div className='text-xs text-gray-600 dark: text-gray-400'>Time on Page</div>'            </div>'            <div className='text-center'>'              <div className='text-2xl font-bold text-orange-500'>'                {analytics.userEngagement.socialShares}'              </div>
+              <div className='text-xs text-gray-600 dark:text-gray-400'>Social Shares</div>'            </div>'          </div></motion.div>
+      </div>
       {/* Conversion Rate */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9 }}
-className='bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg''      >'        <div className='flex items-center justify-between'>'          <div>'            <h3 className='text-lg font-semibold'>Conversion Rate</h3>'            <p className='text-green-100'>Percentage of visitors who complete desired actions</p>'          </div>'          <div className='text-4xl font-bold'>{analytics.conversionRate.toFixed(1)}%</div>'        </div>'      </motion.div>;
+className='bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg''      >'        <div className='flex items-center justify-between'>'          <div>'            <h3 className='text-lg font-semibold'>Conversion Rate</h3>'            <p className='text-green-100'>Percentage of visitors who complete desired actions</p>'          </div>'          <div className='text-4xl font-bold'>{analytics.conversionRate.toFixed(1)}%</div>'        </div>'      </motion.div>
       {/* Last Updated */}
-      <div className='text-center text-sm text-gray-500 dark: text-gray-400'>'        Last updated: {lastUpdated.toLocaleString()}'      </div></div>;
+      <div className='text-center text-sm text-gray-500 dark: text-gray-400'>'        Last updated: {lastUpdated.toLocaleString()}'      </div></div>
   );
 };
 ;

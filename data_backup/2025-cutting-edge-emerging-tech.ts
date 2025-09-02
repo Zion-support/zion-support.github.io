@@ -22,7 +22,7 @@ starter: {;
         price: 599,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic space mining analysis,;
   'Standard planning tools',;
   'Email support'];
@@ -31,7 +31,7 @@ starter: {;
         price: 1499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced mining algorithms,;
   'Custom mission planning',;
   'Priority support',;
@@ -79,7 +79,7 @@ starter: {;
   'Mining Software',;
   'Logistics Platforms',;
   'Analytics Tools'],;
-    compliance[;
+    compliance[
   'Space Mining Regulations',;
   'Environmental Standards',;
   'International Space Law'];
@@ -106,7 +106,7 @@ starter: {;
         price: 499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic bio-computing features,;
   'Standard algorithms',;
   'Email support'];
@@ -115,7 +115,7 @@ starter: {;
         price: 1299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced bio-computing,;
   'Quantum algorithms',;
   'Priority support',;
@@ -163,7 +163,7 @@ starter: {;
   'Research Databases',;
   'Laboratory Systems',;
   'Analytics Platforms'],;
-    compliance[;
+    compliance[
   'Biological Research Standards',;
   'Drug Development Regulations',;
   'Data Privacy Laws'];
@@ -190,7 +190,7 @@ starter: {;
         price: 399,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic BCI development,;
   'Standard algorithms',;
   'Email support'];
@@ -199,7 +199,7 @@ starter: {;
         price: 999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced BCI features,;
   'Custom development',;
   'Priority support',;
@@ -247,7 +247,7 @@ starter: {;
   'Neuroscience Tools',;
   'Healthcare Systems',;
   'Analytics Platforms'],;
-    compliance[;
+    compliance[
   'Medical Device Regulations',;
   'FDA Standards',;
   'Research Ethics Guidelines',;
@@ -275,7 +275,7 @@ starter: {;
         price: 299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic energy optimization,;
   'Standard modeling',;
   'Email support'];
@@ -284,7 +284,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced energy features,;
   'Quantum algorithms',;
   'Priority support',;
@@ -332,7 +332,7 @@ starter: {;
   'Renewable Energy Platforms',;
   'Utility Systems',;
   'Analytics Tools'],;
-    compliance[;
+    compliance[
   'Energy Regulations',;
   'Environmental Standards',;
   'Grid Safety Protocols',;
@@ -360,7 +360,7 @@ starter: {;
         price: 499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic autonomous features,;
   'Standard AI models',;
   'Email support'];
@@ -369,7 +369,7 @@ starter: {;
         price: 1299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced autonomous features,;
   'Custom AI models',;
   'Priority support',;
@@ -418,7 +418,7 @@ integrations: [;
   'Robotics Frameworks',;
   'Simulation Tools',;
   'Analytics Platforms'],;
-    compliance: [;
+    compliance: [
   'Autonomous Vehicle Regulations,;
   'Safety Standards',;
   'Transportation Laws',;

@@ -68,23 +68,23 @@ function LoginForm() {}
     }
   };
   return ();
-    <Form {...form}>;
+    <Form {...form}>
       <form;
         onSubmit={form.handleSubmit(onSubmit)}
         className='space-y-6'''';
         autoComplete='off''';
       >''';
         {form.formState.errors.root && ('''';
-          <p className='text-red-400 text-sm' role='alert'>;
+          <p className='text-red-400 text-sm' role='alert'>
             {form.formState.errors.root.message}
-          </p>;
+          </p>
         )}
         <FormField''';
           control={form.control}'''';
           name='email''';
           render={({ field }) => (''';
             <FormItem>'''';
-              <FormLabel className='text-zion-slate-light'>;
+              <FormLabel className='text-zion-slate-light'>
                 Email address;
               </FormLabel>''';
               <FormControl>'''';
@@ -95,11 +95,11 @@ function LoginForm() {}
                     {...field}'''';
                     autoComplete='off'''';
                   />'''';
-                  <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />;
+                  <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
                 </div>''';
               </FormControl>'''';
-              <FormMessage className='text-red-400' />;
-            </FormItem>;
+              <FormMessage className='text-red-400' />
+            </FormItem>
           )}
         />;
         <FormField''';
@@ -132,53 +132,53 @@ function LoginForm() {}
                     )}'''';
                     <span className='sr-only'>';
                       {showPassword ? 'Hide password' : 'Show password'}
-                    </span>;
-                  </Button>;
+                    </span>
+                  </Button>
                 </div>''';
               </FormControl>'''';
-              <FormMessage className='text-red-400' />;
-            </FormItem>;
+              <FormMessage className='text-red-400' />
+            </FormItem>
           )}
         />''';
 '''';
         <div className='flex items-center justify-between'>'''';
           <div className='text-sm'>''';
-            <Link'''';
+            <Link''''
               to='/forgot-password'''';
               className='font-medium text-zion-cyan hover:text-zion-cyan-light '>;
               Forgot your password?;
-            </Link>;
-          </div>;
-        </div>;
+            </Link>
+          </div>
+        </div>
 ''';
-        <Button'''';
+        <Button''''
           type='submit'''';
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white''';
           disabled={isSubmitting || isLoading}
         >;
           {isSubmitting ? (''';
             <>'''';
-              <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2'></div>;
+              <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2'></div>
               Signing in...;
-            </>;
+            </>
           ) : (''';
             <>'''';
-              <LogIn className='h-4 w-4 mr-2' />;
+              <LogIn className='h-4 w-4 mr-2' />
               Sign in;
-            </>;
+            </>
           )}
         </Button>''';
 ''''';
         <div className='text-center text-sm'>'''''';
           <span className='text-zion-slate-light'>Don't have an account? </span>''';
-          <Link'''';
+          <Link''''
             to='/signup'''';
             className='font-medium text-zion-cyan hover:text-zion-cyan-light ">;
             Sign up;
-          </Link>;
-        </div>;
-      </form>;
-    </Form>;
+          </Link>
+        </div>
+      </form>
+    </Form>
   );
 }
 ;

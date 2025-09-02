@@ -47,7 +47,7 @@ class BuildErrorMonitor {;
       buildTime: null,;
       suggestions: []};
 ;
-    try {;
+    try {
       const startTime = Date.now();
       const buildResult = await this.runBuild();
       const endTime = Date.now();
@@ -93,12 +93,12 @@ class BuildErrorMonitor {;
         stdio: 'pipe,;
         timeout: 300000 // 5 minutes timeout      }).toString();
 ;
-      return {;
+      return {
         success: true,;
         errors: [],;
         warnings: this.parseWarningsFromOutput(output),;
         output};
-    } catch (error) {;
+    } catch (error) {
       const output = error.stdout;
         ? error.stdout.toString();
         : error.stderr.toString();
@@ -248,7 +248,7 @@ class BuildErrorMonitor {;
 ;
   async fixImportExportError(message) {;
     // Simple fixes for common import/export issues;
-    const commonFixes = [;
+    const commonFixes = [
       {;
         pattern: /export\s*{\s*default\s*}/,;
         replacement: 'export default {}

@@ -1,4 +1,4 @@
-export interface InnovativeITInfrastructureService {;
+export interface InnovativeITInfrastructureService {
   id: string;
    title: string;
    description: string;
@@ -20,4 +20,4 @@ export interface InnovativeITInfrastructureService {;
    contactInfo: { phone: string;
    email: string;
    website: string;
-}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; competitors?: string[]; marketSize?: string} ; export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [;
+}; technicalSpecs?: { technology: string[] integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; competitors?: string[]; marketSize?: string} ; export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [;

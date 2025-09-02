@@ -124,7 +124,7 @@ class LintErrorFixer {;
   async fixFile(filePath) {;
     this.log(`🔧 Fixing issues in: ${filePath}`);
 ;
-    const fixes = [;
+    const fixes = [
       this.fixUnusedImports(filePath),;
       this.fixTypeScriptErrors(filePath),;
       this.fixESLintErrors(filePath);
@@ -139,7 +139,7 @@ class LintErrorFixer {;
   🔧 Starting comprehensive lint error fix...;
   ');
 ;
-    const patterns = [';pages/**/*.{js,jsx,ts,tsx}
+    const patterns = ['pages/**/*.{js,jsx,ts,tsx}
   ',';components/**/*.{js,jsx,ts,tsx}
   ',';utils/**/*.{js,jsx,ts,tsx}
   ',';hooks/**/*.{js,jsx,ts,tsx}
@@ -192,14 +192,14 @@ class LintErrorFixer {;
 const fixer = new LintErrorFixer();
 const command = process.argv[2];
 const filePath = process.argv[3];
-switch (command) {;
+switch (command) {
   case 'file;
   ': ;
     if (filePath) {;
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>);
     };
 ;
-      fixer.fixFile(filePath)} else {;
+      fixer.fixFile(filePath)} else {
       console.log(,;
   Usage: node lint-error-fixer.js file <filepath>)};
     break;

@@ -1,4 +1,4 @@
-export interface EnterpriseAIService {;
+export interface EnterpriseAIService {
   id: string;
    name: string;
    tagline: string;

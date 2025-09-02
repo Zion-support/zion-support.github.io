@@ -1,16 +1,16 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-;
+
 // Layout Components;
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
-;
+
 // Loading component;
 const LoadingSpinner = () => (;
-  <div className='flex items-center justify-center min-h-screen'>;
-    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>;
-  </div>;
+  <div className='flex items-center justify-center min-h-screen'>
+    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
+  </div>
 );
 ;
 // Optimized lazy loading with preloading hints;
@@ -18,8 +18,8 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
   const LazyComponent = lazy(importFn);
   return (props: any) => (;
     <Suspense fallback={fallback || <LoadingSpinner />}>;
-      <LazyComponent {...props} />;
-    </Suspense>;
+      <LazyComponent {...props} />
+    </Suspense>
   );
 };
 ;
@@ -181,26 +181,26 @@ const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pa
 ;
 // Error Fallback Component;
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (;
-  <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-    <div className='text-center text-white max-w-md mx-auto p-8'>;
-      <h1 className='text-4xl font-bold mb-4 text-red-400'>Something went wrong</h1>;
-      <p className='text-gray-300 mb-6'>;
-        {error.message || 'An unexpected error occurred'}      </p>;
-      <div className='space-y-3'>;
-        <button;
+  <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+    <div className='text-center text-white max-w-md mx-auto p-8'>
+      <h1 className='text-4xl font-bold mb-4 text-red-400'>Something went wrong</h1>
+      <p className='text-gray-300 mb-6'>
+        {error.message || 'An unexpected error occurred'}      </p>
+      <div className='space-y-3'>
+        <button
           onClick={resetErrorBoundary}
           className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >;
           Try again;
-        </button>;
+        </button>
         <button;
           onClick={() => window.location.href = '/'}
           className='w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors';
         >;
           Go home;
-        </button>;
-      </div>;
-    </div>;
-  </div>;
+        </button>
+      </div>
+    </div>
+  </div>
 );
                       }
                     />;
@@ -324,53 +324,53 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
                     <Route path='/zion-cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />;
                     <Route path='/cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />;
                     {/* 404 Page */}
-                    <Route;
+                    <Route
                       path='*';
                       element={;
                         <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-                          <div className='text-center text-white'>;
-                            <h1 className='text-6xl font-bold mb-4'>404</h1>;
-                            <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>;
-                            <p className='text-gray-300 mb-8'>;
+                          <div className='text-center text-white'>
+                            <h1 className='text-6xl font-bold mb-4'>404</h1>
+                            <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
+                            <p className='text-gray-300 mb-8'>
                               The page you're looking for doesn't exist or has been moved.;
-                            </p>;
+                            </p>
                             <button;
                               onClick={() => window.history.back()}
                               className='px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4';
                             >;
                               Go Back;
-                            </button>;
+                            </button>
                             <button;
                               onClick={() => window.location.href = '/'}
                               className='px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors';
                             >;
                               Go Home;
-                            </button>;
-                          </div>;
-                        </div>;
+                            </button>
+                          </div>
+                        </div>
                       }
                     />;
-                  </Routes>;
-                </AnimatePresence>;
-              </Suspense>;
-            </main>;
+                  </Routes>
+                </AnimatePresence>
+              </Suspense>
+            </main>
             {/* Footer */}
-            <EnhancedFooter />;
+            <EnhancedFooter />
             {/* Floating Action Button */}
-            <FloatingActionButton enabled={true} />;
+            <FloatingActionButton enabled={true} />
             {/* Smart Notification System */}
-            <SmartNotificationSystem enabled={true} />;
+            <SmartNotificationSystem enabled={true} />
             {/* Chat Assistant */}
-            <ChatAssistant;
+            <ChatAssistant
               enabled={true}
               position='bottom-right';
               theme='auto';
               language='en';
             />;
-          </div>;
-        </Router>;
-      </ErrorBoundary>;
-    </HelmetProvider>;
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 };
 ;
@@ -380,14 +380,14 @@ import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 ('');
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>;
-        <PerformanceOptimizer>;
-          <SEO />;
-          <div className='min-h-screen bg-gray-50'>;
-            <EnhancedHeader />;
-            <div className='flex'>;
-              <Sidebar />;
-              <main className='flex-1'>;
-                <Routes>;
+        <PerformanceOptimizer>
+          <SEO />
+          <div className='min-h-screen bg-gray-50'>
+            <EnhancedHeader />
+            <div className='flex'>
+              <Sidebar />
+              <main className='flex-1'>
+                <Routes>
                 {/* Core Pages */}
                 <Route path='/' element={<Home />} />;
                 <Route path='/about' element={<About />} />;
@@ -429,30 +429,30 @@ import { ErrorBoundary } from 'react-error-boundary';
                 <Route path='/terms' element={<Terms />} />;
                 <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />;
                 {/* 404 Fallback */}
-                <Route path='*' element={;
+                <Route path='*' element={
                   <div className='min-h-screen flex items-center justify-center'>;
-                    <div className='text-center'>;
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>;
-                      <p className='text-gray-600 mb-8'>Page not found</p>;
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>;
+                    <div className='text-center'>
+                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
+                      <p className='text-gray-600 mb-8'>Page not found</p>
+                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
                         Go Home;
-                      </a>;
-                    </div>;
-                  </div>;
+                      </a>
+                    </div>
+                  </div>
                 } />;
-              </Routes>;
-              </main>;
-            </div>;
-            <EnhancedFooter />;
-          </div>;
-        </PerformanceOptimizer>;
-      </ErrorBoundary>;
-    </HelmetProvider>;
+              </Routes>
+              </main>
+            </div>
+            <EnhancedFooter />
+          </div>
+        </PerformanceOptimizer>
+      </ErrorBoundary>
+    </HelmetProvider>
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>;
-      <div className='App'>;
-        <div className='min-h-screen'>;
+      <div className='App'>
+        <div className='min-h-screen'>
           <Suspense fallback={<PageLoader />}>;
-            <Routes>;
+            <Routes>
               {/* Main Pages */}
               <Route path='/' element={<HomePage />} />;
               <Route path='/services' element={<ServicesPage />} />;
@@ -504,11 +504,11 @@ import { ErrorBoundary } from 'react-error-boundary';
               <Route path='/accessibility' element={<AboutPage />} />;
               {/* Catch-all route */}
               <Route path='*' element={<HomePage />} />;
-            </Routes>;
-          </Suspense>;
-        </div>;
-      </div>;
-    </ErrorBoundary>;
+            </Routes>
+          </Suspense>
+        </div>
+      </div>
+    </ErrorBoundary>
   );
 }
 ;

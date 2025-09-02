@@ -50,7 +50,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
   ').toLowerCase()} ${value ? 'enabled;
   ': 'disabled}`);
   };
-  const getPositionClasses = () => {;
+  const getPositionClasses = () => {
     switch (position) {;
       case,;
   top-right;
@@ -69,11 +69,11 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
 ;
   };
 ;
-            </div>;
-          </div>;
-        </div>;
+            </div>
+          </div>
+        </div>
       )};
-    </div>;
+    </div>
   );
 };
 ;

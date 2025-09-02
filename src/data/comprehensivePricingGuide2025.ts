@@ -1,4 +1,4 @@
- export interface PricingTier {;
+ export interface PricingTier {
   id: string;
    name: string;
    price: number;

@@ -16,11 +16,11 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           <CreditCard className='w-8 h-8 text-cyan-400'  /> Checkout Performance;
           Optimizer';
         </h1>'';
-        <p className='mt-4 text-slate-300'>;
+        <p className='mt-4 text-slate-300'>
           Reduce friction and boost conversion with real‑user monitoring, A/B;
           tested layouts, and payment retries. Works with Stripe, PayPal, Adyen.';
         </p>'';
-        <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>;
+        <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>
           {[;
             {,;
   title: 'RUM & Session Replay,';
@@ -46,8 +46,8 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
               <div className='flex items-center gap-2 text-cyan-300 font-semibold'>'';
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx;
                 <CheckCircle className='w-4 h-4'  /> {f.title}';
-              </div>'              <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>;
-            </div>;
+              </div>'              <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>
+            </div>
           ))}';
         </div>'';
         <div className='mt-8 text-sm text-slate-300'>,;
@@ -59,12 +59,12 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             href='https://www.optimizely.com/pricing/'';
             target='_blank'';
             rel='noreferrer'';
-          >'            Optimizely pricing <ExternalLink className='w-3 h-3'  />;
+          >'            Optimizely pricing <ExternalLink className='w-3 h-3'  />
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx;
           </a>';
         </div>'';
         <div className='mt-10 flex flex-wrap gap-3'>';
-          <Link'';
+          <Link''
             to='/contact'';
             className='rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500';
           >;
@@ -78,9 +78,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2'';
           >'';
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx;
-            <Phone className='w-4 h-4'  /> +1 302 464 0950</a>        </div>;
-      </section>;
-    </div>;
+            <Phone className='w-4 h-4'  /> +1 302 464 0950</a>        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx;
   )}'';
   '''";

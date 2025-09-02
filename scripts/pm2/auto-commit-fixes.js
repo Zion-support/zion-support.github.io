@@ -29,13 +29,13 @@ class AutoCommitFixes {;
   ';
       });
 ;
-      if (!status.trim()) {;
+      if (!status.trim()) {
         return { hasChanges: false, files: [] };
 ;
       const files = status.split('\n;
   ');
         .filter(line => line.trim());
-        .map(line => {;
+        .map(line => {
           const parts = line.trim().split(/\s+/);
           return {;
             status: parts[0],;
@@ -44,10 +44,10 @@ class AutoCommitFixes {;
           };
         });
 ;
-      return { hasChanges: true, files };
+      return { hasChanges: true, files }
     } catch (error) {;
       this.log(`Error checking git status: ${error.message}`);
-      return { hasChanges: false, files: [] };
+      return { hasChanges: false, files: [] }
 ;
   async getStagedFiles() {;
     try {;
@@ -112,7 +112,7 @@ class AutoCommitFixes {;
       this.log(`Error creating commit: ${error.message}`);
       return false;
 ;
-  async analyzeChanges(files) {;
+  async analyzeChanges(files) {
     const changes = {;
       added: [],;
       modified: [],;

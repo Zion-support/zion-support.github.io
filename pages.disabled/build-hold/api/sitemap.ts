@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from;
-  'next'';export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  'next'';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const baseUrl =,;
   https: //ziontechgroup.com;
   '';  const staticPages = [';,;
@@ -88,7 +88,7 @@ import { NextApiRequest, NextApiResponse } from;
   '/chat-content/sustainable-technology-practices',;
   '/chat-content/technology-implementation-strategies',;
   '  ]';
-  const allPages = [;
+  const allPages = [
     ...staticPages, ...blogPages,;
     ...servicePages, ...categoryPages,;
     ...chatContentPages];
@@ -103,11 +103,11 @@ import { NextApiRequest, NextApiResponse } from;
   ' : page.includes('/blog/;
   ') ? 'weekly;
   ' : 'monthly;
-  ';      return ``    <url>;
-      <loc>${baseUrl}${page}</loc>;
-      <lastmod>${new Date().toISOString()}</lastmod>;
-      <changefreq>${changefreq}</changefreq>;
-      <priority>${priority}</priority>;
+  ';      return ``    <url>
+      <loc>${baseUrl}${page}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>${changefreq}</changefreq>
+      <priority>${priority}</priority>
     </url>`;    });
     .join('')}
   '</urlset>`'`;  res.setHeader(;

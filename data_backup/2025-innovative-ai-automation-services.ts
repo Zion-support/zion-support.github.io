@@ -22,7 +22,7 @@ starter: {;
         price: 299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic business management,;
   'Process automation',;
   'Email support',;
@@ -32,7 +32,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced AI decision-making,;
   'Strategic planning',;
   'Priority support',;
@@ -85,7 +85,7 @@ starter: {;
   ', 'Project management tools;
   ', 'Communication platforms;
   '],;
-    compliance['GDPR;
+    compliance['GDPR
   ', 'CCPA;
   ', 'SOC2;
   ', 'ISO 27001;
@@ -127,7 +127,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Basic emotion recognition, 'Text analysis;
+        features: ['Basic emotion recognition, 'Text analysis
   ', 'Email support;
   ', 'Standard API access;
   '];
@@ -137,7 +137,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Multi-modal analysis, 'Advanced AI models;
+        features: ['Multi-modal analysis, 'Advanced AI models
   ', 'Priority support;
   ', 'Custom training;
   '];
@@ -192,7 +192,7 @@ starter: {;
   ', 'Communication tools;
   ', 'Analytics platforms;
   '],;
-    compliance['HIPAA;
+    compliance['HIPAA
   ', 'GDPR;
   ', 'CCPA;
   ', 'SOC2;
@@ -234,7 +234,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Basic content generation, 'Standard templates;
+        features: ['Basic content generation, 'Standard templates
   ', 'Email support;
   ', 'Limited API calls;
   '];
@@ -244,7 +244,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Advanced AI models, 'Custom styles;
+        features: ['Advanced AI models, 'Custom styles
   ', 'Priority support;
   ', 'Extended API access;
   '];
@@ -299,7 +299,7 @@ starter: {;
   ', 'Social media platforms;
   ', 'E-commerce platforms;
   '],;
-    compliance['Copyright protection;
+    compliance['Copyright protection
   ', 'Intellectual property rights;
   ', 'Creative commons licensing;
   ', 'Commercial usage rights;
@@ -340,7 +340,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Basic diagnostics, 'Health monitoring;
+        features: ['Basic diagnostics, 'Health monitoring
   ', 'Email support;
   ', 'Standard reports;
   '];
@@ -350,7 +350,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Advanced AI models, 'Predictive analytics;
+        features: ['Advanced AI models, 'Predictive analytics
   ', 'Priority support;
   ', 'Custom integrations;
   '];
@@ -405,7 +405,7 @@ starter: {;
   ', 'Pharmacy systems;
   ', 'Insurance platforms;
   '],;
-    compliance['HIPAA;
+    compliance['HIPAA
   ', 'FDA;
   ', 'SOC2;
   ', 'ISO 27001;
@@ -447,7 +447,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Basic financial planning, 'Portfolio monitoring;
+        features: ['Basic financial planning, 'Portfolio monitoring
   ', 'Email support;
   ', 'Standard reports;
   '];
@@ -457,7 +457,7 @@ starter: {;
         period:,;
   month;
   ',;
-        features: ['Advanced AI models, 'Portfolio optimization;
+        features: ['Advanced AI models, 'Portfolio optimization
   ', 'Priority support;
   ', 'Custom strategies;
   '];
@@ -512,7 +512,7 @@ integrations: ['Brokerage platforms, ,;
   ', 'Insurance platforms;
   ', 'Real estate platforms;
   '],;
-    compliance: ['SEC, 'FINRA;
+    compliance: ['SEC, 'FINRA
   ', 'SOC2;
   ', 'ISO 27001;
   ', 'Financial regulations'];

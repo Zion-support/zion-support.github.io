@@ -5,7 +5,7 @@ export interface RealMarketAugmentation2025 {;
    price: string;
    features: string[];
 }
-export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [;
+export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {;
     id: 'market-augmentation-1',;
     name: 'Market Augmentation Service 1',;
@@ -20,7 +20,7 @@ export interface RealMarketAugmentation2025 {;
    price: string;
    features: string[];
 }
-export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [;
+export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {;
     id: 'market-augmentation-1',;
     name: 'Market Augmentation Service 1',;

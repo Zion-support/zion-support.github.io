@@ -26,7 +26,7 @@ import {}
   Pause,;
   RefreshCw} from 'lucide-react.ts';
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
-export default function AIDevOpsAutomationPlatform(...args: any[]): any {;
+export default function AIDevOpsAutomationPlatform(...args: any[]): any {
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>';
       <SEO'';
@@ -35,8 +35,8 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {;
        />';
 export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
   return();
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>;
-      <SEO'';
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>
+      <SEO''
         title='AI DevOps Automation Platform | Zion Tech Group'';
         description='Revolutionary AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.'';
         keywords='AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group'';
@@ -44,7 +44,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
       {/* Hero Section */}'';
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>'';
         <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20'></div>'';
-        <div className='relative max-w-7xl mx-auto'>;
+        <div className='relative max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
@@ -57,38 +57,38 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
               <Cpu className='w-10 h-10 text-blue-400'  />';
             </div>'';
-            <h1 className='text-5xl md:text-7xl font-bold mb-8'>'              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
+            <h1 className='text-5xl md:text-7xl font-bold mb-8'>'              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
                 AI DevOps;
               </span>';
               <br />'';
-              <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>;
+              <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                 Automation Platform;
               </span>';
             </h1>'';
-            <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>;
+            <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               The future of DevOps is here. Our AI-powered automation platform;
               revolutionizes software development, deployment, and operations;
               with intelligent automation that learns, adapts, and optimizes;
               continuously.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
-              <Cpu className='w-10 h-10 text-blue-400'  />;
+              <Cpu className='w-10 h-10 text-blue-400'  />
             </div>'';
-            <h1 className='text-5xl md:text-7xl font-bold mb-8'>'              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
+            <h1 className='text-5xl md:text-7xl font-bold mb-8'>'              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
                 AI DevOps;
-              </span>;
+              </span>
               <br />'';
-              <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>;
+              <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                 Automation Platform;
-              </span>;
+              </span>
             </h1>'';
-            <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>;
+            <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               The future of DevOps is here. Our AI-powered automation platform;
               revolutionizes software development, deployment, and operations;
               with intelligent automation that learns, adapts, and optimizes;
               continuously.;
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'';
                 href='tel:+13024640950'';
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105'';
@@ -97,7 +97,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 <Phone className='w-5 h-5 mr-2'  />                Get Started Today;
               </a>';
                 <Phone className='w-5 h-5 mr-2'  />                Get Started Today;
-              </a>;
+              </a>
               <a'';
                 href='mailto:kleber@ziontechgroup.com'';
                 className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300'';
@@ -105,16 +105,16 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us;
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
+              </a>
+            </div>
+          </motion.div>
+        </div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Features Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -124,19 +124,19 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
               Revolutionary Features';
               Revolutionary Features;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the power of AI-driven DevOps automation;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>;
+          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index) => (;
               <motion.div;
                 key={feature}
@@ -151,20 +151,20 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30'>'';
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
                   <Zap className='w-8 h-8 text-blue-400'  />';
-                  <Zap className='w-8 h-8 text-blue-400'  />;
+                  <Zap className='w-8 h-8 text-blue-400'  />
                 </div>'';
-                <h3 className='text-lg font-semibold text-white mb-4'>;
+                <h3 className='text-lg font-semibold text-white mb-4'>
                   {feature}
-                </h3>              </motion.div>;
+                </h3>              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Benefits Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -174,20 +174,20 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
               Transformative Benefits';
               Transformative Benefits;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               See measurable improvements across your entire development;
               lifecycle;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
             {benefits.map((benefit, index) => (;
               <motion.div;
                 key={benefit}
@@ -202,18 +202,18 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'';
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
                   <CheckCircle className='w-5 h-5 text-white'  />';
-                  <CheckCircle className='w-5 h-5 text-white'  />;
-                </div>'                <p className='text-gray-300 text-lg'>{benefit}</p>;
-              </motion.div>;
+                  <CheckCircle className='w-5 h-5 text-white'  />
+                </div>'                <p className='text-gray-300 text-lg'>{benefit}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Capabilities Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -223,20 +223,20 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
               Comprehensive Capabilities';
               Comprehensive Capabilities;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               End-to-end AI-powered DevOps automation across all aspects of;
               software delivery;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
             {capabilities.map((category, index) => (;
               <motion.div;
                 key={category.category}
@@ -253,57 +253,57 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
                     {index === 0 && <Code className='w-6 h-6 text-blue-400'  />}';
                     {index === 1 && ('';
-                      <GitBranch className='w-6 h-6 text-blue-400'  />;
+                      <GitBranch className='w-6 h-6 text-blue-400'  />
                     )}';
                     {index === 2 && ('';
-                      <Server className='w-6 h-6 text-blue-400'  />;
+                      <Server className='w-6 h-6 text-blue-400'  />
                     )}';
                     {index === 3 && ('';
-                      <Monitor className='w-6 h-6 text-blue-400'  />;
+                      <Monitor className='w-6 h-6 text-blue-400'  />
                     )}';
                   </div>'';
-                  <h3 className='text-2xl font-bold text-white'>;
+                  <h3 className='text-2xl font-bold text-white'>
                     {category.category}
                   </h3>';
                 </div>'';
-                <ul className='space-y-3'>;
+                <ul className='space-y-3'>
                   {category.items.map((item, itemIndex) => (;
                     <li';
                     {index === 0 && <Code className='w-6 h-6 text-blue-400'  />}
                     {index === 1 && ('';
-                      <GitBranch className='w-6 h-6 text-blue-400'  />;
+                      <GitBranch className='w-6 h-6 text-blue-400'  />
                     )}
                     {index === 2 && ('';
-                      <Server className='w-6 h-6 text-blue-400'  />;
+                      <Server className='w-6 h-6 text-blue-400'  />
                     )}
                     {index === 3 && ('';
-                      <Monitor className='w-6 h-6 text-blue-400'  />;
+                      <Monitor className='w-6 h-6 text-blue-400'  />
                     )}
                   </div>'';
-                  <h3 className='text-2xl font-bold text-white'>;
+                  <h3 className='text-2xl font-bold text-white'>
                     {category.category}
-                  </h3>;
+                  </h3>
                 </div>'';
-                <ul className='space-y-3'>;
+                <ul className='space-y-3'>
                   {category.items.map((item, itemIndex) => (;
                     <li;
                       key={itemIndex}'';
                       className='flex items-start text-gray-300'';
                     >'';
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5'  />                      {item}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </motion.div>;
+                </ul>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Pricing Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -313,19 +313,19 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
               Investment Plans';
               Investment Plans;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the perfect plan for your DevOps automation needs;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (;
               <motion.div;
                 key={plan.name}
@@ -349,43 +349,43 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
               >;
                 {plan.name === 'Professional' && ('';
                   <div className='text-center mb-4'>'';
-                    <span className='inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full'>;
+                    <span className='inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full'>
                       Most Popular;
-                    </span>;
+                    </span>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
                   </div>';
                 )}'';
-                <h3 className='text-2xl font-bold text-white mb-2'>;
+                <h3 className='text-2xl font-bold text-white mb-2'>
                   {plan.name}';
                 </h3>'';
                 <div className='mb-6'>'';
-                  <span className='text-4xl font-bold text-blue-400'>;
+                  <span className='text-4xl font-bold text-blue-400'>
                     {plan.price}';
                   </span>'';
                   <span className='text-gray-400 ml-2'>{plan.period}</span>';
                 </div>'';
-                <ul className='space-y-3 mb-8'>;
+                <ul className='space-y-3 mb-8'>
                   {plan.features.map((feature, featureIndex) => (;
-                    <li';
+                    <li'
                   </div>;
                 )}'';
-                <h3 className='text-2xl font-bold text-white mb-2'>;
+                <h3 className='text-2xl font-bold text-white mb-2'>
                   {plan.name}
                 </h3>'';
                 <div className='mb-6'>'';
-                  <span className='text-4xl font-bold text-blue-400'>;
+                  <span className='text-4xl font-bold text-blue-400'>
                     {plan.price}
                   </span>'';
-                  <span className='text-gray-400 ml-2'>{plan.period}</span>;
+                  <span className='text-gray-400 ml-2'>{plan.period}</span>
                 </div>'';
-                <ul className='space-y-3 mb-8'>;
+                <ul className='space-y-3 mb-8'>
                   {plan.features.map((feature, featureIndex) => (;
                     <li;
                       key={featureIndex}'';
                       className='flex items-center text-gray-300'';
                     >'';
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0'  />                      {feature}
-                    </li>;
+                    </li>
                   ))}
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
                 </ul>';
@@ -393,23 +393,23 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                   href='tel:+13024640950'';
                   className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105';
                 >';
-                </ul>;
-                <a'';
+                </ul>
+                <a''
                   href='tel:+13024640950'';
                   className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105'';
                 >;
                   Get Started'';
-                  <ArrowRight className='w-5 h-5 ml-2'  />                </a>;
-              </motion.div>;
+                  <ArrowRight className='w-5 h-5 ml-2'  />                </a>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Contact Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -419,20 +419,20 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
               Ready to Automate Your DevOps?';
               Ready to Automate Your DevOps?;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Contact us today to learn how our AI DevOps automation platform;
               can transform your development workflow;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -447,19 +447,19 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 <Phone className='w-8 h-8 text-blue-400'  />';
               </div>'';
               <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'              <p className='text-gray-300 mb-4'>+1 302 464 0950</p>';
-              <a'';
+              <a''
                 href='tel:+13024640950'';
                 className='text-blue-400 hover:text-blue-300 transition-colors duration-300';
                 <Phone className='w-8 h-8 text-blue-400'  />;
               </div>'';
-              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'              <p className='text-gray-300 mb-4'>+1 302 464 0950</p>;
-              <a'';
+              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'              <p className='text-gray-300 mb-4'>+1 302 464 0950</p>
+              <a''
                 href='tel:+13024640950'';
                 className='text-blue-400 hover:text-blue-300 transition-colors duration-300'';
               >;
                 Call Now;
-              </a>;
-            </motion.div>;
+              </a>
+            </motion.div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -477,19 +477,19 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 <Mail className='w-8 h-8 text-blue-400'  />';
               </div>'';
               <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'              <p className='text-gray-300 mb-4'>kleber@ziontechgroup.com</p>';
-              <a'';
+              <a''
                 href='mailto:kleber@ziontechgroup.com'';
                 className='text-blue-400 hover:text-blue-300 transition-colors duration-300';
                 <Mail className='w-8 h-8 text-blue-400'  />;
               </div>'';
-              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'              <p className='text-gray-300 mb-4'>kleber@ziontechgroup.com</p>;
-              <a'';
+              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'              <p className='text-gray-300 mb-4'>kleber@ziontechgroup.com</p>
+              <a''
                 href='mailto:kleber@ziontechgroup.com'';
                 className='text-blue-400 hover:text-blue-300 transition-colors duration-300'';
               >;
                 Send Email;
-              </a>;
-            </motion.div>;
+              </a>
+            </motion.div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -507,32 +507,32 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 <MapPin className='w-8 h-8 text-blue-400'  />';
               </div>'';
               <h3 className='text-xl font-bold text-white mb-2'>Address</h3>'';
-              <p className='text-gray-300 mb-4'>;
+              <p className='text-gray-300 mb-4'>
                 364 E Main St STE 1008, Middletown DE 19709;
               </p>';
-              <a'';
+              <a''
                 href='https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709''';
                 target='_blank''';
                 rel='noopener noreferrer''                className='text-blue-400 hover:text-blue-300 transition-colors duration-300';
                 <MapPin className='w-8 h-8 text-blue-400'  />;
               </div>'';
               <h3 className='text-xl font-bold text-white mb-2'>Address</h3>'';
-              <p className='text-gray-300 mb-4'>;
+              <p className='text-gray-300 mb-4'>
                 364 E Main St STE 1008, Middletown DE 19709;
-              </p>;
-              <a'';
+              </p>
+              <a''
                 href='https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'';
                 target='_blank'';
                 rel='noopener noreferrer'';
                 className='text-blue-400 hover:text-blue-300 transition-colors duration-300'';
               >;
                 View on Map;
-              </a>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
   )}''`;
 ''`''`;

@@ -4,7 +4,7 @@ import React, { useState } from;
   'lucide-react'; export default function CaseStudiesPage() { const [selectedIndustry, setSelectedIndustry] = useState(;
   'All'); const [selectedService, setSelectedService] = useState(;
   'All'); const [searchTerm, setSearchTerm] = useState(';
-  '); const industries = ['All;
+  '); const industries = ['All
   ', 'Manufacturing;
   ', 'Healthcare;
   ', 'Financial Services;
@@ -12,7 +12,7 @@ import React, { useState } from;
   ', 'Retail;
   ', 'Education;
   ', 'Government;
-  ']; const services = ['All;
+  ']; const services = ['All
   ', 'AI Solutions;
   ', 'Cloud Migration;
   ', 'Cybersecurity;

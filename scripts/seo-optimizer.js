@@ -23,7 +23,7 @@ function generateSitemap() {;
 ;
   const baseUrl =;
   'https: //ziontechgroup.com';
-  const pages = [;
+  const pages = [
   '/,;
   '/about',;
   '/contact',;
@@ -43,18 +43,18 @@ function generateSitemap() {;
   '/privacy',;
   '/terms'  ];
 ;
-  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>;
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>;
+  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 ${pages;
   .map(;
-    page => `  <url>;
-    <loc>${baseUrl}${page}</loc>;
+    page => `  <url>
+    <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString().split(,;
-  T')[0]}</lastmod>;
-    <changefreq>weekly</changefreq>;
+  T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>${page ===;
   '/' ?;
-  '1.0': '0.8}</priority>;
+  '1.0': '0.8}</priority>
   </url>`).join(;
   '\n')}
 </urlset>`;
@@ -66,7 +66,7 @@ ${pages;
 }
 ;
 // 2. Generate robots.txt;
-function generateRobotsTxt() {;
+function generateRobotsTxt() {
   console.log(;
   '🤖 Generating robots.txt...');
     const robotsTxt = `User-agent: *;

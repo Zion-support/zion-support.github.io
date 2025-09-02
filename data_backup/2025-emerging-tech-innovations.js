@@ -84,7 +84,7 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Cutting-edge quantum technology with 5-10 year roadmap,;
         futureProofing:,;
   Continuous quantum hardware upgrades and algorithm optimization',;
-        researchPartnerships[;
+        researchPartnerships[
   'MIT',;
   'Stanford',;
   'Caltech',;
@@ -176,7 +176,7 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Advanced space technology with continuous satellite constellation expansion,;
         futureProofing:,;
   Next-generation satellite launches and AI algorithm improvements',;
-        researchPartnerships[;
+        researchPartnerships[
   'NASA',;
   'ESA',;
   'NOAA',;
@@ -268,7 +268,7 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Advanced edge computing with continuous AI optimization,;
         futureProofing:,;
   5G integration and next-generation edge hardware',;
-        researchPartnerships[;
+        researchPartnerships[
   'Intel',;
   'NVIDIA',;
   'Qualcomm',;
@@ -359,7 +359,7 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Advanced blockchain technology with continuous protocol improvements,;
         futureProofing:,;
   Layer 2 scaling solutions and cross-chain interoperability',;
-        researchPartnerships[;
+        researchPartnerships[
   'Ethereum Foundation',;
   'Hyperledger',;
   'Academic institutions'];

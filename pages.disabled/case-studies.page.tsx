@@ -167,7 +167,7 @@ const caseStudies = [;
     image: '/images/case-study-6.jpg';
 <:src/pages/case-studies.tsx.backup.1756558703296];
 ;
-const industries = [;
+const industries = [
   'All',;
   'Technology',;
   'Healthcare',;
@@ -175,7 +175,7 @@ const industries = [;
   'Banking',;
   'Manufacturing',;
   'Retail'];
-const technologies = [;
+const technologies = [
   'All',;
   'AI/ML',;
   'Cloud Computing',;
@@ -184,7 +184,7 @@ const technologies = [;
   'Data Analytics',;
   'DevOps'];
 ;
-export default function CaseStudies(...args: any[]): any {;
+export default function CaseStudies(...args: any[]): any {
   const [selectedIndustry, setSelectedIndustry] = useState(;
   'All');
   const [selectedTechnology, setSelectedTechnology] = useState(;
@@ -206,11 +206,11 @@ export default function CaseStudies(...args: any[]): any {;
   });
 ;
   return (;
-    <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>;
+    <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}
-      <section className='pt-24 pb-16'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <motion.div;
+      <section className='pt-24 pb-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
             initial = {;
   { opacity: 0,;
   y: 20;
@@ -222,28 +222,28 @@ export default function CaseStudies(...args: any[]): any {;
             transition={{ duration: 0.6 }}
             className='text-center';
             <div className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6'>;
-              <Award className='w-5 h-5' />;
-              <span className='font-medium'>Success Stories</span>;
-            </div>;
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
+              <Award className='w-5 h-5' />
+              <span className='font-medium'>Success Stories</span>
+            </div>
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               Real Results, Real Impact;
-            </h1>;
-            <p className='text-xl text-zion-slate-light max-w-4xl mx-auto'>;
+            </h1>
+            <p className='text-xl text-zion-slate-light max-w-4xl mx-auto'>
               Discover how Zion Tech Group has transformed businesses across industries with;
               cutting-edge technology solutions. Our case studies showcase measurable results;
               and proven success stories.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </p>
+          </motion.div>
+        </div>
+      </section>
       {/* Filters Section */}
-      <section className='py-8'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6'>;
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>;
+      <section className='py-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               {/* Search */}
-              <div className='md:col-span-2'>;
-                <div className='relative'>;
+              <div className='md:col-span-2'>
+                <div className='relative'>
                   <input;
                     type='text';
                     placeholder='Search case studies...';
@@ -251,42 +251,42 @@ export default function CaseStudies(...args: any[]): any {;
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan';
                   />;
-                </div>;
-              </div>;
+                </div>
+              </div>
               {/* Industry Filter */}
-              <div>;
+              <div>
                 <select;
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan';
                 >;
                   {industries.map(industry           => (;
-                    <option key={industry} value={industry}>{industry}</option>;
+                    <option key={industry} value={industry}>{industry}</option>
                   ))}
-                </select>;
-              </div>;
+                </select>
+              </div>
               {/* Technology Filter */}
-              <div>;
+              <div>
                 <select;
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan';
                 >;
                   {technologies.map(tech           => (;
-                    <option key={tech} value={tech}>{tech}</option>;
+                    <option key={tech} value={tech}>{tech}</option>
                   ))}
-                </select>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Case Studies Grid */}
-      <section className='py-16'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8'>;
+      <section className='py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8'>
             {filteredCaseStudies.map((study, index)           => (;
-              <motion.div;
+              <motion.div
                 key={study.id}
                 initial = {;
   { opacity: 0,;
@@ -303,98 +303,98 @@ export default function CaseStudies(...args: any[]): any {;
                 className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300';
                 {/* Header */}
                 <div className='flex items-start justify-between mb-4'>;
-                  <div>;
-                    <h3 className='text-xl font-bold text-white mb-2'>{study.title}</h3>;
-                    <div className='flex items-center gap-4 text-sm text-zion-slate-light'>;
-                      <span className='flex items-center gap-1'>;
-                        <Users className='w-4 h-4' />;
+                  <div>
+                    <h3 className='text-xl font-bold text-white mb-2'>{study.title}</h3>
+                    <div className='flex items-center gap-4 text-sm text-zion-slate-light'>
+                      <span className='flex items-center gap-1'>
+                        <Users className='w-4 h-4' />
                         {study.comp}
-                      </span>;
-                      <span className='flex items-center gap-1'>;
-                        <Globe className='w-4 h-4' />;
+                      </span>
+                      <span className='flex items-center gap-1'>
+                        <Globe className='w-4 h-4' />
                         {study.industry}
-                      </span>;
-                    </div>;
-                  </div>;
-                  <div className='text-right'>;
-                    <div className='text-2xl font-bold text-zion-cyan'>{study.roi}</div>;
-                    <div className='text-sm text-zion-slate-light'>ROI</div>;
-                  </div>;
-                </div>;
+                      </span>
+                    </div>
+                  </div>
+                  <div className='text-right'>
+                    <div className='text-2xl font-bold text-zion-cyan'>{study.roi}</div>
+                    <div className='text-sm text-zion-slate-light'>ROI</div>
+                  </div>
+                </div>
                 {/* Challenge & Solution */}
-                <div className='mb-4'>;
-                  <div className='mb-3'>;
-                    <h4 className='font-semibold text-white mb-2 flex items-center gap-2'>;
-                      <Target className='w-4 h-4 text-red-400' />;
+                <div className='mb-4'>
+                  <div className='mb-3'>
+                    <h4 className='font-semibold text-white mb-2 flex items-center gap-2'>
+                      <Target className='w-4 h-4 text-red-400' />
                       Challenge;
-                    </h4>;
-                    <p className='text-zion-slate-light text-sm'>{study.challenge}</p>;
-                  </div>;
-                  <div>;
-                    <h4 className='font-semibold text-white mb-2 flex items-center gap-2'>;
-                      <Zap className='w-4 h-4 text-yellow-400' />;
+                    </h4>
+                    <p className='text-zion-slate-light text-sm'>{study.challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className='font-semibold text-white mb-2 flex items-center gap-2'>
+                      <Zap className='w-4 h-4 text-yellow-400' />
                       Solution;
-                    </h4>;
-                    <p className='text-zion-slate-light text-sm'>{study.solution}</p>;
-                  </div>;
-                </div>;
+                    </h4>
+                    <p className='text-zion-slate-light text-sm'>{study.solution}</p>
+                  </div>
+                </div>
                 {/* Key Results */}
-                <div className='mb-4'>;
-                  <h4 className='font-semibold text-white mb-3 flex items-center gap-2'>;
-                    <TrendingUp className='w-4 h-4 text-green-400' />;
+                <div className='mb-4'>
+                  <h4 className='font-semibold text-white mb-3 flex items-center gap-2'>
+                    <TrendingUp className='w-4 h-4 text-green-400' />
                     Key Results;
-                  </h4>;
-                  <div className='grid grid-cols-2 gap-2'>;
+                  </h4>
+                  <div className='grid grid-cols-2 gap-2'>
                     {study.results.slice(0, 4).map((result, idx) => (;
-                      <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>;
-                        <CheckCircle className='w-3 h-3 text-green-400' />;
-                        <span>{result}</span>;
-                      </div>;
+                      <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>
+                        <CheckCircle className='w-3 h-3 text-green-400' />
+                        <span>{result}</span>
+                      </div>
                     ))}
-                  </div>;
-                </div>;
+                  </div>
+                </div>
                 {/* Technologies & Metrics */}
-                <div className='mb-4'>;
-                  <div className='flex flex-wrap gap-2 mb-3'>;
+                <div className='mb-4'>
+                  <div className='flex flex-wrap gap-2 mb-3'>
                     {study.technologies.slice(0, 3).map((tech, idx) => (;
-                      <span key={idx} className='px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full'>;
+                      <span key={idx} className='px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full'>
                         {tech}
-                      </span>;
+                      </span>
                     ))}
-                  </div>;
-                  <div className='flex items-center justify-between text-sm text-zion-slate-light'>;
-                    <span className='flex items-center gap-1'>;
-                      <Clock className='w-4 h-4' />;
+                  </div>
+                  <div className='flex items-center justify-between text-sm text-zion-slate-light'>
+                    <span className='flex items-center gap-1'>
+                      <Clock className='w-4 h-4' />
                       {study.duration}
-                    </span>;
-                    <span className='flex items-center gap-1'>;
-                      <Star className='w-4 h-4 text-yellow-400' />;
+                    </span>
+                    <span className='flex items-center gap-1'>
+                      <Star className='w-4 h-4 text-yellow-400' />
                       {study.metrics.satisfaction}% satisfaction;
-                    </span>;
-                  </div>;
-                </div>;
+                    </span>
+                  </div>
+                </div>
                 {/* CTA */}
-                <div className='flex items-center justify-between'>;
-                  <Link;
+                <div className='flex items-center justify-between'>
+                  <Link
                     href={`/case-studies/${study.id}`}
                     className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300';
                     Read Full Case Study;
                     <ArrowRight className='ml-2 h-4 w-4' />;
-                  </Link>;
-                  <div className='text-right'>;
-                    <div className='text-sm text-zion-slate-light'>Contact us to learn more</div>;
-                    <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>;
-                  </div>;
-                </div>;
-              </motion.div>;
+                  </Link>
+                  <div className='text-right'>
+                    <div className='text-sm text-zion-slate-light'>Contact us to learn more</div>
+                    <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className='py-16'>;
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>;
-          <motion.div;
+      <section className='py-16'>
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
+          <motion.div
             initial = {;
   { opacity: 0,;
   y: 20;
@@ -408,28 +408,28 @@ export default function CaseStudies(...args: any[]): any {;
             className='bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8';
             <h2 className='text-3xl font-bold text-white mb-4'>;
               Ready to Create Your Success Story?;
-            </h2>;
-            <p className='text-zion-slate-light text-lg mb-8'>;
+            </h2>
+            <p className='text-zion-slate-light text-lg mb-8'>
               Let's discuss how Zion Tech Group can transform your business with;
               cutting-edge technology solutions.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <Link;
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
                 href='/contact';
                 className='inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg';
                 Get Started Today;
                 <ArrowRight className='ml-2 h-5 w-5' />;
-              </Link>;
-              <Link;
+              </Link>
+              <Link
                 href='/services';
                 className='inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg';
                 View Our Services;
               </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
 ;

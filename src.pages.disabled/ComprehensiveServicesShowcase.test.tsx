@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ComprehensiveServicesShowcase from './ComprehensiveServicesShowcase';
-;
+
 describe('ComprehensiveServicesShowcase', () => {;
   it('renders without crashing', () => {;
     render(<ComprehensiveServicesShowcase />);

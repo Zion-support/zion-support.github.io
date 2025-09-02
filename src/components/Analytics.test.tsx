@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Analytics from './Analytics';
-;
+
 describe('Analytics', () => {;
   it('renders without crashing', () => {;
     render(<Analytics />);

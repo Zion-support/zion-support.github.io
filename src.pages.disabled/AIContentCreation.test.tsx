@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AIContentCreation from './AIContentCreation';
-;
+
 describe('AIContentCreation', () => {;
   it('renders without crashing', () => {;
     render(<AIContentCreation />);

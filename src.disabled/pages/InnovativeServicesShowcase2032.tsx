@@ -6,7 +6,7 @@ import React, { useState, useMemo } from;
   '); const [selectedCategory, setSelectedCategory] = useState('All;
   '); const [selectedPriceRange, setSelectedPriceRange] = useState('All;
   '); const [sortBy, setSortBy] = useState('featured;
-  '); ; const categories = ['All;
+  '); ; const categories = ['All
   ', 'AI & Legal Tech;
   ', 'Cybersecurity;
   ', 'AI & Healthcare;
@@ -17,7 +17,7 @@ import React, { useState, useMemo } from;
   ', 'AI & Quantum Computing;
   ', 'AI & Customer Experience;
   ', 'AI & Supply Chain;
-  ']; ; const priceRanges = [';All;
+  ']; ; const priceRanges = ['All;
   ',';Under $500;
   ',';$500 - $1, 000;
   ',';$1, 000 - $2,000;

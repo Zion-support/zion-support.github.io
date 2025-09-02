@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Enterprise from './Enterprise';
-;
+
 describe('Enterprise', () => {;
   it('renders without crashing', () => {;
     render(<Enterprise />);

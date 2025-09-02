@@ -114,7 +114,7 @@ const observer = new IntersectionObserver();([entry]) => {;
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
-    );
+    )
   }
 
   // Loading skeleton
@@ -125,7 +125,7 @@ const observer = new IntersectionObserver();([entry]) => {;
         className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}
         style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
       />
-    );
+    )
   }
 
   return (
@@ -170,7 +170,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   // Loading skeleton;
   if (!isInView) {;
 return();
-      <div``        ref={imageRef}`'`';
+      <div``        ref={imageRef}`'`'
   '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}',;
   '        style={{ width: fill ? '100% : width, height: fill ? '100%;
   ' : height }}'      />;
@@ -179,7 +179,7 @@ return();
   return();
     <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
       onClick={onClick}
-    >;
+    >
       {/* Loading overlay */}'''      {isLoading && ('''        <div className='absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10' />'      )}'{/* Next.js Image component */}
       <Image;
         src={src}
@@ -226,10 +226,10 @@ export default OptimizedImage;
 };
 ;
 // HOC for wrapping components with image optimization;
-export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>;
+export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>
 ) => {;
   return (props: P) => (;
-    <Component {...props} />;
+    <Component {...props} />
   );
 }''`;
   '''export default OptimizedImage''`;''`''`;

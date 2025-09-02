@@ -2,7 +2,7 @@ import React from,;
   react';
 import { Helmet } from;
   'react-helmet-async';
-interface SEOProps {;
+interface SEOProps {
   title: string;
    description: string;
    canonical?: string;
@@ -109,7 +109,7 @@ const siteName =;
     'hasOfferCatalog': {;
       '@type': 'OfferCatalog',;
       'name': 'Technology Services',;
-      'itemListElement': [;
+      'itemListElement': [
         {;
           '@type': 'Offer',;
           'itemOffered': {;
@@ -171,81 +171,81 @@ const siteName =;
   ', ');
     });
   };return (;
-    <Helmet>;
+    <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>;
-<meta name='description' content={metaDescription} />;
-      <meta name='robots' content={robotsContent} />;
+      <title>{fullTitle}</title>
+<meta name='description' content={metaDescription} />
+      <meta name='robots' content={robotsContent} />
       {/* Canonical URL */}
       {canonical && <link rel='canonical' href={`${siteUrl}${canonical}`} />}
 ;
-      {/* Open Graph / Facebook */}<meta property='og:type' content={type} />;
-      <meta property='og:title' content={title} />;
-      <meta property='og:description' content={metaDescription} />;
-      <meta property='og:url' content={fullUrl} />;
-      <meta property='og:image' content={fullImageUrl} />;
-      <meta property='og:image:width' content='1200' />;
-      <meta property='og:image:height' content='630' />;
-      <meta property='og:site_name' content='Zion Tech Group' />;
-      <meta property='og:locale' content='en_US' />;
+      {/* Open Graph / Facebook */}<meta property='og:type' content={type} />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={metaDescription} />
+      <meta property='og:url' content={fullUrl} />
+      <meta property='og:image' content={fullImageUrl} />
+      <meta property='og:image:width' content='1200' />
+      <meta property='og:image:height' content='630' />
+      <meta property='og:site_name' content='Zion Tech Group' />
+      <meta property='og:locale' content='en_US' />
 {/* Twitter Card */}
-      <meta name='twitter:card' content='summary_large_image' />;
-      <meta name='twitter:site' content='@ziontechgroup' />;
-      <meta name='twitter:creator' content='@ziontechgroup' />;
-      <meta name='twitter:title' content={title} />;
-      <meta name='twitter:description' content={metaDescription} />;
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:site' content='@ziontechgroup' />
+      <meta name='twitter:creator' content='@ziontechgroup' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={metaDescription} />
       <meta name='twitter:image' content={fullImageUrl} />{/* Additional Meta Tags */}
-      <meta name='author' content={author} />;
-      <meta name='keywords' content={tags.join(;
+      <meta name='author' content={author} />
+      <meta name='keywords' content={tags.join(
   ', ')} />;
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' />;
-<meta name='theme-color' content='#22ddd2' />;
-      <meta name='msapplication-TileColor' content='#22ddd2' />;
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<meta name='theme-color' content='#22ddd2' />
+      <meta name='msapplication-TileColor' content='#22ddd2' />
       {/* Favicon */}
-      <link rel='icon' type='image/x-icon' href='/favicon.ico' />;
-      <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />;
-      <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />;
-      <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />;
-      <link rel='manifest' href='/site.webmanifest' />;
+      <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+      <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+      <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+      <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+      <link rel='manifest' href='/site.webmanifest' />
       {/* Preconnect to external domains for performance */}
-      <link rel='preconnect' href='https://fonts.googleapis.com' />;
-      <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />;
+      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
       <link rel='preconnect' href='https://cdn.gpteng.co' />{/* Structured Data */}
-      <script type='application/ld+json'>;
+      <script type='application/ld+json'>
         {JSON.stringify(organizationSchema)}
-      </script>;
-      <script type='application/ld+json'>;
+      </script>
+      <script type='application/ld+json'>
         {JSON.stringify(pageSchema)}
-      </script>;
+      </script>
 {/* Additional SEO Meta Tags */}
-      <meta name='application-name' content='Zion Tech Group' />;
-<meta name='apple-mobile-web-app-title' content='Zion Tech' />;
-      <meta name='apple-mobile-web-app-capable' content='yes' />;
+      <meta name='application-name' content='Zion Tech Group' />
+<meta name='apple-mobile-web-app-title' content='Zion Tech' />
+      <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />{/* Security Headers */}
-      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />;
-      <meta httpEquiv='X-Frame-Options' content='DENY' />;
-      <meta httpEquiv='X-XSS-Protection' content='1; mode=block' />;
-<meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />;
+      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
+      <meta httpEquiv='X-Frame-Options' content='DENY' />
+      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />;
+<meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
       {/* Performance and UX */}
-      <meta name='format-detection' content='telephone=no' />;
-      <meta name='mobile-web-app-capable' content='yes' />;
+      <meta name='format-detection' content='telephone=no' />
+      <meta name='mobile-web-app-capable' content='yes' />
       {/* Language and Region */}
-      <meta httpEquiv='Content-Language' content='en' />;
-      <meta name='language' content='English' />;
-      <meta name='geo.region' content='US-DE' />;
-      <meta name='geo.placename' content='Middletown, Delaware' />;
+      <meta httpEquiv='Content-Language' content='en' />
+      <meta name='language' content='English' />
+      <meta name='geo.region' content='US-DE' />
+      <meta name='geo.placename' content='Middletown, Delaware' />
       {/* Business Information */}
-      <meta name='business:contact_data:street_address' content='364 E Main St STE 1008' />;
-      <meta name='business:contact_data:locality' content='Middletown' />;
-      <meta name='business:contact_data:region' content='DE' />;
-      <meta name='business:contact_data:postal_code' content='19709' />;
-      <meta name='business:contact_data:country_name' content='United States' />;
-      <meta name='business:contact_data:phone_number' content='+1-800-ZION-TECH' />;
-      <meta name='business:contact_data:email' content='info@ziontechgroup.com' />;
+      <meta name='business:contact_data:street_address' content='364 E Main St STE 1008' />
+      <meta name='business:contact_data:locality' content='Middletown' />
+      <meta name='business:contact_data:region' content='DE' />
+      <meta name='business:contact_data:postal_code' content='19709' />
+      <meta name='business:contact_data:country_name' content='United States' />
+      <meta name='business:contact_data:phone_number' content='+1-800-ZION-TECH' />
+      <meta name='business:contact_data:email' content='info@ziontechgroup.com' />
 {/* Additional structured data for articles */}
       {type ===;
   'article' && (;
-        <script type='application/ld+json'>;
+        <script type='application/ld+json'>
           {JSON.stringify({;
             '@context': 'https://schema.org',;
             '@type': 'Article',;
@@ -271,9 +271,9 @@ const siteName =;
               '@id': fullCanonical;
             }
           })}
-        </script>;
+        </script>
       )}
-</Helmet>;
+</Helmet>
   );
 }
 ;

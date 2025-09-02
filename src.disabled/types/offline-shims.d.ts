@@ -7,11 +7,11 @@ declare module 'react' {;
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {};
-  export interface RefObject<T> { current: T };
+  export interface RefObject<T> { current: T }
   export type RefCallback<T> = (value: anyT)  => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
-  export type LegacyRef<T> = Ref<T>;
-  export function useRef<T = any>(initial: T): { current: T };
+  export type LegacyRef<T> = Ref<T>
+  export function useRef<T = any>(initial: T): { current: T }
   const react: ;
   export default react;
 }
@@ -29,12 +29,12 @@ declare namespace JSX {;
 }
 }
 ;
-declare module 'react-dom' {;
+declare module 'react-dom' {
   export function reactDom: ;
   export default reactDom;
 }
 ;
-declare module 'react-router-dom' {;
+declare module 'react-router-dom' {
   export function useNavigate(): ;
   export const Link: ;
   export const Routes: ;
@@ -43,17 +43,17 @@ declare module 'react-router-dom' {;
   export default rr;
 }
 ;
-declare module 'react-hook-form' {;
+declare module 'react-hook-form' {
   export function useForm<T = any>(...args: unknown[]): ;
   const rhf: ;
   export default rhf;
 }
 ;
-declare module '@hookform/resolvers/zod' {;
+declare module '@hookform/resolvers/zod' {
   export function zodResolver(...args: unknown[]): ;
 }
 ;
-declare module '@tanstack/react-query' {;
+declare module '@tanstack/react-query' {
   export function useMutation<T = any>(...args: unknown[]): ;
   const rq: ;
   export default rq;
@@ -66,17 +66,17 @@ declare module 'jspdf' {;
   }
 }
 ;
-declare module 'path' {;
+declare module 'path' {
   const path: ;
   export default path;
 }
 ;
-declare module 'jspdf-autotable' {;
+declare module 'jspdf-autotable' {
   const autotable: ;
   export default autotable;
 }
 ;
-declare module 'zod' {;
+declare module 'zod' {
   export type infer<T> = ;
   const z: ;
   export { z };

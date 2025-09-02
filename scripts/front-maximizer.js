@@ -174,7 +174,7 @@ class FrontMaximizer {;
       if (fs.existsSync(distPath)) {;
         const jsFiles = this.findFiles(distPath,.js');
 ;
-        if (jsFiles.length <= 2) {;
+        if (jsFiles.length <= 2) {
           this.optimizations.push(;
   'Consider implementing code splitting to reduce initial bundle size');
         } else {;
@@ -309,7 +309,7 @@ class FrontMaximizer {;
     try {;
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);
-    } catch (error) {;
+    } catch (error) {
       console.warn(;
   '⚠️  Could not save report:,;
   , error.message);

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-;
-export const FuturisticAnimatedBackground: React.FC = () => {;
+
+export const FuturisticAnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 ;
   useEffect(() => {;
@@ -204,7 +204,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
   }, []);
 ;
   return (;
-    <canvas;
+    <canvas
       ref = {canvasRef}
       className='fixed inset-0 w-full h-full pointer-events-none z-0';
       style = {;

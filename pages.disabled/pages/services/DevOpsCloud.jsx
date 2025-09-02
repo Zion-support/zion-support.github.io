@@ -7,7 +7,7 @@ import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from;
   'lucide-react';
 export { function };
 :pages.disabled/pages/services/DevOpsCloud.jsx;
-export default function DevOpsCloudServices() {;
+export default function DevOpsCloudServices() {
     const devopsServices = [;
         {;
             icon: Cloud,;
@@ -26,7 +26,7 @@ export default function DevOpsCloudServices() {;
   ,Migration roadmap development',Cost optimization analysis;
   ',Security and compliance review',Performance benchmarking;
   '            ],';
-            benefits: [';
+            benefits: ['
   ';
                 'Reduced infrastructure costs by 30-50%,Improved scalability and flexibility',Enhanced disaster recovery;
   ',Better resource utilization';
@@ -50,7 +50,7 @@ export default function DevOpsCloudServices() {;
   ,Environment management',Rollback and recovery;
   ',Pipeline monitoring and alerts',Security scanning integration;
   '            ],';
-            benefits: [';
+            benefits: ['
   ';
                 'Faster time to market,Reduced deployment errors',Improved code quality;
   ',Enhanced team productivity';
@@ -73,7 +73,7 @@ export default function DevOpsCloudServices() {;
   ,Infrastructure versioning',Environment consistency;
   ',Automated scaling policies',Cost monitoring and alerts;
   '            ],';
-            benefits: [';
+            benefits: ['
   ';
                 'Consistent infrastructure deployment,Reduced manual configuration errors',Faster environment provisioning;
   ',Better cost control and visibility';
@@ -97,7 +97,7 @@ export default function DevOpsCloudServices() {;
   ,Auto-scaling and load balancing',Service mesh implementation;
   ',Monitoring and logging',Backup and disaster recovery;
   '            ],';
-            benefits: [';
+            benefits: ['
   ';
                 'Improved application scalability,Better resource utilization',Enhanced deployment flexibility;
   ',Reduced operational overhead';
@@ -121,7 +121,7 @@ export default function DevOpsCloudServices() {;
   ,Team structure recommendations',Tool selection and implementation;
   ',Best practices training',Change management support;
   '            ],';
-            benefits: [';
+            benefits: ['
   ';
                 'Improved development velocity,Better team collaboration',Reduced operational costs;
   ',Enhanced software quality';
@@ -145,7 +145,7 @@ export default function DevOpsCloudServices() {;
   ,Centralized logging and analysis',Real-time alerting;
   ',Custom dashboards',Capacity planning insights;
   '            ],';
-            benefits: [';
+            benefits: ['
   ';
                 'Proactive issue detection,Improved system reliability,;
   ,Better user experience;
@@ -206,7 +206,7 @@ export default function DevOpsCloudServices() {;
   ',ELK Stack & Splunk',Istio & Linkerd;
   ',Helm & ArgoCD';
     ]';
-    const benefits = [';
+    const benefits = ['
   ';
         'Faster software delivery and deployment;
   ',Improved system reliability and uptime',Reduced infrastructure costs;
@@ -255,27 +255,27 @@ export default function DevOpsCloudServices() {;
 ';
     ]';
     return (<div className='min-h-screen bg-background'>'';
-      <SEO title='DevOps & Cloud Services - Zion Tech Group' description='Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery.' keywords='DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation' canonical='https://ziontechgroup.com/services/devops-cloud'/>;
+      <SEO title='DevOps & Cloud Services - Zion Tech Group' description='Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery.' keywords='DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation' canonical='https://ziontechgroup.com/services/devops-cloud'/>
 '{/* Hero Section */}''      <section className='relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20'>'';
         <div className='absolute inset-0 bg-black/20'></div>'';
         <div className='relative container mx-auto px-4 text-center'>'';
-          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent'>;
+          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
-            DevOps & Cloud Services'</h1>''          <p className='text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto leading-relaxed'>;
+            DevOps & Cloud Services'</h1>''          <p className='text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto leading-relaxed'>
             Accelerate your software delivery with modern DevOps practices and cloud-native solutions.;
             From migration to automation, we help you build faster, more reliable applications.;
-          </p>;
-        </div>;
-      </section>;
+          </p>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 '{/* Services Overview */}''      <section className='py-20 bg-white'>'';
         <div className='container mx-auto px-4'>'';
           <div className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our DevOps & Cloud Services</h2>'';
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               End-to-end DevOps and cloud solutions that help businesses modernize their software delivery;
               processes and infrastructure for better performance and efficiency.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
           </div>'''          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>'';
             {devopsServices.map((service, index) => (<div key={service.title} className='bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200'>'';
@@ -288,26 +288,26 @@ export default function DevOpsCloudServices() {;
 :pages.disabled/pages/services/DevOpsCloud.jsx;
                   <p className='text-sm text-gray-500'>Market: {service.marketPrice}</p>'</div>''                <ul className='space-y-2 mb-4'>'';
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className='flex items-center text-sm text-gray-700'>'';
-                      <Check className='w-4 h-4 text-green-500 mr-2 flex-shrink-0'/>;
+                      <Check className='w-4 h-4 text-green-500 mr-2 flex-shrink-0'/>
                       {feature}
 :pages.disabled/pages/services/DevOpsCloud.jsx;
                     </li>))}'</ul>''                <div className='space-y-2'>'';
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (<div key={benefitIndex} className='text-sm text-gray-600'>'';
                       <span className='font-medium'>✓</span> {benefit}
                     </div>))}
-                </div>;
+                </div>
               </div>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 '{/* Cloud Providers Section */}''      <section className='py-20 bg-gray-50'>'';
         <div className='container mx-auto px-4'>'';
           <div className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Cloud Providers We Work With</h2>'';
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Expertise across major cloud platforms to help you choose the right solution for your business needs.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
           </div>'''          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto'>'';
             {cloudProviders.map((provider, index) => (<div key={provider.name} className='bg-white rounded-xl p-6 border border-gray-200'>'';
@@ -316,27 +316,27 @@ export default function DevOpsCloudServices() {;
                 <div className='space-y-3 text-sm'>';
                   <div>'';
                     <span className='font-medium text-gray-700'>Key Services:</span>'';
-                    <p className='text-gray-600'>{provider.services}</p>;
+                    <p className='text-gray-600'>{provider.services}</p>
                   </div>';
                   <div>'';
                     <span className='font-medium text-gray-700'>Strengths:</span>'';
-                    <p className='text-gray-600'>{provider.strengths}</p>;
+                    <p className='text-gray-600'>{provider.strengths}</p>
                   </div>'<div>''                    <span className='font-medium text-gray-700'>Pricing:</span>'';
-                    <p className='text-gray-600'>{provider.pricing}</p>;
-                  </div>;
-                </div>;
+                    <p className='text-gray-600'>{provider.pricing}</p>
+                  </div>
+                </div>
               </div>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 '{/* Use Cases Section */}''      <section className='py-20 bg-white'>'';
         <div className='container mx-auto px-4'>'';
           <div className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Real-World DevOps Use Cases</h2>'';
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Proven DevOps solutions that deliver measurable business value across diverse industries.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
           </div>'''          <div className='grid md:grid-cols-2 gap-8 max-w-6xl mx-auto'>'';
             {useCases.map((useCase, index) => (<div key={useCase.title} className='bg-gray-50 rounded-xl p-8 border border-gray-200'>'';
@@ -348,13 +348,13 @@ export default function DevOpsCloudServices() {;
 :pages.disabled/pages/services/DevOpsCloud.jsx;
                     <div className='text-lg font-semibold text-orange-600'>{useCase.roi}</div>'</div>''                  <div className='bg-blue-50 p-4 rounded-lg'>'';
                     <div className='text-sm text-gray-600 mb-1'>Implementation</div>'';
-                    <div className='text-lg font-semibold text-blue-600'>{useCase.implementation}</div>;
-                  </div>;
-                </div>;
+                    <div className='text-lg font-semibold text-blue-600'>{useCase.implementation}</div>
+                  </div>
+                </div>
               </div>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 ';
       {/* Benefits Section */}'';
@@ -362,21 +362,21 @@ export default function DevOpsCloudServices() {;
         <div className='container mx-auto px-4'>'';
           <div className='grid md:grid-cols-2 gap-12 items-center'>';
             <div>'';
-              <h2 className='text-4xl font-bold text-gray-900 mb-6'>;
-                Why Choose Our DevOps Services?'</h2>''              <p className='text-lg text-gray-600 mb-8 leading-relaxed'>;
+              <h2 className='text-4xl font-bold text-gray-900 mb-6'>
+                Why Choose Our DevOps Services?'</h2>''              <p className='text-lg text-gray-600 mb-8 leading-relaxed'>
                 Our DevOps expertise combined with cloud-native technologies enables us to deliver;
                 solutions that provide real business value and competitive advantage.;
 :pages.disabled/pages/services/DevOpsCloud.jsx;
               </p>'''              <div className='space-y-4'>'';
                 {benefits.map((benefit, index) => (<div key={index} className='flex items-start'>'';
                     <Check className='w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0'/>'';
-                    <span className='text-gray-700'>{benefit}</span>;
+                    <span className='text-gray-700'>{benefit}</span>
                   </div>))}
-              </div>;
+              </div>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
             </div>'''            <div className='bg-white p-8 rounded-2xl shadow-lg border border-gray-200'>'';
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>Free DevOps Assessment</h3>'';
-              <p className='text-gray-600 mb-6'>;
+              <p className='text-gray-600 mb-6'>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
                 Discover how DevOps can transform your business with our comprehensive;
                 DevOps maturity assessment and strategy session.'</p>''              <div className='space-y-3 mb-6'>'';
@@ -385,59 +385,59 @@ export default function DevOpsCloudServices() {;
 :pages.disabled/pages/services/DevOpsCloud.jsx;
                   <span className='font-semibold text-gray-900'>$3,000</span>'</div>''                <div className='flex justify-between'>'';
                   <span className='text-gray-600'>Your Cost:</span>'';
-                  <span className='font-semibold text-green-600'>FREE</span>;
+                  <span className='font-semibold text-green-600'>FREE</span>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
-                </div>'</div>''              <Link to='/contact' className='bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors inline-block w-full text-center'>;
+                </div>'</div>''              <Link to='/contact' className='bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors inline-block w-full text-center'>
                 Schedule Assessment;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 '{/* Industries Section */}''      <section className='py-20 bg-white'>'';
         <div className='container mx-auto px-4'>'';
           <div className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Industries We Serve</h2>'';
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Our DevOps and cloud solutions are tailored to meet the unique challenges and opportunities;
               across diverse industry sectors.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
           </div>'''          <div className='grid md:grid-cols-4 gap-6 max-w-6xl mx-auto'>'';
             {industries.map((industry, index) => (<div key={industry} className='bg-gray-50 rounded-xl p-6 text-center hover:bg-orange-50 transition-colors border border-gray-200'>'';
                 <div className='w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4'>'';
 :pages.disabled/pages/services/DevOpsCloud.jsx;
-                  <Target className='w-8 h-8 text-orange-600'/>'</div>''                <h3 className='text-lg font-semibold text-gray-900'>{industry}</h3>;
+                  <Target className='w-8 h-8 text-orange-600'/>'</div>''                <h3 className='text-lg font-semibold text-gray-900'>{industry}</h3>
               </div>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 '{/* Technologies Section */}''      <section className='py-20 bg-gray-50'>'';
         <div className='container mx-auto px-4'>'';
           <div className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>DevOps Technologies We Use</h2>'';
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               We leverage cutting-edge DevOps and cloud technologies to build robust, scalable,;
               and innovative solutions for our clients.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
           </div>'''          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto'>'';
             {technologies.map((tech, index) => (<div key={tech} className='bg-white rounded-lg p-4 text-center hover:bg-orange-50 transition-colors border border-gray-200'>'';
-                <span className='text-gray-700 font-medium text-sm'>{tech}</span>;
+                <span className='text-gray-700 font-medium text-sm'>{tech}</span>
               </div>))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 '{/* Process Section */}''      <section className='py-20 bg-white'>'';
         <div className='container mx-auto px-4'>'';
           <div className='text-center mb-16'>'';
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our DevOps Implementation Process</h2>'';
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               A proven methodology for delivering successful DevOps transformations that drive business value.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
           </div>'''          <div className='max-w-6xl mx-auto'>'';
             <div className='grid md:grid-cols-6 gap-8'>'';
@@ -445,76 +445,76 @@ export default function DevOpsCloudServices() {;
                 <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
 :pages.disabled/pages/services/DevOpsCloud.jsx;
                   <span className='text-white font-bold text-xl'>1</span>'</div>''                <h3 className='text-lg font-bold text-gray-900 mb-2'>Assessment</h3>'';
-                <p className='text-gray-600 text-sm'>;
+                <p className='text-gray-600 text-sm'>
                   Evaluate current DevOps maturity;
-                </p>;
+                </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
               </div>';
 '';
               <div className='text-center'>'';
                 <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <span className='text-white font-bold text-xl'>2</span>'</div>''                <h3 className='text-lg font-bold text-gray-900 mb-2'>Strategy</h3>'';
-                <p className='text-gray-600 text-sm'>;
+                <p className='text-gray-600 text-sm'>
                   Develop DevOps roadmap and goals;
-                </p>;
+                </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
               </div>';
 '';
               <div className='text-center'>'';
                 <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <span className='text-white font-bold text-xl'>3</span>'</div>''                <h3 className='text-lg font-bold text-gray-900 mb-2'>Implementation</h3>'';
-                <p className='text-gray-600 text-sm'>;
+                <p className='text-gray-600 text-sm'>
                   Build and deploy DevOps tools;
-                </p>;
+                </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
               </div>';
 '';
               <div className='text-center'>'';
                 <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <span className='text-white font-bold text-xl'>4</span>'</div>''                <h3 className='text-lg font-bold text-gray-900 mb-2'>Training</h3>'';
-                <p className='text-gray-600 text-sm'>;
+                <p className='text-gray-600 text-sm'>
                   Enable teams with new processes;
-                </p>;
+                </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
               </div>';
 '';
               <div className='text-center'>'';
                 <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <span className='text-white font-bold text-xl'>5</span>'</div>''                <h3 className='text-lg font-bold text-gray-900 mb-2'>Optimization</h3>'';
-                <p className='text-gray-600 text-sm'>;
+                <p className='text-gray-600 text-sm'>
                   Continuous improvement and scaling;
-                </p>;
+                </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
               </div>';
 '';
               <div className='text-center'>'';
                 <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <span className='text-white font-bold text-xl'>6</span>'</div>''                <h3 className='text-lg font-bold text-gray-900 mb-2'>Support</h3>'';
-                <p className='text-gray-600 text-sm'>;
+                <p className='text-gray-600 text-sm'>
                   Ongoing maintenance and support;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
 '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white'>'';
         <div className='container mx-auto px-4 text-center'>'';
           <h2 className='text-4xl font-bold mb-6'>Ready to Accelerate Your Delivery?</h2>'';
-          <p className='text-xl mb-8 max-w-3xl mx-auto'>;
+          <p className='text-xl mb-8 max-w-3xl mx-auto'>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
             Let our DevOps experts help you build faster, more reliable applications;
             with modern cloud-native practices and automation.';
           </p>'';
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-            <Link to='/contact' className='bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>;
-              Start Your DevOps Journey'</Link>''            <Link to='/services' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors'>;
+            <Link to='/contact' className='bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
+              Start Your DevOps Journey'</Link>''            <Link to='/services' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors'>
               Explore All Services;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
+            </Link>
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx;
     </div>)'';
 }}}}}

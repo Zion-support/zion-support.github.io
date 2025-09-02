@@ -2,7 +2,7 @@ import React from;
   'react'; import { motion } from;
   'framer-motion'; import { Building, TrafficCone, Zap, Shield, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play, MapPin, Wifi, Camera, Lightbulb, Leaf, Car, Bus, Train } from;
   'lucide-react'; import { SEO } from;
-  '../../components/SEO'; const AISmartCityInfrastructure = () => { const features = [ { icon: Building, title:,;
+  '../../components/SEO'; const AISmartCityInfrastructure = () => { const features = [ { icon: Building, title:,
   Smart Building Management', description: AI-powered building automation for energy efficiency, security, and occupant comfort' }, { icon: TrafficCone, title:,;
   Intelligent Traffic Management', description: Real-time traffic optimization, congestion reduction, and smart signal control' }, { icon: Zap, title:,;
   Smart Energy Grid', description: AI-optimized energy distribution, renewable integration, and demand response' }, { icon: Shield, title:,;
@@ -30,7 +30,7 @@ import React from;
 ,;
   Emergency Response',;
   'Crime Prevention',;
-  'Disaster Management'], efficiency: '95%, icon: Shield } ]; const benefits = [,;
+  'Disaster Management'], efficiency: '95%, icon: Shield } ]; const benefits = [,
   Reduce traffic congestion by up to 40%',;
   'Lower energy consumption by 35%',;
   'Improve emergency response times by 50%',;
@@ -64,7 +64,7 @@ import React from;
   '24/7 dedicated support',;
   'White-label solutions',;
   'On-premise deployment',;
-  'Custom development' ], cta: 'Contact Sales, popular: false } ]; const useCases = [ { industry:,;
+  'Custom development' ], cta: 'Contact Sales, popular: false } ]; const useCases = [ { industry:,
   Urban Planning', description: 'Data-driven city planning with AI insights for sustainable development and growth }, { industry:,;
   Public Transportation', description: 'Intelligent transit systems with real-time optimization and passenger experience enhancement }, { industry:,;
   Environmental Management', description: 'Smart environmental monitoring and sustainability initiatives for greener cities }, { industry:,;

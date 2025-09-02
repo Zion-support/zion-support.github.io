@@ -15,7 +15,7 @@ describe('App', () => {
 
   it('handles user interactions', () => {
 import App from './App';
-;
+
 describe(;
   'App', () => {;
   it(;

@@ -1,4 +1,4 @@
-export interface Added2026Q2Service {;
+export interface Added2026Q2Service {
   id: string;
    name: string;
    tagline: string;

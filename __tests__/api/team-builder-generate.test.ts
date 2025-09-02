@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import generateHandler from '@/pages/api/team-builder/generate';
 import { supabase } from '@/integrations/supabase/client'; // To be mocked;
 import { ProjectBrief, TeamRecommendation } from '@/types';
-;
+
 // Mock Supabase;
 jest.mock(;
   '@/integrations/supabase/client', () => ({;
@@ -44,7 +44,7 @@ describe('/api/team-builder/generate API Endpoint'', () => {;
   });
 ;
   it(;
-  'should return 500 if Supabase function call fails', async () => {;
+  'should return 500 if Supabase function call fails', async () => {
     const mockBrief: ProjectBrief = {;
       projectName:;
   'Test Project,;
@@ -71,7 +71,7 @@ describe('/api/team-builder/generate API Endpoint'', () => {;
   });
 ;
   it(;
-  'should return 500 if Supabase function returns no data and no error', async () => {;
+  'should return 500 if Supabase function returns no data and no error', async () => {
     const mockBrief: ProjectBrief = {;
       projectName:;
   'Test Project,;
@@ -96,7 +96,7 @@ describe('/api/team-builder/generate API Endpoint'', () => {;
   });
 ;
   it(,;
-  should return 200 with team recommendation on successful Supabase call', async () => {;
+  should return 200 with team recommendation on successful Supabase call', async () => {
     const mockBrief: ProjectBrief = {;
       projectName:;
   'Test Project,;
@@ -107,7 +107,7 @@ describe('/api/team-builder/generate API Endpoint'', () => {;
   $10k',;
       techStack: [;
   'React]};
-    const mockRecommendation: Partial<TeamRecommendation> = {;
+    const mockRecommendation: Partial<TeamRecommendation> = {
       // Using Partial for brevity;
       recommendationSummary:;
   '1 PM, 2 Devs',;

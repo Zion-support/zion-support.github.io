@@ -10,8 +10,8 @@ import {;
   Settings, Wrench, Hammer, Tool, Cog, Sliders, ToggleLeft, ToggleRight;
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-;
-type Service = {;
+
+type Service = {
   title: string;
   description: string;
   priceRange: string;
@@ -35,7 +35,7 @@ const microSaaSServices: Service[] = [;
       'AI blog post generation', 'Social media content creation',;
       'SEO optimization suggestions', 'Multi-language translation',;
       'Brand voice training', 'Content calendar automation';
-    ], benefits: [;
+    ], benefits: [
       'Save 80% content creation time',;
       'Increase engagement by 300%', 'Improve SEO rankings',;
       'Maintain consistent brand voice', 'Scale content production';
@@ -50,7 +50,7 @@ const microSaaSServices: Service[] = [;
       'Payment tracking & reminders', 'Financial analytics dashboard',;
       'Tax preparation assistance', 'Multi-currency support',;
       'Integration with accounting software';
-    ], benefits: [;
+    ], benefits: [
       'Reduce payment delays by 60%',;
       'Automate 90% of invoicing tasks', 'Improve cash flow visibility',;
       'Simplify tax preparation', 'Professional invoice templates';
@@ -65,7 +65,7 @@ const microSaaSServices: Service[] = [;
       'Natural language processing', 'Sentiment analysis',;
       'Multi-channel deployment', 'Analytics & insights',;
       'Human agent handoff';
-    ], benefits: [;
+    ], benefits: [
       '24/7 customer support',;
       'Reduce support costs by 70%', 'Improve response time by 90%',;
       'Increase customer satisfaction', 'Scale support operations';
@@ -80,7 +80,7 @@ const microSaaSServices: Service[] = [;
       'Predictive demand forecasting', 'Automated reorder points',;
       'Multi-location management', 'Barcode scanning integration',;
       'Supplier management';
-    ], benefits: [;
+    ], benefits: [
       'Reduce stockouts by 80%',;
       'Optimize inventory levels', 'Lower carrying costs',;
       'Improve cash flow', 'Streamline operations';
@@ -95,7 +95,7 @@ const microSaaSServices: Service[] = [;
       'Automated campaign sequences', 'A/B testing optimization',;
       'Advanced segmentation', 'Deliverability optimization',;
       'ROI tracking & analytics';
-    ], benefits: [;
+    ], benefits: [
       'Increase open rates by 40%',;
       'Boost click-through rates by 60%', 'Improve conversion rates',;
       'Automate campaign management', 'Maximize email ROI';
@@ -110,7 +110,7 @@ const microSaaSServices: Service[] = [;
       'AI productivity insights', 'Team performance analytics',;
       'Project profitability analysis', 'Client billing automation',;
       'Integration with project tools';
-    ], benefits: [;
+    ], benefits: [
       'Increase productivity by 25%',;
       'Accurate project billing', 'Identify efficiency opportunities',;
       'Improve team performance', 'Streamline time management';
@@ -125,7 +125,7 @@ const microSaaSServices: Service[] = [;
       'Optimal posting time suggestions', 'Cross-platform scheduling',;
       'Engagement analytics', 'Hashtag optimization',;
       'Competitor analysis';
-    ], benefits: [;
+    ], benefits: [
       'Increase engagement by 200%',;
       'Save 5+ hours per week', 'Improve content performance',;
       'Grow social media following', 'Optimize posting strategy';
@@ -140,7 +140,7 @@ const microSaaSServices: Service[] = [;
       'Actionable insights', 'Conversion tracking',;
       'Heatmap analysis', 'A/B testing tools',;
       'Custom reporting';
-    ], benefits: [;
+    ], benefits: [
       'Make data-driven decisions',;
       'Improve website performance', 'Increase conversion rates',;
       'Understand user behavior', 'Optimize marketing spend';
@@ -158,7 +158,7 @@ const aiServices: Service[] = [;
       'Predictive analytics modeling', 'Real-time data processing',;
       'Automated report generation', 'Natural language queries',;
       'Custom dashboard creation', 'Integration with 100+ data sources';
-    ], benefits: [;
+    ], benefits: [
       'Make faster business decisions',;
       'Identify growth opportunities', 'Reduce manual reporting by 90%',;
       'Improve forecast accuracy', 'Increase operational efficiency';
@@ -173,7 +173,7 @@ const aiServices: Service[] = [;
       'Behavioral analysis', 'Automated incident response',;
       'Zero-day attack prevention', 'Compliance monitoring',;
       '24/7 security monitoring';
-    ], benefits: [;
+    ], benefits: [
       'Prevent 99.9% of cyber attacks',;
       'Reduce security incidents by 95%', 'Comply with industry standards',;
       'Minimize security team workload', 'Protect sensitive data';
@@ -188,7 +188,7 @@ const aiServices: Service[] = [;
       'Sentiment analysis', 'Personalization engine',;
       'Churn prediction', 'Experience optimization',;
       'Multi-channel integration';
-    ], benefits: [;
+    ], benefits: [
       'Increase customer satisfaction by 40%',;
       'Reduce churn rate by 30%', 'Improve customer lifetime value',;
       'Optimize customer touchpoints', 'Enhance brand loyalty';
@@ -202,7 +202,7 @@ const aiServices: Service[] = [;
       'Predictive health modeling', 'Clinical decision support',;
       'Treatment outcome prediction', 'HIPAA compliance',;
       'Integration with EHR systems';
-    ], benefits: [;
+    ], benefits: [
       'Improve patient outcomes',;
       'Reduce healthcare costs', 'Enhance clinical decisions',;
       'Prevent medical errors', 'Optimize treatment plans';
@@ -216,7 +216,7 @@ const aiServices: Service[] = [;
       'Real-time risk assessment', 'Fraud detection algorithms',;
       'Credit scoring models', 'Market risk analysis',;
       'Regulatory compliance', 'Automated reporting';
-    ], benefits: [;
+    ], benefits: [
       'Reduce financial losses by 70%',;
       'Improve risk assessment accuracy', 'Comply with regulations',;
       'Automate risk monitoring', 'Enhance decision making';
@@ -234,7 +234,7 @@ const itServices: Service[] = [;
       'Multi-cloud management', 'Auto-scaling configuration',;
       '24/7 monitoring', 'Security hardening',;
       'Cost optimization', 'Disaster recovery planning';
-    ], benefits: [;
+    ], benefits: [
       'Reduce infrastructure costs by 30%',;
       'Improve system reliability', 'Scale resources automatically',;
       'Enhance security posture', 'Minimize downtime';
@@ -249,7 +249,7 @@ const itServices: Service[] = [;
       'Infrastructure as code', 'Automated testing',;
       'Deployment automation', 'Monitoring & alerting',;
       'Security scanning';
-    ], benefits: [;
+    ], benefits: [
       'Deploy 10x faster',;
       'Reduce deployment errors by 90%', 'Improve code quality',;
       'Automate repetitive tasks', 'Enhance team productivity';
@@ -264,7 +264,7 @@ const itServices: Service[] = [;
       'GraphQL implementation', 'Third-party integrations',;
       'API documentation', 'Rate limiting & security',;
       'Performance optimization';
-    ], benefits: [;
+    ], benefits: [
       'Connect disparate systems',;
       'Improve data flow', 'Enhance system flexibility',;
       'Reduce development time', 'Enable third-party partnerships';
@@ -278,7 +278,7 @@ const itServices: Service[] = [;
       '24/7 infrastructure monitoring', 'Proactive alerting',;
       'Performance optimization', 'Capacity planning',;
       'Root cause analysis', 'Custom dashboards';
-    ], benefits: [;
+    ], benefits: [
       'Prevent system failures',;
       'Optimize performance', 'Reduce downtime by 80%',;
       'Improve resource utilization', 'Enhance system reliability';
@@ -293,7 +293,7 @@ const itServices: Service[] = [;
       'Vulnerability scanning', 'Penetration testing',;
       'Security policy development', 'Compliance management',;
       'Incident response planning';
-    ], benefits: [;
+    ], benefits: [
       'Protect against cyber threats',;
       'Comply with regulations', 'Reduce security risks',;
       'Improve security posture', 'Minimize breach impact';
@@ -308,7 +308,7 @@ const itServices: Service[] = [;
       'ETL process development', 'Data quality assurance',;
       'Minimal downtime migration', 'Data validation',;
       'Post-migration support';
-    ], benefits: [;
+    ], benefits: [
       'Seamless system transitions',;
       'Maintain data integrity', 'Minimize business disruption',;
       'Improve data quality', 'Enable system modernization';
@@ -326,7 +326,7 @@ const emergingTechServices: Service[] = [;
       'Quantum algorithm optimization', 'Edge computing deployment',;
       'Ultra-fast processing', 'Hybrid quantum-classical systems',;
       'Custom quantum applications', 'Performance benchmarking';
-    ], benefits: [;
+    ], benefits: [
       'Solve complex problems faster',;
       'Enable breakthrough innovations', 'Process massive datasets',;
       'Optimize resource utilization', 'Future-proof technology stack';
@@ -340,7 +340,7 @@ const emergingTechServices: Service[] = [;
       'Sustainability reporting', 'Green energy optimization',;
       'Waste reduction strategies', 'ESG compliance',;
       'Environmental analytics';
-    ], benefits: [;
+    ], benefits: [
       'Reduce environmental impact',;
       'Meet sustainability goals', 'Improve ESG ratings',;
       'Lower operational costs', 'Enhance brand reputation';
@@ -354,7 +354,7 @@ const emergingTechServices: Service[] = [;
       'Inventory optimization', 'Supplier risk assessment',;
       'Route optimization', 'Quality control automation',;
       'Supply chain visibility';
-    ], benefits: [;
+    ], benefits: [
       'Reduce supply chain costs by 25%',;
       'Improve delivery times', 'Minimize supply disruptions',;
       'Optimize inventory levels', 'Enhance supplier relationships';
@@ -368,7 +368,7 @@ const emergingTechServices: Service[] = [;
       'Contract review', 'Compliance monitoring',;
       'Legal research assistance', 'Risk assessment',;
       'Document management';
-    ], benefits: [;
+    ], benefits: [
       'Reduce legal costs by 60%',;
       'Accelerate document processing', 'Improve compliance accuracy',;
       'Minimize legal risks', 'Enhance productivity';
@@ -376,11 +376,11 @@ const emergingTechServices: Service[] = [;
   }
 ];
 ;
-export default function ComprehensiveServices2025() {;
+export default function ComprehensiveServices2025() {
   const [activeTab, setActiveTab] = useState('microsaas');
 ;
   const renderServiceCard = (service: Service, index: number) => (;
-    <motion.div;
+    <motion.div
       key={service.title}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -390,60 +390,60 @@ export default function ComprehensiveServices2025() {;
       }`}
     >;
       {service.popular && (;
-        <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>;
-          <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold'>;
+        <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
+          <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold'>
             Popular;
-          </span>;
-        </div>;
+          </span>
+        </div>
       )}
 ;
-      <div className='flex items-start space-x-4 mb-4'>;
+      <div className='flex items-start space-x-4 mb-4'>
         {service.icon && (;
-          <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0'>;
-            <service.icon className='w-6 h-6 text-white' />;
-          </div>;
+          <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0'>
+            <service.icon className='w-6 h-6 text-white' />
+          </div>
         )}
-        <div className='flex-1'>;
+        <div className='flex-1'>
           {service.category && (;
-            <div className='inline-flex items-center px-2 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300 mb-2'>;
+            <div className='inline-flex items-center px-2 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300 mb-2'>
               {service.category}
-            </div>;
+            </div>
           )}
-          <h3 className='text-lg font-semibold text-white mb-2'>{service.title}</h3>;
-          <p className='text-slate-300 text-sm mb-3'>{service.description}</p>;
-        </div>;
-      </div>;
-      <div className='mb-4'>;
-        <div className='text-lg font-bold text-white mb-1'>{service.priceRange}</div>;
+          <h3 className='text-lg font-semibold text-white mb-2'>{service.title}</h3>
+          <p className='text-slate-300 text-sm mb-3'>{service.description}</p>
+        </div>
+      </div>
+      <div className='mb-4'>
+        <div className='text-lg font-bold text-white mb-1'>{service.priceRange}</div>
         {service.marketPrice && (;
-          <div className='text-sm text-slate-400'>Market Price: {service.marketPrice}</div>;
+          <div className='text-sm text-slate-400'>Market Price: {service.marketPrice}</div>
         )}
-      </div>;
+      </div>
       {service.features && (;
-        <div className='mb-4'>;
-          <h4 className='text-sm font-semibold text-white mb-2'>Key Features: </h4>;
-          <ul className='text-xs text-slate-300 space-y-1'>;
+        <div className='mb-4'>
+          <h4 className='text-sm font-semibold text-white mb-2'>Key Features: </h4>
+          <ul className='text-xs text-slate-300 space-y-1'>
             {service.features.slice(0, 3).map((feature, idx) => (;
-              <li key={idx} className='flex items-center'>;
-                <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
+              <li key={idx} className='flex items-center'>
+                <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
                 {feature}
-              </li>;
+              </li>
             ))}
-          </ul>;
-        </div>;
+          </ul>
+        </div>
       )}
 ;
-      <Link;
+      <Link
         to={service.learnMoreUrl || '/contact'}
         className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover: from-purple-400 hover:to-blue-500 transition-all duration-200 text-sm';
       >;
         Learn More;
-        <ArrowRight className='w-4 h-4 ml-2' />;
-      </Link>;
-    </motion.div>;
+        <ArrowRight className='w-4 h-4 ml-2' />
+      </Link>
+    </motion.div>
   );
 ;
-  const serviceCategories = [;
+  const serviceCategories = [
     { id: 'microsaas', label: 'Micro SAAS', count: microSaaSServices.length, services: microSaaSServices },;
     { id: 'ai', label: 'AI Services', count: aiServices.length, services: aiServices },;
     { id: 'it', label: 'IT Services', count: itServices.length, services: itServices },;
@@ -451,73 +451,73 @@ export default function ComprehensiveServices2025() {;
   ];
 ;
   return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-      <SEO;
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
+      <SEO
         title='Comprehensive Services 2025 - Zion Tech Group';
         description='Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and IT services. Transform your business with cutting-edge technology solutions designed for modern enterprises.';
       />;
       {/* Hero Section */}
-      <section className='relative overflow-hidden py-20'>;
-        <div className='absolute inset-0'>;
-          <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>;
-          <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl'></div>;
-          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl'></div>;
-        </div>;
-        <div className='relative z-10 container mx-auto px-4'>;
-          <motion.div;
+      <section className='relative overflow-hidden py-20'>
+        <div className='absolute inset-0'>
+          <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>
+          <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl'></div>
+          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl'></div>
+        </div>
+        <div className='relative z-10 container mx-auto px-4'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center max-w-4xl mx-auto';
           >;
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>;
-              <Star className='w-4 h-4 mr-2' />;
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>
+              <Star className='w-4 h-4 mr-2' />
               Comprehensive Solutions;
-            </div>;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            </div>
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               Our Services;
-              <span className='block bg-gradient-to-r from-purple-400 via-blue-500 to-green-600 bg-clip-text text-transparent'>;
+              <span className='block bg-gradient-to-r from-purple-400 via-blue-500 to-green-600 bg-clip-text text-transparent'>
                 & Solutions;
-              </span>;
-            </h1>;
-            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>;
+              </span>
+            </h1>
+            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and IT services.;
               Transform your business with cutting-edge technology solutions designed for modern enterprises.;
-            </p>;
-            <div className='flex flex-col sm: flex-row gap-4 justify-center'>;
-              <Link;
+            </p>
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+              <Link
                 to='/contact';
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20';
               >;
                 Get Started Today;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Link>;
-              <Link;
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Link>
+              <Link
                 to='/contact';
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200';
               >;
                 Request Consultation;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* Service Categories */}
-      <section className='py-20'>;
-        <div className='container mx-auto px-4'>;
-          <motion.div;
+      <section className='py-20'>
+        <div className='container mx-auto px-4'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center mb-16';
           >;
-            <h2 className='text-4xl font-bold text-white mb-4'>Our Service Categories</h2>;
-            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>Our Service Categories</h2>
+            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Explore our comprehensive range of services across multiple technology domains and industries.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
           {/* Category Tabs */}
-          <div className='flex flex-wrap justify-center gap-4 mb-12'>;
+          <div className='flex flex-wrap justify-center gap-4 mb-12'>
             {serviceCategories.map((category) => (;
               <button;
                 key={category.id}
@@ -529,64 +529,64 @@ export default function ComprehensiveServices2025() {;
                 }`}
               >;
                 {category.label} ({category.count});
-              </button>;
+              </button>
             ))}
-          </div>;
+          </div>
           {/* Service Grid */}
-          <div className='grid lg: grid-cols-2 xl:grid-cols-3 gap-8'>;
+          <div className='grid lg: grid-cols-2 xl:grid-cols-3 gap-8'>
             {serviceCategories;
               .find(cat => cat.id === activeTab);
               ?.services.map((service, index) => renderServiceCard(service, index))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Contact Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10'>;
-        <div className='container mx-auto px-4'>;
-          <div className='max-w-4xl mx-auto text-center'>;
-            <motion.div;
+      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >;
-              <h2 className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>;
-              <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>;
+              <h2 className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>
+              <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
                 Join the future of technology with Zion Tech Group&apos;s innovative services and solutions. ';
                 Get started with a free consultation today.;
-              </p>;
-              <div className='grid md: grid-cols-3 gap-6 mb-12'>;
-                <div className='flex items-center justify-center space-x-3 text-slate-300'>;
-                  <Phone className='w-5 h-5 text-purple-400' />;
-                  <span>+1 302 464 0950</span>;
-                </div>;
-                <div className='flex items-center justify-center space-x-3 text-slate-300'>;
-                  <Mail className='w-5 h-5 text-purple-400' />;
-                  <span>kleber@ziontechgroup.com</span>;
-                </div>;
-                <div className='flex items-center justify-center space-x-3 text-slate-300'>;
-                  <MapPin className='w-5 h-5 text-purple-400' />;
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>;
-                </div>;
-              </div>;
-              <div className='flex flex-col sm: flex-row gap-4 justify-center'>;
-                <Link;
+              </p>
+              <div className='grid md: grid-cols-3 gap-6 mb-12'>
+                <div className='flex items-center justify-center space-x-3 text-slate-300'>
+                  <Phone className='w-5 h-5 text-purple-400' />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className='flex items-center justify-center space-x-3 text-slate-300'>
+                  <Mail className='w-5 h-5 text-purple-400' />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className='flex items-center justify-center space-x-3 text-slate-300'>
+                  <MapPin className='w-5 h-5 text-purple-400' />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+                <Link
                   to='/contact';
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20';
                 >;
                   Get Free Consultation;
-                  <ArrowRight className='w-5 h-5 ml-2' />;
-                </Link>;
-                <Link;
+                  <ArrowRight className='w-5 h-5 ml-2' />
+                </Link>
+                <Link
                   to='/contact';
                   className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200';
                 >;
                   View All Services;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

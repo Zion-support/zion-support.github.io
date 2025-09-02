@@ -1,4 +1,4 @@
-export interface InnovativeAIService {;
+export interface InnovativeAIService {
   id: string;
    name: string;
    tagline: string;
@@ -36,7 +36,7 @@ export interface InnovativeAIService {;
   rating: number;
   reviews: number}
 ;
-const contact = {;
+const contact = {
   mobile:,;
   +1 302 464 0950',;
   email: 'kleber@ziontechgroup.com,;

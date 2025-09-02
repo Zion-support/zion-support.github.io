@@ -33,9 +33,9 @@ import { Heart,;
  } from 'lucide-react';
 ;
 export { function };
-export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
+export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     },;
-    {;
+    {
       icon: Eye,;
       title: 'Medical Image Analysis',;
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'};
@@ -43,7 +43,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
       ],;
       popular: false};
   ]},;
-    {;
+    {
       icon: BarChart3,;
       title: '40% Cost Reduction',;
       description: 'AI optimization reduces healthcare costs and improves efficiency'};
@@ -54,7 +54,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
        />';
       {/* Hero Section */}'';
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto text-center'>;
+        <div className='max-w-7xl mx-auto text-center'>
           <motion.div;
             initial = {;
   { opacity: 0,;
@@ -76,29 +76,29 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
 '';
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
               Transform Healthcare with'';
-              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'> AI Intelligence</span>;
+              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'> AI Intelligence</span>
             </h1>';
 '';
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Our AI-powered healthcare platform delivers 95% accuracy in diagnosis support, predictive analytics,;
               and patient monitoring. Revolutionize patient care with the future of medical technology.;
             </p>';
 '';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105'>
                 Start Free Trial';
               </button>'';
-              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>;
+              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>
                 Schedule Demo;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
+              </button>
+            </div>
+          </motion.div>
+        </div>
       </section>';
       {/* Features Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {;
   { opacity: 0,;
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
@@ -118,12 +118,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
               Powered by Advanced AI';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our platform leverages cutting-edge artificial intelligence to revolutionize healthcare delivery;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index();
               <motion.div;
                 key={index}
@@ -148,7 +148,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300';
 ';
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>';
-                  <feature.icon className='w-6 h-6 text-white' />;
+                  <feature.icon className='w-6 h-6 text-white' />
                 </div>';
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
   delay: index * 0.1;
@@ -160,16 +160,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                   <feature.icon className='w-6 h-6 text-white' />';
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                <p className='text-gray-300'>{feature.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{feature.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
       </section>';
       {/* Benefits Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {;
   { opacity: 0,;
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
@@ -189,12 +189,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
               Proven Results';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Join thousands of healthcare providers already experiencing the benefits of AI-powered analytics;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown();
               <motion.div;
                 key={index}
@@ -219,7 +219,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                 className='text-center';
 ';
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4'>';
-                  <benefit.icon className='w-8 h-8 text-white' />;
+                  <benefit.icon className='w-8 h-8 text-white' />
                 </div>';
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
   delay: index * 0.1;
@@ -231,16 +231,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                   <benefit.icon className='w-8 h-8 text-white' />';
                 </div>'';
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'';
-                <p className='text-gray-300'>{benefit.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{benefit.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
       </section>';
       {/* Use Cases Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {;
   { opacity: 0,;
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
@@ -260,12 +260,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
               Comprehensive Healthcare Solutions';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our AI platform addresses the full spectrum of healthcare challenges;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown();
               <motion.div;
                 key={index}
@@ -290,7 +290,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700';
 ';
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-6'>';
-                  <useCase.icon className='w-8 h-8 text-white' />;
+                  <useCase.icon className='w-8 h-8 text-white' />
                 </div>';
                 <h3 className='text-2xl font-semibold text-white mb-4'>{useCase.title}</h3>';
   delay: index * 0.1;
@@ -302,16 +302,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                   <useCase.icon className='w-8 h-8 text-white' />';
                 </div>'';
                 <h3 className='text-2xl font-semibold text-white mb-4'>{useCase.title}</h3>'';
-                <p className='text-gray-300 text-lg'>{useCase.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300 text-lg'>{useCase.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
       </section>';
       {/* Compliance Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {;
   { opacity: 0,;
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
@@ -331,12 +331,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
               Compliance & Certifications';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Meet healthcare industry standards and regulatory requirements;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6'>;
+          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6'>
             {complianceStandards.map(standard: unknown, index: unknown();
               <motion.div;
                 key={index}
@@ -365,16 +365,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                 viewport={{ once: true }}'';
                 className='bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300'';
 '';
-                <CheckCircle className='w-8 h-8 text-green-400 mx-auto mb-3'  />'                <p className='text-white font-medium text-sm'>{standard}</p>;
-              </motion.div>;
+                <CheckCircle className='w-8 h-8 text-green-400 mx-auto mb-3'  />'                <p className='text-white font-medium text-sm'>{standard}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
       </section>';
       {/* Pricing Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>';
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial = {;
   { opacity: 0,;
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
@@ -394,12 +394,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
               Choose Your Healthcare Plan';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Flexible pricing options designed for healthcare providers of all sizes;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown();
               <motion.div;
                 key={index}
@@ -430,10 +430,10 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                 }`}';
                 {plan.popular && (';
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                    <span className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
+                    <span className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular;
-                    </span>;
-                  </div>;
+                    </span>
+                  </div>
                 )}';
 '';
                 <div className='text-center mb-8'>'';
@@ -441,35 +441,35 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
                   <p className='text-gray-300 mb-4'>{plan.description}</p>'';
                   <div className='flex items-baseline justify-center'>'';
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
-                    <span className='text-gray-300 ml-1'>{plan.period}</span>;
-                  </div>;
+                    <span className='text-gray-300 ml-1'>{plan.period}</span>
+                  </div>
                 </div>';
 '';
                 <ul className='space-y-4 mb-8'>';
                   {plan.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='flex items-start'>'';
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>;
-                    </li>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
+                    </li>
                   ))}
                 </ul>`;
 ``;
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
                   plan.popular'';
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'''`;
                     : 'bg-gray-700 text-white hover:bg-gray-600'``;
                 }`}>;
                   Get Started;
-                </button>;
-              </motion.div>;
+                </button>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
       </section>';
       {/* CTA Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>';
-        <div className='max-w-4xl mx-auto text-center'>;
-          <motion.div;
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
             initial = {;
   { opacity: 0,;
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
@@ -488,29 +488,29 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
               Ready to Transform Healthcare?';
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of healthcare providers already using our AI-powered platform;
             </p>';
 '';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105'>
                 Start Free Trial';
               </button>'';
-              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>;
+              <button className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>
                 Contact Healthcare Team;
-              </button>;
+              </button>
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
-            </div>;
+            </div>
 <:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx;
 =;
             ';
 >            </div>';
             '';
-            <p className='text-gray-400 mt-6'>;
+            <p className='text-gray-400 mt-6'>
               No credit card required • 30-day free trial • HIPAA compliant;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </p>
+          </motion.div>
+        </div>
+      </section>
     </div>''`;
   )}}}}}}''`'"`;

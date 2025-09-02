@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import CybersecurityServices from './CybersecurityServices';
-;
+
 describe('CybersecurityServices', () => {;
   it('renders without crashing', () => {;
     render(<CybersecurityServices />);

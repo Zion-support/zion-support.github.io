@@ -85,12 +85,12 @@ class SyntaxErrorFixer {;
   }
 ;
   findSyntaxErrorFiles() {;
-    const extensions = [;
+    const extensions = [
   '.ts',;
   '.tsx',;
   '.js',;
   '.jsx'];
-    const directories = [;
+    const directories = [
   'src',;
   'pages',;
   'components',;

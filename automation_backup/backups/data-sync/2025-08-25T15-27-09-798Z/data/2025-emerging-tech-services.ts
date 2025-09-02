@@ -1,6 +1,6 @@
 import { MicroSaasService } from,;
   ./enhanced-real-micro-saas-services';
-const contact = {;
+const contact = {
   mobile: '+1 302 464 0950,;
   email:,;
   kleber@ziontechgroup.com',;

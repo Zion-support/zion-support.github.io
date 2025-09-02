@@ -41,7 +41,7 @@ const CloudServices = () => {;
       icon: Globe,';
       features: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'BigQuery']};
   ]';
-  const benefits = [';'Scalable infrastructure that grows with your business',';
+  const benefits = [''Scalable infrastructure that grows with your business',';
     'Reduced capital expenditure and operational costs',';
     'Enhanced security and compliance capabilities',';
     'Faster time to market with cloud-native tools',';
@@ -62,32 +62,32 @@ const CloudServices = () => {;
               Cloud & DevOps'';
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'> Solutions</span>';
             </h1>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Accelerate your digital transformation with modern cloud infrastructure,;
               DevOps practices, and scalable solutions.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Explore Services'</a>'';
-              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>;
+              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
                 Get Started;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Cloud.tsx;
 '{/* Cloud Services */}'';
       <section id='services' className='py-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/Cloud.tsx;
               Our Cloud Services'</h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               End-to-end cloud solutions designed to modernize your infrastructure;
               and accelerate your business growth.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/Cloud.tsx;
           </div>';
 '';
@@ -102,28 +102,28 @@ const CloudServices = () => {;
 :pages.disabled/pages/services/Cloud.tsx;
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='text-sm text-gray-400 flex items-start'>'';
-                      <div className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>;
+                      <div className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Cloud.tsx;
 '{/* Cloud Platforms */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/Cloud.tsx;
               Cloud Platforms We Work With'</h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Expertise across all major cloud providers to ensure you get the best;
               solutions for your specific needs.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/Cloud.tsx;
           </div>';
 '';
@@ -136,16 +136,16 @@ const CloudServices = () => {;
                 <h3 className='text-xl font-semibold text-white mb-3'>{platform.name}</h3>'';
                 <p className='text-gray-300 mb-4'>{platform.description}</p>'';
                 <ul className='space-y-2'>'{platform.features.map((feature, idx) => ('';
-                    <li key={idx} className='text-sm text-gray-400'>;
+                    <li key={idx} className='text-sm text-gray-400'>
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Cloud.tsx;
 ';
       {/* Benefits Section */}'';
@@ -153,59 +153,59 @@ const CloudServices = () => {;
         <div className='max-w-7xl mx-auto'>'';
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>';
             <div>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Why Choose Cloud Solutions?';
               </h2>'';
-              <p className='text-lg text-gray-300 mb-6'>;
+              <p className='text-lg text-gray-300 mb-6'>
                 Cloud computing provides numerous advantages that can transform;
                 your business operations and drive innovation.';
               </p>'';
               <ul className='space-y-3'>'{benefits.map((benefit, index) => ('';
                   <li key={index} className='flex items-center text-gray-300'>'';
-                    <div className='w-2 h-2 bg-blue-400 rounded-full mr-3'></div>;
+                    <div className='w-2 h-2 bg-blue-400 rounded-full mr-3'></div>
                     {benefit}
-                  </li>;
+                  </li>
                 ))}
 :pages.disabled/pages/services/Cloud.tsx;
               </ul>'</div>'';
             <div className='bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30'>'';
               <div className='text-center'>'';
                 <Zap className='w-24 h-24 text-blue-400 mx-auto mb-4' />'';
-                <h3 className='text-2xl font-bold text-white mb-2'>Cloud Expertise</h3>'                <p className='text-gray-300 mb-6'>;
+                <h3 className='text-2xl font-bold text-white mb-2'>Cloud Expertise</h3>'                <p className='text-gray-300 mb-6'>
 :pages.disabled/pages/services/Cloud.tsx;
                   Our team has extensive experience with cloud platforms and;
                   can help you navigate the complex cloud landscape.'</p>'';
-                <div className='text-sm text-gray-400'>;
-                  <p>• Certified cloud professionals</p>;
-                  <p>• Multi-cloud expertise</p>;
-                  <p>• Industry best practices</p>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                <div className='text-sm text-gray-400'>
+                  <p>• Certified cloud professionals</p>
+                  <p>• Multi-cloud expertise</p>
+                  <p>• Industry best practices</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Cloud.tsx;
 '{/* CTA Section */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-4xl mx-auto text-center'>'';
-          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/Cloud.tsx;
             Ready to Scale Your Infrastructure?';
           </h2>'';
-          <p className='text-xl text-gray-300 mb-8'>;
+          <p className='text-xl text-gray-300 mb-8'>
             Transform your business with cloud-native solutions and modern DevOps practices.';
           </p>'';
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
               Get Started'</a>'';
-            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>;
+            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
               View All Services;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   )};
 :pages.disabled/pages/services/Cloud.tsx;
 ';

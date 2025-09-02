@@ -30,7 +30,7 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
 ;
 ;
   loadAutomationSystems() {;
-    const systems = [;
+    const systems = [
       { name: 'lint-monitor, path:,;
   lint-monitor.js', category: 'code-quality, status:,;
   available' },;
@@ -61,7 +61,7 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
       { name: 'intelligent-orchestrator, path:,;
   intelligent-orchestrator.js', category: 'orchestration, status:,;
   available' },;
-      { name: 'automation-factory, path:,;
+      { name: 'automation-factory, path:,
   automation-factory.js', category: 'factory, status:;
   'available' };
     ];
@@ -87,7 +87,7 @@ startMetricsCollection() {;startMetricsCollection() {;
     // Generate alerts every minute;
     setInterval(() => {;
       this.generateAlerts()}, 60000)};
-collectMetrics() {;collectMetrics() {;
+collectMetrics() {collectMetrics() {;
 for (const [name, system] of this.automationSystems) {;
       const metrics = {;
   timestamp: new Date().toISOString(),;
@@ -188,65 +188,65 @@ generateDashboardHTML() {;generateDashboardHTML() {;
 const systems = Array.from(this.automationSystems.values());
     const metrics = Array.from(this.metrics.values());
     const alerts = this.alerts;
-    return `<!DOCTYPE html>;
-<html lang=;
+    return `<!DOCTYPE html>
+<html lang=
   'en'>;
-<head>;
-    <meta charset=;
+<head>
+    <meta charset=
   'UTF-8'>;
-    <meta name=;
+    <meta name=
   'viewport' content=;
   'width=device-width, initial-scale=1.0'>;
-    <title>Automation Dashboard</title>;
+    <title>Automation Dashboard</title>
     <script src=;
-  'https: //cdn.tailwindcss.com'></script>;
+  'https: //cdn.tailwindcss.com'></script>
     <script src=;
-  'https://cdn.jsdelivr.net/npm/chart.js'></script>;
-</head>;
-<body class=;
+  'https://cdn.jsdelivr.net/npm/chart.js'></script>
+</head>
+<body class=
   'bg-gray-100'>;
-    <div class=;
+    <div class=
   'container mx-auto px-4 py-8'>;
         <h1 class=;
-  'text-3xl font-bold text-gray-800 mb-8'>Automation Dashboard</h1>;
+  'text-3xl font-bold text-gray-800 mb-8'>Automation Dashboard</h1>
 ;
-        <!-- System Status -->;
-        <div class=;
+        <!-- System Status -->
+        <div class=
   'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>;
             ${systems.map(system => `;
-                <div class=;
+                <div class=
   'bg-white rounded-lg shadow-md p-6'>;
-                    <div class=;
+                    <div class=
   'flex items-center justify-between mb-4'>;
                         <h3 class=;
-  'text-lg font-semibold text-gray-800>${system.name}</h3>;
-                        <span class=,;
+  'text-lg font-semibold text-gray-800>${system.name}</h3>
+                        <span class=,
   px-2 py-1 rounded-full text-xs font-medium ${;
                             system.isRunning ? 'bg-green-100 text-green-800;
   ': 'bg-gray-100 text-gray-800;
                         }'>;
-                            ${system.isRunning ?,;
+                            ${system.isRunning ?,
   Running': 'Idle};
-                        </span>;
-                    </div>;
-                    <div class=;
+                        </span>
+                    </div>
+                    <div class=
   'space-y-2 text-sm text-gray-600'>;
-                        <p>Category: ${system.category}</p>;
-                        <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>;
-                        <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p>;
+                        <p>Category: ${system.category}</p>
+                        <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>
+                        <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p>
                         <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,;
-  Never'}</p>;
-                    </div>;
+  Never'}</p>
+                    </div>
                 </div>`;).join(';
   ')};
-        </div>;
-        <!-- Alerts -->;
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8;
+        </div>
+        <!-- Alerts -->
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8
   '>;
             <h2 class='text-xl font-semibold text-gray-800 mb-4;
-  '>Alerts</h2>;
+  '>Alerts</h2>
             ${alerts.length > 0 ? alerts.map(alert => `;
-                <div class='p-3 rounded-lg mb-2 ${;
+                <div class='p-3 rounded-lg mb-2 ${
                     alert.type ===;
   'error' ?;
   'bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800;
@@ -255,46 +255,46 @@ const systems = Array.from(this.automationSystems.values());
                     <strong>${alert.system}:</strong> ${alert.message};
                     <span class=,;
   text-xs ml-2;
-  '>${new Date(alert.timestamp).toLocaleString()}</span>;
+  '>${new Date(alert.timestamp).toLocaleString()}</span>
                 </div>`;).join(''): '<p class='text-gray-500;
   '>No alerts</p>};
-        </div>;
-        <!-- Performance Chart -->;
-        <div class=,;
+        </div>
+        <!-- Performance Chart -->
+        <div class=,
   bg-white rounded-lg shadow-md p-6'>;
             <h2 class=;
-  'text-xl font-semibold text-gray-800 mb-4'>Performance Metrics</h2>;
+  'text-xl font-semibold text-gray-800 mb-4'>Performance Metrics</h2>
             <canvas id=;
   'performanceChart' width=;
   '400' height=;
-  '200'></canvas>;
-        </div>;
-        <!-- Actions -->;
-        <div class=;
+  '200'></canvas>
+        </div>
+        <!-- Actions -->
+        <div class=
   'bg-white rounded-lg shadow-md p-6 mt-8'>;
             <h2 class=;
-  'text-xl font-semibold text-gray-800 mb-4'>Actions</h2>;
-            <div class=;
+  'text-xl font-semibold text-gray-800 mb-4'>Actions</h2>
+            <div class=
   'flex flex-wrap gap-4'>;
-                <button onclick=;
+                <button onclick=
   'runAllSystems()' class=;
   'bg-blue-500 hover: bg-blue-600 text-white px-4 py-2 rounded-lg'>;
                     Run All Systems;
-                </button>;
-                <button onclick=;
+                </button>
+                <button onclick=
   'refreshDashboard()' class=;
   'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg'>;
                     Refresh Dashboard;
-                </button>;
-                <button onclick=;
+                </button>
+                <button onclick=
   'generateReport()' class=;
   'bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg'>;
                     Generate Report;
-                </button>;
-            </div>;
-        </div>;
-    </div>;
-    <script>;
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
         // Performance Chart;
         const ctx = document.getElementById(;
   'performanceChart').getContext(;
@@ -304,7 +304,7 @@ const systems = Array.from(this.automationSystems.values());
   'line',;
             data: {;
                 labels: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},;
-                datasets[{;
+                datasets[{
                     label:;
   'Success Rate',;
                     data: ${JSON.stringify(metrics.map(m => m.successRate * 100))},;
@@ -349,8 +349,8 @@ fetch(;
                     a.click()})};
 // Auto-refresh every 30 seconds;// Auto-refresh every 30 seconds;
 setInterval(refreshDashboard, 30000);
-    </script>;
-</body>;
+    </script>
+</body>
 </html>`};
 generateReport() {;generateReport() {;
 const report = {;

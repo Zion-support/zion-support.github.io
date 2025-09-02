@@ -198,7 +198,7 @@ const AdvancedServicePortfolioDashboard = () => {}
         { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length },';
         { id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length }''';
     ]';'';
-    return (<div className='max-w-7xl mx-auto p-6'>;
+    return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
   { opacity: 0,;
@@ -210,12 +210,12 @@ const AdvancedServicePortfolioDashboard = () => {}
 }} className='mb-8'>'''';
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>''';
           <div>'''';
-            <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>;
+            <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>
               Advanced Service Portfolio Dashboard''';
             </h1>'''';
-            <p className='text-zion-slate-light'>;
+            <p className='text-zion-slate-light'>
               Comprehensive insights into our cutting-edge service portfolio, performance metrics, and strategic analysis;
-            </p>;
+            </p>
           </div>''';
 ''''';
           <div className='flex gap-2'>'''''';
@@ -225,9 +225,9 @@ const AdvancedServicePortfolioDashboard = () => {}
                 {mode === 'analytics' && <PieChart className='w-4 h-4 mr-2'/>}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </Button>))}
-          </div>;
-        </div>;
-      </motion.div>;
+          </div>
+        </div>
+      </motion.div>
       {/* Portfolio Metrics */}
       <motion.div initial = {}
   { opacity: 0,;
@@ -245,20 +245,20 @@ const AdvancedServicePortfolioDashboard = () => {}
               </div>'''';
               <div className='flex items-center gap-1'>'''';
                 <ArrowUpRight className='w-4 h-4 text-green-500'/>'''';
-                <span className='text-sm font-medium text-green-600'>;
+                <span className='text-sm font-medium text-green-600'>
                   +{portfolioMetrics.portfolioGrowth}%;
-                </span>;
-              </div>;
-            </div>;
+                </span>
+              </div>
+            </div>
           </CardHeader>''';
           <CardContent>'''';
-            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>;
+            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>
               {portfolioMetrics.totalServices}''';
             </h3>'''';
-            <p className='text-sm text-zion-slate-light'>;
+            <p className='text-sm text-zion-slate-light'>
               Total Services;
-            </p>;
-          </CardContent>;
+            </p>
+          </CardContent>
         </Card>''';
 '''';
         <Card className='hover:shadow-lg transition-shadow'>'''';
@@ -269,20 +269,20 @@ const AdvancedServicePortfolioDashboard = () => {}
               </div>'''';
               <div className='flex items-center gap-1'>'''';
                 <ArrowUpRight className='w-4 h-4 text-green-500'/>'''';
-                <span className='text-sm font-medium text-green-600'>;
+                <span className='text-sm font-medium text-green-600'>
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%;
-                </span>;
-              </div>;
-            </div>;
+                </span>
+              </div>
+            </div>
           </CardHeader>''';
           <CardContent>'''';
-            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>;
+            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>
               ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M''';
             </h3>'''';
-            <p className='text-sm text-zion-slate-light'>;
+            <p className='text-sm text-zion-slate-light'>
               Total Revenue;
-            </p>;
-          </CardContent>;
+            </p>
+          </CardContent>
         </Card>''';
 '''';
         <Card className='hover:shadow-lg transition-shadow'>'''';
@@ -293,20 +293,20 @@ const AdvancedServicePortfolioDashboard = () => {}
               </div>'''';
               <div className='flex items-center gap-1'>'''';
                 <ArrowUpRight className='w-4 h-4 text-green-500'/>'''';
-                <span className='text-sm font-medium text-green-600'>;
+                <span className='text-sm font-medium text-green-600'>
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%;
-                </span>;
-              </div>;
-            </div>;
+                </span>
+              </div>
+            </div>
           </CardHeader>''';
           <CardContent>'''';
-            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>;
+            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>
               {portfolioMetrics.activeClients}''';
             </h3>'''';
-            <p className='text-sm text-zion-slate-light'>;
+            <p className='text-sm text-zion-slate-light'>
               Active Clients;
-            </p>;
-          </CardContent>;
+            </p>
+          </CardContent>
         </Card>''';
 '''';
         <Card className='hover:shadow-lg transition-shadow'>'''';
@@ -317,22 +317,22 @@ const AdvancedServicePortfolioDashboard = () => {}
               </div>'''';
               <div className='flex items-center gap-1'>'''';
                 <ArrowUpRight className='w-4 h-4 text-green-500'/>'''';
-                <span className='text-sm font-medium text-green-600'>;
+                <span className='text-sm font-medium text-green-600'>
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%;
-                </span>;
-              </div>;
-            </div>;
+                </span>
+              </div>
+            </div>
           </CardHeader>''';
           <CardContent>'''';
-            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>;
+            <h3 className='text-2xl font-bold text-zion-blue-dark mb-1'>
               {portfolioMetrics.averagePerformance}%''';
             </h3>'''';
-            <p className='text-sm text-zion-slate-light'>;
+            <p className='text-sm text-zion-slate-light'>
               Avg Performance;
-            </p>;
-          </CardContent>;
-        </Card>;
-      </motion.div>;
+            </p>
+          </CardContent>
+        </Card>
+      </motion.div>
       {/* Filters and Controls */}
       <motion.div initial = {}
   { opacity: 0,;
@@ -346,11 +346,11 @@ const AdvancedServicePortfolioDashboard = () => {}
           <div>'''';
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Category</label>'''';
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>;
-              {categories.map(category => (<option key={category.id} value={category.id}>;
+              {categories.map(category => (<option key={category.id} value={category.id}>
                   {category.name} ({category.count});
                 </option>))}
-            </select>;
-          </div>;
+            </select>
+          </div>
 ''';
           <div>'''';
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Status</label>'''';
@@ -359,9 +359,9 @@ const AdvancedServicePortfolioDashboard = () => {}
               <option value='Active'>Active</option>'''';
               <option value='Development'>Development</option>'''';
               <option value='Planning'>Planning</option>'''';
-              <option value='Discontinued'>Discontinued</option>;
-            </select>;
-          </div>;
+              <option value='Discontinued'>Discontinued</option>
+            </select>
+          </div>
 ''';
           <div>'''';
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Complexity</label>'''';
@@ -370,9 +370,9 @@ const AdvancedServicePortfolioDashboard = () => {}
               <option value='Basic'>Basic</option>'''';
               <option value='Intermediate'>Intermediate</option>'''';
               <option value='Advanced'>Advanced</option>'''';
-              <option value='Enterprise'>Enterprise</option>;
-            </select>;
-          </div>;
+              <option value='Enterprise'>Enterprise</option>
+            </select>
+          </div>
 ''';
           <div>'''';
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Search</label>'''';
@@ -386,15 +386,15 @@ const AdvancedServicePortfolioDashboard = () => {}
             setSelectedStatus('all')';
             setSelectedComplexity('all')'';';
             setSearchTerm('')}}>'''';
-              <Filter className='w-4 h-4 mr-2'/>;
+              <Filter className='w-4 h-4 mr-2'/>
               Clear Filters;
-            </Button>;
-          </div>;
-        </div>;
-      </motion.div>;
+            </Button>
+          </div>
+        </div>
+      </motion.div>
       {/* Portfolio Table */}
       <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} animate = {}
   { opacity: 1,;
@@ -405,14 +405,14 @@ const AdvancedServicePortfolioDashboard = () => {}
           <CardHeader>'''';
             <div className='flex items-center justify-between'>'''';
               <CardTitle className='flex items-center gap-2'>'''';
-                <BarChart3 className='w-5 h-5 text-zion-cyan'/>;
+                <BarChart3 className='w-5 h-5 text-zion-cyan'/>
                 Service Portfolio Overview''';
               </CardTitle>'''';
               <Button variant='outline' size='sm'>'''';
-                <Download className='w-4 h-4 mr-2'/>;
+                <Download className='w-4 h-4 mr-2'/>
                 Export Data;
-              </Button>;
-            </div>;
+              </Button>
+            </div>
           </CardHeader>''';
           <CardContent>'''';
             <div className='overflow-x-auto'>'''';
@@ -426,10 +426,10 @@ const AdvancedServicePortfolioDashboard = () => {}
                     <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>Revenue</th>'''';
                     <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>Growth</th>'''';
                     <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>Complexity</th>'''';
-                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>Demand</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
+                    <th className='text-left py-3 px-4 font-semibold text-zion-slate-dark'>Demand</th>
+                  </tr>
+                </thead>
+                <tbody>
                   {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {}
   { opacity: 0,;
   x: -20;
@@ -442,8 +442,8 @@ const AdvancedServicePortfolioDashboard = () => {}
                         <div className='font-medium text-zion-blue-dark'>{service.title}</div>'''';
                         <div className='text-sm text-zion-slate-light'>{service.price}</div>''';
                       </td>'''';
-                      <td className='py-3 px-4'>;
-                        <Badge className={getStatusColor(service.status)}>;
+                      <td className='py-3 px-4'>
+                        <Badge className={getStatusColor(service.status)}>
                           {service.status}
                         </Badge>''';
                       </td>'''';
@@ -452,7 +452,7 @@ const AdvancedServicePortfolioDashboard = () => {}
                           <div className='w-16 bg-zion-slate-light/20 rounded-full h-2'>'''';
                             <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={{ width: `${service.performance}%` }}></div>''';
                           </div>'''';
-                          <span className='text-sm font-medium'>{service.performance}%</span>;
+                          <span className='text-sm font-medium'>{service.performance}%</span>
                         </div>''';
                       </td>'''';
                       <td className='py-3 px-4'>'''';
@@ -466,29 +466,29 @@ const AdvancedServicePortfolioDashboard = () => {}
                           {service.growth > 0 ? (<ArrowUpRight className='w-4 h-4 text-green-500'/>) : (<ArrowDownRight className='w-4 h-4 text-red-500'/>)}'`'`;
                           <span className={`text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}`}>';
                             {service.growth > 0 ? '+' : ''}{service.growth}%;
-                          </span>;
+                          </span>
                         </div>''';
                       </td>'''';
-                      <td className='py-3 px-4'>;
-                        <Badge className={getComplexityColor(service.complexity)}>;
+                      <td className='py-3 px-4'>
+                        <Badge className={getComplexityColor(service.complexity)}>
                           {service.complexity}
                         </Badge>''';
                       </td>'''';
-                      <td className='py-3 px-4'>;
-                        <Badge className={getMarketDemandColor(service.marketDemand)}>;
+                      <td className='py-3 px-4'>
+                        <Badge className={getMarketDemandColor(service.marketDemand)}>
                           {service.marketDemand}
-                        </Badge>;
-                      </td>;
+                        </Badge>
+                      </td>
                     </motion.tr>) ) }
-                </tbody>;
-              </table>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </motion.div>;
+                </tbody>
+              </table>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
       {/* Portfolio Insights */}
       <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} animate = {}
   { opacity: 1,;
@@ -499,9 +499,9 @@ const AdvancedServicePortfolioDashboard = () => {}
         <Card>''';
           <CardHeader>'''';
             <CardTitle className='flex items-center gap-2'>'''';
-              <PieChart className='w-5 h-5 text-zion-purple'/>;
+              <PieChart className='w-5 h-5 text-zion-purple'/>
               Service Category Distribution;
-            </CardTitle>;
+            </CardTitle>
           </CardHeader>''';
           <CardContent>'''';
             <div className='space-y-3'>';
@@ -529,19 +529,19 @@ const AdvancedServicePortfolioDashboard = () => {}
                         index === 3 ? 'bg-orange-500' :'`'`;
                             index === 4 ? 'bg-red-500' : 'bg-gray-500'}`} style={{ width: `${(category.count / portfolioData.length) * 100}%` }}></div>''';
                     </div>'''';
-                    <span className='text-sm font-medium text-zion-slate-light'>{category.count}</span>;
-                  </div>;
+                    <span className='text-sm font-medium text-zion-slate-light'>{category.count}</span>
+                  </div>
                 </motion.div>) ) }
-            </div>;
-          </CardContent>;
-        </Card>;
+            </div>
+          </CardContent>
+        </Card>
         {/* Portfolio Insights */}
         <Card>''';
           <CardHeader>'''';
             <CardTitle className='flex items-center gap-2'>'''';
-              <Brain className='w-5 h-5 text-zion-cyan'/>;
+              <Brain className='w-5 h-5 text-zion-cyan'/>
               Portfolio Insights;
-            </CardTitle>;
+            </CardTitle>
           </CardHeader>''';
           <CardContent>'''';
             <div className='space-y-4'>'''';
@@ -549,20 +549,20 @@ const AdvancedServicePortfolioDashboard = () => {}
                 <TrendingUp className='w-5 h-5 text-zion-green mt-1'/>''';
                 <div>'''';
                   <h4 className='font-semibold text-zion-slate-dark'>High Growth Services</h4>'''';
-                  <p className='text-sm text-zion-slate-light'>;
+                  <p className='text-sm text-zion-slate-light'>
                                           {portfolioData.filter(s => s.growth > 30).length} services showing &gt;30% growth;
-                  </p>;
-                </div>;
+                  </p>
+                </div>
               </div>''';
 '''';
               <div className='flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg'>'''';
                 <Star className='w-5 h-5 text-zion-blue mt-1'/>''';
                 <div>'''';
                   <h4 className='font-semibold text-zion-slate-dark'>Top Performers</h4>'''';
-                  <p className='text-sm text-zion-slate-light'>;
+                  <p className='text-sm text-zion-slate-light'>
                                           {portfolioData.filter(s => s.performance > 90).length} services with &gt;90% performance;
-                  </p>;
-                </div>;
+                  </p>
+                </div>
               </div>''';
 '''';
               <div className='flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg'>'''';
@@ -571,13 +571,13 @@ const AdvancedServicePortfolioDashboard = () => {}
                   <h4 className='font-semibold text-zion-slate-dark'>Market Leaders</h4>'''';
                   <p className='text-sm text-zion-slate-light'>';
                     {portfolioData.filter(s => s.technologyMaturity === 'Leading').length} services in leading position;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </motion.div>;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
       {/* CTA Section */}
       <motion.div initial = {}
   { opacity: 0,;
@@ -589,7 +589,7 @@ const AdvancedServicePortfolioDashboard = () => {}
 }} transition={{ delay: 0.5 }} className='text-center'>'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
           <h3 className='text-3xl font-bold mb-4'>Ready to Expand Your Portfolio?</h3>'''';
-          <p className='text-xl mb-6 max-w-2xl mx-auto'>;
+          <p className='text-xl mb-6 max-w-2xl mx-auto'>
             Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.;
             Contact us to discuss how we can help you achieve your business goals.''';
           </p>'''';
@@ -601,7 +601,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank');
 ''';
 }>'''';
-              <Users className='w-5 h-5 mr-2'/>;
+              <Users className='w-5 h-5 mr-2'/>
               Get Portfolio Consultation''';
             </Button>'''';
             <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}
@@ -611,12 +611,12 @@ const AdvancedServicePortfolioDashboard = () => {}
   () => window.open('tel:+13024640950',_blank');
 ''';
 }>'''';
-              <Zap className='w-5 h-5 mr-2"/>;
+              <Zap className='w-5 h-5 mr-2"/>
               Call Now;
-            </Button>;
-          </div>;
-        </div>;
-      </motion.div>;
+            </Button>
+          </div>
+        </div>
+      </motion.div>
     </div>)};
 export default AdvancedServicePortfolioDashboard;
 }}}}}}

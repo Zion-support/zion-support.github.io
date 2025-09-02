@@ -167,7 +167,7 @@ class LinkChecker {;
     return links;
   }
 ;
-  isValidLink(link) {;
+  isValidLink(link) {
     // Skip internal anchors, mailto, tel, etc.;
     if (link.startsWith('#;
   ') || link.startsWith('mailto: ') || link.startsWith('tel:)) {;

@@ -15,11 +15,11 @@ export default function StatusIncidentHub(...args: any[]): any {}
 :pages.disabled/pages/services/StatusIncidentHub.tsx;
           <Server className='w-8 h-8 text-cyan-400'  /> Status & Incident Hub';
         </h1>'';
-        <p className='mt-4 text-slate-300'>;
+        <p className='mt-4 text-slate-300'>
           Public status pages, incident timelines, SLA tracking, and subscriber;
           notifications. Integrates with PagerDuty, Opsgenie, and Slack.';
         </p>'';
-        <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>;
+        <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>
           {[;
             {,;
   title: 'Multi‑service monitoring,';
@@ -45,8 +45,8 @@ export default function StatusIncidentHub(...args: any[]): any {}
               <div className='flex items-center gap-2 text-cyan-300 font-semibold'>'';
 :pages.disabled/pages/services/StatusIncidentHub.tsx;
                 <CheckCircle className='w-4 h-4'  /> {f.title}';
-              </div>'              <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>;
-            </div>;
+              </div>'              <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>
+            </div>
           ))}';
         </div>'';
         <div className='mt-8 text-sm text-slate-300'>,;
@@ -58,12 +58,12 @@ export default function StatusIncidentHub(...args: any[]): any {}
             href='https://betterstack.com/status/pricing'';
             target='_blank'';
             rel='noreferrer'';
-          >'            Better Stack Status pricing <ExternalLink className='w-3 h-3'  />;
+          >'            Better Stack Status pricing <ExternalLink className='w-3 h-3'  />
 :pages.disabled/pages/services/StatusIncidentHub.tsx;
           </a>';
         </div>'';
         <div className='mt-10 flex flex-wrap gap-3'>';
-          <Link'';
+          <Link''
             to='/contact'';
             className='rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500';
           >;
@@ -77,9 +77,9 @@ export default function StatusIncidentHub(...args: any[]): any {}
             className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2'';
           >'';
 :pages.disabled/pages/services/StatusIncidentHub.tsx;
-            <Phone className='w-4 h-4'  /> +1 302 464 0950</a>        </div>;
-      </section>;
-    </div>;
+            <Phone className='w-4 h-4'  /> +1 302 464 0950</a>        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/StatusIncidentHub.tsx;
   )}'';
   '''";

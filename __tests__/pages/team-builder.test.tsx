@@ -7,12 +7,12 @@ import { AppLayout } from '@/layout/AppLayout'; // Mocked;
 import { useAuth } from '@/hooks/useAuth'; // Mocked;
 import { supabase } from '@/integrations/supabase/client'; // Mocked for any direct calls if they existed;
 import { toast } from 'sonner';
-;
+
 // Mocks;
 jest.mock(;
   '@/layout/AppLayout', () => ({;
   AppLayout: ({ children }: { children: React.ReactNode }) => (;
-    <div data-testid='app-layout'>{children}</div>;
+    <div data-testid='app-layout'>{children}</div>
   )}));
 ;
 jest.mock(,;

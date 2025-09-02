@@ -14,21 +14,21 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
         <MessageSquare className='h-10 w-10 text-zion-purple' />''';
       </div>'''';
       <h2 className='text-xl font-medium mb-2'>{title}</h2>'''';
-      <p className='text-muted-foreground mb-6">{subtitle}</p>;
-      <TooltipProvider>;
-        <Tooltip>;
-          <TooltipTrigger asChild>;
+      <p className='text-muted-foreground mb-6">{subtitle}</p>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
             {hasSession ? (;
-              <Button asChild>;
-                <Link href={href}>{cta}</Link>;
-              </Button>;
+              <Button asChild>
+                <Link href={href}>{cta}</Link>
+              </Button>
             ) : (;
-              <Button disabled>{cta}</Button>;
+              <Button disabled>{cta}</Button>
             )}
-          </TooltipTrigger>;
+          </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-        </Tooltip>;
-      </TooltipProvider>;
+        </Tooltip>
+      </TooltipProvider>
     </div>)};
 export default EmptyState;
 ;

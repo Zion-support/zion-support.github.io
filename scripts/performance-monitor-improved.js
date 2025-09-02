@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
-;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -57,7 +57,7 @@ class ImprovedPerformanceMonitor {;
     }
   }
 ;
-  async collectSystemMetrics() {;
+  async collectSystemMetrics() {
     try {;
       console.log('💻 Collecting system metrics...');
 ;
@@ -116,7 +116,7 @@ class ImprovedPerformanceMonitor {;
     }
   }
 ;
-  async collectBuildMetrics() {;
+  async collectBuildMetrics() {
     try {;
       console.log('🏗️ Collecting build metrics...');
 ;
@@ -131,7 +131,7 @@ class ImprovedPerformanceMonitor {;
           size: buildSize,;
           lastModified: fs.statSync(buildPath).mtime;
         };
-      } else {;
+      } else {
         this.metrics.build = {;
           exists: false,;
           size: 0,;
@@ -164,7 +164,7 @@ class ImprovedPerformanceMonitor {;
           totalSize += stats.size;
         }
       }
-    } catch (error) {;
+    } catch (error) {
       console.error('Error calculating directory size:', error.message);
     }
 ;

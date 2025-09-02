@@ -8,7 +8,7 @@ const ServiceCategory = ({ category, services }) => {}
     const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
     if(categoryServices.length === 0);
         return null;
-    const getCategoryIcon = (categoryName) => {;
+    const getCategoryIcon = (categoryName) => {
         const iconMap = {;
   'AI & Machine Learning': <Brain className='w-6 h-6'/>,;
             'Cybersecurity & Compliance': <Shield className='w-6 h-6'/>,;

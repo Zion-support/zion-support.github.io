@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from;
   'next';
 ;
-interface WebVitalsData {;
+interface WebVitalsData {
   name: string;
    value: number;
    id: string;

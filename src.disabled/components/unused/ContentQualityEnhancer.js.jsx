@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from;
   'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from;
   '@heroicons/react/24/outline'; export const ContentQualityEnhancer = ({ className = ';
-  ', showAnalysis = true, autoAnalyze = true, targetElements = ['p;
+  ', showAnalysis = true, autoAnalyze = true, targetElements = ['p
   ', 'h1;
   ', 'h2;
   ', 'h3;

@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface EnterpriseBlockchainService {;
+export interface EnterpriseBlockchainService {
   id: string;
    name: string;
    tagline: string;

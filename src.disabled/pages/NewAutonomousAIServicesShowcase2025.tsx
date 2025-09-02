@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-;
+
 const NewAutonomousAIServicesShowcase2025: React.FC = () => {;
   const services = [;
     {;
@@ -88,134 +88,134 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {;
 ;
   return (;
     <>;
-      <Helmet>;
-        <title>New Autonomous AI Services 2025 | Zion Tech Group</title>;
-        <meta name='description' content='Discover five cutting-edge autonomous AI services that revolutionize business operations: Content Marketing, Customer Success, DevOps, Sales, and HR platforms with intelligent automation and predictive analytics.' />;
-        <meta name='keywords' content='autonomous AI services, AI automation, business AI platforms, AI content marketing, AI customer success, AI DevOps, AI sales, AI HR' />;
-        <link rel='canonical' href='https://ziontechgroup.com/new-autonomous-ai-services-2025' />;
-      </Helmet>;
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
+      <Helmet>
+        <title>New Autonomous AI Services 2025 | Zion Tech Group</title>
+        <meta name='description' content='Discover five cutting-edge autonomous AI services that revolutionize business operations: Content Marketing, Customer Success, DevOps, Sales, and HR platforms with intelligent automation and predictive analytics.' />
+        <meta name='keywords' content='autonomous AI services, AI automation, business AI platforms, AI content marketing, AI customer success, AI DevOps, AI sales, AI HR' />
+        <link rel='canonical' href='https://ziontechgroup.com/new-autonomous-ai-services-2025' />
+      </Helmet>
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
         {/* Hero Section */}
-        <motion.section;
+        <motion.section
           className='relative py-20 px-4';
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >;
-          <div className='max-w-7xl mx-auto text-center'>;
-            <motion.div;
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
               className='mb-8';
             >;
-              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6'>;
-                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 10V3L4 14h7v7l9-11h-7z' />;
-                </svg>;
-              </div>;
-              <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6'>
+                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 10V3L4 14h7v7l9-11h-7z' />
+                </svg>
+              </div>
+              <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 New Autonomous AI Services 2025;
-              </h1>;
-              <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;
+              </h1>
+              <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
                 Five cutting-edge autonomous AI services that revolutionize business operations with intelligent automation, predictive analytics, and self-managing capabilities across Content Marketing, Customer Success, DevOps, Sales, and HR.;
-              </p>;
-            </motion.div>;
-            <motion.div;
+              </p>
+            </motion.div>
+            <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
               className='flex flex-col sm:flex-row gap-4 justify-center';
             >;
-              <a;
+              <a
                 href='tel:+13024640950';
                 className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300';
               >;
                 Call Now: +1 302 464 0950;
-              </a>;
-              <a;
+              </a>
+              <a
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300';
               >;
                 Email Us;
-              </a>;
-            </motion.div>;
-          </div>;
-        </motion.section>;
+              </a>
+            </motion.div>
+          </div>
+        </motion.section>
         {/* Services Grid */}
-        <motion.section;
+        <motion.section
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Autonomous AI Services</h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+          <div className='max-w-7xl mx-auto'>
+            <div className='text-center mb-16'>
+              <h2 className='text-4xl font-bold text-white mb-6'>Autonomous AI Services</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Revolutionary AI-powered platforms that autonomously manage and optimize your business operations;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+              </p>
+            </div>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {services.map((service, index) => (;
-                <motion.div;
+                <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300';
                 >;
-                  <div className='flex items-start mb-6'>;
-                    <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-full mr-6 flex-shrink-0`}>;
-                      <span className='text-2xl'>{service.icon}</span>;
-                    </div>;
-                    <div className='flex-1'>;
-                      <h3 className='text-2xl font-bold text-white mb-3'>{service.title}</h3>;
-                      <p className='text-gray-300 mb-4'>{service.description}</p>;
-                      <div className='text-lg font-semibold text-green-400 mb-4'>{service.pricing}</div>;
-                    </div>;
-                  </div>;
-                  <div className='mb-6'>;
-                    <h4 className='text-lg font-semibold text-white mb-3'>Key Features:</h4>;
-                    <ul className='space-y-2'>;
+                  <div className='flex items-start mb-6'>
+                    <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-full mr-6 flex-shrink-0`}>
+                      <span className='text-2xl'>{service.icon}</span>
+                    </div>
+                    <div className='flex-1'>
+                      <h3 className='text-2xl font-bold text-white mb-3'>{service.title}</h3>
+                      <p className='text-gray-300 mb-4'>{service.description}</p>
+                      <div className='text-lg font-semibold text-green-400 mb-4'>{service.pricing}</div>
+                    </div>
+                  </div>
+                  <div className='mb-6'>
+                    <h4 className='text-lg font-semibold text-white mb-3'>Key Features:</h4>
+                    <ul className='space-y-2'>
                       {service.features.map((feature, featureIndex) => (;
-                        <li key={featureIndex} className='flex items-center text-gray-300'>;
-                          <svg className='w-4 h-4 text-green-500 mr-3 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'>;
-                            <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />;
-                          </svg>;
+                        <li key={featureIndex} className='flex items-center text-gray-300'>
+                          <svg className='w-4 h-4 text-green-500 mr-3 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'>
+                            <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
+                          </svg>
                           {feature}
-                        </li>;
+                        </li>
                       ))}
-                    </ul>;
-                  </div>;
-                  <a;
+                    </ul>
+                  </div>
+                  <a
                     href={service.link}
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r ${service.color} text-white hover:opacity-90`}
                   >;
                     Learn More;
-                  </a>;
-                </motion.div>;
+                  </a>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </motion.section>;
+            </div>
+          </div>
+        </motion.section>
         {/* Benefits Section */}
-        <motion.section;
+        <motion.section
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Zion Tech Group?</h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+          <div className='max-w-7xl mx-auto'>
+            <div className='text-center mb-16'>
+              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Zion Tech Group?</h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Transform your business with our cutting-edge autonomous AI services;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {[;
                 {;
                   icon: '🚀',;
@@ -248,57 +248,57 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {;
                   description: 'Round-the-clock AI-powered support with human experts available for complex issues and strategic guidance.';
                 }
               ].map((benefit, index) => (;
-                <motion.div;
+                <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20';
                 >;
-                  <div className='text-4xl mb-4'>{benefit.icon}</div>;
-                  <h3 className='text-xl font-semibold text-white mb-3'>{benefit.title}</h3>;
-                  <p className='text-gray-300'>{benefit.description}</p>;
-                </motion.div>;
+                  <div className='text-4xl mb-4'>{benefit.icon}</div>
+                  <h3 className='text-xl font-semibold text-white mb-3'>{benefit.title}</h3>
+                  <p className='text-gray-300'>{benefit.description}</p>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </motion.section>;
+            </div>
+          </div>
+        </motion.section>
         {/* CTA Section */}
-        <motion.section;
+        <motion.section
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >;
-          <div className='max-w-4xl mx-auto text-center'>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
+          <div className='max-w-4xl mx-auto text-center'>
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business with AI?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>;
+            </h2>
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of businesses already using our autonomous AI services to revolutionize their operations and achieve unprecedented growth.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a;
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
                 href='tel:+13024640950';
                 className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300';
               >;
                 Call +1 302 464 0950;
-              </a>;
-              <a;
+              </a>
+              <a
                 href='mailto:kleber@ziontechgroup.com';
                 className='border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300';
               >;
                 Email kleber@ziontechgroup.com;
-              </a>;
-            </div>;
-            <div className='mt-8 text-gray-400'>;
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
-            </div>;
-          </div>;
-        </motion.section>;
-      </div>;
-    </>;
+              </a>
+            </div>
+            <div className='mt-8 text-gray-400'>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
+          </div>
+        </motion.section>
+      </div>
+    </>
   );
 };
 ;

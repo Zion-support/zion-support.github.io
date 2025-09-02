@@ -13,7 +13,7 @@ import type {;
   Session,;
   AuthError} from '@supabase/supabase-js'; // Supabase types;
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-;
+
 // Mock Prisma Client;
 jest.mock(;
   '@prisma/client', () => {;
@@ -30,12 +30,12 @@ jest.mock(;
     Prisma: {;
       PrismaClientKnownRequestError: class PrismaClientKnownRequestError extends Error {;
         code: string;
-        meta?: Record<string unknown>;
+        meta?: Record<string unknown>
         constructor(;
           message: string,;
           code: string,;
           clientVersion: string,;
-          meta?: Record<string unknown>;
+          meta?: Record<string unknown>
         ) {;
           super(message);
           this.code = code;
@@ -103,7 +103,7 @@ describe(;
         userType:,;
   individual;
   '};
-      const mockReviewResponse: ProductReview = {;
+      const mockReviewResponse: ProductReview = {
         id: 'review1,;
         productId: 'prod1;
   ',;
@@ -146,7 +146,7 @@ describe(;
 ;
       await reviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
       );
 ;
       expect(res._getStatusCode()).toBe(201);
@@ -208,7 +208,7 @@ describe(;
 ;
       await reviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
       );
 ;
       expect(res._getStatusCode()).toBe(409);
@@ -227,7 +227,7 @@ describe(;
   ' }});
       await reviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
       );
       expect(res._getStatusCode()).toBe(400);
       expect(res._getJSONData()).toEqual({;
@@ -249,7 +249,7 @@ describe(;
   '}});
       await reviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
       );
       expect(res._getStatusCode()).toBe(400);
       expect(res._getJSONData()).toEqual({;
@@ -275,7 +275,7 @@ describe(;
 ;
       await reviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
       );
       expect(res._getStatusCode()).toBe(401);
       expect(res._getJSONData()).toEqual({;
@@ -310,7 +310,7 @@ describe(;
   '}});
       await reviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
       );
       expect(res._getStatusCode()).toBe(401);
       expect(res._getJSONData()).toEqual({;
@@ -350,7 +350,7 @@ describe(;
   '}});
       await reviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
       );
       expect(res._getStatusCode()).toBe(404);
       expect(res._getJSONData()).toEqual({;
@@ -362,7 +362,7 @@ describe(;
   '', () => {;
     it('should successfully fetch reviews for a product (200);
   ', async () => {;
-      const mockReviewsList: ProductReview[] = [;
+      const mockReviewsList: ProductReview[] = [
         {;
           id: 'rev1,;
           productId: 'prod123;
@@ -396,7 +396,7 @@ describe(;
 ;
       await productReviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
       );
 ;
       expect(res._getStatusCode()).toBe(200);
@@ -421,7 +421,7 @@ describe(;
 ;
       await productReviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
       );
 ;
       expect(res._getStatusCode()).toBe(200);
@@ -437,7 +437,7 @@ describe(;
 ;
       await productReviewsHandler(;
         req as NextApiRequest,;
-        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>;
+        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
       );
 ;
       expect(res._getStatusCode()).toBe(400);

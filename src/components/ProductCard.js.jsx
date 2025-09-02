@@ -41,12 +41,12 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
         className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center'''';
         data-testid='product-card-error'''';
       >'''';
-        <p className='text-destructive text-sm'>;
+        <p className='text-destructive text-sm'>
           Product information unavailable.;
         </p>''';
         {/* Optionally, provide more details if product ID is known */}'''';
         {/* {product && product.id && <p className='text-xs text-muted-foreground'>ID: {product.id}</p>} */}
-      </div>;
+      </div>
     );
   }
   const active = isWishlisted(product.id);
@@ -81,13 +81,13 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
         onClick={() => toggle(product.id)}';
         aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
       >''';
-        <Heart''''';
+        <Heart'''''
           aria-hidden='true''';
           className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}
         />;
       </button>''';
 '''';
-      <div className='w-full h-40 relative mb-2'>;
+      <div className='w-full h-40 relative mb-2'>
         {imageUrl && !imageError ? (;
           <Image;
             src={imageUrl}
@@ -100,32 +100,32 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
           />''';
         ) : ('''';
           <div className='w-full h-full bg-gray-200 flex items-center justify-center'>'''';
-            <span className='text-gray-500'>No Image</span>;
-          </div>;
+            <span className='text-gray-500'>No Image</span>
+          </div>
         )}''';
         {active && ('''';
           <div className='absolute top-2 left-2 p-1 rounded-full bg-background/70'>'''';
-            <Heart aria-hidden='true' className='text-red-500 fill-red-500' />;
-          </div>;
+            <Heart aria-hidden='true' className='text-red-500 fill-red-500' />
+          </div>
         )}
       </div>''';
       <Link href={`/marketplace/listing/${product.id}`}>'''';
-        <h3 className='font-semibold mb-1'>{productTitle}</h3>;
+        <h3 className='font-semibold mb-1'>{productTitle}</h3>
       </Link>''';
       {product.price != null && ('''';
-        <p className='text-sm text-muted-foreground'>;
+        <p className='text-sm text-muted-foreground'>
           {product.currency}
           {product.price}
         </p>''';
       )}'''';
       <div className='mt-2 flex gap-2'>'''';
-        <Button size='sm' className='flex-1' onClick={addToCart}>;
+        <Button size='sm' className='flex-1' onClick={addToCart}>
           Add to Cart;
-        </Button>;
+        </Button>
         {onBuy && (;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger asChild>;
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
                 <Button;
                   onClick={e => {}
                     e.stopPropagation();
@@ -138,15 +138,15 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
                   disabled={!isAuthenticated || buyDisabled}
                 >;
                   Buy Now;
-                </Button>;
-              </TooltipTrigger>;
+                </Button>
+              </TooltipTrigger>
               {!isAuthenticated && (;
-                <TooltipContent>Login required</TooltipContent>;
+                <TooltipContent>Login required</TooltipContent>
               )}
-            </Tooltip>;
-          </TooltipProvider>;
+            </Tooltip>
+          </TooltipProvider>
         )}
-      </div>;
+      </div>
     </div>)}
 ;
 export { ProductCard };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import EnhancedServicesShowcase2026 from './EnhancedServicesShowcase2026';
-;
+
 describe('EnhancedServicesShowcase2026', () => {;
   it('renders without crashing', () => {;
     render(<EnhancedServicesShowcase2026 />);

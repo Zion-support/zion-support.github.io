@@ -1,4 +1,4 @@
-export type EnhancedInnovativeService = {; id: string; title: string; description: string; category:,;
+export type EnhancedInnovativeService = { id: string; title: string; description: string; category:,;
   Micro SaaS' |;
   'IT Services' |;
   'AI Solutions' |;

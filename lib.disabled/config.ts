@@ -129,11 +129,11 @@ const RuntimeConfigSchema = z.object({;
 });
 ;
 // Configuration class;
-class Configuration {;
+class Configuration {
   private static instance: Configuration;
-  private config: z.infer<typeof AppConfigSchema>;
-  private runtime: z.infer<typeof RuntimeConfigSchema>;
-  private features: z.infer<typeof FeatureFlagsSchema>;
+  private config: z.infer<typeof AppConfigSchema>
+  private runtime: z.infer<typeof RuntimeConfigSchema>
+  private features: z.infer<typeof FeatureFlagsSchema>
 ;
   private constructor() {;
     this.validateEnvironment();
@@ -189,7 +189,7 @@ class Configuration {;
     };
   }
 ;
-  private buildRuntimeConfig(): z.infer<typeof RuntimeConfigSchema> {;
+  private buildRuntimeConfig(): z.infer<typeof RuntimeConfigSchema> {
     const isClient = typeof window !==,;
   undefined';
     const isServer = !isClient;
@@ -229,7 +229,7 @@ class Configuration {;
 ;
   // Feature flag checks;
   public isFeatureEnabled(;
-    feature: keyof z.infer<typeof FeatureFlagsSchema>;
+    feature: keyof z.infer<typeof FeatureFlagsSchema>
   ): boolean {;
     return this.features[feature];
   }
@@ -287,10 +287,10 @@ class Configuration {;
 export const config = Configuration.getInstance();
 ;
 // Export types;
-export type AppConfig = z.infer<typeof AppConfigSchema>;
-export type RuntimeConfig = z.infer<typeof RuntimeConfigSchema>;
-export type FeatureFlags = z.infer<typeof FeatureFlagsSchema>;
-export type Environment = z.infer<typeof EnvironmentSchema>;
+export type AppConfig = z.infer<typeof AppConfigSchema>
+export type RuntimeConfig = z.infer<typeof RuntimeConfigSchema>
+export type FeatureFlags = z.infer<typeof FeatureFlagsSchema>
+export type Environment = z.infer<typeof EnvironmentSchema>
 ;
 // Export schemas;
 export {;

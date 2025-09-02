@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import InfrastructureServices from './InfrastructureServices';
-;
+
 describe('InfrastructureServices', () => {;
   it('renders without crashing', () => {;
     render(<InfrastructureServices />);

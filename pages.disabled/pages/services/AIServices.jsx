@@ -324,10 +324,10 @@ const AIServices = () => {;
             reviewCount: 223;
         }
     ]';';
-    const categories = ['All Services', 'Strategy', 'ML', 'NLP', 'Vision', 'Analytics', 'Automation', 'Ethics', 'Infrastructure', 'Integration', 'Training'];
+    const categories = ['All Services', 'Strategy', 'ML', 'NLP', 'Vision', 'Analytics', 'Automation', 'Ethics', 'Infrastructure', 'Integration', 'Training']
 :pages.disabled/pages/services/AIServices.jsx;
     return (';
-        <div className='min-h-screen bg-background'>;
+        <div className='min-h-screen bg-background'>
 <:pages.disabled/pages/services/AIServices.jsx;
             <SEO;
 =;
@@ -338,7 +338,7 @@ const AIServices = () => {;
 ';
     return ('';
         <div className='min-h-screen bg-background'>';
-            <SEO '';
+            <SEO ''
                 title='AI Services - Zion Tech Group'';
                 description='Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.'';
                 keywords='AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics'';
@@ -355,7 +355,7 @@ const AIServices = () => {;
                             {' '}Innovation;
                         </span>';
                     </h1>'';
-                    <p className='text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8'>;
+                    <p className='text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8'>
 :pages.disabled/pages/services/AIServices.jsx;
                         Harness the power of artificial intelligence to transform your business operations,;
                         enhance customer experiences, and drive innovation across all departments.;
@@ -365,15 +365,15 @@ const AIServices = () => {;
                         enhance customer experiences, and drive innovation across all departments.';
                     </p>'';
                     <div className='flex flex-wrap justify-center gap-4'>'';
-                        <button className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>;
+                        <button className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>
                             Start Your AI Journey';
                         </button>'';
-                        <button className='border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pink-400 hover:text-white transition-all duration-300'>;
+                        <button className='border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pink-400 hover:text-white transition-all duration-300'>
                             View Case Studies;
-                        </button>;
-                    </div>;
-                </div>;
-            </section>;
+                        </button>
+                    </div>
+                </div>
+            </section>
 ';
             {/* Contact Info Banner */}'';
             <div className='bg-gradient-to-r from-gray-900 to-gray-800 border-b border-pink-400/30'>'';
@@ -389,20 +389,20 @@ const AIServices = () => {;
                         </div>'';
                         <div className='flex items-center gap-3'>'';
                             <MapPin className='h-5 w-5 text-pink-400'/>'';
-                            <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span>;
-                        </div>;
-                    </div>;
-                </div>;
-            </div>;
+                            <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 ';
             {/* Services Grid */}'';
             <section className='py-20 bg-white'>'';
                 <div className='container mx-auto px-4'>'';
                     <div className='text-center mb-16'>'';
                         <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our AI Services Portfolio</h2>'';
-                        <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+                        <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
                             Comprehensive AI solutions designed to meet your business challenges and drive innovation;
-                        </p>;
+                        </p>
                     </div>';
 '';
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>';
@@ -410,39 +410,39 @@ const AIServices = () => {;
                             <div key={service.id} className='group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-pink-300'>'';
                                 <div className='p-6'>'';
                                     <div className='flex justify-between items-start mb-4'>'';
-                                        <div className='p-3 rounded-lg bg-pink-100 group-hover:bg-pink-200 transition-colors'>;
+                                        <div className='p-3 rounded-lg bg-pink-100 group-hover:bg-pink-200 transition-colors'>
                                             {service.icon}
                                         </div>';
                                         {service.badge && ('';
-                                            <span className='px-3 py-1 text-xs font-semibold text-pink-600 bg-pink-100 rounded-full'>;
+                                            <span className='px-3 py-1 text-xs font-semibold text-pink-600 bg-pink-100 rounded-full'>
                                                 {service.badge}
-                                            </span>;
+                                            </span>
                                         )}
 :pages.disabled/pages/services/AIServices.jsx;
-                                    </div>;
-<:pages.disabled/pages/services/AIServices.jsx;
+                                    </div>
+<:pages.disabled/pages/services/AIServices.jsx
                                     <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>;
                                         {service.title}
-                                    </h3>;
-                                    <p className='text-gray-600 mb-4'>{service.description}</p>;
-                                    <div className='mb-4'>;
-                                        <p className='text-sm text-gray-500 mb-3'>{service.details}</p>;
+                                    </h3>
+                                    <p className='text-gray-600 mb-4'>{service.description}</p>
+                                    <div className='mb-4'>
+                                        <p className='text-sm text-gray-500 mb-3'>{service.details}</p>
 =;
                                     ';
-                                    <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>;
+                                    <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
                                         {service.title}
-                                    </h3>;
+                                    </h3>
                                     ';
-                                    <p className='text-gray-600 mb-4'>{service.description}</p>;
+                                    <p className='text-gray-600 mb-4'>{service.description}</p>
                                     ';
                                     <div className='mb-4'>';
                                         <p className='text-sm text-gray-500 mb-3'>{service.details}</p>';
->                                        <div className='grid grid-cols-2 gap-2 mb-4'>;
+>                                        <div className='grid grid-cols-2 gap-2 mb-4'>
                                             {service.features.slice(0, 4).map((feature, index) => (';
                                                 <div key={index} className='flex items-center text-xs text-pink-600'>';
                                     </div>';
                                     '';
-                                    <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>;
+                                    <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
                                         {service.title}
                                     </h3>';
                                     '';
@@ -453,20 +453,20 @@ const AIServices = () => {;
                                         <div className='grid grid-cols-2 gap-2 mb-4'>';
                                             {service.features.slice(0, 4).map((feature, index) => ('';
                                                 <div key={index} className='flex items-center text-xs text-pink-600'>'';
-                                                    <CheckCircle className='w-3 h-3 mr-2'/>;
+                                                    <CheckCircle className='w-3 h-3 mr-2'/>
                                                     {feature}
-                                                </div>;
+                                                </div>
                                             ))}
 :pages.disabled/pages/services/AIServices.jsx;
-                                        </div>;
-<:pages.disabled/pages/services/AIServices.jsx;
+                                        </div>
+<:pages.disabled/pages/services/AIServices.jsx
                                         <div className='mb-4'>;
-                                            <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricing:</h4>;
+                                            <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricing:</h4>
 =;
                                         ';
                                         <div className='mb-4'>';
                                             <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricing:</h4>';
->                                            <div className='space-y-1'>;
+>                                            <div className='space-y-1'>
                                                 {Object.entries(service.pricing).map(([plan, price]) => (';
                                                     <div key={plan} className='flex justify-between text-xs'>';
                                                         <span className='text-gray-600 capitalize'>{plan}:</span>';
@@ -478,45 +478,45 @@ const AIServices = () => {;
                                                 {Object.entries(service.pricing).map(([plan, price]) => ('';
                                                     <div key={plan} className='flex justify-between text-xs'>'';
                                                         <span className='text-gray-600 capitalize'>{plan}:</span>'';
-                                                        <span className='text-pink-600 font-semibold'>{String(price)}</span>;
-                                                    </div>;
+                                                        <span className='text-pink-600 font-semibold'>{String(price)}</span>
+                                                    </div>
                                                 ))}
-                                            </div>;
+                                            </div>
 :pages.disabled/pages/services/AIServices.jsx;
-                                        </div>;
+                                        </div>
 <:pages.disabled/pages/services/AIServices.jsx;
 =;
                                         ';
->                                        <div className='flex items-center justify-between text-sm text-gray-500 mb-3'>;
+>                                        <div className='flex items-center justify-between text-sm text-gray-500 mb-3'>
                                             <span>Free Trial:</span>';
-                                            <span className='text-pink-600 font-semibold'>{service.freeTrial}</span>;
-                                        </div>;
+                                            <span className='text-pink-600 font-semibold'>{service.freeTrial}</span>
+                                        </div>
 <:pages.disabled/pages/services/AIServices.jsx;
 =;
                                         ';
->                                        <div className='flex items-center justify-center gap-1 mb-4'>;
+>                                        <div className='flex items-center justify-center gap-1 mb-4'>
                                             {[...Array(5)].map((_, i) => (';
-                                                <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>;
+                                                <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>
                                             ))}';
-                                            <span className='text-sm text-gray-500 ml-2'>({service.reviewCount})</span>;
-                                        </div>;
-                                    </div>;
-<:pages.disabled/pages/services/AIServices.jsx;
+                                            <span className='text-sm text-gray-500 ml-2'>({service.reviewCount})</span>
+                                        </div>
+                                    </div>
+<:pages.disabled/pages/services/AIServices.jsx
                                     <div className='text-center mb-4'>;
-                                        <span className='text-3xl font-bold text-pink-600'>;
+                                        <span className='text-3xl font-bold text-pink-600'>
 =;
                                     ';
                                     <div className='text-center mb-4'>';
                                         <span className='text-3xl font-bold text-pink-600'>'`;
 >                                            {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
                                         </span>';
-                                        <span className='text-gray-500'>;
+                                        <span className='text-gray-500'>
                                             {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
-                                        </span>;
-                                    </div>;
-<:pages.disabled/pages/services/AIServices.jsx;
+                                        </span>
+                                    </div>
+<:pages.disabled/pages/services/AIServices.jsx
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>;
-                                        <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>;
+                                        <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>
 =;
                                     ';
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>';
@@ -525,15 +525,15 @@ const AIServices = () => {;
                                         '';
                                         <div className='flex items-center justify-between text-sm text-gray-500 mb-3'>';
                                             <span>Free Trial:</span>'';
-                                            <span className='text-pink-600 font-semibold'>{service.freeTrial}</span>;
+                                            <span className='text-pink-600 font-semibold'>{service.freeTrial}</span>
                                         </div>';
                                         '';
                                         <div className='flex items-center justify-center gap-1 mb-4'>';
                                             {[...Array(5)].map((_, i) => ('';
                                                 <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>';
                                             ))}'';
-                                            <span className='text-sm text-gray-500 ml-2'>({service.reviewCount})</span>;
-                                        </div>;
+                                            <span className='text-sm text-gray-500 ml-2'>({service.reviewCount})</span>
+                                        </div>
                                     </div>';
                                     '';
                                     <div className='text-center mb-4'>'''`;
@@ -542,29 +542,29 @@ const AIServices = () => {;
                                         </span>'';
                                         <span className='text-gray-500'>';
                                             {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
-                                        </span>;
+                                        </span>
                                     </div>';
                                     '';
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>'';
                                         <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>'';
-                                            <ExternalLink className='h-4 w-4 mr-2'/>;
+                                            <ExternalLink className='h-4 w-4 mr-2'/>
                                             Get Started;
-                                        </a>;
-                                    </button>;
-                                </div>;
-                            </div>;
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
                         ))}
-                    </div>;
-                </div>;
-            </section>;
+                    </div>
+                </div>
+            </section>
 ';
             {/* CTA Section */}'';
             <section className='py-20 bg-gradient-to-r from-pink-50 to-rose-50'>'';
                 <div className='container mx-auto px-4 text-center'>'';
-                    <h2 className='text-4xl font-bold mb-6 text-gray-900'>;
+                    <h2 className='text-4xl font-bold mb-6 text-gray-900'>
                         Ready to Transform Your Business with AI?';
                     </h2>'';
-                    <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>;
+                    <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
 :pages.disabled/pages/services/AIServices.jsx;
                         Start with a consultation and see how our AI services can streamline your operations,;
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.;
@@ -576,17 +576,17 @@ const AIServices = () => {;
                     </p>'';
                     <div className='flex flex-wrap justify-center gap-4'>'';
                         <button className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300'>'';
-                            <Rocket className='h-5 w-5 mr-2 inline'/>;
+                            <Rocket className='h-5 w-5 mr-2 inline'/>
                             Start AI Consultation';
                         </button>'';
                         <button className='border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-all duration-300'>'';
-                            <Phone className='h-5 w-5 mr-2 inline'/>;
+                            <Phone className='h-5 w-5 mr-2 inline'/>
                             Call +1 302 464 0950;
-                        </button>;
-                    </div>;
-                </div>;
-            </section>;
-        </div>;
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };
 ;

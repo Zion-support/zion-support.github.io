@@ -260,7 +260,7 @@ function findErrorPatterns(dir) {;
   ');
             lines.forEach((line, index) => {;
               // Check for common error patterns;
-              const patterns = [;
+              const patterns = [
                 'throw new Error;
   ',;
                 'throw Error;

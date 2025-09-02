@@ -9,4 +9,4 @@ import React, { Component, ErrorInfo, ReactNode } from;
   hasError: boolean;
    error?: Error;
    errorInfo?: ErrorInfo;
-} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false }; } static getDerivedStateFromError(error: Error): State { return { hasError: true, error }; } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo)';
+} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false }; } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo)';

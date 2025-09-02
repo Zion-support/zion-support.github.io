@@ -45,7 +45,7 @@ export const ContactForm: React.FC = () => {;
 import React, { useState } from 'react';
 export const ContactForm: React.FC = () => {;
 import { motion } from 'framer - motion';
-;
+
 ;
   const [formData, setFormData] = useState ({;
     firstName: '',;
@@ -64,7 +64,7 @@ import { motion } from 'framer - motion';
   > ('idle') ;
 ;
   const handleInputChange = useCallback((;
-    e: React.ChangeEvent<;
+    e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >;) => {;
     const { name, value } = e.target;

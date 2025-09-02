@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import TalentDetail from '@/pages/TalentDetail';
-;
+
 const server = setupServer(;
   rest.get(;
   '/api/talent/t-001', (_req, res, ctx) =>;
@@ -28,14 +28,14 @@ afterAll(() => server.close());
 ;
 function renderPage() {;
   return render(;
-    <QueryClientProvider client={new QueryClient()}>;
-      <MemoryRouter initialEntries={[;
+    <QueryClientProvider client={new QueryClient()}>
+      <MemoryRouter initialEntries={[
   '/talent/t-001']}>;
-        <Routes>;
+        <Routes>
           <Route path='/talent/:id' element={<TalentDetail />} />;
-        </Routes>;
-      </MemoryRouter>;
-    </QueryClientProvider>;
+        </Routes>
+      </MemoryRouter>
+    </QueryClientProvider>
   );
 }
 ;

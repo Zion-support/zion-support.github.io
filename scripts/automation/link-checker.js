@@ -116,7 +116,7 @@ async function checkLinks() {;
   '✅ No broken references found');
     // Generate report;
     // // // // // // // console.log(`📊 Report saved to ${reportPath}`);
-  } catch (error) {;
+  } catch (error) {
     // // // // // // // console.error(;
   '❌ Link check failed:,;
   , error.message);

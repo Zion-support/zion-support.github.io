@@ -12,7 +12,7 @@ const mockSignInWithPassword: Mock = vi.fn();
 ;
 vi.mock('@supabase/supabase-js, async importOriginal => {;
   // Using Record<string, unknown> for a general module structure.;
-  const actual = (await importOriginal()) as Record<string, unknown>;
+  const actual = (await importOriginal()) as Record<string, unknown>
   // _mockSignInWithPassword is assigned to the global mockSignInWithPassword later;
   // const _mockSignInWithPassword = vi.fn();
   const _mockSignUp = vi.fn();
@@ -42,7 +42,7 @@ import loginHandler from '../../pages/api/auth/login;
 // Import the mock functions from the mocked module;
 // More specific type for the imported module if its structure is known.;
 const supabaseMockModule = (await import('@supabase/supabase-js;
-  ')) as {;
+  ')) as {
   __internalMockSignInWithPassword: Mock;
 };
 // Assign the mock from the module to the global one. This was the previous behavior.;
@@ -58,7 +58,7 @@ const mockApiReq = (body: unknown, method: string = 'POST;
     body}) as NextApiRequest;
 ;
 // Helper to create mock NextApiResponse;
-const mockApiRes = () => {;
+const mockApiRes = () => {
   const res: Partial<NextApiResponse> = {;
     status: vi.fn().mockReturnThis(),;
     json: vi.fn().mockReturnThis(),;
@@ -85,7 +85,7 @@ describe('/api/auth/login API Handler;
   });
 ;
   it('should successfully log in a verified user and set authToken cookie;
-  ', async () => {;
+  ', async () => {
     const testEmail = 'verified@example.com;
   ';
     const testPassword = 'password123;
@@ -97,7 +97,7 @@ describe('/api/auth/login API Handler;
       refresh_token:,;
   mock-refresh-token;
   '};
-    const mockUserData = { id: 'user-123, email: testEmail };
+    const mockUserData = { id: 'user-123, email: testEmail }
 ;
     mockSignInWithPassword.mockResolvedValueOnce({;
       data: { session: mockSessionData, user: mockUserData },;
@@ -343,7 +343,7 @@ describe('loginUser Service;
       accessToken: 'mock-access-token,;
       refreshToken: 'mock-refresh-token;
   '};
-    global.fetch = vi.fn().mockResolvedValue({;
+    global.fetch = vi.fn().mockResolvedValue({
       ok: true,;
       status: 200,;
       json: async () => mockSuccessResponse,;
@@ -365,7 +365,7 @@ describe('loginUser Service;
   });
 ;
   it('should handle 'Email not confirmed' (403) from API;
-  ', async () => {;
+  ', async () => {
     const mockErrorResponse = {;
       error: 'Email not confirmed. Please check your inbox to verify your email.,;
       code: 'EMAIL_NOT_CONFIRMED;
@@ -387,7 +387,7 @@ describe('loginUser Service;
   });
 ;
   it('should handle 'Invalid credentials' (401) from API;
-  ', async () => {;
+  ', async () => {
     const mockErrorResponse = {;
       error: 'Invalid credentials,;
       code: 'INVALID_CREDENTIALS;
@@ -407,7 +407,7 @@ describe('loginUser Service;
   });
 ;
   it('should handle other errors (e.g., 500) from API;
-  ', async () => {;
+  ', async () => {
     const mockErrorResponse = { error: 'Server error, code: 'LOGIN_FAILED;
   ' };
     global.fetch = vi.fn().mockResolvedValue({;

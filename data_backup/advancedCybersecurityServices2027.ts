@@ -1,4 +1,4 @@
-export interface AdvancedCybersecurityService2027 {;
+export interface AdvancedCybersecurityService2027 {
   id: string;
    title: string;
    description: string;
@@ -24,7 +24,7 @@ export interface AdvancedCybersecurityService2027 {;
   innovationLevel: string;
   marketSize: string;
   competitors: string[];
-  securityFeatures: {;
+  securityFeatures: {
     threatDetection: string;
     encryption: string;
     compliance: string[];
@@ -452,7 +452,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     },;
     roi: '400-800%',;
     estimatedDelivery: '16-20 weeks',;
-    contactInfo: {;
+    contactInfo: {
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;

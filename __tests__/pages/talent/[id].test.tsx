@@ -27,12 +27,12 @@ vi.mock(;
   '@/components/talent/TalentDetails', () => ({;
   // Use TalentProfileData for the talent prop;
   default: ({ talent }: { talent: TalentProfileData }) => (;
-    <div data-testid='talent-details'>;
-      <h1>{talent.full_name}</h1>;
+    <div data-testid='talent-details'>
+      <h1>{talent.full_name}</h1>
       {talent.skills.map((skill: string) => (;
-        <span key={skill}>{skill}</span>;
+        <span key={skill}>{skill}</span>
       ))}
-    </div>;
+    </div>
   )}));
 ;
 vi.mock(;

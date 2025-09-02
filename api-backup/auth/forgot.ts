@@ -20,7 +20,7 @@ const sendPasswordResetEmail = async (;
   to: string,;
   token: string,;
   userId: string;
-) => {;
+) => {
   if (!process.env.SENDGRID_API_KEY) {;
     console.error(;
   'SendGrid API Key not configured. Cannot send email.');
@@ -39,19 +39,19 @@ const sendPasswordResetEmail = async (;
     subject:;
   'Your Password Reset Link',;
     html: `;
-      <p>You requested a password reset.</p>;
-      <p>Click this <a href='${resetUrl}'>link</a> to reset your password: ${resetUrl}</p>;
-      <p>This link will expire in 1 hour.</p>;
+      <p>You requested a password reset.</p>
+      <p>Click this <a href='${resetUrl}'>link</a> to reset your password: ${resetUrl}</p>
+      <p>This link will expire in 1 hour.</p>
       <p>If you didn;
-  't request this, please ignore this email.</p>;
+  't request this, please ignore this email.</p>
     `  };
 ;
-  try {;
+  try {
     await sgMail.send(msg);
     return {;
       success: true,;
       message: 'Password reset email sent successfully.'};
-  } catch (error) {;
+  } catch (error) {
     console.error(,;
   Error sending password reset email: , error);
     return { success: false, message: 'Failed to send password reset email.' };

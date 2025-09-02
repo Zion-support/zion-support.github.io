@@ -1,4 +1,4 @@
-export interface EnterpriseITInfrastructureService {;
+export interface EnterpriseITInfrastructureService {
   id: string;
    name: string;
    tagline: string;
@@ -39,7 +39,7 @@ export interface EnterpriseITInfrastructureService {;
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string}
-const contact = {;
+const contact = {
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;

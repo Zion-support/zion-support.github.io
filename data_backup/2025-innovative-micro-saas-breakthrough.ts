@@ -22,7 +22,7 @@ starter: {;
         price: 99,;
         period:,;
   month',;
-        features: [;
+        features: [
   '20 articles/month,;
   'Basic AI templates',;
   'SEO suggestions',;
@@ -32,7 +32,7 @@ starter: {;
         price: 299,;
         period:,;
   month',;
-        features: [;
+        features: [
   '100 articles/month,;
   'Advanced AI models',;
   'Full SEO suite',;
@@ -84,7 +84,7 @@ starter: {;
   'Mailchimp',;
   'Google Analytics',;
   'SEMrush'],;
-    compliance[;
+    compliance[
   'GDPR',;
   'CCPA',;
   'SOC2',;
@@ -112,7 +112,7 @@ starter: {;
         price: 149,;
         period:,;
   month',;
-        features: [Up to 5,000 contacts',;
+        features: [Up to 5,000 contacts',
   'Basic automation',;
   'Email campaigns',;
   'Standard support'];
@@ -121,7 +121,7 @@ starter: {;
         price: 399,;
         period:,;
   month',;
-        features: [Up to 50,000 contacts',;
+        features: [Up to 50,000 contacts',
   'Advanced analytics',;
   'Sales forecasting',;
   'Custom workflows',;
@@ -172,7 +172,7 @@ starter: {;
   'Zapier',;
   'Slack',;
   'Microsoft Teams'],;
-    compliance[;
+    compliance[
   'GDPR',;
   'CCPA',;
   'SOC2',;
@@ -201,7 +201,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic decision engine,;
   'Up to 1000 decisions/month',;
   'Standard analytics',;
@@ -211,7 +211,7 @@ starter: {;
         price: 1999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced decision engine,;
   'Unlimited decisions',;
   'Custom models',;
@@ -262,7 +262,7 @@ starter: {;
   'Analytics tools',;
   'Business intelligence tools',;
   'API gateways'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'Industry-specific regulations',;
@@ -290,7 +290,7 @@ starter: {;
         price: 299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic contract analysis,;
   'Up to 50 contracts/month',;
   'Standard templates',;
@@ -300,7 +300,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced contract analysis,;
   'Unlimited contracts',;
   'Custom templates',;
@@ -351,7 +351,7 @@ starter: {;
   'E-signature tools',;
   'Legal research databases',;
   'Enterprise systems'],;
-    compliance[;
+    compliance[
   'Legal industry standards',;
   'Data privacy regulations',;
   'SOC2',;
@@ -380,7 +380,7 @@ starter: {;
         price: 599,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic diagnostics,;
   'Up to 100 patients/month',;
   'Standard models',;
@@ -390,7 +390,7 @@ starter: {;
         price: 1499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced diagnostics,;
   'Unlimited patients',;
   'Custom models',;
@@ -442,7 +442,7 @@ integrations: [;
   'Laboratory systems',;
   'Patient monitoring devices',;
   'Healthcare platforms'],;
-    compliance: [;
+    compliance: [
   'HIPAA,;
   'FDA regulations',;
   'Medical device standards',;

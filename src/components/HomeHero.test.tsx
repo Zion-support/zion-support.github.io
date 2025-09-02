@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import HomeHero from './HomeHero';
-;
+
 describe('HomeHero', () => {;
   it('renders without crashing', () => {;
     render(<HomeHero />);

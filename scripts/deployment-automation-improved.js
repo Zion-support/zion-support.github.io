@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
-;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -34,7 +34,7 @@ class ImprovedDeploymentAutomation {;
       console.log('🎯 Starting deployment automation pipeline...');
 ;
       // Define deployment steps;
-      const deploymentSteps = [;
+      const deploymentSteps = [
         {;
           name: 'Pre-deployment Checks',;
           command: 'npm run type-check',;
@@ -106,7 +106,7 @@ class ImprovedDeploymentAutomation {;
     console.log(`\n🔄 Executing: ${step.name}`);
     console.log(`📝 Description: ${step.description}`);
 ;
-    try {;
+    try {
       const result = await this.runCommand(step.command);
       const duration = Date.now() - startTime;
 ;
@@ -127,7 +127,7 @@ class ImprovedDeploymentAutomation {;
 ;
       console.log(`✅ ${step.name} completed successfully (${duration}ms)`);
 ;
-    } catch (error) {;
+    } catch (error) {
       const duration = Date.now() - startTime;
 ;
       const stepResult = {;

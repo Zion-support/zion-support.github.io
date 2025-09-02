@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'';
 import { motion, AnimatePresence } from 'framer-motion'';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
-;
+
 export const EnterpriseDashboard = () => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;
@@ -279,26 +279,26 @@ export const EnterpriseDashboard = () => {;
             <Activity className='w-8 h-8'/>''';
             Enterprise Dashboard'''';
             <div className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>'''';
-              <Server className='w-4 h-4'/>;
+              <Server className='w-4 h-4'/>
               Production;
-            </div>;
+            </div>
           </h2>''';
 '''';
           <div className='flex items-center gap-3'>'''';
             <select value={refreshInterval / 1000} onChange={(e) => setRefreshInterval(Number(e.target.value) * 1000)} className='px-3 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm transition-colors'>;
-              <option value={15}>15s</option>;
-              <option value={30}>30s</option>;
-              <option value={60}>1m</option>;
-              <option value={300}>5m</option>;
+              <option value={15}>15s</option>
+              <option value={30}>30s</option>
+              <option value={60}>1m</option>
+              <option value={300}>5m</option>
             </select>''';
 '''';
             <button onClick={refreshData} disabled={isRefreshing} className='px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50'>'''';
               {isRefreshing ? (<Loader2 className='w-4 h-4 animate-spin'/>) : (<RefreshCw className='w-4 h-4'/>)}
               Refresh;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
+            </button>
+          </div>
+        </div>
+      </div>
 ''';
       {/* Navigation Tabs */}'''';
       <div className='border-b border-gray-200 dark:border-gray-700'>'''';
@@ -313,11 +313,11 @@ export const EnterpriseDashboard = () => {;
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400''`''`;
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>'''';
-              <Icon className='w-4 h-4'/>;
+              <Icon className='w-4 h-4'/>
               {label}
             </button>) ) }
-        </nav>;
-      </div>;
+        </nav>
+      </div>
 ''';
       {/* Main Content */}'''';
       <div className='p-6'>''''';
@@ -334,7 +334,7 @@ export const EnterpriseDashboard = () => {;
 '''';
 }} className='space-y-6'>''';
               {/* System Metrics Overview */}'''';
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {systemMetrics.map((metric) => (<motion.div key={metric.id} initial = {}
   { opacity: 0,;
   scale: 0.9;
@@ -344,15 +344,15 @@ export const EnterpriseDashboard = () => {;
 '''';
 }} className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-center justify-between mb-4'>'''';
-                      <h3 className='font-medium text-gray-900 dark:text-white'>;
+                      <h3 className='font-medium text-gray-900 dark:text-white'>
                         {metric.name}`;
                       </h3>``;
-                      <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>;
+                      <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
                         {metric.status}
-                      </span>;
+                      </span>
                     </div>''';
 '''';
-                    <div className='text-3xl font-bold text-gray-900 dark:text-white mb-2'>;
+                    <div className='text-3xl font-bold text-gray-900 dark:text-white mb-2'>
                       {metric.value}{metric.unit}
                     </div>''';
 '''`;
@@ -364,16 +364,16 @@ export const EnterpriseDashboard = () => {;
                         <Clock3 className='w-4 h-4'/>}';
                         {metric.change > 0 ? '+' : ''}{metric.change}%''';
                       </span>'''';
-                      <span className='text-gray-500'>;
+                      <span className='text-gray-500'>
                         {metric.lastUpdated.toLocaleTimeString()}
-                      </span>;
-                    </div>;
+                      </span>
+                    </div>
                   </motion.div>) ) }
-              </div>;
+              </div>
 ''';
               {/* Service Status Overview */}'''';
               <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
-                <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>;
+                <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>
                   Service Status''';
                 </h3>'''';
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>'''`;
@@ -383,29 +383,29 @@ export const EnterpriseDashboard = () => {;
                         service.status === 'offline' ? 'bg-red-500' :'`''`;
                             'bg-blue-500'}`}></div>'''';
                       <div className='flex-1'>'''';
-                        <div className='font-medium text-gray-900 dark:text-white'>;
+                        <div className='font-medium text-gray-900 dark:text-white'>
                           {service.name}''';
                         </div>'''';
-                        <div className='text-sm text-gray-600 dark:text-gray-400'>;
+                        <div className='text-sm text-gray-600 dark:text-gray-400'>
                           {service.uptime}% uptime;
                         </div>''';
                       </div>'''';
                       <div className='text-right'>'''';
-                        <div className='text-sm font-medium text-gray-900 dark:text-white'>;
+                        <div className='text-sm font-medium text-gray-900 dark:text-white'>
                           {service.responseTime}ms''';
                         </div>'''';
-                        <div className='text-xs text-gray-500'>;
+                        <div className='text-xs text-gray-500'>
                           {service.errorRate}% errors;
-                        </div>;
-                      </div>;
+                        </div>
+                      </div>
                     </div>) ) }
-                </div>;
-              </div>;
+                </div>
+              </div>
 ''';
               {/* Recent Security Alerts */}'''';
               <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                 <div className='flex items-center justify-between mb-4'>'''';
-                  <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>;
+                  <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
                     Recent Security Alerts''';
                   </h3>'''';
                   <span className='text-sm text-gray-600 dark:text-gray-400'>';
@@ -420,27 +420,27 @@ export const EnterpriseDashboard = () => {;
                             'bg-blue-500'}`}></div>'''';
                       <div className='flex-1'>'''';
                         <div className='flex items-center gap-2 mb-1'>'''';
-                          <span className='font-medium text-gray-900 dark:text-white'>;
+                          <span className='font-medium text-gray-900 dark:text-white'>
                             {alert.title}`;
                           </span>``;
-                          <span className={`px-2 py-1 text-xs rounded-full ${getSeverityColor(alert.severity)}`}>;
+                          <span className={`px-2 py-1 text-xs rounded-full ${getSeverityColor(alert.severity)}`}>
                             {alert.severity}
                           </span>''';
                         </div>'''';
-                        <div className='text-sm text-gray-600 dark:text-gray-400 mb-2'>;
+                        <div className='text-sm text-gray-600 dark:text-gray-400 mb-2'>
                           {alert.description}''';
                         </div>'''';
-                        <div className='flex items-center gap-4 text-xs text-gray-500'>;
+                        <div className='flex items-center gap-4 text-xs text-gray-500'>
                           <span>{alert.timestamp.toLocaleTimeString()}</span>`;
                           <span>{alert.source}</span>``;
-                          <span className={`px-2 py-1 rounded ${getStatusColor(alert.status)}`}>;
+                          <span className={`px-2 py-1 rounded ${getStatusColor(alert.status)}`}>
                             {alert.status}
-                          </span>;
-                        </div>;
-                      </div>;
+                          </span>
+                        </div>
+                      </div>
                     </div>) ) }
-                </div>;
-              </div>;
+                </div>
+              </div>
             </motion.div>)}'''';
 '''''';
           {activeTab === 'performance' && (<motion.div key='performance' initial = {}
@@ -456,13 +456,13 @@ export const EnterpriseDashboard = () => {;
 }} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <TrendingUp className='w-16 h-16 text-blue-500 mx-auto mb-4'/>'''';
-                <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
+                <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
                   Performance Monitoring''';
                 </h3>'''';
-                <p className='text-gray-600 dark:text-gray-400'>;
+                <p className='text-gray-600 dark:text-gray-400'>
                   Real-time performance metrics and system health monitoring;
-                </p>;
-              </div>;
+                </p>
+              </div>
 ''';
               {/* Performance Charts Placeholder */}'''';
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>'''';
@@ -470,22 +470,22 @@ export const EnterpriseDashboard = () => {;
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>CPU & Memory Usage</h4>'''';
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
-                      <LineChart className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Performance Chart</p>;
-                    </div>;
-                  </div>;
+                      <LineChart className='w-12 h-12 mx-auto mb-2'/>
+                      <p>Performance Chart</p>
+                    </div>
+                  </div>
                 </div>''';
 '''';
                 <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Response Time & Throughput</h4>'''';
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
-                      <BarChart3 className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Performance Chart</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
+                      <BarChart3 className='w-12 h-12 mx-auto mb-2'/>
+                      <p>Performance Chart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>)}'''';
 '''''';
           {activeTab === 'security' && (<motion.div key='security' initial = {}
@@ -509,12 +509,12 @@ export const EnterpriseDashboard = () => {;
                   <option value='new'>New</option>'''';
                   <option value='investigating'>Investigating</option>'''';
                   <option value='resolved'>Resolved</option>'''';
-                  <option value='false_positive'>False Positive</option>;
-                </select>;
-              </div>;
+                  <option value='false_positive'>False Positive</option>
+                </select>
+              </div>
 ''';
               {/* Security Alerts */}'''';
-              <div className='space-y-4'>;
+              <div className='space-y-4'>
                 {filteredSecurityAlerts.map((alert) => (<motion.div key={alert.id} initial = {}
   { opacity: 0,;
   x: 20;
@@ -525,46 +525,46 @@ export const EnterpriseDashboard = () => {;
 }} className='bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-start justify-between mb-4'>''`;
                       <div className='flex items-center gap-3'>``;
-                        <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}>;
+                        <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}>
                           {alert.severity.toUpperCase()}`;
                         </span>``;
-                        <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(alert.status)}`}>;
+                        <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(alert.status)}`}>
                           {alert.status}''';
                         </span>'''';
                         <span className='px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300'>';
                           {alert.type.replace('_',)}
                         </span>''';
                       </div>'''';
-                      <span className='text-sm text-gray-500'>;
+                      <span className='text-sm text-gray-500'>
                         {alert.timestamp.toLocaleString()}
-                      </span>;
+                      </span>
                     </div>''';
 '''';
-                    <h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>;
+                    <h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
                       {alert.title}''';
                     </h4>'''';
-                    <p className='text-gray-600 dark:text-gray-400 mb-4'>;
+                    <p className='text-gray-600 dark:text-gray-400 mb-4'>
                       {alert.description}
                     </p>''';
 '''';
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>''';
                       <div>'''';
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Source:</span>'''';
-                        <span className='ml-2 text-gray-600 dark:text-gray-400'>{alert.source}</span>;
+                        <span className='ml-2 text-gray-600 dark:text-gray-400'>{alert.source}</span>
                       </div>''';
                       <div>'''';
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Affected:</span>'''';
-                        <span className='ml-2 text-gray-600 dark:text-gray-400'>{alert.affected.length} items</span>;
+                        <span className='ml-2 text-gray-600 dark:text-gray-400'>{alert.affected.length} items</span>
                       </div>''';
                       <div>'''';
                         <span className='font-medium text-gray-700 dark:text-gray-300'>Time:</span>'''';
-                        <span className='ml-2 text-gray-600 dark:text-gray-400'>;
+                        <span className='ml-2 text-gray-600 dark:text-gray-400'>
                           {Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}m ago;
-                        </span>;
-                      </div>;
-                    </div>;
+                        </span>
+                      </div>
+                    </div>
                   </motion.div>) ) }
-              </div>;
+              </div>
             </motion.div>)}'''';
 '''''';
           {activeTab === 'users' && (<motion.div key='users' initial = {}
@@ -587,12 +587,12 @@ export const EnterpriseDashboard = () => {;
                   <option value='1h'>Last Hour</option>'''';
                   <option value='24h'>Last 24 Hours</option>'''';
                   <option value='7d'>Last 7 Days</option>'''';
-                  <option value='30d'>Last 30 Days</option>;
-                </select>;
-              </div>;
+                  <option value='30d'>Last 30 Days</option>
+                </select>
+              </div>
 ''';
               {/* User Activities */}'''';
-              <div className='space-y-4'>;
+              <div className='space-y-4'>
                 {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial = {}
   { opacity: 0,;
   x: 20;
@@ -604,25 +604,25 @@ export const EnterpriseDashboard = () => {;
                     <div className='flex items-center justify-between mb-3'>'''';
                       <div className='flex items-center gap-3'>'''';
                         <div className='w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center'>'''';
-                          <Users className='w-5 h-5 text-indigo-600 dark:text-indigo-400'/>;
+                          <Users className='w-5 h-5 text-indigo-600 dark:text-indigo-400'/>
                         </div>''';
                         <div>'''';
-                          <div className='font-medium text-gray-900 dark:text-white'>;
+                          <div className='font-medium text-gray-900 dark:text-white'>
                             {activity.userName}''';
                           </div>'''';
-                          <div className='text-sm text-gray-600 dark:text-gray-400'>;
+                          <div className='text-sm text-gray-600 dark:text-gray-400'>
                             {activity.action} • {activity.resource}
-                          </div>;
+                          </div>
                         </div>''';
                       </div>''`;
                       <div className='text-right'>``;
-                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(activity.status)}`}>;
+                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(activity.status)}`}>
                           {activity.status}''';
                         </span>'''';
-                        <div className='text-sm text-gray-500 mt-1'>;
+                        <div className='text-sm text-gray-500 mt-1'>
                           {activity.timestamp.toLocaleTimeString()}
-                        </div>;
-                      </div>;
+                        </div>
+                      </div>
                     </div>''';
 '''';
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400'>''';
@@ -634,10 +634,10 @@ export const EnterpriseDashboard = () => {;
                       </div>''';
                       <div>'''';
                         <span className='font-medium'>Time:</span> {activity.timestamp.toLocaleString()}
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                   </motion.div>) ) }
-              </div>;
+              </div>
             </motion.div>)}'''';
 '''''';
           {activeTab === 'services' && (<motion.div key='services' initial = {}
@@ -653,16 +653,16 @@ export const EnterpriseDashboard = () => {;
 }} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <Server className='w-16 h-16 text-green-500 mx-auto mb-4'/>'''';
-                <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
+                <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
                   Service Management''';
                 </h3>'''';
-                <p className='text-gray-600 dark:text-gray-400'>;
+                <p className='text-gray-600 dark:text-gray-400'>
                   Monitor and manage all system services;
-                </p>;
-              </div>;
+                </p>
+              </div>
 ''';
               {/* Service Status Grid */}'''';
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {serviceStatuses.map((service) => (<motion.div key={service.id} initial = {}
   { opacity: 0,;
   scale: 0.9;
@@ -672,45 +672,45 @@ export const EnterpriseDashboard = () => {;
 '''';
 }} className='bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                     <div className='flex items-center justify-between mb-4'>'''';
-                      <h4 className='text-lg font-semibold text-gray-900 dark:text-white'>;
+                      <h4 className='text-lg font-semibold text-gray-900 dark:text-white'>
                         {service.name}`;
                       </h4>``;
-                      <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}>;
+                      <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}>
                         {service.status}
-                      </span>;
+                      </span>
                     </div>''';
 '''';
                     <div className='space-y-3'>'''';
                       <div className='flex justify-between'>'''';
                         <span className='text-gray-600 dark:text-gray-400'>Uptime</span>'''';
-                        <span className='font-medium text-gray-900 dark:text-white'>;
+                        <span className='font-medium text-gray-900 dark:text-white'>
                           {service.uptime}%;
                         </span>''';
                       </div>'''';
                       <div className='flex justify-between'>'''';
                         <span className='text-gray-600 dark:text-gray-400'>Response Time</span>'''';
-                        <span className='font-medium text-gray-900 dark:text-white'>;
+                        <span className='font-medium text-gray-900 dark:text-white'>
                           {service.responseTime}ms;
                         </span>''';
                       </div>'''';
                       <div className='flex justify-between'>'''';
                         <span className='text-gray-600 dark:text-gray-400'>Error Rate</span>'''';
-                        <span className='font-medium text-gray-900 dark:text-white'>;
+                        <span className='font-medium text-gray-900 dark:text-white'>
                           {service.errorRate}%;
-                        </span>;
-                      </div>;
+                        </span>
+                      </div>
                     </div>''';
 '''';
                     {service.lastIncident && (<div className='mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg'>'''';
-                        <div className='text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-1'>;
+                        <div className='text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-1'>
                           Last Incident''';
                         </div>'''';
-                        <div className='text-xs text-yellow-700 dark:text-yellow-300'>;
+                        <div className='text-xs text-yellow-700 dark:text-yellow-300'>
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-                        </div>;
+                        </div>
                       </div>) }
                   </motion.div>) ) }
-              </div>;
+              </div>
             </motion.div>)}'''';
 '''''';
           {activeTab === 'analytics' && (<motion.div key='analytics' initial = {}
@@ -726,13 +726,13 @@ export const EnterpriseDashboard = () => {;
 }} className='space-y-6'>'''';
               <div className='text-center py-8'>'''';
                 <PieChart className='w-16 h-16 text-purple-500 mx-auto mb-4'/>'''';
-                <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
+                <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
                   Analytics & Insights''';
                 </h3>'''';
-                <p className='text-gray-600 dark:text-gray-400'>;
+                <p className='text-gray-600 dark:text-gray-400'>
                   Comprehensive analytics and business intelligence;
-                </p>;
-              </div>;
+                </p>
+              </div>
 ''';
               {/* Analytics Charts Placeholder */}'''';
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>'''';
@@ -740,24 +740,24 @@ export const EnterpriseDashboard = () => {;
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>System Health Overview</h4>'''';
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
-                      <PieChart className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Analytics Chart</p>;
-                    </div>;
-                  </div>;
+                      <PieChart className='w-12 h-12 mx-auto mb-2'/>
+                      <p>Analytics Chart</p>
+                    </div>
+                  </div>
                 </div>''';
 '''';
                 <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>'''';
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Trend Analysis</h4>'''';
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>'''';
                     <div className='text-center text-gray-500'>'''';
-                      <LineChart className='w-12 h-12 mx-auto mb-2'/>;
-                      <p>Analytics Chart</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
+                      <LineChart className='w-12 h-12 mx-auto mb-2'/>
+                      <p>Analytics Chart</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>) }
-        </AnimatePresence>;
-      </div>;
+        </AnimatePresence>
+      </div>
     </div>)}''`;
 ''`''`;

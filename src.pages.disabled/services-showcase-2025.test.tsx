@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import services-showcase-2025 from './services-showcase-2025';
-;
+
 describe('services-showcase-2025', () => {;
   it('renders without crashing', () => {;
     render(<services-showcase-2025 />);

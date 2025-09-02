@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-;
-interface AccessibilitySettings {;
+
+interface AccessibilitySettings {
   highContrast: boolean;
    fontSize: 'small' | 'normal' | 'large' | 'xlarge';
    reducedMotion: boolean;
@@ -108,24 +108,24 @@ const AccessibilityManager: React.FC = () => {;
   return (;
     <>;
       {/* Accessibility Controls */}
-      <div className='accessibility-controls fixed bottom-4 right-4 z-50'>;
+      <div className='accessibility-controls fixed bottom-4 right-4 z-50'>
         <button;
           onClick={() => setIsOpen(!isOpen)}
           className='bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2';
           aria-label='Open accessibility settings';
           aria-expanded={isOpen}
         >;
-          <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
-            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4' />;
-          </svg>;
-        </button>;
+          <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4' />
+          </svg>
+        </button>
         {isOpen && (;
-          <div className='absolute bottom-16 right-0 bg-white border border-gray-200 rounded-lg shadow-xl p-4 w-80'>;
-            <h3 className='text-lg font-semibold mb-4'>Accessibility Settings</h3>;
+          <div className='absolute bottom-16 right-0 bg-white border border-gray-200 rounded-lg shadow-xl p-4 w-80'>
+            <h3 className='text-lg font-semibold mb-4'>Accessibility Settings</h3>
             {/* High Contrast Toggle */}
-            <div className='mb-4'>;
-              <label className='flex items-center justify-between'>;
-                <span>High Contrast Mode</span>;
+            <div className='mb-4'>
+              <label className='flex items-center justify-between'>
+                <span>High Contrast Mode</span>
                 <button;
                   onClick={() => handleToggle('highContrast', !settings.highContrast)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;
@@ -133,18 +133,18 @@ const AccessibilityManager: React.FC = () => {;
                   }`}
                   aria-pressed={settings.highContrast}
                 >;
-                  <span;
+                  <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                       settings.highContrast ? 'translate-x-6' : 'translate-x-1';
                     }`}
                   />;
-                </button>;
-              </label>;
-            </div>;
+                </button>
+              </label>
+            </div>
             {/* Font Size Controls */}
-            <div className='mb-4'>;
-              <label className='block text-sm font-medium mb-2'>Font Size</label>;
-              <div className='flex space-x-2'>;
+            <div className='mb-4'>
+              <label className='block text-sm font-medium mb-2'>Font Size</label>
+              <div className='flex space-x-2'>
                 {(['small', 'normal', 'large', 'xlarge'] as const).map((size) => (;
                   <button;
                     key={size}
@@ -157,14 +157,14 @@ const AccessibilityManager: React.FC = () => {;
                     aria-pressed={settings.fontSize === size}
                   >;
                     {size === 'small' ? 'A' : size === 'normal' ? 'A' : size === 'large' ? 'A' : 'A'}
-                  </button>;
+                  </button>
                 ))}
-              </div>;
-            </div>;
+              </div>
+            </div>
             {/* Reduced Motion Toggle */}
-            <div className='mb-4'>;
-              <label className='flex items-center justify-between'>;
-                <span>Reduce Motion</span>;
+            <div className='mb-4'>
+              <label className='flex items-center justify-between'>
+                <span>Reduce Motion</span>
                 <button;
                   onClick={() => handleToggle('reducedMotion', !settings.reducedMotion)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;
@@ -172,18 +172,18 @@ const AccessibilityManager: React.FC = () => {;
                   }`}
                   aria-pressed={settings.reducedMotion}
                 >;
-                  <span;
+                  <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                       settings.reducedMotion ? 'translate-x-6' : 'translate-x-1';
                     }`}
                   />;
-                </button>;
-              </label>;
-            </div>;
+                </button>
+              </label>
+            </div>
             {/* Focus Visible Toggle */}
-            <div className='mb-4'>;
-              <label className='flex items-center justify-between'>;
-                <span>Enhanced Focus Indicators</span>;
+            <div className='mb-4'>
+              <label className='flex items-center justify-between'>
+                <span>Enhanced Focus Indicators</span>
                 <button;
                   onClick={() => handleToggle('focusVisible', !settings.focusVisible)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${;
@@ -191,27 +191,27 @@ const AccessibilityManager: React.FC = () => {;
                   }`}
                   aria-pressed={settings.focusVisible}
                 >;
-                  <span;
+                  <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                       settings.focusVisible ? 'translate-x-6' : 'translate-x-1';
                     }`}
                   />;
-                </button>;
-              </label>;
-            </div>;
+                </button>
+              </label>
+            </div>
             {/* Screen Reader Status */}
-            <div className='text-sm text-gray-600'>;
+            <div className='text-sm text-gray-600'>
               Screen Reader: {settings.screenReader ? 'Detected' : 'Not Detected'}
-            </div>;
-          </div>;
+            </div>
+          </div>
         )}
-      </div>;
+      </div>
       {/* Screen Reader Only Content */}
-      <div className='sr-only'>;
-        <h1>Zion Tech Group - Accessibility Enhanced</h1>;
-        <p>This website includes accessibility features to ensure all users can access our content.</p>;
-      </div>;
-    </>;
+      <div className='sr-only'>
+        <h1>Zion Tech Group - Accessibility Enhanced</h1>
+        <p>This website includes accessibility features to ensure all users can access our content.</p>
+      </div>
+    </>
   );
 };
 ;

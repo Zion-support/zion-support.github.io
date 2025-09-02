@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedTestimonials from './EnhancedTestimonials';
-;
+
 describe('EnhancedTestimonials', () => {;
   it('renders without crashing', () => {;
     render(<EnhancedTestimonials />);

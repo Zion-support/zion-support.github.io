@@ -1,4 +1,4 @@
-export interface AdvancedCybersecurityService {;
+export interface AdvancedCybersecurityService {
   id: string;
    name: string;
    tagline: string;

@@ -2,7 +2,7 @@ import { describe, expect, test, vi, beforeEach } from 'vitest';
 import handler from '@/pages/api/auth/register'; // Assuming this is the Next.js API handler;
 import { z } from 'zod'; // Used by the handler;
 import type { NextApiRequest, NextApiResponse } from 'next';
-;
+
 // Mock the Supabase client;
 const signUpMock = vi.fn();
 vi.mock(;
@@ -12,10 +12,10 @@ vi.mock(;
       signUp: signUpMock}})}));
 ;
 // Define a more specific type for the mocked response;
-interface MockApiResponse extends NextApiResponse {;
-  status: vi.Mock<[number] MockApiResponse>;
-  json: vi.Mock<[unknown] MockApiResponse>; // Parameter of json can be unknown;
-  setHeader: vi.Mock<[string, string | string[]] void>;
+interface MockApiResponse extends NextApiResponse {
+  status: vi.Mock<[number] MockApiResponse>
+  json: vi.Mock<[unknown] MockApiResponse> // Parameter of json can be unknown;
+  setHeader: vi.Mock<[string, string | string[]] void>
   end: vi.Mock<[((cb?: () => void) => void)?], void>; // end can be called with no args;
 }
 ;
@@ -31,7 +31,7 @@ function mockReq(body: unknown, method: string =;
 }
 ;
 // Helper to create mock response object;
-function mockRes(): MockApiResponse {;
+function mockRes(): MockApiResponse {
   const res: Partial<MockApiResponse> = {};
   res.status = vi.fn().mockReturnValue(res as MockApiResponse);
   res.json = vi.fn().mockReturnValue(res as MockApiResponse);

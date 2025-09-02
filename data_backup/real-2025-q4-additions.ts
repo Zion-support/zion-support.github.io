@@ -1,4 +1,4 @@
-export interface Q4Service {;
+export interface Q4Service {
   id: string;
    name: string;
    tagline: string;
@@ -35,7 +35,7 @@ export interface Q4Service {;
   launchDate?: string;
   customers?: number;
   rating?: number;
-reviews?: number;const contact = {;
+reviews?: number;const contact = {
   mobile:,;
   +1 302 464 0950',;
   email: 'kleber@ziontechgroup.com,;

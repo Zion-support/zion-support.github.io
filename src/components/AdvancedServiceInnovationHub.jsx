@@ -157,7 +157,7 @@ const AdvancedServiceInnovationHub = () => {}
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/> },''''';
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/> }''';
     ]';'';
-    return (<div className='max-w-7xl mx-auto p-6'>;
+    return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
   { opacity: 0,;
@@ -169,12 +169,12 @@ const AdvancedServiceInnovationHub = () => {}
 }} className='mb-8'>'''';
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>''';
           <div>'''';
-            <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>;
+            <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>
               Advanced Service Innovation Hub''';
             </h1>'''';
-            <p className='text-zion-slate-light'>;
+            <p className='text-zion-slate-light'>
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services;
-            </p>;
+            </p>
           </div>''';
 ''''';
           <div className='flex gap-2'>'''''';
@@ -184,8 +184,8 @@ const AdvancedServiceInnovationHub = () => {}
                 {mode === 'insights' && <Lightbulb className='w-4 h-4 mr-2'/>}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </Button>))}
-          </div>;
-        </div>;
+          </div>
+        </div>
       </motion.div>';
 '';
       {/* Innovation Trends View */}''';
@@ -203,11 +203,11 @@ const AdvancedServiceInnovationHub = () => {}
               <div>'''';
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Category</label>'''';
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>;
-                  {categories.map(category => (<option key={category.id} value={category.id}>;
+                  {categories.map(category => (<option key={category.id} value={category.id}>
                       {category.name}
                     </option>) ) }
-                </select>;
-              </div>;
+                </select>
+              </div>
 ''';
               <div>'''';
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Impact</label>'''';
@@ -215,9 +215,9 @@ const AdvancedServiceInnovationHub = () => {}
                   <option value='all'>All Impact Levels</option>'''';
                   <option value='High'>High Impact</option>'''';
                   <option value='Medium'>Medium Impact</option>'''';
-                  <option value='Low'>Low Impact</option>;
-                </select>;
-              </div>;
+                  <option value='Low'>Low Impact</option>
+                </select>
+              </div>
 ''';
               <div>'''';
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Status</label>'''';
@@ -226,19 +226,19 @@ const AdvancedServiceInnovationHub = () => {}
                   <option value='Emerging'>Emerging</option>'''';
                   <option value='Growing'>Growing</option>'''';
                   <option value='Mature'>Mature</option>'''';
-                  <option value='Disruptive'>Disruptive</option>;
-                </select>;
-              </div>;
+                  <option value='Disruptive'>Disruptive</option>
+                </select>
+              </div>
 ''';
               <div>'''';
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Search</label>'''';
                 <Input placeholder='Search trends...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='w-full'/>;
-              </div>;
-            </div>;
-          </motion.div>;
+              </div>
+            </div>
+          </motion.div>
           {/* Trends Grid */}
           <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} animate = {}
   { opacity: 1,;
@@ -256,35 +256,35 @@ const AdvancedServiceInnovationHub = () => {}
                   <CardHeader>'''';
                     <div className='flex items-start justify-between mb-4'>'''';
                       <div className='flex items-center gap-3'>'''';
-                        <div className='w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center'>;
+                        <div className='w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center'>
                           {getCategoryIcon(trend.category)}
                         </div>''';
                         <div>'''';
-                          <CardTitle className='text-lg text-zion-blue-dark'>;
+                          <CardTitle className='text-lg text-zion-blue-dark'>
                             {trend.title}''';
                           </CardTitle>'''';
-                          <div className='flex gap-2 mt-2'>;
-                            <Badge className={getImpactColor(trend.impact)}>;
+                          <div className='flex gap-2 mt-2'>
+                            <Badge className={getImpactColor(trend.impact)}>
                               {trend.impact} Impact;
-                            </Badge>;
-                            <Badge className={getStatusColor(trend.status) }>;
+                            </Badge>
+                            <Badge className={getStatusColor(trend.status) }>
                               {trend.status}
-                            </Badge>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </CardHeader>;
+                            </Badge>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
 ''';
                   <CardContent>'''';
-                    <p className='text-zion-slate-light mb-4'>;
+                    <p className='text-zion-slate-light mb-4'>
                       {trend.description}
                     </p>''';
 '''';
                     <div className='space-y-3'>'''';
                       <div className='flex justify-between items-center'>'''';
                         <span className='text-sm text-zion-slate-light'>Timeline:</span>'''';
-                        <span className='text-sm font-medium text-zion-slate-dark'>{trend.timeline}</span>;
+                        <span className='text-sm font-medium text-zion-slate-dark'>{trend.timeline}</span>
                       </div>''';
 '''';
                       <div className='flex justify-between items-center'>'''';
@@ -293,42 +293,42 @@ const AdvancedServiceInnovationHub = () => {}
                           <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>'''';
                             <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={{ width: `${trend.adoption}%` }}></div>''';
                           </div>'''';
-                          <span className='text-sm font-medium'>{trend.adoption}%</span>;
-                        </div>;
+                          <span className='text-sm font-medium'>{trend.adoption}%</span>
+                        </div>
                       </div>''';
 '''';
                       <div className='flex justify-between items-center'>'''';
                         <span className='text-sm text-zion-slate-light'>Investment:</span>'''';
-                        <span className='text-sm font-medium text-zion-cyan'>{trend.investment}</span>;
-                      </div>;
+                        <span className='text-sm font-medium text-zion-cyan'>{trend.investment}</span>
+                      </div>
 ''';
                       <div>'''';
                         <span className='text-sm text-zion-slate-light'>Key Technologies:</span>'''';
                         <div className='flex flex-wrap gap-1 mt-1'>'''';
-                          {trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key={idx} variant='outline' className='text-xs'>;
+                          {trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key={idx} variant='outline' className='text-xs'>
                               {tech}
                             </Badge>) ) }
-                        </div>;
-                      </div>;
+                        </div>
+                      </div>
 ''';
                       <div>'''';
                         <span className='text-sm text-zion-slate-light'>Key Players:</span>'''';
                         <div className='flex flex-wrap gap-1 mt-1'>'''';
-                          {trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key={idx} variant='outline' className='text-xs'>;
+                          {trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key={idx} variant='outline' className='text-xs'>
                               {player}
                             </Badge>) ) }
-                        </div>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>) ) }
-          </motion.div>;
+          </motion.div>
         </>) }
 ;
       {/* Future Roadmap View */}';
       {viewMode === 'roadmap' && (<motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} animate = {}
   { opacity: 1,;
@@ -347,75 +347,75 @@ const AdvancedServiceInnovationHub = () => {}
                   <div className='flex items-start justify-between'>'''';
                     <div className='flex-1'>'''';
                       <div className='flex items-center gap-3 mb-3'>'''';
-                        <div className='w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white'>;
+                        <div className='w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white'>
                           {getCategoryIcon(roadmap.category)}
                         </div>''';
                         <div>'''';
-                          <CardTitle className='text-xl text-zion-blue-dark'>;
+                          <CardTitle className='text-xl text-zion-blue-dark'>
                             {roadmap.title}''';
                           </CardTitle>'''';
-                          <p className='text-zion-slate-light'>{roadmap.description}</p>;
-                        </div>;
+                          <p className='text-zion-slate-light'>{roadmap.description}</p>
+                        </div>
                       </div>''';
 '''';
                       <div className='flex flex-wrap gap-2'>'''';
-                        <Badge className='bg-zion-blue-light/10 text-zion-blue-dark'>;
+                        <Badge className='bg-zion-blue-light/10 text-zion-blue-dark'>
                           Timeline: {roadmap.timeline}''';
                         </Badge>'''';
-                        <Badge className='bg-zion-cyan/10 text-zion-cyan'>;
+                        <Badge className='bg-zion-cyan/10 text-zion-cyan'>
                           Investment: {roadmap.investment}''';
                         </Badge>'''';
-                        <Badge className='bg-zion-purple/10 text-zion-purple'>;
+                        <Badge className='bg-zion-purple/10 text-zion-purple'>
                           {roadmap.category.toUpperCase()}
-                        </Badge>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </CardHeader>;
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                </CardHeader>
 ''';
                 <CardContent>'''';
                   <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>''';
                     <div>'''';
                       <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>'''';
-                        <CheckCircle className='w-4 h-4 text-green-500'/>;
+                        <CheckCircle className='w-4 h-4 text-green-500'/>
                         Key Milestones''';
                       </h4>'''';
                       <ul className='space-y-2'>'''';
                         {roadmap.milestones.map((milestone, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                            <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>;
+                            <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>
                             {milestone}
                           </li>) ) }
-                      </ul>;
-                    </div>;
+                      </ul>
+                    </div>
 ''';
                     <div>'''';
                       <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>'''';
-                        <Shield className='w-4 h-4 text-orange-500'/>;
+                        <Shield className='w-4 h-4 text-orange-500'/>
                         Challenges''';
                       </h4>'''';
                       <ul className='space-y-2'>'''';
                         {roadmap.challenges.map((challenge, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                            <div className='w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0'></div>;
+                            <div className='w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0'></div>
                             {challenge}
                           </li>) ) }
-                      </ul>;
-                    </div>;
+                      </ul>
+                    </div>
 ''';
                     <div>'''';
                       <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>'''';
-                        <Star className='w-4 h-4 text-yellow-500'/>;
+                        <Star className='w-4 h-4 text-yellow-500'/>
                         Opportunities''';
                       </h4>'''';
                       <ul className='space-y-2'>'''';
                         {roadmap.opportunities.map((opportunity, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                            <div className='w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0'></div>;
+                            <div className='w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0'></div>
                             {opportunity}
                           </li>) ) }
-                      </ul>;
-                    </div>;
-                  </div>;
-                </CardContent>;
-              </Card>;
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>) ) }
         </motion.div>) }
 ;
@@ -428,13 +428,13 @@ const AdvancedServiceInnovationHub = () => {}
   y: 0';';
 '''';
 }} transition={{ delay: 0.1 }} className='space-y-6'>'''';
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
             <Card>''';
               <CardHeader>'''';
                 <CardTitle className='flex items-center gap-2'>'''';
-                  <TrendingUp className='w-5 h-5 text-zion-green'/>;
+                  <TrendingUp className='w-5 h-5 text-zion-green'/>
                   Investment Trends;
-                </CardTitle>;
+                </CardTitle>
               </CardHeader>''';
               <CardContent>'''';
                 <div className='space-y-4'>'''';
@@ -443,7 +443,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-cyan'>$150B+</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' }}></div>;
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' }}></div>
                   </div>''';
 '''';
                   <div className='flex justify-between items-center'>'''';
@@ -451,7 +451,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-purple'>$300B+</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' }}></div>;
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' }}></div>
                   </div>''';
 '''';
                   <div className='flex justify-between items-center'>'''';
@@ -459,7 +459,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-blue'>$200B+</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' }}></div>;
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' }}></div>
                   </div>''';
 '''';
                   <div className='flex justify-between items-center'>'''';
@@ -467,17 +467,17 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-green'>$100B+</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' }}></div>;
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' }}></div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
             <Card>''';
               <CardHeader>'''';
                 <CardTitle className='flex items-center gap-2'>'''';
-                  <Users className='w-5 h-5 text-zion-blue'/>;
+                  <Users className='w-5 h-5 text-zion-blue'/>
                   Market Adoption;
-                </CardTitle>;
+                </CardTitle>
               </CardHeader>''';
               <CardContent>'''';
                 <div className='space-y-4'>'''';
@@ -486,7 +486,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-cyan'>15%</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' }}></div>;
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' }}></div>
                   </div>''';
 '''';
                   <div className='flex justify-between items-center'>'''';
@@ -494,7 +494,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-purple'>35%</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' }}></div>;
+                    <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' }}></div>
                   </div>''';
 '''';
                   <div className='flex justify-between items-center'>'''';
@@ -502,7 +502,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-blue'>40%</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' }}></div>;
+                    <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' }}></div>
                   </div>''';
 '''';
                   <div className='flex justify-between items-center'>'''';
@@ -510,18 +510,18 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-green'>10%</span>''';
                   </div>''''';
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>'''''';
-                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' }}></div>;
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </div>;
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' }}></div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           <Card>''';
             <CardHeader>'''';
               <CardTitle className='flex items-center gap-2'>'''';
-                <Lightbulb className='w-5 h-5 text-zion-yellow'/>;
+                <Lightbulb className='w-5 h-5 text-zion-yellow'/>
                 Strategic Recommendations;
-              </CardTitle>;
+              </CardTitle>
             </CardHeader>''';
             <CardContent>'''';
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>''';
@@ -529,40 +529,40 @@ const AdvancedServiceInnovationHub = () => {}
                   <h4 className='font-semibold text-zion-slate-dark mb-3'>Immediate Actions (0-2 years)</h4>'''';
                   <ul className='space-y-2'>'''';
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/>;
+                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/>
                       Invest in quantum computing research and development''';
                     </li>'''';
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/>;
+                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/>
                       Develop AI ethics and governance frameworks''';
                     </li>'''';
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/>;
+                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/>
                       Establish partnerships with space technology companies;
-                    </li>;
-                  </ul>;
-                </div>;
+                    </li>
+                  </ul>
+                </div>
 ''';
                 <div>'''';
                   <h4 className='font-semibold text-zion-slate-dark mb-3'>Strategic Planning (2-5 years)</h4>'''';
                   <ul className='space-y-2'>'''';
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/>;
+                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/>
                       Build quantum internet infrastructure''';
                     </li>'''';
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/>;
+                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/>
                       Develop synthetic biology capabilities''';
                     </li>'''';
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>'''';
-                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/>;
+                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/>
                       Invest in fusion energy research;
-                    </li>;
-                  </ul>;
-                </div>;
-              </div>;
-            </CardContent>;
-          </Card>;
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>) }
 ;
       {/* CTA Section */}
@@ -576,7 +576,7 @@ const AdvancedServiceInnovationHub = () => {}
 }} transition={{ delay: 0.4 }} className='mt-12 text-center'>'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
           <h3 className='text-3xl font-bold mb-4'>Ready to Shape the Future?</h3>'''';
-          <p className='text-xl mb-6 max-w-2xl mx-auto'>;
+          <p className='text-xl mb-6 max-w-2xl mx-auto'>
             Our innovation hub provides the insights and strategies you need to stay ahead;
             of emerging technologies and capitalize on future opportunities.''';
           </p>'''';
@@ -588,7 +588,7 @@ const AdvancedServiceInnovationHub = () => {}
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank');
 ''';
 }>'''';
-              <Users className='w-5 h-5 mr-2'/>;
+              <Users className='w-5 h-5 mr-2'/>
               Get Innovation Strategy''';
             </Button>'''';
             <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}
@@ -598,12 +598,12 @@ const AdvancedServiceInnovationHub = () => {}
   () => window.open('tel:+13024640950',_blank');
 ''';
 }>'''';
-              <Zap className='w-5 h-5 mr-2"/>;
+              <Zap className='w-5 h-5 mr-2"/>
               Speak with an Expert;
-            </Button>;
-          </div>;
-        </div>;
-      </motion.div>;
+            </Button>
+          </div>
+        </div>
+      </motion.div>
     </div>)};
 export default AdvancedServiceInnovationHub;
 }}}}}}

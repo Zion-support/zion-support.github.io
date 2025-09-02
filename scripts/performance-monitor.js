@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
-;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -50,7 +50,7 @@ class PerformanceMonitor {;
     }
   }
 ;
-  async collectSystemMetrics() {;
+  async collectSystemMetrics() {
     try {;
       console.log('💻 Collecting system metrics...;
   ');
@@ -69,13 +69,13 @@ class PerformanceMonitor {;
       await this.sleep(100); // Wait 100ms;
       const endUsage = process.cpuUsage(startUsage);
 ;
-      this.metrics.system.cpu = {;
+      this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms;
         system: Math.round(endUsage.system / 1000) // ms;
       };
 ;
       // Process info;
-      this.metrics.system.process = {;
+      this.metrics.system.process = {
         pid: process.pid,;
         uptime: Math.round(process.uptime()),;
         version: process.version,;
@@ -117,7 +117,7 @@ class PerformanceMonitor {;
       }
 ;
       // Count files;
-      this.metrics.application.fileCounts = {;
+      this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, [;
   '.ts',.tsx;
   ',.js',.jsx;
@@ -143,7 +143,7 @@ class PerformanceMonitor {;
   '🔨 Collecting build metrics...');
 ;
       // Check if build artifacts exist;
-      const buildFiles = [;
+      const buildFiles = [
   'dist/index.html',dist/css;
   ',dist/js',dist/assets;
   ';
@@ -157,7 +157,7 @@ class PerformanceMonitor {;
 ;
       // Check build configuration;
       const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
-      if (fs.existsSync(viteConfigPath)) {;
+      if (fs.existsSync(viteConfigPath)) {
         const viteConfig = fs.readFileSync(viteConfigPath,utf8;
   ');
         this.metrics.build.config = {;

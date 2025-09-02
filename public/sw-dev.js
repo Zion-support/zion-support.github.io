@@ -2,7 +2,7 @@
 const CACHE_NAME =,;
   zion-tech-group-dev-v1';
 // Files to cache in development;
-const STATIC_FILES = [;
+const STATIC_FILES = [
   '/',;
   '/index.html',;
   '/favicon.svg',;

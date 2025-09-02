@@ -5,7 +5,7 @@ const fs = require(;
 const path = require(;
   'path');
 ;
-class ComprehensiveWebsiteAnalyzer {;
+class ComprehensiveWebsiteAnalyzer {
   constructor(baseUrl =;
   'https: //ziontechgroup.com) {;
     this.baseUrl = baseUrl;
@@ -103,7 +103,7 @@ class ComprehensiveWebsiteAnalyzer {;
     await this.checkUrl(this.baseUrl);
 ;
     // Check common routes;
-    const commonRoutes = [;
+    const commonRoutes = [
   '/about',;
   '/services',;
   '/solutions',;
@@ -178,7 +178,7 @@ class ComprehensiveWebsiteAnalyzer {;
     }
 ;
     // Check service sub-routes;
-    const serviceRoutes = [;
+    const serviceRoutes = [
   '/ai-solutions',;
   '/quantum-computing',;
   '/cybersecurity',;
@@ -208,7 +208,7 @@ class ComprehensiveWebsiteAnalyzer {;
     }
 ;
     // Check solution sub-routes;
-    const solutionRoutes = [;
+    const solutionRoutes = [
   '/enterprise',;
   '/ai-business-intelligence',;
   '/quantum-ai-platform',;
@@ -220,7 +220,7 @@ class ComprehensiveWebsiteAnalyzer {;
     }
 ;
     // Check about sub-routes;
-    const aboutRoutes = [;
+    const aboutRoutes = [
   '/story',;
   '/team';
     ];
@@ -229,7 +229,7 @@ class ComprehensiveWebsiteAnalyzer {;
     }
 ;
     // Check resources sub-routes;
-    const resourceRoutes = [;
+    const resourceRoutes = [
   '/blog',;
   '/case-studies',;
   '/research-development',;
@@ -309,7 +309,7 @@ class ComprehensiveWebsiteAnalyzer {;
     }
 ;
     // Check for missing essential pages;
-    const essentialPages = [;
+    const essentialPages = [
   '/privacy-policy',;
   '/terms-of-service',;
   '/cookie-policy',;

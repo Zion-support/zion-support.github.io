@@ -1,4 +1,4 @@
-export interface ComprehensiveAiService {;
+export interface ComprehensiveAiService {
   id: string;
    title: string;
    description: string;
@@ -20,4 +20,4 @@ export interface ComprehensiveAiService {;
    contactInfo: { phone: string;
    email: string;
    website: string;
-}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[];  }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; } export const COMPREHENSIVE_AI_SERVICES_2025: ComprehensiveAiService[] = [;
+}; technicalSpecs?: { technology: string[] integrations: string[]; apiEndpoints: number; uptime: string; security: string[];  }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; } export const COMPREHENSIVE_AI_SERVICES_2025: ComprehensiveAiService[] = [;

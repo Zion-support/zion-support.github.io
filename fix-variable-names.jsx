@@ -1,5 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3;
-function toCamelCase(str) {;
+function toCamelCase(str) {
   return str;
     .replace(/^[0-9]/, (match) => {;
       const numberWords = {;

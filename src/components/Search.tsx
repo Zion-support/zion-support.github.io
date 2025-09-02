@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'; import { motion, AnimatePresence } from 'framer - motion'; import { cn } from '@/lib / utils'; ; interface SearchResult {;
+import React, { useState, useEffect, useRef, useCallback } from 'react'; import { motion, AnimatePresence } from 'framer - motion'; import { cn } from '@/lib / utils';  interface SearchResult {
    id: string;
    title: string;
    description: string;
@@ -7,7 +7,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'; import 
    category: string;
    tags: string[];
    relevance: number;
-}; interface SearchProps {;
+}; interface SearchProps {
    className?: string;
    placeholder?: string;
    onSearch?: (query: string) => void;

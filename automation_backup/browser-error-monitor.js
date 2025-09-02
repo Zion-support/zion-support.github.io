@@ -51,7 +51,7 @@ const CONFIG = {;
   timeout-fix',connection refused;
   ': 'connection-fix;
   },;
-  fixStrategies: {,;
+  fixStrategies: {,
   null-check-fix;
   ': 'Add null/undefined checks,function-check-fix':,;
   Verify function existence',syntax-fix;
@@ -66,7 +66,7 @@ const CONFIG = {;
   ': 'Fix connection issues;
 };
 ;
-class BrowserErrorMonitor {;
+class BrowserErrorMonitor {
   constructor() {;
     this.browser = null;
     this.page = null;
@@ -91,7 +91,7 @@ class BrowserErrorMonitor {;
       // Launch browser;
       this.browser = await puppeteer.launch({;
         headless: true,;
-        args: [,;
+        args: [,
   --no-sandbox;
   ',--disable-setuid-sandbox',--disable-dev-shm-usage;
   ',--disable-accelerated-2d-canvas',--no-first-run;
@@ -143,7 +143,7 @@ class BrowserErrorMonitor {;
 ;
     });
 ;
-  async handleConsoleError(msg) {;
+  async handleConsoleError(msg) {
     const error = {;
       type: 'console,;
       message: msg.text(),;
@@ -158,7 +158,7 @@ class BrowserErrorMonitor {;
     // Attempt auto-fix;
     await this.attemptAutoFix(error);
 ;
-  async handlePageError(error) {;
+  async handlePageError(error) {
     const pageError = {;
       type: 'page;
   ',;
@@ -175,7 +175,7 @@ class BrowserErrorMonitor {;
     // Attempt auto-fix;
     await this.attemptAutoFix(pageError);
 ;
-  async handleRequestFailure(request) {;
+  async handleRequestFailure(request) {
     const requestError = {;
       type: 'request;
   ',;
@@ -211,11 +211,11 @@ class BrowserErrorMonitor {;
     await this.attemptAutoFix(responseError);
 ;
   assessErrorSeverity(message) {;
-    const criticalKeywords = [,;
+    const criticalKeywords = [,
   fatal;
   ',critical',uncaught;
   ',unhandled'];
-    const warningKeywords = [;
+    const warningKeywords = [
   'warning',deprecated;
   ',experimental'];
 ;
@@ -234,7 +234,7 @@ class BrowserErrorMonitor {;
       const url = this.page.url();
       const title = await this.page.title();
       return { url, title };
-    } catch (error) {;
+    } catch (error) {
       return { url: 'unknown, title:;
   'unknown' };
 ;
@@ -261,7 +261,7 @@ class BrowserErrorMonitor {;
           this.stats.failedFixes++;
           // console.log(`❌ Auto-fix failed: ${fixStrategy} - ${fixResult.reason}`);
 ;
-    } catch (fixError) {;
+    } catch (fixError) {
       console.error(;
   '❌ Error during auto-fix attempt:,;
   , fixError);
@@ -316,7 +316,7 @@ class BrowserErrorMonitor {;
           return { success: false, reason: 'Unknown fix strategy;
   ' };
 ;
-    } catch (fixError) {;
+    } catch (fixError) {
       return { success: false, reason: fixError.message };
 ;
   // Fix implementations;
@@ -334,7 +334,7 @@ class BrowserErrorMonitor {;
 ;
     });
 ;
-    return { success: true, message: 'Null check helper injected;
+    return { success: true, message: 'Null check helper injected
   ' };
 ;
   async fixFunctionCheck(error) {;
@@ -352,7 +352,7 @@ class BrowserErrorMonitor {;
 ;
     });
 ;
-    return { success: true, message:,;
+    return { success: true, message:,
   Function check helper injected;
   ' };
 ;
@@ -360,14 +360,14 @@ class BrowserErrorMonitor {;
     // Try to reload page to clear syntax errors;
     try {;
       await this.page.reload({ waitUntil: 'networkidle0 });
-      return { success: true, message: 'Page reloaded to clear syntax errors;
+      return { success: true, message: 'Page reloaded to clear syntax errors
   ' };
-    } catch (reloadError) {;
+    } catch (reloadError) {
       return { success: false, reason:,;
   Failed to reload page;
   ' };
 ;
-  async fixReferenceError(error) {;
+  async fixReferenceError(error) {
     // Inject global error handler;
     await this.page.evaluate(() => {;
       if (typeof window.globalErrorHandler === 'undefined;
@@ -381,7 +381,7 @@ class BrowserErrorMonitor {;
 ;
     });
 ;
-    return { success: true, message: 'Global error handler injected;
+    return { success: true, message: 'Global error handler injected
   ' };
 ;
   async fixTypeError(error) {;
@@ -400,7 +400,7 @@ class BrowserErrorMonitor {;
 ;
     });
 ;
-    return { success: true, message:,;
+    return { success: true, message:,
   Type checking helper injected;
   ' };
 ;
@@ -408,9 +408,9 @@ class BrowserErrorMonitor {;
     // Try to reload failed resources;
     try {;
       await this.page.reload({ waitUntil: 'networkidle0 });
-      return { success: true, message: 'Resources reloaded;
+      return { success: true, message: 'Resources reloaded
   ' };
-    } catch (reloadError) {;
+    } catch (reloadError) {
       return { success: false, reason:,;
   Failed to reload resources;
   ' };
@@ -418,7 +418,7 @@ class BrowserErrorMonitor {;
   async fixMissingResource(error) {;
     // Log missing resource for manual review;
     // console.log(`📝 Missing resource detected: ${error.url || 'unknown}`);
-    return { success: true, message:,;
+    return { success: true, message:,
   Missing resource logged for review;
   ' };
 ;
@@ -433,22 +433,22 @@ class BrowserErrorMonitor {;
 ;
     });
 ;
-    return { success: true, message: 'CORS bypass helper injected;
+    return { success: true, message: 'CORS bypass helper injected
   ' };
 ;
-  async fixNetworkError(error) {;
+  async fixNetworkError(error) {
     // Wait and retry;
     await new Promise(resolve => setTimeout(resolve, 2000));
     return { success: true, message: 'Network retry delay applied;
   ' };
 ;
-  async fixTimeoutError(error) {;
+  async fixTimeoutError(error) {
     // Increase page timeout;
     this.page.setDefaultTimeout(60000);
     return { success: true, message: 'Page timeout increased to 60s;
   ' };
 ;
-  async fixConnectionError(error) {;
+  async fixConnectionError(error) {
     // Wait and retry connection;
     await new Promise(resolve => setTimeout(resolve, 5000));
     return { success: true, message:,;
@@ -483,7 +483,7 @@ class BrowserErrorMonitor {;
       await this.generateReport();
 ;
       return remainingErrors.length === 0;
-    } catch (error) {;
+    } catch (error) {
       console.error(,;
   ❌ Health check failed: , error);
       return false;

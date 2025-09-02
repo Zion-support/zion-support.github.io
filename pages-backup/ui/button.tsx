@@ -29,7 +29,7 @@ export function Button({;
   onClick,;
   type = 'button;
   ',;
-  disabled = false}: ButtonProps) {;
+  disabled = false}: ButtonProps) {
   ';
   default:;
   'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan,;
@@ -60,14 +60,14 @@ export function Button({;
   if (asChild) {;
     return <span className = {classes}>{children}</span>}
   return();
-    <button;
+    <button
       type = {type}
       className={classes}
       onClick={onClick};
       disabled={disabled};
     >;
       {children};
-    </button>;
+    </button>
   )}
 // Export button variants for use in other components;
 export;

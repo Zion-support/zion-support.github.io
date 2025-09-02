@@ -12,7 +12,7 @@ const AICodeReviewAssistant = () => {}
         {}
             title: 'Automated Security Vulnerability Detection','';
             description: 'AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production','';
-            icon: <Shield className='w-6 h-6'/>;
+            icon: <Shield className='w-6 h-6'/>
         },;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
         {;
@@ -21,7 +21,7 @@ const AICodeReviewAssistant = () => {}
 '';
             title: 'Code Quality Scoring & Metrics','';
             description: 'Comprehensive code quality assessment with detailed metrics and improvement recommendations','';
-            icon: <BarChart3 className='w-6 h-6'/>;
+            icon: <BarChart3 className='w-6 h-6'/>
         },;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
         {;
@@ -30,7 +30,7 @@ const AICodeReviewAssistant = () => {}
 '';
             title: 'Best Practice Recommendations','';
             description: 'Intelligent suggestions for code improvements, design patterns, and industry best practices','';
-            icon: <CheckCircle className='w-6 h-6'/>;
+            icon: <CheckCircle className='w-6 h-6'/>
         },;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
         {;
@@ -39,7 +39,7 @@ const AICodeReviewAssistant = () => {}
 '';
             title: 'Git Integration & Automation','';
             description: 'Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews','';
-            icon: <GitFork className='w-6 h-6'/>;
+            icon: <GitFork className='w-6 h-6'/>
         }
     ];
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
@@ -51,7 +51,7 @@ const AICodeReviewAssistant = () => {}
 '';
             metric: '40-60%','';
             description: 'Reduction in code review time','';
-            icon: <Clock className='w-5 h-5'/>;
+            icon: <Clock className='w-5 h-5'/>
         },;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
         {;
@@ -60,7 +60,7 @@ const AICodeReviewAssistant = () => {}
 '';
             metric: '25%','';
             description: 'Improvement in code quality','';
-            icon: <TrendingUp className='w-5 h-5'/>;
+            icon: <TrendingUp className='w-5 h-5'/>
         },;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
         {;
@@ -69,7 +69,7 @@ const AICodeReviewAssistant = () => {}
 '';
             metric: '90%','';
             description: 'Security issues caught early','';
-            icon: <Shield className='w-5 h-5'/>;
+            icon: <Shield className='w-5 h-5'/>
         },;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
         {;
@@ -78,7 +78,7 @@ const AICodeReviewAssistant = () => {}
 '';
             metric: '24/7','';
             description: 'Automated review coverage','';
-            icon: <Zap className='w-5 h-5'/>;
+            icon: <Zap className='w-5 h-5'/>
     ];
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
     const pricingPlans = [;
@@ -155,10 +155,10 @@ const AICodeReviewAssistant = () => {}
             ],;
             popular: false;
     ];
-    const integrations = ['';
+    const integrations = [''
         'GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Microsoft Teams', 'Discord', 'Email'';
     ];
-    const useCases = ['';
+    const useCases = [''
         'Code quality improvement','';
         'Security compliance','';
         'Team productivity enhancement','';
@@ -172,23 +172,23 @@ const AICodeReviewAssistant = () => {}
         'Technical debt reduction'';
     ];
     return (<>;
-      <Helmet>;
+      <Helmet>
         <title>AI Code Review Assistant — Zion Tech Group | Automated Code Quality & Security</title>'';
         <meta name='description' content='Transform your development workflow with our AI-powered code review assistant. Automated security scanning, quality metrics, and best practice recommendations.'/>'';
         <meta property='og:title' content='AI Code Review Assistant — Zion Tech Group'/>'';
         <meta property='og:description' content='AI-powered code review system with security scanning, quality metrics, and automated recommendations.'/>'';
         <meta property='og:url' content='https://ziontechgroup.com/services/ai-code-review-assistant'/>'';
-        <link rel='canonical' href='https://ziontechgroup.com/services/ai-code-review-assistant'/>;
+        <link rel='canonical' href='https://ziontechgroup.com/services/ai-code-review-assistant'/>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
       </Helmet>';
 '';
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20'>';
-      </Helmet>;
+      </Helmet>
 '';
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20'>;
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20'>
         {/* Hero Section */}'';
         <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-          <div className='max-w-7xl mx-auto text-center'>;
+          <div className='max-w-7xl mx-auto text-center'>
             <motion.div initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
@@ -220,7 +220,7 @@ const AICodeReviewAssistant = () => {}
                 {' '}Code Review Assistant;
               </span>';
             </motion.h1>'';
-            <motion.p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' initial = {;
+            <motion.p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' initial = {
   { opacity: 0,;
   y: 20;
 }} whileInView = {;
@@ -237,7 +237,7 @@ const AICodeReviewAssistant = () => {}
               🔍;
             </motion.div>'';
             <motion.h1 className='text-4xl md:text-6xl font-bold mb-6' initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} whileInView = {}
   { opacity: 1,;
@@ -249,10 +249,10 @@ const AICodeReviewAssistant = () => {}
               AI-Powered'';
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'';
                 {' '}Code Review Assistant;
-              </span>;
+              </span>
             </motion.h1>'';
             <motion.p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto' initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} whileInView = {}
   { opacity: 1,;
@@ -263,7 +263,7 @@ const AICodeReviewAssistant = () => {}
 }}>;
               Intelligent code review system that analyzes pull requests, identifies security vulnerabilities,;
               suggests improvements, and maintains code quality standards across your development team.;
-            </motion.p>;
+            </motion.p>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
 ';
             {/* Key Metrics */}'';
@@ -285,7 +285,7 @@ const AICodeReviewAssistant = () => {}
 }}>'';
               {benefits.map((benefit, index) => (<div key={index} className='text-center'>'';
                   <div className='text-3xl font-bold text-blue-400 mb-2'>{benefit.metric}</div>'';
-                  <div className='text-sm text-gray-300'>{benefit.description}</div>;
+                  <div className='text-sm text-gray-300'>{benefit.description}</div>
                 </div>))}
             </motion.div>';
 '';
@@ -303,7 +303,7 @@ const AICodeReviewAssistant = () => {}
   delay: 0.8;
 ';
 }}>'';
-              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>;
+              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>
                 Start Free Trial';
             {/* Key Metrics */}'';
             <motion.div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto' initial = {}
@@ -318,9 +318,9 @@ const AICodeReviewAssistant = () => {}
 }}>'';
               {benefits.map((benefit, index) => (<div key={index} className='text-center'>'';
                   <div className='text-3xl font-bold text-blue-400 mb-2'>{benefit.metric}</div>'';
-                  <div className='text-sm text-gray-300'>{benefit.description}</div>;
+                  <div className='text-sm text-gray-300'>{benefit.description}</div>
                 </div>))}
-            </motion.div>;
+            </motion.div>
 '';
             <motion.div className='flex flex-col sm:flex-row gap-4 justify-center' initial = {}
   { opacity: 0,;
@@ -332,15 +332,15 @@ const AICodeReviewAssistant = () => {}
   { duration: 0.6,;
   delay: 0.8;
 }}>'';
-              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>;
+              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>
                 Start Free Trial;
               </Link>'';
-              <Link to='/enhanced-services' className='inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>;
+              <Link to='/enhanced-services' className='inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>
                 View All Services;
-              </Link>;
-            </motion.div>;
-          </div>;
-        </section>;
+              </Link>
+            </motion.div>
+          </div>
+        </section>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
 ';
         {/* Features Section */}'';
@@ -357,7 +357,7 @@ const AICodeReviewAssistant = () => {}
   y: 0;
 ';
 }} transition={{ duration: 0.6 }}>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Powerful Features for Modern Development';
         {/* Features Section */}'';
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5'>'';
@@ -369,12 +369,12 @@ const AICodeReviewAssistant = () => {}
   { opacity: 1,;
   y: 0;
 }} transition={{ duration: 0.6 }}>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Powerful Features for Modern Development;
               </h2>'';
-              <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+              <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
                 Comprehensive code review capabilities that integrate seamlessly with your existing workflow;
-              </p>;
+              </p>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
             </motion.div>';
 '';
@@ -397,7 +397,7 @@ const AICodeReviewAssistant = () => {}
 }}>'';
                   <div className='text-blue-400 mb-4'>{feature.icon}</div>'';
                   <h3 className='text-xl font-semibold text-white mb-4'>{feature.title}</h3>'';
-            </motion.div>;
+            </motion.div>
 '';
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>'';
               {features.map((feature, index) => (<motion.div key={index} className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300' initial = {}
@@ -412,11 +412,11 @@ const AICodeReviewAssistant = () => {}
 }}>'';
                   <div className='text-blue-400 mb-4'>{feature.icon}</div>'';
                   <h3 className='text-xl font-semibold text-white mb-4'>{feature.title}</h3>'';
-                  <p className='text-gray-300'>{feature.description}</p>;
+                  <p className='text-gray-300'>{feature.description}</p>
                 </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
 ';
         {/* Pricing Section */}'';
@@ -433,7 +433,7 @@ const AICodeReviewAssistant = () => {}
   y: 0;
 ';
 }} transition={{ duration: 0.6 }}>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Flexible Pricing Plans';
         {/* Pricing Section */}'';
         <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
@@ -445,12 +445,12 @@ const AICodeReviewAssistant = () => {}
   { opacity: 1,;
   y: 0;
 }} transition={{ duration: 0.6 }}>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Flexible Pricing Plans;
               </h2>'';
-              <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+              <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
                 Choose the plan that best fits your team size and requirements;
-              </p>;
+              </p>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
             </motion.div>';
 '';
@@ -473,9 +473,9 @@ const AICodeReviewAssistant = () => {}
 ';
 }}>'';
                   {plan.popular && (<div className='text-center mb-4'>'';
-            </motion.div>;
+            </motion.div>
 '';
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular';
                 ? 'border-blue-400 bg-blue-900/20''`;
                 : 'border-white/20 hover:border-white/40'}`} initial = {}
@@ -489,9 +489,9 @@ const AICodeReviewAssistant = () => {}
   delay: index * 0.1;
 }}>'';
                   {plan.popular && (<div className='text-center mb-4'>'';
-                      <span className='bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium'>;
+                      <span className='bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
                         Most Popular;
-                      </span>;
+                      </span>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
                     </div>)}';
 '';
@@ -501,41 +501,41 @@ const AICodeReviewAssistant = () => {}
                       {plan.price}'';
                       <span className='text-lg text-gray-400'>{plan.period}</span>';
                     </div>'';
-                    <p className='text-gray-300'>{plan.description}</p>;
+                    <p className='text-gray-300'>{plan.description}</p>
                   </div>';
                     </div>)}
 '';
                   <div className='text-center mb-6'>'';
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'';
-                    <div className='text-4xl font-bold text-blue-400 mb-2'>;
+                    <div className='text-4xl font-bold text-blue-400 mb-2'>
                       {plan.price}'';
-                      <span className='text-lg text-gray-400'>{plan.period}</span>;
+                      <span className='text-lg text-gray-400'>{plan.period}</span>
                     </div>'';
-                    <p className='text-gray-300'>{plan.description}</p>;
-                  </div>;
+                    <p className='text-gray-300'>{plan.description}</p>
+                  </div>
 '';
                   <ul className='space-y-3 mb-8'>'';
                     {plan.features.map((feature, idx) => (<li key={idx} className='flex items-center text-gray-300'>'';
-                        <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'/>;
+                        <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'/>
                         {feature}
                       </li>))}
                   </ul>'`;
 '`''`;
-                  <Link to='/contact' className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular''`;
+                  <Link to='/contact' className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular''`
                 ? 'bg-blue-600 hover:bg-blue-700 text-white''`'`;
                 : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}>;
                     Get Started;
-                  </Link>;
+                  </Link>
                 </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
 ';
         {/* Integrations & Use Cases */}'';
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5'>'';
           <div className='max-w-7xl mx-auto'>'';
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>;
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
               {/* Integrations */}
               <motion.div initial = {}
   { opacity: 0,;
@@ -562,10 +562,10 @@ const AICodeReviewAssistant = () => {}
                   {integrations.map((integration, index) => (<div key={index} className='flex items-center bg-white/10 rounded-lg p-3'>'';
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3'/>'';
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
-                      <span className='text-gray-300'>{integration}</span>;
+                      <span className='text-gray-300'>{integration}</span>
                     </div>))}
-                </div>;
-              </motion.div>;
+                </div>
+              </motion.div>
               {/* Use Cases */}
               <motion.div initial = {}
   { opacity: 0,;
@@ -592,19 +592,19 @@ const AICodeReviewAssistant = () => {}
                   {useCases.map((useCase, index) => (<div key={index} className='flex items-center bg-white/10 rounded-lg p-3'>'';
                       <Star className='w-5 h-5 text-yellow-400 mr-3'/>'';
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
-                      <span className='text-gray-300'>{useCase}</span>;
+                      <span className='text-gray-300'>{useCase}</span>
                     </div>))}
-                </div>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
 ';
         {/* CTA Section */}'';
         <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>'';
           <div className='max-w-4xl mx-auto text-center'>'';
-            <motion.h2 className='text-3xl md:text-4xl font-bold text-white mb-6' initial = {;
+            <motion.h2 className='text-3xl md:text-4xl font-bold text-white mb-6' initial = {
   { opacity: 0,;
   y: 20;
 }} whileInView = {;
@@ -613,7 +613,7 @@ const AICodeReviewAssistant = () => {}
 }} transition={{ duration: 0.6 }}>;
               Ready to Transform Your Code Review Process?';
             </motion.h2>'';
-            <motion.p className='text-xl text-gray-300 mb-8' initial = {;
+            <motion.p className='text-xl text-gray-300 mb-8' initial = {
   { opacity: 0,;
   y: 20;
 }} whileInView = {;
@@ -625,7 +625,7 @@ const AICodeReviewAssistant = () => {}
 }}>;
               Join hundreds of development teams already using our AI-powered code review assistant;
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
-            </motion.p>;
+            </motion.p>
 <:pages.disabled/pages/services/AICodeReviewAssistant.jsx;
 =;
             ';
@@ -646,7 +646,7 @@ const AICodeReviewAssistant = () => {}
         <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>'';
           <div className='max-w-4xl mx-auto text-center'>'';
             <motion.h2 className='text-3xl md:text-4xl font-bold text-white mb-6' initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} whileInView = {}
   { opacity: 1,;
@@ -655,7 +655,7 @@ const AICodeReviewAssistant = () => {}
               Ready to Transform Your Code Review Process?;
             </motion.h2>'';
             <motion.p className='text-xl text-gray-300 mb-8' initial = {}
-  { opacity: 0,;
+  { opacity: 0,
   y: 20;
 }} whileInView = {}
   { opacity: 1,;
@@ -665,7 +665,7 @@ const AICodeReviewAssistant = () => {}
   delay: 0.2;
 }}>;
               Join hundreds of development teams already using our AI-powered code review assistant;
-            </motion.p>;
+            </motion.p>
             '';
             <motion.div className='flex flex-col sm:flex-row gap-4 justify-center mb-8' initial = {}
   { opacity: 0,;
@@ -677,9 +677,9 @@ const AICodeReviewAssistant = () => {}
   { duration: 0.6,;
   delay: 0.4;
 }}>'';
-              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>;
+              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>
                 Start Free Trial'';
-                <ArrowRight className='ml-2 w-5 h-5'/>;
+                <ArrowRight className='ml-2 w-5 h-5'/>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
               </Link>';
   delay: 0.4;
@@ -690,9 +690,9 @@ const AICodeReviewAssistant = () => {}
                 <ArrowRight className='ml-2 w-5 h-5'/>';
               </Link>'';
               </Link>'';
-              <a href='tel:+13024640950' className='inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>;
+              <a href='tel:+13024640950' className='inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>
                 Call: +1 302 464 0950;
-              </a>;
+              </a>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
             </motion.div>';
 '';
@@ -712,7 +712,7 @@ const AICodeReviewAssistant = () => {}
                 <div className='flex items-center'>';
   delay: 0.6;
 ';
-            </motion.div>;
+            </motion.div>
 '';
             <motion.div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto' initial = {}
   { opacity: 0,;
@@ -728,53 +728,53 @@ const AICodeReviewAssistant = () => {}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300'>'';
                 <div className='flex items-center'>'';
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
-                  <span className='text-green-400 mr-2'>✓</span>;
+                  <span className='text-green-400 mr-2'>✓</span>
                   AI-Powered Security Scanning';
                 </div>'';
                 <div className='flex items-center'>'';
-                  <span className='text-green-400 mr-2'>✓</span>;
+                  <span className='text-green-400 mr-2'>✓</span>
                   Seamless Git Integration';
                 </div>'';
                 <div className='flex items-center'>'';
-                  <span className='text-green-400 mr-2'>✓</span>;
+                  <span className='text-green-400 mr-2'>✓</span>
                   Custom Rule Configuration';
-                  <span className='text-green-400 mr-2'>✓</span>;
+                  <span className='text-green-400 mr-2'>✓</span>
                   AI-Powered Security Scanning;
                 </div>'';
                 <div className='flex items-center'>'';
-                  <span className='text-green-400 mr-2'>✓</span>;
+                  <span className='text-green-400 mr-2'>✓</span>
                   Seamless Git Integration;
                 </div>'';
                 <div className='flex items-center'>'';
-                  <span className='text-green-400 mr-2'>✓</span>;
+                  <span className='text-green-400 mr-2'>✓</span>
                   Custom Rule Configuration;
                 </div>'';
                 <div className='flex items-center'>'';
-                  <span className='text-green-400 mr-2'>✓</span>;
+                  <span className='text-green-400 mr-2'>✓</span>
                   24/7 Automated Coverage;
-                </div>;
-              </div>;
+                </div>
+              </div>
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx;
             </motion.div>';
 '';
-            <motion.div className='mt-8 text-sm text-gray-400' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {;
+            <motion.div className='mt-8 text-sm text-gray-400' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
   { duration: 0.6,;
   delay: 0.8;
 }}>;
               <p>Email: kleber@ziontechgroup.com</p>';
-            </motion.div>;
+            </motion.div>
 '';
             <motion.div className='mt-8 text-sm text-gray-400' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {}
-  { duration: 0.6,;
+  { duration: 0.6,
   delay: 0.8;
 }}>;
-              <p>Email: kleber@ziontechgroup.com</p>;
+              <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>'';
-              <p>Website: <a href='https://ziontechgroup.com' className='text-blue-400 hover:text-blue-300'>https://ziontechgroup.com</a></p>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
+              <p>Website: <a href='https://ziontechgroup.com' className='text-blue-400 hover:text-blue-300'>https://ziontechgroup.com</a></p>
+            </motion.div>
+          </div>
+        </section>
+      </div>
     </>)};
 export { AICodeReviewAssistant };
 export default AICodeReviewAssistant''`;

@@ -1,12 +1,12 @@
 import { expect, test, vi } from 'vitest';
 import handler from '@/pages/api/users/me';
 import type { NextApiRequest, NextApiResponse } from 'next';
-;
+
 // Define a more specific type for the mocked response;
-interface MockApiResponse extends NextApiResponse {;
-  status: vi.Mock<[number] MockApiResponse>;
-  json: vi.Mock<[unknown] MockApiResponse>; // Changed from [any] to [unknown];
-  setHeader: vi.Mock<[string, string | string[]] void>;
+interface MockApiResponse extends NextApiResponse {
+  status: vi.Mock<[number] MockApiResponse>
+  json: vi.Mock<[unknown] MockApiResponse> // Changed from [any] to [unknown];
+  setHeader: vi.Mock<[string, string | string[]] void>
   end: vi.Mock<[(cb?: () => void) => void], void>;
 }
 ;
@@ -19,7 +19,7 @@ function mockReq(method: string, body?: unknown): NextApiRequest {;
     cookies: {}} as NextApiRequest;
 }
 ;
-function mockRes(): MockApiResponse {;
+function mockRes(): MockApiResponse {
   const res: Partial<MockApiResponse> = {};
   res.status = vi.fn().mockReturnValue(res as MockApiResponse);
   res.json = vi.fn().mockReturnValue(res as MockApiResponse);

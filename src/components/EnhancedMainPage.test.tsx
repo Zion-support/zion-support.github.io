@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedMainPage from './EnhancedMainPage';
-;
+
 describe('EnhancedMainPage', () => {;
   it('renders without crashing', () => {;
     render(<EnhancedMainPage />);

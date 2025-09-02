@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react.ts';
-;
-interface PerformanceMetrics {;
+
+interface PerformanceMetrics {
   fcp: number | null;
    // First Contentful Paint lcp: number | null;
    // Largest Contentful Paint fid: number | null;
@@ -10,7 +10,7 @@ interface PerformanceMetrics {;
    // First Meaningful Paint;
 }
 ;
-interface PerformanceScore {;
+interface PerformanceScore {
   score: number;
    rating: 'good' | 'needs-improvement' | 'poor';
    color: string;
@@ -86,7 +86,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {;
       color = 'text-red-500';
     }
 ;
-    return { score: averageScore, rating, color };
+    return { score: averageScore, rating, color }
   }, []);
 ;
   // Measure Core Web Vitals;
@@ -196,102 +196,102 @@ const AdvancedPerformanceMonitor: React.FC = () => {;
         className='fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50';
         aria-label='Open Performance Monitor';
       >;
-        <Activity className='w-6 h-6' />;
-      </button>;
+        <Activity className='w-6 h-6' />
+      </button>
     );
   }
 ;
   return (;
-    <div className='fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm'>;
-      <div className='flex items-center justify-between mb-4'>;
-        <h3 className='text-lg font-bold text-white flex items-center'>;
-          <Zap className='w-5 h-5 mr-2 text-zion-cyan' />;
+    <div className='fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm'>
+      <div className='flex items-center justify-between mb-4'>
+        <h3 className='text-lg font-bold text-white flex items-center'>
+          <Zap className='w-5 h-5 mr-2 text-zion-cyan' />
           Performance Monitor;
-        </h3>;
+        </h3>
         <button;
           onClick={() => setIsVisible(false)}
           className='text-zion-slate-light hover:text-white transition-colors';
         >;
           ×;
-        </button>;
-      </div>;
+        </button>
+      </div>
       {/* Overall Score */}
-      <div className='mb-4 p-4 bg-zion-slate/30 rounded-lg'>;
-        <div className='text-center'>;
-          <div className={`text-3xl font-bold ${overallScore.color}`}>;
+      <div className='mb-4 p-4 bg-zion-slate/30 rounded-lg'>
+        <div className='text-center'>
+          <div className={`text-3xl font-bold ${overallScore.color}`}>
             {overallScore.score}
-          </div>;
-          <div className='text-sm text-zion-slate-light'>;
+          </div>
+          <div className='text-sm text-zion-slate-light'>
             Overall Score ({overallScore.rating.replace('-', ' ')});
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
       {/* Core Web Vitals */}
-      <div className='space-y-3'>;
-        <div className='flex justify-between items-center'>;
-          <span className='text-sm text-zion-slate-light'>FCP</span>;
-          <div className='text-right'>;
-            <div className='text-white font-mono'>{formatTime(metrics.fcp)}</div>;
-            <div className='text-xs text-zion-slate-light'>;
+      <div className='space-y-3'>
+        <div className='flex justify-between items-center'>
+          <span className='text-sm text-zion-slate-light'>FCP</span>
+          <div className='text-right'>
+            <div className='text-white font-mono'>{formatTime(metrics.fcp)}</div>
+            <div className='text-xs text-zion-slate-light'>
               {getMetricRating('fcp', metrics.fcp)}
-            </div>;
-          </div>;
-        </div>;
-        <div className='flex justify-between items-center'>;
-          <span className='text-sm text-zion-slate-light'>LCP</span>;
-          <div className='text-right'>;
-            <div className='text-white font-mono'>{formatTime(metrics.lcp)}</div>;
-            <div className='text-xs text-zion-slate-light'>;
+            </div>
+          </div>
+        </div>
+        <div className='flex justify-between items-center'>
+          <span className='text-sm text-zion-slate-light'>LCP</span>
+          <div className='text-right'>
+            <div className='text-white font-mono'>{formatTime(metrics.lcp)}</div>
+            <div className='text-xs text-zion-slate-light'>
               {getMetricRating('lcp', metrics.lcp)}
-            </div>;
-          </div>;
-        </div>;
-        <div className='flex justify-between items-center'>;
-          <span className='text-sm text-zion-slate-light'>FID</span>;
-          <div className='text-right'>;
-            <div className='text-white font-mono'>{formatTime(metrics.fid)}</div>;
-            <div className='text-xs text-zion-slate-light'>;
+            </div>
+          </div>
+        </div>
+        <div className='flex justify-between items-center'>
+          <span className='text-sm text-zion-slate-light'>FID</span>
+          <div className='text-right'>
+            <div className='text-white font-mono'>{formatTime(metrics.fid)}</div>
+            <div className='text-xs text-zion-slate-light'>
               {getMetricRating('fid', metrics.fid)}
-            </div>;
-          </div>;
-        </div>;
-        <div className='flex justify-between items-center'>;
-          <span className='text-sm text-zion-slate-light'>CLS</span>;
-          <div className='text-right'>;
-            <div className='text-white font-mono'>{formatCLS(metrics.cls)}</div>;
-            <div className='text-xs text-zion-slate-light'>;
+            </div>
+          </div>
+        </div>
+        <div className='flex justify-between items-center'>
+          <span className='text-sm text-zion-slate-light'>CLS</span>
+          <div className='text-right'>
+            <div className='text-white font-mono'>{formatCLS(metrics.cls)}</div>
+            <div className='text-xs text-zion-slate-light'>
               {getMetricRating('cls', metrics.cls)}
-            </div>;
-          </div>;
-        </div>;
-        <div className='flex justify-between items-center'>;
-          <span className='text-sm text-zion-slate-light'>TTFB</span>;
-          <div className='text-right'>;
-            <div className='text-white font-mono'>{formatTime(metrics.ttfb)}</div>;
-          </div>;
-        </div>;
-      </div>;
+            </div>
+          </div>
+        </div>
+        <div className='flex justify-between items-center'>
+          <span className='text-sm text-zion-slate-light'>TTFB</span>
+          <div className='text-right'>
+            <div className='text-white font-mono'>{formatTime(metrics.ttfb)}</div>
+          </div>
+        </div>
+      </div>
       {/* Recommendations */}
       {overallScore.rating !== 'good' && (;
-        <div className='mt-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg'>;
-          <div className='flex items-center text-yellow-400 mb-2'>;
-            <AlertTriangle className='w-4 h-4 mr-2' />;
-            <span className='text-sm font-medium'>Recommendations</span>;
-          </div>;
-          <ul className='text-xs text-yellow-300 space-y-1'>;
+        <div className='mt-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg'>
+          <div className='flex items-center text-yellow-400 mb-2'>
+            <AlertTriangle className='w-4 h-4 mr-2' />
+            <span className='text-sm font-medium'>Recommendations</span>
+          </div>
+          <ul className='text-xs text-yellow-300 space-y-1'>
             {metrics.lcp && metrics.lcp > 2500 && (;
-              <li>• Optimize images and reduce LCP</li>;
+              <li>• Optimize images and reduce LCP</li>
             )}
             {metrics.fid && metrics.fid > 100 && (;
-              <li>• Reduce JavaScript bundle size</li>;
+              <li>• Reduce JavaScript bundle size</li>
             )}
             {metrics.cls && metrics.cls > 0.1 && (;
-              <li>• Fix layout shifts and set image dimensions</li>;
+              <li>• Fix layout shifts and set image dimensions</li>
             )}
-          </ul>;
-        </div>;
+          </ul>
+        </div>
       )}
-    </div>;
+    </div>
   );
 };
 ;

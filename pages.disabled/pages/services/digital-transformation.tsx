@@ -2,10 +2,10 @@
 export { function };export default function DigitalTransformation(...args: []):  {}
   return();
     <>;
-      <Helmet>;
-        <title>Digital Transformation - Zion Tech Group</title>;
+      <Helmet>
+        <title>Digital Transformation - Zion Tech Group</title>
         <meta name = 'description' content='Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation.' />'';
-        <meta name='keywords' content='digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation' />;
+        <meta name='keywords' content='digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation' />
 :pages.disabled/pages/services/digital-transformation.tsx;
       </Helmet>';
 '';
@@ -20,8 +20,8 @@ export { function };export default function DigitalTransformation(...args: []): 
 '';
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
                 Digital'';
-                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'> Transformation</span>;
-              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>;
+                <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'> Transformation</span>
+              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Transform your business with comprehensive digital transformation services. Modernize operations,;
                 enhance customer experience, and drive innovation across your organization.;
 :pages.disabled/pages/services/digital-transformation.tsx;
@@ -36,24 +36,24 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <ArrowRight className='ml-2 w-5 h-5'  />';
                 </Link>'';
                 <button className='inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200'>'';
-                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>;
-            </div>;
-          </div>;
-        </section>;
+                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-transformation.tsx;
 '{/* Features Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-transformation.tsx;
-                Comprehensive Digital Transformation'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Comprehensive Digital Transformation'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our digital transformation services cover every aspect of modernizing your business;
                 for the digital age.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-transformation.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[;
                 {;
 ';
@@ -95,26 +95,26 @@ export { function };export default function DigitalTransformation(...args: []): 
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
                     <feature.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                  <p className='text-slate-300'>{feature.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{feature.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-transformation.tsx;
 '{/* Transformation Areas Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-transformation.tsx;
-                Digital Transformation Areas'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Digital Transformation Areas'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Comprehensive transformation across all critical business functions and processes.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-transformation.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -129,7 +129,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Business Processes','';
                   description: 'Streamline and automate business processes for efficiency gains.',';
                   icon: Settings,'';
-                  benefits: ['Process mapping', 'Workflow automation', 'Efficiency optimization'];
+                  benefits: ['Process mapping', 'Workflow automation', 'Efficiency optimization']
                 },;
                 {;
 ';
@@ -137,7 +137,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Customer Experience','';
                   description: 'Transform customer interactions and digital touchpoints.',';
                   icon: Users,'';
-                  benefits: ['Omnichannel strategy', 'Digital touchpoints', 'Customer journey mapping'];
+                  benefits: ['Omnichannel strategy', 'Digital touchpoints', 'Customer journey mapping']
                 },;
                 {;
 ';
@@ -145,7 +145,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Data & Analytics','';
                   description: 'Implement data-driven decision making and analytics capabilities.',';
                   icon: BarChart3,'';
-                  benefits: ['Data strategy', 'Analytics implementation', 'Business intelligence'];
+                  benefits: ['Data strategy', 'Analytics implementation', 'Business intelligence']
                 },;
                 {;
 ';
@@ -153,7 +153,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Digital Culture','';
                   description: 'Foster digital-first mindset and organizational change.',';
                   icon: Brain,'';
-                  benefits: ['Change management', 'Digital literacy', 'Innovation culture'];
+                  benefits: ['Change management', 'Digital literacy', 'Innovation culture']
                 },;
                 {;
 ';
@@ -161,7 +161,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Security & Compliance','';
                   description: 'Ensure digital security and regulatory compliance.',';
                   icon: Shield,'';
-                  benefits: ['Cybersecurity', 'Data protection', 'Compliance frameworks'];
+                  benefits: ['Cybersecurity', 'Data protection', 'Compliance frameworks']
                 }';
               ].map((area, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -172,28 +172,28 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <p className='text-slate-300 mb-4'>{area.description}</p>'';
                   <ul className='space-y-1'>'{area.benefits.map((benefit, benefitIndex) => (''                      <li key={benefitIndex} className='text-sm text-purple-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {benefit}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-transformation.tsx;
 '{/* Technology Stack Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-transformation.tsx;
-                Modern Technology Stack'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Modern Technology Stack'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Leverage cutting-edge technologies for your digital transformation journey.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-transformation.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -208,7 +208,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'AI & Machine Learning','';
                   description: 'Intelligent automation and predictive analytics.',';
                   icon: Brain,'';
-                  features: ['Predictive analytics', 'Process automation', 'Intelligent insights'];
+                  features: ['Predictive analytics', 'Process automation', 'Intelligent insights']
                 },;
                 {;
 ';
@@ -216,7 +216,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Mobile & Web','';
                   description: 'Modern web and mobile application development.',';
                   icon: Smartphone,'';
-                  features: ['Progressive web apps', 'Native mobile apps', 'Responsive design'];
+                  features: ['Progressive web apps', 'Native mobile apps', 'Responsive design']
                 },;
                 {;
 ';
@@ -224,7 +224,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Data & Analytics','';
                   description: 'Big data processing and business intelligence tools.',';
                   icon: BarChart3,'';
-                  features: ['Data lakes', 'Real-time analytics', 'Business intelligence'];
+                  features: ['Data lakes', 'Real-time analytics', 'Business intelligence']
                 },;
                 {;
 ';
@@ -232,7 +232,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'DevOps & Automation','';
                   description: 'Continuous integration and deployment automation.',';
                   icon: Settings,'';
-                  features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing'];
+                  features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing']
                 },;
                 {;
 ';
@@ -240,7 +240,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   title: 'Security & Compliance','';
                   description: 'Advanced cybersecurity and compliance solutions.',';
                   icon: Shield,'';
-                  features: ['Zero-trust security', 'Compliance automation', 'Threat detection'];
+                  features: ['Zero-trust security', 'Compliance automation', 'Threat detection']
                 }';
               ].map((tech, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -251,23 +251,23 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <p className='text-slate-300 mb-4'>{tech.description}</p>'';
                   <ul className='space-y-1'>'{tech.features.map((feature, featureIndex) => (''                      <li key={featureIndex} className='text-sm text-purple-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {feature}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-transformation.tsx;
 '{/* Benefits Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-transformation.tsx;
-                Digital Transformation Benefits'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Digital Transformation Benefits'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Transform your business operations with measurable improvements and competitive advantages.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-transformation.tsx;
             </div>';
 '';
@@ -281,10 +281,10 @@ export { function };export default function DigitalTransformation(...args: []): 
                     'Better employee productivity and satisfaction'';
                   ].map((benefit, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>;
-                    </div>;
+                      <CheckCircle className='w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>
+                    </div>
                   ))}
-                </div>;
+                </div>
 :pages.disabled/pages/services/digital-transformation.tsx;
               </div>';
 '';
@@ -297,27 +297,27 @@ export { function };export default function DigitalTransformation(...args: []): 
                     { metric: '80%+', label: 'Digital Adoption', description: 'Technology adoption' }'].map((item, index)  => (''                    <div key={index} className='text-center p-4 bg-slate-700/50 rounded-lg'>'';
                       <div className='text-2xl font-bold text-purple-400 mb-1'>{item.metric}</div>'';
                       <div className='text-sm text-slate-300'>{item.label}</div>'';
-                      <div className='text-xs text-slate-400'>{item.description}</div>;
-                    </div>;
+                      <div className='text-xs text-slate-400'>{item.description}</div>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-transformation.tsx;
 '{/* Implementation Process Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-transformation.tsx;
-                Transformation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Transformation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our systematic approach ensures successful digital transformation implementation.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-transformation.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[;
                 {;
 ';
@@ -351,20 +351,20 @@ export { function };export default function DigitalTransformation(...args: []): 
                 <div key={index} className='text-center'>'';
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                     <span className='text-white font-bold text-xl'>{step.step}</span>'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>'';
-                  <p className='text-slate-300'>{step.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{step.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-transformation.tsx;
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10'>';
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-transformation.tsx;
               Ready to Transform Your Business?';
             </h2>'';
-            <p className='text-xl text-slate-300 mb-8'>;
+            <p className='text-xl text-slate-300 mb-8'>
               Start your digital transformation journey with comprehensive strategy and implementation services.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
@@ -377,11 +377,11 @@ export { function };export default function DigitalTransformation(...args: []): 
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200'>                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
 :pages.disabled/pages/services/digital-transformation.tsx;
     </>';
   )}}}}}}

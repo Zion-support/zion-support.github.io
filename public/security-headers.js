@@ -1,7 +1,7 @@
 // Security Headers Configuration;
 // This file provides security headers for the Zion Tech Group application;
 ;
-const securityHeaders = {;
+const securityHeaders = {
   // Content Security Policy,;
   Content-Security-Policy': [;
     'default-src;

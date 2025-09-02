@@ -10,7 +10,7 @@ import {;
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 ;
-  const footerSections = [;
+  const footerSections = [
     {;
       title: 'Services',;
       links: [;
@@ -24,7 +24,7 @@ const EnhancedFooter: React.FC = () => {;
     },;
     {;
       title: 'Solutions',;
-      links: [;
+      links: [
         { name: 'Enterprise', href: '/solutions/enterprise' },;
         { name: 'Startups', href: '/solutions/startups' },;
         { name: 'Healthcare', href: '/solutions/healthcare' },;
@@ -35,7 +35,7 @@ const EnhancedFooter: React.FC = () => {;
     },;
     {;
       title: 'Company',;
-      links: [;
+      links: [
         { name: 'About Us', href: '/about' },;
         { name: 'Our Team', href: '/about/team' },;
         { name: 'Careers', href: '/careers' },;
@@ -46,7 +46,7 @@ const EnhancedFooter: React.FC = () => {;
     },;
     {;
       title: 'Resources',;
-      links: [;
+      links: [
         { name: 'Blog', href: '/blog' },;
         { name: 'Documentation', href: '/docs' },;
         { name: 'API Reference', href: '/api' },;
@@ -57,7 +57,7 @@ const EnhancedFooter: React.FC = () => {;
     }
   ];
 ;
-  const socialLinks = [;
+  const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },;
@@ -65,48 +65,48 @@ const EnhancedFooter: React.FC = () => {;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 ;
-  const contactInfo = [;
+  const contactInfo = [
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },;
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },;
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 ;
   return (;
-    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>;
+    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>
       {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
           {/* Company Info */}
-          <div className='lg:col-span-2'>;
-            <motion.div;
+          <div className='lg:col-span-2'>
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >;
-              <Link to='/' className='text-2xl font-bold text-white mb-4 block'>;
+              <Link to='/' className='text-2xl font-bold text-white mb-4 block'>
                 Zion Tech Group;
-              </Link>;
-              <p className='text-slate-300 mb-6 max-w-md'>;
+              </Link>
+              <p className='text-slate-300 mb-6 max-w-md'>
                 Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,;
                 and digital transformation services. Transforming businesses with cutting-edge technology.;
-              </p>;
+              </p>
               {/* Contact Information */}
-              <div className='space-y-3 mb-6'>;
+              <div className='space-y-3 mb-6'>
                 {contactInfo.map((contact, index) => (;
-                  <a;
+                  <a
                     key={index}
                     href={contact.href}
                     className='flex items-center text-slate-300 hover:text-white transition-colors';
                   >;
-                    <contact.icon className='w-5 h-5 mr-3 text-blue-400' />;
-                    <span className='text-sm'>{contact.text}</span>;
-                  </a>;
+                    <contact.icon className='w-5 h-5 mr-3 text-blue-400' />
+                    <span className='text-sm'>{contact.text}</span>
+                  </a>
                 ))}
-              </div>;
+              </div>
               {/* Social Links */}
-              <div className='flex space-x-4'>;
+              <div className='flex space-x-4'>
                 {socialLinks.map((social, index) => (;
-                  <a;
+                  <a
                     key={index}
                     href={social.href}
                     target='_blank';
@@ -114,83 +114,83 @@ const EnhancedFooter: React.FC = () => {;
                     className='w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors';
                     aria-label={social.name}
                   >;
-                    <social.icon className='w-5 h-5' />;
-                  </a>;
+                    <social.icon className='w-5 h-5' />
+                  </a>
                 ))}
-              </div>;
-            </motion.div>;
-          </div>;
+              </div>
+            </motion.div>
+          </div>
           {/* Footer Sections */}
           {footerSections.map((section, index) => (;
-            <motion.div;
+            <motion.div
               key={section.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >;
-              <h3 className='text-lg font-semibold text-white mb-4'>{section.title}</h3>;
-              <ul className='space-y-3'>;
+              <h3 className='text-lg font-semibold text-white mb-4'>{section.title}</h3>
+              <ul className='space-y-3'>
                 {section.links.map((link, linkIndex) => (;
-                  <li key={linkIndex}>;
-                    <Link;
+                  <li key={linkIndex}>
+                    <Link
                       to={link.href}
                       className='text-slate-300 hover:text-white transition-colors text-sm';
                     >;
                       {link.name}
-                    </Link>;
-                  </li>;
+                    </Link>
+                  </li>
                 ))}
-              </ul>;
-            </motion.div>;
+              </ul>
+            </motion.div>
           ))}
-        </div>;
-      </div>;
+        </div>
+      </div>
       {/* Newsletter Section */}
-      <div className='border-t border-slate-700'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
-          <motion.div;
+      <div className='border-t border-slate-700'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center';
           >;
-            <h3 className='text-xl font-semibold text-white mb-2'>Stay Updated</h3>;
-            <p className='text-slate-300 mb-6'>Get the latest technology insights and service updates.</p>;
-            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>;
-              <input;
+            <h3 className='text-xl font-semibold text-white mb-2'>Stay Updated</h3>
+            <p className='text-slate-300 mb-6'>Get the latest technology insights and service updates.</p>
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+              <input
                 type='email';
                 placeholder='Enter your email';
                 className='flex-1 px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500';
               />;
-              <button className='px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-semibold'>;
+              <button className='px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-semibold'>
                 Subscribe;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
       {/* Bottom Bar */}
-      <div className='border-t border-slate-700'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
-          <div className='flex flex-col md:flex-row justify-between items-center'>;
-            <div className='text-slate-400 text-sm mb-4 md:mb-0'>;
+      <div className='border-t border-slate-700'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+          <div className='flex flex-col md:flex-row justify-between items-center'>
+            <div className='text-slate-400 text-sm mb-4 md:mb-0'>
               © {currentYear} Zion Tech Group. All rights reserved.;
-            </div>;
-            <div className='flex space-x-6 text-sm'>;
-              <Link to='/privacy' className='text-slate-400 hover:text-white transition-colors'>;
+            </div>
+            <div className='flex space-x-6 text-sm'>
+              <Link to='/privacy' className='text-slate-400 hover:text-white transition-colors'>
                 Privacy Policy;
-              </Link>;
-              <Link to='/terms' className='text-slate-400 hover:text-white transition-colors'>;
+              </Link>
+              <Link to='/terms' className='text-slate-400 hover:text-white transition-colors'>
                 Terms of Service;
-              </Link>;
-              <Link to='/cookies' className='text-slate-400 hover:text-white transition-colors'>;
+              </Link>
+              <Link to='/cookies' className='text-slate-400 hover:text-white transition-colors'>
                 Cookie Policy;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 ;

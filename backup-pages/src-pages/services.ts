@@ -1,13 +1,13 @@
 // Comprehensive Services Data - Zion Tech Group;
 // Combining all existing services and adding new innovative solutions;
-export interface ServiceContact {;
+export interface ServiceContact {
   phone: string;
    email: string;
    website: string;
    address: string;
 }
 ;
-export interface MicroSaasService {;
+export interface MicroSaasService {
   id: string;
    name: string;
    category: string;
@@ -33,7 +33,7 @@ export interface MicroSaasService {;
    growthRate: string;
 }
 ;
-export interface ITService {;
+export interface ITService {
   id: string;
    name: string;
    category: string;
@@ -56,7 +56,7 @@ export interface ITService {;
    compliance: string[];
 }
 ;
-export interface AIService {;
+export interface AIService {
   id: string;
    name: string;
    category: string;
@@ -89,7 +89,7 @@ export interface AIService {;
   sustainabilityFeatures?: string[];
 }
 ;
-export interface InnovativeMicroSaasService {;
+export interface InnovativeMicroSaasService {
   id: string;
    title: string;
    description: string;
@@ -120,7 +120,7 @@ export interface InnovativeMicroSaasService {;
 }
 ;
 // Contact Information;
-export const contactInfo = {;
+export const contactInfo = {
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   website: 'https://ziontechgroup.com',;

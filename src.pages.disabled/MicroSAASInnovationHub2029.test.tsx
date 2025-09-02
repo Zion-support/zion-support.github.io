@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import MicroSAASInnovationHub2029 from './MicroSAASInnovationHub2029';
-;
+
 describe('MicroSAASInnovationHub2029', () => {;
   it('renders without crashing', () => {;
     render(<MicroSAASInnovationHub2029 />);

@@ -46,7 +46,7 @@ const categories = [;
     features['Latest Tech', 'Research Labs', 'Startup Solutions'],;
     stats: '100+ Innovations';
   },;
-  {;
+  {
     title: 'AI Hiring Platform',;
     description: 'AI-powered recruitment and talent acquisition tools',;
     icon: <ZapIcon className='w-10 h-10' />,;
@@ -56,7 +56,7 @@ const categories = [;
   };
 ;
 ];
-const specialServices = [;
+const specialServices = [
   {;
     title: 'IT Onsite Services',;
     link: '/it-onsite-services',;
@@ -75,7 +75,7 @@ const specialServices = [;
     icon: <Globe className='w-5 h-5' />,;
     description: 'Scalable cloud infrastructure';
   },;
-  {;
+  {
     title: 'Security Services',;
     link: '/security-services',;
     icon: <Shield className='w-5 h-5' />,;
@@ -88,7 +88,7 @@ interface CategoriesSectionProps {;
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
   const containerVariants = {;
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       transition: {;
         staggerChildren: 0.1;
@@ -100,7 +100,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 30;
 ;
 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       y: 0,;
       transition: { duration: 0.6, ease: 'easeOut' };
@@ -118,10 +118,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   delay: 0.4;
 }}
         >;
-          <h3 className='text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>;
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>;
+          <h3 className='text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
             {specialServices.map((service, index) => (;
-              <motion.div;
+              <motion.div
                 key={service.title}
                 initial = {;
   { opacity: 0,;
@@ -136,24 +136,24 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   delay: 0.5 + index * 0.1;
 }}
               >;
-                <Link;
+                <Link
                   to={service.link}
                   className='block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group';
                   <div className='flex items-center gap-3 mb-2'>;
-                    <div className='text-zion-purple group-hover:scale-110 transition-transform'>;
+                    <div className='text-zion-purple group-hover:scale-110 transition-transform'>
                       {service.icon}
-                    </div>;
-                    <span className='font-semibold text-sm'>{service.title}</span>;
-                  </div>;
-                  <p className='text-xs text-zion-slate-light leading-relaxed'>;
+                    </div>
+                    <span className='font-semibold text-sm'>{service.title}</span>
+                  </div>
+                  <p className='text-xs text-zion-slate-light leading-relaxed'>
                     {service.description}
-                  </p>;
-                </Link>;
-              </motion.div>;
+                  </p>
+                </Link>
+              </motion.div>
             ))}
-          </div>;
-        </motion.div>;
-        <motion.div;
+          </div>
+        </motion.div>
+        <motion.div
           className='text-center';
           initial = {;
   { opacity: 0,;
@@ -168,16 +168,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   delay: 0.6;
 }}
         >;
-          <Link;
+          <Link
             to='/categories';
             className='inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group';
             Explore All Categories;
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
 ;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 ;

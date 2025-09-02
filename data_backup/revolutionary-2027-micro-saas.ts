@@ -1,4 +1,4 @@
-export interface Revolutionary2027MicroSaas {;
+export interface Revolutionary2027MicroSaas {
   id: string;
    name: string;
    tagline: string;

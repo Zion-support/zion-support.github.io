@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-;
-interface ImageOptimizerProps {;
+
+interface ImageOptimizerProps {
   src: string;
    alt: string;
    width?: number;
@@ -25,7 +25,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({;
   blurDataURL, sizes,;
   fill = false, style,;
   onLoad, onError;
-}) => {;
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -71,25 +71,25 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({;
   }, [priority]);
 ;
   if (hasError) {;
-    return (;
-      <div;
+    return (
+      <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height, ...style }}
         role='img';
         aria-label={alt}
       >;
-        <span className='text-gray-500 text-sm'>Image failed to load</span>;
-      </div>;
+        <span className='text-gray-500 text-sm'>Image failed to load</span>
+      </div>
     );
   }
 ;
   return (;
-    <div;
+    <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={fill ? { position: 'relative', width: '100%', height: '100%' } : { width, height, ...style }}
     >;
-      <img;
+      <img
         src={src}
         alt={alt}
         width={fill ? undefined : width}
@@ -107,12 +107,12 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({;
       />;
       {/* Loading skeleton */}
       {!isLoaded && !hasError && (;
-        <div;
+        <div
           className='absolute inset-0 bg-gray-200 animate-pulse';
           aria-hidden='true';
         />;
       )}
-    </div>;
+    </div>
   );
 };
 ;

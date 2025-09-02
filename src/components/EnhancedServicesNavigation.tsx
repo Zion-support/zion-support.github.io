@@ -41,7 +41,7 @@
       description: 'Enterprise solutions','''';
       icon: '☁️','''';
       color: 'from-green-600 to-blue-600',;
-      services[;
+      services[
         {}
 ''';
 '''';
@@ -75,7 +75,7 @@
       description: 'Business intelligence','''';
       icon: '📊','''';
       color: 'from-purple-600 to-pink-600',;
-      services[;
+      services[
         {}
 ''';
 '''';
@@ -137,25 +137,25 @@
       ]};
   ]};  ]';';
   return ('''';
-    <div className = 'relative'>;
+    <div className = 'relative'>
       {/* Main Services Button */}
       <button''';
         onClick={() => setIsOpen(!isOpen)}'''';
         className='relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'''';
       >'''';
-        <span className='flex items-center gap-2'>;
-          <span>🚀</span>;
-          <span > Services</span>;
-          <motion.span;
+        <span className='flex items-center gap-2'>
+          <span>🚀</span>
+          <span > Services</span>
+          <motion.span
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >;
             ▼;
-          </motion.span>;
-        </span>;
-      </button>;
+          </motion.span>
+        </span>
+      </button>
       {/* Services Dropdown */}
-      <AnimatePresence>;
+      <AnimatePresence>
         {isOpen && (<motion.div;
             initial = {}
   { opacity: 0, y: -10,;
@@ -175,16 +175,16 @@
             <div className='p-6'>''';
               {/* Header */}'''';
               <div className='text-center mb-8'>'''';
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>;
+                <h3 className='text-2xl font-bold text-gray-900 mb-2'>
                   Our Complete Service Portfolio''';
                 </h3>'''';
-                <p className='text-gray-600'>;
+                <p className='text-gray-600'>
                   From AI-powered micro SAAS to enterprise infrastructure solutions;
-                </p>;
-              </div>;
+                </p>
+              </div>
 ''';
               {/* Service Categories Grid */}'''';
-              <div className='grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8'>;
+              <div className='grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8'>
                 {serviceCategories.map((category, categoryIndex)  => (;
                   <motion.div;
                     key={category.name}
@@ -210,11 +210,11 @@
                         <span className='text-2xl'>{category.icon}</span>''';
                         <div>'''';
                           <h4 className='text-lg font-semibold'>{category.name}</h4>'''';
-                          <p className='text-sm opacity-90'>{category.description}</p>;
-                        </div>;
+                          <p className='text-sm opacity-90'>{category.description}</p>
+                        </div>
                       </div>''';
                       '''';
-                      <div className='space-y-2'>;
+                      <div className='space-y-2'>
                         {category.services.map((service, serviceIndex) => (;
                           <motion.div;
                             key={service.title}
@@ -237,22 +237,22 @@
                               <div className='text-xs opacity-80'>{service.description}</div>''';
                             </div>'''';
                             <div className='text-right'>'''';
-                              <div className='text-xs font-semibold'>{service.pricing}</div>;
-                            </div>;
+                              <div className='text-xs font-semibold'>{service.pricing}</div>
+                            </div>
                           </motion.div>) ) }
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                   </motion.div>) ) }
-              </div>;
+              </div>
 ''';
               {/* Quick Links */}'''';
               <div className='border-t border-gray-200 pt-6'>'''';
-                <h4 className='text-lg font-semibold text-gray-900 mb-4 text-center'>;
+                <h4 className='text-lg font-semibold text-gray-900 mb-4 text-center'>
                   Quick Access''';
                 </h4>'''';
-                <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>;
+                <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>
                   {quickLinks.map((link, index)  => (;
-                    <motion.div;
+                    <motion.div
                       key={link.title}
                       initial = {}
   { opacity: 0,;
@@ -272,24 +272,24 @@
                         onClick={() => setIsOpen(false)}'''';
                         className='block p-4 text-center rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200 group'''';
                       >'''';
-                        <div className='text-2xl mb-2 group-hover:scale-110 transition-transform duration-200'>;
+                        <div className='text-2xl mb-2 group-hover:scale-110 transition-transform duration-200'>
                           {link.icon}''';
                         </div>'''';
-                        <div className='font-medium text-gray-900 text-sm mb-1'>;
+                        <div className='font-medium text-gray-900 text-sm mb-1'>
                           {link.title}''';
                         </div>'''';
-                        <div className='text-xs text-gray-600'>;
+                        <div className='text-xs text-gray-600'>
                           {link.description}
-                        </div>;
-                      </Link>;
+                        </div>
+                      </Link>
                     </motion.div>) ) }
-                </div>;
-              </div>;
+                </div>
+              </div>
 ''';
               {/* Contact Information */}'''';
               <div className='mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200'>'''';
                 <div className='text-center'>'''';
-                  <p className='text-sm text-gray-700 mb-2'>;
+                  <p className='text-sm text-gray-700 mb-2'>
                     Need help choosing the right service?''';
                   </p>'''';
                   <div className='flex flex-col sm:flex-row gap-2 justify-center text-sm'>'''';
@@ -297,14 +297,14 @@
                       📱 <span className='font-medium'>+1 302 464 0950</span>''';
                     </span>'''';
                     <span className='text-gray-600'>'''';
-                      ✉️ <span className='font-medium'>kleber@ziontechgroup.com</span>;
-                    </span>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
+                      ✉️ <span className='font-medium'>kleber@ziontechgroup.com</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>) }
-      </AnimatePresence>;
+      </AnimatePresence>
       {/* Backdrop */}
       {isOpen && (<motion.div;
           initial={{ opacity: 0 }}
@@ -314,7 +314,7 @@
           onClick={() => setIsOpen(false)}
         />;
       )};
-    </div>;
+    </div>
   )};
 ;
 export default EnhancedServicesNavigation;

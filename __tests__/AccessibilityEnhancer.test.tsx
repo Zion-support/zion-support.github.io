@@ -3,15 +3,15 @@ import React from,;
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import { describe, it, expect, vi } from 'vitest';
-;
+
 describe(;
   'AccessibilityEnhancer', () => {;
   it(;
   'renders children correctly', () => {;
     render(;
-      <AccessibilityEnhancer>;
-        <div data-testid='test-child'>Test Content</div>;
-      </AccessibilityEnhancer>;
+      <AccessibilityEnhancer>
+        <div data-testid='test-child'>Test Content</div>
+      </AccessibilityEnhancer>
     );
 ;
     expect(screen.getByTestId(;
@@ -23,13 +23,13 @@ describe(;
   it(;
   'applies accessibility props correctly', () => {;
     render(;
-      <AccessibilityEnhancer;
+      <AccessibilityEnhancer
         role='button';
         aria-label='Test Button';
         tabIndex={0}
       >;
-        <span>Button Text</span>;
-      </AccessibilityEnhancer>;
+        <span>Button Text</span>
+      </AccessibilityEnhancer>
     );
 ;
     const element = screen.getByRole(;
@@ -44,9 +44,9 @@ describe(;
   'handles keyboard events correctly', () => {;
     const handleClick = vi.fn();
     render(;
-      <AccessibilityEnhancer role='button' onClick={handleClick} tabIndex={0}>;
-        <span>Clickable Element</span>;
-      </AccessibilityEnhancer>;
+      <AccessibilityEnhancer role='button' onClick={handleClick} tabIndex={0}>
+        <span>Clickable Element</span>
+      </AccessibilityEnhancer>
     );
 ;
     const element = screen.getByRole(;
@@ -61,13 +61,13 @@ describe(;
   it(;
   'applies focus styles when focusable', () => {;
     render(;
-      <AccessibilityEnhancer;
+      <AccessibilityEnhancer
         role='button';
         tabIndex={0}
         className='focus: outline-none focus:ring-2 focus:ring-blue-500';
       >;
-        <span>Focusable Element</span>;
-      </AccessibilityEnhancer>;
+        <span>Focusable Element</span>
+      </AccessibilityEnhancer>
     );
 ;
     const element = screen.getByRole(;
@@ -82,9 +82,9 @@ describe(;
   it(;
   'disables focus when not focusable', () => {;
     render(;
-      <AccessibilityEnhancer role='button' tabIndex={-1}>;
-        <span>Non-focusable Element</span>;
-      </AccessibilityEnhancer>;
+      <AccessibilityEnhancer role='button' tabIndex={-1}>
+        <span>Non-focusable Element</span>
+      </AccessibilityEnhancer>
     );
 ;
     const element = screen.getByRole(;

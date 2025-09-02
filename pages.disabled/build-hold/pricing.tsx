@@ -34,13 +34,13 @@ import { Badge } from;
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>'        <div className='max-w-7xl mx-auto text-center'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
-            <Badge variant='secondary' className='mb-4'>'              <DollarSign className='w-4 h-4 mr-2' />'              Transparent Pricing'            </Badge>;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>'              Choose Your Perfect Plan'            </h1>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>'              Flexible pricing options designed to scale with your business. Start small and grow with us.'            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+          >
+            <Badge variant='secondary' className='mb-4'>'              <DollarSign className='w-4 h-4 mr-2' />'              Transparent Pricing'            </Badge>
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>'              Choose Your Perfect Plan'            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>'              Flexible pricing options designed to scale with your business. Start small and grow with us.'            </p>
+          </motion.div>
+        </div>
+      </section>
       {/* Pricing Plans */}
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'        <div className='max-w-7xl mx-auto'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,64 +51,64 @@ import { Badge } from;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className='relative''              >'                <Card className={`p-8 h-full ${plan.popular ?,;
+                className='relative''              >'                <Card className={`p-8 h-full ${plan.popular ?,
   ring-2 ring-purple-500 scale-105;
   ': '}`}>;
-  '                  {plan.popular && ('                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>'                        <Star className='w-4 h-4 mr-1' />'                        Most Popular'                      </Badge>`                    </div>;
+  '                  {plan.popular && ('                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>'                        <Star className='w-4 h-4 mr-1' />'                        Most Popular'                      </Badge>`                    </div>
                   )}
 ;
                   <div className='text-center mb-8'>'                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'                    <div className='mb-4'>'                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'                      <span className='text-gray-400'>{plan.period}</span>'                    </div>'                    <p className='text-gray-300'>{plan.description}</p>'                  </div>';
-                  <ul className='space-y-4 mb-8'>'                    {plan.features.map((feature, featureIndex) => ('                      <li key={featureIndex} className='flex items-center text-gray-300'>'                        <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />'                        {feature}'                      </li>;
+                  <ul className='space-y-4 mb-8'>'                    {plan.features.map((feature, featureIndex) => ('                      <li key={featureIndex} className='flex items-center text-gray-300'>'                        <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />'                        {feature}'                      </li>
                     ))}
-                  </ul>;
-                  <Button;
+                  </ul>
+                  <Button
                     variant={plan.buttonVariant}
                     className={`w-full bg-gradient-to-r ${plan.color} text-white hover: opacity-90 transition-opacity`}`                  >;
                     {plan.buttonText}
-                    <ArrowRight className='w-4 h-4 ml-2' />'                  </Button>'                </Card>;
-              </motion.div>;
+                    <ArrowRight className='w-4 h-4 ml-2' />'                  </Button>'                </Card>
+              </motion.div>
             ))}
-          </motion.div>;
-        </div>;
-      </section>;
+          </motion.div>
+        </div>
+      </section>
       {/* Service Pricing */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>'        <div className='max-w-7xl mx-auto'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-16''          >'            <h2 className='text-4xl font-bold text-white mb-4'>'              Custom Service Pricing'            </h2>;
-            <p className='text-xl text-gray-300'>'              Tailored solutions for your specific business needs'            </p>;
-          </motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>'            {servicePricing.map((service, index) => ('              <motion.div;
+            className='text-center mb-16''          >'            <h2 className='text-4xl font-bold text-white mb-4'>'              Custom Service Pricing'            </h2>
+            <p className='text-xl text-gray-300'>'              Tailored solutions for your specific business needs'            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>'            {servicePricing.map((service, index) => ('              <motion.div
                 key={service.service}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >;
-                <Card className='p-6 h-full'>'                  <div className='text-center'>'                    <h3 className='text-xl font-bold text-white mb-2'>{service.service}</h3>'                    <div className='text-3xl font-bold text-blue-400 mb-2'>'                      {service.startingPrice}'                    </div>;
-                    <p className='text-gray-300 mb-4 text-sm'>{service.description}</p>'                    '                    <ul className='space-y-2 text-sm text-gray-300'>'                      {service.features.map((feature, featureIndex) => ('                        <li key={featureIndex} className='flex items-center'>'                          <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' />'                          {feature}'                        </li>;
+                <Card className='p-6 h-full'>'                  <div className='text-center'>'                    <h3 className='text-xl font-bold text-white mb-2'>{service.service}</h3>'                    <div className='text-3xl font-bold text-blue-400 mb-2'>'                      {service.startingPrice}'                    </div>
+                    <p className='text-gray-300 mb-4 text-sm'>{service.description}</p>'                    '                    <ul className='space-y-2 text-sm text-gray-300'>'                      {service.features.map((feature, featureIndex) => ('                        <li key={featureIndex} className='flex items-center'>'                          <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' />'                          {feature}'                        </li>
                       ))}
-                    </ul>;
-                  </div>;
-                </Card>;
-              </motion.div>;
+                    </ul>
+                  </div>
+                </Card>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>'        <div className='max-w-4xl mx-auto text-center'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
-            <h2 className='text-4xl font-bold text-white mb-6'>'              Ready to Transform Your Business?'            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>'              Get started today with a free consultation and discover how our AI solutions can drive your success.'            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                <Phone className='w-5 h-5 mr-2' />'                Schedule Free Consultation'              </Button>;
-              <Button size='lg' variant='outline'>'                <Mail className='w-5 h-5 mr-2' />'                Contact Sales Team"              </Button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+          >
+            <h2 className='text-4xl font-bold text-white mb-6'>'              Ready to Transform Your Business?'            </h2>
+            <p className='text-xl text-gray-300 mb-8'>'              Get started today with a free consultation and discover how our AI solutions can drive your success.'            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                <Phone className='w-5 h-5 mr-2' />'                Schedule Free Consultation'              </Button>
+              <Button size='lg' variant='outline'>'                <Mail className='w-5 h-5 mr-2' />'                Contact Sales Team"              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 ;

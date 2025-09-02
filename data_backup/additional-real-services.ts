@@ -1,4 +1,4 @@
-export interface AdditionalRealService {;
+export interface AdditionalRealService {
   id: string;
    name: string;
    tagline: string;

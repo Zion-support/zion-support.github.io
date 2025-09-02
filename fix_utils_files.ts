@@ -127,7 +127,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 ;
 async function fixAllUtilsFiles(...args: unknown[]): unknown {;
   const files = await glob('utils/**/*.{ts,tsx}', {;
-    ignore: ['node_modules/**', '.next/**'];
+    ignore: ['node_modules/**', '.next/**']
   });
   const fixedCount = 0;
   for (const file of files) {;

@@ -1,4 +1,4 @@
-export interface IndustrySolution {;
+export interface IndustrySolution {
   id: string;
    title: string;
    description: string;

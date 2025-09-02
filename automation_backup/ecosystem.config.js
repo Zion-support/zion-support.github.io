@@ -144,7 +144,7 @@ module.exports = {;
       cron_restart:,;
   */15 * * * *';
   ],;
-  deploy: {;
+  deploy: {
     production: {;
       user:;
   'node,;

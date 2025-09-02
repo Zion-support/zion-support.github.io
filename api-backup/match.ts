@@ -1,7 +1,7 @@
 import React from;
   'react'; interface OpenAIMatchRequestBody {;
   projectDescription?: string;
-} interface OpenAIMatchSuccessResponse {;
+} interface OpenAIMatchSuccessResponse {
   category: string;
    itemId: string;
    timeline: string;

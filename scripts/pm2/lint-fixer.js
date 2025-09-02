@@ -24,7 +24,7 @@ class IntelligentLintFixer {;
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
 ;
   isLintableFile(filePath) {;
-    const extensions = [;
+    const extensions = [
   '.js',.jsx;
   ',.ts',.tsx;
   ',.vue'];
@@ -71,7 +71,7 @@ class IntelligentLintFixer {;
     };
 ;
     const rule = message.ruleId;
-    if (suggestions[rule]) {;
+    if (suggestions[rule]) {
       return {;
         file: filePath,;
         line: message.line,;

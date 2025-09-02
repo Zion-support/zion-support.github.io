@@ -106,7 +106,7 @@ function analyzeWebsite() {;
   placeholderPages.forEach(page => console.log(`  - ${page}`));
 ;
   // Generate analysis report;
-  const report = {;
+  const report = {
     timestamp: new Date().toISOString(),;
     totalRoutes: routes.length,;
     existingPages: existingPages.length,;
@@ -131,7 +131,7 @@ function analyzeWebsite() {;
 // Run the analysis;
 try {;
   analyzeWebsite();
-} catch (error) {;
+} catch (error) {
   console.error(;
   '❌ Error analyzing website:', error.message);
   process.exit(1);

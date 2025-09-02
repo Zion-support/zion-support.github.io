@@ -7,7 +7,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
   const [selectedStatus, setSelectedStatus] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 ;
-  const researchAreas = [;
+  const researchAreas = [
     { id: 'all', name: 'All Areas', icon: Microscope, count: 67 },;
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 18 },;
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },;
@@ -17,7 +17,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
     { id: 'materials', name: 'Advanced Materials', icon: Atom, count: 4 }
   ];
 ;
-  const projectStatuses = [;
+  const projectStatuses = [
     { id: 'all', name: 'All Statuses', count: 67 },;
     { id: 'active', name: 'Active', count: 28 },;
     { id: 'completed', name: 'Completed', count: 22 },;
@@ -56,7 +56,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 8,;
       patents: 3,;
-      collaborations: ['MIT', 'Stanford', 'IBM Research'];
+      collaborations: ['MIT', 'Stanford', 'IBM Research']
     },;
     {;
       id: 2,;
@@ -88,7 +88,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 12,;
       patents: 2,;
-      collaborations: ['Harvard Medical School', 'Max Planck Institute', 'Neuralink'];
+      collaborations: ['Harvard Medical School', 'Max Planck Institute', 'Neuralink']
     },;
     {;
       id: 3,;
@@ -120,7 +120,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 6,;
       patents: 4,;
-      collaborations: ['NIST', 'University of Toronto', 'ID Quantique'];
+      collaborations: ['NIST', 'University of Toronto', 'ID Quantique']
     },;
     {;
       id: 4,;
@@ -152,7 +152,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 15,;
       patents: 6,;
-      collaborations: ['Broad Institute', 'UC Berkeley', 'Novartis'];
+      collaborations: ['Broad Institute', 'UC Berkeley', 'Novartis']
     },;
     {;
       id: 5,;
@@ -184,7 +184,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 0,;
       patents: 0,;
-      collaborations: ['MIT', 'Stanford', 'Tesla Energy'];
+      collaborations: ['MIT', 'Stanford', 'Tesla Energy']
     },;
     {;
       id: 6,;
@@ -216,7 +216,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 10,;
       patents: 3,;
-      collaborations: ['Johns Hopkins', 'Rice University', 'Pfizer'];
+      collaborations: ['Johns Hopkins', 'Rice University', 'Pfizer']
     },;
     {;
       id: 7,;
@@ -248,7 +248,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 18,;
       patents: 8,;
-      collaborations: ['ITER', 'Princeton Plasma Physics Lab', 'General Fusion'];
+      collaborations: ['ITER', 'Princeton Plasma Physics Lab', 'General Fusion']
     },;
     {;
       id: 8,;
@@ -280,7 +280,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
       ],;
       publications: 0,;
       patents: 0,;
-      collaborations: ['Caltech', 'University of Vienna', 'Google Quantum AI'];
+      collaborations: ['Caltech', 'University of Vienna', 'Google Quantum AI']
     }
   ];
 ;
@@ -326,94 +326,94 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {;
 ;
   ];
 import React from 'react.ts';
-;
-export default function ResearchDevelopment(...args: any[]): any {;
+
+export default function ResearchDevelopment(...args: any[]): any {
   return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       {/* Header Section */}
-      <div className='relative overflow-hidden'>;
-        <div className='absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20'></div>;
-        <div className='relative container mx-auto px-4 sm:px-6 lg:px-8 py-20'>;
-          <motion.div;
+      <div className='relative overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20'></div>
+        <div className='relative container mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center';
           >;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               Research & Development;
-            </h1>;
-            <p className='text-xl text-zinc-300 max-w-3xl mx-auto mb-8'>;
+            </h1>
+            <p className='text-xl text-zinc-300 max-w-3xl mx-auto mb-8'>
               Pushing the boundaries of technology through cutting-edge research,;
               innovative projects, and breakthrough discoveries at Zion Tech Group.;
-            </p>;
-            <div className='flex flex-wrap justify-center gap-4 text-zinc-300'>;
-              <div className='flex items-center space-x-2'>;
-                <CheckCircle className='w-5 h-5 text-zion-cyan' />;
-                <span>Cutting-edge Research</span>;
-              </div>;
-              <div className='flex items-center space-x-2'>;
-                <CheckCircle className='w-5 h-5 text-zion-cyan' />;
-                <span>Innovation Labs</span>;
-              </div>;
-              <div className='flex items-center space-x-2'>;
-                <CheckCircle className='w-5 h-5 text-zion-cyan' />;
-                <span>Global Collaborations</span>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
+            </p>
+            <div className='flex flex-wrap justify-center gap-4 text-zinc-300'>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-zion-cyan' />
+                <span>Cutting-edge Research</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-zion-cyan' />
+                <span>Innovation Labs</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-zion-cyan' />
+                <span>Global Collaborations</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
       {/* Stats Section */}
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-        <motion.div;
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className='grid grid-cols-1 md:grid-cols-4 gap-8';
         >;
-          <div className='text-center'>;
-            <div className='w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4'>;
-              <Microscope className='w-8 h-8 text-zion-cyan' />;
-            </div>;
-            <div className='text-3xl font-bold text-white mb-2'>67+</div>;
-            <div className='text-zinc-400'>Active Projects</div>;
-          </div>;
-          <div className='text-center'>;
-            <div className='w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4'>;
-              <User className='w-8 h-8 text-zion-purple' />;
-            </div>;
-            <div className='text-3xl font-bold text-white mb-2'>150+</div>;
-            <div className='text-zinc-400'>Researchers</div>;
-          </div>;
-          <div className='text-center'>;
-            <div className='w-16 h-16 bg-zion-blue/20 rounded-full flex items-center justify-center mx-auto mb-4'>;
-              <FileText className='w-8 h-8 text-zion-blue' />;
-            </div>;
-            <div className='text-3xl font-bold text-white mb-2'>200+</div>;
-            <div className='text-zinc-400'>Publications</div>;
-          </div>;
-          <div className='text-center'>;
-            <div className='w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>;
-              <Key className='w-8 h-8 text-green-400' />;
-            </div>;
-            <div className='text-3xl font-bold text-white mb-2'>45+</div>;
-            <div className='text-zinc-400'>Patents</div>;
-          </div>;
-        </motion.div>;
-      </div>;
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <Microscope className='w-8 h-8 text-zion-cyan' />
+            </div>
+            <div className='text-3xl font-bold text-white mb-2'>67+</div>
+            <div className='text-zinc-400'>Active Projects</div>
+          </div>
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <User className='w-8 h-8 text-zion-purple' />
+            </div>
+            <div className='text-3xl font-bold text-white mb-2'>150+</div>
+            <div className='text-zinc-400'>Researchers</div>
+          </div>
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-zion-blue/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <FileText className='w-8 h-8 text-zion-blue' />
+            </div>
+            <div className='text-3xl font-bold text-white mb-2'>200+</div>
+            <div className='text-zinc-400'>Publications</div>
+          </div>
+          <div className='text-center'>
+            <div className='w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <Key className='w-8 h-8 text-green-400' />
+            </div>
+            <div className='text-3xl font-bold text-white mb-2'>45+</div>
+            <div className='text-zinc-400'>Patents</div>
+          </div>
+        </motion.div>
+      </div>
       {/* Search and Filter Section */}
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
-        <motion.div;
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className='bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6';
         >;
-          <div className='grid grid-cols-1 lg:grid-cols-5 gap-6'>;
+          <div className='grid grid-cols-1 lg:grid-cols-5 gap-6'>
             {/* Search */}
-            <div className='relative'>;
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400' />;
+            <div className='relative'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400' />
               <input;
                 type='text';
                 placeholder='Search research projects...';
@@ -421,37 +421,37 @@ export default function ResearchDevelopment(...args: any[]): any {;
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent';
               />;
-            </div>;
+            </div>
             {/* Research Area Filter */}
-            <div>;
+            <div>
               <select;
                 value={selectedArea}
                 onChange={(e) => setSelectedArea(e.target.value)}
                 className='w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent';
               >;
                 {researchAreas.map((area) => (;
-                  <option key={area.id} value={area.id}>;
+                  <option key={area.id} value={area.id}>
                     {area.name} ({area.count});
-                  </option>;
+                  </option>
                 ))}
-              </select>;
-            </div>;
+              </select>
+            </div>
             {/* Status Filter */}
-            <div>;
+            <div>
               <select;
                 value={selectedStatus}
                 onChange={(e) => setSelectedStatus(e.target.value)}
                 className='w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent';
               >;
                 {projectStatuses.map((status) => (;
-                  <option key={status.id} value={status.id}>;
+                  <option key={status.id} value={status.id}>
                     {status.name} ({status.count});
-                  </option>;
+                  </option>
                 ))}
-              </select>;
-            </div>;
+              </select>
+            </div>
             {/* View Mode Toggle */}
-            <div className='flex space-x-2'>;
+            <div className='flex space-x-2'>
               <button;
                 onClick={() => setViewMode('grid')}
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${;
@@ -460,8 +460,8 @@ export default function ResearchDevelopment(...args: any[]): any {;
                     : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70';
                 }`}
               >;
-                <Grid className='w-4 h-4 mx-auto' />;
-              </button>;
+                <Grid className='w-4 h-4 mx-auto' />
+              </button>
               <button;
                 onClick={() => setViewMode('list')}
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${;
@@ -470,120 +470,120 @@ export default function ResearchDevelopment(...args: any[]): any {;
                     : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70';
                 }`}
               >;
-                <List className='w-4 h-4 mx-auto' />;
-              </button>;
-            </div>;
+                <List className='w-4 h-4 mx-auto' />
+              </button>
+            </div>
             {/* Quick Actions */}
-            <div className='flex space-x-3'>;
-              <button className='flex-1 px-4 py-3 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-colors flex items-center justify-center'>;
-                <Microscope className='w-4 h-4 mr-2' />;
+            <div className='flex space-x-3'>
+              <button className='flex-1 px-4 py-3 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-colors flex items-center justify-center'>
+                <Microscope className='w-4 h-4 mr-2' />
                 Join Research;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
       {/* Results Count */}
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-4'>;
-        <motion.div;
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='text-zinc-400';
         >;
           Showing {filteredProjects.length} of {researchProjects.length} research projects;
-        </motion.div>;
-      </div>;
+        </motion.div>
+      </div>
       {/* Featured Projects Section */}
       {filteredProjects.filter(p => p.featured).length > 0 && (;
-        <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
-          <motion.div;
+        <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className='mb-8';
           >;
-            <h2 className='text-3xl font-bold text-white mb-4'>Featured Research Projects</h2>;
-            <p className='text-zinc-300'>Our most innovative and impactful research initiatives</p>;
-          </motion.div>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            <h2 className='text-3xl font-bold text-white mb-4'>Featured Research Projects</h2>
+            <p className='text-zinc-300'>Our most innovative and impactful research initiatives</p>
+          </motion.div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredProjects.filter(p => p.featured).map((project, index) => (;
-              <motion.div;
+              <motion.div
                 key={project.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
                 className='bg-zinc-800/50 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl overflow-hidden hover:border-zion-cyan/50 transition-all duration-300';
               >;
-                <div className='p-8'>;
-                  <div className='flex items-start justify-between mb-6'>;
-                    <div className='w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center'>;
-                      <Microscope className='w-8 h-8 text-zion-cyan' />;
-                    </div>;
-                    <div className='flex items-center space-x-1'>;
-                      <Star className='w-5 h-5 text-yellow-400 fill-current' />;
-                      <span className='text-lg font-bold text-white'>{project.rating}</span>;
-                    </div>;
-                  </div>;
-                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                <div className='p-8'>
+                  <div className='flex items-start justify-between mb-6'>
+                    <div className='w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center'>
+                      <Microscope className='w-8 h-8 text-zion-cyan' />
+                    </div>
+                    <div className='flex items-center space-x-1'>
+                      <Star className='w-5 h-5 text-yellow-400 fill-current' />
+                      <span className='text-lg font-bold text-white'>{project.rating}</span>
+                    </div>
+                  </div>
+                  <h3 className='text-2xl font-bold text-white mb-4'>
                     {project.title}
-                  </h3>;
-                  <p className='text-zinc-300 text-lg mb-6'>;
+                  </h3>
+                  <p className='text-zinc-300 text-lg mb-6'>
                     {project.description}
-                  </p>;
-                  <div className='space-y-4 mb-6'>;
-                    <h4 className='text-lg font-semibold text-zion-cyan'>Research Objectives:</h4>;
-                    <ul className='space-y-2'>;
+                  </p>
+                  <div className='space-y-4 mb-6'>
+                    <h4 className='text-lg font-semibold text-zion-cyan'>Research Objectives:</h4>
+                    <ul className='space-y-2'>
                       {project.objectives.slice(0, 3).map((objective, objectiveIndex) => (;
-                        <li key={objectiveIndex} className='flex items-start space-x-3 text-zinc-300'>;
-                          <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0' />;
-                          <span>{objective}</span>;
-                        </li>;
+                        <li key={objectiveIndex} className='flex items-start space-x-3 text-zinc-300'>
+                          <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0' />
+                          <span>{objective}</span>
+                        </li>
                       ))}
-                    </ul>;
-                  </div>;
-                  <div className='flex items-center justify-between mb-6'>;
-                    <div className='text-sm text-zinc-400'>;
-                      <div>Lead: {project.lead}</div>;
-                      <div>{formatDate(project.startDate)} - {formatDate(project.endDate)}</div>;
-                    </div>;
-                    <div className='text-right'>;
-                      <div className='text-2xl font-bold text-white'>{formatFunding(project.funding)}</div>;
-                      <div className='text-sm text-zinc-400'>Team: {project.teamSize} researchers</div>;
-                    </div>;
-                  </div>;
-                  <div className='flex space-x-3'>;
+                    </ul>
+                  </div>
+                  <div className='flex items-center justify-between mb-6'>
+                    <div className='text-sm text-zinc-400'>
+                      <div>Lead: {project.lead}</div>
+                      <div>{formatDate(project.startDate)} - {formatDate(project.endDate)}</div>
+                    </div>
+                    <div className='text-right'>
+                      <div className='text-2xl font-bold text-white'>{formatFunding(project.funding)}</div>
+                      <div className='text-sm text-zinc-400'>Team: {project.teamSize} researchers</div>
+                    </div>
+                  </div>
+                  <div className='flex space-x-3'>
                     <button;
                       onClick={() => handleViewProject(project.id, project.title)}
                       className='flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300';
                     >;
                       View Project;
-                    </button>;
+                    </button>
                     <button;
                       onClick={() => handleCollaborate(project.id, project.title)}
                       className='px-6 py-3 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300';
                     >;
                       Collaborate;
-                    </button>;
-                  </div>;
-                </div>;
-              </motion.div>;
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
       )}
 ;
       {/* All Projects Section */}
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-        <motion.div;
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
           className='mb-8';
         >;
-          <h2 className='text-3xl font-bold text-white mb-4'>All Research Projects</h2>;
-          <p className='text-zinc-300'>Browse our complete research portfolio</p>;
-        </motion.div>;
+          <h2 className='text-3xl font-bold text-white mb-4'>All Research Projects</h2>
+          <p className='text-zinc-300'>Browse our complete research portfolio</p>
+        </motion.div>
         {filteredProjects.length > 0 ? (;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -591,12 +591,12 @@ export default function ResearchDevelopment(...args: any[]): any {;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16';
-            <h2 className='text-4xl font-bold text-white mb-4'>Active Research Projects</h2>;
-            <p className='text-lg text-zion-slate-light'>Exploring the frontiers of technology and innovation</p>;
-          </motion.div>;
-          <div className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>Active Research Projects</h2>
+            <p className='text-lg text-zion-slate-light'>Exploring the frontiers of technology and innovation</p>
+          </motion.div>
+          <div className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8'>
             {filteredProjects.map((project, index)              => (;
-              <motion.div;
+              <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -607,81 +607,81 @@ export default function ResearchDevelopment(...args: any[]): any {;
               >;
                 {viewMode === 'grid' ? (;
                   // Grid View;
-                  <div className='p-6'>;
+                  <div className='p-6'>
                     {project.featured && (;
-                      <div className='inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4'>;
+                      <div className='inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4'>
                         Featured;
-                      </div>;
+                      </div>
                     )}
 ;
-                    <div className='flex items-start justify-between mb-4'>;
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>;
+                    <div className='flex items-start justify-between mb-4'>
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
                         {project.status}
-                      </span>;
-                      <div className='flex items-center space-x-1'>;
-                        <Star className='w-4 h-4 text-yellow-400 fill-current' />;
-                        <span className='text-sm text-zinc-300'>{project.rating}</span>;
-                      </div>;
-                    </div>;
-                    <h3 className='text-xl font-bold text-white mb-3 line-clamp-2'>;
+                      </span>
+                      <div className='flex items-center space-x-1'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                        <span className='text-sm text-zinc-300'>{project.rating}</span>
+                      </div>
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-3 line-clamp-2'>
                       {project.title}
-                    </h3>;
-                    <p className='text-zinc-400 text-sm mb-4 line-clamp-3'>;
+                    </h3>
+                    <p className='text-zinc-400 text-sm mb-4 line-clamp-3'>
                       {project.description}
-                    </p>;
-                    <div className='flex flex-wrap gap-2 mb-4'>;
+                    </p>
+                    <div className='flex flex-wrap gap-2 mb-4'>
                       {project.tags.slice(0, 3).map((tag, tagIndex) => (;
-                        <span;
+                        <span
                           key={tagIndex}
                           className='px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full';
                         >;
                           {tag}
-                        </span>;
+                        </span>
                       ))}
-                    </div>;
-                    <div className='flex items-center justify-between text-sm text-zinc-500 mb-4'>;
-                      <span className='flex items-center space-x-1'>;
-                        <User className='w-4 h-4' />;
-                        <span>{project.lead}</span>;
-                      </span>;
-                      <span className='flex items-center space-x-1'>;
-                        <Calendar className='w-4 h-4' />;
-                        <span>{formatDate(project.startDate)}</span>;
-                      </span>;
-                    </div>;
-                    <div className='flex items-center justify-between mb-4'>;
-                      <span className='text-sm text-zinc-400'>;
+                    </div>
+                    <div className='flex items-center justify-between text-sm text-zinc-500 mb-4'>
+                      <span className='flex items-center space-x-1'>
+                        <User className='w-4 h-4' />
+                        <span>{project.lead}</span>
+                      </span>
+                      <span className='flex items-center space-x-1'>
+                        <Calendar className='w-4 h-4' />
+                        <span>{formatDate(project.startDate)}</span>
+                      </span>
+                    </div>
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='text-sm text-zinc-400'>
                         {project.teamSize} researchers;
-                      </span>;
-                      <div className='text-right'>;
-                        <div className='text-lg font-bold text-white'>{formatFunding(project.funding)}</div>;
-                      </div>;
-                    </div>;
+                      </span>
+                      <div className='text-right'>
+                        <div className='text-lg font-bold text-white'>{formatFunding(project.funding)}</div>
+                      </div>
+                    </div>
                       View Paper;
-                      <ArrowRight className='w-4 h-4' />;
-                    </a>;
-                  </div>;
-                </div>;
-              </motion.div>;
+                      <ArrowRight className='w-4 h-4' />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Research Partnerships */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto'>;
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16';
-            <h2 className='text-4xl font-bold text-white mb-4'>Research Partnerships</h2>;
-            <p className='text-lg text-zion-slate-light'>Collaborating with leading institutions worldwide</p>;
-          </motion.div>;
-          <div className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>Research Partnerships</h2>
+            <p className='text-lg text-zion-slate-light'>Collaborating with leading institutions worldwide</p>
+          </motion.div>
+          <div className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8'>
             {partnerships.map((partner, index)              => (;
-              <motion.div;
+              <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -689,107 +689,107 @@ export default function ResearchDevelopment(...args: any[]): any {;
                 viewport={{ once: true }}
                 className='bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300';
                 <div className='flex items-start gap-4'>;
-                  <div className='w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0'>;
-                    <Users className='w-8 h-8 text-zion-cyan' />;
-                  </div>;
-                  <div className='flex-1'>;
-                    <h3 className='text-xl font-bold text-white mb-2'>{partner.name}</h3>;
-                    <div className='space-y-2 text-zion-slate-light'>;
-                      <p><span className='text-zion-cyan font-semibold'>Type:</span> {partner.type}</p>;
-                      <p><span className='text-zion-cyan font-semibold'>Focus:</span> {partner.focus}</p>;
-                      <p><span className='text-zion-cyan font-semibold'>Duration:</span> {partner.duration}</p>;
-                    </div>;
-                  </div>;
+                  <div className='w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0'>
+                    <Users className='w-8 h-8 text-zion-cyan' />
+                  </div>
+                  <div className='flex-1'>
+                    <h3 className='text-xl font-bold text-white mb-2'>{partner.name}</h3>
+                    <div className='space-y-2 text-zion-slate-light'>
+                      <p><span className='text-zion-cyan font-semibold'>Type:</span> {partner.type}</p>
+                      <p><span className='text-zion-cyan font-semibold'>Focus:</span> {partner.focus}</p>
+                      <p><span className='text-zion-cyan font-semibold'>Duration:</span> {partner.duration}</p>
+                    </div>
+                  </div>
                 ) : (;
                   // List View;
-                  <div className='flex-1 p-6'>;
-                    <div className='flex items-start justify-between mb-4'>;
-                      <div className='flex-1'>;
+                  <div className='flex-1 p-6'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='flex-1'>
                         {project.featured && (;
-                          <div className='inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-3'>;
+                          <div className='inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-3'>
                             Featured;
-                          </div>;
+                          </div>
                         )}
 ;
-                        <h3 className='text-xl font-bold text-white mb-2'>;
+                        <h3 className='text-xl font-bold text-white mb-2'>
                           {project.title}
-                        </h3>;
-                        <p className='text-zinc-400 text-sm mb-3 line-clamp-2'>;
+                        </h3>
+                        <p className='text-zinc-400 text-sm mb-3 line-clamp-2'>
                           {project.description}
-                        </p>;
-                        <div className='flex items-center space-x-6 text-sm text-zinc-500 mb-3'>;
-                          <span className='flex items-center space-x-1'>;
-                            <User className='w-4 h-4' />;
-                            <span>{project.lead}</span>;
-                          </span>;
-                          <span className='flex items-center space-x-1'>;
-                            <Calendar className='w-4 h-4' />;
-                            <span>{formatDate(project.startDate)}</span>;
-                          </span>;
-                          <span className='flex items-center space-x-1'>;
-                            <Users className='w-4 h-4' />;
-                            <span>{project.teamSize} researchers</span>;
-                          </span>;
-                          <span className='flex items-center space-x-1'>;
-                            <DollarSign className='w-4 h-4' />;
-                            <span>{formatFunding(project.funding)}</span>;
-                          </span>;
-                        </div>;
-                        <div className='flex flex-wrap gap-2'>;
+                        </p>
+                        <div className='flex items-center space-x-6 text-sm text-zinc-500 mb-3'>
+                          <span className='flex items-center space-x-1'>
+                            <User className='w-4 h-4' />
+                            <span>{project.lead}</span>
+                          </span>
+                          <span className='flex items-center space-x-1'>
+                            <Calendar className='w-4 h-4' />
+                            <span>{formatDate(project.startDate)}</span>
+                          </span>
+                          <span className='flex items-center space-x-1'>
+                            <Users className='w-4 h-4' />
+                            <span>{project.teamSize} researchers</span>
+                          </span>
+                          <span className='flex items-center space-x-1'>
+                            <DollarSign className='w-4 h-4' />
+                            <span>{formatFunding(project.funding)}</span>
+                          </span>
+                        </div>
+                        <div className='flex flex-wrap gap-2'>
                           {project.tags.map((tag, tagIndex) => (;
-                            <span;
+                            <span
                               key={tagIndex}
                               className='px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full';
                             >;
                               {tag}
-                            </span>;
+                            </span>
                           ))}
-                        </div>;
-                      </div>;
-                      <div className='flex flex-col items-end space-y-3 ml-6'>;
-                        <div className='flex items-center space-x-1'>;
-                          <Star className='w-4 h-4 text-yellow-400 fill-current' />;
-                          <span className='text-sm text-zinc-300'>{project.rating}</span>;
-                        </div>;
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>;
+                        </div>
+                      </div>
+                      <div className='flex flex-col items-end space-y-3 ml-6'>
+                        <div className='flex items-center space-x-1'>
+                          <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                          <span className='text-sm text-zinc-300'>{project.rating}</span>
+                        </div>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
                           {project.status}
-                        </span>;
-                        <div className='text-right'>;
-                          <div className='text-lg font-bold text-white'>{formatFunding(project.funding)}</div>;
-                        </div>;
-                        <div className='flex space-x-2'>;
+                        </span>
+                        <div className='text-right'>
+                          <div className='text-lg font-bold text-white'>{formatFunding(project.funding)}</div>
+                        </div>
+                        <div className='flex space-x-2'>
                           <button;
                             onClick={() => handleViewProject(project.id, project.title)}
                             className='bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300';
                           >;
                             View;
-                          </button>;
+                          </button>
                           <button;
                             onClick={() => handleCollaborate(project.id, project.title)}
                             className='px-4 py-2 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300';
                           >;
                             Collaborate;
-                          </button>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </div>;
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 )}
-              </motion.div>;
+              </motion.div>
             ))}
-          </motion.div>;
+          </motion.div>
         ) : (;
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
             className='text-center py-16';
           >;
-            <Microscope className='w-16 h-16 text-zinc-400 mx-auto mb-4' />;
-            <h3 className='text-xl font-semibold text-white mb-2'>No research projects found</h3>;
-            <p className='text-zinc-400 mb-6'>;
+            <Microscope className='w-16 h-16 text-zinc-400 mx-auto mb-4' />
+            <h3 className='text-xl font-semibold text-white mb-2'>No research projects found</h3>
+            <p className='text-zinc-400 mb-6'>
               Try adjusting your search terms or browse all research areas;
-            </p>;
+            </p>
             <button;
               onClick={() => {;
                 setSearchQuery('');
@@ -799,9 +799,9 @@ export default function ResearchDevelopment(...args: any[]): any {;
               className='bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors';
             >;
               Clear Filters;
-            </button>;
-          </motion.div>;
-          <div className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8'>;
+            </button>
+          </motion.div>
+          <div className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8'>
             {[;
               {;
                 icon: Flask,;
@@ -818,7 +818,7 @@ export default function ResearchDevelopment(...args: any[]): any {;
                 title: 'Data Analytics',;
                 description: 'High-performance computing for big data research';
             ].map((lab, index)              => (;
-              <motion.div;
+              <motion.div
                 key={lab.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -826,49 +826,49 @@ export default function ResearchDevelopment(...args: any[]): any {;
                 viewport={{ once: true }}
                 className='text-center';
                 <div className='w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4'>;
-                  <lab.icon className='w-10 h-10 text-zion-cyan' />;
-                </div>;
-                <h3 className='text-xl font-bold text-white mb-3'>{lab.title}</h3>;
-                <p className='text-zion-slate-light'>{lab.description}</p>;
-              </motion.div>;
+                  <lab.icon className='w-10 h-10 text-zion-cyan' />
+                </div>
+                <h3 className='text-xl font-bold text-white mb-3'>{lab.title}</h3>
+                <p className='text-zion-slate-light'>{lab.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <div className='bg-zinc-800/30 border-t border-zinc-700/50'>;
-        <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-          <motion.div;
+      <div className='bg-zinc-800/30 border-t border-zinc-700/50'>
+        <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.8 }}
             className='text-center';
           >;
-            <h2 className='text-3xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl font-bold text-white mb-4'>
               Join Our Research Community;
-            </h2>;
-            <p className='text-xl text-zinc-300 mb-8 max-w-2xl mx-auto'>;
+            </h2>
+            <p className='text-xl text-zinc-300 mb-8 max-w-2xl mx-auto'>
               Collaborate with leading researchers, contribute to breakthrough discoveries,;
               and be part of the future of technology innovation.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <Link;
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
                 to='/contact';
                 className='bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300';
               >;
                 Get Involved;
-              </Link>;
-              <Link;
+              </Link>
+              <Link
                 to='/careers';
                 className='border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300';
               >;
                 Research Careers;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
-    </div>;
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
   );
 }
 ;

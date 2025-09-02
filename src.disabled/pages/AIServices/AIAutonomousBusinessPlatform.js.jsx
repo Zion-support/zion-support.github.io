@@ -28,7 +28,7 @@ import React from,;
   ; description: '';Built to grow with your business, from startup to enterprise, with flexible deployment options.',; icon: TrendingUp,;
 ,;
   ; color: 'from-orange-500 to-red-500}; ];,;
-  ; const benefits = [';
+  ; const benefits = ['
   ';Centralize all business operations in one platform;
   ', Reduce software costs by up to 70%',Improve team collaboration and productivity;
   ', Gain real-time insights across all departments',Scale operations without technical limitations;

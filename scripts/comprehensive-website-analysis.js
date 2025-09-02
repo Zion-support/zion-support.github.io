@@ -158,7 +158,7 @@ class WebsiteAnalyzer {;
   }
 ;
   async checkNavigationLinks() {;
-    const navigationLinks = [;
+    const navigationLinks = [
       '/;
   ',;
       '/about;
@@ -203,7 +203,7 @@ class WebsiteAnalyzer {;
   }
 ;
   async checkServicePages() {;
-    const servicePages = [;
+    const servicePages = [
       '/services/ai-supply-chain-optimization;
   ',;
       '/services/ai-cybersecurity-platform;
@@ -246,7 +246,7 @@ class WebsiteAnalyzer {;
   }
 ;
   async checkAdditionalPages() {;
-    const additionalPages = [;
+    const additionalPages = [
       '/enterprise;
   ',;
       '/healthcare;

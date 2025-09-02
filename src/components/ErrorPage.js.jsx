@@ -14,11 +14,11 @@ export const ErrorPage = ({}
             <Link to='/'>Go Home</Link>''';
           </Button>'''';
           <Button variant='outline' asChild>'''';
-            <Link to='/contact'>Contact Support</Link>;
-          </Button>;
-        </div>;
-      </div>;
-    </div>;
+            <Link to='/contact'>Contact Support</Link>
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 export default ErrorPage'';"

@@ -22,7 +22,7 @@ starter: {;
         price: 12999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic quantum security,;
   'Up to 1000 secure connections',;
   'Standard monitoring',;
@@ -32,7 +32,7 @@ starter: {;
         price: 24999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced quantum security,;
   'Unlimited connections',;
   'Custom protocols',;
@@ -82,7 +82,7 @@ starter: {;
   'Financial platforms',;
   'Healthcare systems',;
   'Energy grids'],;
-    compliance[;
+    compliance[
   'FIPS 140-3',;
   'NIST standards',;
   'SOC2',;
@@ -111,7 +111,7 @@ starter: {;
         price: 8999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic bio-computing,;
   'Up to 100 simulations/month',;
   'Standard models',;
@@ -121,7 +121,7 @@ starter: {;
         price: 19999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced bio-computing,;
   'Unlimited simulations',;
   'Custom models',;
@@ -171,7 +171,7 @@ starter: {;
   'Laboratory systems',;
   'Clinical trial platforms',;
   'Genetic databases'],;
-    compliance[;
+    compliance[
   'HIPAA',;
   'FDA regulations',;
   'SOC2',;
@@ -200,7 +200,7 @@ starter: {;
         price: 15999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic neural interface,;
   'Up to 10 users',;
   'Standard monitoring',;
@@ -210,7 +210,7 @@ starter: {;
         price: 29999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced neural interface,;
   'Up to 100 users',;
   'Custom development',;
@@ -260,7 +260,7 @@ starter: {;
   'Research tools',;
   'Monitoring systems',;
   'Safety protocols'],;
-    compliance[;
+    compliance[
   'FDA regulations',;
   'Medical device standards',;
   'SOC2',;
@@ -289,7 +289,7 @@ starter: {;
         price: 19999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic space mining,;
   'Up to 5 mining missions',;
   'Standard monitoring',;
@@ -299,7 +299,7 @@ starter: {;
         price: 39999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced space mining,;
   'Unlimited missions',;
   'Custom planning',;
@@ -349,7 +349,7 @@ starter: {;
   'Ground control systems',;
   'AI platforms',;
   'Robotic systems'],;
-    compliance[;
+    compliance[
   'Space regulations',;
   'International space law',;
   'SOC2',;
@@ -378,7 +378,7 @@ starter: {;
         price: 7999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic energy optimization,;
   'Up to 1000 connections',;
   'Standard monitoring',;
@@ -388,7 +388,7 @@ starter: {;
         price: 15999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced energy optimization,;
   'Unlimited connections',;
   'Custom models',;
@@ -439,7 +439,7 @@ integrations: [;
   'Renewable energy systems',;
   'Utility platforms',;
   'Monitoring systems'],;
-    compliance: [;
+    compliance: [
   'Energy regulations,;
   'Grid standards',;
   'SOC2',;

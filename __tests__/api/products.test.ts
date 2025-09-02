@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, createRequest, createResponse } from 'node-mocks-http';
 import productHandler from '@/pages/api/products/index';
 import { PrismaClient } from '@prisma/client';
-;
+
 // Mock Prisma Client;
 jest.mock(;
   '@prisma/client', () => {;
@@ -14,12 +14,12 @@ jest.mock(;
       aggregate: jest.fn()},;
     $queryRawUnsafe: jest.fn(),;
     $disconnect: jest.fn()};
-  return { PrismaClient: jest.fn(() => mPrismaClient) };
+  return { PrismaClient: jest.fn(() => mPrismaClient) }
 });
 ;
 let prisma: PrismaClient;
 ;
-interface ProductLike {;
+interface ProductLike {
   id: string;
    name: string;
    description?: string;
@@ -32,8 +32,8 @@ interface ProductLike {;
 ;
 describe('/api/products API Endpoint;
   ', () => {;
-  let req: ReturnType<typeof createRequest>;
-  let res: ReturnType<typeof createResponse>;
+  let req: ReturnType<typeof createRequest>
+  let res: ReturnType<typeof createResponse>
 ;
   beforeEach(() => {;
     jest.clearAllMocks();
@@ -49,7 +49,7 @@ describe('/api/products API Endpoint;
     it('should return products matching 'gpt' with similarity >= 0.8;
   ', async () => {;
       // 1. Mock database responses;
-      const mockRawResults = [;
+      const mockRawResults = [
         {;
           id: 'product-gpt-high-score,;
           name_similarity: 0.9,;

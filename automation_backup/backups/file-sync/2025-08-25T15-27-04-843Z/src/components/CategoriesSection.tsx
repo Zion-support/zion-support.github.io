@@ -2,7 +2,7 @@ import { GradientHeading } from,;
   ./GradientHeading';
 import { Link } from;
   'react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users const categories = [;
+import { Briefcase, HardDrive, Lightbulb, Users const categories = [
   {;
     title: 'AI Services,;
     description:,;
@@ -52,7 +52,7 @@ import { Briefcase, HardDrive, Lightbulb, Users const categories = [;
   from-zion-purple-light to-zion-purple',;
   },;
 ];
-const specialServices = [;
+const specialServices = [
   {;
     title: 'IT Onsite Services,;
     link:,;
@@ -63,18 +63,18 @@ const specialServices = [;
     link:,;
   /comprehensive-services';
   },;
-  {;
+  {
     title: 'Services Comparison,;
     link:;
   '/services-comparison';
   };
 ];
-interface CategoriesSectionProps {;
+interface CategoriesSectionProps {
    showTitle?: boolean;
 };
 const containerVariants = {;
   hidden: { opacity: 0 },;
-  visible: {;
+  visible: {
     opacity: 1,;
     transition: {;
       staggerChildren: 0.1,;
@@ -92,7 +92,7 @@ const itemVariants = {;
 ;
 ;
 },;
-  visible: {;
+  visible: {
     y: 0,;
     opacity: 1,;
     transition: {;
@@ -104,10 +104,10 @@ const itemVariants = {;
 };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
   return (;
-    <section className=;
+    <section className=
   'py-20 bg-zion-blue relative overflow-hidden>;
       {/* Background pattern */};
-      <div className=;
+      <div className=
   'absolute inset-0 opacity-5'>;
         <div className=;
   'absolute inset-0' style = {;
@@ -122,10 +122,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 ;
 ;
-}}></div>;
-      </div>;
+}}></div>
+      </div>
 ;
-      <div className=;
+      <div className=
   'container mx-auto px-4 relative z-10'>;
         {showTitle && (;
           <motion.div;
@@ -154,18 +154,18 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             viewport={{ once: true }};
             transition={{ duration: 0.6 }};
 ;
-            <GradientHeading>Explore Categories</GradientHeading>;
-            <p className=,;
+            <GradientHeading>Explore Categories</GradientHeading>
+            <p className=,
   text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>;
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
         )};
 ;
-        <div className=;
+        <div className=
   'grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6>;
           {categories.map((category) => (;
-            <Link;
+            <Link
               key={category.title};
               href={category.link};
               className=,;
@@ -173,18 +173,18 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
               <div className=;
   'rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover: border-zion-purple/50 hover:translate-y-[-5px]>;
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <div className=;
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className=
   'text-white'>;
                     {category.icon};
-                  </div>;
-                </motion.div>;
-              </Link>;
-            </motion.div>;
+                  </div>
+                </motion.div>
+              </Link>
+            </motion.div>
           ))};
-        </motion.div>;
+        </motion.div>
 ;
-        <motion.div;
+        <motion.div
           className=;
   'mt-12';
           initial = {;
@@ -220,11 +220,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }};
         >;
           <h3 className=,;
-  text-center text-xl font-bold text-white mb-6'>Featured Services</h3>;
-          <div className=;
+  text-center text-xl font-bold text-white mb-6'>Featured Services</h3>
+          <div className=
   'flex flex-wrap justify-center gap-4'>;
             {specialServices.map((service) => (;
-              <motion.div;
+              <motion.div
                 key={service.title};
                 href={service.link};
                 className=;
@@ -238,13 +238,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   {service.title};
                   <ArrowRight className=;
   'w-4 h-4'                                                                                                                                                                              />;
-                </Link>;
-              </motion.div>;
+                </Link>
+              </motion.div>
             ))};
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
 ;
-        <motion.div;
+        <motion.div
           className=;
   'mt-12 flex justify-center';
           initial = {;
@@ -279,7 +279,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 }};
         >;
-          <Link;
+          <Link
             href=,;
   /categories';
             className=;
@@ -289,10 +289,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             <ArrowRight className=;
   'w-4 h-4 group-hover:translate-x-1 transition-transform duration-300                                                                                                                                                                              />;
 ursor/website-audit-content-update-and-deployment-efec;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 ;

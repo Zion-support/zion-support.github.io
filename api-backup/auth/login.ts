@@ -6,20 +6,20 @@ import type { User, Session } from;
   '@supabase/supabase-js';
 ;
 // Define expected request body structure;
-interface LoginRequestBody {;
+interface LoginRequestBody {
   email: string;
    password: string;
 }
 ;
 // Define success response structure;
-interface LoginSuccessResponse {;
+interface LoginSuccessResponse {
   user: User;
    session: Session;
    message: string;
 }
 ;
 // Define error response structure;
-interface ErrorResponse {;
+interface ErrorResponse {
   error: string;
    code?: string;
 }
@@ -28,7 +28,7 @@ interface ErrorResponse {;
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 ;
-if (!supabaseUrl || !serviceKey) {;
+if (!supabaseUrl || !serviceKey) {
   const errorMessage =,;
   CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.;  console.error(errorMessage);
   throw new Error(errorMessage);

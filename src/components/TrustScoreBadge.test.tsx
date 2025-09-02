@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import TrustScoreBadge from './TrustScoreBadge';
-;
+
 describe('TrustScoreBadge', () => {;
   it('renders without crashing', () => {;
     render(<TrustScoreBadge />);

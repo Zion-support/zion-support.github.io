@@ -25,7 +25,7 @@ import {}
   ';
 ;
 :pages.disabled/pages/services/GreenIT.jsx;
-export default function GreenIT() {;
+export default function GreenIT() {
   const services = [;
     {;
       icon: Leaf,';
@@ -94,7 +94,7 @@ export default function GreenIT() {;
   ',Efficient algorithms',Green software practices;
   ']}];
 ;
-  const benefits = [;
+  const benefits = [
     {;
       icon: TrendingUp,';
       title:,;
@@ -120,7 +120,7 @@ export default function GreenIT() {;
   ';
       description: 'Leading-edge sustainable technology solutions}];
 ;
-  const technologies = [;
+  const technologies = [
     {;
       icon: Battery,';
       title:,;
@@ -149,32 +149,32 @@ export default function GreenIT() {;
 ;
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO'';
+      <SEO''
         title='Green IT Services - Zion Tech Group'';
         description='Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services.';
       />;
 '{/* Hero Section */}''      <section className='relative py-20 px-4'>'';
-        <div className='container mx-auto text-center'>;
+        <div className='container mx-auto text-center'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/GreenIT.jsx;
             transition={{ duration: 0.6 }}'>''            <div className='flex justify-center mb-6'>'';
               <div className='w-20 h-20 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center'>'';
-                <Leaf className='w-10 h-10 text-white' />;
+                <Leaf className='w-10 h-10 text-white' />
 :pages.disabled/pages/services/GreenIT.jsx;
               </div>';
             </div>'';
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               Green IT Solutions';
             </h1>'';
-            <p className='text-xl text-slate-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto mb-8'>
               Sustainable technology solutions that reduce environmental impact;
               while improving efficiency and reducing costs. Building a greener;
               digital future.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
-              <a'';
+              <a''
                 href='/contact'';
                 className='px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105';
               >;
@@ -183,28 +183,28 @@ export default function GreenIT() {;
               <a'';
                 href='/services-overview'';
                 className='px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300'>                View All Services;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 :pages.disabled/pages/services/GreenIT.jsx;
 '{/* Services Grid */}''      <section className='py-20 px-4'>'';
-        <div className='container mx-auto'>;
+        <div className='container mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/GreenIT.jsx;
-              Green IT Services'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+              Green IT Services'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Comprehensive sustainable technology solutions designed to;
               minimize environmental impact while maximizing efficiency and;
               performance.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/GreenIT.jsx;
-          </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {services.map((service, index) => (;
               <motion.div;
                 key={service.title}
@@ -216,39 +216,39 @@ export default function GreenIT() {;
 :pages.disabled/pages/services/GreenIT.jsx;
                   <service.icon className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3 className='text-xl font-semibold text-white mb-3'>;
+                <h3 className='text-xl font-semibold text-white mb-3'>
                   {service.title}'</h3>''                <p className='text-slate-300 mb-4'>{service.description}</p>'';
-                <ul className='space-y-2'>;
+                <ul className='space-y-2'>
                   {service.features.map((feature, idx) => (;
 :pages.disabled/pages/services/GreenIT.jsx;
                     <li'key={idx}''                      className='flex items-center text-sm text-slate-400'';
                     >'';
-                      <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
+                      <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </motion.div>;
+                </ul>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/GreenIT.jsx;
 '{/* Benefits Section */}''      <section className='py-20 px-4 bg-slate-800/30'>'';
-        <div className='container mx-auto'>;
+        <div className='container mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/GreenIT.jsx;
-              Benefits of Green IT'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+              Benefits of Green IT'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Adopting sustainable technology solutions delivers multiple;
               benefits for your business and the environment.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/GreenIT.jsx;
-          </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+          </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {benefits.map((benefit, index) => (;
               <motion.div;
                 key={benefit.title}
@@ -260,29 +260,29 @@ export default function GreenIT() {;
 :pages.disabled/pages/services/GreenIT.jsx;
                   <benefit.icon className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3 className='text-lg font-semibold text-white mb-2'>;
-                  {benefit.title}'</h3>''                <p className='text-slate-300 text-sm'>{benefit.description}</p>;
-              </motion.div>;
+                <h3 className='text-lg font-semibold text-white mb-2'>
+                  {benefit.title}'</h3>''                <p className='text-slate-300 text-sm'>{benefit.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/GreenIT.jsx;
 '{/* Technologies Section */}''      <section className='py-20 px-4'>'';
-        <div className='container mx-auto'>;
+        <div className='container mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/GreenIT.jsx;
-              Green Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+              Green Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Leveraging cutting-edge technologies to create sustainable and;
               energy-efficient IT infrastructure.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/GreenIT.jsx;
-          </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+          </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {technologies.map((tech, index) => (;
               <motion.div;
                 key={tech.title}
@@ -294,31 +294,31 @@ export default function GreenIT() {;
 :pages.disabled/pages/services/GreenIT.jsx;
                   <tech.icon className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3 className='text-lg font-semibold text-white mb-2'>;
-                  {tech.title}'</h3>''                <p className='text-slate-300 text-sm'>{tech.description}</p>;
-              </motion.div>;
+                <h3 className='text-lg font-semibold text-white mb-2'>
+                  {tech.title}'</h3>''                <p className='text-slate-300 text-sm'>{tech.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/GreenIT.jsx;
 '{/* CTA Section */}''      <section className='py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20'>'';
-        <div className='container mx-auto text-center'>;
+        <div className='container mx-auto text-center'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/GreenIT.jsx;
             transition={{ duration: 0.6 }}';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Go Green?';
             </h2>'';
-            <p className='text-xl text-slate-300 max-w-2xl mx-auto mb-8'>;
+            <p className='text-xl text-slate-300 max-w-2xl mx-auto mb-8'>
               Transform your IT infrastructure with sustainable solutions that;
               benefit both your business and the planet.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
-              <a'';
+              <a''
                 href='/contact'';
                 className='px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105';
               >;
@@ -327,12 +327,12 @@ export default function GreenIT() {;
               <a'';
                 href='/services-overview'';
                 className='px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300'>                Explore More Services;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 :pages.disabled/pages/services/GreenIT.jsx;
 }'';

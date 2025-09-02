@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import SkipLink from './SkipLink';
-;
+
 describe('SkipLink', () => {;
   it('renders without crashing', () => {;
     render(<SkipLink />);

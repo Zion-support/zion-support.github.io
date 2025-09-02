@@ -170,7 +170,7 @@ class FileIntegrityMonitor {;
     const missingFiles = [];
 ;
     try {;
-      const criticalFiles = ['package.json;
+      const criticalFiles = ['package.json
   ',package-lock.json',README.md;
   '];
 ;
@@ -332,7 +332,7 @@ class FileIntegrityMonitor {;
     }
   }
 ;
-  getStats() {;
+  getStats() {
     return {;
       integrityChecks: this.integrityChecks,;
       issuesFound: this.issuesFound,;

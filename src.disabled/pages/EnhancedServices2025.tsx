@@ -3,7 +3,7 @@ import React, { useState } from;
   'framer-motion'; import { Link } from;
   'react-router-dom'; import { Brain, Cloud, Shield, Zap, Users, Rocket, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Cpu, Network, Smartphone, BarChart3, Code, Server, Chip, Wifi, ShieldCheck, Bot, GitFork, Eye, Sparkles, Phone, Mail, MapPin, MessageSquare, FileText, Search, Clock, Atom, Target, DollarSign, Building2, Heart, Car, Leaf, Stethoscope, Microscope, Workflow, Automation, BookOpen, Receipt, Calendar, Share2, CreditCard, Package, Bot as BotIcon } from;
   'lucide-react'; import { SEO } from;
-  '@/components/SEO'; type Service = { title: string; description: string; priceRange: string; learnMoreUrl?: string; ctaUrl?: string; icon?: any; category?: string; popular?: boolean; }; const featuredServices: Service[] = [ { title:,;
+  '@/components/SEO'; type Service = { title: string description: string; priceRange: string; learnMoreUrl?: string; ctaUrl?: string; icon?: any; category?: string; popular?: boolean; }; const featuredServices: Service[] = [ { title:,
   AI Legal Document Automation Platform', description: AI-powered legal document generation, review, and compliance automation.,;
   , priceRange: $299 - $1, 999/month,;
   , learnMoreUrl: '/comprehensive-micro-saas-services-2025, icon: FileText, category:;
@@ -22,7 +22,7 @@ import React, { useState } from;
   'Sustainability', popular: false }, { title:,;
   Quantum Edge Computing Solutions', description: 'Next-generation quantum computing with edge deployment capabilities., priceRange:,;
   $1, 999 - $9,999/month', learnMoreUrl: '/comprehensive-micro-saas-services-2025, icon: Atom, category:;
-  'Quantum Computing', popular: true } ]; const microSaaS: Service[] = [ { title:,;
+  'Quantum Computing', popular: true } ]; const microSaaS: Service[] = [ { title:,
   AI-Powered Social Media Scheduler Pro', description: 'Intelligent social media management with AI content optimization and engagement analytics., priceRange:,;
   $49 - $299/month', learnMoreUrl: '/comprehensive-micro-saas-services-2025, icon: Share2, category:;
   'Social Media & Marketing', popular: true }, { title:,;
@@ -42,7 +42,7 @@ import React, { useState } from;
   'Email Marketing', popular: false }, { title:,;
   Smart Project Time Tracker', description: 'Advanced time tracking with AI-powered productivity insights and team management., priceRange:,;
   $19 - $99/month', learnMoreUrl: '/comprehensive-micro-saas-services-2025, icon: Clock, category:;
-  'Project Management', popular: false } ]; const aiServices: Service[] = [ { title:,;
+  'Project Management', popular: false } ]; const aiServices: Service[] = [ { title:,
   AI Business Intelligence Platform', description: 'Advanced AI-powered analytics with predictive modeling and real-time insights., priceRange:,;
   $2, 500 - $12,000/month', learnMoreUrl: '/comprehensive-micro-saas-services-2025, icon: Brain, category:;
   'AI & Analytics', popular: true }, { title:,;
@@ -51,7 +51,7 @@ import React, { useState } from;
   'Cybersecurity', popular: false }, { title:,;
   AI Customer Experience Optimization', description: 'Intelligent customer journey mapping with personalization and sentiment analysis., priceRange:,;
   $1, 500 - $8,000/month', learnMoreUrl: '/comprehensive-micro-saas-services-2025, icon: Users, category:;
-  'Customer Experience', popular: false } ]; const itServices: Service[] = [ { title:,;
+  'Customer Experience', popular: false } ]; const itServices: Service[] = [ { title:,
   Cloud Infrastructure Management', description: Complete cloud infrastructure setup, management, and optimization with 24/7 monitoring.,;
   , priceRange: $1, 200 - $6,000/month,;
   , learnMoreUrl: '/comprehensive-micro-saas-services-2025, icon: Cloud, category:;

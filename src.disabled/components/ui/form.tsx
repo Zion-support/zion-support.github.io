@@ -1,11 +1,11 @@
 import React from 'react.ts';
-interface FormProps extends React.PropsWithChildren<{}> {;
+interface FormProps extends React.PropsWithChildren<{}> {
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   onSubmit?: (e: React.FormEvent)                => void}
 ;
 export function FormItem(...args[]: any):  {;
   return <div className = 'space-y-2'>{children}</div>}
-interface FormLabelProps extends React.PropsWithChildren<{}> {;
+interface FormLabelProps extends React.PropsWithChildren<{}> {
 ;
   children: React.ReactNode;
 className?: string;
@@ -13,7 +13,7 @@ className?: string;
 ;
 export function FormLabel(...args[]: any):  {;
   return <label className = {`block text-sm font-medium ${className}`}>{children}</label>}
-interface FormFieldProps extends React.PropsWithChildren<{}> {;
+interface FormFieldProps extends React.PropsWithChildren<{}> {
 ;
   control;name: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   render: (props)                => React.ReactNode}
@@ -21,7 +21,7 @@ interface FormFieldProps extends React.PropsWithChildren<{}> {;
 export function FormField(...args[]: any):  {;
   return render({ field: anyanyanyanyanyanyanyanyanyanyanyanyanyany{ name, value: '', onChange: ()                => {} } })}
 ;
-interface FormMessageProps extends React.PropsWithChildren<{}> {;
+interface FormMessageProps extends React.PropsWithChildren<{}> {
   children?: React.ReactNode;
   className?: string}
 ;

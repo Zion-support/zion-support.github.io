@@ -7,7 +7,7 @@ import EnhancedNavigation from;
 import EnhancedFooter from;
   '../EnhancedFooter';
 ;
-interface EnhancedLayoutProps {;
+interface EnhancedLayoutProps {
   // Add your props here children: React.ReactNode;
    title?: string;
    description?: string;
@@ -56,7 +56,7 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {;
     ],;
     'foundingDate': '2010',;
     'numberOfEmployees': '50-100',;
-    'serviceType': [;
+    'serviceType': [
       'AI Development',;
       'Cloud Architecture',;
       'Web Development',;
@@ -70,54 +70,54 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {;
 ;
   return (;
     <>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name='description' content={description} />;
-        <meta name='keywords' content={keywords} />;
-        <meta name='author' content='Zion Tech Group' />;
-        <meta name='robots' content='index,follow' />;
-        <link rel='canonical' href='https://ziontechgroup.com' />;
+      <Head>
+        <title>{title}</title>
+        <meta name='description' content={description} />
+        <meta name='keywords' content={keywords} />
+        <meta name='author' content='Zion Tech Group' />
+        <meta name='robots' content='index,follow' />
+        <link rel='canonical' href='https://ziontechgroup.com' />
         {/* Open Graph / Facebook */}
-        <meta property='og:type' content='website' />;
-        <meta property='og:url' content='https://ziontechgroup.com' />;
-        <meta property='og:title' content={title} />;
-        <meta property='og:description' content={description} />;
-        <meta property='og:image' content={ogImage} />;
-        <meta property='og:site_name' content='Zion Tech Group' />;
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ziontechgroup.com' />
+        <meta property='og:title' content={title} />
+        <meta property='og:description' content={description} />
+        <meta property='og:image' content={ogImage} />
+        <meta property='og:site_name' content='Zion Tech Group' />
         {/* Twitter */}
-        <meta property='twitter:card' content='summary_large_image' />;
-        <meta property='twitter:url' content='https://ziontechgroup.com' />;
-        <meta property='twitter:title' content={title} />;
-        <meta property='twitter:description' content={description} />;
-        <meta property='twitter:image' content={ogImage} />;
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://ziontechgroup.com' />
+        <meta property='twitter:title' content={title} />
+        <meta property='twitter:description' content={description} />
+        <meta property='twitter:image' content={ogImage} />
         {/* Structured Data */}
-        <script;
+        <script
           type='application/ld+json';
           dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
         />;
         {/* Additional Meta Tags */}
-        <meta name='viewport' content='width=device-width, initial-scale=1' />;
-        <meta name='theme-color' content='#000000' />;
-        <link rel='icon' href='/favicon.ico' />;
-        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />;
-        <meta name='apple-mobile-web-app-capable' content='yes' />;
-        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />;
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='theme-color' content='#000000' />
+        <link rel='icon' href='/favicon.ico' />
+        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
         {/* Performance Optimizations */}
-        <link rel='preconnect' href='https://fonts.googleapis.com' />;
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />;
-        <link rel='dns-prefetch' href='//www.google-analytics.com' />;
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+        <link rel='dns-prefetch' href='//www.google-analytics.com' />
         {/* Preload critical resources */}
-        <link rel='preload' href='/fonts/inter-var.woff2' as='font' type='font/woff2' crossOrigin='anonymous' />;
-        <link rel='preload' href='/fonts/poppins-var.woff2' as='font' type='font/woff2' crossOrigin='anonymous' />;
-      </Head>;
-      <div className='min-h-screen flex flex-col'>;
-        <EnhancedNavigation />;
-        <main className='flex-1'>;
+        <link rel='preload' href='/fonts/inter-var.woff2' as='font' type='font/woff2' crossOrigin='anonymous' />
+        <link rel='preload' href='/fonts/poppins-var.woff2' as='font' type='font/woff2' crossOrigin='anonymous' />
+      </Head>
+      <div className='min-h-screen flex flex-col'>
+        <EnhancedNavigation />
+        <main className='flex-1'>
           {children}
-        </main>;
-        <EnhancedFooter />;
-      </div>;
-    </>;
+        </main>
+        <EnhancedFooter />
+      </div>
+    </>
   );
 };
 ;

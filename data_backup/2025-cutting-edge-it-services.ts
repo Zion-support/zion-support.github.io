@@ -22,7 +22,7 @@ starter: {;
         price: 399,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic quantum infrastructure,;
   'Standard security protocols',;
   'Email support'];
@@ -31,7 +31,7 @@ starter: {;
         price: 999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced quantum features,;
   'Enhanced security protocols',;
   'Priority support',;
@@ -80,7 +80,7 @@ starter: {;
   'Kubernetes',;
   'Docker',;
   'Terraform'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'FedRAMP',;
@@ -108,7 +108,7 @@ starter: {;
         price: 299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic edge orchestration,;
   'Standard monitoring',;
   'Email support'];
@@ -117,7 +117,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced orchestration,;
   'AI model deployment',;
   'Priority support',;
@@ -165,7 +165,7 @@ starter: {;
   'IoT Platforms',;
   'AI Frameworks',;
   'Cloud Platforms'],;
-    compliance[;
+    compliance[
   'IoT Security Standards',;
   'Edge Computing Protocols',;
   'Data Privacy Regulations'];
@@ -192,7 +192,7 @@ starter: {;
         price: 499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic zero-trust features,;
   'Standard authentication',;
   'Email support'];
@@ -201,7 +201,7 @@ starter: {;
         price: 1299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced security features,;
   'Behavioral analytics',;
   'Priority support',;
@@ -250,7 +250,7 @@ starter: {;
   'OAuth',;
   'SIEM Systems',;
   'Security Tools'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'FedRAMP',;
@@ -279,7 +279,7 @@ starter: {;
         price: 599,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic blockchain features,;
   'Standard smart contracts',;
   'Email support'];
@@ -288,7 +288,7 @@ starter: {;
         price: 1499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced blockchain features,;
   'Custom smart contracts',;
   'Priority support',;
@@ -336,7 +336,7 @@ starter: {;
   'Financial Systems',;
   'Supply Chain Tools',;
   'Legacy Systems'],;
-    compliance[;
+    compliance[
   'Blockchain Standards',;
   'Financial Regulations',;
   'Data Privacy Laws'];
@@ -363,7 +363,7 @@ starter: {;
         price: 399,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic AI DevOps features,;
   'Standard automation',;
   'Email support'];
@@ -372,7 +372,7 @@ starter: {;
         price: 999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced AI features,;
   'Custom automation',;
   'Priority support',;
@@ -424,7 +424,7 @@ integrations: [;
   'AWS',;
   'Azure',;
   'Google Cloud'],;
-    compliance: [;
+    compliance: [
   'DevOps Best Practices,;
   'Security Standards',;
   'Quality Assurance Protocols'];

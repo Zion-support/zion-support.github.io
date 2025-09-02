@@ -1,7 +1,7 @@
 ;
 export { function };
 :pages.disabled/pages/services/Blockchain.tsx;
-export default function Blockchain(...args[]):  {},;    {;
+export default function Blockchain(...args[]):  {},;    {
       icon: Network,';
       title: 'Cross-Chain Interoperability',';
       description: 'Seamless communication between different blockchain networks'};
@@ -40,7 +40,7 @@ export default function Blockchain(...args[]):  {},;    {;
       popular: true;
     },;
 :pages.disabled/pages/services/Blockchain.tsx;
-    {;
+    {
 '''      name: 'Enterprise','';
       price: '$24,999','';
       period: '/month','';
@@ -54,34 +54,34 @@ export default function Blockchain(...args[]):  {},;    {;
       popular: false};
   ]},;
 :pages.disabled/pages/services/Blockchain.tsx;
-    {';icon: Users,';      title: 'Trust & Compliance',';
+    {'icon: Users,';      title: 'Trust & Compliance',';
       description: 'Build trust through verifiable and auditable processes'};
   ];
 ;
 :pages.disabled/pages/services/Blockchain.tsx;
-    {';icon: Shield,';      title: 'Healthcare',';
+    {'icon: Shield,';      title: 'Healthcare',';
       description: 'Secure patient records and pharmaceutical supply chain management',';
       examples: ['Patient data', 'Drug tracking', 'Clinical trials']};  ];
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
-  return ('';
+  return (''
     <div className='min-h-screen bg-futuristic'>'{/* Hero Section */}''      <section className='relative pt-32 pb-20 overflow-hidden'>'';
         <div className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900 to-slate-900'></div>'';
-        <div className='container-responsive relative z-10'>;
+        <div className='container-responsive relative z-10'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/Blockchain.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto'';
           >'';
             <div className='inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6'>'';
-              <Lock className='w-5 h-5 text-green-400'  />'              <span className='text-green-400 font-medium'>Blockchain Solutions</span>;
+              <Lock className='w-5 h-5 text-green-400'  />'              <span className='text-green-400 font-medium'>Blockchain Solutions</span>
 :pages.disabled/pages/services/Blockchain.tsx;
             </div>';
 '';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
               Trust Through'';
-              <span className='text-gradient'> Technology</span>;
-            </h1>'''            <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>;
+              <span className='text-gradient'> Technology</span>
+            </h1>'''            <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>
               Build trust, transparency, and efficiency with blockchain technology.;
               Transform your business with decentralized solutions.;
 :pages.disabled/pages/services/Blockchain.tsx;
@@ -91,14 +91,14 @@ export default function Blockchain(...args[]):  {},;    {;
               <button className='btn-futuristic px-8 py-4 text-lg'>';
                 Start Blockchain Project'';
                 <ArrowRight className='w-5 h-5 ml-2'  />'</button>'              <button className='btn-outline px-8 py-4 text-lg'>                Learn More;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Blockchain.tsx;
 '{/* Features Section */}''      <section className='py-20'>'';
-        <div className='container-responsive'>;
+        <div className='container-responsive'>
           <motion.div;
             initial = {}
   { opacity: 0,;
@@ -110,15 +110,15 @@ export default function Blockchain(...args[]):  {},;    {;
 }}
             transition={{ duration: 0.6 }}'viewport={{ once: true }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/Blockchain.tsx;
-              Why Choose Blockchain Technology?'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>;
+              Why Choose Blockchain Technology?'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Unprecedented security, transparency, and efficiency;
-            </p>;
+            </p>
 :pages.disabled/pages/services/Blockchain.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index();
               <motion.divkey={feature.title}
                 initial = {}
@@ -137,11 +137,11 @@ export default function Blockchain(...args[]):  {},;    {;
                 <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>'';
 :pages.disabled/pages/services/Blockchain.tsx;
                   <feature.icon className='w-8 h-8 text-white' />'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-                <p className='text-zion-slate-light'>{feature.description}</p>;
-              </motion.div>;
+                <p className='text-zion-slate-light'>{feature.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/Blockchain.tsx;
       </div>';
 '';
@@ -166,7 +166,7 @@ export default function Blockchain(...args[]):  {},;    {;
               <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'';
                 <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent'>Blockchain</span> Solutions for the Future';
               </h1>'';
-              <p className='text-xl text-zinc-300 mb-8 leading-relaxed'>;
+              <p className='text-xl text-zinc-300 mb-8 leading-relaxed'>
                 Leverage the power of blockchain technology to create transparent, secure, and efficient';
   ';
                 business processes. From smart contracts to DeFi, we're building the decentralized future.';
@@ -181,16 +181,16 @@ export default function Blockchain(...args[]):  {},;    {;
                 <RouterLink'';
                   to='/request-quote'';
                   className='inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300';
-                  Request Quote</RouterLink>              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
+                  Request Quote</RouterLink>              </div>
+            </motion.div>
+          </div>
+        </section>
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
         {/* Use Cases Section */}'';
         <section className='py-20'>';
           <div className='container-responsive'>';
-            <motion.div'';
+            <motion.div''
               className='text-center mb-16';
               initial = {;
   { opacity: 0,;
@@ -203,13 +203,13 @@ export default function Blockchain(...args[]):  {},;    {;
               viewport={{ once: true }}';
 '';
               <h2 className='text-4xl font-bold text-white mb-4'>;
-                Blockchain Applications'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>;
+                Blockchain Applications'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>
                 Discover how blockchain is transforming industries across the globe;
-              </p>;
+              </p>
 :pages.disabled/pages/services/Blockchain.tsx;
             </motion.div>';
 '';
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               {useCases.map(useCase: unknown, index: unknown;
                 <motion.div';
                   key={index}'';
@@ -234,20 +234,20 @@ export default function Blockchain(...args[]):  {},;    {;
                   <p className='text-zinc-400 mb-4'>{useCase.description}</p>'';
                   <ul className='space-y-2'>'{useCase.examples.map((example, exampleIndex) => (''                      <li key={exampleIndex} className='flex items-center text-zinc-300 text-sm'>'';
                         <CheckCircle className='w-4 h-4 text-orange-400 mr-2 flex-shrink-0'  />                        {example}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </motion.div>;
+                  </ul>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
         {/* Features Section */}'';
         <section className='py-20 bg-white/5'>';
           <div className='container-responsive'>';
-            <motion.div'';
+            <motion.div''
               className='text-center mb-16';
               initial = {;
   { opacity: 0,;
@@ -260,13 +260,13 @@ export default function Blockchain(...args[]):  {},;    {;
               viewport={{ once: true }}';
 '';
               <h2 className='text-4xl font-bold text-white mb-4'>;
-                Why Choose Our Blockchain?'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>;
+                Why Choose Our Blockchain?'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>
                 Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative;
-              </p>;
+              </p>
 :pages.disabled/pages/services/Blockchain.tsx;
             </motion.div>';
 '';
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map(feature: unknown, index: unknown();
                 <motion.div';
                   key={index}'';
@@ -286,18 +286,18 @@ export default function Blockchain(...args[]):  {},;    {;
 '';
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4'>'';
                     <feature.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                  <p className='text-zinc-400'>{feature.description}</p>;
-                </motion.div>;
+                  <p className='text-zinc-400'>{feature.description}</p>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
         {/* Pricing Section */}'';
         <section className='py-20'>';
           <div className='container-responsive'>';
-            <motion.div'';
+            <motion.div''
               className='text-center mb-16';
               initial = {;
   { opacity: 0,;
@@ -310,13 +310,13 @@ export default function Blockchain(...args[]):  {},;    {;
               viewport={{ once: true }}';
 '';
               <h2 className='text-4xl font-bold text-white mb-4'>;
-                Transparent Pricing'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>;
+                Transparent Pricing'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>
                 Choose the plan that fits your blockchain needs. All plans include our core blockchain features.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/Blockchain.tsx;
             </motion.div>';
 '';
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
               {pricing.map(plan: unknown, index: unknown();
                 <motion.div;
                   key={index}
@@ -339,10 +339,10 @@ export default function Blockchain(...args[]):  {},;    {;
 }}
                   viewport={{ once: true }}
 '{plan.popular && (';                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                      <span className='px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full'>;
+                      <span className='px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full'>
                         Most Popular;
-                      </span>;
-                    </div>;
+                      </span>
+                    </div>
 :pages.disabled/pages/services/Blockchain.tsx;
                   )}'''                  <div className='text-center mb-6'>'';
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'';
@@ -351,17 +351,17 @@ export default function Blockchain(...args[]):  {},;    {;
 :pages.disabled/pages/services/Blockchain.tsx;
                       <span className='text-zinc-400 ml-1'>{plan.period}</span>';
                     </div>'';
-                    <p className='text-zinc-400'>{plan.description}</p>;
+                    <p className='text-zinc-400'>{plan.description}</p>
                   </div>';
 '';
                   <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''                      <li key={featureIndex} className='flex items-center text-zinc-300'>'';
                         <CheckCircle className='w-5 h-5 text-orange-400 mr-3 flex-shrink-0'  />                        {feature}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
+                  </ul>
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
-                  <RouterLink''`;
+                  <RouterLink''`
                     to={plan.name === 'Enterprise' ? '/contact' : '/request-quote'}``;
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${,;
   plan.popular';
@@ -371,17 +371,17 @@ export default function Blockchain(...args[]):  {},;    {;
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20``}`}
                     {plan.cta}
                   </RouterLink>;
-                </motion.div>;
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
         {/* Benefits Section */}'';
         <section className='py-20 bg-white/5'>';
           <div className='container-responsive'>';
-            <motion.div'';
+            <motion.div''
               className='text-center mb-16';
               initial = {;
   { opacity: 0,;
@@ -394,13 +394,13 @@ export default function Blockchain(...args[]):  {},;    {;
               viewport={{ once: true }}';
 '';
               <h2 className='text-4xl font-bold text-white mb-4'>;
-                Business Benefits'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>;
+                Business Benefits'</h2>''              <p className='text-xl text-zinc-400 max-w-3xl mx-auto'>
                 See measurable improvements in your business processes and customer trust;
-              </p>;
+              </p>
 :pages.disabled/pages/services/Blockchain.tsx;
             </motion.div>';
 '';
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown();
                 <motion.div';
                   key={index}'';
@@ -419,19 +419,19 @@ export default function Blockchain(...args[]):  {},;    {;
                   viewport={{ once: true }}';
 '';
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0'>'';
-                    <benefit.icon className='w-6 h-6 text-white' />;
+                    <benefit.icon className='w-6 h-6 text-white' />
                   </div>'<div>''                    <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'';
-                    <p className='text-zinc-400'>{benefit.description}</p>;
-                  </div>;
-                </motion.div>;
+                    <p className='text-zinc-400'>{benefit.description}</p>
+                  </div>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/Blockchain.tsx;
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10'>';
-          <div className='container-responsive text-center'>;
-            <motion.div;
+          <div className='container-responsive text-center'>
+            <motion.div
               initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/Blockchain.tsx;
@@ -460,11 +460,11 @@ export default function Blockchain(...args[]):  {},;    {;
                 <RouterLink'';
                   to='/request-quote'';
                   className='inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300';
-                  Get Custom Quote</RouterLink>              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </div>;
+                  Get Custom Quote</RouterLink>              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </div>
   )}''`;
   ''`''`;

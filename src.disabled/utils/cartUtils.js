@@ -18,7 +18,7 @@ export const validateCartItem = (item) => {;
     return false;
   }
 ;
-  const requiredFields = ['id', 'name', 'price', 'quantity'];
+  const requiredFields = ['id', 'name', 'price', 'quantity']
   for (const field of requiredFields) {;
     if (!(field in item)) {;
       return false;
@@ -51,7 +51,7 @@ export const validateCartItem = (item) => {;
  * @param {Object} newItem - Item to add;
  * @returns {Array} Updated cart array;
  */;
-export const addToCart = (cart, newItem) => {;
+export const addToCart = (cart, newItem) => {
   if (!validateCartItem(newItem)) {;
     console.warn('Invalid cart item:', newItem);
     return cart;
@@ -60,7 +60,7 @@ export const addToCart = (cart, newItem) => {;
 ;
   const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
 ;
-  if (existingItemIndex !== -1) {;
+  if (existingItemIndex !== -1) {
     // Update existing item quantity;
     const updatedCart = [...cart];
     const existingItem = updatedCart[existingItemIndex];
@@ -71,7 +71,7 @@ export const addToCart = (cart, newItem) => {;
         ...existingItem,;
         quantity: newQuantity;
       };
-    } else {;
+    } else {
       // Cap at max quantity;
       updatedCart[existingItemIndex] = {;
         ...existingItem,;
@@ -82,7 +82,7 @@ export const addToCart = (cart, newItem) => {;
     return updatedCart;
   } else {;
     // Add new item;
-    return [...cart, { ...newItem }];
+    return [...cart, { ...newItem }]
 ;
   }
 };
@@ -235,7 +235,7 @@ export const formatPrice = (price, currency = 'USD') => {;
  * @param {Array} cart - Cart items array;
  * @returns {Object} Cart summary;
  */;
-export const getCartSummary = (cart) => {;
+export const getCartSummary = (cart) => {
   const total = calculateCartTotal(cart);
 ;
   return {;
@@ -309,7 +309,7 @@ export const mergeCarts = (cart1, cart2) => {;
 ;
   const mergedCart = [...cart1];
 ;
-  cart2.forEach(item2 => {;
+  cart2.forEach(item2 => {
     const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
 ;
     if (existingItemIndex !== -1) {;
@@ -345,7 +345,7 @@ export const mergeCartItems = (cart1, cart2) => {;
  * @param {Array} cart - Cart array;
  * @returns {Object} Cart statistics;
  */;
-export const getCartStats = (cart) => {;
+export const getCartStats = (cart) => {
   if (isCartEmpty(cart)) {;
     return {;
       totalItems: 0,;
@@ -363,7 +363,7 @@ export const getCartStats = (cart) => {;
   const highestPrice = Math.max(...prices);
   const lowestPrice = Math.min(...prices);
 ;
-  return {;
+  return {
     totalItems,;
     uniqueItems,;
     averagePrice: Math.round(averagePrice * 100) / 100,;
@@ -386,7 +386,7 @@ export const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {;
 ;
   const sortedCart = [...cart];
 ;
-  sortedCart.sort((a, b) => {;
+  sortedCart.sort((a, b) => {
     let aValue, bValue;
 ;
     switch (sortBy) {;

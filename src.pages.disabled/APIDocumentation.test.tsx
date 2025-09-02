@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import APIDocumentation from './APIDocumentation';
-;
+
 describe('APIDocumentation', () => {;
   it('renders without crashing', () => {;
     render(<APIDocumentation />);

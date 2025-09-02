@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-;
-interface SEOProps {;
+
+interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
@@ -24,30 +24,30 @@ const SEO: React.FC<SEOProps> = ({;
   const fullImage = image || '/images/og-image.jpg';
   const fullUrl = url || 'https://ziontechgroup.com';
 ;
-  return (;
-    <Head>;
-      <title>{fullTitle}</title>;
-      <meta name='description' content={description} />;
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name='description' content={description} />
       {keywords && <meta name='keywords' content={keywords} />}
 ;
       {/* Open Graph */}
-      <meta property='og:type' content={type} />;
-      <meta property='og:title' content={fullTitle} />;
-      <meta property='og:description' content={description} />;
-      <meta property='og:image' content={fullImage} />;
-      <meta property='og:url' content={fullUrl} />;
-      <meta property='og:site_name' content={siteName} />;
+      <meta property='og:type' content={type} />
+      <meta property='og:title' content={fullTitle} />
+      <meta property='og:description' content={description} />
+      <meta property='og:image' content={fullImage} />
+      <meta property='og:url' content={fullUrl} />
+      <meta property='og:site_name' content={siteName} />
       {/* Twitter */}
-      <meta name='twitter:card' content='summary_large_image' />;
-      <meta name='twitter:title' content={fullTitle} />;
-      <meta name='twitter:description' content={description} />;
-      <meta name='twitter:image' content={fullImage} />;
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={fullTitle} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={fullImage} />
       {/* Additional meta tags */}
-      <meta name='viewport' content='width=device-width, initial-scale=1' />;
-      <meta name='robots' content='index, follow' />;
-      <link rel='canonical' href={fullUrl} />;
+      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta name='robots' content='index, follow' />
+      <link rel='canonical' href={fullUrl} />
       {/* JSON-LD Structured Data */}
-      <script;
+      <script
         type='application/ld+json';
         dangerouslySetInnerHTML={{;
           __html: JSON.stringify({;
@@ -71,7 +71,7 @@ const SEO: React.FC<SEOProps> = ({;
               'contactType': 'customer service',;
               'email': 'kleber@ziontechgroup.com';
             },;
-            'sameAs': [;
+            'sameAs': [
               'https://linkedin.com/company/ziontechgroup',;
               'https://twitter.com/ziontechgroup',;
               'https://github.com/ziontechgroup';
@@ -79,7 +79,7 @@ const SEO: React.FC<SEOProps> = ({;
           });
         }}
       />;
-    </Head>;
+    </Head>
   );
 };
 ;

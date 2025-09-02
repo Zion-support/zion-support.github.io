@@ -3,7 +3,7 @@ import { NewsletterForm } from '@/components/NewsletterForm';
 import * as toastHook from '@/hooks/use-toast';
 import api from '@/services/apiClient';
 import { vi, expect, test } from 'vitest';
-;
+
 vi.mock(;
   '@/hooks/use-toast');
 ;
@@ -11,7 +11,7 @@ vi.mock(;
   '@/services/apiClient', () => ({;
   default: { post: vi.fn() }}));
 ;
-const mockedApi = api as unknown as { post: any };
+const mockedApi = api as unknown as { post: any }
 ;
 test(,;
   shows success toast when subscription succeeds', async () => {;

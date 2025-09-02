@@ -7,7 +7,7 @@ const fs = require(;
 const path = require(;
   'path');
 ;
-class ComprehensiveLinkChecker {;
+class ComprehensiveLinkChecker {
   constructor() {;
     this.baseUrl =;
   'https: //ziontechgroup.com;
@@ -129,7 +129,7 @@ class ComprehensiveLinkChecker {;
   async checkNavigationLinks() {;
     console.log(;
   '\n=== Checking Navigation Links ===');
-    const navigationUrls = [;
+    const navigationUrls = [
   '/',;
   '/about',;
   '/services',;
@@ -166,7 +166,7 @@ class ComprehensiveLinkChecker {;
   async checkServicePages() {;
     console.log(;
   '\n=== Checking Service Pages ===');
-    const serviceUrls = [;
+    const serviceUrls = [
   '/services/ai-business-intelligence',;
   '/services/ai-compliance-assistant',;
   '/services/ai-sales-copilot',;
@@ -267,7 +267,7 @@ class ComprehensiveLinkChecker {;
     }
 ;
     // Check for missing important pages;
-    const importantPages = [;
+    const importantPages = [
   '/about',;
   '/services',;
   '/contact',;

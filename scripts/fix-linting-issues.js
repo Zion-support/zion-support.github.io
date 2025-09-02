@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { glob } from 'glob';
-;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -101,7 +101,7 @@ class LintingIssuesFixer {;
       // Find all TypeScript and JavaScript files;
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}', {;
         cwd: this.projectRoot,;
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**'];
+        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']
       });
 ;
       console.log(`📁 Found ${sourceFiles.length} source files`);

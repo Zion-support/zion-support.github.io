@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-;
+
 console.log('🧪 Comprehensive Test Automation Starting...');
 ;
 class TestAutomation {;
@@ -202,8 +202,8 @@ class TestAutomation {;
 ;
   async createBasicPerformanceTest() {;
     const performanceTest = `import { test, expect } from '@playwright/test';
-;
-test('Performance test - Page load time', async ({ page }) => {;
+
+test('Performance test - Page load time', async ({ page }) => {
   const startTime = Date.now();
 ;
   await page.goto('/');
@@ -287,7 +287,7 @@ test('Performance test - Bundle size', async ({ page }) => {;
       results: this.testResults,;
       errors: this.errors,;
       warnings: this.warnings,;
-      recommendations: [;
+      recommendations: [
         'Add more unit tests for critical components',;
         'Implement E2E tests for user journeys',;
         'Set up continuous integration for automated testing',;

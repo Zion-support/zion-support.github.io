@@ -2,8 +2,8 @@
 ;
 import React, { useEffect, useState, useCallback } from 'react';
 // import { usePerformanceOptimization } from '../src/utils/performanceOptimizer';
-;
-interface PerformanceMetrics {;
+
+interface PerformanceMetrics {
   fcp: number | null;
    lcp: number | null;
    fid: number | null;
@@ -152,64 +152,64 @@ const PerformanceEnhancer: React.FC = () => {;
 ;
   const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {;
     if (value === null) return 'Measuring...';
-    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.good) return 'Good'
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';
   };
 ;
   return (;
     <div className='fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm z-50'>;
-      <h3 className='text-sm font-semibold text-gray-900 mb-3'>Performance Metrics</h3>;
-      <div className='space-y-2 text-xs'>;
-        <div className='flex justify-between'>;
-          <span>FCP: </span>;
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>;
+      <h3 className='text-sm font-semibold text-gray-900 mb-3'>Performance Metrics</h3>
+      <div className='space-y-2 text-xs'>
+        <div className='flex justify-between'>
+          <span>FCP: </span>
+          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}
-          </span>;
-        </div>;
-        <div className='flex justify-between'>;
-          <span>LCP:</span>;
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>;
+          </span>
+        </div>
+        <div className='flex justify-between'>
+          <span>LCP:</span>
+          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}
-          </span>;
-        </div>;
-        <div className='flex justify-between'>;
-          <span>FID:</span>;
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>;
+          </span>
+        </div>
+        <div className='flex justify-between'>
+          <span>FID:</span>
+          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
             {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}
-          </span>;
-        </div>;
-        <div className='flex justify-between'>;
-          <span>CLS:</span>;
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>;
+          </span>
+        </div>
+        <div className='flex justify-between'>
+          <span>CLS:</span>
+          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
             {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}
-          </span>;
-        </div>;
-        <div className='flex justify-between'>;
-          <span>TTFB:</span>;
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>;
+          </span>
+        </div>
+        <div className='flex justify-between'>
+          <span>TTFB:</span>
+          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}
-          </span>;
-        </div>;
-        <div className='flex justify-between'>;
-          <span>Load Time:</span>;
-          <span className={getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>;
+          </span>
+        </div>
+        <div className='flex justify-between'>
+          <span>Load Time:</span>
+          <span className={getScoreColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
             {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'Measuring...'}
-          </span>;
-        </div>;
+          </span>
+        </div>
         {metrics.memoryUsage && (;
-          <div className='flex justify-between'>;
-            <span>Memory:</span>;
-            <span className={getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}>;
+          <div className='flex justify-between'>
+            <span>Memory:</span>
+            <span className={getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}>
               {Math.round(metrics.memoryUsage)}MB;
-            </span>;
-          </div>;
+            </span>
+          </div>
         )}
-      </div>;
-      <div className='mt-3 pt-2 border-t border-gray-200'>;
-        <div className='text-xs text-gray-500'>;
+      </div>
+      <div className='mt-3 pt-2 border-t border-gray-200'>
+        <div className='text-xs text-gray-500'>
           Overall Score: {(() => {;
-            const scores = [;
+            const scores = [
               getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 }), getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 }), getScoreText(metrics.fid, { good: 100, needsImprovement: 300 }), getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })];
 ;
             const goodCount = scores.filter(score => score === 'Good').length;
@@ -221,9 +221,9 @@ const PerformanceEnhancer: React.FC = () => {;
             if (goodCount >= totalCount * 0.5) return 'Needs Improvement';
             return 'Poor';
           })()}
-        </div>;
-      </div>;
-    </div>;
+        </div>
+      </div>
+    </div>
   );
 };
 ;

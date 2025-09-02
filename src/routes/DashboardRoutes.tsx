@@ -1,14 +1,14 @@
 import { Route, Routes    } from 'react-router-dom';
-export default function Page() {;
-export default function Page() {;
+export default function Page() {
+export default function Page() {
   import { Suspense, lazy } from 'react';
-export default function Page() {;
-export default function Page() {;
+export default function Page() {
+export default function Page() {
   import { ProtectedRoute } from '../components/ProtectedRoute';
-export default function Page() {;
-export default function Page() {;
+export default function Page() {
+export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
-;
+
 // Lazy load dashboard pages;
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
@@ -20,50 +20,50 @@ const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 ;
 const DashboardRoutes: React.FC = () => {;
-  return (<Suspense fallback={<LoadingSpinner />}>;
-      <Routes>;
-        <Route path='/dashboard' element={;
+  return (<Suspense fallback={<LoadingSpinner />}>
+      <Routes>
+        <Route path='/dashboard' element={
           <ProtectedRoute>;
-            <Dashboard />;
-          </ProtectedRoute>;
+            <Dashboard />
+          </ProtectedRoute>
         } />;
-        <Route path='/client-dashboard' element={;
+        <Route path='/client-dashboard' element={
           <ProtectedRoute>;
-            <ClientDashboard />;
-          </ProtectedRoute>;
+            <ClientDashboard />
+          </ProtectedRoute>
         } />;
-        <Route path='/talent-dashboard' element={;
+        <Route path='/talent-dashboard' element={
           <ProtectedRoute>;
-            <TalentDashboard />;
-          </ProtectedRoute>;
+            <TalentDashboard />
+          </ProtectedRoute>
         } />;
-        <Route path='/creator-dashboard' element={;
+        <Route path='/creator-dashboard' element={
           <ProtectedRoute>;
-            <CreatorDashboard />;
-          </ProtectedRoute>;
+            <CreatorDashboard />
+          </ProtectedRoute>
         } />;
-        <Route path='/analytics' element={;
+        <Route path='/analytics' element={
           <ProtectedRoute>;
-            <Analytics />;
-          </ProtectedRoute>;
+            <Analytics />
+          </ProtectedRoute>
         } />;
-        <Route path='/project-milestones' element={;
+        <Route path='/project-milestones' element={
           <ProtectedRoute>;
-            <ProjectMilestones />;
-          </ProtectedRoute>;
+            <ProjectMilestones />
+          </ProtectedRoute>
         } />;
-        <Route path='/project-details' element={;
+        <Route path='/project-details' element={
           <ProtectedRoute>;
-            <ProjectDetails />;
-          </ProtectedRoute>;
+            <ProjectDetails />
+          </ProtectedRoute>
         } />;
-        <Route path='/project-room' element={;
+        <Route path='/project-room' element={
           <ProtectedRoute>;
-            <ProjectRoom />;
-          </ProtectedRoute>;
+            <ProjectRoom />
+          </ProtectedRoute>
         } />;
-      </Routes>;
-    </Suspense>;
+      </Routes>
+    </Suspense>
   );
 };
 ;

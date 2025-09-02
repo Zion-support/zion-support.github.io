@@ -2,10 +2,10 @@
 export { function };export default function BlockchainEnterpriseSolutions(...args: []):  {}
   return();
     <>;
-      <Helmet>;
-        <title>Blockchain Enterprise Solutions - Zion Tech Group</title>;
+      <Helmet>
+        <title>Blockchain Enterprise Solutions - Zion Tech Group</title>
         <meta name = 'description' content='Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises.' />'';
-        <meta name='keywords' content='blockchain, enterprise blockchain, smart contracts, DeFi, distributed ledger, cryptocurrency, enterprise solutions' />;
+        <meta name='keywords' content='blockchain, enterprise blockchain, smart contracts, DeFi, distributed ledger, cryptocurrency, enterprise solutions' />
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
       </Helmet>';
 '';
@@ -20,8 +20,8 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 '';
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
                 Blockchain'';
-                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent'> Enterprise</span>;
-              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>;
+                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent'> Enterprise</span>
+              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Leverage the power of blockchain technology to transform your enterprise operations.;
                 Secure transactions, smart contracts, and decentralized applications for the modern business.;
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
@@ -36,24 +36,24 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   <ArrowRight className='ml-2 w-5 h-5'  />';
                 </Link>'';
                 <button className='inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200'>'';
-                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>;
-            </div>;
-          </div>;
-        </section>;
+                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
 '{/* Features Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
-                Enterprise Blockchain Capabilities'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Enterprise Blockchain Capabilities'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our blockchain platform provides comprehensive enterprise solutions with security,;
                 scalability, and compliance built-in.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[;
                 {;
 ';
@@ -95,26 +95,26 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4'>'';
                     <feature.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                  <p className='text-slate-300'>{feature.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{feature.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
 '{/* Use Cases Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
-                Blockchain Use Cases'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Blockchain Use Cases'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Discover how blockchain technology can revolutionize different aspects of your business.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -129,7 +129,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   title: 'Financial Services','';
                   description: 'Secure transactions, cross-border payments, and asset tokenization.',';
                   icon: Zap,'';
-                  benefits: ['Secure payments', 'Asset tokenization', 'Cross-border transfers'];
+                  benefits: ['Secure payments', 'Asset tokenization', 'Cross-border transfers']
                 },;
                 {;
 ';
@@ -137,7 +137,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   title: 'Healthcare','';
                   description: 'Secure patient records, drug traceability, and medical supply chains.',';
                   icon: Users,'';
-                  benefits: ['Patient records', 'Drug traceability', 'Supply chain'];
+                  benefits: ['Patient records', 'Drug traceability', 'Supply chain']
                 },;
                 {;
 ';
@@ -145,7 +145,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   title: 'Real Estate','';
                   description: 'Property tokenization, smart contracts, and automated transactions.',';
                   icon: Target,'';
-                  benefits: ['Property tokenization', 'Smart contracts', 'Automated transactions'];
+                  benefits: ['Property tokenization', 'Smart contracts', 'Automated transactions']
                 },;
                 {;
 ';
@@ -153,7 +153,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   title: 'Government','';
                   description: 'Voting systems, identity management, and public records.',';
                   icon: Globe,'';
-                  benefits: ['Voting systems', 'Identity management', 'Public records'];
+                  benefits: ['Voting systems', 'Identity management', 'Public records']
                 },;
                 {;
 ';
@@ -161,7 +161,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   title: 'Energy Trading','';
                   description: 'Peer-to-peer energy trading and renewable energy certificates.',';
                   icon: Activity,'';
-                  benefits: ['P2P trading', 'Renewable certificates', 'Grid management'];
+                  benefits: ['P2P trading', 'Renewable certificates', 'Grid management']
                 }';
               ].map((useCase, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -172,23 +172,23 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   <p className='text-slate-300 mb-4'>{useCase.description}</p>'';
                   <ul className='space-y-1'>'{useCase.benefits.map((benefit, benefitIndex) => (''                      <li key={benefitIndex} className='text-sm text-yellow-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {benefit}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
 '{/* Technology Stack Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
-                Advanced Blockchain Technology'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Advanced Blockchain Technology'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Built on cutting-edge blockchain technologies for maximum security, performance, and scalability.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
             </div>';
 '';
@@ -202,10 +202,10 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                     'Integration APIs for existing enterprise systems'';
                   ].map((technology, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-6 h-6 text-yellow-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{technology}</span>;
-                    </div>;
+                      <CheckCircle className='w-6 h-6 text-yellow-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{technology}</span>
+                    </div>
                   ))}
-                </div>;
+                </div>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
               </div>';
 '';
@@ -219,26 +219,26 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   ].map((item, index)  => ('';
                     <div key={index} className='flex items-center space-x-3'>';
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>'';
-                        <item.icon className='w-4 h-4 text-white' />;
+                        <item.icon className='w-4 h-4 text-white' />
                       </div>'<div>''                        <span className='text-slate-300 font-medium'>{item.type}</span>'';
-                        <p className='text-xs text-slate-400'>{item.description}</p>;
-                      </div>;
-                    </div>;
+                        <p className='text-xs text-slate-400'>{item.description}</p>
+                      </div>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
 '{/* DeFi Solutions Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
-                DeFi Enterprise Solutions'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                DeFi Enterprise Solutions'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Decentralized finance solutions designed for enterprise use cases and compliance requirements.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
             </div>';
 '';
@@ -253,11 +253,11 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                     'Cross-chain bridges for multi-network operations'';
                   ].map((application, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{application}</span>;
-                    </div>;
+                      <CheckCircle className='w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{application}</span>
+                    </div>
                   ))}
-                </div>;
-              </div>;
+                </div>
+              </div>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
 ';
               <div>'';
@@ -270,27 +270,27 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                     'Enhanced security and reduced fraud through blockchain technology'';
                   ].map((benefit, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>;
-                    </div>;
+                      <CheckCircle className='w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
 '{/* Implementation Process Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
-                Implementation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Implementation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our systematic approach ensures successful blockchain implementation for your enterprise.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[;
                 {;
 ';
@@ -324,20 +324,20 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <div key={index} className='text-center'>'';
                   <div className='w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                     <span className='text-white font-bold text-xl'>{step.step}</span>'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>'';
-                  <p className='text-slate-300'>{step.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{step.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-yellow-500/10 to-orange-600/10'>';
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx;
               Ready to Transform Your Business with Blockchain?';
             </h2>'';
-            <p className='text-xl text-slate-300 mb-8'>;
+            <p className='text-xl text-slate-300 mb-8'>
               Leverage the power of blockchain technology to secure, automate, and optimize your operations.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
@@ -350,11 +350,11 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200'>                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>'`;
   )}}}}}
   ''`''`;

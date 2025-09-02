@@ -537,7 +537,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'ESG Standards',;
   'Carbon Disclosure Project'],;
         supportLevel: 'premium,;
-        sustainabilityMetrics: [,;
+        sustainabilityMetrics: [,
   Carbon footprint reduction',;
   'Energy efficiency improvement',;
   'Waste reduction percentage',;
@@ -870,7 +870,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
     }
 ];
 // Market analysis for emerging technology services;
-export const EMERGING_TECH_MARKET_ANALYSIS = {;
+export const EMERGING_TECH_MARKET_ANALYSIS = {
   totalMarketSize:,;
   $892B',;
   growthRate: '18.4% CAGR,;
@@ -882,7 +882,7 @@ export const EMERGING_TECH_MARKET_ANALYSIS = {;
   'Biotechnology AI integration',;
   'Quantum technology development';
   ],;
-  competitiveAdvantages: [;
+  competitiveAdvantages: [
   'First-mover advantage in emerging technologies,;
   'AI-powered optimization across all services',;
   'Comprehensive technology stack integration',;

@@ -14,7 +14,7 @@ export interface Service {;
    roi: string;
    link: string;
    tags: string[];
-  export const emergingTech2027Services: Service[] = [ { id:, quantum-machine-learning', name: 'Quantum Machine Learning Platform, description:, Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.', category: 'Quantum Computing, price:, $12,999/month', features[ 'Quantum neural networks', 'Quantum optimization algorithms', 'Hybrid classical-quantum ML', 'Quantum feature selection', 'Quantum clustering', 'Real-time quantum processing' ], benefits[ '1000x faster ML training', 'Unprecedented accuracy', 'Quantum advantage in optimization', 'Breakthrough AI capabilities', 'Future-proof technology' ], useCases[ 'Drug discovery', 'Financial modeling', 'Climate prediction', 'Material science', 'Cryptographic analysis' ], targetAudience[ 'Research institutions', 'Pharmaceutical companies', 'Financial institutions', 'Government agencies', 'Tech companies' ], marketSize: '$18.7B by 2027, competitiveAdvantage:, First quantum machine learning platform with hybrid algorithms', implementationTime: '6-8 weeks, roi:, 1200% within 18 months', link: 'https://ziontechgroup.com/services/quantum-machine-learning, tags[, Quantum Computing', 'Machine Learning', 'AI', 'Research', 'Optimization'];
+  export const emergingTech2027Services: Service[] = [ { id:, quantum-machine-learning', name: 'Quantum Machine Learning Platform, description:, Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.', category: 'Quantum Computing, price:, $12,999/month', features[ 'Quantum neural networks', 'Quantum optimization algorithms', 'Hybrid classical-quantum ML', 'Quantum feature selection', 'Quantum clustering', 'Real-time quantum processing' ], benefits[ '1000x faster ML training', 'Unprecedented accuracy', 'Quantum advantage in optimization', 'Breakthrough AI capabilities', 'Future-proof technology' ], useCases[ 'Drug discovery', 'Financial modeling', 'Climate prediction', 'Material science', 'Cryptographic analysis' ], targetAudience[ 'Research institutions', 'Pharmaceutical companies', 'Financial institutions', 'Government agencies', 'Tech companies' ], marketSize: '$18.7B by 2027, competitiveAdvantage:, First quantum machine learning platform with hybrid algorithms', implementationTime: '6-8 weeks, roi:, 1200% within 18 months', link: 'https://ziontechgroup.com/services/quantum-machine-learning, tags[, Quantum Computing', 'Machine Learning', 'AI', 'Research', 'Optimization']
 },;
   {;
     id: 'neuromorphic-computing,;
@@ -85,7 +85,7 @@ export interface Service {;
   800% within 12 months;
   ',;
     link: 'https://ziontechgroup.com/services/neuromorphic-computing,;
-    tags[,;
+    tags[,
   Neuromorphic Computing;
   ', 'AI;
   ', 'Edge Computing;
@@ -163,7 +163,7 @@ export interface Service {;
   1500% within 24 months;
   ',;
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform,;
-    tags[,;
+    tags[,
   Synthetic Biology;
   ', 'Biotechnology;
   ', 'AI;
@@ -241,7 +241,7 @@ export interface Service {;
   900% within 15 months;
   ',;
     link: 'https://ziontechgroup.com/services/quantum-sensors-network,;
-    tags[,;
+    tags[,
   Quantum Technology;
   ', 'Sensors;
   ', 'Medical Imaging;
@@ -319,7 +319,7 @@ export interface Service {;
   2000% within 30 months;
   ',;
     link: 'https://ziontechgroup.com/services/brain-computer-interface,;
-    tags[,;
+    tags[,
   Brain-Computer Interface;
   ', 'Neural Technology;
   ', 'Medical;
@@ -397,7 +397,7 @@ export interface Service {;
   1000% within 18 months;
   ',;
     link: 'https://ziontechgroup.com/services/quantum-internet-security,;
-    tags[,;
+    tags[,
   Quantum Security;
   ', 'Cybersecurity;
   ', 'Encryption;
@@ -475,7 +475,7 @@ export interface Service {;
   700% within 12 months;
   ',;
     link: 'https://ziontechgroup.com/services/autonomous-robotics-platform,;
-    tags[,;
+    tags[,
   Robotics;
   ', 'AI;
   ', 'Automation;
@@ -553,7 +553,7 @@ export interface Service {;
   1100% within 20 months;
   ',;
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery,;
-    tags[,;
+    tags[,
   Materials Science;
   ', 'Quantum Computing;
   ', 'AI;
@@ -631,7 +631,7 @@ export interface Service {;
   900% within 16 months;
   ',;
     link: 'https://ziontechgroup.com/services/quantum-financial-modeling,;
-    tags[,;
+    tags[,
   Financial Technology;
   ', 'Quantum Computing;
   ', 'Risk Management;
@@ -709,7 +709,7 @@ export interface Service {;
   800% within 18 months;
   ',;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling,;
-tags: ['Climate Modeling;
+tags: ['Climate Modeling
   ', 'Quantum Computing;
   ', 'Environmental;
   ', 'Weather;

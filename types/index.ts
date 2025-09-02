@@ -1,5 +1,5 @@
 // Global types for the Zion Tech Group application;
-export interface Service {;
+export interface Service {
   id: string;
    name: string;
    description: string;
@@ -16,7 +16,7 @@ export interface Service {;
   popular?: boolean;
 }
 ;
-export interface ContactForm {;
+export interface ContactForm {
   name: string;
    email: string;
    company?: string;
@@ -27,7 +27,7 @@ export interface ContactForm {;
    preferredContact: 'email' | 'phone' | 'both';
 }
 ;
-export interface TeamMember {;
+export interface TeamMember {
   id: string;
    name: string;
    position: string;
@@ -39,7 +39,7 @@ export interface TeamMember {;
    twitter?: string;
 }
 ;
-export interface Testimonial {;
+export interface Testimonial {
   id: string;
    name: string;
    company: string;
@@ -50,7 +50,7 @@ export interface Testimonial {;
    project?: string;
 }
 ;
-export interface CaseStudy {;
+export interface CaseStudy {
   id: string;
    title: string;
    client: string;
@@ -65,7 +65,7 @@ export interface CaseStudy {;
    featured?: boolean;
 }
 ;
-export interface BlogPost {;
+export interface BlogPost {
   id: string;
    title: string;
    excerpt: string;
@@ -80,7 +80,7 @@ export interface BlogPost {;
    readTime: number;
 }
 ;
-export interface PricingTier {;
+export interface PricingTier {
   id: string;
    name: string;
    price: number;
@@ -93,21 +93,21 @@ export interface PricingTier {;
    description: string;
 }
 ;
-export interface ApiResponse<T> {;
+export interface ApiResponse<T> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
 }
 ;
-export interface PaginationParams {;
+export interface PaginationParams {
   page: number;
    limit: number;
    sort?: string;
    order?: 'asc' | 'desc';
 }
 ;
-export interface PaginatedResponse<T> {;
+export interface PaginatedResponse<T> {
   data: T[];
   pagination: {;
     page: number;
@@ -119,7 +119,7 @@ export interface PaginatedResponse<T> {;
   };
 }
 ;
-export interface SEOProps {;
+export interface SEOProps {
   title?: string;
    description?: string;
    keywords?: string;
@@ -129,7 +129,7 @@ export interface SEOProps {;
    noindex?: boolean;
 }
 ;
-export interface PerformanceMetrics {;
+export interface PerformanceMetrics {
   fcp?: number;
    // First Contentful Paint lcp?: number;
    // Largest Contentful Paint fid?: number;
@@ -138,14 +138,14 @@ export interface PerformanceMetrics {;
    // Time to First Byte;
 }
 ;
-export interface AccessibilitySettings {;
+export interface AccessibilitySettings {
   highContrast: boolean;
    fontSize: number;
    reducedMotion: boolean;
    screenReader: boolean;
 }
 ;
-export interface UserPreferences {;
+export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
    language: string;
    accessibility: AccessibilitySettings;
@@ -155,20 +155,20 @@ export interface UserPreferences {;
 };
 }
 ;
-export interface NavigationItem {;
+export interface NavigationItem {
   name: string;
    href: string;
    submenu?: NavigationItem[];
    external?: boolean;
 }
 ;
-export interface SocialLink {;
+export interface SocialLink {
   platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
    url: string;
    label: string;
 }
 ;
-export interface CompanyInfo {;
+export interface CompanyInfo {
   name: string;
    tagline: string;
    description: string;
@@ -178,7 +178,7 @@ export interface CompanyInfo {;
    zip: string;
    country: string;
 };
-contact: {;phone: string;
+contact: {phone: string;
     email: string;
     website: string;
   };
@@ -188,7 +188,7 @@ contact: {;phone: string;
   certifications: string[];
 }
 ;
-export interface ErrorInfo {;
+export interface ErrorInfo {
   message: string;
    code?: string;
    details?: any;
@@ -197,7 +197,7 @@ export interface ErrorInfo {;
    url?: string;
 }
 ;
-export interface LoadingState {;
+export interface LoadingState {
   isLoading: boolean;
    error?: string;
    progress?: number;
@@ -212,7 +212,7 @@ export interface FormField {;
   options?: { value: string;
    label: string;
 }[];
-  validation?: {;
+  validation?: {
     min?: number;
     max?: number;
     pattern?: string;
@@ -220,17 +220,17 @@ export interface FormField {;
   };
 }
 ;
-export interface FormState {;
-  values: Record<string, any>;
-   errors: Record<string, string>;
-   touched: Record<string, boolean>;
+export interface FormState {
+  values: Record<string, any>
+   errors: Record<string, string>
+   touched: Record<string, boolean>
    isSubmitting: boolean;
    isValid: boolean;
 }
 ;
 // Utility types;export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
-export type DeepPartial<T> = {;
+export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 ;
@@ -245,7 +245,7 @@ export interface ButtonProps extends BaseComponentProps {;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';  size?: 'sm' | 'md' | 'lg';  disabled?: boolean';  loading?: boolean';
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';}';
-export interface InputProps extends BaseComponentProps {;
+export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';  placeholder?: string';  value?: string;onChange?: (value: string) => void;
   error?: string;
   disabled?: boolean;
@@ -253,19 +253,19 @@ export interface InputProps extends BaseComponentProps {;
 }
 ;
 // API types;
-export interface ApiError {;
+export interface ApiError {
   status: number;
    message: string;
    code?: string;
    details?: any;
 }
 ;
-export interface ApiRequest {;
+export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
    url: string';
    data?: any;
-  params?: Record<string, any>;
-   headers?: Record<string, string>;
+  params?: Record<string, any>
+   headers?: Record<string, string>
 }
 ;
 // Environment types;

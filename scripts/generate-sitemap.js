@@ -14,7 +14,7 @@ const baseUrl = 'https: //ziontechgroup.com;
   ';
 ;
 // Define your pages and their priorities;
-const pages = [;
+const pages = [
   { url: ', priority: 1.0, changefreq:,;
   daily' },;
   { url: '/about, priority: 0.8, changefreq:,;
@@ -34,16 +34,16 @@ const pages = [;
 ;
 // Generate sitemap XML;
 function generateSitemap() {;
-  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>;
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>;
+  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 ${pages;
   .map(;
-    page => `  <url>;
-    <loc>${baseUrl}${page.url}</loc>;
+    page => `  <url>
+    <loc>${baseUrl}${page.url}</loc>
     <lastmod>${new Date().toISOString().split(;
-  'T')[0]}</lastmod>;
-    <changefreq>${page.changefreq}</changefreq>;
-    <priority>${page.priority}</priority>;
+  'T')[0]}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
   </url>`;
   );
   .join(;

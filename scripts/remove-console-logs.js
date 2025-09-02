@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-;
+
 // Configuration;
 const CONFIG = {;
   // Directories to process;
@@ -30,7 +30,7 @@ const CONFIG = {;
 };
 ;
 // Statistics;
-let stats = {;
+let stats = {
   filesProcessed: 0,;
   consoleStatementsRemoved: 0,;
   filesModified: 0;

@@ -1,4 +1,4 @@
-export interface EmergingTechInnovationService {;
+export interface EmergingTechInnovationService {
   id: string;
    name: string;
    tagline: string;
@@ -39,7 +39,7 @@ export interface EmergingTechInnovationService {;
   technology?: string[];
   growthRate?: string;
   variant?: string;
-  contactInfo?: {;
+  contactInfo?: {
     mobile: string;
     email: string;
     address: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import InvestorRelations from './InvestorRelations';
-;
+
 describe('InvestorRelations', () => {;
   it('renders without crashing', () => {;
     render(<InvestorRelations />);

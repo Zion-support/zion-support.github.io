@@ -2,7 +2,7 @@ import React from;
   'react'; import { motion } from;
   'framer-motion'; import { Link, Shield, Zap, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play, Coins, Wallet, FileText, Key, Smartphone, Building, CreditCard, PieChart } from;
   'lucide-react'; import { SEO } from;
-  '../../components/SEO'; const AIBlockchainIntegrationPlatform = () => { const features = [ { icon: Link, title:,;
+  '../../components/SEO'; const AIBlockchainIntegrationPlatform = () => { const features = [ { icon: Link, title:,
   Smart Contract Automation', description: AI-powered smart contract development, deployment, and management with automated optimization' }, { icon: Shield, title:,;
   Blockchain Security', description: Advanced security protocols, vulnerability detection, and threat prevention for blockchain networks' }, { icon: Zap, title:,;
   DeFi Integration', description: Seamless integration with DeFi protocols, yield farming, and automated trading strategies' }, { icon: Database, title:,;
@@ -30,7 +30,7 @@ import React from;
 ,;
   Identity Management',;
   'Document Verification',;
-  'Payment Processing'], efficiency: '97%, icon: Building } ]; const benefits = [,;
+  'Payment Processing'], efficiency: '97%, icon: Building } ]; const benefits = [,
   Reduce transaction costs by up to 60%',;
   'Increase transaction speed by 80%',;
   'Enhance security with AI-powered threat detection',;
@@ -64,7 +64,7 @@ import React from;
   '24/7 dedicated support',;
   'White-label solutions',;
   'On-premise deployment',;
-  'Custom protocol development' ], cta: 'Contact Sales, popular: false } ]; const useCases = [ { industry:,;
+  'Custom protocol development' ], cta: 'Contact Sales, popular: false } ]; const useCases = [ { industry:,
   Financial Services', description: Secure payment processing, cross-border transactions, and automated compliance with blockchain technology}, { industry: 'Supply Chain, description:,;
   End-to-end supply chain tracking, authenticity verification, and automated logistics management' }, { industry: 'Healthcare, description:,;
   Secure patient data management, drug traceability, and medical record verification' }, { industry: 'Real Estate, description:;

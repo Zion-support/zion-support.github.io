@@ -1,4 +1,4 @@
-export interface SpaceTechBreakthroughService2029 {;
+export interface SpaceTechBreakthroughService2029 {
   id: string;
    name: string;
    tagline: string;
@@ -65,7 +65,7 @@ spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: Spac
       'Space logistics management',;
       'Resource transportation';
     ],;
-    spaceCapabilities[;
+    spaceCapabilities[
       'Autonomous navigation',;
       'Resource detection',;
       'Mining automation',;
@@ -115,7 +115,7 @@ spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: Spac
       'Virtual education',;
       'Virtual commerce';
     ],;
-    spaceCapabilities[;
+    spaceCapabilities[
       'Virtual world creation',;
       'Sensory immersion',;
       'AI interactions',;
@@ -165,7 +165,7 @@ spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: Spac
       'Health monitoring',;
       'Medical research';
     ],;
-    spaceCapabilities[;
+    spaceCapabilities[
       'Health prediction',;
       'Disease detection',;
       'Treatment optimization',;
@@ -215,7 +215,7 @@ spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: Spac
       'Educational presentations',;
       'Entertainment events';
     ],;
-    spaceCapabilities[;
+    spaceCapabilities[
       'Holographic projection',;
       'Global synchronization',;
       'Interactive displays',;
@@ -265,7 +265,7 @@ spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: Spac
       'Secure communications',;
       'Scientific research';
     ],;
-    spaceCapabilities[;
+    spaceCapabilities[
       'Quantum entanglement',;
       'Instant communication',;
       'Unbreakable security',;

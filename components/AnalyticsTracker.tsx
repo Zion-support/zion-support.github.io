@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-;
+
 interface AnalyticsTrackerProps {;
   pageName?: string;
-   customEvents?: Array<{ event: string;
+   customEvents?: Array<{ event: string
    category: string;
    action: string;
    label?: string;
@@ -153,13 +153,13 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({;
   }, [pageName, customEvents]);
 ;
   return (;
-    <Head>;
+    <Head>
       {/* Google Analytics 4 */}
-      <script;
+      <script
         async;
         src='https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
       />;
-      <script;
+      <script
         dangerouslySetInnerHTML={{;
           __html: `;
             window.dataLayer = window.dataLayer || [];
@@ -173,14 +173,14 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({;
         }}
       />;
       {/* Enhanced E-commerce Tracking */}
-      <script;
+      <script
         dangerouslySetInnerHTML={{;
           __html: `;
             // Track service interest;
             function trackServiceInterest(serviceName, category) {;
               gtag('event', 'view_item', {;
                 event_category: 'service_interest', event_label: serviceName,;
-                items: [{;
+                items: [{
                   item_id: serviceName, item_name: serviceName,;
                   item_category: category, item_brand: 'Zion Tech Group';
                 }];
@@ -205,7 +205,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({;
           `;
         }}
       />;
-    </Head>;
+    </Head>
   );
 };
 ;

@@ -128,13 +128,13 @@ class HealthChecker {;
   ';
 ;
       this.log('info, `Disk usage: ${usage}`, { status, usagePercent });
-            return {;
+            return {
         status,;
         usage: usage,;
         usagePercent,;
         available: diskInfo[3],;
         total: diskInfo[1]};
-    } catch (error) {;
+    } catch (error) {
       this.log(,;
   error;
   ', 'Failed to check disk space;
@@ -171,7 +171,7 @@ class HealthChecker {;
         used: `${used}MB`,;
         total: `${total}MB`,;
         available: `${total - used}MB`};
-    } catch (error) {;
+    } catch (error) {
       this.log(,;
   error;
   ', 'Failed to check memory usage;
@@ -213,7 +213,7 @@ class HealthChecker {;
           memory: p.monit.memory,;
           uptime: p.pm2_env.pm_uptime,;
           restarts: p.pm2_env.restart_time}))};
-    } catch (error) {;
+    } catch (error) {
       this.log(,;
   error;
   ', 'Failed to check PM2 processes;
@@ -255,7 +255,7 @@ class HealthChecker {;
         fileCount: logFiles.length,;
         totalSize: `${totalSizeMB}MB`,;
         files: logStats};
-    } catch (error) {;
+    } catch (error) {
       this.log(,;
   error;
   ', 'Failed to check log files;
@@ -296,13 +296,13 @@ class HealthChecker {;
 ;
       this.log('info;
   ', `Dependencies: ${dependencyCount} production, ${devDependencyCount} development`);
-            return {;
+            return {
         status: 'healthy;
   ',;
         dependencies: dependencyCount,;
         devDependencies: devDependencyCount,;
         nodeModulesExists};
-    } catch (error) {;
+    } catch (error) {
       this.log(,;
   error;
   ', 'Failed to check dependencies;
@@ -400,7 +400,7 @@ class HealthChecker {;
   ');
 ;
       // Run all health checks;
-      const healthChecks = [;
+      const healthChecks = [
         { name: 'application, check: this.checkApplicationHealth.bind(this) },;
         { name: 'diskSpace;
   ', check: this.checkDiskSpace.bind(this) },;

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback, useMemo } from;
   'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Brain,; Sparkles,; Target,; TrendingUp,; Zap,; Shield,; Globe,; Cpu,; Database,; Cloud,; Lock,; Users,; BarChart3,; Code,; Rocket,; Star,; CheckCircle,; ArrowRight,; Lightbulb,; Settings,; RefreshCw,; Eye,; Heart,; MessageSquare,; Calendar,; DollarSign,; Award; } from;
-  'lucide-react'; ; interface ServiceCategory {;
+  'lucide-react'; ; interface ServiceCategory {
    id: string;
    name: string;
-   icon: React.ComponentType<any>;
+   icon: React.ComponentType<any>
    description: string;
    popularity: number;
    growthRate: number;
@@ -12,7 +12,7 @@ import React, { useState, useEffect, useCallback, useMemo } from;
    priceRange: string;
    implementationTime: string;
    roi: string;
-}; interface UserBehavior {;
+}; interface UserBehavior {
    pageViews: string[];
    timeSpent: number;
    interactions: string[];
@@ -22,7 +22,7 @@ import React, { useState, useEffect, useCallback, useMemo } from;
    budget: string;
    timeline: string;
    painPoints: string[];
-}; interface ServiceRecommendation {;
+}; interface ServiceRecommendation {
    id: string;
    service: ServiceCategory;
    confidence: number;
@@ -32,7 +32,7 @@ import React, { useState, useEffect, useCallback, useMemo } from;
    estimatedCost: string;
    estimatedROI: string;
    priority:, high' | 'medium' | 'low';
-}; const serviceCategories: ServiceCategory[] = [; {; id:;
+}; const serviceCategories: ServiceCategory[] = [ {; id:;
   'ai-ml,; name:;
   'AI & Machine Learning',; icon: Brain,; description:;
   'Advanced AI solutions for business automation and intelligence',; popularity: 95,; growthRate: 87,; averageRating: 4.8,; priceRange:,;
@@ -61,7 +61,7 @@ import React, { useState, useEffect, useCallback, useMemo } from;
   'IoT & Edge Computing',; icon: Database,; description:;
   'Connected devices and edge processing solutions',; popularity: 68,; growthRate: 82,; averageRating: 4.3,; priceRange:,;
   $40K - $400K',; implementationTime: '3-6 months,; roi:,;
-  200-450%'; },; {; id: 'digital-twin,; name:;
+  200-450%'; },; { id: 'digital-twin,; name:;
   'Digital Twin Platform',; icon: Eye,; description:;
   'Virtual representations of physical systems',; popularity: 65,; growthRate: 94,; averageRating: 4.6,; priceRange:,;
   $150K - $1.5M',; implementationTime: '6-10 months,; roi:;

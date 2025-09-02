@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import EquipmentDetail from '@/pages/EquipmentDetail';
 import { safeStorage } from '@/utils/safeStorage';
 import * as router from 'react-router-dom';
-;
+
 jest.mock(;
   '@/hooks/useAuth', () => ({ useAuth: () => ({ isAuthenticated: true }) }));
 jest.mock(;
@@ -29,9 +29,9 @@ describe('Equipment Add to Cart'', () => {;
   it(;
   'increments quantity when adding the same item twice', () => {;
     render(;
-      <MemoryRouter>;
-        <EquipmentDetail />;
-      </MemoryRouter>;
+      <MemoryRouter>
+        <EquipmentDetail />
+      </MemoryRouter>
     );
 ;
     const button = screen.getByRole(;

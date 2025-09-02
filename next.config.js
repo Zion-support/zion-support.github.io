@@ -38,7 +38,7 @@ const nextConfig = {;
         /hardhat/]});
 ;
     // Add fallback for problematic modules;
-    config.resolve.fallback = {;
+    config.resolve.fallback = {
       ...config.resolve.fallback,;
       fs: false,;
       net: false,;

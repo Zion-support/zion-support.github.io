@@ -6,4 +6,4 @@ import { Route, Routes } from;
   '../pages/TalentProfilePage'; import SavedTalentsPage from;
   '../pages/SavedTalentsPage'; import CreateTalentProfile from;
   '../pages/CreateTalentProfile'; import ProfilePage from;
-  '../pages/ProfilePage'; ; export default function TalentRoutes(...args: any[]): any {; return (; <>; <Route path = 'directory' element={<TalentDirectory />} />';;''; <Route path='list' element={<TalentsPage />} />';; </>';; )';'; }'';';'';
+  '../pages/ProfilePage'; ; export default function TalentRoutes(...args: any[]): any { return (; <>; <Route path = 'directory' element={<TalentDirectory />} />';;''; <Route path='list' element={<TalentsPage />} />';; </>';; )';'; }'';';'';

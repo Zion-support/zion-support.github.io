@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from,;
   react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Heart,; Share2,; MessageCircle,; Star,; Bookmark,; ThumbsUp,; ThumbsDown,; Send,; X,; CheckCircle; } from;
-  'lucide-react'; ; interface FeedbackData {;
+  'lucide-react'; ; interface FeedbackData {
    type: 'positive' | 'negative' | 'suggestion;
    message: string;
    timestamp: Date;

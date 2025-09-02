@@ -1,4 +1,4 @@
-export interface PricingAnalysis {;
+export interface PricingAnalysis {
   serviceId: string;
    serviceName: string;
    category: string;
@@ -12,23 +12,23 @@ export interface PricingAnalysis {;
    marketSize: string;
    growthRate: string;
 };
-  pricingStrategy: {;
+  pricingStrategy: {
     strategy: string;
     justification: string;
     priceElasticity: string;
     bundlingOptions: string[];
     discountStructure: string[]};
-  competitiveAnalysis: {;
+  competitiveAnalysis: {
     directCompetitors: string[];
     indirectCompetitors: string[];
     competitiveAdvantages: string[];
     differentiationFactors: string[]};
-  roiAnalysis: {;
+  roiAnalysis: {
     customerROI: string;
     implementationCost: string;
     paybackPeriod: string;
     totalCostOfOwnership: string};
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -68,7 +68,7 @@ website: string;
   'Enterprise package: $8,999/month (includes customization + support)',;
   'Professional package: $4,999/month (includes training + integration)',;
   'Starter package: $1,999/month (limited features)],;
-      discountStructure[;
+      discountStructure[
   'Annual billing: 20% discount,;
 ,;
   Multi-year contracts: 30% discount,;
@@ -88,7 +88,7 @@ website: string;
   '24/7 operational oversight',;
   'Zero human intervention required';
       ],;
-      differentiationFactors[;
+      differentiationFactors[
   'Fully autonomous decision-making',;
   'Real-time market analysis',;
   'Predictive business modeling',;
@@ -147,7 +147,7 @@ website: string;
   'Research package: $15,999/month (includes collaboration tools)',;
   'Enterprise package: $9,999/month (includes support + training)',;
   'Academic package: $2,999/month (discounted for research)],;
-      discountStructure[;
+      discountStructure[
   'Annual billing: 25% discount,;
 ,;
   Research collaboration: 40% discount,;
@@ -168,7 +168,7 @@ website: string;
   'Hybrid classical-quantum computing',;
   'Advanced simulation capabilities';
       ],;
-      differentiationFactors[;
+      differentiationFactors[
   'Quantum neural network processing',;
   'Quantum machine learning algorithms',;
   'Complex problem solving',;
@@ -229,7 +229,7 @@ website: string;
   ,;
   'Basic package: $799/month (limited features);
       ],;
-      discountStructure[,;
+      discountStructure[,
   Annual billing: 15% discount,;
 ,;
   Performance bonuses: 5-20% based on returns,;
@@ -250,7 +250,7 @@ website: string;
   'Autonomous trading algorithms',;
   'Multi-chain DeFi integration';
       ],;
-      differentiationFactors[;
+      differentiationFactors[
   'AI-powered autonomous trading',;
   'Risk management systems',;
   'Portfolio optimization',;
@@ -311,7 +311,7 @@ website: string;
   ,;
   'Standard package: $899/month (basic features);
       ],;
-      discountStructure[,;
+      discountStructure[,
   Annual billing: 20% discount,;
 ,;
   Multi-year contracts: 30% discount,;
@@ -333,7 +333,7 @@ website: string;
   'Predictive threat intelligence',;
   'Zero-day vulnerability detection';
       ],;
-      differentiationFactors[;
+      differentiationFactors[
   'AI-powered autonomous hunting',;
   'Predictive threat intelligence',;
   'Behavioral analysis',;
@@ -392,7 +392,7 @@ website: string;
   'Enterprise package: $8,999/month (includes customization)',;
   'Professional package: $5,999/month (includes training)',;
   'Standard package: $3,499/month (basic features)],;
-      discountStructure[;
+      discountStructure[
   'Annual billing: 20% discount,;
 ,;
   Multi-site deployment: 25% discount,;
@@ -413,7 +413,7 @@ website: string;
   '50% downtime reduction',;
   'Autonomous operation';
       ],;
-      differentiationFactors[;
+      differentiationFactors[
   'AI-powered autonomous management',;
   'Predictive maintenance',;
   'Quality control automation',;
@@ -429,7 +429,7 @@ website: string;
       totalCostOfOwnership:,;
   50% downtime reduction';
     },;
-    contactInfo: {;
+    contactInfo: {
       mobile:;
   '+1 302 464 0950,;
       email:,;
@@ -447,7 +447,7 @@ export const getPricingAnalysisByCategory = (category: string) => {;
 if (!category || category ===,;
   All') return comprehensivePricingAnalysis2025;
   return comprehensivePricingAnalysis2025.filter(s => s.category === category)};
-export const getMarketInsights = () => {;
+export const getMarketInsights = () => {
   const insights = {;
   totalMarketSize: '$1.2T+,;
     averageGrowthRate:,;
@@ -486,7 +486,7 @@ export const getCompetitiveLandscape = () => {;
   'Rockwell Automation',;
   'ABB',;
   'GE Digital'],;
-    blockchain[;
+    blockchain[
   'Chainalysis',;
   'ConsenSys',;
   'Alchemy',;

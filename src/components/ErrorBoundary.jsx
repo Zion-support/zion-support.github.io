@@ -1,14 +1,14 @@
 import React from;
   'react';
 ;
-export class ErrorBoundary extends React.Component {;
+export class ErrorBoundary extends React.Component {
   constructor(props) {;
     super(props);
     this.state = { hasError: false, error: null };
     this.resetErrorBoundary = this.resetErrorBoundary.bind(this);
   }
 ;
-  static getDerivedStateFromError(error) {;
+  static getDerivedStateFromError(error) {
     return { hasError: true, error };
   }
 ;
@@ -45,7 +45,7 @@ export class ErrorBoundary extends React.Component {;
 export function ErrorFallback({ error, resetErrorBoundary, retryCount = 0 }) {;
   const maxRetries = 3;
   const handleRetry = () => {;
-    if (retryCount < maxRetries && typeof resetErrorBoundary === 'function') {;
+    if (retryCount < maxRetries && typeof resetErrorBoundary === 'function') {
       resetErrorBoundary();
     } else {;
       window.location.href = '/';
@@ -54,10 +54,10 @@ export function ErrorFallback({ error, resetErrorBoundary, retryCount = 0 }) {;
 ;
   return (;
     <div role='alert' style={{ padding: 16 }}>;
-      <p>Something went wrong:</p>;
-      <pre style={{ whiteSpace: 'pre-wrap' }}>{String(error?.message || error)}</pre>;
-      <button onClick={handleRetry}>Try again</button>;
-    </div>;
+      <p>Something went wrong:</p>
+      <pre style={{ whiteSpace: 'pre-wrap' }}>{String(error?.message || error)}</pre>
+      <button onClick={handleRetry}>Try again</button>
+    </div>
   );
 }
 ;

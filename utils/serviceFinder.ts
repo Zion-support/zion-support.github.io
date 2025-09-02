@@ -1,5 +1,5 @@
 // Service finder utility for searching and filtering services;
-export interface Service {;
+export interface Service {
   id: string;
    name: string;
    description: string;

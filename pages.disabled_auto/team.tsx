@@ -115,12 +115,12 @@ const Team: React.FC = () => {;
   const leadership = teamMembers.filter(member => member.featured);
   const otherMembers = teamMembers.filter(member => !member.featured);
 ;
-  const companyStats = [;
+  const companyStats = [
     { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },;
     { label: 'PhD Holders', value: '15+', icon: GraduationCap }, { label: 'Research Papers Published', value: '100+', icon: Star }
   ];
 ;
-  const values = [;
+  const values = [
     {;
 :pages.disabled_auto/team.tsx;
       title: 'Innovation First',;
@@ -140,263 +140,263 @@ const Team: React.FC = () => {;
   ];
 ;
   return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-      <SEO;
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <SEO
         title='Our Team - Zion Tech Group';
         description='Meet the talented team of AI experts, engineers, and innovators behind Zion Tech Group. Learn about our leadership and company culture.';
       />;
       {/* Hero Section */}
-      <section className='relative py-20 px-4 sm: px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto text-center'>;
-          <motion.div;
+      <section className='relative py-20 px-4 sm: px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >;
-            <Badge variant='secondary' className='mb-4'>;
-              <Users className='w-4 h-4 mr-2' />;
+            <Badge variant='secondary' className='mb-4'>
+              <Users className='w-4 h-4 mr-2' />
               Meet Our Team;
-            </Badge>;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
+            </Badge>
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               Our Team;
-            </h1>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+            </h1>
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Meet the brilliant minds behind Zion Tech Group. Our diverse team of experts is dedicated to pushing the boundaries of AI and technology.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
+            </p>
+          </motion.div>
+        </div>
+      </section>
       {/* Company Stats */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50'>;
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='grid grid-cols-1 md:grid-cols-4 gap-8';
           >;
             {companyStats.map((stat, index) => (;
-              <motion.div;
+              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className='text-center';
               >;
-                <div className='p-6 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30'>;
-                  <stat.icon className='w-12 h-12 text-blue-400 mx-auto mb-4' />;
-                  <div className='text-3xl font-bold text-white mb-2'>{stat.value}</div>;
-                  <div className='text-gray-300'>{stat.label}</div>;
-                </div>;
-              </motion.div>;
+                <div className='p-6 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30'>
+                  <stat.icon className='w-12 h-12 text-blue-400 mx-auto mb-4' />
+                  <div className='text-3xl font-bold text-white mb-2'>{stat.value}</div>
+                  <div className='text-gray-300'>{stat.label}</div>
+                </div>
+              </motion.div>
             ))}
-          </motion.div>;
-        </div>;
-      </section>;
+          </motion.div>
+        </div>
+      </section>
       {/* Leadership Team */}
-      <section className='py-20 px-4 sm: px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center mb-16';
           >;
-            <h2 className='text-4xl font-bold text-white mb-4'>Leadership Team</h2>;
-            <p className='text-xl text-gray-300'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>Leadership Team</h2>
+            <p className='text-xl text-gray-300'>
               Our executive leadership brings decades of experience in AI, technology, and business innovation.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>;
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {leadership.map((member, index) => (;
-              <motion.div;
+              <motion.div
                 key={member.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >;
-                <Card className='p-8 text-center h-full'>;
-                  <div className='relative mb-6'>;
-                    <img;
+                <Card className='p-8 text-center h-full'>
+                  <div className='relative mb-6'>
+                    <img
                       src={member.image} ;
                       alt={member.name}
                       className='w-32 h-32 rounded-full mx-auto object-cover';
                     />;
-                    <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2'>;
-                      <Badge className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>;
+                    <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2'>
+                      <Badge className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                         Leadership;
-                      </Badge>;
-                    </div>;
-                  </div>;
-                  <h3 className='text-2xl font-bold text-white mb-2'>{member.name}</h3>;
-                  <div className='text-blue-400 font-semibold mb-4'>{member.title}</div>;
-                  <p className='text-gray-300 mb-6 text-sm'>{member.bio}</p>;
-                  <div className='mb-6'>;
-                    <div className='text-sm text-gray-400 mb-2'>Expertise</div>;
-                    <div className='flex flex-wrap gap-2 justify-center'>;
+                      </Badge>
+                    </div>
+                  </div>
+                  <h3 className='text-2xl font-bold text-white mb-2'>{member.name}</h3>
+                  <div className='text-blue-400 font-semibold mb-4'>{member.title}</div>
+                  <p className='text-gray-300 mb-6 text-sm'>{member.bio}</p>
+                  <div className='mb-6'>
+                    <div className='text-sm text-gray-400 mb-2'>Expertise</div>
+                    <div className='flex flex-wrap gap-2 justify-center'>
                       {member.expertise.map((skill, skillIndex) => (;
-                        <Badge key={skillIndex} variant='secondary' className='text-xs'>;
+                        <Badge key={skillIndex} variant='secondary' className='text-xs'>
                           {skill}
-                        </Badge>;
+                        </Badge>
                       ))}
-                    </div>;
-                  </div>;
-                  <div className='mb-6 text-sm text-gray-400'>;
-                    <div className='flex items-center justify-center mb-1'>;
-                      <GraduationCap className='w-4 h-4 mr-2' />;
+                    </div>
+                  </div>
+                  <div className='mb-6 text-sm text-gray-400'>
+                    <div className='flex items-center justify-center mb-1'>
+                      <GraduationCap className='w-4 h-4 mr-2' />
                       {member.education}
-                    </div>;
-                    <div className='flex items-center justify-center'>;
-                      <Briefcase className='w-4 h-4 mr-2' />;
+                    </div>
+                    <div className='flex items-center justify-center'>
+                      <Briefcase className='w-4 h-4 mr-2' />
                       {member.experience}
-                    </div>;
-                  </div>;
-                  <div className='flex justify-center gap-4'>;
-                    <Button variant='outline' size='sm' asChild>;
-                      <a href={member.linkedin} target='_blank' rel='noopener noreferrer'>;
-                        <Linkedin className='w-4 h-4' />;
-                      </a>;
-                    </Button>;
-                    <Button variant='outline' size='sm' asChild>;
-                      <a href={member.twitter} target='_blank' rel='noopener noreferrer'>;
-                        <Twitter className='w-4 h-4' />;
-                      </a>;
-                    </Button>;
-                    <Button variant='outline' size='sm' asChild>;
-                      <a href={`mailto: ${member.email}`}>;
-                        <Mail className='w-4 h-4' />;
-                      </a>;
-                    </Button>;
-                  </div>;
-                </Card>;
-              </motion.div>;
+                    </div>
+                  </div>
+                  <div className='flex justify-center gap-4'>
+                    <Button variant='outline' size='sm' asChild>
+                      <a href={member.linkedin} target='_blank' rel='noopener noreferrer'>
+                        <Linkedin className='w-4 h-4' />
+                      </a>
+                    </Button>
+                    <Button variant='outline' size='sm' asChild>
+                      <a href={member.twitter} target='_blank' rel='noopener noreferrer'>
+                        <Twitter className='w-4 h-4' />
+                      </a>
+                    </Button>
+                    <Button variant='outline' size='sm' asChild>
+                      <a href={`mailto: ${member.email}`}>
+                        <Mail className='w-4 h-4' />
+                      </a>
+                    </Button>
+                  </div>
+                </Card>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Other Team Members */}
-      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>;
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center mb-16';
           >;
-            <h2 className='text-4xl font-bold text-white mb-4'>Our Experts</h2>;
-            <p className='text-xl text-gray-300'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>Our Experts</h2>
+            <p className='text-xl text-gray-300'>
               Meet the talented professionals who make our solutions possible.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {otherMembers.map((member, index) => (;
-              <motion.div;
+              <motion.div
                 key={member.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >;
-                <Card className='p-6 text-center h-full'>;
-                  <div className='relative mb-4'>;
-                    <img;
+                <Card className='p-6 text-center h-full'>
+                  <div className='relative mb-4'>
+                    <img
                       src={member.image} ;
                       alt={member.name}
                       className='w-24 h-24 rounded-full mx-auto object-cover';
                     />;
-                  </div>;
-                  <h3 className='text-xl font-bold text-white mb-1'>{member.name}</h3>;
-                  <div className='text-blue-400 font-semibold mb-3 text-sm'>{member.title}</div>;
-                  <p className='text-gray-300 mb-4 text-sm'>{member.bio}</p>;
-                  <div className='mb-4'>;
-                    <div className='flex flex-wrap gap-1 justify-center'>;
+                  </div>
+                  <h3 className='text-xl font-bold text-white mb-1'>{member.name}</h3>
+                  <div className='text-blue-400 font-semibold mb-3 text-sm'>{member.title}</div>
+                  <p className='text-gray-300 mb-4 text-sm'>{member.bio}</p>
+                  <div className='mb-4'>
+                    <div className='flex flex-wrap gap-1 justify-center'>
                       {member.expertise.map((skill, skillIndex) => (;
-                        <Badge key={skillIndex} variant='secondary' className='text-xs'>;
+                        <Badge key={skillIndex} variant='secondary' className='text-xs'>
                           {skill}
-                        </Badge>;
+                        </Badge>
                       ))}
-                    </div>;
-                  </div>;
-                  <div className='flex justify-center gap-2'>;
-                    <Button variant='outline' size='sm' asChild>;
-                      <a href={member.linkedin} target='_blank' rel='noopener noreferrer'>;
-                        <Linkedin className='w-4 h-4' />;
-                      </a>;
-                    </Button>;
-                    <Button variant='outline' size='sm' asChild>;
-                      <a href={`mailto: ${member.email}`}>;
-                        <Mail className='w-4 h-4' />;
-                      </a>;
-                    </Button>;
-                  </div>;
-                </Card>;
-              </motion.div>;
+                    </div>
+                  </div>
+                  <div className='flex justify-center gap-2'>
+                    <Button variant='outline' size='sm' asChild>
+                      <a href={member.linkedin} target='_blank' rel='noopener noreferrer'>
+                        <Linkedin className='w-4 h-4' />
+                      </a>
+                    </Button>
+                    <Button variant='outline' size='sm' asChild>
+                      <a href={`mailto: ${member.email}`}>
+                        <Mail className='w-4 h-4' />
+                      </a>
+                    </Button>
+                  </div>
+                </Card>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Company Values */}
-      <section className='py-20 px-4 sm: px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto'>;
-          <motion.div;
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center mb-16';
           >;
-            <h2 className='text-4xl font-bold text-white mb-4'>Our Values</h2>;
-            <p className='text-xl text-gray-300'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>Our Values</h2>
+            <p className='text-xl text-gray-300'>
               The principles that guide everything we do at Zion Tech Group.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {values.map((value, index) => (;
-              <motion.div;
+              <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >;
-                <Card className='p-6 text-center h-full'>;
-                  <div className='p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-4'>;
-                    <value.icon className='w-8 h-8 text-blue-400' />;
-                  </div>;
-                  <h3 className='text-xl font-bold text-white mb-3'>{value.title}</h3>;
-                  <p className='text-gray-300 text-sm'>{value.description}</p>;
-                </Card>;
-              </motion.div>;
+                <Card className='p-6 text-center h-full'>
+                  <div className='p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-4'>
+                    <value.icon className='w-8 h-8 text-blue-400' />
+                  </div>
+                  <h3 className='text-xl font-bold text-white mb-3'>{value.title}</h3>
+                  <p className='text-gray-300 text-sm'>{value.description}</p>
+                </Card>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Join Our Team CTA */}
-      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>;
-        <div className='max-w-4xl mx-auto text-center'>;
-          <motion.div;
+      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Join Our Team;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>;
+            </h2>
+            <p className='text-xl text-gray-300 mb-8'>
               We&apos;re always looking for talented individuals who share our passion for AI and innovation. '';
               Join us in building the future of technology.;
-            </p>;
-            <div className='flex flex-col sm: flex-row gap-4 justify-center'>;
-              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>;
-                <Briefcase className='w-5 h-5 mr-2' />;
+            </p>
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
+                <Briefcase className='w-5 h-5 mr-2' />
                 View Open Positions;
-              </Button>;
-              <Button size='lg' variant='outline'>;
-                <Mail className='w-5 h-5 mr-2' />;
+              </Button>
+              <Button size='lg' variant='outline'>
+                <Mail className='w-5 h-5 mr-2' />
                 Contact HR Team;
-              </Button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 ;

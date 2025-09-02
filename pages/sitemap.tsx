@@ -21,7 +21,7 @@ import {;
 } from 'lucide-react';
 ;
 const SitemapPage: React.FC = () => {;
-  const siteStructure = [;
+  const siteStructure = [
     {;
       category: 'Main Pages',;
       icon: Home,;
@@ -36,7 +36,7 @@ const SitemapPage: React.FC = () => {;
     {;
       category: 'Services',;
       icon: Briefcase,;
-      pages: [;
+      pages: [
         { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },;
         { name: 'IT Services', path: '/it-services', description: 'Information Technology services' },;
         { name: 'Micro SaaS', path: '/micro-saas', description: 'Micro Software as a Service' },;
@@ -48,7 +48,7 @@ const SitemapPage: React.FC = () => {;
     {;
       category: 'Resources',;
       icon: BookOpen,;
-      pages: [;
+      pages: [
         { name: 'Case Studies', path: '/case-studies', description: 'Success stories and case studies' },;
         { name: 'White Papers', path: '/white-papers', description: 'Technical white papers' },;
         { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },;
@@ -59,7 +59,7 @@ const SitemapPage: React.FC = () => {;
     {;
       category: 'Company',;
       icon: Users,;
-      pages: [;
+      pages: [
         { name: 'Team', path: '/team', description: 'Meet our team' },;
         { name: 'Partners', path: '/partners', description: 'Our partners' },;
         { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },;
@@ -69,7 +69,7 @@ const SitemapPage: React.FC = () => {;
     {;
       category: 'Legal',;
       icon: Shield,;
-      pages: [;
+      pages: [
         { name: 'Privacy Policy', path: '/privacy', description: 'Privacy policy and data protection' },;
         { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },;
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
@@ -79,108 +79,108 @@ const SitemapPage: React.FC = () => {;
 ;
   return (;
     <>;
-      <SEO;
+      <SEO
         title='Sitemap';
         description='Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.';
         keywords='sitemap, website navigation, pages, services, resources';
       />;
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>;
-          <motion.div;
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center mb-12';
           >;
-            <div className='flex items-center justify-center mb-6'>;
-              <Map className='h-12 w-12 text-blue-600 mr-4' />;
-              <h1 className='text-4xl font-bold text-gray-900'>Website Sitemap</h1>;
-            </div>;
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
+            <div className='flex items-center justify-center mb-6'>
+              <Map className='h-12 w-12 text-blue-600 mr-4' />
+              <h1 className='text-4xl font-bold text-gray-900'>Website Sitemap</h1>
+            </div>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Navigate through all pages and sections of the Zion Tech Group website.;
               Find exactly what you're looking for with our comprehensive site structure.;
-            </p>          </motion.div>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            </p>          </motion.div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {siteStructure.map((section, index) => (;
-              <motion.div;
+              <motion.div
                 key={section.category}                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >;
-                <Card className='h-full'>;
-                  <CardHeader>;
-                    <div className='flex items-center mb-4'>;
-                      <section.icon className='h-6 w-6 text-blue-600 mr-3' />;
-                      <CardTitle className='text-xl'>{section.category}</CardTitle>;
-                    </div>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <div className='space-y-3'>;
+                <Card className='h-full'>
+                  <CardHeader>
+                    <div className='flex items-center mb-4'>
+                      <section.icon className='h-6 w-6 text-blue-600 mr-3' />
+                      <CardTitle className='text-xl'>{section.category}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className='space-y-3'>
                       {section.pages.map((page, pageIndex) => (;
-                        <motion.div;
+                        <motion.div
                           key={page.path}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.4, delay: (index * 0.1) + (pageIndex * 0.05) }}
                           className='flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors';
                         >;
-                          <div className='flex-1'>;
-                            <a;
+                          <div className='flex-1'>
+                            <a
                               href={page.path}
                               className='text-blue-600 hover:text-blue-800 font-medium flex items-center';
                             >;
                               {page.name}
-                              <ExternalLink className='h-4 w-4 ml-2' />;
-                            </a>;
-                            <p className='text-sm text-gray-600 mt-1'>{page.description}</p>;
-                          </div>;
-                          <ArrowRight className='h-4 w-4 text-gray-400' />;
-                        </motion.div>;
+                              <ExternalLink className='h-4 w-4 ml-2' />
+                            </a>
+                            <p className='text-sm text-gray-600 mt-1'>{page.description}</p>
+                          </div>
+                          <ArrowRight className='h-4 w-4 text-gray-400' />
+                        </motion.div>
                       ))}
-                    </div>;
-                  </CardContent>;
-                </Card>              </motion.div>;
+                    </div>
+                  </CardContent>
+                </Card>              </motion.div>
             ))}
-          </div>;
-          <motion.div;
+          </div>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className='mt-12 text-center';
           >;
-            <Card className='max-w-2xl mx-auto'>;
-              <CardContent className='p-8'>;
-                <h3 className='text-2xl font-bold text-gray-900 mb-4'>;
+            <Card className='max-w-2xl mx-auto'>
+              <CardContent className='p-8'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-4'>
                   Can't find what you're looking for?;
-                </h3>;
-                <p className='text-gray-600 mb-6'>;
+                </h3>
+                <p className='text-gray-600 mb-6'>
                   Use our search functionality or contact us directly for assistance.;
-                </p>;
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-                  <a;
+                </p>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <a
                     href='/contact';
                     className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center';
                   >;
-                    <Phone className='h-4 w-4 mr-2' />;
+                    <Phone className='h-4 w-4 mr-2' />
                     Contact Us;
-                  </a>;
-                  <a;
+                  </a>
+                  <a
                     href='/help';
                     className='border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center justify-center';
                   >;
-                    <Search className='h-4 w-4 mr-2' />;
+                    <Search className='h-4 w-4 mr-2' />
                     Get Help;
-                  </a>;
-                </div>;
-              </CardContent>;
-            </Card>          </motion.div>;
-        </div>;
-      </div>;
-    </>;
+                  </a>
+                </div>
+              </CardContent>
+            </Card>          </motion.div>
+        </div>
+      </div>
+    </>
   );
 };
 ;
 const Sitemap: React.FC = () => {;
-  const links = [;
+  const links = [
     { name: 'Home', url: '/' },;
     { name: 'About', url: '/about' },;
     { name: 'Services', url: '/services' },;
@@ -198,19 +198,19 @@ const Sitemap: React.FC = () => {;
     { name: 'Terms', url: '/terms' }];
 ;
   return (;
-    <div className='min-h-screen px-6 py-16 max-w-4xl mx-auto'>;
-      <h1 className='text-3xl font-bold mb-6'>Sitemap</h1>;
-      <p className='text-gray-600 mb-8'>Quick links to primary pages and sections.</p>;
-      <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>;
+    <div className='min-h-screen px-6 py-16 max-w-4xl mx-auto'>
+      <h1 className='text-3xl font-bold mb-6'>Sitemap</h1>
+      <p className='text-gray-600 mb-8'>Quick links to primary pages and sections.</p>
+      <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
         {links.map((l) => (;
-          <li key={l.url}>;
-            <a className='text-blue-600 hover:underline' href={l.url}>;
+          <li key={l.url}>
+            <a className='text-blue-600 hover:underline' href={l.url}>
               {l.name}
-            </a>;
-          </li>;
+            </a>
+          </li>
         ))}
-      </ul>;
-    </div>;
+      </ul>
+    </div>
   );
 };
 ;

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-;
+
 // Simple toast function for direct import;
 export const toast = ({ title, description, variant = 'default' }) => {;
   // In a real app, this would integrate with a toast library;

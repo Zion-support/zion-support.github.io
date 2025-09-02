@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react.ts';
-;
-interface User {;
+
+interface User {
   id: string;
    email: string;
    displayName?: string;
@@ -11,26 +11,26 @@ interface User {;
    updatedAt?: string;
 }
 ;
-interface AuthTokens {;
+interface AuthTokens {
   accessToken: string | null;
    refreshToken: string | null;
 }
 ;
-interface AuthContextType {;
+interface AuthContextType {
   user: User | null;
    isLoading: boolean;
    onboardingStep: number;
    tokens: AuthTokens;
-   login: (email: string, password: string) => Promise<any>;
-   register: (name: string, email: string, password: string) => Promise<any>;
-   signup: (email: string, password: string, userData) => Promise<any>;
-   logout: () => Promise<any>;
-   resetPassword: (email: string) => Promise<any>;
-   updateProfile: (updates: Partial<User>) => Promise<any>;
-   loginWithGoogle: () => Promise<any>;
-   loginWithFacebook: () => Promise<any>;
-   loginWithTwitter: () => Promise<any>;
-   loginWithWeb3: () => Promise<any>;
+   login: (email: string, password: string) => Promise<any>
+   register: (name: string, email: string, password: string) => Promise<any>
+   signup: (email: string, password: string, userData) => Promise<any>
+   logout: () => Promise<any>
+   resetPassword: (email: string) => Promise<any>
+   updateProfile: (updates: Partial<User>) => Promise<any>
+   loginWithGoogle: () => Promise<any>
+   loginWithFacebook: () => Promise<any>
+   loginWithTwitter: () => Promise<any>
+   loginWithWeb3: () => Promise<any>
 }
 ;
 const AuthContext = createContext<AuthContextType | null>(null);

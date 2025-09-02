@@ -7,15 +7,15 @@ import { useParams, Link } from 'react-router-dom';
 import OriginalWhitepaperViewPage from '@/pages/WhitepaperViewPage'; // Renamed for clarity;
 import { supabase } from '@/lib/supabaseClient';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';
-;
+
 // Define types for mocked hook and props;
-interface MockUseAuthReturn {;
+interface MockUseAuthReturn {
   isAdmin: boolean;
    // Add other properties if useAuth returns more thats relevant to this page;
 }
 ;
 // Props for the page component - assuming it takes no specific props itself;
-type WhitepaperViewPageProps = Record<string never>;
+type WhitepaperViewPageProps = Record<string never>
 ;
 // Mock dependencies;
 jest.mock('react-router-dom;
@@ -25,7 +25,7 @@ jest.mock('react-router-dom;
   useParams: jest.fn(),;
   Link: jest.fn(;
     ({ children, to }: { children: React.ReactNode; to: string }) => (;
-      <a href={to}>{children}</a>;
+      <a href={to}>{children}</a>
     );
   )}));
 ;
@@ -61,7 +61,7 @@ jest.mock('@/pages/WhitepaperViewPage;
   's generally easier to mock the hook at the module level where it's defined.;
       // For this specific setup, we;
   'll assume useAuth is mocked effectively for the component's context.;
-      return <ActualPageDefault {...props} />;
+      return <ActualPageDefault {...props} />
     }),;
     useAuth: jest.fn(), // Mock useAuth here so it can be spied on/controlled per test;
   };

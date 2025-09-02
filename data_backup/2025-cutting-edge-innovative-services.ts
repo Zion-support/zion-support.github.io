@@ -1,4 +1,4 @@
-export interface CuttingEdgeInnovativeService {;
+export interface CuttingEdgeInnovativeService {
   id: string;
    name: string;
    tagline: string;

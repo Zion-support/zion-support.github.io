@@ -38,7 +38,7 @@ export function EnhancedHeader() {;
     }
   };
 ;
-  const navigation = [;
+  const navigation = [
     { name: 'Home', href: '/', current: true },;
     { name: 'About', href: '/about', current: false },;
     { name: 'Services', href: '/services', current: false },;
@@ -48,7 +48,7 @@ export function EnhancedHeader() {;
     { name: 'Contact', href: '/contact', current: false }];
 ;
   // Organized services by category;
-  const servicesCategories = [;
+  const servicesCategories = [
     {;
       title: 'AI & Machine Learning',;
       icon: Brain,;
@@ -68,7 +68,7 @@ export function EnhancedHeader() {;
       title: 'Quantum Computing',;
       icon: Atom,;
       color: 'from-indigo-500 to-purple-500',;
-      services: [;
+      services: [
         { name: 'Quantum AI Hybrid Platform', href: '/services/quantum-ai-hybrid-platform', description: 'Revolutionary quantum-AI computing' },;
         { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', description: 'Next-generation computing power' },;
         { name: 'Quantum Financial Trading', href: '/services/ai-quantum-financial-trading-platform', description: 'Advanced quantum trading' },;
@@ -79,7 +79,7 @@ export function EnhancedHeader() {;
       title: 'Cloud & Infrastructure',;
       icon: Cloud,;
       color: 'from-cyan-500 to-blue-500',;
-      services: [;
+      services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' },;
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },;
         { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' },;
@@ -89,7 +89,7 @@ export function EnhancedHeader() {;
       title: 'Cybersecurity',;
       icon: Shield,;
       color: 'from-red-500 to-orange-500',;
-      services: [;
+      services: [
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced AI-powered security' },;
         { name: 'AI Cybersecurity Operations', href: '/services/ai-cybersecurity-operations-center', description: 'Autonomous security operations center' },;
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening' },;
@@ -100,7 +100,7 @@ export function EnhancedHeader() {;
       title: 'Supply Chain & Logistics',;
       icon: Truck,;
       color: 'from-green-500 to-blue-600',;
-      services: [;
+      services: [
         { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-management-platform', description: 'Self-learning supply chain management' },;
         { name: 'Autonomous Logistics', href: '/services/autonomous-logistics', description: 'Smart supply chain automation' }];
     },;
@@ -108,7 +108,7 @@ export function EnhancedHeader() {;
       title: 'Emerging Technologies',;
       icon: Rocket,;
       color: 'from-purple-500 to-pink-500',;
-      services: [;
+      services: [
         { name: 'AI Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management', description: 'Intelligent urban management' },;
         { name: 'AI Autonomous Vehicles', href: '/services/ai-autonomous-vehicle-management-platform', description: 'Autonomous fleet management' },;
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'Connected device intelligence' },;
@@ -119,7 +119,7 @@ export function EnhancedHeader() {;
       title: 'Smart City & Infrastructure',;
       icon: Building2,;
       color: 'from-green-500 to-emerald-500',;
-      services: [;
+      services: [
         { name: 'AI Smart City Management', href: '/services/ai-smart-city-infrastructure-management', description: 'Intelligent urban infrastructure' },;
         { name: 'Traffic Management', href: '/services/traffic-management', description: 'AI-powered traffic optimization' },;
         { name: 'Energy Grid Management', href: '/services/energy-grid', description: 'Smart energy distribution' },;
@@ -129,7 +129,7 @@ export function EnhancedHeader() {;
       title: 'Autonomous Systems',;
       icon: Car,;
       color: 'from-blue-500 to-cyan-500',;
-      services: [;
+      services: [
         { name: 'AI Autonomous Vehicle Platform', href: '/services/ai-autonomous-vehicle-management-platform', description: 'Fleet management & safety' },;
         { name: 'Drone Management', href: '/services/drone-management', description: 'Autonomous drone operations' },;
         { name: 'Robotics Automation', href: '/services/robotics-automation', description: 'Industrial robotics solutions' }];
@@ -138,7 +138,7 @@ export function EnhancedHeader() {;
       title: 'Micro SaaS Solutions',;
       icon: Code,;
       color: 'from-green-500 to-emerald-500',;
-      services: [;
+      services: [
         { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', description: 'Intelligent email management & automation' },;
         { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', description: 'AI-powered social media automation' },;
         { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', description: 'Advanced customer analytics & insights' },;
@@ -152,7 +152,7 @@ export function EnhancedHeader() {;
       title: 'DevOps & Automation',;
       icon: Workflow,;
       color: 'from-blue-500 to-indigo-500',;
-      services: [;
+      services: [
         { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', description: 'Intelligent CI/CD & infrastructure automation' },;
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' },;
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },;
@@ -161,7 +161,7 @@ export function EnhancedHeader() {;
   ];
 ;
   // Featured services for quick access;
-  const services = [;
+  const services = [
     {;
       name: 'AI Email Automation Suite',;
       description: 'Intelligent email management & automation',;
@@ -244,7 +244,7 @@ export function EnhancedHeader() {;
     }
   ];
 ;
-  const solutionsCategories = [;
+  const solutionsCategories = [
     {;
       title: 'Industry Solutions',;
       icon: Building,;
@@ -259,7 +259,7 @@ export function EnhancedHeader() {;
       title: 'Technology Solutions',;
       icon: Cpu,;
       color: 'from-cyan-500 to-blue-500',;
-      solutions: [;
+      solutions: [
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Artificial intelligence integration' },;
         { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },;
         { name: 'Research & Development', href: '/research-development', description: 'Innovation and discovery' },;
@@ -267,7 +267,7 @@ export function EnhancedHeader() {;
     }
   ];
 ;
-  const companyLinks = [;
+  const companyLinks = [
     { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },;
     { name: 'Our Team', href: '/team', description: 'Meet our expert professionals' },;
     { name: 'Leadership', href: '/leadership', description: 'Executive team and vision' },;
@@ -275,7 +275,7 @@ export function EnhancedHeader() {;
     { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },;
     { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }];
 ;
-  const resourceLinks = [;
+  const resourceLinks = [
     { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },;
     { name: 'News', href: '/news', description: 'Company announcements' },;
     { name: 'Press', href: '/press', description: 'Media resources' },;
@@ -283,7 +283,7 @@ export function EnhancedHeader() {;
     { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },;
     { name: 'Documentation', href: '/documentation', description: 'Technical guides' }];
 ;
-  const supportLinks = [;
+  const supportLinks = [
     { name: 'Help Center', href: '/help', description: 'Find answers and solutions' },;
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },;
     { name: 'Support', href: '/support', description: 'Technical assistance' },;
@@ -291,14 +291,14 @@ export function EnhancedHeader() {;
     { name: 'Contact Support', href: '/contact', description: 'Get in touch with our team' },;
     { name: 'Status Page', href: '/status', description: 'Service availability' }];
 ;
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 ;
 export const EnhancedHeader: React.FC = () => {;
   const [mobileOpen, setMobileOpen] = useState(false);
 ;
-  const navLinks = [;
+  const navLinks = [
     { label: 'Home', href: '/' },;
     { label: 'Services', href: '/services' },;
     { label: 'Solutions', href: '/solutions' },;
@@ -310,33 +310,33 @@ export const EnhancedHeader: React.FC = () => {;
   ];
 ;
   return (;
-    <header className='bg-white shadow-lg'>;
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-        <div className='flex justify-between items-center py-6'>;
-          <div className='flex items-center'>;
-            <a href='/' className='text-2xl font-bold text-blue-900'>;
+    <header className='bg-white shadow-lg'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center py-6'>
+          <div className='flex items-center'>
+            <a href='/' className='text-2xl font-bold text-blue-900'>
               Zion Tech Group;
-            </a>;
-          </div>;
-          <nav className='hidden md:flex space-x-8'>;
+            </a>
+          </div>
+          <nav className='hidden md:flex space-x-8'>
             {navLinks.map((link, index) => (;
-              <a key={index} href={link.href} className='text-gray-700 hover:text-blue-600'>;
+              <a key={index} href={link.href} className='text-gray-700 hover:text-blue-600'>
                 {link.label}
-              </a>;
+              </a>
             ))}
-          </nav>;
+          </nav>
           <button;
             aria-label='Toggle navigation';
             onClick={() => setMobileOpen((v) => !v)} ;
             className='md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100';
           >;
-            <svg xmlns='http://www.w3.org/2000/svg' className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>;
-              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />;
-            </svg>;
-          </button>;
-        </div>;
-      </div>;
-    </header>;
+            <svg xmlns='http://www.w3.org/2000/svg' className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
   );
 };
 ;

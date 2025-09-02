@@ -140,7 +140,7 @@ class BuildAutomation {;
       const buildTime = Date.now() - startTime;
       this.log(`Build successful in ${buildTime}ms`);
 ;
-      return {;
+      return {
         success: true,;
         buildTime,;
         timestamp: new Date().toISOString()};
@@ -148,7 +148,7 @@ class BuildAutomation {;
       const errorOutput = error.stderr || error.stdout || error.message;
       this.log(`Build failed: ${errorOutput}`,ERROR');
 ;
-      return {;
+      return {
         success: false,;
         errors: this.parseBuildErrors(errorOutput),;
         timestamp: new Date().toISOString()};
@@ -487,7 +487,7 @@ export default defineConfig({;
   ',lucide-react'],utils-vendor;
   ': ['date-fns,clsx,;
   ,tailwind-merge;
-  '],form-vendor': [;
+  '],form-vendor': [
   'react-hook-form,@hookform/resolvers;
   ',zod'];
         }
@@ -655,7 +655,7 @@ export default {;
     }
   }
 ;
-  async optimizeBuildScripts() {;
+  async optimizeBuildScripts() {
     this.log(;
   'Optimizing build scripts...');
 ;
@@ -676,7 +676,7 @@ export default {;
         }
 ;
         if (!packageJson.scripts[,;
-  build: prod']) {;
+  build: prod']) {
           packageJson.scripts[;
   'build:prod'] =;
   'vite build --mode production;
@@ -697,7 +697,7 @@ export default {;
   ');
 ;
     try {;
-      const buildDirs = ['dist;
+      const buildDirs = ['dist
   ',build',.vite;
   '];
 ;
@@ -734,7 +734,7 @@ export default {;
   'Build configuration analysis completed');
   }
 ;
-  async generateBuildMetrics() {;
+  async generateBuildMetrics() {
     this.log(;
   'Generating build metrics...');
 ;
@@ -762,7 +762,7 @@ export default {;
   }
 ;
   findSourceFiles() {;
-    const extensions = ['.ts;
+    const extensions = ['.ts
   ',.tsx',.js;
   ',.jsx'];
     const files = [];
@@ -793,7 +793,7 @@ export default {;
     return files;
   }
 ;
-  getStats() {;
+  getStats() {
     return {;
       buildSuccesses: this.buildSuccesses,;
       buildFailures: this.buildFailures,;

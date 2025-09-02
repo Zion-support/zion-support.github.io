@@ -45,7 +45,7 @@ class DependencyMonitor {;
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error(;
   'Failed to write to log file:', error.message);
     };
@@ -212,7 +212,7 @@ class DependencyMonitor {;
       // Check if key dependencies exist;
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,;
   'utf8'));
-      const requiredDeps = [;
+      const requiredDeps = [
   'vite',;
   '@vitejs/plugin-react',;
   'react',;
@@ -627,7 +627,7 @@ const stats = fs.statSync(filePath);const stats = fs.statSync(filePath);
   'WARN');
 ;
 ;
-  getStats() {;
+  getStats() {
     return {;
       vulnerabilitiesFound: this.vulnerabilitiesFound,;
       dependenciesUpdated: this.dependenciesUpdated,;

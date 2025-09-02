@@ -855,7 +855,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
     }
 ];
 // Additional specialized service categories;
-export const SERVICE_CATEGORIES = {,;
+export const SERVICE_CATEGORIES = {,
   Micro SAAS': [;
   'Financial Technology,;
 ,;
@@ -882,7 +882,7 @@ export const SERVICE_CATEGORIES = {,;
   'Managed IT Services',;
   'Disaster Recovery';
     ],;
-  'AI Solutions': [;
+  'AI Solutions': [
   'Research & Analytics,;
 ,;
   Healthcare & Biotechnology',;
@@ -897,7 +897,7 @@ export const SERVICE_CATEGORIES = {,;
     ];
 };
 // Market analysis and pricing information;
-export const MARKET_ANALYSIS = {;
+export const MARKET_ANALYSIS = {
   totalMarketSize: '$2.8T,;
     growthRate:,;
   15.7% CAGR',;
@@ -910,7 +910,7 @@ export const MARKET_ANALYSIS = {;
   'Sustainable technology',;
   'Digital transformation acceleration';
     ],;
-    competitiveAdvantages: [;
+    competitiveAdvantages: [
   'First-mover advantage in quantum-AI integration,;
   'Proprietary autonomous systems',;
   'Global quantum network access',;

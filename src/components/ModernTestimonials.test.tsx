@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ModernTestimonials from './ModernTestimonials';
-;
+
 describe('ModernTestimonials', () => {;
   it('renders without crashing', () => {;
     render(<ModernTestimonials />);

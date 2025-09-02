@@ -22,7 +22,7 @@ starter: {;
         price: 2999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic quantum features,;
   'Standard security',;
   'Email support'];
@@ -31,7 +31,7 @@ starter: {;
         price: 7999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced quantum features,;
   'Custom security',;
   'Priority support'];
@@ -78,7 +78,7 @@ starter: {;
   'Kubernetes',;
   'Docker',;
   'Terraform'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'FedRAMP',;
@@ -107,7 +107,7 @@ starter: {;
         price: 1999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic edge features,;
   'Standard optimization',;
   'Email support'];
@@ -116,7 +116,7 @@ starter: {;
         price: 5999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced edge features,;
   'Custom optimization',;
   'Priority support'];
@@ -162,7 +162,7 @@ starter: {;
   'Analytics tools',;
   'Security systems',;
   'Monitoring platforms'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'IoT security standards',;
@@ -191,7 +191,7 @@ starter: {;
         price: 1499,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic zero trust,;
   'Up to 1000 users',;
   'Standard monitoring',;
@@ -201,7 +201,7 @@ starter: {;
         price: 3999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced zero trust,;
   'Unlimited users',;
   'Custom policies',;
@@ -251,7 +251,7 @@ starter: {;
   'Monitoring systems',;
   'Compliance platforms',;
   'Enterprise systems'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'FedRAMP',;
@@ -281,7 +281,7 @@ starter: {;
         price: 999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic AI DevOps,;
   'Up to 10 applications',;
   'Standard automation',;
@@ -291,7 +291,7 @@ starter: {;
         price: 2999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced AI DevOps,;
   'Unlimited applications',;
   'Custom automation',;
@@ -341,7 +341,7 @@ starter: {;
   'Monitoring systems',;
   'Security tools',;
   'Development platforms'],;
-    compliance[;
+    compliance[
   'SOC2',;
   'ISO 27001',;
   'DevOps best practices',;
@@ -370,7 +370,7 @@ starter: {;
         price: 3999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic quantum data center,;
   'Standard quantum features',;
   'Email support'];
@@ -379,7 +379,7 @@ starter: {;
         price: 9999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced quantum data center,;
   'Custom quantum features',;
   'Priority support',;
@@ -429,7 +429,7 @@ integrations: [;
   'Monitoring systems',;
   'Security tools',;
   'Enterprise systems'],;
-    compliance: [;
+    compliance: [
   'SOC2,;
   'ISO 27001',;
   'Data center standards',;

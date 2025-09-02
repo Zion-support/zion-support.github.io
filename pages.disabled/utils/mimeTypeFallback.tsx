@@ -1,11 +1,11 @@
 export default mimeTypeFallback;
 ;
 :pages.disabled/utils/mimeTypeFallback.tsx;
-interface MimeTypeMapping {;
+interface MimeTypeMapping {
   [key: string]: string;
 }
 ;
-class MimeTypeFallback {;
+class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {,;
   .js': 'application / javascript,.mjs;
   ':,;
@@ -55,14 +55,14 @@ class MimeTypeFallback {;
   ',.flac': 'audio / flac};
 ;
   private fallbackUrls: Map < string, string> = new Map () ;
-  private cdnFallbacks = [,;
+  private cdnFallbacks = [,
   'https: //cdn.jsdelivr.net,https://unpkg.com,;
   ,https: //cdnjs.cloudflare.com];
 ;
   constructor() {;
     this.setupFallbackUrls () }
 ;
-  private setupFallbackUrls() {;
+  private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks,;
   this.fallbackUrls.set (;
   '/js / index - C64WnLOI.js',https: //cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / index - C64WnLOI.js;

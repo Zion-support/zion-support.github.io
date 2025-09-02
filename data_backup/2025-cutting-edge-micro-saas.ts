@@ -22,7 +22,7 @@ starter: {;
         price: 199,;
         period:,;
   month',;
-        features: [Up to 1,000 customers',;
+        features: [Up to 1,000 customers',
   'Basic AI features',;
   'Email support'];
       },;
@@ -30,7 +30,7 @@ starter: {;
         price: 499,;
         period:,;
   month',;
-        features: [Up to 10,000 customers',;
+        features: [Up to 10,000 customers',
   'Advanced AI features',;
   'Priority support',;
   'Custom workflows'];
@@ -78,7 +78,7 @@ starter: {;
   'Zendesk',;
   'Slack',;
   'Microsoft Teams'],;
-    compliance[;
+    compliance[
   'GDPR',;
   'CCPA',;
   'SOC2',;
@@ -106,7 +106,7 @@ starter: {;
         price: 299,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic optimization features,;
   'Standard analytics',;
   'Email support'];
@@ -115,7 +115,7 @@ starter: {;
         price: 799,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced optimization,;
   'Quantum algorithms',;
   'Priority support',;
@@ -163,7 +163,7 @@ starter: {;
   'TMS Solutions',;
   'E-commerce Platforms',;
   'Analytics Tools'],;
-    compliance[;
+    compliance[
   'Supply Chain Standards',;
   'Logistics Regulations',;
   'Data Privacy Laws'];
@@ -190,7 +190,7 @@ starter: {;
         price: 149,;
         period:,;
   month',;
-        features: [Up to 1,000 verifications',;
+        features: [Up to 1,000 verifications',
   'Basic verification features',;
   'Email support'];
       },;
@@ -198,7 +198,7 @@ starter: {;
         price: 399,;
         period:,;
   month',;
-        features: [Up to 10,000 verifications',;
+        features: [Up to 10,000 verifications',
   'Advanced verification features',;
   'Priority support',;
   'Custom workflows'];
@@ -245,7 +245,7 @@ starter: {;
   'Healthcare Systems',;
   'E-commerce Platforms',;
   'Government APIs'],;
-    compliance[;
+    compliance[
   'KYC/AML',;
   'GDPR',;
   'CCPA',;
@@ -274,7 +274,7 @@ starter: {;
         price: 249,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Up to 500 employees,;
   'Basic analytics features',;
   'Email support'];
@@ -283,7 +283,7 @@ starter: {;
         price: 649,;
         period:,;
   month',;
-        features: [Up to 5,000 employees',;
+        features: [Up to 5,000 employees',
   'Advanced analytics features',;
   'Priority support',;
   'Custom reporting'];
@@ -331,7 +331,7 @@ starter: {;
   'SuccessFactors',;
   'Slack',;
   'Microsoft Teams'],;
-    compliance[;
+    compliance[
   'HR Data Privacy',;
   'Employment Laws',;
   'Data Protection Regulations'];
@@ -358,7 +358,7 @@ starter: {;
         price: 399,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Basic risk management,;
   'Standard analytics',;
   'Email support'];
@@ -367,7 +367,7 @@ starter: {;
         price: 999,;
         period:,;
   month',;
-        features: [;
+        features: [
   'Advanced risk management,;
   'Quantum algorithms',;
   'Priority support',;
@@ -416,7 +416,7 @@ integrations: [;
   'Trading Platforms',;
   'Risk Management Systems',;
   'Financial Data Providers'],;
-    compliance: [;
+    compliance: [
   'Basel III,;
   'Solvency II',;
   'Dodd-Frank',;

@@ -28,7 +28,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({;
 global.scrollTo = jest.fn();
 // Mock console methods to reduce noise in tests;
 // @ts-expect-error override console in test env;
-global.console = {;
+global.console = {
   ...console,;
   warn: jest.fn(),;
   error: jest.fn()};

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-;
-interface PerformanceMetrics {;
+
+interface PerformanceMetrics {
   fcp?: number;
    lcp?: number;
    fid?: number;
@@ -9,7 +9,7 @@ interface PerformanceMetrics {;
    fmp?: number;
 }
 ;
-const PerformanceMonitor: React.FC = () => {;
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {;
     // Only run in browser environment;
     if (typeof window === 'undefined') return;
@@ -60,7 +60,7 @@ const PerformanceMonitor: React.FC = () => {;
 ;
     // Time to First Byte (TTFB);
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {;
+    if (navigationEntry) {
       metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       console.log('TTFB: ', metrics.ttfb);
     }

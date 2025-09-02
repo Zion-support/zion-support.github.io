@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-;
-interface AccessibilityEnhancerProps {;
+
+interface AccessibilityEnhancerProps {
   children: React.ReactNode;
    skipToContent?: boolean;
    focusManagement?: boolean;
@@ -127,10 +127,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({;
           }}
         >;
           Skip to main content;
-        </a>;
+        </a>
       )}
       {children}
-</>;
+</>
   );
 };
 ;

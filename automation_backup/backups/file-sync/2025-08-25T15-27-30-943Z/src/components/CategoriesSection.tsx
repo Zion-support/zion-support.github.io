@@ -80,7 +80,7 @@ const categories = [;
   'Startup Solutions'],;
     stats: '100+ Innovations;
   },;
-  {;
+  {
 ursor/website-audit-content-update-and-deployment-efec;
     title:,;
   AI Hiring Platform',;
@@ -93,7 +93,7 @@ ursor/website-audit-content-update-and-deployment-efec;
     featured: true;
   };
 ];
-const specialServices = [;
+const specialServices = [
   {;
     title:,;
   IT Onsite Services',;
@@ -119,7 +119,7 @@ const specialServices = [;
     description: 'Scalable cloud infrastructure;
 ursor/website-audit-content-update-and-deployment-efec;
   },;
-  {;
+  {
     title:,;
   Security Services',;
     link: '/security-services,;
@@ -128,13 +128,13 @@ ursor/website-audit-content-update-and-deployment-efec;
     description: 'Cybersecurity & compliance;
   };
 ];
-interface CategoriesSectionProps {;
+interface CategoriesSectionProps {
    showTitle?: boolean;
 };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
   const containerVariants = {;
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       transition: {;
         staggerChildren: 0.1;
@@ -151,7 +151,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 ;
 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       y: 0,;
       transition: { duration: 0.6, ease:,;
@@ -159,16 +159,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     };
   };
   return (;
-    <section className =;
+    <section className =
   'py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden'>;
       {/* Background pattern */};
-      <div className=;
+      <div className=
   'absolute inset-0 opacity-5'>;
         <div className=;
-  'absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 30px_30px]'></div>;
-      </div>;
+  'absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 30px_30px]'></div>
+      </div>
 ;
-      <div className=;
+      <div className=
   'container mx-auto px-4 relative z-10'>;
         {showTitle && (;
           <motion.div;
@@ -196,12 +196,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }};
             transition={{ duration: 0.8 }};
 ;
-            <GradientHeading>Explore Categories</GradientHeading>;
-            <p className=,;
+            <GradientHeading>Explore Categories</GradientHeading>
+            <p className=,
   text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed'>;
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
         )};
 ;
         <motion.div;
@@ -214,67 +214,67 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   'visible';
 ;
           {categories.map((category, index) => (;
-            <motion.div key={category.title} variants={itemVariants}>;
-              <Link;
+            <motion.div key={category.title} variants={itemVariants}>
+              <Link
                 to={category.link};
                 className=;
   'group block h-full';
 ;
                 <div className=;
   'rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover: border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20>;
-                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>;
-                    <div className=,;
+                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className=,
   text-white'>;
                       {category.icon};
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
 ;
-                  <h3 className=;
+                  <h3 className=
   'text-white text-xl font-bold mb-3 group-hover: text-zion-cyan transition-colors>;
                     {category.title};
-                  </h3>;
+                  </h3>
 ;
-                  <p className=,;
+                  <p className=,
   text-zion-slate-light mb-4 text-sm leading-relaxed'>;
                     {category.description};
-                  </p>;
+                  </p>
 ;
                   {/* Features */};
-                  <div className=;
+                  <div className=
   'space-y-2 mb-4'>;
                     {category.features.map((feature, idx) => (;
-                      <div key={idx} className=;
+                      <div key={idx} className=
   'flex items-center gap-2 text-xs text-zion-slate-light'>;
                         <div className=;
-  'w-1.5 h-1.5 rounded-full bg-zion-cyan'></div>;
+  'w-1.5 h-1.5 rounded-full bg-zion-cyan'></div>
                         {feature};
-                      </div>;
+                      </div>
                     ))};
-                  </div>;
+                  </div>
 ;
                   {/* Stats */};
-                  <div className=;
+                  <div className=
   'text-zion-cyan text-sm font-semibold mb-4'>;
                     {category.stats};
-                  </div>;
+                  </div>
 ;
                   {/* Arrow indicator */};
-                  <div className=;
+                  <div className=
   'flex items-center justify-between'>;
-                    <span className=;
+                    <span className=
   'text-zion-slate-light text-sm group-hover: text-zion-cyan transition-colors'>;
                       Learn More;
-                    </span>;
-                    <ArrowRight className=;
+                    </span>
+                    <ArrowRight className=
   'w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300                                                                                                                                                                              />;
-                  </div>;
-                </div>;
-              </Link>;
-            </motion.div>;
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
           ))};
-        </motion.div>;
+        </motion.div>
 ;
-        <motion.div;
+        <motion.div
           className=;
   'mb-12';
           initial = {;
@@ -309,11 +309,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }};
         >;
           <h3 className=,;
-  text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>;
-          <div className=;
+  text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>
+          <div className=
   'grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4>;
             {specialServices.map((service, index) => (;
-              <motion.div;
+              <motion.div
                 key={service.title};
                 initial = {;
   { opacity: 0,;
@@ -346,31 +346,31 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 }};
               >;
-                <Link;
+                <Link
                   to={service.link};
                   className=,;
   block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group';
 ;
                   <div className=;
   'flex items-center gap-3 mb-2'>;
-                    <div className=;
+                    <div className=
   'text-zion-purple group-hover:scale-110 transition-transform>;
                       {service.icon};
-                    </div>;
+                    </div>
                     <span className=;
-  'font-semibold text-sm'>{service.title}</span>;
-                  </div>;
-                  <p className=;
+  'font-semibold text-sm'>{service.title}</span>
+                  </div>
+                  <p className=
   'text-xs text-zion-slate-light leading-relaxed'>;
                     {service.description};
-                  </p>;
-                </Link>;
-              </motion.div>;
+                  </p>
+                </Link>
+              </motion.div>
             ))};
-          </div>;
-        </motion.div>;
+          </div>
+        </motion.div>
 ;
-        <motion.div;
+        <motion.div
           className=;
   'text-center';
           initial = {;
@@ -404,7 +404,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 }};
         >;
-          <Link;
+          <Link
             to=,;
   /categories';
             className=;
@@ -414,10 +414,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             <ArrowRight className=;
   'w-5 h-5 group-hover:translate-x-1 transition-transform                                                                                                                                                                              />;
 ursor/website-audit-content-update-and-deployment-efec;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 ;

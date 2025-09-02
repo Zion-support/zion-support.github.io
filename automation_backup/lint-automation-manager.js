@@ -138,7 +138,7 @@ class LintAutomationManager {;
 // CLI handling;
 const manager = new LintAutomationManager();
 const command = process.argv[2];
-switch (command) {;
+switch (command) {
   case,;
   start': ;
     manager.start();

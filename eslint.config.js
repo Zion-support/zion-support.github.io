@@ -392,7 +392,7 @@ export default [;
         version:,;
   detect'}}},;
   {;
-    ignores: [;
+    ignores: [
   'src/**,;
   'components/**',;
   'backup-pages/**',;

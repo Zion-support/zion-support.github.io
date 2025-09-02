@@ -24,7 +24,7 @@ class ImportOptimizer {;
     console.log(;
   '⚡ Optimizing imports to reduce bundle size...');
 ;
-    const directories = [;
+    const directories = [
   'pages',;
   'components',;
   'src';

@@ -175,7 +175,7 @@ describe('/api/trust/score/[userId] API Endpoint'', () => {;
   });
 ;
   test(;
-  'should return 500 if there is a database error (not PGRST116)', async () => {;
+  'should return 500 if there is a database error (not PGRST116)', async () => {
     const dbError = { message: 'Internal server error, code:;
   'XXYYZ' };
     mockSupabaseSingle.mockResolvedValueOnce({ data: null, error: dbError });

@@ -217,7 +217,7 @@ export const comprehensiveServices = [;
   }
 ];
 ;
-export const serviceCategories = [;
+export const serviceCategories = [
   {;
     name: 'Infrastructure',;
     description: 'Core IT infrastructure services',;
@@ -268,7 +268,7 @@ export const pricingTiers = [;
       'Monthly reports',;
       'Phone support';
     ],;
-    limitations: [;
+    limitations: [
       'Up to 10 users',;
       'Basic monitoring',;
       'Standard response time';
@@ -286,7 +286,7 @@ export const pricingTiers = [;
       'Priority support',;
       'Quarterly reviews';
     ],;
-    limitations: [;
+    limitations: [
       'Up to 50 users',;
       'Business hours support',;
       '4-hour response time';
@@ -304,7 +304,7 @@ export const pricingTiers = [;
       'Advanced analytics',;
       'Strategic consulting';
     ],;
-    limitations: [;
+    limitations: [
       'Unlimited users',;
       'Custom SLAs',;
       '1-hour response time';

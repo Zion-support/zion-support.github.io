@@ -13,7 +13,7 @@ export const ProfileErrorState = ({}
           <div className='w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4'>'''';
             <AlertCircle className='w-8 h-8 text-red-600' />''';
           </div>'''';
-          <h2 className='text-2xl font-bold text-gray-900 mb-2'>;
+          <h2 className='text-2xl font-bold text-gray-900 mb-2'>
             Oops! Something went wrong''';
           </h2>'''';
           <p className='text-gray-600'>{error}</p>''';
@@ -25,15 +25,15 @@ export const ProfileErrorState = ({}
               contact support if the problem persists.;
             </p>''';
 '''';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               {onRetry && (;
                 <Button''';
                   onClick={onRetry}'''';
                   className='flex items-center space-x-2'''';
                 >'''';
-                  <RefreshCw className='w-4 h-4' />;
-                  <span>Try Again</span>;
-                </Button>;
+                  <RefreshCw className='w-4 h-4' />
+                  <span>Try Again</span>
+                </Button>
               )}
 ''';
               <Button''''';
@@ -41,12 +41,12 @@ export const ProfileErrorState = ({}
                 onClick={() => (window.location.href = '/')}
               >;
                 Go Home;
-              </Button>;
-            </div>;
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }'';"
 }'';';

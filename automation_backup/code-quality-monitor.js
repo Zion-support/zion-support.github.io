@@ -18,12 +18,12 @@ class CodeQualityMonitor {;
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error(;
   'Failed to write to log file:', error.message);
     };
 ;
-    this.metrics = {;
+    this.metrics = {
   complexity: 0,;
       maintainability: 0,;
       testCoverage: 0,;
@@ -337,7 +337,7 @@ class CodeQualityMonitor {;
     await this.autoFixCommonSyntaxIssues();
   };
 ;
-  async autoFixCommonSyntaxIssues() {;
+  async autoFixCommonSyntaxIssues() {
     this.log('Attempting to auto-fix common syntax issues...;
   ');
 ;
@@ -405,7 +405,7 @@ class CodeQualityMonitor {;
   async manualCleanupUnusedImports() {;
     this.log(;
   'Performing manual unused import cleanup...);
-;
+
     const sourceFiles = this.findSourceFiles();
     let cleanedCount = 0;
 ;
@@ -629,7 +629,7 @@ class CodeQualityMonitor {;
   'Quality rules update completed');
 ;
   findSourceFiles() {;
-    const extensions = [;
+    const extensions = [
   '.ts',;
   '.tsx',;
   '.js',;
@@ -661,7 +661,7 @@ class CodeQualityMonitor {;
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))};
 };
 const monitor = new CodeQualityMonitor();
-monitor.analyzeCodeQuality().then(metrics => {;
+monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {;
     console.log(;
   'Metrics:', metrics)};

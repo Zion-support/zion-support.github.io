@@ -33,13 +33,13 @@ const lintRules = {;
   ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g;
 };
 // File extensions to check;
-const extensions = ['.js;
+const extensions = ['.js
   ', '.jsx;
   ', '.ts;
   ', '.tsx;
   '];
 // Directories to ignore;
-const ignoreDirs = [;
+const ignoreDirs = [
   'node_modules;
   ',;
   '.git;

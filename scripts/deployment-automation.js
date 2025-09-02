@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-;
+
 console.log('🚀 Deployment Automation Starting...');
 ;
 class DeploymentAutomation {;
@@ -54,7 +54,7 @@ class DeploymentAutomation {;
   async runPreDeploymentChecks() {;
     console.log('🔍 Running pre-deployment checks...');
 ;
-    const checks = [;
+    const checks = [
       { name: 'Git status', command: 'git status --porcelain' },;
       { name: 'Dependencies', command: 'npm audit --audit-level=high' },;
       { name: 'TypeScript', command: 'npx tsc --noEmit' },;
@@ -190,7 +190,7 @@ curl http://localhost:3000/api/health;
   async runPostDeploymentVerification() {;
     console.log('🔍 Running post-deployment verification...');
 ;
-    const verifications = [;
+    const verifications = [
       { name: 'Health check', url: '/api/health' },;
       { name: 'Home page', url: '/' },;
       { name: 'Services page', url: '/services' }
@@ -235,7 +235,7 @@ curl http://localhost:3000/api/health;
     return 'deployment-123';
   }
 ;
-  async generateDeploymentReport() {;
+  async generateDeploymentReport() {
     console.log('📊 Generating deployment report...');
 ;
     const report = {;
@@ -245,7 +245,7 @@ curl http://localhost:3000/api/health;
       steps: this.deploymentSteps,;
       errors: this.errors,;
       warnings: this.warnings,;
-      recommendations: [;
+      recommendations: [
         'Set up automated rollback procedures',;
         'Implement blue-green deployment strategy',;
         'Add comprehensive monitoring and alerting',;

@@ -107,14 +107,14 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         </div>'''';
         <button onClick={checkAllLinks} disabled={isChecking} className='px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2'>''';
           {isChecking ? (<>'''';
-              <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin'/>;
+              <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin'/>
               Checking...''';
             </>) : (<>'''';
-              <CheckCircle className='w-4 h-4'/>;
+              <CheckCircle className='w-4 h-4'/>
               Recheck;
             </>) }
-        </button>;
-      </div>;
+        </button>
+      </div>
 ''';
       {/* Summary Stats */}'''';
       <div className='grid grid-cols-3 gap-4 mb-6'>'''';
@@ -128,18 +128,18 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         </div>'''';
         <div className='text-center p-3 bg-blue-500/20 border border-blue-500/30 rounded-lg'>'''';
           <div className='text-2xl font-bold text-blue-400'>{externalCount}</div>'''';
-          <div className='text-sm text-blue-300'>External</div>;
-        </div>;
-      </div>;
+          <div className='text-sm text-blue-300'>External</div>
+        </div>
+      </div>
 ''';
       {/* Link Status List */}'''';
-      <div className='space-y-3'>;
+      <div className='space-y-3'>
         {links.map((link, index) => {}
             const status = linkStatuses[index];
             if (!status)''';
                 return null';'';
             return (<div key={link.url} className='flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300'>'''';
-              <div className='flex items-center gap-3'>;
+              <div className='flex items-center gap-3'>
                 {getStatusIcon(status.status)}''';
                 <div>'''';
                   <div className='text-white font-medium'>{link.label}</div>'''';
@@ -148,15 +148,15 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 </div>''';
               </div>''`;
               <div className='text-right'>``;
-                <div className={`text-sm font-medium ${getStatusColor(status.status)}`}>;
+                <div className={`text-sm font-medium ${getStatusColor(status.status)}`}>
                   {getStatusText(status.status)}''';
                 </div>'''';
-                {status.responseTime && (<div className='text-xs text-gray-400'>;
+                {status.responseTime && (<div className='text-xs text-gray-400'>
                     {status.responseTime}ms;
                   </div>) }
-              </div>;
+              </div>
             </div>) }) }
-      </div>;
+      </div>
 ''';
       {/* Recommendations */}'''';
       {brokenCount > 0 && (<div className='mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg'>'''';
@@ -164,13 +164,13 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
           <p className='text-sm text-red-300'>';
             {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.;
             Please review and fix these links to improve user experience.;
-          </p>;
+          </p>
         </div>)}''';
 '''';
       {healthyCount === links.length && (<div className='mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg'>'''';
           <h4 className='text-green-400 font-semibold mb-2'>✅ All Links Healthy</h4>'''';
-          <p className='text-sm text-green-300">;
-            Great job! All links are working properly.Your website is in excellent health.</p>;
+          <p className='text-sm text-green-300">
+            Great job! All links are working properly.Your website is in excellent health.</p>
         </div>)}
     </div>)};
 export default LinkHealthChecker;

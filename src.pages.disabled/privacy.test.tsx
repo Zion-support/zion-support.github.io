@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import privacy from './privacy';
-;
+
 describe('privacy', () => {;
   it('renders without crashing', () => {;
     render(<privacy />);

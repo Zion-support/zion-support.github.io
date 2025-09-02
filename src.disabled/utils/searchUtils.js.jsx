@@ -218,7 +218,7 @@ export const formatSearchQuery = (query) => {;
  * Check if filters are active (not default values);
  */;
 export const hasActiveFilters = (filters) => {;
-    return (filters.types.length > 0 ||;
+    return (filters.types.length > 0 ||
         filters.category !== '' ||;
         filters.minPrice > 0 ||;
         filters.maxPrice < 10000 ||;

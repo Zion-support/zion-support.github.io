@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from,;
   react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; User,; Heart,; Star,; MessageCircle,; HelpCircle,; Settings,; X,; ChevronUp,; ChevronDown,; Search,; Filter,; Grid,; List,; Eye,; EyeOff,; Palette,; Moon,; Sun,; Monitor,; Smartphone,; Tablet,; Globe,; Languages,; Volume2,; VolumeX,; Zap,; Target,; TrendingUp,; Users,; Clock,; Bookmark,; Share2,; Download,; Print,; Mail,; Phone,; MapPin; } from;
-  'lucide-react'; ; interface UserPreference {;
+  'lucide-react'; ; interface UserPreference {
    theme: 'light' | 'dark' | 'auto';
    fontSize: 'small' | 'medium' | 'large';
    contrast: 'normal' | 'high';
@@ -10,7 +10,7 @@ import React, { useState, useEffect, useCallback, useRef } from,;
    language: string;
    layout: 'grid' | 'list;
    compactMode: boolean;
-}; interface UserFeedback {;
+}; interface UserFeedback {
    rating: number;
    comment: string;
    category: string;

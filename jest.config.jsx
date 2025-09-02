@@ -15,7 +15,7 @@ const customJestConfig = {;
   components/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},!**/*.d.ts',!**/node_modules/**;
   ';
   ],;
-  testPathIgnorePatterns: [;
+  testPathIgnorePatterns: [
     '<rootDir>/.next/,<rootDir>/node_modules/',<rootDir>/out/;
   ',<rootDir>/__tests__.disabled/',<rootDir>/tests.disabled/;
   ',<rootDir>/src_backup/',<rootDir>/test.disabled/;

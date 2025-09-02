@@ -1,4 +1,4 @@
-export interface ComprehensiveService {;
+export interface ComprehensiveService {
   id: string;
    name: string;
    tagline: string;
@@ -35,7 +35,7 @@ export interface ComprehensiveService {;
   reviews: number;
 }
 ;
-const contact = {;
+const contact = {
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -982,7 +982,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   }
 ];
 ;
-export const serviceCategories = [;
+export const serviceCategories = [
   {;
     name:,;
   AI & Machine Learning',;

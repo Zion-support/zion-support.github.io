@@ -74,7 +74,7 @@ import { real2027Q4Additions } from;
   '../../data/real-2027-q4-additions';
 ;
 type Service = typeof ultimateInnovativeServices2026[number];
-const contactInfo = {;
+const contactInfo = {
 	mobile: '+1 302 464 0950,;
 	email:,;
   kleber@ziontechgroup.com',;
@@ -135,7 +135,7 @@ return path;return null;
 	}
 }
 ;
-export default function ServiceSlugPage({ params }: { params?: { slug: string } }) {;
+export default function ServiceSlugPage({ params }: { params?: { slug: string } }) {
 	const slug = params?.slug ||,;
   default-service';
 ;
@@ -160,134 +160,134 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 ;
 	return (;
 		<>;
-			<Head>;
-				<title>{service.name} — Zion Tech Group</title>;
-				<meta name='description' content={service.tagline} />;
-			</Head>;
-			<div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
-				<main className='container mx-auto px-6 py-12'>;
+			<Head>
+				<title>{service.name} — Zion Tech Group</title>
+				<meta name='description' content={service.tagline} />
+			</Head>
+			<div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+				<main className='container mx-auto px-6 py-12'>
 					{/* Hero Section */}
-					<section className='text-center mb-16'>;
-						<h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
+					<section className='text-center mb-16'>
+						<h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
 							{service.name}
-						</h1>;
-						<p className='text-xl text-white/80 max-w-3xl mx-auto mb-8'>;
+						</h1>
+						<p className='text-xl text-white/80 max-w-3xl mx-auto mb-8'>
 							{service.tagline}
-						</p>;
-						<div className='flex flex-wrap justify-center gap-4'>;
-							<a href='/contact' className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'>;
+						</p>
+						<div className='flex flex-wrap justify-center gap-4'>
+							<a href='/contact' className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'>
 								Get Started;
-							</a>;
-							<a href='/services' className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300'>;
+							</a>
+							<a href='/services' className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300'>
 								View All Services;
-							</a>;
-						</div>;
-					</section>;
+							</a>
+						</div>
+					</section>
 					{/* Service Details */}
-					<section className='mb-16'>;
-						<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
+					<section className='mb-16'>
+						<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 							{/* Main Content */}
-							<div className='lg:col-span-2'>;
-								<div className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8'>;
-									<h2 className='text-2xl font-bold mb-6 text-cyan-400'>About This Service</h2>;
-									<p className='text-white/80 mb-6'>;
+							<div className='lg:col-span-2'>
+								<div className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8'>
+									<h2 className='text-2xl font-bold mb-6 text-cyan-400'>About This Service</h2>
+									<p className='text-white/80 mb-6'>
 										{service.description}
-									</p>;
-									<h3 className='text-xl font-semibold mb-4 text-white'>Key Features</h3>;
-									<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-6'>;
+									</p>
+									<h3 className='text-xl font-semibold mb-4 text-white'>Key Features</h3>
+									<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-6'>
 										{service.features.map((feature, index) => (;
-											<div key={index} className='flex items-center gap-3'>;
-												<Check className='w-5 h-5 text-cyan-400 flex-shrink-0' />;
-												<span className='text-white/80'>{feature}</span>;
-											</div>;
+											<div key={index} className='flex items-center gap-3'>
+												<Check className='w-5 h-5 text-cyan-400 flex-shrink-0' />
+												<span className='text-white/80'>{feature}</span>
+											</div>
 										))}
-									</div>;
-									<div className='flex flex-wrap gap-4'>;
-										<div className='text-center'>;
-											<div className='text-3xl font-bold text-cyan-400 mb-1'>{service.rating}</div>;
-											<div className='text-white/70 text-sm'>Rating</div>;
-										</div>;
-										<div className='text-center'>;
-											<div className='text-3xl font-bold text-purple-400 mb-1'>{service.customers}</div>;
-											<div className='text-white/70 text-sm'>Customers</div>;
-										</div>;
-										<div className='text-center'>;
-											<div className='text-3xl font-bold text-green-400 mb-1'>{service.price}</div>;
-											<div className='text-white/70 text-sm'>Starting Price</div>;
-										</div>;
-									</div>;
-								</div>;
-							</div>;
+									</div>
+									<div className='flex flex-wrap gap-4'>
+										<div className='text-center'>
+											<div className='text-3xl font-bold text-cyan-400 mb-1'>{service.rating}</div>
+											<div className='text-white/70 text-sm'>Rating</div>
+										</div>
+										<div className='text-center'>
+											<div className='text-3xl font-bold text-purple-400 mb-1'>{service.customers}</div>
+											<div className='text-white/70 text-sm'>Customers</div>
+										</div>
+										<div className='text-center'>
+											<div className='text-3xl font-bold text-green-400 mb-1'>{service.price}</div>
+											<div className='text-white/70 text-sm'>Starting Price</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							{/* Sidebar */}
-							<div className='space-y-6'>;
+							<div className='space-y-6'>
 								{/* Contact Card */}
-								<div className='bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-6'>;
-									<h3 className='text-xl font-bold mb-4 text-cyan-400'>Get In Touch</h3>;
-									<div className='space-y-4'>;
-										<div className='flex items-center gap-3'>;
-											<Phone className='w-5 h-5 text-cyan-400' />;
-											<span className='text-white/80'>{contactInfo.mobile}</span>;
-										</div>;
-										<div className='flex items-center gap-3'>;
-											<Mail className='w-5 h-5 text-cyan-400' />;
-											<span className='text-white/80'>{contactInfo.email}</span>;
-										</div>;
-										<div className='flex items-center gap-3'>;
-											<MapPin className='w-5 h-5 text-cyan-400' />;
-											<span className='text-white/80'>{contactInfo.address}</span>;
-										</div>;
-									</div>;
-									<a;
+								<div className='bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-6'>
+									<h3 className='text-xl font-bold mb-4 text-cyan-400'>Get In Touch</h3>
+									<div className='space-y-4'>
+										<div className='flex items-center gap-3'>
+											<Phone className='w-5 h-5 text-cyan-400' />
+											<span className='text-white/80'>{contactInfo.mobile}</span>
+										</div>
+										<div className='flex items-center gap-3'>
+											<Mail className='w-5 h-5 text-cyan-400' />
+											<span className='text-white/80'>{contactInfo.email}</span>
+										</div>
+										<div className='flex items-center gap-3'>
+											<MapPin className='w-5 h-5 text-cyan-400' />
+											<span className='text-white/80'>{contactInfo.address}</span>
+										</div>
+									</div>
+									<a
 										href='/contact';
 										className='block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 mt-6';
 									>;
 										Contact Us;
-									</a>;
-								</div>;
+									</a>
+								</div>
 								{/* Quick Actions */}
-								<div className='bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-6'>;
-									<h3 className='text-xl font-bold mb-4 text-purple-400'>Quick Actions</h3>;
-									<div className='space-y-3'>;
-										<a;
+								<div className='bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-6'>
+									<h3 className='text-xl font-bold mb-4 text-purple-400'>Quick Actions</h3>
+									<div className='space-y-3'>
+										<a
 											href='/case-studies';
 											className='block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300';
 										>;
 											View Case Studies;
-										</a>;
-										<a;
+										</a>
+										<a
 											href='/services';
 											className='block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300';
 										>;
 											Browse Services;
-										</a>;
-									</div>;
-								</div>;
-							</div>;
-						</div>;
-					</section>;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					{/* CTA Section */}
-					<section className='text-center'>;
-						<h2 className='text-3xl font-bold mb-6 text-white'>Ready to Get Started?</h2>;
-						<p className='text-xl text-white/80 mb-8 max-w-2xl mx-auto'>;
+					<section className='text-center'>
+						<h2 className='text-3xl font-bold mb-6 text-white'>Ready to Get Started?</h2>
+						<p className='text-xl text-white/80 mb-8 max-w-2xl mx-auto'>
 							Join hundreds of companies that have already transformed their business with our cutting-edge solutions.;
-						</p>;
-						<div className='flex flex-wrap justify-center gap-4'>;
-							<a;
+						</p>
+						<div className='flex flex-wrap justify-center gap-4'>
+							<a
 								href='/contact';
 								className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg';
 							>;
 								Start Your Project;
-							</a>;
-							<a;
+							</a>
+							<a
 								href='/case-studies';
 								className='px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 text-lg';
 							>;
 								View Case Studies;
-							</a>;
-						</div>;
-					</section>;
-				</main>;
-			</div>;
+							</a>
+						</div>
+					</section>
+				</main>
+			</div>
 		</>);
 }
 export async function getStaticPaths() {;
@@ -310,7 +310,7 @@ export async function getStaticPaths() {;
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),;
 		fallback: false;
 	};
-const contactInfo = {;
+const contactInfo = {
   mobile:,;
   +1 302 464 0950',;
   email: 'kleber@ziontechgroup.com,;
@@ -319,7 +319,7 @@ const contactInfo = {;
   website: 'https://ziontechgroup.com;
 };
 ;
-export async function getStaticPaths() {;
+export async function getStaticPaths() {
   // Return empty paths for now to fix build;
   return {;
     paths: [],;
@@ -341,152 +341,152 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 ;
 export default function ServiceDetailPage({ service, slug }: { service: SimpleService; slug: string }) {;
   return (;
-    <Layout>;
-      <Head>;
-        <title>{service.name} | Zion Tech Group</title>;
-        <meta name='description' content={service.description} />;
-        <link rel='canonical' href={`https://ziontechgroup.com/services/${slug}`} />;
-      </Head>;
-      <div className='container mx-auto px-4 py-16'>;
+    <Layout>
+      <Head>
+        <title>{service.name} | Zion Tech Group</title>
+        <meta name='description' content={service.description} />
+        <link rel='canonical' href={`https://ziontechgroup.com/services/${slug}`} />
+      </Head>
+      <div className='container mx-auto px-4 py-16'>
         {/* Back Navigation */}
-        <div className='mb-8'>;
-          <Link;
+        <div className='mb-8'>
+          <Link
             href='/services';
             className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors';
           >;
-            <ArrowLeft className='w-4 h-4' />;
+            <ArrowLeft className='w-4 h-4' />
             Back to Services;
-          </Link>;
-        </div>;
+          </Link>
+        </div>
 }
-<div className='text-center mb-10'>;
-          <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4'>;
+<div className='text-center mb-10'>
+          <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4'>
             {service.name}
-          </h1>;
-          <p className='text-gray-300 text-lg max-w-3xl mx-auto'>{service.description}</p>;
-        </div>;
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>;
-          <div className='lg:col-span-2 space-y-6'>;
+          </h1>
+          <p className='text-gray-300 text-lg max-w-3xl mx-auto'>{service.description}</p>
+        </div>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>
+          <div className='lg:col-span-2 space-y-6'>
             {/* Overview Card */}
-            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>;
-              <h2 className='text-white text-xl font-semibold mb-3'>Overview</h2>;
-              <p className='text-gray-300 leading-relaxed'>{service.description}</p>;
-            </div>;
+            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>
+              <h2 className='text-white text-xl font-semibold mb-3'>Overview</h2>
+              <p className='text-gray-300 leading-relaxed'>{service.description}</p>
+            </div>
             {/* Features Card */}
-            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>;
-              <h3 className='text-white text-lg font-semibold mb-4'>Key Features</h3>;
-              <ul className='space-y-2 text-gray-300'>;
+            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>
+              <h3 className='text-white text-lg font-semibold mb-4'>Key Features</h3>
+              <ul className='space-y-2 text-gray-300'>
                 {service.features.map((feature, index) => (;
-                  <li key={index} className='flex items-start gap-2'>;
-                    <Check className='w-4 h-4 mt-0.5 text-emerald-400' />;
-                    <span>{feature}</span>;
-                  </li>;
+                  <li key={index} className='flex items-start gap-2'>
+                    <Check className='w-4 h-4 mt-0.5 text-emerald-400' />
+                    <span>{feature}</span>
+                  </li>
                 ))}
-              </ul>;
-            </div>;
+              </ul>
+            </div>
             {/* Use Cases & Integrations */}
-            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>;
-              <h3 className='text-white text-lg font-semibold mb-4'>Use Cases & Integrations</h3>;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300'>;
-                <div>;
-                  <div className='text-sm text-gray-400 mb-2'>Use Cases</div>;
-                  <ul className='list-disc list-inside space-y-1'>;
+            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>
+              <h3 className='text-white text-lg font-semibold mb-4'>Use Cases & Integrations</h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300'>
+                <div>
+                  <div className='text-sm text-gray-400 mb-2'>Use Cases</div>
+                  <ul className='list-disc list-inside space-y-1'>
                     {service.useCases.map((useCase, index) => (;
-                      <li key={index}>{useCase}</li>;
+                      <li key={index}>{useCase}</li>
                     ))}
-                  </ul>;
-                </div>;
-                <div>;
-                  <div className='text-sm text-gray-400 mb-2'>Integrations</div>;
-                  <div className='flex flex-wrap gap-2'>;
+                  </ul>
+                </div>
+                <div>
+                  <div className='text-sm text-gray-400 mb-2'>Integrations</div>
+                  <div className='flex flex-wrap gap-2'>
                     {service.integrations.map((integration, index) => (;
-                      <span key={index} className='px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs'>;
+                      <span key={index} className='px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs'>
                         {integration}
-                      </span>;
+                      </span>
                     ))}
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-          <div className='space-y-6'>;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='space-y-6'>
             {/* Pricing Card */}
-            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>;
-              <div className='text-sm text-gray-400 mb-1'>Pricing</div>;
-              <div className='text-3xl font-bold text-white'>;
+            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>
+              <div className='text-sm text-gray-400 mb-1'>Pricing</div>
+              <div className='text-3xl font-bold text-white'>
                 {service.price}
-                <span className='text-base font-medium text-gray-400'>{service.period}</span>;
-              </div>;
-              <div className='text-sm text-gray-400 mt-2'>;
+                <span className='text-base font-medium text-gray-400'>{service.period}</span>
+              </div>
+              <div className='text-sm text-gray-400 mt-2'>
                 Contact us for custom pricing and implementation details;
-              </div>;
-              <div className='mt-6 flex gap-3'>;
-                <Link;
+              </div>
+              <div className='mt-6 flex gap-3'>
+                <Link
                   href='/contact';
                   className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300';
                 >;
                   Contact Sales;
-                </Link>;
-                <Link;
+                </Link>
+                <Link
                   href={service.link} ;
                   className='flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:border-gray-500 hover:text-white transition-all duration-300';
                 >;
-                  <ExternalLink className='w-4 h-4 inline mr-2' />;
+                  <ExternalLink className='w-4 h-4 inline mr-2' />
                   Learn More;
-                </Link>;
-              </div>;
-            </div>;
+                </Link>
+              </div>
+            </div>
             {/* Contact Card */}
-            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>;
-              <h3 className='text-white font-semibold mb-3'>Contact</h3>;
-              <div className='space-y-3 text-sm'>;
-                <div className='flex items-center gap-2 text-cyan-400'>;
-                  <Phone className='w-4 h-4' />;
-                  <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className='hover:underline'>;
+            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>
+              <h3 className='text-white font-semibold mb-3'>Contact</h3>
+              <div className='space-y-3 text-sm'>
+                <div className='flex items-center gap-2 text-cyan-400'>
+                  <Phone className='w-4 h-4' />
+                  <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className='hover:underline'>
                     {contactInfo.mobile}
-                  </a>;
-                </div>;
-                <div className='flex items-center gap-2 text-purple-400'>;
-                  <Mail className='w-4 h-4' />;
-                  <a href={`mailto:${contactInfo.email}`} className='hover:underline'>;
+                  </a>
+                </div>
+                <div className='flex items-center gap-2 text-purple-400'>
+                  <Mail className='w-4 h-4' />
+                  <a href={`mailto:${contactInfo.email}`} className='hover:underline'>
                     {contactInfo.email}
-                  </a>;
-                </div>;
-                <div className='flex items-center gap-2 text-green-400'>;
-                  <MapPin className='w-4 h-4' />;
-                  <a;
+                  </a>
+                </div>
+                <div className='flex items-center gap-2 text-green-400'>
+                  <MapPin className='w-4 h-4' />
+                  <a
                     href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} ;
                     target='_blank';
                     rel='noopener noreferrer';
                     className='text-xs hover:underline';
                   >;
                     {contactInfo.address}
-                  </a>;
-                </div>;
-              </div>;
-            </div>;
+                  </a>
+                </div>
+              </div>
+            </div>
             {/* Category & Info */}
-            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>;
-              <h3 className='text-white font-semibold mb-3'>Service Information</h3>;
-              <div className='space-y-3 text-sm text-gray-300'>;
-                <p className='leading-relaxed'>;
+            <div className='p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm'>
+              <h3 className='text-white font-semibold mb-3'>Service Information</h3>
+              <div className='space-y-3 text-sm text-gray-300'>
+                <p className='leading-relaxed'>
                   <span className='text-gray-400'>Category:</span> {service.category}
-                </p>;
-                <p className='leading-relaxed'>;
+                </p>
+                <p className='leading-relaxed'>
                   <span className='text-gray-400'>Service ID:</span> {service.id}
-                </p>;
-                <Link;
+                </p>
+                <Link
                   href='/pricing';
                   className='inline-block mt-2 text-cyan-300 hover:text-cyan-200';
                 >;
                   View Pricing Plans →;
-                </Link>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 }
 ;

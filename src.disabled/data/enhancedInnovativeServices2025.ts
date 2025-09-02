@@ -1,10 +1,10 @@
 import React from;
-  'react'; export interface ServiceContact {;
+  'react'; export interface ServiceContact {
   phone: string;
    email: string;
    website: string;
    address: string;
-}; export interface MicroSaasService {;
+}; export interface MicroSaasService {
   id: number;
    name: string;
    category: string;
@@ -25,7 +25,7 @@ import React from;
    integrations: string[];
    freeTier: boolean;
    trialPeriod: string;
-}; export interface ITService {;
+}; export interface ITService {
   id: number;
    name: string;
    category: string;
@@ -43,7 +43,7 @@ import React from;
    certifications: string[];
    deliveryTime: string;
    support: string;
-}; export interface AIService {;
+}; export interface AIService {
   id: number;
    name: string;
    category: string;

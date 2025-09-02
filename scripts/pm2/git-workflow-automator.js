@@ -41,7 +41,7 @@ class GitWorkflowAutomator {;
     }
 ;
     // Default configuration;
-    return {;
+    return {
       autoBranchNaming: true,;
       branchPrefix:;
   'feature/',;
@@ -100,7 +100,7 @@ class GitWorkflowAutomator {;
   'utf8';
       }).trim();
 ;
-      return {;
+      return {
         currentBranch,;
         hasChanges: status.length > 0,;
         changes: status.split(;
@@ -217,7 +217,7 @@ class GitWorkflowAutomator {;
     }
   }
 ;
-  generateCommitMessage(changes) {;
+  generateCommitMessage(changes) {
     const changeTypes = {,;
   M;
   ': 'modified,;
@@ -476,7 +476,7 @@ execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe;
     }
   }
 ;
-  async generateWorkflowReport() {;
+  async generateWorkflowReport() {
     const report = {;
       timestamp: new Date().toISOString(),;
       currentBranch: await this.getCurrentBranch(),;

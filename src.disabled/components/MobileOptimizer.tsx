@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from,;
   react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Smartphone,; Tablet,; Monitor,; Hand,; MousePointer,; ArrowUpDown,; ZoomIn,; ZoomOut,; RotateCcw,; RotateCw,; Maximize,; Minimize,; Settings,; X,; CheckCircle,; AlertTriangle,; Info,; Smartphone as PhoneIcon,; Wifi,; Battery,; Signal,; Volume2,; VolumeX,; Sun,; Moon,; Eye,; EyeOff; } from;
-  'lucide-react'; ; interface MobileSettings {;
+  'lucide-react'; ; interface MobileSettings {
    touchOptimization: boolean;
    gestureSupport: boolean;
    pinchZoom: boolean;
@@ -15,7 +15,7 @@ import React, { useState, useEffect, useCallback, useRef } from,;
    fontSize: 'small' | 'medium' | 'large';
    contrast: 'normal' | 'high' | 'inverted';
    brightness: 'auto' | 'low' | 'normal' | 'high;
-}; interface MobileOptimizerProps {;
+}; interface MobileOptimizerProps {
    enabled?: boolean;
    showPanel?: boolean;
    autoDetect?: boolean;

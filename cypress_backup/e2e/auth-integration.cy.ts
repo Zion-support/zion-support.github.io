@@ -1,6 +1,6 @@
 // Requires TEST_USER_DISPLAY_NAME, TEST_USER_EMAIL, and TEST_USER_PASSWORD in cypress.env.json;
 // Example cypress.env.json:;
-// {;
+// {
 //   'TEST_USER_DISPLAY_NAME': 'Test User',;
 //   'TEST_USER_EMAIL': 'test@example.com',;
 //   'TEST_USER_PASSWORD': 'Password123';

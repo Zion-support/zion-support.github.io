@@ -2,7 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Profile from '@/pages/Profile';
 import { vi, expect, test, beforeEach, afterEach } from 'vitest'; // Added beforeEach, afterEach;
 // Define the UserProfile structure based on usage;
-interface UserProfile {;
+interface UserProfile {
   id: string;
    name: string;
    email: string;
@@ -19,7 +19,7 @@ const originalFetch = global.fetch;
 // Helper to mock fetch;
 // It should be typed to align with how global.fetch is typed or how it;
   's used.;
-// global.fetch returns Promise<Response>, Response has a .json() method returning Promise<any>;
+// global.fetch returns Promise<Response>, Response has a .json() method returning Promise<any>
 // So, the mock should resolve to something that has a json method.;
 const mockFetchImplementation = (;
   responseData: UserProfile | { success: boolean } | Partial<UserProfile>,;
@@ -76,7 +76,7 @@ describe('Profile Page;
       avatarUrl: ';
   ',;
       notifications: { email: true, push: false }};
-    const updatedProfileData: UserProfile = {;
+    const updatedProfileData: UserProfile = {
       ...initialProfileData,;
       name: 'New Name;
   '};

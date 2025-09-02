@@ -22,19 +22,19 @@ import {}
   'lucide-react.ts';
 ;
 :pages.disabled/pages/services/AIContentCreation.tsx;
-export default function AIContentCreation(...args: any[]): any {;
+export default function AIContentCreation(...args: any[]): any {
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>';
-      <SEO'';
+      <SEO''
         title='AI Content Creation Services - Zion Tech Group'';
         description='Revolutionary AI-powered content creation for writing, visual design, video production, and multimedia content generation.';
       />;
 '{/* Hero Section */}''      <section className='relative overflow-hidden py-20'>'';
         <div className='absolute inset-0'>'';
           <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>'';
-          <div className='absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl'></div>'          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl'></div>;
+          <div className='absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl'></div>'          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl'></div>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-        </div>'''        <div className='relative z-10 container mx-auto px-4'>;
+        </div>'''        <div className='relative z-10 container mx-auto px-4'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
@@ -45,11 +45,11 @@ export default function AIContentCreation(...args: any[]): any {;
               <PenTool className='w-4 h-4 mr-2'  />              AI Content Creation;
             </div>';
 '';
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'AI Content Creation''              <span className='block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'AI Content Creation''              <span className='block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent'>
                 Services;
-              </span>;
+              </span>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-            </h1>'''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>;
+            </h1>'''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Transform your content strategy with AI-powered creation tools;
               that generate high-quality written content, visual assets, videos,;
               and multimedia content in seconds.;
@@ -66,28 +66,28 @@ export default function AIContentCreation(...args: any[]): any {;
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200'>                Schedule Demo;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIContentCreation.tsx;
 '{/* Features Section */}''      <section className='py-20'>'';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-              AI Content Creation Features'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+              AI Content Creation Features'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Our AI content creation platform combines cutting-edge technology;
               with creative intelligence to deliver engaging, high-quality;
               content across all media types.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-          </motion.div>'''          <div className='grid md: anygrid-cols-2 lg:grid-cols-4 gap-8'>;
+          </motion.div>'''          <div className='grid md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index) => (;
               <motion.div;
                 key={feature.title}
@@ -99,29 +99,29 @@ export default function AIContentCreation(...args: any[]): any {;
 :pages.disabled/pages/services/AIContentCreation.tsx;
                   <feature.icon className='w-6 h-6 text-purple-400' />';
                 </div>'';
-                <h3 className='text-xl font-semibold text-white mb-2'>;
-                  {feature.title}'</h3>''                <p className='text-slate-300'>{feature.description}</p>;
-              </motion.div>;
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  {feature.title}'</h3>''                <p className='text-slate-300'>{feature.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIContentCreation.tsx;
 '{/* Services Section */}''      <section className='py-20 bg-slate-900/50'>'';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-              Comprehensive Content Services'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+              Comprehensive Content Services'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               From written content to visual media, our AI content creation;
               services cover every aspect of your content needs.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-          </motion.div>'''          <div className='grid md: anygrid-cols-2 gap-8'>;
+          </motion.div>'''          <div className='grid md: anygrid-cols-2 gap-8'>
             {services.map((service, index) => (;
               <motion.div;
                 key={service.title}
@@ -133,41 +133,41 @@ export default function AIContentCreation(...args: any[]): any {;
 :pages.disabled/pages/services/AIContentCreation.tsx;
                   <service.icon className='w-8 h-8 text-purple-400' />';
                 </div>'';
-                <h3 className='text-2xl font-semibold text-white mb-4'>;
+                <h3 className='text-2xl font-semibold text-white mb-4'>
                   {service.title}';
                 </h3>'';
-                <p className='text-slate-300 text-lg mb-6'>;
+                <p className='text-slate-300 text-lg mb-6'>
                   {service.description}';
                 </p>'';
-                <ul className='space-y-2'>;
+                <ul className='space-y-2'>
                   {service.features.map((feature, featureIndex) => (;
                     <li'key={featureIndex}''                      className='flex items-center text-slate-300'';
                     >'';
                       <CheckCircle className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0'  />                      {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </motion.div>;
+                </ul>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIContentCreation.tsx;
 '{/* Technologies Section */}''      <section className='py-20'>'';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-              Advanced AI Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+              Advanced AI Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Our platform leverages cutting-edge AI technologies to provide the;
               most advanced content creation capabilities available.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIContentCreation.tsx;
-          </motion.div>'''          <div className='grid md: anygrid-cols-2 lg:grid-cols-4 gap-6'>;
+          </motion.div>'''          <div className='grid md: anygrid-cols-2 lg:grid-cols-4 gap-6'>
             {technologies.map((tech, index) => (;
               <motion.div;
                 key={tech}
@@ -175,23 +175,23 @@ export default function AIContentCreation(...args: any[]): any {;
 :pages.disabled/pages/services/AIContentCreation.tsx;
                 whileInView={{ opacity: 1, scale: 1 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200'';
               >'';
-                <Sparkles className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0'  />'                <span className='text-white text-sm'>{tech}</span>;
-              </motion.div>;
+                <Sparkles className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0'  />'                <span className='text-white text-sm'>{tech}</span>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIContentCreation.tsx;
 '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10'>'';
-        <div className='container mx-auto px-4 text-center'>;
+        <div className='container mx-auto px-4 text-center'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
             transition={{ duration: 0.6 }}';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
-              Ready to Transform Your Content?'</h2>''            <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
+              Ready to Transform Your Content?'</h2>''            <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
               Join the AI content revolution and create engaging, high-quality;
               content in seconds.;
 :pages.disabled/pages/services/AIContentCreation.tsx;
@@ -207,12 +207,12 @@ export default function AIContentCreation(...args: any[]): any {;
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200'>                Contact Our Team;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/AIContentCreation.tsx;
   )}
   '';

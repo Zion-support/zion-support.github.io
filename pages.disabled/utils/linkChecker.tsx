@@ -126,7 +126,7 @@ url: string;
       exists: true}}
 ;
   // Extract page title;
-  private extractPageTitle (content: string) : string {,;
+  private extractPageTitle (content: string) : string {,
   return titleMatch ? titleMatch[1].trim (): 'Untitled}
 ;
   // Get analysis summary;

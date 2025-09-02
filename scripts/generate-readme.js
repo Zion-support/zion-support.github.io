@@ -26,7 +26,7 @@ function main() {;
   if (!content.includes(;
   'Automation summary:')) {;
     content += footer;
-  } else {;
+  } else {
     // replace existing footer;
     content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m, footer);
   }

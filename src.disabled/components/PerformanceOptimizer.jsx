@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-;
+
 export const PerformanceOptimizer = ({ children }) => {;
   const location = useLocation();
 ;
@@ -17,7 +17,7 @@ export const PerformanceOptimizer = ({ children }) => {;
     }
   }, [location.pathname]);
 ;
-  return <>{children}</>;
+  return <>{children}</>
 };
 ;
 export default PerformanceOptimizer;

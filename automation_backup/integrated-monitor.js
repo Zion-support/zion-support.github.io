@@ -20,7 +20,7 @@ const fs = require(;
 const path = require(;
   'path');
 ;
-class IntegratedMonitor {;
+class IntegratedMonitor {
   constructor() {;
     this.browserMonitor = new BrowserErrorMonitor();
     this.errorFixer = new BrowserErrorFixer();
@@ -160,7 +160,7 @@ class IntegratedMonitor {;
         recentErrors: recentErrors.slice(-20), // Last 20 errors;
         fixesApplied: fixesApplied.slice(-20), // Last 20 fixes;
         browserMonitorStats: this.browserMonitor.stats,;
-        summary: {;
+        summary: {
           totalErrors: this.stats.totalErrors,;
           runtimeFixes: this.stats.runtimeFixes,;
           sourceCodeFixes: this.stats.sourceCodeFixes,;
@@ -174,7 +174,7 @@ class IntegratedMonitor {;
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 ;
       // console.log(`📄 Integrated report generated: ${reportPath}`);
-    } catch (error) {;
+    } catch (error) {
       console.error(,;
   ❌ Failed to generate integrated report: , error);
 ;

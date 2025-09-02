@@ -21,7 +21,7 @@ const { execSync, spawn } = require(;
 const cron = require(;
   'node-cron');
 ;
-class NetlifyBuildMonitor {;
+class NetlifyBuildMonitor {
   constructor() {;
     this.config = {;
       checkInterval: 5 * 60 * 1000, // 5 minutes;
@@ -734,7 +734,7 @@ class NetlifyBuildMonitor {;
     }
   }
 ;
-  async optimizeBuildConfig() {;
+  async optimizeBuildConfig() {
     this.log(;
   'Optimizing build configuration...');
 ;
@@ -776,7 +776,7 @@ class NetlifyBuildMonitor {;
     }
   }
 ;
-  async updateBuildScripts() {;
+  async updateBuildScripts() {
     this.log('Updating build scripts...;
   ');
 ;
@@ -808,7 +808,7 @@ class NetlifyBuildMonitor {;
     }
   }
 ;
-  async fixCommonTypeScriptIssues() {;
+  async fixCommonTypeScriptIssues() {
     this.log(;
   'Fixing common TypeScript issues...');
 ;
@@ -996,7 +996,7 @@ class NetlifyBuildMonitor {;
   ');
   }
 ;
-  getStatus() {;
+  getStatus() {
     return {;
       isRunning: this.isRunning,;
       lastCheck: new Date().toISOString(),;

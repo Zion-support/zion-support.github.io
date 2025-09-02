@@ -3,7 +3,7 @@ const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 ;
 // Assets to cache immediately;
-const STATIC_ASSETS = [;
+const STATIC_ASSETS = [
   '/',;
   '/about',;
   '/services',;
@@ -16,7 +16,7 @@ const STATIC_ASSETS = [;
   '/favicon-16x16.png'];
 ;
 // Assets to cache on demand;
-const CACHE_PATTERNS = [;
+const CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/,;
   /\.(?:css|js)$/,;
   /\.(?:woff|woff2|ttf|eot)$/];
@@ -137,7 +137,7 @@ async function handlePageRequest(request) {;
     }
 ;
     return networkResponse;
-  } catch (error) {;
+  } catch (error) {
     console.log('Service Worker: Network failed, trying cache');
 ;
     // Try cache as fallback;
@@ -155,21 +155,21 @@ async function handlePageRequest(request) {;
     // Fallback response;
     return new Response(;
       `;
-      <!DOCTYPE html>;
-      <html>;
-        <head>;
-          <title>Offline - Zion Tech Group</title>;
-          <meta name='viewport' content='width=device-width, initial-scale=1'>;
-          <style>;
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Offline - Zion Tech Group</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1'>
+          <style>
             body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
             .offline { color: #666; }
-          </style>;
-        </head>;
-        <body>;
-          <h1 class='offline'>You're offline</h1>;
-          <p>Please check your internet connection and try again.</p>;
-        </body>;
-      </html>;
+          </style>
+        </head>
+        <body>
+          <h1 class='offline'>You're offline</h1>
+          <p>Please check your internet connection and try again.</p>
+        </body>
+      </html>
       `,;
       {;
         headers: { 'Content-Type': 'text/html' }
@@ -250,7 +250,7 @@ self.addEventListener('push', (event) => {;
         dateOfArrival: Date.now(),;
         primaryKey: data.primaryKey;
       },;
-      actions: [;
+      actions: [
         {;
           action: 'explore',;
           title: 'View Details',;
@@ -287,7 +287,7 @@ async function getPendingSubmissions() {;
   return [];
 }
 ;
-async function removePendingSubmission(id) {;
+async function removePendingSubmission(id) {
   // In a real app, you would remove from IndexedDB;
   console.log('Service Worker: Removing pending submission', id);
 }

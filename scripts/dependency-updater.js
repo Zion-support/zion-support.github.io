@@ -64,7 +64,7 @@ class DependencyUpdater {;
         encoding:,;
   utf8;
   ',;
-        stdio: ['pipe,pipe',pipe;
+        stdio: ['pipe,pipe',pipe
   '];
       });
 ;
@@ -103,7 +103,7 @@ class DependencyUpdater {;
         cwd: this.projectRoot,;
         encoding:,;
   utf8',;
-        stdio: [;
+        stdio: [
   'pipe,pipe;
   ',pipe'];
       });
@@ -188,7 +188,7 @@ class DependencyUpdater {;
     try {;
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);
-    } catch (error) {;
+    } catch (error) {
       console.warn(;
   '⚠️  Could not save report:,;
   , error.message);

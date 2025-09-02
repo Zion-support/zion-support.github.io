@@ -14,9 +14,9 @@ import { ThemeProvider } from @/components/ThemeProvider';
 it;
   'applies dark class when toggled': unknown, async (: unknown { // Made test async,;
   render(;
-    <ThemeProvider>;
-      <ModeToggle />;
-    </ThemeProvider>;
+    <ThemeProvider>
+      <ModeToggle />
+    </ThemeProvider>
   );
   const button = document.querySelector('button;
   ');  fireEvent.click(button!);

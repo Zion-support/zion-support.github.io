@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from;
-  'react'; ; interface AnalyticsEvent {;
+  'react'; ; interface AnalyticsEvent {
    id: string;
    type: string;
    category: string;
@@ -12,7 +12,7 @@ import React, { useEffect, useState, useCallback } from;
    pageUrl: string;
    userAgent: string;
    referrer: string;
-}; interface PerformanceMetrics {;
+}; interface PerformanceMetrics {
    fcp: number;
    lcp: number;
    fid: number;
@@ -20,7 +20,7 @@ import React, { useEffect, useState, useCallback } from;
    ttfb: number;
    domLoad: number;
    windowLoad: number;
-}; interface UserBehavior {;
+}; interface UserBehavior {
    pageViews: number;
    sessionDuration: number;
    bounceRate: number;

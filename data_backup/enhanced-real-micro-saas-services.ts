@@ -1,4 +1,4 @@
-export type EnhancedRealMicroSaasService = {;
+export type EnhancedRealMicroSaasService = {
 	id: string;
 	name: string;
 	category?: string;

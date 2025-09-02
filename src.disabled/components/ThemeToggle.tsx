@@ -2,7 +2,7 @@ import React from;
   'react'; import { motion } from;
   'framer-motion'; import { Sun, Moon, Monitor } from;
   'lucide-react'; import { useTheme } from;
-  './ThemeProvider'; const ThemeToggle: React.FC = () => { const { theme, setTheme } = useTheme(); const themes = [ { name:;
+  './ThemeProvider'; const ThemeToggle: React.FC = () => { const { theme, setTheme } = useTheme(); const themes = [ { name:
   'light', icon: Sun, label:,;
   Light' }, { name: 'dark, icon: Moon, label:,;
   Dark' }, { name: 'system, icon: Monitor, label:,;

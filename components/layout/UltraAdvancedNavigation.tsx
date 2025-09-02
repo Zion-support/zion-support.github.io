@@ -1,4 +1,4 @@
-export default function UltraAdvancedNavigation() {;
+export default function UltraAdvancedNavigation() {
   return null;
 }
 ;

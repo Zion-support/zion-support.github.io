@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface MarketValidatedService {;
+export interface MarketValidatedService {
   id: string;
    name: string;
    tagline: string;
@@ -18,7 +18,7 @@ export interface MarketValidatedService {;
    email: string;
    address: string;
    website?: string;
-};const contactInfo = {;
+};const contactInfo = {
   mobile:,;
   +1 302 464 0950',;
 	email: 'kleber@ziontechgroup.com,;

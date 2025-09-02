@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import careers from './careers';
-;
+
 describe('careers', () => {;
   it('renders without crashing', () => {;
     render(<careers />);

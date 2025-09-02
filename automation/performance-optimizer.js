@@ -5,7 +5,7 @@ const path = require(;
   'path');
 const { execSync } = require(;
   'child_process');
-class PerformanceOptimizer {;
+class PerformanceOptimizer {
   constructor() {;
     this.optimizations = [];
     // // // // // // // // console.log(message);
@@ -81,7 +81,7 @@ try {;
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
 ;
 ;
-      return {;
+      return {
         totalDependencies: dependencies.length + devDependencies.length,;
         productionDependencies: dependencies.length,;
         devDependencies: devDependencies.length,;

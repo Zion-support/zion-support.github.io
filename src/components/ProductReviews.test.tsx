@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ProductReviews from './ProductReviews';
-;
+
 describe('ProductReviews', () => {;
   it('renders without crashing', () => {;
     render(<ProductReviews />);

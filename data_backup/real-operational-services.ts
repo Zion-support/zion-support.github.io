@@ -1,4 +1,4 @@
-export interface RealOperationalService {;
+export interface RealOperationalService {
   id: string;
    name: string;
    tagline: string;

@@ -1,18 +1,18 @@
 import React from 'react';
-;
+
 export function Avatar({ children, className = '' }) {;
-  return (;
-    <div;
+  return (
+    <div
       className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`}
     >;
       {children}
-    </div>;
+    </div>
   );
 }
 ;
 export function AvatarImage({ src, alt = '', className = '' }) {;
-  return (;
-    <img;
+  return (
+    <img
       src={src}
       alt={alt}
       className={`aspect-square h-full w-full ${className}`}
@@ -21,12 +21,12 @@ export function AvatarImage({ src, alt = '', className = '' }) {;
 }
 ;
 export function AvatarFallback({ children, className = '' }) {;
-  return (;
-    <div;
+  return (
+    <div
       className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`}
     >;
       {children}
-    </div>;
+    </div>
   );
 }
 ;

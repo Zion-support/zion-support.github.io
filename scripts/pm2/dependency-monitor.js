@@ -63,12 +63,12 @@ class DependencyMonitor {;
 ;
           });
 ;
-          return { vulnerabilities, error: true };
+          return { vulnerabilities, error: true }
 ;
       } catch (parseError) {;
         this.log(`Error parsing npm audit output: ${parseError.message}`);
 ;
-      return { error: true, message: error.message };
+      return { error: true, message: error.message }
 ;
   async checkOutdatedPackages() {;
     try {;
@@ -97,7 +97,7 @@ class DependencyMonitor {;
 ;
       return { /* empty */ };
 ;
-  async checkPackageLock() {;
+  async checkPackageLock() {
     try {;
       const packageLockPath = path.join(this.projectRoot,package-lock.json;
   ');
@@ -115,7 +115,7 @@ class DependencyMonitor {;
         dependencies: Object.keys(packageLock.dependencies || { /* empty */ }).length,;
         devDependencies: Object.keys(packageLock.devDependencies || { /* empty */ }).length;
       };
-    } catch (error) {;
+    } catch (error) {
       return { exists: false, error: error.message };
 ;
   async checkNodeVersion() {;
@@ -129,10 +129,10 @@ class DependencyMonitor {;
       }).trim();
 ;
       return { nodeVersion, npmVersion };
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
 ;
-  async checkGitHooks() {;
+  async checkGitHooks() {
     try {;
       const hooksDir = path.join(this.projectRoot,.git/hooks;
   ');
@@ -149,8 +149,8 @@ class DependencyMonitor {;
   ') || stats.mode & 0o111);
       });
 ;
-      return { exists: true, hooks: activeHooks };
-    } catch (error) {;
+      return { exists: true, hooks: activeHooks }
+    } catch (error) {
       return { error: error.message };
 ;
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {;

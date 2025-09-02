@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import AdvancedInnovativeServicesShowcase2026 from './AdvancedInnovativeServicesShowcase2026';
-;
+
 describe('AdvancedInnovativeServicesShowcase2026', () => {;
   it('renders without crashing', () => {;
     render(<AdvancedInnovativeServicesShowcase2026 />);

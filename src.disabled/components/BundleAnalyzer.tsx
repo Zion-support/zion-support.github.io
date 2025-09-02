@@ -1,12 +1,12 @@
 import React, { useEffect, useCallback, useState } from 'react.ts';
-;
-interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {;
+
+interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
   enabled?: boolean;
   showUI?: boolean;
 ;
 }
 ;
-interface BundleMetrics {;
+interface BundleMetrics {
   totalSize: number;
    chunkCount: number;
    largestChunk: {;
@@ -29,7 +29,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
     gzipSavings: 0;
   });
 ;
-  const analyzeBundle = useCallback(() => {;
+  const analyzeBundle = useCallback(() => {
     if (!enabled) return;
 ;
     try {;
@@ -42,7 +42,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
       let chunkCount = 0;
       let largestChunk = { name: unknown'', size: 0 };
 ;
-      resourceEntries.forEach((entry: )  => {;
+      resourceEntries.forEach((entry: )  => {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {;
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
@@ -91,7 +91,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
     }
   }, [enabled]);
 ;
-  const optimizeBundle = useCallback(() => {;
+  const optimizeBundle = useCallback(() => {
     if (!enabled) return;
 ;
     // Implement bundle optimization strategies;
@@ -147,14 +147,14 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
   }
 ;
   return (;
-    <div className='fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm'>;
-      <h3 className='text-sm font-semibold text-gray-800 mb-2'>Bundle Analysis</h3>;
-      <div className='space-y-2 text-xs text-gray-600'>;
-        <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>;
-        <div>Chunks: {metrics.chunkCount}</div>;
-        <div>Largest: {(metrics.largestChunk.size / 1024 / 1024).toFixed(2)} MB</div>;
-        <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>;
-      </div>;
-    </div>;
+    <div className='fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm'>
+      <h3 className='text-sm font-semibold text-gray-800 mb-2'>Bundle Analysis</h3>
+      <div className='space-y-2 text-xs text-gray-600'>
+        <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>
+        <div>Chunks: {metrics.chunkCount}</div>
+        <div>Largest: {(metrics.largestChunk.size / 1024 / 1024).toFixed(2)} MB</div>
+        <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>
+      </div>
+    </div>
   );
 };

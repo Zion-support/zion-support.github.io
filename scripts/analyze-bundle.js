@@ -101,7 +101,7 @@ function generateBundleReport() {;
     console.log(,;
   Consider code splitting or lazy loading for these components.')}
   const mediumFiles = jsFiles.filter(file => file.size > 50 * 1024 && file.size <= 100 * 1024);
-  if (mediumFiles.length > 0) {;
+  if (mediumFiles.length > 0) {
     // // // // // // // console.log(;
   '⚠️  Medium files: ');
     mediumFiles.forEach(file => {;

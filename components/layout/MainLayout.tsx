@@ -4,8 +4,8 @@ import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import SEOEnhancer from '../SEOEnhancer';
-;
-interface MainLayoutProps {;
+
+interface MainLayoutProps {
   children: React.ReactNode;
    title?: string;
    description?: string;
@@ -20,14 +20,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',;
   ogImage = '/og-image.jpg';
 }) => {;
-  return (;
-    <>      <SEOEnhancer;
+  return (
+    <>      <SEOEnhancer
         title={title}
         description={description}
         keywords={keywords}
         ogImage={ogImage}
       />;
-      <PerformanceOptimizer;
+      <PerformanceOptimizer
         preloadImages={[;
           '/hero-bg.jpg',;
           '/services-bg.jpg',;
@@ -37,14 +37,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
           'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
         ]}
       />;
-      <AccessibilityEnhancer>;
-        <div className='min-h-screen flex flex-col'>;
-          <Header />;
-          <main id='main-content' className='flex-grow' role='main'>;
+      <AccessibilityEnhancer>
+        <div className='min-h-screen flex flex-col'>
+          <Header />
+          <main id='main-content' className='flex-grow' role='main'>
             {children}
-          </main>;
-          <Footer />;
-        </div></AccessibilityEnhancer>;
+          </main>
+          <Footer />
+        </div></AccessibilityEnhancer>
 </>);
 };
 ;

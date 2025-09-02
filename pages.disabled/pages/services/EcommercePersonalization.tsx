@@ -21,7 +21,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
               <li className='flex items-center gap-2'><CheckCircle className='h-4 w-4 text-green-400' /> Realtime recs and bundles</li>'';
               <li className='flex items-center gap-2'><CheckCircle className='h-4 w-4 text-green-400' /> Cold‑start handling</li>'';
               <li className='flex items-center gap-2'><CheckCircle className='h-4 w-4 text-green-400' /> Price sensitivity nudges</li>'';
-              <li className='flex items-center gap-2'><CheckCircle className='h-4 w-4 text-green-400' /> Merchandiser controls</li>;
+              <li className='flex items-center gap-2'><CheckCircle className='h-4 w-4 text-green-400' /> Merchandiser controls</li>
 :pages.disabled/pages/services/EcommercePersonalization.tsx;
             </ul>'</div>''          <div className='rounded-xl border border-white/10 bg-white/5 p-6'>'';
             <div className='mb-2 font-semibold'>Outcomes</div>'';
@@ -30,11 +30,11 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EcommercePersonalization.tsx;
               <li className='flex items-center gap-2'><Sparkles className='h-4 w-4 text-cyan-300' /> +3–8% conversion rate</li>'              <li className='flex items-center gap-2'><BarChart3 className='h-4 w-4 text-cyan-300'/> Experiment results dashboard</li>';
             </ul>'';
-            <div className='mt-4 text-sm font-semibold text-cyan-300'>Pricing: $249–$1,499/month</div>;
-          </div>;
-        </div>';;'        <div className='mt-10 text-sm text-slate-400'>Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>;
-      </section>;
-    </div>;
+            <div className='mt-4 text-sm font-semibold text-cyan-300'>Pricing: $249–$1,499/month</div>
+          </div>
+        </div>';;'        <div className='mt-10 text-sm text-slate-400'>Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>
+      </section>
+    </div>
   )};
 ;
 :pages.disabled/pages/services/EcommercePersonalization.tsx;

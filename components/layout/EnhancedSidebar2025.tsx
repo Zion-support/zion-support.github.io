@@ -4,7 +4,7 @@ import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence      
   'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ';  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
               } from;
-  'lucide-react.ts'';interface SidebarItem {;
+  'lucide-react.ts'';interface SidebarItem {
   name: string;
    href: string;
    icon: React.ReactNode;
@@ -45,7 +45,7 @@ const sidebarSections = [;
         name: 'Quantum Computing,;
 ,;
   href: '/quantum-services, icon: Atom,'        description:,;
-  Next-generation quantum computing solutions', subItems[;
+  Next-generation quantum computing solutions', subItems[
   '          { name: 'Quantum Cloud Infrastructure, href:,;
   /quantum-cloud-infrastructure;
   ' }, { name: 'Quantum Bio-Computing, href:,;
@@ -83,7 +83,7 @@ const sidebarSections = [;
         name: 'Micro SAAS,;
 ,;
   href: '/micro-saas, icon: Rocket,'        description:,;
-  AI-powered micro SAAS solutions', subItems[;
+  AI-powered micro SAAS solutions', subItems[
   '          { name: 'AI Content Factory Platform, href:,;
   /ai-content-factory;
   ' }, { name: 'CRM Intelligence & Automation, href:,;
@@ -119,7 +119,7 @@ const sidebarSections = [;
         name: 'Emerging Tech,;
 ,;
   href: '/emerging-tech, icon: Sparkles,'        description:,;
-  Future technologies and innovations', subItems[;
+  Future technologies and innovations', subItems[
   '          { name: 'Brain-Computer Interface, href:,;
   /brain-computer-interface;
   ' }, { name: 'Autonomous Vehicle AI, href:,;
@@ -138,7 +138,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     title: 'Comp & Resources,;
   '    icon: Users, color:,;
   from-green-500 to-emerald-600;
-  ','    items[;
+  ','    items[
   '      {;
         name: 'About Us, href: '/about;
   ','        icon: Users, description:,;
@@ -179,7 +179,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   '/knowledge-base' }';        ]';      };];  };
 ];
 ;
-interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {;
+interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
   isOpen: boolean;
   onClose: ()               => void}
 ;
@@ -214,7 +214,7 @@ document.body.style.overflow =;
   'unset'}}, [isOpen])';  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (;
     <>;
       {/* Backdrop */}
-      <AnimatePresence>;
+      <AnimatePresence>
         {isOpen && (;
           <motion.div;
             initial = {{ opacity: 0 }}
@@ -222,7 +222,7 @@ document.body.style.overflow =;
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
 className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden''            onClick={onClose}'          />)}
-      </AnimatePresence>;
+      </AnimatePresence>
       {/* Sidebar */}
       <motion.div;
 initial={{ x:,;
@@ -236,14 +236,14 @@ initial={{ x:,;
   stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`;
         {/* Header */}
         <div className='sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6'>'          <div className='flex items-center justify-between mb-6'>'            <div className='flex items-center gap-3'>'              <div className='relative'>'                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>'                  <Zap className='w-6 h-6 text-white' />'                </div>'                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20'></div>'              </div>'              <div>';
-                <h2 className='text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent'>'                  Zion Tech Group'                </h2>;
-                <p className='text-gray-400 text-sm'>Revolutionary Technology</p>'              </div>'            </div>;
+                <h2 className='text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent'>'                  Zion Tech Group'                </h2>
+                <p className='text-gray-400 text-sm'>Revolutionary Technology</p>'              </div>'            </div>
             <button;
               onClick={onClose}
-              className='lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200'''              <X className='w-5 h-5 text-gray-400' />'            </button>'          </div>;
+              className='lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200'''              <X className='w-5 h-5 text-gray-400' />'            </button>'          </div>
           {/* Contact Bar */}
           <div className='space-y-3'>'            <div className='flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30'>'              <Phone className='w-4 h-4 text-cyan-400' />'              <span className='text-sm text-gray-300'>{contactInfo.mobile}</span>'            </div>'            <div className='flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30'>'              <Mail className='w-4 h-4 text-cyan-400' />'              <span className='text-sm text-gray-300'>{contactInfo.email}</span>'            </div>'          </div>';
-        </div>;
+        </div>
         {/* Navigation Content */}
         <div className='p-6 space-y-6'>'          {/* Home Link */}'          <Link;
             href='/''            onClick={onClose}'            className='flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group'''            <Home className='w-5 h-5 text-cyan-400' />'            <span className='text-white font-semibold'>Home</span>'          </Link>'';
@@ -251,7 +251,7 @@ initial={{ x:,;
           {sidebarSections.map((section, sectionIndex) => (;
             <div key={sectionIndex} className='space-y-3'>'              <button'                onClick={() => toggleSection(section.title)}
                 className='w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group'''                <div className='flex items-center gap-3'>'                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>'                    <section.icon className='w-4 h-4 text-white' />'                  </div>'                  <span className='text-white font-semibold'>{section.title}</span>'                </div>'                <ChevronDown`                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${`;
-                    expandedSections.has(section.title) ?, rotate-180': ''                  }`}'                />`              </button><AnimatePresence>;
+                    expandedSections.has(section.title) ?, rotate-180': ''                  }`}'                />`              </button><AnimatePresence>
                 {expandedSections.has(section.title) && (;
                   <motion.div;
                     initial = {;
@@ -264,15 +264,15 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 className='space-y-2 ml-6'''                    {section.items.map((item, itemIndex) => (;
                       <div key={itemIndex} className='space-y-2'>'                        <button'                          onClick={() => toggleItem(item.name)}
                           className='w-full flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left'''                          <div className='flex items-center gap-3'>'                            <item.icon className='w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200' />'                            <div>'                              <span className='text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium'>'                                {item.name}'                              </span>';
-                              <p className='text-gray-500 text-xs'>{item.description}</p>'                            </div>'                          </div>;
+                              <p className='text-gray-500 text-xs'>{item.description}</p>'                            </div>'                          </div>
                           {item.subItems && item.subItems.length > 0 && (;
                             <ChevronRight;
                               className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${`;
                                 expandedItems.has(item.name) ?, rotate-90;
-  ': ''                              }`}'                            />`                          )}</button>;
+  ': ''                              }`}'                            />`                          )}</button>
                         {/* Sub-items */}
                         {item.subItems && item.subItems.length > 0 && (;
-                          <AnimatePresence>;
+                          <AnimatePresence>
                             {expandedItems.has(item.name) && (;
                               <motion.div;
                                 initial = {;
@@ -288,29 +288,29 @@ className='space-y-1 ml-6'''                                {item.subItems.map((
                                     onClick={onClose}
 className='flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group'''                                    <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200'></div>'                                    <span className='text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs'>'                                      {subItem.name}'                                    </span></Link>';
                                 ))}
-                              </motion.div>;
+                              </motion.div>
                             )}
-                          </AnimatePresence>;
+                          </AnimatePresence>
                         )}
-                      </div>;
+                      </div>
                     ))}
-                  </motion.div>;
+                  </motion.div>
                 )}
-              </AnimatePresence>;
-            </div>;
+              </AnimatePresence>
+            </div>
           ))}
 ;
           {/* Quick Stats */}
 <div className='pt-6 border-t border-gray-800/50'>'            <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>Quick Stats</h4>'            <div className='grid grid-cols-2 gap-3'>'              <div className='text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30'>'                <div className='text-lg font-bold text-cyan-400'>500+</div>'                <div className='text-xs text-gray-400'>Services</div>'              </div>'              <div className='text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30'>'                <div className='text-lg font-bold text-purple-400'>1000+</div>'                <div className='text-xs text-gray-400'>Clients</div>'              </div>'            </div>';
-          </div>;
+          </div>
           {/* Contact CTA */}
           <div className='pt-6 border-t border-gray-800/50'>'            <div className='p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30'>'              <h4 className='text-sm font-semibold text-white mb-2'>Ready to Transform?</h4>'              <p className='text-gray-300 text-xs mb-3'>'                Get in touch to discuss your revolutionary technology needs.'              </p>';
               <Link;
                 href='/contact''                onClick={onClose}'                className='inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105'''                Contact Us;
-                <ChevronRight className='w-4 h-4' />'              </Link>'            </div>;
-          </div>;
-        </div>;
-      </motion.div>;
-</>;);
+                <ChevronRight className='w-4 h-4' />'              </Link>'            </div>
+          </div>
+        </div>
+      </motion.div>
+</>);
 }
 ;

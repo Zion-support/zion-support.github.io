@@ -8,9 +8,9 @@ import React from;
   id: string;
    status: string;
    // Add other fields if relevant';
-}' ' // Simplified structure for OpenAI's chat completion response interface OpenAIChoice {;
+}' ' // Simplified structure for OpenAI's chat completion response interface OpenAIChoice {
   message?: { content: string;
-}; finish_reason?: string; } interface OpenAIResponse {;
+}; finish_reason?: string; } interface OpenAIResponse {
   choices?: OpenAIChoice[];
    // Add other fields if necessary, e.g., error object error?: { message: string;
 }; } interface KBChatSuccessResponse {;

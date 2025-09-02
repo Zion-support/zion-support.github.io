@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/button';
     }
   };
   return();
-    <form onSubmit={handleSubmit} className='mt-4'>;
+    <form onSubmit={handleSubmit} className='mt-4'>
       <textarea;
         value={content}
         onChange={e => setContent(e.target.value)}''';
@@ -23,10 +23,10 @@ import { Button } from '@/components/ui/button';
         rows={3}''';
       />'''';
       <div className='mt-2 flex justify-end'>'''';
-        <Button type='submit" disabled={!content.trim()}>;
+        <Button type='submit" disabled={!content.trim()}>
           Post Reply;
-        </Button>;
-      </div>;
+        </Button>
+      </div>
     </form>)}
 ;
 export { ReplyForm };

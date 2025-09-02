@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X, Zap, Brain, Cloud, Shield } from 'lucide-react';
-;
+
 export const EnhancedHeader: React.FC = () => {;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 ;
-  const navLinks = [;
+  const navLinks = [
     { label: 'Home', href: '/' },;
     {;
       label: 'Services',;
@@ -28,73 +28,73 @@ export const EnhancedHeader: React.FC = () => {;
     { label: 'Contact', href: '/contact' }
   ];
   return (;
-    <header className='sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm'>;
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-        <div className='flex justify-between items-center h-16'>;
-          <Link to='/' className='text-xl sm:text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors'>;
+    <header className='sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-16'>
+          <Link to='/' className='text-xl sm:text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors'>
             Zion Tech Group;
-          </Link>;
-          <nav className='hidden md:flex items-center gap-6'>;
+          </Link>
+          <nav className='hidden md:flex items-center gap-6'>
             {navLinks.map((link) => (;
-              <div key={link.href} className='relative'>;
+              <div key={link.href} className='relative'>
                 {link.dropdown ? (;
                   <div;
                     className='relative';
                     onMouseEnter={() => setServicesOpen(true)}
                     onMouseLeave={() => setServicesOpen(false)}
                   >;
-                    <button className='flex items-center text-gray-700 hover:text-blue-600 transition-colors'>;
+                    <button className='flex items-center text-gray-700 hover:text-blue-600 transition-colors'>
                       {link.label}
-                      <ChevronDown className='w-4 h-4 ml-1' />;
-                    </button>;
+                      <ChevronDown className='w-4 h-4 ml-1' />
+                    </button>
                     {servicesOpen && (;
-                      <div className='absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50'>;
+                      <div className='absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50'>
                         {link.dropdown.map((item) => (;
-                          <Link;
+                          <Link
                             key={item.href}
                             to={item.href}
                             className='flex items-center px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors';
                           >;
-                            <item.icon className='w-4 h-4 mr-3' />;
+                            <item.icon className='w-4 h-4 mr-3' />
                             {item.label}
-                          </Link>;
+                          </Link>
                         ))}
-                      </div>;
+                      </div>
                     )}
-                  </div>;
+                  </div>
                 ) : (;
-                  <Link to={link.href} className='text-gray-700 hover:text-blue-600 transition-colors'>;
+                  <Link to={link.href} className='text-gray-700 hover:text-blue-600 transition-colors'>
                     {link.label}
-                  </Link>;
+                  </Link>
                 )}
-              </div>;
+              </div>
             ))}
 ;
-            <Link;
+            <Link
               to='/contact';
               className='hidden lg:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-semibold shadow-lg';
             >;
               Get Started;
-            </Link>;
-          </nav>;
+            </Link>
+          </nav>
           <button;
             aria-label='Toggle navigation';
             onClick={() => setMobileOpen((v) => !v)} ;
             className='md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100';
           >;
             {mobileOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
-          </button>;
-        </div>;
-      </div>;
+          </button>
+        </div>
+      </div>
       {mobileOpen && (;
-        <div className='md:hidden border-t border-gray-200 bg-white shadow-lg'>;
-          <div className='px-4 py-3 space-y-2'>;
+        <div className='md:hidden border-t border-gray-200 bg-white shadow-lg'>
+          <div className='px-4 py-3 space-y-2'>
             {navLinks.map((link) => (;
-              <div key={link.href}>;
+              <div key={link.href}>
                 {link.dropdown ? (;
-                  <div>;
-                    <div className='text-gray-500 text-sm font-semibold mb-2'>{link.label}</div>;
-                    <div className='ml-4 space-y-1'>;
+                  <div>
+                    <div className='text-gray-500 text-sm font-semibold mb-2'>{link.label}</div>
+                    <div className='ml-4 space-y-1'>
                       {link.dropdown.map((item) => (;
                         <Link;
                           key={item.href}
@@ -102,12 +102,12 @@ export const EnhancedHeader: React.FC = () => {;
                           className='flex items-center py-2 text-gray-700 hover:text-blue-600';
                           onClick={() => setMobileOpen(false)}
                         >;
-                          <item.icon className='w-4 h-4 mr-3' />;
+                          <item.icon className='w-4 h-4 mr-3' />
                           {item.label}
-                        </Link>;
+                        </Link>
                       ))}
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                 ) : (;
                   <Link;
                     to={link.href} ;
@@ -115,9 +115,9 @@ export const EnhancedHeader: React.FC = () => {;
                     onClick={() => setMobileOpen(false)}
                   >;
                     {link.label}
-                  </Link>;
+                  </Link>
                 )}
-              </div>;
+              </div>
             ))}
             <Link;
               to='/contact';
@@ -125,11 +125,11 @@ export const EnhancedHeader: React.FC = () => {;
               onClick={() => setMobileOpen(false)}
             >;
               Get Started;
-            </Link>;
-          </div>;
-        </div>;
+            </Link>
+          </div>
+        </div>
       )}
-    </header>;
+    </header>
   );
 };
 ;

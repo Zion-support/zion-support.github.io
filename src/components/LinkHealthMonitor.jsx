@@ -113,8 +113,8 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
     return (<>''';
       {/* Floating Action Button */}'''';
       <motion.button onClick={() => setIsOpen(true)} className='fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110' whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>'''';
-        <Link className='w-6 h-6'/>;
-      </motion.button>;
+        <Link className='w-6 h-6'/>
+      </motion.button>
 ''';
       {/* Modal */}'''';
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4' onClick={() => setIsOpen(false)}>;
@@ -140,10 +140,10 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                   ✕;
                 </button>''';
               </div>'''';
-              <p className='text-cyan-100 mt-2'>;
+              <p className='text-cyan-100 mt-2'>
                 Monitor and maintain the health of all website links;
-              </p>;
-            </div>;
+              </p>
+            </div>
 ''';
             {/* Content */}'''';
             <div className='p-6 space-y-6'>''';
@@ -163,8 +163,8 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                   </div>'''';
                   <div className='bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center'>'''';
                     <div className='text-2xl font-bold text-blue-400'>{report.externalLinks}</div>'''';
-                    <div className='text-blue-400 text-sm'>External</div>;
-                  </div>;
+                    <div className='text-blue-400 text-sm'>External</div>
+                  </div>
                 </div>) }
 ''';
               {/* Actions */}'''';
@@ -189,14 +189,14 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 ? 'bg-green-500 text-white''`'`;
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>;
                     Healthy;
-                  </button>;
+                  </button>
                 </div>''';
 '''';
                 <button onClick={startMonitoring} disabled={isMonitoring} className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2'>'''';
                   {isMonitoring ? (<RefreshCw className='w-4 h-4 animate-spin'/>) : (<Zap className='w-4 h-4'/>)}';
-                  <span>{isMonitoring ? 'Checking...' : 'Check All Links'}</span>;
-                </button>;
-              </div>;
+                  <span>{isMonitoring ? 'Checking...' : 'Check All Links'}</span>
+                </button>
+              </div>
 ''';
               {/* Links Table */}'''';
               <div className='bg-gray-800 rounded-lg overflow-hidden'>'''';
@@ -204,21 +204,21 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                   <table className='w-full'>'''';
                     <thead className='bg-gray-700'>''';
                       <tr>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Status''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Link''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Parent Page''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Response Time''';
                         </th>'''';
-                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>;
+                        <th className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'>
                           Last Checked;
-                        </th>;
+                        </th>
                       </tr>''';
                     </thead>'''';
                     <tbody className='divide-y divide-gray-700'>'''';
@@ -226,9 +226,9 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                           <td className='px-6 py-4 whitespace-nowrap'>'''';
                             <div className='flex items-center space-x-2'>`;
                               {getStatusIcon(link.status)}``;
-                              <span className={`text-sm font-medium ${getStatusColor(link.status)}`}>;
+                              <span className={`text-sm font-medium ${getStatusColor(link.status)}`}>
                                 {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
-                              </span>;
+                              </span>
                             </div>''';
                           </td>'''';
                           <td className='px-6 py-4 whitespace-nowrap'>'''';
@@ -237,7 +237,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                                 <span className='truncate'>{link.url}</span>'''';
                                 <ExternalLink className='w-3 h-3'/>''';
                               </a>'''';
-                              {link.linkText && (<div className='text-xs text-gray-400 mt-1'>;
+                              {link.linkText && (<div className='text-xs text-gray-400 mt-1'>
                                   Text: {link.linkText}
                                 </div>) }
                             </div>''';
@@ -248,30 +248,30 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                           <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-300'>'`'`;
                             {link.responseTime ? `${link.responseTime}ms` : 'N/A'}''';
                           </td>'''';
-                          <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-300'>;
+                          <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-300'>
                             {link.lastChecked.toLocaleDateString()}
-                          </td>;
+                          </td>
                         </tr>) ) }
-                    </tbody>;
-                  </table>;
-                </div>;
-              </div>;
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 ''';
               {/* Recommendations */}'''';
               <div className='bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4'>'''';
                 <h3 className='text-lg font-semibold text-yellow-400 mb-2 flex items-center'>'''';
-                  <AlertTriangle className='w-5 h-5 mr-2'/>;
+                  <AlertTriangle className='w-5 h-5 mr-2'/>
                   Recommendations''';
                 </h3>'''';
-                <ul className='text-yellow-200 text-sm space-y-1'>;
-                  <li>• Fix broken LinkedIn and social media links</li>;
-                  <li>• Implement proper redirects for moved pages</li>;
-                  <li>• Set up automated link monitoring</li>;
-                  <li>• Review external link validity regularly</li>;
-                </ul>;
-              </div>;
-            </div>;
-          </motion.div>;
+                <ul className='text-yellow-200 text-sm space-y-1'>
+                  <li>• Fix broken LinkedIn and social media links</li>
+                  <li>• Implement proper redirects for moved pages</li>
+                  <li>• Set up automated link monitoring</li>
+                  <li>• Review external link validity regularly</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>)}
     </>)};
 export default LinkHealthMonitor;

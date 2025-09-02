@@ -1,4 +1,4 @@
-interface SupabaseUser {;
+interface SupabaseUser {
    id: string;
    email?: string;
    user_metadata?: { full_name?: string;
@@ -11,7 +11,7 @@ interface SupabaseUser {;
    is_email_verified?: boolean;
    created_at?: string;
    updated_at?: string;
-} interface MappedUser {;
+} interface MappedUser {
    id: string;
    email: string;
    displayName?: string;

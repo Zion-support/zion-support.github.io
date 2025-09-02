@@ -69,8 +69,8 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
         title='Affiliate Tracking Platform - Zion Tech Group''';
         description='Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM.''        keywords='affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts';
        />';
-    <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>;
-      <SEO'';
+    <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
+      <SEO''
         title='Affiliate Tracking Platform - Zion Tech Group'';
         description='Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM.'';
         keywords='affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts'';
@@ -78,7 +78,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       {/* Hero */}'';
       <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>'';
         <div className='absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20' />'';
-        <div className='relative max-w-7xl mx-auto'>;
+        <div className='relative max-w-7xl mx-auto'>
           <motion.h1;
             initial = {}
   { opacity: 0,;
@@ -102,10 +102,10 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
             transition={{ duration: 0.6 }}'';
             className='text-4xl md:text-6xl font-bold text-white mb-6'';
             Affiliate Tracking Platform'';
-            <span className='block text-zion-cyan text-2xl md:text-3xl mt-2'>Recruit. Attribute. Reward.</span>;
+            <span className='block text-zion-cyan text-2xl md:text-3xl mt-2'>Recruit. Attribute. Reward.</span>
           </motion.h1>';
 '';
-          <p className='text-xl text-zion-slate-light max-w-3xl'>;
+          <p className='text-xl text-zion-slate-light max-w-3xl'>
             End-to-end partner marketing infrastructure: from recruitment to payouts, with trusted, fraud-resistant attribution.;
           </p>';
 '';
@@ -119,32 +119,32 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
             transition={{ duration: 0.6 }}'';
             className='text-4xl md:text-6xl font-bold text-white mb-6'';
             Affiliate Tracking Platform'';
-            <span className='block text-zion-cyan text-2xl md:text-3xl mt-2'>Recruit. Attribute. Reward.</span>;
-          </motion.h1>;
+            <span className='block text-zion-cyan text-2xl md:text-3xl mt-2'>Recruit. Attribute. Reward.</span>
+          </motion.h1>
 '';
-          <p className='text-xl text-zion-slate-light max-w-3xl'>;
+          <p className='text-xl text-zion-slate-light max-w-3xl'>
             End-to-end partner marketing infrastructure: from recruitment to payouts, with trusted, fraud-resistant attribution.;
-          </p>;
+          </p>
 '';
           <div className='mt-8 flex flex-col sm:flex-row gap-4'>'';
             <Button asChild size='lg' className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white'>'';
-              <Link to='/request-quote'>;
+              <Link to='/request-quote'>
                 Request a demo'';
-                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>;
+                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>
             </Button>'';
             <Button asChild variant='outline' size='lg' className='border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white'>'';
-              <a href='tel:+13024640950'>Call +1 302 464 0950</a>;
-            </Button>;
-          </div>;
-        </div>;
+              <a href='tel:+13024640950'>Call +1 302 464 0950</a>
+            </Button>
+          </div>
+        </div>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
       </section>';
-      </section>;
+      </section>
 ;
       {/* Feature grid */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8'>';
         <div className='max-w-7xl mx-auto'>'';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
             {features.map((f();
               <motion.div;
@@ -176,18 +176,18 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
                 <div className='flex items-start gap-3'>'';
 :pages.disabled/pages/services/AffiliateTracking.tsx;
                   <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5'  />';
-                  <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5'  />;
+                  <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5'  />
                   <div>'';
-                    <h3 className='text-white font-semibold mb-1'>{f.title}</h3>'                    <p className='text-zion-slate-light text-sm'>{f.description}</p>;
-                  </div>;
-                </div>;
-              </motion.div>;
+                    <h3 className='text-white font-semibold mb-1'>{f.title}</h3>'                    <p className='text-zion-slate-light text-sm'>{f.description}</p>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Market context */}'';
       <section className='py-8 px-4 sm:px-6 lg:px-8'>';
         <div className='max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6'>'';
@@ -196,34 +196,34 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
               <BarChart3 className='w-6 h-6 text-zion-cyan' />'';
 :pages.disabled/pages/services/AffiliateTracking.tsx;
               <h3 className='text-white text-lg font-semibold'>Market pricing snapshot</h3>';
-              <h3 className='text-white text-lg font-semibold'>Market pricing snapshot</h3>;
+              <h3 className='text-white text-lg font-semibold'>Market pricing snapshot</h3>
             </div>'';
             <div className='flex flex-wrap gap-2'>'';
               <Badge variant='outline' className='text-zion-cyan border-zion-cyan/40'>SaaS</Badge>'';
               <Badge variant='outline' className='text-zion-purple border-zion-purple/40'>DTC</Badge>'';
-              <Badge variant='outline' className='text-white border-white/20'>B2B</Badge>;
+              <Badge variant='outline' className='text-white border-white/20'>B2B</Badge>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
             </div>';
           </div>'';
           <p className='text-zion-slate-light mt-3 text-sm'>'';
             Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{' '}'''';
             <a className='text-zion-cyan hover:text-zion-cyan-light' href='https://tapfiliate.com/pricing/' target='_blank' rel='noreferrer'>Tapfiliate</a>,{' '}'''';
-            </div>;
+            </div>
           </div>'';
-          <p className='text-zion-slate-light mt-3 text-sm'>;
+          <p className='text-zion-slate-light mt-3 text-sm'>
             Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{' '}''';
             <a className='text-zion-cyan hover:text-zion-cyan-light' href='https://tapfiliate.com/pricing/' target='_blank' rel='noreferrer'>Tapfiliate</a>,{' '}''';
             <a className='text-zion-cyan hover:text-zion-cyan-light' href='https://firstpromoter.com/pricing' target='_blank' rel='noreferrer'>FirstPromoter</a> and{' '}'';
             <a className='text-zion-cyan hover:text-zion-cyan-light' href='https://postaffiliatepro.com/pricing/' target='_blank' rel='noreferrer'>Post Affiliate Pro</a>.;
-          </p>;
-        </div>;
+          </p>
+        </div>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Plans */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8'>';
         <div className='max-w-7xl mx-auto'>'';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
             {plans.map(plan: unknown, i: unknown();
               <motion.div;
@@ -262,8 +262,8 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}';
                 {i === 1 && (';
                   <div className='absolute -top-4 left-1/2 -translate-x-1/2'>'';
-                    <Badge className='bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2'>Most Popular</Badge>;
-                  </div>;
+                    <Badge className='bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2'>Most Popular</Badge>
+                  </div>
                 )}';
   delay: i * 0.05;
 }}
@@ -271,8 +271,8 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 ;
                 {i === 1 && (';
                   <div className='absolute -top-4 left-1/2 -translate-x-1/2'>'';
-                    <Badge className='bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2'>Most Popular</Badge>;
-                  </div>;
+                    <Badge className='bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2'>Most Popular</Badge>
+                  </div>
                 )}
 '';
                 <h3 className='text-2xl font-bold text-white'>{plan.name}</h3>'';
@@ -283,13 +283,13 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
                   <span className='text-zion-slate-light'>/{plan.unit}</span>';
                 </div>'';
                 <div className='space-y-2 mb-6'>';
-                  <span className='text-zion-slate-light'>/{plan.unit}</span>;
+                  <span className='text-zion-slate-light'>/{plan.unit}</span>
                 </div>'';
-                <div className='space-y-2 mb-6'>;
+                <div className='space-y-2 mb-6'>
                   {plan.bullets.map((b) => ('';
                     <div key={b} className='flex items-start gap-2'>'';
-                      <CheckCircle className='w-4 h-4 text-zion-cyan mt-0.5'  />'                      <span className='text-zion-slate-light text-sm'>{b}</span>;
-                    </div>;
+                      <CheckCircle className='w-4 h-4 text-zion-cyan mt-0.5'  />'                      <span className='text-zion-slate-light text-sm'>{b}</span>
+                    </div>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
                   ))}';
                 </div>'';
@@ -298,14 +298,14 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
                   ))}
                 </div>'';
                 <Button asChild className='w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white'>'';
-                  <Link to='/contact'>;
+                  <Link to='/contact'>
                     Get started'';
-                    <ArrowRight className='ml-2 w-4 h-4'  />                  </Link>;
-                </Button>;
-              </motion.div>;
+                    <ArrowRight className='ml-2 w-4 h-4'  />                  </Link>
+                </Button>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
       </section>';
       {/* CTA */}'';
@@ -318,55 +318,55 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           <div className='flex gap-3'>'';
             <Button asChild variant='outline' className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-slate-900'>'';
               <a href='mailto:kleber@ziontechgroup.com?subject=Affiliate Program Inquiry'>Email kleber@ziontechgroup.com</a>';
-      </section>;
+      </section>
       {/* CTA */}'';
       <section className='py-12 px-4 sm:px-6 lg:px-8'>';
-        <div className='max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4'>;
+        <div className='max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
           <div>'';
             <h3 className='text-white text-xl font-semibold'>Want a tailored affiliate strategy?</h3>'';
-            <p className='text-zion-slate-light text-sm'>Email us and well share a free program blueprint for your use case.</p>;
+            <p className='text-zion-slate-light text-sm'>Email us and well share a free program blueprint for your use case.</p>
           </div>'';
           <div className='flex gap-3'>'';
             <Button asChild variant='outline' className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-slate-900'>'';
-              <a href='mailto:kleber@ziontechgroup.com?subject=Affiliate Program Inquiry'>Email kleber@ziontechgroup.com</a>;
+              <a href='mailto:kleber@ziontechgroup.com?subject=Affiliate Program Inquiry'>Email kleber@ziontechgroup.com</a>
             </Button>'';
             <Button asChild className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white'>'';
-              <Link to='/request-quote'>Request quote</Link>;
-            </Button>;
-          </div>;
-        </div>;
+              <Link to='/request-quote'>Request quote</Link>
+            </Button>
+          </div>
+        </div>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
       </section>';
-      </section>;
+      </section>
       {/* References */}'';
       <section className='py-8 px-4 sm:px-6 lg:px-8'>';
         <div className='max-w-7xl mx-auto'>'';
           <h3 className='text-white text-lg font-semibold mb-4'>Helpful links</h3>'';
 :pages.disabled/pages/services/AffiliateTracking.tsx;
           <ul className='space-y-2'>';
-          <ul className='space-y-2'>;
+          <ul className='space-y-2'>
             <li>'';
               <a className='inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light' href='https://tapfiliate.com/pricing/' target='_blank' rel='noreferrer'>'';
-                <Link2 className='w-4 h-4' /> Tapfiliate pricing <ExternalLink className='w-4 h-4'  />;
-              </a>;
+                <Link2 className='w-4 h-4' /> Tapfiliate pricing <ExternalLink className='w-4 h-4'  />
+              </a>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
             </li>';
-            </li>;
+            </li>
             <li>'';
               <a className='inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light' href='https://firstpromoter.com/pricing' target='_blank' rel='noreferrer'>'';
-                <Link2 className='w-4 h-4' /> FirstPromoter pricing <ExternalLink className='w-4 h-4'  />;
-              </a>;
+                <Link2 className='w-4 h-4' /> FirstPromoter pricing <ExternalLink className='w-4 h-4'  />
+              </a>
 :pages.disabled/pages/services/AffiliateTracking.tsx;
             </li>';
-            </li>;
+            </li>
             <li>'';
               <a className='inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light' href='https://postaffiliatepro.com/pricing/' target='_blank' rel='noreferrer'>'';
-                <Link2 className='w-4 h-4' /> Post Affiliate Pro pricing <ExternalLink className='w-4 h-4'  />;              </a>;
-            </li>;
-          </ul>;
-        </div>;
-      </section>;
-    </div>;
+                <Link2 className='w-4 h-4' /> Post Affiliate Pro pricing <ExternalLink className='w-4 h-4'  />              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   );
 </div>}
 :pages.disabled/pages/services/AffiliateTracking.tsx;

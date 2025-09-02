@@ -60,7 +60,7 @@ export const QuoteRequestForm = () => {}
     { value: '100k-plus', label: '$100,000+' },';
     { value: 'to-be-discussed', label: 'To be discussed' }
   ]';
-  const urgencyLevels = ['';
+  const urgencyLevels = [''
     { value: 'low', label: 'Low - Planning phase' },';
     { value: 'medium', label: 'Medium - Ready to start soon' },';
     { value: 'high', label: 'High - Need to start immediately' },';
@@ -147,23 +147,23 @@ export const QuoteRequestForm = () => {}
       <Card className='max-w-2xl mx-auto'>'''';
         <CardContent className='p-8 text-center'>'''';
           <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4' />'''';
-          <h2 className='text-2xl font-bold text-gray-900 mb-2'>;
+          <h2 className='text-2xl font-bold text-gray-900 mb-2'>
             Quote Request Submitted!''';
           </h2>'''';
-          <p className='text-gray-600 mb-6'>;
+          <p className='text-gray-600 mb-6'>
             Thank you for your interest.Our team will review your request and;
-            get back to you within 24 hours.</p>;
+            get back to you within 24 hours.</p>
           <Button onClick={ () => setIsSubmitted(false) }>;
             Submit Another Request;
-          </Button>;
-        </CardContent>;
+          </Button>
+        </CardContent>
       </Card>) ;
   }
 ''';
   return ('''';
     <Card className='max-w-4xl mx-auto'>'''';
       <CardHeader className='text-center'>'''';
-        <CardTitle className='text-3xl font-bold'>Request a Quote</CardTitle>;
+        <CardTitle className='text-3xl font-bold'>Request a Quote</CardTitle>
         <CardDescription>';
           Tell us about your project and we'll provide you with a customized;
           quote;
@@ -174,9 +174,9 @@ export const QuoteRequestForm = () => {}
           {/* Personal Information */}'''';
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 First Name *;
-              </label>;
+              </label>
               <Input;
                 value={formData.firstName}'''';
                 onChange={e => handleChange('firstName', e.target.value)}''''';
@@ -184,14 +184,14 @@ export const QuoteRequestForm = () => {}
                 className={errors.firstName ? 'border-red-500' : ''}
               />''';
               {errors.firstName && ('''';
-                <p className='text-red-500 text-sm mt-1'>{errors.firstName}</p>;
+                <p className='text-red-500 text-sm mt-1'>{errors.firstName}</p>
               )}
-            </div>;
+            </div>
 ''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Last Name *;
-              </label>;
+              </label>
               <Input;
                 value={formData.lastName}'''';
                 onChange={e => handleChange('lastName', e.target.value)}''''';
@@ -199,15 +199,15 @@ export const QuoteRequestForm = () => {}
                 className={errors.lastName ? 'border-red-500' : ''}
               />''';
               {errors.lastName && ('''';
-                <p className='text-red-500 text-sm mt-1'>{errors.lastName}</p>;
+                <p className='text-red-500 text-sm mt-1'>{errors.lastName}</p>
               )}
-            </div>;
-          </div>;
+            </div>
+          </div>
 ''';
           {/* Contact Information */}'''';
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Email *;
               </label>''';
               <Input'''';
@@ -218,26 +218,26 @@ export const QuoteRequestForm = () => {}
                 className={errors.email ? 'border-red-500' : ''}
               />''';
               {errors.email && ('''';
-                <p className='text-red-500 text-sm mt-1'>{errors.email}</p>;
+                <p className='text-red-500 text-sm mt-1'>{errors.email}</p>
               )}
-            </div>;
+            </div>
 ''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Phone;
-              </label>;
+              </label>
               <Input;
                 value={formData.phone}'''';
                 onChange={e => handleChange('phone', e.target.value)}'''';
                 placeholder='+1 (555) 123-4567''';
               />;
-            </div>;
-          </div>;
+            </div>
+          </div>
           {/* Company Information */}''';
           <div>'''';
-            <label className='block text-sm font-medium text-gray-700 mb-2'>;
+            <label className='block text-sm font-medium text-gray-700 mb-2'>
               Company Name *;
-            </label>;
+            </label>
             <Input;
               value={formData.company}'''';
               onChange={e => handleChange('company', e.target.value)}''''';
@@ -245,16 +245,16 @@ export const QuoteRequestForm = () => {}
               className={errors.company ? 'border-red-500' : ''}
             />''';
             {errors.company && ('''';
-              <p className='text-red-500 text-sm mt-1'>{errors.company}</p>;
+              <p className='text-red-500 text-sm mt-1'>{errors.company}</p>
             )}
-          </div>;
+          </div>
 ''';
           {/* Project Details */}'''';
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Service Type *;
-              </label>;
+              </label>
               <Select;
                 value={formData.serviceType}';
                 onValueChange={value => handleChange('serviceType', value)}
@@ -262,89 +262,89 @@ export const QuoteRequestForm = () => {}
                 <SelectTrigger'';
                   className={errors.serviceType ? 'border-red-500' : ''}''';
                 >'''';
-                  <SelectValue placeholder='Select a service' />;
-                </SelectTrigger>;
-                <SelectContent>;
+                  <SelectValue placeholder='Select a service' />
+                </SelectTrigger>
+                <SelectContent>
                   {serviceTypes.map(service => (;
-                    <SelectItem key={service.value} value={service.value}>;
+                    <SelectItem key={service.value} value={service.value}>
                       {service.label}
                     </SelectItem>) ) }
-                </SelectContent>;
+                </SelectContent>
               </Select>''';
               {errors.serviceType && ('''';
-                <p className='text-red-500 text-sm mt-1'>;
+                <p className='text-red-500 text-sm mt-1'>
                   {errors.serviceType}
-                </p>;
+                </p>
               )}
-            </div>;
+            </div>
 ''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Timeline;
-              </label>;
+              </label>
               <Select;
                 value={formData.timeline}';
                 onValueChange={value => handleChange('timeline', value)}
               >''';
                 <SelectTrigger>'''';
-                  <SelectValue placeholder='Select timeline' />;
-                </SelectTrigger>;
-                <SelectContent>;
+                  <SelectValue placeholder='Select timeline' />
+                </SelectTrigger>
+                <SelectContent>
                   {timelineOptions.map(timeline => (;
-                    <SelectItem key={timeline.value} value={timeline.value}>;
+                    <SelectItem key={timeline.value} value={timeline.value}>
                       {timeline.label}
                     </SelectItem>) ) }
-                </SelectContent>;
-              </Select>;
-            </div>;
+                </SelectContent>
+              </Select>
+            </div>
           </div>''';
 '''';
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Budget Range;
-              </label>;
+              </label>
               <Select;
                 value={formData.budget}';
                 onValueChange={value => handleChange('budget', value)}
               >''';
                 <SelectTrigger>'''';
-                  <SelectValue placeholder='Select budget range' />;
-                </SelectTrigger>;
-                <SelectContent>;
+                  <SelectValue placeholder='Select budget range' />
+                </SelectTrigger>
+                <SelectContent>
                   {budgetRanges.map(budget => (;
-                    <SelectItem key={budget.value} value={budget.value}>;
+                    <SelectItem key={budget.value} value={budget.value}>
                       {budget.label}
                     </SelectItem>) ) }
-                </SelectContent>;
-              </Select>;
-            </div>;
+                </SelectContent>
+              </Select>
+            </div>
 ''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Urgency Level;
-              </label>;
+              </label>
               <Select;
                 value={formData.urgency}';
                 onValueChange={value => handleChange('urgency', value)}
               >;
-                <SelectTrigger>;
-                  <SelectValue />;
-                </SelectTrigger>;
-                <SelectContent>;
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
                   {urgencyLevels.map(urgency => (;
-                    <SelectItem key={urgency.value} value={urgency.value}>;
+                    <SelectItem key={urgency.value} value={urgency.value}>
                       {urgency.label}
                     </SelectItem>) ) }
-                </SelectContent>;
-              </Select>;
-            </div>;
-          </div>;
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
           {/* Project Description */}''';
           <div>'''';
-            <label className='block text-sm font-medium text-gray-700 mb-2'>;
+            <label className='block text-sm font-medium text-gray-700 mb-2'>
               Project Description *;
-            </label>;
+            </label>
             <Textarea;
               value={formData.projectDescription}'''';
               onChange={e => handleChange('projectDescription', e.target.value)}'''';
@@ -353,33 +353,33 @@ export const QuoteRequestForm = () => {}
               className={errors.projectDescription ? 'border-red-500' : ''}
             />''';
             {errors.projectDescription && ('''';
-              <p className='text-red-500 text-sm mt-1'>;
+              <p className='text-red-500 text-sm mt-1'>
                 {errors.projectDescription}
-              </p>;
+              </p>
             )}
-          </div>;
+          </div>
 ''';
           {/* Preferences */}'''';
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>''';
             <div>'''';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Preferred Contact Method;
-              </label>;
+              </label>
               <Select;
                 value={formData.contactMethod}';
                 onValueChange={value => handleChange('contactMethod', value)}
               >;
-                <SelectTrigger>;
-                  <SelectValue />;
+                <SelectTrigger>
+                  <SelectValue />
                 </SelectTrigger>''';
                 <SelectContent>'''';
                   <SelectItem value='email'>Email</SelectItem>'''';
                   <SelectItem value='phone'>Phone</SelectItem>'''';
-                  <SelectItem value='both'>Both</SelectItem>;
-                </SelectContent>;
-              </Select>;
-            </div>;
-          </div>;
+                  <SelectItem value='both'>Both</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
 ''';
           {/* Checkboxes */}'''';
           <div className='space-y-4'>'''';
@@ -397,10 +397,10 @@ export const QuoteRequestForm = () => {}
                   Terms and Conditions'';
                 </a>{' '}
                 *;
-              </label>;
+              </label>
             </div>''';
             {errors.agreeToTerms && ('''';
-              <p className='text-red-500 text-sm'>{errors.agreeToTerms}</p>;
+              <p className='text-red-500 text-sm'>{errors.agreeToTerms}</p>
             )}''';
 '''';
             <div className='flex items-center space-x-2'>''';
@@ -411,32 +411,32 @@ export const QuoteRequestForm = () => {}
                   handleChange('agreeToMarketing', checked);
                 }''';
               />'''';
-              <label htmlFor='marketing' className='text-sm text-gray-700'>;
+              <label htmlFor='marketing' className='text-sm text-gray-700'>
                 I agree to receive marketing communications from Zion Tech Group;
-              </label>;
-            </div>;
-          </div>;
+              </label>
+            </div>
+          </div>
 ''';
           {/* Submit Button */}'''';
           <div className='text-center'>''';
-            <Button'''';
+            <Button''''
               type='submit'''';
               disabled={isSubmitting}'''';
               className='px-8 py-3 text-lg '>;
               {isSubmitting ? (''';
                 <>'''';
-                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>;
+                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
                   Submitting...;
-                </>;
+                </>
               ) : (''';
                 <>'''';
-                  <Send className='w-5 h-5 mr-2' />;
+                  <Send className='w-5 h-5 mr-2' />
                   Submit Quote Request;
                 </>) }
-            </Button>;
-          </div>;
-        </form>;
-      </CardContent>;
+            </Button>
+          </div>
+        </form>
+      </CardContent>
     </Card>) ;
 }'';"
 }'';';

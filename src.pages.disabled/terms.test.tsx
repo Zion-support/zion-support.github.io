@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import terms from './terms';
-;
+
 describe('terms', () => {;
   it('renders without crashing', () => {;
     render(<terms />);

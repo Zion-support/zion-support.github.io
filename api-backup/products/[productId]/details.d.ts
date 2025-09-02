@@ -1,2 +1,2 @@
 import React from;
-  'react'"; export type ProductWithReviewStats = Product & { averageRating: number | null; reviewCount: number; }; export default function handler( req: NextApiRequest, res: NextApiResponse< | ProductWithReviewStats | { error: string; } > ): Promise<any>; ;
+  'react'"; export type ProductWithReviewStats = Product & { averageRating: number | null reviewCount: number; }; export default function handler( req: NextApiRequest, res: NextApiResponse< | ProductWithReviewStats | { error: string; } > ): Promise<any> ;

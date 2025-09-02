@@ -32,7 +32,7 @@ class AutomationDashboard {;
   }
 ;
   loadAutomationSystems() {;
-    const systems = [;
+    const systems = [
       {;
         name:,;
   lint-monitor',;
@@ -140,7 +140,7 @@ class AutomationDashboard {;
     }, 60000);
   }
 ;
-  collectMetrics() {;
+  collectMetrics() {
     for (const [name, system] of this.automationSystems) {;
       const metrics = {;
         timestamp: new Date().toISOString(),;
@@ -217,7 +217,7 @@ class AutomationDashboard {;
     }
   }
 ;
-  generateReport() {;
+  generateReport() {
     const report = {;
       timestamp: new Date().toISOString(),;
       totalSystems: this.automationSystems.size,;

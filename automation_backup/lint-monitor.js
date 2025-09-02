@@ -51,7 +51,7 @@ class LintMonitor {;
       this.lastCheck = new Date();
       this.log(;
   '✅ Lint check passed - no errors found');
-      return { success: true, errors: 0 };
+      return { success: true, errors: 0 }
     } catch (error) {;
       const errorLines = errorOutput.split(;
   '\n').filter(line =>;
@@ -179,7 +179,7 @@ class LintMonitor {;
 ;
     this.log(;
   '🛑 Lint Monitor stopped')};
-  status() {;
+  status() {
     const status = {;
   running: this.isRunning,;
       errorCount: this.errorCount,;
@@ -201,7 +201,7 @@ class LintMonitor {;
   'Never'}`);
 ;
     return status};
-  getStats() {;
+  getStats() {
     const stats = {;
   totalChecks: 0,;
       totalErrors: 0,;

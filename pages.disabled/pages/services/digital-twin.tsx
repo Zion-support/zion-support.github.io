@@ -2,10 +2,10 @@
 export { function };export default function DigitalTwin(...args: []):  {}
   return();
     <>;
-      <Helmet>;
-        <title>Digital Twin Solutions - Zion Tech Group</title>;
+      <Helmet>
+        <title>Digital Twin Solutions - Zion Tech Group</title>
         <meta name = 'description' content='Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time.' />'';
-        <meta name='keywords' content='digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics' />;
+        <meta name='keywords' content='digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics' />
 :pages.disabled/pages/services/digital-twin.tsx;
       </Helmet>';
 '';
@@ -20,8 +20,8 @@ export { function };export default function DigitalTwin(...args: []):  {}
 '';
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
                 Digital'';
-                <span className='bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent'> Twin</span>;
-              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>;
+                <span className='bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent'> Twin</span>
+              </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Create virtual replicas of your physical systems and assets. Monitor performance,;
                 simulate scenarios, and optimize operations with real-time digital twin technology.;
 :pages.disabled/pages/services/digital-twin.tsx;
@@ -36,24 +36,24 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   <ArrowRight className='ml-2 w-5 h-5'  />';
                 </Link>'';
                 <button className='inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200'>'';
-                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>;
-            </div>;
-          </div>;
-        </section>;
+                  <Play className='mr-2 w-5 h-5'  />                  Watch Demo</button>              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-twin.tsx;
 '{/* Features Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-twin.tsx;
-                Virtual Replication Technology'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Virtual Replication Technology'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our digital twin platform creates accurate virtual representations that enable;
                 real-time monitoring, simulation, and optimization.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-twin.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[;
                 {;
 ';
@@ -95,26 +95,26 @@ export { function };export default function DigitalTwin(...args: []):  {}
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4'>'';
                     <feature.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                  <p className='text-slate-300'>{feature.description}</p>;
-                </div>;
+                  <p className='text-slate-300'>{feature.description}</p>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-twin.tsx;
 '{/* Applications Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-twin.tsx;
-                Digital Twin Applications'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Digital Twin Applications'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Discover how digital twin technology can revolutionize different industries and operations.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-twin.tsx;
             </div>';
 '';
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+              {[
                 {;
 ';
 '';
@@ -129,7 +129,7 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   title: 'Smart Cities','';
                   description: 'Manage urban infrastructure, traffic systems, and public services efficiently.',';
                   icon: Globe,'';
-                  benefits: ['Traffic optimization', 'Infrastructure monitoring', 'Public services'];
+                  benefits: ['Traffic optimization', 'Infrastructure monitoring', 'Public services']
                 },;
                 {;
 ';
@@ -137,7 +137,7 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   title: 'Healthcare','';
                   description: 'Patient monitoring, medical device management, and treatment optimization.',';
                   icon: Users,'';
-                  benefits: ['Patient monitoring', 'Device management', 'Treatment optimization'];
+                  benefits: ['Patient monitoring', 'Device management', 'Treatment optimization']
                 },;
                 {;
 ';
@@ -145,7 +145,7 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   title: 'Energy & Utilities','';
                   description: 'Grid monitoring, renewable energy optimization, and infrastructure management.',';
                   icon: Zap,'';
-                  benefits: ['Grid monitoring', 'Energy optimization', 'Infrastructure management'];
+                  benefits: ['Grid monitoring', 'Energy optimization', 'Infrastructure management']
                 },;
                 {;
 ';
@@ -153,7 +153,7 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   title: 'Transportation','';
                   description: 'Fleet management, route optimization, and vehicle performance monitoring.',';
                   icon: Target,'';
-                  benefits: ['Fleet management', 'Route optimization', 'Performance monitoring'];
+                  benefits: ['Fleet management', 'Route optimization', 'Performance monitoring']
                 },;
                 {;
 ';
@@ -161,7 +161,7 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   title: 'Buildings & Facilities','';
                   description: 'Building management, energy efficiency, and maintenance optimization.',';
                   icon: Activity,'';
-                  benefits: ['Building management', 'Energy efficiency', 'Maintenance optimization'];
+                  benefits: ['Building management', 'Energy efficiency', 'Maintenance optimization']
                 }';
               ].map((application, index)  => ('';
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'';
@@ -172,23 +172,23 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   <p className='text-slate-300 mb-4'>{application.description}</p>'';
                   <ul className='space-y-1'>'{application.benefits.map((benefit, benefitIndex) => (''                      <li key={benefitIndex} className='text-sm text-emerald-400 flex items-center'>'';
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {benefit}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </div>;
+                  </ul>
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-twin.tsx;
 '{/* Technology Stack Section */}''        <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-twin.tsx;
-                Advanced Technology Stack'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Advanced Technology Stack'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Built on cutting-edge technologies for maximum performance, scalability, and reliability.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-twin.tsx;
             </div>';
 '';
@@ -202,10 +202,10 @@ export { function };export default function DigitalTwin(...args: []):  {}
                     'Advanced security and data privacy controls'';
                   ].map((technology, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{technology}</span>;
-                    </div>;
+                      <CheckCircle className='w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{technology}</span>
+                    </div>
                   ))}
-                </div>;
+                </div>
 :pages.disabled/pages/services/digital-twin.tsx;
               </div>';
 '';
@@ -219,23 +219,23 @@ export { function };export default function DigitalTwin(...args: []):  {}
                   ].map((item, index)  => ('';
                     <div key={index} className='flex items-center space-x-3'>';
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>'';
-                        <item.icon className='w-4 h-4 text-white' />'</div>''                      <span className='text-slate-300'>{item.component}</span>;
-                    </div>;
+                        <item.icon className='w-4 h-4 text-white' />'</div>''                      <span className='text-slate-300'>{item.component}</span>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-twin.tsx;
 '{/* Benefits Section */}''        <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-twin.tsx;
-                Transform Your Operations'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>;
+                Transform Your Operations'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Experience unprecedented visibility, control, and optimization across your entire operation.;
-              </p>;
+              </p>
 :pages.disabled/pages/services/digital-twin.tsx;
             </div>';
 '';
@@ -250,11 +250,11 @@ export { function };export default function DigitalTwin(...args: []):  {}
                     'Improve safety with real-time risk assessment and monitoring'';
                   ].map((benefit, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>;
-                    </div>;
+                      <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>
+                    </div>
                   ))}
-                </div>;
-              </div>;
+                </div>
+              </div>
 :pages.disabled/pages/services/digital-twin.tsx;
 ';
               <div>'';
@@ -267,22 +267,22 @@ export { function };export default function DigitalTwin(...args: []):  {}
                     'Facilitate digital transformation and Industry 4.0 adoption'';
                   ].map((advantage, index) => ('';
                     <div key={index} className='flex items-start space-x-3'>'';
-                      <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{advantage}</span>;
-                    </div>;
+                      <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{advantage}</span>
+                    </div>
                   ))}
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/digital-twin.tsx;
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10'>';
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/digital-twin.tsx;
               Ready to Create Your Digital Twin?';
             </h2>'';
-            <p className='text-xl text-slate-300 mb-8'>;
+            <p className='text-xl text-slate-300 mb-8'>
               Transform your physical operations with virtual intelligence and real-time optimization.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
@@ -295,11 +295,11 @@ export { function };export default function DigitalTwin(...args: []):  {}
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200'>                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>'`;
   )}}}}
   ''`'"`;

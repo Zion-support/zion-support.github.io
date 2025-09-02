@@ -211,7 +211,7 @@ class BuildHealthMonitor {;
   async hasMissingDependencies() {;
     try {;
       // Check if key dependencies exist;
-      const requiredDeps = ['vite;
+      const requiredDeps = ['vite
   ',@vitejs/plugin-react',react;
   ',react-dom'];
 ;
@@ -257,7 +257,7 @@ class BuildHealthMonitor {;
       try {;
         this.log(`Attempting to fix: ${issue.type}`);
 ;
-        switch (issue.type) {;
+        switch (issue.type) {
           case,;
   nextjs_imports': await this.fixNextJSImports();
             break;
@@ -309,7 +309,7 @@ class BuildHealthMonitor {;
   async runInlineNextJSFix() {;
     this.log(,;
   Running inline Next.js import fixes...');
-;
+
     const replacements = [;
       {;
         pattern: /import\s+Link\s+from\s+[;
@@ -474,7 +474,7 @@ export default defineConfig({;
   ',lucide-react'],utils-vendor;
   ': ['date-fns,clsx,;
   ,tailwind-merge;
-  '],form-vendor': [;
+  '],form-vendor': [
   'react-hook-form,@hookform/resolvers;
   ',zod'];
         }
@@ -494,7 +494,7 @@ export default defineConfig({;
   }
 ;
   findSourceFiles() {;
-    const extensions = [;
+    const extensions = [
   '.ts',.tsx;
   ',.js',.jsx;
   '];
@@ -630,7 +630,7 @@ export default defineConfig({;
     this.log(;
   'Checking file integrity...');
 ;
-    const criticalFiles = [;
+    const criticalFiles = [
   'package.json',vite.config.ts;
   ',tsconfig.json',src/main.tsx;
   ',index.html';
@@ -667,7 +667,7 @@ export default defineConfig({;
     this.log(;
   'Cleaning up temporary files...');
 ;
-    const tempPatterns = [;
+    const tempPatterns = [
   '*.tmp',*.temp;
   ',*.log.old',*.backup.*;
   ';
@@ -734,7 +734,7 @@ export default defineConfig({;
   ');
   }
 ;
-  getStats() {;
+  getStats() {
     return {;
       errorCount: this.errorCount,;
       fixCount: this.fixCount,;

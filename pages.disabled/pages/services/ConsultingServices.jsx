@@ -8,31 +8,31 @@ const ConsultingServices = () => {}
       <section className='relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20'>'';
         <div className='absolute inset-0 bg-black/20'></div>'';
         <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>'';
-          <h1 className='text-5xl md:text-6xl font-bold mb-6'>;
+          <h1 className='text-5xl md:text-6xl font-bold mb-6'>
 :pages.disabled/pages/services/ConsultingServices.jsx;
-            Technology Consulting Services'</h1>''          <p className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>;
+            Technology Consulting Services'</h1>''          <p className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>
             Strategic technology consulting to help you make informed decisions;
             and achieve your goals.;
-          </p>;
-        </div>;
+          </p>
+        </div>
 :pages.disabled/pages/services/ConsultingServices.jsx;
       </section>'''      <section className='py-20'>'';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'';
-          <h2 className='text-3xl font-bold text-slate-900 mb-4'>;
+          <h2 className='text-3xl font-bold text-slate-900 mb-4'>
 :pages.disabled/pages/services/ConsultingServices.jsx;
             Coming Soon';
           </h2>'';
-          <p className='text-xl text-slate-600 mb-8'>;
+          <p className='text-xl text-slate-600 mb-8'>
   ';
             Were developing comprehensive consulting services. Check back soon!;
           </p>';
           <Link'';
             to='/contact'';
             className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>            Contact Us;
-          </Link>;
-        </div>;
-      </section>;
-    </div>;
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 };
 :pages.disabled/pages/services/ConsultingServices.jsx;

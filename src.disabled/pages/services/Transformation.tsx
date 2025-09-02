@@ -17,7 +17,7 @@ const DigitalTransformation = () => {;
       features: ['System assessment', 'Modernization planning', 'Data migration', 'Integration services'],;
 :pages.disabled/pages/services/Transformation.tsx;
       icon: RefreshCw;
-    },'{';
+    },'{'
       title: 'Change Management',';
       description: 'Guide your team through digital adoption and transformation.',';
       price: 'From $8,000/month',';      features: ['Change strategy', 'Training programs', 'Communication plans', 'Success measurement'],;
@@ -26,13 +26,13 @@ const DigitalTransformation = () => {;
 ;
 :pages.disabled/pages/services/Transformation.tsx;
   ';
-    {';
+    {'
       name: 'Technology',';
       description: 'Modernize your technology stack and infrastructure',';
       icon: BarChart3,';
       features: ['Cloud migration', 'API integration', 'Data modernization', 'Security enhancement']};
   ]';
-  const benefits = [';'Increased operational efficiency and productivity',';
+  const benefits = [''Increased operational efficiency and productivity',';
     'Enhanced customer experience and satisfaction',';
     'Improved data insights and decision making',';
     'Reduced operational costs and manual work',';
@@ -53,32 +53,32 @@ const DigitalTransformation = () => {;
               Digital'';
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> Transformation</span>';
             </h1>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Modernize your business processes and operations with cutting-edge;
               technology solutions that drive growth and innovation.';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+              <a href='#services' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Explore Services'</a>'';
-              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>;
+              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
                 Get Started;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Transformation.tsx;
 '{/* Transformation Services */}'';
       <section id='services' className='py-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/Transformation.tsx;
               Our Transformation Services'</h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Comprehensive digital transformation solutions designed to modernize;
               your business and drive sustainable growth.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/Transformation.tsx;
           </div>';
 '';
@@ -93,28 +93,28 @@ const DigitalTransformation = () => {;
 :pages.disabled/pages/services/Transformation.tsx;
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='text-sm text-gray-400 flex items-start'>'';
-                      <div className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>;
+                      <div className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Transformation.tsx;
 '{/* Transformation Areas */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>'';
         <div className='max-w-7xl mx-auto'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/Transformation.tsx;
               Areas of Transformation'</h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               We help transform every aspect of your business to create a;
               comprehensive digital-first organization.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/Transformation.tsx;
           </div>';
 '';
@@ -127,16 +127,16 @@ const DigitalTransformation = () => {;
                 <h3 className='text-xl font-semibold text-white mb-3'>{area.name}</h3>'';
                 <p className='text-gray-300 mb-4'>{area.description}</p>'';
                 <ul className='space-y-2'>'{area.features.map((feature, idx) => ('';
-                    <li key={idx} className='text-sm text-gray-400'>;
+                    <li key={idx} className='text-sm text-gray-400'>
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Transformation.tsx;
 ';
       {/* Benefits Section */}'';
@@ -144,60 +144,60 @@ const DigitalTransformation = () => {;
         <div className='max-w-7xl mx-auto'>'';
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>';
             <div>'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Why Choose Digital Transformation?';
               </h2>'';
-              <p className='text-lg text-gray-300 mb-6'>;
+              <p className='text-lg text-gray-300 mb-6'>
                 Digital transformation is essential for businesses to remain;
                 competitive and meet evolving customer expectations.';
               </p>'';
               <ul className='space-y-3'>'{benefits.map((benefit, index) => ('';
                   <li key={index} className='flex items-center text-gray-300'>'';
-                    <div className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>;
+                    <div className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>
                     {benefit}
-                  </li>;
+                  </li>
                 ))}
 :pages.disabled/pages/services/Transformation.tsx;
               </ul>'</div>'';
             <div className='bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30'>'';
               <div className='text-center'>'';
                 <Lightbulb className='w-24 h-24 text-indigo-400 mx-auto mb-4' />'';
-                <h3 className='text-2xl font-bold text-white mb-2'>Transformation Expertise</h3>'                <p className='text-gray-300 mb-6'>;
+                <h3 className='text-2xl font-bold text-white mb-2'>Transformation Expertise</h3>'                <p className='text-gray-300 mb-6'>
 :pages.disabled/pages/services/Transformation.tsx;
                   Our team has successfully guided hundreds of organizations;
                   through their digital transformation journey.'</p>'';
-                <div className='text-sm text-gray-400'>;
-                  <p>• Proven methodologies</p>;
-                  <p>• Industry experience</p>;
-                  <p>• Change management expertise</p>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+                <div className='text-sm text-gray-400'>
+                  <p>• Proven methodologies</p>
+                  <p>• Industry experience</p>
+                  <p>• Change management expertise</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/Transformation.tsx;
 '{/* CTA Section */}'';
       <section className='py-16 px-4 sm:px-6 lg:px-8'>'';
         <div className='max-w-4xl mx-auto text-center'>'';
-          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/Transformation.tsx;
             Transform Your Business';
           </h2>'';
-          <p className='text-xl text-gray-300 mb-8'>;
+          <p className='text-xl text-gray-300 mb-8'>
             Ready to modernize your business and unlock new opportunities;
             for growth and innovation?';
           </p>'';
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>;
+            <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
               Get Started'</a>'';
-            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>;
+            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
               View All Services;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   )};
 :pages.disabled/pages/services/Transformation.tsx;
 ';

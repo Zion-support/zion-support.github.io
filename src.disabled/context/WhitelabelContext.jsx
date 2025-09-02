@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-;
+
 const WhitelabelContext = createContext();
 ;
 export function WhitelabelProvider({ children }) {;
@@ -16,10 +16,10 @@ export function WhitelabelProvider({ children }) {;
     setCustomTheme;
   };
 ;
-  return (;
-    <WhitelabelContext.Provider value={value}>;
+  return (
+    <WhitelabelContext.Provider value={value}>
       {children}
-    </WhitelabelContext.Provider>;
+    </WhitelabelContext.Provider>
   );
 }
 ;

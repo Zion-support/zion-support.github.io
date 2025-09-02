@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ModernLoadingSpinner from './ModernLoadingSpinner';
-;
+
 describe('ModernLoadingSpinner', () => {;
   it('renders without crashing', () => {;
     render(<ModernLoadingSpinner />);

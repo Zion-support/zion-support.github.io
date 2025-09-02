@@ -2,9 +2,9 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-;
+
 console.log('🔧 Fixing import statement concatenation issues...');
-;
+
 async function main() {;
 // Function to fix concatenated import statements;
 function fixImportConcatenation(content) {;
@@ -72,7 +72,7 @@ function processFile(filePath) {;
 }
 ;
 // Find all TypeScript and JavaScript files;
-const patterns = [;
+const patterns = [
   'components/**/*.{ts,tsx,js,jsx}',;
   'pages/**/*.{ts,tsx,js,jsx}',;
   'src/**/*.{ts,tsx,js,jsx}',;
@@ -101,7 +101,7 @@ for (const pattern of patterns) {;
   totalProcessed += files.length;
 }
 ;
-const report = {;
+const report = {
   timestamp: new Date().toISOString(),;
   totalFilesProcessed: totalProcessed,;
   totalFilesFixed: totalFixed,;

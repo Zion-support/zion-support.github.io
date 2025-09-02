@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from;
   'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Eye,; EyeOff,; Volume2,; VolumeX,; ZoomIn,; ZoomOut,; Contrast,; Palette,; Keyboard,; MousePointer,; Accessibility,; Settings,; X,; CheckCircle,; AlertTriangle,; Info,; Brain; } from;
-  'lucide-react'; ; interface AccessibilitySettings {;
+  'lucide-react'; ; interface AccessibilitySettings {
    highContrast: boolean;
    largeText: boolean;
    reducedMotion: boolean;
@@ -11,7 +11,7 @@ import React, { useState, useEffect, useCallback } from;
    fontSize: number;
    lineHeight: number;
    letterSpacing: number;
-}; interface AccessibilityFeature {;
+}; interface AccessibilityFeature {
    id: string;
    name: string;
    description: string;
@@ -33,7 +33,7 @@ import React, { useState, useEffect, useCallback } from;
   cognitive',; impact: 'medium; },; {; id:,;
   color-contrast',; name: 'Color Contrast,; description:;
   'High contrast ratios for better readability',; enabled: true,; category:,;
-  visual',; impact: 'high; },; {; id:,;
+  visual',; impact: 'high; },; { id:,;
   keyboard-shortcuts',; name: 'Keyboard Shortcuts,; description:;
   'Alternative navigation methods',; enabled: false,; category:,;
   motor',; impact: 'medium; }; ]); ';

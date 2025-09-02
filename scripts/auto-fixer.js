@@ -157,7 +157,7 @@ class AutoFixer {;
   ');
 ;
       // Common TypeScript fixes;
-      const fixes = [;
+      const fixes = [
         this.fixMissingTypes.bind(this),;
         this.fixSyntaxErrors.bind(this),;
         this.fixImportExtensions.bind(this);

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import MobileNavigation from './MobileNavigation';
-;
+
 describe('MobileNavigation', () => {;
   it('renders without crashing', () => {;
     render(<MobileNavigation />);

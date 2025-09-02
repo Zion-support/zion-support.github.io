@@ -1,7 +1,7 @@
 'use client';
 ;
 import { useEffect, useState, useCallback } from 'react';
-;
+
 declare global {;
   interface Window {;
     gtag: (...args: any[]) => void;
@@ -10,16 +10,16 @@ declare global {;
 ;
 declare const gtag: (...args: any[]) => void;
 ;
-interface AnalyticsEvent {;
+interface AnalyticsEvent {
   name: string;
    category: string;
    action?: string;
    label?: string;
    value?: number;
-   custom_parameters?: Record<string, any>;
+   custom_parameters?: Record<string, any>
 }
 ;
-interface PerformanceMetrics {;
+interface PerformanceMetrics {
   fcp: number;
    lcp: number;
    fid: number;
@@ -91,7 +91,7 @@ const AnalyticsManager: React.FC = () => {;
     return userId;
   }, []);
 ;
-  const trackPageView = useCallback(() => {;
+  const trackPageView = useCallback(() => {
     const pageData = {;
       page_title: document.title, page_location: window.location.href,;
       page_path: window.location.pathname, referrer: document.referrer,;
@@ -125,7 +125,7 @@ const AnalyticsManager: React.FC = () => {;
     sendAnalyticsEvent(event);
   }, [isInitialized]);
 ;
-  const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {;
+  const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {
     try {;
       const eventData = {;
         ...event, timestamp: new Date().toISOString(), session_id: sessionStorage.getItem('analytics_session_id'), user_id: sessionStorage.getItem('analytics_user_id'), page_url: window.location.href,;
@@ -252,7 +252,7 @@ const AnalyticsManager: React.FC = () => {;
   }, [trackEvent]);
 ;
   // Expose analytics functions globally;
-  useEffect(() => {;
+  useEffect(() => {
     (window as any).analytics = {;
       track: trackEvent, trackConversion,;
       trackPerformance, trackUserProperties};

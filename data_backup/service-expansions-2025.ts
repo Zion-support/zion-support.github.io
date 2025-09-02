@@ -1,4 +1,4 @@
-export interface ServiceExpansion2025 {;
+export interface ServiceExpansion2025 {
   id: string;
    name: string;
    tagline: string;

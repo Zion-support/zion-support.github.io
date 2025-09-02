@@ -58,7 +58,7 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
   2024-01-15T10: 30:00Z),;
                 triggerCount: 156;
         ],;
-        dependencies[,;
+        dependencies[,
   vendor_verification;
   ',budget_approval'];
     },;
@@ -117,11 +117,11 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
   2024-01-14T14: 15:00Z),;
                 triggerCount: 23;
         ],;
-        dependencies[,;
+        dependencies[,
   background_check;
   ',document_verification'];
     },;
-    {;
+    {
         id: 'bp-003,;
         name:,;
   Customer Support Ticket Routing',;
@@ -176,11 +176,11 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
   2024-01-15T16: 45:00Z),;
                 triggerCount: 8;
         ],;
-        dependencies[,;
+        dependencies[,
   ticket_classification;
   ',agent_availability'];    };
 ];
-export function AdvancedAIBusinessProcessAutomation() {;
+export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -209,7 +209,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   ';
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20};
     };
-    const getPriorityColor = (priority) => {;
+    const getPriorityColor = (priority) => {
         switch (priority) {;
             case,;
   critical;
@@ -240,7 +240,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   ';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20}';
     }';;
-    const getCategoryIcon = (category) => {';;
+    const getCategoryIcon = (category) => {';
         switch (category) {';;'';,;
   '';';
             case;
@@ -258,7 +258,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     };
     const formatPercentage = (value) => {;
         return `${value}%`};
-    const executeProcess = async (processId) => {;
+    const executeProcess = async (processId) => {
         setIsExecuting(true);
         // Simulate process execution;
         await new Promise (resolve => setTimeout (resolve, 2000) ) ;
@@ -279,7 +279,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
           <Workflow className='w-6 h-6'/>'';';
           <span className='font-semibold'>AI BPA</span>'';';
         </div>'';';
-        <div className='absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold'>;
+        <div className='absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold'>
           NEW';
         </div>';;
       </button>) }';;
@@ -371,7 +371,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
           </button>))}';;
       </div>';;'';
       {/* Content */}'';';
-      <div className='flex-1 overflow-auto p-6'>;
+      <div className='flex-1 overflow-auto p-6'>
   ''';';
         {activeTab === 'overview;
   ' && (<div className='space-y-6'>'';';
@@ -432,7 +432,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                       <div className='space-y-2'>'';';
                         {process.aiInsights.slice(0, 2).map((insight, idx) => (<div key={idx} className='flex items-start gap-2 text-sm'>'';';
                             <Lightbulb className='w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0'/>'';';
-                            <span className='text-zion-slate'>{insight}</span>;
+                            <span className='text-zion-slate'>{insight}</span>
                           </div>))}';
                       </div>';;
                     </div>) ) }';;
@@ -462,10 +462,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                           {process.executionHistory[0]?.status ||;
   'Unknown'}'';';
                         </span>'';';
-                        <span className='text-xs text-zion-slate-light'>;
+                        <span className='text-xs text-zion-slate-light'>
                           {process.executionHistory[0]?.duration || 0}s;
-                        </span>;
-                      </div>;
+                        </span>
+                      </div>
                     </div>) ) }';
                 </div>';;
               </div>';;
@@ -512,10 +512,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     <p className='text-xs text-zion-slate-light'>Executions</p>';;
                   </div>';';
                 </div>'';;'';                <div className='flex items-center gap-3 mb-4'>`;
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(process.status)}`}>;
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(process.status)}`}>
                     {process.status};
                   </span>`;
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(process.priority)}`}>;
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(process.priority)}`}>
                     {process.priority};
                   </span>`';
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>';;
@@ -560,10 +560,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                             <span className='text-xs text-zion-slate-light'>';';
                               Priority: {rule.priority}'';';
                             </span>'';';
-                            <span className='text-xs text-zion-slate-light'>;
+                            <span className='text-xs text-zion-slate-light'>
                               Triggered: {rule.triggerCount} times;
-                            </span>;
-                          </div>;
+                            </span>
+                          </div>
                         </div>) ) }';
                     </div>';;
                   </div>)}';;
@@ -617,13 +617,13 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                       </div>'';';
                     </div>'';';
                     <div className='flex items-center gap-3'>`;
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.isActive,;
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.isActive,
   ;
                     ?;
   'bg-green-100 text-green-700 dark: bg-green-900/20 dark:text-green-400''`;
                     :;
   'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400}`}>;
-                        {rule.isActive ?,;
+                        {rule.isActive ?,
   Active': 'Inactive};
                       </span>`';
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.aiOptimized,;
@@ -636,8 +636,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   ': 'Manual}'';';
                       </span>'';';
                       <button className='p-2 text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/10 rounded-lg'>'';';
-                        <Edit3 className='w-4 h-4'/>;
-                      </button>;
+                        <Edit3 className='w-4 h-4'/>
+                      </button>
                     </div>';
                   </div>) ) }';;
               </div>';;
@@ -700,7 +700,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                         </td>'';';
                         <td className='p-3 font-medium'>{formatCurrency(process.costSavings)}</td>'';';
                         <td className='p-3 font-medium'>{formatPercentage(process.timeReduction)}</td>'';';
-                        <td className='p-3 font-medium'>{process.executionHistory.length}</td>;
+                        <td className='p-3 font-medium'>{process.executionHistory.length}</td>
                       </tr>))};
                   </tbody>';
                 </table>';;
@@ -735,11 +735,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                           <Lightbulb className='w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0'/>'';';
                           <span className='text-zion-slate'>{insight}</span>';';
                         </div>))}'';';
-                    </div>;
+                    </div>
   ''';';
                     {process.automationLevel !== 'fully-automated;
   ' && (<div className='mt-3 pt-3 border-t border-zion-slate-light/50'>'';';
-                        <button className='px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue-dark text-sm'>;
+                        <button className='px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue-dark text-sm'>
                           Apply AI Optimization;
                         </button>';
                       </div>) }';;
@@ -773,8 +773,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   <p className='text-sm text-blue-700 dark:text-blue-300 mb-3'>';';
                     {businessProcesses.filter(p => p.efficiency < 90).length} processes below 90% efficiency target'';';
                   </p>'';';
-                  <button className='px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700'>;                    View Details;
-                  </button>;
+                  <button className='px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700'>                    View Details;
+                  </button>
                 </div>';;
               </div>';';
             </div>';;';

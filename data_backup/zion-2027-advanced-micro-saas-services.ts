@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
-;
-export interface Zion2027AdvancedMicroSaasService {;
+
+export interface Zion2027AdvancedMicroSaasService {
   id: string;
    name: string;
    tagline: string;
@@ -40,7 +40,7 @@ export interface Zion2027AdvancedMicroSaasService {;
   reviews: number;
 }
 ;
-const contact = {;
+const contact = {
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;

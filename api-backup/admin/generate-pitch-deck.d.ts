@@ -4,5 +4,5 @@ import type { NextApiRequest, NextApiResponse } from;
 export default function handler(;
   req: NextApiRequest,;
   res: NextApiResponse;
-): Promise<any>;
+): Promise<any>
 ;

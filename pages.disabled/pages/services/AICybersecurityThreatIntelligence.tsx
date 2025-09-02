@@ -102,7 +102,7 @@ import {;
 ;
 export { function };
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-export default function AICybersecurityThreatIntelligence(...args[]):  {;
+export default function AICybersecurityThreatIntelligence(...args[]):  {
   const features = [;
     {;
 ';
@@ -187,7 +187,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
     }
   ];
 ;
-  return ('';
+  return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
       title: 'Vulnerability Assessment','      description: 'Automated scanning and assessment of system vulnerabilities',;
       icon: Eye;
@@ -270,7 +270,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
   ];
 ;
   return ('';
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>;
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 <:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       <SEO;
@@ -286,11 +286,11 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             <div className='inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6'>'';
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Cybersecurity;
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-            </div>;
+            </div>
 <:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 =;
             ';
->      <SEO '';
+>      <SEO ''
         title='AI Cybersecurity Threat Intelligence - Zion Tech Group'';
         description='Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time.'';
         keywords='AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting'';
@@ -299,12 +299,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
           >'';
             <div className='inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6'>'';
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Cybersecurity;
-            </div>;
+            </div>
             '';
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               AI Cybersecurity'';
-              <span className='bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent'> Threat Intelligence</span>;
-            </h1>;
+              <span className='bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent'> Threat Intelligence</span>
+            </h1>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 <:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 =;
@@ -313,25 +313,25 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             '';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
               AI Cybersecurity'';
-              <span className='bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent'> Threat Intelligence</span>;
+              <span className='bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent'> Threat Intelligence</span>
             </h1>';
             '';
             '';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Stay ahead of cyber threats with AI-powered threat intelligence that detects,;
               analyzes, and responds to security risks in real-time.;
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-<:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
+<:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>;
-                <Play className='w-5 h-5 mr-2' />;
+              <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>
+                <Play className='w-5 h-5 mr-2' />
 =;
             ';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
               <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>';
-                <Play className='w-5 h-5 mr-2'  />;
+                <Play className='w-5 h-5 mr-2'  />
 >                Start Free Trial;
               </button>';
               <button className='px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200 flex items-center justify-center'>';
@@ -339,7 +339,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             '';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
               <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>'';
-                <Play className='w-5 h-5 mr-2'  />;
+                <Play className='w-5 h-5 mr-2'  />
                 Start Free Trial';
               </button>'';
               <button className='px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200 flex items-center justify-center'>'';
@@ -348,15 +348,15 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             '';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
               <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>'';
-                <Play className='w-5 h-5 mr-2'  />;
+                <Play className='w-5 h-5 mr-2'  />
                 Start Free Trial;
               </button>'';
               <button className='px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200 flex items-center justify-center'>'';
                 <Settings className='w-5 h-5 mr-2'  />                Schedule Demo;
-              </button>;
+              </button>
             </div>'';
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto text-center'>;
+        <div className='max-w-7xl mx-auto text-center'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
@@ -369,18 +369,18 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               <Shield className='w-4 h-4 mr-2'  />              Revolutionary AI Cybersecurity Technology';
             </div>'';
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               AI Cybersecurity Threat Intelligence';
               <Shield className='w-4 h-4 mr-2'  />              Revolutionary AI Cybersecurity Technology;
             </div>'';
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               AI Cybersecurity Threat Intelligence;
             </h1>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Protect your organization with our revolutionary AI-powered cybersecurity platform.;
               Detect, analyze, and respond to cyber threats in real-time with unprecedented accuracy.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
           <motion.div;
@@ -414,15 +414,15 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
           >';
             <div className='text-center'>';
               <div className='text-3xl font-bold text-white mb-2'>99.9%</div>';
-              <div className='text-slate-400'>Threat Detection</div>;
+              <div className='text-slate-400'>Threat Detection</div>
             </div>';
             <div className='text-center'>';
               <div className='text-3xl font-bold text-white mb-2'>&lt;100ms</div>'';
-              <div className = 'text-slate-400'>Response Time</div>;
+              <div className = 'text-slate-400'>Response Time</div>
             </div>'';
             <div className='text-center'>'';
               <div className='text-3xl font-bold text-white mb-2'>40-60%</div>'';
-              <div className='text-slate-400'>Cost Reduction</div>;
+              <div className='text-slate-400'>Cost Reduction</div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
             </div>';
             <div className='text-center'>';
@@ -445,8 +445,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             </div>'';
             <div className='text-center'>'';
               <div className='text-3xl font-bold text-white mb-2'>24/7</div>'';
-              <div className='text-slate-400'>Protection</div>;
-            </div>;
+              <div className='text-slate-400'>Protection</div>
+            </div>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}';
             transition={{ duration: 0.8, delay: 0.2 }}'';
@@ -464,33 +464,33 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             </div>'';
             <div className='text-center'>'';
               <div className='text-3xl font-bold text-white mb-2'>24/7</div>'';
-              <div className='text-slate-400'>Protection</div>;
-            </div>;
+              <div className='text-slate-400'>Protection</div>
+            </div>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}'';
             className='flex flex-col sm:flex-row gap-4 justify-center'';
           >;
-            <a'';
+            <a''
               href='/contact'';
               className='inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors'';
             >;
               Secure Your Organization'';
-              <ArrowRight className='ml-2 w-5 h-5'  />            </a>;
-            <a'';
+              <ArrowRight className='ml-2 w-5 h-5'  />            </a>
+            <a''
               href='#demo'';
               className='inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors'';
             >;
               Request Demo;
-            </a>;
-          </motion.div>;
-        </div>;
+            </a>
+          </motion.div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Features Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -500,12 +500,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Advanced Threat Intelligence Features';
               Advanced Threat Intelligence Features;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Our AI-powered platform provides comprehensive cybersecurity threat detection,;
               analysis, and response capabilities for modern organizations.;
@@ -514,32 +514,32 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               Our AI-powered platform provides comprehensive cybersecurity threat detection,;
               analysis, and response capabilities for modern organizations.';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Revolutionary AI Cybersecurity Features';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI-powered cybersecurity platform combines cutting-edge artificial intelligence with;
               advanced security capabilities to provide unprecedented threat protection.;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index();
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Revolutionary AI Cybersecurity Features;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI-powered cybersecurity platform combines cutting-edge artificial intelligence with;
               advanced security capabilities to provide unprecedented threat protection.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index (;
               <motion.div;
                 key={index}
@@ -553,29 +553,29 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                   <feature.icon className='w-6 h-6 text-white' />';
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
-                  <feature.icon className='w-6 h-6 text-white' />;
+                  <feature.icon className='w-6 h-6 text-white' />
                 </div>'';
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>;
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all'';
               >'';
                 <div className='w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                   <feature.icon className='w-6 h-6 text-red-400' />';
-                  <feature.icon className='w-6 h-6 text-red-400' />;
+                  <feature.icon className='w-6 h-6 text-red-400' />
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-                <p className='text-gray-300'>{feature.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{feature.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Security Capabilities Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -585,24 +585,24 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Comprehensive Cybersecurity Services';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               From threat detection to incident response, we provide end-to-end cybersecurity;
               solutions powered by artificial intelligence.;
-            </p>;
+            </p>
           </motion.div>';
               Comprehensive Cybersecurity Services;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               From threat detection to incident response, we provide end-to-end cybersecurity;
               solutions powered by artificial intelligence.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map(service: unknown, index: unknown;
               <motion.div;
                 key={index}
@@ -615,33 +615,33 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               >'';
                 <div className='flex items-start space-x-4'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0'>'';
-                    <service.icon className='w-6 h-6 text-white' />;
+                    <service.icon className='w-6 h-6 text-white' />
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                   </div>';
                   <div>'';
                     <h3 className='text-xl font-semibold text-white mb-2'>{service.title}</h3>'';
-                    <p className='text-gray-300'>{service.description}</p>;
+                    <p className='text-gray-300'>{service.description}</p>
                   </div>';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Advanced Security Capabilities';
-                  </div>;
+                  </div>
                   <div>'';
                     <h3 className='text-xl font-semibold text-white mb-2'>{service.title}</h3>'';
-                    <p className='text-gray-300'>{service.description}</p>;
-                  </div>;
+                    <p className='text-gray-300'>{service.description}</p>
+                  </div>
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Advanced Security Capabilities;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Leverage state-of-the-art AI technologies to enhance every aspect of your cybersecurity posture.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (;
               <motion.div;
                 key={index}
@@ -656,20 +656,20 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 <div className='w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                   <capability.icon className='w-6 h-6 text-red-400' />';
-                  <capability.icon className='w-6 h-6 text-red-400' />;
+                  <capability.icon className='w-6 h-6 text-red-400' />
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-3'>{capability.title}</h3>'';
-                <p className='text-gray-300'>{capability.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{capability.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Threat Types Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -679,40 +679,40 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Transform Your Security Posture';
               Transform Your Security Posture;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Experience measurable improvements in threat detection, response time, and overall security effectiveness.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
           </motion.div>';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Comprehensive Threat Protection';
-          </motion.div>;
+          </motion.div>
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Comprehensive Threat Protection;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI platform protects against all types of cyber threats, from common attacks to sophisticated nation-state campaigns.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {threatTypes.map(threat: unknown, index: unknown();
-              <motion.div;
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}';
           </motion.div>;
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {threatTypes.map(threat: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -727,24 +727,24 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                   <threat.icon className='w-6 h-6 text-red-400' />';
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-3'>{threat.title}</h3>'';
-                <p className='text-gray-300'>{threat.description}</p>;
+                <p className='text-gray-300'>{threat.description}</p>
               </motion.div>';
             ))}'';
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>'';
-            <div className='space-y-6'>;
+            <div className='space-y-6'>
               {benefits.slice(0, 3).map(benefit: unknown, index: unknown();
-                <motion.div;
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}';
                   <threat.icon className='w-6 h-6 text-red-400' />;
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-3'>{threat.title}</h3>'';
-                <p className='text-gray-300'>{threat.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{threat.description}</p>
+              </motion.div>
             ))}'';
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>'';
-            <div className='space-y-6'>;
+            <div className='space-y-6'>
               {benefits.slice(0, 3).map(benefit: unknown, index: unknown (;
                 <motion.div;
                   key={index}
@@ -753,12 +753,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                   transition={{ duration: 0.5, delay: index * 0.1 }}'';
                   className='flex items-start space-x-3'';
                 >'';
-                  <CheckCircle className='w-6 h-6 text-red-400 mt-1 flex-shrink-0'  />'                  <span className='text-gray-300 text-lg'>{benefit}</span>;
-                </motion.div>;
+                  <CheckCircle className='w-6 h-6 text-red-400 mt-1 flex-shrink-0'  />'                  <span className='text-gray-300 text-lg'>{benefit}</span>
+                </motion.div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               ))}';
             </div>'';
-            <div className='space-y-6'>;
+            <div className='space-y-6'>
               {benefits.slice(3).map(benefit: unknown, index: unknown();
                 <motion.div;
                   key={index + 3}
@@ -766,7 +766,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                   whileInView={{ opacity: 1, x: 0 }}';
               ))}
             </div>'';
-            <div className='space-y-6'>;
+            <div className='space-y-6'>
               {benefits.slice(3).map(benefit: unknown, index: unknown (;
                 <motion.div;
                   key={index + 3}
@@ -775,18 +775,18 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                   transition={{ duration: 0.5, delay: index * 0.1 }}'';
                   className='flex items-start space-x-3'';
                 >'';
-                  <CheckCircle className='w-6 h-6 text-red-400 mt-1 flex-shrink-0'  />'                  <span className='text-gray-300 text-lg'>{benefit}</span>;
-                </motion.div>;
+                  <CheckCircle className='w-6 h-6 text-red-400 mt-1 flex-shrink-0'  />'                  <span className='text-gray-300 text-lg'>{benefit}</span>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </div>;
+            </div>
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Pricing Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -796,42 +796,42 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Transparent Pricing';
               Transparent Pricing;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Choose the plan that fits your organization size and security requirements.;
               All plans include a 14-day free trial.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map((plan, index) => (';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Transparent Cybersecurity Pricing';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map((plan, index) => (;
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Transparent Cybersecurity Pricing;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the perfect plan for your security needs with our transparent,;
               enterprise-grade pricing structure.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
           </motion.div>';';
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingTiers.map((tier, index();
               <motion.div;
           </motion.div>';
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingTiers.map((tier, index (;
               <motion.div;
                 key={index}
@@ -864,10 +864,10 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
                 {plan.popular && (';
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                    <span className='bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
+                    <span className='bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular;
-                    </span>;
-                  </div>;
+                    </span>
+                  </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                 )}';
                 )}
@@ -877,9 +877,9 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                   <p className='text-gray-400 mb-4'>{plan.description}</p>'';
                   <div className='mb-4'>'';
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
-                    <span className='text-gray-400'>{plan.period}</span>;
+                    <span className='text-gray-400'>{plan.period}</span>
                   </div>';
-                  <p className='text-gray-600'>{plan.description}</p>;
+                  <p className='text-gray-600'>{plan.description}</p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                 </div>';
 '';
@@ -896,12 +896,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 {index === 1 && ('';
                   <div className='inline-flex items-center px-3 py-1 bg-red-500 text-white text-sm font-medium rounded-full mb-4'>'';
                     <Star className='w-4 h-4 mr-1'  />                    Most Popular;
-                </div>;
+                </div>
 '';
-                <ul className='space-y-3 mb-8'>;
+                <ul className='space-y-3 mb-8'>
                   {plan.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='flex items-center space-x-3'>'';
-                      <CheckCircle className='w-5 h-5 text-red-400 flex-shrink-0'  />;
+                      <CheckCircle className='w-5 h-5 text-red-400 flex-shrink-0'  />
                 viewport={{ once: true }}`;
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
                   index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-white/10'`;
@@ -910,14 +910,14 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 {index === 1 && ('';
                   <div className='inline-flex items-center px-3 py-1 bg-red-500 text-white text-sm font-medium rounded-full mb-4'>'';
                     <Star className='w-4 h-4 mr-1'  />                    Most Popular;
-                  </div>;
+                  </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                 )}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 <:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-                <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>;
-                <div className='mb-4'>;
-                  <span className='text-4xl font-bold text-white'>{tier.price}</span>;
+                <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>
+                <div className='mb-4'>
+                  <span className='text-4xl font-bold text-white'>{tier.price}</span>
 =;
                 ';
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>';
@@ -927,33 +927,33 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>'';
                 <div className='mb-4'>'';
                   <span className='text-4xl font-bold text-white'>{tier.price}</span>'';
-                  <span className='text-gray-400'>/{tier.period}</span>;
+                  <span className='text-gray-400'>/{tier.period}</span>
                 </div>'';
-                <p className='text-gray-300 mb-6'>{tier.description}</p>;
+                <p className='text-gray-300 mb-6'>{tier.description}</p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 <:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 =;
                 ';
 >                '';
-                <ul className='space-y-3 mb-8'>;
+                <ul className='space-y-3 mb-8'>
                   {tier.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='flex items-start'>'';
-                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>;
-                    </li>;
+                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
+                    </li>
                   ))}
-                </ul>;
+                </ul>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-<:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
+<:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
                 <div className='text-sm text-gray-400 mb-6'>;
                   <strong>Best for:</strong> {tier.bestFor}
-                </div>;
-                <a;
+                </div>
+                <a
                   href='/contact';
 =;
                 ';
                 <div className='text-sm text-gray-400 mb-6'>;
                   <strong>Best for:</strong> {tier.bestFor}
-                </div>;
+                </div>
                 <a';
                   href='/contact'`;
 >                )}';
@@ -968,15 +968,15 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 <ul className='space-y-3 mb-8'>';
                   {tier.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='flex items-start'>'';
-                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>;
-                    </li>;
+                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
+                    </li>
                   ))}
                 </ul>';
                 '';
-                <div className='text-sm text-gray-400 mb-6'>;
+                <div className='text-sm text-gray-400 mb-6'>
                   <strong>Best for:</strong> {tier.bestFor}
                 </div>';
-                <a''`;
+                <a''`
                   href='/contact'``;
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${;
 ';
@@ -992,8 +992,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 '';
                 <div className='text-sm text-gray-400 mb-6'>;
                   <strong>Best for:</strong> {tier.bestFor}
-                </div>;
-                <a'';
+                </div>
+                <a''
                   href='/contact'`;
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${}
                     index === 1';
@@ -1006,20 +1006,20 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                     : 'bg-slate-700 text-white hover:bg-slate-600'`;
                 }`}>;
                   {plan.cta}
-                </button>;
+                </button>
                 >;
                   Get Started;
-                </a>;
-              </motion.div>;
+                </a>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Use Cases Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1029,17 +1029,17 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Industry-Specific Security Solutions';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how our AI cybersecurity platform is protecting organizations;
               across industries with tailored security solutions.;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown();
               <motion.div;
                 key={index}
@@ -1048,13 +1048,13 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}';
               Industry-Specific Security Solutions;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how our AI cybersecurity platform is protecting organizations;
               across industries with tailored security solutions.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -1067,20 +1067,20 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 <div className='w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                   <useCase.icon className='w-6 h-6 text-red-400' />';
-                  <useCase.icon className='w-6 h-6 text-red-400' />;
+                  <useCase.icon className='w-6 h-6 text-red-400' />
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>'';
-                <p className='text-gray-300'>{useCase.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{useCase.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Benefits Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1090,17 +1090,17 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             viewport={{ once: true }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Why Choose Our AI Cybersecurity Platform?';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience unprecedented security protection and threat intelligence;
               with our cutting-edge AI cybersecurity technology.;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown();
               <motion.div;
                 key={index}
@@ -1109,13 +1109,13 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}';
               Why Choose Our AI Cybersecurity Platform?;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience unprecedented security protection and threat intelligence;
               with our cutting-edge AI cybersecurity technology.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -1128,18 +1128,18 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 <div className='w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0'>'';
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                   <CheckCircle className='w-5 h-5 text-red-400'  />';
-                  <CheckCircle className='w-5 h-5 text-red-400'  />;
-                </div>'                <p className='text-lg text-gray-300'>{benefit}</p>;
-              </motion.div>;
+                  <CheckCircle className='w-5 h-5 text-red-400'  />
+                </div>'                <p className='text-lg text-gray-300'>{benefit}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* CTA Section */}'';
       <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-4xl mx-auto text-center'>;
+        <div className='max-w-4xl mx-auto text-center'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1147,22 +1147,22 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
             viewport={{ once: true }}';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Secure Your Organization?';
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Join the AI cybersecurity revolution and protect your organization;
             viewport={{ once: true }}
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Secure Your Organization?;
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join the AI cybersecurity revolution and protect your organization;
               with our advanced threat intelligence platform.;
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               <a';
                 href='/contact';
@@ -1176,12 +1176,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               >';
                 Secure Your Organization'';
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>';
-              <a'';
+              <a''
                 href='/contact'';
                 className='inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors'';
               >;
                 Secure Your Organization'';
-                <ArrowRight className='ml-2 w-5 h-5'  />              </a>;
+                <ArrowRight className='ml-2 w-5 h-5'  />              </a>
               <a'';
                 href='tel:+13024640950'';
                 className='inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors'';
@@ -1192,17 +1192,17 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               </a>'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Industry Applications';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our cybersecurity threat intelligence solutions adapt to various industries, providing tailored;
               security and compliance for your specific business needs.;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown();
               <motion.div;
                 key={index}
@@ -1210,13 +1210,13 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 whileInView={{ opacity: 1, y: 0 }}';
               Industry Applications;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our cybersecurity threat intelligence solutions adapt to various industries, providing tailored;
               security and compliance for your specific business needs.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -1228,19 +1228,19 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
                 <div className='w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
                   <Target className='w-8 h-8 text-white'  />';
-                  <Target className='w-8 h-8 text-white'  />;
+                  <Target className='w-8 h-8 text-white'  />
                 </div>'';
-                <h3 className='text-xl font-semibold text-white mb-2'>{useCase.industry}</h3>'                <p className='text-gray-300 text-sm'>{useCase.description}</p>;
-              </motion.div>;
+                <h3 className='text-xl font-semibold text-white mb-2'>{useCase.industry}</h3>'                <p className='text-gray-300 text-sm'>{useCase.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Market Information Section */}'';
       <section className='py-20 bg-slate-800/30'>'';
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
@@ -1249,19 +1249,19 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Market Insights & ROI';
               Market Insights & ROI;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Understand the market landscape and potential return on investment for AI-powered cybersecurity solutions.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
@@ -1272,8 +1272,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
             >'';
               <BarChart3 className='w-12 h-12 text-red-400 mx-auto mb-4' />'';
               <h3 className='text-2xl font-bold text-white mb-2'>$182.3B</h3>'';
-              <p className='text-gray-300'>Global Market Size 2024</p>;
-            </motion.div>;
+              <p className='text-gray-300'>Global Market Size 2024</p>
+            </motion.div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
             <motion.div;
@@ -1286,8 +1286,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center'';
             >'';
               <TrendingUp className='w-12 h-12 text-orange-400 mx-auto mb-4'  />'';
-              <h3 className='text-2xl font-bold text-white mb-2'>13.4%</h3>'              <p className='text-gray-300'>Annual Growth Rate</p>;
-            </motion.div>;
+              <h3 className='text-2xl font-bold text-white mb-2'>13.4%</h3>'              <p className='text-gray-300'>Annual Growth Rate</p>
+            </motion.div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
             <motion.div;
@@ -1300,8 +1300,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center'';
             >'';
               <DollarSign className='w-12 h-12 text-yellow-400 mx-auto mb-4'  />'';
-              <h3 className='text-2xl font-bold text-white mb-2'>400%</h3>'              <p className='text-gray-300'>Average ROI</p>;
-            </motion.div>;
+              <h3 className='text-2xl font-bold text-white mb-2'>400%</h3>'              <p className='text-gray-300'>Average ROI</p>
+            </motion.div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
             <motion.div;
@@ -1314,16 +1314,16 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center'';
             >'';
               <Clock className='w-12 h-12 text-purple-400 mx-auto mb-4'  />'';
-              <h3 className='text-2xl font-bold text-white mb-2'>80%</h3>'              <p className='text-gray-300'>Faster Detection</p>;
-            </motion.div>;
-          </div>;
-        </div>;
+              <h3 className='text-2xl font-bold text-white mb-2'>80%</h3>'              <p className='text-gray-300'>Faster Detection</p>
+            </motion.div>
+          </div>
+        </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
       </section>';
-      </section>;
+      </section>
       {/* CTA Section */}'';
       <section className='py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10'>'';
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div;
             initial = {}
   { opacity: 0,;
@@ -1342,36 +1342,36 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 }}
             transition={{ duration: 0.8 }}';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Start Your Cybersecurity Journey Today';
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
               Join thousands of organizations worldwide that use our AI-powered cybersecurity;
   y: 0;
 }}
             transition={{ duration: 0.8 }}
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Start Your Cybersecurity Journey Today;
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of organizations worldwide that use our AI-powered cybersecurity;
               threat intelligence platform to protect their digital assets.;
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>
                 Start Free Trial'';
-                <ArrowRight className='w-5 h-5 ml-2'  />;
-              </button>'              <button className='px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200'>;
+                <ArrowRight className='w-5 h-5 ml-2'  />
+              </button>'              <button className='px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200'>
                 Contact Sales;
-              </button>;
-            </div>;
+              </button>
+            </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-<:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
+<:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
             <div className='mt-8 text-center'>;
-              <p className='text-gray-400 mb-4'>Ready to get started? Contact our team:</p>;
-              <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>;
+              <p className='text-gray-400 mb-4'>Ready to get started? Contact our team:</p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>
 =;
             ';
             <div className='mt-8 text-center'>';
@@ -1384,46 +1384,46 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center'>';
                 Start Free Trial'';
                 <ArrowRight className='w-5 h-5 ml-2'  />';
-              </button>'              <button className='px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200'>;
+              </button>'              <button className='px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200'>
                 Contact Sales;
-              </button>;
+              </button>
             </div>';
             '';
             <div className='mt-8 text-center'>'';
               <p className='text-gray-400 mb-4'>Ready to get started? Contact our team:</p>'';
               <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>'';
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
-                <div className='flex items-center justify-center space-x-2'>;
-                  <span>📱</span>;
+                <div className='flex items-center justify-center space-x-2'>
+                  <span>📱</span>
                   <span>+1 302 464 0950</span>';
                 </div>'';
-                <div className='flex items-center justify-center space-x-2'>;
-                  <span>✉️</span>;
+                <div className='flex items-center justify-center space-x-2'>
+                  <span>✉️</span>
                   <span>kleber@ziontechgroup.com</span>';
-                <div className='flex items-center justify-center space-x-2'>;
-                  <span>📱</span>;
-                  <span>+1 302 464 0950</span>;
+                <div className='flex items-center justify-center space-x-2'>
+                  <span>📱</span>
+                  <span>+1 302 464 0950</span>
                 </div>'';
-                <div className='flex items-center justify-center space-x-2'>;
-                  <span>✉️</span>;
-                  <span>kleber@ziontechgroup.com</span>;
+                <div className='flex items-center justify-center space-x-2'>
+                  <span>✉️</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </div>'';
-                <div className='flex items-center justify-center space-x-2'>;
-                  <span>🌐</span>;
-                  <span>https://ziontechgroup.com</span>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+                <div className='flex items-center justify-center space-x-2'>
+                  <span>🌐</span>
+                  <span>https://ziontechgroup.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   )};
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;
   )}''`;
 ''`''`;

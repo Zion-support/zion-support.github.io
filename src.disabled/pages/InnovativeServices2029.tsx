@@ -2,17 +2,17 @@ import React, { useState, useMemo } from;
   'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Brain,; Shield,; Cloud,; BarChart3,; Zap,; Search,; Filter,; Star,; Users,; TrendingUp,; CheckCircle,; ArrowRight,; Phone,; Mail,; MapPin,; DollarSign,; Clock,; Target,; Rocket,; Globe,; Cpu,; Lock,; Database,; Network,; Eye,; Smartphone,; Monitor,; Server,; Atom,; Car,; Scale,; Leaf,; Factory,; Building,; Heart,; ShoppingCart,; BookOpen,; MessageCircle,; HelpCircle,; Gauge; } from;
   'lucide-react'; import { SEO } from;
-  '@/components/SEO'; ; interface Service {;
+  '@/components/SEO'; ; interface Service {
    id: string;
    title: string;
    description: string;
-   icon: React.ComponentType<any>;
+   icon: React.ComponentType<any>
    category: string;
    price: {;
    monthly: number;
    yearly: number;
    enterprise: string;
-}; features: string[]; benefits: string[]; targetMarket: string[]; roi: string; implementationTime: string; contact: {; phone: string; email: string; address: string; }; color: string; featured: boolean; tags: string[]; }; const services: Service[] = [; {; id:,;
+}; features: string[]; benefits: string[]; targetMarket: string[]; roi: string; implementationTime: string; contact: { phone: string; email: string; address: string; }; color: string; featured: boolean; tags: string[]; }; const services: Service[] = [; {; id:,;
   ai-code-reviewer',; title: 'AI Autonomous Code Reviewer,; description:;
   'Advanced AI-powered code review system with real-time analysis, automated quality scoring, and security vulnerability detection.',; icon: Brain,; category:;
   'AI & Machine Learning',; price: {; monthly: 299,; yearly: 2999,; enterprise:,;
@@ -23,7 +23,7 @@ import React, { useState, useMemo } from;
   2-3 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-cyan-400 to-blue-500,; featured: true,; tags: [,;
+  ; },; color: 'from-cyan-400 to-blue-500,; featured: true,; tags: [,
   AI',;
   'Code Review',;
   'Security',;
@@ -37,7 +37,7 @@ import React, { useState, useMemo } from;
   1-2 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-green-400 to-emerald-500,; featured: true,; tags: [,;
+  ; },; color: 'from-green-400 to-emerald-500,; featured: true,; tags: [,
   AI',;
   'SEO',;
   'Marketing',;
@@ -51,7 +51,7 @@ import React, { useState, useMemo } from;
   2-3 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-purple-400 to-pink-500,; featured: true,; tags: [,;
+  ; },; color: 'from-purple-400 to-pink-500,; featured: true,; tags: [,
   AI',;
   'HR',;
   'Recruitment',;
@@ -65,7 +65,7 @@ import React, { useState, useMemo } from;
   4-6 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-red-400 to-pink-500,; featured: false,; tags: [,;
+  ; },; color: 'from-red-400 to-pink-500,; featured: false,; tags: [,
   Security',;
   'Zero Trust',;
   'Network',;
@@ -79,7 +79,7 @@ import React, { useState, useMemo } from;
   4-6 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-orange-400 to-red-500,; featured: false,; tags: [,;
+  ; },; color: 'from-orange-400 to-red-500,; featured: false,; tags: [,
   Security',;
   'Threat Intelligence',;
   'AI',;
@@ -93,7 +93,7 @@ import React, { useState, useMemo } from;
   2-3 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-blue-400 to-indigo-500,; featured: false,; tags: [,;
+  ; },; color: 'from-blue-400 to-indigo-500,; featured: false,; tags: [,
   Cloud',;
   'FinOps',;
   'Cost Optimization',;
@@ -107,7 +107,7 @@ import React, { useState, useMemo } from;
   3-4 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-indigo-400 to-purple-500,; featured: false,; tags: [,;
+  ; },; color: 'from-indigo-400 to-purple-500,; featured: false,; tags: [,
   AI',;
   'Business Intelligence',;
   'Analytics',;
@@ -121,11 +121,11 @@ import React, { useState, useMemo } from;
   3-4 weeks',; contact: {; phone:;
   '+1 302 464 0950,; email:,;
   kleber@ziontechgroup.com',; address: 364 E Main St STE 1008, Middletown DE 19709,;
-  ; },; color: 'from-yellow-400 to-orange-500,; featured: false,; tags: [;
+  ; },; color: 'from-yellow-400 to-orange-500,; featured: false,; tags: [
   'Automation',;
   'Workflow',;
   'AI',;
-  'Process Optimization']; }; ]; ; const categories = [';All',';AI & Machine Learning',';Cybersecurity',';Cloud & DevOps',';Data & Analytics',';Automation & Integration'; ]; ; export default function InnovativeServices2029() {; const [selectedCategory, setSelectedCategory] = useState(;
+  'Process Optimization']; }; ]; ; const categories = ['All',';AI & Machine Learning',';Cybersecurity',';Cloud & DevOps',';Data & Analytics',';Automation & Integration'; ]; ; export default function InnovativeServices2029() { const [selectedCategory, setSelectedCategory] = useState(;
   'All'); const [searchQuery, setSearchQuery] = useState(';
   '); const [selectedService, setSelectedService] = useState<Service | null>(null); const [sortBy, setSortBy] = useState<'name;
   ' | 'price;

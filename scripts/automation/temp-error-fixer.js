@@ -21,7 +21,7 @@ try {;
   setTimeout(() => {;
     process.exit(0);
   }, 5000);
-} catch (error) {;
+} catch (error) {
   console.error(;
   'Script error:', error.message);
   process.exit(1);

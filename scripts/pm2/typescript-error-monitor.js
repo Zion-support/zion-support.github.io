@@ -158,7 +158,7 @@ class TypeScriptErrorMonitor {;
       const originalContent = content;
 ;
       // Apply specific fixes based on error codes;
-      switch (code) {;
+      switch (code) {
         case;
   'TS2304': // Cannot find name;
           modified = this.fixCannotFindName(lines, line - 1, message);
@@ -259,7 +259,7 @@ class TypeScriptErrorMonitor {;
       if (moduleName.startsWith(;
   './') || moduleName.startsWith(;
   '../')) {;
-        const extensions = [;
+        const extensions = [
   '.ts',;
   '.tsx',;
   '.js',;
@@ -342,7 +342,7 @@ class TypeScriptErrorMonitor {;
     return false;
   }
 ;
-  applyGenericFix(lines, lineIndex, message) {;
+  applyGenericFix(lines, lineIndex, message) {
     const line = lines[lineIndex];
 ;
     // Generic type annotation fixes;

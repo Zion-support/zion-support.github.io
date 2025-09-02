@@ -1,4 +1,4 @@
-export interface ExtraService {;
+export interface ExtraService {
   id: string;
    name: string;
    tagline: string;

@@ -5,7 +5,7 @@
       <section className='relative overflow-hidden py-20'>'';
         <div className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10'></div>'';
         <div className='container mx-auto px-4 relative z-10'>';
-          <motion.div'';
+          <motion.div''
             className='text-center max-w-4xl mx-auto';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}';
@@ -162,20 +162,20 @@ import {}
 export { function };
 export default function ITConsulting(...args: []):  {}
     },;
-    {;
+    {
       icon: Cloud,;
       title: 'Cloud Strategy',;
       description: 'Plan cloud migration and hybrid cloud solutions'};
   ]';Optimize IT infrastructure and reduce costs by 25%',';Improve system performance and reliability',';Enhance cybersecurity posture and compliance',';Enable digital transformation initiatives',';Streamline IT operations and processes',';Align technology with business objectives';
   ]},;
-    {;
+    {
       icon: Scale,;
       title: 'Scalability Planning',;
       description: 'Plan for future growth and technology scaling'};
   ];
 ;
       description: 'Secure, compliant financial technology solutions'},;
-    {;
+    {
       industry: 'Manufacturing',;
       description: 'Industry 4.0 and smart manufacturing IT'};
   ];
@@ -185,7 +185,7 @@ export default function ITConsulting(...args: []):  {}
       {/* Hero Section */}'';
       <section className='relative overflow-hidden py-20'>'';
         <div className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10'></div>'';
-        <div className='container mx-auto px-4 relative z-10'>;
+        <div className='container mx-auto px-4 relative z-10'>
           <motion.div'';
             className='text-center max-w-4xl mx-auto'';
             initial={{ opacity: 0, y: 30 }}
@@ -197,26 +197,26 @@ export default function ITConsulting(...args: []):  {}
 :pages.disabled/pages/services/ITConsulting.tsx;
               <Briefcase className='w-4 h-4 mr-2'  />              IT Consulting Services;
 :pages.disabled/pages/services/ITConsulting.tsx;
-            </div>;
+            </div>
 <:pages.disabled/pages/services/ITConsulting.tsx;
 =;
             ';
 >              <Briefcase className='w-4 h-4 mr-2'  />              IT Consulting Services;
-            </div>;
+            </div>
             '';
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               IT'';
-              <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'> Consulting</span>;
+              <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'> Consulting</span>
             </h1>'';
-            <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>;
+            <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>
               Strategic IT consulting services that align technology with your business objectives.;
               Our expert consultants help you make informed technology decisions that drive growth and innovation.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ITConsulting.tsx;
 <:pages.disabled/pages/services/ITConsulting.tsx;
 =;
             ';
->            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+>            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link';
                 to='/contact';
             </div>';
@@ -225,7 +225,7 @@ export default function ITConsulting(...args: []):  {}
               IT'';
               <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'> Consulting</span>';
             </h1>'';
-            <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>;
+            <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>
               Strategic IT consulting services that align technology with your business objectives.;
               Our expert consultants help you make informed technology decisions that drive growth and innovation.;
             </p>';
@@ -236,31 +236,31 @@ export default function ITConsulting(...args: []):  {}
                 className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold';
                 Get Expert Advice;
               </Link>';
-              <Link'';
+              <Link''
                 to='/services'';
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold';
                 View All Services;
             '';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <Link'';
+              <Link''
                 to='/contact'';
                 className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'';
                 Get Expert Advice;
               </Link>;
-              <Link'';
+              <Link''
                 to='/services'';
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold'';
                 View All Services;
               </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
+            </div>
+          </motion.div>
+        </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
       </section>';
       {/* Features Section */}'';
       <section className='py-20'>';
         <div className='container mx-auto px-4'>';
-          <motion.div'';
+          <motion.div''
             className='text-center mb-16';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}';
@@ -268,7 +268,7 @@ export default function ITConsulting(...args: []):  {}
 ;
       {/* Features Section */}'';
       <section className='py-20'>';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 30 }}
@@ -276,20 +276,20 @@ export default function ITConsulting(...args: []):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITConsulting.tsx;
               Comprehensive IT Consulting Features';
               Comprehensive IT Consulting Features;
             </h2>'';
-            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>;
+            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Comprehensive IT consulting services designed to help you make the right technology decisions;
               and implement solutions that drive business success.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ITConsulting.tsx;
           </motion.div>';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {services.map((service, index;
               <motion.div;
                 key={index}
@@ -327,53 +327,53 @@ export default function ITConsulting(...args: []):  {}
                 <div className='flex items-start gap-4 mb-6'>'';
                   <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0'>'';
 :pages.disabled/pages/services/ITConsulting.tsx;
-                    <service.icon className='w-8 h-8 text-white' />;
+                    <service.icon className='w-8 h-8 text-white' />
                   </div>';
-                    <service.icon className='w-8 h-8 text-white' />;
-                  </div>;
+                    <service.icon className='w-8 h-8 text-white' />
+                  </div>
                   <div>'';
                     <h3 className='text-2xl font-bold text-white mb-2'>{service.title}</h3>'';
-                    <p className='text-zion-slate-light leading-relaxed'>{service.description}</p>;
-                  </div>;
+                    <p className='text-zion-slate-light leading-relaxed'>{service.description}</p>
+                  </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
                 </div>';
 '';
                 <div className='mb-6'>'''';
                   <h4 className='text-zion-cyan font-semibold mb-3'>What's Included:</h4>'';
                   <ul className='space-y-2'>';
-                </div>;
+                </div>
 '';
                 <div className='mb-6'>''';
                   <h4 className='text-zion-cyan font-semibold mb-3'>What's Included:</h4>'';
-                  <ul className='space-y-2'>;
+                  <ul className='space-y-2'>
                     {service.features.map((feature, featureIndex) => ('';
                       <li key={featureIndex} className='flex items-center gap-2 text-zion-slate-light'>'';
                         <CheckCircle className='w-4 h-4 text-zion-cyan flex-shrink-0'  />                        {feature}
-                      </li>;
+                      </li>
                     ))}
 :pages.disabled/pages/services/ITConsulting.tsx;
                   </ul>';
-                  </ul>;
+                  </ul>
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
-                <p className='text-gray-300'>{feature.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{feature.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
       </section>';
       {/* Expertise Areas */}'';
       <section className='py-20 bg-zion-slate-dark/30'>';
         <div className='container mx-auto px-4'>';
-          <motion.div'';
+          <motion.div''
             className='text-center mb-16';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}';
       </section>;
       {/* Expertise Areas */}'';
       <section className='py-20 bg-zion-slate-dark/30'>';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 30 }}
@@ -381,28 +381,28 @@ export default function ITConsulting(...args: []):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITConsulting.tsx;
               Core IT Consulting Services';
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               From strategy to implementation, we provide;
               comprehensive IT consulting solutions.;
-            </p>;
+            </p>
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {expertise.map(area: unknown, index: unknown();
               <motion.div;
               Core IT Consulting Services;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               From strategy to implementation, we provide;
               comprehensive IT consulting solutions.;
-            </p>;
-          </motion.div>;
+            </p>
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {expertise.map(area: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -440,37 +440,37 @@ export default function ITConsulting(...args: []):  {}
                 <div className='flex items-start space-x-4'>'';
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0'>'';
 :pages.disabled/pages/services/ITConsulting.tsx;
-                    <service.icon className='w-6 h-6 text-white' />;
+                    <service.icon className='w-6 h-6 text-white' />
                   </div>';
-                    <service.icon className='w-6 h-6 text-white' />;
-                  </div>;
+                    <service.icon className='w-6 h-6 text-white' />
+                  </div>
                   <div>'';
                     <h3 className='text-xl font-semibold text-white mb-2'>{service.title}</h3>'';
-                    <p className='text-gray-300'>{service.description}</p>;
-                  </div>;
+                    <p className='text-gray-300'>{service.description}</p>
+                  </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
                 </div>';
-                </div>;
+                </div>
 '';
                 <h3 className='text-xl font-bold text-white mb-3'>{area.title}</h3>'';
-                <p className='text-zion-slate-light leading-relaxed'>{area.description}</p>;
-              </motion.div>;
+                <p className='text-zion-slate-light leading-relaxed'>{area.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
       </section>';
       {/* Benefits Section */}'';
       <section className='py-20'>';
         <div className='container mx-auto px-4'>';
-          <motion.div'';
+          <motion.div''
             className='text-center mb-16';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}';
       </section>;
       {/* Benefits Section */}'';
       <section className='py-20'>';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 30 }}
@@ -478,18 +478,18 @@ export default function ITConsulting(...args: []):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITConsulting.tsx;
               IT Consulting Benefits';
               IT Consulting Benefits;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Experience measurable improvements in IT efficiency, security, and business alignment.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ITConsulting.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown();
               <motion.div';
                 key={index}'';
@@ -500,9 +500,9 @@ export default function ITConsulting(...args: []):  {}
 '';
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6'>'';
                   <benefit.icon className='w-8 h-8 text-white' />';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown (;
               <motion.div;
                 key={index}'';
@@ -512,27 +512,27 @@ export default function ITConsulting(...args: []):  {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 '';
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6'>'';
-                  <benefit.icon className='w-8 h-8 text-white' />;
+                  <benefit.icon className='w-8 h-8 text-white' />
                 </div>'';
                 <h3 className='text-xl font-bold text-white mb-3'>{benefit.title}</h3>'';
-                <p className='text-zion-slate-light leading-relaxed'>{benefit.description}</p>;
-              </motion.div>;
+                <p className='text-zion-slate-light leading-relaxed'>{benefit.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
       </section>';
       {/* Industries Section */}'';
       <section className='py-20 bg-zion-slate-dark/30'>';
         <div className='container mx-auto px-4'>';
-          <motion.div'';
+          <motion.div''
             className='text-center mb-16';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}';
       </section>;
       {/* Industries Section */}'';
       <section className='py-20 bg-zion-slate-dark/30'>';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div'';
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 30 }}
@@ -540,24 +540,24 @@ export default function ITConsulting(...args: []):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16'';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITConsulting.tsx;
               Industry Applications';
               Industry Applications;
             </h2>'';
-            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>;
+            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our IT consulting expertise spans across multiple industries,;
               each with unique technology challenges and requirements.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ITConsulting.tsx;
           </motion.div>';
 '';
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {industries.map(industry: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           </motion.div>;
 '';
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {industries.map(industry: unknown, index: unknown (;
               <motion.div;
                 key={index}
@@ -593,17 +593,17 @@ export default function ITConsulting(...args: []):  {}
 }}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200'';
               >'';
-                <div className='text-zion-cyan font-semibold'>{industry}</div>;
-              </motion.div>;
+                <div className='text-zion-cyan font-semibold'>{industry}</div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
       </section>';
       {/* Process Section */}'';
       <section className='py-20'>';
         <div className='container mx-auto px-4'>';
-          <motion.div'';
+          <motion.div''
             className='text-center mb-16';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -611,11 +611,11 @@ export default function ITConsulting(...args: []):  {}
 '';
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>;
               Our Consulting Process';
-      </section>;
+      </section>
       {/* Process Section */}'';
       <section className='py-20'>';
-        <div className='container mx-auto px-4'>;
-          <motion.div'';
+        <div className='container mx-auto px-4'>
+          <motion.div''
             className='text-center mb-16'';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -624,9 +624,9 @@ export default function ITConsulting(...args: []):  {}
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>;
               Our Consulting Process;
             </h2>'';
-            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>;
+            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               A proven methodology that ensures successful consulting outcomes and lasting value.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/ITConsulting.tsx;
           </motion.div>';
 '';
@@ -637,7 +637,7 @@ export default function ITConsulting(...args: []):  {}
               { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },';
               { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
             ].map(phase: unknown, index: unknown();
-              <motion.div';
+              <motion.div'
                 key={index}'';
                 className='text-center';
                 initial={{ opacity: 0, y: 30 }}
@@ -646,16 +646,16 @@ export default function ITConsulting(...args: []):  {}
 '';
                 <div className='w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>;
                   {phase.step}';
-          </motion.div>;
+          </motion.div>
 '';
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[';
               { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },;
               { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },;
               { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },;
               { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
             ].map(phase: unknown, index: unknown (;
-              <motion.div;
+              <motion.div
                 key={index}'';
                 className='text-center'';
                 initial={{ opacity: 0, y: 30 }}
@@ -666,11 +666,11 @@ export default function ITConsulting(...args: []):  {}
                   {phase.step}
                 </div>'';
                 <h3 className='text-xl font-semibold text-white mb-2'>{useCase.industry}</h3>'';
-                <p className='text-gray-300 text-sm'>{useCase.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300 text-sm'>{useCase.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/ITConsulting.tsx;
       </section>';
       {/* CTA Section */}'';
@@ -682,10 +682,10 @@ export default function ITConsulting(...args: []):  {}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}';
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Start Your IT Consultation Today';
             </h2>'';
-            <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>;
+            <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
               Let our IT consulting experts help you make the right technology decisions.;
               Get started with a free consultation today.';
             </p>'';
@@ -695,43 +695,43 @@ export default function ITConsulting(...args: []):  {}
                 className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold';
                 Schedule Consultation;
               </Link>';
-              <Link'';
+              <Link''
                 to='/services'';
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold';
                 Explore Services;
       </section>;
       {/* CTA Section */}'';
       <section className='py-20 bg-zion-slate-dark/30'>';
-        <div className='container mx-auto px-4'>;
+        <div className='container mx-auto px-4'>
           <motion.div'';
             className='bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center'';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >'';
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Start Your IT Consultation Today;
             </h2>'';
-            <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>;
+            <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
               Let our IT consulting experts help you make the right technology decisions.;
               Get started with a free consultation today.;
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <Link'';
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link''
                 to='/contact'';
                 className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold'';
                 Schedule Consultation;
               </Link>;
-              <Link'';
+              <Link''
                 to='/services'';
                 className='px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold'';
                 Explore Services;
               </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   )};
 :pages.disabled/pages/services/ITConsulting.tsx;
 ;export default ITConsulting'';''";

@@ -1,4 +1,4 @@
-export interface EnterpriseITBreakthroughService2029 {;
+export interface EnterpriseITBreakthroughService2029 {
   id: string;
    name: string;
    tagline: string;
@@ -65,7 +65,7 @@ enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices20
       'Operational optimization',;
       'Financial analysis';
     ],;
-    enterpriseCapabilities[;
+    enterpriseCapabilities[
       'Data analysis',;
       'Predictive insights',;
       'Real-time monitoring',;
@@ -115,7 +115,7 @@ enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices20
       'Logistics optimization',;
       'Supplier relationship management';
     ],;
-    enterpriseCapabilities[;
+    enterpriseCapabilities[
       'Demand forecasting',;
       'Inventory optimization',;
       'Logistics management',;
@@ -165,7 +165,7 @@ enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices20
       'Performance management',;
       'Workforce planning';
     ],;
-    enterpriseCapabilities[;
+    enterpriseCapabilities[
       'Recruitment optimization',;
       'Performance analytics',;
       'Employee engagement',;
@@ -215,7 +215,7 @@ enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices20
       'Investment optimization',;
       'Compliance monitoring';
     ],;
-    enterpriseCapabilities[;
+    enterpriseCapabilities[
       'Financial planning',;
       'Risk management',;
       'Investment optimization',;
@@ -265,7 +265,7 @@ enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices20
       'Vulnerability management',;
       'Compliance monitoring';
     ],;
-    enterpriseCapabilities[;
+    enterpriseCapabilities[
       'Threat detection',;
       'Security monitoring',;
       'Incident response',;

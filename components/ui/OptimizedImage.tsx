@@ -4,8 +4,8 @@ import { cn } from '../../lib/utils';
 
 interface OptimizedImageProps {
 import { cn } from '../../src/lib/utils';
-;
-interface OptimizedImageProps {;
+
+interface OptimizedImageProps {
   src: string;
    alt: string;
    width?: number;
@@ -31,8 +31,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
 }) => {;
   return (;
-    <div className={cn('relative overflow-hidden', className)}>;
-      <Image;
+    <div className={cn('relative overflow-hidden', className)}>
+      <Image
         src={src}
         alt={alt}
         width={width}
@@ -44,7 +44,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
         sizes={sizes}
         className='object-cover transition-transform duration-300 hover:scale-105';
       />;
-    </div>;
+    </div>
   );
 };
 ;

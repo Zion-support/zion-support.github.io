@@ -1,4 +1,4 @@
-export interface AIBreakthroughService2029 {;
+export interface AIBreakthroughService2029 {
   id: string;
    name: string;
    tagline: string;
@@ -66,7 +66,7 @@ aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthrough
       'Ethical AI development',;
       'Advanced robotics';
     ],;
-    aiCapabilities[;
+    aiCapabilities[
       'Consciousness simulation',;
       'Emotional intelligence',;
       'Self-awareness',;
@@ -116,7 +116,7 @@ aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthrough
       'Climate modeling',;
       'Cryptography';
     ],;
-    aiCapabilities[;
+    aiCapabilities[
       'Quantum machine learning',;
       'Quantum optimization',;
       'Quantum neural networks',;
@@ -166,7 +166,7 @@ aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthrough
       'Marketing creativity',;
       'Product development';
     ],;
-    aiCapabilities[;
+    aiCapabilities[
       'Multi-model orchestration',;
       'Creative fusion',;
       'Cross-domain creativity',;
@@ -216,7 +216,7 @@ aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthrough
       'Financial management',;
       'Risk management';
     ],;
-    aiCapabilities[;
+    aiCapabilities[
       'Autonomous decision making',;
       'Strategic planning',;
       'Operational management',;
@@ -266,7 +266,7 @@ aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthrough
       'Education',;
       'Healthcare';
     ],;
-    aiCapabilities[;
+    aiCapabilities[
       'Emotion detection',;
       'Emotional response',;
       'Empathy simulation',;

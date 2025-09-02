@@ -15,4 +15,4 @@
    message?: string;
 } interface ErrorResponse {;
   error: string;
-} // Type for the handler function itself before being wrapped by withErrorLogging type UserMeApiHandler = ( req: NextApiRequest, res: NextApiResponse<UserMe | MutationSuccessResponse | ErrorResponse> ) => void | Promise<void>; const handler: UserMeApiHandler = async (req, res) => { ' ' ' if (req.method === 'GET') { // Simulate fetching user data if (mockUser.softDeleted) { // Check if user is 'deleted' return res .status(404) .json({ error: 'User not found or has been deleted." }); ;
+} // Type for the handler function itself before being wrapped by withErrorLogging type UserMeApiHandler = ( req: NextApiRequest, res: NextApiResponse<UserMe | MutationSuccessResponse | ErrorResponse> ) => void | Promise<void> const handler: UserMeApiHandler = async (req, res) => { ' ' ' if (req.method === 'GET') { // Simulate fetching user data if (mockUser.softDeleted) { // Check if user is 'deleted' return res .status(404) .json({ error: 'User not found or has been deleted." }); ;

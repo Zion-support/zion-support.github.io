@@ -7,7 +7,7 @@ import React, { useState, useRef, useEffect } from,;
    description: string;
    type: 'service' | 'page' | 'feature;
    url: string;
-   icon?: React.ComponentType<any>;
+   icon?: React.ComponentType<any>
 } interface SearchComponentProps {;
   placeholder?: string;
    onSearch?: (query: string) => void;

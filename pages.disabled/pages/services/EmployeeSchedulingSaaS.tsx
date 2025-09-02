@@ -1,16 +1,16 @@
 ;
 export { function };
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-export default function EmployeeSchedulingSaaS(...args: []):  {;
+export default function EmployeeSchedulingSaaS(...args: []):  {
 export default function EmployeeSchedulingSaaS(...args: []):  {}
     },;
-    {;
+    {
       icon: Globe,';
       title: 'Multi-location Support',';
       description: 'Manage schedules across multiple locations, departments, and time zones seamlessly.'};
   ]},;
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-    {';
+    {'
     {;
       icon: FileText,';
       title: 'Compliance Tracking',';
@@ -90,13 +90,13 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
   ]},';
   ]},;
-    {';
+    {'
       title: 'Ensure Compliance',';
       description: 'Automatically comply with labor laws and avoid costly violations.',;
       icon: Shield};
   ]},;
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-    {';
+    {'
     {;
       icon: BarChart3,';
       title: 'Construction',';
@@ -119,17 +119,17 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
         canonical='/services/employee-scheduling-saas';
        />';
 '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO '';
+      <SEO ''
         title = 'Employee Scheduling SaaS - Zion Tech Group'';
         description='Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.'';
         canonical='/services/employee-scheduling-saas'';
        />;
-'      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+'      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
         {/* Hero Section */}'';
         <section className='relative py-20 overflow-hidden'>'';
           <div className='absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-600/20'></div>'';
           <div className='relative max-w-7xl mx-auto px-6'>'';
-            <div className='text-center'>;
+            <div className='text-center'>
               <motion.div;
                 initial = {}
   { opacity: 0,;
@@ -145,11 +145,11 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                 transition={{ duration: 0.6 }}';
 '';
                 <h1 className='text-5xl md:text-6xl font-bold mb-6'>'';
-                  <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-400 bg-clip-text text-transparent'>;
+                  <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-400 bg-clip-text text-transparent'>
                     Employee Scheduling SaaS;
                   </span>';
                 </h1>'';
-                <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+                <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                   Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive;
                   workforce management tools. Streamline your scheduling process and optimize labor costs.';
                 </p>'';
@@ -168,55 +168,55 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                 transition={{ duration: 0.6 }}
 '';
                 <h1 className='text-5xl md:text-6xl font-bold mb-6'>'';
-                  <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-400 bg-clip-text text-transparent'>;
+                  <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-400 bg-clip-text text-transparent'>
                     Employee Scheduling SaaS;
-                  </span>;
+                  </span>
                 </h1>'';
-                <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+                <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                   Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive;
                   workforce management tools. Streamline your scheduling process and optimize labor costs.;
                 </p>'';
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-                  <Link'';
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Link''
                     to='/request-quote'';
                     className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105'';
                     Start Free Trial;
                   </Link>;
-                  <Link'';
+                  <Link''
                     to='/contact'';
                     className='px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300'';
                     Schedule Demo;
                   </Link>;
-                </div>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 ';
         {/* Features Section */}'';
         <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-6'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-4xl font-bold mb-6 text-white'>;
+              <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                 Powerful Scheduling Features';
                 Powerful Scheduling Features;
               </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Everything you need to manage your workforce efficiently and effectively;
-              </p>;
+              </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-            </div>;
+            </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
             ';
 >            </div>';
             '';
-            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index();
-                <motion.div;
+                <motion.div
             '';
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>;
               {features.map((feature, index (;
@@ -250,40 +250,40 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                     <feature.icon className='w-6 h-6 text-white' />';
-                    <feature.icon className='w-6 h-6 text-white' />;
+                    <feature.icon className='w-6 h-6 text-white' />
                   </div>'';
                   <h3 className='text-xl font-semibold mb-3 text-white'>{feature.title}</h3>'';
-                  <p className='text-gray-300'>{feature.description}</p>;
-                </motion.div>;
+                  <p className='text-gray-300'>{feature.description}</p>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 ';
         {/* Scheduling Capabilities Section */}'';
         <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-6'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-4xl font-bold mb-6 text-white'>;
+              <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                 Advanced Scheduling Capabilities';
                 Advanced Scheduling Capabilities;
               </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Intelligent tools that make scheduling simple and efficient;
-              </p>;
+              </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-            </div>;
+            </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
             ';
 >            </div>';
             '';
-            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {schedulingCapabilities.map(capability: unknown, index: unknown();
-                <motion.div;
+                <motion.div
             '';
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>;
               {schedulingCapabilities.map(capability: unknown, index: unknown (;
@@ -317,40 +317,40 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                     <capability.icon className='w-6 h-6 text-white' />';
-                    <capability.icon className='w-6 h-6 text-white' />;
+                    <capability.icon className='w-6 h-6 text-white' />
                   </div>'';
                   <h3 className='text-xl font-semibold mb-3 text-white'>{capability.title}</h3>'';
-                  <p className='text-gray-300'>{capability.description}</p>;
-                </motion.div>;
+                  <p className='text-gray-300'>{capability.description}</p>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 ';
         {/* Industries Section */}'';
         <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-6'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-4xl font-bold mb-6 text-white'>;
+              <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                 Designed for Every Industry';
                 Designed for Every Industry;
               </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Flexible scheduling solutions that adapt to your business needs;
-              </p>;
+              </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-            </div>;
+            </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
             ';
 >            </div>';
             '';
-            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {industries.map(industry: unknown, index: unknown();
-                <motion.div;
+                <motion.div
             '';
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>;
               {industries.map(industry: unknown, index: unknown (;
@@ -384,40 +384,40 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                     <industry.icon className='w-6 h-6 text-white' />';
-                    <industry.icon className='w-6 h-6 text-white' />;
+                    <industry.icon className='w-6 h-6 text-white' />
                   </div>'';
                   <h3 className='text-xl font-semibold mb-3 text-white'>{industry.title}</h3>'';
-                  <p className='text-gray-300'>{industry.description}</p>;
-                </motion.div>;
+                  <p className='text-gray-300'>{industry.description}</p>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 ';
         {/* Benefits Section */}'';
         <section className='py-20 bg-slate-800/30'>';
           <div className='max-w-7xl mx-auto px-6'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-4xl font-bold mb-6 text-white'>;
+              <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                 Why Choose Our Scheduling Platform?';
                 Why Choose Our Scheduling Platform?;
               </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Professional scheduling tools that transform how you manage your workforce;
-              </p>;
+              </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-            </div>;
+            </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
             ';
 >            </div>';
             '';
-            <div className='grid md: grid-cols-2 gap-8'>;
+            <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown();
-                <motion.div;
+                <motion.div
             '';
             <div className='grid md: grid-cols-2 gap-8'>;
               {benefits.map(benefit: unknown, index: unknown (;
@@ -449,44 +449,44 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   className='flex items-start space-x-4'';
 '';
                   <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0'>'';
-                    <benefit.icon className='w-6 h-6 text-white' />;
+                    <benefit.icon className='w-6 h-6 text-white' />
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                   </div>';
-                  </div>;
+                  </div>
                   <div>'';
                     <h3 className='text-xl font-semibold mb-2 text-white'>{benefit.title}</h3>'';
-                    <p className='text-gray-300'>{benefit.description}</p>;
-                  </div>;
-                </motion.div>;
+                    <p className='text-gray-300'>{benefit.description}</p>
+                  </div>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 ';
         {/* Pricing Section */}'';
         <section className='py-20'>';
           <div className='max-w-7xl mx-auto px-6'>'';
             <div className='text-center mb-16'>'';
-              <h2 className='text-4xl font-bold mb-6 text-white'>;
+              <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                 Transparent Pricing Plans';
                 Transparent Pricing Plans;
               </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Choose the scheduling plan that fits your business size and needs;
-              </p>;
+              </p>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-            </div>;
+            </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
             ';
 >            </div>';
             '';
-            <div className='grid md: grid-cols-3 gap-8'>;
+            <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown();
-                <motion.div;
+                <motion.div
             '';
             <div className='grid md: grid-cols-3 gap-8'>;
               {pricingPlans.map(plan: unknown, index: unknown (;
@@ -525,10 +525,10 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 ;
                   {plan.popular && (';
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                      <span className='bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
+                      <span className='bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                         Most Popular;
-                      </span>;
-                    </div>;
+                      </span>
+                    </div>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                   )}';
                   )}
@@ -540,25 +540,25 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
                       <span className='text-gray-400'>{plan.period}</span>';
                     </div>'';
-                    <p className='text-gray-300'>{plan.description}</p>;
+                    <p className='text-gray-300'>{plan.description}</p>
                   </div>';
 '';
                   <ul className='space-y-3 mb-8'>';
-                      <span className='text-gray-400'>{plan.period}</span>;
+                      <span className='text-gray-400'>{plan.period}</span>
                     </div>'';
-                    <p className='text-gray-300'>{plan.description}</p>;
-                  </div>;
+                    <p className='text-gray-300'>{plan.description}</p>
+                  </div>
 '';
-                  <ul className='space-y-3 mb-8'>;
+                  <ul className='space-y-3 mb-8'>
                     {plan.features.map((feature, featureIndex) => ('';
                       <li key={featureIndex} className='flex items-center space-x-3'>'';
-                        <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0'  />'                        <span className='text-gray-300'>{feature}</span>;
-                      </li>;
+                        <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0'  />'                        <span className='text-gray-300'>{feature}</span>
+                      </li>
                     ))}
-                  </ul>;
+                  </ul>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 ';
-                  <Link''`;
+                  <Link''`
                     to='/request-quote'``;
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
 ';
@@ -575,17 +575,17 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 ;
                     Get Started;
                   </Link>;
-                </motion.div>;
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 ';
         {/* CTA Section */}'';
         <section className='py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20'>';
-          <div className='max-w-4xl mx-auto text-center px-6'>;
-            <motion.div;
+          <div className='max-w-4xl mx-auto text-center px-6'>
+            <motion.div
               initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
@@ -602,7 +602,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
               <h2 className='text-4xl font-bold mb-6 text-white'>;
                 Ready to Transform Your Scheduling?';
               </h2>'';
-              <p className='text-xl text-gray-300 mb-8'>;
+              <p className='text-xl text-gray-300 mb-8'>
                 Join thousands of businesses using our platform to streamline their workforce management.';
               </p>'';
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
@@ -611,7 +611,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105';
                   Start Free Trial;
                 </Link>';
-                <Link'';
+                <Link''
                   to='/contact'';
                   className='px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300';
                   Contact Sales;
@@ -622,24 +622,24 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
               <h2 className='text-4xl font-bold mb-6 text-white'>;
                 Ready to Transform Your Scheduling?;
               </h2>'';
-              <p className='text-xl text-gray-300 mb-8'>;
+              <p className='text-xl text-gray-300 mb-8'>
                 Join thousands of businesses using our platform to streamline their workforce management.;
               </p>'';
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-                <Link'';
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <Link''
                   to='/request-quote'';
                   className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105'';
                   Start Free Trial;
                 </Link>;
-                <Link'';
+                <Link''
                   to='/contact'';
                   className='px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300'';
                   Contact Sales;
                 </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
     </>''`;
   )}}}}}}}''`'"`;

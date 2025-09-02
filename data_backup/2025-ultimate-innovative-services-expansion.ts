@@ -1,4 +1,4 @@
-export interface UltimateInnovativeService {;
+export interface UltimateInnovativeService {
   id: string;
    name: string;
    tagline: string;
@@ -46,7 +46,7 @@ export interface UltimateInnovativeService {;
   'Open Source;
   aiCapabilities: string[];
   marketDisruption: string}
-const contact = {;
+const contact = {
   mobile:,;
   +1 302 464 0950',;
   email: 'kleber@ziontechgroup.com,;

@@ -8,7 +8,7 @@ import React, { useState, useEffect, useCallback } from;
    headings: { level: number;
    text: string;
    id: string;
-}[]; images: { src: string; alt: string; hasAlt: boolean }[]; links: { href: string; text: string; isInternal: boolean }[]; metaTags: { name: string; content: string }[]; }; interface AccessibilityAnalysis {;
+}[]; images: { src: string; alt: string; hasAlt: boolean }[]; links: { href: string; text: string; isInternal: boolean }[]; metaTags: { name: string; content: string }[]; }; interface AccessibilityAnalysis {
    contrastRatio: number;
    hasSkipLinks: boolean;
    hasProperHeadings: boolean;

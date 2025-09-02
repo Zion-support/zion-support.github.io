@@ -3,7 +3,7 @@ import { render, screen, fireEvent, waitFor } from,;
 import { ServiceTypeStep } from '@/components/QuoteRequestForm/ServiceTypeStep';
 import { QuoteFormData } from '@/types/quotes';
 import { vi } from 'vitest';
-;
+
 const baseData: QuoteFormData = {;
   serviceType: ',;
   serviceCategory: '',;

@@ -55,7 +55,7 @@ import { Shield,;
  } from 'lucide-react';
 ;
 const AIDataGovernance: React.FC = (): JSX.Element => {}
-    {;
+    {
       icon: Users,';
       title: 'Data Lineage Tracking',';
       description: 'Complete audit trail showing data origins, transformations, and usage patterns',';
@@ -139,7 +139,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       popular: false};
   ];
 :pages.disabled/pages/services/AIDataGovernance.tsx;
-    {';
+    {'
 ;
     {;
       icon: Clock,';
@@ -148,13 +148,13 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       metric: '24/7'};
 :pages.disabled/pages/services/AIDataGovernance.tsx;
   ]';
-    {';
+    {'
       name: 'SOC 2',';
       description: 'Service Organization Control 2 compliance',';
       icon: CheckCircle,';
       color: 'from-yellow-500 to-orange-500'};
   ];
-  const useCases = [;
+  const useCases = [
     {;
 ';
 '';
@@ -173,7 +173,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       icon: DollarSign,'';
       color: 'from-green-500 to-emerald-500';
     },;
-    {;
+    {
 ';
 '';
       industry: 'Retail','';
@@ -216,15 +216,15 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       icon: ShieldCheck,'';
       color: 'from-purple-500 to-pink-500'';
     },;
-    {';
+    {'
       industry: 'Technology',';
       title: 'Intellectual Property',';
       description: 'Protect trade secrets and proprietary data with advanced classification',;
       icon: Cpu,';
       color: 'from-orange-500 to-red-500'};  ];
 ;
-  return ('';
-    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+  return (''
+    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
 <:pages.disabled/pages/services/AIDataGovernance.tsx;
       <SEO;
@@ -234,7 +234,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
         description='Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security.';
        />        title='AI Data Governance - Zion Tech Group''        description='Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security.';
        />';
-      <SEO '';
+      <SEO ''
         title='AI Data Governance - Zion Tech Group'';
         description='Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security.'';
        />;
@@ -242,7 +242,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       <section className='relative overflow-hidden py-20 lg:py-32'>'';
         <div className='absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20'></div>'';
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
-          <div className='text-center'>;
+          <div className='text-center'>
             <motion.div;
               initial = {}
   { opacity: 0,;
@@ -267,7 +267,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 '';
               <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>';
                 AI Data'';
-                <span className='bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent'> Governance</span>;
+                <span className='bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent'> Governance</span>
               </h1>';
   y: 0;
 }}
@@ -275,62 +275,62 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 '';
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8'>'';
                 <Shield className='w-4 h-4 mr-2'  />                AI-Powered Data Protection;
-              </div>;
+              </div>
 '';
-              <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>;
+              <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>
                 AI Data'';
-                <span className='bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent'> Governance</span>;
-              </h1>;
+                <span className='bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent'> Governance</span>
+              </h1>
 '';
-              <p className='text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>;
+              <p className='text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>
                 Protect your most valuable asset with intelligent data governance.;
                 AI-powered classification, access control, and compliance management for the modern enterprise.;
 :pages.disabled/pages/services/AIDataGovernance.tsx;
               </p>';
 '';
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-                <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>;
+                <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>
                   Start Free Trial';
-              </p>;
+              </p>
 '';
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-                <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>;
+                <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>
                   Start Free Trial;
                 </button>'';
-                <button className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300'>;
+                <button className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300'>
                   Watch Demo;
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
       </section>';
-      </section>;
+      </section>
 ;
       {/* Features Section */}'';
       <section className='py-20'>';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
               Comprehensive Data Protection';
               Comprehensive Data Protection;
             </h2>'';
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Everything you need to secure, classify, and govern your data with AI intelligence;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
-          </div>;
+          </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
 <:pages.disabled/pages/services/AIDataGovernance.tsx;
 =;
           ';
 >          </div>';
           '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index();
-              <motion.div;
+              <motion.div
           '';
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
             {features.map((feature, index (;
@@ -369,41 +369,41 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                 className='group'';
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`;
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>'';
-                    <feature.icon className='w-6 h-6 text-white' />;
+                    <feature.icon className='w-6 h-6 text-white' />
                   </div>'';
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-                  <p className='text-gray-300'>{feature.description}</p>;
-                </div>;
-              </motion.div>;
+                  <p className='text-gray-300'>{feature.description}</p>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Benefits Section */}'';
       <section className='py-20 bg-slate-800/50'>';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
               Proven Results Across Industries';
               Proven Results Across Industries;
             </h2>'';
-            <p className='text-xl text-gray-300'>;
+            <p className='text-xl text-gray-300'>
               See how AI Data Governance transforms data security and compliance;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
-          </div>;
+          </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
 <:pages.disabled/pages/services/AIDataGovernance.tsx;
 =;
           ';
 >          </div>';
           '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           '';
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
             {benefits.map(benefit: unknown, index: unknown (;
@@ -434,7 +434,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                 className='text-center';
 ';
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4'>';
-                  <benefit.icon className='w-8 h-8 text-white' />;
+                  <benefit.icon className='w-8 h-8 text-white' />
                 </div>';
                 <div className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>';
                 <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>';
@@ -452,41 +452,41 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                 className='text-center'';
 '';
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4'>'';
-                  <benefit.icon className='w-8 h-8 text-white' />;
+                  <benefit.icon className='w-8 h-8 text-white' />
                 </div>'';
                 <div className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>'';
                 <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'';
-                <p className='text-gray-300'>{benefit.description}</p>;
-              </motion.div>;
+                <p className='text-gray-300'>{benefit.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Compliance Frameworks Section */}'';
       <section className='py-20'>';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
               Industry Compliance Support';
               Industry Compliance Support;
             </h2>'';
-            <p className='text-xl text-gray-300'>;
+            <p className='text-xl text-gray-300'>
               Built-in compliance for major regulatory frameworks and industry standards;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
-          </div>;
+          </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
 <:pages.disabled/pages/services/AIDataGovernance.tsx;
 =;
           ';
 >          </div>';
           '';
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {complianceFrameworks.map(framework: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           '';
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
             {complianceFrameworks.map(framework: unknown, index: unknown (;
@@ -521,7 +521,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 `;
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${framework.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`;
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${framework.color} mb-4`}>'';
-                    <framework.icon className='w-6 h-6 text-white' />;
+                    <framework.icon className='w-6 h-6 text-white' />
 :pages.disabled/pages/services/AIDataGovernance.tsx;
                   </div>';
                   <h3 className='text-xl font-semibold text-white mb-3'>{framework.name}</h3>';
@@ -536,38 +536,38 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                   <h3 className='text-xl font-semibold text-white mb-3'>{framework.name}</h3>'';
                   </div>'';
                   <h3 className='text-xl font-semibold text-white mb-3'>{framework.name}</h3>'';
-                  <p className='text-gray-300'>{framework.description}</p>;
-                </div>;
-              </motion.div>;
+                  <p className='text-gray-300'>{framework.description}</p>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Use Cases Section */}'';
       <section className='py-20 bg-slate-800/50'>';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
               Industry-Specific Solutions';
               Industry-Specific Solutions;
             </h2>'';
-            <p className='text-xl text-gray-300'>;
+            <p className='text-xl text-gray-300'>
               Tailored data governance for your industry's unique requirements;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
-          </div>;
+          </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
 <:pages.disabled/pages/services/AIDataGovernance.tsx;
 =;
           ';
 >          </div>';
           '';
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>;
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           '';
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>;
             {useCases.map(useCase: unknown, index: unknown (;
@@ -603,7 +603,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>'';
                   <div className='flex items-start space-x-4'>`;
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>'';
-                      <useCase.icon className='w-6 h-6 text-white' />;
+                      <useCase.icon className='w-6 h-6 text-white' />
 :pages.disabled/pages/services/AIDataGovernance.tsx;
                     </div>';
                     <div className='flex-1'>';
@@ -622,40 +622,40 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                       <div className='text-sm font-medium text-blue-300 mb-2'>{useCase.industry}</div>'';
                       <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>'';
 :pages.disabled/pages/services/AIDataGovernance.tsx;
-                      <p className='text-gray-300'>{useCase.description}</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
+                      <p className='text-gray-300'>{useCase.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
       </section>';
-      </section>;
+      </section>
       {/* Pricing Section */}'';
       <section className='py-20'>';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='text-center mb-16'>'';
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
               Flexible Pricing Plans';
               Flexible Pricing Plans;
             </h2>'';
-            <p className='text-xl text-gray-300'>;
+            <p className='text-xl text-gray-300'>
               Choose the plan that fits your data governance needs;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
-          </div>;
+          </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
 <:pages.disabled/pages/services/AIDataGovernance.tsx;
 =;
           ';
 >          </div>';
           '';
-          <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown();
-              <motion.div;
+              <motion.div
           '';
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>;
             {pricingPlans.map(plan: unknown, index: unknown (;
@@ -701,10 +701,10 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 ;
                 {plan.popular && (';
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                    <span className='bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium'>;
+                    <span className='bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium'>
                       Most Popular;
-                    </span>;
-                  </div>;
+                    </span>
+                  </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
                 )}';
                 )}
@@ -716,25 +716,25 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIDataGovernance.tsx;
                     <span className='text-gray-400 ml-1'>{plan.period}</span>';
                   </div>'';
-                  <p className='text-gray-300'>{plan.description}</p>;
+                  <p className='text-gray-300'>{plan.description}</p>
                 </div>';
 '';
                 <ul className='space-y-4 mb-8'>';
-                    <span className='text-gray-400 ml-1'>{plan.period}</span>;
+                    <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>'';
-                  <p className='text-gray-300'>{plan.description}</p>;
-                </div>;
+                  <p className='text-gray-300'>{plan.description}</p>
+                </div>
 '';
-                <ul className='space-y-4 mb-8'>;
+                <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => ('';
                     <li key={featureIndex} className='flex items-center'>'';
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>;
-                    </li>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
+                    </li>
                   ))}
 :pages.disabled/pages/services/AIDataGovernance.tsx;
                 </ul>`;
 ``;
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
                   plan.popular'';
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'''`;
@@ -742,23 +742,23 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                 </ul>;
 `;
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-                  plan.popular';
+                  plan.popular'
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'';
                     : 'bg-slate-700 text-white hover:bg-slate-600'`;
                 }`}>;
                   {plan.cta}
-                </button>;
-              </motion.div>;
+                </button>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
       </section>';
-      </section>;
+      </section>
       {/* CTA Section */}'';
       <section className='py-20 bg-slate-800/50'>';
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>;
-          <motion.div;
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
+          <motion.div
             initial = {}
   { opacity: 0,;
 :pages.disabled/pages/services/AIDataGovernance.tsx;
@@ -779,34 +779,34 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
               Ready to Secure Your Data?';
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of organizations already using AI Data Governance to protect their most valuable assets';
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>
                 Start Free Trial';
   y: 0;
 }}
             transition={{ duration: 0.8 }}
 '';
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
               Ready to Secure Your Data?;
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join thousands of organizations already using AI Data Governance to protect their most valuable assets;
             </p>'';
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>
                 Start Free Trial;
               </button>'';
-              <button className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300'>;
+              <button className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300'>
                 Schedule Demo;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx;
   )}''`;
 export default AIDataGovernance}}}}}}''`''`;

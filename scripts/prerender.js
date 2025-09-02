@@ -34,7 +34,7 @@ async function prerender() {;
   const template = readFileSync(resolve('dist/index.html;
   '), 'utf8;
   ');
-  const rendered = template.replace('<!--app-html-->;
+  const rendered = template.replace('<!--app-html-->
   ', html);
   writeFileSync(resolve('dist/index.html;
   '), rendered);

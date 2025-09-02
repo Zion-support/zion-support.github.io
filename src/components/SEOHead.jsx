@@ -5,13 +5,13 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 ''';
     const siteName = 'Zion Tech Group';
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
-    return (<Helmet>;
+    return (<Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>;
+      <title>{fullTitle}</title>
       <meta name='description' content={description}/>'''';
       <meta name='keywords' content={keywords}/>'''';
       <meta name='author' content={author}/>'''';
-      <meta name='robots' content='index, follow'/>;
+      <meta name='robots' content='index, follow'/>
 ''';
       {/* Open Graph Meta Tags */}'''';
       <meta property='og:title' content={fullTitle}/>'''';
@@ -20,31 +20,31 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       <meta property='og:url' content={url}/>'''';
       <meta property='og:type' content={type}/>'''';
       <meta property='og:site_name' content={siteName}/>'''';
-      <meta property='og:locale' content='en_US'/>;
+      <meta property='og:locale' content='en_US'/>
 ''';
       {/* Twitter Card Meta Tags */}'''';
       <meta name='twitter:card' content='summary_large_image'/>'''';
       <meta name='twitter:title' content={fullTitle}/>'''';
       <meta name='twitter:description' content={description}/>'''';
       <meta name='twitter:image' content={image}/>'''';
-      <meta name='twitter:site' content='@ziontechgroup'/>;
+      <meta name='twitter:site' content='@ziontechgroup'/>
 ''';
       {/* Additional Meta Tags */}'''';
       <meta name='viewport' content='width=device-width, initial-scale=1.0'/>'''';
       <meta name='theme-color' content='#1e3a8a'/>'''';
-      <meta name='msapplication-TileColor' content='#1e3a8a'/>;
+      <meta name='msapplication-TileColor' content='#1e3a8a'/>
 ''';
       {/* Canonical URL */}'''';
-      <link rel='canonical' href={url}/>;
+      <link rel='canonical' href={url}/>
 ''';
       {/* Favicon and Icons */}'''';
       <link rel='icon' type='image/x-icon' href='/favicon.ico'/>'''';
       <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'/>'''';
       <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'/>'''';
-      <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'/>;
+      <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'/>
 ''';
       {/* Structured Data */}'''';
-      <script type='application/ld+json'>;
+      <script type='application/ld+json'>
         {JSON.stringify({}
 ''';
 '''';
@@ -72,16 +72,16 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 'contactType': 'customer service','''';
                 'email': 'kleber@ziontechgroup.com'''';
             },'''';
-            'sameAs'[';'';
+            'sameAs'[''';
                 'https://linkedin.com/company/ziontechgroup','''';
                 'https://twitter.com/ziontechgroup','''';
                 'https://github.com/ziontechgroup''';
             ];
         }) }
-      </script>;
+      </script>
 '''';
       {/* Article specific structured data */}'''''';
-      {type === 'article' && publishedTime && (<script type='application/ld+json'>;
+      {type === 'article' && publishedTime && (<script type='application/ld+json'>
           {JSON.stringify({}
 ''';
 '''';

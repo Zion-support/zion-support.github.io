@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface CybersecuritySolutions2026 {;
+export interface CybersecuritySolutions2026 {
   id: string;
    name: string;
    tagline: string;

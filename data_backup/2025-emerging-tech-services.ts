@@ -1,5 +1,5 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = {;
+const contact = {
   mobile:,;
   +1 302 464 0950',;
   email: 'kleber@ziontechgroup.com,;
@@ -556,7 +556,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 11;
   },;
   // Cybersecurity & Privacy Services;
-  {;
+  {
     id:,;
   quantum-cybersecurity-platform',;
     name: 'Quantum Cybersecurity Platform,;

@@ -11,9 +11,9 @@ test;
   ').mockReturnValue(navigateMock);
   vi.spyOn(auth,useAuth').mockReturnValue({ user: null } as );
   render(;
-    <MemoryRouter>;
-      <CreatePostButton />;
-    </MemoryRouter>;
+    <MemoryRouter>
+      <CreatePostButton />
+    </MemoryRouter>
   );
   fireEvent.click(screen.getByRole(;
   'button', { name: /create new post/i }));

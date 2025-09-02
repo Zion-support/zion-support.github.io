@@ -3,7 +3,7 @@ import path from,;
 import http from 'http';
 import { Verifier } from '@pact-foundation/pact';
 import handler from '@/pages/api/items';
-;
+
 let server;
 ;
 beforeAll((done) => {;
@@ -16,7 +16,7 @@ afterAll((done) => {;
 });
 ;
 test(;
-  'ItemsService meets contract', async () => {;
+  'ItemsService meets contract', async () => {
   const opts = {;
     provider: 'ItemsService,;
     providerBaseUrl:,;

@@ -51,7 +51,7 @@ class FileIntegrityMonitor {;
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
-    } catch (error) {;
+    } catch (error) {
       // // // // // // // console.error(;
   'Failed to write to log file:', error.message);
     };
@@ -167,7 +167,7 @@ class FileIntegrityMonitor {;
     return issues;
 ;
   async checkMissingCriticalFiles() {;
-    const criticalFiles = [';package.json',';vite.config.ts',';tsconfig.json',';src/main.tsx',';index.html',';tailwind.config.js',';postcss.config.js';
+    const criticalFiles = ['package.json',';vite.config.ts',';tsconfig.json',';src/main.tsx',';index.html',';tailwind.config.js',';postcss.config.js';
     ];
 ;
     const missingFiles = [];
@@ -236,7 +236,7 @@ class FileIntegrityMonitor {;
     const permissionIssues = [];
 ;
     try {;
-      const criticalFiles = [';package.json',';vite.config.ts',';src/main.tsx';
+      const criticalFiles = ['package.json',';vite.config.ts',';src/main.tsx';
 ;
       ];
 ;
@@ -293,7 +293,7 @@ class FileIntegrityMonitor {;
 ;
     try {;
       // Check for essential directories;
-      const essentialDirs = [';src',';src/components',';src/pages',';src/utils',';public',';logs';
+      const essentialDirs = ['src',';src/components',';src/pages',';src/utils',';public',';logs';
       ];
 ;
       for (const dir of essentialDirs) {;
@@ -434,7 +434,7 @@ class FileIntegrityMonitor {;
   @hookform/resolvers': '^2.9.11,;,;
   zod': '^3.20.6;
       },;
-      devDependencies: {;,;
+      devDependencies: {,;
   @types/react': '^18.0.28,;,;
   @types/react-dom': '^18.0.11,;,;
   @typescript-eslint/eslint-plugin': '^5.57.1,;,;
@@ -573,12 +573,12 @@ import;
 ;
 ReactDOM.createRoot(document.getElementById(;
   'root')!).render(;
-  <React.StrictMode>;
-    <HelmetProvider>;
-      <BrowserRouter>;
-        <App />;
-      </BrowserRouter>;
-    </HelmetProvider>;
+  <React.StrictMode>
+    <HelmetProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,;
 )`;
 ;
@@ -597,28 +597,28 @@ ReactDOM.createRoot(document.getElementById(;
     );
 ;
   async createIndexHtml() {;
-    const indexHtml = `<!doctype html>;
-<html lang=;
+    const indexHtml = `<!doctype html>
+<html lang=
   'en'>;
-  <head>;
-    <meta charset=;
+  <head>
+    <meta charset=
   'UTF-8' />;
-    <link rel=;
+    <link rel=
   'icon' type=;
   'image/svg+xml' href=;
   '/vite.svg' />;
-    <meta name=;
+    <meta name=
   'viewport' content=;
   'width=device-width, initial-scale=1.0' />;
-    <title>Zion App</title>;
-  </head>;
-  <body>;
+    <title>Zion App</title>
+  </head>
+  <body>
     <div id=;
-  'root'></div>;
+  'root'></div>
     <script type=;
   'module' src=;
-  '/src/main.tsx'></script>;
-  </body>;
+  '/src/main.tsx'></script>
+  </body>
 </html>`;
 ;
     fs.writeFileSync(;
@@ -919,7 +919,7 @@ export default {;
 ;
 ;
   findSourceFiles() {;
-    const extensions = [;
+    const extensions = [
   '.ts',;
   '.tsx',;
   '.js',;
@@ -946,7 +946,7 @@ export default {;
   'logs'].includes(item)) {;
             traverse(fullPath);
 ;
-        } else if (extensions.some(ext => item.endsWith(ext))) {;
+        } else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
 ;
 ;

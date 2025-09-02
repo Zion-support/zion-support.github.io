@@ -8,40 +8,40 @@ const InfrastructureServices = () => {}
       <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>'';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='text-center'>'';
-            <h1 className='text-4xl md:text-5xl font-bold mb-6'>;
+            <h1 className='text-4xl md:text-5xl font-bold mb-6'>
 :pages.disabled/pages/services/Infrastructure.jsx;
-              IT Infrastructure Solutions'</h1>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              IT Infrastructure Solutions'</h1>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Build robust, scalable infrastructure for your business needs.;
-            </p>;
-          </div>;
+            </p>
+          </div>
 :pages.disabled/pages/services/Infrastructure.jsx;
         </div>'</section>''      <section className='py-16 bg-white'>'';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'';
             <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>'';
-              <h3 className='text-xl font-semibold text-slate-900 mb-4'>;
+              <h3 className='text-xl font-semibold text-slate-900 mb-4'>
 :pages.disabled/pages/services/Infrastructure.jsx;
                 Network Design';
               </h3>'';
-              <p className='text-slate-600'>;
+              <p className='text-slate-600'>
                 Scalable network architecture and optimization.;
               </p>';
             </div>'';
             <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>'';
-              <h3 className='text-xl font-semibold text-slate-900 mb-4'>;
+              <h3 className='text-xl font-semibold text-slate-900 mb-4'>
                 System Administration';
               </h3>'';
-              <p className='text-slate-600'>;
+              <p className='text-slate-600'>
                 24/7 monitoring and maintenance services.;
               </p>';
             </div>'';
             <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>'';
-              <h3 className='text-xl font-semibold text-slate-900 mb-4'>;
-                Data Centers'</h3>''              <p className='text-slate-600'>;
+              <h3 className='text-xl font-semibold text-slate-900 mb-4'>
+                Data Centers'</h3>''              <p className='text-slate-600'>
                 Reliable hosting and colocation solutions.;
-              </p>;
-            </div>;
-          </div>;
+              </p>
+            </div>
+          </div>
 :pages.disabled/pages/services/Infrastructure.jsx;
         </div>';
       </section>'';
@@ -51,10 +51,10 @@ const InfrastructureServices = () => {}
           <Link'';
             to='/contact'';
             className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300'>            Get Started;
-          </Link>;
-        </div>;
-      </section>;
-    </div>;
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 };
 export { InfrastructureServices };

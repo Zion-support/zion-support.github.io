@@ -146,7 +146,7 @@ class LinkIntegrityChecker {;
   ');
       const tsFiles = this.findFiles('.ts;
   ');
-      const allFiles = [...jsFiles, ...tsFiles];
+      const allFiles = [...jsFiles, ...tsFiles]
 ;
       for (const file of allFiles) {;
         this.checkedFiles++;
@@ -196,7 +196,7 @@ class LinkIntegrityChecker {;
       }
 ;
       // Check for essential build files;
-      const essentialFiles = [;
+      const essentialFiles = [
         'index.html;
   ',css',js;
   ',assets';
@@ -240,7 +240,7 @@ class LinkIntegrityChecker {;
     }
   }
 ;
-  isValidAsset(assetPath, sourceFile) {;
+  isValidAsset(assetPath, sourceFile) {
     // Skip external URLs;
     if (assetPath.startsWith(,;
   http: //;
@@ -291,7 +291,7 @@ class LinkIntegrityChecker {;
       const fullPath = path.resolve(sourceDir, importPath);
 ;
       // Check for .js, .ts, .tsx, .jsx extensions;
-      const extensions = ['.js;
+      const extensions = ['.js
   ',.ts',.tsx;
   ',.jsx'];
       return extensions.some(ext => {;
@@ -304,7 +304,7 @@ class LinkIntegrityChecker {;
     if (importPath.startsWith(;
   '/')) {;
       const fullPath = path.join(this.projectRoot, importPath.substring(1));
-      const extensions = [;
+      const extensions = [
   '.js',.ts;
   ',.tsx',.jsx;
   '];
@@ -362,7 +362,7 @@ class LinkIntegrityChecker {;
     try {;
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);
-    } catch (error) {;
+    } catch (error) {
       console.warn(;
   '⚠️  Could not save report:,;
   , error.message);

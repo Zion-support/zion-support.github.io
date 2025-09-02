@@ -46,5 +46,5 @@ target.style.backgroundImage = `url(${target.dataset.src})`;              target
     };
   }, []);
 ;
-  return <>{children}</>;
+  return <>{children}</>
 };

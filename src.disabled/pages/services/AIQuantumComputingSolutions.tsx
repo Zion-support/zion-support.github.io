@@ -2,7 +2,7 @@ import React from;
   'react'; import { motion } from;
   'framer-motion'; import { Atom, Cpu, Zap, Shield, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play } from;
   'lucide-react'; import { SEO } from;
-  '../../components/SEO'; const AIQuantumComputingSolutions = () => { const features = [ { icon: Atom, title:,;
+  '../../components/SEO'; const AIQuantumComputingSolutions = () => { const features = [ { icon: Atom, title:,
   Quantum Algorithm Development', description: 'Advanced quantum algorithm design and optimization for complex computational problems }, { icon: Cpu, title:,;
   Quantum Simulation Platform', description: 'High-performance quantum simulation environment for research and development }, { icon: Zap, title:,;
   Quantum Machine Learning', description: 'AI-powered quantum computing solutions for enhanced machine learning capabilities }, { icon: Shield, title:,;
@@ -32,7 +32,7 @@ import React from;
 ,;
   Post-Quantum Cryptography',;
   'Quantum Random Number Generation',;
-  'Quantum Authentication'], accuracy: '99.9%, icon: Shield } ]; const benefits = [,;
+  'Quantum Authentication'], accuracy: '99.9%, icon: Shield } ]; const benefits = [,
   Exponential computational speedup for complex problems',;
   'Revolutionary breakthroughs in drug discovery and materials science',;
   'Unbreakable quantum encryption for ultimate security',;
@@ -68,7 +68,7 @@ import React from;
   '24/7 dedicated support',;
   'White-label solutions',;
   'On-premise deployment',;
-  'Custom quantum development' ], cta: 'Contact Sales, popular: false } ]; const useCases = [ { industry:,;
+  'Custom quantum development' ], cta: 'Contact Sales, popular: false } ]; const useCases = [ { industry:,
   Pharmaceutical Research', description: 'Quantum-accelerated drug discovery and molecular simulation for faster medical breakthroughs }, { industry:,;
   Financial Services', description: Quantum optimization for portfolio management, risk analysis, and fraud detection}, { industry: 'Materials Science, description:,;
   Quantum simulation for advanced materials discovery and optimization' }, { industry: 'Cybersecurity, description:;

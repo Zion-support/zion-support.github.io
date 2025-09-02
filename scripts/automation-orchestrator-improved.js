@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
-;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
@@ -34,7 +34,7 @@ class ImprovedAutomationOrchestrator {;
       console.log('🎯 Starting automation orchestration...');
 ;
       // Define automation scripts to run;
-      const automationScripts = [;
+      const automationScripts = [
         {;
           name: 'Performance Monitor',;
           script: 'scripts/performance-monitor-improved.js',;
@@ -91,7 +91,7 @@ class ImprovedAutomationOrchestrator {;
     console.log(`\n🔄 Running: ${script.name}`);
     console.log(`📝 Description: ${script.description}`);
 ;
-    try {;
+    try {
       const result = await this.executeCommand(script.script);
       const duration = Date.now() - startTime;
 ;
@@ -111,7 +111,7 @@ class ImprovedAutomationOrchestrator {;
 ;
       console.log(`✅ ${script.name} completed successfully (${duration}ms)`);
 ;
-    } catch (error) {;
+    } catch (error) {
       const duration = Date.now() - startTime;
 ;
       const scriptResult = {;

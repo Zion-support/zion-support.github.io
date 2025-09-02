@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import InnovativeMicroSaasServices2026 from './InnovativeMicroSaasServices2026';
-;
+
 describe('InnovativeMicroSaasServices2026', () => {;
   it('renders without crashing', () => {;
     render(<InnovativeMicroSaasServices2026 />);

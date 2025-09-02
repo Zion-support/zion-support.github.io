@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ComprehensiveOptimizer from './ComprehensiveOptimizer';
-;
+
 describe('ComprehensiveOptimizer', () => {;
   it('renders without crashing', () => {;
     render(<ComprehensiveOptimizer />);

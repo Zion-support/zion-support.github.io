@@ -42,7 +42,7 @@ console.log(,;
   ');
 ;
 // 2. Performance Recommendations;
-const recommendations = [;
+const recommendations = [
   {;
     category: 'Code Splitting,;
     priority:,;

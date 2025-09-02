@@ -15,7 +15,7 @@ try {;
   'pm2 --version', { stdio: 'pipe });
   console.log(,;
   ✅ PM2 is installed');
-} catch (error) {;
+} catch (error) {
   console.error(;
   '❌ PM2 is not installed. Please install it first: npm install -g pm2);
   process.exit(1);

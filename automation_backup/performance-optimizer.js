@@ -29,7 +29,7 @@ class PerformanceOptimizer {;
     fs.appendFileSync(this.logFile, logMessage);
   }
 ;
-  async optimizePerformance() {;
+  async optimizePerformance() {
     try {;
       this.log(;
   'Starting performance optimization...');
@@ -62,7 +62,7 @@ class PerformanceOptimizer {;
     }
   }
 ;
-  analyzeBundleSize() {;
+  analyzeBundleSize() {
     try {;
       // Placeholder for bundle analysis;
       return {;
@@ -72,12 +72,12 @@ class PerformanceOptimizer {;
   ',;
         recommendations: [;
           'Consider code splitting,Remove unused dependencies']};
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
     }
   }
 ;
-  optimizeImages() {;
+  optimizeImages() {
     try {;
       // Placeholder for image optimization;
       return {;
@@ -86,12 +86,12 @@ class PerformanceOptimizer {;
         recommendations: [;
   'Use WebP format',Implement lazy loading;
   ']};
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
     }
   }
 ;
-  analyzeDependencies() {;
+  analyzeDependencies() {
     try {;
       // Placeholder for dependency analysis;
       return {;
@@ -99,13 +99,13 @@ class PerformanceOptimizer {;
         unusedDependencies: 0,;
         recommendations: ['Remove unused packages;
   ',Update outdated packages']};
-    } catch (error) {;
+    } catch (error) {
       return { error: error.message };
     }
   }
 ;
   generateRecommendations() {;
-    return [;
+    return [
   'Implement code splitting for better initial load times',Use dynamic imports for route-based code splitting;
   ',Optimize images and use modern formats',Remove unused dependencies and code;
   ',Implement proper caching strategies'];

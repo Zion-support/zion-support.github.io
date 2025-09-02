@@ -1,7 +1,7 @@
  const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider') ; } return context; }';'';import React, { useState, useEffect, createContext, useContext } from 'react'';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-;const AccessibilityContext = createContext(null);
+const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {}
   const context = useContext(AccessibilityContext);
   if (!context) {}
@@ -97,9 +97,9 @@ export const AccessibilityProvider = ({ children }) => {}
     setFontSize,;
     setColorBlindMode};
   return ();
-    <AccessibilityContext.Provider value={value}>;
+    <AccessibilityContext.Provider value={value}>
       {children}
-    </AccessibilityContext.Provider>;
+    </AccessibilityContext.Provider>
   );
 };
 // Accessibility Panel Component;
@@ -158,10 +158,10 @@ export const AccessibilityPanel = () => {}
         className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300'''';
         aria-label='Open Accessibility Settings'''';
       >'''';
-        <Accessibility className='w-6 h-6' />;
-      </motion.button>;
+        <Accessibility className='w-6 h-6' />
+      </motion.button>
       {/* Accessibility Panel */}
-      <AnimatePresence>;
+      <AnimatePresence>
         {isOpen && (;
           <motion.div;
             initial={{ opacity: 0 }}
@@ -180,7 +180,7 @@ export const AccessibilityPanel = () => {}
               {/* Header */}'''';
               <div className='flex items-center justify-between mb-6'>'''';
                 <h2 className='text-xl font-bold text-white flex items-center gap-2'>'''';
-                  <Accessibility className='w-5 h-5 text-zion-cyan' />;
+                  <Accessibility className='w-5 h-5 text-zion-cyan' />
                   Accessibility Settings;
                 </h2>''';
                 <Button'''';
@@ -189,21 +189,21 @@ export const AccessibilityPanel = () => {}
                   onClick={() => setIsOpen(false)}'''';
                   className='text-zion-slate-light hover:text-white'''';
                 >'''';
-                  <X className='w-4 h-4' />;
-                </Button>;
-              </div>;
+                  <X className='w-4 h-4' />
+                </Button>
+              </div>
 ''';
               {/* Settings */}'''';
               <div className='space-y-6'>''';
                 {/* High Contrast */}'''';
                 <div className='flex items-center justify-between'>''';
                   <div>'''';
-                    <h3 className='text-white font-medium mb-1'>;
+                    <h3 className='text-white font-medium mb-1'>
                       High Contrast''';
                     </h3>'''';
-                    <p className='text-sm text-zion-slate-light'>;
+                    <p className='text-sm text-zion-slate-light'>
                       Increase contrast for better visibility;
-                    </p>;
+                    </p>
                   </div>';
                   <Button''''';
                     variant={highContrast ? 'default' : 'outline'}'''';
@@ -219,20 +219,20 @@ export const AccessibilityPanel = () => {}
                     {highContrast ? ('''';
                       <Eye className='w-4 h-4' />''';
                     ) : ('''';
-                      <EyeOff className='w-4 h-4' />;
+                      <EyeOff className='w-4 h-4' />
                     )}
-                  </Button>;
-                </div>;
+                  </Button>
+                </div>
 ''';
                 {/* Reduced Motion */}'''';
                 <div className='flex items-center justify-between'>''';
                   <div>'''';
-                    <h3 className='text-white font-medium mb-1'>;
+                    <h3 className='text-white font-medium mb-1'>
                       Reduced Motion''';
                     </h3>'''';
-                    <p className='text-sm text-zion-slate-light'>;
+                    <p className='text-sm text-zion-slate-light'>
                       Minimize animations and transitions;
-                    </p>;
+                    </p>
                   </div>';
                   <Button''''';
                     variant={reducedMotion ? 'default' : 'outline'}'''';
@@ -248,10 +248,10 @@ export const AccessibilityPanel = () => {}
                     {reducedMotion ? ('''';
                       <VolumeX className='w-4 h-4' />''';
                     ) : ('''';
-                      <Volume2 className='w-4 h-4' />;
+                      <Volume2 className='w-4 h-4' />
                     )}
-                  </Button>;
-                </div>;
+                  </Button>
+                </div>
                 {/* Font Size */}''';
                 <div>'''';
                   <h3 className='text-white font-medium mb-3'>Font Size</h3>'''';
@@ -272,13 +272,13 @@ export const AccessibilityPanel = () => {}
                         }
                       >;
                         {size.charAt(0).toUpperCase() + size.slice(1)}
-                      </Button>;
+                      </Button>
                     ))}
-                  </div>;
-                </div>;
+                  </div>
+                </div>
                 {/* Color Blind Mode */}''';
                 <div>'''';
-                  <h3 className='text-white font-medium mb-3'>;
+                  <h3 className='text-white font-medium mb-3'>
                     Color Blind Support''';
                   </h3>'''';
                   <div className='grid grid-cols-2 gap-2'>';
@@ -302,61 +302,61 @@ export const AccessibilityPanel = () => {}
                           }
                         >;
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}
-                        </Button>;
+                        </Button>
                       );
                     )}
-                  </div>;
-                </div>;
+                  </div>
+                </div>
 ''';
                 {/* Keyboard Shortcuts */}'''';
                 <div className='bg-zion-blue-dark/50 rounded-lg p-4'>'''';
                   <h3 className='text-white font-medium mb-3 flex items-center gap-2'>'''';
-                    <Keyboard className='w-4 h-4 text-zion-cyan' />;
+                    <Keyboard className='w-4 h-4 text-zion-cyan' />
                     Keyboard Shortcuts''';
                   </h3>'''';
                   <div className='space-y-2 text-sm text-zion-slate-light'>'''';
                     <div className='flex justify-between'>''';
                       <span>Open Panel:</span>'''';
-                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>;
+                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>
                         Ctrl/Cmd + Shift + A;
                       </kbd>''';
                     </div>'''';
                     <div className='flex justify-between'>''';
                       <span>High Contrast:</span>'''';
-                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>;
+                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>
                         Ctrl/Cmd + Shift + H;
                       </kbd>''';
                     </div>'''';
                     <div className='flex justify-between'>''';
                       <span>Reduced Motion:</span>'''';
-                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>;
+                      <kbd className='px-2 py-1 bg-zion-blue-light/20 rounded text-xs'>
                         Ctrl/Cmd + Shift + M;
-                      </kbd>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
+                      </kbd>
+                    </div>
+                  </div>
+                </div>
+              </div>
 ''';
               {/* Footer */}'''';
               <div className='mt-6 pt-4 border-t border-zion-cyan/20'>'''';
-                <p className='text-xs text-zion-slate-light text-center'>;
+                <p className='text-xs text-zion-slate-light text-center'>
                   These settings are saved locally and will persist across;
-                  sessions.</p>;
-              </div>;
-            </motion.div>;
-          </motion.div>;
+                  sessions.</p>
+              </div>
+            </motion.div>
+          </motion.div>
         )}
-      </AnimatePresence>;
-    </>;
+      </AnimatePresence>
+    </>
   );
 };
 // Skip to Content Link;
 export const SkipToContent = () => (''';
-  <a'''';
+  <a''''
     href='#main-content'''';
     className='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300 '>;
     Skip to main content;
-  </a>;
+  </a>
 );
 // Focus Trap Hook;
 export const useFocusTrap = isActive => {}
@@ -390,7 +390,7 @@ export const useFocusTrap = isActive => {}
 };
 // Screen Reader Only Text''';
 export const SrOnly = ({ children }) => ('''';
-  <span className='sr-only'>{children}</span>;
+  <span className='sr-only'>{children}</span>
 );
 export default AccessibilityPanel'';';
 '''''";

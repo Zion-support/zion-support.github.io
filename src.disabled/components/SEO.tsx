@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-;
-interface SEOProps {;
+
+interface SEOProps {
   title?: string;
    description?: string;
    keywords?: string;
@@ -19,32 +19,32 @@ export const SEO: React.FC<SEOProps> = ({;
   type = 'website';
 }) => {;
   return (;
-    <Helmet>;
+    <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>;
-      <meta name='description' content={description} />;
-      <meta name='keywords' content={keywords} />;
-      <meta name='author' content='Zion Tech Group' />;
-      <meta name='robots' content='index, follow' />;
-      <link rel='canonical' href={url} />;
+      <title>{title}</title>
+      <meta name='description' content={description} />
+      <meta name='keywords' content={keywords} />
+      <meta name='author' content='Zion Tech Group' />
+      <meta name='robots' content='index, follow' />
+      <link rel='canonical' href={url} />
       {/* Open Graph / Facebook */}
-      <meta property='og:type' content={type} />;
-      <meta property='og:url' content={url} />;
-      <meta property='og:title' content={title} />;
-      <meta property='og:description' content={description} />;
-      <meta property='og:image' content={image} />;
-      <meta property='og:site_name' content='Zion Tech Group' />;
+      <meta property='og:type' content={type} />
+      <meta property='og:url' content={url} />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      <meta property='og:image' content={image} />
+      <meta property='og:site_name' content='Zion Tech Group' />
       {/* Twitter */}
-      <meta property='twitter:card' content='summary_large_image' />;
-      <meta property='twitter:url' content={url} />;
-      <meta property='twitter:title' content={title} />;
-      <meta property='twitter:description' content={description} />;
-      <meta property='twitter:image' content={image} />;
+      <meta property='twitter:card' content='summary_large_image' />
+      <meta property='twitter:url' content={url} />
+      <meta property='twitter:title' content={title} />
+      <meta property='twitter:description' content={description} />
+      <meta property='twitter:image' content={image} />
       {/* Additional SEO */}
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' />;
-      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />;
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       {/* Structured Data */}
-      <script type='application/ld+json'>;
+      <script type='application/ld+json'>
         {JSON.stringify({;
           '@context': 'https://schema.org',;
           '@type': 'Organization',;
@@ -62,7 +62,7 @@ export const SEO: React.FC<SEOProps> = ({;
             'contactType': 'customer service';
           }
         })}
-      </script>;
-    </Helmet>;
+      </script>
+    </Helmet>
   );
 };

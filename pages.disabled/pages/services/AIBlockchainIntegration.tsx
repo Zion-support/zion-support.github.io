@@ -21,15 +21,15 @@ import {}
   'lucide-react.ts';
 ;
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-export default function AIBlockchainIntegration(...args: any[]): any {;
+export default function AIBlockchainIntegration(...args: any[]): any {
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO'';
+      <SEO''
         title='AI Blockchain Integration - Zion Tech Group'';
         description='Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations.';
       />;
 '{/* Hero Section */}''      <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10'></div>'        <div className='relative max-w-7xl mx-auto text-center'>;
+        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10'></div>'        <div className='relative max-w-7xl mx-auto text-center'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,48 +37,48 @@ export default function AIBlockchainIntegration(...args: any[]): any {;
             transition={{ duration: 0.8 }}';
           >'';
             <div className='flex items-center justify-center mb-6'>'';
-              <Brain className='w-12 h-12 text-cyan-400 mr-3'  />'              <h1 className='text-4xl md:text-6xl font-bold text-white'>;
+              <Brain className='w-12 h-12 text-cyan-400 mr-3'  />'              <h1 className='text-4xl md:text-6xl font-bold text-white'>
                 AI Blockchain Integration;
               </h1>';
             </div>'';
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionize your blockchain operations with AI-powered;
               intelligence, automated smart contracts, and enhanced security;
               protocols.';
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
                 className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'>                Get Started Today;
-              </motion.button>;
+              </motion.button>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
                 className='border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300'>                Watch Demo;
-              </motion.button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
 '{/* Features Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-              Revolutionary Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Revolutionary Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Blockchain Integration platform combines cutting-edge;
               artificial intelligence with blockchain technology to deliver;
               unprecedented capabilities.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>;
+          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index) => (;
               <motion.div;
                 key={index}
@@ -90,29 +90,29 @@ export default function AIBlockchainIntegration(...args: any[]): any {;
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
                   <feature.icon className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3 className='text-xl font-semibold text-white mb-3'>;
-                  {feature.title}'</h3>''                <p className='text-gray-300'>{feature.description}</p>;
-              </motion.div>;
+                <h3 className='text-xl font-semibold text-white mb-3'>
+                  {feature.title}'</h3>''                <p className='text-gray-300'>{feature.description}</p>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
 '{/* Benefits Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-              Why Choose AI Blockchain Integration?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Why Choose AI Blockchain Integration?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Transform your blockchain operations with intelligent automation;
               and enhanced security.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6'>;
+          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6'>
             {benefits.map((benefit, index) => (;
               <motion.div;
                 key={index}
@@ -120,28 +120,28 @@ export default function AIBlockchainIntegration(...args: any[]): any {;
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='flex items-start space-x-3'';
               >'';
-                <CheckCircle className='w-6 h-6 text-cyan-400 mt-1 flex-shrink-0'  />'                <span className='text-gray-300 text-lg'>{benefit}</span>;
-              </motion.div>;
+                <CheckCircle className='w-6 h-6 text-cyan-400 mt-1 flex-shrink-0'  />'                <span className='text-gray-300 text-lg'>{benefit}</span>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
 '{/* Pricing Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto'>;
+        <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center mb-16'';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-              Transparent Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Transparent Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the plan that fits your business needs. All plans include;
               our core AI features.;
-            </p>;
+            </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>;
+          </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (;
               <motion.div;
                 key={index}
@@ -156,32 +156,32 @@ export default function AIBlockchainIntegration(...args: any[]): any {;
   '`: 'border-slate-600/50``;
                 } relative`}
               >'{index === 1 && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                    <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
+                    <span className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular;
-                    </span>;
-                  </div>;
+                    </span>
+                  </div>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
                 )}';
 '';
                 <div className='text-center mb-8'>'';
-                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}';
                   </h3>'';
                   <div className='flex items-baseline justify-center'>'';
-                    <span className='text-4xl font-bold text-white'>;
+                    <span className='text-4xl font-bold text-white'>
                       {plan.price}';
                     </span>'';
-                    <span className='text-gray-400 ml-2'>{plan.period}</span>;
-                  </div>;
+                    <span className='text-gray-400 ml-2'>{plan.period}</span>
+                  </div>
                 </div>';
 '';
                 <ul className='space-y-4 mb-8'>'{plan.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-center'>'';
-                      <CheckCircle className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>;
-                    </li>;
+                      <CheckCircle className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
+                    </li>
                   ))}
-                </ul>;
+                </ul>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
-                <motion.button;
+                <motion.button
                   whileHover={{ scale: 1.05 }}`;
                   whileTap={{ scale: 0.95 }}``;
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,;
@@ -191,44 +191,44 @@ export default function AIBlockchainIntegration(...args: any[]): any {;
   '`;
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10``}`}                >;
                   Get Started;
-                </motion.button>;
-              </motion.div>;
+                </motion.button>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
 '{/* CTA Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10'>'';
-        <div className='max-w-4xl mx-auto text-center'>;
+        <div className='max-w-4xl mx-auto text-center'>
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
             transition={{ duration: 0.8 }}';
           >'';
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Blockchain Operations?';
             </h2>'';
-            <p className='text-xl text-gray-300 mb-8'>;
+            <p className='text-xl text-gray-300 mb-8'>
               Join the future of intelligent blockchain technology with;
               AI-powered automation and security.';
             </p>'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
                 className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'>                Start Free Trial;
-              </motion.button>;
+              </motion.button>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
                 className='border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300'>                Contact Sales;
-              </motion.button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   )}''`;
   ''`''`;

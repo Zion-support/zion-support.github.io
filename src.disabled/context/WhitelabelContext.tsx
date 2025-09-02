@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from;
-  'react'; ; interface WhitelabelContextType {;
+  'react'; ; interface WhitelabelContextType {
    isWhitelabeled: boolean;
    brandName: string;
    brandLogo: string;
@@ -10,10 +10,10 @@ import React, { createContext, useContext, useState, ReactNode } from;
    setPrimaryColor: (color: string) => void;
    setSecondaryColor: (color: string) => void;
 }; const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined); ; export const useWhitelabel = () => {; const context = useContext(WhitelabelContext); if (context === undefined) {; throw new Error(;
-  'useWhitelabel must be used within a WhitelabelProvider'); }; return context; }; ; interface WhitelabelProviderProps {;
+  'useWhitelabel must be used within a WhitelabelProvider'); }; return context; }; ; interface WhitelabelProviderProps {
    children: ReactNode;
-}; export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {; const [brandName, setBrandName] = useState(;
+}; export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => { const [brandName, setBrandName] = useState(;
   'Zion Tech Group'); const [brandLogo, setBrandLogo] = useState(;
   '/logo.svg'); const [primaryColor, setPrimaryColor] = useState(;
   '#3B82F6'); const [secondaryColor, setSecondaryColor] = useState(;
-  '#8B5CF6'); ; const value: WhitelabelContextType = {; isWhitelabeled: false,; brandName,; brandLogo,; primaryColor,; secondaryColor,; setBrandName,; setBrandLogo,; setPrimaryColor,; setSecondaryColor}; ; return (; <WhitelabelContext.Provider value={value}>; {children}; </WhitelabelContext.Provider>; ); }; ';
+  '#8B5CF6'); ; const value: WhitelabelContextType = {; isWhitelabeled: false,; brandName,; brandLogo,; primaryColor,; secondaryColor,; setBrandName,; setBrandLogo,; setPrimaryColor,; setSecondaryColor}; ; return ( <WhitelabelContext.Provider value={value}> {children}; </WhitelabelContext.Provider> ); }; ';

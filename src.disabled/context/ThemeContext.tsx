@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-;
+
 export type Theme = 'light' | 'dark' | 'system';
 export type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink';
 ;
-export interface ThemeConfig {;
+export interface ThemeConfig {
   theme: Theme;
    colorScheme: ColorScheme;
    primaryColor: string;
@@ -21,7 +21,7 @@ export interface ThemeConfig {;
    infoColor: string;
 }
 ;
-interface ThemeContextType {;
+interface ThemeContextType {
   theme: Theme;
    colorScheme: ColorScheme;
    config: ThemeConfig;
@@ -34,7 +34,7 @@ interface ThemeContextType {;
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 ;
 // Color schemes;
-const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig>; dark: Partial<ThemeConfig> }> = {;
+const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dark: Partial<ThemeConfig> }> = {;
   blue: {;
     light: {;
       primaryColor: '#0ea5e9',;
@@ -146,7 +146,7 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig>; dark: Par
 };
 ;
 // Base theme configurations;
-const lightTheme: Partial<ThemeConfig> = {;
+const lightTheme: Partial<ThemeConfig> = {
   backgroundColor: '#ffffff',;
   surfaceColor: '#f8fafc',;
   textColor: '#1e293b',;
@@ -154,7 +154,7 @@ const lightTheme: Partial<ThemeConfig> = {;
   borderColor: '#e2e8f0',;
   shadowColor: 'rgba(0, 0, 0, 0.1)'};
 ;
-const darkTheme: Partial<ThemeConfig> = {;
+const darkTheme: Partial<ThemeConfig> = {
   backgroundColor: '#0f172a',;
   surfaceColor: '#1e293b',;
   textColor: '#f1f5f9',;
@@ -162,7 +162,7 @@ const darkTheme: Partial<ThemeConfig> = {;
   borderColor: '#334155',;
   shadowColor: 'rgba(0, 0, 0, 0.3)'};
 ;
-interface ThemeProviderProps {;
+interface ThemeProviderProps {
   children: ReactNode;
    defaultTheme?: Theme;
    defaultColorScheme?: ColorScheme;
@@ -185,7 +185,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({;
   };
 ;
   // Get effective theme (resolves 'system' to actual theme);
-  const getEffectiveTheme = (): 'light' | 'dark' => {;
+  const getEffectiveTheme = (): 'light' | 'dark' => {
     return theme === 'system' ? getSystemTheme() : theme;
   };
 ;
@@ -220,7 +220,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({;
   }, [config, getEffectiveTheme, colorScheme]);
 ;
   // Listen for system theme changes;
-  useEffect(() => {;
+  useEffect(() => {
     if (theme === 'system') {;
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       const handleChange = () => {;
@@ -252,7 +252,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({;
     localStorage.setItem('colorScheme', newColorScheme);
   };
 ;
-  const toggleTheme = () => {;
+  const toggleTheme = () => {
     const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
   };
@@ -266,10 +266,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({;
     toggleTheme,;
     isDark};
 ;
-  return (;
-    <ThemeContext.Provider value={value}>;
+  return (
+    <ThemeContext.Provider value={value}>
       {children}
-    </ThemeContext.Provider>;
+    </ThemeContext.Provider>
   );
 };
 ;

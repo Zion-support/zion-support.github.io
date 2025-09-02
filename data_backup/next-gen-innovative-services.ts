@@ -1,4 +1,4 @@
-export interface NextGenInnovativeService {;
+export interface NextGenInnovativeService {
   id: string;
    name: string;
    tagline: string;

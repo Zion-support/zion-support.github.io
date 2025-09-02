@@ -24,7 +24,7 @@ class ConsoleCleaner {;
     console.log(;
   '🧹 Cleaning console statements from production code...');
 ;
-    const directories = [;
+    const directories = [
   'pages',;
   'components',;
   'src',;

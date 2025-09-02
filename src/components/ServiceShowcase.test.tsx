@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ServiceShowcase from './ServiceShowcase';
-;
+
 describe('ServiceShowcase', () => {;
   it('renders without crashing', () => {;
     render(<ServiceShowcase />);

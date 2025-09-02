@@ -3,7 +3,7 @@
    renderTime: number;
    memoryUsage: number;
    fps: number;
-} interface UsePerformanceOptimizationOptions {;
+} interface UsePerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
    enableIntersectionObserver?: boolean;
    enableMemoryManagement?: boolean;

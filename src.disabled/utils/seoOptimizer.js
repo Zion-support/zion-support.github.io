@@ -1,4 +1,4 @@
-export class SEOOptimizer {;
+export class SEOOptimizer {
   static DEFAULT_META_DESCRIPTIONS = {;
     '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',;
     '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',;
@@ -18,7 +18,7 @@ export class SEOOptimizer {;
     '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.';
   };
 ;
-  static KEYWORD_MAPPINGS = {;
+  static KEYWORD_MAPPINGS = {
     '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],;
     '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],;
     '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],;
@@ -34,7 +34,7 @@ export class SEOOptimizer {;
     '/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],;
     '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],;
     '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],;
-    '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology'];
+    '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
   };
 ;
   static generateSEOData(path) {;
@@ -80,7 +80,7 @@ export class SEOOptimizer {;
 ;
   static generateKeywords(path) {;
     return this.KEYWORD_MAPPINGS[path] ||;
-      ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
+      ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation']
   }
 ;
   static generateCanonicalUrl(path) {;

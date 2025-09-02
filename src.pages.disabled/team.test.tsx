@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import team from './team';
-;
+
 describe('team', () => {;
   it('renders without crashing', () => {;
     render(<team />);
