@@ -31,7 +31,8 @@ import {}
   BarChart,
   TrendingUp,
   Activity,
-  ShieldCheck} from 'lucide-react.ts';
+  ShieldCheck} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
 export default function AIAutonomousThreatIntelligence(...args: any[]): any {
@@ -59,7 +60,8 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
               AI Autonomous Threat Intelligence
             </h1>"
 ""
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">'
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+  '
               The world's most advanced AI-powered threat intelligence platform
               that autonomously detects, analyzes, and neutralizes cyber threats
               in real-time.
@@ -217,11 +219,11 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
 :pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
-                className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
-'
-                  plan.popular''
-                    ? 'border-red-400/60 shadow-lg shadow-red-500/25'''`
-                    : 'border-red-500/20'``
+                className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${,
+  plan.popular''
+                    ?
+  'border-red-400/60 shadow-lg shadow-red-500/25''
+  '`: 'border-red-500/20``
                 } hover:border-red-400/40 transition-all duration-300`}
               >"{plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -252,11 +254,12 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
-                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    plan.popular''
-                      ? 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700'''`
-                      : 'bg-red-600/20 border border-red-400 hover:bg-red-600/30'``}`}
+                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${,
+  plan.popular'
+  '
+                      ? 'bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700''
+  '`
+                      : 'bg-red-600/20 border border-red-400 hover:bg-red-600/30``}`}
                 >
                   Get Started;
                 </motion.button>
@@ -329,4 +332,4 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       </section>
     </div>
   )}'"`
-'"`'"`
+  '"`'"`

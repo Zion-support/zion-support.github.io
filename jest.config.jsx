@@ -1,22 +1,34 @@
-const nextJest = require('next/jest');
+<<<<<<< HEAD
+const nextJest = require(,
+  next/jest');
 ;
+=======
+const nextJest = require('next/jest');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './'
+  dir: './
 });
 
-// Add any custom config to be passed to Jest;
+// Add any custom config to be passed to Jest
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testEnvironment: 'jsdom',
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
+  setupFilesAfterEnv: [,
+  <rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom,
+  moduleNameMapper: {,
+  ^@/(.*)$': '<rootDir>/$1
   },
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},!**/*.d.ts',!**/node_modules/**'
+  collectCoverageFrom: [,
+  components/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},!**/*.d.ts',!**/node_modules/**
+  '
   ],
   testPathIgnorePatterns: [
-    '<rootDir>/.next/',<rootDir>/node_modules/',<rootDir>/out/',<rootDir>/__tests__.disabled/',<rootDir>/tests.disabled/',<rootDir>/src_backup/',<rootDir>/test.disabled/',<rootDir>/plugins.disabled/',<rootDir>/supabase.disabled/',<rootDir>/dao/',<rootDir>/pages.disabled/'
+    '<rootDir>/.next/,<rootDir>/node_modules/',<rootDir>/out/
+  ',<rootDir>/__tests__.disabled/',<rootDir>/tests.disabled/
+  ',<rootDir>/src_backup/',<rootDir>/test.disabled/
+  ',<rootDir>/plugins.disabled/',<rootDir>/supabase.disabled/
+  ',<rootDir>/dao/',<rootDir>/pages.disabled/'
   ]
 };
 
