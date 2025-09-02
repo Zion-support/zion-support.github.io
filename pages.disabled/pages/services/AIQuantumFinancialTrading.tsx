@@ -1,5 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
 import {
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
   Brain,
@@ -20,7 +22,8 @@ import {
   Phone,
   Mail,
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
-  MapPin} from 'lucide-react';
+  MapPin} from
+  'lucide-react';
 
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 const AIQuantumFinancialTrading = () => {
@@ -221,7 +224,8 @@ const AIQuantumFinancialTrading = () => {
               </h1>
             </div>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your trading with the world's first AI-powered quantum computing platform.
+              Revolutionize your trading with the world
+  's first AI-powered quantum computing platform.
               Experience unprecedented speed, accuracy, and profitability in financial markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -457,8 +461,9 @@ const AIQuantumFinancialTrading = () => {
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
                   plan.popular
-                    ? 'border-purple-400 shadow-2xl shadow-purple-500/20'
-                    : 'border-slate-600'
+                    ?,
+  border-purple-400 shadow-2xl shadow-purple-500/20
+  ': 'border-slate-600
                 }`}
               >
                 {plan.popular && (
@@ -491,8 +496,10 @@ const AIQuantumFinancialTrading = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
-                      : 'bg-slate-600 text-white hover:bg-slate-500'}`}
+                      ?,
+  bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover: from-purple-600 hover:to-cyan-600
+  '
+                      : 'bg-slate-600 text-white hover:bg-slate-500}`}
                 >
                   Get Started
                 </a>
