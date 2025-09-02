@@ -9,13 +9,13 @@ interface LayoutProps {
    description?: string;
 }
 ;
-const Layout: React.FC<LayoutProps> = ({;
-  children,;
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',;
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.';
-}) => {;
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+}) => {
   return (
-    <>;
+    <>
       <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
@@ -33,11 +33,11 @@ const Layout: React.FC<LayoutProps> = ({;
         <EnhancedNavigation />
         <main className='flex-grow'>
           {children}
-        </main>        <EnhancedFooter />
+        </main>
+        <EnhancedFooter />
       </div>
     </>
   );
 };
-;
+
 export default Layout;
-;
