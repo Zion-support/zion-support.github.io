@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -12,8 +12,7 @@ class BuildHealthMonitor {
   }
 
   log(message) {
-    console.log(
-      `[${new Date().toISOString()}] [BuildHealthMonitor] ${message}`
+    console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}'
     );
   }
 
@@ -24,7 +23,7 @@ class BuildHealthMonitor {
       await this.monitorBuildHealth();
       this.log('Build health monitoring completed.');
     } catch (error) {
-      this.log(`Error during build health monitoring: ${error.message}`);
+      this.log(Error during build health monitoring: ${error.message}`);
     }
   }
 
@@ -90,9 +89,7 @@ class BuildHealthMonitor {
       // Save report
       const timestamp = Date.now();
       const reportPath = path.join(
-        this.projectRoot,
-        'error-reports',
-        `build-health-report-${timestamp}.json`
+        this.projectRoot,error-reports', `build-health-report-${timestamp}.json`
       );
 
       const dir = path.dirname(reportPath);
@@ -100,10 +97,8 @@ class BuildHealthMonitor {
         fs.mkdirSync(dir, { recursive: true });
       }
 
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      this.log(`Build health report saved to: ${reportPath}`);
-    } catch (error) {
-      this.log(`Error monitoring build health: ${error.message}`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Build health report saved to: ${reportPath}`);
+    } catch (error) {this.log(`Error monitoring build health: ${error.message}`);
     }
   }
 
@@ -111,14 +106,12 @@ class BuildHealthMonitor {
     const recommendations = [];
 
     if (report.buildStatus.status === 'error') {
-      recommendations.push(
-        'Fix build errors to ensure project compiles correctly'
+      recommendations.push(Fix build errors to ensure project compiles correctly'
       );
     }
 
     if (report.performance?.status === 'poor') {
-      recommendations.push(
-        'Optimize build performance - consider code splitting and lazy loading'
+      recommendations.push(Optimize build performance - consider code splitting and lazy loading'
       );
     }
 

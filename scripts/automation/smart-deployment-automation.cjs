@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Smart Deployment Automation - PM2 Automation
@@ -13,23 +13,19 @@ class SmartDeploymentAutomation {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'smart-deployment-automation.log'
     );
     this.deploymentHistory = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'deployment-history.json'
     );
     this.environmentConfig = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'environment-config.json'
     );
     this.rollbackHistory = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'rollback-history.json'
     );
     this.ensureLogsDirectory();
@@ -84,8 +80,7 @@ class SmartDeploymentAutomation {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async initializeEnvironment() {
@@ -105,8 +100,7 @@ class SmartDeploymentAutomation {
       await this.initializePM2Ecosystem();
 
       this.log('Deployment environment initialized successfully');
-    } catch (error) {
-      this.log(`Environment initialization failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Environment initialization failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -120,8 +114,7 @@ class SmartDeploymentAutomation {
         this.environmentConfigs = this.environments;
         await this.saveEnvironmentConfigs();
       }
-    } catch (error) {
-      this.log(`Failed to load environment configs: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to load environment configs: ${error.message}`, 'WARN');
       this.environmentConfigs = this.environments;
     }
   }
@@ -132,8 +125,7 @@ class SmartDeploymentAutomation {
         this.environmentConfig,
         JSON.stringify(this.environmentConfigs, null, 2)
       );
-    } catch (error) {
-      this.log(`Failed to save environment configs: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save environment configs: ${error.message}`, 'ERROR');
     }
   }
 
@@ -146,33 +138,29 @@ class SmartDeploymentAutomation {
         fs.mkdirSync(hooksDir, { recursive: true });
       }
 
-      // Pre-commit hook for deployment validation
-      const preCommitHook = `#!/bin/sh
+      // Pre-commit hook for deployment validationconst preCommitHook = `#!/''bin/sh''
 # Pre-commit hook for deployment validation
 echo "Running deployment validation..."
 npm run validate:deployment
 if [ $? -ne 0 ]; then
-  echo "Deployment validation failed. Commit aborted."
+  echo "Deployment validation failed. Commit aborted.'
   exit 1
-fi
-`;
+fi;
 
       fs.writeFileSync(path.join(hooksDir, 'pre-commit'), preCommitHook);
       fs.chmodSync(path.join(hooksDir, 'pre-commit'), '755');
 
       // Post-merge hook for auto-deployment
-      const postMergeHook = `#!/bin/sh
+      const postMergeHook = `#!/''bin/sh''
 # Post-merge hook for auto-deployment
-echo "Post-merge deployment check..."
-npm run check:auto-deploy
-`;
+echo "Post-merge deployment check...'
+npm run check:auto-deploy;
 
       fs.writeFileSync(path.join(hooksDir, 'post-merge'), postMergeHook);
       fs.chmodSync(path.join(hooksDir, 'post-merge'), '755');
 
       this.log('Git hooks configured successfully');
-    } catch (error) {
-      this.log(`Git hooks setup failed: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Git hooks setup failed: ${error.message}`, 'WARN');
     }
   }
 
@@ -180,25 +168,18 @@ npm run check:auto-deploy
     this.log('Setting up deployment directories...');
 
     try {
-      const deploymentDirs = [
-        'deployments',
-        'deployments/backups',
-        'deployments/rollbacks',
-        'deployments/logs',
-        'deployments/configs',
-      ];
+      const deploymentDirs = ['deployments'', '''deployments/backups''', '''deployments/rollbacks'''', '''deployments/logs''', '''deployments/configs'''', ''];
 
       for (const dir of deploymentDirs) {
-        const fullPath = path.join(this.projectRoot, dir);
+        const fullPath = path.join(this.projectRoot, 'dir);
         if (!fs.existsSync(fullPath)) {
-          fs.mkdirSync(fullPath, { recursive: true });
+          fs.mkdirSync(fullPath', { recursive: true });
         }
       }
 
       this.log('Deployment directories created');
     } catch (error) {
-      this.log(
-        `Deployment directories setup failed: ${error.message}`,
+      this.log(Deployment directories setup failed: ${error.message}',
         'ERROR'
       );
     }
@@ -210,50 +191,34 @@ npm run check:auto-deploy
     try {
       // Create deployment-specific PM2 ecosystem
       const deploymentEcosystem = {
-        apps: [
-          {
-            name: 'deployment-manager',
-            script: './scripts/automation/smart-deployment-automation.cjs',
-            instances: 1,
-            autorestart: true,
-            watch: false,
-            max_memory_restart: '512M',
-            env: {
-              NODE_ENV: 'production',
-              DEPLOYMENT_MODE: 'true',
-            },
-          },
-        ],
+        apps: ['{
+            name: 'deployment-manager'', 'script: './''scripts/automation/smart-deployment-automation.cjs'''', 'instances: 1', 'autorestart: true', 'watch: false', 'max_memory_restart: '512M'', 'env: {
+              NODE_ENV: 'production'', 'DEPLOYMENT_MODE: 'true'', '}', '}', ''],
       };
 
       const ecosystemPath = path.join(
-        this.projectRoot,
-        'deployments',
+        this.projectRoot,deployments',
         'ecosystem.deployment.cjs'
       );
       fs.writeFileSync(
-        ecosystemPath,
-        `module.exports = ${JSON.stringify(deploymentEcosystem, null, 2)};`
+        ecosystemPath,module.exports = ${JSON.stringify(deploymentEcosystem, null, 2)};'
       );
 
       this.log('PM2 ecosystem initialized for deployment');
     } catch (error) {
-      this.log(
-        `PM2 ecosystem initialization failed: ${error.message}`,
+      this.log(PM2 ecosystem initialization failed: ${error.message}',
         'ERROR'
       );
     }
   }
 
   async deploy(environment, strategy = 'IMMEDIATE', options = {}) {
-    this.log(
-      `Starting deployment to ${environment} using ${strategy} strategy...`
+    this.log(Starting deployment to ${environment} using ${strategy} strategy...'
     );
 
     try {
       // Validate environment
-      if (!this.environmentConfigs[environment]) {
-        throw new Error(`Invalid environment: ${environment}`);
+      if (!this.environmentConfigs[environment]) {throw new Error(`Invalid environment: ${environment}`);
       }
 
       const envConfig = this.environmentConfigs[environment];
@@ -296,15 +261,12 @@ npm run check:auto-deploy
         await this.handleDeploymentFailure(deployment, envConfig);
       }
 
-      this.log(
-        `Deployment to ${environment} completed with status: ${deployment.status}`
+      this.log(Deployment to ${environment} completed with status: ${deployment.status}'
       );
 
       return deployment;
     } catch (error) {
-      this.log(
-        `Deployment to ${environment} failed: ${error.message}`,
-        'ERROR'
+      this.log( `Deployment to ${environment} failed: ${error.message}',ERROR'
       );
       throw error;
     }
@@ -314,24 +276,14 @@ npm run check:auto-deploy
     this.log(`Running pre-deployment checks for ${environment}...`);
 
     try {
-      const checks = [
-        { name: 'Git Status', check: () => this.checkGitStatus() },
-        { name: 'Dependencies', check: () => this.checkDependencies() },
-        { name: 'Build Validation', check: () => this.validateBuild() },
-        { name: 'Tests', check: () => this.runTests() },
-        {
-          name: 'Environment Config',
-          check: () => this.validateEnvironmentConfig(environment),
-        },
-      ];
+      const checks = ['{ name: 'Git Status'', 'check: () => this.checkGitStatus() }', '{ name: 'Dependencies'', 'check: () => this.checkDependencies() }', '{ name: 'Build Validation'', 'check: () => this.validateBuild() }', '{ name: 'Tests'', 'check: () => this.runTests() }', '{
+          name: 'Environment Config'', 'check: () => this.validateEnvironmentConfig(environment)', '}', ''];
 
-      for (const check of checks) {
-        this.log(`Running check: ${check.name}`);
+      for (const check of checks) {this.log(`Running check: ${check.name}');
         const result = await check.check();
 
         if (!result.success) {
-          throw new Error(
-            `Pre-deployment check failed: ${check.name} - ${result.error}`
+          throw new Error(Pre-deployment check failed: ${check.name} - ${result.error}'
           );
         }
       }
@@ -343,8 +295,7 @@ npm run check:auto-deploy
     }
   }
 
-  async executeDeploymentStrategy(deployment, strategy, envConfig) {
-    this.log(`Executing deployment strategy: ${strategy}`);
+  async executeDeploymentStrategy(deployment, strategy, envConfig) {this.log(`Executing deployment strategy: ${strategy}`);
 
     try {
       let result;
@@ -362,14 +313,12 @@ npm run check:auto-deploy
         case this.deploymentStrategies.ROLLING:
           result = await this.rollingDeployment(deployment, envConfig);
           break;
-        default:
-          throw new Error(`Unknown deployment strategy: ${strategy}`);
+        default:throw new Error(`Unknown deployment strategy: ${strategy}');
       }
 
       return result;
     } catch (error) {
-      this.log(
-        `Deployment strategy execution failed: ${error.message}`,
+      this.log(Deployment strategy execution failed: ${error.message}',
         'ERROR'
       );
       return { success: false, error: error.message };
@@ -471,8 +420,7 @@ npm run check:auto-deploy
         // Final health check
         const finalHealth = await this.runHealthChecks(
           deployment,
-          envConfig,
-          'canary'
+          envConfig,canary'
         );
 
         if (finalHealth.success) {
@@ -558,13 +506,11 @@ npm run check:auto-deploy
       });
 
       this.log('Application built successfully');
-    } catch (error) {
-      throw new Error(`Build failed: ${error.message}`);
+    } catch (error) {throw new Error(`Build failed: ${error.message}`);
     }
   }
 
-  async deployToEnvironment(deployment, envConfig, instance = 'main') {
-    this.log(`Deploying to ${deployment.environment} instance: ${instance}`);
+  async deployToEnvironment(deployment, envConfig, instance = 'main') {this.log(`Deploying to ${deployment.environment} instance: ${instance}');
 
     try {
       // Create deployment backup
@@ -583,8 +529,7 @@ npm run check:auto-deploy
       // Restart PM2 processes
       await this.restartPM2Processes(deployment.environment, instance);
 
-      this.log(
-        `Deployment to ${deployment.environment} instance ${instance} completed`
+      this.log(Deployment to ${deployment.environment} instance ${instance} completed'
       );
     } catch (error) {
       throw new Error(`Deployment failed: ${error.message}`);
@@ -592,33 +537,19 @@ npm run check:auto-deploy
   }
 
   async runHealthChecks(deployment, envConfig, instance = 'main') {
-    this.log(
-      `Running health checks for ${deployment.environment} instance: ${instance}`
+    this.log(Running health checks for ${deployment.environment} instance: ${instance}'
     );
 
     try {
-      const healthChecks = [
-        {
-          name: 'Application Health',
-          check: () =>
-            this.checkApplicationHealth(deployment.environment, instance),
-        },
-        {
-          name: 'Database Connectivity',
-          check: () =>
-            this.checkDatabaseConnectivity(deployment.environment, instance),
-        },
-        {
-          name: 'External Services',
-          check: () =>
-            this.checkExternalServices(deployment.environment, instance),
-        },
-        {
-          name: 'Performance Metrics',
-          check: () =>
-            this.checkPerformanceMetrics(deployment.environment, instance),
-        },
-      ];
+      const healthChecks = ['{
+          name: 'Application Health'', 'check: () =>
+            this.checkApplicationHealth(deployment.environment', 'instance)', '}', '{
+          name: 'Database Connectivity'', 'check: () =>
+            this.checkDatabaseConnectivity(deployment.environment', 'instance)', '}', '{
+          name: 'External Services'', 'check: () =>
+            this.checkExternalServices(deployment.environment', 'instance)', '}', '{
+          name: 'Performance Metrics'', 'check: () =>
+            this.checkPerformanceMetrics(deployment.environment', 'instance)', '}', ''];
 
       const results = [];
       let success = true;
@@ -651,8 +582,7 @@ npm run check:auto-deploy
     }
   }
 
-  async rollbackDeployment(deployment, envConfig) {
-    this.log(`Rolling back deployment ${deployment.id}...`);
+  async rollbackDeployment(deployment, envConfig) {this.log(`Rolling back deployment ${deployment.id}...`);
 
     try {
       // Get last successful deployment
@@ -682,18 +612,15 @@ npm run check:auto-deploy
       // Save rollback history
       this.rollbackHistoryData.push(rollback);
       await this.saveRollbackHistory();
-
-      this.log(`Rollback completed successfully`);
+this.log(`Rollback completed successfully`);
 
       return rollback;
-    } catch (error) {
-      this.log(`Rollback failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Rollback failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async executeRollback(rollback, envConfig) {
-    this.log(`Executing rollback to deployment ${rollback.rollbackTo}...`);
+  async executeRollback(rollback, envConfig) {this.log(`Executing rollback to deployment ${rollback.rollbackTo}...`);
 
     try {
       // Restore from backup
@@ -713,18 +640,15 @@ npm run check:auto-deploy
       }
 
       this.log('Rollback executed successfully');
-    } catch (error) {
-      throw new Error(`Rollback execution failed: ${error.message}`);
+    } catch (error) {throw new Error(`Rollback execution failed: ${error.message}`);
     }
   }
 
   // Utility methods
-  generateDeploymentId() {
-    return `deploy_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  generateDeploymentId() {return `deploy_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  generateRollbackId() {
-    return `rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  generateRollbackId() {return `rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   async getCurrentCommit() {
@@ -804,8 +728,7 @@ npm run check:auto-deploy
     try {
       if (!this.environmentConfigs[environment]) {
         return {
-          success: false,
-          error: `Environment ${environment} not configured`,
+          success: false,error: `Environment ${environment} not configured`,
         };
       }
 
@@ -821,8 +744,7 @@ npm run check:auto-deploy
         this.deploymentHistory,
         JSON.stringify(this.deploymentHistoryData, null, 2)
       );
-    } catch (error) {
-      this.log(`Failed to save deployment history: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save deployment history: ${error.message}`, 'ERROR');
     }
   }
 
@@ -832,8 +754,7 @@ npm run check:auto-deploy
         this.rollbackHistory,
         JSON.stringify(this.rollbackHistoryData, null, 2)
       );
-    } catch (error) {
-      this.log(`Failed to save rollback history: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save rollback history: ${error.message}`, 'ERROR');
     }
   }
 
@@ -847,11 +768,9 @@ npm run check:auto-deploy
       // Start monitoring for deployment triggers
       this.startDeploymentMonitoring();
 
-      this.log(
-        'Smart Deployment Automation is running and monitoring for deployment triggers'
+      this.log(Smart Deployment Automation is running and monitoring for deployment triggers'
       );
-    } catch (error) {
-      this.log(`Smart Deployment Automation failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Smart Deployment Automation failed: ${error.message}`, 'ERROR');
       setTimeout(() => this.run(), 300000); // 5 minutes on error
     }
   }
@@ -865,21 +784,19 @@ npm run check:auto-deploy
 
         // Check for deployment health
         await this.monitorDeploymentHealth();
-      } catch (error) {
-        this.log(`Deployment monitoring error: ${error.message}`, 'WARN');
+      } catch (error) {this.log(`Deployment monitoring error: ${error.message}`, 'WARN');
       }
     }, 60000); // Check every minute
   }
 
   async checkAutoDeploymentConditions() {
     // Check if any environments need auto-deployment
-    for (const [envName, envConfig] of Object.entries(
+    for (const ['envName', 'envConfig'] of Object.entries(
       this.environmentConfigs
     )) {
       if (envConfig.autoDeploy) {
         const shouldDeploy = await this.shouldAutoDeploy(envName, envConfig);
-        if (shouldDeploy) {
-          this.log(`Auto-deployment triggered for ${envName}`);
+        if (shouldDeploy) {this.log(`Auto-deployment triggered for ${envName}`);
           await this.deploy(envName, 'IMMEDIATE');
         }
       }
@@ -905,8 +822,7 @@ npm run check:auto-deploy
       });
 
       // Check if local branch is behind remote
-      const behindCount = execSync(
-        `git rev-list --count HEAD..origin/${envConfig.branch}`,
+      const behindCount = execSync(git rev-list --count HEAD..origin/${envConfig.branch}',
         {
           encoding: 'utf8',
           cwd: this.projectRoot,
@@ -914,8 +830,7 @@ npm run check:auto-deploy
       ).trim();
 
       return parseInt(behindCount) > 0;
-    } catch (error) {
-      this.log(`Failed to check for new commits: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to check for new commits: ${error.message}`, 'WARN');
       return false;
     }
   }
@@ -929,15 +844,14 @@ npm run check:auto-deploy
       );
 
       return healthCheck.success;
-    } catch (error) {
-      this.log(`Health check failed: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Health check failed: ${error.message}`, 'WARN');
       return false;
     }
   }
 
   async monitorDeploymentHealth() {
     // Monitor all active deployments
-    for (const [envName, envConfig] of Object.entries(
+    for (const ['envName', 'envConfig'] of Object.entries(
       this.environmentConfigs
     )) {
       if (envConfig.healthChecks) {
@@ -948,8 +862,7 @@ npm run check:auto-deploy
           );
 
           if (!health.success) {
-            this.log(
-              `Health check failed for ${envName}, considering rollback`,
+            this.log(Health check failed for ${envName}, considering rollback',
               'WARN'
             );
             // Consider automatic rollback for critical environments
@@ -958,8 +871,7 @@ npm run check:auto-deploy
             }
           }
         } catch (error) {
-          this.log(
-            `Health monitoring failed for ${envName}: ${error.message}`,
+          this.log(Health monitoring failed for ${envName}: ${error.message}',
             'WARN'
           );
         }
@@ -974,8 +886,7 @@ npm run check:auto-deploy
 
     if (consecutiveFailures >= 3) {
       // 3 consecutive failures
-      this.log(
-        `Automatic rollback triggered for ${environment} due to ${consecutiveFailures} consecutive health failures`
+      this.log(Automatic rollback triggered for ${environment} due to ${consecutiveFailures} consecutive health failures'
       );
 
       const deployment = {

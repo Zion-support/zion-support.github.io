@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
@@ -8,23 +8,18 @@ class TestAutomation {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '../../');
     this.logFile = path.join(
-      this.projectRoot,
-      'test-reports',
+      this.projectRoot, 'test-reports',
       'test-automation.log'
     );
     this.reportFile = path.join(
-      this.projectRoot,
-      'test-reports',
+      this.projectRoot, 'test-reports',
       'test-report.json'
     );
     this.ensureDirectories();
   }
 
   ensureDirectories() {
-    const dirs = [
-      path.join(this.projectRoot, 'test-reports'),
-      path.join(this.projectRoot, 'test-results'),
-    ];
+    const dirs = [''this.'projectRoot/test-reports'', ''this.'projectRoot/test-results'', ''];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
@@ -35,15 +30,14 @@ class TestAutomation {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(logEntry);
+    console.log(`logEntry);
 
     // Append to log file
     fs.appendFileSync(this.logFile, logEntry + '\n');
   }
 
   async runCommand(command, cwd = this.projectRoot) {
-    return new Promise((resolve, reject) => {
-      this.log(`Running command: ${command}`);
+    return new Promise((resolve, reject) => {this.log(Running command: ${command}`);
 
       const child = spawn(command, [], {
         shell: true,
@@ -55,27 +49,21 @@ class TestAutomation {
       let stderr = '';
 
       child.stdout.on('data', data => {
-        stdout += data.toString();
-        this.log(`STDOUT: ${data.toString().trim()}`);
+        stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);
       });
 
       child.stderr.on('data', data => {
-        stderr += data.toString();
-        this.log(`STDERR: ${data.toString().trim()}`);
+        stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);
       });
 
       child.on('close', code => {
-        if (code === 0) {
-          this.log(`Command completed successfully with code ${code}`);
+        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
-        } else {
-          this.log(`Command failed with code ${code}`, 'ERROR');
-          reject(new Error(`Command failed with code ${code}: ${stderr}`));
+        } else {this.log(`Command failed with code ${code}`, 'ERROR');reject(new Error(`Command failed with code ${code}: ${stderr}`));
         }
       });
 
-      child.on('error', error => {
-        this.log(`Command error: ${error.message}`, 'ERROR');
+      child.on('error', error => {this.log(`Command error: ${error.message}`, 'ERROR');
         reject(error);
       });
     });
@@ -87,8 +75,7 @@ class TestAutomation {
       await this.runCommand('npm ci');
       this.log('Dependencies installed successfully');
       return true;
-    } catch (error) {
-      this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -99,8 +86,7 @@ class TestAutomation {
       await this.runCommand('npm run build');
       this.log('Build completed successfully');
       return true;
-    } catch (error) {
-      this.log(`Build failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Build failed: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -114,8 +100,7 @@ class TestAutomation {
       return false;
     }
 
-    const files = fs.readdirSync(distPath);
-    this.log(`Build output contains ${files.length} files/directories`);
+    const files = fs.readdirSync(distPath);this.log(`Build output contains ${files.length} ''files/directories''`);
 
     // Check for critical files
     const criticalFiles = ['index.html'];
@@ -123,8 +108,7 @@ class TestAutomation {
       file => !fs.existsSync(path.join(distPath, file))
     );
 
-    if (missingFiles.length > 0) {
-      this.log(`Missing critical files: ${missingFiles.join(', ')}`, 'ERROR');
+    if (missingFiles.length > 0) {this.log(`Missing critical files: ${missingFiles.join(', ')}`, 'ERROR');
       return false;
     }
 
@@ -156,9 +140,8 @@ class TestAutomation {
       }
 
       // Start server in background
-      const serverProcess = spawn(
-        'npx',
-        ['http-server', serverPath, '-p', '5000', '-s'],
+      const serverProcess = spawn(npx',
+        ['http-server', 'serverPath', '-p', '5000', '-s'],
         {
           shell: true,
           cwd: this.projectRoot,
@@ -171,31 +154,27 @@ class TestAutomation {
 
       // Test if server is responding
       try {
-        const testResult = await this.runCommand(
-          'curl -s -o /dev/null -w "%{http_code}" http://localhost:5000'
+        const testResult = await this.runCommand(curl -s -o /''dev/null'' -w '%{http_code}" http://localhost:5000'
         );
         if (testResult.stdout.includes('200')) {
           this.log('Asset paths verification passed');
           serverProcess.kill();
           return true;
         } else {
-          this.log(
-            `Asset paths verification failed: HTTP ${testResult.stdout}`,
+          this.log(Asset paths verification failed: HTTP ${testResult.stdout}',
             'ERROR'
           );
           serverProcess.kill();
           return false;
         }
       } catch (error) {
-        this.log(
-          'Asset paths verification failed: Could not connect to test server',
+        this.log(Asset paths verification failed: Could not connect to test server',
           'ERROR'
         );
         serverProcess.kill();
         return false;
       }
-    } catch (error) {
-      this.log(`Asset paths verification failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Asset paths verification failed: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -223,15 +202,11 @@ class TestAutomation {
       let testCount = 0;
       try {
         // Look for test result files
-        const testResultFiles = [
-          'test-results.xml',
-          'junit.xml',
-          'test-report.json',
-        ];
+        const testResultFiles = ['test-results.xml'', 'junit.xml', 'test-report.json'', ''];
         for (const file of testResultFiles) {
-          const filePath = path.join(this.projectRoot, file);
+          const filePath = path.join(this.projectRoot, 'file);
           if (fs.existsSync(filePath)) {
-            const content = fs.readFileSync(filePath, 'utf8');
+            const content = fs.readFileSync(filePath', 'utf8');
             // Simple parsing for common test result formats
             if (file.endsWith('.xml')) {
               const testMatches = content.match(/tests="(\d+)"/);
@@ -246,15 +221,13 @@ class TestAutomation {
       } catch (parseError) {
         this.log('Could not parse test results', 'WARN');
       }
-
-      this.log(`Tests completed successfully. Test count: ${testCount}`);
+this.log(`Tests completed successfully. Test count: ${testCount}`);
       return {
         success: true,
         message: 'Tests passed',
         testCount: testCount,
       };
-    } catch (error) {
-      this.log(`Tests failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Tests failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message,
@@ -279,8 +252,7 @@ class TestAutomation {
       },
     };
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Test report generated: ${this.reportFile}`);
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Test report generated: ${this.reportFile}`);
 
     return report;
   }
@@ -299,8 +271,7 @@ class TestAutomation {
     });
 
     if (!depsResult) {
-      this.log(
-        'Skipping remaining steps due to dependency installation failure',
+      this.log(Skipping remaining steps due to dependency installation failure',
         'ERROR'
       );
       await this.generateTestReport(results);
@@ -346,13 +317,10 @@ class TestAutomation {
 
     // Generate final report
     const report = await this.generateTestReport(results);
-
-    this.log(`Test automation completed. Status: ${report.status}`);
-    this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
+this.log(`Test automation completed. Status: ${report.status}`);this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
 
     if (report.status === 'FAILED') {
-      this.log(
-        'Test automation failed. Check the report for details.',
+      this.log(Test automation failed. Check the report for details.',
         'ERROR'
       );
       process.exit(1);

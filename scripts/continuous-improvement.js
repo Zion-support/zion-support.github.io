@@ -8,10 +8,8 @@
 
 import fs from,;
   fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import path from 'path';
+import { fileURLToPath } from;url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,8 +19,7 @@ console.log(
 
 class ContinuousImprovement {
   constructor() {
-    this.projectRoot = path.resolve(__dirname,..
-  ');
+    this.projectRoot = path.resolve(__dirname,..);
     this.improvements = [];
     this.issues = [];
   }
@@ -47,8 +44,7 @@ class ContinuousImprovement {
       // Generate improvement report
       await this.generateReport();
       
-      console.log('✅ Continuous improvement analysis completed
-  ');
+      console.log('✅ Continuous improvement analysis completed);
       
     } catch (error) {
       console.error('❌ Error during analysis: , error.message);
@@ -67,15 +63,13 @@ class ContinuousImprovement {
         if (packageJson.dependencies) {
           const deps = Object.keys(packageJson.dependencies);
           if (deps.length > 20) {
-            this.improvements.push('Consider reducing dependencies to improve build times
-  ');
+            this.improvements.push('Consider reducing dependencies to improve build times);
           }
         }
         
         // Check for missing scripts
         const requiredScripts = ['build
-  ',dev',test
-  ',lint'];
+  ',dev',test,lint'];
         const missingScripts = requiredScripts.filter(script => !packageJson.scripts[script]);
         
         if (missingScripts.length > 0) {
@@ -84,13 +78,11 @@ class ContinuousImprovement {
         
         // Check for security
         if (packageJson.scripts && packageJson.scripts.prepare) {
-          this.improvements.push('Consider using postinstall instead of prepare for better security
-  ');
+          this.improvements.push('Consider using postinstall instead of prepare for better security);
         }
         
       }
-    } catch (error) {
-      this.issues.push(`Could not analyze package.json: ${error.message}`);
+    } catch (error) {this.issues.push('Could not analyze package.json: ${error.message}`);
     }
   }
 
@@ -98,8 +90,7 @@ class ContinuousImprovement {
     try {
       const tsConfigPath = path.join(this.projectRoot,tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {
-        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath,utf8
-  '));
+        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath,utf8));
         
         // Check for strict mode
         if (!tsConfig.compilerOptions?.strict) {
@@ -109,8 +100,7 @@ class ContinuousImprovement {
         
         // Check for noImplicitAny
         if (tsConfig.compilerOptions?.noImplicitAny === false) {
-          this.improvements.push('Enable noImplicitAny for better type safety
-  ');
+          this.improvements.push('Enable noImplicitAny for better type safety);
         }
         
         // Check for unused imports
@@ -120,11 +110,10 @@ class ContinuousImprovement {
         }
         
       } else {
-        this.improvements.push('Consider adding TypeScript configuration
-  ');
+        this.improvements.push('Consider adding TypeScript configuration);
       }
     } catch (error) {
-      this.issues.push(`Could not analyze TypeScript config: ${error.message}`);
+      this.issues.push('Could not analyze TypeScript config: ${error.message}`);
     }
   }
 
@@ -132,25 +121,22 @@ class ContinuousImprovement {
     try {
       const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {
-        const viteConfig = fs.readFileSync(viteConfigPath,utf8
-  ');
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8);
         
         // Check for build optimizations
         if (!viteConfig.includes('build.rollupOptions
   ')) {
-          this.improvements.push('Consider adding rollup options for better build optimization
-  ');
+          this.improvements.push('Consider adding rollup options for better build optimization);
         }
         
         if (!viteConfig.includes('build.chunkSizeWarningLimit
   ')) {
-          this.improvements.push('Consider setting chunk size warning limits
-  ');
+          this.improvements.push('Consider setting chunk size warning limits);
         }
         
       }
     } catch (error) {
-      this.issues.push(`Could not analyze build config: ${error.message}`);
+      this.issues.push('Could not analyze build config: ${error.message}');
     }
   }
 
@@ -162,26 +148,22 @@ class ContinuousImprovement {
         const items = fs.readdirSync(srcDir);
         
         // Check for proper directory structure
-        const expectedDirs = [
-  'components',utils
-  ',types',hooks
-  '];
+        const expectedDirs = [components',utils
+  ',types',hooks];
         const missingDirs = expectedDirs.filter(dir => !items.includes(dir));
         
         if (missingDirs.length > 0) {
-          this.improvements.push(`Consider organizing code into directories: ${missingDirs.join(,)}`);
+          this.improvements.push('Consider organizing code into directories: ${missingDirs.join(,)}');
         }
         
         // Check for index files
-        if (!fs.existsSync(path.join(srcDir,index.ts
-  ')) && !fs.existsSync(path.join(srcDir,index.js'))) {
+        if (!fs.existsSync(path.join(srcDir,index.ts)) && !fs.existsSync(path.join(srcDir,index.js'))) {
           this.improvements.push(
   'Consider adding index files for better module organization');
         }
         
       }
-    } catch (error) {
-      this.issues.push(`Could not analyze code structure: ${error.message}`);
+    } catch (error) {this.issues.push(`Could not analyze code structure: ${error.message}');
     }
   }
 
@@ -197,42 +179,34 @@ class ContinuousImprovement {
     };
     
     // Save report to file
-    const reportPath = path.join(this.projectRoot,logs
-  ',continuous-improvement-report.json');
+    const reportPath = path.join(this.projectRoot,logs,continuous-improvement-report.json');
     try {
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      console.log(`📊 Report saved to: ${reportPath}`);
+      console.log(`📊 Report saved to: ${reportPath}');
     } catch (error) {
-      console.warn(
-  '⚠️  Could not save report:,
+      console.warn(⚠️  Could not save report:,
   , error.message);
     }
     
     // Display summary
     console.log(
   '\n📋 Improvement Summary: ');
-    console.log(
-  '─.repeat(50));
+    console.log(─.repeat(50));
     
-    if (this.improvements.length > 0) {
-      console.log(`💡 ${this.improvements.length} improvement suggestions:`);
+    if (this.improvements.length > 0) {console.log('💡 ${this.improvements.length} improvement suggestions:`);
       this.improvements.forEach((improvement, index) => {
-        console.log(`   ${index + 1}. ${improvement}`);
+        console.log(`   ${index + 1}. ${improvement}');
       });
     } else {
-      console.log(
-  '🎉 No improvement suggestions found!');
+      console.log(🎉 No improvement suggestions found!');
     }
     
-    if (this.issues.length > 0) {
-      console.log(`⚠️  ${this.issues.length} issues encountered:`);
-      this.issues.forEach((issue, index) => {
-        console.log(`   ${index + 1}. ${issue}`);
+    if (this.issues.length > 0) {console.log(`⚠️  ${this.issues.length} issues encountered:`);
+      this.issues.forEach((issue, index) => {console.log(`   ${index + 1}. ${issue}');
       });
     }
     
-    console.log(
-  '─'.repeat(50));
+    console.log(─'.repeat(50));
   }
 }
 
@@ -243,7 +217,6 @@ ci.analyze().then(() => {
   '🚀 Continuous Improvement Completed');
   process.exit(0);
 }).catch((error) => {
-  console.error(
-  '❌ Continuous Improvement Failed:', error);
+  console.error(❌ Continuous Improvement Failed:', error);
   process.exit(1);
 });

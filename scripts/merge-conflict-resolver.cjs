@@ -30,36 +30,29 @@ class MergeConflictResolver {
   async ensureBackupDir() {
     try {
       await fs.mkdir(this.backupDir, { recursive: true });
-    } catch (error) {
-      await this.log(`Failed to create backup directory: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Failed to create backup directory: ${error.message}`, 'ERROR');
     }
   }
 
   async findAllMergeConflicts() {
-    try {
-      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`);
+    try {const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`);
       
-      const files = stdout.trim().split('\n').filter(line => line && !line.includes('node_modules'));
-      await this.log(`Found ${files.length} files with merge conflicts`, 'INFO');
+      const files = stdout.trim().split('\n').filter(line => line && !line.includes('node_modules'));await this.log(`Found ${files.length} files with merge conflicts`, 'INFO');
       return files;
-    } catch (error) {
-      await this.log(`Error finding merge conflicts: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Error finding merge conflicts: ${error.message}`, 'ERROR');
       return [];
     }
   }
 
   async backupFile(filePath) {
     try {
-      const relativePath = path.relative(this.projectRoot, filePath);
-      const backupPath = path.join(this.backupDir, `${relativePath.replace(/[/\\]/g, '_')}_${Date.now()}.backup`);
+      const relativePath = path.relative(this.projectRoot, filePath);const backupPath = path.join(this.backupDir, `${relativePath.replace(/[/\\]/g, '_')}_${Date.now()}.backup`);
       
       const content = await fs.readFile(filePath, 'utf8');
       await fs.writeFile(backupPath, content);
-      
       await this.log(`Backed up ${filePath} to ${backupPath}`, 'INFO');
       return backupPath;
-    } catch (error) {
-      await this.log(`Failed to backup ${filePath}: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Failed to backup ${filePath}: ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -181,12 +174,10 @@ class MergeConflictResolver {
       }
       
       await fs.writeFile(filePath, resolvedContent);
-      
       await this.log(`Resolved ${conflicts.length} conflicts in ${filePath}`, 'INFO');
       return { resolved: true, conflictsCount: conflicts.length };
       
-    } catch (error) {
-      await this.log(`Failed to resolve conflicts in ${filePath}: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Failed to resolve conflicts in ${filePath}: ${error.message}`, 'ERROR');
       return { resolved: false, error: error.message };
     }
   }
@@ -227,7 +218,6 @@ class MergeConflictResolver {
       }
       
       await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
-      
       await this.log(`Merge conflict resolution completed: ${results.resolved}/${results.totalFiles} files resolved`, 'INFO');
       
       // If conflicts were resolved, trigger a build check
@@ -236,8 +226,7 @@ class MergeConflictResolver {
         exec('pm2 restart error-monitor');
       }
       
-    } catch (error) {
-      await this.log(`Merge conflict resolver failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Merge conflict resolver failed: ${error.message}`, 'ERROR');
     }
   }
 }

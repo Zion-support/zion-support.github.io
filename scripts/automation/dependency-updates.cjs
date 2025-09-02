@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('📦 Starting continuous dependency updates automation...');
+console.log(`'📦 Starting continuous dependency updates automation...');
 
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL =
@@ -12,19 +12,19 @@ const AUTOMATION_INTERVAL =
 
 async function runDependencyUpdates() {
   try {
-    console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);
+    console.log(`📦 Running dependency updates at ${new Date().toISOString()});
 
     // Check for outdated dependencies
-    console.log('🔍 Checking for outdated dependencies...');
+    console.log(`'🔍 Checking for outdated dependencies...');
     try {
       execSync('npm outdated', { stdio: 'inherit' });
     } catch (error) {
-      console.log('✅ All dependencies are up to date');
+      console.log('✅ All dependencies are up to date'`);
       return;
     }
 
     // Check for security vulnerabilities
-    console.log('🔒 Checking for security vulnerabilities...');
+    console.log(`'🔒 Checking for security vulnerabilities...');
     try {
       execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
       console.log('✅ No security vulnerabilities found');
@@ -55,7 +55,7 @@ async function runDependencyUpdates() {
       });
       const outdated = JSON.parse(outdatedOutput);
 
-      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
+      const majorUpdates = Object.entries(outdated).filter((['pkg', 'info']) => {
         const current = info.current.split('.')[0];
         const latest = info.latest.split('.')[0];
         return current !== latest;
@@ -63,16 +63,15 @@ async function runDependencyUpdates() {
 
       if (majorUpdates.length > 0) {
         console.log('⚠️  Major version updates available:');
-        majorUpdates.forEach(([pkg, info]) => {
-          console.log(`  - ${pkg}: ${info.current} → ${info.latest}`);
+        majorUpdates.forEach((['pkg', 'info']) => {console.log(  - ${pkg}: ${info.current} → ${info.latest});
         });
 
         console.log('ℹ️  Major updates require manual review');
       } else {
-        console.log('✅ No major version updates available');
+        console.log('✅ No major version updates available'`);
       }
     } catch (error) {
-      console.log('ℹ️  Could not check for major updates');
+      console.log(`'ℹ️  Could not check for major updates');
     }
 
     // Install dependencies
@@ -98,11 +97,9 @@ async function runDependencyUpdates() {
     };
 
     const reportPath = path.join(
-      process.cwd(),
-      'dependency-updates-report.json'
+      process.cwd(),dependency-updates-report.json'
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Report saved to ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});
 
     console.log('✅ Continuous dependency updates completed successfully');
   } catch (error) {
@@ -113,8 +110,7 @@ async function runDependencyUpdates() {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   // Run initial dependency updates
@@ -125,9 +121,8 @@ async function runContinuous() {
     await runDependencyUpdates();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    `✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+  console.log( ✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

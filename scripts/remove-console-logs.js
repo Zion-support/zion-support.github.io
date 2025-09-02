@@ -7,22 +7,16 @@ import { glob } from 'glob';
 // Configuration
 const CONFIG = {
   // Directories to process
-  directories: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'components/**/*.{js,jsx,ts,tsx}',
-    'utils/**/*.{js,jsx,ts,tsx}',
-    'hooks/**/*.{js,jsx,ts,tsx}',
+  directories: [src/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',components/**/*.{js,jsx,ts,tsx}',
+    'utils/**/*.{js,jsx,ts,tsx}',hooks/**/*.{js,jsx,ts,tsx}',
     'services/**/*.{js,jsx,ts,tsx}'
   ],
   
   // Files to exclude
-  exclude: [
-    '**/*.test.{js,jsx,ts,tsx}',
-    '**/*.spec.{js,jsx,ts,tsx}',
-    '**/node_modules/**',
-    '**/dist/**',
-    '**/build/**',
+  exclude: [**/*.test.{js,jsx,ts,tsx}',
+    '**/*.spec.{js,jsx,ts,tsx}',**/node_modules/**',
+    '**/dist/**',**/build/**',
     '**/.next/**'
   ],
   
@@ -55,10 +49,8 @@ function removeConsoleStatements(filePath) {
       const patterns = [
         // Simple console.method() calls
         new RegExp(`console\\.${method}\\s*\\([^)]*\\)\\s*;?\\s*`, 'g'),
-        // Multi-line console.method() calls
-        new RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`, 'g'),
-        // Console.method() with template literals
-        new RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`, 'g')
+        // Multi-line console.method() callsnew RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`, 'g'),
+        // Console.method() with template literalsnew RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`, 'g')
       ];
 
       patterns.forEach(pattern => {
@@ -78,15 +70,13 @@ function removeConsoleStatements(filePath) {
       fs.writeFileSync(filePath, modifiedContent, 'utf8');
       stats.filesModified++;
       stats.consoleStatementsRemoved += removedCount;
-      
       console.log(`✅ Modified: ${filePath} (removed ${removedCount} console statements)`);
     }
 
     stats.filesProcessed++;
     return removedCount > 0;
 
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+  } catch (error) {console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -119,8 +109,7 @@ async function main() {
 
   // Remove duplicates
   allFiles = [...new Set(allFiles)];
-
-  console.log(`📁 Found ${allFiles.length} files to process\n`);
+console.log(`📁 Found ${allFiles.length} files to process\n`);
 
   // Process each file
   allFiles.forEach(filePath => {
@@ -130,10 +119,7 @@ async function main() {
   });
 
   // Print summary
-  console.log('\n📊 Summary:');
-  console.log(`   Files processed: ${stats.filesProcessed}`);
-  console.log(`   Files modified: ${stats.filesModified}`);
-  console.log(`   Console statements removed: ${stats.consoleStatementsRemoved}`);
+  console.log('\n📊 Summary:');console.log(`   Files processed: ${stats.filesProcessed}`);console.log(`   Files modified: ${stats.filesModified}`);console.log(`   Console statements removed: ${stats.consoleStatementsRemoved}`);
   
   if (stats.filesModified > 0) {
     console.log('\n✅ Console.log removal completed successfully!');
@@ -142,8 +128,7 @@ async function main() {
   }
 }
 
-// Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Run if called directlyif (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 

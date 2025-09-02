@@ -27,23 +27,19 @@ class SyntaxFixer {
   }
 
   async findMergeConflicts() {
-    try {
-      const { stdout } = await execAsync(
-        `find ${this.projectRoot} -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`
+    try {const { stdout } = await execAsync(find ${this.projectRoot} -name '*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`
       );
 
       const files = stdout
         .trim()
         .split('\n')
         .filter(line => line && !line.includes('node_modules'));
-      await this.log(
-        `Found ${files.length} files with merge conflicts`,
+      await this.log(Found ${files.length} files with merge conflicts',
         'INFO'
       );
       return files;
     } catch (error) {
-      await this.log(
-        `Error finding merge conflicts: ${error.message}`,
+      await this.log(Error finding merge conflicts: ${error.message}',
         'ERROR'
       );
       return [];
@@ -64,8 +60,7 @@ class SyntaxFixer {
     ];
 
     try {
-      const { stdout } = await execAsync(
-        `find ${this.projectRoot}/src -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | head -50`
+      const { stdout } = await execAsync(find ${this.projectRoot}/src -name '*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | head -50`
       );
       const files = stdout
         .trim()
@@ -93,8 +88,7 @@ class SyntaxFixer {
       }
 
       return problemFiles;
-    } catch (error) {
-      await this.log(`Error finding syntax errors: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Error finding syntax errors: ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -109,12 +103,10 @@ class SyntaxFixer {
         .replace(/=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '')
         .replace(/>>>>>>> [^\n]+\n/g, '');
 
-      await fs.writeFile(filePath, fixed);
-      await this.log(`Fixed merge conflict in ${filePath}`, 'INFO');
+      await fs.writeFile(filePath, fixed);await this.log(`Fixed merge conflict in ${filePath}`, 'INFO');
       return true;
     } catch (error) {
-      await this.log(
-        `Failed to fix merge conflict in ${filePath}: ${error.message}`,
+      await this.log(Failed to fix merge conflict in ${filePath}: ${error.message}',
         'ERROR'
       );
       return false;
@@ -153,15 +145,13 @@ class SyntaxFixer {
       }
 
       if (changed) {
-        await fs.writeFile(filePath, content);
-        await this.log(`Fixed syntax errors in ${filePath}`, 'INFO');
+        await fs.writeFile(filePath, content);await this.log(`Fixed syntax errors in ${filePath}`, 'INFO');
         return true;
       }
 
       return false;
     } catch (error) {
-      await this.log(
-        `Failed to fix syntax errors in ${filePath}: ${error.message}`,
+      await this.log(Failed to fix syntax errors in ${filePath}: ${error.message}',
         'ERROR'
       );
       return false;
@@ -200,8 +190,7 @@ class SyntaxFixer {
 
       const totalFixed =
         results.mergeConflicts.fixed + results.syntaxErrors.fixed;
-      await this.log(
-        `Syntax fixer completed: ${totalFixed} files fixed`,
+      await this.log(Syntax fixer completed: ${totalFixed} files fixed',
         'INFO'
       );
 
@@ -209,8 +198,7 @@ class SyntaxFixer {
       if (totalFixed > 0) {
         exec('pm2 restart error-monitor');
       }
-    } catch (error) {
-      await this.log(`Syntax fixer failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Syntax fixer failed: ${error.message}`, 'ERROR');
     }
   }
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -24,9 +24,9 @@ class MasterAutomationOrchestrator {
   ensureDirectories() {
     const dirs = ['logs', 'automation', 'reports'];
     dirs.forEach(dir => {
-      const dirPath = path.join(this.projectRoot, dir);
+      const dirPath = path.join(this.projectRoot, 'dir);
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+        fs.mkdirSync(dirPath', { recursive: true });
       }
     });
   }
@@ -34,7 +34,7 @@ class MasterAutomationOrchestrator {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
     
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
@@ -55,8 +55,7 @@ class MasterAutomationOrchestrator {
       // Generate comprehensive dashboard
       await this.generateAutomationDashboard();
       
-    } catch (error) {
-      this.log(`❌ Fatal error in orchestrator: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(❌ Fatal error in orchestrator: ${error.message}, 'ERROR'`);
     }
   }
 
@@ -67,8 +66,7 @@ class MasterAutomationOrchestrator {
     try {
       execSync('pm2 start ecosystem.config.cjs', { stdio: 'pipe' });
       this.log('✅ PM2 ecosystem started successfully');
-    } catch (error) {
-      this.log(`⚠️ PM2 start failed: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`⚠️ PM2 start failed: ${error.message}`, 'WARN');
     }
 
     // Initialize error monitoring
@@ -113,7 +111,7 @@ class MasterAutomationOrchestrator {
       this.log('🔍 Running Error Monitoring...');
       
       // Run enhanced error fixer
-      const result = execSync('node scripts/automation/enhanced-error-fixer.cjs', { 
+      const result = execSync('node ''scripts/automation/enhanced-error-fixer.cjs''', { 
         encoding: 'utf8',
         stdio: 'pipe'
       });
@@ -129,8 +127,7 @@ class MasterAutomationOrchestrator {
       this.automationStatus.errorFixer.lastRun = new Date().toISOString();
       this.log('✅ Error monitoring completed');
       
-    } catch (error) {
-      this.log(`❌ Error monitoring failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Error monitoring failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -152,8 +149,7 @@ class MasterAutomationOrchestrator {
       
       this.automationStatus.performanceMonitor.lastRun = new Date().toISOString();
       
-    } catch (error) {
-      this.log(`❌ Performance monitoring failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Performance monitoring failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -178,8 +174,7 @@ class MasterAutomationOrchestrator {
       this.automationStatus.securityScanner.lastRun = new Date().toISOString();
       this.log('✅ Security scanning completed');
       
-    } catch (error) {
-      this.log(`❌ Security scanning failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Security scanning failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -206,8 +201,7 @@ class MasterAutomationOrchestrator {
       
       this.automationStatus.codeQuality.lastRun = new Date().toISOString();
       
-    } catch (error) {
-      this.log(`❌ Code quality monitoring failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Code quality monitoring failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -241,8 +235,7 @@ class MasterAutomationOrchestrator {
       
       this.log('✅ Daily maintenance completed');
       
-    } catch (error) {
-      this.log(`❌ Daily maintenance failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Daily maintenance failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -261,8 +254,7 @@ class MasterAutomationOrchestrator {
       
       this.log('✅ Weekly maintenance completed');
       
-    } catch (error) {
-      this.log(`❌ Weekly maintenance failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Weekly maintenance failed: ${error.message}`, 'ERROR');
     }
   }
 
@@ -313,18 +305,11 @@ class MasterAutomationOrchestrator {
   }
 
   displayDashboard(dashboard) {
-    console.log('\n🎯 ZION TECH AUTOMATION DASHBOARD');
-    console.log('=====================================');
-    console.log(`📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active`);
-    console.log(`🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}`);
-    console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);
-    console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);
-    console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
+    console.log(`'\n🎯 ZION TECH AUTOMATION DASHBOARD');
+    console.log(`'=====================================');console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
     
-    console.log('\n📋 Recommendations:');
-    dashboard.recommendations.forEach(rec => console.log(`   ${rec}`));
-    
-    console.log(`\n📄 Dashboard saved to: ${this.dashboardFile}`);
+    console.log(`'\n📋 Recommendations:');dashboard.recommendations.forEach(rec => console.log(`   ${rec}));
+    console.log(\n📄 Dashboard saved to: ${this.dashboardFile}``);
   }
 
   async stop() {
@@ -334,8 +319,7 @@ class MasterAutomationOrchestrator {
       // Stop PM2 processes
       execSync('pm2 stop all', { stdio: 'pipe' });
       this.log('✅ All automation processes stopped');
-    } catch (error) {
-      this.log(`⚠️ Error stopping processes: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`⚠️ Error stopping processes: ${error.message}`, 'WARN');
     }
   }
 }

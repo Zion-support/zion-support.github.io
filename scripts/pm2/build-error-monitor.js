@@ -2,24 +2,19 @@
 
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from 'fs';
+import path from 'path';
 
 class BuildErrorMonitor {
   constructor() {
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000; // 15 minutes
-    this.autoFixBuild = process.env.AUTO_FIX_BUILD ===
-  'true';
+    this.autoFixBuild = process.env.AUTO_FIX_BUILD ===true';
     this.reportErrors = process.env.REPORT_ERRORS ===
   'true';
-    this.logFile =
-  'error-reports/build-error-monitor-report.json';
+    this.logFile =error-reports/build-error-monitor-report.json';
     
     console.log(
-  '🏗️ Build Error Monitor started');    console.log(`Build check interval: ${this.buildCheckInterval}ms`);
-    console.log(`Auto-fix build: ${this.autoFixBuild}`);
+  '🏗️ Build Error Monitor started');    console.log(`Build check interval: ${this.buildCheckInterval}ms`);console.log(`Auto-fix build: ${this.autoFixBuild}');
   }
 
   async start() {
@@ -33,8 +28,7 @@ class BuildErrorMonitor {
   }
 
   async checkBuildErrors() {
-    console.log(
-  '🔍 Checking build errors...');
+    console.log(🔍 Checking build errors...');
         const report = {
       timestamp: new Date().toISOString(),
       buildStatus:
@@ -72,18 +66,15 @@ class BuildErrorMonitor {
       this.saveReport(report);
       
       const status = report.buildStatus ===,
-  success' ?
-  '✅': '❌;
-      console.log(`${status} Build check complete. Status: ${report.buildStatus}`);      console.log(`Build time: ${report.buildTime}ms`);
-      console.log(
-        `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`
+  success' ?✅': '❌;
+      console.log(`${status} Build check complete. Status: ${report.buildStatus}`);      console.log(`Build time: ${report.buildTime}ms');
+      console.log(Errors: ${report.errors.length}, Warnings: ${report.warnings.length}'
       );
     } catch (error) {
       console.error(
   'Error during build check:,
   , error);
-      report.buildStatus =
-  'error';
+      report.buildStatus =error';
       report.error = error.message;
       this.saveReport(report);
     }
@@ -124,10 +115,8 @@ class BuildErrorMonitor {
       const line = lines[i];
 
       // Vite/Rollup errors
-      if (line.includes(
-  '✗') || line.includes(
-  'Error: ') || line.includes(
-  'error TS')) {        errors.push({
+      if (line.includes(✗') || line.includes(
+  'Error: ') || line.includes(error TS')) {        errors.push({
           type:
   'build,
           message: line.trim(),
@@ -137,8 +126,7 @@ class BuildErrorMonitor {
       }
 
       // Module resolution errors
-      if (line.includes(
-  'Cannot resolve module') || line.includes(
+      if (line.includes(Cannot resolve module') || line.includes(
   'Module not found')) {        errors.push({
           type: 'module,
           message: line.trim(),
@@ -153,20 +141,17 @@ class BuildErrorMonitor {
 
   parseWarningsFromOutput(output) {
     const warnings = [];
-    const lines = output.split(
-  '\\n');
+    const lines = output.split(\\n');
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
       if (line.includes(
-  'warning') || line.includes(
-  '⚠')) {        warnings.push({
+  'warning') || line.includes(⚠')) {        warnings.push({
           type: 'warning,
           message: line.trim(),
           line: i + 1,
-          severity:
-  'warning'        });
+          severity:warning'        });
       }
     }
 
@@ -179,15 +164,13 @@ class BuildErrorMonitor {
         const fixed = await this.fixBuildError(error);
         if (fixed) {
           report.fixes.applied.push(error);
-          console.log(
-            `✅ Fixed build error: ${error.message.substring(0, 50)}...`
+          console.log( `✅ Fixed build error: ${error.message.substring(0, 50)}...`
           );
         } else {
           report.fixes.failed.push(error);
         }
       } catch (fixError) {
-        report.fixes.failed.push({ ...error, fixError: fixError.message });
-        console.error(`❌ Failed to fix build error:`, fixError.message);
+        report.fixes.failed.push({ ...error, fixError: fixError.message });console.error(`❌ Failed to fix build error:', fixError.message);
       }
     }
   }
@@ -197,30 +180,26 @@ class BuildErrorMonitor {
 
     try {
       // Fix module resolution errors
-      if (type ===
-  'module' || message.includes(
+      if (type ===module' || message.includes(
   'Cannot resolve module')) {
         return await this.fixModuleResolutionError(message);
       }
 
       // Fix import/export errors
-      if (message.includes(
-  'import') || message.includes(
+      if (message.includes(import') || message.includes(
   'export')) {
         return await this.fixImportExportError(message);
       }
 
       // Fix dependency errors
-      if (message.includes(
-  'dependency') || message.includes(
+      if (message.includes(dependency') || message.includes(
   'package')) {
         return await this.fixDependencyError(message);
       }
 
       return false;
     } catch (error) {
-      console.error(
-  'Error fixing build error:', error);
+      console.error(Error fixing build error:', error);
       return false;
     }
   }
@@ -235,16 +214,12 @@ class BuildErrorMonitor {
     const moduleName = moduleMatch[1];
 
     // Try to install missing dependencies
-    if (!moduleName.startsWith('.
-  ') && !moduleName.startsWith('/
+    if (!moduleName.startsWith('.) && !moduleName.startsWith('/
   ')) {
       try {
-        console.log(`Installing missing dependency: ${moduleName}`);
-        execSync(`npm install ${moduleName}`, { stdio: 'pipe
-  ' });
+        console.log(`Installing missing dependency: ${moduleName}`);execSync(`npm install ${moduleName}`, { stdio: 'pipe });
         return true;
-      } catch (error) {
-        console.error(`Failed to install ${moduleName}:`, error.message);
+      } catch (error) {console.error('Failed to install ${moduleName}:`, error.message);
       }
     }
 
@@ -257,7 +232,6 @@ class BuildErrorMonitor {
       {
         pattern: /export\s*{\s*default\s*}/,
         replacement: 'export default {}
-  '
       },
       {
         pattern: /import\s*{\s*}\s*from/,
@@ -276,12 +250,10 @@ class BuildErrorMonitor {
     if (packageMatch) {
       const packageName = packageMatch[1];
       try {
-        console.log(`Installing suggested dependency: ${packageName}`);
-        execSync(`npm install ${packageName}`, { stdio: 'pipe
-  ' });
+        console.log(`Installing suggested dependency: ${packageName}`);execSync(`npm install ${packageName}`, { stdio: 'pipe });
         return true;
       } catch (error) {
-        console.error(`Failed to install ${packageName}:`, error.message);
+        console.error('Failed to install ${packageName}:', error.message);
       }
     }
 
@@ -294,29 +266,24 @@ class BuildErrorMonitor {
     // Performance suggestions
     if (report.buildTime > 60000) { // More than 1 minute
       suggestions.push(,
-  Consider optimizing build performance - build time is over 1 minute
-  ');    }
+  Consider optimizing build performance - build time is over 1 minute);    }
 
     // Error pattern suggestions
     const moduleErrors = report.errors.filter(e => e.type === 'module
   ').length;
     if (moduleErrors > 0) {
-      suggestions.push(
-        `Found ${moduleErrors} module resolution errors - check import paths and dependencies`;
+      suggestions.push(Found ${moduleErrors} module resolution errors - check import paths and dependencies';
       );
     }
     
-    const tsErrors = report.errors.filter(e => e.message.includes('TS
-  ')).length;    if (tsErrors > 0) {
-      suggestions.push(
-        `Found ${tsErrors} TypeScript errors - run type checking separately`
+    const tsErrors = report.errors.filter(e => e.message.includes('TS)).length;    if (tsErrors > 0) {
+      suggestions.push('Found ${tsErrors} TypeScript errors - run type checking separately`
       );
     }
 
     // Warning suggestions
     if (report.warnings.length > 10) {
-      suggestions.push('High number of warnings detected - consider addressing them for better code quality
-  ');    }
+      suggestions.push('High number of warnings detected - consider addressing them for better code quality);    }
 
     return suggestions;
   }
@@ -335,15 +302,13 @@ const monitor = new BuildErrorMonitor();
 monitor.start().catch(console.error);
 
 // Handle graceful shutdown
-process.on('SIGTERM
-  ', () => {
+process.on('SIGTERM, () => {
   console.log('🏗️ Build Error Monitor shutting down...
   ');
   process.exit(0);
 });
 
-process.on('SIGINT
-  ', () => {
+process.on('SIGINT, () => {
   console.log('🏗️ Build Error Monitor interrupted');
   process.exit(0);
 });

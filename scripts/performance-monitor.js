@@ -5,25 +5,19 @@
  * Monitors system and application performance
  */
 
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
-import { execSync } from;
-  'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log(
-  '📊 Performance Monitor Started');
+console.log('📊 Performance Monitor Started');
 
 class PerformanceMonitor {
   constructor() {
-    this.projectRoot = path.resolve(__dirname,..
-  ');
+    this.projectRoot = path.resolve(__dirname, '..');
     this.metrics = {
       timestamp: new Date().toISOString(),
       system: {},
@@ -35,8 +29,7 @@ class PerformanceMonitor {
   async monitor() {
     try {
       console.log(,
-  🔍 Collecting performance metrics...
-  ');
+  🔍 Collecting performance metrics...);
       
       // Collect system metrics
       await this.collectSystemMetrics();
@@ -63,8 +56,7 @@ class PerformanceMonitor {
 
   async collectSystemMetrics() {
     try {
-      console.log('💻 Collecting system metrics...
-  ');
+      console.log('💻 Collecting system metrics...);
       
       // Memory usage
       const memoryInfo = process.memoryUsage();
@@ -113,8 +105,7 @@ class PerformanceMonitor {
       }
       
       // Check node_modules size
-      const nodeModulesPath = path.join(this.projectRoot,node_modules
-  ');
+      const nodeModulesPath = path.join(this.projectRoot,node_modules);
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB
@@ -130,16 +121,12 @@ class PerformanceMonitor {
       // Count files
       this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, [
-  '.ts',.tsx
-  ',.js',.jsx
+  '.ts',.tsx,.js',.jsx
   ']),
-        styles: this.countFiles(path.join(this.projectRoot,styles'), [
-  '.css',.scss
+        styles: this.countFiles(path.join(this.projectRoot,styles'), [.css',.scss
   ',.sass']),
-        tests: this.countFiles(path.join(this.projectRoot,tests
-  '), ['.test.js
-  ',.test.ts',.spec.js
-  ',.spec.ts'])
+        tests: this.countFiles(path.join(this.projectRoot,tests), ['.test.js
+  ',.test.ts',.spec.js,.spec.ts'])
       };
       
     } catch (error) {
@@ -150,13 +137,11 @@ class PerformanceMonitor {
 
   async collectBuildMetrics() {
     try {
-      console.log(
-  '🔨 Collecting build metrics...');
+      console.log(🔨 Collecting build metrics...');
       
       // Check if build artifacts exist
       const buildFiles = [
-  'dist/index.html',dist/css
-  ',dist/js',dist/assets
+  'dist/index.html',dist/css,dist/js',dist/assets
   '
       ];
       
@@ -169,8 +154,7 @@ class PerformanceMonitor {
       // Check build configuration
       const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {
-        const viteConfig = fs.readFileSync(viteConfigPath,utf8
-  ');
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8);
         this.metrics.build.config = {
           hasVite: true,
           hasBuildOptimizations: viteConfig.includes(,
@@ -226,8 +210,7 @@ class PerformanceMonitor {
         }
       }
     } catch (error) {
-      // Skip directories we can
-  't read
+      // Skip directories we cant read
     }
     
     return count;
@@ -248,41 +231,31 @@ class PerformanceMonitor {
   displaySummary() {
     console.log(,
   \n📊 Performance Summary: ');
-    console.log('─
-  '.repeat(50));
+    console.log('─.repeat(50));
     
     // System metrics
     console.log('💻 System:
-  ');
-    console.log(`   Memory: ${this.metrics.system.memory?.heapUsed || 'N/A}MB used / ${this.metrics.system.memory?.heapTotal ||,
-  N/A
-  '}MB total`);
+  ');console.log(`   Memory: ${this.metrics.system.memory?.heapUsed || 'N/A}MB used / ${this.metrics.system.memory?.heapTotal ||,
+  N/A}MB total');
     console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A}ms user / ${this.metrics.system.cpu?.system ||,
-  N/A
-  '}ms system`);
-    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);
+  N/A}ms system');console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);
     
     // Application metrics
     console.log(,
   \n📱 Application: );
-    if (this.metrics.application.buildSize) {
-      console.log(`   Build size: ${this.metrics.application.buildSize}MB`);
+    if (this.metrics.application.buildSize) {console.log(`   Build size: ${this.metrics.application.buildSize}MB`);
     }
-    if (this.metrics.application.dependenciesSize) {
-      console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`);
+    if (this.metrics.application.dependenciesSize) {console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`);
     }
-    if (this.metrics.application.sourceSize) {
-      console.log(`   Source code: ${this.metrics.application.sourceSize}KB`);
+    if (this.metrics.application.sourceSize) {console.log(`   Source code: ${this.metrics.application.sourceSize}KB`);
     }
     
     // Build metrics
     console.log(,
   \n🔨 Build: );
-    const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;
-    console.log(`   Artifacts: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);
+    const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;console.log(`   Artifacts: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);
     
-    console.log('─
-  '.repeat(50));
+    console.log('─.repeat(50));
   }
 
   sleep(ms) {

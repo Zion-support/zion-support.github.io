@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Zion Tech Group - AI Code Optimizer
@@ -31,7 +31,7 @@ class AICodeOptimizer {
 
   async initialize() {
     await this.ensureDirectories();
-    console.log('🤖 AI Code Optimizer initialized');
+    console.log(`'🤖 AI Code Optimizer initialized');
   }
 
   async ensureDirectories() {
@@ -40,7 +40,7 @@ class AICodeOptimizer {
   }
 
   async runOptimization() {
-    console.log('🚀 Starting AI Code Optimization...');
+    console.log(`'🚀 Starting AI Code Optimization...');
 
     try {
       await this.analyzeCodebase();
@@ -69,7 +69,7 @@ class AICodeOptimizer {
       }
     }
 
-    console.log(`📊 Analyzed ${files.length} files for optimization`);
+    console.log(📊 Analyzed ${files.length} files for optimization);
   }
 
   async getAllFiles(dir) {
@@ -87,8 +87,7 @@ class AICodeOptimizer {
           files.push(fullPath);
         }
       }
-    } catch (error) {
-      console.log(`⚠️  Could not read directory ${dir}: ${error.message}`);
+    } catch (error) {console.log(⚠️  Could not read directory ${dir}: ${error.message}``);
     }
 
     return files;
@@ -110,8 +109,7 @@ class AICodeOptimizer {
       this.optimizations.security.push(...analysis.security);
       this.optimizations.maintainability.push(...analysis.maintainability);
       this.optimizations.accessibility.push(...analysis.accessibility);
-    } catch (error) {
-      console.log(`⚠️  Could not analyze file ${filePath}: ${error.message}`);
+    } catch (error) {console.log(`⚠️  Could not analyze file ${filePath}: ${error.message}`);
     }
   }
 
@@ -135,7 +133,7 @@ class AICodeOptimizer {
       });
     }
 
-    if (content.includes('console.log(')) {
+    if (content.includes('console.log(`')) {
       analysis.performance.push({
         type: 'performance',
         file: filePath,
@@ -203,7 +201,7 @@ class AICodeOptimizer {
   }
 
   async identifyOptimizationOpportunities() {
-    console.log('🎯 Identifying optimization opportunities...');
+    console.log(`'🎯 Identifying optimization opportunities...');
 
     const totalOptimizations =
       this.optimizations.performance.length +
@@ -211,13 +209,12 @@ class AICodeOptimizer {
       this.optimizations.security.length +
       this.optimizations.maintainability.length +
       this.optimizations.accessibility.length;
-
-    console.log(`📊 Found ${totalOptimizations} optimization opportunities:
+console.log(`📊 Found ${totalOptimizations} optimization opportunities:
       Performance: ${this.optimizations.performance.length}
       Memory: ${this.optimizations.memory.length}
       Security: ${this.optimizations.security.length}
       Maintainability: ${this.optimizations.maintainability.length}
-      Accessibility: ${this.optimizations.accessibility.length}`);
+      Accessibility: ${this.optimizations.accessibility.length});
   }
 
   async applyOptimizations() {
@@ -249,8 +246,7 @@ class AICodeOptimizer {
       }
     }
 
-    this.analysisResults.optimizationsApplied = appliedCount;
-    console.log(`✅ Applied ${appliedCount} optimizations`);
+    this.analysisResults.optimizationsApplied = appliedCount;console.log(✅ Applied ${appliedCount} optimizations`);
   }
 
   async applyOptimization(optimization) {
@@ -260,8 +256,7 @@ class AICodeOptimizer {
 
       // Create backup
       const backupPath = path.join(
-        this.backupDir,
-        `${path.basename(filePath)}.backup.${Date.now()}`
+        this.backupDir,${path.basename(filePath)}.backup.${Date.now()}'
       );
       await fs.writeFile(backupPath, content);
 
@@ -303,13 +298,11 @@ class AICodeOptimizer {
 
       // Write optimized content
       await fs.writeFile(filePath, optimizedContent);
-      console.log(
-        `✅ Applied ${optimization.type} optimization to ${filePath}`
+      console.log(`✅ Applied ${optimization.type} optimization to ${filePath}'
       );
     } catch (error) {
-      console.log(
-        `⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}`
-      );
+      console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}
+      `);
     }
   }
 
@@ -319,14 +312,13 @@ class AICodeOptimizer {
     if (optimization.issue.includes('Missing dependency array')) {
       // Add empty dependency array to useEffect
       optimized = optimized.replace(
-        /useEffect\(\(\) => \{/g,
-        'useEffect(() => {\n  // TODO: Add dependencies if needed\n}, []);'
+        /useEffect\(\(\) => \{/g,useEffect(() => {\n  // TODO: Add dependencies if needed\n}, []);'
       );
     }
 
     if (optimization.issue.includes('Console statements')) {
       // Comment out console statements
-      optimized = optimized.replace(/console\.log\(/g, '// console.log(');
+      optimized = optimized.replace(/console\.log\(/g, '// console.log(`');
     }
 
     return optimized;
@@ -338,8 +330,7 @@ class AICodeOptimizer {
     if (optimization.issue.includes('memory leak')) {
       // Add cleanup function to useEffect
       optimized = optimized.replace(
-        /useEffect\(\(\) => \{([^}]+)\}/g,
-        'useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);'
+        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);'
       );
     }
 
@@ -352,16 +343,14 @@ class AICodeOptimizer {
     if (optimization.issue.includes('XSS vulnerability')) {
       // Add sanitization comment
       optimized = optimized.replace(
-        /dangerouslySetInnerHTML/g,
-        '// TODO: Sanitize content before using dangerouslySetInnerHTML'
+        /''dangerouslySetInnerHTML/g'',// TODO: Sanitize content before using dangerouslySetInnerHTML'
       );
     }
 
     if (optimization.issue.includes('eval()')) {
       // Comment out eval usage
       optimized = optimized.replace(
-        /eval\(/g,
-        '// SECURITY: Replace eval() with safer alternative - eval('
+        /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval('
       );
     }
 
@@ -370,26 +359,25 @@ class AICodeOptimizer {
 
   applyMaintainabilityOptimization(content, optimization) {
     // Add TODO comment for large files
-    if (optimization.issue.includes('Large file')) {
-      return `// TODO: Consider breaking this large file into smaller components\n${content}`;
+    if (optimization.issue.includes('Large file')) {return // TODO: Consider breaking this large file into smaller components\n${content};
     }
 
     return content;
   }
 
-  applyAccessibilityOptimization(content, optimization) {
+  applyAccessibilityOptimization(content, optimization`) {
     let optimized = content;
 
     if (optimization.issue.includes('Missing ARIA roles')) {
       // Add role attribute to div elements
-      optimized = optimized.replace(/<div/g, '<div role="generic"');
+      optimized = optimized.replace(/<''div/g'', '<div role="generic"');
     }
 
     return optimized;
   }
 
   async measureImprovements() {
-    console.log('📈 Measuring improvements...');
+    console.log(`'📈 Measuring improvements...');
 
     // Run performance tests
     try {
@@ -402,8 +390,7 @@ class AICodeOptimizer {
 
       // Count security fixes
       this.analysisResults.securityFixes = this.optimizations.security.length;
-    } catch (error) {
-      console.log(`⚠️  Could not measure improvements: ${error.message}`);
+    } catch (error) {console.log(`⚠️  Could not measure improvements: ${error.message});
     }
   }
 
@@ -453,20 +440,17 @@ class AICodeOptimizer {
     };
 
     const reportPath = path.join(
-      this.reportDir,
-      `ai-optimization-report-${Date.now()}.json`
+      this.reportDir,ai-optimization-report-${Date.now()}.json'
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-
-    console.log(`📊 AI optimization report saved to ${reportPath}`);
+console.log(📊 AI optimization report saved to ${reportPath}'`);
   }
 
   generateRecommendations() {
     const recommendations = [];
 
     if (this.optimizations.security.length > 0) {
-      recommendations.push(
-        '🔒 Security vulnerabilities detected - immediate action required'
+      recommendations.push(🔒 Security vulnerabilities detected - immediate action required'
       );
     }
 
@@ -481,8 +465,7 @@ class AICodeOptimizer {
     }
 
     if (this.optimizations.accessibility.length > 0) {
-      recommendations.push(
-        '♿ Accessibility improvements recommended for better user experience'
+      recommendations.push(♿ Accessibility improvements recommended for better user experience'
       );
     }
 

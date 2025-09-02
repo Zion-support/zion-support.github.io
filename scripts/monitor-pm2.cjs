@@ -32,8 +32,7 @@ class PM2Monitor {
   // Get PM2 logs for a specific process
   async getLogs(processName, lines = 10) {
     return new Promise((resolve, reject) => {
-      exec(
-        `pm2 logs ${processName} --lines ${lines} --nostream`,
+      exec(pm2 logs ${processName} --lines ${lines} --nostream',
         (error, stdout, stderr) => {
           if (error) {
             reject(error);
@@ -208,15 +207,8 @@ class PM2Monitor {
 
         // Generate and display summary
         const summary = this.generateSummary(status);
-        console.log('\n📈 Summary Statistics:');
-        console.log(`   Total Processes: ${summary.total}`);
-        console.log(`   Online: ${summary.online} ✅`);
-        console.log(`   Errored: ${summary.errored} ❌`);
-        console.log(`   Stopped: ${summary.stopped} ⏸️`);
-        console.log(`   Launching: ${summary.launching} 🔄`);
-        console.log(`   Total Restarts: ${summary.totalRestarts}`);
-        console.log(
-          `   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`
+        console.log('\n📈 Summary Statistics:');console.log(`   Total Processes: ${summary.total}`);console.log(`   Online: ${summary.online} ✅`);console.log(`   Errored: ${summary.errored} ❌`);console.log(`   Stopped: ${summary.stopped} ⏸️`);console.log(`   Launching: ${summary.launching} 🔄`);console.log(`   Total Restarts: ${summary.totalRestarts}');
+        console.log(   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB'
         );
         console.log(
           `   Total Memory: ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB`
@@ -250,7 +242,7 @@ class PM2Monitor {
 
   // Display help information
   showHelp() {
-    console.log(`
+    console.log('
 PM2 Monitoring Dashboard - Usage
 
 Commands:
@@ -264,8 +256,7 @@ Examples:
   node scripts/monitor-pm2.js start
   node scripts/monitor-pm2.js status
   node scripts/monitor-pm2.js logs console-error-fixer
-  node scripts/monitor-pm2.js report
-    `);
+  node scripts/monitor-pm2.js report);
   }
 }
 
@@ -302,8 +293,7 @@ async function main() {
     case 'help':
       monitor.showHelp();
       break;
-    default:
-      console.error(`Unknown command: ${command}`);
+    default:console.error(`Unknown command: ${command}`);
       monitor.showHelp();
       process.exit(1);
   }

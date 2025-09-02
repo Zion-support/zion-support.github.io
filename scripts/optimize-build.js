@@ -8,17 +8,15 @@
 
 import { existsSync, statSync } from,;
   fs';
-import { join } from;
-  'path';
+import { join } from;path';
 
 function log(message) {
   // Keep output terse to avoid noisy CI logs
-  console.log(`[optimize-build] ${message}`);
+  console.log(`[optimize-build] ${message}');
 }
 
 try {
-  const buildDir = join(process.cwd(),
-  '.next');
+  const buildDir = join(process.cwd(),.next');
 
   if (!existsSync(buildDir) || !statSync(buildDir).isDirectory()) {
     log(
@@ -28,8 +26,7 @@ try {
 
   // Placeholder for future optimizations (e.g., pruning maps, compressing assets)
   // Intentionally minimal to avoid side effects.
-  log(
-  'Next.js build output verified. No additional optimizations applied.');
+  log(Next.js build output verified. No additional optimizations applied.');
 } catch (error) {
   console.error(
   '[optimize-build] error:', error?.message || error);
@@ -42,12 +39,9 @@ try {
  * Comprehensive build optimization for Zion Tech Group
  */
 
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { execSync } from;
-  'child_process';
+import fs from 'fs';
+import path from 'path';
+import { execSync } from;child_process';
 import { fileURLToPath } from;
   'url';
 
@@ -57,8 +51,7 @@ const __dirname = path.dirname(__filename);
 class BuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.srcDir = path.join(this.projectRoot,
-  'src');
+    this.srcDir = path.join(this.projectRoot,src');
     this.buildDir = path.join(this.projectRoot,
   '.next');
     this.optimizationReport = {
@@ -71,8 +64,7 @@ class BuildOptimizer {
   }
 
   async optimize() {
-    console.log(
-  '🚀 Starting build optimization...');
+    console.log(🚀 Starting build optimization...');
         try {
       await this.cleanConsoleStatements();
       await this.optimizeImages();
@@ -85,10 +77,8 @@ class BuildOptimizer {
       
       console.log(
   '✅ Build optimization completed successfully!');
-      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,
-  'optimization-report.json')}`);    } catch (error) {
-      console.error(
-  '❌ Build optimization failed:', error.message);
+      console.log('📊 Optimization report saved to: ${path.join(this.buildDir,optimization-report.json')}');    } catch (error) {
+      console.error(❌ Build optimization failed:', error.message);
       this.optimizationReport.errors.push(error.message);
       await this.generateReport();
       process.exit(1);
@@ -99,16 +89,13 @@ class BuildOptimizer {
     console.log(
   '🧹 Cleaning console statements...');
     
-    const files = this.getAllFiles(this.srcDir, [
-  '.ts',
-  '.tsx',
-  '.js',
+    const files = this.getAllFiles(this.srcDir, [.ts',
+  '.tsx',.js',
   '.jsx']);    let cleanedFiles = 0;
 
     for (const file of files) {
       try {
-        let content = fs.readFileSync(file,
-  'utf8');
+        let content = fs.readFileSync(file,utf8');
         const originalContent = content;
 
         // Remove console statements in production
@@ -126,25 +113,20 @@ class BuildOptimizer {
           cleanedFiles++;
         }
       } catch (error) {
-        this.optimizationReport.warnings.push(
-          `Failed to clean console statements in ${file}: ${error.message}`
+        this.optimizationReport.warnings.push(Failed to clean console statements in ${file}: ${error.message}'
         );
       }
     }
 
-    this.optimizationReport.optimizations.push(
-      `Cleaned console statements from ${cleanedFiles} files`
-    );
-    console.log(`✅ Cleaned console statements from ${cleanedFiles} files`);
+    this.optimizationReport.optimizations.push( `Cleaned console statements from ${cleanedFiles} files`
+    );console.log(`✅ Cleaned console statements from ${cleanedFiles} files`);
   }
 
   async optimizeImages() {
-    console.log('🖼️ Optimizing images...
-  ');
+    console.log('🖼️ Optimizing images...);
     
     const imageDir = path.join(this.projectRoot, 'public
-  ', 'images
-  ');    if (!fs.existsSync(imageDir)) {
+  ', 'images);    if (!fs.existsSync(imageDir)) {
       this.optimizationReport.warnings.push('Images directory not found
   ');
       return;
@@ -164,36 +146,31 @@ class BuildOptimizer {
 
         if (sizeKB > 100) {
           // Images larger than 100KB
-          this.optimizationReport.warnings.push(
-            `Large image detected: ${image} (${sizeKB}KB)`
+          this.optimizationReport.warnings.push(Large image detected: ${image} (${sizeKB}KB)'
           );
         }
 
         optimizedImages++;
       } catch (error) {
-        this.optimizationReport.warnings.push(
-          `Failed to optimize image ${image}: ${error.message}`
+        this.optimizationReport.warnings.push( `Failed to optimize image ${image}: ${error.message}'
         );
       }
     }
 
-    this.optimizationReport.optimizations.push(
-      `Processed ${optimizedImages} images`
+    this.optimizationReport.optimizations.push(Processed ${optimizedImages} images'
     );
     console.log(`✅ Processed ${optimizedImages} images`);
   }
 
   async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...
-  ');
+    console.log('🎨 Optimizing CSS...);
     
     const cssFiles = this.getAllFiles(this.srcDir, ['.css
   ']);    let optimizedCSS = 0;
 
     for (const file of cssFiles) {
       try {
-        let content = fs.readFileSync(file, 'utf8
-  ');
+        let content = fs.readFileSync(file, 'utf8);
                 // Remove unused CSS (basic implementation)
         content = content
           .replace(/\s+/g, ' 
@@ -204,27 +181,21 @@ class BuildOptimizer {
         fs.writeFileSync(file, content);
         optimizedCSS++;
       } catch (error) {
-        this.optimizationReport.warnings.push(
-          `Failed to optimize CSS in ${file}: ${error.message}`
+        this.optimizationReport.warnings.push(Failed to optimize CSS in ${file}: ${error.message}'
         );
       }
     }
 
-    this.optimizationReport.optimizations.push(
-      `Optimized ${optimizedCSS} CSS files`
-    );
-    console.log(`✅ Optimized ${optimizedCSS} CSS files`);
+    this.optimizationReport.optimizations.push( `Optimized ${optimizedCSS} CSS files`
+    );console.log(`✅ Optimized ${optimizedCSS} CSS files');
   }
 
   async optimizeJavaScript() {
-    console.log(
-  '⚡ Optimizing JavaScript...');
+    console.log(⚡ Optimizing JavaScript...');
     
     const jsFiles = this.getAllFiles(this.srcDir, [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx']);    let optimizedJS = 0;
+  '.ts',.tsx',
+  '.js',.jsx']);    let optimizedJS = 0;
 
     for (const file of jsFiles) {
       try {
@@ -232,8 +203,7 @@ class BuildOptimizer {
   'utf8');
                 // Basic optimizations
         content = content
-          .replace(/\s+/g,
-  ' ') // Remove extra whitespace
+          .replace(/\s+/g, ') // Remove extra whitespace
           .replace(/\/\/.*$/gm, '
   ') // Remove single-line comments
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments
@@ -242,27 +212,23 @@ class BuildOptimizer {
         fs.writeFileSync(file, content);
         optimizedJS++;
       } catch (error) {
-        this.optimizationReport.warnings.push(
-          `Failed to optimize JavaScript in ${file}: ${error.message}`
+        this.optimizationReport.warnings.push(Failed to optimize JavaScript in ${file}: ${error.message}'
         );
       }
     }
 
     this.optimizationReport.optimizations.push(
       `Optimized ${optimizedJS} JavaScript files`
-    );
-    console.log(`✅ Optimized ${optimizedJS} JavaScript files`);
+    );console.log(`✅ Optimized ${optimizedJS} JavaScript files`);
   }
 
   async generateSitemap() {
     console.log(,
-  🗺️ Generating sitemap...');
-        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
+  🗺️ Generating sitemap...');const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
     <loc>https://ziontechgroup.com/</loc>
-    <lastmod>${new Date().toISOString().split(
-  'T)[0]}</lastmod>
+    <lastmod>${new Date().toISOString().split(T)[0]}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -282,19 +248,16 @@ class BuildOptimizer {
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>${new Date().toISOString().split(
-  'T')[0]}</lastmod>
+    <lastmod>${new Date().toISOString().split(T')[0]}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-</urlset>`;
+</urlset>';
     
-    fs.writeFileSync(path.join(this.buildDir,
-  'sitemap.xml'), sitemap);
+    fs.writeFileSync(path.join(this.buildDir,sitemap.xml'), sitemap);
     this.optimizationReport.optimizations.push(
   'Generated sitemap.xml');
-    console.log(
-  '✅ Generated sitemap.xml');
+    console.log(✅ Generated sitemap.xml');
   }
 
   async generateRobotsTxt() {
@@ -309,14 +272,12 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/`;
+Disallow: /private/';
     
-    fs.writeFileSync(path.join(this.buildDir,
-  'robots.txt'), robotsTxt);
+    fs.writeFileSync(path.join(this.buildDir,robots.txt'), robotsTxt);
     this.optimizationReport.optimizations.push(
   'Generated robots.txt');
-    console.log(
-  '✅ Generated robots.txt');
+    console.log(✅ Generated robots.txt');
   }
 
   async optimizeManifest() {
@@ -345,13 +306,11 @@ Disallow: /private/`;
     };
 
     fs.writeFileSync(
-      path.join(this.buildDir,
-  'manifest.json'),       JSON.stringify(manifest, null, 2)
+      path.join(this.buildDir,manifest.json'),       JSON.stringify(manifest, null, 2)
     );
     this.optimizationReport.optimizations.push(
   'Generated manifest.json');
-    console.log(
-  '✅ Generated manifest.json');
+    console.log(✅ Generated manifest.json');
   }
 
   async generateReport() {
@@ -391,8 +350,7 @@ Disallow: /private/`;
   }
 }
 
-// Run optimization if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Run optimization if called directlyif (import.meta.url === `file://${process.argv[1]}`) {
   const optimizer = new BuildOptimizer();
   optimizer.optimize().catch(console.error);
 }

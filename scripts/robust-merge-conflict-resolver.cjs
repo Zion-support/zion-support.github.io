@@ -67,8 +67,7 @@ function resolveMergeConflict(filePath) {
 
     // Remove malformed React imports
     content = content.replace(
-      /import\s+React[^;]*?from\s+['"]react['"]\s*;?\s*/g,
-      "import React from 'react';\n"
+      /import\s+React[^;]*?from\s+['"]react['']\s*;?\s*/g,import React from 'react';\n"
     );
 
     // Strategy 3: Fix common syntax issues
@@ -98,16 +97,14 @@ function resolveMergeConflict(filePath) {
     }
 
     return false;
-  } catch (error) {
-    log(`Error processing ${filePath}: ${error.message}`, 'red');
+  } catch (error) {log(`Error processing ${filePath}: ${error.message}`, 'red');
     return false;
   }
 }
 
 function findConflictedFiles() {
   try {
-    const result = execSync(
-      'git status --porcelain | grep "^UU" | awk "{print $2}"',
+    const result = execSync(git status --porcelain | grep '^UU" | awk "{print $2}"',
       { encoding: 'utf8' }
     );
     return result
@@ -123,8 +120,7 @@ function findConflictedFiles() {
 function main() {
   log('🚀 Starting robust merge conflict resolution...', 'cyan');
 
-  const conflictedFiles = findConflictedFiles();
-  log(`Found ${conflictedFiles.length} files with merge conflicts`, 'yellow');
+  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, 'yellow');
 
   if (conflictedFiles.length === 0) {
     log('✅ No merge conflicts found!', 'green');
@@ -137,21 +133,15 @@ function main() {
   for (const filePath of conflictedFiles) {
     try {
       if (resolveMergeConflict(filePath)) {
-        resolvedCount++;
-        log(`✅ Resolved: ${filePath}`, 'green');
-      } else {
-        log(`⚠️  No changes needed: ${filePath}`, 'yellow');
+        resolvedCount++;log(`✅ Resolved: ${filePath}`, 'green');
+      } else {log(`⚠️  No changes needed: ${filePath}`, 'yellow');
       }
     } catch (error) {
-      errorCount++;
-      log(`❌ Error processing ${filePath}: ${error.message}`, 'red');
+      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, 'red');
     }
   }
 
-  log('\n📊 Resolution Summary:', 'cyan');
-  log(`Total conflicted files: ${conflictedFiles.length}`, 'blue');
-  log(`Successfully resolved: ${resolvedCount}`, 'green');
-  log(`Errors encountered: ${errorCount}`, 'red');
+  log('\n📊 Resolution Summary:', 'cyan');log(`Total conflicted files: ${conflictedFiles.length}`, 'blue');log(`Successfully resolved: ${resolvedCount}`, 'green');log(`Errors encountered: ${errorCount}`, 'red');
 
   if (resolvedCount > 0) {
     log('\n🎯 Next steps:', 'cyan');

@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🧪 Starting Adaptive Test Generator...');
+console.log(`'🧪 Starting Adaptive Test Generator...');
 
 // Get automation interval from environment variable (default: 8 hours)
 const AUTOMATION_INTERVAL =
@@ -31,8 +31,7 @@ class AdaptiveTestGenerator {
 
   async generateAdaptiveTests() {
     try {
-      console.log(
-        `🧪 Running adaptive test generation at ${new Date().toISOString()}`
+      console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}'
       );
 
       // Analyze codebase structure
@@ -59,7 +58,7 @@ class AdaptiveTestGenerator {
       // Generate report
       await this.generateReport();
 
-      console.log('✅ Adaptive test generation completed successfully');
+      console.log(`'✅ Adaptive test generation completed successfully');
     } catch (error) {
       console.error('❌ Adaptive test generation failed:', error.message);
     }
@@ -166,15 +165,9 @@ class AdaptiveTestGenerator {
       service => !service.hasTests
     );
 
-    this.testMetrics.untestedFiles = [
-      ...untestedComponents.map(comp => ({ type: 'component', ...comp })),
-      ...untestedUtilities.map(util => ({ type: 'utility', ...util })),
-      ...untestedHooks.map(hook => ({ type: 'hook', ...hook })),
-      ...untestedServices.map(service => ({ type: 'service', ...service })),
-    ];
+    this.testMetrics.untestedFiles = ['...untestedComponents.map(comp => ({ type: 'component'', '...comp }))', '...untestedUtilities.map(util => ({ type: 'utility'', '...util }))', '...untestedHooks.map(hook => ({ type: 'hook'', '...hook }))', '...untestedServices.map(service => ({ type: 'service'', '...service }))', ''];
 
-    console.log(
-      `📊 Found ${this.testMetrics.untestedFiles.length} untested files`
+    console.log(📊 Found ${this.testMetrics.untestedFiles.length} untested files'
     );
   }
 
@@ -199,11 +192,10 @@ class AdaptiveTestGenerator {
             component: component.name,
             timestamp: new Date().toISOString(),
           });
-          console.log(`✅ Generated test for component: ${component.name}`);
+          console.log(✅ Generated test for component: ${component.name}');
         }
       } catch (error) {
-        console.log(
-          `⚠️ Failed to generate test for ${component.name}:`,
+        console.log(⚠️ Failed to generate test for ${component.name}:',
           error.message
         );
       }
@@ -230,12 +222,10 @@ class AdaptiveTestGenerator {
             path: testPath,
             utility: utility.name,
             timestamp: new Date().toISOString(),
-          });
-          console.log(`✅ Generated test for utility: ${utility.name}`);
+          });console.log(✅ Generated test for utility: ${utility.name}');
         }
       } catch (error) {
-        console.log(
-          `⚠️ Failed to generate test for ${utility.name}:`,
+        console.log(⚠️ Failed to generate test for ${utility.name}:',
           error.message
         );
       }
@@ -246,23 +236,10 @@ class AdaptiveTestGenerator {
     console.log('🔗 Generating integration tests...');
 
     // Generate integration tests for common user flows
-    const integrationTests = [
-      {
-        name: 'App Navigation',
-        description: 'Test navigation between main app routes',
-        content: this.generateIntegrationTest('navigation'),
-      },
-      {
-        name: 'Form Submission',
-        description: 'Test form submission flows',
-        content: this.generateIntegrationTest('form'),
-      },
-      {
-        name: 'API Integration',
-        description: 'Test API integration flows',
-        content: this.generateIntegrationTest('api'),
-      },
-    ];
+    const integrationTests = ['{
+        name: 'App Navigation'', 'description: 'Test navigation between main app routes'', 'content: this.generateIntegrationTest('navigation')', '}', '{
+        name: 'Form Submission'', 'description: 'Test form submission flows'', 'content: this.generateIntegrationTest('form')', '}', '{
+        name: 'API Integration'', 'description: 'Test API integration flows'', 'content: this.generateIntegrationTest('api')', '}', ''];
 
     const testsDir = path.join(process.cwd(), 'tests', 'integration');
     if (!fs.existsSync(testsDir)) {
@@ -270,9 +247,7 @@ class AdaptiveTestGenerator {
     }
 
     for (const test of integrationTests) {
-      const testPath = path.join(
-        testsDir,
-        `${test.name.toLowerCase().replace(/\s+/g, '-')}.test.ts`
+      const testPath = path.join(testsDir, '${test.name.toLowerCase().replace(/\s+/g', '-')}.test.ts
       );
 
       if (!fs.existsSync(testPath)) {
@@ -282,21 +257,15 @@ class AdaptiveTestGenerator {
           path: testPath,
           name: test.name,
           timestamp: new Date().toISOString(),
-        });
-        console.log(`✅ Generated integration test: ${test.name}`);
+        });console.log(✅ Generated integration test: ${test.name}``);
       }
     }
   }
 
   async analyzeTestPatterns() {
-    console.log('📊 Analyzing test patterns...');
+    console.log(`'📊 Analyzing test patterns...');
 
-    const existingTests = this.findFiles(process.cwd(), [
-      '.test.ts',
-      '.test.tsx',
-      '.spec.ts',
-      '.spec.tsx',
-    ]);
+    const existingTests = this.findFiles(process.cwd(), ['.test.ts'', '.test.tsx', '.spec.ts'', '.spec.tsx', '']);
 
     const patterns = {
       totalTests: existingTests.length,
@@ -339,11 +308,11 @@ class AdaptiveTestGenerator {
     }
 
     this.testMetrics.testPatterns.set('existing', patterns);
-    console.log('📊 Test pattern analysis:', patterns);
+    console.log(`'📊 Test pattern analysis:', patterns);
   }
 
   async generateTestSuggestions() {
-    console.log('💡 Generating test suggestions...');
+    console.log(`'💡 Generating test suggestions...');
 
     const structure = this.testMetrics.testPatterns.get('structure');
     const existing = this.testMetrics.testPatterns.get('existing');
@@ -365,10 +334,8 @@ class AdaptiveTestGenerator {
       this.testMetrics.testSuggestions.push({
         priority: 'high',
         category: 'coverage',
-        title: 'Low Test Coverage',
-        description: `Current test coverage: ${this.testMetrics.testCoverage.toFixed(1)}%`,
-        action:
-          'Focus on testing critical business logic and user-facing components',
+        title: 'Low Test Coverage',description: Current test coverage: ${this.testMetrics.testCoverage.toFixed(1)}%',
+        action:Focus on testing critical business logic and user-facing components',
       });
     }
 
@@ -403,14 +370,14 @@ class AdaptiveTestGenerator {
         priority: 'high',
         category: 'priority',
         title: 'Critical Components Need Testing',
-        description: `Components: ${criticalComponents.map(c => c.name).join(', ')}`,
+        description: Components: ${criticalComponents.map(c => c.name).join(', ')},
         action: 'Generate tests for these critical components first',
       });
     }
   }
 
   async generateReport() {
-    console.log('📊 Generating test generation report...');
+    console.log('📊 Generating test generation report...'`);
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -429,8 +396,7 @@ class AdaptiveTestGenerator {
     };
 
     const reportPath = path.join(
-      this.reportDir,
-      `test-generation-${Date.now()}.json`
+      this.reportDir,test-generation-${Date.now()}.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
@@ -440,8 +406,7 @@ class AdaptiveTestGenerator {
       'test-generation-report.json'
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-
-    console.log(`📊 Test generation report saved to ${reportPath}`);
+console.log(`📊 Test generation report saved to ${reportPath});
   }
 
   findFiles(dir, extensions) {
@@ -512,10 +477,9 @@ class AdaptiveTestGenerator {
     return match ? match[1] : 'UnknownService';
   }
 
-  generateComponentTest(component) {
-    return `import { render, screen } from '@testing-library/react';
+  generateComponentTest(component) {return import { render, screen } from '@testing-''library/react''';
 import { describe, it, expect } from 'vitest';
-import ${component.name} from './${path.basename(component.path, path.extname(component.path))}';
+import ${component.name} from './${path.basename(component.path, path.extname(component.path`))}';
 
 describe('${component.name}', () => {
   it('renders without crashing', () => {
@@ -532,12 +496,11 @@ describe('${component.name}', () => {
     render(<${component.name} />);
     // Add interaction tests based on component functionality
   });
-});
-`;
+});;
   }
 
   generateUtilityTest(utility) {
-    return `import { describe, it, expect } from 'vitest';
+    return 'import { describe, it, expect } from 'vitest';
 import { ${utility.name} } from './${path.basename(utility.path, path.extname(utility.path))}';
 
 describe('${utility.name}', () => {
@@ -557,16 +520,15 @@ describe('${utility.name}', () => {
     // Add error handling tests
     expect(() => ${utility.name}(undefined)).not.toThrow();
   });
-});
-`;
+});;
   }
 
   generateIntegrationTest(type) {
     const templates = {
-      navigation: `import { render, screen, fireEvent } from '@testing-library/react';
+      navigation: 'import { render, screen, fireEvent } from '@testing-''library/react''';
 import { describe, it, expect } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
-import App from '../src/App';
+import App from '../''src/App''';
 
 describe('Navigation Integration', () => {
   it('should navigate between main routes', () => {
@@ -577,13 +539,12 @@ describe('Navigation Integration', () => {
     );
     
     // Test navigation between main routes
-    const homeLink = screen.getByText(/home/i);
+    const homeLink = screen.getByText(/''home/i'');
     fireEvent.click(homeLink);
     expect(window.location.pathname).toBe('/');
   });
 });`,
-
-      form: `import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+form: `import { render, screen, fireEvent, waitFor } from '@testing-''library/react''';
 import { describe, it, expect } from 'vitest';
 
 describe('Form Submission Integration', () => {
@@ -591,21 +552,20 @@ describe('Form Submission Integration', () => {
     render(<YourFormComponent />);
     
     // Fill out form
-    const input = screen.getByLabelText(/email/i);
+    const input = screen.getByLabelText(/''email/i'');
     fireEvent.change(input, { target: { value: 'test@example.com' } });
     
     // Submit form
-    const submitButton = screen.getByRole('button', { name: /submit/i });
+    const submitButton = screen.getByRole('button', { name: /''submit/i'' });
     fireEvent.click(submitButton);
     
     // Wait for submission
     await waitFor(() => {
-      expect(screen.getByText(/success/i)).toBeInTheDocument();
+      expect(screen.getByText(/''success/i'')).toBeInTheDocument();
     });
   });
 });`,
-
-      api: `import { render, screen, waitFor } from '@testing-library/react';
+api: `import { render, screen, waitFor } from '@testing-''library/react''';
 import { describe, it, expect, vi } from 'vitest';
 
 describe('API Integration', () => {
@@ -623,7 +583,7 @@ describe('API Integration', () => {
       expect(screen.getByText('test data')).toBeInTheDocument();
     });
   });
-});`,
+});',
     };
 
     return templates[type] || templates.navigation;
@@ -632,8 +592,7 @@ describe('API Integration', () => {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(`🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   const generator = new AdaptiveTestGenerator();
@@ -647,8 +606,8 @@ async function runContinuous() {
   }, AUTOMATION_INTERVAL);
 
   console.log(
-    `✅ Adaptive test generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+    ✅ Adaptive test generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

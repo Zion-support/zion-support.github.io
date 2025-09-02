@@ -8,10 +8,8 @@ class PM2AutomationLauncher {
   constructor() {
     this.processes = new Map();
     this.logFile = path.join(
-      __dirname,
-      '..',
-      'logs',
-      'pm2-automation-launcher.log'
+      __dirname,..',
+      'logs',pm2-automation-launcher.log'
     );
     this.ensureLogDirectory();
     this.config = this.loadConfig();
@@ -39,8 +37,7 @@ class PM2AutomationLauncher {
         return require(configPath);
       }
       throw new Error('ecosystem.config.cjs not found');
-    } catch (error) {
-      this.log(`❌ Failed to load config: ${error.message}`);
+    } catch (error) {this.log(`❌ Failed to load config: ${error.message}`);
       return null;
     }
   }
@@ -50,8 +47,7 @@ class PM2AutomationLauncher {
       const output = execSync('pm2 jlist', { encoding: 'utf8' });
       const processes = JSON.parse(output);
       return processes.filter(proc => proc.name !== 'pm2-logrotate');
-    } catch (error) {
-      this.log(`❌ Failed to get PM2 status: ${error.message}`);
+    } catch (error) {this.log(`❌ Failed to get PM2 status: ${error.message}`);
       return [];
     }
   }
@@ -65,34 +61,27 @@ class PM2AutomationLauncher {
     this.log('🚀 Starting PM2 automation processes...');
 
     for (const process of this.config.automation) {
-      try {
-        this.log(`🔧 Starting ${process.name}...`);
+      try {this.log(`🔧 Starting ${process.name}...`);
 
         // Check if process already exists
         const existingProcesses = await this.checkPM2Status();
         const exists = existingProcesses.find(p => p.name === process.name);
 
-        if (exists) {
-          this.log(`⚠️ Process ${process.name} already exists, restarting...`);
-          execSync(`pm2 restart ${process.name}`, { stdio: 'pipe' });
+        if (exists) {this.log(`⚠️ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { stdio: 'pipe' });
         } else {
           // Start new process
           const scriptPath = path.resolve(__dirname, '..', process.script);
-          if (fs.existsSync(scriptPath)) {
-            execSync(`pm2 start ${scriptPath} --name ${process.name}`, {
+          if (fs.existsSync(scriptPath)) {execSync(`pm2 start ${scriptPath} --name ${process.name}`, {
               stdio: 'pipe',
               env: { ...process.env, ...process.env },
-            });
-            this.log(`✅ Started ${process.name}`);
-          } else {
-            this.log(`❌ Script not found: ${scriptPath}`);
+            });this.log(`✅ Started ${process.name}`);
+          } else {this.log(`❌ Script not found: ${scriptPath}`);
           }
         }
 
         // Add delay between starts
         await this.sleep(2000);
-      } catch (error) {
-        this.log(`❌ Failed to start ${process.name}: ${error.message}`);
+      } catch (error) {this.log(`❌ Failed to start ${process.name}: ${error.message}`);
       }
     }
 
@@ -106,14 +95,11 @@ class PM2AutomationLauncher {
     try {
       const processes = await this.checkPM2Status();
       for (const proc of processes) {
-        if (proc.name !== 'pm2-logrotate') {
-          execSync(`pm2 stop ${proc.name}`, { stdio: 'pipe' });
-          this.log(`🛑 Stopped ${proc.name}`);
+        if (proc.name !== 'pm2-logrotate') {execSync(`pm2 stop ${proc.name}`, { stdio: 'pipe' });this.log(`🛑 Stopped ${proc.name}`);
         }
       }
       this.log('✅ All automation processes stopped');
-    } catch (error) {
-      this.log(`❌ Error stopping processes: ${error.message}`);
+    } catch (error) {this.log(`❌ Error stopping processes: ${error.message}`);
     }
   }
 
@@ -123,14 +109,11 @@ class PM2AutomationLauncher {
     try {
       const processes = await this.checkPM2Status();
       for (const proc of processes) {
-        if (proc.name !== 'pm2-logrotate') {
-          execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe' });
-          this.log(`🔄 Restarted ${proc.name}`);
+        if (proc.name !== 'pm2-logrotate') {execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe' });this.log(`🔄 Restarted ${proc.name}`);
         }
       }
       this.log('✅ All automation processes restarted');
-    } catch (error) {
-      this.log(`❌ Error restarting processes: ${error.message}`);
+    } catch (error) {this.log(`❌ Error restarting processes: ${error.message}`);
     }
   }
 
@@ -140,14 +123,11 @@ class PM2AutomationLauncher {
     try {
       const processes = await this.checkPM2Status();
       for (const proc of processes) {
-        if (proc.name !== 'pm2-logrotate') {
-          execSync(`pm2 delete ${proc.name}`, { stdio: 'pipe' });
-          this.log(`🗑️ Deleted ${proc.name}`);
+        if (proc.name !== 'pm2-logrotate') {execSync(`pm2 delete ${proc.name}`, { stdio: 'pipe' });this.log(`🗑️ Deleted ${proc.name}`);
         }
       }
       this.log('✅ All automation processes deleted');
-    } catch (error) {
-      this.log(`❌ Error deleting processes: ${error.message}`);
+    } catch (error) {this.log(`❌ Error deleting processes: ${error.message}`);
     }
   }
 
@@ -173,13 +153,8 @@ class PM2AutomationLauncher {
               ? '🔴'
               : '🟡';
         const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
-
-        console.log(`\n${statusIcon} ${proc.name}`);
-        console.log(`   Status: ${proc.pm2_env.status}`);
-        console.log(`   Uptime: ${uptime}`);
-        console.log(`   Restarts: ${proc.pm2_env.restart_time}`);
-        console.log(
-          `   Memory: ${Math.round(proc.monit.memory / 1024 / 1024)}MB`
+console.log(`\n${statusIcon} ${proc.name}`);console.log(`   Status: ${proc.pm2_env.status}`);console.log(`   Uptime: ${uptime}`);console.log(`   Restarts: ${proc.pm2_env.restart_time}');
+        console.log(   Memory: ${Math.round(proc.monit.memory / 1024 / 1024)}MB'
         );
         console.log(`   CPU: ${proc.monit.cpu}%`);
       }
@@ -189,27 +164,22 @@ class PM2AutomationLauncher {
       ).length;
       const totalCount = processes.length;
 
-      console.log(
-        `\n📊 Summary: ${onlineCount}/${totalCount} processes online`
+      console.log(\n📊 Summary: ${onlineCount}/${totalCount} processes online'
       );
-    } catch (error) {
-      this.log(`❌ Error getting status: ${error.message}`);
+    } catch (error) {this.log(`❌ Error getting status: ${error.message}`);
     }
   }
 
   async showLogs(processName = null, lines = 20) {
     try {
-      if (processName) {
-        this.log(`📝 Showing logs for ${processName}:`);
-        execSync(`pm2 logs ${processName} --lines ${lines}`, {
+      if (processName) {this.log(`📝 Showing logs for ${processName}:`);execSync(`pm2 logs ${processName} --lines ${lines}`, {
           stdio: 'inherit',
         });
       } else {
         this.log('📝 Showing all automation logs:');
         execSync('pm2 logs --lines 10', { stdio: 'inherit' });
       }
-    } catch (error) {
-      this.log(`❌ Error showing logs: ${error.message}`);
+    } catch (error) {this.log(`❌ Error showing logs: ${error.message}`);
     }
   }
 
@@ -217,8 +187,7 @@ class PM2AutomationLauncher {
     this.log('📊 Opening PM2 monitoring interface...');
     try {
       execSync('pm2 monit', { stdio: 'inherit' });
-    } catch (error) {
-      this.log(`❌ Error opening monitoring: ${error.message}`);
+    } catch (error) {this.log(`❌ Error opening monitoring: ${error.message}`);
     }
   }
 
@@ -247,17 +216,13 @@ class PM2AutomationLauncher {
       };
 
       const reportPath = path.join(
-        __dirname,
-        '..',
-        'logs',
-        'automation-report.json'
+        __dirname,..',
+        'logs',automation-report.json'
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-      this.log(`✅ Report generated: ${reportPath}`);
+this.log(`✅ Report generated: ${reportPath}`);
       return report;
-    } catch (error) {
-      this.log(`❌ Error generating report: ${error.message}`);
+    } catch (error) {this.log(`❌ Error generating report: ${error.message}`);
       return null;
     }
   }
@@ -269,11 +234,7 @@ class PM2AutomationLauncher {
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
-
-    if (days > 0) return `${days}d ${hours % 24}h`;
-    if (hours > 0) return `${hours}h ${minutes % 60}m`;
-    if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
-    return `${seconds}s`;
+if (days > 0) return `${days}d ${hours % 24}h`;if (hours > 0) return `${hours}h ${minutes % 60}m`;if (minutes > 0) return `${minutes}m ${seconds % 60}s`;return `${seconds}s`;
   }
 
   sleep(ms) {
@@ -295,8 +256,7 @@ class PM2AutomationLauncher {
     console.log('  help      - Show this help message');
     console.log('\nExamples:');
     console.log('  node pm2-automation-launcher.cjs start');
-    console.log(
-      '  node pm2-automation-launcher.cjs logs enhanced-link-checker'
+    console.log(  node pm2-automation-launcher.cjs logs enhanced-link-checker'
     );
     console.log('  node pm2-automation-launcher.cjs status');
   }
@@ -339,8 +299,7 @@ async function main() {
         launcher.showHelp();
         break;
     }
-  } catch (error) {
-    launcher.log(`❌ Command failed: ${error.message}`);
+  } catch (error) {launcher.log(`❌ Command failed: ${error.message}`);
     process.exit(1);
   }
 }

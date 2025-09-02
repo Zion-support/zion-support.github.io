@@ -1,16 +1,13 @@
 #!/usr/bin/env node
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from 'fs';
+import path from 'path';
 
 function walk(dir, filelist = []) {
   const files = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of files) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (entry.name.startsWith(
-  '.') || entry.name.includes(
+      if (entry.name.startsWith(.') || entry.name.includes(
   'node_modules')) continue;      filelist = walk(full, filelist);
     } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {
       filelist.push(full);
@@ -21,10 +18,8 @@ function walk(dir, filelist = []) {
 
 function main() {
   const repoRoot = process.cwd();
-  const srcDirs = [path.join(repoRoot,
-  'pages'), path.join(repoRoot,
-  'src'), path.join(repoRoot,
-  'components')];  const index = [];
+  const srcDirs = [path.join(repoRoot,pages'), path.join(repoRoot,
+  'src'), path.join(repoRoot,components')];  const index = [];
   for (const dir of srcDirs) {
     if (!fs.existsSync(dir)) continue;
     for (const file of walk(dir)) {
@@ -37,8 +32,7 @@ function main() {
       } catch {}
     }
   }
-  const outDir = path.join(repoRoot,
-  'public');
+  const outDir = path.join(repoRoot,public');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir,
   'search-index.json');

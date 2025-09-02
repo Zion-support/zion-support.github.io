@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +20,7 @@ class CriticalErrorAlertSystem {
   }
 
   ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
+    ['this.logsPath', 'this.reportsPath'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -30,7 +30,7 @@ class CriticalErrorAlertSystem {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
 
     const logFile = path.join(this.logsPath, 'critical-error-alert-system.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -70,8 +70,7 @@ class CriticalErrorAlertSystem {
     if (resourceStatus.critical) {
       criticalErrors.push(resourceStatus);
     }
-
-    this.log(`Found ${criticalErrors.length} critical error conditions`);
+this.log(Found ${criticalErrors.length} critical error conditions`);
     return criticalErrors;
   }
 
@@ -95,8 +94,7 @@ class CriticalErrorAlertSystem {
 
       return {
         type: 'build',
-        critical: errorCount >= this.criticalThresholds.buildFailures,
-        message: `Build failed with ${errorCount} errors`,
+        critical: errorCount >= this.criticalThresholds.buildFailures,message: `Build failed with ${errorCount} errors`,
         severity:
           errorCount >= this.criticalThresholds.buildFailures
             ? 'critical'
@@ -126,8 +124,7 @@ class CriticalErrorAlertSystem {
 
       return {
         type: 'typescript',
-        critical: errorCount >= this.criticalThresholds.typeErrors,
-        message: `TypeScript check failed with ${errorCount} errors`,
+        critical: errorCount >= this.criticalThresholds.typeErrors,message: `TypeScript check failed with ${errorCount} errors`,
         severity:
           errorCount >= this.criticalThresholds.typeErrors
             ? 'critical'
@@ -157,8 +154,7 @@ class CriticalErrorAlertSystem {
 
       return {
         type: 'lint',
-        critical: errorCount >= this.criticalThresholds.lintErrors,
-        message: `ESLint check failed with ${errorCount} errors`,
+        critical: errorCount >= this.criticalThresholds.lintErrors,message: `ESLint check failed with ${errorCount} errors`,
         severity:
           errorCount >= this.criticalThresholds.lintErrors
             ? 'critical'
@@ -188,8 +184,7 @@ class CriticalErrorAlertSystem {
 
       return {
         type: 'dependencies',
-        critical: issueCount >= this.criticalThresholds.dependencyIssues,
-        message: `Dependency check failed with ${issueCount} issues`,
+        critical: issueCount >= this.criticalThresholds.dependencyIssues,message: `Dependency check failed with ${issueCount} issues`,
         severity:
           issueCount >= this.criticalThresholds.dependencyIssues
             ? 'critical'
@@ -225,8 +220,7 @@ class CriticalErrorAlertSystem {
         if (usage > 90) {
           return {
             type: 'system',
-            critical: true,
-            message: `Disk usage critical: ${usage}%`,
+            critical: true,message: `Disk usage critical: ${usage}%`,
             severity: 'critical',
             details: { diskUsage: usage },
           };
@@ -289,15 +283,13 @@ class CriticalErrorAlertSystem {
   }
 
   async sendAlert(error) {
-    this.log(
-      `🚨 SENDING CRITICAL ALERT: ${error.type.toUpperCase()} - ${error.message}`,
+    this.log(🚨 SENDING CRITICAL ALERT: ${error.type.toUpperCase()} - ${error.message}',
       'CRITICAL'
     );
 
     // Create alert file
     const alertFile = path.join(
-      this.reportsPath,
-      `critical-alert-${Date.now()}.json`
+      this.reportsPath,critical-alert-${Date.now()}.json'
     );
     const alertData = {
       timestamp: new Date().toISOString(),
@@ -313,17 +305,12 @@ class CriticalErrorAlertSystem {
     // Log to console with high visibility
     console.error('\n' + '='.repeat(80));
     console.error('🚨 CRITICAL ERROR ALERT 🚨');
-    console.error('='.repeat(80));
-    console.error(`Type: ${error.type.toUpperCase()}`);
-    console.error(`Message: ${error.message}`);
-    console.error(`Severity: ${error.severity.toUpperCase()}`);
-    console.error(`Timestamp: ${new Date().toISOString()}`);
+    console.error('='.repeat(80));console.error(`Type: ${error.type.toUpperCase()}`);console.error(`Message: ${error.message}`);console.error(`Severity: ${error.severity.toUpperCase()}`);console.error(`Timestamp: ${new Date().toISOString()}`);
     console.error('='.repeat(80));
     console.error('IMMEDIATE ACTION REQUIRED!');
     console.error('='.repeat(80) + '\n');
 
-    // Store in alert history
-    this.alertHistory.set(`${error.type}-${Date.now()}`, alertData);
+    // Store in alert historythis.alertHistory.set(`${error.type}-${Date.now()}`, alertData);
 
     return alertData;
   }
@@ -347,21 +334,14 @@ class CriticalErrorAlertSystem {
       },
       criticalErrors: criticalErrors,
       alertHistory: Array.from(this.alertHistory.values()),
-      recommendations: [
-        'Address critical errors immediately',
-        'Review error patterns and implement preventive measures',
-        'Consider rolling back to last stable version',
-        'Implement automated error recovery systems',
-      ],
+      recommendations: ['Address critical errors immediately'', 'Review error patterns and implement preventive measures', 'Consider rolling back to last stable version'', 'Implement automated error recovery systems', ''],
     };
 
     const reportFile = path.join(
-      this.reportsPath,
-      'critical-error-alert-report.json'
+      this.reportsPath,critical-error-alert-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report generated: ${reportFile}`);
+this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
 
@@ -390,10 +370,8 @@ class CriticalErrorAlertSystem {
       const report = await this.generateReport(criticalErrors);
 
       this.log('🎉 Critical Error Alert System completed!');
-      this.log(
-        `📊 Detected ${criticalErrors.length} critical error conditions`
-      );
-      this.log(`🚨 Sent ${alerts.length} critical alerts`);
+      this.log(📊 Detected ${criticalErrors.length} critical error conditions'
+      );this.log(`🚨 Sent ${alerts.length} critical alerts');
 
       return {
         success: alerts.length === 0,
@@ -402,8 +380,7 @@ class CriticalErrorAlertSystem {
         report,
       };
     } catch (error) {
-      this.log(
-        `💥 Critical Error Alert System failed: ${error.message}`,
+      this.log(💥 Critical Error Alert System failed: ${error.message}',
         'ERROR'
       );
       throw error;

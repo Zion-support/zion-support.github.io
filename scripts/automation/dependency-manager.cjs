@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Dependency Manager - PM2 Automation
@@ -13,8 +13,7 @@ class DependencyManager {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'dependency-manager.log'
     );
     this.reportsDir = path.join(this.projectRoot, 'logs', 'dependency-reports');
@@ -35,8 +34,7 @@ class DependencyManager {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async runDependencyManagement() {
@@ -84,8 +82,7 @@ class DependencyManager {
       if (actions.length > 0 && errors.length === 0) {
         await this.commitDependencyChanges(actions);
       }
-    } catch (error) {
-      this.log(`Dependency management failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Dependency management failed: ${error.message}`, 'ERROR');
       errors.push({
         type: 'SYSTEM_ERROR',
         message: error.message,
@@ -114,7 +111,7 @@ class DependencyManager {
 
           // Check for invalid versions
           if (packageJson.dependencies) {
-            for (const [dep, version] of Object.entries(
+            for (const ['dep', 'version'] of Object.entries(
               packageJson.dependencies
             )) {
               if (typeof version !== 'string' || version.trim() === '') {
@@ -128,7 +125,7 @@ class DependencyManager {
           }
 
           if (packageJson.devDependencies) {
-            for (const [dep, version] of Object.entries(
+            for (const ['dep', 'version'] of Object.entries(
               packageJson.devDependencies
             )) {
               if (typeof version !== 'string' || version.trim() === '') {
@@ -166,13 +163,11 @@ class DependencyManager {
         const outdated = await this.checkOutdatedDependencies();
         status.outdatedDeps = outdated;
       } catch (error) {
-        this.log(
-          `Failed to check outdated dependencies: ${error.message}`,
+        this.log(Failed to check outdated dependencies: ${error.message}',
           'WARN'
         );
       }
-    } catch (error) {
-      this.log(`Dependency status check failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Dependency status check failed: ${error.message}`, 'ERROR');
     }
 
     return status;
@@ -187,8 +182,8 @@ class DependencyManager {
       for (const pkg of packages) {
         if (pkg.startsWith('.')) continue;
 
-        const pkgPath = path.join(nodeModulesPath, pkg);
-        const pkgJsonPath = path.join(pkgPath, 'package.json');
+        const pkgPath = path.join(nodeModulesPath, 'pkg);
+        const pkgJsonPath = path.join(pkgPath', 'package.json');
 
         if (fs.existsSync(pkgJsonPath)) {
           try {
@@ -215,8 +210,7 @@ class DependencyManager {
           });
         }
       }
-    } catch (error) {
-      this.log(`Error scanning packages: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Error scanning packages: ${error.message}`, 'WARN');
     }
 
     return corrupted;
@@ -231,7 +225,7 @@ class DependencyManager {
       });
 
       const outdated = JSON.parse(result);
-      return Object.entries(outdated).map(([name, info]) => ({
+      return Object.entries(outdated).map((['name', 'info']) => ({
         name,
         current: info.current,
         wanted: info.wanted,
@@ -242,7 +236,7 @@ class DependencyManager {
       if (error.stdout) {
         try {
           const outdated = JSON.parse(error.stdout);
-          return Object.entries(outdated).map(([name, info]) => ({
+          return Object.entries(outdated).map((['name', 'info']) => ({
             name,
             current: info.current,
             wanted: info.wanted,
@@ -282,8 +276,7 @@ class DependencyManager {
 
             fixes.push({
               type: 'PACKAGE_JSON_FIX',
-              dependency: issue.dependency,
-              action: `Fixed invalid version for ${issue.dependency}`,
+              dependency: issue.dependency,action: `Fixed invalid version for ${issue.dependency}`,
               timestamp: new Date().toISOString(),
             });
           }
@@ -294,8 +287,7 @@ class DependencyManager {
         fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
         this.log('Fixed package.json issues');
       }
-    } catch (error) {
-      this.log(`Failed to fix package.json: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to fix package.json: ${error.message}`, 'ERROR');
     }
 
     return fixes;
@@ -331,8 +323,7 @@ class DependencyManager {
           timestamp: new Date().toISOString(),
         });
       }
-    } catch (error) {
-      this.log(`Failed to clean dependencies: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to clean dependencies: ${error.message}`, 'ERROR');
     }
 
     return actions;
@@ -357,8 +348,7 @@ class DependencyManager {
         action: 'Successfully reinstalled all dependencies',
         timestamp: new Date().toISOString(),
       });
-    } catch (error) {
-      this.log(`Failed to reinstall dependencies: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to reinstall dependencies: ${error.message}`, 'ERROR');
       throw error;
     }
 
@@ -372,32 +362,27 @@ class DependencyManager {
       // Check for outdated dependencies
       const outdated = await this.checkOutdatedDependencies();
 
-      if (outdated.length > 0) {
-        this.log(`Found ${outdated.length} outdated dependencies`);
+      if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
 
         // Update minor and patch versions only (safe updates)
         for (const dep of outdated) {
           try {
-            if (this.isSafeUpdate(dep.current, dep.wanted)) {
-              execSync(`npm update ${dep.name}`, {
+            if (this.isSafeUpdate(dep.current, dep.wanted)) {execSync(`npm update ${dep.name}`, {
                 cwd: this.projectRoot,
                 stdio: 'pipe',
               });
 
               actions.push({
                 type: 'UPDATE',
-                dependency: dep.name,
-                action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,
+                dependency: dep.name,action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,
                 timestamp: new Date().toISOString(),
               });
             }
-          } catch (error) {
-            this.log(`Failed to update ${dep.name}: ${error.message}`, 'WARN');
+          } catch (error) {this.log(`Failed to update ${dep.name}: ${error.message}`, 'WARN');
           }
         }
       }
-    } catch (error) {
-      this.log(`Failed to update dependencies: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to update dependencies: ${error.message}`, 'WARN');
     }
 
     return actions;
@@ -432,12 +417,10 @@ class DependencyManager {
     };
 
     const reportFile = path.join(
-      this.reportsDir,
-      `dependency-report-${Date.now()}.json`
+      this.reportsDir,dependency-report-${Date.now()}.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`Dependency report generated: ${reportFile}`);
+this.log(`Dependency report generated: ${reportFile}`);
 
     return report;
   }
@@ -452,16 +435,13 @@ class DependencyManager {
         stdio: 'pipe',
       });
 
-      // Commit
-      const commitMessage = `chore: Auto-manage dependencies (${actions.length} actions)`;
-      execSync(`git commit -m "${commitMessage}"`, {
+      // Commitconst commitMessage = `chore: Auto-manage dependencies (${actions.length} actions)`;execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
         stdio: 'pipe',
       });
 
       this.log('Dependency changes committed successfully');
-    } catch (error) {
-      this.log(`Failed to commit dependency changes: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to commit dependency changes: ${error.message}`, 'WARN');
     }
   }
 }
@@ -480,8 +460,7 @@ async function main() {
     } else {
       process.exit(2); // No actions needed
     }
-  } catch (error) {
-    manager.log(`Fatal error: ${error.message}`, 'ERROR');
+  } catch (error) {manager.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);
   }
 }

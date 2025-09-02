@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Smart Build Optimizer - PM2 Automation
@@ -14,31 +14,24 @@ class SmartBuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'smart-build-optimizer.log'
     );
     this.performanceLog = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'build-performance.json'
     );
     this.optimizationsLog = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'build-optimizations.json'
     );
     this.ensureLogsDirectory();
 
     this.buildHistory = [];
     this.optimizationStrategies = {
-      vite: {
-        'build.rollupOptions.output.manualChunks':
-          'Split vendor chunks intelligently',
-        'build.rollupOptions.treeshake':
-          'Enable tree shaking for smaller bundles',
-        'build.minify': 'Use esbuild for faster minification',
-        'build.sourcemap': 'Conditional source maps for production',
+      vite: {build.rollupOptions.output.manualChunks':
+          'Split vendor chunks intelligently',build.rollupOptions.treeshake':
+          'Enable tree shaking for smaller bundles',build.minify': 'Use esbuild for faster minification',build.sourcemap': 'Conditional source maps for production',
       },
       typescript: {
         incremental: 'Enable incremental compilation',
@@ -70,8 +63,7 @@ class SmartBuildOptimizer {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async runOptimization() {
@@ -108,11 +100,9 @@ class SmartBuildOptimizer {
       // 6. Test optimizations
       await this.testOptimizations(optimization.applied);
 
-      this.log(
-        `Build optimization completed: ${optimization.applied.length} optimizations applied`
+      this.log(Build optimization completed: ${optimization.applied.length} optimizations applied'
       );
-    } catch (error) {
-      this.log(`Build optimization failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Build optimization failed: ${error.message}`, 'ERROR');
     }
 
     return optimization;
@@ -151,11 +141,9 @@ class SmartBuildOptimizer {
       performance.memoryUsage = process.memoryUsage().heapUsed;
       performance.cpuUsage = process.cpuUsage().user;
 
-      this.log(
-        `Performance analysis: Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms`
+      this.log(Performance analysis: Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms'
       );
-    } catch (error) {
-      this.log(`Performance analysis failed: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Performance analysis failed: ${error.message}`, 'WARN');
     }
 
     return performance;
@@ -171,8 +159,7 @@ class SmartBuildOptimizer {
       build.on('close', code => {
         if (code === 0) {
           resolve();
-        } else {
-          reject(new Error(`Build failed with code ${code}`));
+        } else {reject(new Error(`Build failed with code ${code}`));
         }
       });
 
@@ -190,8 +177,7 @@ class SmartBuildOptimizer {
       install.on('close', code => {
         if (code === 0) {
           resolve();
-        } else {
-          reject(new Error(`Install failed with code ${code}`));
+        } else {reject(new Error(`Install failed with code ${code}`));
         }
       });
 
@@ -209,8 +195,7 @@ class SmartBuildOptimizer {
       rebuild.on('close', code => {
         if (code === 0) {
           resolve();
-        } else {
-          reject(new Error(`Rebuild failed with code ${code}`));
+        } else {reject(new Error(`Rebuild failed with code ${code}`));
         }
       });
 
@@ -232,8 +217,7 @@ class SmartBuildOptimizer {
       }
 
       return totalSize;
-    } catch (error) {
-      this.log(`Bundle size measurement failed: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Bundle size measurement failed: ${error.message}`, 'WARN');
       return 0;
     }
   }
@@ -242,11 +226,11 @@ class SmartBuildOptimizer {
     const items = fs.readdirSync(dir);
 
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath = path.join(dir, 'item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        this.getAllFilesRecursive(fullPath, files);
+        this.getAllFilesRecursive(fullPath', files);
       } else {
         files.push(fullPath);
       }
@@ -318,8 +302,7 @@ class SmartBuildOptimizer {
             result: result.message,
           });
         }
-      } catch (error) {
-        this.log(`Failed to apply optimization: ${error.message}`, 'WARN');
+      } catch (error) {this.log(`Failed to apply optimization: ${error.message}`, 'WARN');
       }
     }
 
@@ -350,9 +333,7 @@ class SmartBuildOptimizer {
 
         // Add build optimizations
         if (!config.includes('build.rollupOptions')) {
-          config = config.replace(
-            'export default defineConfig({',
-            `export default defineConfig({
+          config = config.replace(export default defineConfig({', `export default defineConfig({
   build: {
     rollupOptions: {
       output: {
@@ -392,7 +373,7 @@ class SmartBuildOptimizer {
         config.compilerOptions = {
           ...config.compilerOptions,
           incremental: true,
-          tsBuildInfoFile: './node_modules/.cache/.tsbuildinfo',
+          tsBuildInfoFile: './''node_modules/.cache/.tsbuildinfo''',
           skipLibCheck: true,
           removeComments: true,
         };
@@ -419,8 +400,7 @@ class SmartBuildOptimizer {
 
         if (!pkg.scripts['install:fast']) {
           pkg.scripts['install:fast'] = 'npm ci --prefer-offline --no-audit';
-          pkg.scripts['install:clean'] =
-            'rm -rf node_modules package-lock.json && npm install';
+          pkg.scripts['install:clean'] =rm -rf node_modules package-lock.json && npm install';
 
           fs.writeFileSync(packagePath, JSON.stringify(pkg, null, 2));
           return { success: true, message: 'Fast install scripts added' };
@@ -443,7 +423,7 @@ class SmartBuildOptimizer {
         config.compilerOptions = {
           ...config.compilerOptions,
           incremental: true,
-          tsBuildInfoFile: './node_modules/.cache/.tsbuildinfo',
+          tsBuildInfoFile: './''node_modules/.cache/.tsbuildinfo''',
         };
 
         fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2));
@@ -480,8 +460,7 @@ class SmartBuildOptimizer {
         category: 'BUNDLE_SIZE',
         priority: 'HIGH',
         suggestion: 'Implement dynamic imports for code splitting',
-        action:
-          'Use React.lazy() and dynamic imports for route-based splitting',
+        action:Use React.lazy() and dynamic imports for route-based splitting',
       });
     }
 
@@ -490,7 +469,7 @@ class SmartBuildOptimizer {
       category: 'WORKFLOW',
       priority: 'MEDIUM',
       suggestion: 'Use npm ci for faster, reliable installs',
-      action: 'Run npm ci instead of npm install in CI/CD environments',
+      action: 'Run npm ci instead of npm install in ''CI/CD'' environments',
     });
 
     return recommendations;
@@ -504,8 +483,7 @@ class SmartBuildOptimizer {
       );
       this.log('Optimization results saved');
     } catch (error) {
-      this.log(
-        `Failed to save optimization results: ${error.message}`,
+      this.log(Failed to save optimization results: ${error.message}',
         'ERROR'
       );
     }
@@ -517,13 +495,10 @@ class SmartBuildOptimizer {
     for (const optimization of optimizations) {
       try {
         const performance = await this.analyzeBuildPerformance();
-        this.log(
-          `Optimization test for ${optimization.type}: Build time = ${performance.buildTime}ms`
+        this.log(Optimization test for ${optimization.type}: Build time = ${performance.buildTime}ms'
         );
       } catch (error) {
-        this.log(
-          `Optimization test failed for ${optimization.type}: ${error.message}`,
-          'WARN'
+        this.log( `Optimization test failed for ${optimization.type}: ${error.message}',WARN'
         );
       }
     }

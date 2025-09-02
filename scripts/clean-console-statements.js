@@ -5,12 +5,9 @@
  * Removes console statements from production code
  */
 
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from;url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,10 +23,8 @@ class ConsoleCleaner {
     console.log(
   '🧹 Cleaning console statements from production code...');
     
-    const directories = [
-  'pages',
-  'components',
-  'src',
+    const directories = [pages',
+  'components',src',
   'lib'
     ];
     for (const dir of directories) {
@@ -39,11 +34,10 @@ class ConsoleCleaner {
       }
     }
 
-    console.log(
-      `✅ Cleaned console statements from ${this.cleanedFiles.length} files`
+    console.log(✅ Cleaned console statements from ${this.cleanedFiles.length} files'
     );
     console.log(
-      `📊 Total console statements removed: ${this.totalConsoleStatements}`
+      `📊 Total console statements removed: ${this.totalConsoleStatements}'
     );
   }
 
@@ -64,17 +58,14 @@ class ConsoleCleaner {
 
   isJavaScriptFile(filePath) {
     const ext = path.extname(filePath);
-    return [
-  '.js',
-  '.jsx',
-  '.ts',
+    return [.js',
+  '.jsx',.ts',
   '.tsx'].includes(ext);
   }
 
   async cleanFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath,
-  'utf8');
+      const content = fs.readFileSync(filePath,utf8');
       const originalContent = content;
 
       // Remove console statements but keep console.error for debugging
@@ -122,12 +113,10 @@ class ConsoleCleaner {
         fs.writeFileSync(filePath, cleanedContent, 'utf8');
         this.cleanedFiles.push(filePath);
         this.totalConsoleStatements += removedCount;
-        console.log(
-          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`
+        console.log(🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}'
         );
       }
-    } catch (error) {
-      console.error(`❌ Error cleaning file ${filePath}:`, error.message);
+    } catch (error) {console.error(`❌ Error cleaning file ${filePath}:`, error.message);
     }
   }
 }

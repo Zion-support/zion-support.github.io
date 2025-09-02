@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('📦 Starting smart dependency fixer automation...');
+console.log(`'📦 Starting smart dependency fixer automation...');
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL =
@@ -12,8 +12,7 @@ const AUTOMATION_INTERVAL =
 
 async function runSmartDependencyFixer() {
   try {
-    console.log(
-      `📦 Running smart dependency fixer at ${new Date().toISOString()}`
+    console.log(`📦 Running smart dependency fixer at ${new Date().toISOString()}'
     );
 
     const issues = {
@@ -25,7 +24,7 @@ async function runSmartDependencyFixer() {
     };
 
     // Step 1: Check for outdated packages
-    console.log('🔍 Step 1: Checking for outdated packages...');
+    console.log(`'🔍 Step 1: Checking for outdated packages...');
     try {
       const outdatedOutput = execSync('npm outdated --json', {
         stdio: 'pipe',
@@ -37,13 +36,13 @@ async function runSmartDependencyFixer() {
         latest: outdatedData[pkg].latest,
         wanted: outdatedData[pkg].wanted,
       }));
-      console.log(`📊 Found ${issues.outdated.length} outdated packages`);
+      console.log(📊 Found ${issues.outdated.length} outdated packages);
     } catch (error) {
       console.log('✅ No outdated packages found');
     }
 
     // Step 2: Check for security vulnerabilities
-    console.log('🔍 Step 2: Checking for security vulnerabilities...');
+    console.log('🔍 Step 2: Checking for security vulnerabilities...'`);
     try {
       const auditOutput = execSync('npm audit --json', {
         stdio: 'pipe',
@@ -58,8 +57,7 @@ async function runSmartDependencyFixer() {
             via: auditData.vulnerabilities[pkg].via,
           })
         );
-        console.log(
-          `📊 Found ${issues.vulnerabilities.length} vulnerable packages`
+        console.log(`📊 Found ${issues.vulnerabilities.length} vulnerable packages'
         );
       }
     } catch (error) {
@@ -77,36 +75,33 @@ async function runSmartDependencyFixer() {
             problem.includes('conflict') ||
             problem.includes('missing') ||
             problem.includes('peer')
-        );
-        console.log(`📊 Found ${issues.conflicts.length} dependency conflicts`);
+        );console.log(📊 Found ${issues.conflicts.length} dependency conflicts);
       }
     } catch (error) {
       console.log('✅ No dependency conflicts found');
     }
 
     // Step 4: Check for missing packages
-    console.log('🔍 Step 4: Checking for missing packages...');
+    console.log('🔍 Step 4: Checking for missing packages...'`);
     try {
       const checkOutput = execSync('npm check --json', {
         stdio: 'pipe',
       }).toString();
       const checkData = JSON.parse(checkOutput);
       if (checkData.missing) {
-        issues.missing = checkData.missing;
-        console.log(`📊 Found ${issues.missing.length} missing packages`);
+        issues.missing = checkData.missing;console.log(`📊 Found ${issues.missing.length} missing packages);
       }
     } catch (error) {
       console.log('✅ No missing packages found');
     }
 
     // Step 5: Attempt to fix issues automatically
-    console.log('🔧 Step 5: Attempting to fix issues automatically...');
+    console.log('🔧 Step 5: Attempting to fix issues automatically...'`);
     const fixedIssues = await autoFixDependencyIssues(issues);
     issues.fixed = fixedIssues;
 
     // Step 6: Run npm install to ensure everything is properly installed
-    console.log(
-      '🔧 Step 6: Running npm install to ensure proper installation...'
+    console.log(`🔧 Step 6: Running npm install to ensure proper installation...'
     );
     try {
       execSync('npm install', { stdio: 'inherit' });
@@ -136,11 +131,9 @@ async function runSmartDependencyFixer() {
     };
 
     const reportPath = path.join(
-      process.cwd(),
-      'smart-dependency-fixer-report.json'
+      process.cwd(),smart-dependency-fixer-report.json'
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Dependency fixer report saved to ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Dependency fixer report saved to ${reportPath});
 
     console.log('✅ Smart dependency fixer completed successfully');
   } catch (error) {
@@ -153,7 +146,7 @@ async function autoFixDependencyIssues(issues) {
 
   // Fix security vulnerabilities
   if (issues.vulnerabilities.length > 0) {
-    console.log('🔧 Attempting to fix security vulnerabilities...');
+    console.log('🔧 Attempting to fix security vulnerabilities...'`);
     try {
       execSync('npm audit fix', { stdio: 'inherit' });
       fixedIssues.push({
@@ -161,7 +154,7 @@ async function autoFixDependencyIssues(issues) {
         message: 'Applied npm audit fix',
       });
     } catch (error) {
-      console.log('⚠️  Could not automatically fix all vulnerabilities');
+      console.log(`'⚠️  Could not automatically fix all vulnerabilities');
     }
   }
 
@@ -177,12 +170,10 @@ async function autoFixDependencyIssues(issues) {
 
     if (safeUpdates.length > 0) {
       try {
-        const packages = safeUpdates.map(pkg => pkg.name).join(' ');
-        execSync(`npm update ${packages}`, { stdio: 'inherit' });
+        const packages = safeUpdates.map(pkg => pkg.name).join(' ');execSync(npm update ${packages}, { stdio: 'inherit' });
         fixedIssues.push({
-          type: 'outdated',
-          message: `Updated ${safeUpdates.length} packages safely`,
-        });
+          type: 'outdated',message: Updated ${safeUpdates.length} packages safely,
+        }`);
       } catch (error) {
         console.log('⚠️  Could not update all outdated packages');
       }
@@ -276,8 +267,7 @@ if (require.main === module) {
 
   // Set up continuous monitoring
   setInterval(runSmartDependencyFixer, AUTOMATION_INTERVAL);
-  console.log(
-    `🔄 Smart dependency fixer will run every ${AUTOMATION_INTERVAL / 3600000} hours`
+  console.log(🔄 Smart dependency fixer will run every ${AUTOMATION_INTERVAL / 3600000} hours'
   );
 }
 

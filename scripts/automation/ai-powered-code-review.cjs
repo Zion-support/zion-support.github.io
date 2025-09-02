@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * AI-Powered Code Review - PM2 Automation
@@ -13,13 +13,11 @@ class AIPoweredCodeReview {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'ai-code-review.log'
     );
     this.reviewHistory = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'code-review-history.json'
     );
     this.issuesFound = 0;
@@ -28,7 +26,7 @@ class AIPoweredCodeReview {
   }
 
   async initialize() {
-    console.log('🤖 AI-Powered Code Review System Initialized');
+    console.log(`'🤖 AI-Powered Code Review System Initialized');
     this.ensureLogDirectory();
     this.loadReviewHistory();
     
@@ -72,7 +70,7 @@ class AIPoweredCodeReview {
   }
 
   async startContinuousReview() {
-    console.log('🔍 Starting continuous code review...');
+    console.log(`'🔍 Starting continuous code review...');
     
     // Initial review
     await this.performFullCodeReview();
@@ -101,7 +99,7 @@ class AIPoweredCodeReview {
     };
 
     try {
-      // Review TypeScript/JavaScript files
+      // Review ''TypeScript/JavaScript'' files
       await this.reviewTypeScriptFiles(reviewResults);
       
       // Review React components
@@ -126,8 +124,7 @@ class AIPoweredCodeReview {
       // Log results
       this.logReviewResults(reviewResults);
       
-      console.log(`✅ Code review completed in ${reviewResults.duration}ms`);
-      console.log(`📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements`);
+      console.log(✅ Code review completed in ${reviewResults.duration}ms);console.log(📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements``);
       
     } catch (error) {
       console.error('❌ Error during code review:', error);
@@ -136,7 +133,7 @@ class AIPoweredCodeReview {
   }
 
   async reviewTypeScriptFiles(results) {
-    console.log('🔍 Reviewing TypeScript/JavaScript files...');
+    console.log(`'🔍 Reviewing ''TypeScript/JavaScript'' files...');
     
     const tsFiles = this.findFiles(['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx']);
     
@@ -149,8 +146,7 @@ class AIPoweredCodeReview {
         results.issues.push(...fileResults.issues);
         results.improvements.push(...fileResults.improvements);
         
-      } catch (error) {
-        console.error(`Error reviewing ${file}:`, error);
+      } catch (error) {console.error(Error reviewing ${file}:, error`);
       }
     }
   }
@@ -179,8 +175,7 @@ class AIPoweredCodeReview {
           results.issues.push({
             file: filePath,
             type: 'typescript',
-            severity: 'info',
-            message: `Unused import: ${importedItem}`,
+            severity: 'info',message: `Unused import: ${importedItem}`,
             line: this.findLineNumber(content, importStmt),
             suggestion: 'Remove unused import'
           });
@@ -194,7 +189,7 @@ class AIPoweredCodeReview {
         file: filePath,
         type: 'react',
         severity: 'info',
-        message: 'Consider adding dependencies to useEffect or using useCallback/useMemo',
+        message: 'Consider adding dependencies to useEffect or using ''useCallback/useMemo''',
         line: this.findLineNumber(content, 'useEffect'),
         suggestion: 'Review useEffect dependencies for optimization'
       });
@@ -204,7 +199,7 @@ class AIPoweredCodeReview {
   }
 
   async reviewReactComponents(results) {
-    console.log('⚛️ Reviewing React components...');
+    console.log(`'⚛️ Reviewing React components...');
     
     const reactFiles = this.findFiles(['**/*.tsx', '**/*.jsx']);
     
@@ -216,8 +211,7 @@ class AIPoweredCodeReview {
         results.issues.push(...componentResults.issues);
         results.improvements.push(...componentResults.improvements);
         
-      } catch (error) {
-        console.error(`Error reviewing React component ${file}:`, error);
+      } catch (error) {console.error(Error reviewing React component ${file}:, error`);
       }
     }
   }
@@ -253,15 +247,9 @@ class AIPoweredCodeReview {
   }
 
   async reviewConfigFiles(results) {
-    console.log('⚙️ Reviewing configuration files...');
+    console.log(`'⚙️ Reviewing configuration files...');
     
-    const configFiles = [
-      'package.json',
-      'tsconfig.json',
-      'next.config.js',
-      'tailwind.config.js',
-      'eslint.config.js'
-    ];
+    const configFiles = ['package.json'', 'tsconfig.json', 'next.config.js'', 'tailwind.config.js', 'eslint.config.js''];
     
     for (const configFile of configFiles) {
       if (fs.existsSync(configFile)) {
@@ -272,8 +260,7 @@ class AIPoweredCodeReview {
           results.issues.push(...configResults.issues);
           results.improvements.push(...configResults.improvements);
           
-        } catch (error) {
-          console.error(`Error reviewing config file ${configFile}:`, error);
+        } catch (error) {console.error(Error reviewing config file ${configFile}:, error`);
         }
       }
     }
@@ -288,13 +275,12 @@ class AIPoweredCodeReview {
         
         // Check for outdated dependencies
         if (pkg.dependencies) {
-          for (const [dep, version] of Object.entries(pkg.dependencies)) {
+          for (const ['dep', 'version'] of Object.entries(pkg.dependencies)) {
             if (version.startsWith('^') || version.startsWith('~')) {
               results.improvements.push({
                 file: filePath,
                 type: 'dependencies',
-                severity: 'info',
-                message: `Consider pinning dependency version: ${dep}`,
+                severity: 'info',message: `Consider pinning dependency version: ${dep}`,
                 line: this.findLineNumber(content, dep),
                 suggestion: 'Use exact version for production stability'
               });
@@ -323,7 +309,7 @@ class AIPoweredCodeReview {
   }
 
   async reviewDependencies(results) {
-    console.log('📦 Reviewing package dependencies...');
+    console.log(`'📦 Reviewing package dependencies...');
     
     try {
       // Check for outdated packages
@@ -335,15 +321,13 @@ class AIPoweredCodeReview {
       
       if (outdatedCheck.trim()) {
         const outdated = JSON.parse(outdatedCheck);
-        for (const [pkg, info] of Object.entries(outdated)) {
+        for (const ['pkg', 'info'] of Object.entries(outdated)) {
           results.improvements.push({
             file: 'package.json',
             type: 'dependencies',
-            severity: 'info',
-            message: `Outdated package: ${pkg} (current: ${info.current}, latest: ${info.latest})`,
-            line: 0,
-            suggestion: `Update ${pkg} to latest version`
-          });
+            severity: 'info',message: Outdated package: ${pkg} (current: ${info.current}, latest: ${info.latest}),
+            line: 0,suggestion: `Update ${pkg} to latest version`
+          }`);
         }
       }
       
@@ -357,14 +341,12 @@ class AIPoweredCodeReview {
       if (auditCheck.trim()) {
         const audit = JSON.parse(auditCheck);
         if (audit.vulnerabilities) {
-          for (const [pkg, vuln] of Object.entries(audit.vulnerabilities)) {
+          for (const ['pkg', 'vuln'] of Object.entries(audit.vulnerabilities)) {
             results.issues.push({
               file: 'package.json',
               type: 'security',
-              severity: 'high',
-              message: `Security vulnerability in ${pkg}: ${vuln.title}`,
-              line: 0,
-              suggestion: `Run 'npm audit fix' or update ${pkg}`
+              severity: 'high',message: `Security vulnerability in ${pkg}: ${vuln.title}`,
+              line: 0,suggestion: `Run 'npm audit fix' or update ${pkg}`
             });
           }
         }
@@ -372,12 +354,12 @@ class AIPoweredCodeReview {
       
     } catch (error) {
       // npm commands might fail if no issues found
-      console.log('No dependency issues found');
+      console.log(`'No dependency issues found');
     }
   }
 
   async generateAISuggestions(results) {
-    console.log('🧠 Generating AI-powered suggestions...');
+    console.log(`'🧠 Generating AI-powered suggestions...');
     
     // Analyze patterns and generate intelligent suggestions
     const patterns = this.analyzeCodePatterns(results);
@@ -422,7 +404,7 @@ class AIPoweredCodeReview {
   }
 
   async applyAutoFixes(results) {
-    console.log('🔧 Applying automatic fixes...');
+    console.log(`'🔧 Applying automatic fixes...');
     
     let fixesApplied = 0;
     
@@ -434,8 +416,7 @@ class AIPoweredCodeReview {
         }
       }
     }
-    
-    console.log(`✅ Applied ${fixesApplied} automatic fixes`);
+    console.log(✅ Applied ${fixesApplied} automatic fixes);
   }
 
   async autoFixIssue(issue) {
@@ -454,8 +435,7 @@ class AIPoweredCodeReview {
       }
       
       return false;
-    } catch (error) {
-      console.error(`Error auto-fixing issue in ${issue.file}:`, error);
+    } catch (error) {console.error(Error auto-fixing issue in ${issue.file}:, error`);
       return false;
     }
   }
@@ -570,7 +550,7 @@ class AIPoweredCodeReview {
   }
 
   watchForChanges() {
-    console.log('👀 Setting up file change monitoring...');
+    console.log(`'👀 Setting up file change monitoring...');
     
     // Simple file watching for demonstration
     // In production, you'd use chokidar or similar
@@ -587,7 +567,7 @@ class AIPoweredCodeReview {
       });
       
       if (gitStatus.trim()) {
-        console.log('📝 Changes detected, performing quick review...');
+        console.log(`'📝 Changes detected, performing quick review...');
         await this.performQuickReview();
       }
     } catch (error) {
@@ -628,12 +608,9 @@ class AIPoweredCodeReview {
       const content = fs.readFileSync(filePath, 'utf8');
       const results = await this.analyzeTypeScriptFile(filePath, content);
       
-      if (results.issues.length > 0 || results.improvements.length > 0) {
-        console.log(`🔍 Quick review of ${filePath}:`);
-        console.log(`   Issues: ${results.issues.length}, Improvements: ${results.improvements.length}`);
+      if (results.issues.length > 0 || results.improvements.length > 0) {console.log(🔍 Quick review of ${filePath}:);console.log(   Issues: ${results.issues.length}, Improvements: ${results.improvements.length}``);
       }
-    } catch (error) {
-      console.error(`Error reviewing changed file ${filePath}:`, error);
+    } catch (error) {console.error(`Error reviewing changed file ${filePath}:`, error);
     }
   }
 }

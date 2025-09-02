@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -13,9 +13,9 @@ class ComprehensiveErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
-    this.logsDir = path.join(this.projectRoot, 'automation/logs');
-    this.reportsDir = path.join(this.projectRoot, 'automation/reports');
-    this.backupDir = path.join(this.projectRoot, 'automation/backups');
+    this.logsDir = path.join(this.projectRoot, '''automation/logs'');
+    this.reportsDir = path.join(this.projectRoot, ''automation/reports''');
+    this.backupDir = path.join(this.projectRoot, ''automation/backups'');
     this.errors = [];
     this.fixes = [];
     this.startTime = Date.now();
@@ -25,7 +25,7 @@ class ComprehensiveErrorFixer {
   }
 
   ensureDirectories() {
-    [this.logsDir, this.reportsDir, this.backupDir].forEach(dir => {
+    ['this.logsDir', 'this.reportsDir', 'this.backupDir'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -33,14 +33,12 @@ class ComprehensiveErrorFixer {
   }
 
   setupLogging() {
-    this.logFile = path.join(this.logsDir, `comprehensive-error-fixer-${Date.now()}.log`);
-    this.reportFile = path.join(this.reportsDir, `error-fix-report-${Date.now()}.json`);
+    this.logFile = path.join(this.logsDir, '`comprehensive-error-fixer-${Date.now()}.log`);this.reportFile = path.join(this.reportsDir', `error-fix-report-${Date.now()}.json`);
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    const timestamp = new Date().toISOString();const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(`logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
@@ -61,8 +59,7 @@ class ComprehensiveErrorFixer {
       await this.generateReport();
       
       this.log('Comprehensive Error Fixer completed successfully', 'SUCCESS');
-    } catch (error) {
-      this.log(`Error in comprehensive error fixer: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(Error in comprehensive error fixer: ${error.message}, 'ERROR'`);
       throw error;
     }
   }
@@ -84,7 +81,6 @@ class ComprehensiveErrorFixer {
     
     // Detect file structure issues
     await this.detectFileStructureIssues();
-    
     this.log(`Detected ${this.errors.length} total errors`, 'INFO');
   }
 
@@ -115,7 +111,6 @@ class ComprehensiveErrorFixer {
           });
         }
       });
-      
       this.log(`Detected ${this.errors.filter(e => e.type === 'typescript').length} TypeScript errors`, 'WARN');
     }
   }
@@ -146,7 +141,6 @@ class ComprehensiveErrorFixer {
           });
         }
       });
-      
       this.log(`Detected ${this.errors.filter(e => e.type === 'eslint').length} ESLint errors`, 'WARN');
     }
   }
@@ -177,7 +171,6 @@ class ComprehensiveErrorFixer {
           });
         }
       });
-      
       this.log(`Detected ${this.errors.filter(e => e.type === 'build').length} build errors`, 'WARN');
     }
   }
@@ -208,7 +201,6 @@ class ComprehensiveErrorFixer {
           });
         }
       });
-      
       this.log(`Detected ${this.errors.filter(e => e.type === 'dependency').length} dependency issues`, 'WARN');
     }
   }
@@ -217,18 +209,12 @@ class ComprehensiveErrorFixer {
     this.log('Detecting file structure issues...', 'INFO');
     
     // Check for missing files
-    const criticalFiles = [
-      'package.json',
-      'tsconfig.json',
-      '.eslintrc.js',
-      'next.config.js'
-    ];
+    const criticalFiles = ['package.json'', 'tsconfig.json', '.eslintrc.js'', 'next.config.js'];
     
     criticalFiles.forEach(file => {
       if (!fs.existsSync(path.join(this.projectRoot, file))) {
         this.errors.push({
-          type: 'file_structure',
-          message: `Missing critical file: ${file}`,
+          type: 'file_structure',message: `Missing critical file: ${file}`,
           severity: 'error',
           file: file,
           line: null
@@ -237,17 +223,13 @@ class ComprehensiveErrorFixer {
     });
     
     // Check for duplicate files
-    const duplicatePatterns = [
-      { pattern: /\.js\.jsx$/, description: 'Duplicate .js.jsx files' },
-      { pattern: /\.ts\.tsx$/, description: 'Duplicate .ts.tsx files' }
-    ];
+    const duplicatePatterns = ['{ pattern: /\.js\.jsx$/', 'description: 'Duplicate .js.jsx files' }', '{ pattern: /\.ts\.tsx$/', 'description: 'Duplicate .ts.tsx files' }'];
     
     this.walkDirectory(this.projectRoot, (filePath) => {
       duplicatePatterns.forEach(({ pattern, description }) => {
         if (pattern.test(filePath)) {
           this.errors.push({
-            type: 'file_structure',
-            message: `${description}: ${filePath}`,
+            type: 'file_structure',message: `${description}: ${filePath}`,
             severity: 'warning',
             file: filePath,
             line: null
@@ -255,7 +237,6 @@ class ComprehensiveErrorFixer {
         }
       });
     });
-    
     this.log(`Detected ${this.errors.filter(e => e.type === 'file_structure').length} file structure issues`, 'WARN');
   }
 
@@ -276,7 +257,6 @@ class ComprehensiveErrorFixer {
     
     // Fix file structure issues
     await this.fixFileStructureIssues();
-    
     this.log(`Applied ${this.fixes.length} fixes`, 'INFO');
   }
 
@@ -296,20 +276,14 @@ class ComprehensiveErrorFixer {
         }
         
         // Create a proper ESLint config
-        const newConfig = `module.exports = {
+        const newConfig = 'module.exports = {
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'next/core-web-vitals'
-  ],
-  parser: '@typescript-eslint/parser',
+  extends: ['eslint:recommended'', 'plugin:''react/recommended''', 'plugin:react-''hooks/recommended'''', 'plugin:@typescript-''eslint/recommended''', '''next/core-web-vitals''''],
+  parser: '@typescript-''eslint/parser''',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -317,22 +291,14 @@ class ComprehensiveErrorFixer {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
+  plugins: ['react'', '@typescript-eslint', ''],
+  rules: {''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',
   },
   settings: {
     react: {
       version: 'detect',
     },
-  },
-};`;
+  },};`;
         
         this.backupFile(eslintConfigPath);
         fs.writeFileSync(eslintConfigPath, newConfig);
@@ -355,8 +321,7 @@ class ComprehensiveErrorFixer {
   }
 
   log(message, level = 'info') {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
+    const timestamp = new Date().toISOString();console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
   }
 
   async run() {
@@ -369,7 +334,7 @@ class ComprehensiveErrorFixer {
       // Step 2: Fix TypeScript errors
       await this.fixTypeScriptErrors();
       
-      // Step 3: Fix import/export issues
+      // Step 3: Fix ''import/export'' issues
       await this.fixImportExportIssues();
       
       // Step 4: Fix missing exports
@@ -388,8 +353,7 @@ class ComprehensiveErrorFixer {
       await this.generateReport();
       
       this.log('Comprehensive Error Fixer completed successfully!', 'success');
-    } catch (error) {
-      this.log(`Error in Comprehensive Error Fixer: ${error.message}`, 'error');
+    } catch (error) {this.log(`Error in Comprehensive Error Fixer: ${error.message}`, 'error');
       await this.generateReport();
       process.exit(1);
     }
@@ -467,10 +431,9 @@ class ComprehensiveErrorFixer {
 
   async fixTypeScriptError(error) {
     try {
-      const filePath = path.join(this.projectRoot, error.file);
+      const filePath = path.join(this.projectRoot, 'error.file);
       
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${error.file}`, 'WARN');
+      if (!fs.existsSync(filePath)) {this.log(`File not found: ${error.file}`', 'WARN');
         return;
       }
       
@@ -494,9 +457,7 @@ class ComprehensiveErrorFixer {
                 const imports = importMatch[1].split(',').map(i => i.trim());
                 if (!imports.includes(propertyName)) {
                   imports.push(propertyName);
-                  lines[lineIndex] = lines[lineIndex].replace(
-                    importMatch[0],
-                    `import { ${imports.join(', ')} } from '${importMatch[2]}'`
+                  lines[lineIndex] = lines[lineIndex].replace(importMatch[0],import { ${imports.join(', ')} } from '${importMatch[2]}'`
                   );
                 }
               }
@@ -517,11 +478,9 @@ class ComprehensiveErrorFixer {
           file: error.file,
           line: error.line
         });
-        
         this.log(`Fixed TypeScript error in ${error.file}:${error.line}`, 'SUCCESS');
       }
-    } catch (error) {
-      this.log(`Error fixing TypeScript error: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Error fixing TypeScript error: ${error.message}`, 'ERROR');
     }
   }
 
@@ -540,8 +499,8 @@ class ComprehensiveErrorFixer {
     const tsFiles = glob.sync('src/**/*.{ts,tsx}', { cwd: this.projectRoot });
     
     for (const file of tsFiles) {
-      const filePath = path.join(this.projectRoot, file);
-      const content = fs.readFileSync(filePath, 'utf8');
+      const filePath = path.join(this.projectRoot, 'file);
+      const content = fs.readFileSync(filePath', 'utf8');
       let modified = false;
       let newContent = content;
 
@@ -555,7 +514,7 @@ class ComprehensiveErrorFixer {
 
       // 2. Fix any types
       if (content.includes(': any')) {
-        newContent = newContent.replace(/: any/g, ': unknown');
+        newContent = newContent.replace(/: ''any/g'', ': unknown');
         modified = true;
       }
 
@@ -563,9 +522,7 @@ class ComprehensiveErrorFixer {
       const lines = newContent.split('\n');
       const cleanedLines = lines.filter(line => {
         // Remove unused variable declarations
-        if (line.match(/^\s*(const|let|var)\s+(\w+)\s*[:=]/) && 
-            !newContent.includes(`$2`) || 
-            newContent.split(`$2`).length <= 2) {
+        if (line.match(/^\s*(const|let|var)\s+(\w+)\s*[:=]/) && !newContent.includes(`$2`) || newContent.split(`$2`).length <= 2) {
           return false;
         }
         return true;
@@ -580,8 +537,7 @@ class ComprehensiveErrorFixer {
       const functionRegex = /function\s+(\w+)\s*\([^)]*\)\s*{/g;
       if (functionRegex.test(newContent)) {
         newContent = newContent.replace(
-          /function\s+(\w+)\s*\([^)]*\)\s*{/g,
-          'function $1(...args: any[]): any {'
+          /function\s+(\w+)\s*\([^)]*\)\s*{/g,function $1(...args: any[]): any {'
         );
         modified = true;
       }
@@ -593,8 +549,7 @@ class ComprehensiveErrorFixer {
           file,
           description: 'Fixed TypeScript syntax issues',
           timestamp: Date.now()
-        });
-        this.log(`Fixed TypeScript issues in ${file}`, 'info');
+        });this.log(`Fixed TypeScript issues in ${file}`, 'info');
 >>>>>>> pr-10728
       }
     }
@@ -604,7 +559,7 @@ class ComprehensiveErrorFixer {
   async fixServicesPageError() {
     this.log('Fixing ServicesPage import error...', 'INFO');
     
-    const appFilePath = path.join(this.projectRoot, 'src/App.tsx');
+    const appFilePath = path.join(this.projectRoot, ''src/App.tsx'');
     
     if (fs.existsSync(appFilePath)) {
       try {
@@ -615,20 +570,18 @@ class ComprehensiveErrorFixer {
         
         if (servicesPageImport.test(content)) {
           // Check if ServicesPage exists
-          const servicesPagePath = path.join(this.projectRoot, 'src/pages/ServicesPage.tsx');
-          const servicesPageJsPath = path.join(this.projectRoot, 'src/pages/ServicesPage.jsx');
+          const servicesPagePath = path.join(this.projectRoot, '''src/pages/ServicesPage.tsx'');
+          const servicesPageJsPath = path.join(this.projectRoot, ''src/pages/ServicesPage.jsx''');
           
           if (fs.existsSync(servicesPagePath)) {
             // Fix to use default export
             content = content.replace(
-              servicesPageImport,
-              "const ServicesPage = lazy(() => import('./pages/ServicesPage'));"
+              servicesPageImport,const ServicesPage = lazy(() => import('./''pages/ServicesPage'''));'
             );
           } else if (fs.existsSync(servicesPageJsPath)) {
             // Fix to use .jsx file
             content = content.replace(
-              servicesPageImport,
-              "const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));"
+              servicesPageImport,const ServicesPage = lazy(() => import('./''pages/ServicesPage.jsx'''));"
             );
           } else {
             // Remove the import if file doesn't exist
@@ -641,23 +594,22 @@ class ComprehensiveErrorFixer {
           this.fixes.push({
             type: 'build',
             description: 'Fixed ServicesPage import error',
-            file: 'src/App.tsx'
+            file: '''src/App.tsx'''
           });
           
           this.log('ServicesPage import error fixed', 'SUCCESS');
         }
-      } catch (error) {
-        this.log(`Error fixing ServicesPage error: ${error.message}`, 'ERROR');
+      } catch (error) {this.log(`Error fixing ServicesPage error: ${error.message}`, 'ERROR');
 =======
   async fixImportExportIssues() {
-    this.log('Fixing import/export issues...', 'info');
+    this.log('Fixing ''import/export'' issues...', 'info');
     
     // Find all JavaScript and TypeScript files
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
     
     for (const file of files) {
-      const filePath = path.join(this.projectRoot, file);
-      const content = fs.readFileSync(filePath, 'utf8');
+      const filePath = path.join(this.projectRoot, 'file);
+      const content = fs.readFileSync(filePath', 'utf8');
       let modified = false;
       let newContent = content;
 
@@ -706,10 +658,9 @@ class ComprehensiveErrorFixer {
         this.fixes.push({
           type: 'import',
           file,
-          description: 'Fixed import/export issues',
+          description: 'Fixed ''import/export'' issues',
           timestamp: Date.now()
-        });
-        this.log(`Fixed import issues in ${file}`, 'info');
+        });this.log(`Fixed import issues in ${file}`, 'info');
       }
     }
   }
@@ -721,21 +672,20 @@ class ComprehensiveErrorFixer {
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
     
     for (const file of files) {
-      const filePath = path.join(this.projectRoot, file);
-      const content = fs.readFileSync(filePath, 'utf8');
+      const filePath = path.join(this.projectRoot, 'file);
+      const content = fs.readFileSync(filePath', 'utf8');
       let modified = false;
       let newContent = content;
 
       // Check if file has default export
-      const hasDefaultExport = /export\s+default/.test(content);
+      const hasDefaultExport = /export\s+''default/.test''(content);
       const hasNamedExports = /export\s+(const|function|class|interface|type)/.test(content);
 
       // If file has components but no exports, add default export
       if (!hasDefaultExport && !hasNamedExports && content.includes('function') && file.endsWith('.tsx')) {
         const componentMatch = content.match(/function\s+(\w+)/);
         if (componentMatch) {
-          const componentName = componentMatch[1];
-          newContent += `\n\nexport default ${componentName};`;
+          const componentName = componentMatch[1];newContent += `\n\nexport default ${componentName};`;
           modified = true;
         }
       }
@@ -752,8 +702,7 @@ class ComprehensiveErrorFixer {
         }
       }
 
-      if (components.length > 0 && !hasNamedExports) {
-        const exportStatement = `\n\nexport { ${components.join(', ')} };`;
+      if (components.length > 0 && !hasNamedExports) {const exportStatement = `\n\nexport { ${components.join(', ')} };`;
         newContent += exportStatement;
         modified = true;
       }
@@ -765,8 +714,7 @@ class ComprehensiveErrorFixer {
           file,
           description: 'Added missing exports',
           timestamp: Date.now()
-        });
-        this.log(`Fixed exports in ${file}`, 'info');
+        });this.log(`Fixed exports in ${file}`, 'info');
       }
     }
   }
@@ -869,8 +817,7 @@ class ComprehensiveErrorFixer {
       });
       
       this.log('Dependency issues fixed', 'SUCCESS');
-    } catch (error) {
-      this.log(`Error fixing dependency issues: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Error fixing dependency issues: ${error.message}`, 'ERROR');
     }
   }
 
@@ -886,8 +833,7 @@ class ComprehensiveErrorFixer {
     }
   }
 
-  async createMissingFile(fileName) {
-    this.log(`Creating missing file: ${fileName}`, 'INFO');
+  async createMissingFile(fileName) {this.log(`Creating missing file: ${fileName}`, 'INFO');
     
     const filePath = path.join(this.projectRoot, fileName);
     
@@ -895,48 +841,32 @@ class ComprehensiveErrorFixer {
       switch (fileName) {
         case 'tsconfig.json':
           if (!fs.existsSync(filePath)) {
-            const tsConfig = {
-              "compilerOptions": {
-                "target": "es5",
-                "lib": ["dom", "dom.iterable", "es6"],
-                "allowJs": true,
-                "skipLibCheck": true,
-                "strict": true,
-                "forceConsistentCasingInFileNames": true,
-                "noEmit": true,
-                "esModuleInterop": true,
-                "module": "esnext",
-                "moduleResolution": "node",
-                "resolveJsonModule": true,
-                "isolatedModules": true,
-                "jsx": "preserve",
-                "incremental": true,
-                "plugins": [
-                  {
-                    "name": "next"
+            const tsConfig = {compilerOptions': {
+                "target": "es5',lib': ["dom", "dom.iterable", "es6'],allowJs': true,
+                "skipLibCheck': true,strict': true,
+                "forceConsistentCasingInFileNames': true,noEmit': true,
+                "esModuleInterop': true,module': "esnext',moduleResolution': "node',resolveJsonModule': true,
+                "isolatedModules': true,jsx': "preserve',incremental': true,
+                "plugins': [
+                  {name': "next'
                   }
-                ],
-                "paths": {
-                  "@/*": ["./src/*"]
+                ],paths': {
+                  "@/*": ["./src/*']
                 }
-              },
-              "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-              "exclude": ["node_modules"]
+              },include': ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".''next/types/''**/*.ts'],exclude': ["node_modules"]
             };
             
             fs.writeFileSync(filePath, JSON.stringify(tsConfig, null, 2));
             
             this.fixes.push({
-              type: 'file_structure',
-              description: `Created missing ${fileName}`,
+              type: 'file_structure',description: `Created missing ${fileName}`,
               file: fileName
             });
           }
           break;
           
         case 'next.config.js':
-          if (!fs.existsSync(filePath)) {
-            const nextConfig = `/** @type {import('next').NextConfig} */
+          if (!fs.existsSync(filePath)) {const nextConfig = `/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -950,17 +880,14 @@ module.exports = nextConfig`;
             fs.writeFileSync(filePath, nextConfig);
             
             this.fixes.push({
-              type: 'file_structure',
-              description: `Created missing ${fileName}`,
+              type: 'file_structure',description: `Created missing ${fileName}`,
               file: fileName
             });
           }
           break;
       }
-      
       this.log(`Created missing file: ${fileName}`, 'SUCCESS');
-    } catch (error) {
-      this.log(`Error creating missing file ${fileName}: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Error creating missing file ${fileName}: ${error.message}`, 'ERROR');
     }
   }
 
@@ -975,13 +902,11 @@ module.exports = nextConfig`;
     
     const remainingErrors = this.errors.length;
     const fixedErrors = originalErrorCount - remainingErrors;
-    
     this.log(`Fixed ${fixedErrors} errors, ${remainingErrors} remaining`, 'INFO');
     
     if (remainingErrors === 0) {
       this.log('All errors have been fixed!', 'SUCCESS');
-    } else {
-      this.log(`${remainingErrors} errors remain after fixes`, 'WARN');
+    } else {this.log(`${remainingErrors} errors remain after fixes`, 'WARN');
 =======
     this.log('Fixing dependency issues...', 'info');
     
@@ -1094,7 +1019,6 @@ module.exports = nextConfig`;
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    
     this.log(`Report generated: ${this.reportFile}`, 'SUCCESS');
     
     // Also update the global report
@@ -1152,11 +1076,7 @@ module.exports = nextConfig`;
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`Report generated: ${this.reportFile}`, 'info');
-    this.log(`Total errors: ${this.errors.length}`, 'info');
-    this.log(`Total fixes: ${this.fixes.length}`, 'info');
-    this.log(`Duration: ${duration}ms`, 'info');
+    this.log(`Report generated: ${this.reportFile}`, 'info');this.log(`Total errors: ${this.errors.length}`, 'info');this.log(`Total fixes: ${this.fixes.length}`, 'info');this.log(`Duration: ${duration}ms`, 'info');
 >>>>>>> pr-10728
   }
 }

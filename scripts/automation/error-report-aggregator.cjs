@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -38,22 +38,19 @@ class ErrorReportAggregator {
 
     for (const file of reportFiles) {
       try {
-        const reportPath = path.join(reportsDir, file);
-        const reportContent = fs.readFileSync(reportPath, 'utf8');
+        const reportPath = path.join(reportsDir, 'file);
+        const reportContent = fs.readFileSync(reportPath', 'utf8');
         const report = JSON.parse(reportContent);
         
         reports[file] = report;
         
         // Aggregate errors and fixes
-        if (report.errorsFound) {
-          this.errorsFound.push(...report.errorsFound.map(error => `${file}: ${error}`));
+        if (report.errorsFound) {this.errorsFound.push(...report.errorsFound.map(error => `${file}: ${error}`));
         }
         
-        if (report.fixesApplied) {
-          this.fixesApplied.push(...report.fixesApplied.map(fix => `${file}: ${fix}`));
+        if (report.fixesApplied) {this.fixesApplied.push(...report.fixesApplied.map(fix => `${file}: ${fix}`));
         }
-      } catch (error) {
-        this.log(`Error reading report ${file}: ${error.message}`, 'error');
+      } catch (error) {this.log(`Error reading report ${file}: ${error.message}`, 'error');
       }
     }
 
@@ -84,9 +81,7 @@ class ErrorReportAggregator {
 
     await this.ensureDirectoryExists(path.dirname(this.logFile));
     fs.writeFileSync(this.logFile, JSON.stringify(summary, null, 2));
-    
-    this.log(`Aggregated report generated: ${this.logFile}`);
-    this.log(`Total reports: ${summary.totalReports}, Errors: ${summary.totalErrors}, Fixes: ${summary.totalFixes}`);
+    this.log(`Aggregated report generated: ${this.logFile}`);this.log(`Total reports: ${summary.totalReports}, Errors: ${summary.totalErrors}, Fixes: ${summary.totalFixes}`);
   }
 
   categorizeErrors() {
@@ -148,9 +143,7 @@ class ErrorReportAggregator {
       await this.generateSummary();
       
       this.log('Error report aggregation completed', 'success');
-    } catch (error) {
-      this.log(`Error during aggregation: ${error.message}`, 'error');
-      this.errorsFound.push(`Process error: ${error.message}`);
+    } catch (error) {this.log(`Error during aggregation: ${error.message}`, 'error');this.errorsFound.push(`Process error: ${error.message}`);
       await this.generateSummary();
     }
   }

@@ -2,23 +2,18 @@
 
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from 'fs';
+import path from 'path';
 
 class SyntaxErrorFixer {
   constructor() {
     this.scanInterval = process.env.SCAN_INTERVAL || 300000; // 5 minutes
-    this.autoFix = process.env.AUTO_FIX ===
-  'true';
+    this.autoFix = process.env.AUTO_FIX ===true';
     this.logFile =
   'error-reports/syntax-error-fixer-report.json';
     
-    console.log(
-  '🔧 Syntax Error Fixer started');
-    console.log(`Scan interval: ${this.scanInterval}ms`);
-    console.log(`Auto-fix enabled: ${this.autoFix}`);
+    console.log(🔧 Syntax Error Fixer started');
+    console.log(`Scan interval: ${this.scanInterval}ms`);console.log(`Auto-fix enabled: ${this.autoFix}');
   }
 
   async start() {
@@ -32,8 +27,7 @@ class SyntaxErrorFixer {
   }
 
   async scanAndFix() {
-    console.log(
-  '🔍 Starting syntax error scan...');
+    console.log(🔍 Starting syntax error scan...');
     
     const report = {
       timestamp: new Date().toISOString(),
@@ -61,41 +55,32 @@ class SyntaxErrorFixer {
                 report.fixes.applied.push(file);
                 console.log(`✅ Fixed syntax errors in: ${file}`);
               } else {
-                report.fixes.failed.push(file);
-                console.log(`❌ Failed to fix syntax errors in: ${file}`);
+                report.fixes.failed.push(file);console.log(`❌ Failed to fix syntax errors in: ${file}`);
               }
             } else {
               report.fixes.skipped.push(file);
             }
           }
-        } catch (error) {
-          console.error(`Error processing ${file}:`, error.message);
+        } catch (error) {console.error(`Error processing ${file}:`, error.message);
         }
       }
 
       // Save report
       this.saveReport(report);
-      
-      console.log(`📊 Scan complete. Found ${report.errors.length} files with syntax errors.`);
-      console.log(`✅ Fixed: ${report.fixes.applied.length}, ❌ Failed: ${report.fixes.failed.length}, ⏭️ Skipped: ${report.fixes.skipped.length}`);
+      console.log(`📊 Scan complete. Found ${report.errors.length} files with syntax errors.`);console.log(`✅ Fixed: ${report.fixes.applied.length}, ❌ Failed: ${report.fixes.failed.length}, ⏭️ Skipped: ${report.fixes.skipped.length}');
       
     } catch (error) {
-      console.error(
-  'Error during syntax scan:', error);
+      console.error(Error during syntax scan:', error);
     }
   }
 
   findSyntaxErrorFiles() {
     const extensions = [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'];
+  '.ts',.tsx',
+  '.js',.jsx'];
     const directories = [
-  'src',
-  'pages',
-  'components',
-  'utils',
+  'src',pages',
+  'components',utils',
   'types'];
     const files = [];
 
@@ -131,31 +116,25 @@ class SyntaxErrorFixer {
     const errors = [];
     
     try {
-      const content = fs.readFileSync(filePath,
-  'utf8');
+      const content = fs.readFileSync(filePath,utf8');
       const lines = content.split(
   '\\n');
 
       // Check for common syntax error patterns
       const patterns = [
-        { pattern: /export\s*$/, error:
-  'Incomplete export statement' },
+        { pattern: /export\s*$/, error:Incomplete export statement' },
         { pattern: /:\s*;/, error:
   'Missing type annotation' },
-        { pattern: /{\s*$/, error:
-  'Unclosed brace' },
+        { pattern: /{\s*$/, error:Unclosed brace' },
         { pattern: /\w+:\s*$/, error:
   'Missing type or value' },
-        { pattern: /return\s*}/, error:
-  'Missing return value' },
+        { pattern: /return\s*}/, error:Missing return value' },
 { pattern: //, error:
   'Git merge conflict marker' },
         { pattern: /{ pattern: /.replace(/\\n([\\s\\S]*?)}{ pattern: //, error:,
   Git merge conflict marker' },
-        { pattern: /\s*$/, error: 'Unterminated string literal
-  ' },
-        { pattern: /"\s*$/, error: 'Unterminated string literal
-  ' },
+        { pattern: /\s*$/, error: 'Unterminated string literal },
+        { pattern: /'\s*$/, error: 'Unterminated string literal },
       ];
 
       lines.forEach((line, index) => {
@@ -176,9 +155,8 @@ class SyntaxErrorFixer {
       errors.push({
         line: 1,
         content: '',
-        error: `File read error: ${error.message}`,
-        type:
-  'file-error'
+        error: `File read error: ${error.message}',
+        type:file-error'
       });
     }
 
@@ -200,8 +178,7 @@ class SyntaxErrorFixer {
 
       // Fix incomplete exports
       content = content.replace(/export\\s*$/gm, 'export default {}';);
-      if (content !== fs.readFileSync(filePath,
-  'utf8')) modified = true;
+      if (content !== fs.readFileSync(filePath,utf8')) modified = true;
 
       // Fix missing type annotations
       content = content.replace(/(\\w+):\\s*;/g,
@@ -214,21 +191,18 @@ class SyntaxErrorFixer {
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
       if (openBraces > closeBraces) {
-        content +=
-  '\\n'.repeat(openBraces - closeBraces) +
+        content +=\\n'.repeat(openBraces - closeBraces) +
   '}'.repeat(openBraces - closeBraces);
         modified = true;
       }
 
       // Fix unterminated strings
-      content = content.replace(/
-  '/g, "'").replace(/"/g,
+      content = content.replace(//g, ''").replace(/"/g,
   '"');
 
       if (modified) {
         // Create backup
-        fs.writeFileSync(filePath +
-  '.backup', fs.readFileSync(filePath,
+        fs.writeFileSync(filePath +.backup', fs.readFileSync(filePath,
   'utf8'));
         
         // Write fixed content
@@ -237,8 +211,7 @@ class SyntaxErrorFixer {
       }
 
       return false;
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+    } catch (error) {console.error(`Error fixing ${filePath}:', error.message);
       return false;
     }
   }
@@ -251,8 +224,7 @@ saveReport(report) {
     try {
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     } catch (error) {
-      console.error(
-  'Error saving report:', error.message);
+      console.error(Error saving report:', error.message);
     }
   }
 }
@@ -264,14 +236,12 @@ fixer.start().catch(console.error);
 // Handle graceful shutdown
 process.on(
   'SIGTERM', () => {
-  console.log(
-  '🔧 Syntax Error Fixer shutting down...');
+  console.log(🔧 Syntax Error Fixer shutting down...');
   process.exit(0);
 });
 
 process.on(
   'SIGINT', () => {
-  console.log(
-  '🔧 Syntax Error Fixer interrupted');
+  console.log(🔧 Syntax Error Fixer interrupted');
   process.exit(0);
 });

@@ -2,23 +2,21 @@
 ;
 const fs = require(
   'fs');
-const path = require(
-  'path');
+const path = require(path');
 const { execSync } = require(
   'child_process');
 ;
 class CodeQualityMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot,logs/pm2/code-quality-monitor.log
-  ');
+    this.logFile = path.join(this.projectRoot,logs/pm2/code-quality-monitor.log);
     this.reportFile = path.join(this.projectRoot,logs/pm2/code-quality-report.json');
     this.lastReport = null;
     this.startTime = Date.now();
 
   log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
+    const logMessage = `[${timestamp}] ${message}\n';
 
 
     try {
@@ -27,8 +25,7 @@ class CodeQualityMonitor {
 
   async analyzeFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath,utf8
-  ');
+      const content = fs.readFileSync(filePath,utf8);
       const stats = fs.statSync(filePath);
 
       const analysis = {
@@ -40,8 +37,7 @@ class CodeQualityMonitor {
       };
 
       // Check for common code quality issues
-      const lines = content.split('\n
-  ');
+      const lines = content.split('\n);
 
       lines.forEach((line, index) => {
         const lineNum = index + 1;
@@ -55,7 +51,6 @@ class CodeQualityMonitor {
   ',
             message: 'Trailing spaces found,
             severity: 'low
-  '
           });
 
         // Long lines (over 120 characters)
@@ -63,10 +58,8 @@ class CodeQualityMonitor {
           analysis.issues.push({
             line: lineNum,
             type: 'long-line
-  ',
-            message: `Line is ${line.length} characters long (max: 120)`,
+  ',message: `Line is ${line.length} characters long (max: 120)`,
             severity: 'medium
-  '
           });
 
         // Console statements
@@ -78,7 +71,6 @@ class CodeQualityMonitor {
   ',
             message: 'Console statement found - should be removed in production,
             severity: 'medium
-  '
           });
 
         // TODO/FIXME comments
@@ -90,7 +82,6 @@ class CodeQualityMonitor {
   ',
             message: 'TODO/FIXME comment found,
             severity: 'low
-  '
           });
 
         // Unused imports (basic check)
@@ -99,15 +90,12 @@ class CodeQualityMonitor {
           const importMatch = line.match(/import\s+(\w+)/);
           if (importMatch) {
             const importName = importMatch[1];
-            if (importName !== 'React
-  ' && !content.includes(importName)) {
+            if (importName !== 'React && !content.includes(importName)) {
               analysis.issues.push({
                 line: lineNum,
                 type: 'unused-import
-  ',
-                message: `Potentially unused import: ${importName}`,
-                severity: 'medium
-  ';
+  ',message: `Potentially unused import: ${importName}`,
+                severity: 'medium;
               });
 
 
@@ -116,8 +104,7 @@ class CodeQualityMonitor {
 
       return analysis;
 
-    } catch (error) {
-      this.log(`Error analyzing file ${filePath}: ${error.message}`);
+    } catch (error) {this.log('Error analyzing file ${filePath}: ${error.message}`);
       return null;
 
 
@@ -132,28 +119,23 @@ class CodeQualityMonitor {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-          if (!fullPath.includes('node_modules
-  ') &&
+          if (!fullPath.includes('node_modules) &&
               !fullPath.includes('.git
   ') &&
-              !fullPath.includes('dist
-  ') &&
+              !fullPath.includes('dist) &&
               !fullPath.includes('build
   ') &&
-              !fullPath.includes('.next
-  ') &&
+              !fullPath.includes('.next) &&
               !fullPath.includes('coverage
   ') &&
-              !fullPath.includes('logs
-  ')) {
+              !fullPath.includes('logs)) {
             const subAnalyses = await this.walkDirectory(fullPath);
             analyses.push(...subAnalyses);
 
         } else if (stat.isFile()) {
           const ext = path.extname(fullPath);
           if (['.js
-  ',.jsx',.ts
-  ',.tsx'].includes(ext)) {
+  ',.jsx',.ts,.tsx'].includes(ext)) {
             const analysis = await this.analyzeFile(fullPath);
             if (analysis) {
               analyses.push(analysis);
@@ -211,8 +193,7 @@ class CodeQualityMonitor {
   Run the lint-fixer to automatically remove trailing spaces'
       });
 
-    if (issuesByType[
-  'console-statement'] > 0) {
+    if (issuesByType[console-statement'] > 0) {
       recommendations.push({
         type: 'console-statement,
         priority:,
@@ -222,8 +203,7 @@ class CodeQualityMonitor {
   Replace console statements with proper logging or remove them'
       });
 
-    if (issuesByType[
-  'unused-import'] > 0) {
+    if (issuesByType[unused-import'] > 0) {
       recommendations.push({
         type: 'unused-import,
         priority:,
@@ -239,8 +219,7 @@ class CodeQualityMonitor {
         priority:,
   high',
         message: 'High number of code quality issues detected,
-        action:
-  'Run comprehensive code cleanup and establish coding standards'
+        action:Run comprehensive code cleanup and establish coding standards'
       });
 
     return recommendations;
@@ -251,40 +230,33 @@ class CodeQualityMonitor {
       if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
 
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      this.log(`Report saved to: ${this.reportFile}`);
-    } catch (error) {
-      this.log(`Error saving report: ${error.message}`);
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Report saved to: ${this.reportFile}`);
+    } catch (error) {this.log(`Error saving report: ${error.message}');
 
 
   async checkGitStatus() {
     try {
-      const status = execSync(
-  'git status --porcelain', {
+      const status = execSync(git status --porcelain', {
         cwd: this.projectRoot,
         encoding:
   'utf8'
       });
 
       if (status.trim()) {
-        this.log(
-  '⚠️  Uncommitted changes detected');
+        this.log(⚠️  Uncommitted changes detected');
         return false;
 
       return true;
     } catch (error) {
-      this.log(`Error checking git status: ${error.message}`);
+      this.log(`Error checking git status: ${error.message}');
       return false;
 
 
   async run() {
-    this.log(
-  '🔍 Starting Code Quality Monitor...');
-    this.log(`Project root: ${this.projectRoot}`);
+    this.log(🔍 Starting Code Quality Monitor...');this.log(`Project root: ${this.projectRoot}');
 
     try {
-      // Create logs directory if it doesn
-  't exist
+      // Create logs directory if it doesnt exist
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
@@ -299,8 +271,7 @@ class CodeQualityMonitor {
       const analyses = await this.walkDirectory(this.projectRoot);
 
       // Generate report
-      this.log('📊 Generating quality report...
-  ');
+      this.log('📊 Generating quality report...);
       const report = this.generateReport(analyses);
 
       // Save report
@@ -310,34 +281,27 @@ class CodeQualityMonitor {
 
       // Log summary
       this.log('\n📊 Code Quality Report Summary: );
-      this.log(`Files analyzed: ${report.summary.totalFiles}`);
-      this.log(`Total issues: ${report.summary.totalIssues}`);
-      this.log(`Duration: ${duration}ms`);
+      this.log(`Files analyzed: ${report.summary.totalFiles}`);this.log(`Total issues: ${report.summary.totalIssues}`);this.log(`Duration: ${duration}ms`);
 
       if (report.summary.totalIssues > 0) {
         this.log(,
   \n🚨 Issues by type: );
-        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {
-          this.log(`  ${type}: ${count}`);
+        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {this.log(`  ${type}: ${count}`);
         });
 
         this.log(,
   \n💡 Recommendations: );
-        report.recommendations.forEach(rec => {
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
-          this.log(`    Action: ${rec.action}`);
+        report.recommendations.forEach(rec => {this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);this.log(`    Action: ${rec.action}`);
         });
 
         // If there are many issues and git is clean, suggest running the lint fixer
         if (report.summary.totalIssues > 50 && isClean) {
-          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues
-  ');
+          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues);
 
       } else {
         this.log('✨ Excellent! No code quality issues found!');
 
-    } catch (error) {
-      this.log(`❌ Error running code quality monitor: ${error.message}`);
+    } catch (error) {this.log(`❌ Error running code quality monitor: ${error.message}`);
       process.exit(1);
 
 

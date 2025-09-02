@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🛡️ Starting Enhanced Security Automation...');
+console.log(`'🛡️ Starting Enhanced Security Automation...');
 
 class EnhancedSecurityAutomation {
   constructor() {
@@ -26,7 +26,7 @@ class EnhancedSecurityAutomation {
   }
 
   async runSecurityAudit() {
-    console.log('🔍 Running Security Audit...');
+    console.log(`'🔍 Running Security Audit...');
     try {
       // Run npm audit
       const auditOutput = execSync('npm audit --audit-level moderate --json', {
@@ -47,8 +47,7 @@ class EnhancedSecurityAutomation {
         critical: auditData.metadata?.vulnerabilities?.critical || 0,
       };
 
-      console.log(
-        `✅ Security audit completed. Found ${this.securityResults.audit.summary.total} vulnerabilities`
+      console.log(`✅ Security audit completed. Found ${this.securityResults.audit.summary.total} vulnerabilities'
       );
 
       // Save detailed audit results
@@ -95,8 +94,7 @@ class EnhancedSecurityAutomation {
       this.securityResults.dependencies.outdated = outdatedPackages;
       this.securityResults.dependencies.licenses = licenses;
 
-      console.log(
-        `✅ Dependency check completed. Found ${outdatedPackages.length} outdated packages`
+      console.log(✅ Dependency check completed. Found ${outdatedPackages.length} outdated packages'
       );
 
       // Save dependency results
@@ -125,7 +123,7 @@ class EnhancedSecurityAutomation {
     const extractFromDeps = (deps, level = 0) => {
       if (!deps) return;
 
-      Object.entries(deps).forEach(([name, info]) => {
+      Object.entries(deps).forEach((['name', 'info']) => {
         if (info.license) {
           licenses.push({
             name,
@@ -194,8 +192,7 @@ class EnhancedSecurityAutomation {
         low: issues.filter(i => i.severity === 0).length,
       };
 
-      console.log(
-        `✅ Code analysis completed. Found ${issues.length} security issues`
+      console.log(✅ Code analysis completed. Found ${issues.length} security issues'
       );
 
       // Save code analysis results
@@ -234,44 +231,18 @@ class EnhancedSecurityAutomation {
         const content = fs.readFileSync(filePath, 'utf8');
 
         // Check for dangerous patterns
-        const patterns = [
-          {
-            pattern: /eval\s*\(/,
-            rule: 'no-eval',
-            severity: 2,
-            message: 'eval() usage detected',
-          },
-          {
-            pattern: /new\s+Function/,
-            rule: 'no-new-func',
-            severity: 2,
-            message: 'new Function() usage detected',
-          },
-          {
-            pattern: /innerHTML\s*=/,
-            rule: 'no-inner-html',
-            severity: 1,
-            message: 'innerHTML assignment detected',
-          },
-          {
-            pattern: /document\.write/,
-            rule: 'no-document-write',
-            severity: 1,
-            message: 'document.write() usage detected',
-          },
-          {
-            pattern: /localStorage\[.*\]\s*=/,
+        const patterns = ['{
+            pattern: /eval\s*\(/', 'rule: 'no-eval'', 'severity: 2', 'message: 'eval() usage detected'', '}', '{
+            pattern: /new\s+Function/', 'rule: 'no-new-func'', 'severity: 2', 'message: 'new Function() usage detected'', '}', '{
+            pattern: /innerHTML\s*=/', 'rule: 'no-inner-html'', 'severity: 1', 'message: 'innerHTML assignment detected'', '}', '{
+            pattern: /document\.write/', 'rule: 'no-document-write'', 'severity: 1', 'message: 'document.write() usage detected'', '}', '{
+            pattern: /localStorage\[.*\']\s*=/,
             rule: 'local-storage-security',
             severity: 1,
             message: 'localStorage assignment detected',
           },
           {
-            pattern: /sessionStorage\[.*\]\s*=/,
-            rule: 'session-storage-security',
-            severity: 1,
-            message: 'sessionStorage assignment detected',
-          },
-        ];
+            pattern: /sessionStorage\['.*\]\s*=/', 'rule: 'session-storage-security'', 'severity: 1', 'message: 'sessionStorage assignment detected'', '}', ''];
 
         patterns.forEach(({ pattern, rule, severity, message }) => {
           const matches = content.match(pattern);
@@ -331,10 +302,7 @@ class EnhancedSecurityAutomation {
         { pattern: /secret\s*[:=]\s*['"][^'"]{10,}['"]/i, type: 'Secret' },
         { pattern: /token\s*[:=]\s*['"][^'"]{10,}['"]/i, type: 'Token' },
         {
-          pattern: /private[_-]?key\s*[:=]\s*['"][^'"]{10,}['"]/i,
-          type: 'Private Key',
-        },
-      ];
+          pattern: /private[_-]?key\s*[:=]\s*['"][^'"]{10,}['"]/i, 'type: 'Private Key'', '}', ''];
 
       const srcDir = path.join(process.cwd(), 'src');
       if (fs.existsSync(srcDir)) {
@@ -381,8 +349,7 @@ class EnhancedSecurityAutomation {
       this.securityResults.secrets.status = 'success';
       this.securityResults.secrets.findings = findings;
 
-      console.log(
-        `✅ Secret scan completed. Found ${findings.length} potential secrets`
+      console.log(✅ Secret scan completed. Found ${findings.length} potential secrets'
       );
 
       // Save secret scan results
@@ -459,8 +426,7 @@ class EnhancedSecurityAutomation {
       this.securityResults.compliance.status = 'success';
       this.securityResults.compliance.checks = checks;
 
-      console.log(
-        `✅ Compliance checks completed. Performed ${checks.length} checks`
+      console.log(✅ Compliance checks completed. Performed ${checks.length} checks'
       );
 
       // Save compliance results
@@ -529,7 +495,7 @@ class EnhancedSecurityAutomation {
   }
 
   generateMarkdownReport(report) {
-    return `# Security Report - ${new Date().toLocaleDateString()}
+    return # Security Report - ${new Date().toLocaleDateString()}
 
 ## 🚨 Risk Level: ${report.riskLevel}
 
@@ -569,22 +535,19 @@ class EnhancedSecurityAutomation {
 ## 🚨 Immediate Actions Required
 
 ${
-  report.summary.criticalVulnerabilities > 0
-    ? `1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately
-2. **CRITICAL**: Update packages with critical security issues`
+  report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately
+2. **CRITICAL**: Update packages with critical security issues
     : '1. ✅ No critical vulnerabilities found'
 }
 
 ${
-  report.summary.highVulnerabilities > 0
-    ? `3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities
-4. **HIGH**: Review and update high-risk packages`
+  report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities
+4. **HIGH**: Review and update high-risk packages
     : '2. ✅ No high-risk vulnerabilities found'
 }
 
 ${
-  report.summary.potentialSecrets > 0
-    ? `5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets
+  report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets
 6. **SECRETS**: Use environment variables for sensitive data`
     : '3. ✅ No hardcoded secrets found'
 }
@@ -598,12 +561,11 @@ ${
 5. **Monitoring**: Set up continuous security monitoring
 
 ---
-*Report generated by Enhanced Security Automation*
-`;
+*Report generated by Enhanced Security Automation*;
   }
 
-  async runAllSecurityChecks() {
-    console.log('🚀 Starting comprehensive security checks...');
+  async runAllSecurityChecks(```) {
+    console.log(`'🚀 Starting comprehensive security checks...');
 
     await this.runSecurityAudit();
     await this.checkDependencies();
@@ -613,11 +575,7 @@ ${
 
     const report = await this.generateSecurityReport();
 
-    console.log('\n🛡️ Security Check Summary:');
-    console.log(`Vulnerabilities: ${report.summary.totalVulnerabilities}`);
-    console.log(`Critical: ${report.summary.criticalVulnerabilities} 🔴`);
-    console.log(`High: ${report.summary.highVulnerabilities} 🟠`);
-    console.log(`Risk Level: ${report.riskLevel}`);
+    console.log(`'\n🛡️ Security Check Summary:');console.log(Vulnerabilities: ${report.summary.totalVulnerabilities});console.log(Critical: ${report.summary.criticalVulnerabilities} 🔴``);console.log(`High: ${report.summary.highVulnerabilities} 🟠`);console.log(`Risk Level: ${report.riskLevel}`);
 
     return report;
   }

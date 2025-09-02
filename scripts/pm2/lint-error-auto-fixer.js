@@ -2,24 +2,18 @@
 
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from 'fs';
+import path from 'path';
 
 class LintErrorAutoFixer {
   constructor() {
     this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000; // 4 minutes
-    this.autoFixLint = process.env.AUTO_FIX_LINT ===
-  'true';
+    this.autoFixLint = process.env.AUTO_FIX_LINT ===true';
     this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10;
     this.logFile =
   'error-reports/lint-error-auto-fixer-report.json';
     
-    console.log(
-  '🧹 Lint Error Auto Fixer started');    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
-    console.log(`Auto-fix lint: ${this.autoFixLint}`);
-    console.log(`Max warnings: ${this.maxWarnings}`);
+    console.log(🧹 Lint Error Auto Fixer started');    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);console.log(`Auto-fix lint: ${this.autoFixLint}`);console.log(`Max warnings: ${this.maxWarnings}');
   }
 
   async start() {
@@ -33,8 +27,7 @@ class LintErrorAutoFixer {
   }
 
   async checkAndFixLintErrors() {
-    console.log(
-  '🔍 Checking lint errors...');
+    console.log(🔍 Checking lint errors...');
         const report = {
       timestamp: new Date().toISOString(),
       summary: {
@@ -69,16 +62,13 @@ class LintErrorAutoFixer {
       // Save report
       this.saveReport(report);
 
-      console.log(`📊 Lint check complete.`);
-      console.log(
-        `Errors: ${report.summary.totalErrors}, Warnings: ${report.summary.totalWarnings}`
+      console.log(`📊 Lint check complete.');
+      console.log(Errors: ${report.summary.totalErrors}, Warnings: ${report.summary.totalWarnings}'
       );
-      console.log(
-        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`
+      console.log( `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}'
       );
     } catch (error) {
-      console.error(
-  'Error during lint check:,
+      console.error(Error during lint check:,
   , error);
       report.error = error.message;
       this.saveReport(report);
@@ -96,8 +86,7 @@ class LintErrorAutoFixer {
       return {
         success: true,
         errors: [],
-        warnings: this.parseLintOutput(output,
-  'warning'),
+        warnings: this.parseLintOutput(output,warning'),
         output      };
     } catch (error) {
       const output = error.stdout
@@ -108,8 +97,7 @@ class LintErrorAutoFixer {
         success: false,
         errors: this.parseLintOutput(output,
   'error'),
-        warnings: this.parseLintOutput(output,
-  'warning'),
+        warnings: this.parseLintOutput(output,warning'),
         output      };
     }
   }
@@ -142,15 +130,12 @@ class LintErrorAutoFixer {
 
   async autoFixLintIssues(report) {
     try {
-      // First try ESLint
-  's built-in auto-fix
+      // First try ESLints built-in auto-fix
       console.log('Running ESLint auto-fix...
   ');
-      execSync('npx eslint . --fix --max-warnings 1000
-  ', { stdio: 'pipe });
+      execSync('npx eslint . --fix --max-warnings 1000, { stdio: 'pipe });
       report.summary.fixesApplied += 1;
-      console.log('✅ ESLint auto-fix completed
-  ');
+      console.log('✅ ESLint auto-fix completed);
     } catch (error) {
       console.log('ESLint auto-fix had issues, trying manual fixes...
   ');
@@ -161,8 +146,7 @@ class LintErrorAutoFixer {
           if (fixed) {
             report.fixes.applied.push(issue);
             report.summary.fixesApplied++;
-            console.log(
-              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`
+            console.log(✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}'
             );
           } else {
             report.fixes.failed.push(issue);
@@ -188,8 +172,7 @@ class LintErrorAutoFixer {
     }
 
     try {
-      const content = fs.readFileSync(file, 'utf8
-  ');
+      const content = fs.readFileSync(file, 'utf8);
       const lines = content.split('\\n
   ');
             if (line > lines.length) {
@@ -201,24 +184,21 @@ class LintErrorAutoFixer {
 
       // Apply specific fixes based on ESLint rules
       switch (rule) {
-        case 'no-unused-vars
-  ':
+        case 'no-unused-vars:
           modified = this.fixUnusedVars(lines, line - 1, message);
           break;
         case 'no-console
   ':
           modified = this.fixNoConsole(lines, line - 1);
           break;
-        case 'quotes
-  ':
+        case 'quotes:
           modified = this.fixQuotes(lines, line - 1, message);
           break;
         case 'semi
   ':
           modified = this.fixSemicolons(lines, line - 1, message);
           break;
-        case 'indent
-  ':
+        case 'indent:
           modified = this.fixIndentation(lines, line - 1);
           break;
         case 'no-trailing-spaces
@@ -226,8 +206,7 @@ class LintErrorAutoFixer {
           modified = this.fixTrailingSpaces(lines, line - 1);
           break;
         case,
-  eol-last
-  ': modified = this.fixEolLast(lines);
+  eol-last: modified = this.fixEolLast(lines);
           break;
         case 'prefer-const:
           modified = this.fixPreferConst(lines, line - 1);
@@ -239,8 +218,7 @@ class LintErrorAutoFixer {
 
       if (modified) {
         // Create backup
-        fs.writeFileSync(file + '.backup
-  ', originalContent);
+        fs.writeFileSync(file + '.backup, originalContent);
                 // Write fixed content
         const newContent = lines.join('\\n
   ');
@@ -249,25 +227,20 @@ class LintErrorAutoFixer {
       }
 
       return false;
-    } catch (error) {
-      console.error(`Error fixing lint issue in ${file}:`, error.message);
+    } catch (error) {console.error(`Error fixing lint issue in ${file}:`, error.message);
       return false;
     }
   }
 
   fixUnusedVars(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    const varMatch = message.match(/'(.+?)
-  ' is defined but never used/);
+    const varMatch = message.match(/'(.+?) is defined but never used/);
         if (varMatch) {
       const varName = varMatch[1];
       // Comment out unused variables
-      if (
-        line.includes(`const ${varName}`) ||
-        line.includes(`let ${varName}`) ||
-        line.includes(`var ${varName}`)
-      ) {
-        lines[lineIndex] = `// ${line} // Unused variable`;
+      if (line.includes('const ${varName}`) ||
+        line.includes(`let ${varName}`) ||line.includes(`var ${varName}`)
+      ) {lines[lineIndex] = `// ${line} // Unused variable`;
         return true;
       }
     }
@@ -277,10 +250,8 @@ class LintErrorAutoFixer {
 
   fixNoConsole(lines, lineIndex) {
     const line = lines[lineIndex];
-    if (line.includes('console.
-  ')) {
-      // Comment out console statements
-      lines[lineIndex] = `// ${line} // Console statement disabled`;
+    if (line.includes('console.)) {
+      // Comment out console statementslines[lineIndex] = '// ${line} // Console statement disabled`;
       return true;
     }
     return false;
@@ -289,12 +260,10 @@ class LintErrorAutoFixer {
   fixQuotes(lines, lineIndex, message) {
     const line = lines[lineIndex];
     
-    if (message.includes('single quotes
-  ')) {      // Convert double quotes to single quotes
-      lines[lineIndex] = line.replace(/"/g, "'");
+    if (message.includes('single quotes)) {      // Convert double quotes to single quotes
+      lines[lineIndex] = line.replace(/'/g, "'');
       return true;
-    } else if (message.includes(
-  'double quotes')) {
+    } else if (message.includes(double quotes')) {
       // Convert single quotes to double quotes
       lines[lineIndex] = line.replace(/
   '/g, '"
@@ -308,8 +277,7 @@ class LintErrorAutoFixer {
   fixSemicolons(lines, lineIndex, message) {
     const line = lines[lineIndex];
     
-    if (message.includes('Missing semicolon
-  ')) {      lines[lineIndex] = line + ';;
+    if (message.includes('Missing semicolon)) {      lines[lineIndex] = line + ';;
       return true;
     } else if (message.includes(
   'Extra semicolon')) {
@@ -325,8 +293,7 @@ class LintErrorAutoFixer {
     const line = lines[lineIndex];
 
     // Simple indentation fix - convert tabs to spaces
-    if (line.includes('\\t
-  ')) {
+    if (line.includes('\\t)) {
       lines[lineIndex] = line.replace(/\\t/g, ' 
   ');
       return true;
@@ -360,11 +327,9 @@ class LintErrorAutoFixer {
   fixPreferConst(lines, lineIndex) {
     const line = lines[lineIndex];
     
-    if (line.includes('let
-  ') && !line.includes('=
+    if (line.includes('let) && !line.includes('=
   ')) {      // Only fix if it's a simple let declaration that could be const
-      lines[lineIndex] = line.replace(
-  'let ',
+      lines[lineIndex] = line.replace(let ',
   'const ');
       return true;
     }
@@ -377,9 +342,8 @@ class LintErrorAutoFixer {
     const line = lines[lineIndex];
 
     // Add eslint-disable comment for unfixable issues
-    if (!line.includes(
-  'eslint-disable')) {
-      lines[lineIndex] = `${line} // eslint-disable-line ${rule}`;
+    if (!line.includes(eslint-disable')) {
+      lines[lineIndex] = `${line} // eslint-disable-line ${rule}';
       return true;
     }
 
@@ -390,8 +354,7 @@ class LintErrorAutoFixer {
     try {
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     } catch (error) {
-      console.error(
-  'Error saving report:', error.message);
+      console.error(Error saving report:', error.message);
     }
   }
 }
@@ -403,14 +366,12 @@ fixer.start().catch(console.error);
 // Handle graceful shutdown
 process.on(
   'SIGTERM', () => {
-  console.log(
-  '🧹 Lint Error Auto Fixer shutting down...');
+  console.log(🧹 Lint Error Auto Fixer shutting down...');
   process.exit(0);
 });
 
 process.on(
   'SIGINT', () => {
-  console.log(
-  '🧹 Lint Error Auto Fixer interrupted');
+  console.log(🧹 Lint Error Auto Fixer interrupted');
   process.exit(0);
 });

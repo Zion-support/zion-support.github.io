@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs').promises;
@@ -7,7 +7,7 @@ const path = require('path');
 class LintingErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/linting-error-fixer.log');
+    this.logFile = path.join(this.projectRoot, ''automation/logs/linting-error-fixer.log'');
     this.fixesApplied = [];
     this.startTime = new Date();
   }
@@ -15,7 +15,7 @@ class LintingErrorFixer {
   async log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
     await fs.appendFile(this.logFile, logMessage + '\n');
   }
 
@@ -37,31 +37,21 @@ class LintingErrorFixer {
     await this.log('🔧 Fixing ESLint configuration...');
     
     try {
-      const eslintPath = path.join(this.projectRoot, '.eslintrc.js');
-      const fixedConfig = `module.exports = {
-  extends: ['next/core-web-vitals', 'next/typescript'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    'no-console': 'warn',
-    'no-unused-vars': 'warn',
-    'prefer-const': 'warn',
-    'no-var': 'error'
+      const eslintPath = path.join(this.projectRoot, '.eslintrc.js');const fixedConfig = module.exports = {
+  extends: ['''next/core-web-vitals''', '''next/typescript'''],
+  rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn',no-unused-vars': 'warn',prefer-const': 'warn',no-var': 'error'
   },
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/']
-};`;
+};;
       
-      await fs.writeFile(eslintPath, fixedConfig);
+      await fs.writeFile(eslintPath, fixedConfig`);
       await this.log('✅ ESLint configuration fixed');
       this.fixesApplied.push({
         type: 'eslint-config-fix',
         file: '.eslintrc.js',
         timestamp: new Date().toISOString()
       });
-    } catch (error) {
-      await this.log(`❌ Error fixing ESLint config: ${error.message}`);
+    } catch (error) {await this.log(`❌ Error fixing ESLint config: ${error.message}`);
     }
   }
 
@@ -89,22 +79,21 @@ class LintingErrorFixer {
     
     for (const file of jsFiles) {
       try {
-        const filePath = path.join(this.projectRoot, file);
-        let content = await fs.readFile(filePath, 'utf8');
+        const filePath = path.join(this.projectRoot, 'file);
+        let content = await fs.readFile(filePath', 'utf8');
         let modified = false;
         
         // Fix unused variables
-        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^;]+);\s*\/\/\s*unused/g;
+        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^;]+);\s*\/\/\s*''unused/g'';
         if (unusedVarPattern.test(content)) {
-          content = content.replace(unusedVarPattern, (match, varName, value) => {
-            return `// const ${varName} = ${value}; // unused`;
+          content = content.replace(unusedVarPattern, (match, varName, value) => {return `// const ${varName} = ${value}; // unused`;
           });
           modified = true;
         }
         
         // Fix console.log statements
-        if (content.includes('console.log(')) {
-          content = content.replace(/console\.log\(/g, '// console.log(');
+        if (content.includes('console.log(`')) {
+          content = content.replace(/console\.log\(/g, '// console.log(`');
           modified = true;
         }
         
@@ -115,16 +104,14 @@ class LintingErrorFixer {
         }
         
         if (modified) {
-          await fs.writeFile(filePath, content);
-          await this.log(`✅ Fixed linting issues in ${file}`);
+          await fs.writeFile(filePath, content);await this.log(✅ Fixed linting issues in ${file});
           this.fixesApplied.push({
             type: 'linting-fix',
             file: file,
             timestamp: new Date().toISOString()
           });
         }
-      } catch (error) {
-        await this.log(`❌ Error fixing ${file}: ${error.message}`);
+      } catch (error) {await this.log(❌ Error fixing ${file}: ${error.message}``);
       }
     }
   }
@@ -139,9 +126,7 @@ class LintingErrorFixer {
       
       const endTime = new Date();
       const duration = endTime - this.startTime;
-      
-      await this.log(`✅ Linting Error Fixer completed in ${duration.getTime()}ms`);
-      await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
+      await this.log(`✅ Linting Error Fixer completed in ${duration.getTime()}ms`);await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
       
       return {
         success: true,
@@ -149,8 +134,7 @@ class LintingErrorFixer {
         duration: duration.getTime()
       };
       
-    } catch (error) {
-      await this.log(`❌ Linting Error Fixer failed: ${error.message}`);
+    } catch (error) {await this.log(`❌ Linting Error Fixer failed: ${error.message}`);
       throw error;
     }
   }

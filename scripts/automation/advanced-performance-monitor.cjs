@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Advanced Performance Monitor - PM2 Automation
@@ -14,18 +14,15 @@ class AdvancedPerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'advanced-performance-monitor.log'
     );
     this.performanceLog = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'performance-metrics.json'
     );
     this.alertsLog = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'performance-alerts.json'
     );
     this.ensureLogsDirectory();
@@ -46,24 +43,9 @@ class AdvancedPerformanceMonitor {
 
     // Performance optimization strategies
     this.optimizationStrategies = {
-      memory: [
-        'Force garbage collection',
-        'Restart PM2 processes',
-        'Clear build cache',
-        'Optimize bundle size',
-      ],
-      cpu: [
-        'Reduce concurrent processes',
-        'Optimize build configuration',
-        'Enable incremental compilation',
-        'Use worker threads',
-      ],
-      disk: [
-        'Clean up temporary files',
-        'Remove old build artifacts',
-        'Optimize log rotation',
-        'Clear npm cache',
-      ],
+      memory: ['Force garbage collection'', 'Restart PM2 processes', 'Clear build cache'', 'Optimize bundle size', ''],
+      cpu: ['Reduce concurrent processes'', 'Optimize build configuration', 'Enable incremental compilation'', 'Use worker threads', ''],
+      disk: ['Clean up temporary files'', 'Remove old build artifacts', 'Optimize log rotation'', 'Clear npm cache', ''],
     };
   }
 
@@ -77,8 +59,7 @@ class AdvancedPerformanceMonitor {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async startMonitoring() {
@@ -165,8 +146,7 @@ class AdvancedPerformanceMonitor {
       // Disk usage
       const diskStats = await this.getDiskUsage();
       metrics.disk = { ...metrics.disk, ...diskStats };
-    } catch (error) {
-      this.log(`Failed to collect system metrics: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to collect system metrics: ${error.message}`, 'WARN');
     }
 
     return metrics;
@@ -201,8 +181,7 @@ class AdvancedPerformanceMonitor {
       const buildMetrics = await this.getBuildMetrics();
       metrics.build = { ...metrics.build, ...buildMetrics };
     } catch (error) {
-      this.log(
-        `Failed to collect application metrics: ${error.message}`,
+      this.log(Failed to collect application metrics: ${error.message}',
         'WARN'
       );
     }
@@ -232,8 +211,7 @@ class AdvancedPerformanceMonitor {
 
       // Count dependencies
       metrics.dependencies = await this.countDependencies();
-    } catch (error) {
-      this.log(`Failed to collect build metrics: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to collect build metrics: ${error.message}`, 'WARN');
     }
 
     return metrics;
@@ -252,8 +230,7 @@ class AdvancedPerformanceMonitor {
       // For now, we'll use placeholder values
       metrics.responseTime = Math.random() * 1000; // Simulated response time
       metrics.throughput = Math.random() * 1000000; // Simulated throughput
-    } catch (error) {
-      this.log(`Failed to collect network metrics: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to collect network metrics: ${error.message}`, 'WARN');
     }
 
     return metrics;
@@ -321,8 +298,7 @@ class AdvancedPerformanceMonitor {
   async getBuildMetrics() {
     try {
       const buildLogPath = path.join(
-        this.projectRoot,
-        'logs',
+        this.projectRoot,logs',
         'build-performance.json'
       );
       if (fs.existsSync(buildLogPath)) {
@@ -333,8 +309,7 @@ class AdvancedPerformanceMonitor {
           buildCount: this.performanceHistory.filter(m => m.build).length,
         };
       }
-    } catch (error) {
-      this.log(`Failed to get build metrics: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to get build metrics: ${error.message}`, 'WARN');
     }
 
     return { lastBuildTime: 0, lastBuildSize: 0, buildCount: 0 };
@@ -351,8 +326,7 @@ class AdvancedPerformanceMonitor {
           minification: config.includes('minify'),
         };
       }
-    } catch (error) {
-      this.log(`Failed to check Vite config: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to check Vite config: ${error.message}`, 'WARN');
     }
 
     return { treeShaking: false, codeSplitting: false, minification: true };
@@ -398,11 +372,11 @@ class AdvancedPerformanceMonitor {
     const items = fs.readdirSync(dir);
 
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath = path.join(dir, 'item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        this.getAllFilesRecursive(fullPath, files);
+        this.getAllFilesRecursive(fullPath', files);
       } else {
         files.push(fullPath);
       }
@@ -418,8 +392,7 @@ class AdvancedPerformanceMonitor {
     if (metrics.system.cpu.usage > this.alertThresholds.cpu) {
       issues.push({
         type: 'CPU_HIGH',
-        severity: 'HIGH',
-        description: `CPU usage is ${metrics.system.cpu.usage.toFixed(1)}%`,
+        severity: 'HIGH',description: `CPU usage is ${metrics.system.cpu.usage.toFixed(1)}%`,
         threshold: this.alertThresholds.cpu,
         current: metrics.system.cpu.usage,
         category: 'SYSTEM',
@@ -429,8 +402,7 @@ class AdvancedPerformanceMonitor {
     if (metrics.system.memory.usage > this.alertThresholds.memory) {
       issues.push({
         type: 'MEMORY_HIGH',
-        severity: 'HIGH',
-        description: `Memory usage is ${metrics.system.memory.usage.toFixed(1)}%`,
+        severity: 'HIGH',description: `Memory usage is ${metrics.system.memory.usage.toFixed(1)}%`,
         threshold: this.alertThresholds.memory,
         current: metrics.system.memory.usage,
         category: 'SYSTEM',
@@ -440,8 +412,7 @@ class AdvancedPerformanceMonitor {
     if (metrics.system.disk.usage > this.alertThresholds.disk) {
       issues.push({
         type: 'DISK_HIGH',
-        severity: 'CRITICAL',
-        description: `Disk usage is ${metrics.system.disk.usage.toFixed(1)}%`,
+        severity: 'CRITICAL',description: `Disk usage is ${metrics.system.disk.usage.toFixed(1)}%`,
         threshold: this.alertThresholds.disk,
         current: metrics.system.disk.usage,
         category: 'SYSTEM',
@@ -454,8 +425,7 @@ class AdvancedPerformanceMonitor {
     ) {
       issues.push({
         type: 'BUILD_SLOW',
-        severity: 'MEDIUM',
-        description: `Build time is ${metrics.application.build.lastBuildTime}ms`,
+        severity: 'MEDIUM',description: `Build time is ${metrics.application.build.lastBuildTime}ms`,
         threshold: this.alertThresholds.buildTime,
         current: metrics.application.build.lastBuildTime,
         category: 'APPLICATION',
@@ -467,8 +437,7 @@ class AdvancedPerformanceMonitor {
     ) {
       issues.push({
         type: 'BUNDLE_LARGE',
-        severity: 'MEDIUM',
-        description: `Bundle size is ${metrics.application.build.lastBuildSize} bytes`,
+        severity: 'MEDIUM',description: `Bundle size is ${metrics.application.build.lastBuildSize} bytes`,
         threshold: this.alertThresholds.bundleSize,
         current: metrics.application.build.lastBuildSize,
         category: 'APPLICATION',
@@ -491,8 +460,7 @@ class AdvancedPerformanceMonitor {
         recommendations: this.getRecommendations(issue),
       };
 
-      this.alertHistory.push(alert);
-      this.log(`ALERT: ${issue.type} - ${issue.description}`, issue.severity);
+      this.alertHistory.push(alert);this.log(`ALERT: ${issue.type} - ${issue.description}`, issue.severity);
     }
 
     // Save alerts
@@ -513,17 +481,13 @@ class AdvancedPerformanceMonitor {
         recommendations.push(...this.optimizationStrategies.disk);
         break;
       case 'BUILD_SLOW':
-        recommendations.push(
-          'Enable incremental compilation',
-          'Use esbuild for faster builds',
-          'Optimize Vite configuration'
+        recommendations.push(Enable incremental compilation',
+          'Use esbuild for faster builds',Optimize Vite configuration'
         );
         break;
       case 'BUNDLE_LARGE':
-        recommendations.push(
-          'Enable tree shaking',
-          'Implement code splitting',
-          'Remove unused dependencies'
+        recommendations.push(Enable tree shaking',
+          'Implement code splitting',Remove unused dependencies'
         );
         break;
     }
@@ -540,14 +504,12 @@ class AdvancedPerformanceMonitor {
       try {
         const result = await this.applyAutoFix(issue);
         if (result.success) {
-          this.log(
-            `Auto-fix applied for ${issue.type}: ${result.message}`,
+          this.log(Auto-fix applied for ${issue.type}: ${result.message}',
             'INFO'
           );
         }
       } catch (error) {
-        this.log(
-          `Auto-fix failed for ${issue.type}: ${error.message}`,
+        this.log(Auto-fix failed for ${issue.type}: ${error.message}',
           'ERROR'
         );
       }
@@ -573,12 +535,11 @@ class AdvancedPerformanceMonitor {
   async fixDiskSpace() {
     try {
       // Clean up temporary files
-      const tempDirs = ['node_modules/.cache', 'dist', 'build', 'logs'];
+      const tempDirs = ['''node_modules/.cache''', 'dist', 'build', 'logs'];
 
       for (const dir of tempDirs) {
-        const fullPath = path.join(this.projectRoot, dir);
-        if (fs.existsSync(fullPath)) {
-          execSync(`rm -rf ${fullPath}`, {
+        const fullPath = path.join(this.projectRoot, 'dir);
+        if (fs.existsSync(fullPath)) {execSync(`rm -rf ${fullPath}`', {
             cwd: this.projectRoot,
             stdio: 'pipe',
           });
@@ -643,8 +604,7 @@ class AdvancedPerformanceMonitor {
   async saveMetrics(metrics) {
     try {
       fs.writeFileSync(this.performanceLog, JSON.stringify(metrics, null, 2));
-    } catch (error) {
-      this.log(`Failed to save metrics: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save metrics: ${error.message}`, 'ERROR');
     }
   }
 
@@ -654,8 +614,7 @@ class AdvancedPerformanceMonitor {
         this.alertsLog,
         JSON.stringify(this.alertHistory, null, 2)
       );
-    } catch (error) {
-      this.log(`Failed to save alerts: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save alerts: ${error.message}`, 'ERROR');
     }
   }
 

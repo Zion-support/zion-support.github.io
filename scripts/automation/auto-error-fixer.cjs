@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -60,11 +60,9 @@ class AutoErrorFixer {
 
       // Check build errors
       await this.fixBuildErrors();
-
-      this.log(`✅ Error check completed. Fixed ${this.fixesApplied} issues.`);
+this.log(`✅ Error check completed. Fixed ${this.fixesApplied} issues.`);
       this.saveReport();
-    } catch (error) {
-      this.log(`❌ Error during auto-fix: ${error.message}`);
+    } catch (error) {this.log(`❌ Error during auto-fix: ${error.message}`);
     }
   }
 
@@ -97,7 +95,7 @@ class AutoErrorFixer {
     // Fix missing type annotations
     await this.fixMissingTypes();
 
-    // Fix import/export issues
+    // Fix ''import/export'' issues
     await this.fixImportExportIssues();
 
     // Fix JSX syntax errors
@@ -114,8 +112,7 @@ class AutoErrorFixer {
 
         // Fix missing type annotations in catch blocks
         content = content.replace(
-          /} catch \(error: \)/g,
-          '} catch (error: any)'
+          /} catch \(error: \)/g,} catch (error: any)'
         );
 
         // Fix missing type annotations in function parameters
@@ -123,23 +120,19 @@ class AutoErrorFixer {
 
         // Fix missing return types
         content = content.replace(
-          /function ([^(]+)\([^)]*\): \s*{/g,
-          'function $1(): any {'
+          /function ([^(]+)\([^)]*\): \s*{/g,function $1(): any {'
         );
 
         if (content !== fs.readFileSync(file, 'utf8')) {
-          fs.writeFileSync(file, content);
-          this.log(`✅ Fixed missing types in ${file}`);
+          fs.writeFileSync(file, content);this.log(`✅ Fixed missing types in ${file}`);
           this.fixesApplied++;
           this.errorsFixed.push({ file, type: 'missing_types' });
           modified = true;
         }
 
-        if (modified) {
-          this.log(`📝 Fixed missing types in ${file}`);
+        if (modified) {this.log(`📝 Fixed missing types in ${file}`);
         }
-      } catch (error) {
-        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      } catch (error) {this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }
   }
@@ -158,8 +151,7 @@ class AutoErrorFixer {
           !content.includes('import React from')
         ) {
           content = content.replace(
-            /import React([^;]*);/g,
-            'import React from "react";'
+            /import React([^;]*);/g,import React from 'react";'
           );
           modified = true;
         }
@@ -171,13 +163,11 @@ class AutoErrorFixer {
         }
 
         if (modified) {
-          fs.writeFileSync(file, content);
-          this.log(`✅ Fixed import/export issues in ${file}`);
+          fs.writeFileSync(file, content);this.log(`✅ Fixed ''import/export'' issues in ${file}`);
           this.fixesApplied++;
           this.errorsFixed.push({ file, type: 'import_export' });
         }
-      } catch (error) {
-        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      } catch (error) {this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }
   }
@@ -192,26 +182,22 @@ class AutoErrorFixer {
 
         // Fix JSX fragment syntax
         content = content.replace(
-          /<>([\s\S]*?)<\/>/g,
-          '<React.Fragment>$1</React.Fragment>'
+          /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>'
         );
 
         // Fix JSX closing tags
         content = content.replace(/<([^>]+)\/>/g, '<$1 />');
 
         if (content !== fs.readFileSync(file, 'utf8')) {
-          fs.writeFileSync(file, content);
-          this.log(`✅ Fixed JSX errors in ${file}`);
+          fs.writeFileSync(file, content);this.log(`✅ Fixed JSX errors in ${file}`);
           this.fixesApplied++;
           this.errorsFixed.push({ file, type: 'jsx_syntax' });
           modified = true;
         }
 
-        if (modified) {
-          this.log(`📝 Fixed JSX errors in ${file}`);
+        if (modified) {this.log(`📝 Fixed JSX errors in ${file}`);
         }
-      } catch (error) {
-        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      } catch (error) {this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }
   }
@@ -228,8 +214,7 @@ class AutoErrorFixer {
         this.log('⚠️ ESLint auto-fix failed, checking for specific errors...');
         await this.fixSpecificESLintErrors();
       }
-    } catch (error) {
-      this.log(`❌ ESLint check failed: ${error.message}`);
+    } catch (error) {this.log(`❌ ESLint check failed: ${error.message}`);
     }
   }
 
@@ -246,24 +231,21 @@ class AutoErrorFixer {
         content = content.replace(/[ \t]+$/gm, '');
 
         // Fix missing semicolons
-        content = content.replace(/([^;])\n/g, '$1;\n');
+        content = content.replace(/([^;])\''n/g'', '$1;\n');
 
         // Fix double quotes to single quotes
         content = content.replace(/"([^"]*)"/g, "'$1'");
 
         if (content !== fs.readFileSync(file, 'utf8')) {
-          fs.writeFileSync(file, content);
-          this.log(`✅ Fixed ESLint issues in ${file}`);
+          fs.writeFileSync(file, content);this.log(`✅ Fixed ESLint issues in ${file}`);
           this.fixesApplied++;
           this.errorsFixed.push({ file, type: 'eslint' });
           modified = true;
         }
 
-        if (modified) {
-          this.log(`📝 Fixed ESLint issues in ${file}`);
+        if (modified) {this.log(`📝 Fixed ESLint issues in ${file}`);
         }
-      } catch (error) {
-        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      } catch (error) {this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }
   }
@@ -277,8 +259,7 @@ class AutoErrorFixer {
       try {
         const content = fs.readFileSync(file, 'utf8');
 
-        // Check for common syntax errors
-        if (content.includes('<<<<<<< HEAD') || content.includes('          this.log(`⚠️ Merge conflict detected in ${file}`);
+        // Check for common syntax errorsif (content.includes('<<<<<<< HEAD') || content.includes('          this.log(`⚠️ Merge conflict detected in ${file}`);
           this.errorsFixed.push({
             file,
             type: 'merge_conflict',
@@ -287,16 +268,14 @@ class AutoErrorFixer {
         }
 
         // Check for malformed JSX
-        if (content.includes('<>') && !content.includes('</>')) {
-          this.log(`⚠️ Malformed JSX fragment in ${file}`);
+        if (content.includes('<>') && !content.includes('</>')) {this.log(`⚠️ Malformed JSX fragment in ${file}`);
           this.errorsFixed.push({
             file,
             type: 'malformed_jsx',
             needsManualFix: true,
           });
         }
-      } catch (error) {
-        this.log(`⚠️ Could not process ${file}: ${error.message}`);
+      } catch (error) {this.log(`⚠️ Could not process ${file}: ${error.message}`);
       }
     }
   }
@@ -325,8 +304,7 @@ class AutoErrorFixer {
       } catch (error) {
         // No outdated packages
       }
-    } catch (error) {
-      this.log(`❌ Dependency check failed: ${error.message}`);
+    } catch (error) {this.log(`❌ Dependency check failed: ${error.message}`);
     }
   }
 
@@ -360,8 +338,7 @@ class AutoErrorFixer {
           this.log('❌ Build still failing after cache clear');
         }
       }
-    } catch (error) {
-      this.log(`❌ Build check failed: ${error.message}`);
+    } catch (error) {this.log(`❌ Build check failed: ${error.message}`);
     }
   }
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Lucide React Icon Fixer - PM2 Automation
@@ -31,25 +31,12 @@ class LucideReactIconFixer {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}');
   }
 
   getValidIcons() {
     // Common valid Lucide React icons
-    return [
-      'User', 'UserCheck', 'UserX', 'UserPlus', 'UserMinus', 'UserEdit', 'UserSearch',
-      'Users', 'Users2', 'UserStar', 'UserHeart', 'UserCog', 'UserShield',
-      'Eye', 'EyeOff', 'MousePointer', 'Clock', 'MapPin', 'Smartphone', 'Tablet', 'Laptop',
-      'Server', 'Database', 'HardDrive', 'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio',
-      'Signal', 'Antenna', 'Satellite', 'Orbit', 'Star', 'Navigation', 'Moon', 'Sun',
-      'Binary', 'Lock', 'Key', 'Fingerprint', 'Brain', 'Rocket', 'DollarSign', 'Search',
-      'Sparkles', 'Zap', 'Settings', 'Settings2', 'Cog', 'Cog2', 'Device', 'Desktop',
-      'Monitor', 'Smartphone', 'Tablet', 'Laptop', 'Server', 'Database', 'HardDrive',
-      'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal', 'Antenna', 'Satellite',
-      'Orbit', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary', 'Lock', 'Key', 'Fingerprint',
-      'Brain', 'Rocket', 'DollarSign', 'Search', 'Sparkles', 'Zap'
-    ];
+    return ['User'', 'UserCheck', 'UserX', 'UserPlus', 'UserMinus', 'UserEdit', 'UserSearch', 'Users'', 'Users2', 'UserStar', 'UserHeart', 'UserCog', 'UserShield', 'Eye'', 'EyeOff', 'MousePointer', 'Clock', 'MapPin', 'Smartphone', 'Tablet', 'Laptop', 'Server'', 'Database', 'HardDrive', 'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal'', 'Antenna', 'Satellite', 'Orbit', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary'', 'Lock', 'Key', 'Fingerprint', 'Brain', 'Rocket', 'DollarSign', 'Search', 'Sparkles'', 'Zap', 'Settings', 'Settings2', 'Cog', 'Cog2', 'Device', 'Desktop', 'Monitor'', 'Smartphone', 'Tablet', 'Laptop', 'Server', 'Database', 'HardDrive', 'Cpu'', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal', 'Antenna', 'Satellite', 'Orbit'', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary', 'Lock', 'Key', 'Fingerprint', 'Brain'', 'Rocket', 'DollarSign', 'Search', 'Sparkles', 'Zap'];
   }
 
   async runIconFix() {
@@ -111,13 +98,11 @@ class LucideReactIconFixer {
                 content: content
               });
             }
-          } catch (error) {
-            this.log(`Error reading file ${file}: ${error.message}`, 'WARN');
+          } catch (error) {this.log(`Error reading file ${file}: ${error.message}`, 'WARN');
           }
         }
       }
-    } catch (error) {
-      this.log(`Error scanning for icon files: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Error scanning for icon files: ${error.message}`, 'WARN');
     }
 
     return filesWithIcons;
@@ -146,13 +131,11 @@ class LucideReactIconFixer {
       if (newContent !== content) modified = true;
 
       if (modified) {
-        fs.writeFileSync(filePath, newContent);
-        this.log(`✅ Fixed icon imports in ${path.basename(filePath)}`);
+        fs.writeFileSync(filePath, newContent);this.log(`✅ Fixed icon imports in ${path.basename(filePath)}`);
         return { type: 'icon_imports', file: filePath, fix: 'fixed_icon_imports' };
       }
 
-    } catch (error) {
-      this.log(`Error fixing icon imports in ${filePath}: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Error fixing icon imports in ${filePath}: ${error.message}`, 'WARN');
     }
 
     return null;
@@ -187,8 +170,7 @@ class LucideReactIconFixer {
         
         // Reconstruct import statement with unique icons
         if (importMap.size > 0) {
-          const uniqueIcons = Array.from(importMap.keys()).sort();
-          newLines.push(`import { ${uniqueIcons.join(', ')} } from 'lucide-react';`);
+          const uniqueIcons = Array.from(importMap.keys()).sort();newLines.push(`import { ${uniqueIcons.join(', ')} } from 'lucide-react';`);
         }
         
         newLines.push('');
@@ -205,24 +187,13 @@ class LucideReactIconFixer {
     let newContent = content;
 
     // Common invalid icon mappings
-    const iconMappings = {
-      'UserHeart': 'Heart',
-      'UserEdit2': 'UserEdit',
-      'UserSearch2': 'Search',
-      'UserList2': 'Users2',
-      'UserSettings2': 'Settings2',
-      'UserShield2': 'Shield',
-      'UserStar2': 'Star',
-      'Device': 'Monitor',
-      'Desktop': 'Monitor'
+    const iconMappings = {UserHeart': 'Heart',UserEdit2': 'UserEdit',UserSearch2': 'Search',UserList2': 'Users2',UserSettings2': 'Settings2',UserShield2': 'Shield',UserStar2': 'Star',Device': 'Monitor',Desktop': 'Monitor'
     };
 
     // Replace invalid icon names
-    for (const [invalid, valid] of Object.entries(iconMappings)) {
-      const regex = new RegExp(`\\b${invalid}\\b`, 'g');
+    for (const ['invalid', 'valid'] of Object.entries(iconMappings)) {const regex = new RegExp(`\\b${invalid}\\b`, 'g');
       if (newContent.includes(invalid)) {
-        newContent = newContent.replace(regex, valid);
-        this.log(`🔄 Replaced invalid icon '${invalid}' with '${valid}'`);
+        newContent = newContent.replace(regex, valid);this.log(`🔄 Replaced invalid icon '${invalid}' with '${valid}'`);
       }
     }
 
@@ -259,8 +230,7 @@ class LucideReactIconFixer {
           const icons = match[1].split(',').map(icon => icon.trim());
           const usedIcons = icons.filter(icon => this.isIconUsed(icon, content));
           
-          if (usedIcons.length > 0) {
-            importLines.push(`import { ${usedIcons.join(', ')} } from 'lucide-react';`);
+          if (usedIcons.length > 0) {importLines.push(`import { ${usedIcons.join(', ')} } from 'lucide-react';`);
           }
         }
       } else if (inImportBlock && line.trim() === '') {
@@ -280,10 +250,7 @@ class LucideReactIconFixer {
 
   isIconUsed(iconName, content) {
     // Check if icon is used in JSX or as a component
-    const patterns = [
-      new RegExp(`<${iconName}[\\s/>]`, 'g'),
-      new RegExp(`</${iconName}>`, 'g'),
-      new RegExp(`\\b${iconName}\\b`, 'g')
+    const patterns = [new RegExp(`<${iconName}[\\s/>]`, 'g'),new RegExp(`</${iconName}>`, 'g'),new RegExp(`\\b${iconName}\\b`, 'g')
     ];
 
     for (const pattern of patterns) {
@@ -300,8 +267,7 @@ class LucideReactIconFixer {
     return content
       .replace(/import\s*\{\s*([^}]+)\s*\}\s*from\s*['"]lucide-react['"]/g, 
                (match, icons) => {
-                 const cleanIcons = icons.split(',').map(icon => icon.trim()).filter(Boolean);
-                 return `import { ${cleanIcons.join(', ')} } from 'lucide-react'`;
+                 const cleanIcons = icons.split(',').map(icon => icon.trim()).filter(Boolean);return `import { ${cleanIcons.join(', ')} } from 'lucide-react'`;
                })
       .replace(/,\s*,/g, ',') // Remove double commas
       .replace(/,\s*}/g, '}') // Remove trailing commas
@@ -313,9 +279,9 @@ class LucideReactIconFixer {
     const files = fs.readdirSync(dirPath);
 
     for (const file of files) {
-      const fullPath = path.join(dirPath, file);
+      const fullPath = path.join(dirPath, 'file);
       if (fs.statSync(fullPath).isDirectory()) {
-        arrayOfFiles = await this.getAllFiles(fullPath, arrayOfFiles);
+        arrayOfFiles = await this.getAllFiles(fullPath', arrayOfFiles);
       } else {
         arrayOfFiles.push(fullPath);
       }
@@ -335,19 +301,15 @@ class LucideReactIconFixer {
       errors: errors
     };
 
-    fs.writeFileSync(this.fixesLog, JSON.stringify(report, null, 2));
-    this.log(`📊 Icon fix report generated: ${this.fixesLog}`);
+    fs.writeFileSync(this.fixesLog, JSON.stringify(report, null, 2));this.log(`📊 Icon fix report generated: ${this.fixesLog}`);
   }
 
   async commitFixes(fixes) {
     try {
       if (fixes.length > 0) {
-        execSync('git add .', { stdio: 'pipe' });
-        execSync(`git commit -m "Auto-fix: ${fixes.length} Lucide React icon issues resolved"`, { stdio: 'pipe' });
-        this.log(`✅ Committed ${fixes.length} icon fixes to git`);
+        execSync('git add .', { stdio: 'pipe' });execSync(`git commit -m "Auto-fix: ${fixes.length} Lucide React icon issues resolved"`, { stdio: 'pipe' });this.log(`✅ Committed ${fixes.length} icon fixes to git`);
       }
-    } catch (error) {
-      this.log(`Warning: Could not commit fixes: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Warning: Could not commit fixes: ${error.message}`, 'WARN');
     }
   }
 }
@@ -358,15 +320,10 @@ async function main() {
   
   // Run the icon fix
   const result = await fixer.runIconFix();
+  console.log(`\n🎨 Lucide React Icon Fixer Summary:`);console.log(`✅ Total fixes applied: ${result.fixes.length}`);console.log(`❌ Total errors encountered: ${result.errors.length}`);
   
-  console.log(`\n🎨 Lucide React Icon Fixer Summary:`);
-  console.log(`✅ Total fixes applied: ${result.fixes.length}`);
-  console.log(`❌ Total errors encountered: ${result.errors.length}`);
-  
-  if (result.fixes.length > 0) {
-    console.log(`\n🔧 Icon fixes applied:`);
-    result.fixes.forEach(fix => {
-      console.log(`  - ${fix.type}: ${path.basename(fix.file)}`);
+  if (result.fixes.length > 0) {console.log(`\n🔧 Icon fixes applied:`);
+    result.fixes.forEach(fix => {console.log(`  - ${fix.type}: ${path.basename(fix.file)}`);
     });
   }
   

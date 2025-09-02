@@ -55,16 +55,14 @@ async function identifyMissingPages() {
 
     // Generate recommendations
     console.log('\n=== RECOMMENDATIONS ===');
-    if (missingPages.length > 0) {
-      console.log(`Create ${missingPages.length} missing page(s):`);
+    if (missingPages.length > 0) {console.log(`Create ${missingPages.length} missing page(s):`);
       missingPages.forEach(page => {
         const pageName = page
           .replace('/', '')
           .replace(/-/g, ' ')
           .replace(/\b\w/g, l => l.toUpperCase())
           .replace(/\s+/g, '');
-        console.log(
-          `  - Create src/pages/${pageName}Page.tsx for route ${page}`
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}'
         );
       });
     }

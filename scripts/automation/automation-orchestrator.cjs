@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Zion Tech Group - PM2 Automation Orchestrator
@@ -32,7 +32,7 @@ class AutomationOrchestrator {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2');
+        console.log(`'✅ Connected to PM2');
         this.setupProcessMonitoring();
         this.initializeSchedules();
         this.startHealthMonitoring();
@@ -67,19 +67,16 @@ class AutomationOrchestrator {
 
     switch (event) {
       case 'start':
-        console.log(`🚀 Process ${process.name} started`);
+        console.log(`🚀 Process ${process.name} started);
         this.processes.set(process.name, { ...process, status: 'online' });
         break;
-      case 'stop':
-        console.log(`⏸️  Process ${process.name} stopped`);
+      case 'stop':console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: 'stopped' });
         break;
-      case 'restart':
-        console.log(`🔄 Process ${process.name} restarted`);
+      case 'restart':console.log(`🔄 Process ${process.name} restarted`);
         this.processes.set(process.name, { ...process, status: 'online' });
         break;
-      case 'exit':
-        console.log(`❌ Process ${process.name} exited`);
+      case 'exit':console.log(`❌ Process ${process.name} exited`);
         this.processes.set(process.name, { ...process, status: 'errored' });
         this.handleProcessFailure(process.name);
         break;
@@ -87,8 +84,7 @@ class AutomationOrchestrator {
   }
 
   handleProcessError(data) {
-    const { process, log } = data;
-    console.error(`❌ Error in ${process.name}:`, log);
+    const { process, log } = data;console.error(`❌ Error in ${process.name}:`, log);
 
     // Update process status
     if (this.processes.has(process.name)) {
@@ -100,10 +96,8 @@ class AutomationOrchestrator {
     const { process, log } = data;
 
     // Log important messages
-    if (log.includes('ERROR') || log.includes('CRITICAL')) {
-      console.error(`⚠️  ${process.name}:`, log);
-    } else if (log.includes('SUCCESS') || log.includes('COMPLETED')) {
-      console.log(`✅ ${process.name}:`, log);
+    if (log.includes('ERROR') || log.includes('CRITICAL')) {console.error(`⚠️  ${process.name}:`, log);
+    } else if (log.includes('SUCCESS') || log.includes('COMPLETED')) {console.log(`✅ ${process.name}:', log);
     }
   }
 
@@ -113,38 +107,30 @@ class AutomationOrchestrator {
 
     // Check if this is a critical process
     if (this.isCriticalProcess(processName)) {
-      console.log(
-        `🚨 Critical process ${processName} failed, attempting recovery...`
+      console.log(`🚨 Critical process ${processName} failed, attempting recovery...'
       );
       this.attemptRecovery(processName);
     }
   }
 
   isCriticalProcess(processName) {
-    const criticalProcesses = [
-      'console-error-fixer',
-      'security-audit',
-      'performance-monitor',
-    ];
+    const criticalProcesses = ['console-error-fixer', 'security-audit'', 'performance-monitor', ''];
     return criticalProcesses.includes(processName);
   }
 
   async attemptRecovery(processName) {
     try {
-      console.log(`🔄 Attempting to restart ${processName}...`);
+      console.log(`🔄 Attempting to restart ${processName}...);
       await this.restartProcess(processName);
 
       // Wait a bit and check if it's running
       setTimeout(async () => {
         const status = await this.getProcessStatus(processName);
-        if (status === 'online') {
-          console.log(`✅ ${processName} recovered successfully`);
-        } else {
-          console.error(`❌ ${processName} recovery failed`);
+        if (status === 'online') {console.log(✅ ${processName} recovered successfully``);
+        } else {console.error(`❌ ${processName} recovery failed`);
         }
       }, 10000);
-    } catch (error) {
-      console.error(`❌ Failed to recover ${processName}:`, error.message);
+    } catch (error) {console.error(`❌ Failed to recover ${processName}:`, error.message);
     }
   }
 
@@ -231,8 +217,7 @@ class AutomationOrchestrator {
         const health = this.assessProcessHealth(process);
         this.healthChecks.set(process.name, health);
 
-        if (health.status === 'unhealthy') {
-          console.warn(`⚠️  Unhealthy process detected: ${process.name}`);
+        if (health.status === 'unhealthy') {console.warn(`⚠️  Unhealthy process detected: ${process.name}`);
           this.handleUnhealthyProcess(process.name, health);
         }
       }
@@ -283,19 +268,16 @@ class AutomationOrchestrator {
     return health;
   }
 
-  handleUnhealthyProcess(processName, health) {
-    console.warn(`🚨 Process ${processName} is unhealthy:`, health.issues);
+  handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is unhealthy:`, health.issues);
 
     // Attempt to restart unhealthy processes
     if (
       health.issues.includes('Excessive restarts') ||
       health.issues.includes('Low uptime')
     ) {
-      console.log(
-        `🔄 Attempting to restart unhealthy process ${processName}...`
+      console.log(`🔄 Attempting to restart unhealthy process ${processName}...'
       );
-      this.restartProcess(processName).catch(error => {
-        console.error(`❌ Failed to restart ${processName}:`, error.message);
+      this.restartProcess(processName).catch(error => {console.error(❌ Failed to restart ${processName}:, error.message`);
       });
     }
   }
@@ -318,8 +300,7 @@ class AutomationOrchestrator {
       const process = processes.find(p => p.name === processName);
       return process ? process.pm2_env.status : 'unknown';
     } catch (error) {
-      console.error(
-        `❌ Failed to get status for ${processName}:`,
+      console.error(❌ Failed to get status for ${processName}:',
         error.message
       );
       return 'unknown';
@@ -387,7 +368,7 @@ class AutomationOrchestrator {
       recommendations: [],
     };
 
-    for (const [name, process] of this.processes) {
+    for (const ['name', 'process'] of this.processes) {
       const health = this.healthChecks.get(name) || { status: 'unknown' };
       const schedule = this.schedules.get(name) || {};
 
@@ -402,9 +383,8 @@ class AutomationOrchestrator {
       report.processes.push({
         name,
         status: process.status,
-        health: health.status,
-        schedule: schedule.interval ? `${schedule.interval / 1000}s` : 'N/A',
-        priority: schedule.priority || 'N/A',
+        health: health.status,schedule: schedule.interval ? `${schedule.interval / 1000}s` : '''N/A''',
+        priority: schedule.priority || '''N/A''',
       });
     }
 
@@ -423,17 +403,14 @@ class AutomationOrchestrator {
     try {
       const report = await this.generateReport();
       const reportPath = path.join(
-        __dirname,
-        '..',
-        'reports',
-        'automation-report.json'
+        __dirname,..',
+        'reports',automation-report.json'
       );
 
       // Ensure reports directory exists
       await fs.mkdir(path.dirname(reportPath), { recursive: true });
 
-      await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-      console.log(`📊 Report saved to ${reportPath}`);
+      await fs.writeFile(reportPath, JSON.stringify(report, null, 2));console.log(`📊 Report saved to ${reportPath}`);
     } catch (error) {
       console.error('❌ Failed to save report:', error.message);
     }

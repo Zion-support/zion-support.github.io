@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
@@ -8,23 +8,18 @@ class LinkCheckerAutomation {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '../../');
     this.logFile = path.join(
-      this.projectRoot,
-      'link-reports',
+      this.projectRoot,link-reports',
       'link-checker-automation.log'
     );
     this.reportFile = path.join(
-      this.projectRoot,
-      'link-reports',
+      this.projectRoot,link-reports',
       'link-checker-report.json'
     );
     this.ensureDirectories();
   }
 
   ensureDirectories() {
-    const dirs = [
-      path.join(this.projectRoot, 'link-reports'),
-      path.join(this.projectRoot, 'link-check-results'),
-    ];
+    const dirs = [''this.'projectRoot/link-reports'', ''this.'projectRoot/link-check-results'', ''];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
@@ -35,15 +30,14 @@ class LinkCheckerAutomation {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(logEntry);
+    console.log(`logEntry);
 
     // Append to log file
     fs.appendFileSync(this.logFile, logEntry + '\n');
   }
 
   async runCommand(command, cwd = this.projectRoot) {
-    return new Promise((resolve, reject) => {
-      this.log(`Running command: ${command}`);
+    return new Promise((resolve, reject) => {this.log(Running command: ${command}`);
 
       const child = spawn(command, [], {
         shell: true,
@@ -55,27 +49,21 @@ class LinkCheckerAutomation {
       let stderr = '';
 
       child.stdout.on('data', data => {
-        stdout += data.toString();
-        this.log(`STDOUT: ${data.toString().trim()}`);
+        stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);
       });
 
       child.stderr.on('data', data => {
-        stderr += data.toString();
-        this.log(`STDERR: ${data.toString().trim()}`);
+        stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);
       });
 
       child.on('close', code => {
-        if (code === 0) {
-          this.log(`Command completed successfully with code ${code}`);
+        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
-        } else {
-          this.log(`Command failed with code ${code}`, 'ERROR');
-          reject(new Error(`Command failed with code ${code}: ${stderr}`));
+        } else {this.log(`Command failed with code ${code}`, 'ERROR');reject(new Error(`Command failed with code ${code}: ${stderr}`));
         }
       });
 
-      child.on('error', error => {
-        this.log(`Command error: ${error.message}`, 'ERROR');
+      child.on('error', error => {this.log(`Command error: ${error.message}`, 'ERROR');
         reject(error);
       });
     });
@@ -87,8 +75,7 @@ class LinkCheckerAutomation {
       await this.runCommand('npm ci');
       this.log('Dependencies installed successfully');
       return true;
-    } catch (error) {
-      this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -99,8 +86,7 @@ class LinkCheckerAutomation {
       await this.runCommand('npm install -g linkinator');
       this.log('Linkinator installed successfully');
       return true;
-    } catch (error) {
-      this.log(`Failed to install linkinator: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to install linkinator: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -111,8 +97,7 @@ class LinkCheckerAutomation {
       await this.runCommand('npm run build');
       this.log('Build completed successfully');
       return true;
-    } catch (error) {
-      this.log(`Build failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Build failed: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -124,9 +109,8 @@ class LinkCheckerAutomation {
       const distPath = path.join(this.projectRoot, 'dist');
 
       // Start http-server in background
-      const serverProcess = spawn(
-        'npx',
-        ['http-server', distPath, '-p', '5000', '-s'],
+      const serverProcess = spawn(npx',
+        ['http-server', 'distPath', '-p', '5000', '-s'],
         {
           shell: true,
           cwd: this.projectRoot,
@@ -138,8 +122,7 @@ class LinkCheckerAutomation {
       await new Promise(resolve => setTimeout(resolve, 3000));
 
       // Run linkinator on local server
-      const result = await this.runCommand(
-        'npx linkinator http://localhost:5000 --recurse --concurrency 10 --skip ".*(logout|signout).*" --format json'
+      const result = await this.runCommand(npx linkinator http://localhost:5000 --recurse --concurrency 10 --skip '.*(logout|signout).*" --format json'
       );
 
       // Stop server
@@ -150,8 +133,7 @@ class LinkCheckerAutomation {
       const brokenLinks =
         linkData.links?.filter(link => link.state === 'BROKEN') || [];
 
-      this.log(
-        `Internal link check completed. Found ${brokenLinks.length} broken links`
+      this.log(Internal link check completed. Found ${brokenLinks.length} broken links'
       );
 
       return {
@@ -160,8 +142,7 @@ class LinkCheckerAutomation {
         brokenLinks: brokenLinks,
         allLinks: linkData.links || [],
       };
-    } catch (error) {
-      this.log(`Internal link check failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Internal link check failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message,
@@ -185,8 +166,7 @@ class LinkCheckerAutomation {
       }
 
       // Remove duplicates
-      const uniqueUrls = [...new Set(externalUrls)];
-      this.log(`Found ${uniqueUrls.length} unique external URLs to check`);
+      const uniqueUrls = [...new Set(externalUrls)];this.log(`Found ${uniqueUrls.length} unique external URLs to check`);
 
       if (uniqueUrls.length === 0) {
         return {
@@ -199,16 +179,14 @@ class LinkCheckerAutomation {
 
       // Check external links with linkinator
       const urlList = uniqueUrls.join(' ');
-      const result = await this.runCommand(
-        `npx linkinator ${urlList} --concurrency 5 --format json`
+      const result = await this.runCommand(npx linkinator ${urlList} --concurrency 5 --format json'
       );
 
       const linkData = JSON.parse(result.stdout);
       const brokenLinks =
         linkData.links?.filter(link => link.state === 'BROKEN') || [];
 
-      this.log(
-        `External link check completed. Found ${brokenLinks.length} broken links`
+      this.log(External link check completed. Found ${brokenLinks.length} broken links'
       );
 
       return {
@@ -217,8 +195,7 @@ class LinkCheckerAutomation {
         brokenLinks: brokenLinks,
         allLinks: linkData.links || [],
       };
-    } catch (error) {
-      this.log(`External link check failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`External link check failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message,
@@ -249,13 +226,11 @@ class LinkCheckerAutomation {
 
     const allLinks = [
       ...(internalResult.allLinks || []),
-      ...(externalResult.allLinks || []),
-    ];
+      ...(externalResult.allLinks || ['])', ''];
 
     const brokenLinks = [
       ...(internalResult.brokenLinks || []),
-      ...(externalResult.brokenLinks || []),
-    ];
+      ...(externalResult.brokenLinks || ['])', ''];
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -289,8 +264,7 @@ class LinkCheckerAutomation {
       if (externalBroken.length > 0) {
         report.recommendations.push({
           priority: 'MEDIUM',
-          action: 'Update or remove broken external links',
-          details: `${externalBroken.length} external links are broken`,
+          action: 'Update or remove broken external links',details: `${externalBroken.length} external links are broken`,
         });
       }
     }
@@ -307,49 +281,28 @@ class LinkCheckerAutomation {
     // Generate markdown report
     const markdownReport = this.generateMarkdownReport(report);
     const markdownFile = path.join(
-      this.projectRoot,
-      'link-reports',
+      this.projectRoot,link-reports',
       'LINK_REPORT.md'
     );
     fs.writeFileSync(markdownFile, markdownReport);
-
-    this.log(`Link report generated: ${this.reportFile}`);
-    this.log(`Markdown report generated: ${markdownFile}`);
+this.log(`Link report generated: ${this.reportFile}`);this.log(`Markdown report generated: ${markdownFile}`);
 
     return report;
   }
 
   generateMarkdownReport(report) {
     const { summary, brokenLinks, recommendations } = report;
+let markdown = `# Link Check Report - ${new Date().toLocaleDateString()}\n\n`;markdown += `## Summary\n`;markdown += `- **Total links checked**: ${summary.totalLinks}\n`;markdown += `- **Working links**: ${summary.workingLinks}\n`;markdown += `- **Broken links**: ${summary.brokenLinks}\n`;markdown += `- **Internal links**: ${summary.internalLinks}\n`;markdown += `- **External links**: ${summary.externalLinks}\n`;markdown += `- **Report generated**: ${new Date().toLocaleString()}\n\n`;
 
-    let markdown = `# Link Check Report - ${new Date().toLocaleDateString()}\n\n`;
-    markdown += `## Summary\n`;
-    markdown += `- **Total links checked**: ${summary.totalLinks}\n`;
-    markdown += `- **Working links**: ${summary.workingLinks}\n`;
-    markdown += `- **Broken links**: ${summary.brokenLinks}\n`;
-    markdown += `- **Internal links**: ${summary.internalLinks}\n`;
-    markdown += `- **External links**: ${summary.externalLinks}\n`;
-    markdown += `- **Report generated**: ${new Date().toLocaleString()}\n\n`;
+    if (brokenLinks.length > 0) {markdown += `## Broken Links\n\n`;markdown += `| Source | Target | Status | Type |\n`;markdown += `|--------|--------|--------|------|\n`;
 
-    if (brokenLinks.length > 0) {
-      markdown += `## Broken Links\n\n`;
-      markdown += `| Source | Target | Status | Type |\n`;
-      markdown += `|--------|--------|--------|------|\n`;
-
-      brokenLinks.forEach(link => {
-        markdown += `| ${link.source || 'unknown'} | ${link.target || 'unknown'} | ${link.status || 'unknown'} | ${link.type || 'unknown'} |\n`;
+      brokenLinks.forEach(link => {markdown += `| ${link.source || 'unknown'} | ${link.target || 'unknown'} | ${link.status || 'unknown'} | ${link.type || 'unknown'} |\n`;
       });
-
-      markdown += `\n## Recommendations\n\n`;
-      recommendations.forEach(rec => {
-        markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;
+markdown += `\n## Recommendations\n\n`;
+      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;
       });
-    } else {
-      markdown += `## ✅ No Broken Links Found!\n\n`;
-      markdown += `All links are working correctly.\n\n`;
-      markdown += `## Recommendations\n\n`;
-      recommendations.forEach(rec => {
-        markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;
+    } else {markdown += `## ✅ No Broken Links Found!\n\n`;markdown += `All links are working correctly.\n\n`;markdown += `## Recommendations\n\n`;
+      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;
       });
     }
 
@@ -362,8 +315,7 @@ class LinkCheckerAutomation {
     // Install dependencies
     const depsResult = await this.installDependencies();
     if (!depsResult) {
-      this.log(
-        'Skipping link check due to dependency installation failure',
+      this.log(Skipping link check due to dependency installation failure',
         'ERROR'
       );
       return;
@@ -372,8 +324,7 @@ class LinkCheckerAutomation {
     // Install linkinator
     const linkinatorResult = await this.installLinkinator();
     if (!linkinatorResult) {
-      this.log(
-        'Skipping link check due to linkinator installation failure',
+      this.log(Skipping link check due to linkinator installation failure',
         'ERROR'
       );
       return;
@@ -397,20 +348,15 @@ class LinkCheckerAutomation {
       internalResult,
       externalResult
     );
-
-    this.log(`Link checker automation completed.`);
-    this.log(`Total links: ${report.summary.totalLinks}`);
-    this.log(`Broken links: ${report.summary.brokenLinks}`);
+this.log(`Link checker automation completed.`);this.log(`Total links: ${report.summary.totalLinks}`);this.log(`Broken links: ${report.summary.brokenLinks}`);
 
     if (report.summary.brokenLinks > 0) {
       this.log('Broken links detected. Check the report for details.', 'WARN');
       this.log('Recommendations:');
-      report.recommendations.forEach(rec => {
-        this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}`);
+      report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}');
       });
     } else {
-      this.log(
-        'No broken links found. All links are working correctly!',
+      this.log(No broken links found. All links are working correctly!',
         'INFO'
       );
     }

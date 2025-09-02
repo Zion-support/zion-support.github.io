@@ -83,8 +83,7 @@ class TestAutomation {
       }
     } catch (error) {
       console.log('❌ Unit tests failed:', error.message);
-      this.testResults.unit.failed++;
-      this.errors.push(`Unit tests failed: ${error.message}`);
+      this.testResults.unit.failed++;this.errors.push(`Unit tests failed: ${error.message}`);
     }
   }
 
@@ -95,8 +94,7 @@ class TestAutomation {
       // Check for integration test files
       const integrationTestFiles = this.findTestFiles('**/*.integration.test.{js,jsx,ts,tsx}');
       
-      if (integrationTestFiles.length > 0) {
-        const output = execSync(`npm test -- ${integrationTestFiles.join(' ')} --watchAll=false`, { 
+      if (integrationTestFiles.length > 0) {const output = execSync(`npm test -- ${integrationTestFiles.join(' ')} --watchAll=false`, { 
           encoding: 'utf8',
           stdio: 'pipe'
         });
@@ -109,8 +107,7 @@ class TestAutomation {
       }
     } catch (error) {
       console.log('❌ Integration tests failed:', error.message);
-      this.testResults.integration.failed++;
-      this.errors.push(`Integration tests failed: ${error.message}`);
+      this.testResults.integration.failed++;this.errors.push(`Integration tests failed: ${error.message}`);
     }
   }
 
@@ -128,8 +125,7 @@ class TestAutomation {
       }
     } catch (error) {
       console.log('❌ E2E tests failed:', error.message);
-      this.testResults.e2e.failed++;
-      this.errors.push(`E2E tests failed: ${error.message}`);
+      this.testResults.e2e.failed++;this.errors.push(`E2E tests failed: ${error.message}`);
     }
   }
 
@@ -154,8 +150,7 @@ class TestAutomation {
       }
     } catch (error) {
       console.log('❌ Performance tests failed:', error.message);
-      this.testResults.performance.failed++;
-      this.errors.push(`Performance tests failed: ${error.message}`);
+      this.testResults.performance.failed++;this.errors.push(`Performance tests failed: ${error.message}`);
     }
   }
 
@@ -174,8 +169,7 @@ class TestAutomation {
         this.warnings.push('No accessibility testing framework found');
       }
     } catch (error) {
-      console.log('❌ Accessibility tests failed:', error.message);
-      this.errors.push(`Accessibility tests failed: ${error.message}`);
+      console.log('❌ Accessibility tests failed:', error.message);this.errors.push(`Accessibility tests failed: ${error.message}`);
     }
   }
 
@@ -196,13 +190,11 @@ class TestAutomation {
         this.warnings.push('Security vulnerabilities detected');
       }
     } catch (error) {
-      console.log('❌ Security tests failed:', error.message);
-      this.errors.push(`Security tests failed: ${error.message}`);
+      console.log('❌ Security tests failed:', error.message);this.errors.push(`Security tests failed: ${error.message}`);
     }
   }
 
-  async createBasicPerformanceTest() {
-    const performanceTest = `import { test, expect } from '@playwright/test';
+  async createBasicPerformanceTest() {const performanceTest = `import { test, expect } from '@playwright/test';
 
 test('Performance test - Page load time', async ({ page }) => {
   const startTime = Date.now();
@@ -240,8 +232,7 @@ test('Performance test - Bundle size', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   
   expect(consoleErrors.length).toBe(0);
-});
-`;
+});;
 
     fs.writeFileSync('tests/performance.test.js', performanceTest);
   }
@@ -288,12 +279,9 @@ test('Performance test - Bundle size', async ({ page }) => {
       results: this.testResults,
       errors: this.errors,
       warnings: this.warnings,
-      recommendations: [
-        'Add more unit tests for critical components',
-        'Implement E2E tests for user journeys',
-        'Set up continuous integration for automated testing',
-        'Add performance monitoring in production',
-        'Implement accessibility testing in CI/CD pipeline'
+      recommendations: [Add more unit tests for critical components',
+        'Implement E2E tests for user journeys',Set up continuous integration for automated testing',
+        'Add performance monitoring in production',Implement accessibility testing in CI/CD pipeline'
       ]
     };
     
@@ -312,17 +300,14 @@ test('Performance test - Bundle size', async ({ page }) => {
     const total = Object.values(this.testResults).reduce((sum, r) => sum + r.total, 0);
     const passed = Object.values(this.testResults).reduce((sum, r) => sum + r.passed, 0);
     const successRate = total > 0 ? (passed / total * 100).toFixed(2) : 0;
-    
     console.log(`\n🎯 Overall Success Rate: ${successRate}%`);
     
     if (this.warnings.length > 0) {
-      console.log('\n⚠️ Warnings:');
-      this.warnings.forEach(warning => console.log(`  - ${warning}`));
+      console.log('\n⚠️ Warnings:');this.warnings.forEach(warning => console.log(`  - ${warning}`));
     }
     
     if (this.errors.length > 0) {
-      console.log('\n❌ Errors:');
-      this.errors.forEach(error => console.log(`  - ${error}`));
+      console.log('\n❌ Errors:');this.errors.forEach(error => console.log(`  - ${error}`));
     }
   }
 }

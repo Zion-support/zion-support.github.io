@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +17,7 @@ class SyntaxFixer {
   }
 
   ensureDirectories() {
-    [this.logDir, this.backupDir].forEach(dir => {
+    ['this.logDir', 'this.backupDir'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -32,7 +32,7 @@ class SyntaxFixer {
   log(level, ...args) {
     const timestamp = new Date().toISOString();
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;
-    console.log(message);
+    console.log(`message);
     
     const logFile = path.join(this.logDir, 'syntax-fixer.log');
     fs.appendFileSync(logFile, message + '\\n');
@@ -41,17 +41,16 @@ class SyntaxFixer {
   createBackup(filePath) {
     try {
       const relativePath = path.relative(this.projectRoot, filePath);
-      const backupPath = path.join(this.backupDir, relativePath);
+      const backupPath = path.join(this.backupDir, 'relativePath);
       const backupDir = path.dirname(backupPath);
       
       if (!fs.existsSync(backupDir)) {
-        fs.mkdirSync(backupDir, { recursive: true });
+        fs.mkdirSync(backupDir', { recursive: true });
       }
       
       fs.copyFileSync(filePath, backupPath);
       return backupPath;
-    } catch (error) {
-      this.log('error', `Failed to create backup for ${filePath}:`, error.message);
+    } catch (error) {this.log('error', Failed to create backup for ${filePath}:, error.message`);
       return null;
     }
   }
@@ -86,16 +85,16 @@ class SyntaxFixer {
     let changes = 0;
     
     // Remove merge conflict markers and take the HEAD version
-    const mergeConflictPattern = /<<<<<<< HEAD\\n([\\s\\S]*?)=======\\n[\\s\\S]*?>>>>>>> [^\\n]+\\n/g;
+    const mergeConflictPattern = /<<<<<<< HEAD\\n([\\s\\S]*?)=======\\n[\\s\\S]*?>>>>>>> [^\\n]+\\''n/g'';
     fixed = fixed.replace(mergeConflictPattern, (match, headContent) => {
       changes++;
       return headContent;
     });
     
     // Remove standalone conflict markers
-    fixed = fixed.replace(/^<<<<<<< HEAD\\n/gm, () => { changes++; return ''; });
-    fixed = fixed.replace(/^=======\\n/gm, () => { changes++; return ''; });
-    fixed = fixed.replace(/^>>>>>>> [^\\n]+\\n/gm, () => { changes++; return ''; });
+    fixed = fixed.replace(/^<<<<<<< HEAD\\''n/gm'', () => { changes++; return ''; });
+    fixed = fixed.replace(/^=======\\''n/gm'', () => { changes++; return ''; });
+    fixed = fixed.replace(/^>>>>>>> [^\\n]+\\''n/gm'', () => { changes++; return ''; });
     
     return { content: fixed, changes };
   }
@@ -131,14 +130,12 @@ class SyntaxFixer {
     
     // Replace CommonJS require with ES6 imports where appropriate
     fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\(['"]([^'"]+)['"]\\);?/g, (match, varName, moduleName) => {
-      changes++;
-      return `import ${varName} from '${moduleName}';`;
+      changes++;return `import ${varName} from '${moduleName}';`;
     });
     
     // Fix module.exports to export default
     fixed = fixed.replace(/module\\.exports\\s*=\\s*(.+);?/g, (match, value) => {
-      changes++;
-      return `export default ${value};`;
+      changes++;return `export default ${value};`;
     });
     
     return { content: fixed, changes };
@@ -149,10 +146,10 @@ class SyntaxFixer {
     let changes = 0;
     
     // Remove lines with parsing errors
-    fixed = fixed.replace(/.*Parsing error:.*\\n/g, () => { changes++; return ''; });
+    fixed = fixed.replace(/.*Parsing error:.*\\''n/g'', () => { changes++; return ''; });
     
     // Remove lines that are clearly corrupted
-    fixed = fixed.replace(/.*Unterminated string literal.*\\n/g, () => { changes++; return ''; });
+    fixed = fixed.replace(/.*Unterminated string literal.*\\''n/g'', () => { changes++; return ''; });
     
     // Remove empty quotes at end of file
     fixed = fixed.replace(/["']\\s*$/, () => { changes++; return ''; });
@@ -180,8 +177,7 @@ class SyntaxFixer {
   }
 
   generateBasicReactComponent(componentName) {
-    const name = componentName.replace(/[^a-zA-Z0-9]/g, '');
-    return `import React from 'react';
+    const name = componentName.replace(/[^a-zA-Z0-9]/g, '');return `import React from 'react';
 
 interface ${name}Props {
   // Add props here
@@ -196,20 +192,18 @@ const ${name}: React.FC<${name}Props> = () => {
   );
 };
 
-export default ${name};
-`;
+export default ${name};;
   }
 
   generateBasicUtility(utilityName) {
     const name = utilityName.replace(/[^a-zA-Z0-9]/g, '');
-    return `// ${name} utility functions
+    return '// ${name} utility functions
 
 export const ${name.toLowerCase()} = {
   // Add utility functions here
 };
 
-export default ${name.toLowerCase()};
-`;
+export default ${name.toLowerCase()};;
   }
 
   async fixFile(filePath) {
@@ -224,8 +218,7 @@ export default ${name.toLowerCase()};
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const backupPath = this.createBackup(filePath);
       
-      if (!backupPath) {
-        this.log('error', `Could not create backup for ${filePath}, skipping fix`);
+      if (!backupPath) {this.log('error', `Could not create backup for ${filePath}, skipping fix`);
         return false;
       }
       
@@ -233,13 +226,7 @@ export default ${name.toLowerCase()};
       let totalChanges = 0;
       
       // Apply various fixes
-      const fixes = [
-        this.fixMergeConflicts(content),
-        this.fixUnterminatedStrings,
-        this.removeCorruptContent,
-        this.fixModuleSystemErrors,
-        this.fixCommonSyntaxErrors
-      ];
+      const fixes = ['this.fixMergeConflicts(content)', 'this.fixUnterminatedStrings', 'this.removeCorruptContent', 'this.fixModuleSystemErrors', 'this.fixCommonSyntaxErrors'];
       
       for (let i = 0; i < fixes.length; i++) {
         let result;
@@ -260,22 +247,19 @@ export default ${name.toLowerCase()};
         const generatedContent = this.generateFixedContent(filePath, originalContent);
         if (generatedContent) {
           content = generatedContent;
-          totalChanges++;
-          this.log('info', `Generated new content for ${filePath}`);
+          totalChanges++;this.log('info', `Generated new content for ${filePath}`);
         }
       }
       
       // Only write if changes were made
       if (totalChanges > 0) {
         fs.writeFileSync(filePath, content);
-        this.fixesApplied += totalChanges;
-        this.log('info', `Fixed ${filePath} (${totalChanges} changes)`);
+        this.fixesApplied += totalChanges;this.log('info', `Fixed ${filePath} (${totalChanges} changes)`);
         return true;
       }
       
       return false;
-    } catch (error) {
-      this.log('error', `Failed to fix file ${filePath}:`, error.message);
+    } catch (error) {this.log('error', `Failed to fix file ${filePath}:`, error.message);
       return false;
     }
   }
@@ -294,8 +278,7 @@ export default ${name.toLowerCase()};
           await this.fixFile(itemPath);
         }
       }
-    } catch (error) {
-      this.log('error', `Error scanning directory ${dirPath}:`, error.message);
+    } catch (error) {this.log('error', `Error scanning directory ${dirPath}:`, error.message);
     }
   }
 
@@ -313,10 +296,7 @@ export default ${name.toLowerCase()};
     
     const endTime = Date.now();
     const duration = Math.round((endTime - startTime) / 1000);
-    
-    this.log('info', `Syntax fixing completed in ${duration}s`);
-    this.log('info', `Files processed: ${this.filesProcessed}`);
-    this.log('info', `Fixes applied: ${this.fixesApplied}`);
+    this.log('info', `Syntax fixing completed in ${duration}s`);this.log('info', `Files processed: ${this.filesProcessed}`);this.log('info', `Fixes applied: ${this.fixesApplied}`);
     
     // Generate report
     const report = {

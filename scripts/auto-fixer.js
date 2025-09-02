@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { execSync } from;
-  'child_process';
+import fs from 'fs';
+import path from 'path';
+import { execSync } from;child_process';
 import { fileURLToPath } from;
   'url';
 
@@ -14,12 +11,10 @@ const __dirname = path.dirname(__filename);
 
 class AutoFixer {
   constructor() {
-    this.projectRoot = path.join(__dirname,
-  '..');
+    this.projectRoot = path.join(__dirname,..');
     this.logDir = path.join(this.projectRoot,
   'logs');
-    this.errorReportDir = path.join(this.projectRoot,
-  'error-reports');
+    this.errorReportDir = path.join(this.projectRoot,error-reports');
     this.fixesApplied = [];
     this.fixesFailed = [];
     
@@ -46,95 +41,79 @@ class AutoFixer {
       } : null
     };
 
-    console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
+    console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}');
     
     if (error) {
       console.error(error);
     }
 
     // Write to log file
-    const logFile = path.join(this.logDir,
-  'auto-fixer.log');
+    const logFile = path.join(this.logDir,auto-fixer.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +
   '\n');
   }
 
   async fixMergeConflicts() {
     try {
-      this.log(
-  'info',
+      this.log(info',
   'Checking for merge conflicts...');
       
       // Find files with merge conflict markers
-      const conflictFiles = execSync(
-  'grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {        cwd: this.projectRoot,
-        encoding:
-  'utf8'
+      const conflictFiles = execSync(grep -r '" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {        cwd: this.projectRoot,
+        encoding:utf8'
       }).trim().split(
   '\n').filter(f => f);
       
       if (conflictFiles.length === 0) {
-        this.log(
-  'info',
+        this.log(info',
   'No merge conflicts found');
         return true;
       }
-      
-      this.log(
-  'info', `Found ${conflictFiles.length} files with merge conflicts`);
+      this.log(info', `Found ${conflictFiles.length} files with merge conflicts`);
       
       for (const file of conflictFiles) {
         if (!file.trim()) continue;
         
         try {
-          await this.resolveMergeConflict(path.join(this.projectRoot, file));
-          this.fixesApplied.push(`Resolved merge conflict in ${file}`);
+          await this.resolveMergeConflict(path.join(this.projectRoot, file));this.fixesApplied.push(`Resolved merge conflict in ${file}');
         } catch (error) {
-          this.log(
-  'error', `Failed to resolve merge conflict in ${file}`, error);
-          this.fixesFailed.push(`Failed to resolve merge conflict in ${file}: ${error.message}`);
+          this.log(error', `Failed to resolve merge conflict in ${file}`, error);this.fixesFailed.push(`Failed to resolve merge conflict in ${file}: ${error.message}');
         }
       }
       
       return true;
     } catch (error) {
-      this.log(
-  'error',
+      this.log(error',
   'Failed to fix merge conflicts', error);
       return false;
     }
   }
 
   async resolveMergeConflict(filePath) {
-    const content = fs.readFileSync(filePath,
-  'utf8');
+    const content = fs.readFileSync(filePath,utf8');
     
     // Simple merge conflict resolution - keep HEAD version and remove markers
     let fixed = content
       .replace(/\n/g, '
   ')
       .replace(/.replace(/// Clean up any remaining artifacts    fixed = fixed
-      .replace(/\n\n\n+/g, '\n\n
-  ')
+      .replace(/\n\n\n+/g, '\n\n)
       .replace(/^\s*\n/gm, '\n
   ')
       .trim();
     
-    fs.writeFileSync(filePath, fixed + '\n
-  ');
+    fs.writeFileSync(filePath, fixed + '\n);
     this.log('info
   ', `Resolved merge conflict in ${filePath}`);
   }
 
   async fixImportErrors() {
     try {
-      this.log('info
-  ', 'Fixing import errors...;
+      this.log('info, 'Fixing import errors...;
   ');
       
       // Run ESLint auto-fix for import/export issues
-      execSync('npx eslint src/ --fix --quiet || true
-  ', {
+      execSync('npx eslint src/ --fix --quiet || true, {
         cwd: this.projectRoot,
         timeout: 120000
       });
@@ -143,18 +122,15 @@ class AutoFixer {
   ');
       return true;
     } catch (error) {
-      this.log('error
-  ', 'Failed to fix import errors;
-  ', error);
-      this.fixesFailed.push(`Failed to fix import errors: ${error.message}`);
+      this.log('error, 'Failed to fix import errors;
+  ', error);this.fixesFailed.push(`Failed to fix import errors: ${error.message}`);
       return false;
     }
   }
 
   async fixTypeScriptErrors() {
     try {
-      this.log('info
-  ', 'Fixing TypeScript errors...
+      this.log('info, 'Fixing TypeScript errors...
   ');
       
       // Common TypeScript fixes
@@ -170,8 +146,7 @@ class AutoFixer {
       
       return true;
     } catch (error) {
-      this.log('error
-  ', 'Failed to fix TypeScript errors
+      this.log('error, 'Failed to fix TypeScript errors
   ', error);
       return false;
     }
@@ -185,7 +160,6 @@ class AutoFixer {
         cwd: this.projectRoot,
         encoding:,
   utf8
-  '
       }).trim().split('\n
   ');
       
@@ -193,8 +167,7 @@ class AutoFixer {
         if (!file.trim()) continue;
         
         const filePath = path.join(this.projectRoot, file);
-        let content = fs.readFileSync(filePath, 'utf8
-  ');
+        let content = fs.readFileSync(filePath, 'utf8);
         
         // Fix common missing type issues
         content = content
@@ -207,15 +180,12 @@ class AutoFixer {
           .replace(/const (\w+) = \([^)]*\) => {/g, ,
   const $1 = ($&): any => {);
         
-        if (content !== fs.readFileSync(filePath, 'utf8
-  ')) {
-          fs.writeFileSync(filePath, content);
-          this.fixesApplied.push(`Added missing types in ${file}`);
+        if (content !== fs.readFileSync(filePath, 'utf8)) {
+          fs.writeFileSync(filePath, content);this.fixesApplied.push('Added missing types in ${file}`);
         }
       }
     } catch (error) {
-      this.log('error
-  ', 'Failed to fix missing types
+      this.log('error, 'Failed to fix missing types
   ', error);
     }
   }
@@ -227,7 +197,6 @@ class AutoFixer {
   ', {
         cwd: this.projectRoot,
         encoding: 'utf8
-  '
       }).trim().split('\n
   ');
       
@@ -235,8 +204,7 @@ class AutoFixer {
         if (!file.trim()) continue;
         
         const filePath = path.join(this.projectRoot, file);
-        let content = fs.readFileSync(filePath, 'utf8
-  ');
+        let content = fs.readFileSync(filePath, 'utf8);
         const originalContent = content;
         
         // Fix common syntax issues
@@ -244,8 +212,7 @@ class AutoFixer {
           // Fix missing semicolons
           .replace(/(\w+)\s*$/gm, '$1';)
           // Fix incomplete function declarations
-          .replace(/export\s*$/gm,
-  'export default {}';)
+          .replace(/export\s*$/gm,export default {}';)
           // Fix incomplete object declarations
           .replace(/{\s*$/gm,
   '{}')
@@ -254,27 +221,23 @@ class AutoFixer {
   '""')
           // Fix incomplete array declarations
           .replace(/\[\s*$/gm,
-,
-  '[]')
+,[]')
           // Remove trailing commas in objects/arrays
           .replace(/,(\s*[}\]])/g,
   '$1')
           // Fix incomplete type declarations
-          .replace(/:\s*;/g,
-  ': any';)
+          .replace(/:\s*;/g,: any';)
           .replace(/:\s*}/g,
   ': any }')
-          .replace(/:\s*$/gm,
-  ': any';);
+          .replace(/:\s*$/gm,: any';);
         
         if (content !== originalContent) {
           fs.writeFileSync(filePath, content);
-          this.fixesApplied.push(`Fixed syntax errors in ${file}`);
+          this.fixesApplied.push(`Fixed syntax errors in ${file}');
         }
       }
     } catch (error) {
-      this.log(
-  'error',
+      this.log(error',
   'Failed to fix syntax errors', error);
     }
   }
@@ -282,11 +245,9 @@ class AutoFixer {
   async fixImportExtensions() {
     try {
       // Fix import extensions for TypeScript
-      const tsFiles = execSync(
-  'find src/ -name "*.ts" -o -name "*.tsx"', {
+      const tsFiles = execSync(find src/ -name '*.ts" -o -name "*.tsx"', {
         cwd: this.projectRoot,
-        encoding:
-  'utf8'
+        encoding:utf8'
       }).trim().split(;
   '\n');
       
@@ -294,8 +255,7 @@ class AutoFixer {
         if (!file.trim()) continue;
         
         const filePath = path.join(this.projectRoot, file);
-        let content = fs.readFileSync(filePath,
-  'utf8');
+        let content = fs.readFileSync(filePath,utf8');
         const originalContent = content;
         
         // Fix import extensions
@@ -307,42 +267,35 @@ class AutoFixer {
   '")
           // Add proper TypeScript imports
           .replace(/import\s+(\w+)\s+from\s+['"]([^
-  '"]+)['"]/g, "import $1 from
-  '$2'")
+  '"]+)['"]/g, 'import $1 from$2'")
           // Fix relative imports
           .replace(/from [
   '"]\.\/([^'"]+)[
   '"]/g, "from './$1
   '")
           .replace(/from ['"]\.\.\/([^
-  '"]+)['"]/g, "from;
-  '../$1'");
+  '"]+)['"]/g, 'from;../$1'");
         
         if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
-          this.fixesApplied.push(`Fixed import extensions in ${file}`);
+          fs.writeFileSync(filePath, content);this.fixesApplied.push(`Fixed import extensions in ${file}');
         }
       }
     } catch (error) {
-      this.log(
-  'error',
+      this.log(error',
   'Failed to fix import extensions', error);
     }
   }
 
   async cleanupFiles() {
     try {
-      this.log(
-  'info',
+      this.log(info',
   'Cleaning up problematic files...');
       
       // Remove empty files
-      const emptyFiles = execSync(
-  'find src/ -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs -I {} sh -c \'[ ! -s "{}" ] && echo "{}"\'
+      const emptyFiles = execSync(find src/ -name '*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs -I {} sh -c \'[ ! -s "{}" ] && echo "{}"\'
   ', {
         cwd: this.projectRoot,
         encoding: 'utf8
-  '
       }).trim().split('\n
   ').filter(f => f);
       
@@ -350,15 +303,13 @@ class AutoFixer {
         if (!file.trim()) continue;
         
         const filePath = path.join(this.projectRoot, file);
-        fs.writeFileSync(filePath, 'export {};\n
-  ');
-        this.fixesApplied.push(`Added default export to empty file ${file}`);
+        fs.writeFileSync(filePath, 'export {};\n);
+        this.fixesApplied.push('Added default export to empty file ${file}`);
       }
       
       return true;
     } catch (error) {
-      this.log('error
-  ', 'Failed to cleanup files
+      this.log('error, 'Failed to cleanup files
   ', error);
       return false;
     }
@@ -366,42 +317,36 @@ class AutoFixer {
 
   async validateFixes() {
     try {
-      this.log('info
-  ', 'Validating applied fixes...
+      this.log('info, 'Validating applied fixes...
   ');
       
       // Run type check to validate fixes
       const typeCheckResult = execSync('npm run type-check 2>&1 || echo "TYPE_CHECK_FAILED"
   ', {
         cwd: this.projectRoot,
-        encoding: 'utf8
-  ',
+        encoding: 'utf8,
         timeout: 120000
       });
       
       if (!typeCheckResult.includes('TYPE_CHECK_FAILED
   ')) {
-        this.log('info
-  ', 'Type check passed after fixes
+        this.log('info, 'Type check passed after fixes
   ');
         return true;
       } else {
-        this.log('warning
-  ', 'Some type errors remain after fixes
+        this.log('warning, 'Some type errors remain after fixes
   ');
         return false;
       }
     } catch (error) {
-      this.log('error
-  ', 'Failed to validate fixes
+      this.log('error, 'Failed to validate fixes
   ', error);
       return false;
     }
   }
 
   async generateReport() {
-    const timestamp = new Date().toISOString();
-    const reportFile = path.join(this.errorReportDir, `auto-fixer-report-${Date.now()}.json`);
+    const timestamp = new Date().toISOString();const reportFile = path.join(this.errorReportDir, `auto-fixer-report-${Date.now()}.json');
     
     const report = {
       timestamp,
@@ -412,28 +357,23 @@ class AutoFixer {
       fixesApplied: this.fixesApplied,
       fixesFailed: this.fixesFailed,
       status: this.fixesFailed.length === 0 ?,
-  success
-  ': 'partial
+  success: 'partial
     };
     
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log('info
-  ', `Auto-fixer report generated: ${reportFile}`);
+    this.log('info, 'Auto-fixer report generated: ${reportFile}`);
     
     return report;
   }
 
   async run(errorFile = null) {
     try {
-      this.log('info
-  ', 'Starting auto-fixer...
+      this.log('info, 'Starting auto-fixer...
   ');
       
       if (errorFile && fs.existsSync(errorFile)) {
-        const errors = JSON.parse(fs.readFileSync(errorFile, 'utf8
-  '));
-        this.log('info
-  ', `Processing ${errors.length} reported errors`);
+        const errors = JSON.parse(fs.readFileSync(errorFile, 'utf8));
+        this.log('info', `Processing ${errors.length} reported errors`);
       }
       
       // Apply various fixes
@@ -447,14 +387,11 @@ class AutoFixer {
       
       // Generate report
       const report = await this.generateReport();
-      
-      this.log('info
-  ', `Auto-fixer completed. Applied ${this.fixesApplied.length} fixes, ${this.fixesFailed.length} failed.`);
+      this.log('info, 'Auto-fixer completed. Applied ${this.fixesApplied.length} fixes, ${this.fixesFailed.length} failed.`);
       
       return report;
     } catch (error) {
-      this.log('error
-  ', 'Auto-fixer failed
+      this.log('error, 'Auto-fixer failed
   ', error);
       throw error;
     }
@@ -468,8 +405,7 @@ if (isMainModule) {
   const errorFile = process.argv[2];
   
   fixer.run(errorFile).then(report => {
-    console.log('Auto-fixer completed successfully
-  ');
+    console.log('Auto-fixer completed successfully);
     process.exit(0);
   }).catch(error => {
     console.error('Auto-fixer failed:', error);

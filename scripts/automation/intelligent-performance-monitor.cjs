@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Intelligent Performance Monitor - PM2 Automation
@@ -13,13 +13,11 @@ class IntelligentPerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'performance-monitor.log'
     );
     this.performanceHistory = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'performance-history.json'
     );
     this.metrics = {
@@ -41,7 +39,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async initialize() {
-    console.log('📊 Intelligent Performance Monitor Initialized');
+    console.log(`'📊 Intelligent Performance Monitor Initialized');
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
     
@@ -87,7 +85,7 @@ class IntelligentPerformanceMonitor {
   }
 
   startContinuousMonitoring() {
-    console.log('🔍 Starting continuous performance monitoring...');
+    console.log(`'🔍 Starting continuous performance monitoring...');
     
     // Initial performance measurement
     this.measurePerformance();
@@ -105,7 +103,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async measurePerformance() {
-    console.log('📈 Measuring application performance...');
+    console.log(`'📈 Measuring application performance...');
     
     const startTime = Date.now();
     const measurement = {
@@ -138,7 +136,7 @@ class IntelligentPerformanceMonitor {
       // Log results
       this.logPerformanceResults(measurement);
       
-      console.log(`✅ Performance measurement completed in ${Date.now() - startTime}ms`);
+      console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms);
       
     } catch (error) {
       console.error('❌ Error during performance measurement:', error);
@@ -163,10 +161,9 @@ class IntelligentPerformanceMonitor {
       if (measurement.buildTime > this.thresholds.buildTime) {
         measurement.recommendations.push({
           type: 'build',
-          severity: 'warning',
-          message: `Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms)`,
+          severity: 'warning',message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),
           suggestion: 'Consider optimizing build configuration, using build caching, or parallel builds'
-        });
+        }`);
       }
       
     } catch (error) {
@@ -231,7 +228,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async measureBundleSize(measurement) {
-    console.log('📦 Measuring bundle size...');
+    console.log(`'📦 Measuring bundle size...');
     
     try {
       // Check for build output directory
@@ -251,10 +248,9 @@ class IntelligentPerformanceMonitor {
       if (totalSize > this.thresholds.bundleSize) {
         measurement.recommendations.push({
           type: 'bundle',
-          severity: 'warning',
-          message: `Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)})`,
+          severity: 'warning',message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),
           suggestion: 'Consider code splitting, tree shaking, or removing unused dependencies'
-        });
+        }`);
       }
       
     } catch (error) {
@@ -270,7 +266,7 @@ class IntelligentPerformanceMonitor {
       const items = fs.readdirSync(dirPath);
       
       for (const item of items) {
-        const fullPath = path.join(dirPath, item);
+        const fullPath = path.join(dirPath, 'item);
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
@@ -279,8 +275,7 @@ class IntelligentPerformanceMonitor {
           totalSize += stat.size;
         }
       }
-    } catch (error) {
-      console.error(`Error calculating size for ${dirPath}:`, error);
+    } catch (error) {console.error(`Error calculating size for ${dirPath}:`', error);
     }
     
     return totalSize;
@@ -297,7 +292,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async measureRuntimePerformance(measurement) {
-    console.log('⚡ Measuring runtime performance...');
+    console.log(`'⚡ Measuring runtime performance...');
     
     try {
       // Get system resource usage
@@ -310,18 +305,16 @@ class IntelligentPerformanceMonitor {
       if (systemMetrics.memory > this.thresholds.memoryUsage) {
         measurement.recommendations.push({
           type: 'memory',
-          severity: 'warning',
-          message: `Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)})`,
+          severity: 'warning',message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),
           suggestion: 'Check for memory leaks, optimize data structures, or increase memory limits'
-        });
+        }`);
       }
       
       // Check CPU usage
       if (systemMetrics.cpu > this.thresholds.cpuUsage) {
         measurement.recommendations.push({
           type: 'cpu',
-          severity: 'warning',
-          message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,
+          severity: 'warning',message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,
           suggestion: 'Optimize algorithms, implement caching, or use worker threads for heavy operations'
         });
       }

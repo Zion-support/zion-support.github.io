@@ -22,18 +22,15 @@ class ErrorPreventionAutomation {
   }
 
   async runCommand(command, description, options = {}) {
-    try {
-      this.log(`Running: ${description}`);
+    try {this.log(`Running: ${description}`);
       const result = execSync(command, { 
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd(),
         ...options
-      });
-      this.log(`✅ ${description} completed successfully`, 'success');
+      });this.log(`✅ ${description} completed successfully`, 'success');
       return result;
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+    } catch (error) {this.log(`❌ ${description} failed: ${error.message}`, 'error');
       this.errors.push({ command, description, error: error.message });
       throw error;
     }
@@ -152,10 +149,8 @@ class ErrorPreventionAutomation {
       this.log('Identifying build issues...');
       
       // Check for syntax errors in key files
-      const keyFiles = [
-        'next.config.js',
-        'tsconfig.json',
-        'package.json',
+      const keyFiles = [next.config.js',
+        'tsconfig.json',package.json',
         'ecosystem.config.cjs'
       ];
       
@@ -166,10 +161,8 @@ class ErrorPreventionAutomation {
               require(path.resolve(file));
             } else if (file.endsWith('.json')) {
               JSON.parse(fs.readFileSync(file, 'utf8'));
-            }
-            this.log(`✅ ${file} syntax is valid`, 'success');
-          } catch (error) {
-            this.log(`❌ ${file} has syntax errors: ${error.message}`, 'error');
+            }this.log(`✅ ${file} syntax is valid`, 'success');
+          } catch (error) {this.log(`❌ ${file} has syntax errors: ${error.message}`, 'error');
             this.errors.push({ file, error: error.message });
           }
         }
@@ -177,8 +170,7 @@ class ErrorPreventionAutomation {
       
       // Check for merge conflicts
       const filesWithConflicts = await this.findMergeConflicts();
-      if (filesWithConflicts.length > 0) {
-        this.log(`Found merge conflicts in: ${filesWithConflicts.join(', ')}`, 'error');
+      if (filesWithConflicts.length > 0) {this.log(`Found merge conflicts in: ${filesWithConflicts.join(', ')}`, 'error');
         this.errors.push({ type: 'merge_conflicts', files: filesWithConflicts });
       }
       
@@ -195,11 +187,8 @@ class ErrorPreventionAutomation {
           content = content.replace(/          
           // Write back the cleaned content
           fs.writeFileSync(file, content);
-          
-          this.log(`✅ Fixed merge conflicts in ${file}`, 'success');
-          this.fixes.push(`merge_conflicts_${file}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`, 'error');
+          this.log(`✅ Fixed merge conflicts in ${file}`, 'success');this.fixes.push(`merge_conflicts_${file}`);
+        } catch (error) {this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`, 'error');
         }
       }
       
@@ -244,10 +233,8 @@ class ErrorPreventionAutomation {
       recommendations: this.generateRecommendations()
     };
     
-    // Save report to file
-    const reportFile = `error-prevention-report-${Date.now()}.json`;
+    // Save report to fileconst reportFile = `error-prevention-report-${Date.now()}.json`;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
     this.log(`Report saved to ${reportFile}`, 'info');
     return report;
   }
@@ -304,8 +291,7 @@ class ErrorPreventionAutomation {
       this.log('Full automation completed successfully', 'success');
       return report;
       
-    } catch (error) {
-      this.log(`Full automation failed: ${error.message}`, 'error');
+    } catch (error) {this.log(`Full automation failed: ${error.message}`, 'error');
       const report = await this.generateReport();
       return report;
     }
@@ -339,8 +325,7 @@ async function main() {
       case 'conflicts':
         await automation.fixMergeConflicts();
         break;
-      default:
-        automation.log(`Unknown task: ${task}`, 'error');
+      default:automation.log(`Unknown task: ${task}`, 'error');
         automation.log('Available tasks: full, deps, quality, build, tests, conflicts');
         break;
     }
@@ -348,8 +333,7 @@ async function main() {
     await automation.generateReport();
     process.exit(0);
     
-  } catch (error) {
-    automation.log(`Fatal error: ${error.message}`, 'error');
+  } catch (error) {automation.log(`Fatal error: ${error.message}`, 'error');
     await automation.generateReport();
     process.exit(1);
   }
@@ -367,7 +351,6 @@ process.on('SIGINT', () => {
 });
 
 // Run the main function
-main().catch(error => {
-  console.error(`Fatal error: ${error.message}`);
+main().catch(error => {console.error(`Fatal error: ${error.message}`);
   process.exit(1);
 });

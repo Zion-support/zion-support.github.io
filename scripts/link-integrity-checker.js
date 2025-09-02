@@ -7,10 +7,8 @@
 
 import fs from,;
   fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import path from 'path';
+import { fileURLToPath } from;url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,8 +18,7 @@ console.log(
 
 class LinkIntegrityChecker {
   constructor() {
-    this.projectRoot = path.resolve(__dirname,..
-  ');
+    this.projectRoot = path.resolve(__dirname,..);
     this.issues = [];
     this.checkedFiles = 0;
   }
@@ -46,8 +43,7 @@ class LinkIntegrityChecker {
       // Generate integrity report
       await this.generateReport();
       
-      console.log('✅ Link integrity check completed
-  ');
+      console.log('✅ Link integrity check completed);
       
     } catch (error) {
       console.error('❌ Error during integrity check: , error.message);
@@ -56,8 +52,7 @@ class LinkIntegrityChecker {
 
   async checkHtmlIntegrity() {
     try {
-      console.log('📄 Checking HTML integrity...
-  ');
+      console.log('📄 Checking HTML integrity...);
       
       const htmlFiles = this.findFiles('.html
   ');
@@ -84,8 +79,7 @@ class LinkIntegrityChecker {
   ']+)["']/g;
         while ((match = scriptRegex.exec(content)) !== null) {
           const src = match[1];
-          if (!this.isValidAsset(src, file)) {
-            this.issues.push(`Broken script reference in ${file}: ${src}`);
+          if (!this.isValidAsset(src, file)) {this.issues.push(`Broken script reference in ${file}: ${src}`);
           }
         }
         
@@ -95,8 +89,7 @@ class LinkIntegrityChecker {
   ']/g;
         while ((match = linkRegex.exec(content)) !== null) {
           const href = match[1];
-          if (!this.isValidAsset(href, file)) {
-            this.issues.push(`Broken stylesheet reference in ${file}: ${href}`);
+          if (!this.isValidAsset(href, file)) {this.issues.push(`Broken stylesheet reference in ${file}: ${href}`);
           }
         }
       }
@@ -109,8 +102,7 @@ class LinkIntegrityChecker {
 
   async checkCssIntegrity() {
     try {
-      console.log('🎨 Checking CSS integrity...
-  ');
+      console.log('🎨 Checking CSS integrity...);
       
       const cssFiles = this.findFiles('.css
   ');
@@ -127,8 +119,7 @@ class LinkIntegrityChecker {
         
         while ((match = urlRegex.exec(content)) !== null) {
           const url = match[1];
-          if (!this.isValidAsset(url, file)) {
-            this.issues.push(`Broken asset reference in CSS ${file}: ${url}`);
+          if (!this.isValidAsset(url, file)) {this.issues.push(`Broken asset reference in CSS ${file}: ${url}`);
           }
         }
       }
@@ -141,13 +132,11 @@ class LinkIntegrityChecker {
 
   async checkJsIntegrity() {
     try {
-      console.log('⚡ Checking JavaScript integrity...
-  ');
+      console.log('⚡ Checking JavaScript integrity...);
       
       const jsFiles = this.findFiles('.js
   ');
-      const tsFiles = this.findFiles('.ts
-  ');
+      const tsFiles = this.findFiles('.ts);
       const allFiles = [...jsFiles, ...tsFiles];
       
       for (const file of allFiles) {
@@ -162,8 +151,7 @@ class LinkIntegrityChecker {
         
         while ((match = importRegex.exec(content)) !== null) {
           const importPath = match[1];
-          if (!this.isValidImport(importPath, file)) {
-            this.issues.push(`Broken import in ${file}: ${importPath}`);
+          if (!this.isValidImport(importPath, file)) {this.issues.push(`Broken import in ${file}: ${importPath}`);
           }
         }
         
@@ -172,15 +160,13 @@ class LinkIntegrityChecker {
   '"]+)['"]\s*\)/g;
         while ((match = requireRegex.exec(content)) !== null) {
           const requirePath = match[1];
-          if (!this.isValidImport(requirePath, file)) {
-            this.issues.push(`Broken require in ${file}: ${requirePath}`);
+          if (!this.isValidImport(requirePath, file)) {this.issues.push(`Broken require in ${file}: ${requirePath}');
           }
         }
       }
       
     } catch (error) {
-      console.warn(
-  '⚠️  Could not check JavaScript integrity:', error.message);
+      console.warn(⚠️  Could not check JavaScript integrity:', error.message);
     }
   }
 
@@ -189,8 +175,7 @@ class LinkIntegrityChecker {
       console.log(
   '🔨 Checking build artifacts...');
       
-      const distPath = path.join(this.projectRoot,dist
-  ');
+      const distPath = path.join(this.projectRoot,dist);
       if (!fs.existsSync(distPath)) {
         this.issues.push('Build directory (dist) does not exist
   ');
@@ -198,22 +183,19 @@ class LinkIntegrityChecker {
       }
       
       // Check for essential build files
-      const essentialFiles = [
-        'index.html
-  ',css',js
-  ',assets'
+      const essentialFiles = [index.html
+  ',css',js,assets'
       ];
       
       for (const file of essentialFiles) {
         const filePath = path.join(distPath, file);
         if (!fs.existsSync(filePath)) {
-          this.issues.push(`Missing essential build file: ${file}`);
+          this.issues.push(`Missing essential build file: ${file}');
         }
       }
       
       // Check for broken internal links in build
-      const indexHtmlPath = path.join(distPath,index.html
-  ');
+      const indexHtmlPath = path.join(distPath,index.html);
       if (fs.existsSync(indexHtmlPath)) {
         const content = fs.readFileSync(indexHtmlPath,utf8');
         
@@ -225,12 +207,10 @@ class LinkIntegrityChecker {
         
         while ((match = assetRegex.exec(content)) !== null) {
           const assetPath = match[2];
-          if (assetPath.startsWith('./
-  ') || assetPath.startsWith('/
+          if (assetPath.startsWith('./) || assetPath.startsWith('/
   ')) {
             const fullPath = path.join(distPath, assetPath.replace(/^\.?\//,));
-            if (!fs.existsSync(fullPath)) {
-              this.issues.push(`Broken asset reference in build: ${assetPath}`);
+            if (!fs.existsSync(fullPath)) {this.issues.push(`Broken asset reference in build: ${assetPath}');
             }
           }
         }
@@ -245,8 +225,7 @@ class LinkIntegrityChecker {
   isValidAsset(assetPath, sourceFile) {
     // Skip external URLs
     if (assetPath.startsWith(,
-  http: //
-  ') || assetPath.startsWith('https://)) {
+  http: //) || assetPath.startsWith('https://)) {
       return true;
     }
     
@@ -257,8 +236,7 @@ class LinkIntegrityChecker {
     }
     
     // Handle relative paths
-    if (assetPath.startsWith('./
-  ') || assetPath.startsWith('../
+    if (assetPath.startsWith('./) || assetPath.startsWith('../
   ')) {
       const sourceDir = path.dirname(sourceFile);
       const fullPath = path.resolve(sourceDir, assetPath);
@@ -266,8 +244,7 @@ class LinkIntegrityChecker {
     }
     
     // Handle absolute paths from project root
-    if (assetPath.startsWith('/
-  ')) {
+    if (assetPath.startsWith('/)) {
       const fullPath = path.join(this.projectRoot, assetPath.substring(1));
       return fs.existsSync(fullPath);
     }
@@ -280,38 +257,32 @@ class LinkIntegrityChecker {
   isValidImport(importPath, sourceFile) {
     // Skip external packages
     if (!importPath.startsWith('.
-  ') && !importPath.startsWith('/
-  ')) {
+  ') && !importPath.startsWith('/)) {
       return true;
     }
     
     // Handle relative imports
     if (importPath.startsWith('./
-  ') || importPath.startsWith('../
-  ')) {
+  ') || importPath.startsWith('../)) {
       const sourceDir = path.dirname(sourceFile);
       const fullPath = path.resolve(sourceDir, importPath);
       
       // Check for .js, .ts, .tsx, .jsx extensions
       const extensions = ['.js
-  ',.ts',.tsx
-  ',.jsx',];
+  ',.ts',.tsx,.jsx',];
       return extensions.some(ext => {
-        const testPath = ext ? `${fullPath}${ext}` : fullPath;
+        const testPath = ext ? `${fullPath}${ext}' : fullPath;
         return fs.existsSync(testPath);
       });
     }
     
     // Handle absolute imports from project root
-    if (importPath.startsWith(
-  '/')) {
+    if (importPath.startsWith(/')) {
       const fullPath = path.join(this.projectRoot, importPath.substring(1));
       const extensions = [
-  '.js',.ts
-  ',.tsx',.jsx
+  '.js',.ts,.tsx',.jsx
   ',];
-      return extensions.some(ext => {
-        const testPath = ext ? `${fullPath}${ext}` : fullPath;
+      return extensions.some(ext => {const testPath = ext ? `${fullPath}${ext}` : fullPath;
         return fs.existsSync(testPath);
       });
     }
@@ -330,8 +301,7 @@ class LinkIntegrityChecker {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
           
-          if (stat.isDirectory() && !item.startsWith('.
-  ') && item !== 'node_modules
+          if (stat.isDirectory() && !item.startsWith('.) && item !== 'node_modules
   ') {
             scanDirectory(fullPath);
           } else if (stat.isFile() && item.endsWith(extension)) {
@@ -359,34 +329,27 @@ class LinkIntegrityChecker {
     };
     
     // Save report to file
-    const reportPath = path.join(this.projectRoot,logs
-  ',link-integrity-report.json');
+    const reportPath = path.join(this.projectRoot,logs,link-integrity-report.json');
     try {
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      console.log(`📊 Report saved to: ${reportPath}`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(`📊 Report saved to: ${reportPath}');
     } catch (error) {
-      console.warn(
-  '⚠️  Could not save report:,
+      console.warn(⚠️  Could not save report:,
   , error.message);
     }
     
     // Display summary
     console.log(
   '\n📋 Integrity Check Summary: ');
-    console.log(
-  '─.repeat(50));
-    console.log(`📁 Files checked: ${this.checkedFiles}`);
-    console.log(`⚠️  Issues found: ${this.issues.length}`);
+    console.log(─.repeat(50));
+    console.log('📁 Files checked: ${this.checkedFiles}`);console.log(`⚠️  Issues found: ${this.issues.length}');
     
     if (this.issues.length > 0) {
-      console.log(
-  '\n🔍 Issues:');
+      console.log(\n🔍 Issues:');
       this.issues.forEach((issue, index) => {
-        console.log(`   ${index + 1}. ${issue}`);
+        console.log(`   ${index + 1}. ${issue}');
       });
     } else {
-      console.log(
-  '\n🎉 All links and assets are valid!');
+      console.log(\n🎉 All links and assets are valid!');
     }
     
     console.log(
@@ -397,17 +360,14 @@ class LinkIntegrityChecker {
     const recommendations = [];
     
     if (this.issues.length > 0) {
-      recommendations.push(
-  'Fix broken asset references and imports');
+      recommendations.push(Fix broken asset references and imports');
       recommendations.push(
   'Verify all file paths are correct');
-      recommendations.push(
-  'Check for typos in import statements');
+      recommendations.push(Check for typos in import statements');
       recommendations.push(
   'Ensure build process generates all required assets');
     } else {
-      recommendations.push(
-  'Continue monitoring for new issues');
+      recommendations.push(Continue monitoring for new issues');
       recommendations.push(
   'Consider adding automated integrity checks to CI/CD');
     }
@@ -419,8 +379,7 @@ class LinkIntegrityChecker {
 // Run the link integrity checker
 const checker = new LinkIntegrityChecker();
 checker.checkIntegrity().then(() => {
-  console.log(
-  '🔗 Link Integrity Checker Completed');
+  console.log(🔗 Link Integrity Checker Completed');
   process.exit(0);
 }).catch((error) => {
   console.error(

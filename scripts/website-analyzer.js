@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from;url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,17 +12,14 @@ function analyzeWebsite() {
   console.log(
   '🔍 Analyzing Zion Tech Group Website...\n');
 
-  const srcDir = path.join(__dirname,
-  '..',
+  const srcDir = path.join(__dirname,..',
   'src');
-  const pagesDir = path.join(srcDir,
-  'pages');
+  const pagesDir = path.join(srcDir,pages');
   const componentsDir = path.join(srcDir,
   'components');
   
   // Read App.tsx to extract all routes
-  const appTsxPath = path.join(srcDir,
-  'App.tsx');
+  const appTsxPath = path.join(srcDir,App.tsx');
   const appContent = fs.readFileSync(appTsxPath,
   'utf8');
     // Extract route paths from App.tsx
@@ -37,8 +31,7 @@ function analyzeWebsite() {
     routes.push(match[1]);
   }
 
-  console.log(`📊 Found ${routes.length} routes in App.tsx:`);
-  routes.forEach(route => console.log(`  - ${route}`));
+  console.log(`📊 Found ${routes.length} routes in App.tsx:`);routes.forEach(route => console.log(`  - ${route}`));
 
   // Check which pages exist
   const existingPages = [];
@@ -53,8 +46,7 @@ function analyzeWebsite() {
 
       if (stat.isDirectory()) {
         scanDirectory(fullPath, path.join(basePath, item));
-      } else if (item.endsWith('.tsx
-  ') || item.endsWith('.jsx
+      } else if (item.endsWith('.tsx) || item.endsWith('.jsx
   ')) {
         const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));
         existingPages.push(pagePath);
@@ -63,18 +55,14 @@ function analyzeWebsite() {
   }
 
   scanDirectory(pagesDir);
-
-  console.log(`\n📁 Found ${existingPages.length} existing page files:`);
-  existingPages.forEach(page => console.log(`  - ${page}`));
+console.log(`\n📁 Found ${existingPages.length} existing page files:`);existingPages.forEach(page => console.log(`  - ${page}'));
 
   // Check for missing pages
   routes.forEach(route => {
-    if (route ===
-  '*') return; // Skip 404 route
+    if (route ===*') return; // Skip 404 route
     
     const routePath = route.replace(/^\//, '
-  ').replace(/\//g, '-
-  ');
+  ').replace(/\//g, '-);
     const hasPage = existingPages.some(page => 
       page.includes(routePath) || 
       page.includes(route.replace(/\//g, '-
@@ -86,14 +74,12 @@ function analyzeWebsite() {
     }
   });
 
-  console.log(`\n❌ Found ${missingPages.length} missing pages:`);
-  missingPages.forEach(page => console.log(`  - ${page}`));
+  console.log(`\n❌ Found ${missingPages.length} missing pages:`);missingPages.forEach(page => console.log(`  - ${page}'));
 
   // Check for placeholder pages (files with minimal content)
   const placeholderPages = [];
   existingPages.forEach(pagePath => {
-    const fullPath = path.join(pagesDir, pagePath +
-  '.tsx');
+    const fullPath = path.join(pagesDir, pagePath +.tsx');
     if (fs.existsSync(fullPath)) {
       const content = fs.readFileSync(fullPath,
   'utf8');
@@ -102,10 +88,9 @@ function analyzeWebsite() {
     }
   });
 
-  console.log(
-    `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`
+  console.log(\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):'
   );
-  placeholderPages.forEach(page => console.log(`  - ${page}`));
+  placeholderPages.forEach(page => console.log(`  - ${page}'));
 
   // Generate analysis report
   const report = {
@@ -120,13 +105,11 @@ function analyzeWebsite() {
   };
 
   fs.writeFileSync(
-    path.join(__dirname,
-  '..',
+    path.join(__dirname,..',
   'website-analysis-report.json'),
     JSON.stringify(report, null, 2)
   );
-
-  console.log(`\n📝 Analysis report saved to website-analysis-report.json`);
+console.log(`\n📝 Analysis report saved to website-analysis-report.json');
 
   return report;
 }
@@ -135,7 +118,6 @@ function analyzeWebsite() {
 try {
   analyzeWebsite();
 } catch (error) {
-  console.error(
-  '❌ Error analyzing website:', error.message);
+  console.error(❌ Error analyzing website:', error.message);
   process.exit(1);
 }

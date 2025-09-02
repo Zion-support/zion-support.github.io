@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting Smart Deployment Optimizer...');
+console.log(`'🚀 Starting Smart Deployment Optimizer...');
 
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL =
@@ -33,22 +33,20 @@ class SmartDeploymentOptimizer {
   loadHistoricalData() {
     try {
       const historicalFile = path.join(
-        this.reportDir,
-        'deployment-history.json'
+        this.reportDir,deployment-history.json'
       );
       if (fs.existsSync(historicalFile)) {
         const data = JSON.parse(fs.readFileSync(historicalFile, 'utf8'));
         this.deploymentMetrics = { ...this.deploymentMetrics, ...data };
       }
     } catch (error) {
-      console.log('No historical deployment data found, starting fresh');
+      console.log(`'No historical deployment data found, starting fresh');
     }
   }
 
   async optimizeDeployment() {
     try {
-      console.log(
-        `🚀 Running smart deployment optimization at ${new Date().toISOString()}`
+      console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}'
       );
 
       // Analyze current build configuration
@@ -118,14 +116,9 @@ class SmartDeploymentOptimizer {
 
     if (packageJson.dependencies) {
       const largeDependencies = Object.entries(packageJson.dependencies).filter(
-        ([name, version]) => {
+        (['name', 'version']) => {
           // Check for known large packages
-          const largePackages = [
-            'lodash',
-            'moment',
-            'date-fns',
-            'framer-motion',
-          ];
+          const largePackages = ['lodash'', 'moment', 'date-fns'', 'framer-motion', ''];
           return largePackages.includes(name);
         }
       );
@@ -134,7 +127,7 @@ class SmartDeploymentOptimizer {
         this.deploymentMetrics.optimizationSuggestions.push({
           type: 'dependency_optimization',
           priority: 'medium',
-          description: `Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(', ')}`,
+          description: Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(', ')},
           action: 'Use tree-shaking or replace with lighter alternatives',
         });
       }
@@ -165,8 +158,7 @@ class SmartDeploymentOptimizer {
           files: this.countFiles(distPath),
         });
 
-        console.log(
-          `📊 Current bundle size: ${(bundleSize / 1024 / 1024).toFixed(2)} MB`
+        console.log(📊 Current bundle size: ${(bundleSize / 1024 / 1024`).toFixed(2)} MB'
         );
 
         // Check for optimization opportunities
@@ -181,7 +173,7 @@ class SmartDeploymentOptimizer {
         }
       }
     } catch (error) {
-      console.log('⚠️ Build analysis failed:', error.message);
+      console.log(`'⚠️ Build analysis failed:', error.message);
     }
   }
 
@@ -206,11 +198,9 @@ class SmartDeploymentOptimizer {
     this.deploymentMetrics.successRate =
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
 
-    console.log(
-      `📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}`
+    console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}'
     );
-    console.log(
-      `📊 Success rate: ${this.deploymentMetrics.successRate.toFixed(2)}%`
+    console.log( 📊 Success rate: ${this.deploymentMetrics.successRate.toFixed(2)}%
     );
 
     // Analyze build time trends
@@ -247,8 +237,7 @@ class SmartDeploymentOptimizer {
         type: 'code_splitting',
         priority: 'high',
         description: 'Implement code splitting for better performance',
-        action:
-          'Use React.lazy() and dynamic imports for route-based splitting',
+        action:Use React.lazy() and dynamic imports for route-based splitting',
       });
     }
 
@@ -274,12 +263,12 @@ class SmartDeploymentOptimizer {
   }
 
   async testOptimizedBuild() {
-    console.log('🧪 Testing optimized build...');
+    console.log('🧪 Testing optimized build...'`);
 
     try {
       // Run type checking
       execSync('npm run type-check', { stdio: 'pipe' });
-      console.log('✅ Type checking passed');
+      console.log(`'✅ Type checking passed');
 
       // Run linting
       execSync('npm run lint', { stdio: 'pipe' });
@@ -304,8 +293,7 @@ class SmartDeploymentOptimizer {
           if (issues.length > 0) {
             this.deploymentMetrics.optimizationSuggestions.push({
               type: 'html_optimization',
-              priority: 'low',
-              description: `HTML optimization issues: ${issues.join(', ')}`,
+              priority: 'low',description: HTML optimization issues: ${issues.join(', ')},
               action: 'Add missing HTML meta tags and optimize structure',
             });
           }
@@ -317,7 +305,7 @@ class SmartDeploymentOptimizer {
   }
 
   async generateReport() {
-    console.log('📊 Generating deployment optimization report...');
+    console.log('📊 Generating deployment optimization report...'`);
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -333,8 +321,7 @@ class SmartDeploymentOptimizer {
     };
 
     const reportPath = path.join(
-      this.reportDir,
-      `deployment-optimization-${Date.now()}.json`
+      this.reportDir,deployment-optimization-${Date.now()}.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
@@ -347,12 +334,10 @@ class SmartDeploymentOptimizer {
 
     // Also save latest report
     const latestReportPath = path.join(
-      process.cwd(),
-      'deployment-optimization-report.json'
+      process.cwd(),deployment-optimization-report.json'
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-
-    console.log(`📊 Deployment optimization report saved to ${reportPath}`);
+console.log(`📊 Deployment optimization report saved to ${reportPath});
   }
 
   calculateBundleSize(dir) {
@@ -431,8 +416,7 @@ class SmartDeploymentOptimizer {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   const optimizer = new SmartDeploymentOptimizer();
@@ -445,9 +429,8 @@ async function runContinuous() {
     await optimizer.optimizeDeployment();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    `✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+  console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

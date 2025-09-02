@@ -6,12 +6,9 @@
  * Checks for broken links in the project
  */
 
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from;url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,8 +18,7 @@ console.log(
 
 class LinkChecker {
   constructor() {
-    this.projectRoot = path.resolve(__dirname,..
-  ');
+    this.projectRoot = path.resolve(__dirname,..);
     this.brokenLinks = [];
     this.checkedLinks = 0;
   }
@@ -43,15 +39,12 @@ class LinkChecker {
       
       console.log(`✅ Link check completed. Checked ${this.checkedLinks} links.`);
       
-      if (this.brokenLinks.length > 0) {
-        console.log(`⚠️  Found ${this.brokenLinks.length} potentially broken links:`);
-        this.brokenLinks.forEach(link => {
-          console.log(`   - ${link}`);
+      if (this.brokenLinks.length > 0) {console.log(`⚠️  Found ${this.brokenLinks.length} potentially broken links:`);
+        this.brokenLinks.forEach(link => {console.log(`   - ${link}');
         });
       } else {
         console.log(,
-  🎉 All links appear to be valid!
-  ');
+  🎉 All links appear to be valid!);
       }
       
     } catch (error) {
@@ -60,8 +53,7 @@ class LinkChecker {
   }
 
   async scanHtmlFiles() {
-    const htmlFiles = this.findFiles('.html
-  ');
+    const htmlFiles = this.findFiles('.html);
     
     for (const file of htmlFiles) {
       const content = fs.readFileSync(file,utf8');
@@ -70,15 +62,14 @@ class LinkChecker {
       for (const link of links) {
         this.checkedLinks++;
         if (!this.isValidLink(link)) {
-          this.brokenLinks.push(`${file}: ${link}`);
+          this.brokenLinks.push(`${file}: ${link}');
         }
       }
     }
   }
 
   async scanMarkdownFiles() {
-    const mdFiles = this.findFiles(
-  '.md');
+    const mdFiles = this.findFiles(.md');
     
     for (const file of mdFiles) {
       const content = fs.readFileSync(file,utf8
@@ -87,8 +78,7 @@ class LinkChecker {
       
       for (const link of links) {
         this.checkedLinks++;
-        if (!this.isValidLink(link)) {
-          this.brokenLinks.push(`${file}: ${link}`);
+        if (!this.isValidLink(link)) {this.brokenLinks.push(`${file}: ${link}`);
         }
       }
     }
@@ -98,13 +88,12 @@ class LinkChecker {
     try {
       const packagePath = path.join(this.projectRoot,package.json');
       if (fs.existsSync(packagePath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8
-  '));
+        const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8));
         
         if (packageJson.repository) {
           this.checkedLinks++;
           if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {
-            this.brokenLinks.push(`package.json: ${packageJson.repository.url || packageJson.repository}`);
+            this.brokenLinks.push('package.json: ${packageJson.repository.url || packageJson.repository}');
           }
         }
       }
@@ -126,8 +115,7 @@ class LinkChecker {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !item.startsWith(,
-  .
-  ') && item !== 'node_modules
+  .) && item !== 'node_modules
   ') {
             scanDirectory(fullPath);
           } else if (stat.isFile() && item.endsWith(extension)) {
@@ -171,16 +159,13 @@ class LinkChecker {
 
   isValidLink(link) {
     // Skip internal anchors, mailto, tel, etc.
-    if (link.startsWith('#
-  ') || link.startsWith('mailto: ') || link.startsWith('tel:)) {
+    if (link.startsWith('#) || link.startsWith('mailto: ') || link.startsWith('tel:)) {
       return true;
     }
     
     // Skip relative paths
-    if (link.startsWith('./
-  ') || link.startsWith('../
-  ') || link.startsWith('/
-  ')) {
+    if (link.startsWith('./) || link.startsWith('../
+  ') || link.startsWith('/)) {
       return true;
     }
     

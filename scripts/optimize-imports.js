@@ -5,12 +5,9 @@
  * Optimizes import statements to reduce bundle size
  */
 
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from;url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,10 +23,8 @@ class ImportOptimizer {
     console.log(
   '⚡ Optimizing imports to reduce bundle size...');
     
-    const directories = [
-  'pages',
-  'components',
-  'src'
+    const directories = [pages',
+  'components',src'
     ];
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
@@ -38,8 +33,7 @@ class ImportOptimizer {
       }
     }
 
-    console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);
-    console.log(`📊 Total optimizations: ${this.totalOptimizations}`);
+    console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);console.log(`📊 Total optimizations: ${this.totalOptimizations}');
   }
 
   async processDirectory(dirPath) {
@@ -59,17 +53,14 @@ class ImportOptimizer {
 
   isJavaScriptFile(filePath) {
     const ext = path.extname(filePath);
-    return [
-  '.js',
-  '.jsx',
-  '.ts',
+    return [.js',
+  '.jsx',.ts',
   '.tsx'].includes(ext);
   }
 
   async optimizeFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath,
-  'utf8');
+      const content = fs.readFileSync(filePath,utf8');
       let optimizedContent = content;
       let optimizations = 0;
 
@@ -94,8 +85,7 @@ class ImportOptimizer {
   'utf8');
         this.optimizedFiles.push(filePath);
         this.totalOptimizations += optimizations;
-        console.log(
-          `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}`
+        console.log(⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}'
         );
       }
     } catch (error) {
@@ -106,19 +96,16 @@ class ImportOptimizer {
   optimizeLucideImports(content) {
     // Convert individual icon imports to single import
     const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;
-  '"]lucide-react['"];?\s*/g;    const matches = [...content.matchAll(lucidePattern)];
+  '"]lucide-react[''];?\s*/g;    const matches = [...content.matchAll(lucidePattern)];
 
     if (matches.length > 1) {
       const allIcons = new Set();
       matches.forEach(match => {
-        const icons = match[1].split(
-  ',').map(icon => icon.trim());
+        const icons = match[1].split(,').map(icon => icon.trim());
         icons.forEach(icon => allIcons.add(icon));
       });
       
-      const optimizedImport = `import { ${Array.from(allIcons).join(
-  ', ')} } from;
-  'lucide-react';\n`;
+      const optimizedImport = 'import { ${Array.from(allIcons).join(, ')} } from;'lucide-react';\n`;
       return content.replace(lucidePattern, '
   ').replace(/^/, optimizedImport);    }
 
@@ -129,8 +116,7 @@ class ImportOptimizer {
     // Optimize framer-motion imports
     return content.replace(
       /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[
-  '"];?\s*/g,
-      "import { motion } from 'framer-motion;
+  ''];?\s*/g,import { motion } from 'framer-motion;
   ';\n"
     );
   }
@@ -138,13 +124,12 @@ class ImportOptimizer {
   optimizeRadixImports(content) {
     // Group Radix UI imports
     const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]@radix-ui\/([^
-  '"]+)['"];?\s*/g;    const matches = [...content.matchAll(radixPattern)];
+  '"]+)[''];?\s*/g;    const matches = [...content.matchAll(radixPattern)];
 
     if (matches.length > 1) {
       const groupedImports = new Map();
       matches.forEach(match => {
-        const components = match[1].split(
-  ',').map(comp => comp.trim());
+        const components = match[1].split(,').map(comp => comp.trim());
         const packageName = match[2];
         if (!groupedImports.has(packageName)) {
           groupedImports.set(packageName, new Set());
@@ -154,9 +139,7 @@ class ImportOptimizer {
       
       let optimizedImports = '
   ';      groupedImports.forEach((components, packageName) => {
-        optimizedImports += `import { ${Array.from(components).join(',
-  ')} } from '@radix-ui/${packageName};
-  ';\n`;
+        optimizedImports += `import { ${Array.from(components).join(',)} } from '@radix-ui/${packageName};';\n`;
       });
 
       return content.replace(radixPattern, '').replace(/^/, optimizedImports);
@@ -167,8 +150,7 @@ class ImportOptimizer {
 
   removeUnusedImports(content) {
     // Simple unused import removal (basic implementation)
-    const lines = content.split(;
-  '\n');
+    const lines = content.split(;\n');
     const usedIdentifiers = new Set();
 
     // Find all used identifiers
@@ -184,8 +166,7 @@ class ImportOptimizer {
 
     // Remove unused imports (simplified)
     return lines.filter(line => {
-      if (line.trim().startsWith(
-  'import')) {
+      if (line.trim().startsWith(import')) {
         const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
         if (importMatch) {
           const importedItems = importMatch[1].split(
@@ -195,8 +176,7 @@ class ImportOptimizer {
         }
       }
       return true;
-    }).join(
-  '\n');  }
+    }).join(\n');  }
 }
 
 // Run the optimizer

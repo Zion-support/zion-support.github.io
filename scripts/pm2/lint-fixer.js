@@ -2,16 +2,14 @@
 ;
 const fs = require(,
   fs');
-const path = require(
-  'path');
+const path = require(path');
 const { execSync } = require(
   'child_process');
 ;
 class IntelligentLintFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot,logs/pm2/lint-fixer.log
-  ');
+    this.logFile = path.join(this.projectRoot,logs/pm2/lint-fixer.log);
     this.reportFile = path.join(this.projectRoot,logs/pm2/lint-report.json');
     this.fixesApplied = 0;
     this.errorsFixed = 0;
@@ -21,14 +19,12 @@ class IntelligentLintFixer {
   log(message, level =
   'INFO') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    const logMessage = `[${timestamp}] [${level}] ${message}\n';
 
 
   isLintableFile(filePath) {
-    const extensions = [
-  '.js',.jsx
-  ',.ts',.tsx
-  ',.vue'];
+    const extensions = [.js',.jsx
+  ',.ts',.tsx,.vue'];
     return extensions.some(ext => filePath.endsWith(ext));
   }
 
@@ -40,36 +36,31 @@ class IntelligentLintFixer {
     try {
 
   createSuggestion(message, filePath) {
-    const suggestions = {
-  'no-console': {
+    const suggestions = {no-console': {
         message:
   'Replace console.log with proper logging,
         fix:,
   Implement structured logging with winston or pino',
         priority: 'medium
-      },no-unused-vars
-  ': {
+      },no-unused-vars: {
         message:,
   Remove unused variables or mark with underscore
   ',
         fix: 'Use _variableName or remove if truly unused,
         priority:,
   low
-  '
       },prefer-const': {
         message:
   'Use const for variables that are not reassigned,
         fix:,
   Change let to const where appropriate',
         priority: 'low
-      },no-var
-  ': {
+      },no-var: {
         message:,
   Use modern ES6+ variable declarations
   ',
         fix: 'Replace var with const or let,
         priority: 'medium
-  '
       }
     };
 

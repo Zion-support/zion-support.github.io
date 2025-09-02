@@ -28,8 +28,7 @@ class ErrorMonitor {
 
   async checkBuildErrors() {
     try {
-      const { stdout, stderr } = await execAsync(
-        'cd /workspace && npm run build 2>&1'
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run build 2>&1'
       );
 
       if (stderr || stdout.includes('error') || stdout.includes('Error')) {
@@ -48,8 +47,7 @@ class ErrorMonitor {
         hasErrors: false,
         timestamp: new Date().toISOString(),
       };
-    } catch (error) {
-      await this.log(`Build check failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Build check failed: ${error.message}`, 'ERROR');
       return {
         type: 'build',
         hasErrors: true,
@@ -61,8 +59,7 @@ class ErrorMonitor {
 
   async checkLintErrors() {
     try {
-      const { stdout, stderr } = await execAsync(
-        'cd /workspace && npm run lint 2>&1'
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1'
       );
 
       if (stderr || stdout.includes('error') || stdout.includes('Error')) {
@@ -81,8 +78,7 @@ class ErrorMonitor {
         hasErrors: false,
         timestamp: new Date().toISOString(),
       };
-    } catch (error) {
-      await this.log(`Lint check failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Lint check failed: ${error.message}`, 'ERROR');
       return {
         type: 'lint',
         hasErrors: true,
@@ -94,8 +90,7 @@ class ErrorMonitor {
 
   async checkTypeErrors() {
     try {
-      const { stdout, stderr } = await execAsync(
-        'cd /workspace && npm run type-check 2>&1'
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1'
       );
 
       if (stderr || stdout.includes('error') || stdout.includes('Error')) {
@@ -114,8 +109,7 @@ class ErrorMonitor {
         hasErrors: false,
         timestamp: new Date().toISOString(),
       };
-    } catch (error) {
-      await this.log(`TypeScript check failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`TypeScript check failed: ${error.message}`, 'ERROR');
       return {
         type: 'typescript',
         hasErrors: true,
@@ -135,8 +129,7 @@ class ErrorMonitor {
             break;
           case 'lint':
             await this.log('Auto-fixing lint errors', 'INFO');
-            await execAsync(
-              'cd /workspace && npm run lint -- --fix 2>/dev/null || true'
+            await execAsync(cd /workspace && npm run lint -- --fix 2>/dev/null || true'
             );
             break;
           case 'typescript':
@@ -145,8 +138,7 @@ class ErrorMonitor {
             break;
         }
       } catch (error) {
-        await this.log(
-          `Failed to trigger fix for ${errorType}: ${error.message}`,
+        await this.log(Failed to trigger fix for ${errorType}: ${error.message}',
           'ERROR'
         );
       }
@@ -167,12 +159,10 @@ class ErrorMonitor {
 
     try {
       await fs.writeFile(this.reportFile, JSON.stringify(report, null, 2));
-      await this.log(
-        `Report saved: ${report.summary.errorsFound} errors found`,
+      await this.log(Report saved: ${report.summary.errorsFound} errors found',
         'INFO'
       );
-    } catch (error) {
-      await this.log(`Failed to save report: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Failed to save report: ${error.message}`, 'ERROR');
     }
   }
 
@@ -188,8 +178,7 @@ class ErrorMonitor {
 
       const errorTypes = results.filter(r => r.hasErrors).map(r => r.type);
 
-      if (errorTypes.length > 0) {
-        await this.log(`Found errors in: ${errorTypes.join(', ')}`, 'WARN');
+      if (errorTypes.length > 0) {await this.log(`Found errors in: ${errorTypes.join(', ')}`, 'WARN');
         await this.triggerFixes(errorTypes);
       } else {
         await this.log('No errors detected', 'INFO');
@@ -197,8 +186,7 @@ class ErrorMonitor {
 
       await this.saveReport(results);
       this.lastCheck = new Date();
-    } catch (error) {
-      await this.log(`Error monitoring failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Error monitoring failed: ${error.message}`, 'ERROR');
     }
   }
 }

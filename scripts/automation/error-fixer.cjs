@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -31,8 +31,7 @@ class ErrorFixer {
       return { success: true, errors: [] };
     } catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseTypeScriptErrors(output);
-      this.log(`TypeScript check failed with ${errors.length} errors`);
+      const errors = this.parseTypeScriptErrors(output);this.log(`TypeScript check failed with ${errors.length} errors`);
       return { success: false, errors };
     }
   }
@@ -80,8 +79,7 @@ class ErrorFixer {
       return { success: true, errors: [] };
     } catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseLintErrors(output);
-      this.log(`ESLint check failed with ${errors.length} errors`);
+      const errors = this.parseLintErrors(output);this.log(`ESLint check failed with ${errors.length} errors`);
       return { success: false, errors };
     }
   }
@@ -103,10 +101,10 @@ class ErrorFixer {
     // Fix common TypeScript syntax errors
     await this.fixTypeScriptSyntaxErrors();
 
-    // Fix common React/JSX errors
+    // Fix common ''React/JSX'' errors
     await this.fixReactErrors();
 
-    // Fix common import/export errors
+    // Fix common ''import/export'' errors
     await this.fixImportExportErrors();
 
     // Fix common variable declaration errors
@@ -125,8 +123,7 @@ class ErrorFixer {
       { pattern: /(\w+)\s*\[/g, replacement: '$1: [' },
 
       // Fix missing semicolons
-      { pattern: /(\w+)\s*\[/g, replacement: '$1: [' },
-    ];
+      { pattern: /(\w+)\s*\['/g', 'replacement: '$1: [' }', ''];
 
     // Process TypeScript files
     const tsFiles = this.findFiles(['**/*.ts', '**/*.tsx']);
@@ -146,13 +143,11 @@ class ErrorFixer {
 
         if (content !== originalContent) {
           fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed errors in ${file}`);
+          this.errorsFixed++;this.log(`Fixed errors in ${file}`);
         }
 
         this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
+      } catch (error) {this.log(`Error processing ${file}: ${error.message}`);
       }
     }
   }
@@ -170,17 +165,16 @@ class ErrorFixer {
 
     // Fix missing catch block types
     content = content.replace(
-      /catch\s*\(\s*error\s*:\s*\)/g,
-      'catch (error: any)'
+      /catch\s*\(\s*error\s*:\s*\)/g, 'catch (error: any)'
     );
 
     return content;
   }
 
   async fixReactErrors() {
-    this.log('Fixing React/JSX errors...');
+    this.log('Fixing ''React/JSX'' errors...');
 
-    const reactFiles = this.findFiles(['**/*.tsx', '**/*.jsx']);
+    const reactFiles = this.findFiles(['**/*.tsx'', '**/*.jsx']);
 
     for (const file of reactFiles) {
       try {
@@ -196,33 +190,25 @@ class ErrorFixer {
         if (content.includes('<Helmet>') && !content.includes('<>')) {
           content = content.replace(/<Helmet>/g, '<>\n        <Helmet>');
           content = content.replace(
-            /<\/Helmet>\s*<\/div>/g,
-            '</Helmet>\n      </div>\n    </>'
+            /<\/Helmet>\s*<\/div>/g,</Helmet>\n      </div>\n    </>'
           );
         }
 
         if (content !== originalContent) {
           fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed React errors in ${file}`);
+          this.errorsFixed++;this.log(`Fixed React errors in ${file}`);
         }
 
         this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
+      } catch (error) {this.log(`Error processing ${file}: ${error.message}`);
       }
     }
   }
 
   async fixImportExportErrors() {
-    this.log('Fixing import/export errors...');
+    this.log('Fixing ''import/export'' errors...');
 
-    const sourceFiles = this.findFiles([
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.js',
-      '**/*.jsx',
-    ]);
+    const sourceFiles = this.findFiles(['**/*.ts'', '**/*.tsx', '**/*.js'', '**/*.jsx', '']);
 
     for (const file of sourceFiles) {
       try {
@@ -237,13 +223,11 @@ class ErrorFixer {
 
         if (content !== originalContent) {
           fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed import/export errors in ${file}`);
+          this.errorsFixed++;this.log(`Fixed ''import/export'' errors in ${file}`);
         }
 
         this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
+      } catch (error) {this.log(`Error processing ${file}: ${error.message}`);
       }
     }
   }
@@ -251,19 +235,14 @@ class ErrorFixer {
   async fixVariableErrors() {
     this.log('Fixing variable declaration errors...');
 
-    const sourceFiles = this.findFiles([
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.js',
-      '**/*.jsx',
-    ]);
+    const sourceFiles = this.findFiles(['**/*.ts'', '**/*.tsx', '**/*.js'', '**/*.jsx', '']);
 
     for (const file of sourceFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
         let originalContent = content;
 
-        // Fix missing const/let/var declarations
+        // Fix missing ''const/let/var'' declarations
         content = content.replace(/^(\s*)(\w+)\s*=\s*\[/gm, '$1const $2 = [');
 
         // Fix missing semicolons
@@ -271,13 +250,11 @@ class ErrorFixer {
 
         if (content !== originalContent) {
           fs.writeFileSync(file, content, 'utf8');
-          this.errorsFixed++;
-          this.log(`Fixed variable errors in ${file}`);
+          this.errorsFixed++;this.log(`Fixed variable errors in ${file}`);
         }
 
         this.filesProcessed++;
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`);
+      } catch (error) {this.log(`Error processing ${file}: ${error.message}`);
       }
     }
   }
@@ -320,8 +297,7 @@ class ErrorFixer {
       .replace(/\*\*/g, '.*')
       .replace(/\*/g, '[^/]*')
       .replace(/\./g, '\\.');
-
-    return new RegExp(`^${regexPattern}$`).test(relativePath);
+return new RegExp(`^${regexPattern}$`).test(relativePath);
   }
 
   generateReport() {
@@ -331,8 +307,7 @@ class ErrorFixer {
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Error fixer automation completed',
-      status: 'completed',
-      duration: `${duration}ms`,
+      status: 'completed',duration: `${duration}ms`,
       filesProcessed: this.filesProcessed,
       errorsFixed: this.errorsFixed,
       performance: {
@@ -345,8 +320,7 @@ class ErrorFixer {
 
     const reportPath = path.join(this.reportsDir, 'error-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log(`Report saved to ${reportPath}`);
+this.log(`Report saved to ${reportPath}`);
     return report;
   }
 
@@ -380,14 +354,11 @@ class ErrorFixer {
       // Generate report
       const report = this.generateReport();
 
-      this.log(
-        `Error Fixer completed. Processed ${this.filesProcessed} files, fixed ${this.errorsFixed} errors.`
-      );
-      this.log(`Duration: ${report.duration}`);
+      this.log(Error Fixer completed. Processed ${this.filesProcessed} files, fixed ${this.errorsFixed} errors.'
+      );this.log(`Duration: ${report.duration}`);
 
       return report;
-    } catch (error) {
-      this.log(`Error Fixer failed: ${error.message}`);
+    } catch (error) {this.log(`Error Fixer failed: ${error.message}`);
       throw error;
     }
   }

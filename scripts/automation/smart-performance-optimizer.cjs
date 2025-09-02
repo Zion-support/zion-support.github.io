@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Smart Performance Optimizer - PM2 Automation
@@ -21,22 +21,9 @@ class SmartPerformanceOptimizer {
     this.optimizationHistory = [];
     this.performanceBaseline = null;
     this.optimizationStrategies = {
-      bundle: [
-        { name: 'Tree Shaking', command: 'npm run build:analyze', impact: 'HIGH' },
-        { name: 'Code Splitting', command: 'npm run build:split', impact: 'HIGH' },
-        { name: 'Minification', command: 'npm run build:minify', impact: 'MEDIUM' },
-        { name: 'Gzip Compression', command: 'npm run build:gzip', impact: 'MEDIUM' }
-      ],
-      runtime: [
-        { name: 'Lazy Loading', command: 'npm run optimize:lazy', impact: 'HIGH' },
-        { name: 'Memoization', command: 'npm run optimize:memo', impact: 'MEDIUM' },
-        { name: 'Virtual Scrolling', command: 'npm run optimize:virtual', impact: 'MEDIUM' }
-      ],
-      build: [
-        { name: 'Parallel Builds', command: 'npm run build:parallel', impact: 'HIGH' },
-        { name: 'Incremental Builds', command: 'npm run build:incremental', impact: 'MEDIUM' },
-        { name: 'Cache Optimization', command: 'npm run build:cache', impact: 'MEDIUM' }
-      ]
+      bundle: ['{ name: 'Tree Shaking'', 'command: 'npm run build:analyze'', 'impact: 'HIGH' }', '{ name: 'Code Splitting'', 'command: 'npm run build:split'', 'impact: 'HIGH' }', '{ name: 'Minification'', 'command: 'npm run build:minify'', 'impact: 'MEDIUM' }', '{ name: 'Gzip Compression'', 'command: 'npm run build:gzip'', 'impact: 'MEDIUM' }'],
+      runtime: ['{ name: 'Lazy Loading'', 'command: 'npm run optimize:lazy'', 'impact: 'HIGH' }', '{ name: 'Memoization'', 'command: 'npm run optimize:memo'', 'impact: 'MEDIUM' }', '{ name: 'Virtual Scrolling'', 'command: 'npm run optimize:virtual'', 'impact: 'MEDIUM' }'],
+      build: ['{ name: 'Parallel Builds'', 'command: 'npm run build:parallel'', 'impact: 'HIGH' }', '{ name: 'Incremental Builds'', 'command: 'npm run build:incremental'', 'impact: 'MEDIUM' }', '{ name: 'Cache Optimization'', 'command: 'npm run build:cache'', 'impact: 'MEDIUM' }']
     };
   }
 
@@ -51,8 +38,7 @@ class SmartPerformanceOptimizer {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async analyzeBundleSize() {
@@ -85,8 +71,7 @@ class SmartPerformanceOptimizer {
       await this.saveBundleAnalysis(analysis);
       return analysis;
       
-    } catch (error) {
-      this.log(`Bundle analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Bundle analysis failed: ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -120,8 +105,7 @@ class SmartPerformanceOptimizer {
         if (file.endsWith('.js') || file.endsWith('.css')) {
           stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression
         }
-      } catch (error) {
-        this.log(`Error analyzing file ${file}: ${error.message}`, 'WARN');
+      } catch (error) {this.log(`Error analyzing file ${file}: ${error.message}`, 'WARN');
       }
     }
     
@@ -170,8 +154,7 @@ class SmartPerformanceOptimizer {
       if (largestFile.size > 500 * 1024) { // > 500KB
         recommendations.push({
           priority: 'MEDIUM',
-          type: 'LARGE_FILE',
-          message: `Large file detected: ${largestFile.file} (${largestFile.sizeKB}KB). Consider splitting.`,
+          type: 'LARGE_FILE',message: `Large file detected: ${largestFile.file} (${largestFile.sizeKB}KB). Consider splitting.`,
           file: largestFile.file
         });
       }
@@ -211,8 +194,7 @@ class SmartPerformanceOptimizer {
       
       return performanceMetrics;
       
-    } catch (error) {
-      this.log(`Runtime performance measurement failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Runtime performance measurement failed: ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -234,11 +216,9 @@ class SmartPerformanceOptimizer {
       metrics.timeToInteractive = Math.random() * 4000 + 2000; // 2000-6000ms
       metrics.totalBlockingTime = Math.random() * 500 + 100; // 100-600ms
       metrics.cumulativeLayoutShift = Math.random() * 0.1; // 0-0.1
-      
       this.log(`Performance metrics collected: FCP=${Math.round(metrics.firstContentfulPaint)}ms, LCP=${Math.round(metrics.largestContentfulPaint)}ms`);
       
-    } catch (error) {
-      this.log(`Performance test execution failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Performance test execution failed: ${error.message}`, 'ERROR');
     }
     
     return metrics;
@@ -261,8 +241,7 @@ class SmartPerformanceOptimizer {
       
       // Apply build optimizations
       for (const strategy of this.optimizationStrategies.build) {
-        try {
-          this.log(`Applying build optimization: ${strategy.name}`);
+        try {this.log(`Applying build optimization: ${strategy.name}`);
           execSync(strategy.command, { 
             encoding: 'utf8', 
             cwd: this.projectRoot,
@@ -276,8 +255,7 @@ class SmartPerformanceOptimizer {
             timestamp: new Date().toISOString()
           });
           
-        } catch (error) {
-          this.log(`Build optimization ${strategy.name} failed: ${error.message}`, 'WARN');
+        } catch (error) {this.log(`Build optimization ${strategy.name} failed: ${error.message}`, 'WARN');
           optimizations.push({
             name: strategy.name,
             impact: strategy.impact,
@@ -299,7 +277,6 @@ class SmartPerformanceOptimizer {
       
       const timeImprovement = buildTime - optimizedBuildTime;
       const improvementPercentage = Math.round((timeImprovement / buildTime) * 100);
-      
       this.log(`Build optimization completed. Time improvement: ${timeImprovement}ms (${improvementPercentage}%)`);
       
       return {
@@ -310,8 +287,7 @@ class SmartPerformanceOptimizer {
         optimizations: optimizations
       };
       
-    } catch (error) {
-      this.log(`Build optimization failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Build optimization failed: ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -323,8 +299,7 @@ class SmartPerformanceOptimizer {
     
     try {
       for (const strategy of this.optimizationStrategies.runtime) {
-        try {
-          this.log(`Applying runtime optimization: ${strategy.name}`);
+        try {this.log(`Applying runtime optimization: ${strategy.name}`);
           execSync(strategy.command, { 
             encoding: 'utf8', 
             cwd: this.projectRoot,
@@ -338,8 +313,7 @@ class SmartPerformanceOptimizer {
             timestamp: new Date().toISOString()
           });
           
-        } catch (error) {
-          this.log(`Runtime optimization ${strategy.name} failed: ${error.message}`, 'WARN');
+        } catch (error) {this.log(`Runtime optimization ${strategy.name} failed: ${error.message}`, 'WARN');
           optimizations.push({
             name: strategy.name,
             impact: strategy.impact,
@@ -352,8 +326,7 @@ class SmartPerformanceOptimizer {
       
       return optimizations;
       
-    } catch (error) {
-      this.log(`Runtime optimization failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Runtime optimization failed: ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -391,7 +364,6 @@ class SmartPerformanceOptimizer {
     
     // Save report
     await this.saveOptimizationResults(report);
-    
     this.log(`Optimization report generated. ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations} optimizations successful`);
     
     return report;
@@ -401,8 +373,7 @@ class SmartPerformanceOptimizer {
     try {
       fs.writeFileSync(this.bundleAnalysis, JSON.stringify(analysis, null, 2));
       this.log('Bundle analysis saved');
-    } catch (error) {
-      this.log(`Failed to save bundle analysis: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save bundle analysis: ${error.message}`, 'ERROR');
     }
   }
 
@@ -410,8 +381,7 @@ class SmartPerformanceOptimizer {
     try {
       fs.writeFileSync(this.optimizationResults, JSON.stringify(results, null, 2));
       this.log('Optimization results saved');
-    } catch (error) {
-      this.log(`Failed to save optimization results: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save optimization results: ${error.message}`, 'ERROR');
     }
   }
 
@@ -422,17 +392,12 @@ class SmartPerformanceOptimizer {
       // Generate comprehensive optimization report
       const report = await this.generateOptimizationReport();
       
-      // Display summary
-      this.log(`Performance Optimization Summary:`);
-      this.log(`  - Bundle Size: ${report.bundle ? Math.round(report.bundle.totalSize / 1024) + 'KB' : 'N/A'}`);
-      this.log(`  - Build Time Improvement: ${report.buildOptimizations ? report.buildOptimizations.improvementPercentage + '%' : 'N/A'}`);
-      this.log(`  - Successful Optimizations: ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations}`);
+      // Display summarythis.log(`Performance Optimization Summary:`);this.log(`  - Bundle Size: ${report.bundle ? Math.round(report.bundle.totalSize / 1024) + 'KB' : '''N/A'''}`);this.log(`  - Build Time Improvement: ${report.buildOptimizations ? report.buildOptimizations.improvementPercentage + '%' : '''N/A'''}`);this.log(`  - Successful Optimizations: ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations}`);
       
       // Schedule next optimization run
       setTimeout(() => this.run(), 3600000); // 1 hour
       
-    } catch (error) {
-      this.log(`Smart Performance Optimizer failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Smart Performance Optimizer failed: ${error.message}`, 'ERROR');
       setTimeout(() => this.run(), 900000); // 15 minutes on error
     }
   }

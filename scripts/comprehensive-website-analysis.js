@@ -2,12 +2,9 @@
 
 import axios from,;
   axios';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from;url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -44,9 +41,8 @@ class WebsiteAnalyzer {
   }
 
   async analyzeWebsite() {
-    console.log(
-  '🚀 Starting comprehensive website analysis...');
-    console.log(`📍 Base URL: ${BASE_URL}`);
+    console.log(🚀 Starting comprehensive website analysis...');
+    console.log(`📍 Base URL: ${BASE_URL}');
 
     // Start with main page
     await this.checkPage(BASE_URL);
@@ -63,20 +59,14 @@ class WebsiteAnalyzer {
     // Generate report
     this.generateReport();
 
-    console.log(
-  '\n✅ Analysis completed!');
-    console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`);    console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
-    console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);
-    console.log(`🔄 Redirects: ${this.results.summary.redirects}`);
-    console.log(`📄 Missing pages: ${this.results.summary.missingPages}`);
+    console.log(\n✅ Analysis completed!');console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`);    console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);console.log(`🔄 Redirects: ${this.results.summary.redirects}`);console.log(`📄 Missing pages: ${this.results.summary.missingPages}`);
   }
 
   async checkPage(url, parentUrl = null) {
     if (this.checkedUrls.has(url)) return;
     this.checkedUrls.add(url);
 
-    try {
-      console.log(`🔍 Checking: ${url}`);
+    try {console.log(`🔍 Checking: ${url}');
 
       const response = await axios.get(url, {
         timeout: TIMEOUT,
@@ -100,10 +90,9 @@ class WebsiteAnalyzer {
         if (response.data) {
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
-            if (link.startsWith(
-  '/') || link.startsWith(BASE_URL)) {
+            if (link.startsWith(/') || link.startsWith(BASE_URL)) {
               const fullUrl = link.startsWith(
-  '/') ? `${BASE_URL}${link}` : link;              if (!this.checkedUrls.has(fullUrl)) {
+  '/') ? `${BASE_URL}${link}' : link;              if (!this.checkedUrls.has(fullUrl)) {
                 this.linkQueue.push({ url: fullUrl, parentUrl: url });
               }
             }
@@ -130,8 +119,7 @@ class WebsiteAnalyzer {
             url,
             status,
             parentUrl,
-            error:
-  'Page not found'          });
+            error:Page not found'          });
         } else {
           this.results.summary.brokenLinks++;
           this.results.brokenLinks.push({
@@ -167,141 +155,100 @@ class WebsiteAnalyzer {
   }
 
   async checkNavigationLinks() {
-    const navigationLinks = [
-      '/
+    const navigationLinks = [/
   ',
-      '/about
-  ',
+      '/about,
       '/contact
+  ',/services
   ',
-      '/services
-  ',
-      '/ai-services
-  ',
+      '/ai-services,
       '/it-services
+  ',/micro-saas
   ',
-      '/micro-saas
-  ',
-      '/solutions
-  ',
+      '/solutions,
       '/case-studies
+  ',/white-papers
   ',
-      '/white-papers
-  ',
-      '/webinars
-  ',
+      '/webinars,
       '/blog
+  ',/careers
   ',
-      '/careers
-  ',
-      '/team
-  ',
+      '/team,
       '/pricing
+  ',/help
   ',
-      '/help
-  ',
-      '/privacy
-  ',
+      '/privacy,
       '/terms
   '    ];
 
-    for (const link of navigationLinks) {
-      const fullUrl = `${BASE_URL}${link}`;
+    for (const link of navigationLinks) {const fullUrl = `${BASE_URL}${link}';
       await this.checkPage(fullUrl);
     }
   }
 
   async checkServicePages() {
-    const servicePages = [
-      '/services/ai-supply-chain-optimization
+    const servicePages = [/services/ai-supply-chain-optimization
   ',
-      '/services/ai-cybersecurity-platform
-  ',
+      '/services/ai-cybersecurity-platform,
       '/services/ai-healthcare-platform
+  ',/services/ai-quantum-hybrid-platform
   ',
-      '/services/ai-quantum-hybrid-platform
-  ',
-      '/services/ai-business-intelligence
-  ',
+      '/services/ai-business-intelligence,
       '/services/ai-sales-copilot
+  ',/services/ai-content-marketing-automation
   ',
-      '/services/ai-content-marketing-automation
-  ',
-      '/services/ai-hr-platform
-  ',
+      '/services/ai-hr-platform,
       '/services/ai-legal-research-platform
+  ',/services/ai-education-platform
   ',
-      '/services/ai-education-platform
-  ',
-      '/services/cloud-devops
-  ',
+      '/services/cloud-devops,
       '/services/zero-trust-network-architecture
+  ',/services/ai-compliance-copilot
   ',
-      '/services/ai-compliance-copilot
-  ',
-      '/services/blockchain-enterprise-solutions
-  ',
+      '/services/blockchain-enterprise-solutions,
       '/services/quantum-computing
+  ',/services/iot-edge
   ',
-      '/services/iot-edge
-  ',
-      '/services/digital-transformation
-  '    ];
+      '/services/digital-transformation    ];
 
     for (const link of servicePages) {
-      const fullUrl = `${BASE_URL}${link}`;
+      const fullUrl = '${BASE_URL}${link}';
       await this.checkPage(fullUrl);
     }
   }
 
   async checkAdditionalPages() {
-    const additionalPages = [
-      '/enterprise
+    const additionalPages = [/enterprise
   ',
-      '/healthcare
-  ',
+      '/healthcare,
       '/financial
+  ',/manufacturing
   ',
-      '/manufacturing
-  ',
-      '/retail
-  ',
+      '/retail,
       '/government
+  ',/education
   ',
-      '/education
-  ',
-      '/startup
-  ',
+      '/startup,
       '/marketplace
+  ',/talent
   ',
-      '/talent
-  ',
-      '/community
-  ',
+      '/community,
       '/research-development
+  ',/training
   ',
-      '/training
-  ',
-      '/tutorials
-  ',
+      '/tutorials,
       '/support
+  ',/faq
   ',
-      '/faq
-  ',
-      '/news
-  ',
+      '/news,
       '/events
+  ',/partners
   ',
-      '/partners
-  ',
-      '/signup
-  ',
+      '/signup,
       '/login
+  ',/dashboard
   ',
-      '/dashboard
-  ',
-      '/request-quote
-  ',
+      '/request-quote,
       '/schedule-demo
   '    ];
 
@@ -315,54 +262,45 @@ class WebsiteAnalyzer {
     // Calculate success rate
     const total = this.results.summary.totalLinksChecked;
     const working = this.results.summary.workingLinks;
-    const successRate = total > 0 ? ((working / total) * 100).toFixed(2): '0.00;
-        this.results.summary.successRate = `${successRate}%`;
+    const successRate = total > 0 ? ((working / total) * 100).toFixed(2): '0.00;this.results.summary.successRate = `${successRate}%`;
 
     // Generate recommendations
     this.generateRecommendations();
 
     // Save report
-    const reportPath = path.join(__dirname, '..
-  ', 'comprehensive-website-analysis-report.json
+    const reportPath = path.join(__dirname, '.., 'comprehensive-website-analysis-report.json
   ');    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-
-    console.log(`📄 Report saved to: ${reportPath}`);
+console.log(`📄 Report saved to: ${reportPath}`);
   }
 
   generateRecommendations() {
     if (this.results.summary.brokenLinks > 0) {
       this.results.recommendations.push({
-        type: 'critical
-  ',
-        message: `Fix ${this.results.summary.brokenLinks} broken links to improve user experience and SEO`,
+        type: 'critical,
+        message: 'Fix ${this.results.summary.brokenLinks} broken links to improve user experience and SEO',
         action:,
-  Review and fix all broken links identified in the report
-  '      });
+  Review and fix all broken links identified in the report      });
     }
 
     if (this.results.summary.missingPages > 0) {
       this.results.recommendations.push({
-        type: 'important,
-        message: `Create ${this.results.summary.missingPages} missing pages that are referenced in navigation`,
+        type: 'important,message: `Create ${this.results.summary.missingPages} missing pages that are referenced in navigation',
         action:,
-  Create content for all missing pages or update navigation to remove broken references
-  '      });
+  Create content for all missing pages or update navigation to remove broken references      });
     }
 
     if (this.results.summary.redirects > 0) {
       this.results.recommendations.push({
         type: 'info,
-        message: `${this.results.summary.redirects} redirects found - consider updating direct links`,
+        message: `${this.results.summary.redirects} redirects found - consider updating direct links',
         action:,
-  Update navigation and internal links to point directly to final URLs
-  '      });
+  Update navigation and internal links to point directly to final URLs      });
     }
 
     if (this.results.summary.successRate < '95%
   ') {
       this.results.recommendations.push({
-        type: 'warning,
-        message: `Success rate is ${this.results.summary.successRate} - aim for 95%+`,
+        type: 'warning,message: `Success rate is ${this.results.summary.successRate} - aim for 95%+`,
         action: 'Address all issues to improve overall website reliability',
       });
     }

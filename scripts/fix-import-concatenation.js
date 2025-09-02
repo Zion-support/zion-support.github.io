@@ -31,24 +31,21 @@ function fixImportConcatenation(content) {
   // Fix patterns like: 'const someVariants = cva(;
   fixed = fixed.replace(
     /'const\s+([^=]+)=\s*cva\(;/g,
-    (match, varName) => {
-      return `const ${varName.trim()} = cva(`;
+    (match, varName) => {return `const ${varName.trim()} = cva(`;
     }
   );
 
   // Fix patterns with multiple concatenated strings
   fixed = fixed.replace(
     /'([^']+)',\s*'([^']+)',\s*'([^']+)'/g,
-    (match, str1, str2, str3) => {
-      return `'${str1}${str2}${str3}'`;
+    (match, str1, str2, str3) => {return `'${str1}${str2}${str3}'`;
     }
   );
 
   // Fix patterns with semicolons in strings
   fixed = fixed.replace(
     /'([^']*);([^']*)'/g,
-    (match, before, after) => {
-      return `'${before}${after}'`;
+    (match, before, after) => {return `'${before}${after}'`;
     }
   );
 
@@ -62,22 +59,18 @@ function processFile(filePath) {
     const fixed = fixImportConcatenation(content);
     
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, fixed, 'utf8');console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+  } catch (error) {console.error(`❌ Error processing ${filePath}:', error.message);
     return false;
   }
 }
 
 // Find all TypeScript and JavaScript files
-const patterns = [
-  'components/**/*.{ts,tsx,js,jsx}',
-  'pages/**/*.{ts,tsx,js,jsx}',
-  'src/**/*.{ts,tsx,js,jsx}',
+const patterns = [components/**/*.{ts,tsx,js,jsx}',
+  'pages/**/*.{ts,tsx,js,jsx}',src/**/*.{ts,tsx,js,jsx}',
   '*.{ts,tsx,js,jsx}'
 ];
 
@@ -93,8 +86,7 @@ for (const pattern of patterns) {
   }
 }
 
-console.log(`\n🎉 Import concatenation fix completed!`);
-console.log(`📊 Total files fixed: ${totalFixed}`);
+console.log(`\n🎉 Import concatenation fix completed!`);console.log(`📊 Total files fixed: ${totalFixed}`);
 
 // Generate report
 let totalProcessed = 0;

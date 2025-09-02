@@ -28,8 +28,8 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -96,9 +96,6 @@
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "alwaysStrict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
     "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": [
