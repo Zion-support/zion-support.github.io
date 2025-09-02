@@ -187,7 +187,6 @@ export interface FormState {
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]}
-;
 // Component prop types;
 export interface BaseComponentProps {
   className?: string;

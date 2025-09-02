@@ -58,7 +58,6 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
       'IoT Platforms',
       'Digital Transformation';
     ]}
-;
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <>
@@ -110,6 +109,5 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
       </div>
     </>
   )}
-;
 export { EnhancedLayout }
 export default EnhancedLayout

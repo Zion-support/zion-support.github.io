@@ -333,5 +333,4 @@ const Help: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default Help

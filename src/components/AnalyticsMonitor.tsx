@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'  interface AnalyticsEvent {
+import React, { useEffect, useState, useCallback } from 'react'  interface AnalyticsEvent {;
    id: string;
    type: string;
    category: string;

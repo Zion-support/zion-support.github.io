@@ -124,7 +124,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       </div>
     </motion.button>
   )}
-;
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string

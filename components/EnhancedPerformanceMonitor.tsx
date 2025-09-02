@@ -21,7 +21,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     if (score >= 90) return 'text-green-600';
     if (score >= 50) return 'text-yellow-600';
     return 'text-red-600'}
-;
   const updateMetrics = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -150,5 +149,4 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </AnimatePresence>
     </div>
   )}
-;
 export default EnhancedPerformanceMonitor

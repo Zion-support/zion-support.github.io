@@ -257,7 +257,6 @@ class LinkIntegrityChecker {
       } catch (error) {
         // Skip directories we can't read}
     }
-;
     scanDirectory(this.projectRoot);
     return files}
   async generateReport() {
@@ -268,7 +267,6 @@ class LinkIntegrityChecker {
         issues: this.issues.length},
       issues: this.issues,
       recommendations: this.generateRecommendations()}
-;
     // Save report to file;
     const reportPath = path.join(this.projectRoot,logs;
   ',link-integrity-report.json');

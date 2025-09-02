@@ -190,7 +190,6 @@ self.addEventListener('push', (event) => {
           title: 'Close',
           icon: '/favicon-32x32.png'}
       ]}
-;
     event.waitUntil(
       self.registration.showNotification(data.title, options))}
 })

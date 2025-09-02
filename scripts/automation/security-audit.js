@@ -111,7 +111,6 @@ async function runSecurityAudit() {
   ');
     // Generate security report;
   status: 'completed}
-;
     const reportPath = path.join(process.cwd(), ,
   security-audit-report.json;
   ');

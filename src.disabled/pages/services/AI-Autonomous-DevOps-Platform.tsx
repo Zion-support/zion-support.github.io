@@ -307,5 +307,4 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
 export default AIAutonomousDevOpsPlatform

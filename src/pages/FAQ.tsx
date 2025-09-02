@@ -1,14 +1,13 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';"
 import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
 const FAQ: React.FC = () => {
-  const [openItems, setOpenItems] = React.useState<number[]>([]);
+  const [openItems, setOpenItems] = React.useState<number []" >([]);
   const toggleItem = (index: number) => {
     setOpenItems(prev =>
       prev.includes(index);
         ? prev.filter(i => i !== index);
         : [...prev, index]
     )}
-;
   const faqs = [
     {
       question: 'What services does Zion Tech Group offer?', answer: 'We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.'},
@@ -38,24 +37,24 @@ const FAQ: React.FC = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className='text-center mb-12'>
-          <div className='flex items-center justify-center mb-4'>
-            <HelpCircle className='h-8 w-8 text-blue-600 mr-3' />
+          animate={{ opacity: 1, y: 0 }}"
+          className='text-center mb-12'>"
+          <div className='flex items-center justify-center mb-4'>"
+            <HelpCircle className='h-8 w-8 text-blue-600 mr-3' /" >"
             <h1 className='text-4xl font-bold text-gray-900'>Frequently Asked Questions</h1>
-          </div>
+          </div>"
           <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
             Find answers to common questions about our services, processes, and solutions.
           </p>
         </motion.div>
-        {/* FAQ Items */}
+        {/* FAQ Items */}"
         <div className='space-y-4'>
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1 }}"
               className='bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden'>
               <button;
                 onClick={() => toggleItem(index)}
@@ -64,17 +63,16 @@ const FAQ: React.FC = () => {
                 <span className='text-lg font-semibold text-gray-900 pr-4'>
                   {faq.question}
                 </span>
-                <ChevronDown
-                  className={`h-5 w-5 text-gray-500 transition-transform ${
+                <ChevronDown className={`h-5 w-5 text-gray-500 transition-transform ${"`
                     openItems.includes(index) ? 'rotate-180' : ''}`}
-                />
+                /" >
               </button>
               {openItems.includes(index) && (
                 <motion.div
-                  initial={{ height: 0, opacity: 0 }}
+                  initial={{ height: 0, opacity: 0 }}"
                   animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  className='px-6 pb-4'>
+                  exit={{ height: 0, opacity: 0 }}"
+                  className='px-6 pb-4'>"
                   <p className='text-gray-600 leading-relaxed'>
                     {faq.answer}
                   </p>
@@ -87,15 +85,15 @@ const FAQ: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className='mt-16 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-          <div className='text-center'>
+          transition={{ delay: 0.5 }}"
+          className='mt-16 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>"
+          <div className='text-center'>"
             <h2 className='text-2xl font-bold text-gray-900 mb-4'>
               Still have questions?
-            </h2>
+            </h2>"
             <p className='text-gray-600 mb-6'>
               Our team is here to help. Get in touch with us for personalized assistance.
-            </p>
+            </p>"
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='/contact';
@@ -121,5 +119,4 @@ const FAQ: React.FC = () => {
       </div>
     </div>
   )}
-;
-export default FAQ
+export default FAQ"`

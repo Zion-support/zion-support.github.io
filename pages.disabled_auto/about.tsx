@@ -392,5 +392,4 @@ const AboutPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default AboutPage

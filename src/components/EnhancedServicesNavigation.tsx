@@ -102,9 +102,9 @@
           url: '/services/ai-compliance-assistant', '''';
           description: 'AI-powered compliance', '''';
           pricing: 'Custom pricing'''}
-      ]}
-  ]}  ]';';
-  return ('''';
+      ]}",
+]}  ]';';"
+  return ('''';"
     <div className = 'relative'>
       {/* Main Services Button */}
       <button''';'
@@ -113,10 +113,9 @@
         <span className='flex items-center gap-2'>
           <span>🚀</span>
           <span > Services</span>
-          <motion.span
+          <motion .span
             animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
-          >
+            transition={{ duration: 0.3 }}" >
             ▼
           </motion.span>
         </span>
@@ -147,7 +146,7 @@
 '''{/* Service Categories Grid */}'''''
               <div className='grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8'>
                 {serviceCategories.map((category, categoryIndex)  => (
-                  <motion.div;
+                  <motion .div;
                     key={category.name}
                     initial = {}
   { opacity: 0, x: categoryIndex % 2 === 0 ? -20 : 20}}
@@ -201,7 +200,7 @@
                 </h4>''''
                 <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>
                   {quickLinks.map((link, index)  => (
-                    <motion.div
+                    <motion .div
                       key={link.title}
                       initial = {}
   { opacity: 0, y: 20}}
@@ -257,12 +256,9 @@
         />)}
     </div>
   )}
-;
 export default EnhancedServicesNavigation;
 export { EnhancedServicesNavigation }
-;
 export { EnhancedServicesNavigation }
-;
 export { EnhancedServicesNavigation }
 
-export { EnhancedServicesNavigation }
+export { EnhancedServicesNavigation }"`

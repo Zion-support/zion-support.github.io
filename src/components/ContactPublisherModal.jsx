@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { focusManagement } from '@/utils/accessibility';
+import React, { useState, useEffect, useRef } from 'react';"
+import { focusManagement } from '@/utils/accessibility';"
 import { toast } from '@/hooks/use-toast';
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
 ';'
@@ -55,7 +55,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             toast.error('Failed to send message. Please try again.')';';
             // Optionally, set a specific error message state if needed'''';
             // setError('Failed to send message. Please try again.')}
-        finally {}
+        finally {}"
             setIsLoading(false) // Set loading false}'''}';''
     return (<div ref={modalRef} className='fixed inset-0 bg-black/50 flex items-center justify-center z-50' role='dialog' aria-modal='true' aria-labelledby='contact-publisher-title' onClick={onClose}>''''
       <div className='bg-white dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]' onClick={(e) => e.stopPropagation()}>''''
@@ -75,7 +75,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
           </div>''''
           <button type='submit' className='px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700 disabled:opacity-50' disabled={isLoading}>'{isLoading ? 'Sending...' : 'Send Message'}'''
           </button>''''
-          <button type='button' onClick={onClose} className='ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50' disabled={isLoading}>
+          <button type='button' onClick={onClose} className='ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50' disabled={isLoading}" >
             Cancel
           </button>
         </form>
@@ -83,6 +83,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     </div>)}'"""'"
           </button>
         </form>
-      </div>
-    </div>)}'''';
+      </div>"
+    </div>)}'''';"
 ''''''
+"

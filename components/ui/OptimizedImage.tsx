@@ -35,5 +35,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className='object-cover transition-transform duration-300 hover: scale-105'/>
     </div>
   )}
-;
 export default OptimizedImage

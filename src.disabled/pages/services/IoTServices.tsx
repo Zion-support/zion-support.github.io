@@ -190,7 +190,6 @@ const IoTServices = () => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/IoTServices.tsx;
 export { IoTServices }'';
 export default IoTServices}}}'''"

@@ -15,11 +15,11 @@ const FAQ = lazy(() => import('./pages/FAQ.tsx'));
 const Careers = lazy(() => import('./pages/Careers.tsx'));
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 // Services pages;
-const ComprehensivePricing = lazy(() =>
+const ComprehensivePricing = lazy(() =>"
   import('./pages/ComprehensivePricing2025.tsx'));
 // Loading component
-const LoadingSpinner = () => (
-  <div className='flex items-center justify-center min-h-screen'>
+const LoadingSpinner = () => ("
+  <div className='flex items-center justify-center min-h-screen'>"
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'></div>
   </div>
 );
@@ -34,30 +34,30 @@ const ServicesPage = () => (
             {' '}
             Services
           </span>
-        </h1>
+        </h1>"
         <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
           Comprehensive technology solutions to drive your business forward
         </p>
-      </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
+      </div>"
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>"
+        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>"
           <h3 className='text-xl font-bold text-white mb-4'>
             AI & Machine Learning
-          </h3>
+          </h3>"
           <p className='text-gray-300'>
             Cutting-edge artificial intelligence solutions for business;
             automation and insights.
           </p>
-        </div>
-        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
-          <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>
+        </div>"
+        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>"
+          <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>"
           <p className='text-gray-300'>
             Advanced security solutions with zero-trust architecture and threat;
             detection.
           </p>
-        </div>
-        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
-          <h3 className='text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>
+        </div>"
+        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>"
+          <h3 className='text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>"
           <p className='text-gray-300'>
             Scalable cloud infrastructure and automated deployment solutions.
           </p>
@@ -68,9 +68,9 @@ const ServicesPage = () => (
 )
 function App() {}
   return (
-    <Router>
+    <Router>"
       <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
-        <AppHeader />
+        <AppHeader /" >"
         <main className='flex-1'>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
@@ -92,8 +92,8 @@ function App() {}
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
                         404 - Page Not Found
-                      </h1>
-                      <p className='text-zion-slate-light mb-6'>
+                      </h1>"
+                      <p className='text-zion-slate-light mb-6'>"
                         The page you're looking for doesn't exist.
                       </p>
                       <a
@@ -102,24 +102,21 @@ function App() {}
                         Go Home
                       </a>
                     </div>
-                  </div>
-                }
+                  </div>,
+}
               />
             </Routes>
           </Suspense>
         </main>
-        <Footer />
-        <ChatAssistant />
+        <Footer /" >
+        <ChatAssistant /" >
       </div>
     </Router>
   )}
 export default App;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+"

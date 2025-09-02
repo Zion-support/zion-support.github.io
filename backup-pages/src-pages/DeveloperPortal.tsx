@@ -448,5 +448,4 @@ const data = await response.json()`;
         </div>
       </section>
     </div>) }
-;
 export default DeveloperPortal}}}}''`

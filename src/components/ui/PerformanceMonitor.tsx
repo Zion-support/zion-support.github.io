@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'  interface PerformanceMetrics {
+import React, { useEffect, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'  interface PerformanceMetrics {;
    fcp: number | null;
    lcp: number | null;
    fid: number | null;
@@ -8,7 +8,7 @@ import React, { useEffect, useState, useCallback } from 'react' import { motion,
    windowLoad: number | null} interface PerformanceMonitorProps {
    showDetails?: boolean;
    autoHide?: boolean;
-   threshold?: {
+   threshold?: { 
    fcp: number;
    lcp: number;
    fid: number;

@@ -56,7 +56,6 @@ return a.price - b.price'      case;
         return 0}
   })
     return cat ? cat.icon : Zap}
-;
     return cat ? cat.color :;
   'from-zion-cyan to-zion-blue'}
   return();

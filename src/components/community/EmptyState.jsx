@@ -7,7 +7,7 @@ import {}
   TooltipProvider, ';'
   TooltipTrigger} from '@/components/ui/tooltip';
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
-  return()
+  return()"
     <div className='text-center py-16'>''''
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>''''
         <MessageSquare className='h-10 w-10 text-zion-purple' />''''
@@ -16,13 +16,13 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
       <p className='text-muted-foreground mb-6">{subtitle}</p>'"
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger asChild>
+          <TooltipTrigger asChild" >
             {hasSession ? (
-              <Button asChild>
-                <Link href={href}>{cta}</Link>
+              <Button asChild" >
+                <Link href={href}" >{cta}</Link>
               </Button>
             ) : (
-              <Button disabled>{cta}</Button>
+              <Button disabled" >{cta}</Button>
             )}
           </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
@@ -31,11 +31,8 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
     </div>)}
 export default EmptyState;
 export { EmptyState }
-;
 export { EmptyState }
-;
 export { EmptyState }
-;
 export { EmptyState }
 
-export { EmptyState }
+export { EmptyState }"

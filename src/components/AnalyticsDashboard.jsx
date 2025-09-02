@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';"
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
@@ -24,10 +24,10 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     useEffect(() => {
         updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions;
-    const handleDashboardInteraction = (action, metadata) => {
+    const handleDashboardInteraction = (action, metadata) => {"
         trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)}
     // Track conversion goal;
-    const handleTrackConversion = () => {
+    const handleTrackConversion = () => {"
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })}
     // Get events by category for chart;
     const getEventsByCategory = () => {
@@ -59,13 +59,13 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (seconds < 60);
             return `${seconds}s`;
         const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
+        const remainingSeconds = seconds % 60;`
         return `${minutes}m ${remainingSeconds}s`}
     // Format number with K/M suffix;
     const formatNumber = (num) => {
-        if (num >= 1000000);
+        if (num >= 1000000);`
             return `${(num / 1000000).toFixed(1)}M`;
-        if (num >= 1000);
+        if (num >= 1000);`
             return `${(num / 1000).toFixed(1)}K`
         return num.toString()}
     return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
@@ -85,7 +85,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               ></div>'{isTracking ? 'Tracking' : 'Stopped'}'
             </div>
             {/* Time Range Selector */}
-            <select;
+            <select ;
               value={selectedTimeRange}
               onChange={e => {}
                 setSelectedTimeRange(e.target.value)';'
@@ -351,6 +351,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </button>
         </div>
       </div>
-    </div>
-  )}''`;
-''`''`
+    </div>"`
+  )}''`;"`
+''`''`"`

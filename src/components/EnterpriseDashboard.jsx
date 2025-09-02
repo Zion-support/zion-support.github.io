@@ -226,7 +226,7 @@ export const EnterpriseDashboard = () => {
             <Activity className='w-8 h-8'/>''';'
             Enterprise Dashboard''''
             <div className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>''''
-              <Server className='w-4 h-4'/>
+              <Server className='w-4 h-4'/" >
               Production
             </div>
           </h2>''';'
@@ -251,7 +251,7 @@ export const EnterpriseDashboard = () => {
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-indigo-500 text-indigo-600 dark: text-indigo-400''`''`;'
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>''''
-              <Icon className='w-4 h-4'/>
+              <Icon className='w-4 h-4'/" >
               {label}
             </button>) ) }
         </nav>
@@ -271,10 +271,10 @@ export const EnterpriseDashboard = () => {
   scale: 1 ''';'
 ''''}} className='bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                     <div className='flex items-center justify-between mb-4'>''''
-                      <h3 className='font-medium text-gray-900 dark:text-white'>
+                      <h3 className='font-medium text-gray-900 dark:text-white'>`
                         {metric.name}`
                       </h3>``
-                      <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
+                      <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}" >
                         {metric.status}
                       </span>
                     </div>''';'
@@ -350,17 +350,17 @@ export const EnterpriseDashboard = () => {
                         <div className='text-sm text-gray-600 dark: text-gray-400 mb-2'>
                           {alert.description}''''
                         </div>''''
-                        <div className='flex items-center gap-4 text-xs text-gray-500'>
+                        <div className='flex items-center gap-4 text-xs text-gray-500'>`
                           <span>{alert.timestamp.toLocaleTimeString()}</span>`
                           <span>{alert.source}</span>``
-                          <span className={`px-2 py-1 rounded ${getStatusColor(alert.status)}`}>
+                          <span className={`px-2 py-1 rounded ${getStatusColor(alert.status)}`}" >
                             {alert.status}
                           </span>
                         </div>
                       </div>
                     </div>) ) }
                 </div>
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'performance' && (<motion.div key='performance' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -383,7 +383,7 @@ export const EnterpriseDashboard = () => {
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>CPU & Memory Usage</h4>''''
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>''''
                     <div className='text-center text-gray-500'>''''
-                      <LineChart className='w-12 h-12 mx-auto mb-2'/>
+                      <LineChart className='w-12 h-12 mx-auto mb-2'/" >
                       <p>Performance Chart</p>
                     </div>
                   </div>
@@ -393,12 +393,12 @@ export const EnterpriseDashboard = () => {
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Response Time & Throughput</h4>''''
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>''''
                     <div className='text-center text-gray-500'>''''
-                      <BarChart3 className='w-12 h-12 mx-auto mb-2'/>
+                      <BarChart3 className='w-12 h-12 mx-auto mb-2'/" >
                       <p>Performance Chart</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'security' && (<motion.div key='security' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -427,7 +427,7 @@ export const EnterpriseDashboard = () => {
 ''''}} className='bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                     <div className='flex items-start justify-between mb-4'>''`
                       <div className='flex items-center gap-3'>``
-                        <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}>
+                        <span className={`px-3 py-1 text-sm rounded-full ${getSeverityColor(alert.severity)}`}" >`
                           {alert.severity.toUpperCase()}`
                         </span>``
                         <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(alert.status)}`}>
@@ -465,7 +465,7 @@ export const EnterpriseDashboard = () => {
                       </div>
                     </div>
                   </motion.div>) ) }
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'users' && (<motion.div key='users' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -517,7 +517,7 @@ export const EnterpriseDashboard = () => {
                     ''''
                     <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400'>''''
                       <div>''''
-                        <span className='font-medium'>IP:</span> {activity.ipAddress}
+                        <span className='font-medium'>IP:</span> {activity.ipAddress}"
                       </div>''''
                       <div>''''''
                         <span className='font-medium'>Browser:</span> {activity.userAgent.split('/')[0]}
@@ -527,7 +527,7 @@ export const EnterpriseDashboard = () => {
                       </div>
                     </div>
                   </motion.div>) ) }
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'services' && (<motion.div key='services' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -552,10 +552,10 @@ export const EnterpriseDashboard = () => {
   scale: 1 ''';'
 ''''}} className='bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                     <div className='flex items-center justify-between mb-4'>''''
-                      <h4 className='text-lg font-semibold text-gray-900 dark:text-white'>
+                      <h4 className='text-lg font-semibold text-gray-900 dark:text-white'>`
                         {service.name}`
                       </h4>``
-                      <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}>
+                      <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}" >
                         {service.status}
                       </span>
                     </div>''';'
@@ -589,7 +589,7 @@ export const EnterpriseDashboard = () => {
                         </div>
                       </div>) }
                   </motion.div>) ) }
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'analytics' && (<motion.div key='analytics' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -612,7 +612,7 @@ export const EnterpriseDashboard = () => {
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>System Health Overview</h4>''''
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>''''
                     <div className='text-center text-gray-500'>''''
-                      <PieChart className='w-12 h-12 mx-auto mb-2'/>
+                      <PieChart className='w-12 h-12 mx-auto mb-2'/" >
                       <p>Analytics Chart</p>
                     </div>
                   </div>
@@ -622,7 +622,7 @@ export const EnterpriseDashboard = () => {
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Trend Analysis</h4>''''
                   <div className='h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center'>''''
                     <div className='text-center text-gray-500'>''''
-                      <LineChart className='w-12 h-12 mx-auto mb-2'/>
+                      <LineChart className='w-12 h-12 mx-auto mb-2'/" >
                       <p>Analytics Chart</p>
                     </div>
                   </div>
@@ -630,6 +630,6 @@ export const EnterpriseDashboard = () => {
               </div>
             </motion.div>) }
         </AnimatePresence>
-      </div>
-    </div>)}''`;
-''`''`
+      </div>"`
+    </div>)}''`;"`
+''`''`"`

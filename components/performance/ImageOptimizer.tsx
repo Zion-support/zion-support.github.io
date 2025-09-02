@@ -30,11 +30,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.()}
-;
   const handleError = () => {
     setHasError(true);
     onError?.()}
-;
   // Intersection Observer for lazy loading;
   useEffect(() => {
     if (priority || !imgRef.current) return;
@@ -90,5 +88,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           aria-hidden='true'/>)}
     </div>
   )}
-;
 export default ImageOptimizer

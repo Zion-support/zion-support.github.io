@@ -43,8 +43,7 @@ const EnhancedServicesShowcase = () => {}
             className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto''';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+            transition={{ duration: 0.6, delay: 0.2 }}" >
             Discover our extensive portfolio of innovative micro SAAS services,
             enterprise IT solutions, cutting-edge AI services, and emerging
             technology solutions designed to transform your business.</motion.p>
@@ -84,7 +83,7 @@ const EnhancedServicesShowcase = () => {}
               className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''''/>'''''
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
-                <button;
+                <button ;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg border transition-all duration-300 ${}
@@ -298,8 +297,7 @@ const EnhancedServicesShowcase = () => {}
             className='mt-8 text-sm text-gray-400''';
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
+            transition={{ duration: 0.6, delay: 0.8 }}" >
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>';'
@@ -316,11 +314,8 @@ const EnhancedServicesShowcase = () => {}
     </div>)}
 export default EnhancedServicesShowcase;
 export { EnhancedServicesShowcase }
-;
 export { EnhancedServicesShowcase }
-;
 export { EnhancedServicesShowcase }
-;
 export { EnhancedServicesShowcase }
 
-export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }"`

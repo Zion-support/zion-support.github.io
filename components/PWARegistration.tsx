@@ -76,7 +76,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
     const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true)}
-;
     // Listen for the appinstalled event;
 const handleAppInstalled = () => {setIsInstalled(true);
       setShowInstallPrompt(false);
@@ -185,5 +184,4 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
       </motion.div>
     </AnimatePresence>
   )}
-;
 export default PWARegistration

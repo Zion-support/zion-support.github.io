@@ -9,19 +9,19 @@ import React from,
   ';AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.;
   ', '' icon: Code, ,
   ';
-  ' color: 'from-purple-500 to-pink-500}, {};
+  ' color: 'from-purple-500 to-pink-500}, {}
   ';'; title: 'Security Vulnerability Detection, ,
   ';
   ' description: ''';
   ';Advanced security scanning that identifies potential security risks and compliance violations., '' icon: Shield, ,
   ';
-  ' color: 'from-blue-500 to-cyan-500}, {};
+  ' color: 'from-blue-500 to-cyan-500}, {}
   ';'; title: 'Performance Optimization, ,
   ';
   ' description: ''';
   ';Intelligent suggestions for code optimization and performance improvements., '' icon: Zap, ,
   ';
-  ' color: 'from-green-500 to-emerald-500}, {};
+  ' color: 'from-green-500 to-emerald-500}, {}
    title: 'Code Quality Metrics,
 ,
    description: '';Comprehensive code quality analysis with detailed metrics and improvement recommendations., icon: CheckCircle,

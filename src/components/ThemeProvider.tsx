@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react' type Theme = 'light' | 'dark' | 'system' interface ThemeContextType {
+import React, { createContext, useContext, useEffect, useState } from 'react' type Theme = 'light' | 'dark' | 'system' interface ThemeContextType {;
   theme: Theme;
    setTheme: (theme: Theme) => void
    isDark: boolean} const ThemeContext = createContext < ThemeContextType | null> (null)  export const useTheme = () => { const context = useContext (ThemeContext)  if (context === null) { throw new Error ('useTheme must be used within a ThemeProvider')  } return context } interface ThemeProviderProps {

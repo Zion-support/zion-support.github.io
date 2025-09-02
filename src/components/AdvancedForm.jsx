@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useCallback } from 'react';"
+import { motion, AnimatePresence } from 'framer-motion';"
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
@@ -71,11 +71,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             // Length validation
             if(field.validation?.minLength && stringValue.length < field.validation.minLength) {}
                 return `Minimum length is ${field.validation.minLength} characters`}
-            if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}
-`;
-``;
-```;
-````;
+            if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}`
+`;`
+``;`
+```;`
+````;`
                 return `Maximum length is ${field.validation.maxLength} characters`}
             // Pattern validation;
             if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}
@@ -88,7 +88,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 const customError = field.validation.custom(stringValue);
                 if(customError);
                     return customError}
-        }
+        };
         return null}, [fields]);
     // Handle field change;
     const handleFieldChange = useCallback((name, value) => {}
@@ -170,8 +170,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);
     // Get field icon;
     const getFieldIcon = useCallback((field) => {}
-        switch(field.type) {}
-'''';
+        switch(field.type) {}"
+'''';"
 ''''''
             case 'email': return <Mail className='w-4 h-4'/>'';''''
             case 'tel': return <Phone className='w-4 h-4'/>'';''''
@@ -209,7 +209,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                         : 'border-red-500 focus:ring-red-200''`''`;'
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>''''
               <option value=''>Select an option</option>
-              {field.options?.map(option => (<option key={option.value} value={option.value}>
+              {field.options?.map(option => (<option key={option.value} value={option.value}" >"
                   {option.label}''''
                 </option>))}''''''
             </select>) : field.type === 'checkbox' ? (<div className='flex items-center space-x-3'>''''

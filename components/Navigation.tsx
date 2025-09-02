@@ -132,8 +132,7 @@ const Navigation: React.FC = () => {
                             className="text-gray-300 hover: text-white block px-3 py-2 rounded-md text-sm"
                             onClick={() => {
                               setIsOpen(false);
-                              setActiveDropdown(null);
-                            }}
+                              setActiveDropdown(null)}}
                           >
                             {dropdownItem.name}
                           </Link>

@@ -83,5 +83,4 @@ import { '  Home, ArrowLeft,
       </div>
     </div>
   )}
-;
 export default NotFound

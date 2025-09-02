@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from;
 import { Menu, X, ChevronDown } from;
   'lucide-react';
 const Header: React.FC = () => {
-;
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();

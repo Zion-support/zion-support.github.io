@@ -422,5 +422,4 @@ const Solutions: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default Solutions

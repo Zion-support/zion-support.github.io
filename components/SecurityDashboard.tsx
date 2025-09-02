@@ -29,7 +29,6 @@ const SecurityDashboard: React.FC = () => {
 const mockData: SecurityMetrics = {
       overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {
         critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)}, lastScan: new Date()}
-;
     setTimeout(() => {
       setSecurity(mockData);
       setIsLoading(false)}, 1000)}, [])
@@ -105,5 +104,4 @@ className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
       </div>
     </div>
   )}
-;
 export default SecurityDashboard

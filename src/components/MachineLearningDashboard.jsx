@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
+import React, { useState, useCallback } from 'react';"
+import { motion, AnimatePresence } from 'framer-motion';"
+import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';"
 export const MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
     const [activeTab, setActiveTab] = useState('overview');
@@ -118,8 +118,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             default: return 'text-gray-600 bg-gray-100'}
     }
     const getModelTypeIcon = (type) => {}
-        switch(type) {}
-'''';
+        switch(type) {}"
+'''';"
 ''''''
             case 'classification': return <Target className='w-4 h-4'/>'';''''
             case 'regression': return <TrendingUp className='w-4 h-4'/>'';''''
@@ -162,7 +162,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id''`;
                 ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`;'
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>''''
-            <Icon className='w-4 h-4'/>
+            <Icon className='w-4 h-4'/" >
             <span>{label}</span>
           </button>) ) }
       </div>
@@ -211,7 +211,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <p className='text-sm font-medium text-gray-600 dark:text-gray-400'>Predictions</p>''''
                       <p className='text-2xl font-bold text-orange-600'>{metrics.totalPredictions}</p>''''
                     </div>''''
-                    <Zap className='w-8 h-8 text-orange-500'/>
+                    <Zap className='w-8 h-8 text-orange-500'/" >
                   </div>
                 </div>
               </div>
@@ -262,7 +262,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       </div>
                     </div>) ) }
                 </div>
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'models' && (<motion.div key='models' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -340,7 +340,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4'>''''{models.map((model) => (<div key={model.id} className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>''''
                     <div className='flex items-center justify-between mb-3'>''''
                       <div className='flex items-center space-x-2'>''''
-                        <div className='p-2 bg-purple-100 dark:bg-purple-900 rounded-lg'>
+                        <div className='p-2 bg-purple-100 dark:bg-purple-900 rounded-lg'>`
                           {getModelTypeIcon(model.type)}`
                         </div>``
                         <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.status)}`}>
@@ -396,7 +396,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         </button>) }
                     </div>
                   </div>) ) }
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'training' && (<motion.div key='training' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -418,14 +418,14 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           <div>''''
                             <p className='font-medium text-gray-900 dark:text-white'>'{model?.name || 'Unknown Model'}'''
                             </p>''''
-                            <p className='text-sm text-gray-500 dark:text-gray-400'>
+                            <p className='text-sm text-gray-500 dark:text-gray-400'>`
                               Started: {job.startTime.toLocaleString()}`
                             </p>``
                           </div>```
                         </div>````
-                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getJobStatusColor(job.status)}`}>
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getJobStatusColor(job.status)}`}" >
                           {job.status}
-                        </span>
+                        </span>"
                       </div>''''
                       ''''''{job.status === 'running' && (<div className='mb-3'>''''
                           <div className='flex justify-between text-sm mb-1'>''''
@@ -467,7 +467,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     <p>No training jobs found</p>''''
                     <p className='text-sm'>Start training a model to see jobs here</p>
                   </div>)}
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'predictions' && (<motion.div key='predictions' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -513,7 +513,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           </div>''''
                           <span className='text-sm text-gray-500 dark: text-gray-400'>
                             {prediction.timestamp.toLocaleTimeString()}
-                          </span>
+                          </span>"
                         </div>''''
                         ''''''{prediction.status === 'completed' && prediction.result && (<div className='text-sm text-gray-700 dark: text-gray-300'>
                             <p><strong>Result:</strong> {JSON.stringify(prediction.result)}</p>
@@ -529,7 +529,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <p>No predictions yet</p>
                     </div>)}
                 </div>
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'analytics' && (<motion.div key='analytics' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -583,6 +583,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               </div>
             </motion.div>) }
         </AnimatePresence>
-      </div>
-    </div>)}''`;
-''`''`
+      </div>"`
+    </div>)}''`;"`
+''`''`"`

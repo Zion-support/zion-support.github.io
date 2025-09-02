@@ -226,7 +226,7 @@ const AdvancedServiceRecommendation = () => {}
   (e) => setClientProfile(prev => ({ ...prev, industry: e.target.value ''';'
 ''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Industry</option>
-              {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
+              {industries.map(industry => (<option key={industry} value={industry}" >{industry}</option>) ) }
             </select>
           </div>
           ''''
@@ -236,7 +236,7 @@ const AdvancedServiceRecommendation = () => {}
   (e) => setClientProfile(prev => ({ ...prev, compSize: e.target.value ''';'
 ''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Comp Size</option>
-              {compSizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
+              {compSizes.map(size => (<option key={size} value={size}" >{size}</option>) ) }
             </select>
           </div>
           ''''
@@ -246,7 +246,7 @@ const AdvancedServiceRecommendation = () => {}
   (e) => setClientProfile(prev => ({ ...prev, budget: e.target.value ''';'
 ''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Budget Range</option>
-              {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
+              {budgets.map(budget => (<option key={budget} value={budget}" >{budget}</option>) ) }
             </select>
           </div>
           ''''
@@ -256,7 +256,7 @@ const AdvancedServiceRecommendation = () => {}
   (e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value ''';'
 ''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Timeline</option>
-              {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
+              {timelines.map(timeline => (<option key={timeline} value={timeline}" >{timeline}</option>) ) }
             </select>
           </div>
           ''''
@@ -266,7 +266,7 @@ const AdvancedServiceRecommendation = () => {}
   (e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value ''';'
 ''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Technology Maturity</option>
-              {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
+              {technologyMaturityLevels.map(level => (<option key={level} value={level}" >{level}</option>) ) }
             </select>
           </div>
         </div>''';'
@@ -275,7 +275,7 @@ const AdvancedServiceRecommendation = () => {}
           <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Primary Business Goals</label>''''
           <div className='grid grid-cols-2 md: grid-cols-3 gap-2'>''''{primaryGoals.map(goal => (<label key={goal} className='flex items-center gap-2 cursor-pointer'>''''
                 <input type='checkbox' checked={clientProfile.primaryGoals.includes(goal)} onChange = {}
-  (e) => {}
+  (e) =" > {}
                 if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
   goal] }) ) }
@@ -291,7 +291,7 @@ const AdvancedServiceRecommendation = () => {}
           <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Current Challenges</label>''''
           <div className='grid grid-cols-2 md: grid-cols-3 gap-2'>''''{challenges.map(challenge => (<label key={challenge} className='flex items-center gap-2 cursor-pointer'>''''
                 <input type='checkbox' checked={clientProfile.challenges.includes(challenge)} onChange = {}
-  (e) => {}
+  (e) =" > {}
                 if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
   challenge] }) ) }
@@ -340,7 +340,7 @@ const AdvancedServiceRecommendation = () => {}
                         </p>''';'
                         ''''
                         <div className='flex flex-wrap gap-2 mb-4'>
-                          <Badge className={getPriorityColor(rec.priority)}>
+                          <Badge className={getPriorityColor(rec.priority)}" >
                             Priority: {rec.priority}
                           </Badge>
                           <Badge className={getComplexityColor (rec.implementationComplexity) }>
@@ -371,7 +371,7 @@ const AdvancedServiceRecommendation = () => {}
                           Why This Service Matches''''
                         </h4>''''
                         <ul className='space-y-2'>''''{rec.reasoning.map((reason, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>''''
-                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/>
+                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/" >
                               {reason}
                             </li>) ) }
                         </ul>
@@ -404,7 +404,7 @@ const AdvancedServiceRecommendation = () => {}
 ';'
   () => window.open(rec.service.link, _blank')}>''';
                             Learn More''''
-                            <ArrowRight className='w-4 h-4 ml-2'/>
+                            <ArrowRight className='w-4 h-4 ml-2'/" >
                           </Button>
                         </div>
                       </div>
@@ -447,11 +447,8 @@ const AdvancedServiceRecommendation = () => {}
     </div>)}
 export default AdvancedServiceRecommendation;
 export { AdvancedServiceRecommendation }
-;
 export { AdvancedServiceRecommendation }
-;
 export { AdvancedServiceRecommendation }
-;
 export { AdvancedServiceRecommendation }
 
-export { AdvancedServiceRecommendation }
+export { AdvancedServiceRecommendation }"`

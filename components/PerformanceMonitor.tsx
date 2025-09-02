@@ -7,8 +7,7 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-  loadTime: number | null;
-}
+  loadTime: number | null}
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -71,8 +70,7 @@ const PerformanceMonitor: React.FC = () => {
 
           if (!entry.hadRecentInput) {
 
-            clsValue += (entry as any).value;
-          }
+            clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));''
       });''
@@ -81,8 +79,7 @@ const PerformanceMonitor: React.FC = () => {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+        clsObserver.disconnect()}
     }
 ''
     // Measure Time to First Byte (TTFB)''
@@ -92,13 +89,11 @@ const PerformanceMonitor: React.FC = () => {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
 
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))}
 
       // Measure page load time
       const loadEventEnd = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime: loadEventEnd }));
-    }
+      setMetrics(prev => ({ ...prev, loadTime: loadEventEnd }))}
   }, []);
   const getScoreColor = (metric: string, value: number | null): string => {
 ''

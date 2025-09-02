@@ -156,5 +156,4 @@ import Link from;
       </section>
     </MainLayout>
   )}
-;
 export default AboutPage

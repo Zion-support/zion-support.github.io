@@ -1,10 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';"
+import { Link } from 'react-router-dom';"
 import { SEO } from '../components/SEO';
 import { 
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
-  Brain, Atom, Rocket, Shield, Globe, Code 
+  Brain, Atom, Rocket, Shield, Globe, Code ;",
 } from 'lucide-react';
 export default function Blog() {
   const blogPosts = [
@@ -60,34 +59,31 @@ export default function Blog() {
   const regularPosts = blogPosts.filter(post => !post.featured);
   return (
     <>
-      <SEO 
+      <SEO "
         title="Blog - Zion Tech Group | Technology Insights & Industry News"
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team."'
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
-      />
-      
+      /" >
+      "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        {/* Hero Section */}"
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion .div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8 }}"
+              className="text-center max-w-4xl mx-auto"" >"
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Technology Insights
-              </h1>
+              </h1>"
               <p className="text-xl text-gray-300 mb-8">
                 Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 {categories.slice(0, 4).map((category, index) => (
-                  <span
-                    key={category.name}
-                    className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm"
-                  >
+                  <span key={category.name}"
+                    className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm"" >
                     {category.name}
                   </span>
                 ))}
@@ -101,53 +97,52 @@ export default function Blog() {
             {/* Main Content */}
             <div className="lg:col-span-3">
               {/* Featured Posts */}
-              {featuredPosts.length > 0 && (
-                <section className="mb-16">
-                  <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-                    <TrendingUp className="w-8 h-8 mr-3 text-blue-400" />
+              {featuredPosts.length > 0 && ("
+                <section className="mb-16">"
+                  <h2 className="text-3xl font-bold text-white mb-8 flex items-center">"
+                    <TrendingUp className="w-8 h-8 mr-3 text-blue-400" /" >
                     Featured Articles
-                  </h2>
+                  </h2>"
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {featuredPosts.map((post, index) => (
-                      <motion.article
+                      <motion .article
                         key={post.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: index * 0.1 }}
-                        className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-                      >
-                        <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-                          <div className="text-6xl opacity-20">
-                            {post.category === "AI & Machine Learning" && <Brain />}
-                            {post.category === "Quantum Computing" && <Atom />}
-                            {post.category === "Micro SaaS" && <Rocket />}
-                            {post.category === "Cybersecurity" && <Shield />}
+                        transition={{ duration: 0.8, delay: index * 0.1 }}"
+                        className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"" >"
+                        <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">"
+                          <div className="text-6xl opacity-20">"
+                            {post.category === "AI & Machine Learning" && <Brain /" >}"
+                            {post.category === "Quantum Computing" && <Atom /" >}"
+                            {post.category === "Micro SaaS" && <Rocket /" >}"
+                            {post.category === "Cybersecurity" && <Shield /" >}
                           </div>
-                        </div>
-                        <div className="p-6">
-                          <div className="flex items-center gap-4 mb-3">
+                        </div>"
+                        <div className="p-6">"
+                          <div className="flex items-center gap-4 mb-3">"
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">
                               {post.category}
-                            </span>
+                            </span>"
                             <span className="text-yellow-400 text-xs font-medium">Featured</span>
-                          </div>
+                          </div>"
                           <h3 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
-                            <Link to={`/blog/${post.id}`}>{post.title}</Link>
-                          </h3>
-                          <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
-                          <div className="flex items-center justify-between text-sm text-gray-400">
-                            <div className="flex items-center gap-4">
-                              <span className="flex items-center">
-                                <User className="w-4 h-4 mr-1" />
+                            <Link to={`/blog/${post.id}`}" >{post.title}</Link>
+                          </h3>"
+                          <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>"
+                          <div className="flex items-center justify-between text-sm text-gray-400">"
+                            <div className="flex items-center gap-4">"
+                              <span className="flex items-center">"
+                                <User className="w-4 h-4 mr-1" /" >
                                 {post.author}
-                              </span>
-                              <span className="flex items-center">
-                                <Calendar className="w-4 h-4 mr-1" />
+                              </span>"
+                              <span className="flex items-center">"
+                                <Calendar className="w-4 h-4 mr-1" /" >
                                 {new Date(post.date).toLocaleDateString()}
                               </span>
-                            </div>
-                            <span className="flex items-center">
-                              <Clock className="w-4 h-4 mr-1" />
+                            </div>"
+                            <span className="flex items-center">"
+                              <Clock className="w-4 h-4 mr-1" /" >
                               {post.readTime}
                             </span>
                           </div>
@@ -159,50 +154,49 @@ export default function Blog() {
               )}
 
               {/* Regular Posts */}
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>
+              <section>"
+                <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>"
                 <div className="space-y-8">
                   {regularPosts.map((post, index) => (
-                    <motion.article
+                    <motion .article
                       key={post.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                      className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                    >
-                      <div className="flex flex-col md:flex-row gap-6">
-                        <div className="md:w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <div className="text-4xl opacity-20">
-                            {post.category === "AI & Machine Learning" && <Brain />}
-                            {post.category === "Quantum Computing" && <Atom />}
-                            {post.category === "Micro SaaS" && <Rocket />}
-                            {post.category === "Cybersecurity" && <Shield />}
-                            {post.category === "Digital Transformation" && <Globe />}
-                            {post.category === "Cloud Computing" && <Code />}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}"
+                      className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"" >"
+                      <div className="flex flex-col md:flex-row gap-6">"
+                        <div className="md:w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">"
+                          <div className="text-4xl opacity-20">"
+                            {post.category === "AI & Machine Learning" && <Brain /" >}"
+                            {post.category === "Quantum Computing" && <Atom /" >}"
+                            {post.category === "Micro SaaS" && <Rocket /" >}"
+                            {post.category === "Cybersecurity" && <Shield /" >}"
+                            {post.category === "Digital Transformation" && <Globe /" >}"
+                            {post.category === "Cloud Computing" && <Code /" >}
                           </div>
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center gap-4 mb-3">
+                        </div>"
+                        <div className="flex-1">"
+                          <div className="flex items-center gap-4 mb-3">"
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">
                               {post.category}
                             </span>
-                          </div>
-                          <h3 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">
-                            <Link to={`/blog/${post.id}`}>{post.title}</Link>
-                          </h3>
-                          <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-4 text-sm text-gray-400">
-                              <span className="flex items-center">
-                                <User className="w-4 h-4 mr-1" />
+                          </div>"
+                          <h3 className="text-xl font-bold text-white mb-3 hover:text-blue-400 transition-colors">`
+                            <Link to={`/blog/${post.id}`}" >{post.title}</Link>
+                          </h3>"
+                          <p className="text-gray-300 mb-4">{post.excerpt}</p>"
+                          <div className="flex items-center justify-between">"
+                            <div className="flex items-center gap-4 text-sm text-gray-400">"
+                              <span className="flex items-center">"
+                                <User className="w-4 h-4 mr-1" /" >
                                 {post.author}
-                              </span>
-                              <span className="flex items-center">
-                                <Calendar className="w-4 h-4 mr-1" />
+                              </span>"
+                              <span className="flex items-center">"
+                                <Calendar className="w-4 h-4 mr-1" /" >
                                 {new Date(post.date).toLocaleDateString()}
-                              </span>
-                              <span className="flex items-center">
-                                <Clock className="w-4 h-4 mr-1" />
+                              </span>"
+                              <span className="flex items-center">"
+                                <Clock className="w-4 h-4 mr-1" /" >
                                 {post.readTime}
                               </span>
                             </div>
@@ -225,9 +219,9 @@ export default function Blog() {
             {/* Sidebar */}
             <div className="lg: col-span-1">
               <div className="sticky top-8 space-y-8">
-                {/* Categories */}
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">
-                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>
+                {/* Categories */}"
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">"
+                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>"
                   <div className="space-y-3">
                     {categories.map((category, index) => (
                       <Link
@@ -238,21 +232,21 @@ export default function Blog() {
                         <div className="flex items-center">
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover:text-blue-300" />
                           <span className="text-gray-300 group-hover:text-white">{category.name}</span>
-                        </div>
+                        </div>"
                         <span className="text-sm text-gray-400">{category.count}</span>
                       </Link>
                     ))}
                   </div>
                 </div>
 
-                {/* Newsletter Signup */}
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">
-                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>
+                {/* Newsletter Signup */}"
+                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">"
+                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>"
                   <p className="text-gray-300 mb-4">
                     Get the latest technology insights delivered to your inbox.
-                  </p>
+                  </p>"
                   <div className="space-y-3">
-                    <input
+                    <input "
                       type="email"
                       placeholder="Enter your email"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500"

@@ -6,7 +6,6 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   ': Car,Green Tech': Leaf,Space Tech;
   ': Satellite,
   FinTech: Banknote,IoT & Smart Cities': Building}
-;
 const categoryColors: { [key: string]: string } = {,
   AI & Customer Success': 'from-cyan-500 to-blue-600,Blockchain & DeFi;
   ':,

@@ -3,7 +3,7 @@ export interface ComprehensiveNewService {
    title: string;
    description: string;
    category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech';
-   pricing: {
+   pricing: { 
    monthly: string;
    yearly: string;
    enterprise: string;

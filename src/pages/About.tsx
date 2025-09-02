@@ -1,12 +1,11 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   return (    <>
-      <SEO;
-        title='About Us - Zion Tech Group''        description='Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.'''      />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>About Zion Tech Group</h1>'          <p className='text-lg text-gray-600 mb-6'>'            Zion Tech Group is a leading technology solutions provider dedicated to helping '            organizations transform their digital infrastructure and achieve their business goals.'
-          </p>
+      <SEO ;
+        title='About Us - Zion Tech Group''        description='Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.'''      /" >'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>About Zion Tech Group</h1>'          <p className='text-lg text-gray-600 mb-6'>'            Zion Tech Group is a leading technology solutions provider dedicated to helping '            organizations transform their digital infrastructure and achieve their business goals.'
+          </p>"
           <p className='text-lg text-gray-600'>'            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services.'          </p></div>
       </div>
 </>)}
-;
 export default function About() {
   const values = [
     {
@@ -49,7 +48,7 @@ export default function About() {
       year: '2024', title: 'Global Reach',
       description: 'Extended our services to serve clients across multiple industries and geographies.'}
   ]
-  return(
+  return("
     <div className='min-h-screen bg-white'>
       <Header />
       {/* Hero Section */}
@@ -58,9 +57,9 @@ export default function About() {
           <div className='text-center'>
             <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
               About Zion Tech Group
-            </h1>
+            </h1>"
             <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              We are a forward-thinking technology company dedicated to empowering businesses;
+              We are a forward-thinking technology comp dedicated to empowering businesses;
               with innovative solutions that drive growth and competitive advantage.
             </p>
           </div>
@@ -70,16 +69,16 @@ export default function About() {
       <section className='py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-            <div>
+            <div>"
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
                 Our Story
-              </h2>
+              </h2>"
               <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
                 Founded in 2020, Zion Tech Group emerged from a vision to bridge the gap between;
-                cutting-edge technology and practical business solutions. We recognized that many;
+                cutting-edge technology and practical business solutions. We recognized that m;
                 organizations struggle to harness the full potential of emerging technologies like;
                 AI, cloud computing, and cybersecurity.
-              </p>
+              </p>"
               <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
                 Our journey began with a simple mission: to make advanced technology accessible, understandable, and beneficial for businesses of all sizes. We believe that;
                 innovation should drive growth, not complexity.
@@ -88,11 +87,11 @@ export default function About() {
                 Today, we're proud to serve clients across various industries, helping them;'
                 navigate digital transformation, implement AI solutions, and build secure, scalable technology infrastructure.
               </p>
-            </div>
-            <div className='bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 text-white'>
-              <div className='text-center'>
-                <div className='text-6xl mb-4'>🏢</div>
-                <h3 className='text-2xl font-bold mb-4'>Our Mission</h3>
+            </div>"
+            <div className='bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 text-white'>"
+              <div className='text-center'>"
+                <div className='text-6xl mb-4'>🏢</div>"
+                <h3 className='text-2xl font-bold mb-4'>Our Mission</h3>"
                 <p className='text-blue-100 leading-relaxed'>
                   To empower businesses with innovative technology solutions that accelerate growth,
                   enhance efficiency, and create sustainable competitive advantages in the digital age.
@@ -108,18 +107,18 @@ export default function About() {
           <div className='text-center mb-16'>
             <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Our Values
-            </h2>
+            </h2>"
             <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
               The principles that guide everything we do and shape our relationships with clients and partners.
             </p>
-          </div>
+          </div>"
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {values.map((value, index) => (
-              <div key={index} className='text-center'>
-                <div className='text-5xl mb-4'>{value.icon}</div>
+            {values.map((value, index) => ("
+              <div key={index} className='text-center'>"
+                <div className='text-5xl mb-4'>{value.icon}</div>"
                 <h3 className='text-xl font-bold text-gray-900 mb-3'>
                   {value.title}
-                </h3>
+                </h3>"
                 <p className='text-gray-600 leading-relaxed'>
                   {value.description}
                 </p>
@@ -134,21 +133,21 @@ export default function About() {
           <div className='text-center mb-16'>
             <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Our Team
-            </h2>
+            </h2>"
             <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
               Meet the passionate professionals who make Zion Tech Group a trusted technology partner.
             </p>
-          </div>
+          </div>"
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {team.map((member, index) => (
               <div key={index} className='bg-gray-50 rounded-xl p-8 text-center hover: shadow-lg transition-shadow'>
                 <div className='text-6xl mb-4'>{member.image}</div>
                 <h3 className='text-2xl font-bold text-gray-900 mb-2'>
                   {member.name}
-                </h3>
+                </h3>"
                 <p className='text-blue-600 font-semibold mb-4'>
                   {member.role}
-                </p>
+                </p>"
                 <p className='text-gray-600 leading-relaxed'>
                   {member.description}
                 </p>
@@ -163,28 +162,28 @@ export default function About() {
           <div className='text-center mb-16'>
             <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
               Our Journey
-            </h2>
+            </h2>"
             <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
               Key milestones that mark our growth and commitment to technological excellence.
             </p>
-          </div>
+          </div>"
           <div className='relative'>
-            {/* Timeline Line */}
-            <div className='absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200'></div>
+            {/* Timeline Line */}"
+            <div className='absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200'></div>"
             <div className='space-y-12'>
               {milestones.map((milestone, index) => (
-                <div key={index} className={`relative flex items-center ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>{/* Timeline Dot */}
+                <div key={index} className={`relative flex items-center ${"`
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}" >{/* Timeline Dot */}"
                   <div className='absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg'></div>
-                  {/* Content */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className='bg-white rounded-lg p-6 shadow-lg'>
+                  {/* Content */}"`
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}" >"
+                    <div className='bg-white rounded-lg p-6 shadow-lg'>"
                       <div className='text-2xl font-bold text-blue-600 mb-2'>
                         {milestone.year}
-                      </div>
+                      </div>"
                       <h3 className='text-xl font-bold text-gray-900 mb-2'>
                         {milestone.title}
-                      </h3>
+                      </h3>"
                       <p className='text-gray-600'>
                         {milestone.description}
                       </p>
@@ -219,6 +218,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /" >
     </div>
-  )}
+  )}"`

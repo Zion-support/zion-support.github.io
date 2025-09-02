@@ -108,5 +108,4 @@ const AIOpsCopilot: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default AIOpsCopilot

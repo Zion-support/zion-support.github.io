@@ -6,8 +6,7 @@ interface FormData {
   email: string;
   company: string;
   service: string;
-  message: string;
-}
+  message: string}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -99,8 +98,7 @@ const ContactForm: React.FC = () => {
           Thank you for reaching out. We'll get back to you within 24 hours.'
         </p>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-white rounded-xl shadow-xl p-8">

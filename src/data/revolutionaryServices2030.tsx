@@ -4,11 +4,11 @@ export interface RevolutionaryService2030 {
    description: string;
    category: string;
    subcategory: string;
-   pricing: { monthly: number;
+   pricing: {  monthly: number;
    yearly: number;
    custom: string;
    currency: string;
-   pricingModel: string;
+   pricingModel: string
    marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {
   id: number;
    name: string;

@@ -36,11 +36,8 @@ import { AlertTriangle,
   Server'} from 'lucide-react';
 export { function }
 export default function AIIncidentPostmortems(...args[]): {
-  ;
   website: 'https://ziontechgroup.com'
-<:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
-}
-;
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx}
   const features = [{
       icon: AlertTriangle,
       title: 'AI-Powered Root Cause Analysis',

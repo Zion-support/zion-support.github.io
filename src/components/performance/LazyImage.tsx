@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react' import { motion } from 'framer-motion' interface LazyImageProps {
+import React, { useState, useRef, useEffect } from 'react' import { motion } from 'framer-motion' interface LazyImageProps {;
   src: string;
    alt: string;
    className?: string;

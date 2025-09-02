@@ -202,23 +202,23 @@ const SEOOptimizer = () => {}
         const goodPages = pageAnalyses.filter(page => page.score >= 60) .length
         const poorPages = pageAnalyses.filter(page => page.score < 40) .length;
         let summary = `Analyzed ${totalPages} pages for SEO.`;
-        if(excellentPages > 0) {}
-`;
-``;
-```;
-````;
+        if(excellentPages > 0) {}`
+`;`
+``;`
+```;`
+````;`
             summary += `${excellentPages} pages have excellent SEO. `}
-        if (goodPages > 0) {}
-`;
-``;
-```;
-````;
+        if (goodPages > 0) {}`
+`;`
+``;`
+```;`
+````;`
             summary += `${goodPages} pages have good SEO. `}
-        if (poorPages > 0) {}
-`;
-``;
-```;
-````;
+        if (poorPages > 0) {}`
+`;`
+``;`
+```;`
+````;`
             summary += `${poorPages} pages need significant SEO improvement. `}
         if (topIssues.length > 0) {}
 '`;'
@@ -293,7 +293,7 @@ const SEOOptimizer = () => {}
           </div>
 '''{/* Content */}'''''
           <div className='p-4 max-h-[500px] overflow-y-auto'>''''{isAnalyzing ? (<div className='flex items-center justify-center py-8'>''''
-                <RefreshCw className='w-6 h-6 animate-spin text-purple-600'/>''''
+                <RefreshCw className='w-6 h-6 animate-spin text-purple-600'/" >''''
                 <span className='ml-2 text-gray-600'>Analyzing SEO...</span>''''
               </div>) : report ? (<div className='space-y-4'>'''{/* Top Issues */}''''{report.topIssues.length > 0 && (<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>'''''
                     <h4 className='font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2'>''''
@@ -409,7 +409,7 @@ const SEOOptimizer = () => {}
               <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>'{isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}'''
             </button>''''
             <button onClick={exportSEOReport} className='px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2'>''''
-              <Download className='w-4 h-4'/>
+              <Download className='w-4 h-4'/" >
               Export
             </button>
           </div>
@@ -417,11 +417,8 @@ const SEOOptimizer = () => {}
     </div>)}
 export default SEOOptimizer;
 export { SEOOptimizer }
-;
 export { SEOOptimizer }
-;
 export { SEOOptimizer }
-;
 export { SEOOptimizer }
-;
 export { SEOOptimizer }
+"`

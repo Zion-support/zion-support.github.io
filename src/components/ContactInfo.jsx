@@ -9,7 +9,7 @@ export function ContactInfo() {
         <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
             Get In Touch''''
           </h2>''''
-          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
+          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>;
             Ready to transform your business with cutting-edge technology?;
             Contact our experts today for a free consultation.
           </p>
@@ -56,7 +56,7 @@ export function ContactInfo() {
                     <p className='text-white font-medium'>Address</p>''''
                     <p className='text-zion-slate-light'>
                       364 E Main St STE 1008
-                      <br />
+                      <br /" >
                       Middletown DE 19709
                     </p>
                   </div>
@@ -74,7 +74,7 @@ export function ContactInfo() {
                       rel='noopener noreferrer'''';'
                       className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
                       ziontechgroup.com''''
-                      <ExternalLink className='h-4 w-4' />
+                      <ExternalLink className='h-4 w-4' /" >
                     </a>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export function ContactInfo() {
                     Need immediate assistance?''''
                   </p>''''
                   <div className='flex items-center gap-2'>''''
-                    <Phone className='h-4 w-4 text-zion-cyan' />''''
+                    <Phone className='h-4 w-4 text-zion-cyan' /" >''''
                     <span className='text-zion-cyan font-medium'>
                       Call us now: +1 302 464 0950
                     </span>
@@ -245,3 +245,4 @@ export function ContactInfo() {
   )}'"""'"
 }'''';
 ''''''
+"

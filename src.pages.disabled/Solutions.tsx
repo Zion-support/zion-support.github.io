@@ -13,5 +13,4 @@ const Solutions: React.FC = () => {
       </div>
     </>
   )}
-;
 export default Solutions

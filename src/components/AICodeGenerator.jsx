@@ -94,7 +94,7 @@ export const AICodeGenerator = () => {
             <Code className='w-8 h-8'/>''';'
             AI Code Generator''''
             <div className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>''''
-              <Sparkles className='w-4 h-4'/>
+              <Sparkles className='w-4 h-4'/" >
               Powered by AI
             </div>
           </h2>''';'
@@ -113,7 +113,7 @@ export const AICodeGenerator = () => {
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`;'
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>''''
-              <Icon className='w-4 h-4'/>
+              <Icon className='w-4 h-4'/" >
               {label}
             </button>) ) }
         </nav>
@@ -255,7 +255,7 @@ export const AICodeGenerator = () => {
                       <code>{generatedCode}</code>
                     </pre>
                   </div>
-                </motion.div>)}
+                </motion.div>)}"
             </motion.div>)}''''
 ''''''{activeTab === 'analyze' && (<motion.div key='analyze' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -324,7 +324,7 @@ export const AICodeGenerator = () => {
                           </div>) ) }
                       </div>
                     </div>)}
-                </motion.div>)}
+                </motion.div>)}"
             </motion.div>)}''''
 ''''''{activeTab === 'optimize' && (<motion.div key='optimize' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -349,7 +349,7 @@ export const AICodeGenerator = () => {
                     <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>''''
                     <div className='font-medium text-gray-900 dark:text-white'>{label}</div>
                   </button>))}
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'tests' && (<motion.div key='tests' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -370,7 +370,7 @@ export const AICodeGenerator = () => {
               <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-green-600 hover: bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''''
                 <TestTube className='w-5 h-5'/>
                 Generate Test Suite
-              </button>
+              </button>"
             </motion.div>)}''''
 ''''''{activeTab === 'docs' && (<motion.div key='docs' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -491,6 +491,6 @@ export const AICodeGenerator = () => {
                 </div>) ) }
             </div>
           </motion.div>) }
-      </div>
-    </div>)}''`;
-''`''`
+      </div>"`
+    </div>)}''`;"`
+''`''`"`

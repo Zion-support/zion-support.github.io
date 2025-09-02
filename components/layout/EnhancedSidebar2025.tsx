@@ -188,8 +188,7 @@ export default function EnhancedSidebar2025(...args[]: any): {
       document.body.style.overflow = 'hidden'} else {
 
       document.body.style.overflow = 'unset'}
-;
-    return () => {;
+    return () => {
       document.body.style.overflow = 'unset'}}, [isOpen]);
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
   return (

@@ -1,6 +1,6 @@
 
 ;
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';"
 import { Link } from 'react-router-dom';
 import {
   Brain, Shield,
@@ -49,9 +49,9 @@ export const EnhancedServicesShowcase: React.FC = () => {
       transition: {
         staggerChildren: 0.1}
     }
-  }
-;
+  }"
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3']
-;
+;"
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [hoveredService, setHoveredService] = useState<string | null>(null)
+  const [hoveredService, setHoveredService] = useState<string | null" >(null)"
+}}

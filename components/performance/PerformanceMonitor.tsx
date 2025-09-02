@@ -11,7 +11,6 @@ const PerformanceMonitor: React.FC = () => {
     // Only run in browser environment;
     if (typeof window === 'undefined') return;
     const metrics: PerformanceMetrics = {}
-;
     // First Contentful Paint (FCP);
     const fcpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -77,7 +76,6 @@ const PerformanceMonitor: React.FC = () => {
             'Content-Type': 'application/json'}, body: JSON.stringify({
             url: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
     }
-;
     // Send metrics when page is about to unload;
     window.addEventListener('beforeunload', sendMetrics);
     // Also send after a delay to capture late metrics;

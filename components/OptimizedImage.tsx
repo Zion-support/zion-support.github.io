@@ -17,8 +17,7 @@ interface OptimizedImageProps {
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
@@ -56,8 +55,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
     if (imageRef.current) {
 
-      observer.observe(imageRef.current);
-    }
+      observer.observe(imageRef.current)}
 
     return () => observer.disconnect();
   }, [priority]);
@@ -97,8 +95,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <p className="text-xs">Image failed to load</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   // Loading skeleton
   if (!isInView) {
@@ -109,8 +106,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}''
         style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
       />
-    );
-  }
+    )}
 
   return()
     <div`

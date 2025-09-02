@@ -17,7 +17,7 @@ export interface AdvancedInnovativeService2026 {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
+   contactInfo: {  phone: string;
    email: string;
-   website: string;
+   website: string
    address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string industryTrends?: string[]} export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [;

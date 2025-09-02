@@ -49,7 +49,6 @@ const containerVariants = {
       delayChildren: 0.2}
   }
 }
-;
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -60,7 +59,6 @@ const itemVariants = {
       ease: 'easeOut'}
   }
 }
-;
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return(
     <section className='py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden'>

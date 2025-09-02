@@ -45,7 +45,6 @@ export function ComprehensiveServicesShowcase() {}
         staggerChildren: 0.1, delayChildren: 0.2}
     }
   }
-;
   const itemVariants = {}
   hidden: { y: 20, opacity: 0},
     visible: {}
@@ -56,7 +55,6 @@ export function ComprehensiveServicesShowcase() {}
         ease: 'easeOut'''}
     }
   }
-;
   const cardVariants = {}
   hidden: { scale: 0.95, opacity: 0},
     visible: {}
@@ -65,8 +63,8 @@ export function ComprehensiveServicesShowcase() {}
 ''';'
         duration: 0.4, '''';
         ease: 'easeOut'''}
-    }
-  }';';
+    }",
+}';';"
   return (''''
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
@@ -175,12 +173,12 @@ export function ComprehensiveServicesShowcase() {}
 '''{/* Pricing */}'''''
                 <div className='flex items-center justify-between mb-4'>''''
                   <div className='flex items-center space-x-2'>''''
-                    <DollarSign className='w-5 h-5 text-zion-cyan' />''''
+                    <DollarSign className='w-5 h-5 text-zion-cyan' /" >''''
                     <span className='text-2xl font-bold text-white'>{service.price}</span>''''
                     <span className='text-zion-cyan-light'>{service.period}</span>''''
                   </div>''''
                   <div className='flex items-center space-x-1'>''''
-                    <Star className='w-4 h-4 text-yellow-400 fill-current' />''''
+                    <Star className='w-4 h-4 text-yellow-400 fill-current' /" >''''
                     <span className='text-white text-sm'>{service.rating}</span>''''
                     <span className='text-zion-cyan-light text-sm'>({service.reviews})</span>
                   </div>
@@ -295,7 +293,7 @@ export function ComprehensiveServicesShowcase() {}
                   <h3 className='text-xl font-semibold text-white mb-4'>Features</h3>''''
                   <ul className='space-y-2'>'''{selectedService.features.map((feature, index) => ('''''
                       <li key={index} className='flex items-center space-x-2'>''''
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />''''
+                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' /" >''''
                         <span className='text-zion-cyan-light'>{feature}</span>
                       </li>
                     ))}

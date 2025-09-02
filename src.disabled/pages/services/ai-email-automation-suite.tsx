@@ -501,5 +501,4 @@ const AIEmailAutomationSuite = () => {
       </div>
     </div>
   )}
-;
 export default AIEmailAutomationSuite

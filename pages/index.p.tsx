@@ -150,8 +150,7 @@ export default function Index() {
             }}
             onMouseOut={e => {
               e.target.style.background = 'transparent';
-              e.target.style.color = '#00d4ff';
-            }}
+              e.target.style.color = '#00d4ff'}}
           >
             Get Started
           </a>

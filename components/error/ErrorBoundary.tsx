@@ -39,7 +39,6 @@ class ErrorBoundary extends Component<Props, State> {
 ;
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-;
   render() {
     if (this.state.hasError) {
       // Custom fallback UI;

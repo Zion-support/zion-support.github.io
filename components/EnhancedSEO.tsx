@@ -65,5 +65,4 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       />
     </Head>
   )}
-;
 export default EnhancedSEO

@@ -145,5 +145,4 @@ const ContactFormEnhanced: React.FC = () => {
       </motion.div>
     </div>
   )}
-;
 export default ContactFormEnhanced

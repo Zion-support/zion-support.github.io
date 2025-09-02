@@ -13,7 +13,7 @@ export interface PricingTier {
    description: string;
    category: string;
    pricingTiers: PricingTier[];
-   marketComparison: {
+   marketComparison: { 
    averageMarketPrice: string;
    ourPrice: string;
    savings: string;

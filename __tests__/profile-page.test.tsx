@@ -66,7 +66,6 @@ describe('Profile Page;
       ...initialProfileData,
       name: 'New Name;
   '}
-;
     // Mock initial fetch;
     global.fetch = mockFetchImplementation(initialProfileData)
     render(<Profile />);

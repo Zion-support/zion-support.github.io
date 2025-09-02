@@ -4,5 +4,4 @@ export default function UltraFuturisticFooter2034() {
     <footer className="py-8 text-center text-sm text-gray-400">
       <span>© {new Date().getFullYear()} Zion Tech Group</span>
     </footer>
-  );
-}
+  )}

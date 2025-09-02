@@ -158,5 +158,4 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
       </section>
     </MainLayout>
   )}
-;
 export default API

@@ -44,5 +44,4 @@ export const WebVitals = () => {useEffect(() => {
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics)}, []);
   return null}
-;
 export default WebVitals

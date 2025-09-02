@@ -184,7 +184,6 @@ curl http://localhost:3000/api/health;
         'Create disaster recovery procedures',
         'Implement automated security scanning';
       ]}
-;
     fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2));
     this.deploymentSteps.push('✅ Deployment report generated')}
 }

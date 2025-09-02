@@ -16,7 +16,7 @@
    roi: string;
    estimatedDelivery: string;
    supportLevel: string;
-   contactInfo: { mobile: string;
+   contactInfo: {  mobile: string;
    email: string;
    address: string;
    website: string;

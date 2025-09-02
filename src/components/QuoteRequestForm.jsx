@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button.jsx';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea.jsx';
+import React, { useState } from 'react';"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';"
+import { Button } from './ui/Button.jsx';"
+import { Input } from './ui/input';"
+import { Textarea } from './ui/textarea.jsx';"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
 import {}
   Mail, Phone,
@@ -48,7 +48,6 @@ export const QuoteRequestForm = () => {}
         ...prev, ';'
         [field]: ''}))}
   }
-;
   const validateForm = () => {}
     const newErrors = {}
 ;
@@ -66,7 +65,6 @@ export const QuoteRequestForm = () => {}
       newErrors.agreeToTerms = 'You must agree to the terms and conditions';
     setErrors(newErrors) ;
     return Object.keys(newErrors) .length === 0}
-;
   const handleSubmit = async e => {}
     e.preventDefault();
     if(!validateForm()) {}
@@ -99,9 +97,8 @@ export const QuoteRequestForm = () => {}
       // console.error('Error submitting form: ', error)} finally {}
       setIsSubmitting(false)}
   }
-;
   if(isSubmitted) {}
-    return()
+    return()"
       <Card className='max-w-2xl mx-auto'>''''
         <CardContent className='p-8 text-center'>''''
           <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4' />''''
@@ -111,7 +108,7 @@ export const QuoteRequestForm = () => {}
           <p className='text-gray-600 mb-6'>
             Thank you for your interest.Our team will review your request and
             get back to you within 24 hours.</p>
-          <Button onClick={ () => setIsSubmitted(false) }>
+          <Button onClick={ () =" > setIsSubmitted(false) }>
             Submit Another Request
           </Button>
         </CardContent>
@@ -178,9 +175,9 @@ export const QuoteRequestForm = () => {}
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Phone
               </label>
-              <Input;
-                value={formData.phone}'''';
-                onChange={e => handleChange('phone', e.target.value)}'''';
+              <Input ;"
+                value={formData.phone}'''';"
+                onChange={e =" > handleChange('phone', e.target.value)}'''';"
                 placeholder='+1 (555) 123-4567'''
               />
             </div>
@@ -215,7 +212,7 @@ export const QuoteRequestForm = () => {}
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map(service => (
-                    <SelectItem key={service.value} value={service.value}>
+                    <SelectItem key={service.value} value={service.value}" >
                       {service.label}
                     </SelectItem>) ) }
                 </SelectContent>
@@ -235,11 +232,11 @@ export const QuoteRequestForm = () => {}
                 onValueChange={value => handleChange('timeline', value)}
               >''''
                 <SelectTrigger>''''
-                  <SelectValue placeholder='Select timeline' />
+                  <SelectValue placeholder='Select timeline' /" >
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map(timeline => (
-                    <SelectItem key={timeline.value} value={timeline.value}>
+                    <SelectItem key={timeline.value} value={timeline.value}" >
                       {timeline.label}
                     </SelectItem>) ) }
                 </SelectContent>
@@ -257,11 +254,11 @@ export const QuoteRequestForm = () => {}
                 onValueChange={value => handleChange('budget', value)}
               >''''
                 <SelectTrigger>''''
-                  <SelectValue placeholder='Select budget range' />
+                  <SelectValue placeholder='Select budget range' /" >
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map(budget => (
-                    <SelectItem key={budget.value} value={budget.value}>
+                    <SelectItem key={budget.value} value={budget.value}" >
                       {budget.label}
                     </SelectItem>) ) }
                 </SelectContent>
@@ -277,11 +274,11 @@ export const QuoteRequestForm = () => {}
                 onValueChange={value => handleChange('urgency', value)}
               >
                 <SelectTrigger>
-                  <SelectValue />
+                  <SelectValue /" >
                 </SelectTrigger>
                 <SelectContent>
                   {urgencyLevels.map(urgency => (
-                    <SelectItem key={urgency.value} value={urgency.value}>
+                    <SelectItem key={urgency.value} value={urgency.value}" >
                       {urgency.label}
                     </SelectItem>) ) }
                 </SelectContent>
@@ -368,7 +365,7 @@ export const QuoteRequestForm = () => {}
 </>
               ) : (''''
                 <>''''
-                  <Send className='w-5 h-5 mr-2' />
+                  <Send className='w-5 h-5 mr-2' /" >
                   Submit Quote Request
 </>) }
             </Button>
@@ -378,3 +375,4 @@ export const QuoteRequestForm = () => {}
     </Card>) }'';""
 }'';';'
 ''''''
+"

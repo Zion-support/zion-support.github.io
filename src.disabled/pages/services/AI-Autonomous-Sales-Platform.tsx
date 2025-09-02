@@ -306,5 +306,4 @@ const AIAutonomousSalesPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
 export default AIAutonomousSalesPlatform

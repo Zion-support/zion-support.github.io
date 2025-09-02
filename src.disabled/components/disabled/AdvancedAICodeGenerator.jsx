@@ -8,7 +8,7 @@ import React, { useState, useRef } from,
   'POST' |;
   'PUT' |;
   'DELETE body?headers?: Record<string, string>} export function useApi<T>({ url, method =
-  'GET', body, headers }: UseApiOptions<T>) { const [data, setData] = useState<T | null>(null) const [loading, setLoading] = useState(false) const [error, setError] = useState<string | null>(null)  const execute = async () => { try { setLoading (true)  setError (null)   const response = await fetch(url, { method, headers: {;
+  'GET', body, headers }: UseApiOptions<T>) { const [data, setData] = useState<T | null>(null) const [loading, setLoading] = useState(false) const [error, setError] = useState<string | null>(null)  const execute = async () => { try { setLoading (true)  setError (null)   const response = await fetch(url, { method, headers: {
   Content-Type': 'application/json, ...headers}, body: body ? JSON.stringify(body) : null})  if (!response.ok) {`; throw new Error(\`HTTP error! status: \${response.status}\`)} const result = await response.json() setData(result)} catch (err) { setError(err instanceof Error ? err.message :,
   An error occurred')} finally { setLoading(false)} }  useEffect(() => { if (method ===;
   'GET') { execute()} }, [url])`; return { data, loading, error, execute }}`, tags[;

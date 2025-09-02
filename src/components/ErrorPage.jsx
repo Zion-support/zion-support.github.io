@@ -3,7 +3,7 @@ export const ErrorPage = ({}
   statusCode = 404, ';'
   title = 'Page Not Found', ';'
   message = 'The page you are looking for does not exist.'}) => {}
-  return()
+  return()"
     <div className='min-h-screen bg-zion-blue flex items-center justify-center'>''''
       <div className='text-center text-white'>''''
         <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>''''
@@ -13,7 +13,7 @@ export const ErrorPage = ({}
           <Button asChild>''''
             <Link to='/'>Go Home</Link>''''
           </Button>''''
-          <Button variant='outline' asChild>''''
+          <Button variant='outline' asChild" >''''
             <Link to='/contact'>Contact Support</Link>
           </Button>
         </div>

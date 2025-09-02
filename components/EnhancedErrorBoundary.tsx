@@ -52,15 +52,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         // Silently fail if error reporting fails})} catch (reportingError) {
       // Silently fail if error reporting fails}
   }
-;
   private handleRetry = () => {
     this.setState({
       hasError: false, error: null,
       errorInfo: null})}
-;
   private handleReload = () => {
     window.location.reload()}
-;
   override render() {
     if (this.state.hasError) {
       // Custom fallback UI;

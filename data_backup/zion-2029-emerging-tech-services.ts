@@ -717,4 +717,3 @@ export const getPopularServices = () => {
   return zionEmergingTechServices2029.filter(service => service.isPopular)}
 export const getNewServices = () => {
   return zionEmergingTechServices2029.filter(service => service.isNew)}
-;

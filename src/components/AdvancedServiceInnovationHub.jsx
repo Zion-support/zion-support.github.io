@@ -128,8 +128,8 @@ const AdvancedServiceInnovationHub = () => {}
             default: return 'bg-gray-100 text-gray-800'}
     }
     const getCategoryIcon = (category) => {}
-        switch(category) {}
-'''';
+        switch(category) {}"
+'''';"
 ''''''
             case 'quantum': return <Atom className='w-5 h-5'/>'';''''
             case 'ai': return <Brain className='w-5 h-5'/>'';''''
@@ -172,7 +172,7 @@ const AdvancedServiceInnovationHub = () => {}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>''''
               <div>''''
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Category</label>''''
-                <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>{categories.map(category => (<option key={category.id} value={category.id}>
+                <select value={selectedCategory} onChange={(e) =" > setSelectedCategory(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>{categories.map(category => (<option key={category.id} value={category.id}" >
                       {category.name}
                     </option>) ) }
                 </select>
@@ -180,7 +180,7 @@ const AdvancedServiceInnovationHub = () => {}
               ''''
               <div>''''
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Impact</label>''''
-                <select value={selectedImpact} onChange={(e) => setSelectedImpact(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>''''
+                <select value={selectedImpact} onChange={(e) =" > setSelectedImpact(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>''''
                   <option value='all'>All Impact Levels</option>''''
                   <option value='High'>High Impact</option>''''
                   <option value='Medium'>Medium Impact</option>''''
@@ -190,7 +190,7 @@ const AdvancedServiceInnovationHub = () => {}
 ''''
               <div>''''
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Status</label>''''
-                <select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>''''
+                <select value={selectedStatus} onChange={(e) =" > setSelectedStatus(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>''''
                   <option value='all'>All Statuses</option>''''
                   <option value='Emerging'>Emerging</option>''''
                   <option value='Growing'>Growing</option>''''
@@ -201,7 +201,7 @@ const AdvancedServiceInnovationHub = () => {}
 ''''
               <div>''''
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Search</label>''''
-                <Input placeholder='Search trends...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='w-full'/>
+                <Input placeholder='Search trends...' value={searchTerm} onChange={(e) =" > setSearchTerm(e.target.value)} className='w-full'/>
               </div>
             </div>
           </motion.div>
@@ -226,10 +226,10 @@ const AdvancedServiceInnovationHub = () => {}
                             {trend.title}''''
                           </CardTitle>''''
                           <div className='flex gap-2 mt-2'>
-                            <Badge className={getImpactColor(trend.impact)}>
+                            <Badge className={getImpactColor(trend.impact)}" >
                               {trend.impact} Impact
                             </Badge>
-                            <Badge className={getStatusColor(trend.status) }>
+                            <Badge className={getStatusColor(trend.status) }" >
                               {trend.status}
                             </Badge>
                           </div>
@@ -375,7 +375,7 @@ const AdvancedServiceInnovationHub = () => {}
             <Card>''''
               <CardHeader>''''
                 <CardTitle className='flex items-center gap-2'>''''
-                  <TrendingUp className='w-5 h-5 text-zion-green'/>
+                  <TrendingUp className='w-5 h-5 text-zion-green'/" >
                   Investment Trends
                 </CardTitle>
               </CardHeader>''''
@@ -410,7 +410,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-green'>$100B+</span>''''
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
-                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' }}></div>
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '60%' }}" ></div>
                   </div>
                 </div>
               </CardContent>
@@ -418,7 +418,7 @@ const AdvancedServiceInnovationHub = () => {}
             <Card>''''
               <CardHeader>''''
                 <CardTitle className='flex items-center gap-2'>''''
-                  <Users className='w-5 h-5 text-zion-blue'/>
+                  <Users className='w-5 h-5 text-zion-blue'/" >
                   Market Adoption
                 </CardTitle>
               </CardHeader>''''
@@ -453,7 +453,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-green'>10%</span>''''
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
-                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' }}></div>
+                    <div className='bg-zion-green h-2 rounded-full' style={{ width: '10%' }}" ></div>
                   </div>
                 </div>
               </CardContent>
@@ -462,7 +462,7 @@ const AdvancedServiceInnovationHub = () => {}
           <Card>''''
             <CardHeader>''''
               <CardTitle className='flex items-center gap-2'>''''
-                <Lightbulb className='w-5 h-5 text-zion-yellow'/>
+                <Lightbulb className='w-5 h-5 text-zion-yellow'/" >
                 Strategic Recommendations
               </CardTitle>
             </CardHeader>''''
@@ -480,7 +480,7 @@ const AdvancedServiceInnovationHub = () => {}
                       Develop AI ethics and governance frameworks''''
                     </li>''''
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>''''
-                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/>
+                      <CheckCircle className='w-4 h-4 text-green-500 mt-1 flex-shrink-0'/" >
                       Establish partnerships with space technology companies
                     </li>
                   </ul>
@@ -498,7 +498,7 @@ const AdvancedServiceInnovationHub = () => {}
                       Develop synthetic biology capabilities''''
                     </li>''''
                     <li className='text-sm text-zion-slate-light flex items-start gap-2'>''''
-                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/>
+                      <CheckCircle className='w-4 h-4 text-blue-500 mt-1 flex-shrink-0'/" >
                       Invest in fusion energy research
                     </li>
                   </ul>
@@ -540,11 +540,8 @@ const AdvancedServiceInnovationHub = () => {}
     </div>)}
 export default AdvancedServiceInnovationHub;
 export { AdvancedServiceInnovationHub }
-;
 export { AdvancedServiceInnovationHub }
-;
 export { AdvancedServiceInnovationHub }
-;
 export { AdvancedServiceInnovationHub }
 
-export { AdvancedServiceInnovationHub }
+export { AdvancedServiceInnovationHub }"`

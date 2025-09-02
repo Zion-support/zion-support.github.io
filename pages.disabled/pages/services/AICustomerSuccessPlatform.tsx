@@ -478,6 +478,5 @@ import {}
       </section>
     </div>
   )}
-;
 export { AICustomerSuccessPlatform }export default AICustomerSuccessPlatform''`;
   ''`'"`

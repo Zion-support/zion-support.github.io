@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';"
 import Head from 'next/head';
 interface SEOEnhancerProps {
   title?: string;
@@ -8,8 +8,7 @@ interface SEOEnhancerProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
-}
+  structuredData?: }
 
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
@@ -18,12 +17,11 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   twitterCard = 'summary_large_image', structuredData
 }) => {
   useEffect(() => {
-    // Update page title dynamically
+    // Update page title dynamically"
     if (typeof document !== 'undefined') {
-      document.title = title;
-    }
+      document.title = title}
 
-    // Add performance monitoring
+    // Add performance monitoring"
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -55,10 +53,10 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   };
   return (
     <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>{title}</title>"
+      <meta name="description" content={description} /" >"
+      <meta name="keywords" content={keywords} /" >"
+      <meta name="viewport" content="width=device-width, initial-scale=1" /" >
       
       {/* Open Graph */}
       <meta property="og: title" content={title} />
@@ -68,32 +66,32 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      {/* Twitter */}"
+      <meta name="twitter:card" content={twitterCard} /" >"
+      <meta name="twitter:title" content={title} /" >"
+      <meta name="twitter:description" content={description} /" >"
+      <meta name="twitter:image" content={ogImage} /" >
       
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {/* Canonical URL */}"
+      {canonical && <link rel="canonical" href={canonical} /" >}
       
       {/* Structured Data */}
-      <script
+      <script "
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData)
-        }}
-      />
+          __html: JSON.stringify(structuredData || defaultStructuredData),
+}}
+      /" >
       
       {/* Performance hints */}
       <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://ziontechgroup.com" />
       
-      {/* Security headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      {/* Security headers */}"
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /" >"
+      <meta httpEquiv="X-Frame-Options" content="DENY" /" >"
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >
     </Head>
   );
 };

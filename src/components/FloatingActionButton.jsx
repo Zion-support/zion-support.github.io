@@ -22,7 +22,7 @@ const FloatingActionButton = ({ className = '' }) => {}
       color: 'bg-purple-500 hover:bg-purple-600'}
   ];
   return ()
-    <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
+    <div className={`fixed bottom-6 right-6 z-50 ${className}`}" >
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -86,11 +86,8 @@ const FloatingActionButton = ({ className = '' }) => {}
     </div>)}
 export default FloatingActionButton;
 export { FloatingActionButton }
-;
 export { FloatingActionButton }
-;
 export { FloatingActionButton }
-;
 export { FloatingActionButton }
 
-export { FloatingActionButton }
+export { FloatingActionButton }"`

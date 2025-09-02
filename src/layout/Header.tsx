@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';"
 import { Link, useLocation } from 'react-router-dom';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -6,9 +6,8 @@ export default function Header() {
   const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)}
-;
-    window.addEventListener('scroll', handleScroll);
+      setScrolled(window.scrollY > 50)}"
+    window.addEventListener('scroll', handleScroll);"
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   const navigation = [
     {
@@ -34,37 +33,37 @@ export default function Header() {
   ]
   return(
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled;
-        ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg';
-        : 'bg-white/90 backdrop-blur-md'}`}>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      scrolled;"
+        ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg';"`
+        : 'bg-white/90 backdrop-blur-md'}`}" >"
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>"
         <div className='flex items-center justify-between h-16 lg:h-20'>
-          {/* Logo */}
-          <Link to='/' className='flex items-center space-x-3'>
-            <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>
+          {/* Logo */}"
+          <Link to='/' className='flex items-center space-x-3'>"
+            <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>"
               <span className='text-white font-bold text-xl'>Z</span>
-            </div>
-            <div className='hidden sm:block'>
-              <h1 className='text-xl font-bold text-gray-900'>Zion Tech Group</h1>
+            </div>"
+            <div className='hidden sm:block'>"
+              <h1 className='text-xl font-bold text-gray-900'>Zion Tech Group</h1>"
               <p className='text-xs text-gray-600'>Innovation & Technology</p>
             </div>
           </Link>
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation */}"
           <nav className='hidden lg:flex items-center space-x-8'>
-            {navigation.map((item) => (
+            {navigation.map((item) => ("
               <div key={item.name} className='relative group'>
-                {item.dropdown ? (
-                  <div className='relative'>
+                {item.dropdown ? ("
+                  <div className='relative'>`
                     <button className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      item.current;
-                        ? 'text-blue-600 bg-blue-50';
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}>{item.name}
-                      <svg className='ml-1 inline-block w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
+                      item.current;"
+                        ? 'text-blue-600 bg-blue-50';"`
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}" >{item.name}"
+                      <svg className='ml-1 inline-block w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>"
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' /" >
                       </svg>
                     </button>
-                    {/* Dropdown */}
-                    <div className='absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50'>
+                    {/* Dropdown */}"
+                    <div className='absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50'>"
                       <div className='py-2'>
                         {item.dropdown.map((subItem) => (
                           <Link
@@ -77,13 +76,11 @@ export default function Header() {
                     </div>
                   </div>
                 ) : (
-                  <Link
-                    to={item.href}
+                  <Link to={item.href}`
                     className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      item.current;
-                        ? 'text-blue-600 bg-blue-50';
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}
-                  >{item.name}
+                      item.current;"
+                        ? 'text-blue-600 bg-blue-50';"`
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}" >{item.name}
                   </Link>
                 )}
               </div>
@@ -109,17 +106,17 @@ export default function Header() {
         </div>
       </div>
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className='lg:hidden bg-white border-t border-gray-200'>
+      {mobileMenuOpen && ("
+        <div className='lg:hidden bg-white border-t border-gray-200'>"
           <div className='px-4 py-6 space-y-4'>
             {navigation.map((item) => (
-              <div key={item.name}>
+              <div key={item.name}" >
                 {item.dropdown ? (
-                  <div>
-                    <div className='text-sm font-medium text-gray-900 mb-2'>{item.name}</div>
+                  <div>"
+                    <div className='text-sm font-medium text-gray-900 mb-2'>{item.name}</div>"
                     <div className='ml-4 space-y-2'>
                       {item.dropdown.map((subItem) => (
-                        <Link;
+                        <Link ;
                           key={subItem.name}
                           to={subItem.href}
                           className='block text-sm text-gray-600 hover: text-blue-600';
@@ -138,7 +135,7 @@ export default function Header() {
                   </Link>
                 )}
               </div>
-            ))}
+            ))}"
             <div className='pt-4'>
               <Link;
                 to='/contact';
@@ -152,4 +149,4 @@ export default function Header() {
         </div>
       )}
     </header>
-  )}
+  )}"`

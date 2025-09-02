@@ -79,10 +79,7 @@ const containerVariants = {
 }
 const itemVariants = {
   hidden: { y: 20,
-  opacity: 0;
-;
-
-},
+  opacity: 0},
   visible: {
     y: 0,
     opacity: 1,
@@ -104,8 +101,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
   backgroundSize:;
   '50px 50px';
-;
-;
 }}></div>
       </div>
 
@@ -117,18 +112,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             initial = {
   { opacity: 0,
   y: 20;
-;
-;
 }}
             whileInView = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-;
             <GradientHeading>Explore Categories</GradientHeading>
             <p className=,
   text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
@@ -162,21 +152,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial = {
   { opacity: 0,
   y: 20;
-;
-;
 }}
           whileInView = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4;
-;
-;
 }}
         >
           <h3 className=,
@@ -206,21 +190,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial = {
   { opacity: 0,
   y: 20;
-;
-;
 }}
           whileInView = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.6;
-;
-;
 }}
         >
           <Link

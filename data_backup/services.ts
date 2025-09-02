@@ -4680,6 +4680,5 @@ export const services: Service[] = [;
 ];
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter(service => service.category === category)}
-;
 export const getServiceById = (id: string) => {
   return services.find(service => service.id === id)}

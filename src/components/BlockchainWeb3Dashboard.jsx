@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
+import { useState, useCallback } from 'react';"
+import { motion, AnimatePresence } from 'framer-motion';"
+import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';"
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
     const [activeTab, setActiveTab] = useState('overview');
@@ -140,7 +140,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                       </button>
                     </div>
                   </div>
-                </div>)}
+                </div>)}"
             </motion.div>)}''''
 ''''''{activeTab === 'contracts' && (<motion.div key='contracts' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -199,7 +199,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                       </div>
                     </div>
                   </div>) ) }
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'nfts' && (<motion.div key='nfts' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -247,7 +247,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                       </div>
                     </div>
                   </div>) ) }
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'defi' && (<motion.div key='defi' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -310,7 +310,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                       </div>
                     </div>
                   </div>) ) }
-              </div>
+              </div>"
             </motion.div>)}''''
 ''''''{activeTab === 'transactions' && (<motion.div key='transactions' initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -341,7 +341,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                           </p>``
                         </div>```
                       </div>````
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.status)}`}>
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.status)}`}" >
                         {tx.status}
                       </span>
                     </div>''';'
@@ -491,6 +491,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
               </div>
             </motion.div>
           </motion.div>) }
-      </AnimatePresence>
-    </div>)}''`;
-''`''`
+      </AnimatePresence>"`
+    </div>)}''`;"`
+''`''`"`

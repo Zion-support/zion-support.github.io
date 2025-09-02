@@ -12,11 +12,11 @@ export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null" >(null);
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)}
-    window.addEventListener('scroll', handleScroll);
+      setScrolled(window.scrollY > 50)}"
+    window.addEventListener('scroll', handleScroll);"
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
     // Close mobile menu when route changes;
@@ -162,17 +162,16 @@ export function EnhancedHeader() {
     { name: 'Contact Support', href: '/contact', description: 'Get in touch with our team' }, { name: 'Status Page', href: '/status', description: 'Service availability' }];
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
-;
 export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Solutions', href: '/solutions' },
-    { label: 'Enterprise', href: '/enterprise' },
-    { label: 'Request Quote', href: '/request-quote' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Careers', href: '/careers' },
+  const navLinks = ["
+    { label: 'Home', href: '/' },"
+    { label: 'Services', href: '/services' },"
+    { label: 'Solutions', href: '/solutions' },"
+    { label: 'Enterprise', href: '/enterprise' },"
+    { label: 'Request Quote', href: '/request-quote' },"
+    { label: 'Case Studies', href: '/case-studies' },"
+    { label: 'Careers', href: '/careers' },"
     { label: 'Contact', href: '/contact' }
   ]
   return(
@@ -183,7 +182,7 @@ export const EnhancedHeader: React.FC = () => {
             <a href='/' className='text-2xl font-bold text-blue-900'>
               Zion Tech Group
             </a>
-          </div>
+          </div>"
           <nav className='hidden md:flex space-x-8'>
             {navLinks.map((link, index) => (
               <a key={index} href={link.href} className='text-gray-700 hover: text-blue-600'>
@@ -191,7 +190,7 @@ export const EnhancedHeader: React.FC = () => {
               </a>
             ))}
           </nav>
-          <button;
+          <button ;"
             aria-label='Toggle navigation';
             onClick={() => setMobileOpen((v) => !v)}
             className='md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -204,3 +203,5 @@ export const EnhancedHeader: React.FC = () => {
       </div>
     </header>
   )}
+"
+}`

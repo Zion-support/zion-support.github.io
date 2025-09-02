@@ -1,6 +1,6 @@
-import { useState, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
+import { useState, useMemo, useCallback } from 'react';"
+import { motion, AnimatePresence } from 'framer-motion';"
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';"
 import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
@@ -44,7 +44,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                             return false}
                     default: any;
                         return true}
-            })})
+            })});
         // Apply sorting;
         if(sortConfig) {}
             result.sort((a, b) => {}
@@ -54,7 +54,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     return sortConfig.direction === 'asc' ? -1 : 1;
                 if (aVal > bVal)';'
                     return sortConfig.direction === 'asc' ? 1 : -1;
-                return 0})}
+                return 0})};
         return result}, [data, searchQuery, filters, sortConfig, columns]);
     // Pagination;
     const totalPages = Math.ceil(processedData.length / pageSize);
@@ -145,10 +145,10 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         if(!enableSorting || sortConfig?.key !== key) {}
 ''';'
 ''''
-            return <ArrowUpDown className='w-4 h-4 text-gray-400'/>}'''';
+            return <ArrowUpDown className='w-4 h-4 text-gray-400'/" >}'''';"
         return sortConfig.direction === 'asc'''''
-            ? <ChevronUp className='w-4 h-4 text-blue-500'/>''''
-            : <ChevronDown className='w-4 h-4 text-blue-500'/>}
+            ? <ChevronUp className='w-4 h-4 text-blue-500'/" >''''
+            : <ChevronDown className='w-4 h-4 text-blue-500'/" >};
     // Render cell content;
     const renderCell = (column, item, index) => {}
         const value = item[column.key];
@@ -174,7 +174,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             <button onClick={() => setShowFilters(!showFilters)} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters''`;
             ? 'bg-blue-500 text-white''`''`;'
             : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'}`}>''''
-              <Filter className='w-4 h-4'/>
+              <Filter className='w-4 h-4'/" >
               Filters
             </button>
           </div>
@@ -255,7 +255,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                       <Edit className='w-4 h-4'/>''''
                     </button>''''
                     <button className='p-1 text-gray-400 hover:text-red-500 transition-colors'>''''
-                      <Trash2 className='w-4 h-4'/>
+                      <Trash2 className='w-4 h-4'/" >
                     </button>
                   </div>) }
               </motion.div>) ) }

@@ -168,7 +168,6 @@ return a.title.localeCompare(b.title)'      case;
         return 0}
   })
     return categoryData ? categoryData.icon : Globe}
-;
     return categoryData ? categoryData.color :,
   from-gray-500 to-slate-600'}
 
@@ -176,7 +175,6 @@ return a.title.localeCompare(b.title)'      case;
   'medium';
     return;
   'high'}
-;
     switch (range) {
       case;
   'low': ';
@@ -195,7 +193,6 @@ return a.title.localeCompare(b.title)'      case;
         return;
   'text-gray-400}
   }
-;
     switch (range) {
       case,
   low': ';
@@ -214,7 +211,6 @@ return a.title.localeCompare(b.title)'      case;
         return;
   'bg-gray-500/20 text-gray-400}
   }
-;
       case,
   Advanced': ';
         return 'text-blue-400;
@@ -227,7 +223,6 @@ return a.title.localeCompare(b.title)'      case;
   ';
         return 'text-gray-400}
   }
-;
       case,
   Advanced;
   ': ';
@@ -241,7 +236,6 @@ return a.title.localeCompare(b.title)'      case;
       default:';
         return;
   'bg-gray-500/20}  }
-;
   return();
     <div className='min-h-screen py-8'>'
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>

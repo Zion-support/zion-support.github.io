@@ -25,7 +25,6 @@ class AutoCommitFixes {
   '})
       if (!status.trim()) {
         return { hasChanges: false, files: [] }
-;
       const files = status.split('\n;
   ');
         .filter(line => line.trim());
@@ -92,7 +91,6 @@ class AutoCommitFixes {
       deleted: [],
       renamed: [],
       other: []}
-;
     files.forEach(file => {
       const status = file.status;
       const fileName = file.file;

@@ -7,8 +7,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-  siteName?: string;
-}
+  siteName?: string}
 
 const SEO: React.FC<SEOProps> = ({
   title,

@@ -52,7 +52,6 @@ export default function CybersecurityServicesPage(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState(,
   all');
     return categoryData?.icon || Shield}
-;
       case;
   'monthly': return;
   'Monthly';
@@ -435,7 +434,6 @@ function SecurityServiceCard(...args: any[]): any {,
   'project-based: return <Zap className='w-4 h-4'  />'
       default: return <DollarSign className='w-4 h-4'  />}
   }
-;
       case,
   monthly': return;
   'Monthly';

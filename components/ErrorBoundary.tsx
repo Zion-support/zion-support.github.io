@@ -4,26 +4,24 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
+  errorInfo: ErrorInfo | null}
 
 class ErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
 
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
+    this.state = { hasError: false, error: null, errorInfo: null }
   }
 
   static getDerivedStateFromError(error: Error): State {
 
-    return { hasError: true, error, errorInfo: null };
+    return { hasError: true, error, errorInfo: null }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -64,8 +62,7 @@ class ErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
 
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       // Default error UI
       return()
@@ -146,11 +143,9 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 // Hook for functional components

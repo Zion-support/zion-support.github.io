@@ -52,11 +52,8 @@ import { Heart,
   TestTube'} from 'lucide-react';
 export { function }
 export default function AIHealthcarePredictiveAnalytics(...args[]): {
-  ;
   website: 'https://ziontechgroup.com'
-<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
-}
-;
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx}
   const features = [{
       icon: Brain,
       title: 'AI-Powered Disease Prediction',

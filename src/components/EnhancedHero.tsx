@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { Link } from 'react - router - dom' import {  ArrowRight, Play, Pause, ChevronLeft, ChevronRight, Brain, Atom, Rocket, Shield, Zap, TrendingUp, Users, Globe, Award } from 'lucide - react'  interface HeroSlide {
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { Link } from 'react - router - dom' import {  ArrowRight, Play, Pause, ChevronLeft, ChevronRight, Brain, Atom, Rocket, Shield, Zap, TrendingUp, Users, Globe, Award } from 'lucide - react'  interface HeroSlide {;
    id: number;
    title: string;
    subtitle: string;
@@ -6,11 +6,11 @@ import React, { useState, useEffect } from 'react' import { motion, AnimatePrese
    ctaText: string;
    ctaLink: string;
    background: string;
-   icon: React.ComponentType < any>
+   icon: React.ComponentType < >
    stats?: Array<{
    number: string;
    label: string;
-   icon: React.ComponentType < any>}> } export default React.memo(/**
+   icon: React.ComponentType < >}> } export default React.memo(/**
  * EnhancedHero function
  * @param {*} params - Function parameters
  * @returns {*} Function return value*/

@@ -27,7 +27,6 @@ const ContactPage: NextPage = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData, [e.target.name]: e.target.value})}
-;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -49,7 +48,6 @@ const ContactPage: NextPage = () => {
         name: '', email: '',
         company: '', phone: '',
         service: '', message: ''})}, 2000)}
-;
   const contactInfo = [
     {
 :pages.disabled_auto/contact.tsx
@@ -536,5 +534,4 @@ const ContactPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default ContactPage

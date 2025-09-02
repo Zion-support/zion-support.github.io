@@ -69,7 +69,6 @@ export;
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 24 hours';
       sameSite: 'strict'}}}
-;
 // Input sanitization functions;
   // Remove potentially dangerous HTML tags;
   html: (input: string) : string => {
@@ -86,7 +85,6 @@ export;
   // General sanitization;
   general: (input: string) : string => {
     return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) ) }}
-;
 // Helper function to generate CSP header string;
   return Object.entries (securityConfig.csp) .map ( ([key, values]) => {
       if (Array.isArray (values) ) {
@@ -105,7 +103,6 @@ export;
       sameSite: 'strict'}
   }
 }
-;
 // Input sanitization functions;
   // Remove potentially dangerous HTML tags;
   html: (input: string) : string => {}
@@ -122,13 +119,11 @@ export;
   general: (input: string) : string => {}
     return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) ) }
 }
-;
 // Helper function to generate CSP header string;
   return Object.entries (securityConfig.csp) .map ( ([key, values]) => {}
       if (Array.isArray (values) ) {}
         return `${key} ${values.join (' ') }`}
       return `${key} ${values}`}) .join (') }
-;
 // Validate input against patterns;
   email: (email: string) : boolean =>
     securityConfig.validation.email.test (email) ,
@@ -147,12 +142,10 @@ export;
   decimal: (num: string) : boolean =>
 :pages.disabled/utils/securityConfig.tsx;
     securityConfig.validation.decimal.test (num) }
-;
 // Security middleware configuration;
   // Enable all security features;
   enableAll: () => ({
     securityConfig.validation.decimal.test (num)}
-;
 // Security middleware configuration;
   // Enable all security features;
   enableAll: () => ({}

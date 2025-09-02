@@ -1,9 +1,9 @@
- import { Helmet } from 'react-helmet-async'  interface SEOHeadProps {
+ import { Helmet } from 'react-helmet-async'  interface SEOHeadProps {;
    title: string;
    description: string;
    keywords?: string[];
    canonicalUrl?: string;
-   ogImage?: string;
+   ogImage?: string;"
    ogType?: 'website' | 'article' | 'service';
    structuredData?: object;
    noIndex?: boolean;

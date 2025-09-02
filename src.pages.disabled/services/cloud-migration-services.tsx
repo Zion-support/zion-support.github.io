@@ -267,5 +267,4 @@ const CloudMigrationServices: React.FC = () => {
       </section>
     </Layout>
   )}
-;
 export default CloudMigrationServices

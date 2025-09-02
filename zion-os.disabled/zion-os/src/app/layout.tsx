@@ -24,7 +24,6 @@ export const metadata = {
     type: 'website,
     locale:;
   'en_US'}}
-;
 export { function }
 export default function RootLayout(...args: unknown[]): unknown {
   return(

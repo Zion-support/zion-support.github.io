@@ -33,7 +33,6 @@ class SyntaxErrorFixer {
         failed: [],
         skipped: []}
     }
-;
     try {
       // Find files with common syntax error patterns;
       const files = this.findSyntaxErrorFiles();

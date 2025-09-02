@@ -142,7 +142,7 @@ const AdvancedAnalyticsDashboard = () => {}
                 key={range}'''';
                 variant={timeRange === range ? 'default' : 'outline'}'''';
                 size='sm''';
-                onClick={() => setTimeRange(range)}
+                onClick={() =" > setTimeRange(range)}
               >{range}
               </Button>
             ))}
@@ -197,7 +197,7 @@ const AdvancedAnalyticsDashboard = () => {}
         <Card>''''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
-              <BarChart3 className='w-5 h-5 text-zion-cyan' />
+              <BarChart3 className='w-5 h-5 text-zion-cyan' /" >
               Service Performance Overview
             </CardTitle>
           </CardHeader>''''
@@ -254,7 +254,7 @@ const AdvancedAnalyticsDashboard = () => {}
                       </td>''''
                       <td className='py-3 px-4'>''''
                         <div className='flex items-center gap-1'>''''
-                          <TrendingUp className='w-4 h-4 text-green-500' />''''
+                          <TrendingUp className='w-4 h-4 text-green-500' /" >''''
                           <span className='text-green-600 font-medium'>
                             +{service.growth}%
                           </span>
@@ -293,7 +293,7 @@ const AdvancedAnalyticsDashboard = () => {}
         <Card>''''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
-              <PieChart className='w-5 h-5 text-zion-purple' />
+              <PieChart className='w-5 h-5 text-zion-purple' /" >
               Service Category Distribution
             </CardTitle>
           </CardHeader>''''
@@ -313,7 +313,7 @@ const AdvancedAnalyticsDashboard = () => {}
                       {category.label}
                     </span>''''
                   </div>''''
-                  <div className='flex items-center gap-2'>''''
+                  <div className='flex items-center gap-2'>''''`
                     <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>`
                       <div``;
                         className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``;
@@ -333,7 +333,7 @@ const AdvancedAnalyticsDashboard = () => {}
         <Card>''''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
-              <Brain className='w-5 h-5 text-zion-cyan' />
+              <Brain className='w-5 h-5 text-zion-cyan' /" >
               Key Insights
             </CardTitle>
           </CardHeader>''''
@@ -414,11 +414,8 @@ const AdvancedAnalyticsDashboard = () => {}
     </div>)}
 export default AdvancedAnalyticsDashboard;
 export { AdvancedAnalyticsDashboard }
-;
 export { AdvancedAnalyticsDashboard }
-;
 export { AdvancedAnalyticsDashboard }
-;
 export { AdvancedAnalyticsDashboard }
 
-export { AdvancedAnalyticsDashboard }
+export { AdvancedAnalyticsDashboard }"`

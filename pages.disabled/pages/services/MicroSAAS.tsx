@@ -306,5 +306,4 @@ icon: Globe,';
     </div>
 :pages.disabled/pages/services/MicroSAAS.tsx)}'';
 export default MicroSAAS}}}}'''')}
-;
 export default MicroSAAS}}}}'''

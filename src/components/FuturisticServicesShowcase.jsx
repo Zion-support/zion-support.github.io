@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices.jsx';
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)
-    return (<motion.div initial = {}
+    return (<motion .div initial = {}
   { opacity: 0, y: 50,
   scale: 0.9}} animate = {}
   isVisible ? { opacity: 1, y: 0,
@@ -127,7 +127,7 @@ export const FuturisticServicesShowcase = () => {}
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesSearch})
+        return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX;
     useEffect(() => {}
         const allIndices = new Set(filteredServices.map((_, index) => index))';';
@@ -177,7 +177,7 @@ export const FuturisticServicesShowcase = () => {}
 '''{/* Services Grid */}'''''
         <div className='grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8'>
           <AnimatePresence>
-            {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has(index) }/>) ) }
+            {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has(index) }/" >) ) }
           </AnimatePresence>
         </div>
         {/* Call to Action */}

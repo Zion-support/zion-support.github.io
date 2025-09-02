@@ -188,7 +188,6 @@ export function Sidebar() {
         ? prev.filter(name => name !== itemName);
         : [...prev, itemName]
     )}
-;
   const isActive = (path: string) => location.pathname === path
   return(
     <div

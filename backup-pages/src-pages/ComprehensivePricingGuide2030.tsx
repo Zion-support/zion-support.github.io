@@ -228,7 +228,6 @@ features[';Basic AI features',
         <div className='max-w-7xl mx-auto'>'
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => {
-;
               return()
                 <motion.div
                   key = {service.id}
@@ -536,5 +535,4 @@ features[';Basic AI features',
         </div>
       </section>
     </div>) }
-;
 export default ComprehensivePricingGuide2030}}''`

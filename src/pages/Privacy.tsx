@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';"
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
 const Privacy: React.FC = () => {
   const sections = [
@@ -48,15 +48,15 @@ const Privacy: React.FC = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className='text-center mb-12'>
-          <div className='flex items-center justify-center mb-4'>
-            <Shield className='h-8 w-8 text-blue-600 mr-3' />
+          animate={{ opacity: 1, y: 0 }}"
+          className='text-center mb-12'>"
+          <div className='flex items-center justify-center mb-4'>"
+            <Shield className='h-8 w-8 text-blue-600 mr-3' /" >"
             <h1 className='text-4xl font-bold text-gray-900'>Privacy Policy</h1>
-          </div>
+          </div>"
           <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
             Your privacy is important to us. This policy explains how we collect, use, and protect your information.
-          </p>
+          </p>"
           <p className='text-sm text-gray-500 mt-4'>
             Last updated: {new Date().toLocaleDateString()}
           </p>
@@ -75,23 +75,23 @@ const Privacy: React.FC = () => {
             of this privacy policy, please do not access the site or use our services.
           </p>
         </motion.div>
-        {/* Policy Sections */}
+        {/* Policy Sections */}"
         <div className='space-y-8'>
           {sections.map((section, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * (index + 2) }}
-              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-              <div className='flex items-center mb-4'>
-                <section.icon className='h-6 w-6 text-blue-600 mr-3' />
+              transition={{ delay: 0.1 * (index + 2) }}"
+              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>"
+              <div className='flex items-center mb-4'>"
+                <section .icon className='h-6 w-6 text-blue-600 mr-3' /" >"
                 <h2 className='text-2xl font-bold text-gray-900'>{section.title}</h2>
-              </div>
+              </div>"
               <ul className='space-y-2'>
-                {section.content.map((item, itemIndex) => (
-                  <li key={itemIndex} className='flex items-start'>
-                    <span className='text-blue-600 mr-2 mt-1'>•</span>
+                {section.content.map((item, itemIndex) => ("
+                  <li key={itemIndex} className='flex items-start'>"
+                    <span className='text-blue-600 mr-2 mt-1'>•</span>"
                     <span className='text-gray-600'>{item}</span>
                   </li>
                 ))}
@@ -103,29 +103,29 @@ const Privacy: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className='mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>
+          transition={{ delay: 0.8 }}"
+          className='mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>"
+          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>"
           <p className='text-gray-600 mb-4'>
             If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <div>
-              <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>
+            <div>"
+              <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>"
               <p className='text-gray-600'>kleber@ziontechgroup.com</p>
             </div>
-            <div>
-              <h3 className='font-semibold text-gray-900 mb-2'>Phone</h3>
+            <div>"
+              <h3 className='font-semibold text-gray-900 mb-2'>Phone</h3>"
               <p className='text-gray-600'>+1 302 464 0950</p>
             </div>
-            <div>
-              <h3 className='font-semibold text-gray-900 mb-2'>Address</h3>
+            <div>"
+              <h3 className='font-semibold text-gray-900 mb-2'>Address</h3>"
               <p className='text-gray-600'>
-                364 E Main St STE 1008<br />
+                364 E Main St STE 1008<br /" >
                 Middletown DE 19709
               </p>
             </div>
-            <div>
-              <h3 className='font-semibold text-gray-900 mb-2'>Data Protection Officer</h3>
+            <div>"
+              <h3 className='font-semibold text-gray-900 mb-2'>Data Protection Officer</h3>"
               <p className='text-gray-600'>dpo@ziontechgroup.com</p>
             </div>
           </div>
@@ -134,17 +134,16 @@ const Privacy: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
-          className='mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6'>
-          <h3 className='text-lg font-semibold text-blue-900 mb-2'>Policy Updates</h3>
+          transition={{ delay: 0.9 }}"
+          className='mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6'>"
+          <h3 className='text-lg font-semibold text-blue-900 mb-2'>Policy Updates</h3>"
           <p className='text-blue-800'>
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting;
+            We may update this Privacy Policy from time to time. We will notify you of  changes by posting;"
             the new Privacy Policy on this page and updating the 'Last updated' date. You are advised to review;
-            this Privacy Policy periodically for any changes.
+            this Privacy Policy periodically for  changes.
           </p>
         </motion.div>
       </div>
     </div>
   )}
-;
-export default Privacy
+export default Privacy"

@@ -458,7 +458,6 @@ export default function ResearchDevelopment(...args[]):  {
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesArea && matchesStatus && matchesSearch})}
   }
-;
   return()
     <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}'
