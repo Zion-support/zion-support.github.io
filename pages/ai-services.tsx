@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -830,6 +830,150 @@ export default function AIServices() {
       pricing: '$100,000 - $500,000/month',
       delivery: '60-120 weeks',
       category: 'Consciousness AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Hunter',
+      description: 'Advanced AI system for proactive threat detection and automated incident response',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Automated incident response and containment',
+        'Behavioral analysis and anomaly detection',
+        'Zero-day vulnerability identification',
+        'Threat intelligence aggregation and analysis',
+        'Integration with SIEM and security tools'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Financial Trading Algorithm',
+      description: 'Intelligent algorithmic trading system with market prediction and risk management',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and prediction',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Sentiment analysis from news and social media',
+        'Backtesting and strategy validation',
+        'Integration with major trading platforms'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis Assistant',
+      description: 'Advanced medical AI for diagnostic support and treatment recommendations',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation',
+        'Symptom analysis and differential diagnosis',
+        'Treatment recommendation and drug interaction checking',
+        'Patient risk assessment and monitoring',
+        'Integration with EHR and medical devices',
+        'Clinical decision support and documentation'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Medical AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Control',
+      description: 'Intelligent autonomous vehicle navigation and safety systems',
+      icon: Car,
+      features: [
+        'Real-time environment perception and mapping',
+        'Path planning and obstacle avoidance',
+        'Traffic prediction and route optimization',
+        'Vehicle-to-vehicle communication coordination',
+        'Safety monitoring and emergency response',
+        'Integration with vehicle control systems'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Autonomous Vehicle AI'
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description: 'Intelligent energy distribution and consumption optimization system',
+      icon: Zap,
+      features: [
+        'Real-time energy demand prediction and optimization',
+        'Renewable energy integration and storage management',
+        'Grid stability monitoring and control',
+        'Energy trading and market optimization',
+        'Predictive maintenance for grid infrastructure',
+        'Integration with smart meters and IoT devices'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '12-24 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Agricultural Intelligence',
+      description: 'Smart farming system with crop monitoring and yield optimization',
+      icon: TreePine,
+      features: [
+        'Crop health monitoring and disease detection',
+        'Precision agriculture and resource optimization',
+        'Weather prediction and irrigation management',
+        'Yield prediction and harvest optimization',
+        'Soil analysis and nutrient management',
+        'Integration with IoT sensors and drones'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-20 weeks',
+      category: 'AgTech AI'
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Intelligent urban infrastructure management and optimization platform',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and congestion management',
+        'Public safety monitoring and emergency response',
+        'Resource allocation and waste management',
+        'Environmental monitoring and air quality control',
+        'Citizen service optimization and delivery',
+        'Integration with city infrastructure and IoT networks'
+      ],
+      pricing: '$30,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Smart City AI'
+    },
+    {
+      title: 'AI-Powered Manufacturing Quality Control',
+      description: 'Intelligent manufacturing process optimization and quality assurance',
+      icon: Settings,
+      features: [
+        'Real-time quality inspection and defect detection',
+        'Predictive maintenance and equipment optimization',
+        'Production line optimization and scheduling',
+        'Supply chain optimization and demand forecasting',
+        'Worker safety monitoring and compliance',
+        'Integration with manufacturing execution systems'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'Manufacturing AI'
+    },
+    {
+      title: 'AI-Powered Personal Health Assistant',
+      description: 'Intelligent personal health monitoring and wellness optimization',
+      icon: Heart,
+      features: [
+        'Continuous health monitoring and vital signs tracking',
+        'Personalized health recommendations and interventions',
+        'Medication adherence monitoring and reminders',
+        'Lifestyle optimization and habit formation',
+        'Integration with wearables and health devices',
+        'Telehealth consultation and remote monitoring'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '6-12 weeks',
+      category: 'Personal Health AI'
     }
   ];
   const aiTechnologies = [

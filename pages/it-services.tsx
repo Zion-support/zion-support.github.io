@@ -32,7 +32,8 @@ import {
   TrendingUp,
   Car,
   Brain,
-  Satellite
+  Satellite,
+  TreePine
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -632,6 +633,150 @@ export default function ITServices() {
       pricing: '$75,000 - $750,000/month',
       delivery: '32-64 weeks',
       category: 'Space Mission IT Services'
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, optimization, and hybrid classical-quantum systems',
+      icon: Cpu,
+      features: [
+        'Quantum computer setup and configuration',
+        'Quantum algorithm development and optimization',
+        'Hybrid classical-quantum computing workflows',
+        'Quantum error correction and noise mitigation',
+        'Quantum machine learning model training',
+        'Integration with existing IT infrastructure'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-48 weeks',
+      category: 'Quantum Computing Services'
+    },
+    {
+      title: '5G & Edge Computing Networks',
+      description: '5G network deployment, edge computing infrastructure, and ultra-low latency solutions',
+      icon: Network,
+      features: [
+        '5G network planning and deployment',
+        'Edge computing infrastructure setup',
+        'Ultra-low latency application optimization',
+        'Network slicing and virtualization',
+        'IoT device connectivity and management',
+        'Real-time data processing and analytics'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: '5G & Edge Services'
+    },
+    {
+      title: 'Metaverse & Virtual Reality Infrastructure',
+      description: 'VR/AR platform development, metaverse infrastructure, and immersive technology solutions',
+      icon: Monitor,
+      features: [
+        'VR/AR application development and deployment',
+        'Metaverse platform infrastructure setup',
+        '3D content creation and management',
+        'Virtual event hosting and management',
+        'Immersive training and simulation systems',
+        'Cross-platform VR/AR integration'
+      ],
+      pricing: '$15,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Metaverse Services'
+    },
+    {
+      title: 'Green IT & Sustainable Computing',
+      description: 'Energy-efficient computing solutions, carbon footprint reduction, and sustainable IT practices',
+      icon: TreePine,
+      features: [
+        'Energy-efficient server and data center design',
+        'Carbon footprint monitoring and reduction',
+        'Renewable energy integration for IT infrastructure',
+        'Sustainable software development practices',
+        'E-waste management and recycling programs',
+        'Green cloud computing optimization'
+      ],
+      pricing: '$10,000 - $100,000/month',
+      delivery: '8-16 weeks',
+      category: 'Green IT Services'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation',
+      icon: Shield,
+      features: [
+        'Zero-trust network architecture design',
+        'Identity and access management (IAM) implementation',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring and validation',
+        'Privileged access management (PAM)',
+        'Security automation and orchestration'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Zero-Trust Security Services'
+    },
+    {
+      title: 'Hyperautomation & RPA Solutions',
+      description: 'Intelligent process automation, robotic process automation, and business process optimization',
+      icon: Settings,
+      features: [
+        'Robotic Process Automation (RPA) implementation',
+        'Intelligent document processing and workflow automation',
+        'Business process mining and optimization',
+        'AI-powered decision automation',
+        'Integration with legacy systems and APIs',
+        'Process monitoring and performance analytics'
+      ],
+      pricing: '$8,000 - $80,000/month',
+      delivery: '8-20 weeks',
+      category: 'Hyperautomation Services'
+    },
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description: 'Digital twin development, simulation platforms, and virtual modeling solutions',
+      icon: Monitor,
+      features: [
+        'Digital twin platform development and deployment',
+        'Real-time simulation and modeling systems',
+        'IoT sensor integration and data synchronization',
+        'Predictive analytics and scenario modeling',
+        'Virtual testing and validation environments',
+        'Integration with CAD and engineering tools'
+      ],
+      pricing: '$25,000 - $250,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Neuromorphic Computing Systems',
+      description: 'Brain-inspired computing infrastructure, spiking neural networks, and edge AI optimization',
+      icon: Brain,
+      features: [
+        'Neuromorphic chip integration and optimization',
+        'Spiking neural network development and deployment',
+        'Edge AI processing and optimization',
+        'Real-time learning and adaptation systems',
+        'Low-power computing infrastructure',
+        'Integration with IoT and sensor networks'
+      ],
+      pricing: '$30,000 - $300,000/month',
+      delivery: '20-40 weeks',
+      category: 'Neuromorphic Computing Services'
+    },
+    {
+      title: 'Autonomous Systems Infrastructure',
+      description: 'Infrastructure for autonomous vehicles, drones, and robotic systems with real-time processing',
+      icon: Car,
+      features: [
+        'Autonomous vehicle computing infrastructure',
+        'Drone fleet management and control systems',
+        'Robotic system integration and coordination',
+        'Real-time sensor data processing and fusion',
+        'Edge computing for autonomous decision making',
+        'Safety and failover system implementation'
+      ],
+      pricing: '$40,000 - $400,000/month',
+      delivery: '24-48 weeks',
+      category: 'Autonomous Systems Services'
     }
   ];
 
