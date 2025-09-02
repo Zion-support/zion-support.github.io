@@ -104,7 +104,7 @@ function generateSitemap() {
   } catch (error) {
     // // // // // // // console.error('❌ Error generating sitemap:', error.message);
     process.exit(1);
-=======
+
     console.log('✅ Text sitemap generated successfully at:', textSitemapPath);
     console.log('\n🎉 All sitemap files generated successfully!');
     console.log(`📊 Total routes: ${routes.length}`);

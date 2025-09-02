@@ -49,7 +49,7 @@ export default function InnovativeServicesShowcase2027(...args[]: any):  {
       transition: {
         duration: 0.3,
         ease: "easeOut"
-=======
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -369,7 +369,7 @@ export default function InnovativeServicesShowcase2027() {
                   ))}
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
-=======
+
     <EnhancedSEO data={SEOConfigs.innovativeServicesShowcase2027}>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-blue-dark">
         <SEO
@@ -878,7 +878,7 @@ export default function InnovativeServicesShowcase2027() {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Get in touch with our experts to discuss how these innovative services can drive your success
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Helmet>
         <title>Innovative AI Services Showcase 2027 | Zion Tech Group</title>
@@ -914,7 +914,7 @@ export default function InnovativeServicesShowcase2027() {
     </EnhancedSEO>
   );
 };
-=======
+
               <a 
                 href="#contact" 
                 className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"

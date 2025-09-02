@@ -21,7 +21,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
+
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle              } from 'lucide-react.ts';
@@ -268,7 +268,6 @@ export default function AIProjectManagement() {
         </div>
       </section>
 
-=======
       {/* Project Types Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">

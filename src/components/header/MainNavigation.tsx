@@ -303,8 +303,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
   );
 }
 
-
-=======
 import React, { useState              } from 'react.ts';
 import { Link                } from 'react-router-dom.ts';
 import { cn                } from '@/lib/utils';

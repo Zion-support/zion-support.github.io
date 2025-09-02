@@ -17,11 +17,7 @@ class LintMonitor {
     fs.appendFileSync(this.logFile, logMessage);
     this.ensureLogDirectory()}
   ensureLogDirectory() {
-=======
-;
-    this.ensureLogDirectory()};
-  ensureLogDirectory() {;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true })}
@@ -45,7 +41,7 @@ class LintMonitor {
     } catch (error) {;
       const errorLines = errorOutput.split('\n').filter(line =>;
         line.includes('error') || line.includes('Error');
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
       );
       this.errorCount = errorLines.length;
       this.lastCheck = new Date();
@@ -198,9 +194,7 @@ switch (command) {
   default:
     // // // // // // // // console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
     process.exit(1);
-=======
-;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
     process.exit(1)}
 // Graceful shutdown

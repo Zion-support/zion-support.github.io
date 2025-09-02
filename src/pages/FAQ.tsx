@@ -130,7 +130,7 @@ export default function FAQ() {
       case 'Support': return HelpCircle;
       case 'General': return Zap;
       default: return HelpCircle;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     }
   };
 
@@ -142,7 +142,7 @@ export default function FAQ() {
       case 'Support': return 'from-green-500 to-emerald-500';
       case 'General': return 'from-yellow-500 to-orange-500';
       default: return 'from-gray-500 to-slate-500';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     }
   };
 
@@ -246,7 +246,7 @@ export default function FAQ() {
                       : 'border-slate-700 bg-slate-800/30 hover:border-slate-600'
                   }`}
                   initial={{ opacity: 0, y: 20 }}
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -259,7 +259,7 @@ export default function FAQ() {
                 </motion.button>
               );
             })}
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
           </div>
         </div>
       </section>
@@ -398,4 +398,4 @@ export default function FAQ() {
     </div>
   );
 }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

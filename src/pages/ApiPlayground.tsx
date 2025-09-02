@@ -91,7 +91,7 @@ import {
   FastForward as FastForwardIcon2,
   Repeat as RepeatIcon2,
   Repeat1 as Repeat1Icon2
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
@@ -136,7 +136,6 @@ interface Method {
   color: string;
 }
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 export default function ApiPlayground() {
   const [activeTab, setActiveTab] = useState('playground');
   const [selectedApi, setSelectedApi] = useState(null);
@@ -160,7 +159,7 @@ export default function ApiPlayground() {
   ];
 
   const apis: ApiEndpoint[] = [
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     {
       id: 'user-management',
       name: 'User Management API',
@@ -313,7 +312,7 @@ export default function ApiPlayground() {
       default:
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
     }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   };
 
   return (
@@ -322,7 +321,7 @@ export default function ApiPlayground() {
         title="API Playground - Zion Tech Group"
         description="Test and explore our APIs in real-time. Interactive playground for AI, cloud, security, and data analytics endpoints with live examples."
         keywords="API playground, API testing, REST API, AI API, cloud API, security API, Zion Tech Group"
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -668,7 +667,7 @@ export default function ApiPlayground() {
                         </div>
                       </div>
                     )}
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                   </div>
                 ) : (
                   <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
@@ -716,7 +715,7 @@ export default function ApiPlayground() {
             </motion.div>
           </div>
         </section>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       </div>
     </>
   );

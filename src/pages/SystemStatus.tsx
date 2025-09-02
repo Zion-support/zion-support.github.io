@@ -24,7 +24,6 @@ import {
   Bell,
   Info
 } from 'lucide-react';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
 interface ServiceStatus {
   id: string;
@@ -108,7 +107,7 @@ const services: ServiceStatus[] = [
     lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Cloud hosting and infrastructure services',
     icon: Cloud
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   }
 ];
 
@@ -131,7 +130,7 @@ const incidents: Incident[] = [
     severity: 'medium',
     startTime: '2025-08-27T16:00:00Z',
     affectedServices: ['ai']
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   }
 ];
 
@@ -162,7 +161,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
       return <Settings className="w-5 h-5" />;
     default:
       return <Clock className="w-5 h-5" />;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   }
 };
 
@@ -461,7 +460,7 @@ export default function SystemStatus() {
                             : 'text-blue-400 bg-blue-400/10 border-blue-400/20'
                         }`}>
                           <span className="capitalize">{incident.status}</span>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                         </div>
                       </div>
                     </div>
@@ -589,7 +588,7 @@ export default function SystemStatus() {
             </motion.div>
           </div>
         </section>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       </div>
     </>
   );

@@ -47,8 +47,7 @@ const categories = [;
     stats: '100+ Innovations';
   },;
   {;
-=======
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec
     title: 'AI Hiring Platform',;
     description: 'AI-powered recruitment and talent acquisition tools',;
     icon: <ZapIcon className='w-10 h-10'                                                                                                                                                                              />,;
@@ -75,8 +74,7 @@ const specialServices = [;
     link: '/cloud-solutions',;
     icon: <Globe className='w-5 h-5'                                                                                                                                                                              />,;
     description: 'Scalable cloud infrastructure';
-=======
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec
   },;
   {;
     title: 'Security Services',;
@@ -335,9 +333,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
             Explore All Categories;
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'                                                                                                                                                                              />;
-=======
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'              />;
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec
           </Link>;
         </motion.div>;
       </div>;

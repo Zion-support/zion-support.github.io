@@ -42,7 +42,7 @@ import {
     technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
   }
 ];
-=======
+
 const digitalTwinTechnologies = [
   {
     name: "IoT Sensors",

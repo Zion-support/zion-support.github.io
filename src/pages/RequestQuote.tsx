@@ -1,4 +1,4 @@
-=======
+
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
@@ -37,19 +37,7 @@ import { Calculator,
   Package,
   Truck,
   Headphones
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
 } from 'lucide-react';
 
 export default function RequestQuote(...args: any[]): any {
@@ -289,7 +277,6 @@ export default function RequestQuote(...args: any[]): any {
     }));
   };
 
-=======
   const toggleService = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setFormData(prev => ({
       ...prev,

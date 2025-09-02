@@ -58,7 +58,7 @@ const Blog = () => {
       tags: ["Quantum", "Computing", "Innovation"],
       image: "/images/blog/quantum-computing.jpg",
       featured: true
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     }
   ];
 
@@ -71,7 +71,6 @@ const Blog = () => {
     return matchesSearch && matchesCategory;
   });
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -105,7 +104,7 @@ const Blog = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
             />
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
           </div>
           <select
             value={selectedCategory}
@@ -263,7 +262,7 @@ const Blog = () => {
           </div>
         </motion.div>
       </div>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     </div>
   );
 };

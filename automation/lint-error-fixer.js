@@ -13,11 +13,7 @@ class LintErrorFixer {
     fs.appendFileSync(this.logFile, logMessage);
     this.ensureLogDirectory()}
   ensureLogDirectory() {
-=======
-;
-    this.ensureLogDirectory()};
-  ensureLogDirectory() {;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true })}
@@ -118,7 +114,7 @@ class LintErrorFixer {
     ];
     let totalFiles = 0;
     for (const pattern of patterns) {;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
       const files = this.glob(pattern);
       for (const fixed = await this.fixFile(file);
         if (fixed) totalFixed++;
@@ -159,11 +155,7 @@ switch (command) {
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
       fixer.fixFile(filePath)} else {
       console.log('Usage: node lint-error-fixer.js file <filepath>')}
-=======
-    };
-      fixer.fixFile(filePath)} else {;
-      console.log('Usage: node lint-error-fixer.js file <filepath>')};
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     break;
   case 'all':
     fixer.fixAllFiles();
@@ -171,8 +163,6 @@ switch (command) {
   default:
     // // // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
     process.exit(1);
-=======
-}}}}}}}}}}}}}}}}}}}}}}}}}};
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
     process.exit(1)}

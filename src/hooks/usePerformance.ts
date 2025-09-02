@@ -2,19 +2,6 @@ import React, { useState } from 'react.ts';
 import { useEffect, useRef, useState              } from 'react.ts';
 interface PerformanceMetrics {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
@@ -23,32 +10,8 @@ interface PerformanceMetrics {
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 interface PerformanceOptions {
-
-
-
-
-
-
-
-
-
-
-
-
 
   enableRealUserMonitoring?: boolean;
   enableWebVitals?: boolean;
@@ -56,18 +19,6 @@ interface PerformanceOptions {
   enableNavigationTiming?: boolean;
   logToConsole?: boolean;
   sendToAnalytics?: boolean;
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -165,7 +116,7 @@ export function usePerformance(...args: any[]): any {
       // // // // // // // console.warn('Error setting up long task observer: anyanyanyanyanyanyanyanyanyanyanyanyany', error);
     }
     return ()              => longTaskObserver.disconnect();
-=======
+
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }

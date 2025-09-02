@@ -18,7 +18,7 @@ import {
   Users,
   Target,
   DollarSign,
-=======
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -359,7 +359,7 @@ export function ComprehensivePricingGuide2025() {
       'Mid-Range': comprehensiveServices2025Enhanced.filter(s => parseFloat(s.price.replace('$', '').replace(',', '')) >= 500 && parseFloat(s.price.replace('$', '').replace(',', '')) < 2000).length,
       Premium: comprehensiveServices2025Enhanced.filter(s => parseFloat(s.price.replace('$', '').replace(',', '')) >= 2000 && parseFloat(s.price.replace('$', '').replace(',', '')) < 5000).length,
       Enterprise: comprehensiveServices2025Enhanced.filter(s => parseFloat(s.price.replace('$', '').replace(',', '')) >= 5000).length
-=======
+
   Filter,
   Search
 } from 'lucide-react';
@@ -1580,7 +1580,7 @@ export default function ComprehensivePricingGuide2025() {
               Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">https://ziontechgroup.com</a>
             </p>
           </div>
-=======
+
         </div>
       </div>
     </div>

@@ -297,7 +297,7 @@ export default function Terms() {
                 <Globe className="w-16 h-16 text-green-400 mx-auto mb-6" />
                 <h3 className="text-xl font-semibold text-white mb-3">Applicability</h3>
                 <p className="text-gray-400">Global Coverage</p>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
               </div>
             </section>
           </div>
@@ -633,7 +633,7 @@ export default function Terms() {
           </motion.div>
         </div>
       </section>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     </div>
   );
 }

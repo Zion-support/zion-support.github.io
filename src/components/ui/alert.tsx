@@ -11,7 +11,7 @@ interface AlertProps extends React.PropsWithChildren<{
 interface AlertTitleProps {
   children: React.ReactNode;
   className?: string;
-=======
+
   className?: string}
 
 }

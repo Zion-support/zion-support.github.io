@@ -19,7 +19,7 @@ export function EnhancedHeader() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -31,7 +31,6 @@ export function EnhancedHeader() {
     setActiveDropdown(null);
   }, [location.pathname]);
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -330,7 +329,7 @@ export function EnhancedHeader() {
                         <div className="text-xs text-gray-500">{link.description}</div>
                       </Link>
                     ))}
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -485,7 +484,7 @@ export function EnhancedHeader() {
                         <div className="text-xs text-gray-500">{link.description}</div>
                       </Link>
                     ))}
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -594,4 +593,4 @@ export function EnhancedHeader() {
     </header>
   );
 }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

@@ -127,7 +127,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
         { name: 'Data Protection', href: '/data-protection', icon: Lock, description: 'GDPR & data security' },
         { name: 'Accessibility', href: '/accessibility', icon: Eye, description: 'Accessibility statement' },
         { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation structure' },
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       ]
     }
   ];
@@ -364,4 +364,4 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
     </AnimatePresence>
   );
 }
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

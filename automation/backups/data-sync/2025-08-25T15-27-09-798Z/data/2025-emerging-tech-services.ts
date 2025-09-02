@@ -482,4 +482,4 @@ export const emergingTechServices2025: MicroSaasService[] = [
     reviews: 7
 ];
     return price >= minPrice && price <= maxPrice})};
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+

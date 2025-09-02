@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   Award, 
   Target, 
   Globe, 
@@ -29,7 +29,7 @@ export default function About() {
       icon: Brain,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     },
     {
       icon: Shield,
@@ -57,7 +57,6 @@ export default function About() {
     }
   ];
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}

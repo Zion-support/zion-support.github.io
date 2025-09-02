@@ -7,7 +7,7 @@ const cron = require('node-cron');
 ;
 class CodeQualityMonitor {;
   constructor() {;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     // // // // // // // // console.log(logEntry.trim());
     try {
       fs.appendFileSync(this.logFile, logEntry);
@@ -19,17 +19,7 @@ class CodeQualityMonitor {;
       testCoverage: 0,
       performance: 0,
   lastUpdated: new Date().toISOString()
-=======
-    };
-    this.metrics = {;
-  complexity: 0,;
-      maintainability: 0,;
-      testCoverage: 0,;
-      performance: 0,;
-  lastUpdated: new Date().toISOString();
-;
-;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
   log(message) {
@@ -128,7 +118,7 @@ class CodeQualityMonitor {;
         cwd: this.projectRoot,;
         encoding: 'utf8',;
         stdio: 'pipe';
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
       });
       return [];
     } catch (error) {

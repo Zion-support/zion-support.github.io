@@ -5,7 +5,7 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   canonical?: string;
   ogImage?: string;
   ogType?: string;
@@ -19,7 +19,7 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
 }
 
 export function SEO({ 
@@ -41,11 +41,10 @@ export function SEO({
   tags = []
 }) => {
   const siteName = 'Zion Tech Group';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   // Default structured data for organization
   const defaultStructuredData = {
@@ -55,7 +54,7 @@ export function SEO({
     "url": siteUrl,
     "logo": `${siteUrl}/logo.png`,
     "description": "Leading provider of AI solutions, quantum computing, and cloud infrastructure. Transform your business with cutting-edge technology.",
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -67,13 +66,13 @@ export function SEO({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
       "https://linkedin.com/company/ziontechgroup",
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       "https://twitter.com/ziontechgroup",
       "https://github.com/Zion-Holdings",
       "https://www.youtube.com/@ziontechgroup"
@@ -81,13 +80,12 @@ export function SEO({
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullCanonical} />
@@ -128,7 +126,6 @@ export function SEO({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
 
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
@@ -142,4 +139,4 @@ export function SEO({
     </Helmet>
   );
 };
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+

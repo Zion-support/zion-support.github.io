@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react.ts';
 import { Link, useLocation              } from 'react-router-dom.ts';
 import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { ChevronDown,
-=======
+
   Menu,
   X,
   ChevronDown,
@@ -16,35 +16,11 @@ import { ChevronDown,
 
 interface NavigationLink {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   key: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
   href: string;
   name: string;
   matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => boolean;
 children?: NavigationLink[];
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

@@ -5,20 +5,6 @@ import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell                }
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 export interface Notification {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   type: NotificationType;
   title: string;
@@ -30,36 +16,10 @@ action?: {;
 
 interface NotificationContextType {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   notifications: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification[];
   addNotification: anyanyanyanyanyanyanyanyanyanyanyanyanyany(notification: Omit<Notification, 'id'>)                => void;
   removeNotification: anyanyanyanyanyanyanyanyanyanyanyanyanyany(id: string)                => void;
 clearAll: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void;
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -217,7 +177,7 @@ export const notify = {
   info: (title: string, message: string, options?: Partial<Notification>)               => {
     // // // console.log('Info notification:', { title, message, ...options });
 };}}}}}}}}}}}
-=======
+
     // // // // // // // console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>)               => {

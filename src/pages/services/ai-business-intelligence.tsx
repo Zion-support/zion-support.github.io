@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
-=======
+
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
@@ -23,7 +23,7 @@ import { Brain,
   Star
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
+
   Users,
   Globe,
   Star,
@@ -203,7 +203,7 @@ export default function AIBusinessIntelligence() {
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
+
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
