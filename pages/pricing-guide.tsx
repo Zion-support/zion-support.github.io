@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Phone, 
-  Mail, 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -28,15 +5,14 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  Phone,
+  CheckCircle, 
+  Star, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe, 
+  Phone, 
   Mail,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   ArrowRight,
   DollarSign,
   TrendingUp,
@@ -56,18 +32,8 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-<<<<<<< HEAD
-  HelpCircle
-<<<<<<< HEAD
-=======
   HelpCircle,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 } from 'lucide-react';
-import { Network } from 'lucide-react';
-=======
-} from
-  'lucide-react';
->>>>>>> origin/main
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [

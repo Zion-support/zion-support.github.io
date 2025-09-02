@@ -18,6 +18,11 @@ import {
   TrendingUp,
   Clock,
   Award,
+  FileText,
+  Mail,
+  MessageSquare,
+  ShoppingCart,
+  UserCheck,
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -309,6 +314,393 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Additional Services Section */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Additional Services
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Expand your capabilities with our specialized micro SaaS solutions and AI-powered tools.
+            </p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* AI-Powered Content Creation */}
+            <div
+              id="content-creation"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300"
+            >
+              <div className="flex items-center gap-x-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
+                  <FileText className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    AI Content Creation Tools
+                  </h2>
+                  <p className="text-sm text-blue-600 font-medium">
+                    Starting at $99/month
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Automate your content production with AI-powered writing tools, SEO optimization, and multimedia generation.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm text-gray-700">
+                    AI blog post generation
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm text-gray-700">
+                    SEO content optimization
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm text-gray-700">
+                    Social media content
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-blue-600" />
+                  <span className="text-sm text-gray-700">
+                    Brand voice consistency
+                  </span>
+                </li>
+              </ul>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <Clock className="h-4 w-4" />
+                  <span>1-2 weeks setup</span>
+                </div>
+                <Link
+                  to="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* AI Email Responder */}
+            <div
+              id="email-automation"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-green-300"
+            >
+              <div className="flex items-center gap-x-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
+                  <Mail className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    AI Email Responder
+                  </h2>
+                  <p className="text-sm text-green-600 font-medium">
+                    Starting at $149/month
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Automate email responses with intelligent AI that understands context and maintains your brand voice.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span className="text-sm text-gray-700">
+                    Smart email classification
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span className="text-sm text-gray-700">
+                    Automated responses
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span className="text-sm text-gray-700">
+                    Priority flagging
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span className="text-sm text-gray-700">
+                    Multi-language support
+                  </span>
+                </li>
+              </ul>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <Clock className="h-4 w-4" />
+                  <span>2-3 weeks setup</span>
+                </div>
+                <Link
+                  to="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Customer Support Platform */}
+            <div
+              id="customer-support"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300"
+            >
+              <div className="flex items-center gap-x-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors">
+                  <MessageSquare className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    Customer Support Platform
+                  </h2>
+                  <p className="text-sm text-purple-600 font-medium">
+                    Starting at $199/month
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Comprehensive helpdesk solution with AI chatbots, ticket management, and analytics.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <span className="text-sm text-gray-700">
+                    AI-powered chatbots
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <span className="text-sm text-gray-700">
+                    Ticket management system
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <span className="text-sm text-gray-700">
+                    Live chat integration
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-purple-600" />
+                  <span className="text-sm text-gray-700">
+                    Performance analytics
+                  </span>
+                </li>
+              </ul>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <Clock className="h-4 w-4" />
+                  <span>3-4 weeks setup</span>
+                </div>
+                <Link
+                  to="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* E-Commerce Return Management */}
+            <div
+              id="ecommerce-returns"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300"
+            >
+              <div className="flex items-center gap-x-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
+                  <ShoppingCart className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    E-Commerce Return Management
+                  </h2>
+                  <p className="text-sm text-orange-600 font-medium">
+                    Starting at $179/month
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Streamline your return process with automated workflows, label generation, and tracking.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <span className="text-sm text-gray-700">
+                    Automated return requests
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <span className="text-sm text-gray-700">
+                    Return label generation
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <span className="text-sm text-gray-700">
+                    Status tracking system
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-orange-600" />
+                  <span className="text-sm text-gray-700">
+                    Analytics dashboard
+                  </span>
+                </li>
+              </ul>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <Clock className="h-4 w-4" />
+                  <span>2-3 weeks setup</span>
+                </div>
+                <Link
+                  to="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* AI Talent Matching */}
+            <div
+              id="talent-matching"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-indigo-300"
+            >
+              <div className="flex items-center gap-x-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-600 group-hover:bg-indigo-700 transition-colors">
+                  <UserCheck className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    AI Talent Matching Platform
+                  </h2>
+                  <p className="text-sm text-indigo-600 font-medium">
+                    Starting at $249/month
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Connect with the perfect tech talent using advanced AI algorithms and verified profiles.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-indigo-600" />
+                  <span className="text-sm text-gray-700">
+                    AI-powered matching
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-indigo-600" />
+                  <span className="text-sm text-gray-700">
+                    Verified tech profiles
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-indigo-600" />
+                  <span className="text-sm text-gray-700">
+                    Skills assessment
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-indigo-600" />
+                  <span className="text-sm text-gray-700">
+                    Project matching
+                  </span>
+                </li>
+              </ul>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <Clock className="h-4 w-4" />
+                  <span>4-6 weeks setup</span>
+                </div>
+                <Link
+                  to="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-500 transition-colors group"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Data Analytics Services */}
+            <div
+              id="data-analytics"
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-teal-300"
+            >
+              <div className="flex items-center gap-x-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-teal-600 group-hover:bg-teal-700 transition-colors">
+                  <BarChart3 className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900">
+                    Data Analytics Services
+                  </h2>
+                  <p className="text-sm text-teal-600 font-medium">
+                    Starting at $299/month
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Unlock insights from your data with advanced analytics, reporting, and business intelligence.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-teal-600" />
+                  <span className="text-sm text-gray-700">
+                    Custom dashboards
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-teal-600" />
+                  <span className="text-sm text-gray-700">
+                    Predictive analytics
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-teal-600" />
+                  <span className="text-sm text-gray-700">
+                    Real-time reporting
+                  </span>
+                </li>
+                <li className="flex items-center gap-x-3">
+                  <CheckCircle className="h-4 w-4 text-teal-600" />
+                  <span className="text-sm text-gray-700">
+                    Data visualization
+                  </span>
+                </li>
+              </ul>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <Clock className="h-4 w-4" />
+                  <span>3-5 weeks setup</span>
+                </div>
+                <Link
+                  to="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm font-semibold text-teal-600 hover:text-teal-500 transition-colors group"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Process Section */}
       <section className="py-24 sm:py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -377,8 +769,8 @@ export default function Services() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
-                to="/contact"
-                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105"
+                to="mailto:kleber@ziontechgroup.com"
+                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"
                 aria-label="Contact us to get started"
               >
                 Contact Us
@@ -397,6 +789,21 @@ export default function Services() {
                   →
                 </span>
               </Link>
+            </div>
+            
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="text-white">
+                <div className="font-semibold mb-2">Phone</div>
+                <div>+1 302 464 0950</div>
+              </div>
+              <div className="text-white">
+                <div className="font-semibold mb-2">Email</div>
+                <div>kleber@ziontechgroup.com</div>
+              </div>
+              <div className="text-white">
+                <div className="font-semibold mb-2">Address</div>
+                <div>364 E Main St STE 1008<br />Middletown, DE 19709</div>
+              </div>
             </div>
           </div>
         </div>
