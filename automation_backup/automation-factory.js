@@ -27,17 +27,15 @@ class AutomationFactory {;
   };
   saveStatus() {;
     try {;
-      const status = {;
-  timestamp: new Date().toISOString(),;
-        runningScripts: Object.fromEntries(this.runningScripts),;
-  <<<<<<< HEAD;
-        totalScripts: this.scripts.size;
-;
-;
-};
-      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch (error) {;
-      this.log(`Error saving status: ${error.message}`)};
-=======;
+      const status = {
+        timestamp: new Date().toISOString(),
+        runningScripts: Object.fromEntries(this.runningScripts),
+        totalScripts: this.scripts.size
+      };
+      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
+    } catch (error) {
+      this.log(`Error saving status: ${error.message}`);
+    }
   totalScripts: this.scripts.size;
 ;
 ;
@@ -92,22 +90,16 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 class CodeQualityMonitor {;
-  constructor() {;
-    this.metrics = {;
-  complexity: 0,;
-      maintainability: 0,;
-      testCoverage: 0,;
-      performance: 0,;
-  <<<<<<< HEAD;
-      lastUpdated: new Date().toISOString();
-;
-;
-};
-    this.logFile = path.join(__dirname, 'logs', 'code-quality.log')};
-=======;
-  lastUpdated: new Date().toISOString();
-;
-;
+  constructor() {
+    this.metrics = {
+      complexity: 0,
+      maintainability: 0,
+      testCoverage: 0,
+      performance: 0,
+      lastUpdated: new Date().toISOString()
+    };
+    this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
+  }
 ;
 ;
 ;
