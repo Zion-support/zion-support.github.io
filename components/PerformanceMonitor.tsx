@@ -1,240 +1,151 @@
-'use client';'
-''
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    loadTime: null});
-
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-'
-    // Only show in development or when explicitly enabled''
-    if (process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true') {
+    if (typeof window === 'undefined') return;
 
-      setIsVisible(true);
-    }
-'
-    // Measure First Contentful Paint (FCP)''
-    if ('PerformanceObserver' in window) {
+    // Only show in development or for admin users
+    const isDev = process.env.NODE_ENV === 'development';
+    const isAdmin = localStorage.getItem('admin_mode') === 'true';
+    
+    if (!isDev && !isAdmin) return;
 
-      const fcpObserver = new PerformanceObserver((list) => {
-'
-        const entries = list.getEntries();''
-        const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-        }'
-      });''
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Measure Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        }'
-      });''
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Measure First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-'
-''
-          if (entry.entryType === 'first-input') {
-
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      
+      entries.forEach((entry) => {
+        switch (entry.entryType) {
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+            break;
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            break;
+          case 'first-input':
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-          }
-        });'
-      });''
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Measure Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-
-        for (const entry of list.getEntries()) {
-
-          if (!entry.hadRecentInput) {
-
-            clsValue += (entry as any).value;
-          }
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ 
+                ...prev, 
+                cls: (prev.cls || 0) + (entry as any).value 
+              }));
+            }
+            break;
+          case 'navigation':
+            setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
+            break;
         }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));'
-      });''
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      });
+    });
 
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+    // Observe different types of performance entries
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+    } catch (e) {
+      // Fallback for browsers that don't support all entry types
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
     }
-'
-    // Measure Time to First Byte (TTFB)''
-    if ('performance' in window) {
-'
-''
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
 
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
+    // Show metrics after 3 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000);
 
-      // Measure page load time
-      const loadEventEnd = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime: loadEventEnd }));
-    }
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
   }, []);
-
-  const getScoreColor = (metric: string, value: number | null): string => {
-'
-''
-    if (value === null) return 'text-gray-500';
-    
-    switch (metric) {
-'
-''
-      case 'fcp':''
-        return value <= 1800 ? 'text-green-500' : value <= 3000 ? 'text-yellow-500' : 'text-red-500';''
-      case 'lcp':''
-        return value <= 2500 ? 'text-green-500' : value <= 4000 ? 'text-yellow-500' : 'text-red-500';''
-      case 'fid':''
-        return value <= 100 ? 'text-green-500' : value <= 300 ? 'text-yellow-500' : 'text-red-500';''
-      case 'cls':''
-        return value <= 0.1 ? 'text-green-500' : value <= 0.25 ? 'text-yellow-500' : 'text-red-500';'
-      default:''
-        return 'text-gray-500';
-    }
-  };
-
-  const getScoreLabel = (metric: string, value: number | null): string => {
-'
-''
-    if (value === null) return 'N/A';
-    
-    switch (metric) {
-'
-''
-      case 'fcp':''
-        return value <= 1800 ? 'Good' : value <= 3000 ? 'Needs Improvement' : 'Poor';''
-      case 'lcp':''
-        return value <= 2500 ? 'Good' : value <= 4000 ? 'Needs Improvement' : 'Poor';''
-      case 'fid':''
-        return value <= 100 ? 'Good' : value <= 300 ? 'Needs Improvement' : 'Poor';''
-      case 'cls':''
-        return value <= 0.1 ? 'Good' : value <= 0.25 ? 'Needs Improvement' : 'Poor';'
-      default:''
-        return 'N/A';
-    }
-  };
 
   if (!isVisible) return null;
 
-  return()
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-sm z-50">""
-      <div className="flex items-center justify-between mb-3">""
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-          Performance Monitor
-        </h3>
-        <button"
-          onClick={() => setIsVisible(false)}""
-          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
+  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.poor) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  return (
+    <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">
+      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>
+      
+      <div className="space-y-2 text-xs">
+        {metrics.fcp && (
+          <div className="flex justify-between">
+            <span className="text-gray-600">FCP:</span>
+            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
+            </span>
+          </div>
+        )}
+        
+        {metrics.lcp && (
+          <div className="flex justify-between">
+            <span className="text-gray-600">LCP:</span>
+            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
+            </span>
+          </div>
+        )}
+        
+        {metrics.fid && (
+          <div className="flex justify-between">
+            <span className="text-gray-600">FID:</span>
+            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
+              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
+            </span>
+          </div>
+        )}
+        
+        {metrics.cls && (
+          <div className="flex justify-between">
+            <span className="text-gray-600">CLS:</span>
+            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
+            </span>
+          </div>
+        )}
+        
+        {metrics.ttfb && (
+          <div className="flex justify-between">
+            <span className="text-gray-600">TTFB:</span>
+            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
+            </span>
+          </div>
+        )}
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-gray-200">
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-xs text-gray-500 hover:text-gray-700"
         >
-          ×
-        </button>
-      </div>"
-      ""
-      <div className="space-y-2 text-xs">""
-        <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">FCP:</span>''
-          <span className={getScoreColor('fcp', metrics.fcp)}>''
-            {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"
-          </span>"'"
-          <span className="text-gray-500 text-xs">''
-            {getScoreLabel('fcp', metrics.fcp)}
-          </span>
-        </div>"
-        ""
-        <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">LCP:</span>''`
-          <span className={getScoreColor('lcp', metrics.lcp)}>'`'`
-            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"
-          </span>"'"
-          <span className="text-gray-500 text-xs">''
-            {getScoreLabel('lcp', metrics.lcp)}
-          </span>
-        </div>"
-        ""
-        <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">FID:</span>''`
-          <span className={getScoreColor('fid', metrics.fid)}>'`'`
-            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}"
-          </span>"'"
-          <span className="text-gray-500 text-xs">''
-            {getScoreLabel('fid', metrics.fid)}
-          </span>
-        </div>"
-        ""
-        <div className="flex justify-between">"'"
-          <span className="text-gray-600 dark:text-gray-400">CLS:</span>''
-          <span className={getScoreColor('cls', metrics.cls)}>''
-            {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}"
-          </span>"'"
-          <span className="text-gray-500 text-xs">''
-            {getScoreLabel('cls', metrics.cls)}
-          </span>
-        </div>"
-        ""
-        <div className="flex justify-between">""
-          <span className="text-gray-600 dark:text-gray-400">TTFB:</span>"'"`
-          <span className="text-gray-900 dark:text-white">'`'`
-            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
-          </span>
-        </div>"
-        ""
-        <div className="flex justify-between">""
-          <span className="text-gray-600 dark:text-gray-400">Load Time:</span>"'"`
-          <span className="text-gray-900 dark:text-white">'`'`
-            {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}
-          </span>
-        </div>
-      </div>"
-      ""
-      <div className="mt-3 pt-2 border-t border-gray-200 dark:border-gray-700">
-        <button"
-          onClick={() => window.location.reload()}""
-          className="w-full text-xs bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded"
-        >
-          Refresh Metrics
+          Hide
         </button>
       </div>
     </div>
   );
 };
-'"`
-export default PerformanceMonitor;'"`'"`
+
+export default PerformanceMonitor;
