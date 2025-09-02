@@ -43,7 +43,8 @@ const Home: NextPage = () => {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200 leading-relaxed">
             Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
+            with cutting-edge AI, cloud architecture, and innovative development services. From micro SaaS solutions 
+            to enterprise AI platforms, we deliver real results with measurable ROI.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -240,25 +241,92 @@ const Home: NextPage = () => {
 
           {/* Featured Services */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Meeting Transcriber</h3>
-              <p className="text-gray-600 text-sm mb-3">Real-time transcription with action items extraction</p>
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Meeting Transcriber Pro</h3>
+              <p className="text-gray-600 text-sm mb-3">Real-time transcription with action items extraction. Save 2+ hours per meeting with 99% accuracy.</p>
               <div className="text-blue-600 font-semibold">Starting at $25/month</div>
+              <div className="text-xs text-gray-500 mt-1">Trusted by 500+ teams</div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500 hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Zero Trust Security</h3>
-              <p className="text-gray-600 text-sm mb-3">Complete security architecture implementation</p>
+              <p className="text-gray-600 text-sm mb-3">Complete security architecture implementation. Reduce security incidents by 85% with enterprise-grade protection.</p>
               <div className="text-purple-600 font-semibold">Starting at $12,000</div>
+              <div className="text-xs text-gray-500 mt-1">SOC 2 compliant</div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500 hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Generative AI Platform</h3>
-              <p className="text-gray-600 text-sm mb-3">Custom AI for content creation and automation</p>
+              <p className="text-gray-600 text-sm mb-3">Custom AI for content creation and automation. Increase productivity by 300% with intelligent automation.</p>
               <div className="text-indigo-600 font-semibold">Starting at $15,000</div>
+              <div className="text-xs text-gray-500 mt-1">ROI in 3 months</div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-500">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-500 hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Contract Auditor</h3>
-              <p className="text-gray-600 text-sm mb-3">AI-powered blockchain security auditing</p>
+              <p className="text-gray-600 text-sm mb-3">AI-powered blockchain security auditing. Prevent costly breaches with automated vulnerability detection.</p>
               <div className="text-green-600 font-semibold">Starting at $150/month</div>
+              <div className="text-xs text-gray-500 mt-1">80% faster audits</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Position & Competitive Advantages */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and measurable ROI.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Proven ROI</h3>
+              <p className="text-gray-600 mb-4">Our clients see average ROI of 300% within 6 months, with measurable improvements in efficiency, cost savings, and revenue growth.</p>
+              <div className="text-sm text-blue-600 font-semibold">✓ 98% client satisfaction rate</div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Rapid Deployment</h3>
+              <p className="text-gray-600 mb-4">Get your solutions up and running in days, not months. Our agile development process ensures quick time-to-market.</p>
+              <div className="text-sm text-purple-600 font-semibold">✓ 50% faster deployment</div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+              <p className="text-gray-600 mb-4">Bank-level security with SOC 2 compliance, end-to-end encryption, and 24/7 monitoring to protect your data.</p>
+              <div className="text-sm text-indigo-600 font-semibold">✓ 99.9% uptime guarantee</div>
+            </div>
+          </div>
+
+          {/* Pricing Comparison */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Competitive Pricing & Value</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">$25-399</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">Micro SaaS Solutions</div>
+                <div className="text-gray-600">Affordable, focused tools that solve specific business problems with immediate ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-600 mb-2">$8,500-180,000</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">IT Services</div>
+                <div className="text-gray-600">Enterprise-grade infrastructure and security solutions with comprehensive support</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-indigo-600 mb-2">$12,000-400,000</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">AI Services</div>
+                <div className="text-gray-600">Cutting-edge AI solutions that transform business operations and drive innovation</div>
+              </div>
             </div>
           </div>
         </div>
@@ -272,7 +340,8 @@ const Home: NextPage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Let's discuss how we can help transform your business with cutting-edge technology solutions tailored to your needs.
+            Join 500+ companies that have transformed their operations with our cutting-edge technology solutions. 
+            Get a free consultation and discover how we can drive measurable ROI for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

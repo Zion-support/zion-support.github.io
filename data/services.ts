@@ -3683,6 +3683,1452 @@ export const services: Service[] = [
     technologies: ['Energy AI', 'IoT Sensors', 'Python', 'TensorFlow', 'Energy Management Systems'],
     link: 'https://ziontechgroup.com/services/ai-energy-optimization',
     icon: '⚡'
+  },
+  // NEW MICRO SAAS SERVICES
+  {
+    id: 'ai-meeting-transcriber',
+    name: 'AI Meeting Transcriber Pro',
+    category: 'micro-saas',
+    description: 'Advanced AI-powered meeting transcription service with real-time action items extraction, speaker identification, and intelligent summarization.',
+    features: [
+      'Real-time transcription',
+      'Speaker identification',
+      'Action items extraction',
+      'Meeting summaries',
+      'Multi-language support',
+      'Integration with calendar apps',
+      'Searchable transcripts',
+      'Export to multiple formats'
+    ],
+    pricing: {
+      starter: 25,
+      professional: 65,
+      enterprise: 149,
+      currency: 'USD'
+    },
+    benefits: [
+      'Save 2+ hours per meeting',
+      'Never miss important details',
+      'Improved meeting productivity',
+      'Better follow-up tracking'
+    ],
+    useCases: [
+      'Business meetings',
+      'Client consultations',
+      'Team standups',
+      'Training sessions'
+    ],
+    technologies: ['OpenAI Whisper', 'React', 'Node.js', 'WebRTC', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/ai-meeting-transcriber',
+    icon: '🎤'
+  },
+  {
+    id: 'smart-contract-auditor',
+    name: 'Smart Contract Security Auditor',
+    category: 'micro-saas',
+    description: 'AI-powered smart contract security auditing platform that automatically detects vulnerabilities and provides detailed security reports.',
+    features: [
+      'Automated vulnerability scanning',
+      'Gas optimization analysis',
+      'Security best practices check',
+      'Detailed audit reports',
+      'Remediation suggestions',
+      'Multi-blockchain support',
+      'Integration with development tools',
+      'Continuous monitoring'
+    ],
+    pricing: {
+      starter: 150,
+      professional: 450,
+      enterprise: 1200,
+      currency: 'USD'
+    },
+    benefits: [
+      'Prevent costly security breaches',
+      'Reduce audit time by 80%',
+      'Comprehensive security coverage',
+      'Industry-standard compliance'
+    ],
+    useCases: [
+      'DeFi protocols',
+      'NFT marketplaces',
+      'DAO governance',
+      'Token contracts'
+    ],
+    technologies: ['Solidity', 'AI Security Analysis', 'React', 'Node.js', 'Blockchain APIs'],
+    link: 'https://ziontechgroup.com/services/smart-contract-auditor',
+    icon: '🔒'
+  },
+  {
+    id: 'ai-code-reviewer',
+    name: 'AI Code Review Assistant',
+    category: 'micro-saas',
+    description: 'Intelligent code review platform that automatically analyzes code quality, security issues, and performance bottlenecks with AI-powered suggestions.',
+    features: [
+      'Automated code analysis',
+      'Security vulnerability detection',
+      'Performance optimization suggestions',
+      'Code quality metrics',
+      'Best practices enforcement',
+      'Multi-language support',
+      'Integration with Git platforms',
+      'Team collaboration tools'
+    ],
+    pricing: {
+      starter: 45,
+      professional: 125,
+      enterprise: 299,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce code review time by 60%',
+      'Catch bugs before deployment',
+      'Improve code quality',
+      'Faster development cycles'
+    ],
+    useCases: [
+      'Software development teams',
+      'Open source projects',
+      'Code quality assurance',
+      'Security compliance'
+    ],
+    technologies: ['AI Code Analysis', 'GitHub API', 'React', 'Node.js', 'Machine Learning'],
+    link: 'https://ziontechgroup.com/services/ai-code-reviewer',
+    icon: '👨‍💻'
+  },
+  {
+    id: 'ai-customer-support',
+    name: 'AI Customer Support Suite',
+    category: 'micro-saas',
+    description: 'Intelligent customer support platform with AI chatbots, ticket routing, sentiment analysis, and automated response generation.',
+    features: [
+      'AI-powered chatbots',
+      'Intelligent ticket routing',
+      'Sentiment analysis',
+      'Automated response generation',
+      'Knowledge base integration',
+      'Multi-channel support',
+      'Performance analytics',
+      'Custom branding'
+    ],
+    pricing: {
+      starter: 35,
+      professional: 95,
+      enterprise: 249,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce support costs by 40%',
+      '24/7 customer assistance',
+      'Faster response times',
+      'Improved customer satisfaction'
+    ],
+    useCases: [
+      'E-commerce businesses',
+      'SaaS companies',
+      'Service providers',
+      'Online marketplaces'
+    ],
+    technologies: ['OpenAI GPT-4', 'React', 'Node.js', 'WebSocket', 'MongoDB'],
+    link: 'https://ziontechgroup.com/services/ai-customer-support',
+    icon: '🤖'
+  },
+  {
+    id: 'ai-seo-optimizer',
+    name: 'AI SEO Optimization Platform',
+    category: 'micro-saas',
+    description: 'Advanced SEO optimization platform that uses AI to analyze content, suggest improvements, and track ranking performance across search engines.',
+    features: [
+      'AI content analysis',
+      'Keyword research & optimization',
+      'Competitor analysis',
+      'Technical SEO auditing',
+      'Ranking tracking',
+      'Content suggestions',
+      'Link building opportunities',
+      'Performance reporting'
+    ],
+    pricing: {
+      starter: 39,
+      professional: 99,
+      enterprise: 229,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase organic traffic by 150%',
+      'Improve search rankings',
+      'Save 10+ hours weekly',
+      'Data-driven SEO strategy'
+    ],
+    useCases: [
+      'Content creators',
+      'E-commerce stores',
+      'Marketing agencies',
+      'Blog publishers'
+    ],
+    technologies: ['AI Content Analysis', 'Search APIs', 'React', 'Node.js', 'Data Analytics'],
+    link: 'https://ziontechgroup.com/services/ai-seo-optimizer',
+    icon: '📈'
+  },
+  {
+    id: 'ai-data-visualization',
+    name: 'AI Data Visualization Studio',
+    category: 'micro-saas',
+    description: 'Intelligent data visualization platform that automatically creates interactive charts, dashboards, and reports from your data with AI-powered insights.',
+    features: [
+      'Automatic chart generation',
+      'Interactive dashboards',
+      'AI-powered insights',
+      'Data source integration',
+      'Custom visualization templates',
+      'Real-time data updates',
+      'Export to multiple formats',
+      'Collaborative sharing'
+    ],
+    pricing: {
+      starter: 29,
+      professional: 79,
+      enterprise: 199,
+      currency: 'USD'
+    },
+    benefits: [
+      'Create visualizations 10x faster',
+      'Discover hidden data patterns',
+      'Professional-looking reports',
+      'Better data-driven decisions'
+    ],
+    useCases: [
+      'Business analysts',
+      'Data scientists',
+      'Marketing teams',
+      'Executive reporting'
+    ],
+    technologies: ['D3.js', 'Chart.js', 'React', 'Node.js', 'AI Analytics'],
+    link: 'https://ziontechgroup.com/services/ai-data-visualization',
+    icon: '📊'
+  },
+  {
+    id: 'ai-social-listening',
+    name: 'AI Social Media Listening',
+    category: 'micro-saas',
+    description: 'Advanced social media monitoring platform that tracks brand mentions, sentiment analysis, and competitor intelligence across all major platforms.',
+    features: [
+      'Real-time brand monitoring',
+      'Sentiment analysis',
+      'Competitor tracking',
+      'Influencer identification',
+      'Crisis detection alerts',
+      'Trend analysis',
+      'Custom dashboard',
+      'Automated reporting'
+    ],
+    pricing: {
+      starter: 49,
+      professional: 129,
+      enterprise: 299,
+      currency: 'USD'
+    },
+    benefits: [
+      'Monitor brand reputation 24/7',
+      'Identify growth opportunities',
+      'Prevent PR crises',
+      'Competitive intelligence'
+    ],
+    useCases: [
+      'Brand managers',
+      'Marketing agencies',
+      'PR professionals',
+      'Social media managers'
+    ],
+    technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'Real-time Analytics'],
+    link: 'https://ziontechgroup.com/services/ai-social-listening',
+    icon: '👂'
+  },
+  {
+    id: 'ai-email-personalization',
+    name: 'AI Email Personalization Engine',
+    category: 'micro-saas',
+    description: 'Intelligent email personalization platform that creates dynamic, personalized email content based on user behavior and preferences.',
+    features: [
+      'Dynamic content personalization',
+      'Behavior-based targeting',
+      'A/B testing automation',
+      'Send time optimization',
+      'Subject line generation',
+      'Content recommendations',
+      'Performance analytics',
+      'Integration with email platforms'
+    ],
+    pricing: {
+      starter: 32,
+      professional: 85,
+      enterprise: 199,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase open rates by 40%',
+      'Boost click-through rates',
+      'Personalized customer experience',
+      'Automated optimization'
+    ],
+    useCases: [
+      'E-commerce marketing',
+      'SaaS onboarding',
+      'Newsletter publishers',
+      'Lead nurturing'
+    ],
+    technologies: ['AI Personalization', 'Email APIs', 'React', 'Node.js', 'Machine Learning'],
+    link: 'https://ziontechgroup.com/services/ai-email-personalization',
+    icon: '✉️'
+  },
+  {
+    id: 'ai-voice-cloning',
+    name: 'AI Voice Cloning Studio',
+    category: 'micro-saas',
+    description: 'Professional voice cloning platform that creates high-quality synthetic voices for content creation, accessibility, and personalized experiences.',
+    features: [
+      'High-quality voice synthesis',
+      'Multiple voice options',
+      'Emotion and tone control',
+      'Multi-language support',
+      'Real-time voice generation',
+      'API integration',
+      'Voice customization',
+      'Commercial usage rights'
+    ],
+    pricing: {
+      starter: 59,
+      professional: 149,
+      enterprise: 399,
+      currency: 'USD'
+    },
+    benefits: [
+      'Create professional voice content',
+      'Accessibility improvements',
+      'Cost-effective voice production',
+      'Consistent brand voice'
+    ],
+    useCases: [
+      'Content creators',
+      'Accessibility services',
+      'E-learning platforms',
+      'Podcast production'
+    ],
+    technologies: ['Text-to-Speech AI', 'Neural Networks', 'React', 'Node.js', 'Audio Processing'],
+    link: 'https://ziontechgroup.com/services/ai-voice-cloning',
+    icon: '🎙️'
+  },
+  {
+    id: 'ai-video-editor',
+    name: 'AI Video Editing Assistant',
+    category: 'micro-saas',
+    description: 'Intelligent video editing platform that automatically edits videos, adds captions, creates thumbnails, and optimizes for different platforms.',
+    features: [
+      'Automatic video editing',
+      'AI-generated captions',
+      'Smart thumbnail creation',
+      'Platform optimization',
+      'Background removal',
+      'Color correction',
+      'Audio enhancement',
+      'Batch processing'
+    ],
+    pricing: {
+      starter: 42,
+      professional: 115,
+      enterprise: 279,
+      currency: 'USD'
+    },
+    benefits: [
+      'Edit videos 5x faster',
+      'Professional-quality output',
+      'Platform-specific optimization',
+      'Automated workflow'
+    ],
+    useCases: [
+      'Content creators',
+      'Social media managers',
+      'Marketing teams',
+      'Video production'
+    ],
+    technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
+    link: 'https://ziontechgroup.com/services/ai-video-editor',
+    icon: '🎬'
+  },
+  {
+    id: 'ai-translation-platform',
+    name: 'AI Translation Platform',
+    category: 'micro-saas',
+    description: 'Advanced translation platform with real-time translation, document processing, and context-aware language conversion for global businesses.',
+    features: [
+      'Real-time translation',
+      'Document translation',
+      'Context-aware translation',
+      'Multi-language support',
+      'Translation memory',
+      'Quality assurance',
+      'API integration',
+      'Team collaboration'
+    ],
+    pricing: {
+      starter: 38,
+      professional: 98,
+      enterprise: 249,
+      currency: 'USD'
+    },
+    benefits: [
+      'Break language barriers',
+      'Accurate context-aware translation',
+      'Reduce translation costs',
+      'Faster global expansion'
+    ],
+    useCases: [
+      'Global businesses',
+      'E-commerce platforms',
+      'Content publishers',
+      'Customer support'
+    ],
+    technologies: ['Neural Translation', 'NLP', 'React', 'Node.js', 'Translation APIs'],
+    link: 'https://ziontechgroup.com/services/ai-translation-platform',
+    icon: '🌍'
+  },
+  {
+    id: 'ai-fraud-detection-saas',
+    name: 'AI Fraud Detection Platform',
+    category: 'micro-saas',
+    description: 'Real-time fraud detection platform that uses machine learning to identify and prevent fraudulent transactions, accounts, and activities.',
+    features: [
+      'Real-time fraud detection',
+      'Transaction monitoring',
+      'Behavioral analysis',
+      'Risk scoring',
+      'Custom rule engine',
+      'API integration',
+      'Dashboard analytics',
+      'Alert management'
+    ],
+    pricing: {
+      starter: 89,
+      professional: 229,
+      enterprise: 599,
+      currency: 'USD'
+    },
+    benefits: [
+      'Prevent financial losses',
+      'Real-time protection',
+      'Reduced false positives',
+      'Compliance with regulations'
+    ],
+    useCases: [
+      'E-commerce platforms',
+      'Financial services',
+      'Payment processors',
+      'Online marketplaces'
+    ],
+    technologies: ['Machine Learning', 'Real-time Analytics', 'React', 'Node.js', 'Fraud Detection AI'],
+    link: 'https://ziontechgroup.com/services/ai-fraud-detection-saas',
+    icon: '🛡️'
+  },
+  {
+    id: 'ai-content-moderation-saas',
+    name: 'AI Content Moderation Platform',
+    category: 'micro-saas',
+    description: 'Automated content moderation platform that uses AI to detect and filter inappropriate content across text, images, and videos.',
+    features: [
+      'Multi-media content analysis',
+      'Real-time moderation',
+      'Custom policy configuration',
+      'Human review workflow',
+      'API integration',
+      'Analytics dashboard',
+      'Bulk content processing',
+      'Compliance reporting'
+    ],
+    pricing: {
+      starter: 55,
+      professional: 145,
+      enterprise: 349,
+      currency: 'USD'
+    },
+    benefits: [
+      'Scale content moderation',
+      'Reduce moderation costs',
+      'Consistent policy enforcement',
+      'Protect brand reputation'
+    ],
+    useCases: [
+      'Social media platforms',
+      'User-generated content',
+      'Online communities',
+      'E-commerce marketplaces'
+    ],
+    technologies: ['Computer Vision', 'NLP', 'React', 'Node.js', 'Content Analysis AI'],
+    link: 'https://ziontechgroup.com/services/ai-content-moderation-saas',
+    icon: '🔍'
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    name: 'AI Predictive Maintenance',
+    category: 'micro-saas',
+    description: 'Intelligent predictive maintenance platform that uses IoT sensors and AI to predict equipment failures and optimize maintenance schedules.',
+    features: [
+      'IoT sensor integration',
+      'Failure prediction models',
+      'Maintenance scheduling',
+      'Cost optimization',
+      'Real-time monitoring',
+      'Alert system',
+      'Performance analytics',
+      'Integration with CMMS'
+    ],
+    pricing: {
+      starter: 125,
+      professional: 325,
+      enterprise: 799,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce unplanned downtime',
+      'Optimize maintenance costs',
+      'Extend equipment lifespan',
+      'Improve operational efficiency'
+    ],
+    useCases: [
+      'Manufacturing facilities',
+      'Industrial equipment',
+      'Fleet management',
+      'Building maintenance'
+    ],
+    technologies: ['IoT Sensors', 'Predictive Analytics', 'React', 'Node.js', 'Machine Learning'],
+    link: 'https://ziontechgroup.com/services/ai-predictive-maintenance',
+    icon: '🔧'
+  },
+  {
+    id: 'ai-personalization-engine',
+    name: 'AI Personalization Engine',
+    category: 'micro-saas',
+    description: 'Advanced personalization platform that creates unique user experiences through AI-driven content, product recommendations, and interface customization.',
+    features: [
+      'User behavior analysis',
+      'Dynamic content personalization',
+      'Product recommendations',
+      'Interface customization',
+      'A/B testing automation',
+      'Real-time adaptation',
+      'Cross-platform consistency',
+      'Performance analytics'
+    ],
+    pricing: {
+      starter: 69,
+      professional: 179,
+      enterprise: 449,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase user engagement',
+      'Boost conversion rates',
+      'Improve user satisfaction',
+      'Data-driven personalization'
+    ],
+    useCases: [
+      'E-commerce platforms',
+      'Content websites',
+      'Mobile applications',
+      'SaaS platforms'
+    ],
+    technologies: ['Personalization AI', 'Machine Learning', 'React', 'Node.js', 'Real-time Analytics'],
+    link: 'https://ziontechgroup.com/services/ai-personalization-engine',
+    icon: '🎯'
+  },
+  // NEW IT SERVICES
+  {
+    id: 'blockchain-infrastructure',
+    name: 'Blockchain Infrastructure Setup',
+    category: 'it-services',
+    description: 'Complete blockchain infrastructure deployment including node setup, smart contract deployment, and decentralized application hosting.',
+    features: [
+      'Multi-blockchain node deployment',
+      'Smart contract deployment',
+      'DApp hosting infrastructure',
+      'Blockchain monitoring',
+      'Security auditing',
+      'Performance optimization',
+      'Backup and recovery',
+      '24/7 technical support'
+    ],
+    pricing: {
+      starter: 8500,
+      professional: 25000,
+      enterprise: 75000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Scalable blockchain infrastructure',
+      'Reduced deployment time',
+      'Enterprise-grade security',
+      'Cost-effective operations'
+    ],
+    useCases: [
+      'DeFi applications',
+      'NFT marketplaces',
+      'Supply chain tracking',
+      'Digital identity systems'
+    ],
+    technologies: ['Ethereum', 'Polygon', 'AWS', 'Docker', 'Kubernetes'],
+    link: 'https://ziontechgroup.com/services/blockchain-infrastructure',
+    icon: '⛓️'
+  },
+  {
+    id: 'iot-platform-development',
+    name: 'IoT Platform Development',
+    category: 'it-services',
+    description: 'Comprehensive IoT platform development with device management, data processing, analytics, and real-time monitoring capabilities.',
+    features: [
+      'Device management and provisioning',
+      'Real-time data processing',
+      'Edge computing integration',
+      'Data analytics and visualization',
+      'Security and encryption',
+      'Scalable cloud infrastructure',
+      'API development',
+      'Mobile application integration'
+    ],
+    pricing: {
+      starter: 12000,
+      professional: 35000,
+      enterprise: 95000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Rapid IoT deployment',
+      'Scalable device management',
+      'Real-time insights',
+      'Reduced development costs'
+    ],
+    useCases: [
+      'Smart cities',
+      'Industrial automation',
+      'Healthcare monitoring',
+      'Environmental sensing'
+    ],
+    technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'Node.js', 'React'],
+    link: 'https://ziontechgroup.com/services/iot-platform-development',
+    icon: '🌐'
+  },
+  {
+    id: 'quantum-computing-setup',
+    name: 'Quantum Computing Infrastructure',
+    category: 'it-services',
+    description: 'Quantum computing infrastructure setup and optimization for research institutions and enterprises exploring quantum algorithms.',
+    features: [
+      'Quantum hardware integration',
+      'Quantum algorithm development',
+      'Hybrid classical-quantum systems',
+      'Quantum error correction',
+      'Performance optimization',
+      'Security implementation',
+      'Research collaboration tools',
+      'Training and documentation'
+    ],
+    pricing: {
+      starter: 25000,
+      professional: 75000,
+      enterprise: 200000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Cutting-edge quantum capabilities',
+      'Research acceleration',
+      'Competitive advantage',
+      'Future-proof technology'
+    ],
+    useCases: [
+      'Cryptography research',
+      'Drug discovery',
+      'Financial modeling',
+      'Optimization problems'
+    ],
+    technologies: ['IBM Quantum', 'Google Cirq', 'Microsoft Q#', 'Python', 'Quantum SDKs'],
+    link: 'https://ziontechgroup.com/services/quantum-computing-setup',
+    icon: '⚛️'
+  },
+  {
+    id: 'ar-vr-platform',
+    name: 'AR/VR Platform Development',
+    category: 'it-services',
+    description: 'Immersive AR/VR platform development with 3D modeling, spatial computing, and cross-platform deployment capabilities.',
+    features: [
+      '3D modeling and animation',
+      'Spatial computing integration',
+      'Cross-platform deployment',
+      'Real-time rendering optimization',
+      'Hand and eye tracking',
+      'Multi-user collaboration',
+      'Cloud-based content delivery',
+      'Analytics and user tracking'
+    ],
+    pricing: {
+      starter: 15000,
+      professional: 45000,
+      enterprise: 120000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Immersive user experiences',
+      'Cross-platform compatibility',
+      'Scalable deployment',
+      'Advanced interaction capabilities'
+    ],
+    useCases: [
+      'Training and simulation',
+      'Virtual showrooms',
+      'Remote collaboration',
+      'Gaming and entertainment'
+    ],
+    technologies: ['Unity', 'Unreal Engine', 'WebXR', 'ARCore', 'ARKit'],
+    link: 'https://ziontechgroup.com/services/ar-vr-platform',
+    icon: '🥽'
+  },
+  {
+    id: 'edge-computing-network',
+    name: 'Edge Computing Network Setup',
+    category: 'it-services',
+    description: 'Distributed edge computing network deployment for low-latency applications, IoT processing, and real-time data analytics.',
+    features: [
+      'Edge server deployment',
+      'Content delivery optimization',
+      'Real-time data processing',
+      'Load balancing and failover',
+      'Security and encryption',
+      'Monitoring and analytics',
+      'Auto-scaling capabilities',
+      'Global network optimization'
+    ],
+    pricing: {
+      starter: 10000,
+      professional: 30000,
+      enterprise: 85000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Ultra-low latency',
+      'Improved performance',
+      'Reduced bandwidth costs',
+      'Enhanced user experience'
+    ],
+    useCases: [
+      'Gaming and streaming',
+      'IoT data processing',
+      'Real-time analytics',
+      'Content delivery'
+    ],
+    technologies: ['Kubernetes', 'Docker', 'CDN', 'Edge Computing', 'Microservices'],
+    link: 'https://ziontechgroup.com/services/edge-computing-network',
+    icon: '🌐'
+  },
+  {
+    id: 'cybersecurity-operations-center',
+    name: 'Cybersecurity Operations Center (SOC)',
+    category: 'it-services',
+    description: '24/7 cybersecurity operations center with threat detection, incident response, and security monitoring services.',
+    features: [
+      '24/7 threat monitoring',
+      'Incident response automation',
+      'Security information management',
+      'Threat intelligence integration',
+      'Vulnerability assessment',
+      'Compliance monitoring',
+      'Security training programs',
+      'Regular security reports'
+    ],
+    pricing: {
+      starter: 18000,
+      professional: 55000,
+      enterprise: 150000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Proactive threat detection',
+      'Rapid incident response',
+      'Compliance assurance',
+      'Reduced security risks'
+    ],
+    useCases: [
+      'Financial institutions',
+      'Healthcare organizations',
+      'Government agencies',
+      'Large enterprises'
+    ],
+    technologies: ['SIEM', 'SOAR', 'EDR', 'Threat Intelligence', 'Security Analytics'],
+    link: 'https://ziontechgroup.com/services/cybersecurity-operations-center',
+    icon: '🛡️'
+  },
+  {
+    id: 'data-lake-architecture',
+    name: 'Data Lake Architecture Setup',
+    category: 'it-services',
+    description: 'Enterprise data lake architecture with data ingestion, processing, analytics, and machine learning capabilities.',
+    features: [
+      'Multi-source data ingestion',
+      'Data cataloging and governance',
+      'Real-time and batch processing',
+      'Machine learning pipelines',
+      'Data quality management',
+      'Security and access control',
+      'Scalable storage solutions',
+      'Analytics and visualization'
+    ],
+    pricing: {
+      starter: 14000,
+      professional: 42000,
+      enterprise: 115000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Unified data management',
+      'Scalable analytics',
+      'Cost-effective storage',
+      'Advanced data insights'
+    ],
+    useCases: [
+      'Business intelligence',
+      'Machine learning projects',
+      'Data analytics',
+      'Compliance reporting'
+    ],
+    technologies: ['AWS S3', 'Apache Spark', 'Hadoop', 'Kafka', 'Elasticsearch'],
+    link: 'https://ziontechgroup.com/services/data-lake-architecture',
+    icon: '🏞️'
+  },
+  {
+    id: 'microservices-mesh',
+    name: 'Service Mesh Implementation',
+    category: 'it-services',
+    description: 'Service mesh architecture implementation with Istio, traffic management, security, and observability for microservices.',
+    features: [
+      'Service mesh deployment',
+      'Traffic management and routing',
+      'Security and encryption',
+      'Observability and monitoring',
+      'Load balancing',
+      'Circuit breaking',
+      'Service discovery',
+      'Policy enforcement'
+    ],
+    pricing: {
+      starter: 11000,
+      professional: 33000,
+      enterprise: 90000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Enhanced service communication',
+      'Improved security',
+      'Better observability',
+      'Simplified operations'
+    ],
+    useCases: [
+      'Microservices architecture',
+      'Cloud-native applications',
+      'Distributed systems',
+      'API management'
+    ],
+    technologies: ['Istio', 'Envoy', 'Kubernetes', 'Prometheus', 'Grafana'],
+    link: 'https://ziontechgroup.com/services/microservices-mesh',
+    icon: '🕸️'
+  },
+  {
+    id: 'ai-infrastructure-gpu',
+    name: 'AI Infrastructure with GPU Clusters',
+    category: 'it-services',
+    description: 'High-performance AI infrastructure setup with GPU clusters, distributed training, and model deployment capabilities.',
+    features: [
+      'GPU cluster configuration',
+      'Distributed training setup',
+      'Model deployment pipelines',
+      'Auto-scaling capabilities',
+      'Performance monitoring',
+      'Data pipeline integration',
+      'Security and access control',
+      'Cost optimization'
+    ],
+    pricing: {
+      starter: 20000,
+      professional: 60000,
+      enterprise: 160000,
+      currency: 'USD'
+    },
+    benefits: [
+      'High-performance AI training',
+      'Scalable model deployment',
+      'Cost-effective GPU utilization',
+      'Faster time to market'
+    ],
+    useCases: [
+      'Machine learning research',
+      'Deep learning projects',
+      'Computer vision applications',
+      'Natural language processing'
+    ],
+    technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow'],
+    link: 'https://ziontechgroup.com/services/ai-infrastructure-gpu',
+    icon: '🚀'
+  },
+  {
+    id: 'zero-trust-network',
+    name: 'Zero Trust Network Architecture',
+    category: 'it-services',
+    description: 'Complete zero trust network implementation with identity verification, micro-segmentation, and continuous monitoring.',
+    features: [
+      'Identity and access management',
+      'Network micro-segmentation',
+      'Continuous verification',
+      'Device trust assessment',
+      'Application security',
+      'Data protection',
+      'Threat detection',
+      'Compliance reporting'
+    ],
+    pricing: {
+      starter: 16000,
+      professional: 48000,
+      enterprise: 130000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Enhanced security posture',
+      'Reduced attack surface',
+      'Compliance assurance',
+      'Improved visibility'
+    ],
+    useCases: [
+      'Enterprise networks',
+      'Remote workforce',
+      'Cloud migration',
+      'Regulatory compliance'
+    ],
+    technologies: ['Identity Management', 'Network Security', 'SIEM', 'Endpoint Protection', 'Cloud Security'],
+    link: 'https://ziontechgroup.com/services/zero-trust-network',
+    icon: '🔐'
+  },
+  {
+    id: 'hyperconverged-infrastructure',
+    name: 'Hyperconverged Infrastructure (HCI)',
+    category: 'it-services',
+    description: 'Hyperconverged infrastructure deployment combining compute, storage, and networking in a single, scalable platform.',
+    features: [
+      'Unified infrastructure management',
+      'Software-defined storage',
+      'Virtualized networking',
+      'Automated provisioning',
+      'High availability and redundancy',
+      'Backup and disaster recovery',
+      'Performance optimization',
+      'Cost management'
+    ],
+    pricing: {
+      starter: 13000,
+      professional: 39000,
+      enterprise: 105000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Simplified infrastructure',
+      'Reduced operational costs',
+      'Improved scalability',
+      'Enhanced performance'
+    ],
+    useCases: [
+      'Data center consolidation',
+      'Virtual desktop infrastructure',
+      'Private cloud deployment',
+      'Disaster recovery'
+    ],
+    technologies: ['VMware vSAN', 'Nutanix', 'Hyper-V', 'Storage Virtualization', 'Network Virtualization'],
+    link: 'https://ziontechgroup.com/services/hyperconverged-infrastructure',
+    icon: '🏗️'
+  },
+  {
+    id: '5g-network-slicing',
+    name: '5G Network Slicing Implementation',
+    category: 'it-services',
+    description: '5G network slicing deployment for customized network services with guaranteed performance and isolation.',
+    features: [
+      'Network slice design',
+      'Service level agreements',
+      'Quality of service management',
+      'Traffic isolation',
+      'Performance monitoring',
+      'Automated provisioning',
+      'Security and encryption',
+      'Multi-tenant support'
+    ],
+    pricing: {
+      starter: 22000,
+      professional: 66000,
+      enterprise: 180000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Customized network services',
+      'Guaranteed performance',
+      'Cost optimization',
+      'Rapid service deployment'
+    ],
+    useCases: [
+      'IoT applications',
+      'Autonomous vehicles',
+      'Industrial automation',
+      'Smart cities'
+    ],
+    technologies: ['5G Core', 'Network Functions', 'SDN', 'NFV', 'Edge Computing'],
+    link: 'https://ziontechgroup.com/services/5g-network-slicing',
+    icon: '📡'
+  },
+  // NEW AI SERVICES
+  {
+    id: 'ai-medical-diagnosis',
+    name: 'AI Medical Diagnosis Assistant',
+    category: 'ai-services',
+    description: 'Advanced AI-powered medical diagnosis platform that analyzes medical images, symptoms, and patient data to assist healthcare professionals in accurate diagnosis.',
+    features: [
+      'Medical image analysis',
+      'Symptom pattern recognition',
+      'Patient data integration',
+      'Diagnostic recommendations',
+      'Risk assessment',
+      'Treatment suggestions',
+      'Clinical decision support',
+      'Regulatory compliance'
+    ],
+    pricing: {
+      starter: 25000,
+      professional: 75000,
+      enterprise: 200000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Improved diagnostic accuracy',
+      'Faster diagnosis times',
+      'Reduced medical errors',
+      'Enhanced patient outcomes'
+    ],
+    useCases: [
+      'Hospitals and clinics',
+      'Radiology departments',
+      'Primary care practices',
+      'Telemedicine platforms'
+    ],
+    technologies: ['Deep Learning', 'Computer Vision', 'Medical AI', 'Python', 'TensorFlow'],
+    link: 'https://ziontechgroup.com/services/ai-medical-diagnosis',
+    icon: '🏥'
+  },
+  {
+    id: 'ai-financial-trading',
+    name: 'AI Financial Trading Platform',
+    category: 'ai-services',
+    description: 'Intelligent algorithmic trading platform that uses machine learning to analyze market data, predict trends, and execute automated trading strategies.',
+    features: [
+      'Real-time market analysis',
+      'Predictive modeling',
+      'Automated trading execution',
+      'Risk management',
+      'Portfolio optimization',
+      'Backtesting capabilities',
+      'Multi-asset support',
+      'Performance analytics'
+    ],
+    pricing: {
+      starter: 30000,
+      professional: 90000,
+      enterprise: 250000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Enhanced trading performance',
+      'Reduced emotional trading',
+      '24/7 market monitoring',
+      'Data-driven decisions'
+    ],
+    useCases: [
+      'Investment firms',
+      'Hedge funds',
+      'Trading companies',
+      'Financial institutions'
+    ],
+    technologies: ['Machine Learning', 'Quantitative Finance', 'Python', 'TensorFlow', 'Financial APIs'],
+    link: 'https://ziontechgroup.com/services/ai-financial-trading',
+    icon: '📈'
+  },
+  {
+    id: 'ai-autonomous-vehicles',
+    name: 'AI Autonomous Vehicle Systems',
+    category: 'ai-services',
+    description: 'Advanced AI systems for autonomous vehicles including perception, decision-making, path planning, and safety-critical control systems.',
+    features: [
+      'Computer vision and perception',
+      'Sensor fusion',
+      'Path planning and navigation',
+      'Decision-making algorithms',
+      'Safety systems',
+      'Real-time processing',
+      'Simulation and testing',
+      'Regulatory compliance'
+    ],
+    pricing: {
+      starter: 50000,
+      professional: 150000,
+      enterprise: 400000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Enhanced safety',
+      'Improved efficiency',
+      'Reduced human error',
+      'Future mobility solutions'
+    ],
+    useCases: [
+      'Automotive manufacturers',
+      'Fleet management',
+      'Public transportation',
+      'Logistics companies'
+    ],
+    technologies: ['Computer Vision', 'Robotics', 'C++', 'ROS', 'Simulation Software'],
+    link: 'https://ziontechgroup.com/services/ai-autonomous-vehicles',
+    icon: '🚗'
+  },
+  {
+    id: 'ai-drug-discovery',
+    name: 'AI Drug Discovery Platform',
+    category: 'ai-services',
+    description: 'Revolutionary AI platform for pharmaceutical drug discovery, molecular design, and clinical trial optimization using advanced machine learning.',
+    features: [
+      'Molecular property prediction',
+      'Drug-target interaction modeling',
+      'Clinical trial optimization',
+      'Side effect prediction',
+      'Drug repurposing',
+      'Biomarker discovery',
+      'Pharmacokinetic modeling',
+      'Regulatory pathway guidance'
+    ],
+    pricing: {
+      starter: 40000,
+      professional: 120000,
+      enterprise: 300000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Faster drug development',
+      'Reduced R&D costs',
+      'Higher success rates',
+      'Personalized medicine'
+    ],
+    useCases: [
+      'Pharmaceutical companies',
+      'Biotech startups',
+      'Research institutions',
+      'Clinical research organizations'
+    ],
+    technologies: ['Deep Learning', 'Bioinformatics', 'Python', 'PyTorch', 'Molecular Modeling'],
+    link: 'https://ziontechgroup.com/services/ai-drug-discovery',
+    icon: '💊'
+  },
+  {
+    id: 'ai-climate-modeling',
+    name: 'AI Climate Modeling Platform',
+    category: 'ai-services',
+    description: 'Advanced AI platform for climate modeling, environmental monitoring, and sustainability analytics to address climate change challenges.',
+    features: [
+      'Climate pattern prediction',
+      'Environmental impact assessment',
+      'Carbon footprint analysis',
+      'Weather forecasting',
+      'Natural disaster prediction',
+      'Sustainability optimization',
+      'Policy impact modeling',
+      'Real-time monitoring'
+    ],
+    pricing: {
+      starter: 20000,
+      professional: 60000,
+      enterprise: 160000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Accurate climate predictions',
+      'Environmental protection',
+      'Sustainable development',
+      'Risk mitigation'
+    ],
+    useCases: [
+      'Government agencies',
+      'Environmental organizations',
+      'Energy companies',
+      'Research institutions'
+    ],
+    technologies: ['Climate AI', 'Environmental Data', 'Python', 'TensorFlow', 'Satellite Data'],
+    link: 'https://ziontechgroup.com/services/ai-climate-modeling',
+    icon: '🌍'
+  },
+  {
+    id: 'ai-robotics-control',
+    name: 'AI Robotics Control Systems',
+    category: 'ai-services',
+    description: 'Intelligent robotics control systems with advanced AI for autonomous operation, human-robot interaction, and complex task execution.',
+    features: [
+      'Autonomous navigation',
+      'Object manipulation',
+      'Human-robot interaction',
+      'Task planning and execution',
+      'Learning from demonstration',
+      'Multi-robot coordination',
+      'Safety systems',
+      'Real-time adaptation'
+    ],
+    pricing: {
+      starter: 35000,
+      professional: 105000,
+      enterprise: 280000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increased automation',
+      'Improved efficiency',
+      'Enhanced safety',
+      'Flexible operations'
+    ],
+    useCases: [
+      'Manufacturing automation',
+      'Warehouse operations',
+      'Healthcare assistance',
+      'Service robotics'
+    ],
+    technologies: ['Robotics AI', 'Computer Vision', 'ROS', 'C++', 'Machine Learning'],
+    link: 'https://ziontechgroup.com/services/ai-robotics-control',
+    icon: '🤖'
+  },
+  {
+    id: 'ai-cybersecurity-threat',
+    name: 'AI Cybersecurity Threat Detection',
+    category: 'ai-services',
+    description: 'Advanced AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time with machine learning.',
+    features: [
+      'Real-time threat detection',
+      'Behavioral analysis',
+      'Anomaly detection',
+      'Automated response',
+      'Threat intelligence',
+      'Incident investigation',
+      'Predictive security',
+      'Compliance monitoring'
+    ],
+    pricing: {
+      starter: 18000,
+      professional: 54000,
+      enterprise: 145000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Proactive threat prevention',
+      'Reduced response time',
+      'Enhanced security posture',
+      'Cost-effective protection'
+    ],
+    useCases: [
+      'Enterprise security',
+      'Government agencies',
+      'Financial institutions',
+      'Critical infrastructure'
+    ],
+    technologies: ['Cybersecurity AI', 'Machine Learning', 'Python', 'TensorFlow', 'Security Analytics'],
+    link: 'https://ziontechgroup.com/services/ai-cybersecurity-threat',
+    icon: '🔒'
+  },
+  {
+    id: 'ai-supply-chain-optimization',
+    name: 'AI Supply Chain Optimization',
+    category: 'ai-services',
+    description: 'Intelligent supply chain optimization platform that uses AI to optimize logistics, inventory management, and demand forecasting.',
+    features: [
+      'Demand forecasting',
+      'Inventory optimization',
+      'Route optimization',
+      'Supplier risk assessment',
+      'Cost optimization',
+      'Quality prediction',
+      'Sustainability tracking',
+      'Real-time monitoring'
+    ],
+    pricing: {
+      starter: 22000,
+      professional: 66000,
+      enterprise: 175000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduced operational costs',
+      'Improved efficiency',
+      'Better demand planning',
+      'Enhanced visibility'
+    ],
+    useCases: [
+      'Manufacturing companies',
+      'Retail chains',
+      'Logistics providers',
+      'E-commerce platforms'
+    ],
+    technologies: ['Supply Chain AI', 'Optimization Algorithms', 'Python', 'Machine Learning', 'IoT Integration'],
+    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization',
+    icon: '📦'
+  },
+  {
+    id: 'ai-personalized-education',
+    name: 'AI Personalized Education Platform',
+    category: 'ai-services',
+    description: 'Intelligent education platform that personalizes learning experiences, adapts to individual needs, and optimizes educational outcomes.',
+    features: [
+      'Personalized learning paths',
+      'Adaptive content delivery',
+      'Learning analytics',
+      'Skill assessment',
+      'Progress tracking',
+      'Intelligent tutoring',
+      'Collaborative learning',
+      'Performance prediction'
+    ],
+    pricing: {
+      starter: 15000,
+      professional: 45000,
+      enterprise: 120000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Improved learning outcomes',
+      'Personalized experiences',
+      'Efficient learning paths',
+      'Data-driven insights'
+    ],
+    useCases: [
+      'Educational institutions',
+      'Corporate training',
+      'Online learning platforms',
+      'Skill development programs'
+    ],
+    technologies: ['Educational AI', 'Adaptive Learning', 'Python', 'Machine Learning', 'Learning Analytics'],
+    link: 'https://ziontechgroup.com/services/ai-personalized-education',
+    icon: '🎓'
+  },
+  {
+    id: 'ai-creative-content',
+    name: 'AI Creative Content Generation',
+    category: 'ai-services',
+    description: 'Advanced AI platform for creative content generation including art, music, writing, and multimedia content with human-like creativity.',
+    features: [
+      'Art and image generation',
+      'Music composition',
+      'Creative writing',
+      'Video content creation',
+      'Style transfer',
+      'Creative collaboration',
+      'Content customization',
+      'Intellectual property management'
+    ],
+    pricing: {
+      starter: 12000,
+      professional: 36000,
+      enterprise: 95000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Unlimited creative possibilities',
+      'Faster content production',
+      'Cost-effective creation',
+      'Consistent quality'
+    ],
+    useCases: [
+      'Creative agencies',
+      'Entertainment industry',
+      'Marketing teams',
+      'Content creators'
+    ],
+    technologies: ['Generative AI', 'Creative AI', 'Python', 'PyTorch', 'Creative Tools'],
+    link: 'https://ziontechgroup.com/services/ai-creative-content',
+    icon: '🎨'
+  },
+  {
+    id: 'ai-legal-document-analysis',
+    name: 'AI Legal Document Analysis',
+    category: 'ai-services',
+    description: 'Intelligent legal document analysis platform that automates contract review, legal research, and case analysis with AI-powered insights.',
+    features: [
+      'Contract analysis and review',
+      'Legal research automation',
+      'Case law analysis',
+      'Risk assessment',
+      'Compliance checking',
+      'Document summarization',
+      'Legal precedent identification',
+      'Due diligence automation'
+    ],
+    pricing: {
+      starter: 16000,
+      professional: 48000,
+      enterprise: 125000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Faster document review',
+      'Reduced legal costs',
+      'Improved accuracy',
+      'Enhanced compliance'
+    ],
+    useCases: [
+      'Law firms',
+      'Corporate legal departments',
+      'Legal research organizations',
+      'Compliance teams'
+    ],
+    technologies: ['Legal AI', 'NLP', 'Python', 'Machine Learning', 'Legal Databases'],
+    link: 'https://ziontechgroup.com/services/ai-legal-document-analysis',
+    icon: '⚖️'
+  },
+  {
+    id: 'ai-agricultural-optimization',
+    name: 'AI Agricultural Optimization',
+    category: 'ai-services',
+    description: 'Smart agriculture platform that uses AI to optimize crop yields, monitor soil health, and manage agricultural operations efficiently.',
+    features: [
+      'Crop yield optimization',
+      'Soil health monitoring',
+      'Pest and disease detection',
+      'Irrigation management',
+      'Weather prediction',
+      'Precision farming',
+      'Resource optimization',
+      'Sustainability tracking'
+    ],
+    pricing: {
+      starter: 14000,
+      professional: 42000,
+      enterprise: 110000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increased crop yields',
+      'Reduced resource usage',
+      'Improved sustainability',
+      'Better decision making'
+    ],
+    useCases: [
+      'Farm operations',
+      'Agricultural cooperatives',
+      'Food production companies',
+      'Research institutions'
+    ],
+    technologies: ['Agricultural AI', 'IoT Sensors', 'Computer Vision', 'Python', 'Machine Learning'],
+    link: 'https://ziontechgroup.com/services/ai-agricultural-optimization',
+    icon: '🌾'
   }
 ];
 
