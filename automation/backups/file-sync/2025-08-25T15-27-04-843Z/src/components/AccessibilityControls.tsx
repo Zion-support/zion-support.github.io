@@ -1,61 +1,54 @@
-import { useState, useEffect } from,;
+import { useState, useEffect } from,
   react';
 import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from;
   'lucide-react';
 import { useAccessibility } from '../hooks/useAccessibility';
-interface AccessibilityControlsProps {;
+interface AccessibilityControlsProps {
   className?: string;
-   position?: 'top-right' | 'bottom-right' | 'floating;
-}
-export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
-  className =,;
-  ',;
+   position?: 'top-right' | 'bottom-right' | 'floating}
+export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
+  className =,
+  ',
   position = 'floating;
-  ';
-}) => {;
+  '}) => {
 ;
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const { preferences, savePreferences, announceToScreenReader } = useAccessibility();
   // Close panel when clicking outside;
-  useEffect(() => {;
-    const handleClickOutside = (event: MouseEvent) => {;
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (!target.closest('.accessibility-controls)) {;
+      if (!target.closest('.accessibility-controls)) {
         setIsOpen(false);
         setIsExpanded(false)}
-    };
-    if (isOpen) {;
+    }
+    if (isOpen) {
       document.addEventListener('mousedown;
   ', handleClickOutside);
       return () => document.removeEventListener('mousedown;
   ', handleClickOutside)}
-;
   }, [isOpen]);
-  const togglePanel = () => {;
+  const togglePanel = () => {
     setIsOpen(!isOpen);
-    if (!isOpen) {;
+    if (!isOpen) {
       announceToScreenReader('Accessibility controls opened;
   ')}
+  }
 ;
-  };
-;
-  const toggleExpanded = () => {;
-    setIsExpanded(!isExpanded);
-  };
-  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {;
-    savePreferences({ [key]: value });
-    announceToScreenReader(`${key.replace(/([A-Z])/g, ,;
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded)}
+  const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {
+    savePreferences({ [key]: value })
+    announceToScreenReader(`${key.replace(/([A-Z])/g, ,
   $1;
   ').toLowerCase()} ${value ? 'enabled;
-  ': 'disabled}`);
-  };
+  ': 'disabled}`)}
   const getPositionClasses = () => {
-    switch (position) {;
-      case,;
+    switch (position) {
+      case,
   top-right;
   ': ;
-;
         return 'top-4 right-4;
   ';
       case 'bottom-right;
@@ -66,14 +59,11 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
   ':;
       default:;
         return 'bottom-4 right-4}
-;
-  };
-;
+  }
+
             </div>
           </div>
         </div>
-      )};
+      )}
     </div>
-  );
-};
-;
+  )}

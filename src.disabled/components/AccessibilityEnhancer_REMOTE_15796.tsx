@@ -10,30 +10,28 @@ import React, { useState, useEffect, useCallback } from;
    colorBlindFriendly: boolean;
    fontSize: number;
    lineHeight: number;
-   letterSpacing: number;
-} interface AccessibilityFeature {
+   letterSpacing: number} interface AccessibilityFeature {
    id: string;
    name: string;
    description: string;
    enabled: boolean;
    category:, visual' | 'auditory' | 'motor' | 'cognitive';
-   impact: 'high' | 'medium' | 'low;
-} export const AccessibilityEnhancer: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [settings, setSettings] = useState<AccessibilitySettings>({ highContrast: false, largeText: false, reducedMotion: false, screenReader: false, keyboardNavigation: false, colorBlindFriendly: false, fontSize: 100, lineHeight: 1.5, letterSpacing: 0})  const [features, setFeatures] = useState<AccessibilityFeature[]>([ { id:,;
+   impact: 'high' | 'medium' | 'low} export const AccessibilityEnhancer: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [settings, setSettings] = useState<AccessibilitySettings>({ highContrast: false, largeText: false, reducedMotion: false, screenReader: false, keyboardNavigation: false, colorBlindFriendly: false, fontSize: 100, lineHeight: 1.5, letterSpacing: 0})  const [features, setFeatures] = useState<AccessibilityFeature[]>([ { id:,
   skip-links', name: 'Skip Links, description:;
-  'Quick navigation to main content areas', enabled: true, category:,;
-  motor', impact: 'high }, { id:,;
+  'Quick navigation to main content areas', enabled: true, category:,
+  motor', impact: 'high }, { id:,
   focus-indicators', name: 'Focus Indicators, description:;
-  'Clear visual indicators for keyboard navigation', enabled: true, category:,;
-  visual', impact: 'high }, { id:,;
+  'Clear visual indicators for keyboard navigation', enabled: true, category:,
+  visual', impact: 'high }, { id:,
   alt-text', name: 'Alt Text, description:;
-  'Descriptive text for images and media', enabled: true, category:,;
-  visual', impact: 'high }, { id:,;
+  'Descriptive text for images and media', enabled: true, category:,
+  visual', impact: 'high }, { id:,
   semantic-html', name: 'Semantic HTML, description:;
-  'Proper HTML structure for screen readers', enabled: true, category:,;
-  cognitive', impact: 'medium }, { id:,;
+  'Proper HTML structure for screen readers', enabled: true, category:,
+  cognitive', impact: 'medium }, { id:,
   color-contrast', name: 'Color Contrast, description:;
-  'High contrast ratios for better readability', enabled: true, category:,;
-  visual', impact: 'high }, { id:,;
+  'High contrast ratios for better readability', enabled: true, category:,
+  visual', impact: 'high }, { id:,
   keyboard-shortcuts', name: 'Keyboard Shortcuts, description:;
-  'Alternative navigation methods', enabled: false, category:,;
-  motor', impact: 'medium } ]) ';
+  'Alternative navigation methods', enabled: false, category:,
+  motor', impact: 'medium } ]) '

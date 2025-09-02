@@ -1,58 +1,57 @@
-React from,;
+React from,
   react';
 import type { NextPage } from;
   'next';MainLayout from;
   '../components/layout/MainLayout';
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from;
-  'lucide-react'';const Status: NextPage = () => {;
+  'lucide-react'';const Status: NextPage = () => {
   const services = [
-    {;
-      name: 'Web Application, status:,;
+    {
+      name: 'Web Application, status:,
   operational;
-  ','      uptime: '99.9%, responseTime:,;
-  120ms',;
-  '      lastIncident: 'No incidents in the past 30 days'    }, {,;
-  name: 'API Services,;
-,;
-  status: 'operational, uptime:,;
+  ','      uptime: '99.9%, responseTime:,
+  120ms',
+  '      lastIncident: 'No incidents in the past 30 days'    }, {,
+  name: 'API Services,
+,
+  status: 'operational, uptime:,
   99.8%;
-  ','      responseTime: '85ms, lastIncident:,;
-  No incidents in the past 30 days''    },;
-  '    {;
-      name: 'Database, status:,;
+  ','      responseTime: '85ms, lastIncident:,
+  No incidents in the past 30 days''    },
+  '    {
+      name: 'Database, status:,
   operational;
-  ','      uptime: '99.9%, responseTime:,;
-  45ms',;
-  '      lastIncident: 'No incidents in the past 30 days'    }, {,;
-  name: 'Cloud Infrastructure,;
-,;
-  status: 'operational, uptime:,;
+  ','      uptime: '99.9%, responseTime:,
+  45ms',
+  '      lastIncident: 'No incidents in the past 30 days'    }, {,
+  name: 'Cloud Infrastructure,
+,
+  status: 'operational, uptime:,
   99.7%;
-  ','      responseTime: '200ms, lastIncident:,;
-  No incidents in the past 30 days''    },;
-  '    {;
-      name: 'CDN, status:,;
+  ','      responseTime: '200ms, lastIncident:,
+  No incidents in the past 30 days''    },
+  '    {
+      name: 'CDN, status:,
   operational;
-  ','      uptime: '99.9%, responseTime:,;
-  50ms',;
-  '      lastIncident: 'No incidents in the past 30 days'    }, {,;
-  name: 'Monitoring,;
-,;
-  status: 'operational, uptime:,;
+  ','      uptime: '99.9%, responseTime:,
+  50ms',
+  '      lastIncident: 'No incidents in the past 30 days'    }, {,
+  name: 'Monitoring,
+,
+  status: 'operational, uptime:,
   100%;
-  ','      responseTime: '30ms, lastIncident:,;
+  ','      responseTime: '30ms, lastIncident:,
   No incidents in the past 30 days''    }
   '  ];
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'operational
+  ': return <CheckCircle className='w-5 h-5 text-green-500' />'      case 'degraded
+  ': return <AlertCircle className='w-5 h-5 text-yellow-500' />'      case 'outage: return <XCircle className='w-5 h-5 text-red-500' />'      default: return <Clock className='w-5 h-5 text-gray-500' />'    }'  }
 ;
-  const getStatusIcon = (status: string) => {;
-    switch (status) {;
-      case 'operational;
-  ': return <CheckCircle className='w-5 h-5 text-green-500' />'      case 'degraded;
-  ': return <AlertCircle className='w-5 h-5 text-yellow-500' />'      case 'outage: return <XCircle className='w-5 h-5 text-red-500' />'      default: return <Clock className='w-5 h-5 text-gray-500' />'    }'  };
-;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
-      case,;
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case,
   operational;
   ': return 'text-green-600 bg-green-100;
   '      case;
@@ -61,36 +60,35 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
   'outage': return;
   'text-red-600 bg-red-100'      default: return;
   'text-gray-600 bg-gray-100'    }
-  '  };
+  '  }
 ;
   const incidents = [
-    {;
-      id: 1, title:,;
+    {
+      id: 1, title:,
   Scheduled Maintenance - API Services;
-  ','      status: 'resolved, date:,;
-  2025-01-20',;
+  ','      status: 'resolved, date:,
+  2025-01-20',
   '      description: 'Scheduled maintenance window for API services completed successfully., impact: 'minor';
-  '    },'    {;
-      id: 2, title:,;
-  Database Performance Issue',;
-  '      status: 'resolved, date:,;
+  '    },'    {
+      id: 2, title:,
+  Database Performance Issue',
+  '      status: 'resolved, date:,
   2025-01-15;
   ','      description: 'Temporary performance degradation in database queries has been resolved., impact:;
   'minor''    }
-  '  ];
-;
-  return (;
+  '  ]
+  return(
     <MainLayout;
-      title='System Status - Zion Tech Group''      description='Check the current status of Zion Tech Group services and infrastructure. Monitor uptime, performance, and any ongoing incidents.''      keywords='system status, uptime, service status, monitoring, incidents, performance''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>System Status</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Monitor the real-time status of our services and infrastructure. '              All systems are currently operational.;
+      title='System Status - Zion Tech Group''      description='Check the current status of Zion Tech Group services and infrastructure. Monitor uptime, performance, and any ongoing incidents.''      keywords='system status, uptime, service status, monitoring, incidents, performance''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>System Status</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Monitor the real-time status of our services and infrastructure. '              All systems are currently operational.
             </p>
           </div>
         </section>
         {/* Overall Status */}
-        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <div className='flex items-center justify-center mb-4'>'                <CheckCircle className='w-12 h-12 text-green-500 mr-3' />'                <h2 className='text-3xl font-bold text-gray-900'>All Systems Operational</h2>'              </div>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.''              </p>
+        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <div className='flex items-center justify-center mb-4'>'                <CheckCircle className='w-12 h-12 text-green-500 mr-3' />'                <h2 className='text-3xl font-bold text-gray-900'>All Systems Operational</h2>'              </div>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                All services are running normally. We&aposre monitoring our systems 24/7 to ensure optimal performance.''              </p>
   '            </div>
             {/* Status Overview Cards */}
-            <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto'>'              <div className='bg-gray-50 rounded-lg p-6 text-center'>'                <Activity className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-2xl font-bold text-gray-900 mb-2'>99.9%</h3>'                <p className='text-gray-600'>Overall Uptime</p>'              </div>';
-              <div className='bg-gray-50 rounded-lg p-6 text-center'>'                <Clock className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-2xl font-bold text-gray-900 mb-2'>85ms</h3>'                <p className='text-gray-600'>Average Response Time</p>'              </div>';
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto'>'              <div className='bg-gray-50 rounded-lg p-6 text-center'>'                <Activity className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-2xl font-bold text-gray-900 mb-2'>99.9%</h3>'                <p className='text-gray-600'>Overall Uptime</p>'              </div>'
+              <div className='bg-gray-50 rounded-lg p-6 text-center'>'                <Clock className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-2xl font-bold text-gray-900 mb-2'>85ms</h3>'                <p className='text-gray-600'>Average Response Time</p>'              </div>'
               <div className='bg-gray-50 rounded-lg p-6 text-center'>'                <CheckCircle className='w-12 h-12 text-green-600 mx-auto mb-4' />'                <h3 className='text-2xl font-bold text-gray-900 mb-2'>0</h3>'                <p className='text-gray-600'>Active Incidents</p>'              </div>'            </div>
           </div>
         </section>
@@ -124,7 +122,7 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
         {/* Recent Incidents */}
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Recent Incidents</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                History of recent incidents and their resolution status.'              </p>
             </div>
-            <div className='max-w-4xl mx-auto'>'              <div className='space-y-6'>'                {incidents.map((incident) => ('                  <div key={incident.id} className='bg-gray-50 rounded-lg p-6'>'                    <div className='flex items-start justify-between'>'                      <div className='flex-1'>'                        <div className='flex items-center mb-2'>'                          <CheckCircle className='w-5 h-5 text-green-500 mr-2' />'                          <h3 className='text-lg font-semibold text-gray-900'>{incident.title}</h3>'                        </div>'                        <p className='text-gray-600 mb-2'>{incident.description}</p>'                        <div className='flex items-center text-sm text-gray-500'>'                          <span className='mr-4'>Date: {incident.date}</span>'                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${'                            incident.impact ===,;
+            <div className='max-w-4xl mx-auto'>'              <div className='space-y-6'>'                {incidents.map((incident) => ('                  <div key={incident.id} className='bg-gray-50 rounded-lg p-6'>'                    <div className='flex items-start justify-between'>'                      <div className='flex-1'>'                        <div className='flex items-center mb-2'>'                          <CheckCircle className='w-5 h-5 text-green-500 mr-2' />'                          <h3 className='text-lg font-semibold text-gray-900'>{incident.title}</h3>'                        </div>'                        <p className='text-gray-600 mb-2'>{incident.description}</p>'                        <div className='flex items-center text-sm text-gray-500'>'                          <span className='mr-4'>Date: {incident.date}</span>'                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${'                            incident.impact ===,
   minor;
   ' ? 'bg-yellow-100 text-yellow-800;
   ': 'bg-red-100 text-red-800'                          }`}>'                            {incident.impact} impact`                          </span>
@@ -140,9 +138,9 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
         {/* Monitoring Information */}
         <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Monitoring & Alerts</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We continuously monitor our systems and will notify you of any issues.'              </p>
             </div>
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto'>'              <div className='bg-white rounded-lg p-6 text-center'>'                <Database className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-lg font-semibold text-gray-900 mb-2'>24/7 Monitoring</h3>'                <p className='text-gray-600 text-sm'>Continuous monitoring of all systems</p>'              </div>';
-              <div className='bg-white rounded-lg p-6 text-center'>'                <Activity className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-lg font-semibold text-gray-900 mb-2'>Real-time Alerts</h3>'                <p className='text-gray-600 text-sm'>Instant notifications for any issues</p>'              </div>';
-              <div className='bg-white rounded-lg p-6 text-center'>'                <Cloud className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-lg font-semibold text-gray-900 mb-2'>Global Monitoring</h3>'                <p className='text-gray-600 text-sm'>Monitoring from multiple locations</p>'              </div>';
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto'>'              <div className='bg-white rounded-lg p-6 text-center'>'                <Database className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-lg font-semibold text-gray-900 mb-2'>24/7 Monitoring</h3>'                <p className='text-gray-600 text-sm'>Continuous monitoring of all systems</p>'              </div>'
+              <div className='bg-white rounded-lg p-6 text-center'>'                <Activity className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-lg font-semibold text-gray-900 mb-2'>Real-time Alerts</h3>'                <p className='text-gray-600 text-sm'>Instant notifications for any issues</p>'              </div>'
+              <div className='bg-white rounded-lg p-6 text-center'>'                <Cloud className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-lg font-semibold text-gray-900 mb-2'>Global Monitoring</h3>'                <p className='text-gray-600 text-sm'>Monitoring from multiple locations</p>'              </div>'
               <div className='bg-white rounded-lg p-6 text-center'>'                <CheckCircle className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                <h3 className='text-lg font-semibold text-gray-900 mb-2'>SLA Compliance</h3>'                <p className='text-gray-600 text-sm'>99.9% uptime guarantee</p>'              </div>'            </div>
           </div>
         </section>
@@ -154,7 +152,6 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default Status;
+export default Status

@@ -3,6 +3,5 @@ interface AutocompleteSuggestionsProps {
    searchTerm: string;
    onSelectSuggestion: (suggestion: string) => void;
    visible: boolean;
-   highlightedIndex: number;
-   listId: string;
-};
+   highlightedIndex: number
+   listId: string}

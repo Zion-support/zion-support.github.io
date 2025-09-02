@@ -12,263 +12,235 @@ import Link from;
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import {;
-  Code,;
-  Smartphone,;
-  Globe,;
-  Database,;
-  Zap,;
-  Shield,;
-  Users,;
-  CheckCircle,;
+import {
+  Code,
+  Smartphone,
+  Globe,
+  Database,
+  Zap,
+  Shield,
+  Users,
+  CheckCircle,
 } from 'lucide-react';
 import Link from 'next/link';
 
-const CustomDevelopment: NextPage = () => {;
+const CustomDevelopment: NextPage = () => {
   const developmentServices = [
-    {;
-      icon: Code,;
+    {
+      icon: Code,
 :pages.disabled_auto/solutions/custom-development.tsx;
-      title:,;
-  Web Application Development',;
-      description: 'Custom web applications built with modern frameworks and technologies.,;
+      title:,
+  Web Application Development',
+      description: 'Custom web applications built with modern frameworks and technologies.,
       features: [;
-  'React, Vue.js, Angular',;
-  'Node.js, Python, PHP',;
-  'Responsive design',;
-  'API integration'];
-    },;
-    {;
-      icon: Smartphone,;
-      title:,;
-  Mobile App Development',;
-      description: 'Native and cross-platform mobile applications for iOS and Android.,;
+  'React, Vue.js, Angular',
+  'Node.js, Python, PHP',
+  'Responsive design',
+  'API integration']},
+    {
+      icon: Smartphone,
+      title:,
+  Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android.,
       features: [
-  'React Native, Flutter',;
-  'Swift, Kotlin',;
-  'App Store optimization',;
-  'Push notifications'];
-    },;
-    {;
-      icon: Globe,;
-      title:,;
-  E-commerce Solutions',;
-      description: 'Complete e-commerce platforms with payment integration and inventory management.,;
+  'React Native, Flutter',
+  'Swift, Kotlin',
+  'App Store optimization',
+  'Push notifications']},
+    {
+      icon: Globe,
+      title:,
+  E-commerce Solutions',
+      description: 'Complete e-commerce platforms with payment integration and inventory management.,
       features: [
-  'Shopping cart functionality',;
-  'Payment gateway integration',;
-  'Inventory management',;
-  'Order tracking'];
-    },;
-    {;
-      icon: Database,;
-      title:,;
-  Database Design & Management',;
-      description: 'Custom database solutions optimized for performance and scalability.,;
+  'Shopping cart functionality',
+  'Payment gateway integration',
+  'Inventory management',
+  'Order tracking']},
+    {
+      icon: Database,
+      title:,
+  Database Design & Management',
+      description: 'Custom database solutions optimized for performance and scalability.,
       features: [
-  'MySQL, PostgreSQL, MongoDB',;
-  'Data modeling',;
-  'Performance optimization',;
-  'Backup & recovery'];
-    },;
-    {;
-      icon: Zap,;
-      title:,;
-  API Development',;
-      description: 'RESTful and GraphQL APIs for seamless integration between systems.,;
+  'MySQL, PostgreSQL, MongoDB',
+  'Data modeling',
+  'Performance optimization',
+  'Backup & recovery']},
+    {
+      icon: Zap,
+      title:,
+  API Development',
+      description: 'RESTful and GraphQL APIs for seamless integration between systems.,
       features: [
-  'RESTful APIs',;
-  'GraphQL endpoints',;
-  'Authentication & authorization',;
-  'Rate limiting'];
-    },;
-    {;
-      icon: Shield,;
-      title:,;
-  Security Implementation',;
-      description: 'Comprehensive security measures to protect your applications and data.,;
+  'RESTful APIs',
+  'GraphQL endpoints',
+  'Authentication & authorization',
+  'Rate limiting']},
+    {
+      icon: Shield,
+      title:,
+  Security Implementation',
+      description: 'Comprehensive security measures to protect your applications and data.,
       features: [,
-  SSL/TLS encryption',;
-  'Authentication systems',;
-  'Data validation',;
-  'Security audits'];
-    }
-      title: 'Web Application Development',;
+  SSL/TLS encryption',
+  'Authentication systems',
+  'Data validation',
+  'Security audits']}
+      title: 'Web Application Development',
       description:;
-        'Custom web applications built with modern frameworks and technologies.',;
+        'Custom web applications built with modern frameworks and technologies.',
       features: [;
-        'React, Vue.js, Angular',;
-        'Node.js, Python, PHP',;
-        'Responsive design',;
-        'API integration']},;
-    {;
-      icon: Smartphone,;
-      title: 'Mobile App Development',;
+        'React, Vue.js, Angular',
+        'Node.js, Python, PHP',
+        'Responsive design',
+        'API integration']},
+    {
+      icon: Smartphone,
+      title: 'Mobile App Development',
       description:;
-        'Native and cross-platform mobile applications for iOS and Android.',;
+        'Native and cross-platform mobile applications for iOS and Android.',
       features: [;
-        'React Native, Flutter',;
-        'Swift, Kotlin',;
-        'App Store optimization',;
-        'Push notifications']},;
-    {;
-      icon: Globe,;
-      title: 'E-commerce Solutions',;
+        'React Native, Flutter',
+        'Swift, Kotlin',
+        'App Store optimization',
+        'Push notifications']},
+    {
+      icon: Globe,
+      title: 'E-commerce Solutions',
       description:;
-        'Complete e-commerce platforms with payment integration and inventory management.',;
+        'Complete e-commerce platforms with payment integration and inventory management.',
       features: [;
-        'Shopping cart functionality',;
-        'Payment gateway integration',;
-        'Inventory management',;
-        'Order tracking']},;
-    {;
-      icon: Database,;
-      title: 'Database Design & Management',;
+        'Shopping cart functionality',
+        'Payment gateway integration',
+        'Inventory management',
+        'Order tracking']},
+    {
+      icon: Database,
+      title: 'Database Design & Management',
       description:;
-        'Custom database solutions optimized for performance and scalability.',;
+        'Custom database solutions optimized for performance and scalability.',
       features: [;
-        'MySQL, PostgreSQL, MongoDB',;
-        'Data modeling',;
-        'Performance optimization',;
-        'Backup & recovery']},;
-    {;
-      icon: Zap,;
-      title: 'API Development',;
+        'MySQL, PostgreSQL, MongoDB',
+        'Data modeling',
+        'Performance optimization',
+        'Backup & recovery']},
+    {
+      icon: Zap,
+      title: 'API Development',
       description:;
-        'RESTful and GraphQL APIs for seamless integration between systems.',;
+        'RESTful and GraphQL APIs for seamless integration between systems.',
       features: [;
-        'RESTful APIs',;
-        'GraphQL endpoints',;
-        'Authentication & authorization',;
-        'Rate limiting']},;
-    {;
-      icon: Shield,;
-      title: 'Security Implementation',;
+        'RESTful APIs',
+        'GraphQL endpoints',
+        'Authentication & authorization',
+        'Rate limiting']},
+    {
+      icon: Shield,
+      title: 'Security Implementation',
       description:;
-        'Comprehensive security measures to protect your applications and data.',;
+        'Comprehensive security measures to protect your applications and data.',
       features: [;
-        'SSL/TLS encryption',;
-        'Authentication systems',;
-        'Data validation',;
+        'SSL/TLS encryption',
+        'Authentication systems',
+        'Data validation',
         'Security audits']}];
-;
   const developmentProcess = [
-    {;
+    {
 :pages.disabled_auto/solutions/custom-development.tsx;
-      step: '01,;
-      title:,;
-  Discovery & Planning',;
-      description: 'We analyze your requirements and create a detailed project roadmap.;
-    },;
-    {;
-      step:,;
-  02',;
-      title: 'Design & Architecture,;
-      description:,;
-  Our team designs the system architecture and user interface.';
-    },;
-    {;
-      step: '03,;
-      title:,;
-  Development',;
-      description: 'We build your solution using agile methodologies and best practices.;
-    },;
-    {;
-      step:,;
-  04',;
-      title: 'Testing & Quality Assurance,;
-      description:,;
-  Comprehensive testing ensures your solution works flawlessly.';
-    },;
-    {;
-      step: '05,;
-      title:,;
-  Deployment & Launch',;
-      description: 'We deploy your solution and provide launch support.;
-    },;
-    {;
-      step:,;
-  06',;
-      title: 'Maintenance & Support,;
-      description:,;
-  Ongoing support and maintenance to keep your solution running smoothly.';
-    }
+      step: '01,
+      title:,
+  Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project roadmap.},
+    {
+      step:,
+  02',
+      title: 'Design & Architecture,
+      description:,
+  Our team designs the system architecture and user interface.'},
+    {
+      step: '03,
+      title:,
+  Development',
+      description: 'We build your solution using agile methodologies and best practices.},
+    {
+      step:,
+  04',
+      title: 'Testing & Quality Assurance,
+      description:,
+  Comprehensive testing ensures your solution works flawlessly.'},
+    {
+      step: '05,
+      title:,
+  Deployment & Launch',
+      description: 'We deploy your solution and provide launch support.},
+    {
+      step:,
+  06',
+      title: 'Maintenance & Support,
+      description:,
+  Ongoing support and maintenance to keep your solution running smoothly.'}
   ];
-;
   const technologies = [
     { name: 'React, category:,';
-  Frontend' }, ';
-    { name: 'Vue.js, category:, ';
-  Frontend' },';
-    { name: 'Angular, category:,';
-  Frontend' }, ';
-    { name: 'Node.js, category:, ';
-  Backend' },';
-    { name: 'Python, category:,';
-  Backend' }, ';
-    { name: 'PHP, category:, ';
-  Backend' },';
-    { name: 'MySQL, category:,';
-  Database' }, ';
-    { name: 'PostgreSQL, category:, ';
-  Database' },';
-    { name: 'MongoDB, category:,';
-  Database' }, ';
-    { name: 'AWS, category:, ';
-  Cloud' },';
-    { name: 'Azure, category:,';
-  Cloud' }, ';
-    { name: 'Docker, category: ';
+  Frontend' }, '{ name: 'Vue.js, category:, ';
+  Frontend' },'{ name: 'Angular, category:,';
+  Frontend' }, '{ name: 'Node.js, category:, ';
+  Backend' },'{ name: 'Python, category:,';
+  Backend' }, '{ name: 'PHP, category:, ';
+  Backend' },'{ name: 'MySQL, category:,';
+  Database' }, '{ name: 'PostgreSQL, category:, ';
+  Database' },'{ name: 'MongoDB, category:,';
+  Database' }, '{ name: 'AWS, category:, ';
+  Cloud' },'{ name: 'Azure, category:,';
+  Cloud' }, '{ name: 'Docker, category: ';
   'DevOps' }
-      step: '01',;
-      title: 'Discovery & Planning',;
+      step: '01',
+      title: 'Discovery & Planning',
       description:;
-        'We analyze your requirements and create a detailed project roadmap.'},;
-    {;
-      step: '02',;
-      title: 'Design & Architecture',;
+        'We analyze your requirements and create a detailed project roadmap.'},
+    {
+      step: '02',
+      title: 'Design & Architecture',
       description:;
-        'Our team designs the system architecture and user interface.'},;
-    {;
-      step: '03',;
-      title: 'Development',;
+        'Our team designs the system architecture and user interface.'},
+    {
+      step: '03',
+      title: 'Development',
       description:;
-        'We build your solution using agile methodologies and best practices.'},;
-    {;
-      step: '04',;
-      title: 'Testing & Quality Assurance',;
+        'We build your solution using agile methodologies and best practices.'},
+    {
+      step: '04',
+      title: 'Testing & Quality Assurance',
       description:;
-        'Comprehensive testing ensures your solution works flawlessly.'},;
-    {;
-      step: '05',;
-      title: 'Deployment & Launch',;
-      description: 'We deploy your solution and provide launch support.'},;
-    {;
-      step: '06',;
-      title: 'Maintenance & Support',;
+        'Comprehensive testing ensures your solution works flawlessly.'},
+    {
+      step: '05',
+      title: 'Deployment & Launch',
+      description: 'We deploy your solution and provide launch support.'},
+    {
+      step: '06',
+      title: 'Maintenance & Support',
       description:;
         'Ongoing support and maintenance to keep your solution running smoothly.'}];
-;
   const technologies = [
-    { name: 'React', category: 'Frontend' },;
-    { name: 'Vue.js', category: 'Frontend' },;
-    { name: 'Angular', category: 'Frontend' },;
-    { name: 'Node.js', category: 'Backend' },;
-    { name: 'Python', category: 'Backend' },;
-    { name: 'PHP', category: 'Backend' },;
-    { name: 'MySQL', category: 'Database' },;
-    { name: 'PostgreSQL', category: 'Database' },;
-    { name: 'MongoDB', category: 'Database' },;
-    { name: 'AWS', category: 'Cloud' },;
-    { name: 'Azure', category: 'Cloud' },;
-    { name: 'Docker', category: 'DevOps' }];
-;
-  return (;
+    { name: 'React', category: 'Frontend' },
+    { name: 'Vue.js', category: 'Frontend' },
+    { name: 'Angular', category: 'Frontend' },
+    { name: 'Node.js', category: 'Backend' },
+    { name: 'Python', category: 'Backend' },
+    { name: 'PHP', category: 'Backend' },
+    { name: 'MySQL', category: 'Database' },
+    { name: 'PostgreSQL', category: 'Database' },
+    { name: 'MongoDB', category: 'Database' },
+    { name: 'AWS', category: 'Cloud' },
+    { name: 'Azure', category: 'Cloud' },
+    { name: 'Docker', category: 'DevOps' }]
+  return(
     <MainLayout
       title='Custom Development Solutions - Zion Tech Group';
       description='Transform your ideas into powerful digital solutions with our custom development services. From web applications to mobile apps, we build scalable and secure solutions.';
-      keywords='custom development, web development, mobile app development, software development, custom software, application development';
-    >;
+      keywords='custom development, web development, mobile app development, software development, custom software, application development'>
       <div className='min-h-screen bg-gray-50'>
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
@@ -276,7 +248,7 @@ const CustomDevelopment: NextPage = () => {;
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>Custom Development Solutions</h1>
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
               Transform your ideas into powerful digital solutions with our expert development team.;
-              We build scalable, secure, and innovative applications tailored to your business needs.;
+              We build scalable, secure, and innovative applications tailored to your business needs.
             </p>
           </div>
         </section>
@@ -286,17 +258,17 @@ const CustomDevelopment: NextPage = () => {;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Development Services</h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                We offer comprehensive development services to bring your vision to life.;
+                We offer comprehensive development services to bring your vision to life.
               </p>
             </div>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
-              {developmentServices.map((service, index) => (;
+              {developmentServices.map((service, index) => (
                 <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow'>
                   <service.icon className='w-12 h-12 text-blue-600 mb-4' />
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{service.title}</h3>
                   <p className='text-gray-600 mb-4'>{service.description}</p>
                   <ul className='space-y-2'>
-                    {service.features.map((feature, idx) => (;
+                    {service.features.map((feature, idx) => (
                       <li key={idx} className='flex items-center text-sm text-gray-600'>
                         <CheckCircle className='w-4 h-4 text-green-500 mr-2' />
                         {feature}
@@ -314,11 +286,11 @@ const CustomDevelopment: NextPage = () => {;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Development Process</h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                We follow a proven development methodology to ensure successful project delivery.;
+                We follow a proven development methodology to ensure successful project delivery.
               </p>
             </div>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
-              {developmentProcess.map((process, index) => (;
+              {developmentProcess.map((process, index) => (
                 <div key={index} className='bg-white rounded-lg p-6 text-center hover: shadow-lg transition-shadow'>
                   <div className='w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'>
                     {process.step}
@@ -336,11 +308,11 @@ const CustomDevelopment: NextPage = () => {;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4'>Technologies We Use</h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                We work with the latest technologies and frameworks to build modern, scalable solutions.;
+                We work with the latest technologies and frameworks to build modern, scalable solutions.
               </p>
             </div>
             <div className='grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6'>
-              {technologies.map((tech, index) => (;
+              {technologies.map((tech, index) => (
                 <div key={index} className='bg-gray-50 rounded-lg p-4 text-center hover: shadow-md transition-shadow'>
                   <h3 className='font-semibold text-gray-900 mb-1'>{tech.name}</h3>
                   <span className='text-sm text-gray-600'>{tech.category}</span>
@@ -355,7 +327,7 @@ const CustomDevelopment: NextPage = () => {;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold mb-4'>Why Choose Zion Tech Group?</h2>
               <p className='text-xl text-blue-200 max-w-3xl mx-auto'>
-                We combine technical expertise with business understanding to deliver exceptional results.;
+                We combine technical expertise with business understanding to deliver exceptional results.
               </p>
             </div>
             <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
@@ -382,27 +354,24 @@ const CustomDevelopment: NextPage = () => {;
           <div className='container mx-auto px-4 text-center'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Start Your Project?</h2>
             <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto'>
-              Let&aposs discuss your custom development needs and create a solution that drives your business forward.'';
+              Let&aposs discuss your custom development needs and create a solution that drives your business forward.''
             </p>
             <div className='flex flex-col sm: flex-row justify-center gap-4'>
               <Link
                 href='/contact';
-                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors';
-              >;
-                Get Started;
+                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+                Get Started
               </Link>
               <Link
                 href='/solutions';
-                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors';
-              >;
-                View All Solutions;
+                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors'>
+                View All Solutions
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default CustomDevelopment;
+export default CustomDevelopment

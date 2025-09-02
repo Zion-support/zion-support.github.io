@@ -12,8 +12,6 @@ const InfrastructureServices: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default InfrastructureServices;
-;
+export default InfrastructureServices

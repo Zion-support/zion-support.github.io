@@ -1,25 +1,23 @@
 React from;
   'react';
 import { motion } from;
-  'framer-motion';{ SEO } from;
+  'framer-motion'{ SEO } from;
   '../components/SEO';
 import { Button } from;
-  '../components/ui/Button';{ Card } from;
+  '../components/ui/Button'{ Card } from;
   '../components/ui/Card';
-import { '  Home, ArrowLeft,;
-  Search, HelpCircle,;
-  Phone, Mail,;
-  Globe, FileText,;
-  Briefcase, Users,;
-  BookOpen, DollarSign,;
-  Calendar, Award,;
-  Shield;
-} from;
-  'lucide-react'';const NotFound: React.FC = () => {;
-  const quickLinks = [;
-    { name: 'Home', url: '/', icon: Home }, { name: 'Services', url: '/services', icon: Briefcase },'    { name: 'About', url: '/about', icon: Users }, { name: 'Contact', url: '/contact', icon: Phone },'    { name: 'Blog', url: '/blog', icon: BookOpen }, { name: 'Pricing', url: '/pricing', icon: DollarSign },'    { name: 'Team', url: '/team', icon: Award }, { name: 'Webinars', url: '/webinars', icon: Calendar },'    { name: 'White Papers', url: '/white-papers', icon: FileText }, { name: 'Privacy Policy', url: '/privacy', icon: Shield }'  ]';
-  return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>'      <SEO '        title='Page Not Found - Zion Tech Group' '        description='The page you&apos;re looking for doesn&apos;t exist. Find what you need with our helpful navigation and search options.''      />';
+import { '  Home, ArrowLeft,
+  Search, HelpCircle,
+  Phone, Mail,
+  Globe, FileText,
+  Briefcase, Users,
+  BookOpen, DollarSign,
+  Calendar, Award,
+  Shield} from;
+  'lucide-react'';const NotFound: React.FC = () => {
+  const quickLinks = [{ name: 'Home', url: '/', icon: Home }, { name: 'Services', url: '/services', icon: Briefcase },'    { name: 'About', url: '/about', icon: Users }, { name: 'Contact', url: '/contact', icon: Phone },'    { name: 'Blog', url: '/blog', icon: BookOpen }, { name: 'Pricing', url: '/pricing', icon: DollarSign },'    { name: 'Team', url: '/team', icon: Award }, { name: 'Webinars', url: '/webinars', icon: Calendar },'    { name: 'White Papers', url: '/white-papers', icon: FileText }, { name: 'Privacy Policy', url: '/privacy', icon: Shield }'  ]'
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>'      <SEO '        title='Page Not Found - Zion Tech Group' '        description='The page you&apos;re looking for doesn&apos;t exist. Find what you need with our helpful navigation and search options.''      />'
       <div className='max-w-4xl mx-auto text-center'>'        <motion.div'          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -36,8 +34,8 @@ import { '  Home, ArrowLeft,;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className='mb-8''          >'            <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>'            <p className='text-xl text-gray-300 mb-6'>'              Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.'            </p>
-            <p className='text-gray-400'>'              Don&apos;t worry, we&apos;ll help you find what you&apos;re looking for.''            </p>
+            className='mb-8''          >'            <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>'            <p className='text-xl text-gray-300 mb-6'>'              Sorry, the page you&apos;re looking for doesn&apost exist or has been moved.'            </p>
+            <p className='text-gray-400'>'              Don&apos;t worry, we&apos;ll help you find what you&aposre looking for.''            </p>
   '          </motion.div>
           {/* Action Buttons */}
           <motion.div;
@@ -45,10 +43,10 @@ import { '  Home, ArrowLeft,;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className='flex flex-col sm:flex-row gap-4 justify-center mb-12''          >'            <Button;
-              size='lg' '              className='bg-gradient-to-r from-blue-500 to-purple-600 text-white               onClick={() => window.history.back()}'>;
+              size='lg' '              className='bg-gradient-to-r from-blue-500 to-purple-600 text-white               onClick={() => window.history.back()}'>
               <ArrowLeft className='w-5 h-5 mr-2' />'              Go Back'            </Button>
             <Button;
-              size='lg' '              variant='outline''              onClick={() => window.location.href = '/;
+              size='lg' '              variant='outline''              onClick={() => window.location.href = '/
   '}'            >'              <Home className='w-5 h-5 mr-2' />'              Go Home'            </Button>
           </motion.div>
           {/* Quick Links */}
@@ -56,7 +54,7 @@ import { '  Home, ArrowLeft,;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-          >;
+          >
             <Card className='p-8'>'              <h3 className='text-2xl font-bold text-white mb-6'>Popular Pages</h3>'              <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>'                {quickLinks.map((link, index) => ('                  <motion.a;
                     key={link.url}
                     href={link.url}
@@ -74,7 +72,7 @@ import { '  Home, ArrowLeft,;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
-            className='mt-12''          >'            <div className='bg-slate-800/50 rounded-lg p-8'>'              <h3 className='text-2xl font-bold text-white mb-4'>Still Need Help?</h3>'              <p className='text-gray-300 mb-6'>'                If you can&apos;t find what you&apos;re looking for, our team is here to help.'              </p>
+            className='mt-12''          >'            <div className='bg-slate-800/50 rounded-lg p-8'>'              <h3 className='text-2xl font-bold text-white mb-4'>Still Need Help?</h3>'              <p className='text-gray-300 mb-6'>'                If you can&apos;t find what you&aposre looking for, our team is here to help.'              </p>
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>'                <a'                  href='/contact''                  className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity''                >'                  <Phone className='w-5 h-5 mr-2' />'                  Contact Support'                </a>
                 <a;
                   href='mailto:support@ziontechgroup.com''                  className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors''                >'                  <Mail className='w-5 h-5 mr-2' />'                  Email Us"                </a>
@@ -84,7 +82,6 @@ import { '  Home, ArrowLeft,;
         </motion.div>
       </div>
     </div>
-  );
-};
+  )}
 ;
-export default NotFound;
+export default NotFound

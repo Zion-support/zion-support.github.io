@@ -7,21 +7,19 @@ import EnhancedErrorBoundary.dynamic from '../components/EnhancedErrorBoundary.d
 describe('EnhancedErrorBoundary.dynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedErrorBoundary.dynamic />);
-    expect(screen.getByTestId('enhancederrorboundary.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('enhancederrorboundary.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
     render(<EnhancedErrorBoundary.dynamic />);
     // Add specific content tests based on component
-  });
+  })
 
   test('handles user interactions', () => {
     render(<EnhancedErrorBoundary.dynamic />);
     // Add interaction tests based on component functionality
-  });
+  })
 
   test('applies correct styling', () => {
     render(<EnhancedErrorBoundary.dynamic />);
     // Add styling tests if needed
-  });
-});
+  })})

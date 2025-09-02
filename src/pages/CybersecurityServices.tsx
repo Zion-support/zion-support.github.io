@@ -12,8 +12,6 @@ const CybersecurityServices: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default CybersecurityServices;
-;
+export default CybersecurityServices

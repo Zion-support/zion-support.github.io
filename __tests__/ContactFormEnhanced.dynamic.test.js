@@ -7,21 +7,19 @@ import ContactFormEnhanced.dynamic from '../components/ContactFormEnhanced.dynam
 describe('ContactFormEnhanced.dynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormEnhanced.dynamic />);
-    expect(screen.getByTestId('contactformenhanced.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('contactformenhanced.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
     render(<ContactFormEnhanced.dynamic />);
     // Add specific content tests based on component
-  });
+  })
 
   test('handles user interactions', () => {
     render(<ContactFormEnhanced.dynamic />);
     // Add interaction tests based on component functionality
-  });
+  })
 
   test('applies correct styling', () => {
     render(<ContactFormEnhanced.dynamic />);
     // Add styling tests if needed
-  });
-});
+  })})

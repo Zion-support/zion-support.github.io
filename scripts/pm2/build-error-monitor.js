@@ -5,9 +5,8 @@ import fs from;
   'fs';
 import path from;
   'path';
-;
-class BuildErrorMonitor {;
-  constructor() {;
+class BuildErrorMonitor {
+  constructor() {
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000 // 15 minutes;
     this.autoFixBuild = process.env.AUTO_FIX_BUILD ===;
   'true';
@@ -15,331 +14,247 @@ class BuildErrorMonitor {;
   'true';
     this.logFile =;
   'error-reports/build-error-monitor-report.json';
-;
-    console.log(;
+    console.log(
   '🏗️ Build Error Monitor started')    console.log(`Build check interval: ${this.buildCheckInterval}ms`);
-    console.log(`Auto-fix build: ${this.autoFixBuild}`);
-  }
-;
-  async start() {;
+    console.log(`Auto-fix build: ${this.autoFixBuild}`)}
+  async start() {
     // Initial build check;
     await this.checkBuildErrors();
-;
     // Set up interval checking;
-    setInterval(async () => {;
-      await this.checkBuildErrors();
-    }, this.buildCheckInterval);
-  }
-;
-  async checkBuildErrors() {;
-    console.log(;
+    setInterval(async () => {
+      await this.checkBuildErrors()}, this.buildCheckInterval)}
+  async checkBuildErrors() {
+    console.log(
   '🔍 Checking build errors...');
-        const report = {;
-      timestamp: new Date().toISOString(),;
+        const report = {
+      timestamp: new Date().toISOString(),
       buildStatus:;
-  'unknown',;
-      errors: [],;
-      warnings: [],;
-      fixes: {;
-        applied: [],;
-        failed: [],;
-        skipped: []},;
-      buildTime: null,;
-      suggestions: []};
+  'unknown',
+      errors: [],
+      warnings: [],
+      fixes: {
+        applied: [],
+        failed: [],
+        skipped: []},
+      buildTime: null,
+      suggestions: []}
 ;
     try {
       const startTime = Date.now();
       const buildResult = await this.runBuild();
       const endTime = Date.now();
-;
       report.buildTime = endTime - startTime;
-      report.buildStatus = buildResult.success ?,;
+      report.buildStatus = buildResult.success ?,
   success': 'failed;
       report.errors = buildResult.errors;
       report.warnings = buildResult.warnings;
-;
-      if (!buildResult.success && this.autoFixBuild) {;
-        await this.fixBuildErrors(report);
-      }
-;
+      if (!buildResult.success && this.autoFixBuild) {
+        await this.fixBuildErrors(report)}
       // Generate suggestions;
       report.suggestions = this.generateBuildSuggestions(report);
-;
       // Save report;
       this.saveReport(report);
-;
-      const status = report.buildStatus ===,;
+      const status = report.buildStatus ===,
   success' ?;
   '✅': '❌;
       console.log(`${status} Build check complete. Status: ${report.buildStatus}`)      console.log(`Build time: ${report.buildTime}ms`);
-      console.log(;
-        `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`;
-      );
-    } catch (error) {;
-      console.error(;
-  'Error during build check:,;
+      console.log(
+        `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`)} catch (error) {
+      console.error(
+  'Error during build check:,
   , error);
       report.buildStatus =;
   'error';
       report.error = error.message;
-      this.saveReport(report);
-    }
+      this.saveReport(report)}
   }
-;
-  async runBuild() {;
-    try {;
-      const output = execSync(;
-  'npm run build', {;
-        stdio: 'pipe,;
+  async runBuild() {
+    try {
+      const output = execSync(
+  'npm run build', {
+        stdio: 'pipe,
         timeout: 300000 // 5 minutes timeout      }).toString();
-;
       return {
-        success: true,;
-        errors: [],;
-        warnings: this.parseWarningsFromOutput(output),;
-        output};
+        success: true,
+        errors: [],
+        warnings: this.parseWarningsFromOutput(output),
+        output}
     } catch (error) {
       const output = error.stdout;
         ? error.stdout.toString();
         : error.stderr.toString();
-;
-      return {;
-        success: false,;
-        errors: this.parseErrorsFromOutput(output),;
-        warnings: this.parseWarningsFromOutput(output),;
-        output};
+      return {
+        success: false,
+        errors: this.parseErrorsFromOutput(output),
+        warnings: this.parseWarningsFromOutput(output),
+        output}
     }
   }
-;
-  parseErrorsFromOutput(output) {;
+  parseErrorsFromOutput(output) {
     const errors = [];
-    const lines = output.split(,;
+    const lines = output.split(,
   \\n');
-        for (let i = 0 i < lines.length i++) {;
+        for (let i = 0 i < lines.length i++) {
       const line = lines[i];
-;
       // Vite/Rollup errors;
-      if (line.includes(;
-  '✗') || line.includes(;
-  'Error: ') || line.includes(;
-  'error TS')) {        errors.push({;
+      if (line.includes(
+  '✗') || line.includes(
+  'Error: ') || line.includes(
+  'error TS')) {        errors.push({
           type:;
-  'build,;
-          message: line.trim(),;
-          line: i + 1,;
-          severity:,;
-  error'        });
-      }
-;
+  'build,
+          message: line.trim(),
+          line: i + 1,
+          severity:,
+  error'        })}
       // Module resolution errors;
-      if (line.includes(;
-  'Cannot resolve module') || line.includes(;
-  'Module not found')) {        errors.push({;
-          type: 'module,;
-          message: line.trim(),;
-          line: i + 1,;
-          severity:,;
-  error'        });
-      }
+      if (line.includes(
+  'Cannot resolve module') || line.includes(
+  'Module not found')) {        errors.push({
+          type: 'module,
+          message: line.trim(),
+          line: i + 1,
+          severity:,
+  error'        })}
     }
-;
-    return errors;
-  }
-;
-  parseWarningsFromOutput(output) {;
+    return errors}
+  parseWarningsFromOutput(output) {
     const warnings = [];
-    const lines = output.split(;
+    const lines = output.split(
   '\\n');
-;
-    for (let i = 0 i < lines.length i++) {;
+    for (let i = 0 i < lines.length i++) {
       const line = lines[i];
-;
-      if (line.includes(;
-  'warning') || line.includes(;
-  '⚠')) {        warnings.push({;
-          type: 'warning,;
-          message: line.trim(),;
-          line: i + 1,;
+      if (line.includes(
+  'warning') || line.includes(
+  '⚠')) {        warnings.push({
+          type: 'warning,
+          message: line.trim(),
+          line: i + 1,
           severity:;
-  'warning'        });
-      }
+  'warning'        })}
     }
-;
-    return warnings;
-  }
-;
-  async fixBuildErrors(report) {;
-    for (const error of report.errors) {;
-      try {;
+    return warnings}
+  async fixBuildErrors(report) {
+    for (const error of report.errors) {
+      try {
         const fixed = await this.fixBuildError(error);
-        if (fixed) {;
+        if (fixed) {
           report.fixes.applied.push(error);
-          console.log(;
-            `✅ Fixed build error: ${error.message.substring(0, 50)}...`;
-          );
-        } else {;
-          report.fixes.failed.push(error);
-        }
-      } catch (fixError) {;
-        report.fixes.failed.push({ ...error, fixError: fixError.message });
-        console.error(`❌ Failed to fix build error:`, fixError.message);
-      }
+          console.log(
+            `✅ Fixed build error: ${error.message.substring(0, 50)}...`)} else {
+          report.fixes.failed.push(error)}
+      } catch (fixError) {
+        report.fixes.failed.push({ ...error, fixError: fixError.message })
+        console.error(`❌ Failed to fix build error:`, fixError.message)}
     }
   }
-;
-  async fixBuildError(error) {;
+  async fixBuildError(error) {
     const { message, type } = error;
-;
-    try {;
+    try {
       // Fix module resolution errors;
       if (type ===;
-  'module' || message.includes(;
-  'Cannot resolve module')) {;
-        return await this.fixModuleResolutionError(message);
-      }
-;
+  'module' || message.includes(
+  'Cannot resolve module')) {
+        return await this.fixModuleResolutionError(message)}
       // Fix import/export errors;
-      if (message.includes(;
-  'import') || message.includes(;
-  'export')) {;
-        return await this.fixImportExportError(message);
-      }
-;
+      if (message.includes(
+  'import') || message.includes(
+  'export')) {
+        return await this.fixImportExportError(message)}
       // Fix dependency errors;
-      if (message.includes(;
-  'dependency') || message.includes(;
-  'package')) {;
-        return await this.fixDependencyError(message);
-      }
-;
-      return false;
-    } catch (error) {;
-      console.error(;
+      if (message.includes(
+  'dependency') || message.includes(
+  'package')) {
+        return await this.fixDependencyError(message)}
+      return false} catch (error) {
+      console.error(
   'Error fixing build error:', error);
-      return false;
-    }
+      return false}
   }
-;
-  async fixModuleResolutionError(message) {;
+  async fixModuleResolutionError(message) {
     // Extract module name from error message;
     const moduleMatch = message.match(/[';
   ']([^'']+)[";
   ']/);
     if (!moduleMatch) return false;
-;
     const moduleName = moduleMatch[1];
-;
     // Try to install missing dependencies;
     if (!moduleName.startsWith('.;
   ') && !moduleName.startsWith('/;
-  ')) {;
-      try {;
+  ')) {
+      try {
         console.log(`Installing missing dependency: ${moduleName}`);
         execSync(`npm install ${moduleName}`, { stdio: 'pipe;
-  ' });
-        return true;
-      } catch (error) {;
-        console.error(`Failed to install ${moduleName}:`, error.message);
-      }
+  ' })
+        return true} catch (error) {
+        console.error(`Failed to install ${moduleName}:`, error.message)}
     }
-;
-    return false;
-  }
-;
-  async fixImportExportError(message) {;
+    return false}
+  async fixImportExportError(message) {
     // Simple fixes for common import/export issues;
     const commonFixes = [
-      {;
-        pattern: /export\s*{\s*default\s*}/,;
+      {
+        pattern: /export\s*{\s*default\s*}/,
         replacement: 'export default {}
-  ';
-      },;
-      {;
-        pattern: /import\s*{\s*}\s*from/,;
+  '},
+      {
+        pattern: /import\s*{\s*}\s*from/,
         replacement: 'import;
-  ';
-      }    ];
-;
+  '}    ];
     // This would need file-specific logic;
     // For now, just return false to indicate no fix applied;
-    return false;
-  }
-;
-  async fixDependencyError(message) {;
+    return false}
+  async fixDependencyError(message) {
     // Extract package names and try to install them;
     const packageMatch = message.match(/npm install ([\\w\\-@\\/]+)/);
-    if (packageMatch) {;
+    if (packageMatch) {
       const packageName = packageMatch[1];
-      try {;
+      try {
         console.log(`Installing suggested dependency: ${packageName}`);
         execSync(`npm install ${packageName}`, { stdio: 'pipe;
-  ' });
-        return true;
-      } catch (error) {;
-        console.error(`Failed to install ${packageName}:`, error.message);
-      }
+  ' })
+        return true} catch (error) {
+        console.error(`Failed to install ${packageName}:`, error.message)}
     }
-;
-    return false;
-  }
-;
-  generateBuildSuggestions(report) {;
+    return false}
+  generateBuildSuggestions(report) {
     const suggestions = [];
-;
     // Performance suggestions;
     if (report.buildTime > 60000) { // More than 1 minute;
-      suggestions.push(,;
+      suggestions.push(,
   Consider optimizing build performance - build time is over 1 minute;
   ')    }
-;
     // Error pattern suggestions;
     const moduleErrors = report.errors.filter(e => e.type === 'module;
   ').length;
-    if (moduleErrors > 0) {;
-      suggestions.push(;
-        `Found ${moduleErrors} module resolution errors - check import paths and dependencies`;
-      );
-    }
-;
+    if (moduleErrors > 0) {
+      suggestions.push(
+        `Found ${moduleErrors} module resolution errors - check import paths and dependencies`)}
     const tsErrors = report.errors.filter(e => e.message.includes('TS;
-  ')).length    if (tsErrors > 0) {;
-      suggestions.push(;
-        `Found ${tsErrors} TypeScript errors - run type checking separately`;
-      );
-    }
-;
+  ')).length    if (tsErrors > 0) {
+      suggestions.push(
+        `Found ${tsErrors} TypeScript errors - run type checking separately`)}
     // Warning suggestions;
-    if (report.warnings.length > 10) {;
+    if (report.warnings.length > 10) {
       suggestions.push('High number of warnings detected - consider addressing them for better code quality;
   ')    }
-;
-    return suggestions;
-  }
-;
-  saveReport(report) {;
-    try {;
-      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
-    } catch (error) {;
-      console.error('Error saving report: , error.message);
-    }
+    return suggestions}
+  saveReport(report) {
+    try {
+      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) {
+      console.error('Error saving report: , error.message)}
   }
 }
-;
 // Start the monitor;
 const monitor = new BuildErrorMonitor();
 monitor.start().catch(console.error);
-;
 // Handle graceful shutdown;
 process.on('SIGTERM;
-  ', () => {;
+  ', () => {
   console.log('🏗️ Build Error Monitor shutting down...;
   ');
-  process.exit(0);
-});
-;
+  process.exit(0)})
 process.on('SIGINT;
-  ', () => {;
+  ', () => {
   console.log('🏗️ Build Error Monitor interrupted');
-  process.exit(0);
-});
-;
+  process.exit(0)})

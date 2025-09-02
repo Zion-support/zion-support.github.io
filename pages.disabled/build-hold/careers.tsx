@@ -1,14 +1,14 @@
-type { NextPage } from,;
+type { NextPage } from,
   next';
 import Layout from;
   '../components/Layout';Link from;
   'next/link';
 import { Users, Briefcase, Heart, Zap, CheckCircle } from;
-  'lucide-react'';const Careers: NextPage = () => {;
-  return (;
+  'lucide-react'';const Careers: NextPage = () => {
+  return(
     <Layout;
       title='Careers at Zion Tech Group - Join Our Team''      description='Join Zion Tech Group and be part of a team that&apos;s transforming businesses through innovative technology solutions. Explore career opportunities and grow with us.'''    >      {/* Hero Section */}
-      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            Join Our'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Team</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Be part of a team that&apos;s transforming businesses through innovative technology solutions. ''            Grow your career with us and make a real impact.;
+      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            Join Our'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Team</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Be part of a team that&apos;s transforming businesses through innovative technology solutions. ''            Grow your career with us and make a real impact.
   '          </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='#open-positions' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              View Open Positions'            </Link>
             <Link href='/contact' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Get in Touch'            </Link>
@@ -16,24 +16,24 @@ import { Users, Briefcase, Heart, Zap, CheckCircle } from;
         </div>
       </section>
       {/* Why Work With Us */}
-      <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Work at Zion Tech Group?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We&apos;re building a culture of innovation, collaboration, and continuous learning.,;
-  '              Here&apos;s what makes us special.';
+      <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Work at Zion Tech Group?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We&apos;re building a culture of innovation, collaboration, and continuous learning.,
+  '              Here&apos;s what makes us special.'
   '            </p>'          </div>
-          <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>'            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6'>'                <Users className='w-8 h-8 text-blue-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Collaborative Culture</h3>'              <p className='text-gray-600'>'                Work with talented professionals who share your passion for technology and innovation. '                Our team-first approach fosters creativity and problem-solving.;
+          <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>'            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6'>'                <Users className='w-8 h-8 text-blue-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Collaborative Culture</h3>'              <p className='text-gray-600'>'                Work with talented professionals who share your passion for technology and innovation. '                Our team-first approach fosters creativity and problem-solving.
               </p>
             </div>
-            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6'>'                <Zap className='w-8 h-8 text-purple-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Cutting-Edge Technology</h3>'              <p className='text-gray-600'>'                Work with the latest technologies and frameworks. We&apos;re always exploring new ';
+            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6'>'                <Zap className='w-8 h-8 text-purple-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Cutting-Edge Technology</h3>'              <p className='text-gray-600'>'                Work with the latest technologies and frameworks. We&apos;re always exploring new '
   '                tools and approaches to solve complex business challenges.              </p>
             </div>
             <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6'>'                <Heart className='w-8 h-8 text-green-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Work-Life Balance</h3>'              <p className='text-gray-600'>'                We believe in maintaining a healthy work-life balance. Flexible hours, remote work options, and generous time-off policies.'              </p>
             </div>
-            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6'>'                <Briefcase className='w-8 h-8 text-orange-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Career Growth</h3>'              <p className='text-gray-600'>'                Continuous learning and development opportunities. We invest in your growth '                through training, certifications, and mentorship programs.;
+            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6'>'                <Briefcase className='w-8 h-8 text-orange-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Career Growth</h3>'              <p className='text-gray-600'>'                Continuous learning and development opportunities. We invest in your growth '                through training, certifications, and mentorship programs.
               </p>
             </div>
-            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6'>'                <CheckCircle className='w-8 h-8 text-red-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Impactful Work</h3>'              <p className='text-gray-600'>'                Work on projects that make a real difference. Our solutions help businesses '                transform and grow, creating meaningful impact in various industries.;
+            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6'>'                <CheckCircle className='w-8 h-8 text-red-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Impactful Work</h3>'              <p className='text-gray-600'>'                Work on projects that make a real difference. Our solutions help businesses '                transform and grow, creating meaningful impact in various industries.
               </p>
             </div>
-            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6'>'                <Users className='w-8 h-8 text-indigo-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Diverse Team</h3>'              <p className='text-gray-600'>'                Join a diverse team with different backgrounds, perspectives, and experiences. '                We believe diversity drives innovation and better solutions.;
+            <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6'>'                <Users className='w-8 h-8 text-indigo-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Diverse Team</h3>'              <p className='text-gray-600'>'                Join a diverse team with different backgrounds, perspectives, and experiences. '                We believe diversity drives innovation and better solutions.
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ import { Users, Briefcase, Heart, Zap, CheckCircle } from;
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Join Our Team?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Don&apos;t see the perfect role? Send us your resume and we&apos;ll keep you in mind for future opportunities.'          </p>
+      <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Join Our Team?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Don&apos;t see the perfect role? Send us your resume and we&aposll keep you in mind for future opportunities.'          </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Submit Your Application'              </a>
             </Link>
             <a href='mailto:careers@ziontechgroup.com' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Email Us'            </a>
@@ -130,7 +130,6 @@ import { Users, Briefcase, Heart, Zap, CheckCircle } from;
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 ;
-export default Careers;
+export default Careers

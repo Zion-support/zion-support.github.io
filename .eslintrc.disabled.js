@@ -57,4 +57,4 @@ module.exports = {
   '**/*.backup',
   '**/*.tsbackup',
   ],
-};
+}

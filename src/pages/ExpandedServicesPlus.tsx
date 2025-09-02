@@ -8,21 +8,21 @@ export default function ExpandedServicesPlus() {
           </div>
           <h1 className='text-3xl sm:text-4xl font-bold tracking-tight'>High-Impact Micro SaaS, IT, and AI Services</h1>
           <p className='mt-3 max-w-3xl text-slate-300'>
-            Add-on solutions you can deploy quickly, with transparent pricing and clear ROI.We don’t replace your;
+            Add-on solutions you can deploy quickly, with transparent pricing and clear ROI.We don’t replace your
             existing tools—we make them smarter and more effective across growth, operations, and security.</p>
           <div className='mt-6 flex flex-wrap gap-3 text-sm'>
             <a href='tel:+13024640950' className='rounded-lg bg-purple-600 px-4 py-2 font-semibold hover:bg-purple-500'>
-              Call +1 302 464 0950;
+              Call +1 302 464 0950
             </a>
             <a href='mailto:kleber@ziontechgroup.com' className='rounded-lg border border-slate-700 px-4 py-2 hover:border-slate-500'>
-              Email kleber@ziontechgroup.com;
+              Email kleber@ziontechgroup.com
             </a>
             <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='rounded-lg border border-slate-700 px-4 py-2 hover:border-slate-500'>
-              Visit ziontechgroup.com;
+              Visit ziontechgroup.com
             </a>
           </div>
           <p className='mt-3 text-slate-400 text-sm'>
-            Address: 364 E Main St STE 1008, Middletown, DE 19709;
+            Address: 364 E Main St STE 1008, Middletown, DE 19709
           </p>
         </div>
       </section>
@@ -212,13 +212,11 @@ export default function ExpandedServicesPlus() {
           </div>
           <div className='mt-8'>
             <a href='mailto:kleber@ziontechgroup.com' className='rounded-lg bg-purple-600 px-5 py-3 font-semibold hover:bg-purple-500'>
-              Request Proposal;
+              Request Proposal
             </a>
             <span className='ml-4 text-slate-400'>or call <a className='underline hover:text-slate-200' href='tel:+13024640950'>+1 302 464 0950</a></span>
           </div>
         </div>
       </section>
     </div>
-  );
-}
-;
+  )}

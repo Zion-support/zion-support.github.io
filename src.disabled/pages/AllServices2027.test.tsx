@@ -1,5 +1,5 @@
 describe (
-  'AllServices2027', () => {}'; it ('renders without crashing
+  'AllServices2027', () => {}' it ('renders without crashing
   ', () => {} render (<AllServices2027 />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<AllServices2027 />) ''

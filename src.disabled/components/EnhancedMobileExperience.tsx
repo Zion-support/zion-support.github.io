@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from,;
+import React, { useState, useEffect, useCallback, useMemo } from,
   react' import { motion, AnimatePresence } from;
   'framer-motion' import {  Smartphone, Tablet, Monitor, MousePointer, Hand, Wifi, Battery, Settings, X, Check, AlertTriangle, Info, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Smartphone as PhoneIcon, Tablet as TabletIcon, Monitor as DesktopIcon, Activity } from;
   'lucide-react'  interface MobileSettings {
@@ -14,12 +14,10 @@ import React, { useState, useEffect, useCallback, useMemo } from,;
    networkOptimization: boolean;
    viewportMode: 'mobile' | 'tablet' | 'desktop' | 'auto';
    touchSensitivity: 'low' | 'medium' | 'high;
-   mobileAnimations: boolean;
-} interface MobileExperienceProps {
+   mobileAnimations: boolean} interface MobileExperienceProps {
    enabled?: boolean;
    showControls?: boolean;
-   onSettingsChange?: (settings: MobileSettings) => void;
-} export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({ enabled = true, showControls = true, onSettingsChange }) => { const [isOpen, setIsOpen] = useState(false) const [settings, setSettings] = useState<MobileSettings>({ touchOptimization: true, gestureNavigation: true, mobileFirst: true, responsiveImages: true, touchFeedback: true, mobileMenu: true, swipeGestures: true, mobileNotifications: true, batteryOptimization: true, networkOptimization: true, viewportMode:,;
+   onSettingsChange?: (settings: MobileSettings) => void} export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({ enabled = true, showControls = true, onSettingsChange }) => { const [isOpen, setIsOpen] = useState(false) const [settings, setSettings] = useState<MobileSettings>({ touchOptimization: true, gestureNavigation: true, mobileFirst: true, responsiveImages: true, touchFeedback: true, mobileMenu: true, swipeGestures: true, mobileNotifications: true, batteryOptimization: true, networkOptimization: true, viewportMode:,
   auto', touchSensitivity: 'medium, mobileAnimations: true })  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, isTablet: false, isDesktop: false, screenWidth: 0, screenHeight: 0, pixelRatio: 1, touchSupport: false, orientation:;
   'portrait' as;
   'portrait' |;
@@ -28,4 +26,4 @@ import React, { useState, useEffect, useCallback, useMemo } from,;
   'slow' |;
   'medium' |;
   'fast' |;
-  'unknown' }) ';
+  'unknown' }) '

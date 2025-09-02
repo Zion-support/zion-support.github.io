@@ -12,8 +12,6 @@ const Terms: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default Terms;
-;
+export default Terms

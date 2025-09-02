@@ -1,43 +1,37 @@
 React from;
   'react';
 import { motion } from;
-  'framer-motion';{ SEO } from;
+  'framer-motion'{ SEO } from;
   '../components/SEO';
 import { Button } from;
-  '../components/ui/Button';{ Card } from;
+  '../components/ui/Button'{ Card } from;
   '../components/ui/Card';
 import { Badge } from;
-  '../components/ui/Badge';import { '  FileText, Download,;
-  Calendar, User,;
-  Clock, ArrowRight,;
-  Search, Filter,;
-  Tag, Eye,;
-  Share2, BookOpen,;
-  TrendingUp, Brain,;
-  Shield, Cloud,;
-  Database, Network,;
-  Zap, Globe,;
-  Phone, Mail,;
-  Award, Star,;
-  CheckCircle;
-} from;
-  'lucide-react'';const WhitePapers: React.FC = () => {;
-  const whitePapers = [;
-    {;
-      id: 1, title: 'The Future of AI in Enterprise: A Comprehensive Guide to Implementation','      description: 'Explore the latest trends, challenges, and opportunities in enterprise AI adoption. This comprehensive guide covers everything from strategy to implementation.', author: 'Dr. Sarah Johnson','      date: '2025-01-15', readTime: '45 min read','      category: 'AI Strategy', downloads: 1250,'      rating: 4.9, pages: 32,'      image: '/api/placeholder/400/300', tags: ['AI Strategy', 'Enterprise', 'Implementation', 'Future Trends'], featured: true,'      downloadUrl: '/downloads/ai-enterprise-guide.pdf''    }, {'      id: 2,;
-      title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets', description: 'Learn how AI is revolutionizing cybersecurity and the essential measures organizations need to protect against emerging threats.','      author: 'Michael Chen', date: '2025-01-12','      readTime: '35 min read', category: 'Security','      downloads: 980, rating: 4.8,'      pages: 28, image: '/api/placeholder/400/300','      tags: ['Cybersecurity', 'AI Security', 'Threat Protection', 'Risk Management'], featured: false,'      downloadUrl: '/downloads/ai-cybersecurity-guide.pdf''    }, {'      id: 3,;
-      title: 'Cloud Migration Strategies: Best Practices for 2025', description: 'Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.','      author: 'Emily Rodriguez', date: '2025-01-10','      readTime: '40 min read', category: 'Cloud Computing','      downloads: 1150, rating: 4.7,'      pages: 30, image: '/api/placeholder/400/300','      tags: ['Cloud Migration', 'Strategy', 'Best Practices', 'Digital Transformation'], featured: false,'      downloadUrl: '/downloads/cloud-migration-guide.pdf''    }, {'      id: 4,;
-      title: 'Data Analytics and Machine Learning: Driving Business Intelligence', description: 'Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.','      author: 'David Kim', date: '2025-01-08','      readTime: '38 min read', category: 'Analytics','      downloads: 890, rating: 4.6,'      pages: 26, image: '/api/placeholder/400/300','      tags: ['Data Analytics', 'Machine Learning', 'Business Intelligence', 'Decision Making'], featured: false,'      downloadUrl: '/downloads/data-analytics-guide.pdf''    }, {'      id: 5,;
-      title: 'AI-Powered Customer Experience: The New Competitive Advantage', description: 'Explore how AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.', author: 'Lisa Wang','      date: '2025-01-05', readTime: '42 min read','      category: 'Customer Experience', downloads: 1100,'      rating: 4.8, pages: 34,'      image: '/api/placeholder/400/300', tags: ['Customer Experience', 'AI', 'Automation', 'Competitive Advantage'], featured: false,'      downloadUrl: '/downloads/ai-customer-experience.pdf''    }, {'      id: 6,;
+  '../components/ui/Badge';import { '  FileText, Download,
+  Calendar, User,
+  Clock, ArrowRight,
+  Search, Filter,
+  Tag, Eye,
+  Share2, BookOpen,
+  TrendingUp, Brain,
+  Shield, Cloud,
+  Database, Network,
+  Zap, Globe,
+  Phone, Mail,
+  Award, Star,
+  CheckCircle} from;
+  'lucide-react'';const WhitePapers: React.FC = () => {
+  const whitePapers = [{
+      id: 1, title: 'The Future of AI in Enterprise: A Comprehensive Guide to Implementation','      description: 'Explore the latest trends, challenges, and opportunities in enterprise AI adoption. This comprehensive guide covers everything from strategy to implementation.', author: 'Dr. Sarah Johnson','      date: '2025-01-15', readTime: '45 min read','      category: 'AI Strategy', downloads: 1250,'      rating: 4.9, pages: 32,'      image: '/api/placeholder/400/300', tags: ['AI Strategy', 'Enterprise', 'Implementation', 'Future Trends'], featured: true,'      downloadUrl: '/downloads/ai-enterprise-guide.pdf''    }, {'      id: 2,
+      title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets', description: 'Learn how AI is revolutionizing cybersecurity and the essential measures organizations need to protect against emerging threats.','      author: 'Michael Chen', date: '2025-01-12','      readTime: '35 min read', category: 'Security','      downloads: 980, rating: 4.8,'      pages: 28, image: '/api/placeholder/400/300','      tags: ['Cybersecurity', 'AI Security', 'Threat Protection', 'Risk Management'], featured: false,'      downloadUrl: '/downloads/ai-cybersecurity-guide.pdf''    }, {'      id: 3,
+      title: 'Cloud Migration Strategies: Best Practices for 2025', description: 'Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.','      author: 'Emily Rodriguez', date: '2025-01-10','      readTime: '40 min read', category: 'Cloud Computing','      downloads: 1150, rating: 4.7,'      pages: 30, image: '/api/placeholder/400/300','      tags: ['Cloud Migration', 'Strategy', 'Best Practices', 'Digital Transformation'], featured: false,'      downloadUrl: '/downloads/cloud-migration-guide.pdf''    }, {'      id: 4,
+      title: 'Data Analytics and Machine Learning: Driving Business Intelligence', description: 'Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.','      author: 'David Kim', date: '2025-01-08','      readTime: '38 min read', category: 'Analytics','      downloads: 890, rating: 4.6,'      pages: 26, image: '/api/placeholder/400/300','      tags: ['Data Analytics', 'Machine Learning', 'Business Intelligence', 'Decision Making'], featured: false,'      downloadUrl: '/downloads/data-analytics-guide.pdf''    }, {'      id: 5,
+      title: 'AI-Powered Customer Experience: The New Competitive Advantage', description: 'Explore how AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.', author: 'Lisa Wang','      date: '2025-01-05', readTime: '42 min read','      category: 'Customer Experience', downloads: 1100,'      rating: 4.8, pages: 34,'      image: '/api/placeholder/400/300', tags: ['Customer Experience', 'AI', 'Automation', 'Competitive Advantage'], featured: false,'      downloadUrl: '/downloads/ai-customer-experience.pdf''    }, {'      id: 6,
       title: 'Digital Transformation: A Roadmap for Modern Organizations', description: 'Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.','      author: 'James Wilson', date: '2025-01-03','      readTime: '50 min read', category: 'Digital Transformation','      downloads: 1350, rating: 4.9,'      pages: 36, image: '/api/placeholder/400/300','      tags: ['Digital Transformation', 'Strategy', 'Technology', 'Innovation'], featured: false,'      downloadUrl: '/downloads/digital-transformation-roadmap.pdf''    }'  ];
-;
-  const categories = [;
-    { name: 'All Categories', count: 24, active: true }, { name: 'AI Strategy', count: 6, active: false },'    { name: 'Security', count: 4, active: false }, { name: 'Cloud Computing', count: 5, active: false },'    { name: 'Analytics', count: 3, active: false }, { name: 'Customer Experience', count: 3, active: false },'    { name: 'Digital Transformation', count: 2, active: false }, { name: 'Other', count: 1, active: false }'  ]';
-  const featuredPaper = whitePapers.find(paper => paper.featured);
-;
-  return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='White Papers - Zion Tech Group' '        description='Access our comprehensive white papers and research reports on AI, technology trends, and business innovation. Expert insights and actionable strategies.''      />';
-      {/* Hero Section */}
+  const categories = [{ name: 'All Categories', count: 24, active: true }, { name: 'AI Strategy', count: 6, active: false },'    { name: 'Security', count: 4, active: false }, { name: 'Cloud Computing', count: 5, active: false },'    { name: 'Analytics', count: 3, active: false }, { name: 'Customer Experience', count: 3, active: false },'    { name: 'Digital Transformation', count: 2, active: false }, { name: 'Other', count: 1, active: false }'  ]';
+  const featuredPaper = whitePapers.find(paper => paper.featured)
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='White Papers - Zion Tech Group' '        description='Access our comprehensive white papers and research reports on AI, technology trends, and business innovation. Expert insights and actionable strategies.''      />'{/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>'        <div className='max-w-7xl mx-auto text-center'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -49,12 +43,12 @@ import { Badge } from;
         </div>
       </section>
       {/* Featured White Paper */}
-      {featuredPaper && (;
+      {featuredPaper && (
         <section className='py-20 px-4 sm:px-6 lg:px-8'>'          <div className='max-w-7xl mx-auto'>'            <motion.div'              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className='text-3xl font-bold text-white mb-8'>Featured White Paper</h2>'              <Card className='overflow-hidden'>'                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>'                  <div className='relative h-64 lg:h-full'>'                    <img '                      src={featuredPaper.image} ;
+              <h2 className='text-3xl font-bold text-white mb-8'>Featured White Paper</h2>'              <Card className='overflow-hidden'>'                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>'                  <div className='relative h-64 lg:h-full'>'                    <img '                      src={featuredPaper.image}
                       alt={featuredPaper.title}
                       className='w-full h-full object-cover''                    />'                    <div className='absolute top-4 left-4'>'                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>'                        <Star className='w-4 h-4 mr-1' />'                        Featured'                      </Badge>
                     </div>
@@ -70,7 +64,6 @@ import { Badge } from;
           </div>
         </section>
       )}
-;
       {/* White Papers Grid */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>'        <div className='max-w-7xl mx-auto'>'          <div className='flex flex-col lg:flex-row gap-8'>'            {/* Main Content */}'            <div className='lg:w-2/3'>'              <motion.div'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -84,8 +77,8 @@ import { Badge } from;
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.1 * index }}
-                    >;
-                      <Card className='overflow-hidden h-full'>'                        <div className='relative h-48'>'                          <img '                            src={paper.image} ;
+                    >
+                      <Card className='overflow-hidden h-full'>'                        <div className='relative h-48'>'                          <img '                            src={paper.image}
                             alt={paper.title}
                             className='w-full h-full object-cover''                          />'                          <div className='absolute top-4 left-4'>'                            <Badge variant='outline'>{paper.category}</Badge>'                          </div>'                          <div className='absolute top-4 right-4'>'                            <Badge variant='secondary' className='text-xs'>'                              {paper.pages} pages'                            </Badge>
                           </div>
@@ -114,7 +107,7 @@ import { Badge } from;
                 <Card className='p-6'>'                  <h3 className='text-xl font-bold text-white mb-4'>Filter by Category</h3>'                  <div className='space-y-2'>'                    {categories.map((category, index) => ('                      <button;
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${`                          category.active;
-                            ?,;
+                            ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white;
   ' ': 'text-gray-300 hover:bg-slate-700'                        }`}'                      >`                        <span>{category.name}</span>
                         <Badge variant='secondary' className='text-xs'>'                          {category.count}'                        </Badge>
@@ -153,7 +146,6 @@ import { Badge } from;
         </div>
       </section>
     </div>
-  );
-};
+  )}
 ;
-export default WhitePapers;
+export default WhitePapers

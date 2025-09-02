@@ -20,16 +20,16 @@ export default function Services() {
             <div className='flex items-center justify-center mb-4'>
               <Award className='h-6 w-6 text-blue-600 mr-2' />
               <span className='text-base font-semibold leading-7 text-blue-600'>
-                Our Services;
+                Our Services
               </span>
             </div>
             <h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-              Our Services;
+              Our Services
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
               From strategy to production, we deliver outcomes fast. Our;
               comprehensive suite of services covers everything you need to;
-              transform your business.;
+              transform your business.
             </p>
           </div>
         </div>
@@ -41,48 +41,47 @@ export default function Services() {
             {/* AI Autonomous Systems */}
             <div
               id='ai';
-              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300';
-            >;
+              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300'>
               <div className='flex items-center gap-x-3 mb-6'>
                 <div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors'>
                   <Brain className='h-7 w-7 text-white' />
                 </div>
                 <div>
                   <h2 className='text-xl font-semibold text-gray-900'>
-                    AI Autonomous Systems;
+                    AI Autonomous Systems
                   </h2>
                   <p className='text-sm text-blue-600 font-medium'>
-                    Intelligent Automation;
+                    Intelligent Automation
                   </p>
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
                 Transform your operations with intelligent automation and;
-                AI-powered decision making.;
+                AI-powered decision making.
               </p>
               <ul className='space-y-3 mb-6'>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-blue-600' />
                   <span className='text-sm text-gray-700'>
-                    Sales/CS multi-agent copilots;
+                    Sales/CS multi-agent copilots
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-blue-600' />
                   <span className='text-sm text-gray-700'>
-                    RAG and workflow orchestration;
+                    RAG and workflow orchestration
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-blue-600' />
                   <span className='text-sm text-gray-700'>
-                    Observability and guardrails;
+                    Observability and guardrails
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-blue-600' />
                   <span className='text-sm text-gray-700'>
-                    Intelligent process automation;
+                    Intelligent process automation
                   </span>
                 </li>
               </ul>
@@ -94,9 +93,8 @@ export default function Services() {
                 <Link
                   href='/contact';
                   className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group';
-                  aria-label='Get started with AI services';
-                >;
-                  Get started with AI;
+                  aria-label='Get started with AI services'>
+                  Get started with AI
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
                 </Link>
               </div>
@@ -104,48 +102,47 @@ export default function Services() {
             {/* Cloud Platforms */}
             <div
               id='cloud';
-              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-green-300';
-            >;
+              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-green-300'>
               <div className='flex items-center gap-x-3 mb-6'>
                 <div className='flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors'>
                   <Cloud className='h-7 w-7 text-white' />
                 </div>
                 <div>
                   <h2 className='text-xl font-semibold text-gray-900'>
-                    Cloud Platforms;
+                    Cloud Platforms
                   </h2>
                   <p className='text-sm text-green-600 font-medium'>
-                    Scalable Infrastructure;
+                    Scalable Infrastructure
                   </p>
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
                 Build scalable, resilient cloud infrastructure that grows with;
-                your business.;
+                your business.
               </p>
               <ul className='space-y-3 mb-6'>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-green-600' />
                   <span className='text-sm text-gray-700'>
-                    Serverless and Kubernetes;
+                    Serverless and Kubernetes
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-green-600' />
                   <span className='text-sm text-gray-700'>
-                    Data pipelines and ML ops;
+                    Data pipelines and ML ops
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-green-600' />
                   <span className='text-sm text-gray-700'>
-                    FinOps and SRE practices;
+                    FinOps and SRE practices
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-green-600' />
                   <span className='text-sm text-gray-700'>
-                    Multi-cloud architecture;
+                    Multi-cloud architecture
                   </span>
                 </li>
               </ul>
@@ -157,9 +154,8 @@ export default function Services() {
                 <Link
                   href='/contact';
                   className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group';
-                  aria-label='Get started with cloud services';
-                >;
-                  Get started with Cloud;
+                  aria-label='Get started with cloud services'>
+                  Get started with Cloud
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
                 </Link>
               </div>
@@ -167,42 +163,41 @@ export default function Services() {
             {/* Cybersecurity */}
             <div
               id='cybersecurity';
-              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300';
-            >;
+              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300'>
               <div className='flex items-center gap-x-3 mb-6'>
                 <div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors'>
                   <Shield className='h-7 w-7 text-white' />
                 </div>
                 <div>
                   <h2 className='text-xl font-semibold text-gray-900'>
-                    Cybersecurity;
+                    Cybersecurity
                   </h2>
                   <p className='text-sm text-purple-600 font-medium'>
-                    Zero-Trust Security;
+                    Zero-Trust Security
                   </p>
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
                 Protect your business with enterprise-grade security frameworks;
-                and compliance automation.;
+                and compliance automation.
               </p>
               <ul className='space-y-3 mb-6'>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-purple-600' />
                   <span className='text-sm text-gray-700'>
-                    Zero-trust architecture;
+                    Zero-trust architecture
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-purple-600' />
                   <span className='text-sm text-gray-700'>
-                    Compliance automation;
+                    Compliance automation
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-purple-600' />
                   <span className='text-sm text-gray-700'>
-                    Incident response;
+                    Incident response
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
@@ -218,9 +213,8 @@ export default function Services() {
                 <Link
                   href='/contact';
                   className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group';
-                  aria-label='Get started with cybersecurity services';
-                >;
-                  Get started with Security;
+                  aria-label='Get started with cybersecurity services'>
+                  Get started with Security
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
                 </Link>
               </div>
@@ -228,30 +222,29 @@ export default function Services() {
             {/* Micro SaaS */}
             <div
               id='saas';
-              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300';
-            >;
+              className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300'>
               <div className='flex items-center gap-x-3 mb-6'>
                 <div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors'>
                   <Code className='h-7 w-7 text-white' />
                 </div>
                 <div>
                   <h2 className='text-xl font-semibold text-gray-900'>
-                    Micro SaaS;
+                    Micro SaaS
                   </h2>
                   <p className='text-sm text-orange-600 font-medium'>
-                    Custom Solutions;
+                    Custom Solutions
                   </p>
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
                 Custom software solutions tailored to your specific business;
-                needs and workflows.;
+                needs and workflows.
               </p>
               <ul className='space-y-3 mb-6'>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-orange-600' />
                   <span className='text-sm text-gray-700'>
-                    Custom web applications;
+                    Custom web applications
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
@@ -261,13 +254,13 @@ export default function Services() {
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-orange-600' />
                   <span className='text-sm text-gray-700'>
-                    Integration services;
+                    Integration services
                   </span>
                 </li>
                 <li className='flex items-center gap-x-3'>
                   <CheckCircle className='h-4 w-4 text-orange-600' />
                   <span className='text-sm text-gray-700'>
-                    Maintenance & support;
+                    Maintenance & support
                   </span>
                 </li>
               </ul>
@@ -279,9 +272,8 @@ export default function Services() {
                 <Link
                   href='/contact';
                   className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group';
-                  aria-label='Get started with custom software services';
-                >;
-                  Get started with SaaS;
+                  aria-label='Get started with custom software services'>
+                  Get started with SaaS
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
                 </Link>
               </div>
@@ -294,11 +286,11 @@ export default function Services() {
         <div className='mx-auto max-w-7xl px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl lg:text-center mb-16'>
             <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-              Our Delivery Process;
+              Our Delivery Process
             </h2>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
               We follow a proven methodology that ensures quality, speed, and;
-              successful outcomes.;
+              successful outcomes.
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
@@ -307,10 +299,10 @@ export default function Services() {
                 <span className='text-2xl font-bold text-blue-600'>1</span>
               </div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                Discovery;
+                Discovery
               </h3>
               <p className='text-gray-600'>
-                Understand your needs and requirements;
+                Understand your needs and requirements
               </p>
             </div>
             <div className='text-center group'>
@@ -318,7 +310,7 @@ export default function Services() {
                 <span className='text-2xl font-bold text-green-600'>2</span>
               </div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                Strategy;
+                Strategy
               </h3>
               <p className='text-gray-600'>Plan the solution architecture</p>
             </div>
@@ -327,7 +319,7 @@ export default function Services() {
                 <span className='text-2xl font-bold text-purple-600'>3</span>
               </div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                Development;
+                Development
               </h3>
               <p className='text-gray-600'>Build and test the solution</p>
             </div>
@@ -336,7 +328,7 @@ export default function Services() {
                 <span className='text-2xl font-bold text-orange-600'>4</span>
               </div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                Deployment;
+                Deployment
               </h3>
               <p className='text-gray-600'>Launch and monitor performance</p>
             </div>
@@ -348,32 +340,29 @@ export default function Services() {
         <div className='mx-auto max-w-7xl px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl text-center'>
             <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-              Ready to get started?;
+              Ready to get started?
             </h2>
             <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
               Let's discuss your project requirements and how we can help you;
-              achieve your goals.;
+              achieve your goals.
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>
               <Link
                 href='/contact';
                 className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105';
-                aria-label='Contact us to get started';
-              >;
-                Contact Us;
+                aria-label='Contact us to get started'>
+                Contact Us
                 <ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />
               </Link>
               <Link
                 href='/';
                 className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group';
-                aria-label='Back to homepage';
-              >;
+                aria-label='Back to homepage'>
                 Back to Home{' '}
                 <span
                   aria-hidden='true';
-                  className='group-hover:translate-x-1 transition-transform inline-block';
-                >;
-                  →;
+                  className='group-hover:translate-x-1 transition-transform inline-block'>
+                  →
                 </span>
               </Link>
             </div>
@@ -381,6 +370,4 @@ export default function Services() {
         </div>
       </section>
     </PageTransition>
-  );
-}
-;
+  )}

@@ -2,76 +2,67 @@ import { Link } from 'react-router-dom';
 import { revolutionaryMicroSaasServices2025, revolutionaryITServices2025, revolutionaryAIServices2025 } from '../data/revolutionaryServices2025';
 import { Phone, Mail, Globe, MapPin, ArrowRight, Star, TrendingUp, Users, Zap, Shield, Cloud, Brain, CheckCircle, Clock, DollarSign, Target, Rocket } from 'lucide-react';
 
-const RevolutionaryServicesLanding2025: React.FC = () => {;
+const RevolutionaryServicesLanding2025: React.FC = () => {
   const featuredServices = [;
     revolutionaryMicroSaasServices2025[0], // AI Business Intelligence;
     revolutionaryITServices2025[0], // AI Cybersecurity;
     revolutionaryAIServices2025[0] // AI Enterprise Automation;
-  ];
-;
+  ]
   const stats = [
-    { label: 'Total Services', value: '16', icon: <Users className='w-6 h-6' /> },;
-    { label: 'Micro SAAS', value: '10', icon: <Zap className='w-6 h-6' /> },;
-    { label: 'IT Services', value: '3', icon: <Shield className='w-6 h-6' /> },;
+    { label: 'Total Services', value: '16', icon: <Users className='w-6 h-6' /> },
+    { label: 'Micro SAAS', value: '10', icon: <Zap className='w-6 h-6' /> },
+    { label: 'IT Services', value: '3', icon: <Shield className='w-6 h-6' /> },
     { label: 'AI Services', value: '3', icon: <Brain className='w-6 h-6' /> }
-  ];
-;
+  ]
   const benefits = [
-    {;
-      icon: <Rocket className='w-8 h-8' />,;
-      title: 'Cutting-Edge Innovation',;
-      description: 'Stay ahead with the latest AI and technology advancements';
-    },;
-    {;
-      icon: <Target className='w-8 h-8' />,;
-      title: 'Proven ROI',;
-      description: 'Average 300%+ return on investment within 6 months';
-    },;
-    {;
-      icon: <Clock className='w-8 h-8' />,;
-      title: 'Rapid Implementation',;
-      description: 'Get up and running in as little as 1-2 weeks';
-    },;
-    {;
-      icon: <DollarSign className='w-8 h-8' />,;
-      title: 'Competitive Pricing',;
-      description: 'Affordable solutions that fit any business budget';
-    }
-  ];
-;
-  return (;
+    {
+      icon: <Rocket className='w-8 h-8' />,
+      title: 'Cutting-Edge Innovation',
+      description: 'Stay ahead with the latest AI and technology advancements'},
+    {
+      icon: <Target className='w-8 h-8' />,
+      title: 'Proven ROI',
+      description: 'Average 300%+ return on investment within 6 months'},
+    {
+      icon: <Clock className='w-8 h-8' />,
+      title: 'Rapid Implementation',
+      description: 'Get up and running in as little as 1-2 weeks'},
+    {
+      icon: <DollarSign className='w-8 h-8' />,
+      title: 'Competitive Pricing',
+      description: 'Affordable solutions that fit any business budget'}
+  ]
+  return(
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'>
       {/* Hero Section */}
       <div className='bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white'>
         <div className='container mx-auto px-4 py-20'>
           <div className='text-center max-w-5xl mx-auto'>
             <h1 className='text-6xl font-bold mb-6 leading-tight'>
-              Revolutionary Services 2025;
+              Revolutionary Services 2025
             </h1>
             <p className='text-2xl mb-8 leading-relaxed max-w-4xl mx-auto'>
               Transform your business with our cutting-edge AI-powered micro SAAS, IT, and AI services.;
-              Experience the future of technology with intelligent automation, advanced analytics, and innovative solutions.;
+              Experience the future of technology with intelligent automation, advanced analytics, and innovative solutions.
             </p>
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg group';
-              >;
-                Explore All Services;
+                className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg group'>
+                Explore All Services
                 <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
               </Link>
               <Link
                 to='/revolutionary-pricing-guide-2025';
-                className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg';
-              >;
+                className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
                 <DollarSign className='w-5 h-5' />
-                View Pricing;
+                View Pricing
               </Link>
             </div>
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
-              {stats.map((stat, index) => (;
+              {stats.map((stat, index) => (
                 <div key={index} className='text-center'>
                   <div className='flex items-center justify-center mb-2'>
                     <div className='p-2 bg-white/20 rounded-lg'>
@@ -92,26 +83,24 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
           <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
             <div className='text-center md:text-left'>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                Ready to Get Started?;
+                Ready to Get Started?
               </h3>
               <p className='text-gray-600'>
-                Contact our experts to discuss your needs and discover the perfect solution;
+                Contact our experts to discuss your needs and discover the perfect solution
               </p>
             </div>
             <div className='flex flex-col sm:flex-row gap-3'>
               <a
                 href='tel:+13024640950';
-                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors';
-              >;
+                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
                 <Phone className='w-4 h-4' />
-                Call +1 302 464 0950;
+                Call +1 302 464 0950
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com';
-                className='inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors';
-              >;
+                className='inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors'>
                 <Mail className='w-4 h-4' />
-                Email Us;
+                Email Us
               </a>
             </div>
           </div>
@@ -122,11 +111,11 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
         <div className='container mx-auto px-4'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-6'>
-              Service Categories;
+              Service Categories
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Choose from our comprehensive range of revolutionary services designed to;
-              transform your business operations and drive growth.;
+              transform your business operations and drive growth.
             </p>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
@@ -138,13 +127,13 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
                 </div>
                 <h3 className='text-2xl font-bold text-gray-900 mb-2'>Micro SAAS Solutions</h3>
                 <p className='text-gray-600 mb-4'>
-                  AI-powered business applications that streamline operations and boost productivity;
+                  AI-powered business applications that streamline operations and boost productivity
                 </p>
                 <div className='text-3xl font-bold text-blue-600 mb-2'>
-                  {revolutionaryMicroSaasServices2025.length} Services;
+                  {revolutionaryMicroSaasServices2025.length} Services
                 </div>
                 <div className='text-sm text-gray-500'>
-                  Starting from ${Math.min(...revolutionaryMicroSaasServices2025.map(s => s.price))}/month;
+                  Starting from ${Math.min(...revolutionaryMicroSaasServices2025.map(s => s.price))}/month
                 </div>
               </div>
               <div className='space-y-3 mb-6'>
@@ -167,9 +156,8 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
               </div>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2';
-              >;
-                Explore Micro SAAS;
+                className='w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                Explore Micro SAAS
                 <ArrowRight className='w-4 h-4' />
               </Link>
             </div>
@@ -181,13 +169,13 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
                 </div>
                 <h3 className='text-2xl font-bold text-gray-900 mb-2'>IT Infrastructure</h3>
                 <p className='text-gray-600 mb-4'>
-                  Advanced cybersecurity, cloud optimization, and DevOps automation solutions;
+                  Advanced cybersecurity, cloud optimization, and DevOps automation solutions
                 </p>
                 <div className='text-3xl font-bold text-purple-600 mb-2'>
-                  {revolutionaryITServices2025.length} Services;
+                  {revolutionaryITServices2025.length} Services
                 </div>
                 <div className='text-sm text-gray-500'>
-                  Starting from ${Math.min(...revolutionaryITServices2025.map(s => s.price))}/month;
+                  Starting from ${Math.min(...revolutionaryITServices2025.map(s => s.price))}/month
                 </div>
               </div>
               <div className='space-y-3 mb-6'>
@@ -210,9 +198,8 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
               </div>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2';
-              >;
-                Explore IT Services;
+                className='w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                Explore IT Services
                 <ArrowRight className='w-4 h-4' />
               </Link>
             </div>
@@ -224,13 +211,13 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
                 </div>
                 <h3 className='text-2xl font-bold text-gray-900 mb-2'>AI & Machine Learning</h3>
                 <p className='text-gray-600 mb-4'>
-                  Enterprise automation, predictive analytics, and natural language processing;
+                  Enterprise automation, predictive analytics, and natural language processing
                 </p>
                 <div className='text-3xl font-bold text-green-600 mb-2'>
-                  {revolutionaryAIServices2025.length} Services;
+                  {revolutionaryAIServices2025.length} Services
                 </div>
                 <div className='text-sm text-gray-500'>
-                  Starting from ${Math.min(...revolutionaryAIServices2025.map(s => s.price))}/month;
+                  Starting from ${Math.min(...revolutionaryAIServices2025.map(s => s.price))}/month
                 </div>
               </div>
               <div className='space-y-3 mb-6'>
@@ -253,9 +240,8 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
               </div>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2';
-              >;
-                Explore AI Services;
+                className='w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                Explore AI Services
                 <ArrowRight className='w-4 h-4' />
               </Link>
             </div>
@@ -267,15 +253,15 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
         <div className='container mx-auto px-4'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-6'>
-              Featured Services;
+              Featured Services
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Discover our most popular and innovative solutions that are transforming;
-              businesses across industries.;
+              businesses across industries.
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {featuredServices.map((service, index) => (;
+            {featuredServices.map((service, index) => (
               <div key={service.id} className='bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300'>
                 <div className='text-center mb-6'>
                   <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -291,7 +277,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
                   <div className='text-sm text-gray-500'>per {service.pricingModel}</div>
                 </div>
                 <div className='space-y-3 mb-6'>
-                  {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (;
+                  {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className='flex items-center gap-3 text-sm text-gray-700'>
                       <Star className='w-4 h-4 text-yellow-500' />
                       <span>{benefit}</span>
@@ -301,17 +287,15 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
                 <div className='space-y-3'>
                   <Link
                     to='/revolutionary-services-showcase-2025';
-                    className='w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2';
-                  >;
-                    Learn More;
+                    className='w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                    Learn More
                     <ArrowRight className='w-4 h-4' />
                   </Link>
                   <a
                     href={`tel:${service.contactInfo.phone}`}
-                    className='w-full border border-blue-600 text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center font-medium inline-flex items-center justify-center gap-2';
-                  >;
+                    className='w-full border border-blue-600 text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                     <Phone className='w-4 h-4' />
-                    Call Now;
+                    Call Now
                   </a>
                 </div>
               </div>
@@ -324,15 +308,15 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
         <div className='container mx-auto px-4'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-6'>
-              Why Choose Zion Tech Group?;
+              Why Choose Zion Tech Group?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               We combine cutting-edge technology with proven business expertise to deliver;
-              solutions that drive real results.;
+              solutions that drive real results.
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {benefits.map((benefit, index) => (;
+            {benefits.map((benefit, index) => (
               <div key={index} className='text-center'>
                 <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <div className='text-blue-600'>
@@ -350,26 +334,24 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
       <div className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold text-white mb-6'>
-            Ready to Transform Your Business?;
+            Ready to Transform Your Business?
           </h2>
           <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
             Join hundreds of businesses that have already transformed their operations;
-            with our revolutionary AI-powered services. Get started today!;
+            with our revolutionary AI-powered services. Get started today!
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <Link
               to='/revolutionary-services-showcase-2025';
-              className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg';
-            >;
-              Explore All Services;
+              className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
+              Explore All Services
               <ArrowRight className='w-5 h-5' />
             </Link>
             <Link
               to='/revolutionary-pricing-guide-2025';
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg';
-            >;
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
               <DollarSign className='w-5 h-5' />
-              View Pricing;
+              View Pricing
             </Link>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
@@ -406,7 +388,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
               </div>
               <p className='text-gray-400 text-sm leading-relaxed mb-6'>
                 Pioneering the future of technology with AI-powered solutions that transform businesses;
-                and empower innovation. We specialize in cutting-edge AI, IT infrastructure, and micro SAAS solutions.;
+                and empower innovation. We specialize in cutting-edge AI, IT infrastructure, and micro SAAS solutions.
               </p>
             </div>
             <div>
@@ -455,8 +437,6 @@ const RevolutionaryServicesLanding2025: React.FC = () => {;
         </div>
       </footer>
     </div>
-  );
-};
+  )}
 ;
-export default RevolutionaryServicesLanding2025;
-;
+export default RevolutionaryServicesLanding2025

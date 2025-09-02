@@ -35,7 +35,7 @@ const nextConfig = {
         /contracts/,
         /hardhat/
       ]
-    });
+    })
 
     // Add fallback for problematic modules
     config.resolve.fallback = {
@@ -43,10 +43,9 @@ const nextConfig = {
       fs: false,
       net: false,
       tls: false
-    };
+    }
 
-    return config;
-  },
+    return config},
   // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
@@ -55,6 +54,6 @@ const nextConfig = {
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2
   }
-};
+}
 
 export default nextConfig;

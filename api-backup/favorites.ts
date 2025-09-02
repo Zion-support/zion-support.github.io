@@ -1,20 +1,15 @@
-' // Define interfaces for request and response types interface FavoriteItem {;
+' // Define interfaces for request and response types interface FavoriteItem {
   item_type: string;
    item_id: string;
    created_at?: string;
    // Optional for request, present in response user_id?: string;
-   // Optional for request, not usually returned in GET all;
-} interface FavoriteRequestBody {;
+   // Optional for request, not usually returned in GET all} interface FavoriteRequestBody {
   user_id?: string;
    // Can also come from query for GET item_type?: string;
-   item_id?: string;
-} interface FavoriteRequestQuery {;
-  userId?: string;
-} type GetFavoritesResponse = FavoriteItem[] interface MutationSuccessResponse {;
+   item_id?: string} interface FavoriteRequestQuery {
+  userId?: string} type GetFavoritesResponse = FavoriteItem[] interface MutationSuccessResponse {
   success: boolean;
    message?: string;
-   // Optional success message;
-} interface ErrorResponse {;
+   // Optional success message} interface ErrorResponse {
   error: string;
-   details?: string;
-} const supabaseUrl = process.env.SUPABASE_URL const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY if (!supabaseUrl || !serviceKey) { const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (favorites). Service cannot start." ;
+   details?: string} const supabaseUrl = process.env.SUPABASE_URL const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY if (!supabaseUrl || !serviceKey) { const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (favorites). Service cannot start." ;

@@ -6,8 +6,7 @@ const CloudMigrationServices: React.FC = () => {
   return (
     <Layout
       title='Cloud Migration Services - Zion Tech Group';
-      description='Expert cloud migration services that reduce costs by 30% and improve performance by 50% with zero downtime.';
-    >;
+      description='Expert cloud migration services that reduce costs by 30% and improve performance by 50% with zero downtime.'>
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4 text-center'>
           <div className='flex justify-center mb-6'>
@@ -16,24 +15,22 @@ const CloudMigrationServices: React.FC = () => {
             </div>
           </div>
           <h1 className='text-5xl md:text-6xl font-bold mb-6'>
-            Cloud Migration Services;
+            Cloud Migration Services
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Seamlessly migrate to the cloud with zero downtime. Our expert team reduces costs by 30%;
-            and improves performance by 50% with proven migration strategies.;
+            and improves performance by 50% with proven migration strategies.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4 mb-12'>
             <a
               href='https://ziontechgroup.com/contact';
-              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Get Free Assessment;
+              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Get Free Assessment
             </a>
             <a
               href='https://ziontechgroup.com/contact';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Schedule Consultation;
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Schedule Consultation
             </a>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>
@@ -61,7 +58,7 @@ const CloudMigrationServices: React.FC = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our Migration Services</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We provide comprehensive cloud migration services for all major cloud platforms.;
+              We provide comprehensive cloud migration services for all major cloud platforms.
             </p>
           </div>
           <div className='grid md:grid-cols-2 gap-8'>
@@ -73,20 +70,20 @@ const CloudMigrationServices: React.FC = () => {
                 <h3 className='text-2xl font-bold text-gray-900'>AWS Migration</h3>
               </div>
               <p className='text-gray-600 mb-6'>
-                Complete migration to Amazon Web Services with optimized architecture and cost management.;
+                Complete migration to Amazon Web Services with optimized architecture and cost management.
               </p>
               <ul className='space-y-2'>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Lift and shift migration;
+                  Lift and shift migration
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Cloud-native optimization;
+                  Cloud-native optimization
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Cost optimization;
+                  Cost optimization
                 </li>
               </ul>
             </div>
@@ -98,20 +95,20 @@ const CloudMigrationServices: React.FC = () => {
                 <h3 className='text-2xl font-bold text-gray-900'>Azure Migration</h3>
               </div>
               <p className='text-gray-600 mb-6'>
-                Seamless migration to Microsoft Azure with enterprise-grade security and compliance.;
+                Seamless migration to Microsoft Azure with enterprise-grade security and compliance.
               </p>
               <ul className='space-y-2'>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Hybrid cloud solutions;
+                  Hybrid cloud solutions
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Security compliance;
+                  Security compliance
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Disaster recovery;
+                  Disaster recovery
                 </li>
               </ul>
             </div>
@@ -123,7 +120,7 @@ const CloudMigrationServices: React.FC = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Service Packages</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose the migration package that fits your needs and budget.;
+              Choose the migration package that fits your needs and budget.
             </p>
           </div>
           <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
@@ -151,15 +148,14 @@ const CloudMigrationServices: React.FC = () => {
               </ul>
               <a
                 href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors';
-              >;
-                Get Quote;
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
+                Get Quote
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-xl ring-2 ring-blue-500 relative'>
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                 <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                  Most Popular;
+                  Most Popular
                 </span>
               </div>
               <div className='text-center mb-8'>
@@ -189,9 +185,8 @@ const CloudMigrationServices: React.FC = () => {
               </ul>
               <a
                 href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors';
-              >;
-                Get Quote;
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors'>
+                Get Quote
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-lg'>
@@ -222,9 +217,8 @@ const CloudMigrationServices: React.FC = () => {
               </ul>
               <a
                 href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors';
-              >;
-                Get Quote;
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
+                Get Quote
               </a>
             </div>
           </div>
@@ -234,20 +228,18 @@ const CloudMigrationServices: React.FC = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Migrate to the Cloud?</h2>
           <p className='text-xl mb-8 max-w-3xl mx-auto'>
-            Join hundreds of businesses that have successfully migrated with our expert team.;
+            Join hundreds of businesses that have successfully migrated with our expert team.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4'>
             <a
               href='https://ziontechgroup.com/contact';
-              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Get Free Assessment;
+              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Get Free Assessment
             </a>
             <a
               href='tel:+13024640950';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Call +1 302 464 0950;
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Call +1 302 464 0950
             </a>
           </div>
         </div>
@@ -274,7 +266,6 @@ const CloudMigrationServices: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 ;
-export default CloudMigrationServices;
+export default CloudMigrationServices

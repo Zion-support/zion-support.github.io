@@ -1,4 +1,4 @@
-import React from,;
+import React from,
   react';
 import Head from;
   'next/head';
@@ -6,29 +6,26 @@ import Head from;
 import QuantumHolographicMatrixBackground from;
   '../components/ui/QuantumHolographicMatrixBackground';import QuantumHolographicMatrixBackground from;
   '../components/ui/QuantumHolographicMatrixBackground;
-import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from,;
+import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from,
   lucide-react';
-;
 export default function DomainDNSMonitorPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950,;
-    email:,;
-  kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709,;
-    website:,;
-  https: //ziontechgroup.com;
-  };
+    mobile: '+1 302 464 0950,
+    email:,
+  kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709,
+    website:,
+  https: //ziontechgroup.com}
 ;
   const features = [
-  'Registrar expiry and auto-renew checks',;
-  'NS/DS drift and delegation correctness',;
-  'DNSSEC presence and validity',;
-  'MX/SPF/DMARC health and alignment',;
-  'Propagation tests across regions',;
+  'Registrar expiry and auto-renew checks',
+  'NS/DS drift and delegation correctness',
+  'DNSSEC presence and validity',
+  'MX/SPF/DMARC health and alignment',
+  'Propagation tests across regions',
   'Alerts, webhooks and change history';
   ];
-;
-  return (;
+  return(
 <:pages/domain-dns-monitor.tsx;
     <QuantumHolographicMatrixBackground intensity={1.5}><QuantumHolographicMatrixBackground intensity={1.5}>
 <Head>
@@ -40,7 +37,7 @@ export default function DomainDNSMonitorPage() {
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
-              <Globe className='w-10 h-10' /> Domain & DNS Health Monitor;
+              <Globe className='w-10 h-10' /> Domain & DNS Health Monitor
             </h1>
             <p className='mt-4 text-xl text-gray-300 max-w-3xl mx-auto'>Prevent domain lapses, email deliverability issues and outages with continuous DNS hygiene checks.</p>
           </div>
@@ -50,7 +47,7 @@ export default function DomainDNSMonitorPage() {
               <p className='text-gray-300 mb-6'>Stay ahead of domain and DNS issues by tracking registrar and nameserver changes, DNSSEC status, and email authentication records across providers and regions.</p>
               <h3 className='text-lg font-semibold text-white mb-3'>Key Features</h3>
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300'>
-                {features.map((f) => (;
+                {features.map((f) => (
                   <li key={f} className='flex items-start gap-2 w-4 h-4 text-emerald-400 mt-0.5'><Check /> <span>{f}</span></li>
                 ))}
               </ul>
@@ -74,6 +71,4 @@ export default function DomainDNSMonitorPage() {
       </div>
 <:pages/domain-dns-monitor.tsx;
     </QuantumHolographicMatrixBackground></QuantumHolographicMatrixBackground>
-);
-}
-;
+)}

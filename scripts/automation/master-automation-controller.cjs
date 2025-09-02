@@ -10,7 +10,7 @@ class MasterAutomationController {
     this.automations = new Map();
     this.isRunning = false;
     this.logFile = path.join(
-      this.projectRoot,master-automation-controller-report.json'
+      this.projectRoot, 'master-automation-controller-report.json'
     );
     this.checkInterval = 1 * 60 * 1000; // Check every minute
   }

@@ -8,5 +8,4 @@ export default function Demo(...args: unknown[]): unknown {
         <p className='text-slate-300'>Schedule a live demonstration of our solutions.</p>
       </div>
     </div>
-  );
-}
+  )}

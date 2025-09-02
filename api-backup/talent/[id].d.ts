@@ -1,4 +1,3 @@
 interface Req {
   method?: string;
-   query?: { id?: string;
-} ;
+   query?: { id?: string}

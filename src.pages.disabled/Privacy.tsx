@@ -1,9 +1,9 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 
-const Privacy: React.FC = () => {;
+const Privacy: React.FC = () => {
   return (
-    <>;
+    <>
       <SEO title='Privacy - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
@@ -12,8 +12,6 @@ const Privacy: React.FC = () => {;
         </div>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default Privacy;
-;
+export default Privacy

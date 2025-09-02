@@ -26,10 +26,8 @@ export interface ComprehensiveService {
    reviews?: number;
    popular?: boolean;
    launchDate?: string;
-   contactInfo: {;
+   contactInfo: {
    mobile: string;
    email: string;
    address: string;
-   website: string;
-} } const CONTACT_INFO = { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https:''';
-;
+   website: string} } const CONTACT_INFO = { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https:''';

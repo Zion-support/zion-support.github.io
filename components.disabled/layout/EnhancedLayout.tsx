@@ -6,70 +6,62 @@ import EnhancedNavigation from;
   '../EnhancedNavigation';
 import EnhancedFooter from;
   '../EnhancedFooter';
-;
 interface EnhancedLayoutProps {
   // Add your props here children: React.ReactNode;
    title?: string;
    description?: string;
    keywords?: string;
    ogImage?: string;
-   structuredData?: object;
-}
-;
-const EnhancedLayout: React.FC<EnhancedLayoutProps> = {;
-  children,;
-  title =,;
-  Zion Tech Group - Leading AI & Technology Solutions',;
+   structuredData?: object}
+const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
+  children,
+  title =,
+  Zion Tech Group - Leading AI & Technology Solutions',
   description =;
   'Transform your business with Zion Tech Group\'s cutting-edge AI development, cloud architecture, and digital transformation services.;
-  ',;
+  ',
   keywords = 'AI development, cloud architecture, web development, cybersecurity, IoT platforms, digital transformation, technology consulting;
-  ',;
-  ogImage = 'https: //ziontechgroup.com/og-image.png,;
-  structuredData;
-} {;
-  const defaultStructuredData = {;
-    '@context': 'https://schema.org',;
-    '@type': 'Organization',;
-    'name': 'Zion Tech Group',;
-    'description': 'Leading technology consulting firm specializing in AI development, cloud architecture, and digital transformation solutions.',;
-    'url': 'https://ziontechgroup.com',;
-    'logo': 'https://ziontechgroup.com/logo.png',;
-    'contactPoint': {;
-      '@type': 'ContactPoint',;
-      'telephone': '+1-302-464-0950',;
-      'contactType': 'customer service',;
-      'email': 'kleber@ziontechgroup.com';
-    },;
-    'address': {;
-      '@type': 'PostalAddress',;
-      'streetAddress': '364 E Main St STE 1008',;
-      'addressLocality': 'Middletown',;
-      'addressRegion': 'DE',;
-      'postalCode': '19709',;
-      'addressCountry': 'US';
-    },;
+  ',
+  ogImage = 'https: //ziontechgroup.com/og-image.png,
+  structuredData} {
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Zion Tech Group',
+    'description': 'Leading technology consulting firm specializing in AI development, cloud architecture, and digital transformation solutions.',
+    'url': 'https://ziontechgroup.com',
+    'logo': 'https://ziontechgroup.com/logo.png',
+    'contactPoint': {
+      '@type': 'ContactPoint',
+      'telephone': '+1-302-464-0950',
+      'contactType': 'customer service',
+      'email': 'kleber@ziontechgroup.com'},
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': '364 E Main St STE 1008',
+      'addressLocality': 'Middletown',
+      'addressRegion': 'DE',
+      'postalCode': '19709',
+      'addressCountry': 'US'},
     'sameAs': [;
-      'https://twitter.com/ziontechgroup',;
-      'https://linkedin.com/company/ziontechgroup',;
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup';
-    ],;
-    'foundingDate': '2010',;
-    'numberOfEmployees': '50-100',;
+    ],
+    'foundingDate': '2010',
+    'numberOfEmployees': '50-100',
     'serviceType': [
-      'AI Development',;
-      'Cloud Architecture',;
-      'Web Development',;
-      'Cybersecurity',;
-      'IoT Platforms',;
+      'AI Development',
+      'Cloud Architecture',
+      'Web Development',
+      'Cybersecurity',
+      'IoT Platforms',
       'Digital Transformation';
-    ];
-  };
+    ]}
 ;
-  const finalStructuredData = structuredData || defaultStructuredData;
-;
-  return (;
-    <>;
+  const finalStructuredData = structuredData || defaultStructuredData
+  return(
+    <>
       <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
@@ -94,8 +86,7 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {;
         <script
           type='application/ld+json';
           dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
-        />;
-        {/* Additional Meta Tags */}
+        />{/* Additional Meta Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='theme-color' content='#000000' />
         <link rel='icon' href='/favicon.ico' />
@@ -118,8 +109,7 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {;
         <EnhancedFooter />
       </div>
     </>
-  );
-};
+  )}
 ;
-export { EnhancedLayout };
-export default EnhancedLayout;
+export { EnhancedLayout }
+export default EnhancedLayout

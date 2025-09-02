@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
-const AIAutonomousDevOpsPlatform: React.FC = () => {;
-  return (;
-    <>;
+const AIAutonomousDevOpsPlatform: React.FC = () => {
+  return(
+    <>
       <Helmet>
         <title>AI Autonomous DevOps Platform | Zion Tech Group</title>
         <meta name='description' content='Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.' />
@@ -18,14 +18,13 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-        >;
+        >
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className='mb-8';
-            >;
+              className='mb-8'>
               <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6'>
                 <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                   <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />
@@ -33,29 +32,26 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
                 </svg>
               </div>
               <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-                AI Autonomous DevOps Platform;
+                AI Autonomous DevOps Platform
               </h1>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.;
+                Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.
               </p>
             </motion.div>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className='flex flex-col sm:flex-row gap-4 justify-center';
-            >;
+              className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='tel:+13024640950';
-                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300';
-              >;
-                Call Now: +1 302 464 0950;
+                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300'>
+                Call Now: +1 302 464 0950
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300';
-              >;
-                Email Us;
+                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300'>
+                Email Us
               </a>
             </motion.div>
           </div>
@@ -67,54 +63,46 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-7xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Comprehensive AI-driven DevOps capabilities that transform your development operations;
+                Comprehensive AI-driven DevOps capabilities that transform your development operations
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {[;
-                {;
-                  icon: '🤖',;
-                  title: 'Autonomous Infrastructure',;
-                  description: 'AI automatically provisions, scales, and manages cloud infrastructure based on real-time demand and performance metrics.';
-                },;
-                {;
-                  icon: '🚀',;
-                  title: 'Intelligent Deployment',;
-                  description: 'Automated CI/CD pipelines with AI-powered testing, deployment strategies, and rollback capabilities.';
-                },;
-                {;
-                  icon: '🔍',;
-                  title: 'Predictive Monitoring',;
-                  description: 'Advanced monitoring with anomaly detection, performance prediction, and proactive issue resolution.';
-                },;
-                {;
-                  icon: '🛠️',;
-                  title: 'Self-Healing Systems',;
-                  description: 'AI automatically detects and resolves infrastructure issues, performance bottlenecks, and security vulnerabilities.';
-                },;
-                {;
-                  icon: '📊',;
-                  title: 'Performance Optimization',;
-                  description: 'Continuous optimization of resource allocation, cost management, and performance tuning across all environments.';
-                },;
-                {;
-                  icon: '🔒',;
-                  title: 'Security Automation',;
-                  description: 'Automated security scanning, compliance monitoring, and threat response with AI-powered vulnerability management.';
-                }
-              ].map((feature, index) => (;
+              {[{
+                  icon: '🤖',
+                  title: 'Autonomous Infrastructure',
+                  description: 'AI automatically provisions, scales, and manages cloud infrastructure based on real-time demand and performance metrics.'},
+                {
+                  icon: '🚀',
+                  title: 'Intelligent Deployment',
+                  description: 'Automated CI/CD pipelines with AI-powered testing, deployment strategies, and rollback capabilities.'},
+                {
+                  icon: '🔍',
+                  title: 'Predictive Monitoring',
+                  description: 'Advanced monitoring with anomaly detection, performance prediction, and proactive issue resolution.'},
+                {
+                  icon: '🛠️',
+                  title: 'Self-Healing Systems',
+                  description: 'AI automatically detects and resolves infrastructure issues, performance bottlenecks, and security vulnerabilities.'},
+                {
+                  icon: '📊',
+                  title: 'Performance Optimization',
+                  description: 'Continuous optimization of resource allocation, cost management, and performance tuning across all environments.'},
+                {
+                  icon: '🔒',
+                  title: 'Security Automation',
+                  description: 'Automated security scanning, compliance monitoring, and threat response with AI-powered vulnerability management.'}
+              ].map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20';
-                >;
+                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
                   <div className='text-4xl mb-4'>{feature.icon}</div>
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
                   <p className='text-gray-300'>{feature.description}</p>
@@ -130,7 +118,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-7xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>
@@ -138,62 +126,57 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               {[
-                {;
-                  name: 'Starter',;
-                  price: '$399',;
-                  period: '/month',;
-                  description: 'Perfect for small teams',;
+                {
+                  name: 'Starter',
+                  price: '$399',
+                  period: '/month',
+                  description: 'Perfect for small teams',
                   features: [;
-                    'Up to 10 applications',;
-                    'Basic automation',;
-                    'Standard monitoring',;
-                    'Email support',;
+                    'Up to 10 applications',
+                    'Basic automation',
+                    'Standard monitoring',
+                    'Email support',
                     'Cloud integrations';
-                  ];
-                },;
-                {;
-                  name: 'Professional',;
-                  price: '$999',;
-                  period: '/month',;
-                  description: 'Ideal for growing teams',;
+                  ]},
+                {
+                  name: 'Professional',
+                  price: '$999',
+                  period: '/month',
+                  description: 'Ideal for growing teams',
                   features: [;
-                    'Up to 50 applications',;
-                    'Advanced AI automation',;
-                    'Predictive monitoring',;
-                    'Priority support',;
-                    'Custom integrations',;
+                    'Up to 50 applications',
+                    'Advanced AI automation',
+                    'Predictive monitoring',
+                    'Priority support',
+                    'Custom integrations',
                     'Self-healing systems';
-                  ],;
-                  popular: true;
-                },;
-                {;
-                  name: 'Enterprise',;
-                  price: '$2,499',;
-                  period: '/month',;
-                  description: 'For large organizations',;
+                  ],
+                  popular: true},
+                {
+                  name: 'Enterprise',
+                  price: '$2,499',
+                  period: '/month',
+                  description: 'For large organizations',
                   features: [
-                    'Unlimited applications',;
-                    'Full AI capabilities',;
-                    'Custom AI models',;
-                    'Dedicated support',;
-                    'White-label options',;
-                    'On-premise deployment';
-                  ];
-                }
-              ].map((plan, index) => (;
+                    'Unlimited applications',
+                    'Full AI capabilities',
+                    'Custom AI models',
+                    'Dedicated support',
+                    'White-label options',
+                    'On-premise deployment'
+                  ]}
+              ].map((plan, index) => (
                 <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${;
-                    plan.popular ? 'border-green-500' : 'border-white/20';
-                  } relative`}
-                >;
-                  {plan.popular && (;
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
+                    plan.popular ? 'border-green-500' : 'border-white/20'} relative`}
+                >{plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                        Most Popular;
+                        Most Popular
                       </span>
                     </div>
                   )}
@@ -204,7 +187,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
                     <span className='text-gray-300'>{plan.period}</span>
                   </div>
                   <ul className='space-y-3 mb-8'>
-                    {plan.features.map((feature, featureIndex) => (;
+                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-center text-gray-300'>
                         <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
@@ -215,13 +198,12 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
                   </ul>
                   <a
                     href='tel:+13024640950';
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${;
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700';
-                        : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white';
-                    }`}
-                  >;
-                    Get Started;
+                        : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white'}`}
+                  >
+                    Get Started
                   </a>
                 </motion.div>
               ))}
@@ -235,12 +217,12 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-7xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Transform your DevOps operations with AI-powered automation and intelligent optimization;
+                Transform your DevOps operations with AI-powered automation and intelligent optimization
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
@@ -248,13 +230,13 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
                   {[;
-                    'Reduce deployment time by 80% with AI automation',;
-                    'Decrease infrastructure costs by 50% through intelligent optimization',;
-                    'Improve system reliability by 95% with self-healing capabilities',;
-                    'Save 40+ hours per week on manual DevOps tasks',;
-                    'Boost deployment frequency by 300% with automated pipelines',;
-                    'Eliminate 90% of production incidents with predictive monitoring';
-                  ].map((benefit, index) => (;
+                    'Reduce deployment time by 80% with AI automation',
+                    'Decrease infrastructure costs by 50% through intelligent optimization',
+                    'Improve system reliability by 95% with self-healing capabilities',
+                    'Save 40+ hours per week on manual DevOps tasks',
+                    'Boost deployment frequency by 300% with automated pipelines',
+                    'Eliminate 90% of production incidents with predictive monitoring'
+                  ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1'>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
@@ -297,26 +279,24 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
+        >
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-4xl font-bold text-white mb-6'>
-              Ready to Transform Your DevOps?;
+              Ready to Transform Your DevOps?
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              Join thousands of teams already using our AI-powered platform to revolutionize their DevOps operations.;
+              Join thousands of teams already using our AI-powered platform to revolutionize their DevOps operations.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='tel:+13024640950';
-                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300';
-              >;
-                Call +1 302 464 0950;
+                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300'>
+                Call +1 302 464 0950
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300';
-              >;
-                Email kleber@ziontechgroup.com;
+                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300'>
+                Email kleber@ziontechgroup.com
               </a>
             </div>
             <div className='mt-8 text-gray-400'>
@@ -326,7 +306,6 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {;
         </motion.section>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default AIAutonomousDevOpsPlatform;
+export default AIAutonomousDevOpsPlatform

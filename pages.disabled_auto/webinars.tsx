@@ -11,43 +11,42 @@ import { Card } from;
   '../components/ui/Card';
 import { Badge } from;
   '../components/ui/Badge';
-import { ;
+import {
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import {;
-  Calendar,;
-  Clock,;
-  Users,;
-  Play,;
-  ArrowRight,;
-  Search,;
-  Filter,;
-  Tag,;
-  Eye,;
-  Share2,;
-  Video,;
-  TrendingUp,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  Database,;
-  Network,;
-  Zap,;
-  Globe,;
-  Phone,;
-  Mail,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  Download,;
-  Bookmark,;
+import {
+  Calendar,
+  Clock,
+  Users,
+  Play,
+  ArrowRight,
+  Search,
+  Filter,
+  Tag,
+  Eye,
+  Share2,
+  Video,
+  TrendingUp,
+  Brain,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Zap,
+  Globe,
+  Phone,
+  Mail,
+  Award,
+  Star,
+  CheckCircle,
+  Download,
+  Bookmark,
 :pages.disabled_auto/webinars.tsx;
-  ExternalLink;
-} from;
+  ExternalLink} from;
   'lucide-react';
   ExternalLink} from 'lucide-react';
                       </Button>
@@ -55,27 +54,23 @@ import {;
                   </div>
                   <div className='p-8'>
                     <div className='flex items-center mb-4'>
-:pages.disabled_auto/webinars.tsx;
+:pages.disabled_auto/webinars.tsx
                       <Badge variant='outline' className='mr-3'>{featuredWebinar.category}</Badge>
                       <Badge variant={featuredWebinar.status ===,
   upcoming' ?;
-  'default': 'secondary} className='text-xs'>;
-                        {featuredWebinar.status ===,;
-  upcoming' ?;
+  'default': 'secondary} className='text-xs'>{featuredWebinar.status ===,
+  upcoming' ?
   'Upcoming': 'Recorded}
                       <Badge variant='outline' className='mr-3'>
                         {featuredWebinar.category}
                       </Badge>
                       <Badge
-                        variant={;
+                        variant={
                           featuredWebinar.status === 'upcoming';
                             ? 'default';
-                            : 'secondary';
-                        }
-                        className='text-xs';
-                      >;
-                        {featuredWebinar.status === 'upcoming';
-                          ? 'Upcoming';
+                            : 'secondary'}
+                        className='text-xs'>{featuredWebinar.status === 'upcoming';
+                          ? 'Upcoming'
                           : 'Recorded'}
                       </Badge>
                     </div>
@@ -108,12 +103,11 @@ import {;
                         {featuredWebinar.time}
                       </div>
                       <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
-:pages.disabled_auto/webinars.tsx;
-                        {featuredWebinar.status ===,;
+:pages.disabled_auto/webinars.tsx{featuredWebinar.status ===,
   upcoming' ?;
   'Register Now': 'Watch Recording}
                         {featuredWebinar.status === 'upcoming';
-                          ? 'Register Now';
+                          ? 'Register Now'
                           : 'Watch Recording'}
                         <ArrowRight className='w-4 h-4 ml-2' />
                       </Button>
@@ -125,7 +119,6 @@ import {;
           </div>
         </section>
       )}
-;
       {/* Webinars Grid */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>
         <div className='max-w-7xl mx-auto'>
@@ -136,8 +129,7 @@ import {;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className='mb-8';
-              >;
+                className='mb-8'>
                 <div className='flex items-center justify-between mb-6'>
                   <h2 className='text-3xl font-bold text-white'>All Webinars</h2>
                   <div className='flex items-center gap-4'>
@@ -146,17 +138,16 @@ import {;
                       <input
                         type='text';
                         placeholder='Search webinars...';
-                        className='pl-10 pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500';
-                      />;
+                        className='pl-10 pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500'/>
                     </div>
                     <Button variant='outline' size='sm'>
                       <Filter className='w-4 h-4 mr-2' />
-                      Filter;
+                      Filter
                     </Button>
                   </div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-:pages.disabled_auto/webinars.tsx;
+:pages.disabled_auto/webinars.tsx
                               </Button>
                             </div>
                           </div>
@@ -173,25 +164,22 @@ import {;
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className='space-y-8';
-              >;
-                {/* Categories Filter */}
+                className='space-y-8'>{/* Categories Filter */}
                 <Card className='p-6'>
                   <h3 className='text-xl font-bold text-white mb-4'>Filter by Category</h3>
                   <div className='space-y-2'>
-                    {categories.map((category, index) => (;
+                    {categories.map((category, index) => (
                       <button
                         key={category.name}
-                        className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${;
+                        className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
 :pages.disabled_auto/webinars.tsx;
                           category.active;
-                            ?,;
+                            ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700;
                           category.active;
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white';
-                            : 'text-gray-300 hover:bg-slate-700';
-                        }`}
-                      >;
+                            : 'text-gray-300 hover:bg-slate-700'}`}
+                      >
                         <span>{category.name}</span>
                         <Badge variant='secondary' className='text-xs'>
                           {category.count}
@@ -222,16 +210,15 @@ import {;
                 <Card className='p-6'>
                   <h3 className='text-xl font-bold text-white mb-4'>Stay Updated</h3>
                   <p className='text-gray-300 mb-4 text-sm'>
-                    Get notified about upcoming webinars and access to exclusive content.;
+                    Get notified about upcoming webinars and access to exclusive content.
                   </p>
                   <div className='space-y-3'>
                     <input
                       type='email';
                       placeholder='Enter your email';
-                      className='w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500';
-                    />;
+                      className='w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500'/>
                     <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
-                      Subscribe;
+                      Subscribe
                     </Button>
                   </div>
                 </Card>
@@ -239,11 +226,11 @@ import {;
                 <Card className='p-6'>
                   <h3 className='text-xl font-bold text-white mb-4'>Host Your Own Webinar?</h3>
                   <p className='text-gray-300 mb-4 text-sm'>
-                    Partner with us to host educational webinars and reach our audience of technology professionals.;
+                    Partner with us to host educational webinars and reach our audience of technology professionals.
                   </p>
                   <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                     <Phone className='w-4 h-4 mr-2' />
-                    Partner With Us;
+                    Partner With Us
                   </Button>
                 </Card>
               </motion.div>
@@ -258,28 +245,27 @@ import {;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
+          >
             <h2 className='text-4xl font-bold text-white mb-6'>
-              Ready to Learn from Industry Experts?;
+              Ready to Learn from Industry Experts?
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              Join our community of professionals and stay ahead with the latest insights and best practices.;
+              Join our community of professionals and stay ahead with the latest insights and best practices.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                 <Calendar className='w-5 h-5 mr-2' />
-                View All Upcoming Webinars;
+                View All Upcoming Webinars
               </Button>
               <Button size='lg' variant='outline'>
                 <Mail className='w-5 h-5 mr-2' />
-                Request Custom Webinar;
+                Request Custom Webinar
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )}
 ;
-export default Webinars;
+export default Webinars

@@ -2,10 +2,9 @@ import React from;
   'react';
 import SEO from;
   '../components/SEO';
-;
 export default function WebinarsPage() {
-	return (;
-		<>;
+	return(
+		<>
 			<SEO title='Webinars | Zion Tech Group' description='Live and on-demand webinars from Zion Tech Group.' />
 			<section className='container mx-auto px-4 py-16'>
 				<h1 className='text-4xl font-bold mb-6'>Webinars</h1>
@@ -19,14 +18,13 @@ import SEO from;
   '../components/SEO';
 import Link from;
   'next/link';
-;
 export default function WebinarsPage() {
 	const pageTitle =;
   'Webinars | Zion Tech Group';
 	const pageDescription =;
-  'Watch live and on-demand webinars on AI, quantum computing, and modern SaaS.';
+  'Watch live and on-demand webinars on AI, quantum computing, and modern SaaS.'
 	return (
-		<>;
+		<>
 			<SEO title={pageTitle} description={pageDescription} canonical='/webinars' />
 			<section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
 				<div className='container mx-auto px-4 max-w-5xl'>
@@ -45,6 +43,4 @@ export default function WebinarsPage() {
 				</div>
 			</section>
 		</>
-	);
-}
-;
+	)}

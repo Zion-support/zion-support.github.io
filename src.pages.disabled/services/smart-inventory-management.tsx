@@ -6,8 +6,7 @@ const SmartInventoryManagement: React.FC = () => {
   return (
     <Layout
       title='Smart Inventory Management - Zion Tech Group';
-      description='AI-powered inventory management system that reduces stockouts by 90% and optimizes inventory costs by 40%.';
-    >;
+      description='AI-powered inventory management system that reduces stockouts by 90% and optimizes inventory costs by 40%.'>
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4 text-center'>
           <div className='flex justify-center mb-6'>
@@ -16,24 +15,22 @@ const SmartInventoryManagement: React.FC = () => {
             </div>
           </div>
           <h1 className='text-5xl md:text-6xl font-bold mb-6'>
-            Smart Inventory Management;
+            Smart Inventory Management
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Optimize your inventory with AI-powered predictions. Reduce stockouts by 90%;
-            and cut inventory costs by 40% with intelligent demand forecasting.;
+            and cut inventory costs by 40% with intelligent demand forecasting.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4 mb-12'>
             <a
               href='https://ziontechgroup.com/contact';
-              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Start Free Trial;
+              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Start Free Trial
             </a>
             <a
               href='https://ziontechgroup.com/contact';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Schedule Demo;
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Schedule Demo
             </a>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>
@@ -61,7 +58,7 @@ const SmartInventoryManagement: React.FC = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Key Features</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our smart inventory management system uses AI to predict demand and optimize your stock levels.;
+              Our smart inventory management system uses AI to predict demand and optimize your stock levels.
             </p>
           </div>
           <div className='grid md:grid-cols-2 gap-8'>
@@ -73,20 +70,20 @@ const SmartInventoryManagement: React.FC = () => {
                 <h3 className='text-2xl font-bold text-gray-900'>Demand Forecasting</h3>
               </div>
               <p className='text-gray-600 mb-6'>
-                AI-powered demand prediction with 95% accuracy to prevent stockouts and overstocking.;
+                AI-powered demand prediction with 95% accuracy to prevent stockouts and overstocking.
               </p>
               <ul className='space-y-2'>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Seasonal trend analysis;
+                  Seasonal trend analysis
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Real-time demand updates;
+                  Real-time demand updates
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Multi-location optimization;
+                  Multi-location optimization
                 </li>
               </ul>
             </div>
@@ -98,20 +95,20 @@ const SmartInventoryManagement: React.FC = () => {
                 <h3 className='text-2xl font-bold text-gray-900'>Automated Reordering</h3>
               </div>
               <p className='text-gray-600 mb-6'>
-                Smart reorder points and automated purchase orders to maintain optimal inventory levels.;
+                Smart reorder points and automated purchase orders to maintain optimal inventory levels.
               </p>
               <ul className='space-y-2'>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Dynamic reorder points;
+                  Dynamic reorder points
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Supplier integration;
+                  Supplier integration
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Cost optimization;
+                  Cost optimization
                 </li>
               </ul>
             </div>
@@ -123,7 +120,7 @@ const SmartInventoryManagement: React.FC = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Simple Pricing</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose the plan that fits your business size.;
+              Choose the plan that fits your business size.
             </p>
           </div>
           <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
@@ -151,15 +148,14 @@ const SmartInventoryManagement: React.FC = () => {
               </ul>
               <a
                 href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors';
-              >;
-                Get Started;
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
+                Get Started
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-xl ring-2 ring-blue-500 relative'>
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                 <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                  Most Popular;
+                  Most Popular
                 </span>
               </div>
               <div className='text-center mb-8'>
@@ -189,9 +185,8 @@ const SmartInventoryManagement: React.FC = () => {
               </ul>
               <a
                 href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors';
-              >;
-                Get Started;
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors'>
+                Get Started
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-lg'>
@@ -222,9 +217,8 @@ const SmartInventoryManagement: React.FC = () => {
               </ul>
               <a
                 href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors';
-              >;
-                Get Started;
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
+                Get Started
               </a>
             </div>
           </div>
@@ -234,20 +228,18 @@ const SmartInventoryManagement: React.FC = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Optimize Your Inventory?</h2>
           <p className='text-xl mb-8 max-w-3xl mx-auto'>
-            Join hundreds of businesses already using our smart inventory management system.;
+            Join hundreds of businesses already using our smart inventory management system.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4'>
             <a
               href='https://ziontechgroup.com/contact';
-              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Start Free Trial;
+              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Start Free Trial
             </a>
             <a
               href='tel:+13024640950';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Call +1 302 464 0950;
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
+              Call +1 302 464 0950
             </a>
           </div>
         </div>
@@ -274,7 +266,6 @@ const SmartInventoryManagement: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 ;
-export default SmartInventoryManagement;
+export default SmartInventoryManagement

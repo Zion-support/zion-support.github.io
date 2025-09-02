@@ -1,5 +1,5 @@
 describe (
-  'Pricing', () => {}'; it ('renders without crashing
+  'Pricing', () => {}' it ('renders without crashing
   ', () => {} render (<Pricing />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<Pricing />) ''

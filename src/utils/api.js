@@ -3,10 +3,8 @@ export const api = {
   async get(url) {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  },
+      throw new Error(`HTTP error! status: ${response.status}`)}
+    return response.json()},
   
   async post(url, data) {
     const response = await fetch(url, {
@@ -15,10 +13,8 @@ export const api = {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    });
+    })
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  }
-};
+      throw new Error(`HTTP error! status: ${response.status}`)}
+    return response.json()}
+}

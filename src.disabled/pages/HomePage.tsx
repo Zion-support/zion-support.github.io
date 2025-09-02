@@ -5,4 +5,4 @@ import React, { useState, useEffect, Suspense } from;
   'framer-motion' import ServiceShowcase from;
   '../components/ServiceShowcase' import InnovativeServicesShowcase from;
   '../components/InnovativeServicesShowcase' import { contactInfo } from;
-  '../data/services';;';
+  '../data/services';';

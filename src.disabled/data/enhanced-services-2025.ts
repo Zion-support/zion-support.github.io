@@ -7,6 +7,4 @@ export interface EnhancedService {
    pricing: { monthly: string;
    yearly: string;
    enterprise: string;
-   setup: string;
-} features: string[] benefits: string[] technology: string[] integrations: string[] useCases: string[] targetAudience: string marketPosition: string competitors: string[] roi: string trialDays: number setupTime: string icon: string color: string link: string contactInfo: { mobile: string email: string address: string website: string}} export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [''";
-;
+   setup: string} features: string[] benefits: string[] technology: string[] integrations: string[] useCases: string[] targetAudience: string marketPosition: string competitors: string[] roi: string trialDays: number setupTime: string icon: string color: string link: string contactInfo: { mobile: string email: string address: string website: string}} export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [''";

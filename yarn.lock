@@ -6738,9 +6738,9 @@ onetime@^5.1.2:
     mimic-fn "^2.1.0"
 
 openai@^5.11.0:
-  version "5.17.0"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-5.17.0.tgz#e02accdab044d828e69d6b849c55b91dfd6d93d3"
-  integrity sha512-7djpJzihvQ2KlKdfhLcShB+DYQpKW+EPndSM86AvKfXCISnqDYnA/aZtrUWa+VB8zvG/K0rJ6Cmjtd79b64u2w==
+  version "5.18.1"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-5.18.1.tgz#1c4884aefcada7ec684771e03c860c381f1902c1"
+  integrity sha512-iXSOfLlOL+jgnFr5CGrB2SEZw5C92o1nrFW2SasoAXj4QxGhfeJPgg8zkX+vaCfX80cT6CWjgaGnq7z9XzbyRw==
 
 opener@^1.5.2:
   version "1.5.2"

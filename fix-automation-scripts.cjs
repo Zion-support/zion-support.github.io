@@ -1,115 +1,60 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class AutomationScriptFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.automationDir = path.join(this.projectRoot, 'scripts', 'automation');
-    this.fixedCount = 0;
-    this.errorCount = 0;
-  }
-
-  async fixAllScripts() {
-    console.log('🔧 Starting automation script fixes...');
+function fixAutomationScripts() {
+  const automationDir = path.join(process.cwd(), 'automation');
+  const files = fs.readdirSync(automationDir).filter(file => file.endsWith('.js'));
+  
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    const filePath = path.join(automationDir, file);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    try {
-      const files = fs.readdirSync(this.automationDir);
-      const cjsFiles = files.filter(file => file.endsWith('.cjs'));
-      
-      for (const file of cjsFiles) {
-        await this.fixScript(file);
-      }
-      
-      console.log(`✅ Fixed ${this.fixedCount} scripts`);
-      console.log(`❌ ${this.errorCount} scripts had errors`);
-      
-    } catch (error) {
-      console.error('Error fixing scripts:', error.message);
+    // Fix common syntax issues
+    content = content.replace(/#!/usr\/bin\/env node;/g, '#!/usr/bin/env node');
+    content = content.replace(/const fs = require\(\s*'fs'\);/g, "const fs = require('fs');");
+    content = content.replace(/const path = require\(\s*'path'\);/g, "const path = require('path');");
+    content = content.replace(/const { execSync } = require\(\s*'child_process'\);/g, "const { execSync } = require('child_process');");
+    content = content.replace(/const { execSync, spawn } = require\(\s*'child_process'\);/g, "const { execSync, spawn } = require('child_process');");
+    content = content.replace(/const cron = require\(\s*'node-cron'\);/g, "const cron = require('node-cron');");
+    
+    // Fix class method syntax
+    content = content.replace(/;\s*async\s+(\w+)\s*\(/g, '  async $1(');
+    content = content.replace(/class\s+(\w+)\s*{\s*constructor\s*\(\s*\)\s*{\s*;/g, 'class $1 {\n  constructor() {');
+    
+    // Fix console.log statements
+    content = content.replace(/\/\/ \/\/ \/\/ \/\/ \/\/ \/\/ \/\/ console\.log\(/g, '    console.log(');
+    content = content.replace(/\/\/ \/\/ \/\/ \/\/ \/\/ \/\/ \/\/ console\.error\(/g, '    console.error(');
+    
+    // Fix method calls
+    content = content.replace(/this\.log\(\s*'([^']+)'\);/g, "    this.log('$1');");
+    content = content.replace(/fs\.appendFileSync\(this\.logFile, logMessage\);/g, '    fs.appendFileSync(this.logFile, logMessage);');
+    
+    // Fix try-catch blocks
+    content = content.replace(/try\s*{;\s*this\.log\(/g, '    try {\n      this.log(');
+    content = content.replace(/}\s*catch\s*\(error\)\s*{/g, '    } catch (error) {');
+    
+    // Fix object properties
+    content = content.replace(/this\.metrics\s*=\s*{;/g, '    this.metrics = {');
+    
+    // Fix log file paths
+    content = content.replace(/this\.logFile\s*=\s*path\.join\(this\.projectRoot,\s*'logs',/g, "    this.logFile = path.join(this.projectRoot, 'logs',");
+    
+    // Remove extra semicolons and fix spacing
+    content = content.replace(/;\s*;/g, ';');
+    content = content.replace(/\s+;/g, ';');
+    content = content.replace(/;\s*\n/g, ';\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${file}`);
+      fixedCount++;
     }
-  }
-
-  async fixScript(filename) {
-    const filePath = path.join(this.automationDir, filename);
-    
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-      
-      // Fix common syntax errors
-      content = this.fixCommonErrors(content);
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
-        console.log(`✅ Fixed: ${filename}`);
-        this.fixedCount++;
-      }
-      
-    } catch (error) {
-      console.error(`❌ Error fixing ${filename}:`, error.message);
-      this.errorCount++;
-    }
-  }
-
-  fixCommonErrors(content) {
-    // Fix missing quotes in path.join
-    content = content.replace(
-      /path\.join\(\s*([^,]+),\s*([^,]+),\s*([^)]+)\s*\)/g,
-      (match, p1, p2, p3) => {
-        if (!p2.includes("'") && !p2.includes('"')) {
-          return `path.join(${p1}, '${p2}', ${p3})`;
-        }
-        return match;
-      }
-    );
-    
-    // Fix template literal syntax errors
-    content = content.replace(
-      /console\.log\(([^`]+)`([^`]+)`([^)]*)\)/g,
-      'console.log(`$1$2$3`)'
-    );
-    
-    // Fix missing quotes in string arrays
-    content = content.replace(
-      /\[([^[\]]*[^'",\s][^[\]]*)\]/g,
-      (match, content) => {
-        if (content.includes(',')) {
-          const items = content.split(',').map(item => {
-            const trimmed = item.trim();
-            if (!trimmed.startsWith("'") && !trimmed.startsWith('"')) {
-              return `'${trimmed}'`;
-            }
-            return trimmed;
-          });
-          return `[${items.join(', ')}]`;
-        }
-        return match;
-      }
-    );
-    
-    // Fix missing quotes in file paths
-    content = content.replace(
-      /([a-zA-Z_][a-zA-Z0-9_]*\/[a-zA-Z0-9_\/\-\.]+)/g,
-      (match) => {
-        if (!match.includes("'") && !match.includes('"') && 
-            !match.includes('path.join') && !match.includes('require')) {
-          return `'${match}'`;
-        }
-        return match;
-      }
-    );
-    
-    return content;
-  }
+  });
+  
+  console.log(`Fixed ${fixedCount} automation script files`);
 }
 
-// Run the fixer
-const fixer = new AutomationScriptFixer();
-fixer.fixAllScripts().then(() => {
-  console.log('🎉 Automation script fixing completed!');
-}).catch(error => {
-  console.error('💥 Error:', error);
-  process.exit(1);
-});
+fixAutomationScripts();

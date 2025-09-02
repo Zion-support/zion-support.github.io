@@ -5,8 +5,7 @@ test.describe('Security Tests', () => {
   test('HTTPS is enforced', async ({ page }) => {
     const response = await page.goto('/');
     const url = response.url();
-    expect(url).toMatch(/^https:/);
-  });
+    expect(url).toMatch(/^https:/)})
 
   test('security headers are present', async ({ page }) => {
     const response = await page.goto('/');
@@ -15,8 +14,7 @@ test.describe('Security Tests', () => {
     // Check for security headers
     expect(headers['x-frame-options']).toBeTruthy();
     expect(headers['x-content-type-options']).toBe('nosniff');
-    expect(headers['x-xss-protection']).toBeTruthy();
-  });
+    expect(headers['x-xss-protection']).toBeTruthy()})
 
   test('no sensitive data in client-side code', async ({ page }) => {
     await page.goto('/');
@@ -33,9 +31,8 @@ test.describe('Security Tests', () => {
     ];
     
     for (const pattern of sensitivePatterns) {
-      expect(content).not.toMatch(pattern);
-    }
-  });
+      expect(content).not.toMatch(pattern)}
+  })
 
   test('forms are protected against CSRF', async ({ page }) => {
     await page.goto('/contact');
@@ -49,9 +46,8 @@ test.describe('Security Tests', () => {
       const csrfCount = await csrfToken.count();
       
       // Forms should have CSRF protection
-      expect(csrfCount).toBeGreaterThan(0);
-    }
-  });
+      expect(csrfCount).toBeGreaterThan(0)}
+  })
 
   test('external links are safe', async ({ page }) => {
     await page.goto('/');
@@ -65,7 +61,5 @@ test.describe('Security Tests', () => {
       const rel = await link.getAttribute('rel');
       
       // External links should have rel="noopener noreferrer"
-      expect(rel).toContain('noopener');
-    }
-  });
-});
+      expect(rel).toContain('noopener')}
+  })})

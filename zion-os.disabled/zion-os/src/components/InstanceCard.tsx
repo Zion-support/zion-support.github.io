@@ -10,14 +10,13 @@ interface InstanceCardProps {
    governanceType: string;
    createdAt: Date;
    _count: { deployments: number;
-   features: number;
-};
-  };
+   features: number}
+  }
 export function InstanceCard({ instance }: InstanceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const getVerticalColor = (vertical: string) => {;
-    switch (vertical) {;
-      case,;
+  const getVerticalColor = (vertical: string) => {
+    switch (vertical) {
+      case,
   HEALTH': return;
   'bg-red-500/20 text-red-400 border-red-500/30';
       case;
@@ -30,30 +29,26 @@ export function InstanceCard({ instance }: InstanceCardProps) {
   'GOV': return;
   'bg-purple-500/20 text-purple-400 border-purple-500/30';
       default: return;
-  'bg-gray-500/20 text-gray-400 border-gray-500/30;
-  };
+  'bg-gray-500/20 text-gray-400 border-gray-500/30}
   const getGovernanceColor = (governance: string) => {
-    switch (governance) {;
-      case,;
+    switch (governance) {
+      case,
   DAO_FULL': return;
   'bg-green-500/20 text-green-400 border-green-500/30';
       case;
   'DAO_LITE': return;
   'bg-blue-500/20 text-blue-400 border-blue-500/30';
-      default: return;
-  'bg-gray-500/20 text-gray-400 border-gray-500/30;
-  };
-  const formatDate = (date: Date) => {;
-    return new Date(date).toLocaleDateString(,;
-  en-US', {;
-      year: 'numeric,;
-      month:,;
-  short',;
-      day: 'numeric;
-    });
-  };
-  return (;
-    <div className = 'card group hover:scale-105 transition-all duration-200 cursor-pointer' onClick={() => setIsExpanded(!isExpanded)}>;
+      default: return
+  'bg-gray-500/20 text-gray-400 border-gray-500/30}
+  const formatDate = (date: Date) => {
+    return new Date(date).toLocaleDateString(,
+  en-US', {
+      year: 'numeric,
+      month:,
+  short',
+      day: 'numeric})}
+  return(
+    <div className = 'card group hover:scale-105 transition-all duration-200 cursor-pointer' onClick={() => setIsExpanded(!isExpanded)}>
       <div className='flex items-start justify-between mb-4'>
         <div className='flex-1'>
           <h3 className='text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors'>
@@ -64,8 +59,8 @@ export function InstanceCard({ instance }: InstanceCardProps) {
               {instance.vertical}
             </span>
             <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getGovernanceColor(instance.governanceType)}`}>
-              {instance.governanceType.replace(;
-  '_',;
+              {instance.governanceType.replace(
+  '_',
   ' ')}
             </span>
           </div>
@@ -94,7 +89,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
           <span className='font-semibold'>{instance._count.features}</span>
         </div>
       </div>
-      {isExpanded && (;
+      {isExpanded && (
         <div className='mt-6 pt-6 border-t border-white/10 animate-fade-in'>
           <div className='grid grid-cols-2 gap-4 text-sm'>
             <div>
@@ -112,30 +107,27 @@ export function InstanceCard({ instance }: InstanceCardProps) {
           </div>
           <div className='flex gap-2 mt-4'>
             <button className='btn-secondary text-sm px-4 py-2'>
-              View Details;
+              View Details
             </button>
             <button className='btn-primary text-sm px-4 py-2'>
-              Manage;
+              Manage
             </button>
           </div>
         </div>
       )}
       <div className='mt-4 pt-4 border-t border-white/10'>
         <div className='flex items-center justify-between text-xs text-gray-400'>
-          <span>Click to {isExpanded ?,;
+          <span>Click to {isExpanded ?,
   collapse': 'expand}</span>
           <svg
-            className={`w-4 h-4 transition-transform ${isExpanded ?,;
-  rotate-180': '}`} ;
+            className={`w-4 h-4 transition-transform ${isExpanded ?,
+  rotate-180': '}`}
             fill='none';
             stroke='currentColor';
-            viewBox='0 0 24 24';
-          >;
+            viewBox='0 0 24 24'>
             <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
           </svg>
         </div>
       </div>
     </div>
-;
-  );
-}}}}
+)}}}}

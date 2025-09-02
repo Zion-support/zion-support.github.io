@@ -8,116 +8,103 @@ import { Card } from;
   '../components/ui/Card';
 import { Badge } from;
   '../components/ui/Badge';
-import {;
+import {
 :pages.disabled_auto/terms.tsx;
-  FileText,;
-  Scale,;
-  AlertTriangle,;
-  CheckCircle,;
-  Calendar,;
-  Globe,;
-  Mail,;
-  Phone,;
-  ArrowRight,;
-  Shield,;
-  Users,;
-  DollarSign,;
-  Clock,;
-  BookOpen;
-} from;
+  FileText,
+  Scale,
+  AlertTriangle,
+  CheckCircle,
+  Calendar,
+  Globe,
+  Mail,
+  Phone,
+  ArrowRight,
+  Shield,
+  Users,
+  DollarSign,
+  Clock,
+  BookOpen} from;
   'lucide-react';
-  FileText, Scale,;
-  AlertTriangle, CheckCircle,;
-  Calendar, Globe,;
-  Mail, Phone,;
-  ArrowRight, Shield,;
-  Users, DollarSign,;
-  Clock, BookOpen;
-} from 'lucide-react';
-;
-const Terms: React.FC = () => {;
+  FileText, Scale,
+  AlertTriangle, CheckCircle,
+  Calendar, Globe,
+  Mail, Phone,
+  ArrowRight, Shield,
+  Users, DollarSign,
+  Clock, BookOpen} from 'lucide-react';
+const Terms: React.FC = () => {
   const lastUpdated = '2025-01-15';
   const sections = [
-    {;
-      id: 'acceptance-of-terms', title: 'Acceptance of Terms',;
+    {
+      id: 'acceptance-of-terms', title: 'Acceptance of Terms',
       icon: CheckCircle, content: [;
-        'By accessing and using Zion Tech Group services, you accept and agree to be bound by these Terms of Service', 'If you do not agree to these terms, you may not access or use our services', 'These terms apply to all visitors, users, and others who access or use our services',;
+        'By accessing and using Zion Tech Group services, you accept and agree to be bound by these Terms of Service', 'If you do not agree to these terms, you may not access or use our services', 'These terms apply to all visitors, users, and others who access or use our services',
         'We reserve the right to modify these terms at any time without prior notice';
-      ];
-    }, {;
-      id: 'service-description',;
-      title: 'Service Description', icon: BookOpen,;
+      ]}, {
+      id: 'service-description',
+      title: 'Service Description', icon: BookOpen,
       content: [
-        'Zion Tech Group provides AI-powered solutions, consulting services, and technology products', 'Our services include but are not limited to AI development, cloud migration, and cybersecurity solutions',;
+        'Zion Tech Group provides AI-powered solutions, consulting services, and technology products', 'Our services include but are not limited to AI development, cloud migration, and cybersecurity solutions',
         'We reserve the right to modify, suspend, or discontinue any part of our services at any time', 'Service availability may vary based on geographic location and technical requirements';
-      ];
-    }, {;
-      id: 'user-responsibilities',;
-      title: 'User Responsibilities', icon: Users,;
+      ]}, {
+      id: 'user-responsibilities',
+      title: 'User Responsibilities', icon: Users,
       content: [
-        'Provide accurate and complete information when using our services', 'Maintain the confidentiality of your account credentials',;
+        'Provide accurate and complete information when using our services', 'Maintain the confidentiality of your account credentials',
         'Use our services in compliance with applicable laws and regulations', 'Not engage in any activities that may harm or disrupt our services';
-      ];
-    }, {;
-      id: 'payment-terms',;
-      title: 'Payment Terms', icon: DollarSign,;
+      ]}, {
+      id: 'payment-terms',
+      title: 'Payment Terms', icon: DollarSign,
       content: [
-        'Payment terms are specified in individual service agreements', 'All fees are non-refundable unless otherwise specified',;
+        'Payment terms are specified in individual service agreements', 'All fees are non-refundable unless otherwise specified',
         'We reserve the right to change pricing with 30 days notice', 'Late payments may result in service suspension or termination';
-      ];
-    }, {;
-      id: 'intellectual-property',;
-      title: 'Intellectual Property', icon: Shield,;
+      ]}, {
+      id: 'intellectual-property',
+      title: 'Intellectual Property', icon: Shield,
       content: [
-        'All content, trademarks, and intellectual property belong to Zion Tech Group', 'Users retain ownership of their data and content',;
+        'All content, trademarks, and intellectual property belong to Zion Tech Group', 'Users retain ownership of their data and content',
         'We grant limited license to use our services as specified in these terms', 'Unauthorized use of our intellectual property is strictly prohibited';
-      ];
-    }, {;
-      id: 'limitation-of-liability',;
-      title: 'Limitation of Liability', icon: AlertTriangle,;
+      ]}, {
+      id: 'limitation-of-liability',
+      title: 'Limitation of Liability', icon: AlertTriangle,
       content: [
 :pages.disabled_auto/terms.tsx;
         'Our services are provided;
-  'as is' without warranties of any kind',;
-        'We are not liable for any indirect, incidental, or consequential damages',;
-        'Our total liability is limited to the amount paid for the specific service',;
+  'as is' without warranties of any kind',
+        'We are not liable for any indirect, incidental, or consequential damages',
+        'Our total liability is limited to the amount paid for the specific service',
         'Some jurisdictions may not allow limitation of liability, so these limitations may not apply';
-        'Our services are provided 'as is' without warranties of any kind', 'We are not liable for any indirect, incidental, or consequential damages',;
+        'Our services are provided 'as is' without warranties of any kind', 'We are not liable for any indirect, incidental, or consequential damages',
         'Our total liability is limited to the amount paid for the specific service', 'Some jurisdictions may not allow limitation of liability, so these limitations may not apply';
-      ];
-    }
+      ]}
   ];
-;
   const contactInfo = {
-    email: 'legal@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105';
-  };
-;
-  return (;
+    email: 'legal@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105'}
+
+  return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO
         title='Terms of Service - Zion Tech Group';
 :pages.disabled_auto/terms.tsx;
         description='Read our Terms of Service to understand the terms and conditions for using Zion Tech Group;
   's AI services and solutions.';
-        description='Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions.'';
-      />;
-      {/* Hero Section */}
+        description='Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions.''/>{/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
+          >
             <Badge variant='secondary' className='mb-4'>
               <Scale className='w-4 h-4 mr-2' />
-              Legal Terms;
+              Legal Terms
             </Badge>
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-              Terms of Service;
+              Terms of Service
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.'';
+              These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.''
             </p>
             <div className='flex items-center justify-center text-gray-400'>
               <Calendar className='w-4 h-4 mr-2' />
@@ -133,17 +120,14 @@ const Terms: React.FC = () => {;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-8';
-          >;
+            className='text-center mb-8'>
             <h2 className='text-2xl font-bold text-white mb-4'>Quick Navigation</h2>
             <div className='flex flex-wrap justify-center gap-4'>
-              {sections.map((section, index) => (;
+              {sections.map((section, index) => (
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hover:text-white transition-colors text-sm';
-                >;
-                  {section.title}
+                  className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hover:text-white transition-colors text-sm'>{section.title}
                 </a>
               ))}
             </div>
@@ -157,18 +141,16 @@ const Terms: React.FC = () => {;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='space-y-12';
-          >;
-            {/* Introduction */}
+            className='space-y-12'>{/* Introduction */}
             <Card className='p-8'>
               <h2 className='text-3xl font-bold text-white mb-6'>Introduction</h2>
               <div className='prose prose-invert max-w-none'>
                 <p className='text-gray-300 mb-4'>
-                  Welcome to Zion Tech Group. These Terms of Service ('Terms') govern your use of our website, services, and products. By accessing or using our services, you agree to be bound by these Terms.;
+                  Welcome to Zion Tech Group. These Terms of Service ('Terms') govern your use of our website, services, and products. By accessing or using our services, you agree to be bound by these Terms.
                 </p>
                 <p className='text-gray-300 mb-4'>
                   Please read these Terms carefully before using our services. If you disagree with any part of;
-                  these terms, then you may not access our services.;
+                  these terms, then you may not access our services.
                 </p>
                 <div className='bg-blue-500/10 border border-blue-500/30 rounded-lg p-4'>
                   <div className='flex items-start'>
@@ -177,7 +159,7 @@ const Terms: React.FC = () => {;
                       <h4 className='text-blue-400 font-semibold mb-2'>Important Notice</h4>
                       <p className='text-gray-300 text-sm'>
                         These Terms may be updated from time to time. Continued use of our services after;
-                        changes constitutes acceptance of the new Terms.;
+                        changes constitutes acceptance of the new Terms.
                       </p>
                     </div>
                   </div>
@@ -185,13 +167,13 @@ const Terms: React.FC = () => {;
               </div>
             </Card>
             {/* Terms Sections */}
-            {sections.map((section, index) => (;
+            {sections.map((section, index) => (
               <motion.div
                 key={section.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >;
+              >
                 <Card className='p-8' id={section.id}>
                   <div className='flex items-center mb-6'>
                     <div className='p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mr-4'>
@@ -200,7 +182,7 @@ const Terms: React.FC = () => {;
                     <h2 className='text-3xl font-bold text-white'>{section.title}</h2>
                   </div>
                   <ul className='space-y-3'>
-                    {section.content.map((item, itemIndex) => (;
+                    {section.content.map((item, itemIndex) => (
                       <li key={itemIndex} className='flex items-start text-gray-300'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />
                         {item}
@@ -210,23 +192,22 @@ const Terms: React.FC = () => {;
                 </Card>
               </motion.div>
             ))}
-;
             {/* Termination */}
             <Card className='p-8'>
               <h2 className='text-3xl font-bold text-white mb-6'>Termination</h2>
               <div className='prose prose-invert max-w-none'>
                 <p className='text-gray-300 mb-4'>
                   We may terminate or suspend your access to our services immediately, without prior notice or;
-                  liability, for any reason whatsoever, including without limitation if you breach the Terms.;
+                  liability, for any reason whatsoever, including without limitation if you breach the Terms.
                 </p>
                 <p className='text-gray-300 mb-4'>
                   Upon termination, your right to use the services will cease immediately. If you wish to;
-                  terminate your account, you may simply discontinue using the services.;
+                  terminate your account, you may simply discontinue using the services.
                 </p>
                 <p className='text-gray-300'>
                   All provisions of the Terms which by their nature should survive termination shall survive;
-                  termination, including, without limitation, ownership provisions, warranty disclaimers,;
-                  indemnity, and limitations of liability.;
+                  termination, including, without limitation, ownership provisions, warranty disclaimers,
+                  indemnity, and limitations of liability.
                 </p>
               </div>
             </Card>
@@ -235,16 +216,16 @@ const Terms: React.FC = () => {;
               <h2 className='text-3xl font-bold text-white mb-6'>Governing Law</h2>
               <div className='prose prose-invert max-w-none'>
                 <p className='text-gray-300 mb-4'>
-                  These Terms shall be interpreted and governed by the laws of the State of California,;
-                  United States, without regard to its conflict of law provisions.;
+                  These Terms shall be interpreted and governed by the laws of the State of California,
+                  United States, without regard to its conflict of law provisions.
                 </p>
                 <p className='text-gray-300 mb-4'>
                   Our failure to enforce any right or provision of these Terms will not be considered a;
-                  waiver of those rights.;
+                  waiver of those rights.
                 </p>
                 <p className='text-gray-300'>
-                  If any provision of these Terms is held to be invalid or unenforceable by a court,;
-                  the remaining provisions of these Terms will remain in effect.;
+                  If any provision of these Terms is held to be invalid or unenforceable by a court,
+                  the remaining provisions of these Terms will remain in effect.
                 </p>
               </div>
             </Card>
@@ -284,12 +265,12 @@ const Terms: React.FC = () => {;
                 <p className='text-gray-300 mb-4'>
                   We reserve the right, at our sole discretion, to modify or replace these Terms at any time.;
                   If a revision is material, we will try to provide at least 30 days notice prior to any new;
-                  terms taking effect.;
+                  terms taking effect.
                 </p>
                 <p className='text-gray-300 mb-4'>
                   What constitutes a material change will be determined at our sole discretion. By continuing;
                   to access or use our services after those revisions become effective, you agree to be bound;
-                  by the revised terms.;
+                  by the revised terms.
                 </p>
                 <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4'>
                   <div className='flex items-start'>
@@ -298,7 +279,7 @@ const Terms: React.FC = () => {;
                       <h4 className='text-yellow-400 font-semibold mb-2'>Stay Updated</h4>
                       <p className='text-gray-300 text-sm'>
                         We recommend that you review these Terms periodically for any changes.;
-                        Changes to these Terms are effective when they are posted on this page.;
+                        Changes to these Terms are effective when they are posted on this page.
                       </p>
                     </div>
                   </div>
@@ -309,7 +290,6 @@ const Terms: React.FC = () => {;
         </div>
       </section>
     </div>
-  );
-};
+  )}
 ;
-export default Terms;
+export default Terms

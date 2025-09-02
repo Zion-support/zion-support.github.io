@@ -1,5 +1,5 @@
 describe (
-  'ForgotPassword', () => {}'; it ('renders without crashing
+  'ForgotPassword', () => {}' it ('renders without crashing
   ', () => {} render (<ForgotPassword />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<ForgotPassword />) ''

@@ -7,21 +7,19 @@ import index.p from '../pages/index.p';
 describe('index.p Integration Tests', () => {
   test('page renders correctly', () => {
     render(<index.p />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+    expect(screen.getByRole('main')).toBeInTheDocument()})
 
   test('navigation works', () => {
     render(<index.p />);
     // Test navigation elements
-  });
+  })
 
   test('page content is accessible', () => {
     render(<index.p />);
     // Test accessibility features
-  });
+  })
 
   test('page loads with correct data', () => {
     render(<index.p />);
     // Test data loading and display
-  });
-});
+  })})

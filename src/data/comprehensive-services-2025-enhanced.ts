@@ -19,10 +19,9 @@ export interface EnhancedServiceItem {
    roi: string;
    trialDays: number;
    setupTime: string;
-   contactInfo: {;
+   contactInfo: {
    mobile: string;
    email: string;
    address: string;
-   website: string;
-} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string security: string[] } export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [';;
+   website: string} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string security: string[] } export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [';
 ;

@@ -12,8 +12,6 @@ const AIServices: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )}
 ;
-export default AIServices;
-;
+export default AIServices

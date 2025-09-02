@@ -1,4 +1,4 @@
-import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend:,;
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend:,
   up' |;
   'down' |;
   'stable' status: 'good' |;
@@ -7,5 +7,5 @@ import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCir
   '1h' |;
   '24h' |;
   '7d' |;
-  '30d'>(;
-  '24h')';
+  '30d'>(
+  '24h')'

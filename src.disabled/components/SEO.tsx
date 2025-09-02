@@ -7,18 +7,15 @@ interface SEOProps {
    keywords?: string;
    image?: string;
    url?: string;
-   type?: string;
-}
-;
-export const SEO: React.FC<SEOProps> = ({;
-  title = 'Zion Tech Group - Leading Technology Solutions',;
-  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',;
-  keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',;
-  image = '/og-image.svg',;
-  url = 'https://ziontechgroup.com',;
-  type = 'website';
-}) => {;
-  return (;
+   type?: string}
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions',
+  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
+  keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
+  image = '/og-image.svg',
+  url = 'https://ziontechgroup.com',
+  type = 'website'}) => {
+  return(
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -45,24 +42,22 @@ export const SEO: React.FC<SEOProps> = ({;
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       {/* Structured Data */}
       <script type='application/ld+json'>
-        {JSON.stringify({;
-          '@context': 'https://schema.org',;
-          '@type': 'Organization',;
-          'name': 'Zion Tech Group',;
-          'url': 'https://ziontechgroup.com',;
-          'logo': 'https://ziontechgroup.com/logo.svg',;
-          'description': description,;
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          'name': 'Zion Tech Group',
+          'url': 'https://ziontechgroup.com',
+          'logo': 'https://ziontechgroup.com/logo.svg',
+          'description': description,
           'sameAs': [;
-            'https://linkedin.com/company/zion-tech-group',;
-            'https://twitter.com/ziontechgroup';
-          ],;
-          'contactPoint': {;
-            '@type': 'ContactPoint',;
-            'telephone': '+1-302-464-0950',;
-            'contactType': 'customer service';
-          }
+            'https://linkedin.com/company/zion-tech-group',
+            'https://twitter.com/ziontechgroup'
+          ],
+          'contactPoint': {
+            '@type': 'ContactPoint',
+            'telephone': '+1-302-464-0950',
+            'contactType': 'customer service'}
         })}
       </script>
     </Helmet>
-  );
-};
+  )}

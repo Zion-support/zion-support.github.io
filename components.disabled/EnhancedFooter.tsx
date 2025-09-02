@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
-const EnhancedFooter: React.FC = () => {;
-  return (;
+const EnhancedFooter: React.FC = () => {
+  return(
     <footer className='bg-gray-900 text-white'>
       <div className='container mx-auto px-4 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -15,7 +15,7 @@ const EnhancedFooter: React.FC = () => {;
               <div className='text-xl font-bold'>Zion Tech Group</div>
             </div>
             <p className='text-gray-300 mb-4'>
-              Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.;
+              Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className='flex space-x-4'>
               <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'><Linkedin className='w-5 h-5' /></a>
@@ -138,7 +138,6 @@ const EnhancedFooter: React.FC = () => {;
         </div>
       </div>
     </footer>
-  );
-};
+  )}
 ;
-export default EnhancedFooter;
+export default EnhancedFooter

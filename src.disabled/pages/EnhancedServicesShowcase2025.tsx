@@ -7,4 +7,4 @@ import React, { useState, useMemo } from;
   ') const [selectedCategory, setSelectedCategory] = useState('all;
   ') const [sortBy, setSortBy] = useState('featured;
   ') const [viewMode, setViewMode] = useState<any>('grid;
-  ') ';
+  ') '

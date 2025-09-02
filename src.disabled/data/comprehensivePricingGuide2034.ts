@@ -10,8 +10,7 @@ export interface ComprehensivePricingGuide2034 {
    contactInfo: { phone: string;
    email: string;
    website: string;
-   address: string;
-} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {
+   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {
    name: string;
    price: number;
    currency: string;
@@ -24,5 +23,4 @@ export interface ComprehensivePricingGuide2034 {
    savings?: string;
    roi: string;
    estimatedDelivery: string;
-   supportLevel: string;
-} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+   supportLevel: string} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;

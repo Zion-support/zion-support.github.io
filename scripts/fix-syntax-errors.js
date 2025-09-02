@@ -48,8 +48,7 @@ function fixFile(filePath) {
     
     // Apply all syntax fixes
     syntaxFixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
+      content = content.replace(fix.pattern, fix.replacement)})
     
     // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process';");content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs';");content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path';");
     
@@ -59,12 +58,9 @@ function fixFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');console.log(`✅ Fixed: ${path.basename(filePath)}`);
-      return true;
-    }
-    return false;
-  } catch (error) {console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+      return true}
+    return false} catch (error) {console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false}
 }
 
 function findScriptFiles() {
@@ -78,16 +74,13 @@ function findScriptFiles() {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {
-        files.push(fullPath);
-      }
+        scanDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {
+        files.push(fullPath)}
     }
   }
   
   scanDirectory(scriptsDir);
-  return files;
-}
+  return files}
 
 async function main() {
   const scriptFiles = findScriptFiles();
@@ -96,8 +89,7 @@ async function main() {
   
   for (const file of scriptFiles) {
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
   console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`);
   
@@ -111,14 +103,11 @@ async function main() {
       
       for (const testFile of testFiles) {
         if (fs.existsSync(testFile)) {
-          try {execSync(`node --check ${testFile}`, { stdio: 'pipe' });console.log(`✅ ${testFile} syntax is valid`);
-          } catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`);
-          }
+          try {execSync(`node --check ${testFile}`, { stdio: 'pipe' })console.log(`✅ ${testFile} syntax is valid`)} catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`)}
         }
       }
     } catch (error) {
-      console.log('⚠️  Could not validate syntax');
-    }
+      console.log('⚠️  Could not validate syntax')}
   }
 }
 

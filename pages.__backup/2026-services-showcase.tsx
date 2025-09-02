@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from,;
+import React, { useState, useMemo } from,
   react';
 import Head from;
   'next/head';
@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from;
   'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from;
   'lucide-react';
-;
 import UltraFuturisticBackground from;
   '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from;
@@ -22,12 +21,11 @@ export default function Services2026ShowcasePage() {
   const [searchTerm, setSearchTerm] = useState('
   ');
   const [selectedCategory, setSelectedCategory] = useState<string>('all;
-  ');
+  ')
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all;
-  ');
+  ')
   const [sortBy, setSortBy] = useState<string>('name;
   ');
-;
   // Map service variants to supported card variants;
   const mapServiceVariantToCardVariant = (serviceVariant: string): 'default;
   ' | 'holographic;
@@ -60,7 +58,7 @@ export default function Services2026ShowcasePage() {
   ' | 'quantum-energy;
   ' | 'quantum-neural;
   ' | 'quantum-cyberpunk;
-  ' => {;
+  ' => {
     if (serviceVariant.includes('quantum;
   ') && serviceVariant.includes('ai;
   ')) return 'quantum-advanced;
@@ -149,116 +147,107 @@ export default function Services2026ShowcasePage() {
     if (serviceVariant.includes('analytics;
   ')) return 'neural;
   ';
-    return 'default;
-  };
+    return 'default}
 ;
   const contactInfo = {
-    mobile:,;
+    mobile:,
   +1 302 464 0950;
-  ',;
-    email: 'kleber@ziontechgroup.com,;
-    address:,;
+  ',
+    email: 'kleber@ziontechgroup.com,
+    address:,
   364 E Main St STE 1008 Middletown DE 19709;
-  ',;
-    website: 'https://ziontechgroup.com  };
+  ',
+    website: 'https://ziontechgroup.com  }
 ;
   // Combine all 2026 services;
   const all2026Services = [
-    ...innovative2026MicroSaasServicesV2,;
-    ...emergingTech2026ServicesV2,;
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
     ...enterpriseIT2026ServicesV2];
-;
   // Enhanced categories for 2026;
   const categories = [
-    { id:,;
+    { id:,
   all;
   ', name: 'All 2026 Services, icon: '🚀;
-  ', count: all2026Services.length },;
-    { id:,;
+  ', count: all2026Services.length },
+    { id:,
   ai;
-  ', name: 'AI & Machine Learning, icon:,;
+  ', name: 'AI & Machine Learning, icon:,
   🧠;
-  ', count: all2026Services.filter(s => s.category.includes('AI)).length },;
-    { id:,;
+  ', count: all2026Services.filter(s => s.category.includes('AI)).length },
+    { id:,
   quantum;
-  ', name: 'Quantum & Emerging Tech, icon:,;
+  ', name: 'Quantum & Emerging Tech, icon:,
   ⚛️;
   ', count: all2026Services.filter(s => s.category.includes('Quantum;
-  ') || s.category.includes('Emerging)).length },;
-    { id:,;
+  ') || s.category.includes('Emerging)).length },
+    { id:,
   enterprise;
-  ', name: 'Enterprise IT, icon:,;
+  ', name: 'Enterprise IT, icon:,
   🏢;
   ', count: all2026Services.filter(s => s.category.includes('Enterprise;
-  ') || s.category.includes('IT)).length },;
-    { id:,;
+  ') || s.category.includes('IT)).length },
+    { id:,
   micro-saas;
-  ', name: 'Micro SaaS, icon:,;
+  ', name: 'Micro SaaS, icon:,
   💻;
   ', count: all2026Services.filter(s => s.category.includes('SaaS)).length }
   ];
-;
   const priceRanges = [
-    { id:,;
+    { id:,
   all;
-  ', name: 'All Prices, range:,;
+  ', name: 'All Prices, range:,
   All;
-  ' },;
-    { id: 'low, name:,;
+  ' },
+    { id: 'low, name:,
   Under $1K/month;
-  ', range: 'Under $1K },;
-    { id:,;
+  ', range: 'Under $1K },
+    { id:,
   medium;
-  ', name: '$1K - $5K/month, range:,;
+  ', name: '$1K - $5K/month, range:,
   $1K - $5K;
-  ' },;
-    { id: 'high, name:,;
+  ' },
+    { id: 'high, name:,
   $5K - $20K/month;
-  ', range: '$5K - $20K },;
-    { id:,;
+  ', range: '$5K - $20K },
+    { id:,
   premium;
-  ', name: '$20K+/month, range:,;
+  ', name: '$20K+/month, range:,
   $20K+;
   ' }
   ];
-;
   const sortOptions = [
-    { id: 'name, name:,;
+    { id: 'name, name:,
   Name A-Z;
-  ' },;
-    { id: 'price-low, name:,;
+  ' },
+    { id: 'price-low, name:,
   Price Low to High;
-  ' },;
-    { id: 'price-high, name:,;
+  ' },
+    { id: 'price-high, name:,
   Price High to Low;
-  ' },;
-    { id: 'popularity, name:,;
+  ' },
+    { id: 'popularity, name:,
   Most Popular;
-  ' },;
-    { id: 'newest, name:,;
+  ' },
+    { id: 'newest, name:,
   Newest First;
   ' }  ];
-;
   // Filter and sort services;
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(() => {
     let filtered = all2026Services;
-;
     // Search filter;
-    if (searchTerm) {;
-      filtered = filtered.filter(;
-        service =>;
+    if (searchTerm) {
+      filtered = filtered.filter(
+        service =>
           service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
           service.description;
             .toLowerCase();
             .includes(searchTerm.toLowerCase()) ||;
-          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      );
-    }
-;
+          service.category.toLowerCase().includes(searchTerm.toLowerCase()))}
     // Category filter;
     if (selectedCategory !== 'all;
-  ') {;
-      filtered = filtered.filter(service => {;
+  ') {
+      filtered = filtered.filter(service => {
         if (selectedCategory === 'ai;
   ') return service.category.includes('AI;
   ');
@@ -272,99 +261,83 @@ export default function Services2026ShowcasePage() {
   ');
         if (selectedCategory === 'micro-saas;
   ') return service.category.includes('SaaS;
-  ')        return true;
-      });
-    }
-;
+  ')        return true})}
     // Price range filter;
     if (selectedPriceRange !== 'all;
-  ') {;
-      filtered = filtered.filter(service => {;
+  ') {
+      filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace('$;
-  ', '').replace(;
+  ', '').replace(
   ',', ';
   '));
-        if (selectedPriceRange === 'low;
+        if (selectedPriceRange === 'low
   ') return price < 1000;
         if (selectedPriceRange === 'medium;
   ') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high;
   ') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium;
-  ') return price >= 20000        return true;
-      });
-    }
-;
+  ') return price >= 20000        return true})}
     // Sort services;
-    filtered.sort((a, b) => {;
-      switch (sortBy) {;
+    filtered.sort((a, b) => {
+      switch (sortBy) {
         case 'price-low;
-  ': return parseInt(a.price.replace('$, ,;
-  ').replace(;
+  ': return parseInt(a.price.replace('$, ,
+  ').replace(
   ',', ';
   ')) - parseInt(b.price.replace('$;
-  ', '').replace(;
+  ', '').replace(
   ',', ';
   '));
         case 'price-high;
-  ': return parseInt(b.price.replace('$, ,;
-  ').replace(;
+  ': return parseInt(b.price.replace('$, ,
+  ').replace(
   ',', ';
   ')) - parseInt(a.price.replace('$;
-  ', '').replace(;
+  ', '').replace(
   ',', ';
   '));
         case 'popularity;
   ': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'newest:;
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()        default:;
-          return a.name.localeCompare(b.name);
-      }
-    });
-;
-    return filtered;
-  }, [;
-    searchTerm,;
-    selectedCategory,;
-    selectedPriceRange,;
-    sortBy,;
-    all2026Services]);
-;
-  return (;
+          return a.name.localeCompare(b.name)}
+    })
+    return filtered}, [;
+    searchTerm,
+    selectedCategory,
+    selectedPriceRange,
+    sortBy,
+    all2026Services])
+  return(
     <UltraFuturisticBackground intensity='high'>
       <div className='min-h-screen'>
         <Head>
           <title>
             2026 Services Showcase - Zion Tech Group | Revolutionary AI, Quantum;
-            & IT Solutions;
+            & IT Solutions
           </title>
           <meta
             name='description';
-            content='Explore our revolutionary 2026 services including AI-powered platforms, quantum computing, emerging technologies, and enterprise IT solutions. Contact: +1 302 464 0950';
-          />;
+            content='Explore our revolutionary 2026 services including AI-powered platforms, quantum computing, emerging technologies, and enterprise IT solutions. Contact: +1 302 464 0950'/>
           <meta
             name='keywords';
-            content='2026 services, AI services, quantum computing, emerging technology, enterprise IT, micro SaaS, neuromorphic computing, DNA computing, photonic computing, holographic displays, swarm robotics, quantum internet, biometric authentication, zero trust, edge computing, 5G networks';
-          />;
+            content='2026 services, AI services, quantum computing, emerging technology, enterprise IT, micro SaaS, neuromorphic computing, DNA computing, photonic computing, holographic displays, swarm robotics, quantum internet, biometric authentication, zero trust, edge computing, 5G networks'/>
           <meta name='author' content='Zion Tech Group' />
           <meta name='robots' content='index, follow' />
           <meta
             property='og:title';
-            content='2026 Services Showcase - Zion Tech Group';
-          />;
+            content='2026 Services Showcase - Zion Tech Group'/>
           <meta
             property='og:description';
-            content='Revolutionary AI, quantum computing, and emerging technology services for 2026 and beyond.';
-          />;
+            content='Revolutionary AI, quantum computing, and emerging technology services for 2026 and beyond.'/>
           <meta
             property='og:url';
-            content='https://ziontechgroup.com/2026-services-showcase';
-          />;
+            content='https://ziontechgroup.com/2026-services-showcase'/>
           <meta property='og:type' content='website' />
           <link
             rel='canonical';
-            href='https://ziontechgroup.com/2026-services-showcase';
-          />;
+            href='https://ziontechgroup.com/2026-services-showcase'/>
         </Head>
         {/* Hero Section */}
         <section className='relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden'>
@@ -374,29 +347,29 @@ export default function Services2026ShowcasePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >;
+            >
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-                2026 Services Showcase;
+                2026 Services Showcase
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Discover our revolutionary AI, quantum computing, and emerging;
                 technology services that will define the future of business and;
-                technology.;
+                technology.
               </p>
               <div className='flex flex-wrap justify-center gap-4 mb-12'>
                 <div className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3'>
                   <span className='text-purple-300 font-semibold'>
-                    {all2026Services.length}+ Revolutionary Services;
+                    {all2026Services.length}+ Revolutionary Services
                   </span>
                 </div>
                 <div className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-full px-6 py-3'>
                   <span className='text-cyan-300 font-semibold'>
-                    AI-Powered Solutions;
+                    AI-Powered Solutions
                   </span>
                 </div>
                 <div className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3'>
                   <span className='text-green-300 font-semibold'>
-                    Quantum Computing;
+                    Quantum Computing
                   </span>
                 </div>
               </div>
@@ -415,24 +388,23 @@ export default function Services2026ShowcasePage() {
                   placeholder='Search 2026 services...';
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
-                />;
+                  className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                />
               </div>
               {/* Filters */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 {/* Category Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
-                    Category;
+                    Category
                   </label>
                   <select;
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
-                    className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
-                  >;
-                    {categories.map(category => (;
+                    className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                  >{categories.map(category => (
                       <option key={category.id} value={category.id}>
-                        {category.name} ({category.count});
+                        {category.name} ({category.count})
                       </option>
                     ))}
                   </select>
@@ -440,14 +412,13 @@ export default function Services2026ShowcasePage() {
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
-                    Price Range;
+                    Price Range
                   </label>
                   <select;
                     value={selectedPriceRange}
                     onChange={e => setSelectedPriceRange(e.target.value)}
-                    className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
-                  >;
-                    {priceRanges.map(range => (;
+                    className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                  >{priceRanges.map(range => (
                       <option key={range.id} value={range.id}>
                         {range.name}
                       </option>
@@ -457,14 +428,13 @@ export default function Services2026ShowcasePage() {
                 {/* Sort Options */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
-                    Sort By;
+                    Sort By
                   </label>
                   <select;
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
-                    className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
-                  >;
-                    {sortOptions.map(option => (;
+                    className='w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                  >{sortOptions.map(option => (
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>
@@ -475,7 +445,7 @@ export default function Services2026ShowcasePage() {
               {/* Results Count */}
               <div className='text-center'>
                 <p className='text-gray-400'>
-                  Showing <span className='text-purple-400 font-semibold'>{filteredServices.length}</span> of{';
+                  Showing <span className='text-purple-400 font-semibold'>{filteredServices.length}</span> of{'
   '}
                   <span className='text-purple-400 font-semibold'>{all2026Services.length}</span> 2026 services                </p>
               </div>
@@ -486,46 +456,44 @@ export default function Services2026ShowcasePage() {
         <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <AnimatePresence mode='wait'>
-              {filteredServices.length === 0 ? (;
+              {filteredServices.length === 0 ? (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className='text-center py-20';
-                >;
+                  className='text-center py-20'>
                   <div className='text-gray-400 text-xl mb-4'>
-                    No services found matching your criteria;
+                    No services found matching your criteria
                   </div>
                   <button;
-                    onClick={() => {;
+                    onClick={() => {
                       setSearchTerm('');
-                      setSelectedCategory(;
+                      setSelectedCategory(
   'all');
-                      setSelectedPriceRange(;
+                      setSelectedPriceRange(
   'all');
-                      setSortBy(;
-  'name');
-                    }} className='bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-xl hover:from-gray-500 hover:to-gray-600 transition-all duration-200'>                    Clear Filters;
+                      setSortBy(
+  'name')}} className='bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-xl hover:from-gray-500 hover:to-gray-600 transition-all duration-200'>                    Clear Filters
                   </button>
                 </motion.div>
-              ) : (;
+              ) : (
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                  {filteredServices.map((service, index) => (;
+                  {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                    >;
+                    >
                       <UltraFuturisticCard className='h-full group hover:scale-105 transition-transform duration-300'>
                         <div className='p-6 h-full flex flex-col'>
                           {/* Service Header */}
                           <div className='flex items-start justify-between mb-4'>
                             <div className='text-4xl mb-2'>{service.icon}</div>
-                            {service.popular && (;
+                            {service.popular && (
                               <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full'>
-                                POPULAR;
+                                POPULAR
                               </div>
                             )}
                           </div>
@@ -552,23 +520,22 @@ export default function Services2026ShowcasePage() {
                           {/* Features */}
                           <div className='mb-6'>
                             <div className='text-sm text-gray-300 mb-2'>
-                              Key Features:;
+                              Key Features:
                             </div>
                             <div className='space-y-1'>
                               {service.features;
-                                .slice(0, 3);
-                                .map((feature, idx) => (;
+                                .slice(0, 3)
+                                .map((feature, idx) => (
                                   <div
                                     key={idx}
-                                    className='flex items-center text-xs text-gray-400';
-                                  >;
+                                    className='flex items-center text-xs text-gray-400'>
                                     <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
                                     {feature}
                                   </div>
                                 ))}
-                              {service.features.length > 3 && (;
+                              {service.features.length > 3 && (
                                 <div className='text-xs text-gray-500 mt-1'>
-                                  +{service.features.length - 3} more features;
+                                  +{service.features.length - 3} more features
                                 </div>
                               )}
                             </div>
@@ -593,7 +560,7 @@ export default function Services2026ShowcasePage() {
                           <div className='mt-auto'>
                             <Link href={service.link}>
                               <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium group-hover:scale-105 transition-transform hover:from-cyan-600 hover:to-blue-700'>
-                                Learn More;
+                                Learn More
                                 <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
                               </button>
                             </Link>
@@ -615,25 +582,25 @@ export default function Services2026ShowcasePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
+            >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Ready to Transform Your Business?;
+                Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
                 Our 2026 services are designed to give you a competitive edge in;
-                the rapidly evolving technology landscape.;
+                the rapidly evolving technology landscape.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link href='/contact'>
                   <button className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>
                     <Phone className='w-5 h-5 mr-2' />
-                    Contact Us;
+                    Contact Us
                   </button>
                 </Link>
                 <Link href='/pricing'>
                   <button className='bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-gray-500 hover:to-gray-600 transition-all duration-200'>
                     <DollarSign className='w-5 h-5 mr-2' />
-                    View Pricing;
+                    View Pricing
                   </button>
                 </Link>
               </div>
@@ -648,6 +615,4 @@ export default function Services2026ShowcasePage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  );
-}
-;
+  )}

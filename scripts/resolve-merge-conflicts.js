@@ -19,8 +19,7 @@ class MergeConflictResolver {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..');
     this.resolvedFiles = [];
-    this.errors = [];
-  }
+    this.errors = []}
 
   async run() {
     try {
@@ -33,23 +32,19 @@ class MergeConflictResolver {
       
       // Resolve each conflict
       for (const file of conflictedFiles) {
-        await this.resolveConflict(file);
-      }
+        await this.resolveConflict(file)}
       
       // Generate summary
-      this.generateSummary();
-      
-    } catch (error) {
+      this.generateSummary()} catch (error) {
       console.error('❌ Error during merge conflict resolution:', error);
-      this.errors.push(error.message);
-    }
+      this.errors.push(error.message)}
   }
 
   async findConflictedFiles() {
     const files = await glob('**/*', {
       cwd: this.projectRoot,
       ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', '.next/**']
-    });
+    })
     
     const conflictedFiles = [];
     
@@ -58,15 +53,13 @@ class MergeConflictResolver {
       
       try {
         const content = fs.readFileSync(filePath, 'utf8');
-        if (content.includes('          conflictedFiles.push(file);
-        }
+        if (content.includes('          conflictedFiles.push(file)}
       } catch (error) {
         // Skip files that can't be read
       }
     }
     
-    return conflictedFiles;
-  }
+    return conflictedFiles}
 
   async resolveConflict(filePath) {
     try {
@@ -79,12 +72,9 @@ class MergeConflictResolver {
       fs.writeFileSync(fullPath, content, 'utf8');
       this.resolvedFiles.push(filePath);
       
-      console.log(`✅ Resolved conflicts in: ${filePath}`);
-      
-    } catch (error) {
+      console.log(`✅ Resolved conflicts in: ${filePath}`)} catch (error) {
       console.error(`❌ Error resolving ${filePath}:`, error.message);
-      this.errors.push(`${filePath}: ${error.message}`);
-    }
+      this.errors.push(`${filePath}: ${error.message}`)}
   }
 
   resolveMergeConflicts(content) {
@@ -97,8 +87,7 @@ class MergeConflictResolver {
     // Clean up any remaining conflict markers
     resolved = resolved.replace(/    resolved = resolved.replace(/=======\n/g, '');
     resolved = resolved.replace(/    
-    return resolved;
-  }
+    return resolved}
 
   generateSummary() {
     const summary = {
@@ -119,8 +108,7 @@ class MergeConflictResolver {
     
     if (this.errors.length > 0) {
       console.log('\n❌ Errors encountered:');
-      this.errors.forEach(error => console.log(`  - ${error}`));
-    }
+      this.errors.forEach(error => console.log(`  - ${error}`))}
   }
 }
 
@@ -128,5 +116,4 @@ class MergeConflictResolver {
 const resolver = new MergeConflictResolver();
 resolver.run().catch(error => {
   console.error('❌ Failed to resolve merge conflicts:', error);
-  process.exit(1);
-});
+  process.exit(1)})

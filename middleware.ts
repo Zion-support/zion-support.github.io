@@ -24,11 +24,10 @@ export function middleware(request: NextRequest) {
   
   response.headers.set('Content-Security-Policy', csp);
   
-  return response;
-}
+  return response}
 
 export const config = {
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-};
+}

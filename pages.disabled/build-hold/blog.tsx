@@ -1,43 +1,37 @@
 React from;
   'react';
 import { motion } from;
-  'framer-motion';{ SEO } from;
+  'framer-motion'{ SEO } from;
   '../components/SEO';
 import { Button } from;
-  '../components/ui/Button';{ Card } from;
+  '../components/ui/Button'{ Card } from;
   '../components/ui/Card';
 import { Badge } from;
-  '../components/ui/Badge';import { '  Calendar, Clock,;
-  User, ArrowRight,;
-  Search, Filter,;
-  Tag, BookOpen,;
-  TrendingUp, Star,;
-  Eye, MessageCircle,;
-  Share2, Heart,;
-  Brain, Zap,;
-  Shield, Cloud,;
-  Database, Network,;
-  Code, Rocket,;
-  Target, Globe,;
-  Phone, Mail;
-} from;
-  'lucide-react'';const Blog: React.FC = () => {;
-  const blogPosts = [;
-    {;
-      id: 1, title: 'The Future of AI in Business: 2025 Trends and Predictions','      excerpt: 'Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.', author: 'Sarah Johnson','      date: '2025-01-15', readTime: '8 min read','      category: 'AI Trends', image: '/api/placeholder/600/400','      tags: ['AI', 'Business', 'Trends', '2025'], featured: true'    },'    {;
-      id: 2, title: 'Building Scalable AI Solutions: Best Practices and Architecture','      excerpt: 'Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.', author: 'Michael Chen','      date: '2025-01-12', readTime: '12 min read','      category: 'Technical', image: '/api/placeholder/600/400','      tags: ['AI Architecture', 'Scalability', 'Best Practices'], featured: false'    },'    {;
-      id: 3, title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets','      excerpt: 'Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.', author: 'Emily Rodriguez','      date: '2025-01-10', readTime: '10 min read','      category: 'Security', image: '/api/placeholder/600/400','      tags: ['Cybersecurity', 'AI Security', 'Threat Protection'], featured: false'    },'    {;
-      id: 4, title: 'Cloud Migration Strategies: A Complete Guide for 2025','      excerpt: 'Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.', author: 'David Kim','      date: '2025-01-08', readTime: '15 min read','      category: 'Cloud', image: '/api/placeholder/600/400','      tags: ['Cloud Migration', 'Strategy', 'Best Practices'], featured: false'    },'    {;
-      id: 5, title: 'AI-Powered Customer Experience: Transforming Business Interactions','      excerpt: 'How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.','      author: 'Lisa Wang', date: '2025-01-05','      readTime: '9 min read', category: 'Customer Experience','      image: '/api/placeholder/600/400', tags: ['Customer Experience', 'AI', 'Automation'], featured: false'    },'    {;
+  '../components/ui/Badge';import { '  Calendar, Clock,
+  User, ArrowRight,
+  Search, Filter,
+  Tag, BookOpen,
+  TrendingUp, Star,
+  Eye, MessageCircle,
+  Share2, Heart,
+  Brain, Zap,
+  Shield, Cloud,
+  Database, Network,
+  Code, Rocket,
+  Target, Globe,
+  Phone, Mail} from;
+  'lucide-react'';const Blog: React.FC = () => {
+  const blogPosts = [{
+      id: 1, title: 'The Future of AI in Business: 2025 Trends and Predictions','      excerpt: 'Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.', author: 'Sarah Johnson','      date: '2025-01-15', readTime: '8 min read','      category: 'AI Trends', image: '/api/placeholder/600/400','      tags: ['AI', 'Business', 'Trends', '2025'], featured: true'    },'    {
+      id: 2, title: 'Building Scalable AI Solutions: Best Practices and Architecture','      excerpt: 'Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.', author: 'Michael Chen','      date: '2025-01-12', readTime: '12 min read','      category: 'Technical', image: '/api/placeholder/600/400','      tags: ['AI Architecture', 'Scalability', 'Best Practices'], featured: false'    },'    {
+      id: 3, title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets','      excerpt: 'Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.', author: 'Emily Rodriguez','      date: '2025-01-10', readTime: '10 min read','      category: 'Security', image: '/api/placeholder/600/400','      tags: ['Cybersecurity', 'AI Security', 'Threat Protection'], featured: false'    },'    {
+      id: 4, title: 'Cloud Migration Strategies: A Complete Guide for 2025','      excerpt: 'Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.', author: 'David Kim','      date: '2025-01-08', readTime: '15 min read','      category: 'Cloud', image: '/api/placeholder/600/400','      tags: ['Cloud Migration', 'Strategy', 'Best Practices'], featured: false'    },'    {
+      id: 5, title: 'AI-Powered Customer Experience: Transforming Business Interactions','      excerpt: 'How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.','      author: 'Lisa Wang', date: '2025-01-05','      readTime: '9 min read', category: 'Customer Experience','      image: '/api/placeholder/600/400', tags: ['Customer Experience', 'AI', 'Automation'], featured: false'    },'    {
       id: 6, title: 'Data Analytics and Machine Learning: Driving Business Intelligence','      excerpt: 'Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.', author: 'James Wilson','      date: '2025-01-03', readTime: '11 min read','      category: 'Analytics', image: '/api/placeholder/600/400','      tags: ['Data Analytics', 'Machine Learning', 'Business Intelligence'], featured: false'    }'  ];
-;
-  const categories = [;
-    { name: 'All', count: 24, active: true }, { name: 'AI Trends', count: 6, active: false },'    { name: 'Technical', count: 8, active: false }, { name: 'Security', count: 4, active: false },'    { name: 'Cloud', count: 3, active: false }, { name: 'Customer Experience', count: 2, active: false },'    { name: 'Analytics', count: 1, active: false }'  ]';
-  const featuredPost = blogPosts.find(post => post.featured);
-;
-  return (;
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='Blog - Zion Tech Group' '        description='Stay updated with the latest insights on AI, technology trends, and business innovation. Expert articles and thought leadership from Zion Tech Group.''      />';
-      {/* Hero Section */}
+  const categories = [{ name: 'All', count: 24, active: true }, { name: 'AI Trends', count: 6, active: false },'    { name: 'Technical', count: 8, active: false }, { name: 'Security', count: 4, active: false },'    { name: 'Cloud', count: 3, active: false }, { name: 'Customer Experience', count: 2, active: false },'    { name: 'Analytics', count: 1, active: false }'  ]';
+  const featuredPost = blogPosts.find(post => post.featured)
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='Blog - Zion Tech Group' '        description='Stay updated with the latest insights on AI, technology trends, and business innovation. Expert articles and thought leadership from Zion Tech Group.''      />'{/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>'        <div className='max-w-7xl mx-auto text-center'>'          <motion.div'            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -49,12 +43,12 @@ import { Badge } from;
         </div>
       </section>
       {/* Featured Post */}
-      {featuredPost && (;
+      {featuredPost && (
         <section className='py-20 px-4 sm: px-6 lg:px-8'>'          <div className='max-w-7xl mx-auto'>'            <motion.div'              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className='text-3xl font-bold text-white mb-8'>Featured Article</h2>'              <Card className='overflow-hidden'>'                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>'                  <div className='relative h-64 lg:h-full'>'                    <img '                      src={featuredPost.image} ;
+              <h2 className='text-3xl font-bold text-white mb-8'>Featured Article</h2>'              <Card className='overflow-hidden'>'                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>'                  <div className='relative h-64 lg:h-full'>'                    <img '                      src={featuredPost.image}
                       alt={featuredPost.title}
                       className='w-full h-full object-cover''                    />'                    <div className='absolute top-4 left-4'>'                      <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>'                        <Star className='w-4 h-4 mr-1' />'                        Featured'                      </Badge>
                     </div>
@@ -68,7 +62,6 @@ import { Badge } from;
           </div>
         </section>
       )}
-;
       {/* Blog Posts Grid */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50'>'        <div className='max-w-7xl mx-auto'>'          <div className='flex flex-col lg:flex-row gap-8'>'            {/* Main Content */}'            <div className='lg:w-2/3'>'              <motion.div'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -78,8 +71,8 @@ import { Badge } from;
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.1 * index }}
-                    >;
-                      <Card className='overflow-hidden h-full'>'                        <div className='relative h-48'>'                          <img '                            src={post.image} ;
+                    >
+                      <Card className='overflow-hidden h-full'>'                        <div className='relative h-48'>'                          <img '                            src={post.image}
                             alt={post.title}
                             className='w-full h-full object-cover''                          />'                          <div className='absolute top-4 left-4'>'                            <Badge variant='outline'>{post.category}</Badge>'                          </div>'                        </div>
                         <div className='p-6'>'                          <div className='flex items-center mb-3 text-sm text-gray-400'>'                            <User className='w-4 h-4 mr-2' />'                            {post.author}'                            <Calendar className='w-4 h-4 ml-4 mr-2' />'                            {new Date(post.date).toLocaleDateString()}'                            <Clock className='w-4 h-4 ml-4 mr-2' />'                            {post.readTime}'                          </div>
@@ -102,7 +95,7 @@ import { Badge } from;
                 <Card className='p-6'>'                  <h3 className='text-xl font-bold text-white mb-4'>Categories</h3>'                  <div className='space-y-2'>'                    {categories.map((category, index) => ('                      <button;
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${`                          category.active;
-                            ?,;
+                            ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white;
   ' ': 'text-gray-300 hover:bg-slate-700'                        }`}'                      >`                        <span>{category.name}</span>
                         <Badge variant='secondary' className='text-xs'>'                          {category.count}'                        </Badge>
@@ -139,7 +132,6 @@ import { Badge } from;
         </div>
       </section>
     </div>
-  );
-};
+  )}
 ;
-export default Blog;
+export default Blog

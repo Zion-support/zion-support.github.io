@@ -2,43 +2,37 @@
 // Build Verification Script;
 // This script checks if our components can be imported without syntax errors;
 /* eslint-disable no-console, no-undef, no-unused-vars */;
-console.log(;
+console.log(
   '🔍 Starting build verification...');
-;
-try {;
+try {
   // Test component imports;
-  console.log(;
+  console.log(
   '📦 Testing component imports...');
-;
   // Test basic React functionality;
-  const React = require(;
+  const React = require(
   'react');
-  console.log(;
+  console.log(
   '✅ React import successful');
 
   // Test framer-motion;
-  const { motion } = require(;
+  const { motion } = require(
   'framer-motion');
-  console.log(;
+  console.log(
   '✅ Framer Motion import successful');
 
   // Test lucide-react icons;
-  const { ArrowRight, CheckCircle, Brain, Cloud, Shield, Zap } = require(;
+  const { ArrowRight, CheckCircle, Brain, Cloud, Shield, Zap } = require(
   'lucide-react');
-  console.log(;
+  console.log(
   '✅ Lucide React icons import successful');
 
-  console.log(;
+  console.log(
   '🎉 All core dependencies imported successfully!');
-  console.log(;
-  '📋 Components should be ready for build');
-  } catch (error) {
-  console.error(;
+  console.log(
+  '📋 Components should be ready for build')} catch (error) {
+  console.error(
   '❌ Import error:', error.message);
   process.exit(1);
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-}
-;
-console.log(;
+ursor/automate-test-fix-improve-and-merge-code-48f3}
+console.log(
   '🏁 Build verification complete');
-;

@@ -13,8 +13,7 @@ class AppImprover {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..');
     this.improvements = [];
-    this.fixes = [];
-  }
+    this.fixes = []}
 
   async runImprovements() {
     console.log('🔧 Running comprehensive app improvements...');
@@ -28,8 +27,7 @@ class AppImprover {
     await this.optimizeBuild();
     await this.improveDocumentation();
     
-    this.generateReport();
-  }
+    this.generateReport()}
 
   async optimizePerformance() {
     console.log('⚡ Optimizing performance...');
@@ -43,8 +41,7 @@ class AppImprover {
     // Create performance monitoring
     await this.createPerformanceMonitoring();
     
-    this.improvements.push('Performance optimizations applied');
-  }
+    this.improvements.push('Performance optimizations applied')}
 
   async optimizeImages() {
     const publicDir = path.join(this.projectRoot, 'public');
@@ -61,8 +58,7 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  quality?: number;
-}
+  quality?: number}
 
 export default function OptimizedImage({
   src,
@@ -92,8 +88,7 @@ export default function OptimizedImage({
         onLoad={() => setIsLoading(false)}
         onError={() => {
           setHasError(true);
-          setIsLoading(false);
-        }}
+          setIsLoading(false)}}
         placeholder="blur"
         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
       />
@@ -103,29 +98,25 @@ export default function OptimizedImage({
         </div>
       )}
     </div>
-  );
-}`;
+  )}`;
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'OptimizedImage.tsx'),
       optimizedImageComponent
     );
     
-    this.fixes.push('Created OptimizedImage component for better performance');
-  }
+    this.fixes.push('Created OptimizedImage component for better performance')}
 
   async optimizeNextConfig() {
     const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
     let nextConfig = '';
     
     if (fs.existsSync(nextConfigPath)) {
-      nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
-    }
+      nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
     
     // Add performance optimizations
     const performanceOptimizations = `
@@ -159,10 +150,9 @@ const nextConfig = {
             chunks: 'all',
           },
         },
-      };
+      }
     }
-    return config;
-  },
+    return config},
   
   // Headers for performance
   async headers() {
@@ -184,8 +174,7 @@ const nextConfig = {
           },
         ],
       },
-    ];
-  },
+    ]},
   
   // Redirects for SEO
   async redirects() {
@@ -195,8 +184,7 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ];
-  },
+    ]},
   
   // Rewrites for API routes
   async rewrites() {
@@ -205,15 +193,13 @@ const nextConfig = {
         source: '/api/:path*',
         destination: '/api/:path*',
       },
-    ];
-  },
-};
+    ]},
+}
 
 module.exports = nextConfig;`;
 
     fs.writeFileSync(nextConfigPath, performanceOptimizations);
-    this.fixes.push('Optimized Next.js configuration for performance');
-  }
+    this.fixes.push('Optimized Next.js configuration for performance')}
 
   async createPerformanceMonitoring() {
     const performanceMonitor = `import { useEffect } from 'react';
@@ -232,34 +218,28 @@ export function usePerformanceMonitoring() {
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
           non_interaction: true,
-        });
-      }
-    };
+        })}
+    }
 
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-  }, []);
-}
+    getTTFB(sendToAnalytics)}, [])}
 
 export function reportWebVitals(metric) {
-  console.log('Web Vitals:', metric);
-}`;
+  console.log('Web Vitals:', metric)}`;
 
     const hooksDir = path.join(this.projectRoot, 'src', 'hooks');
     if (!fs.existsSync(hooksDir)) {
-      fs.mkdirSync(hooksDir, { recursive: true });
-    }
+      fs.mkdirSync(hooksDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(hooksDir, 'usePerformanceMonitoring.ts'),
       performanceMonitor
     );
     
-    this.fixes.push('Created performance monitoring hook');
-  }
+    this.fixes.push('Created performance monitoring hook')}
 
   async improveCodeQuality() {
     console.log('📝 Improving code quality...');
@@ -273,8 +253,7 @@ export function reportWebVitals(metric) {
     // Create TypeScript strict configuration
     await this.updateTypeScriptConfig();
     
-    this.improvements.push('Code quality improvements applied');
-  }
+    this.improvements.push('Code quality improvements applied')}
 
   async createESLintConfig() {
     const eslintConfig = `module.exports = {
@@ -308,15 +287,14 @@ export function reportWebVitals(metric) {
     'jsx-a11y/role-supports-aria-props': 'error',
   },
   ignorePatterns: ['node_modules/', '.next/', 'out/'],
-};`;
+}`;
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'eslint.config.js'),
       eslintConfig
     );
     
-    this.fixes.push('Created comprehensive ESLint configuration');
-  }
+    this.fixes.push('Created comprehensive ESLint configuration')}
 
   async createPrettierConfig() {
     const prettierConfig = `module.exports = {
@@ -331,23 +309,21 @@ export function reportWebVitals(metric) {
   bracketSpacing: true,
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
-};`;
+}`;
 
     fs.writeFileSync(
       path.join(this.projectRoot, '.prettierrc.js'),
       prettierConfig
     );
     
-    this.fixes.push('Created Prettier configuration');
-  }
+    this.fixes.push('Created Prettier configuration')}
 
   async updateTypeScriptConfig() {
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
-    let tsConfig = {};
+    let tsConfig = {}
     
     if (fs.existsSync(tsConfigPath)) {
-      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-    }
+      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}
     
     // Add strict TypeScript configuration
     tsConfig.compilerOptions = {
@@ -360,11 +336,10 @@ export function reportWebVitals(metric) {
       noFallthroughCasesInSwitch: true,
       noUncheckedIndexedAccess: true,
       exactOptionalPropertyTypes: true,
-    };
+    }
     
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
-    this.fixes.push('Updated TypeScript configuration for strict type checking');
-  }
+    this.fixes.push('Updated TypeScript configuration for strict type checking')}
 
   async enhanceSecurity() {
     console.log('🔒 Enhancing security...');
@@ -375,8 +350,7 @@ export function reportWebVitals(metric) {
     // Create environment validation
     await this.createEnvironmentValidation();
     
-    this.improvements.push('Security enhancements applied');
-  }
+    this.improvements.push('Security enhancements applied')}
 
   async createSecurityMiddleware() {
     const securityMiddleware = `import { NextResponse } from 'next/server';
@@ -405,20 +379,18 @@ export function middleware(request: NextRequest) {
   
   response.headers.set('Content-Security-Policy', csp);
   
-  return response;
-}
+  return response}
 
 export const config = {
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-};`;
+}`;
 
     const middlewarePath = path.join(this.projectRoot, 'middleware.ts');
     fs.writeFileSync(middlewarePath, securityMiddleware);
     
-    this.fixes.push('Created security middleware with CSP headers');
-  }
+    this.fixes.push('Created security middleware with CSP headers')}
 
   async createEnvironmentValidation() {
     const envValidation = `import { z } from 'zod';
@@ -429,7 +401,7 @@ const envSchema = z.object({
   DATABASE_URL: z.string().url().optional(),
   NEXTAUTH_SECRET: z.string().min(32).optional(),
   NEXTAUTH_URL: z.string().url().optional(),
-});
+})
 
 export const env = envSchema.parse(process.env);
 
@@ -437,16 +409,14 @@ export type Env = z.infer<typeof envSchema>;`;
 
     const libDir = path.join(this.projectRoot, 'src', 'lib');
     if (!fs.existsSync(libDir)) {
-      fs.mkdirSync(libDir, { recursive: true });
-    }
+      fs.mkdirSync(libDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(libDir, 'env.ts'),
       envValidation
     );
     
-    this.fixes.push('Created environment validation schema');
-  }
+    this.fixes.push('Created environment validation schema')}
 
   async optimizeSEO() {
     console.log('🔍 Optimizing SEO...');
@@ -460,8 +430,7 @@ export type Env = z.infer<typeof envSchema>;`;
     // Create robots.txt
     await this.createRobotsTxt();
     
-    this.improvements.push('SEO optimizations applied');
-  }
+    this.improvements.push('SEO optimizations applied')}
 
   async createSEOComponent() {
     const seoComponent = `import Head from 'next/head';
@@ -476,8 +445,7 @@ interface SEOProps {
   keywords?: string[];
   author?: string;
   publishedTime?: string;
-  modifiedTime?: string;
-}
+  modifiedTime?: string}
 
 export default function SEO({
   title = 'Zion Tech Group - Advanced Technology Solutions',
@@ -538,21 +506,18 @@ export default function SEO({
         }}
       />
     </Head>
-  );
-}`;
+  )}`;
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'SEO.tsx'),
       seoComponent
     );
     
-    this.fixes.push('Created comprehensive SEO component');
-  }
+    this.fixes.push('Created comprehensive SEO component')}
 
   async createSitemapGenerator() {
     const sitemapGenerator = `import fs from 'fs';
@@ -585,20 +550,17 @@ export async function generateSitemap() {
 </urlset>\`;
 
   fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully');
-}
+  console.log('Sitemap generated successfully')}
 
 if (require.main === module) {
-  generateSitemap();
-}`;
+  generateSitemap()}`;
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'scripts', 'generate-sitemap.js'),
       sitemapGenerator
     );
     
-    this.fixes.push('Created sitemap generator');
-  }
+    this.fixes.push('Created sitemap generator')}
 
   async createRobotsTxt() {
     const robotsTxt = `User-agent: *
@@ -617,8 +579,7 @@ Disallow: /private/`;
       robotsTxt
     );
     
-    this.fixes.push('Created robots.txt file');
-  }
+    this.fixes.push('Created robots.txt file')}
 
   async improveAccessibility() {
     console.log('♿ Improving accessibility...');
@@ -629,17 +590,15 @@ Disallow: /private/`;
     // Create skip link component
     await this.createSkipLink();
     
-    this.improvements.push('Accessibility improvements applied');
-  }
+    this.improvements.push('Accessibility improvements applied')}
 
   async createAccessibilityUtils() {
     const accessibilityUtils = `// Accessibility utilities
 export const focusElement = (selector: string) => {
   const element = document.querySelector(selector);
   if (element) {
-    (element as HTMLElement).focus();
-  }
-};
+    (element as HTMLElement).focus()}
+}
 
 export const announceToScreenReader = (message: string) => {
   const announcement = document.createElement('div');
@@ -651,9 +610,7 @@ export const announceToScreenReader = (message: string) => {
   document.body.appendChild(announcement);
   
   setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 1000);
-};
+    document.body.removeChild(announcement)}, 1000)}
 
 export const trapFocus = (element: HTMLElement) => {
   const focusableElements = element.querySelectorAll(
@@ -668,46 +625,40 @@ export const trapFocus = (element: HTMLElement) => {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       }
     }
-  };
+  }
   
   element.addEventListener('keydown', handleTabKey);
   
   return () => {
-    element.removeEventListener('keydown', handleTabKey);
-  };
-};
+    element.removeEventListener('keydown', handleTabKey)}
+}
 
 export const getContrastRatio = (color1: string, color2: string): number => {
   // Simplified contrast ratio calculation
   // In a real implementation, you'd want to use a proper color library
   return 4.5; // Placeholder value
-};
+}
 
 export const isHighContrast = (color1: string, color2: string): boolean => {
-  return getContrastRatio(color1, color2) >= 4.5;
-};`;
+  return getContrastRatio(color1, color2) >= 4.5}`;
 
     const utilsDir = path.join(this.projectRoot, 'src', 'utils');
     if (!fs.existsSync(utilsDir)) {
-      fs.mkdirSync(utilsDir, { recursive: true });
-    }
+      fs.mkdirSync(utilsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(utilsDir, 'accessibility.ts'),
       accessibilityUtils
     );
     
-    this.fixes.push('Created accessibility utilities');
-  }
+    this.fixes.push('Created accessibility utilities')}
 
   async createSkipLink() {
     const skipLink = `import Link from 'next/link';
@@ -720,21 +671,18 @@ export default function SkipLink() {
     >
       Skip to main content
     </Link>
-  );
-}`;
+  )}`;
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'SkipLink.tsx'),
       skipLink
     );
     
-    this.fixes.push('Created skip link component');
-  }
+    this.fixes.push('Created skip link component')}
 
   async enhanceUserExperience() {
     console.log('✨ Enhancing user experience...');
@@ -748,23 +696,21 @@ export default function SkipLink() {
     // Create toast notifications
     await this.createToastSystem();
     
-    this.improvements.push('User experience enhancements applied');
-  }
+    this.improvements.push('User experience enhancements applied')}
 
   async createLoadingComponents() {
     const loadingSpinner = `import { cn } from '@/lib/utils';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}
+  className?: string}
 
 export default function LoadingSpinner({ size = 'md', className }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-  };
+  }
 
   return (
     <div className={cn('flex items-center justify-center', className)}>
@@ -775,15 +721,13 @@ export default function LoadingSpinner({ size = 'md', className }: LoadingSpinne
         )}
       />
     </div>
-  );
-}`;
+  )}`;
 
     const skeleton = `import { cn } from '@/lib/utils';
 
 interface SkeletonProps {
   className?: string;
-  lines?: number;
-}
+  lines?: number}
 
 export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
   if (lines === 1) {
@@ -794,8 +738,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
           className
         )}
       />
-    );
-  }
+    )}
 
   return (
     <div className="space-y-2">
@@ -809,13 +752,11 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
         />
       ))}
     </div>
-  );
-}`;
+  )}`;
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'LoadingSpinner.tsx'),
@@ -827,29 +768,26 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
       skeleton
     );
     
-    this.fixes.push('Created loading components (spinner and skeleton)');
-  }
+    this.fixes.push('Created loading components (spinner and skeleton)')}
 
   async createErrorBoundary() {
     const errorBoundary = `import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode}
 
 interface State {
   hasError: boolean;
-  error?: Error;
-}
+  error?: Error}
 
 export default class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
-  };
+  }
 
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -858,8 +796,7 @@ export default class ErrorBoundary extends Component<Props, State> {
     // Send error to monitoring service
     if (typeof window !== 'undefined') {
       // Example: Send to Sentry, LogRocket, etc.
-      console.log('Error reported to monitoring service');
-    }
+      console.log('Error reported to monitoring service')}
   }
 
   public render() {
@@ -894,25 +831,21 @@ export default class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }`;
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'ErrorBoundary.tsx'),
       errorBoundary
     );
     
-    this.fixes.push('Created error boundary component');
-  }
+    this.fixes.push('Created error boundary component')}
 
   async createToastSystem() {
     const toastSystem = `import React, { createContext, useContext, useState, useCallback } from 'react';
@@ -922,14 +855,12 @@ interface Toast {
   type: 'success' | 'error' | 'warning' | 'info';
   title: string;
   message?: string;
-  duration?: number;
-}
+  duration?: number}
 
 interface ToastContextType {
   toasts: Toast[];
   addToast: (toast: Omit<Toast, 'id'>) => void;
-  removeToast: (id: string) => void;
-}
+  removeToast: (id: string) => void}
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
@@ -938,36 +869,30 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id };
+    const newToast = { ...toast, id }
     
     setToasts(prev => [...prev, newToast]);
     
     // Auto remove after duration
     const duration = toast.duration || 5000;
     setTimeout(() => {
-      setToasts(prev => prev.filter(t => t.id !== id));
-    }, duration);
-  }, []);
+      setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, []);
 
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id));
-  }, []);
+    setToasts(prev => prev.filter(t => t.id !== id))}, []);
 
   return (
     <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
       {children}
       <ToastContainer toasts={toasts} removeToast={removeToast} />
     </ToastContext.Provider>
-  );
-}
+  )}
 
 export function useToast() {
   const context = useContext(ToastContext);
   if (context === undefined) {
-    throw new Error('useToast must be used within a ToastProvider');
-  }
-  return context;
-}
+    throw new Error('useToast must be used within a ToastProvider')}
+  return context}
 
 function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast: (id: string) => void }) {
   return (
@@ -976,8 +901,7 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
         <Toast key={toast.id} toast={toast} onRemove={removeToast} />
       ))}
     </div>
-  );
-}
+  )}
 
 function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
   const bgColor = {
@@ -1004,21 +928,18 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
         </button>
       </div>
     </div>
-  );
-}`;
+  )}`;
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true });
-    }
+      fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'Toast.tsx'),
       toastSystem
     );
     
-    this.fixes.push('Created toast notification system');
-  }
+    this.fixes.push('Created toast notification system')}
 
   async optimizeBuild() {
     console.log('🔨 Optimizing build process...');
@@ -1029,8 +950,7 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
     // Create bundle analyzer
     await this.createBundleAnalyzer();
     
-    this.improvements.push('Build optimizations applied');
-  }
+    this.improvements.push('Build optimizations applied')}
 
   async createBuildOptimizer() {
     const buildOptimizer = `import fs from 'fs';
@@ -1046,37 +966,31 @@ const cleanBuild = () => {
   
   dirsToClean.forEach(dir => {
     if (fs.existsSync(dir)) {
-      fs.rmSync(dir, { recursive: true, force: true });
-      console.log(\`✅ Cleaned \${dir}\`);
-    }
-  });
-};
+      fs.rmSync(dir, { recursive: true, force: true })
+      console.log(\`✅ Cleaned \${dir}\`)}
+  })}
 
 // Optimize images
 const optimizeImages = () => {
   console.log('🖼️ Optimizing images...');
   // This would typically use a tool like imagemin
-  console.log('✅ Images optimized');
-};
+  console.log('✅ Images optimized')}
 
 // Generate static assets
 const generateStaticAssets = () => {
   console.log('📄 Generating static assets...');
   try {
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Static assets generated');
-  } catch (error) {
-    console.error('❌ Failed to generate static assets:', error.message);
-  }
-};
+    execSync('npm run build', { stdio: 'inherit' })
+    console.log('✅ Static assets generated')} catch (error) {
+    console.error('❌ Failed to generate static assets:', error.message)}
+}
 
 // Run all optimizations
 const runOptimizations = () => {
   cleanBuild();
   optimizeImages();
   generateStaticAssets();
-  console.log('🎉 Build optimizations completed!');
-};
+  console.log('🎉 Build optimizations completed!')}
 
 runOptimizations();`;
 
@@ -1085,8 +999,7 @@ runOptimizations();`;
       buildOptimizer
     );
     
-    this.fixes.push('Created build optimization script');
-  }
+    this.fixes.push('Created build optimization script')}
 
   async createBundleAnalyzer() {
     const bundleAnalyzer = `import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -1102,17 +1015,14 @@ const withBundleAnalyzer = (nextConfig = {}) => {
             openAnalyzer: false,
             reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',
           })
-        );
-      }
+        )}
       
       if (nextConfig.webpack) {
-        return nextConfig.webpack(config, { dev, isServer });
-      }
+        return nextConfig.webpack(config, { dev, isServer })}
       
-      return config;
-    },
-  };
-};
+      return config},
+  }
+}
 
 module.exports = withBundleAnalyzer;`;
 
@@ -1121,8 +1031,7 @@ module.exports = withBundleAnalyzer;`;
       bundleAnalyzer
     );
     
-    this.fixes.push('Created bundle analyzer configuration');
-  }
+    this.fixes.push('Created bundle analyzer configuration')}
 
   async improveDocumentation() {
     console.log('📚 Improving documentation...');
@@ -1133,8 +1042,7 @@ module.exports = withBundleAnalyzer;`;
     // Create API documentation
     await this.createAPIDocumentation();
     
-    this.improvements.push('Documentation improvements applied');
-  }
+    this.improvements.push('Documentation improvements applied')}
 
   async createREADME() {
     const readme = `# Zion Tech Group
@@ -1275,8 +1183,7 @@ For support, email support@ziontechgroup.com or create an issue in the repositor
       readme
     );
     
-    this.fixes.push('Created comprehensive README');
-  }
+    this.fixes.push('Created comprehensive README')}
 
   async createAPIDocumentation() {
     const apiDocs = `# API Documentation
@@ -1376,16 +1283,14 @@ API requests are rate limited to 100 requests per minute per IP address.
 
     const docsDir = path.join(this.projectRoot, 'docs');
     if (!fs.existsSync(docsDir)) {
-      fs.mkdirSync(docsDir, { recursive: true });
-    }
+      fs.mkdirSync(docsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(docsDir, 'API.md'),
       apiDocs
     );
     
-    this.fixes.push('Created API documentation');
-  }
+    this.fixes.push('Created API documentation')}
 
   generateReport() {
     const report = {
@@ -1396,7 +1301,7 @@ API requests are rate limited to 100 requests per minute per IP address.
         totalImprovements: this.improvements.length,
         totalFixes: this.fixes.length,
       }
-    };
+    }
 
     // Save report
     const reportPath = path.join(this.projectRoot, 'app-improvement-report.json');
@@ -1409,22 +1314,18 @@ API requests are rate limited to 100 requests per minute per IP address.
     
     console.log('\n📋 Improvements Applied:');
     this.improvements.forEach(improvement => {
-      console.log(`✅ ${improvement}`);
-    });
+      console.log(`✅ ${improvement}`)})
     
     console.log('\n🔧 Fixes Applied:');
     this.fixes.forEach(fix => {
-      console.log(`✅ ${fix}`);
-    });
+      console.log(`✅ ${fix}`)})
     
-    console.log(`\n📄 Full report saved to: ${reportPath}`);
-  }
+    console.log(`\n📄 Full report saved to: ${reportPath}`)}
 }
 
 // Run improvements
 async function main() {
   const improver = new AppImprover();
-  await improver.runImprovements();
-}
+  await improver.runImprovements()}
 
 main().catch(console.error);

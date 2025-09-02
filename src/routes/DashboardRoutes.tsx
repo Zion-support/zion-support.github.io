@@ -17,54 +17,52 @@ const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));
 const Analytics = lazy(() => import('../pages/Analytics'));
 const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
-const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
-;
-const DashboardRoutes: React.FC = () => {;
+const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
+const DashboardRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner />}>
       <Routes>
         <Route path='/dashboard' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        } />;
+        } />
         <Route path='/client-dashboard' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-        } />;
+        } />
         <Route path='/talent-dashboard' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
-        } />;
+        } />
         <Route path='/creator-dashboard' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-        } />;
+        } />
         <Route path='/analytics' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-        } />;
+        } />
         <Route path='/project-milestones' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-        } />;
+        } />
         <Route path='/project-details' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
-        } />;
+        } />
         <Route path='/project-room' element={
-          <ProtectedRoute>;
+          <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-        } />;
+        } />
       </Routes>
     </Suspense>
-  );
-};
+  )}
 ;
-export default DashboardRoutes;
+export default DashboardRoutes

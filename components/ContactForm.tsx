@@ -6,8 +6,7 @@ interface FormData {
   email: string;
   company: string;
   service: string;
-  message: string;
-}
+  message: string}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -16,17 +15,16 @@ const ContactForm: React.FC = () => {
     company: '',
     service: '',
     message: ''
-  });
+  })
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))}
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,14 +32,11 @@ const ContactForm: React.FC = () => {
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setIsSubmitted(true)} catch (error) {
+      console.error('Error submitting form:', error)} finally {
+      setIsSubmitting(false)}
+  }
   if (isSubmitted) {
     return (
       <div className='bg-green-50 border border-green-200 rounded-xl p-8 text-center'>
@@ -50,18 +45,17 @@ const ContactForm: React.FC = () => {
           Message Sent!
         </h3>
         <p className='text-green-600'>
-          Thank you for reaching out. We&apos;ll get back to you within 24 hours.
+          Thank you for reaching out. We&aposll get back to you within 24 hours.
         </p>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className='bg-white rounded-xl shadow-xl p-8'>
       <div className='text-center mb-8'>
         <h2 className='text-3xl font-bold text-gray-900 mb-4'>Get In Touch</h2>
         <p className='text-gray-600 max-w-2xl mx-auto'>
-          Ready to transform your business? Let&apos;s discuss how our technology
+          Ready to transform your business? Let&aposs discuss how our technology
           solutions can drive your success.
         </p>
       </div>
@@ -200,7 +194,6 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )}
 
-export default ContactForm;
+export default ContactForm

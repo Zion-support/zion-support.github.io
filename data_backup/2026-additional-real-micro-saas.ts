@@ -110,4 +110,4 @@ export const additionalRealMicroSaas2026 = [
 		launchDate:
   '2025-11-10'
 
-];}
+]}

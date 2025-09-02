@@ -9,44 +9,41 @@ interface SEOEnhancerProps {
    canonicalUrl?: string;
    structuredData?: object;
    noindex?: boolean;
-   nofollow?: boolean;
-}
-;
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',;
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',;
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',;
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',;
-  canonicalUrl = 'https://ziontechgroup.com',;
-  structuredData,;
-  noindex = false,;
-  nofollow = false}) => {;
-  const defaultStructuredData = {;
-    '@context': 'https://schema.org',;
-    '@type': 'Organization',;
-    name: 'Zion Tech Group',;
-    url: 'https://ziontechgroup.com',;
-    logo: 'https://ziontechgroup.com/logo.png',;
-    description,;
-    address: {;
-      '@type': 'PostalAddress',;
-      streetAddress: '364 E Main St STE 1008',;
-      addressLocality: 'Middletown',;
-      addressRegion: 'DE',;
-      postalCode: '19709',;
-      addressCountry: 'US'},;
-    contactPoint: {;
-      '@type': 'ContactPoint',;
-      telephone: '+1-302-464-0950',;
-      contactType: 'customer service',;
-      email: 'kleber@ziontechgroup.com'},;
+   nofollow?: boolean}
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',
+  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  canonicalUrl = 'https://ziontechgroup.com',
+  structuredData,
+  noindex = false,
+  nofollow = false}) => {
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US'},
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'},
     sameAs: [;
-      'https://www.linkedin.com/company/zion-tech-group',;
-      'https://github.com/Zion-Technologies']};
+      'https://www.linkedin.com/company/zion-tech-group',
+      'https://github.com/Zion-Technologies']}
 ;
-  const finalStructuredData = structuredData || defaultStructuredData;
-;
-  return (;
+  const finalStructuredData = structuredData || defaultStructuredData
+  return(
     <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
@@ -90,15 +87,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
       <script
         type='application/ld+json';
         dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
-      />;
+      />
       <meta httpEquiv='x-dns-prefetch-control' content='on' />
       <meta name='format-detection' content='telephone=no' />
       <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
       <meta httpEquiv='X-Frame-Options' content='DENY' />
-      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />;
+      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
     </Head>
-  );
-};
+  )}
 ;
-export default SEOEnhancer;
+export default SEOEnhancer

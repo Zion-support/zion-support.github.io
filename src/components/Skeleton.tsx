@@ -2,8 +2,7 @@ import { cn } from '@/lib/utils';
 
 interface SkeletonProps {
   className?: string;
-  lines?: number;
-}
+  lines?: number}
 
 export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
   if (lines === 1) {
@@ -14,8 +13,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
           className
         )}
       />
-    );
-  }
+    )}
 
   return (
     <div className="space-y-2">
@@ -29,5 +27,4 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
         />
       ))}
     </div>
-  );
-}
+  )}

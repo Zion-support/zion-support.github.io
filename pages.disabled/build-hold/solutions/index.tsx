@@ -4,11 +4,11 @@ import MainLayout from;
   '../../components/layout/MainLayout';Link from;
   'next/link';
 import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from;
-  'lucide-react'';const Solutions: NextPage = () => {;
+  'lucide-react'';const Solutions: NextPage = () => {
   return (
     <MainLayout;
       title='Technology Solutions - Zion Tech Group''      description='Discover comprehensive technology solutions tailored for enterprises, small businesses, startups, and specific industries. Transform your business with Zion Tech Group.''    >'      {/* Hero Section */}
-      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            Technology'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Tailored technology solutions for businesses of all sizes and industries. '            From startups to enterprises, we have the expertise to transform your operations.;
+      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            Technology'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Tailored technology solutions for businesses of all sizes and industries. '            From startups to enterprises, we have the expertise to transform your operations.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Get Your Solution'            </Link>
             <Link href='/services' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              View All Services'            </Link>
@@ -33,7 +33,7 @@ import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRi
         </div>
       </section>
       {/* Business Type Solutions */}
-      <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Solutions by Business Type</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We understand that different business types have unique needs. '              Our solutions are tailored to meet your specific requirements and challenges.;
+      <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Solutions by Business Type</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We understand that different business types have unique needs. '              Our solutions are tailored to meet your specific requirements and challenges.
             </p>
           </div>
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>'            <div className='bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow'>'              <div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6'>'                <Building className='w-8 h-8 text-blue-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Enterprise Solutions</h3>'              <p className='text-gray-600 mb-4'>'                Comprehensive technology solutions for large organizations with complex infrastructure needs.'              </p>
@@ -61,7 +61,7 @@ import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRi
         </div>
       </section>
       {/* Industry Solutions */}
-      <section className='py-20 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Industry-Specific Solutions</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We understand the unique challenges and requirements of different industries. '              Our solutions are tailored to meet industry-specific needs and compliance requirements.;
+      <section className='py-20 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Industry-Specific Solutions</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We understand the unique challenges and requirements of different industries. '              Our solutions are tailored to meet industry-specific needs and compliance requirements.
             </p>
           </div>
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>'            <div className='bg-gray-50 rounded-lg p-6'>'              <div className='flex items-center space-x-3 mb-4'>'                <Heart className='w-6 h-6 text-red-600' />'                <h3 className='text-lg font-semibold text-gray-900'>Healthcare</h3>'              </div>'              <p className='text-gray-600 mb-4'>'                HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.'              </p>
@@ -134,13 +134,12 @@ import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRi
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Find Your Solution?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Let&apos;s discuss your business needs and find the perfect technology solution to drive your success.''          </p>'          <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Get Started Today'            </Link>
+      <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Find Your Solution?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Let&aposs discuss your business needs and find the perfect technology solution to drive your success.''          </p>'          <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Get Started Today'            </Link>
             <Link href='/services' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Explore Our Services'            </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )}
 ;
-export default Solutions;
+export default Solutions

@@ -6,16 +6,13 @@ export interface Service {
    category: 'micro-saas' | 'ai-services' | 'it-services';
    price: { min: number;
    max: number;
-   currency: string;
-};
+   currency: string}
   features: string[];
   technologies: string[];
   deliveryTime: string;
   support: string;
   image?: string;
-  popular?: boolean;
-}
-;
+  popular?: boolean}
 export interface ContactForm {
   name: string;
    email: string;
@@ -24,9 +21,7 @@ export interface ContactForm {
    service: string;
    budget?: string;
    message: string;
-   preferredContact: 'email' | 'phone' | 'both';
-}
-;
+   preferredContact: 'email' | 'phone' | 'both'}
 export interface TeamMember {
   id: string;
    name: string;
@@ -36,9 +31,7 @@ export interface TeamMember {
    skills: string[];
    linkedin?: string;
    github?: string;
-   twitter?: string;
-}
-;
+   twitter?: string}
 export interface Testimonial {
   id: string;
    name: string;
@@ -47,9 +40,7 @@ export interface Testimonial {
    content: string;
    rating: number;
    image?: string;
-   project?: string;
-}
-;
+   project?: string}
 export interface CaseStudy {
   id: string;
    title: string;
@@ -62,9 +53,7 @@ export interface CaseStudy {
    duration: string;
    teamSize: number;
    image: string;
-   featured?: boolean;
-}
-;
+   featured?: boolean}
 export interface BlogPost {
   id: string;
    title: string;
@@ -77,9 +66,7 @@ export interface BlogPost {
    category: string;
    image: string;
    featured?: boolean;
-   readTime: number;
-}
-;
+   readTime: number}
 export interface PricingTier {
   id: string;
    name: string;
@@ -90,23 +77,17 @@ export interface PricingTier {
    limitations?: string[];
    popular?: boolean;
    cta: string;
-   description: string;
-}
-;
+   description: string}
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;
   error?: string;
-  message?: string;
-}
-;
+  message?: string}
 export interface PaginationParams {
   page: number;
    limit: number;
    sort?: string;
-   order?: 'asc' | 'desc';
-}
-;
+   order?: 'asc' | 'desc'}
 export interface PaginatedResponse<T> {
   data: T[];
   pagination: {
@@ -115,10 +96,8 @@ export interface PaginatedResponse<T> {
     total: number;
     pages: number;
     hasNext: boolean;
-    hasPrev: boolean;
-  };
+    hasPrev: boolean}
 }
-;
 export interface SEOProps {
   title?: string;
    description?: string;
@@ -126,48 +105,36 @@ export interface SEOProps {
    ogImage?: string;
    url?: string;
    type?: string;
-   noindex?: boolean;
-}
-;
+   noindex?: boolean}
 export interface PerformanceMetrics {
   fcp?: number;
    // First Contentful Paint lcp?: number;
    // Largest Contentful Paint fid?: number;
    // First Input Delay cls?: number;
    // Cumulative Layout Shift ttfb?: number;
-   // Time to First Byte;
-}
-;
+   // Time to First Byte}
 export interface AccessibilitySettings {
   highContrast: boolean;
    fontSize: number;
    reducedMotion: boolean;
-   screenReader: boolean;
-}
-;
+   screenReader: boolean}
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
    language: string;
    accessibility: AccessibilitySettings;
    notifications: { email: boolean;
    browser: boolean;
-   marketing: boolean;
-};
+   marketing: boolean}
 }
-;
 export interface NavigationItem {
   name: string;
    href: string;
    submenu?: NavigationItem[];
-   external?: boolean;
-}
-;
+   external?: boolean}
 export interface SocialLink {
   platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
    url: string;
-   label: string;
-}
-;
+   label: string}
 export interface CompanyInfo {
   name: string;
    tagline: string;
@@ -176,33 +143,25 @@ export interface CompanyInfo {
    city: string;
    state: string;
    zip: string;
-   country: string;
-};
+   country: string}
 contact: {phone: string;
     email: string;
-    website: string;
-  };
+    website: string}
   social: SocialLink[];
   founded: number;
   employees: string;
-  certifications: string[];
-}
-;
+  certifications: string[]}
 export interface ErrorInfo {
   message: string;
    code?: string;
    details?: any;
    timestamp: string;
    userAgent?: string;
-   url?: string;
-}
-;
+   url?: string}
 export interface LoadingState {
   isLoading: boolean;
    error?: string;
-   progress?: number;
-}
-;
+   progress?: number}
 export interface FormField {
   name: string;
   label: string;
@@ -210,37 +169,30 @@ export interface FormField {
   required: boolean;
    placeholder?: string;
   options?: { value: string;
-   label: string;
-}[];
+   label: string}[];
   validation?: {
     min?: number;
     max?: number;
     pattern?: string;
-    message?: string;
-  };
+    message?: string}
 }
-;
 export interface FormState {
   values: Record<string, any>
    errors: Record<string, string>
    touched: Record<string, boolean>
    isSubmitting: boolean;
-   isValid: boolean;
-}
-;
+   isValid: boolean}
 // Utility types;export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]}
 ;
 // Component prop types;
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
-  'data-testid'?: string;
-}
+  'data-testid'?: string}
 
 export interface ButtonProps extends BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
@@ -248,8 +200,7 @@ export interface ButtonProps extends BaseComponentProps {
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
+  type?: 'button' | 'submit' | 'reset'}
 
 export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
@@ -258,30 +209,23 @@ export interface InputProps extends BaseComponentProps {
   onChange?: (value: string) => void;
   error?: string;
   disabled?: boolean;
-  required?: boolean;
-}
-;
+  required?: boolean}
 // API types;
 export interface ApiError {
   status: number;
    message: string;
    code?: string;
-   details?: any;
-}
-;
+   details?: any}
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
   data?: any;
   params?: Record<string, any>;
-  headers?: Record<string, string>;
-}
-;
+  headers?: Record<string, string>}
 // Environment types;
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SENTRY_DSN?: string;
-}
+  NEXT_PUBLIC_SENTRY_DSN?: string}

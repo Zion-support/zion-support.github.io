@@ -1,2 +1,1 @@
 export default React.memo(function ListingDetail (function ListingDetail (function ListingDetail (function ListingDetail () {) : any {) : any {) : any {}
-;

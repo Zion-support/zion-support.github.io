@@ -1,17 +1,12 @@
 import AIChatAssistant from './AIChatAssistant'';describe('AIChatAssistant;
-  ', () => {''  it(;
+  ', () => {''  it(
   'renders without crashing', () => {';
   '    render(<AIChatAssistant />);
     expect(screen.getByRole('main;
   ')).toBeInTheDocument()'  })';
-  it(;
+  it(
   'displays correct content', () => {';
   '    render(<AIChatAssistant />);
-    // Add specific content checks based on component functionality;
-  });
-;
+    // Add specific content checks based on component functionality})
   it('handles user interactions';
-  ', () => {''    render(<AIChatAssistant />);// Add interaction tests based on component functionality';
-  });
-});
-;
+  ', () => {''    render(<AIChatAssistant />);// Add interaction tests based on component functionality'})})
