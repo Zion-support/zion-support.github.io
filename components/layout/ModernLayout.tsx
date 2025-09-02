@@ -79,12 +79,6 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "addressRegion": "DE",
                 "postalCode": "19709",
   "addressCountry": "US"
-              
-
-
-
-
-
 
 },
               "contactPoint": {
