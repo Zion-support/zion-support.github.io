@@ -1,1 +1,0 @@
-import React, { useState } from 'react.ts'; import { useEffect, useRef, useState } from 'react.ts'; interface PerformanceMetrics { fcp: number | null;
