@@ -4,60 +4,42 @@ import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, S
 const Accessibility: React.FC = () => {
   const features = [
     {
-      title: 'Visual Accessibility',
-      icon: Eye,
-      description: 'Support for users with visual impairments',
-      features: [;
-        'High contrast mode support',
-        'Screen reader compatibility',
-        'Text scaling and zoom functionality',
-        'Alternative text for images',
+      title: 'Visual Accessibility', icon: Eye,
+      description: 'Support for users with visual impairments', features: [;
+        'High contrast mode support', 'Screen reader compatibility',
+        'Text scaling and zoom functionality', 'Alternative text for images',
         'Keyboard navigation support';
-      ]},
-    {
+      ]}, {
       title: 'Motor Accessibility',
-      icon: MousePointer,
-      description: 'Support for users with motor impairments',
+      icon: MousePointer, description: 'Support for users with motor impairments',
       features: [
-        'Keyboard-only navigation',
-        'Voice control compatibility',
-        'Large click targets',
-        'Customizable interaction timeouts',
+        'Keyboard-only navigation', 'Voice control compatibility',
+        'Large click targets', 'Customizable interaction timeouts',
         'Switch control support';
-      ]},
-    {
+      ]}, {
       title: 'Cognitive Accessibility',
-      icon: AccessibilityIcon,
-      description: 'Support for users with cognitive differences',
+      icon: AccessibilityIcon, description: 'Support for users with cognitive differences',
       features: [
-        'Clear and simple language',
-        'Consistent navigation patterns',
-        'Error prevention and recovery',
-        'Progress indicators',
+        'Clear and simple language', 'Consistent navigation patterns',
+        'Error prevention and recovery', 'Progress indicators',
         'Help and support resources';
-      ]},
-    {
+      ]}, {
       title: 'Auditory Accessibility',
-      icon: Ear,
-      description: 'Support for users with hearing impairments',
+      icon: Ear, description: 'Support for users with hearing impairments',
       features: [
-        'Visual indicators for audio content',
-        'Captions and transcripts',
-        'Text-based alternatives',
-        'Visual alerts and notifications',
+        'Visual indicators for audio content', 'Captions and transcripts',
+        'Text-based alternatives', 'Visual alerts and notifications',
         'Sign language support where applicable';
       ]}
   ];
   const standards = [
-    'WCAG 2.1 AA compliance',
-    'Section 508 compliance',
-    'ADA compliance',
-    'EN 301 549 compliance',
+    'WCAG 2.1 AA compliance', 'Section 508 compliance',
+    'ADA compliance', 'EN 301 549 compliance',
     'ISO/IEC 40500 compliance';
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -242,8 +224,7 @@ const Accessibility: React.FC = () => {
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Feedback and Support</h2>
           <p className='text-gray-600 mb-4'>
             We welcome your feedback on the accessibility of our website. If you encounter any;
-            accessibility barriers or have suggestions for improvement, please contact us:
-          </p>
+            accessibility barriers or have suggestions for improvement, please contact us: </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>
               <h3 className='font-semibold text-gray-900 mb-2'>Accessibility Contact</h3>

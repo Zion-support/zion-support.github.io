@@ -11,111 +11,76 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, A
 export default function PricingGuide() {
   const plans = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses getting started',
+      name: 'Starter', price: '$99',
+      period: '/month', description: 'Perfect for small businesses getting started',
       features: [
-        'Up to 5 team members',
-        'Basic AI services',
-        'Email support',
-        'Standard templates',
-        'Basic analytics',
-        '1GB storage'
-      ],
-      popular: false,
+        'Up to 5 team members', 'Basic AI services',
+        'Email support', 'Standard templates',
+        'Basic analytics', '1GB storage'
+      ], popular: false,
       cta: 'Start Free Trial'
-    },
-    {
+    }, {
       name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
+      price: '$299', period: '/month',
+      description: 'Ideal for growing businesses', features: [
         'Up to 25 team members',
-        'Advanced AI services',
-        'Priority support',
-        'Custom templates',
-        'Advanced analytics',
-        '10GB storage',
-        'API access',
+        'Advanced AI services', 'Priority support',
+        'Custom templates', 'Advanced analytics',
+        '10GB storage', 'API access',
         'Custom integrations'
-      ],
-      popular: true,
+      ], popular: true,
       cta: 'Start Free Trial'
-    },
-    {
+    }, {
       name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations',
-      features: [
+      price: 'Custom', period: '',
+      description: 'For large organizations', features: [
         'Unlimited team members',
-        'Full AI suite',
-        '24/7 dedicated support',
-        'White-label options',
-        'Custom analytics',
-        'Unlimited storage',
-        'Full API access',
-        'Custom development',
-        'SLA guarantee'
-      ],
-      popular: false,
+        'Full AI suite', '24/7 dedicated support',
+        'White-label options', 'Custom analytics',
+        'Unlimited storage', 'Full API access',
+        'Custom development', 'SLA guarantee'
+      ], popular: false,
       cta: 'Contact Sales'
     }
   ];
 
   const addOns = [
     {
-      name: 'Additional AI Credits',
-      price: '$0.10',
-      description: 'Per AI-generated content piece',
-      icon: Brain
+      name: 'Additional AI Credits', price: '$0.10',
+      description: 'Per AI-generated content piece', icon: Brain
     },
     {
-      name: 'Extra Storage',
-      price: '$5',
-      description: 'Per 10GB per month',
-      icon: Database
+      name: 'Extra Storage', price: '$5',
+      description: 'Per 10GB per month', icon: Database
     },
     {
-      name: 'Priority Support',
-      price: '$99',
-      description: 'Per month for faster response',
-      icon: Shield
+      name: 'Priority Support', price: '$99',
+      description: 'Per month for faster response', icon: Shield
     },
     {
-      name: 'Custom Development',
-      price: '$150',
-      description: 'Per hour for custom features',
-      icon: Network
+      name: 'Custom Development', price: '$150',
+      description: 'Per hour for custom features', icon: Network
     }
   ];
 
   const faqs = [
     {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
+      question: 'Can I change my plan at any time?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
     },
     {
-      question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
-    },
-    {
+      question: 'Is there a free trial available?', answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
+    }, {
       question: 'What payment methods do you accept?',
       answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.'
-    },
-    {
+    }, {
       question: 'Do you offer discounts for annual subscriptions?',
       answer: 'Yes, we offer 20% off when you pay annually. This applies to all plans except Enterprise.'
     },
     {
-      question: 'What happens if I exceed my plan limits?',
-      answer: 'We\'ll notify you when you\'re approaching your limits. You can upgrade your plan or purchase additional credits as needed.'
+      question: 'What happens if I exceed my plan limits?', answer: 'We\'ll notify you when you\'re approaching your limits. You can upgrade your plan or purchase additional credits as needed.'
     },
     {
-      question: 'Is there a setup fee?',
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.'
+      question: 'Is there a setup fee?', answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.'
     }
   ];
 
@@ -129,7 +94,7 @@ export default function PricingGuide() {
       <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
         <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32'>
             <div className='text-center'>
               <Badge className='mb-4 bg-white/20 text-white border-white/30'>
                 Transparent Pricing
@@ -140,7 +105,7 @@ export default function PricingGuide() {
               <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
                 Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
                 <Button size='lg' className='bg-white text-blue-600 hover:bg-blue-50'>
                   Start Free Trial
                   <ArrowRight className='ml-2 h-5 w-5' />
@@ -165,7 +130,7 @@ export default function PricingGuide() {
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
               {plans.map((plan, index) => (
                 <Card key={index} className={`p-8 relative ${plan.popular ? 'ring-2 ring-blue-500 shadow-xl scale-105' : ''}`}>
                   {plan.popular && (
@@ -202,7 +167,7 @@ export default function PricingGuide() {
 
         {/* Add-ons Section */}
         <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
                 Add-on Services
@@ -214,7 +179,7 @@ export default function PricingGuide() {
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {addOns.map((addon, index) => (
-                <Card key={index} className='p-6 text-center hover:shadow-lg transition-shadow duration-300'>
+                <Card key={index} className='p-6 text-center hover: shadow-lg transition-shadow duration-300'>
                   <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 mb-4'>
                     <addon.icon className='h-6 w-6 text-blue-600' />
                   </div>
@@ -229,7 +194,7 @@ export default function PricingGuide() {
 
         {/* FAQ Section */}
         <section className='py-20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
                 Frequently Asked Questions
@@ -252,7 +217,7 @@ export default function PricingGuide() {
 
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
               Ready to Get Started?
             </h2>

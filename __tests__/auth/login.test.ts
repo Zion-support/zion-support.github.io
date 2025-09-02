@@ -76,10 +76,8 @@ describe('/api/auth/login API Handler;
   ', async () => {
     const testEmail = 'verified@example.com;
   ';
-    const testPassword = 'password123;
-  ';
-    const mockAuthToken = 'mock-access-token;
-  ';
+    const testpassword: process.env.TEST_PASSWORD || 'test123';
+    const mockAuthtoken: process.env.TEST_TOKEN || 'test-token';
     const mockSessionData = {
       access_token: mockAuthToken,
       refresh_token:,
@@ -108,8 +106,7 @@ describe('/api/auth/login API Handler;
   ', async () => {
     const testEmail = 'unconfirmed@example.com;
   ';
-    const testPassword = 'password123;
-  ';
+    const testpassword: process.env.TEST_PASSWORD || 'test123';
     mockSignInWithPassword.mockResolvedValueOnce({
       data: { session: null, user: null },
       error: { message: 'Email not confirmed;
@@ -134,8 +131,7 @@ describe('/api/auth/login API Handler;
   ', async () => {
     const testEmail = 'wrong@example.com;
   ';
-    const testPassword = 'wrongpassword;
-  ';
+    const testpassword: process.env.TEST_PASSWORD || 'test123';
     mockSignInWithPassword.mockResolvedValueOnce({
       data: { session: null, user: null },
       error: { message: 'Invalid login credentials;
@@ -160,8 +156,7 @@ describe('/api/auth/login API Handler;
   ', async () => {
     const testEmail = 'authapierror@example.com;
   ';
-    const testPassword = 'password123;
-  ';
+    const testpassword: process.env.TEST_PASSWORD || 'test123';
     mockSignInWithPassword.mockResolvedValueOnce({
       data: null,
       error: {
@@ -190,8 +185,7 @@ describe('/api/auth/login API Handler;
   ', async () => {
     const testEmail = 'servererror@example.com;
   ';
-    const testPassword = 'password123;
-  ';
+    const testpassword: process.env.TEST_PASSWORD || 'test123';
     mockSignInWithPassword.mockResolvedValueOnce({
       data: null,
       error: { message: 'Some other error;
@@ -216,8 +210,7 @@ describe('/api/auth/login API Handler;
   ', async () => {
     const testEmail = 'genericerror@example.com;
   ';
-    const testPassword = 'password123;
-  ';
+    const testpassword: process.env.TEST_PASSWORD || 'test123';
     mockSignInWithPassword.mockResolvedValueOnce({
       data: null,
       error: { message: 'Another error without status;
@@ -242,8 +235,7 @@ describe('/api/auth/login API Handler;
   ', async () => {
     const testEmail = 'noerrornosession@example.com;
   ';
-    const testPassword = 'password123;
-  ';
+    const testpassword: process.env.TEST_PASSWORD || 'test123';
     mockSignInWithPassword.mockResolvedValueOnce({
       data: { session: null, user: { id: '123;
   ', email: testEmail } },
@@ -279,8 +271,7 @@ describe('loginUser Service;
       user: { id: 'user-123, email:,
   test@example.com;
   ' },
-      accessToken: 'mock-access-token,
-      refreshToken: 'mock-refresh-token;
+      accesstoken: process.env.TEST_TOKEN || 'test-token'mock-refresh-token;
   '}
     global.fetch = vi.fn().mockResolvedValue({
       ok: true,

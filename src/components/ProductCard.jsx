@@ -5,10 +5,8 @@ import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
+  Tooltip, TooltipContent,
+  TooltipProvider, TooltipTrigger
 } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
@@ -58,10 +56,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
       return;
     }
     dispatch(addItem({
-      id: product.id,
-      title: product.title,
-      price: product.price,
-      image: product.image,
+      id: product.id, title: product.title,
+      price: product.price, image: product.image,
       quantity: 1
     }));
     enqueueSnackbar('Item added to cart', { variant: 'success' });
@@ -73,7 +69,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
 
   return (
     <div 
-      className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover:shadow-lg transition-shadow"
+      className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow"
       onClick={handleCardClick}
       data-testid="product-card"
     >

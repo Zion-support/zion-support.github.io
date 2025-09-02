@@ -2,70 +2,49 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
-  BookOpen, Code, FileText, Video, Download, 
-  Search, ArrowRight, ExternalLink, Star, Users
+  BookOpen, Code, FileText, Video, Download, Search, ArrowRight, ExternalLink, Star, Users
 } from 'lucide-react';
 
 export default function Documentation() {
   const docCategories = [
     {
-      title: "Getting Started",
-      description: "Quick start guides and setup instructions",
-      icon: BookOpen,
-      articles: 12,
+      title: "Getting Started", description: "Quick start guides and setup instructions",
+      icon: BookOpen, articles: 12,
       color: "from-blue-500 to-cyan-500"
-    },
-    {
+    }, {
       title: "API Reference",
-      description: "Complete API documentation and examples",
-      icon: Code,
-      articles: 45,
-      color: "from-green-500 to-emerald-500"
+      description: "Complete API documentation and examples", icon: Code,
+      articles: 45, color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Guides & Tutorials",
-      description: "Step-by-step tutorials and best practices",
-      icon: FileText,
-      articles: 28,
+      title: "Guides & Tutorials", description: "Step-by-step tutorials and best practices",
+      icon: FileText, articles: 28,
       color: "from-purple-500 to-pink-500"
-    },
-    {
+    }, {
       title: "Video Tutorials",
-      description: "Visual learning resources and demos",
-      icon: Video,
-      articles: 15,
-      color: "from-orange-500 to-red-500"
+      description: "Visual learning resources and demos", icon: Video,
+      articles: 15, color: "from-orange-500 to-red-500"
     }
   ];
 
   const popularDocs = [
     {
-      title: "Quick Start Guide",
-      description: "Get up and running with Zion Tech Group services in minutes",
-      category: "Getting Started",
-      readTime: "5 min read",
+      title: "Quick Start Guide", description: "Get up and running with Zion Tech Group services in minutes",
+      category: "Getting Started", readTime: "5 min read",
       views: 1250
-    },
-    {
+    }, {
       title: "API Authentication",
-      description: "Learn how to authenticate and secure your API requests",
-      category: "API Reference",
-      readTime: "8 min read",
-      views: 980
+      description: "Learn how to authenticate and secure your API requests", category: "API Reference",
+      readTime: "8 min read", views: 980
     },
     {
-      title: "AI Model Integration",
-      description: "Integrate our AI models into your applications",
-      category: "Guides & Tutorials",
-      readTime: "12 min read",
+      title: "AI Model Integration", description: "Integrate our AI models into your applications",
+      category: "Guides & Tutorials", readTime: "12 min read",
       views: 756
-    },
-    {
+    }, {
       title: "Quantum Computing Basics",
-      description: "Introduction to quantum computing concepts and applications",
-      category: "Guides & Tutorials",
-      readTime: "15 min read",
-      views: 634
+      description: "Introduction to quantum computing concepts and applications", category: "Guides & Tutorials",
+      readTime: "15 min read", views: 634
     }
   ];
 
@@ -102,7 +81,7 @@ export default function Documentation() {
                   <input
                     type="text"
                     placeholder="Search documentation..."
-                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -214,7 +193,7 @@ export default function Documentation() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -285,10 +264,10 @@ export default function Documentation() {
                 Need Help?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Can't find what you're looking for? Our support team is here to help 
+                Can&apos;t find what you&apos;re looking for? Our support team is here to help 
                 you get the most out of our platform.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/help"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
@@ -308,6 +287,6 @@ export default function Documentation() {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

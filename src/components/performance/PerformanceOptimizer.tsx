@@ -27,10 +27,8 @@ export const PerformanceOptimizer: React.FC = () => {
         const networkLatency = navigation.responseEnd - navigation.requestStart;
 
         setMetrics({
-          loadTime,
-          renderTime,
-          memoryUsage,
-          networkLatency
+          loadTime, renderTime,
+          memoryUsage, networkLatency
         });
 
         // Check if performance is optimized
@@ -56,8 +54,7 @@ export const PerformanceOptimizer: React.FC = () => {
     if (typeof window !== 'undefined') {
       // Preload critical resources
       const criticalResources = [
-        '/fonts/inter.woff2',
-        '/images/hero-bg.jpg'
+        '/fonts/inter.woff2', '/images/hero-bg.jpg'
       ];
 
       criticalResources.forEach(resource => {
@@ -99,19 +96,19 @@ export const PerformanceOptimizer: React.FC = () => {
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-600">Render Time:</span>
+          <span className="text-gray-600">Render Time: </span>
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>
             {metrics.renderTime.toFixed(0)}ms
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-600">Memory:</span>
+          <span className="text-gray-600">Memory: </span>
           <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>
             {metrics.memoryUsage.toFixed(1)}MB
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-600">Network:</span>
+          <span className="text-gray-600">Network: </span>
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>
             {metrics.networkLatency.toFixed(0)}ms
           </span>
@@ -121,7 +118,7 @@ export const PerformanceOptimizer: React.FC = () => {
       {!isOptimized && (
         <button
           onClick={optimizePerformance}
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors"
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"
         >
           Optimize Performance
         </button>

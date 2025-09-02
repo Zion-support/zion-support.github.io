@@ -15,28 +15,19 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'Zion Tech Group - AI-Powered Solutions & Digital Transformation',
-  description = 'Leading provider of AI-powered solutions, cloud services, cybersecurity, and digital transformation for businesses worldwide. 500+ projects completed with 99.9% uptime guarantee.',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url,
-  type = 'website',
+  title = 'Zion Tech Group - AI-Powered Solutions & Digital Transformation', description = 'Leading provider of AI-powered solutions, cloud services, cybersecurity, and digital transformation for businesses worldwide. 500+ projects completed with 99.9% uptime guarantee.', image = 'https: //ziontechgroup.com/og-image.jpg',
+  url, type = 'website',
   keywords = [
-    'AI solutions',
-    'cloud services',
-    'cybersecurity',
-    'digital transformation',
-    'machine learning',
-    'enterprise software',
-    'IT consulting',
-    'Zion Tech Group'
-  ],
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
+    'AI solutions', 'cloud services',
+    'cybersecurity', 'digital transformation',
+    'machine learning', 'enterprise software',
+    'IT consulting', 'Zion Tech Group'
+  ], author = 'Zion Tech Group',
+  publishedTime, modifiedTime,
   noindex = false
 }: SEOProps) {
   const router = useRouter();
-  const canonicalUrl = url || `https://ziontechgroup.com${router.asPath}`;
+  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;
 
   return (
     <Head>
@@ -48,7 +39,7 @@ export function SEO({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
+      <meta property="og: type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -66,7 +57,7 @@ export function SEO({
       <meta property="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
-      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index,follow'} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
@@ -77,32 +68,25 @@ export function SEO({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Zion Tech Group',
-            url: 'https://ziontechgroup.com',
-            logo: 'https://ziontechgroup.com/logo.png',
-            description: description,
-            address: {
+            '@type': 'Organization', name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com', logo: 'https://ziontechgroup.com/logo.png',
+            description: description, address: {
               '@type': 'PostalAddress',
               addressCountry: 'US'
-            },
-            contactPoint: {
+            }, contactPoint: {
               '@type': 'ContactPoint',
-              telephone: '+1-555-123-4567',
-              contactType: 'customer service',
+              telephone: '+1-555-123-4567', contactType: 'customer service',
               email: 'info@ziontechgroup.com'
-            },
-            sameAs: [
+            }, sameAs: [
               'https://linkedin.com/company/zion-tech-group',
-              'https://twitter.com/ziontechgroup',
-              'https://facebook.com/ziontechgroup'
+              'https: //twitter.com/ziontechgroup', 'https: //facebook.com/ziontechgroup'
             ]
           })
         }}
       />
       
       {/* Article specific meta tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {publishedTime && <meta property="article: published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {author && <meta property="article:author" content={author} />}
     </Head>

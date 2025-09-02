@@ -24,39 +24,41 @@ class PerformanceMonitor {
   async monitor() {
     try {
       console.log('🔍 Collecting performance metrics...');
-      // Collect system metrics;
+      // Collect system metrics
       await this.collectSystemMetrics();
-      // Collect application metrics;
+      // Collect application metrics
       await this.collectApplicationMetrics();
-      // Collect build metrics;
+      // Collect build metrics
       await this.collectBuildMetrics();
-      // Save metrics;
+      // Save metrics
       await this.saveMetrics();
-      // Display summary;
+      // Display summary
       this.displaySummary();
-      console.log('✅ Performance monitoring completed')} catch (error) {
-      console.error('❌ Error during performance monitoring:', error.message)}
+      console.log('✅ Performance monitoring completed');
+    } catch (error) {
+      console.error('❌ Error during performance monitoring:', error.message);
+    }
   }
   async collectSystemMetrics() {
     try {
       console.log('💻 Collecting system metrics...');
-      // Memory usage;
+      // Memory usage
       const memoryInfo = process.memoryUsage();
       this.metrics.system.memory = {
-        rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB;
-        heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB;
-        heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB;
-        external: Math.round(memoryInfo.external / 1024 / 1024) // MB}
-;
-      // CPU usage;
+        rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB
+        heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB
+        heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB
+        external: Math.round(memoryInfo.external / 1024 / 1024) // MB
+      };
+      // CPU usage
       const startUsage = process.cpuUsage();
-      await this.sleep(100) // Wait 100ms;
+      await this.sleep(100); // Wait 100ms
       const endUsage = process.cpuUsage(startUsage);
       this.metrics.system.cpu = {
-        user: Math.round(endUsage.user / 1000), // ms;
-        system: Math.round(endUsage.system / 1000) // ms}
-;
-      // Process info;
+        user: Math.round(endUsage.user / 1000), // ms
+        system: Math.round(endUsage.system / 1000) // ms
+      };
+      // Process info
       this.metrics.system.process = {
         pid: process.pid,
         uptime: Math.round(process.uptime()),
@@ -69,25 +71,24 @@ class PerformanceMonitor {
   }
   async collectApplicationMetrics() {
     try {
-      console.log('📱 Collecting application metrics...;
-  ');
-      // Check file sizes;
-      const distPath = path.join(this.projectRoot,dist');
+      console.log('📱 Collecting application metrics...');
+      // Check file sizes
+      const distPath = path.join(this.projectRoot, 'dist');
       if (fs.existsSync(distPath)) {
         const distSize = this.getDirectorySize(distPath);
-        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024) // MB}
-      // Check node_modules size;
-      const nodeModulesPath = path.join(this.projectRoot,node_modules;
-  ');
+        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB
+      }
+      // Check node_modules size
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024) // MB}
-      // Check source code size;
+      // Check source code size
       const srcPath = path.join(this.projectRoot,src');
       if (fs.existsSync(srcPath)) {
         const srcSize = this.getDirectorySize(srcPath);
         this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB}
-      // Count files;
+      // Count files
       this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, [;
   '.ts',.tsx;
@@ -108,7 +109,7 @@ class PerformanceMonitor {
     try {
       console.log(
   '🔨 Collecting build metrics...');
-      // Check if build artifacts exist;
+      // Check if build artifacts exist
       const buildFiles = [
   'dist/index.html',dist/css;
   ',dist/js',dist/assets;

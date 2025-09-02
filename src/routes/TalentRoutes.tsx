@@ -13,7 +13,7 @@ export default function TalentRoutes() {
     <Routes>
       <Route path="directory" element={<TalentDirectory />} />
       <Route path="list" element={<TalentsPage />} />
-      <Route path="profile/:id" element={<TalentProfilePage />} />
+      <Route path="profile/: id" element={<TalentProfilePage />} />
       <Route path="saved" element={<SavedTalentsPage />} />
       <Route path="create" element={<CreateTalentProfile />} />
       <Route path="profile" element={<ProfilePage />} />

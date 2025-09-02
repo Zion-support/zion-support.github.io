@@ -16,68 +16,48 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechCorp',
-      content: 'Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.',
+      name: 'Sarah Johnson', role: 'CEO, TechCorp', content: 'Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.',
       rating: 5
-    },
-    {
+    }, {
       name: 'Michael Chen',
       role: 'CTO, InnovateLabs',
-      content: 'Outstanding service and cutting-edge technology. They delivered our project on time and within budget.',
-      rating: 5
+      content: 'Outstanding service and cutting-edge technology. They delivered our project on time and within budget.', rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Founder, StartupXYZ',
-      content: 'The team at Zion Tech Group is exceptional. Their expertise in cloud infrastructure saved us months of development.',
+      name: 'Emily Rodriguez', role: 'Founder, StartupXYZ', content: 'The team at Zion Tech Group is exceptional. Their expertise in cloud infrastructure saved us months of development.',
       rating: 5
     }
   ];
 
   const features = [
     {
-      icon: Zap,
-      title: 'Lightning Fast',
+      icon: Zap, title: 'Lightning Fast',
       description: 'Optimized performance with cutting-edge technology'
-    },
-    {
+    }, {
       icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
+      title: 'Secure & Reliable', description: 'Enterprise-grade security with 99.9% uptime guarantee'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
+      icon: Globe, title: 'Global Reach',
       description: 'Serving clients worldwide with 24/7 support'
-    },
-    {
+    }, {
       icon: TrendingUp,
-      title: 'Scalable Solutions',
-      description: 'Grow with confidence using our scalable architecture'
+      title: 'Scalable Solutions', description: 'Grow with confidence using our scalable architecture'
     }
   ];
   const services = [
     {
-      title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions and automation tools',
-      icon: Brain,
-      href: '/services#ai',
+      title: 'AI Services', description: 'Cutting-edge artificial intelligence solutions and automation tools',
+      icon: Brain, href: '/services#ai',
       features: ['Content Creation', 'Email Automation', 'Customer Support', 'Business Intelligence']
-    },
-    {
+    }, {
       title: 'IT Services',
-      description: 'Enterprise-grade infrastructure and development services',
-      icon: Network,
-      href: '/services#cloud',
-      features: ['DevOps Automation', 'Cloud Migration', 'Security Assessment', 'API Management']
-    },
-    {
+      description: 'Enterprise-grade infrastructure and development services', icon: Network,
+      href: '/services#cloud', features: ['DevOps Automation', 'Cloud Migration', 'Security Assessment', 'API Management']
+    }, {
       title: 'Micro SaaS',
-      description: 'Specialized software solutions for business challenges',
-      icon: Cloud,
-      href: '/services#saas',
-      features: ['Project Management', 'Analytics Dashboard', 'HR Management', 'Financial Tracking']
+      description: 'Specialized software solutions for business challenges', icon: Cloud,
+      href: '/services#saas', features: ['Project Management', 'Analytics Dashboard', 'HR Management', 'Financial Tracking']
     }
   ];
   return (
@@ -87,36 +67,25 @@ export default function Home() {
         description="Transform your business with Zion Tech Group's cutting-edge AI services, enterprise IT solutions, and innovative Micro SaaS platforms. 500+ projects completed, 99.9% uptime guarantee."
         keywords={[
           'AI services',
-          'IT solutions', 
-          'Micro SaaS',
-          'cloud computing',
-          'cybersecurity',
-          'business automation',
-          'technology consulting',
+          'IT solutions', 'Micro SaaS',
+          'cloud computing', 'cybersecurity',
+          'business automation', 'technology consulting',
           'enterprise software'
         ]}
       />
         <script type='application/ld+json'>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading provider of AI services, IT solutions, and Micro SaaS platforms",
+            "@context": "https://schema.org", "@type": "Organization",
+            "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png", "description": "Leading provider of AI services, IT solutions, and Micro SaaS platforms",
             "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
-              "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
+              "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown", "addressRegion": "DE",
+              "postalCode": "19709", "addressCountry": "US"
             },
             "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
+              "@type": "ContactPoint", "telephone": "+1-302-464-0950",
+              "contactType": "customer service", "email": "kleber@ziontechgroup.com"
             },
             "sameAs": [
               "https://ziontechgroup.com"
@@ -126,7 +95,7 @@ export default function Home() {
       <main className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
         <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32'>
             <div className='text-center'>
               <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6'>
                 Welcome to Zion Tech Group
@@ -134,7 +103,7 @@ export default function Home() {
               <p className='text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8'>
                 Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>
                 <Link href='/services'>
                   <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>
                     Explore Our Services
@@ -157,7 +126,7 @@ export default function Home() {
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
               {stats.map((stat, index) => (
                 <div key={index} className='text-center'>
-                  <div className='text-3xl sm:text-4xl font-bold text-blue-600 mb-2'>{stat.number}</div>
+                  <div className='text-3xl sm: text-4xl font-bold text-blue-600 mb-2'>{stat.number}</div>
                   <div className='text-sm sm:text-base text-gray-600'>{stat.label}</div>
                 </div>
               ))}
@@ -166,7 +135,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className='py-20 sm:py-32'>
+        <section className='py-20 sm: py-32'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
@@ -178,7 +147,7 @@ export default function Home() {
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
               {services.map((service, index) => (
-                <Card key={index} className='p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
+                <Card key={index} className='p-8 hover: shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
                   <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6'>
                     <service.icon className='w-8 h-8 text-white' />
                   </div>
@@ -196,7 +165,7 @@ export default function Home() {
                     </div>
                   </div>
                   <Link href={service.href}>
-                    <Button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'>
+                    <Button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white'>
                       Learn More
                       <ArrowRight className='w-4 h-4 ml-2' />
                     </Button>
@@ -209,7 +178,7 @@ export default function Home() {
 
         {/* Features Section */}
         <section className='py-20 bg-gray-50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
                 Why Choose Zion Tech Group?
@@ -218,10 +187,10 @@ export default function Home() {
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to excellence.
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {features.map((feature, index) => (
                 <div key={index} className='text-center group'>
-                  <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
+                  <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover: scale-110 transition-transform duration-300'>
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
                   <h3 className='text-xl font-bold text-gray-900 mb-4'>{feature.title}</h3>
@@ -234,18 +203,18 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
                 What Our Clients Say
               </h2>
               <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
-                Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+                Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about working with us.
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className='p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300'>
+                <Card key={index} className='p-8 bg-white border-0 shadow-lg hover: shadow-xl transition-all duration-300'>
                   <div className='flex items-center mb-4'>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />
@@ -264,7 +233,7 @@ export default function Home() {
 
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h2>
@@ -283,7 +252,7 @@ export default function Home() {
             </div>
             <div className='mt-4 text-center text-blue-100'>
               <p className='text-sm'>364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className='text-sm mt-1'>Visit us at <a href='https://ziontechgroup.com' className='underline hover:text-white' target='_blank' rel='noreferrer'>ziontechgroup.com</a></p>
+              <p className='text-sm mt-1'>Visit us at <a href='https: //ziontechgroup.com' className='underline hover:text-white' target='_blank' rel='noreferrer'>ziontechgroup.com</a></p>
             </div>
             <div className='mt-8'>
               <Link href='/contact'>
@@ -296,6 +265,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </>
+</>
   );
 }

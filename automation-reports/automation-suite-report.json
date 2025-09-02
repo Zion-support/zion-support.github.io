@@ -1,16 +1,16 @@
 {
-  "timestamp": "2025-09-02T19:39:51.737Z",
+  "timestamp": "2025-09-02T21:31:20.322Z",
   "summary": {
     "total": 8,
-    "successful": 4,
-    "failed": 4
+    "successful": 5,
+    "failed": 3
   },
   "results": [
     {
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_31_05_019Z-debug-0.log\n"
     },
     {
       "command": "npm run type-check",
@@ -22,13 +22,13 @@
       "command": "npm run test",
       "description": "Test Suite",
       "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
+      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot find module 'msw/node'\nRequire stack:\n- /workspace/jest.config.cjs\n- /workspace/node_modules/jest-util/build/requireOrImportModule.js\n- /workspace/node_modules/jest-util/build/index.js\n- /workspace/node_modules/@jest/core/build/FailedTestsInteractiveMode.js\n- /workspace/node_modules/@jest/core/build/plugins/FailedTestsInteractive.js\n- /workspace/node_modules/@jest/core/build/watch.js\n- /workspace/node_modules/@jest/core/build/cli/index.js\n- /workspace/node_modules/@jest/core/build/index.js\n- /workspace/node_modules/jest-cli/build/run.js\n- /workspace/node_modules/jest-cli/build/index.js\n- /workspace/node_modules/jest-cli/bin/jest.js\n- /workspace/node_modules/jest/bin/jest.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at Function.resolve (node:internal/modules/helpers:145:19)\n    at Object.<anonymous> (/workspace/jest.config.cjs:44:27)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n"
     },
     {
       "command": "npm run build",
       "description": "Build Application",
-      "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Invalid next.config.js options detected: \n ⚠     Unrecognized key(s) in object: 'newNextLinkBehavior' at \"experimental\"\n ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config\n ⚠ The \"experimental.esmExternals\" option has been modified. experimental.esmExternals is not recommended to be modified as it may disrupt module resolution. It should be removed from your next.config.js.\nFailed to compile.\n\n./components/ui/Button.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/components/ui/Button.tsx\u001b[0m:14:1]\n \u001b[2m11\u001b[0m |   ({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {\n \u001b[2m12\u001b[0m |     return (\n \u001b[2m13\u001b[0m |       <button\n \u001b[2m14\u001b[0m |         className={cn(;\n    : \u001b[35;1m                      ^\u001b[0m\n \u001b[2m15\u001b[0m |           'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',;\n \u001b[2m16\u001b[0m |           {;\n \u001b[2m17\u001b[0m |             'bg-primary text-primary-foreground hover:bg-primary/90': variant === 'default',;\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ui/Button.tsx\n./pages/index.tsx\n\n./components/ui/Card.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/components/ui/Card.tsx\u001b[0m:10:1]\n \u001b[2m 7\u001b[0m | >(({ className, ...props }, ref) => (\n \u001b[2m 8\u001b[0m |   <div\n \u001b[2m 9\u001b[0m |     ref={ref}\n \u001b[2m10\u001b[0m |     className={cn(;\n    : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m11\u001b[0m |       'rounded-lg border bg-card text-card-foreground shadow-sm',;\n \u001b[2m12\u001b[0m |       className;\n \u001b[2m13\u001b[0m |     )}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ui/Card.tsx\n./pages/index.tsx\n\n./pages/NotFound.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token `;`. Expected identifier or string\n    ,-[\u001b[36;1;4m/workspace/pages/NotFound.tsx\u001b[0m:10:1]\n \u001b[2m 7\u001b[0m |   ArrowLeft,\n \u001b[2m 8\u001b[0m |   Phone,\n \u001b[2m 9\u001b[0m |   Mail,\n \u001b[2m10\u001b[0m |   FileText,;\n    : \u001b[35;1m           ^\u001b[0m\n \u001b[2m11\u001b[0m |   Briefcase,;\n \u001b[2m12\u001b[0m |   Users,;\n \u001b[2m13\u001b[0m |   BookOpen,;\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/NotFound.tsx\n\n./pages/enhanced-home.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token `;`. Expected identifier, string literal, numeric literal or [ for the computed key\n    ,-[\u001b[36;1;4m/workspace/pages/enhanced-home.tsx\u001b[0m:40:1]\n \u001b[2m37\u001b[0m |       description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',\n \u001b[2m38\u001b[0m |       color: 'from-blue-500 to-cyan-500'\n \u001b[2m39\u001b[0m |     },\n \u001b[2m40\u001b[0m |     {;\n    : \u001b[35;1m     ^\u001b[0m\n \u001b[2m41\u001b[0m |       icon: Shield,;\n \u001b[2m42\u001b[0m |       title: 'Cybersecurity',;\n \u001b[2m43\u001b[0m |       description: 'Advanced security measures to protect your digital assets and ensure compliance.',;\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/enhanced-home.tsx\n\n./pages/index.p.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got ';'\n    ,-[\u001b[36;1;4m/workspace/pages/index.p.tsx\u001b[0m:26:1]\n \u001b[2m23\u001b[0m |           dangerouslySetInnerHTML={{\n \u001b[2m24\u001b[0m |             __html: JSON.stringify({\n \u001b[2m25\u001b[0m |               '@context': 'https://schema.org', '@type': 'Organization',\n \u001b[2m26\u001b[0m |               'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',;\n    : \u001b[35;1m                                                                            ^\u001b[0m\n \u001b[2m27\u001b[0m |               'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', 'address': {;\n \u001b[2m28\u001b[0m |                 '@type': 'PostalAddress',;\n \u001b[2m29\u001b[0m |                 'addressCountry': 'US';\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.p.tsx\n\n\n> Build failed because of webpack errors\n"
+      "success": true,
+      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 4.0s\n   Collecting page data ...\n   Generating static pages (0/31) ...\n   Generating static pages (7/31) \r\n   Generating static pages (15/31) \r\n   Generating static pages (23/31) \r\n ✓ Generating static pages (31/31)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     4.73 kB        92.7 kB\n├   /_app                                     0 B          88 kB\n├ ○ /404                                    180 B        88.2 kB\n├ ○ /about (337 ms)                       2.74 kB        93.1 kB\n├ ○ /ai-services (336 ms)                 8.35 kB        96.4 kB\n├ ○ /blog (336 ms)                        3.14 kB        93.5 kB\n├ ○ /careers (342 ms)                     4.62 kB         101 kB\n├ ○ /contact (335 ms)                      2.7 kB        90.7 kB\n├ ○ /cookies (335 ms)                     3.39 kB        91.4 kB\n├ ○ /help (335 ms)                        3.72 kB          94 kB\n├ ○ /index.p (335 ms)                     1.45 kB        89.5 kB\n├ ○ /it-services                          7.96 kB          96 kB\n├ ○ /micro-saas                           8.75 kB        96.8 kB\n├ ○ /NotFound                             35.5 kB         124 kB\n├ ○ /partners                             3.76 kB         100 kB\n├ ○ /pricing                              3.75 kB        94.1 kB\n├ ○ /pricing-guide                        3.75 kB         102 kB\n├ ○ /privacy                              3.59 kB        93.9 kB\n├ ○ /services                             13.8 kB         104 kB\n├ ○ /services/ai-development              2.95 kB        93.3 kB\n├ ○ /services/cloud-services              2.84 kB        93.2 kB\n├ ○ /services/web-development             3.01 kB        93.3 kB\n├ ○ /sitemap                              3.08 kB        91.1 kB\n├ ○ /solutions                            4.65 kB         101 kB\n├ ○ /solutions/ai-content-creation        4.18 kB         100 kB\n├ ○ /solutions/customer-support           3.41 kB        99.7 kB\n├ ○ /solutions/email-automation           4.06 kB         100 kB\n├ ○ /solutions/event-management           3.29 kB        99.5 kB\n├ ○ /solutions/project-management         3.41 kB        99.7 kB\n├ ○ /solutions/workflow-automation        3.34 kB        99.6 kB\n└ ○ /terms                                3.98 kB        94.3 kB\n+ First Load JS shared by all             90.6 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           9.92 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"
     },
     {
       "name": "Error Detection",
@@ -44,16 +44,16 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/LinkMonitor.jsx",
-            "issue": "Potential N+1 query problem"
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Potential infinite re-render"
           },
           {
             "file": "/workspace/src/components/PerformanceOptimizer.tsx",
             "issue": "Potential N+1 query problem"
           },
           {
-            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.js.jsx",
-            "issue": "Potential infinite re-render"
+            "file": "/workspace/src/components/accessibility/AccessibilityEnhancer.tsx",
+            "issue": "Potential N+1 query problem"
           },
           {
             "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.jsx",
@@ -77,11 +77,19 @@
       "result": {
         "issues": [
           {
+            "file": "/workspace/src/components/SEO.tsx",
+            "issue": "Potential XSS vulnerability"
+          },
+          {
+            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "issue": "Potential XSS vulnerability"
+          },
+          {
             "file": "/workspace/src/utils/helpers.js",
             "issue": "Use of eval() detected"
           }
         ],
-        "count": 1
+        "count": 3
       }
     },
     {
@@ -90,15 +98,7 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/AICodeGenerator.js.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
             "file": "/workspace/src/components/AICodeGenerator.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
             "issue": "Console.log in production code"
           },
           {
@@ -106,31 +106,27 @@
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
             "file": "/workspace/src/components/MachineLearningDashboard.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MobileNavigation.jsx",
+            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/ProductCard.jsx",
-            "issue": "TODO/FIXME comment found"
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "issue": "Console.log in production code"
           },
           {
             "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
             "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/pages/Search.tsx",
-            "issue": "Console.log in production code"
           }
         ],
-        "count": 10
+        "count": 7
       }
     }
   ]

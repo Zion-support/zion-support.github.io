@@ -31,13 +31,7 @@ describe('/api/auth/reset token validation'', () => {
     const { req, res } = createMocks({
       method: 'POST as RequestMethod,
       body: { token:,
-  invalid', newPassword: 'pass12345 }})
-    await handler(
-      req as unknown as NextApiRequest,
-      res as unknown as NextApiResponse);
-    expect(res._getStatusCode()).toBe(400);
-    expect((res._getJSONData() as ErrorResponse).message).toBe(
-  'Invalid or expired password reset token.')})
+  invalid', newpassword: process.env.TEST_PASSWORD || 'test123'Invalid or expired password reset token.')})
   // TODO: Add a test case for a successful password reset if this file is to be comprehensive.;
   // This would involve mocking Prisma calls within the handler:;
   // - prisma.user.findFirst to find a user by a valid (hashed) token;

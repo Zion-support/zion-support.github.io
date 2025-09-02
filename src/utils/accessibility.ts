@@ -19,7 +19,7 @@ export const announceToScreenReader = (message: string) => {
 
 export const trapFocus = (element: HTMLElement) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
   );
   
   const firstElement = focusableElements[0] as HTMLElement;
@@ -47,7 +47,7 @@ export const trapFocus = (element: HTMLElement) => {
 
 export const getContrastRatio = (color1: string, color2: string): number => {
   // Simplified contrast ratio calculation
-  // In a real implementation, you'd want to use a proper color library
+  // In a real implementation, you&apos;d want to use a proper color library'
   return 4.5; // Placeholder value
 }
 

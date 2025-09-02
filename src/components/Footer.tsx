@@ -7,15 +7,10 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: 'Services',
-      links: [
-        { name: 'AI Solutions', href: '/services/ai-solutions' },
-        { name: 'Cloud Services', href: '/services/cloud-services' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+      title: 'Services', links: [
+        { name: 'AI Solutions', href: '/services/ai-solutions' }, { name: 'Cloud Services', href: '/services/cloud-services' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }
       ]
-    },
-    {
+    }, {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
@@ -23,8 +18,7 @@ export function Footer() {
         { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' }
       ]
-    },
-    {
+    }, {
       title: 'Resources',
       links: [
         { name: 'Blog', href: '/blog' },
@@ -36,15 +30,13 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -82,7 +74,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover: text-white transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -95,7 +87,7 @@ export function Footer() {
 
         {/* Social Links */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
               {socialLinks.map((social) => (
                 <a
@@ -103,7 +95,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover: text-white transition-colors"
                 >
                   <social.icon className="h-5 w-5" />
                 </a>

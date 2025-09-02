@@ -113,9 +113,7 @@ describe(
         access_token:,
   token;
   ',
-        refresh_token: 'ref,
-        expires_in: 3600,
-        token_type: 'bearer;
+        refresh_token: process.env.TEST_TOKEN || 'test-token'bearer;
   ',
         expires_at: Date.now() + 3600000}
 ;
@@ -153,8 +151,7 @@ describe(
         user: { id: 'supaUserId, email:,
   test@example.com;
   ' } as SupabaseUser,
-        access_token: 'token,
-        refresh_token: 'ref;
+        access_token: process.env.TEST_TOKEN || 'test-token'ref;
   ',
         expires_in: 3600,
         token_type: 'bearer;
@@ -262,9 +259,7 @@ describe(
         access_token:,
   token;
   ',
-        refresh_token: 'ref,
-        expires_in: 3600,
-        token_type: 'bearer;
+        refresh_token: process.env.TEST_TOKEN || 'test-token'bearer;
   ',
         expires_at: Date.now() + 3600000}
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
@@ -296,8 +291,7 @@ describe(
           email:,
   unknown@example.com;
   '} as SupabaseUser,
-        access_token: 'token,
-        refresh_token: 'ref;
+        access_token: process.env.TEST_TOKEN || 'test-token'ref;
   ',
         expires_in: 3600,
         token_type: 'bearer;

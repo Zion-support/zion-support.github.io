@@ -33,13 +33,10 @@ class ErrorBoundary extends Component<Props, State> {
     fetch('/api/analytics/error', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'},
-      body: JSON.stringify({
+        'Content-Type': 'application/json'}, body: JSON.stringify({
         error: {
-          message: error.message, stack: error.stack,
-          name: error.name}, errorInfo: {
-          componentStack: errorInfo.componentStack},
-        url: window.location.href, timestamp: Date.now(), userAgent: navigator.userAgent})}).catch(console.error)}
+          message: error.message, stack: error.stack, name: error.name}, errorInfo: {
+          componentStack: errorInfo.componentStack}, url: window.location.href, timestamp: Date.now(), userAgent: navigator.userAgent})}).catch(console.error)}
 ;
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
@@ -71,7 +68,7 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className='text-gray-600 text-center mb-6'>
-              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.'
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''
             </p>
             <div className='flex flex-col sm: flex-row gap-3'>
               <button

@@ -17,8 +17,7 @@ import ResetPassword from '../../src/pages/ResetPassword' // Adjust path as nece
   ', () => ({
 //   ...jest.requireActual('react-router-dom;
   '),
-//   useParams: () => ({ uid: 'testuid, token: 'testtoken;
-  ' }),
+//   useParams: () => ({ uid: 'testuid, token: process.env.TEST_TOKEN || 'test-token' }),
 //   useNavigate: () => mockNavigate,
 // }));
 // jest.mock(,

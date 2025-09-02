@@ -4,10 +4,8 @@ import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'l
 import { Button } from '@/components/ui/button';
 
 const mobileMenuItems = [
-  { name: 'Services', icon: <Briefcase className='w-5 h-5'/>, href: '/services' },
-  { name: 'Talent', icon: <Users className='w-5 h-5'/>, href: '/talent' },
-  { name: 'Equipment', icon: <HardDrive className='w-5 h-5'/>, href: '/equipment' },
-  { name: 'Innovation', icon: <Lightbulb className='w-5 h-5'/>, href: '/category/innovation' },
+  { name: 'Services', icon: <Briefcase className='w-5 h-5'/>, href: '/services' }, { name: 'Talent', icon: <Users className='w-5 h-5'/>, href: '/talent' },
+  { name: 'Equipment', icon: <HardDrive className='w-5 h-5'/>, href: '/equipment' }, { name: 'Innovation', icon: <Lightbulb className='w-5 h-5'/>, href: '/category/innovation' },
 ];
 
 export function MobileNavigation() {
@@ -18,7 +16,7 @@ export function MobileNavigation() {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className="lg: hidden">
       <Button
         variant="ghost"
         size="sm"
@@ -36,7 +34,7 @@ export function MobileNavigation() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.icon}

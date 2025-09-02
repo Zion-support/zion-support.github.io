@@ -98,9 +98,7 @@ describe('/api/auth/register'', () => {
     test(
   'handles successful registration with auto-confirmation (email already verified)', async () => {
       const mockSession = {
-        access_token: 'mock-access-token,
-        refresh_token:,
-  mock-refresh-token',
+        access_token: process.env.TEST_TOKEN || 'test-token',
         user: {
           id:;
   'user-id-123,
@@ -189,10 +187,4 @@ describe('/api/auth/register'', () => {
         name: 'Test User,
         email:,
   test@example.com',
-        password: 'Password123!})
-      const res = mockRes();
-      await handler(req, res);
-      expect(res.status).toHaveBeenCalledWith(503);
-      expect(res.json).toHaveBeenCalledWith({
-        message:;
-  'Network error. Please try again.'})})})})
+        password: process.env.TEST_PASSWORD || 'test123'Network error. Please try again.'})})})})

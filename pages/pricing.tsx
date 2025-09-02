@@ -6,87 +6,56 @@ import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-rea
 const Pricing: NextPage = () => {
   const pricingPlans = [
     {
-      name: "Starter",
-      description: "Perfect for small businesses and startups",
-      price: "$2,500",
-      period: "per month",
-      icon: Zap,
-      color: "blue",
-      features: [
+      name: "Starter", description: "Perfect for small businesses and startups",
+      price: "$2, 500",
+      period: "per month", icon: Zap,
+      color: "blue", features: [
         "Basic website development",
-        "Up to 5 pages",
-        "Mobile responsive design",
-        "Basic SEO optimization",
-        "Email support",
+        "Up to 5 pages", "Mobile responsive design",
+        "Basic SEO optimization", "Email support",
         "3 months maintenance included"
-      ],
-      popular: false
+      ], popular: false
     },
     {
-      name: "Professional",
-      description: "Ideal for growing businesses",
-      price: "$5,000",
-      period: "per month",
-      icon: Users,
-      color: "purple",
-      features: [
+      name: "Professional", description: "Ideal for growing businesses",
+      price: "$5, 000",
+      period: "per month", icon: Users,
+      color: "purple", features: [
         "Custom web application development",
-        "Up to 15 pages",
-        "Advanced features and integrations",
-        "Advanced SEO optimization",
-        "Priority email support",
-        "6 months maintenance included",
-        "Performance optimization",
+        "Up to 15 pages", "Advanced features and integrations",
+        "Advanced SEO optimization", "Priority email support",
+        "6 months maintenance included", "Performance optimization",
         "Analytics setup"
-      ],
-      popular: true
+      ], popular: true
     },
     {
-      name: "Enterprise",
-      description: "For large organizations and complex projects",
-      price: "Custom",
-      period: "quote",
-      icon: Building,
-      color: "green",
+      name: "Enterprise", description: "For large organizations and complex projects",
+      price: "Custom", period: "quote",
+      icon: Building, color: "green",
       features: [
-        "Full-stack enterprise solutions",
-        "Unlimited pages and features",
-        "Custom integrations and APIs",
-        "Advanced security features",
-        "Dedicated project manager",
-        "24/7 phone and email support",
-        "12 months maintenance included",
-        "Custom training and documentation",
+        "Full-stack enterprise solutions", "Unlimited pages and features",
+        "Custom integrations and APIs", "Advanced security features",
+        "Dedicated project manager", "24/7 phone and email support",
+        "12 months maintenance included", "Custom training and documentation",
         "SLA guarantees"
-      ],
-      popular: false
+      ], popular: false
     }
   ];
 
   const servicePricing = [
     {
-      service: "AI Development",
-      description: "Custom AI solutions and machine learning models",
-      startingPrice: "$10,000",
+      service: "AI Development", description: "Custom AI solutions and machine learning models",
+      startingPrice: "$10, 000",
       features: ["Custom AI models", "Data analysis", "Integration support", "Training and documentation"]
-    },
-    {
+    }, {
       service: "Cloud Services",
-      description: "Cloud migration and infrastructure management",
-      startingPrice: "$5,000",
-      features: ["Cloud migration", "Infrastructure setup", "Monitoring and maintenance", "Security implementation"]
-    },
-    {
+      description: "Cloud migration and infrastructure management", startingPrice: "$5,000", features: ["Cloud migration", "Infrastructure setup", "Monitoring and maintenance", "Security implementation"]
+    }, {
       service: "Mobile Development",
-      description: "Native and cross-platform mobile applications",
-      startingPrice: "$8,000",
-      features: ["iOS and Android apps", "Cross-platform solutions", "App store deployment", "Ongoing updates"]
-    },
-    {
+      description: "Native and cross-platform mobile applications", startingPrice: "$8,000", features: ["iOS and Android apps", "Cross-platform solutions", "App store deployment", "Ongoing updates"]
+    }, {
       service: "Blockchain Solutions",
-      description: "Blockchain development and smart contracts",
-      startingPrice: "$15,000",
-      features: ["Smart contract development", "Blockchain integration", "Security auditing", "Deployment support"]
+      description: "Blockchain development and smart contracts", startingPrice: "$15,000", features: ["Smart contract development", "Blockchain integration", "Security auditing", "Deployment support"]
     }
   ];
 
@@ -98,7 +67,7 @@ const Pricing: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Simple
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>
           </h1>
@@ -154,7 +123,7 @@ const Pricing: NextPage = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
@@ -171,7 +140,7 @@ const Pricing: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Service-Specific Pricing</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8 max-w-4xl mx-auto">
             {servicePricing.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.service}</h3>
@@ -189,7 +158,7 @@ const Pricing: NextPage = () => {
                 </ul>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
+                  className="text-blue-600 hover: text-blue-700 font-semibold flex items-center"
                 >
                   Get Custom Quote
                   <ArrowRight className="w-4 h-4 ml-1" />
@@ -204,7 +173,7 @@ const Pricing: NextPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
                 <Crown className="w-8 h-8 text-blue-600" />
@@ -251,7 +220,7 @@ const Pricing: NextPage = () => {
             </div>
 
             <div className="bg-white rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in maintenance?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s included in maintenance?</h3>'
               <p className="text-gray-600">
                 Maintenance includes bug fixes, security updates, performance optimization, and minor feature enhancements as specified in your plan.
               </p>
@@ -260,7 +229,7 @@ const Pricing: NextPage = () => {
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>
               <p className="text-gray-600">
-                Absolutely! You can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition.
+                Absolutely! You can upgrade or downgrade your plan at any time. We&apos;ll work with you to ensure a smooth transition.'
               </p>
             </div>
 
@@ -281,7 +250,7 @@ const Pricing: NextPage = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Contact us today to discuss your project requirements and get a customized quote that fits your budget.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Free Quote
             </Link>

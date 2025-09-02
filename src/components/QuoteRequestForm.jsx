@@ -5,67 +5,64 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea.jsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
 import {}
-  Mail,
-  Phone,
-  Building,';
-  Send,'';
-  CheckCircle,''';
+  Mail, Phone,
+  Building, ';'
+  Send, '';
+  CheckCircle, ''';'
   AlertCircle} from 'lucide-react';
 export const QuoteRequestForm = () => {}
   const [formData, setFormData] = useState({}
-';
+';'
 '';
-''';
-    firstName: '',''';
-    lastName: '',''';
-    email: '',''';
-    phone: '',''';
-    company: '',''';
-    serviceType: '',''';
-    projectDescription: '',''';
-    timeline: '',''';
-    budget: '',''';
-    urgency: 'medium',''';
-    contactMethod: 'email',
-    agreeToTerms: false,
+''';'
+    firstName: '', ''';'
+    lastName: '', ''';'
+    email: '', ''';'
+    phone: '', ''';'
+    company: '', ''';'
+    serviceType: '', ''';'
+    projectDescription: '', ''';'
+    timeline: '', ''';'
+    budget: '', ''';'
+    urgency: 'medium', ''';'
+    contactMethod: 'email', agreeToTerms: false,
     agreeToMarketing: false})
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
-  const [errors, setErrors] = useState ({}) ';
+  const [errors, setErrors] = useState ({}) ';'
   const serviceTypes = [''{ value: 'ai-services', label: 'AI & Machine Learning Services' },'{ value: 'it-solutions', label: 'IT Infrastructure & Solutions' },'{ value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },'{ value: 'equipment', label: 'Equipment & Hardware' },'{ value: 'consulting', label: 'IT Consulting & Strategy' },'{ value: 'custom-development', label: 'Custom Software Development' },'{ value: 'other', label: 'Other Services' }
-  ]';
-  const timelineOptions = [''{ value: 'asap', label: 'ASAP (Within 1 week)},'{ value: '1-2-weeks', label: '1-2 weeks' },'{ value: '1-month', label: '1 month' },'{ value: '2-3-months', label: '2-3 months' },'{ value: '3-6-months', label: '3-6 months' },'{ value: '6-months-plus', label: '6+ months' }
-  ]';
-  const budgetRanges = [''{ value: 'under-5k', label: 'Under $5,000' },'{ value: '5k-10k', label: '$5,000 - $10,000' },'{ value: '10k-25k', label: '$10,000 - $25,000' },'{ value: '25k-50k', label: '$25,000 - $50,000' },'{ value: '50k-100k', label: '$50,000 - $100,000' },'{ value: '100k-plus', label: '$100,000+' },'{ value: 'to-be-discussed', label: 'To be discussed' }
-  ]';
+  ]';'
+  const timelineOptions = [''{ value: 'asap', label: 'ASAP (Within 1 week)}, '{ value: '1-2-weeks', label: '1-2 weeks' }, '{ value: '1-month', label: '1 month' }, '{ value: '2-3-months', label: '2-3 months' }, '{ value: '3-6-months', label: '3-6 months' }, '{ value: '6-months-plus', label: '6+ months' }
+  ]';'
+  const budgetRanges = [''{ value: 'under-5k', label: 'Under $5,000' }, '{ value: '5k-10k', label: '$5, 000 - $10,000' }, '{ value: '10k-25k', label: '$10, 000 - $25,000' }, '{ value: '25k-50k', label: '$25, 000 - $50,000' }, '{ value: '50k-100k', label: '$50, 000 - $100,000' }, '{ value: '100k-plus', label: '$100, 000+' },'{ value: 'to-be-discussed', label: 'To be discussed' }
+  ]';'
   const urgencyLevels = [''
-    { value: 'low', label: 'Low - Planning phase' },'{ value: 'medium', label: 'Medium - Ready to start soon' },'{ value: 'high', label: 'High - Need to start immediately' },'{ value: 'critical', label: 'Critical - Emergency situation' }
+    { value: 'low', label: 'Low - Planning phase' },'{ value: 'medium', label: 'Medium - Ready to start soon' },'{ value: 'high', label: 'High - Need to start immediately' },'{ value: 'critical', label: 'Critical - Emergency situation' }'
   ];
   const handleChange = (field, value) => {}
     setFormData(prev => ({}
-      ...prev,
-      [field]: value}));
+      ...prev, [field]: value}));
     // Clear error when user starts typing;
     if(errors[field]) {}
       setErrors(prev => ({}
-        ...prev,';
+        ...prev, ';'
         [field]: ''}))}
   }
 ;
   const validateForm = () => {}
     const newErrors = {}
 ;
-    if (!formData.firstName.trim())';
+    if (!formData.firstName.trim())';'
       newErrors.firstName = 'First name is required';
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.company.trim())';
+    if (!formData.company.trim())';'
       newErrors.company = 'Company name is required';
-    if (!formData.serviceType)';
+    if (!formData.serviceType)';'
       newErrors.serviceType = 'Service type is required';
-    if (!formData.projectDescription.trim())';
+    if (!formData.projectDescription.trim())';'
       newErrors.projectDescription = 'Project description is required';
-    if (!formData.agreeToTerms)';
+    if (!formData.agreeToTerms)';'
       newErrors.agreeToTerms = 'You must agree to the terms and conditions';
     setErrors(newErrors) ;
     return Object.keys(newErrors) .length === 0}
@@ -81,26 +78,25 @@ export const QuoteRequestForm = () => {}
       setIsSubmitted(true);
       // Reset form;
       setFormData({}
-';
+';'
 '';
-''';
-        firstName: '',''';
-        lastName: '',''';
-        email: '',''';
-        phone: '',''';
-        company: '',''';
-        serviceType: '',''';
-        projectDescription: '',''';
-        timeline: '',''';
-        budget: '',''';
-        urgency: 'medium',''';
-        contactMethod: 'email',
-        agreeToTerms: false,
+''';'
+        firstName: '', ''';'
+        lastName: '', ''';'
+        email: '', ''';'
+        phone: '', ''';'
+        company: '', ''';'
+        serviceType: '', ''';'
+        projectDescription: '', ''';'
+        timeline: '', ''';'
+        budget: '', ''';'
+        urgency: 'medium', ''';'
+        contactMethod: 'email', agreeToTerms: false,
         agreeToMarketing: false})} catch (error) {}
-';
+';'
 '';
-''';
-      // console.error('Error submitting form:', error)} finally {}
+''';'
+      // console.error('Error submitting form: ', error)} finally {}
       setIsSubmitting(false)}
   }
 ;
@@ -110,7 +106,7 @@ export const QuoteRequestForm = () => {}
         <CardContent className='p-8 text-center'>''''
           <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4' />''''
           <h2 className='text-2xl font-bold text-gray-900 mb-2'>
-            Quote Request Submitted!'''
+            Quote Request Submitted!''''
           </h2>''''
           <p className='text-gray-600 mb-6'>
             Thank you for your interest.Our team will review your request and
@@ -120,64 +116,64 @@ export const QuoteRequestForm = () => {}
           </Button>
         </CardContent>
       </Card>) }
-''';
+''';'
   return (''''
     <Card className='max-w-4xl mx-auto'>''''
       <CardHeader className='text-center'>''''
         <CardTitle className='text-3xl font-bold'>Request a Quote</CardTitle>
-        <CardDescription>';
-          Tell us about your project and we'll provide you with a customized;
+        <CardDescription>';'
+          Tell us about your project and we&apos;ll provide you with a customized;'
           quote
-        </CardDescription>'''
+        </CardDescription>''''
       </CardHeader>''''
       <CardContent className='p-6'>''''
-        <form onSubmit={handleSubmit} className='space-y-6'>'''{/* Personal Information */}''''
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'''
+        <form onSubmit={handleSubmit} className='space-y-6'>'''{/* Personal Information */}'''''
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 First Name *
               </label>
               <Input;
                 value={formData.firstName}'''';
-                onChange={e => handleChange('firstName', e.target.value)}''''';
+                onChange={e => handleChange('firstName', e.target.value)}''''';'
                 placeholder='John''';
                 className={errors.firstName ? 'border-red-500' : ''}
-              />'''{errors.firstName && (''''
+              />'''{errors.firstName && ('''''
                 <p className='text-red-500 text-sm mt-1'>{errors.firstName}</p>
               )}
             </div>
-'''
+''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Last Name *
               </label>
               <Input;
                 value={formData.lastName}'''';
-                onChange={e => handleChange('lastName', e.target.value)}''''';
+                onChange={e => handleChange('lastName', e.target.value)}''''';'
                 placeholder='Doe''';
                 className={errors.lastName ? 'border-red-500' : ''}
-              />'''{errors.lastName && (''''
+              />'''{errors.lastName && ('''''
                 <p className='text-red-500 text-sm mt-1'>{errors.lastName}</p>
               )}
             </div>
           </div>
-'''{/* Contact Information */}''''
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'''
+'''{/* Contact Information */}'''''
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Email *
-              </label>'''
+              </label>''''
               <Input'''';
                 type='email''';
                 value={formData.email}'''';
-                onChange={e => handleChange('email', e.target.value)}''''';
+                onChange={e => handleChange('email', e.target.value)}''''';'
                 placeholder='john@company.com''';
                 className={errors.email ? 'border-red-500' : ''}
-              />'''{errors.email && (''''
+              />'''{errors.email && ('''''
                 <p className='text-red-500 text-sm mt-1'>{errors.email}</p>
               )}
             </div>
-'''
+''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Phone
@@ -189,32 +185,32 @@ export const QuoteRequestForm = () => {}
               />
             </div>
           </div>
-          {/* Company Information */}'''
+          {/* Company Information */}''''
           <div>''''
             <label className='block text-sm font-medium text-gray-700 mb-2'>
               Company Name *
             </label>
             <Input;
               value={formData.company}'''';
-              onChange={e => handleChange('company', e.target.value)}''''';
+              onChange={e => handleChange('company', e.target.value)}''''';'
               placeholder='Your Company Inc.''';
               className={errors.company ? 'border-red-500' : ''}
-            />'''{errors.company && (''''
+            />'''{errors.company && ('''''
               <p className='text-red-500 text-sm mt-1'>{errors.company}</p>
             )}
           </div>
-'''{/* Project Details */}''''
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'''
+'''{/* Project Details */}'''''
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Service Type *
               </label>
               <Select;
-                value={formData.serviceType}';
+                value={formData.serviceType}';'
                 onValueChange={value => handleChange('serviceType', value)}
-              >'
+              >''
                 <SelectTrigger'';
-                  className={errors.serviceType ? 'border-red-500' : ''}'''>''''
+                  className={errors.serviceType ? 'border-red-500' : ''}'''>'''''
                   <SelectValue placeholder='Select a service' />
                 </SelectTrigger>
                 <SelectContent>
@@ -223,21 +219,21 @@ export const QuoteRequestForm = () => {}
                       {service.label}
                     </SelectItem>) ) }
                 </SelectContent>
-              </Select>'''{errors.serviceType && (''''
+              </Select>'''{errors.serviceType && ('''''
                 <p className='text-red-500 text-sm mt-1'>
                   {errors.serviceType}
                 </p>
               )}
             </div>
-'''
+''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Timeline
               </label>
               <Select;
-                value={formData.timeline}';
+                value={formData.timeline}';'
                 onValueChange={value => handleChange('timeline', value)}
-              >'''
+              >''''
                 <SelectTrigger>''''
                   <SelectValue placeholder='Select timeline' />
                 </SelectTrigger>
@@ -249,17 +245,17 @@ export const QuoteRequestForm = () => {}
                 </SelectContent>
               </Select>
             </div>
-          </div>''';
+          </div>''';'
 ''''
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'''
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Budget Range
               </label>
               <Select;
-                value={formData.budget}';
+                value={formData.budget}';'
                 onValueChange={value => handleChange('budget', value)}
-              >'''
+              >''''
                 <SelectTrigger>''''
                   <SelectValue placeholder='Select budget range' />
                 </SelectTrigger>
@@ -271,13 +267,13 @@ export const QuoteRequestForm = () => {}
                 </SelectContent>
               </Select>
             </div>
-'''
+''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Urgency Level
               </label>
               <Select;
-                value={formData.urgency}';
+                value={formData.urgency}';'
                 onValueChange={value => handleChange('urgency', value)}
               >
                 <SelectTrigger>
@@ -292,7 +288,7 @@ export const QuoteRequestForm = () => {}
               </Select>
             </div>
           </div>
-          {/* Project Description */}'''
+          {/* Project Description */}''''
           <div>''''
             <label className='block text-sm font-medium text-gray-700 mb-2'>
               Project Description *
@@ -301,27 +297,27 @@ export const QuoteRequestForm = () => {}
               value={formData.projectDescription}'''';
               onChange={e => handleChange('projectDescription', e.target.value)}'''';
               placeholder='Please describe your project requirements, goals, and any specific needs...''';
-              rows={6}';
+              rows={6}';'
               className={errors.projectDescription ? 'border-red-500' : ''}
-            />'''{errors.projectDescription && (''''
+            />'''{errors.projectDescription && ('''''
               <p className='text-red-500 text-sm mt-1'>
                 {errors.projectDescription}
               </p>
             )}
           </div>
-'''{/* Preferences */}''''
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'''
+'''{/* Preferences */}'''''
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
             <div>''''
               <label className='block text-sm font-medium text-gray-700 mb-2'>
                 Preferred Contact Method
               </label>
               <Select;
-                value={formData.contactMethod}';
+                value={formData.contactMethod}';'
                 onValueChange={value => handleChange('contactMethod', value)}
               >
                 <SelectTrigger>
                   <SelectValue />
-                </SelectTrigger>'''
+                </SelectTrigger>''''
                 <SelectContent>''''
                   <SelectItem value='email'>Email</SelectItem>''''
                   <SelectItem value='phone'>Phone</SelectItem>''''
@@ -330,55 +326,55 @@ export const QuoteRequestForm = () => {}
               </Select>
             </div>
           </div>
-'''{/* Checkboxes */}''''
+'''{/* Checkboxes */}'''''
           <div className='space-y-4'>''''
-            <div className='flex items-center space-x-2'>'''
+            <div className='flex items-center space-x-2'>''''
               <Checkbox'''';
                 id='terms''';
                 checked={formData.agreeToTerms}
-                onCheckedChange={checked =>';
-                  handleChange('agreeToTerms', checked)}'''/>''''
+                onCheckedChange={checked =>';'
+                  handleChange('agreeToTerms', checked)}'''/>'''''
               <label htmlFor='terms' className='text-sm text-gray-700'>'''';
                 I agree to the{' '}''''
-                <a href='/terms' className='text-blue-600 hover:underline'>';
+                <a href='/terms' className='text-blue-600 hover: underline'>';'
                   Terms and Conditions''
                 </a>{' '}
                 *
               </label>
-            </div>'''{errors.agreeToTerms && (''''
+            </div>'''{errors.agreeToTerms && ('''''
               <p className='text-red-500 text-sm'>{errors.agreeToTerms}</p>
-            )}''';
+            )}''';'
 ''''
-            <div className='flex items-center space-x-2'>'''
+            <div className='flex items-center space-x-2'>''''
               <Checkbox'''';
                 id='marketing''';
                 checked={formData.agreeToMarketing}
-                onCheckedChange={checked =>';
-                  handleChange('agreeToMarketing', checked)}'''/>''''
+                onCheckedChange={checked =>';'
+                  handleChange('agreeToMarketing', checked)}'''/>'''''
               <label htmlFor='marketing' className='text-sm text-gray-700'>
                 I agree to receive marketing communications from Zion Tech Group
               </label>
             </div>
           </div>
-'''{/* Submit Button */}''''
-          <div className='text-center'>'''
+'''{/* Submit Button */}'''''
+          <div className='text-center'>''''
             <Button''''
-              type='submit'''';
+              type='submit'''';'
               disabled={isSubmitting}'''';
-              className='px-8 py-3 text-lg '>{isSubmitting ? ('''
+              className='px-8 py-3 text-lg '>{isSubmitting ? (''''
                 <>''''
                   <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
                   Submitting...
-                </>
-              ) : ('''
+</>
+              ) : (''''
                 <>''''
                   <Send className='w-5 h-5 mr-2' />
                   Submit Quote Request
-                </>) }
+</>) }
             </Button>
           </div>
         </form>
       </CardContent>
-    </Card>) }'';"
-}'';';
+    </Card>) }'';""
+}'';';'
 ''''''

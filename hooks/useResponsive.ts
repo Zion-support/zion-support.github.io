@@ -6,7 +6,8 @@ interface ResponsiveState {
   orientation: 'landscape' | 'portrait';
   isMobile: boolean;
   isTablet: boolean;
-  isDesktop: boolean}
+  isDesktop: boolean;
+}
 
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
@@ -15,8 +16,8 @@ const useResponsive = (): ResponsiveState => {
     orientation: 'landscape',
     isMobile: false,
     isTablet: false,
-    isDesktop: true
-  })
+    isDesktop: true,
+  });
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -29,14 +30,17 @@ const useResponsive = (): ResponsiveState => {
         orientation: width > height ? 'landscape' : 'portrait',
         isMobile: width < 768,
         isTablet: width >= 768 && width < 1024,
-        isDesktop: width >= 1024
-      })}
+        isDesktop: width >= 1024,
+      });
+    };
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
 
-    return () => window.removeEventListener('resize', updateDimensions)}, []);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
-  return state}
+  return state;
+};
 
 export default useResponsive;

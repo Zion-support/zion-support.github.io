@@ -6,82 +6,51 @@ import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 const Blog: NextPage = () => {
   const blogPosts = [
     {
-      id: 1,
-      title: "The Future of AI in Business: Trends and Predictions for 2024",
+      id: 1, title: "The Future of AI in Business: Trends and Predictions for 2024",
       excerpt: "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",
-      author: "Kleber Santos",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      category: "AI & Machine Learning",
-      image: "/api/placeholder/600/400",
-      slug: "future-of-ai-in-business-2024"
+      author: "Kleber Santos", date: "2024-01-15",
+      readTime: "5 min read", category: "AI & Machine Learning",
+      image: "/api/placeholder/600/400", slug: "future-of-ai-in-business-2024"
     },
     {
-      id: 2,
-      title: "Cloud Migration Best Practices: A Complete Guide",
-      excerpt: "Learn the essential steps and strategies for successfully migrating your business to the cloud.",
-      author: "Zion Tech Team",
-      date: "2024-01-10",
-      readTime: "8 min read",
-      category: "Cloud Services",
-      image: "/api/placeholder/600/400",
+      id: 2, title: "Cloud Migration Best Practices: A Complete Guide",
+      excerpt: "Learn the essential steps and strategies for successfully migrating your business to the cloud.", author: "Zion Tech Team",
+      date: "2024-01-10", readTime: "8 min read",
+      category: "Cloud Services", image: "/api/placeholder/600/400",
       slug: "cloud-migration-best-practices"
-    },
-    {
+    }, {
       id: 3,
-      title: "Building Scalable Web Applications with Modern Technologies",
-      excerpt: "Discover the latest technologies and frameworks for creating robust, scalable web applications.",
-      author: "Development Team",
-      date: "2024-01-05",
-      readTime: "6 min read",
-      category: "Web Development",
-      image: "/api/placeholder/600/400",
+      title: "Building Scalable Web Applications with Modern Technologies", excerpt: "Discover the latest technologies and frameworks for creating robust, scalable web applications.", author: "Development Team",
+      date: "2024-01-05", readTime: "6 min read",
+      category: "Web Development", image: "/api/placeholder/600/400",
       slug: "scalable-web-applications-modern-tech"
-    },
-    {
+    }, {
       id: 4,
-      title: "Cybersecurity in 2024: Protecting Your Digital Assets",
-      excerpt: "Essential cybersecurity strategies and tools to protect your business from evolving threats.",
-      author: "Security Team",
-      date: "2024-01-01",
-      readTime: "7 min read",
-      category: "Cybersecurity",
-      image: "/api/placeholder/600/400",
-      slug: "cybersecurity-2024-protecting-digital-assets"
+      title: "Cybersecurity in 2024: Protecting Your Digital Assets", excerpt: "Essential cybersecurity strategies and tools to protect your business from evolving threats.",
+      author: "Security Team", date: "2024-01-01",
+      readTime: "7 min read", category: "Cybersecurity",
+      image: "/api/placeholder/600/400", slug: "cybersecurity-2024-protecting-digital-assets"
     },
     {
-      id: 5,
-      title: "Mobile App Development: Native vs Cross-Platform",
-      excerpt: "Compare native and cross-platform development approaches to choose the best solution for your mobile app.",
-      author: "Mobile Team",
-      date: "2023-12-28",
-      readTime: "9 min read",
-      category: "Mobile Development",
-      image: "/api/placeholder/600/400",
+      id: 5, title: "Mobile App Development: Native vs Cross-Platform",
+      excerpt: "Compare native and cross-platform development approaches to choose the best solution for your mobile app.", author: "Mobile Team",
+      date: "2023-12-28", readTime: "9 min read",
+      category: "Mobile Development", image: "/api/placeholder/600/400",
       slug: "mobile-app-development-native-vs-cross-platform"
-    },
-    {
+    }, {
       id: 6,
-      title: "Blockchain Technology: Beyond Cryptocurrency",
-      excerpt: "Explore real-world applications of blockchain technology in various industries beyond digital currencies.",
-      author: "Blockchain Team",
-      date: "2023-12-25",
-      readTime: "6 min read",
-      category: "Blockchain",
-      image: "/api/placeholder/600/400",
-      slug: "blockchain-technology-beyond-cryptocurrency"
+      title: "Blockchain Technology: Beyond Cryptocurrency", excerpt: "Explore real-world applications of blockchain technology in various industries beyond digital currencies.",
+      author: "Blockchain Team", date: "2023-12-25",
+      readTime: "6 min read", category: "Blockchain",
+      image: "/api/placeholder/600/400", slug: "blockchain-technology-beyond-cryptocurrency"
     }
   ];
 
   const categories = [
-    "All Posts",
-    "AI & Machine Learning",
-    "Cloud Services",
-    "Web Development",
-    "Mobile Development",
-    "Blockchain",
-    "Cybersecurity",
-    "IoT",
+    "All Posts", "AI & Machine Learning",
+    "Cloud Services", "Web Development",
+    "Mobile Development", "Blockchain",
+    "Cybersecurity", "IoT",
     "Industry Insights"
   ];
 
@@ -93,7 +62,7 @@ const Blog: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Tech
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>
           </h1>
@@ -106,7 +75,7 @@ const Blog: NextPage = () => {
       {/* Blog Content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-4 gap-8">
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-8">
@@ -145,7 +114,7 @@ const Blog: NextPage = () => {
                     />
                     <button
                       type="submit"
-                      className="w-full bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors"
+                      className="w-full bg-white text-blue-600 hover: bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors"
                     >
                       Subscribe
                     </button>
@@ -158,7 +127,7 @@ const Blog: NextPage = () => {
             <div className="lg:col-span-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {blogPosts.map((post) => (
-                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">
                     <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
                     <div className="p-6">
                       <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
@@ -194,7 +163,7 @@ const Blog: NextPage = () => {
                         
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm"
+                          className="text-blue-600 hover: text-blue-700 font-medium flex items-center text-sm"
                         >
                           Read More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -207,7 +176,7 @@ const Blog: NextPage = () => {
 
               {/* Load More Button */}
               <div className="text-center mt-12">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                <button className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Load More Posts
                 </button>
               </div>
@@ -221,9 +190,9 @@ const Blog: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
+            Let&apos;s discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.'
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
             </Link>

@@ -16,8 +16,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'All Services', href: '/services' }
-      ]
+        { name: 'All Services', href: '/services' },
+      ],
     },
     {
       name: 'Solutions',
@@ -25,16 +25,19 @@ const Navigation: React.FC = () => {
       dropdown: [
         { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
         { name: 'Email Automation', href: '/solutions/email-automation' },
-        { name: 'Customer Support Platform', href: '/solutions/customer-support' },
+        {
+          name: 'Customer Support Platform',
+          href: '/solutions/customer-support',
+        },
         { name: 'Event Management', href: '/solutions/event-management' },
         { name: 'Project Management', href: '/solutions/project-management' },
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
-      ]
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
+      ],
     },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
   ];
 
   const toggleDropdown = (itemName: string) => {
@@ -42,36 +45,39 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className='bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center h-16'>
+    <nav className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className='flex-shrink-0'>
-            <Link href='/' className='text-white text-2xl font-bold hover:text-blue-300 transition-colors'>
+          <div className="flex-shrink-0">
+            <Link
+              href="/"
+              className="text-white text-2xl font-bold hover:text-blue-300 transition-colors"
+            >
               Zion Tech Group
             </Link>
           </div>
           {/* Desktop Navigation */}
-          <div className='hidden md:block'>
-            <div className='ml-10 flex items-baseline space-x-4'>
-              {navigationItems.map((item) => (
-                <div key={item.name} className='relative'>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navigationItems.map(item => (
+                <div key={item.name} className="relative">
                   {item.dropdown ? (
-                    <div className='relative'>
+                    <div className="relative">
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center'
+                        className="text-white hover: text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                       >
                         {item.name}
-                        <ChevronDown className='ml-1 h-4 w-4' />
+                        <ChevronDown className="ml-1 h-4 w-4" />
                       </button>
                       {activeDropdown === item.name && (
-                        <div className='absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50'>
-                          {item.dropdown.map((dropdownItem) => (
+                        <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                          {item.dropdown.map(dropdownItem => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className='block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors'
+                              className="block px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"
                               onClick={() => setActiveDropdown(null)}
                             >
                               {dropdownItem.name}
@@ -83,7 +89,7 @@ const Navigation: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors'
+                      className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -92,63 +98,73 @@ const Navigation: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Search and Contact */}
-          <div className='hidden md:flex items-center space-x-4'>
-            <div className='relative'>
+          <div className="hidden md: flex items-center space-x-4">
+            <div className="relative">
               <input
-                type='text'
-                placeholder='Search...'
+                type="text"
+                placeholder="Search..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className='bg-white bg-opacity-10 text-white placeholder-gray-300 px-4 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-300'
+                onChange={e => setSearchQuery(e.target.value)}
+                className="bg-white bg-opacity-10 text-white placeholder-gray-300 px-4 py-2 rounded-md text-sm focus: outline-none focus:ring-2 focus:ring-blue-300"
               />
-              <Search className='absolute right-3 top-2.5 h-4 w-4 text-gray-300' />
+              <Search className="absolute right-3 top-2.5 h-4 w-4 text-gray-300" />
             </div>
-            <div className='flex items-center space-x-2 text-sm'>
-              <a href='tel:+13024640950' className='text-white hover:text-blue-300 flex items-center'>
-                <Phone className='h-4 w-4 mr-1' />
-                <span className='hidden lg:inline'>+1 302 464 0950</span>
+            <div className="flex items-center space-x-2 text-sm">
+              <a
+                href="tel:+13024640950"
+                className="text-white hover:text-blue-300 flex items-center"
+              >
+                <Phone className="h-4 w-4 mr-1" />
+                <span className="hidden lg:inline">+1 302 464 0950</span>
               </a>
-              <a href='mailto:kleber@ziontechgroup.com' className='text-white hover:text-blue-300 flex items-center'>
-                <Mail className='h-4 w-4 mr-1' />
-                <span className='hidden lg:inline'>Contact</span>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="text-white hover:text-blue-300 flex items-center"
+              >
+                <Mail className="h-4 w-4 mr-1" />
+                <span className="hidden lg:inline">Contact</span>
               </a>
             </div>
           </div>
           {/* Mobile menu button */}
-          <div className='md:hidden'>
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className='text-white hover:text-blue-300 p-2 rounded-md transition-colors'
+              className="text-white hover: text-blue-300 p-2 rounded-md transition-colors"
             >
-              {isOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className='md:hidden'>
-          <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95'>
-            {navigationItems.map((item) => (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95">
+            {navigationItems.map(item => (
               <div key={item.name}>
                 {item.dropdown ? (
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between'
+                      className="text-white hover: text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                     >
                       {item.name}
-                      <ChevronDown className='h-4 w-4' />
+                      <ChevronDown className="h-4 w-4" />
                     </button>
                     {activeDropdown === item.name && (
-                      <div className='pl-4 space-y-1'>
-                        {item.dropdown.map((dropdownItem) => (
+                      <div className="pl-4 space-y-1">
+                        {item.dropdown.map(dropdownItem => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className='text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm'
+                            className="text-gray-300 hover: text-white block px-3 py-2 rounded-md text-sm"
                             onClick={() => {
                               setIsOpen(false);
                               setActiveDropdown(null);
@@ -163,7 +179,7 @@ const Navigation: React.FC = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium'
+                    className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

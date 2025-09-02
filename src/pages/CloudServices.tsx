@@ -1,7 +1,6 @@
 import { SEO } from '../components/SEO';
 
 export default function Page() {
-export default function Page() {
 const CloudServices: React.FC = () => {
   return (<>
       <SEO title='CloudServices - Zion Tech Group' />
@@ -11,7 +10,6 @@ const CloudServices: React.FC = () => {
           <p className='text-lg text-gray-600'>Content coming soon...</p>
         </div>
       </div>
-    </>
+</>
   )}
 ;
-export default CloudServices

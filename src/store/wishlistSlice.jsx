@@ -4,12 +4,11 @@ const initialState = { items: [] };
 
 export const getApiUrl = () => {
   const env = import.meta?.env || process.env;
-  return env.VITE_API_URL || env.API_URL || 'http://localhost:3000';
+  return env.VITE_API_URL || env.API_URL || 'http: //localhost:3000';
 };
 
 export const loadWishlistFromDB = createAsyncThunk(
-  'wishlist/loadFromDB',
-  async (userId) => {
+  'wishlist/loadFromDB', async (userId) => {
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);
     if (!res.ok) throw new Error('Failed to load');
     return await res.json();
@@ -17,20 +16,17 @@ export const loadWishlistFromDB = createAsyncThunk(
 );
 
 const wishlistSlice = createSlice({
-  name: 'wishlist',
-  initialState,
+  name: 'wishlist', initialState,
   reducers: {
     addToWishlist(state, action) {
       const exists = state.items.some(
         item => item.id === action.payload.id && item.type === action.payload.type
       );
       if (!exists) state.items.push(action.payload);
-    },
-    removeFromWishlist(state, action) {
+    }, removeFromWishlist(state, action) {
       state.items = state.items.filter(item => item.id !== action.payload.id);
     }
-  },
-  extraReducers: builder => {
+  }, extraReducers: builder => {
     builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload;
     });

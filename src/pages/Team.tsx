@@ -10,48 +10,30 @@ import {
 export default function Team() {
   const teamMembers = [
     {
-      id: 1,
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer",
-      department: "Executive",
-      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.",
-      expertise: ["AI Strategy", "Quantum Computing", "Leadership"],
-      achievements: ["MIT PhD", "Google AI Research", "50+ Patents"]
-    },
-    {
+      id: 1, name: "Dr. Sarah Chen",
+      role: "Chief Executive Officer", department: "Executive",
+      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy", "Quantum Computing", "Leadership"], achievements: ["MIT PhD", "Google AI Research", "50+ Patents"]
+    }, {
       id: 2,
-      name: "Prof. Michael Rodriguez",
-      role: "Chief Technology Officer",
-      department: "Technology",
-      bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.",
-      expertise: ["Quantum Computing", "Research", "Innovation"],
-      achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"]
-    },
-    {
+      name: "Prof. Michael Rodriguez", role: "Chief Technology Officer",
+      department: "Technology", bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.",
+      expertise: ["Quantum Computing", "Research", "Innovation"], achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"]
+    }, {
       id: 3,
-      name: "Alex Thompson",
-      role: "Head of AI Research",
-      department: "AI & Machine Learning",
-      bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.",
-      expertise: ["Deep Learning", "Neural Networks", "AI Ethics"],
-      achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"]
-    },
-    {
+      name: "Alex Thompson", role: "Head of AI Research",
+      department: "AI & Machine Learning", bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.",
+      expertise: ["Deep Learning", "Neural Networks", "AI Ethics"], achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"]
+    }, {
       id: 4,
-      name: "Lisa Park",
-      role: "Chief Security Officer",
-      department: "Cybersecurity",
-      bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",
-      expertise: ["Cybersecurity", "Risk Management", "Compliance"],
-      achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
+      name: "Lisa Park", role: "Chief Security Officer",
+      department: "Cybersecurity", bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",
+      expertise: ["Cybersecurity", "Risk Management", "Compliance"], achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Team Members", icon: Users },
-    { number: "15+", label: "Countries", icon: Globe },
-    { number: "200+", label: "Years Combined Experience", icon: Award },
-    { number: "95%", label: "Employee Satisfaction", icon: Star }
+    { number: "50+", label: "Team Members", icon: Users }, { number: "15+", label: "Countries", icon: Globe },
+    { number: "200+", label: "Years Combined Experience", icon: Award }, { number: "95%", label: "Employee Satisfaction", icon: Star }
   ];
 
   return (
@@ -76,10 +58,9 @@ export default function Team() {
                 Meet Our Team
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                World-class experts in AI, quantum computing, cybersecurity, and emerging technologies, 
-                united by a passion for innovation and excellence.
+                World-class experts in AI, quantum computing, cybersecurity, and emerging technologies, united by a passion for innovation and excellence.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -170,8 +151,8 @@ export default function Team() {
 
                     <div className="flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50">
                       <a
-                        href={`mailto:${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}
-                        className="text-gray-400 hover:text-green-400 transition-colors"
+                        href={`mailto: ${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}
+                        className="text-gray-400 hover: text-green-400 transition-colors"
                       >
                         <Mail className="w-5 h-5" />
                       </a>
@@ -196,10 +177,10 @@ export default function Team() {
                 Join Our Team
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                We're always looking for exceptional talent to join our mission of advancing technology 
+                We&apos;re always looking for exceptional talent to join our mission of advancing technology '
                 and solving complex challenges. Explore opportunities to work with the best minds in tech.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/careers"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
@@ -219,6 +200,6 @@ export default function Team() {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

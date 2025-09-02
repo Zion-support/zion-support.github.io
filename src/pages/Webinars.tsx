@@ -2,67 +2,45 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
-  Video, Calendar, Clock, Users, Play, 
-  Star, ArrowRight, ExternalLink, Download
+  Video, Calendar, Clock, Users, Play, Star, ArrowRight, ExternalLink, Download
 } from 'lucide-react';
 
 export default function Webinars() {
   const upcomingWebinars = [
     {
-      id: 1,
-      title: "AI Revolution: Transforming Business Operations",
-      description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.",
-      date: "2025-01-15",
-      time: "2:00 PM EST",
-      duration: "60 minutes",
-      speaker: "Dr. Sarah Chen",
-      attendees: 1250,
+      id: 1, title: "AI Revolution: Transforming Business Operations",
+      description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.", date: "2025-01-15",
+      time: "2:00 PM EST", duration: "60 minutes",
+      speaker: "Dr. Sarah Chen", attendees: 1250,
       featured: true
-    },
-    {
+    }, {
       id: 2,
-      title: "Quantum Computing: The Future is Now",
-      description: "Explore the latest developments in quantum computing and their real-world applications.",
-      date: "2025-01-20",
-      time: "3:00 PM EST",
-      duration: "45 minutes",
-      speaker: "Prof. Michael Rodriguez",
-      attendees: 890,
-      featured: true
+      title: "Quantum Computing: The Future is Now", description: "Explore the latest developments in quantum computing and their real-world applications.",
+      date: "2025-01-20", time: "3:00 PM EST",
+      duration: "45 minutes", speaker: "Prof. Michael Rodriguez",
+      attendees: 890, featured: true
     },
     {
-      id: 3,
-      title: "Micro SaaS Success Stories",
-      description: "Hear from successful micro SaaS entrepreneurs and learn their strategies for growth.",
-      date: "2025-01-25",
-      time: "1:00 PM EST",
-      duration: "50 minutes",
-      speaker: "Alex Thompson",
-      attendees: 567,
+      id: 3, title: "Micro SaaS Success Stories",
+      description: "Hear from successful micro SaaS entrepreneurs and learn their strategies for growth.", date: "2025-01-25",
+      time: "1:00 PM EST", duration: "50 minutes",
+      speaker: "Alex Thompson", attendees: 567,
       featured: false
     }
   ];
 
   const pastWebinars = [
     {
-      id: 4,
-      title: "Cybersecurity Best Practices 2025",
-      description: "Essential cybersecurity practices for modern applications and infrastructure.",
-      date: "2025-01-10",
-      duration: "55 minutes",
-      speaker: "Lisa Park",
-      views: 2340,
-      rating: 4.8
+      id: 4, title: "Cybersecurity Best Practices 2025",
+      description: "Essential cybersecurity practices for modern applications and infrastructure.", date: "2025-01-10",
+      duration: "55 minutes", speaker: "Lisa Park",
+      views: 2340, rating: 4.8
     },
     {
-      id: 5,
-      title: "Digital Transformation Strategies",
-      description: "Comprehensive guide to successful digital transformation initiatives.",
-      date: "2025-01-05",
-      duration: "65 minutes",
-      speaker: "David Kumar",
-      views: 1890,
-      rating: 4.7
+      id: 5, title: "Digital Transformation Strategies",
+      description: "Comprehensive guide to successful digital transformation initiatives.", date: "2025-01-05",
+      duration: "65 minutes", speaker: "David Kumar",
+      views: 1890, rating: 4.7
     }
   ];
 
@@ -109,11 +87,11 @@ export default function Webinars() {
             >
               <h2 className="text-4xl font-bold text-white mb-4">Upcoming Webinars</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't miss these exclusive sessions with industry experts
+                Don&apos;t miss these exclusive sessions with industry experts'
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {upcomingWebinars.map((webinar, index) => (
                 <motion.div
                   key={webinar.id}
@@ -152,7 +130,7 @@ export default function Webinars() {
                   </div>
 
                   <div className="mb-4">
-                    <p className="text-sm text-gray-400">Speaker:</p>
+                    <p className="text-sm text-gray-400">Speaker: </p>
                     <p className="text-blue-400 font-medium">{webinar.speaker}</p>
                   </div>
 
@@ -218,7 +196,7 @@ export default function Webinars() {
                   </div>
 
                   <div className="mb-4">
-                    <p className="text-sm text-gray-400">Speaker:</p>
+                    <p className="text-sm text-gray-400">Speaker: </p>
                     <p className="text-blue-400 font-medium">{webinar.speaker}</p>
                   </div>
 
@@ -273,6 +251,6 @@ export default function Webinars() {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

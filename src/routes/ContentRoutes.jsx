@@ -46,7 +46,7 @@ const ContentRoutes = () => {
       <Route path="/support" element={<HelpCenterPage />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<BlogPost />} />
+      <Route path="/blog/: slug" element={<BlogPost />} />
       <Route path="/content/blog" element={<Blog />} />
       <Route path="/content/blog/:slug" element={<BlogPost />} />
       <Route path="/green-it" element={<GreenIT />} />

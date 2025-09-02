@@ -4,71 +4,48 @@ import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
 const Privacy: React.FC = () => {
   const sections = [
     {
-      title: 'Information We Collect',
-      icon: Database,
+      title: 'Information We Collect', icon: Database,
       content: [;
-        'Personal information you provide (name, email, phone number)',
-        'Business information for service delivery',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data and analytics to improve our services',
+        'Personal information you provide (name, email, phone number)', 'Business information for service delivery',
+        'Technical information (IP address, browser type, device information)', 'Usage data and analytics to improve our services',
         'Communication records and support interactions';
-      ]},
-    {
+      ]}, {
       title: 'How We Use Your Information',
-      icon: Eye,
-      content: [
+      icon: Eye, content: [
         'To provide and improve our services',
-        'To communicate with you about our services',
-        'To process payments and manage accounts',
-        'To provide customer support',
-        'To comply with legal obligations',
+        'To communicate with you about our services', 'To process payments and manage accounts',
+        'To provide customer support', 'To comply with legal obligations',
         'To protect our rights and prevent fraud';
-      ]},
-    {
+      ]}, {
       title: 'Information Sharing',
-      icon: UserCheck,
-      content: [
+      icon: UserCheck, content: [
         'We do not sell your personal information',
-        'We may share information with trusted service providers',
-        'We may disclose information if required by law',
-        'We may share information in case of business transfers',
-        'We may share aggregated, non-personal information';
-      ]},
-    {
+        'We may share information with trusted service providers', 'We may disclose information if required by law',
+        'We may share information in case of business transfers', 'We may share aggregated, non-personal information';
+      ]}, {
       title: 'Data Security',
-      icon: Lock,
-      content: [
+      icon: Lock, content: [
         'We use industry-standard encryption to protect your data',
-        'We implement access controls and authentication',
-        'We regularly update our security measures',
-        'We conduct security audits and assessments',
-        'We train our staff on data protection practices';
-      ]},
-    {
+        'We implement access controls and authentication', 'We regularly update our security measures',
+        'We conduct security audits and assessments', 'We train our staff on data protection practices';
+      ]}, {
       title: 'Your Rights',
-      icon: Shield,
-      content: [
+      icon: Shield, content: [
         'Right to access your personal information',
-        'Right to correct inaccurate information',
-        'Right to delete your personal information',
-        'Right to restrict processing of your information',
-        'Right to data portability',
+        'Right to correct inaccurate information', 'Right to delete your personal information',
+        'Right to restrict processing of your information', 'Right to data portability',
         'Right to object to processing';
-      ]},
-    {
+      ]}, {
       title: 'Cookies and Tracking',
-      icon: FileText,
-      content: [
+      icon: FileText, content: [
         'We use cookies to improve website functionality',
-        'We use analytics cookies to understand usage',
-        'We use marketing cookies for targeted advertising',
-        'You can control cookie settings in your browser',
-        'Some features may not work without cookies';
+        'We use analytics cookies to understand usage', 'We use marketing cookies for targeted advertising',
+        'You can control cookie settings in your browser', 'Some features may not work without cookies';
       ]}
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,7 +70,7 @@ const Privacy: React.FC = () => {
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Introduction</h2>
           <p className='text-gray-600 leading-relaxed'>
-            Zion Tech Group ('we,' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
+            Zion Tech Group ('we, ' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
             explains how we collect, use, disclose, and safeguard your information when you visit our website;
             or use our services. Please read this privacy policy carefully. If you do not agree with the terms;
             of this privacy policy, please do not access the site or use our services.
@@ -131,8 +108,7 @@ const Privacy: React.FC = () => {
           className='mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>
           <p className='text-gray-600 mb-4'>
-            If you have any questions about this Privacy Policy or our data practices, please contact us:
-          </p>
+            If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>
               <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>

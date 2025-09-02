@@ -5,6 +5,5 @@ export function cn(...inputs: ClassValue[]) {
 export default function Page() {
 import { twMerge  } from 'tailwind-merge';
 
-export default function Page() {
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))}

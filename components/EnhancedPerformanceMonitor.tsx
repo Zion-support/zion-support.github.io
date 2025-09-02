@@ -29,12 +29,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       // Simulate API call to get performance metrics;
       await new Promise(resolve => setTimeout(resolve, 1000));
       const newMetrics: PerformanceMetrics = {
-        fcp: Math.random() * 2000 + 500,
-        lcp: Math.random() * 3000 + 1000,
-        fid: Math.random() * 100 + 10,
-        cls: Math.random() * 0.3,
-        ttfb: Math.random() * 500 + 100,
-        score: Math.random() * 100}
+        fcp: Math.random() * 2000 + 500, lcp: Math.random() * 3000 + 1000, fid: Math.random() * 100 + 10, cls: Math.random() * 0.3, ttfb: Math.random() * 500 + 100, score: Math.random() * 100}
 ;
       setMetrics(newMetrics);
       setLastUpdated(new Date());
@@ -42,21 +37,18 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       const newAlerts: PerformanceAlert[] = [];
       if (newMetrics.fcp > 1800) {
         newAlerts.push({
-          type: 'warning',
-          message: 'First Contentful Paint is slow',
+          type: 'warning', message: 'First Contentful Paint is slow',
           metric: 'FCP'})}
       if (newMetrics.lcp > 2500) {
         newAlerts.push({
-          type: 'error',
-          message: 'Largest Contentful Paint is very slow',
+          type: 'error', message: 'Largest Contentful Paint is very slow',
           metric: 'LCP'})}
       if (newMetrics.cls > 0.25) {
         newAlerts.push({
-          type: 'warning',
-          message: 'Cumulative Layout Shift is high',
+          type: 'warning', message: 'Cumulative Layout Shift is high',
           metric: 'CLS'})}
       setAlerts(newAlerts)} catch (error) {
-      console.error('Error updating metrics:', error)} finally {
+      console.error('Error updating metrics: ', error)} finally {
       setIsLoading(false)}
   }, []);
   useEffect(() => {
@@ -70,7 +62,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </div>
     )}
   return(
-    <div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>
+    <div className='bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>
       <div className='flex items-center justify-between mb-4'>
         <h3 className='text-lg font-semibold text-gray-900 dark:text-white flex items-center'>
           <Activity className='w-5 h-5 mr-2 text-blue-500' />
@@ -87,20 +79,20 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6'>
+      <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4 mb-6'>
         <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>
           <div className='text-sm text-gray-600 dark:text-gray-400'>FCP</div>
           <div className='text-2xl font-bold text-gray-900 dark:text-white'>
             {Math.round(metrics.fcp)}ms
           </div>
         </div>
-        <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>
+        <div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-4'>
           <div className='text-sm text-gray-600 dark:text-gray-400'>LCP</div>
           <div className='text-2xl font-bold text-gray-900 dark:text-white'>
             {Math.round(metrics.lcp)}ms
           </div>
         </div>
-        <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>
+        <div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-4'>
           <div className='text-sm text-gray-600 dark:text-gray-400'>CLS</div>
           <div className='text-2xl font-bold text-gray-900 dark:text-white'>
             {metrics.cls.toFixed(3)}
@@ -109,18 +101,17 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </div>
       <div className='mb-4'>
         <div className='flex items-center justify-between mb-2'>
-          <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+          <span className='text-sm font-medium text-gray-700 dark: text-gray-300'>
             Performance Score
           </span>
           <span className={`text-lg font-bold ${getScoreColor(metrics.score)}`}>
             {Math.round(metrics.score)}
           </span>
         </div>
-        <div className='w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2'>
+        <div className='w-full bg-gray-200 dark: bg-gray-600 rounded-full h-2'>
           <div;
             className={`h-2 rounded-full ${
-              metrics.score >= 90 ? 'bg-green-500' :
-              metrics.score >= 50 ? 'bg-yellow-500' : 'bg-red-500'}`}
+              metrics.score >= 90 ? 'bg-green-500' : metrics.score >= 50 ? 'bg-yellow-500' : 'bg-red-500'}`}
             style={{ width: `${metrics.score}%` }}
           ></div>
         </div>

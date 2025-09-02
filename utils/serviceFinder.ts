@@ -9,8 +9,7 @@ export interface Service {
    tags?: string[];
    [key: string]: unknown}
 export function findServicesByCategory(
-  allServiceArrays: Service[][],
-  categoryIncludes: string
+  allServiceArrays: Service[][], categoryIncludes: string
 ): Service[] {
   const results: Service[] = [];
 
@@ -23,8 +22,7 @@ export function findServicesByCategory(
 
   return results}
 export function findServicesByTag(
-  allServiceArrays: Service[][],
-  tagIncludes: string
+  allServiceArrays: Service[][], tagIncludes: string
 ): Service[] {
   const results: Service[] = [];
 
@@ -41,8 +39,7 @@ export function findServicesByTag(
   }
   return results}
 export function findServicesByPriceRange(
-  allServiceArrays: Service[][],
-  minPrice: number,
+  allServiceArrays: Service[][], minPrice: number,
   maxPrice: number
 ): Service[] {
   const results: Service[] = [];
@@ -55,8 +52,7 @@ export function findServicesByPriceRange(
   }
   return results}
 export function searchServices(
-  allServiceArrays: Service[][],
-  searchTerm: string
+  allServiceArrays: Service[][], searchTerm: string
 ): Service[] {
   const results: Service[] = [];
   const term = searchTerm.toLowerCase();

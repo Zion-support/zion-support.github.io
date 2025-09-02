@@ -1,33 +1,76 @@
 {
-  "timestamp": "2025-09-02T17:30:09.269Z",
+  "timestamp": "2025-09-02T22:06:15.868Z",
   "system": {
-    "platform": "linux",
-    "arch": "x64",
-    "nodeVersion": "v22.16.0",
-    "memoryUsage": {
-      "rss": 51060736,
-      "heapTotal": 5832704,
-      "heapUsed": 4905024,
-      "external": 1865515,
-      "arrayBuffers": 18144
+    "memory": {
+      "rss": 47,
+      "heapUsed": 4,
+      "heapTotal": 5,
+      "external": 1
     },
-    "uptime": 0.027207474,
-    "cpuUsage": {
-      "user": 26315,
-      "system": 3759
+    "cpu": {
+      "user": 0,
+      "system": 0
+    },
+    "process": {
+      "pid": 7268,
+      "uptime": 0,
+      "version": "v22.16.0",
+      "platform": "linux",
+      "arch": "x64"
     }
   },
   "application": {
-    "buildExists": true,
-    "packageName": "zion-tech-group",
-    "packageVersion": "0.1.0",
-    "dependencies": 58,
-    "devDependencies": 38
+    "buildSize": 0,
+    "dependenciesSize": 622,
+    "sourceSize": 9485,
+    "fileCounts": {
+      "source": 1993,
+      "components": 689,
+      "pages": 1081
+    }
   },
   "build": {
-    "exists": true,
-    "size": 49926639,
-    "lastModified": "2025-09-02T17:28:00.435Z"
-  },
-  "errors": []
+    "hasBuildArtifacts": true,
+    "buildTime": 0,
+    "bundleSize": 0,
+    "scripts": [
+      "pm2:start",
+      "pm2:stop",
+      "pm2:restart",
+      "pm2:status",
+      "pm2:logs",
+      "sitemap",
+      "pm2:fastads:start",
+      "pm2:fastads:restart",
+      "pm2:fastads:stop",
+      "pm2:cron:start",
+      "pm2:cron:restart",
+      "pm2:cron:stop",
+      "pm2:bootstrap:logrotate",
+      "functions:run",
+      "functions:run:execute",
+      "front:advertise",
+      "deps:maintain",
+      "deps:cron:start",
+      "netlify:manifest",
+      "netlify:trigger",
+      "readme:generate",
+      "search:index",
+      "content:fix",
+      "perf:monitor",
+      "perf:audit",
+      "dev",
+      "build",
+      "start",
+      "lint",
+      "lint:fix",
+      "type-check",
+      "analyze",
+      "format",
+      "format:check",
+      "test",
+      "test:watch",
+      "test:coverage"
+    ]
+  }
 }

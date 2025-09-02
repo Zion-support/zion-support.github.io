@@ -4,17 +4,14 @@ import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucid
 
 const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''})
+    name: '', email: '',
+    subject: '', message: ''})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value}))}
+      ...prev, [name]: value}))}
 ;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,11 +36,11 @@ const ContactFormEnhanced: React.FC = () => {
         <div className='text-center mb-8'>
           <h2 className='text-3xl font-bold text-gray-900 mb-4'>Get In Touch</h2>
           <p className='text-gray-600'>
-            Ready to transform your business? Let's discuss how our technology solutions can drive your success.
+            Ready to transform your business? Let&apos;s discuss how our technology solutions can drive your success.'
           </p>
         </div>
         <form onSubmit={handleSubmit} className='space-y-6'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>
             <div>
               <label htmlFor='name' className='block text-sm font-medium text-gray-700 mb-2'>
                 Full Name *
@@ -57,7 +54,7 @@ const ContactFormEnhanced: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required;
-                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
+                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
                   placeholder='Your full name'/>
               </div>
             </div>
@@ -74,7 +71,7 @@ const ContactFormEnhanced: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required;
-                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
+                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
                   placeholder='your@email.com'/>
               </div>
             </div>
@@ -90,7 +87,7 @@ const ContactFormEnhanced: React.FC = () => {
               value={formData.subject}
               onChange={handleChange}
               required;
-              className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
+              className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
               placeholder='What can we help you with?'/>
           </div>
           <div>
@@ -106,7 +103,7 @@ const ContactFormEnhanced: React.FC = () => {
                 onChange={handleChange}
                 required;
                 rows={5}
-                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
+                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
                 placeholder='Tell us about your project or requirements...'/>
             </div>
           </div>
@@ -119,12 +116,12 @@ const ContactFormEnhanced: React.FC = () => {
               <>
                 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white'></div>
                 <span>Sending...</span>
-              </>
+</>
             ) : (
               <>
                 <Send className='w-5 h-5' />
                 <span>Send Message</span>
-              </>
+</>
             )}
           </motion.button>
           {submitStatus === 'success' && (
@@ -133,7 +130,7 @@ const ContactFormEnhanced: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className='flex items-center space-x-2 text-green-600 bg-green-50 p-4 rounded-lg'>
               <CheckCircle className='w-5 h-5' />
-              <span>Message sent successfully! We'll get back to you soon.</span>
+              <span>Message sent successfully! We&apos;ll get back to you soon.</span>'
             </motion.div>
           )}
           {submitStatus === 'error' && (
