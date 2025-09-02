@@ -4,7 +4,8 @@ import {}
   DollarSign,
   ExternalLink,
   Phone,
-  Mail} from 'lucide-react.ts';
+  Mail} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
@@ -24,9 +25,12 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
         </p>"
 ""
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">'
-          {[''
-            'Static diffs + architectural risk scoring',PR review suggestions and security hints',Unit/integration test generation',Flaky test clustering and ownership',CI insights: bottlenecks and failures',Jira/GitHub/GitLab/Bitbucket integrations',
+        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">,
+  {[''
+  'Static diffs + architectural risk scoring',PR review suggestions and security hints
+  ',Unit/integration test generation',Flaky test clustering and ownership
+  ',CI insights: bottlenecks and failures,Jira/GitHub/GitLab/Bitbucket integrations
+  ',
           ].map(b => (
             <div"key={b}""
               className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4""
@@ -74,4 +78,4 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
 ;
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
 export { DeveloperProductivityCopilot };export default DeveloperProductivityCopilot;'"
-'"'"
+  '"'"

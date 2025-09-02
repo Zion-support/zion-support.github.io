@@ -25,7 +25,8 @@ import {}
   Pill,
   Syringe,
   Thermometer,
-  BrainCircuit} from 'lucide-react.ts';
+  BrainCircuit} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 export default function AIHealthcareDiagnostics(...args: any[]): any {
@@ -255,7 +256,8 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Flexible Pricing Plans"
             </h2>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+  '
               Choose the plan that fits your healthcare facility's needs. All
               plans include our core AI diagnostic capabilities.
             </p>
@@ -268,11 +270,11 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-                className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
-'
-                  index === 1''
-                    ? 'border-green-400/50 shadow-lg shadow-green-500/25'''`
-                    : 'border-slate-600/50'``
+                className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${,
+  index === 1''
+                    ?
+  'border-green-400/50 shadow-lg shadow-green-500/25''
+  '`: 'border-slate-600/50``
                 } relative`}
               >"{index === 1 && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -306,11 +308,12 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    index === 1''
-                      ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:shadow-lg hover:shadow-green-500/25'''`
-                      : 'border border-green-400 text-green-400 hover:bg-green-400/10'``}`}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+  index === 1'
+  '
+                      ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover: shadow-lg hover:shadow-green-500/25''
+  '`
+                      : 'border border-green-400 text-green-400 hover:bg-green-400/10``}`}
                 >
                   Get Started;
                 </motion.button>
@@ -357,4 +360,4 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
       </section>
     </div>
   )}'"`
-'"`'"`
+  '"`'"`

@@ -106,8 +106,11 @@
     "styles/**/*",
     "types/**/*",
     "utils/**/*",
+<<<<<<< HEAD
     "**/*.ts",
     "**/*.tsx",
+=======
+>>>>>>> origin/main
     ".next/types/**/*.ts"
   ],
   "exclude": [

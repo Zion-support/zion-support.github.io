@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
+=======
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+>>>>>>> origin/main
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -8,6 +13,7 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
+<<<<<<< HEAD
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
@@ -26,6 +32,17 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {children}
       </div>
     </>
+=======
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation />
+      <main id="main-content" className="flex-grow" role="main">
+        {children}
+      </main>
+      <EnhancedFooter />
+    </div>
+>>>>>>> origin/main
   );
 };
 

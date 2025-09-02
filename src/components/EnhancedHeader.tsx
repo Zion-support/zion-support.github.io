@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from
+  'react';
 
 export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const navLinks = [
+<<<<<<< HEAD
     { label: 'Home', href: '/' },
     { 
       label: 'Services', 
@@ -21,6 +23,24 @@ export const EnhancedHeader: React.FC = () => {
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' }
+=======
+    { label:,
+  Home', href: '/ },
+    { label:,
+  Services', href: '/services },
+    { label:,
+  Solutions', href: '/solutions },
+    { label:,
+  Enterprise', href: '/enterprise },
+    { label:,
+  Request Quote', href: '/request-quote },
+    { label:,
+  Case Studies', href: '/case-studies },
+    { label:,
+  Careers', href: '/careers },
+    { label:,
+  Contact', href: '/contact }
+>>>>>>> origin/main
   ];
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
