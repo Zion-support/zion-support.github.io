@@ -90,14 +90,24 @@ const Footer: React.FC = () => {
 
         {/* Quick Links */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Company</h4>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
+                <li><Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors">Careers</Link></li>
                 <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+                <li><Link href="/sitemap" className="text-gray-300 hover:text-blue-400 transition-colors">Sitemap</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services" className="text-gray-300 hover:text-blue-400 transition-colors">All Services</Link></li>
+                <li><Link href="/services/micro-saas" className="text-gray-300 hover:text-blue-400 transition-colors">Micro SaaS</Link></li>
+                <li><Link href="/services/it-services" className="text-gray-300 hover:text-blue-400 transition-colors">IT Services</Link></li>
+                <li><Link href="/services/ai-services" className="text-gray-300 hover:text-blue-400 transition-colors">AI Services</Link></li>
               </ul>
             </div>
             
@@ -123,7 +133,7 @@ const Footer: React.FC = () => {
             
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Connect</h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mb-4">
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
@@ -139,7 +149,7 @@ const Footer: React.FC = () => {
               </div>
               
               {/* Newsletter Signup */}
-              <div className="mt-6">
+              <div>
                 <h5 className="text-sm font-semibold mb-2 text-blue-400">Newsletter</h5>
                 <p className="text-gray-300 text-sm mb-3">Stay updated with our latest insights</p>
                 <div className="flex">
