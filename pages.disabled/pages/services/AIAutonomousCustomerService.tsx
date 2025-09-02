@@ -20,7 +20,8 @@ import {}
   TrendingUp,
   Zap,
   Shield,
-  Headphones} from 'lucide-react.ts';
+  Headphones} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
 const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
@@ -40,7 +41,9 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Customer Service with""
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
@@ -197,4 +200,4 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
 export default AIAutonomousCustomerService;'"
-'"'"
+  '"'"

@@ -1,8 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from
+  'react';
+import { Link } from
+  'react-router-dom';
 
 export function Logo({ customLogo, customColor }) {
-  const logoColor = customColor || '#22D3EE'; // Default to zion-cyan
+  const logoColor = customColor ||
+  '#22D3EE'; // Default to zion-cyan
 
   return (
     <Link to="/" className="flex items-center space-x-3 group">
@@ -11,7 +14,8 @@ export function Logo({ customLogo, customColor }) {
         style={{ 
           background: customColor 
             ? `linear-gradient(135deg, ${customColor}, ${customColor}dd)` 
-            : 'linear-gradient(135deg, #22D3EE, #A855F7)'
+            :
+  'linear-gradient(135deg, #22D3EE, #A855F7)'
         }}
       >
         <span className="text-white font-bold text-xl">Z</span>

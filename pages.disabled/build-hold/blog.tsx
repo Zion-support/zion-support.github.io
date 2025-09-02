@@ -1,4 +1,13 @@
-import React from 'react';'import { motion } from 'framer-motion';'import { SEO } from '../components/SEO';'import { Button } from '../components/ui/Button';'import { Card } from '../components/ui/Card';'import { Badge } from '../components/ui/Badge';'import { ;'  Calendar, Clock,
+React from
+  'react';
+import { motion } from
+  'framer-motion';'{ SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';'{ Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';'import { ;'  Calendar, Clock,
   User, ArrowRight,
   Search, Filter,
   Tag, BookOpen,
@@ -11,7 +20,9 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
   Code, Rocket,
   Target, Globe,
   Phone, Mail
-} from 'lucide-react';''const Blog: React.FC = () => {
+} from
+  'lucide-react';'
+  'const Blog: React.FC = () => {
   const blogPosts = [;
     {;
       id: 1, title: "The Future of AI in Business: 2025 Trends and Predictions","      excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.", author: "Sarah Johnson","      date: "2025-01-15", readTime: "8 min read","      category: "AI Trends", image: "/api/placeholder/600/400","      tags: ["AI", "Business", "Trends", "2025"], featured: true"    },"    {;
@@ -94,7 +105,9 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
                 <Card className="p-6">"                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>"                  <div className="space-y-2">"                    {categories.map((category, index) => ("                      <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${`                          category.active 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' '                            : 'text-gray-300 hover:bg-slate-700''                        }`}'                      >`                        <span>{category.name}</span>
+                            ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white
+  ' ': 'text-gray-300 hover:bg-slate-700'                        }`}'                      >`                        <span>{category.name}</span>
                         <Badge variant="secondary" className="text-xs">"                          {category.count}"                        </Badge>
                       </button>
                     ))}

@@ -1,4 +1,13 @@
-import React from 'react';'import { motion } from 'framer-motion';'import { SEO } from '../components/SEO';'import { Button } from '../components/ui/Button';'import { Card } from '../components/ui/Card';'import { Badge } from '../components/ui/Badge';'import { ;'  FileText, Download,
+React from
+  'react';
+import { motion } from
+  'framer-motion';'{ SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';'{ Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';'import { ;'  FileText, Download,
   Calendar, User,
   Clock, ArrowRight,
   Search, Filter,
@@ -11,7 +20,9 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
   Phone, Mail,
   Award, Star,
   CheckCircle
-} from 'lucide-react';''const WhitePapers: React.FC = () => {
+} from
+  'lucide-react';'
+  'const WhitePapers: React.FC = () => {
   const whitePapers = [;
     {;
       id: 1, title: "The Future of AI in Enterprise: A Comprehensive Guide to Implementation","      description: "Explore the latest trends, challenges, and opportunities in enterprise AI adoption. This comprehensive guide covers everything from strategy to implementation.", author: "Dr. Sarah Johnson","      date: "2025-01-15", readTime: "45 min read","      category: "AI Strategy", downloads: 1250,"      rating: 4.9, pages: 32,"      image: "/api/placeholder/400/300", tags: ["AI Strategy", "Enterprise", "Implementation", "Future Trends"], featured: true,"      downloadUrl: "/downloads/ai-enterprise-guide.pdf""    }, {"      id: 2,;
@@ -111,7 +122,9 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
                 <Card className="p-6">"                  <h3 className="text-xl font-bold text-white mb-4">Filter by Category</h3>"                  <div className="space-y-2">"                    {categories.map((category, index) => ("                      <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${`                          category.active 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' '                            : 'text-gray-300 hover:bg-slate-700''                        }`}'                      >`                        <span>{category.name}</span>
+                            ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white
+  ' ': 'text-gray-300 hover:bg-slate-700'                        }`}'                      >`                        <span>{category.name}</span>
                         <Badge variant="secondary" className="text-xs">"                          {category.count}"                        </Badge>
                       </button>
                     ))}
