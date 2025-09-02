@@ -23,266 +23,163 @@ import {
 const SitemapPage: React.FC = () => {
   const siteStructure = [
     {
-      title: 'Main Pages',
-      links: [
-        { name: 'Home', href: '/', description: 'Main landing page' },
-        { name: 'About', href: '/about', description: 'About Zion Tech Group' },
-        {
-          name: 'Contact',
-          href: '/contact',
-          description: 'Contact information and form',
-        },
-        {
-          name: 'Blog',
-          href: '/blog',
-          description: 'Latest news and insights',
-        },
-        {
-          name: 'Help',
-          href: '/help',
-          description: 'Support and documentation',
-        },
-      ],
+      category: 'Main Pages',
+      icon: Home,
+      pages: [
+        { name: 'Home', path: '/', description: 'Main landing page' },
+        { name: 'About', path: '/about', description: 'About Zion Tech Group' },
+        { name: 'Contact', path: '/contact', description: 'Contact information' },
+        { name: 'Pricing', path: '/pricing', description: 'Service pricing' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities' }
+      ]
     },
     {
-      title: 'Services',
-      links: [
-        {
-          name: 'All Services',
-          href: '/services',
-          description: 'Overview of all services',
-        },
-        {
-          name: 'AI Services',
-          href: '/ai-services',
-          description: 'Artificial Intelligence solutions',
-        },
-        {
-          name: 'IT Services',
-          href: '/it-services',
-          description: 'Information Technology services',
-        },
-        {
-          name: 'Micro SaaS',
-          href: '/micro-saas',
-          description: 'Micro Software as a Service',
-        },
-        {
-          name: 'AI Development',
-          href: '/services/ai-development',
-          description: 'Custom AI development',
-        },
-        {
-          name: 'Cloud Services',
-          href: '/services/cloud-services',
-          description: 'Cloud computing solutions',
-        },
-        {
-          name: 'Web Development',
-          href: '/services/web-development',
-          description: 'Web application development',
-        },
-      ],
+      category: 'Services',
+      icon: Briefcase,
+      pages: [
+        { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },
+        { name: 'IT Services', path: '/it-services', description: 'Information Technology services' },
+        { name: 'Micro SaaS', path: '/micro-saas', description: 'Micro Software as a Service' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud computing solutions' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security services' },
+        { name: 'Infrastructure', path: '/infrastructure', description: 'IT infrastructure services' }
+      ]
     },
     {
-      title: 'Solutions',
-      links: [
-        {
-          name: 'All Solutions',
-          href: '/solutions',
-          description: 'Overview of all solutions',
-        },
-        {
-          name: 'AI Content Creation',
-          href: '/solutions/ai-content-creation',
-          description: 'Automated content generation',
-        },
-        {
-          name: 'Email Automation',
-          href: '/solutions/email-automation',
-          description: 'Email marketing automation',
-        },
-        {
-          name: 'Customer Support',
-          href: '/solutions/customer-support',
-          description: 'AI-powered support platform',
-        },
-        {
-          name: 'Event Management',
-          href: '/solutions/event-management',
-          description: 'Event planning and management',
-        },
-        {
-          name: 'Project Management',
-          href: '/solutions/project-management',
-          description: 'Project collaboration tools',
-        },
-        {
-          name: 'Workflow Automation',
-          href: '/solutions/workflow-automation',
-          description: 'Business process automation',
-        },
-      ],
+      category: 'Resources',
+      icon: BookOpen,
+      pages: [
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and case studies' },
+        { name: 'White Papers', path: '/white-papers', description: 'Technical white papers' },
+        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
+        { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
+        { name: 'Documentation', path: '/documentation', description: 'Technical documentation' }
+      ]
     },
     {
-      title: 'Business',
-      links: [
-        {
-          name: 'Pricing',
-          href: '/pricing',
-          description: 'Service pricing and plans',
-        },
-        {
-          name: 'Partners',
-          href: '/partners',
-          description: 'Partnership opportunities',
-        },
-        {
-          name: 'Careers',
-          href: '/careers',
-          description: 'Job opportunities and culture',
-        },
-      ],
+      category: 'Company',
+      icon: Users,
+      pages: [
+        { name: 'Team', path: '/team', description: 'Meet our team' },
+        { name: 'Partners', path: '/partners', description: 'Our partners' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        { name: 'Help', path: '/help', description: 'Help and support' }
+      ]
     },
     {
-      title: 'Legal & Policies',
-      links: [
-        {
-          name: 'Privacy Policy',
-          href: '/privacy',
-          description: 'Privacy and data protection',
-        },
-        {
-          name: 'Terms of Service',
-          href: '/terms',
-          description: 'Terms and conditions',
-        },
-        {
-          name: 'Cookie Policy',
-          href: '/cookies',
-          description: 'Cookie usage and preferences',
-        },
-      ],
-    },
-
+      category: 'Legal',
+      icon: Shield,
+      pages: [
+        { name: 'Privacy Policy', path: '/privacy', description: 'Privacy policy and data protection' },
+        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
+      ]
+    }
   ];
 
   return (
     <>
       <SEO
-        title="Sitemap - Zion Tech Group"
-        description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place."
-        keywords="sitemap, navigation, website structure, pages, links"
+        title='Sitemap'
+        description='Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.'
+        keywords='sitemap, website navigation, pages, services, resources'
       />
-      <Head>
-        <title>Sitemap - Zion Tech Group</title>
-      </Head>
-
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          {/* Header */}
-          <div className="mb-8">
-            <Link
-              href="/"
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4"
-            >
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Home
-            </Link>
-            <div className="flex items-center mb-4">
-              <Sitemap className="h-8 w-8 text-blue-600 mr-3" />
-              <h1 className="text-3xl font-bold text-gray-900">Sitemap</h1>
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className='text-center mb-12'
+          >
+            <div className='flex items-center justify-center mb-6'>
+              <Map className='h-12 w-12 text-blue-600 mr-4' />
+              <h1 className='text-4xl font-bold text-gray-900'>Website Sitemap</h1>
             </div>
-            <p className="text-gray-600">
-              Complete overview of all pages and sections on the Zion Tech Group
-              website.
-
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Navigate through all pages and sections of the Zion Tech Group website.
+              Find exactly what you're looking for with our comprehensive site structure.
             </p>
           </motion.div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {siteStructure.map((section, index) => (
-              <Card key={index} className="p-6">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Sitemap className="h-5 w-5 mr-2 text-blue-600" />
-                  {section.title}
-                </h2>
-                <ul className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <Link
-                        href={link.href}
-                        className="group flex items-start justify-between text-blue-600 hover: text-blue-800 transition-colors"
-                      >
-                        <div className="flex-1">
-                          <span className="font-medium group-hover:underline">
-                            {link.name}
-                          </span>
-                          <p className="text-sm text-gray-600 mt-1">
-                            {link.description}
-                          </p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 ml-2 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+              <motion.div
+                key={section.category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className='h-full'>
+                  <CardHeader>
+                    <div className='flex items-center mb-4'>
+                      <section.icon className='h-6 w-6 text-blue-600 mr-3' />
+                      <CardTitle className='text-xl'>{section.category}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className='space-y-3'>
+                      {section.pages.map((page, pageIndex) => (
+                        <motion.div
+                          key={page.path}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.4, delay: (index * 0.1) + (pageIndex * 0.05) }}
+                          className='flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors'
+                        >
+                          <div className='flex-1'>
+                            <a
+                              href={page.path}
+                              className='text-blue-600 hover:text-blue-800 font-medium flex items-center'
+                            >
+                              {page.name}
+                              <ExternalLink className='h-4 w-4 ml-2' />
+                            </a>
+                            <p className='text-sm text-gray-600 mt-1'>{page.description}</p>
+                          </div>
+                          <ArrowRight className='h-4 w-4 text-gray-400' />
+                        </motion.div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>              </motion.div>
             ))}
           </div>
-
-          {/* Additional Information */}
-          <Card className="mt-8 p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              About This Sitemap
-            </h2>
-            <div className="prose text-gray-600">
-              <p>
-                This sitemap provides a comprehensive overview of all pages and
-                sections available on the Zion Tech Group website. Our site is
-                organized into several main categories:{' '}
-              </p>
-              <ul>
-                <li>
-                  <strong>Main Pages:</strong> Core pages including home, about,
-                  contact, and blog
-                </li>
-                <li>
-                  <strong>Services: </strong> Detailed information about our
-                  technology services and solutions
-                </li>
-                <li>
-                  <strong>Solutions:</strong> Specific product offerings and
-                  platforms we provide
-                </li>
-                <li>
-                  <strong>Business:</strong> Information about pricing,
-                  partnerships, and career opportunities
-                </li>
-                <li>
-                  <strong>Legal & Policies: </strong> Important legal documents
-                  and privacy information
-                </li>
-              </ul>
-              <p>
-                If you can&apos;t find what you&apos;re looking for, please
-                don&apos;t hesitate to{' '}
-                <Link
-                  href="/contact"
-                  className="text-blue-600 hover: underline"
-                >
-                  contact us
-                </Link>{' '}
-                for assistance.'
-              </p>
-            </div>
-          </Card>
-
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className='mt-12 text-center'
+          >
+            <Card className='max-w-2xl mx-auto'>
+              <CardContent className='p-8'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+                  Can't find what you're looking for?
+                </h3>
+                <p className='text-gray-600 mb-6'>
+                  Use our search functionality or contact us directly for assistance.
+                </p>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <a
+                    href='/contact'
+                    className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center'
+                  >
+                    <Phone className='h-4 w-4 mr-2' />
+                    Contact Us
+                  </a>
+                  <a
+                    href='/help'
+                    className='border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center justify-center'
+                  >
+                    <Search className='h-4 w-4 mr-2' />
+                    Get Help
+                  </a>
+                </div>
+              </CardContent>
+            </Card>          </motion.div>
         </div>
       </div>
     </>
   );
-}
+};
 
-
-
-export default sitemap;
+export default SitemapPage;
