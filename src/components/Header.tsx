@@ -26,9 +26,21 @@ export function Header() {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
+    { 
+      name: 'Services', 
+      href: '/services',
+      dropdown: [
+        { name: 'All Services', href: '/comprehensive-services' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Cloud Solutions', href: '/services/cloud' },
+        { name: 'Data Analytics', href: '/services/analytics' }
+      ]
+    },
     { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -79,7 +91,7 @@ export function Header() {
             </form>
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="h-4 w-4" />
-              <span>+1 (555) 123-4567</span>
+              <span>+1 302 464 0950</span>
             </div>
           </div>
 
@@ -124,7 +136,7 @@ export function Header() {
               </div>
               <div className="px-3 py-2 flex items-center space-x-2 text-sm text-gray-600">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
             </div>
           </div>

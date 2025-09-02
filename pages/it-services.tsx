@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap, Leaf } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -99,16 +99,128 @@ export default function ITServices() {
       description: 'Automated deployment pipelines and infrastructure as code',
       icon: Settings,
       features: [
-        'CI/CD pipeline setup and optimization',
-        'Infrastructure as Code (IaC) implementation',
+        'CI/CD pipeline design and implementation',
+        'Infrastructure as Code (IaC) with Terraform',
         'Container orchestration with Kubernetes',
-        'Monitoring and logging solutions',
         'Automated testing and quality gates',
-        'DevSecOps and security integration',
+        'Monitoring and observability setup',
+        'GitOps and version control best practices',
       ],
-      pricing: '$3,500 - $20, 000/month',
-      delivery: '4-10 weeks',
+      pricing: '$4,000 - $20, 000/month',
+      delivery: '4-8 weeks',
       category: 'DevOps Services',
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for IoT and real-time applications',
+      icon: Cpu,
+      features: [
+        'Edge server deployment and management',
+        'IoT device integration and monitoring',
+        'Real-time data processing and analytics',
+        'Edge-to-cloud connectivity solutions',
+        'Latency optimization and performance tuning',
+        'Edge security and compliance management',
+      ],
+      pricing: '$6,000 - $35, 000/month',
+      delivery: '6-12 weeks',
+      category: 'Edge Computing',
+    },
+    {
+      title: 'Quantum Computing Integration',
+      description: 'Next-generation quantum computing solutions for complex problem solving',
+      icon: Zap,
+      features: [
+        'Quantum algorithm development and optimization',
+        'Quantum machine learning implementations',
+        'Cryptographic security enhancements',
+        'Optimization problem solving',
+        'Quantum simulation and modeling',
+        'Hybrid classical-quantum systems',
+      ],
+      pricing: '$15,000 - $100, 000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Computing',
+    },
+    {
+      title: 'Blockchain & Web3 Infrastructure',
+      description: 'Decentralized infrastructure and blockchain development services',
+      icon: Link2,
+      features: [
+        'Blockchain network setup and management',
+        'Smart contract development and auditing',
+        'DeFi protocol implementation',
+        'NFT marketplace development',
+        'Cross-chain interoperability solutions',
+        'Web3 application development',
+      ],
+      pricing: '$8,000 - $50, 000/month',
+      delivery: '8-16 weeks',
+      category: 'Blockchain Services',
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'Machine learning infrastructure and model deployment services',
+      icon: Brain,
+      features: [
+        'ML pipeline development and deployment',
+        'Model training and inference infrastructure',
+        'Data preprocessing and feature engineering',
+        'Model monitoring and performance tracking',
+        'A/B testing and model versioning',
+        'AutoML and hyperparameter optimization',
+      ],
+      pricing: '$7,000 - $40, 000/month',
+      delivery: '6-14 weeks',
+      category: 'AI Infrastructure',
+    },
+    {
+      title: 'Green IT & Sustainability',
+      description: 'Sustainable technology solutions and carbon footprint reduction',
+      icon: Leaf,
+      features: [
+        'Energy-efficient infrastructure design',
+        'Carbon footprint monitoring and reporting',
+        'Renewable energy integration',
+        'Sustainable cloud computing practices',
+        'E-waste management and recycling',
+        'Green data center optimization',
+      ],
+      pricing: '$3,000 - $20, 000/month',
+      delivery: '4-10 weeks',
+      category: 'Green IT',
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring',
+        'Privileged access management (PAM)',
+        'Security orchestration and automation',
+        'Compliance and audit management',
+      ],
+      pricing: '$5,000 - $30, 000/month',
+      delivery: '6-12 weeks',
+      category: 'Zero Trust Security',
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Multi-cloud and hybrid cloud orchestration and management',
+      icon: Globe,
+      features: [
+        'Multi-cloud strategy and architecture',
+        'Cloud cost optimization and management',
+        'Hybrid cloud connectivity and security',
+        'Cloud migration and modernization',
+        'Disaster recovery and business continuity',
+        'Cloud governance and compliance',
+      ],
+      pricing: '$6,000 - $35, 000/month',
+      delivery: '8-16 weeks',
+      category: 'Hybrid Cloud',
     },
     {
       title: 'Digital Transformation',
@@ -597,7 +709,7 @@ export default function ITServices() {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https: //ziontechgroup.com/it-services" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
 
       {/* Hero Section */}

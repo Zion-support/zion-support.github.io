@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Header } from '../src/components/Header';
+import Footer from '../src/components/layout/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
@@ -66,7 +66,7 @@ export default function Home() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       
-      <Navigation />
+      <Header />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -82,11 +82,12 @@ export default function Home() {
                 We help businesses innovate, scale, and succeed in the digital age.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                  Get Started
-                </Link>
-                <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                  View Services
+                <a href="tel:+13024640950" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call: +1 302 464 0950
+                </a>
+                <Link href="/comprehensive-services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                  View All Services
                 </Link>
               </div>
             </div>
@@ -171,12 +172,14 @@ export default function Home() {
               Let's discuss how our technology solutions can drive your success. Get started with a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Free Consultation
-              </Link>
-              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Learn More About Us
-              </Link>
+              <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                <Phone className="w-5 h-5 mr-2" />
+                Call for Free Consultation
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">
+                <Mail className="w-5 h-5 mr-2" />
+                Email Us
+              </a>
             </div>
           </div>
         </section>
