@@ -90,8 +90,7 @@ class ConfigErrorFixer {
 
       // Check for merge conflicts
       if (
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
+        content.includes('') ||
         content.includes('>>>>>>>')
       ) {
         issues.push({
@@ -366,15 +365,12 @@ class ConfigErrorFixer {
   async fixMergeConflicts(content) {
     // Remove merge conflict markers and keep HEAD version
     content = content.replace(
-      /<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]*\n?/g,
-      '$1'
+      /\n[\s\S]*?\n      '$1'
     );
 
     // Clean up any remaining markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/
     return content;
   }
 
