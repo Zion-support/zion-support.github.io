@@ -18,7 +18,8 @@ import {}
   Award,
   Target,
   Workflow,
-  Phone} from 'lucide-react';
+  Phone} from
+  'lucide-react';
 ;
 export { function };
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
@@ -88,9 +89,10 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
               Revolutionary Quantum-AI Features"
             </h2>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
-              Our platform combines the best of both worlds: quantum computing's''
-              exponential power and AI's intelligent optimization capabilities.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
+  Our platform combines the best of both worlds: quantum computing's'
+  '
+              exponential power and AIs intelligent optimization capabilities.
             </p>
           </motion.div>"
 ""
@@ -144,11 +146,11 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
-                  index === 1''
-                    ? 'border-purple-500/50 bg-purple-500/10'''`
-                    : 'border-white/10'``
+                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,
+  index === 1''
+                    ?
+  'border-purple-500/50 bg-purple-500/10''
+  '`: 'border-white/10``
                 } hover:border-purple-500/50 transition-all`}
               >"
                 {index === 1 && (""
@@ -182,11 +184,12 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
 "
                 <a""`
                   href="/contact"``
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
-'
-                    index === 1''
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'''`
-                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'``}`}
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${,
+  index === 1'
+  '
+                      ? 'bg-purple-600 hover: bg-purple-700 text-white''
+  '`
+                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20``}`}
                 >
                   Get Started;
                 </a>
@@ -312,4 +315,4 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
       </section>
     </div>
   )}'"`
-'"`'"`
+  '"`'"`
