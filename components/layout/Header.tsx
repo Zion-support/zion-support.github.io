@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -33,7 +33,6 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,7 +72,7 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (_path: string) => false;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
