@@ -18,7 +18,8 @@ const nextConfig = {
   images: {
     domains: ['ziontechgroup.com'],
     formats: ['image/avif', 'image/webp'],
-    unoptimized: true,
+    // Enable Next.js Image Optimization
+    unoptimized: false,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
