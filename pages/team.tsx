@@ -1,9 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
 import { 
   Linkedin,
   Twitter,
@@ -29,7 +35,8 @@ import {
   Sparkles,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -160,7 +167,8 @@ const Team: React.FC = () => {
   const values = [
     {
       title: "Innovation First",
-      description: "We push the boundaries of what's possible with AI and technology",
+      description: "We push the boundaries of what
+  's possible with AI and technology",
       icon: Brain
     },
     {

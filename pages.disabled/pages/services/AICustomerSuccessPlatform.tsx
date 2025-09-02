@@ -189,7 +189,8 @@ import {}
   UserEdit3,
   UserEditOff,
   UserSearch3,
-  UserSearchOff} from 'lucide-react';
+  UserSearchOff} from
+  'lucide-react';
 
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"{/* Hero Section */}""
@@ -207,8 +208,10 @@ import {}
             </div>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Customer Success with""
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">'
-                {' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+  '
+                {' 
+  '}
                 AI Intelligence
               </span>"
             </h1>""
@@ -378,11 +381,11 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
-                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
-'
-                  index === 1''
-                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent'''`
-                    : 'border-zion-slate-light/20'``
+                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${,
+  index === 1'
+  '
+                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent''
+  '`: 'border-zion-slate-light/20``
                 }`}"
               >""
                 <div className="text-center mb-6">""
@@ -540,4 +543,4 @@ import {}
   )};
 ;
 export { AICustomerSuccessPlatform };export default AICustomerSuccessPlatform;'"`
-'"`'"`
+  '"`'"`

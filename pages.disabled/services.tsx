@@ -1,11 +1,17 @@
-import React from 'react'
-import Link from 'next/link'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
+import React from
+  'react'
+import Link from
+  'next/link'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from
+  'lucide-react'
+import PageTransition from
+  '../src/components/PageTransition'
 
 export default function Services() {
-	const title = 'Services — Zion Tech Group'
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const title =
+  'Services — Zion Tech Group'
+	const description =
+  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
 
 	return (
 		<PageTransition>

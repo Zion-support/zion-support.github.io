@@ -23,7 +23,8 @@ import {}
   Calendar,
   GitBranch,
   PieChart,
-  AlertTriangle} from 'lucide-react.ts';
+  AlertTriangle} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/ai-project-management.tsx
 export default function AIProjectManagement(...args: any[]): any {
@@ -289,5 +290,6 @@ export default function AIProjectManagement(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/ai-project-management.tsx
-  )}'"
+  )}
+  '"
 '"'"

@@ -49,11 +49,10 @@ import {}
   Kanban,
   Calendar,
   Timer,
-  Stopwatch} from 'lucide-react';
-
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-const AICybersecurityPlatform: React.FC = () => {
-'const [activeTab, setActiveTab] = useState('overview');
+  Stopwatch} from,
+  lucide-react';: pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
+const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview
+  ');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {}
@@ -249,11 +248,11 @@ const AICybersecurityPlatform: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-                className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-'
-                  tier.popular''
-                    ? 'border-red-500 scale-105'''`
-                    : 'border-red-500/20'``
+                className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
+  tier.popular'
+  '
+                    ? 'border-red-500 scale-105''
+  '`: 'border-red-500/20``
                 }`}
               >"{tier.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -301,11 +300,12 @@ const AICybersecurityPlatform: React.FC = () => {
 "
                 <Link""`
                   to="/contact"``
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    tier.popular''
-                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700'''`
-                      : 'border-2 border-red-500 text-red-300 hover:bg-red-500 hover:text-white'``}`}
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+  tier.popular'
+  '
+                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700''
+  '`
+                      : 'border-2 border-red-500 text-red-300 hover:bg-red-500 hover:text-white``}`}
                 >
                   Get Protected;
                 </Link>
@@ -409,4 +409,4 @@ const AICybersecurityPlatform: React.FC = () => {
   )};
 
 export default AICybersecurityPlatform;'"`
-'"`'"`
+  '"`'"`
