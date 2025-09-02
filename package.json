@@ -80,7 +80,16 @@
     "pm2:simple:deploy": "./scripts/pm2-automation.sh deploy",
     "pm2:simple:build": "./scripts/pm2-automation.sh build",
     "pm2:simple:test": "./scripts/pm2-automation.sh test",
-    "pm2:simple:lint": "./scripts/pm2-automation.sh lint"
+    "pm2:simple:lint": "./scripts/pm2-automation.sh lint",
+    "security:audit": "npm audit --audit-level=moderate",
+    "security:fix": "npm audit fix",
+    "performance:lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
+    "performance:budget": "bundlesize",
+    "seo:validate": "npm run build && npm run seo:check",
+    "pwa:validate": "pwa-validate",
+    "accessibility:test": "pa11y https://ziontechgroup.com",
+    "deploy:staging": "npm run build && npm run test && echo 'Deploying to staging...'",
+    "deploy:production": "npm run build:full && npm run security:audit && echo 'Deploying to production...'"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.21.5",
