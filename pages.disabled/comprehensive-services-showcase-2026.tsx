@@ -1,18 +1,29 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
-import { comprehensiveExpandedServices, serviceCategories } from '../data/comprehensive-2026-expanded-services'
+<<<<<<< HEAD
+import React, { useState } from,
+  react'
+import { Link } from
+  'react-router-dom'
+import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from
+  'lucide-react'
+import PageTransition from
+  '../src/components/PageTransition'
+import { comprehensiveExpandedServices, serviceCategories } from
+  '../data/comprehensive-2026-expanded-services'
 
 export default function ComprehensiveServicesShowcase2026() {
-	const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group'
-	const description = 'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'
+	const title =
+  'Comprehensive Services Showcase 2026 — Zion Tech Group'
+	const description =
+  'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'
 
-	const [selectedCategory, setSelectedCategory] = useState<string>('all')
-	const [searchTerm, setSearchTerm] = useState('')
+	const [selectedCategory, setSelectedCategory] = useState<string>(
+  'all')
+	const [searchTerm, setSearchTerm] = useState('
+  ')
 
 	const filteredServices = comprehensiveExpandedServices.filter(service => {
-		const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+		const matchesCategory = selectedCategory === 'all
+  ' || service.category === selectedCategory
 		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
@@ -24,11 +35,11 @@ export default function ComprehensiveServicesShowcase2026() {
 	return (
 		<PageTransition>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
+			<section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-							Comprehensive{' '}
+							Comprehensive{'}
 							<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 								Services Portfolio
 							</span>
@@ -80,11 +91,14 @@ export default function ComprehensiveServicesShowcase2026() {
 						{/* Category Filter */}
 						<div className="flex flex-wrap gap-2">
 							<button
-								onClick={() => setSelectedCategory('all')}
+								onClick={() => setSelectedCategory(,
+  all
+  ')}
 								className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-									selectedCategory === 'all'
-										? 'bg-blue-600 text-white'
-										: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+									selectedCategory === 'all
+  '
+										? 'bg-blue-600 text-white
+  ': 'bg-gray-100 text-gray-700 hover:bg-gray-200
 								}`}
 							>
 								All Services
@@ -95,8 +109,9 @@ export default function ComprehensiveServicesShowcase2026() {
 									onClick={() => setSelectedCategory(category.name)}
 									className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 										selectedCategory === category.name
-											? 'bg-blue-600 text-white'
-											: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+											?,
+  bg-blue-600 text-white
+  ': 'bg-gray-100 text-gray-700 hover:bg-gray-200
 									}`}
 								>
 									{category.icon} {category.name}
@@ -360,3 +375,9 @@ export default function ComprehensiveServicesShowcase2026() {
 		</PageTransition>
 	)
 }
+=======
+// Archived from pages/comprehensive-services-showcase-2026.tsx to avoid build issues.
+// Restore and adapt to Next.js Link if needed.
+export default function Placeholder() { return null; }
+
+>>>>>>> origin/main

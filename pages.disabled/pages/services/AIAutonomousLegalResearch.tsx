@@ -21,7 +21,8 @@ import {}
   Zap,
   Shield,
   Users,
-  Scale} from 'lucide-react.ts';
+  Scale} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
 const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
@@ -41,7 +42,9 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Revolutionize Legal Research with""
-              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
@@ -198,4 +201,4 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
 export default AIAutonomousLegalResearch;'"
-'"'"
+  '"'"

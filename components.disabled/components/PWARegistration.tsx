@@ -1,7 +1,15 @@
-import React, { useEffect, useState } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { Download, X, Smartphone, Monitor } from 'lucide-react';''interface BeforeInstallPromptEvent extends Event {
+React, { useEffect, useState } from,
+  react';
+import { motion, AnimatePresence } from 'lucide-react';
+  'framer-motion';'import { Download, X, Smartphone, Monitor } from 'lucide-react';
+  'lucide-react';'
+  'interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{;
-    outcome: 'accepted' | 'dismissed';'    platform: string;'  }>;prompt(): Promise<void>;
+    outcome: 'accepted
+  ' | 'dismissed
+  ;
+   platform: string;  }>;prompt(): Promise<void>;
 }
 
 const PWARegistration: React.FC = () => {
@@ -11,7 +19,9 @@ const PWARegistration: React.FC = () => {
 
   useEffect(() => {
     // Check if app is already installed
-if (window.matchMedia('(display-mode: standalone)').matches) {'      setIsInstalled(true);'      return;
+if (window.matchMedia(,
+  (display-mode: standalone)').matches) {
+  '      setIsInstalled(true);      return;
     }
 
     // Listen for the beforeinstallprompt event
@@ -26,19 +36,35 @@ const handleAppInstalled = () => {;setIsInstalled(true);
       setDeferredPrompt(null);
     };
 
-window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener('appinstalled', handleAppInstalled);''    // Register service worker
-    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);'        })'        .catch((error) => {
-          console.log('Service Worker registration failed: ', error);'        });'    }
+window.addEventListener(,
+  beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener(
+  'appinstalled', handleAppInstalled);'
+  '    // Register service worker
+    if ('serviceWorker
+  ' in navigator) {'      navigator.serviceWorker.register(
+  '/sw.js')
+  '        .then((registration) => {'          console.log(
+  'Service Worker registered successfully: , registration);,
+  })
+  '        .catch((error) => {
+          console.log('Service Worker registration failed: , error);'        });'    }
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener('appinstalled', handleAppInstalled);'    };'  }, []);
+      window.removeEventListener(
+  'beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener(
+  'appinstalled', handleAppInstalled);'    };'  }, []);
 
   const handleInstallClick = async () => {;if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     
-if (outcome === 'accepted') {'      console.log('User accepted the install prompt');'    } else {'      console.log('User dismissed the install prompt');'    }'setDeferredPrompt(null);
+if (outcome ===
+  'accepted') {
+  '      console.log('User accepted the install prompt
+  ');'    } else {
+  '      console.log('User dismissed the install prompt
+  ');'    }'setDeferredPrompt(null);
     setShowInstallPrompt(false);
   };
 
