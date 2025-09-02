@@ -1,19 +1,19 @@
 export default resourceMonitor;
 
-interface ResourceError {
-  url: string;
+:pages.disabled/utils/resourceMonitor.tsx
+interface ResourceError {url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
   error: string;
   timestamp: number}
 
-class ResourceMonitor {
+class ResourceMonitor {}
   private errors: ResourceError[] = [];
   private isMonitoring = false;
   private retryAttempts = new Map < string, number> () ;
   private maxRetries = 3;
 
-  start() {
-    if (this.isMonitoring) return;
+:pages.disabled/utils/resourceMonitor.tsx
+  start() {if (this.isMonitoring) return;
 
     this.isMonitoring = true;
     this.setupErrorListeners () ;
@@ -22,6 +22,7 @@ class ResourceMonitor {
 '
     console.log ('🔍 Resource Monitor started') }
 
+:pages.disabled/utils/resourceMonitor.tsx
   stop() {
     this.isMonitoring = false;'
     console.log ('🔍 Resource Monitor stopped') }
@@ -33,37 +34,35 @@ class ResourceMonitor {
 
         if (event.target && event.target !== window) {
 
-          if (url) {
-
-            this.handleResourceError (url,
+          if (url) {this.handleResourceError (url,
               this.getResourceType (target) ,'
               event.error?.message || 'Unknown error') }
         }
       },
       true) ;
 
+:pages.disabled/utils/resourceMonitor.tsx
     // Listen for unhandled promise rejections'
     window.addEventListener ('unhandledrejection', event => {
 
       if (event.reason &&'
         typeof event.reason === 'string' &&'
         event.reason.includes ('MIME') ) {
-'
-        this.handleResourceError ('unknown',other',
+'this.handleResourceError ('unknown',other',
           `MIME type error: ${event.reason}`) }
     }) }
 
+:pages.disabled/utils/resourceMonitor.tsx
   private setupResourceObservers() {
     // Monitor DOM changes for new resources
-    if (window.MutationObserver) {
-
-              this.monitorElement (element) }
+    if (window.MutationObserver) {this.monitorElement (element) }
           }) }) }) ;
 
       observer.observe (document.head, { childList: true, subtree: true }) ;
       observer.observe (document.body, { childList: true, subtree: true }) }
   }
 
+:pages.disabled/utils/resourceMonitor.tsx
   private monitorElement (element: HTMLElement) {
 
     // Monitor scripts'
@@ -101,11 +100,10 @@ class ResourceMonitor {
     try {
       if (!response.ok) {
 '
-        this.handleResourceError (url,other',`
-          `HTTP ${response.status}: ${response.statusText}`) ;
+        this.handleResourceError (url,other',``HTTP ${response.status}: ${response.statusText}`) ;
         return}
 
-      
+:pages.disabled/utils/resourceMonitor.tsx
       if (!contentType) {
 '
         this.handleResourceError (url,other',No content - type header') ;
@@ -120,12 +118,12 @@ class ResourceMonitor {
         this.handleResourceError (url,stylesheet',`
           `Incorrect MIME type: ${contentType} (expected css) `) }
     } catch (error) {
-'`
-      this.handleResourceError (url,other', `Fetch error: ${error}`) }
+'`this.handleResourceError (url,other', `Fetch error: ${error}`) }
   }
 
   private handleResourceError (url: string,'
     type: ResourceError['type'],
+:pages.disabled/utils/resourceMonitor.tsx
     error: string) {
 
     const resourceError: ResourceError = {
@@ -133,30 +131,29 @@ class ResourceMonitor {
       url,
       type,
       error,
-      timestamp: Date.now () };
-
-    this.errors.push (resourceError) ;'
+      timestamp: Date.now () };this.errors.push (resourceError) ;'
     console.error ('🚨 Resource Error:', resourceError) ;
 
-    // Attempt to retry loading
+    // Attempt to retry loading;
     this.attemptRetry (url, type) ;
 
-    // Report to analytics / monitoring service
+    // Report to analytics / monitoring service;
     this.reportError (resourceError) }
+:pages.disabled/utils/resourceMonitor.tsx
 '
   private attemptRetry (url: string, type: ResourceError['type']) {
 
     if (attempts >= this.maxRetries) {
-`
-      console.warn (`Max retry attempts reached for ${url}`) ;
+`console.warn (`Max retry attempts reached for ${url}`) ;
       return}
 
     this.retryAttempts.set (url, attempts + 1) ;
 
-    setTimeout ( () => {
+    setTimeout ( () => {}
         this.retryResource (url, type) },
-      Math.pow (2, attempts) * 1000) ; // Exponential backoff
+      Math.pow (2, attempts) * 1000) ; // Exponential backoff;
   }
+:pages.disabled/utils/resourceMonitor.tsx
 '
   private retryResource (url: string, type: ResourceError['type']) {
 `
@@ -221,13 +218,12 @@ class ResourceMonitor {
     this.retryAttempts.clear () }
 
   getErrorSummary() {
-    this.errors.forEach (error => {
-
-      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}) ;
+    this.errors.forEach (error => {summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}) ;
 
     return summary}
 }
 
+:pages.disabled/utils/resourceMonitor.tsx
 // Create singleton instance
 
 '`

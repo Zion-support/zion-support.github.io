@@ -1,32 +1,32 @@
 ;
-export { function };export default function CloudDevOps(...args: []):  {
-
+export { function };export default function CloudDevOps(...args: []):  {}
   return()
     <>
       <Helmet>
         <title>Cloud DevOps - Zion Tech Group</title>
         <meta name = "description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />""
         <meta name="keywords" content="cloud devops, CI/CD, cloud infrastructure, automation, containerization, kubernetes, aws, azure, google cloud" />
+:pages.disabled/pages/services/cloud-devops.tsx
       </Helmet>"
 ""
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-        {/* Hero Section */}""
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
         <section className="relative pt-32 pb-20 overflow-hidden">""
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">""
+:pages.disabled/pages/services/cloud-devops.tsx
                 <Cloud className="w-4 h-4 mr-2"  />                Cloud-Native DevOps
               </div>"
 ""
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 Cloud""
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> DevOps</span>
-              </h1>"
-""
+              </h1>"""
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Streamline your development and operations with cloud-native DevOps solutions. Automate deployments,
                 improve collaboration, and accelerate delivery with modern cloud infrastructure.
+:pages.disabled/pages/services/cloud-devops.tsx
               </p>"
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -38,24 +38,24 @@ export { function };export default function CloudDevOps(...args: []):  {
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">""
-                  <Play className="mr-2 w-5 h-5"  />                  Watch Demo
-                </button>
+                  <Play className="mr-2 w-5 h-5"  />                  Watch Demo</button>
               </div>
             </div>
           </div>
         </section>
-"
-        {/* Features Section */}""
+:pages.disabled/pages/services/cloud-devops.tsx
+"{/* Features Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Cloud DevOps Solutions"
-              </h2>""
+:pages.disabled/pages/services/cloud-devops.tsx
+                Comprehensive Cloud DevOps Solutions"</h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our cloud DevOps platform provides end-to-end solutions for modern software development
+                Our cloud DevOps platform provides end-to-end solutions for modern software development;
                 and deployment workflows.
               </p>
+:pages.disabled/pages/services/cloud-devops.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,8 +99,7 @@ export { function };export default function CloudDevOps(...args: []):  {
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">""
-                    <feature.icon className="w-6 h-6 text-white" />"
-                  </div>""
+                    <feature.icon className="w-6 h-6 text-white" />"</div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                   <p className="text-slate-300">{feature.description}</p>
                 </div>
@@ -109,17 +108,18 @@ export { function };export default function CloudDevOps(...args: []):  {
           </motion.div>
         </div>
       </section>
-"
-        {/* DevOps Areas Section */}""
+:pages.disabled/pages/services/cloud-devops.tsx
+"{/* DevOps Areas Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                DevOps Service Areas"
-              </h2>""
+:pages.disabled/pages/services/cloud-devops.tsx
+                DevOps Service Areas"</h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Comprehensive DevOps services covering all aspects of modern software delivery.
               </p>
+:pages.disabled/pages/services/cloud-devops.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -179,8 +179,7 @@ export { function };export default function CloudDevOps(...args: []):  {
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>""
                   <p className="text-slate-300 mb-4">{area.description}</p>""
-                  <ul className="space-y-1">"
-                    {area.benefits.map((benefit, benefitIndex) => (""
+                  <ul className="space-y-1">"{area.benefits.map((benefit, benefitIndex) => (""
                       <li key={benefitIndex} className="text-sm text-cyan-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
                       </li>
@@ -194,17 +193,18 @@ export { function };export default function CloudDevOps(...args: []):  {
           </div>
         </div>
       </section>
-"
-        {/* Technology Stack Section */}""
+:pages.disabled/pages/services/cloud-devops.tsx
+"{/* Technology Stack Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                DevOps Technology Stack"
-              </h2>""
+:pages.disabled/pages/services/cloud-devops.tsx
+                DevOps Technology Stack"</h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Leverage industry-leading tools and technologies for your DevOps implementation.
               </p>
+:pages.disabled/pages/services/cloud-devops.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -264,8 +264,7 @@ export { function };export default function CloudDevOps(...args: []):  {
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{tech.title}</h3>""
                   <p className="text-slate-300 mb-4">{tech.description}</p>""
-                  <ul className="space-y-1">"
-                    {tech.features.map((feature, featureIndex) => (""
+                  <ul className="space-y-1">"{tech.features.map((feature, featureIndex) => (""
                       <li key={featureIndex} className="text-sm text-cyan-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
                       </li>
@@ -286,23 +285,23 @@ export { function };export default function CloudDevOps(...args: []):  {
           </div>
         </div>
       </section>
-"
-        {/* Benefits Section */}""
+:pages.disabled/pages/services/cloud-devops.tsx
+"{/* Benefits Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Cloud DevOps Benefits"
-              </h2>""
+:pages.disabled/pages/services/cloud-devops.tsx
+                Cloud DevOps Benefits"</h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Transform your software delivery process with measurable improvements and efficiency gains.
               </p>
+:pages.disabled/pages/services/cloud-devops.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
-                <div className="space-y-6">"
-                  {[""
+                <div className="space-y-6">"{[""
                     "50-80% faster deployment frequency",""
                     "60-90% reduction in lead time",""
                     "40-70% improvement in recovery time",""
@@ -315,17 +314,17 @@ export { function };export default function CloudDevOps(...args: []):  {
                     </div>
                   ))}
                 </div>
+:pages.disabled/pages/services/cloud-devops.tsx
               </div>"
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">DevOps Metrics</h3>""
-                <div className="space-y-4">"
-                  {[""
+                <div className="space-y-4">"{[""
                     { metric: "50-80%", label: "Deployment Speed", description: "Faster delivery" },""
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },""
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },""
-                    { metric: "99.9%+", label: "Uptime", description: "Availability" }"
-                  ].map((item, index)  => (""
+:pages.disabled/pages/services/cloud-devops.tsx
+                    { metric: "99.9%+", label: "Uptime", description: "Availability" }"].map((item, index)  => (""
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>""
                       <div className="text-sm text-slate-300">{item.label}</div>""
@@ -338,17 +337,18 @@ export { function };export default function CloudDevOps(...args: []):  {
           </div>
         </div>
       </section>
-"
-        {/* Implementation Process Section */}""
+:pages.disabled/pages/services/cloud-devops.tsx
+"{/* Implementation Process Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                DevOps Implementation Process"
-              </h2>""
+:pages.disabled/pages/services/cloud-devops.tsx
+                DevOps Implementation Process"</h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our systematic approach ensures successful DevOps implementation and transformation.
               </p>
+:pages.disabled/pages/services/cloud-devops.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -384,8 +384,7 @@ export { function };export default function CloudDevOps(...args: []):  {
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    <span className="text-white font-bold text-xl">{step.step}</span>"
-                  </div>""
+                    <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
                 </div>
@@ -394,11 +393,12 @@ export { function };export default function CloudDevOps(...args: []):  {
           </div>
         </div>
       </section>
-"
-        {/* CTA Section */}""
+:pages.disabled/pages/services/cloud-devops.tsx
+"{/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">;""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+:pages.disabled/pages/services/cloud-devops.tsx
               Ready to Transform Your DevOps?"
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -413,13 +413,13 @@ export { function };export default function CloudDevOps(...args: []):  {
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
                 to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">
                 Explore All Services;
               </Link>;
             </div>;
           </div>;
         </section>;
       </div>;
+:pages.disabled/pages/services/cloud-devops.tsx
     </>"
   )}}}}}}'"'"

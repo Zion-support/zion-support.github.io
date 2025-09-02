@@ -1,116 +1,71 @@
+import { Helmet } from 'react-helmet-async';
 
-type SEOProps = {
+interface SEOProps {
   title?: string;
   description?: string;
-  url?: string;
+  keywords?: string;
   image?: string;
-};
+  url?: string;
+  type?: string;
+}
 
-export function SEO({
-
-  title = 'Zion Tech Group - Technology Solutions','
-  description = 'Zion Tech Group delivers AI, cloud, cybersecurity and digital transformation services.','
-  url = 'https://ziontechgroup.com','
-  image = '/og-image.jpg'
-}: SEOProps) {
-            text-align: center}
-          
-          /* Optimize font loading */
-          @font-face {
-
-            font-family: 'Orbitron';
-            font-display: swap;
-            src: url('/fonts/orbitron-v16-latin-400.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal}
-          
-          @font-face {
-
-            font-family: 'Orbitron';
-            font-display: swap;
-            src: url('/fonts/orbitron-v16-latin-600.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal}
-          
-          /* Reduce layout shift */
-          img {
-
-            max-width: 100%;
-            height: auto}
-          
-          /* Optimize animations */
-          @media(prefers-reduced-motion: reduce) {
-
-            *, *::before, *::after {
-
-              animation-duration: 0.01ms !important;
-              animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important}
-          }`
-        `}
-      </style>
-
-      {/* Performance monitoring */}
-      <script>`
-        {`
-          // Performance monitoring'
-          if('performance' in window) {
-
-            window.addEventListener('load', () => {
-
-              if(navigation) {
-
-                // console.log('Page load time:', loadTime + 'ms');
-                
-                // Send to analytics if available
-                if(window.gtag) {
-
-                  window.gtag('event',timing_complete', {
-
-                    name: 'load',
-                    value: Math.round (loadTime) }) }
-              }
-            }) }
-          
-          // Core Web Vitals monitoring'
-          if('web-vital' in window) {
-
-            import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-
-              getCLS(console.log);
-              getFID(console.log);
-              getFCP(console.log);
-              getLCP(console.log);
-              getTTFB(console.log)})}`
-        `}
-      </script>
-    </Helmet>) }
-'"`
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading Technology Solutions',
+  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
+  keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
+  image = '/og-image.svg',
+  url = 'https://ziontechgroup.com',
+  type = 'website'
+}) => {
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
-      <meta property="og:type" content="website" />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta property="og:site_name" content="Zion Tech Group" />
 
-  return()
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />"
-      <link rel="canonical" href={url} />"
-      <meta property="og:type" content="website" />"
-      <meta property="og:title" content={title} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:url" content={url} />"
-      <meta property="og:image" content={image} />"
-      <meta name="twitter:card" content="summary_large_image" />"
-      <meta name="twitter:title" content={title} />"
-      <meta name="twitter:description" content={description} />"
-      <meta name="twitter:image" content={image} />
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
+
+      {/* Additional SEO */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.svg",
+          "description": description,
+          "sameAs": [
+            "https://linkedin.com/company/zion-tech-group",
+            "https://twitter.com/ziontechgroup"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-ZION-TECH",
+            "contactType": "customer service"
+          }
+        })}
+      </script>
     </Helmet>
-  )}
-'"
+  );
+};

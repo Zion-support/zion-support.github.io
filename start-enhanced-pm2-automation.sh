@@ -71,7 +71,7 @@ setup_enhanced_ecosystem() {
     log "Setting up enhanced PM2 ecosystem..."
     
     # Create logs directory
-    mkdir -p "$PROJECT_ROOT/logs"
+    mkdir -p "logs"
     
     # Set proper permissions
     if [ -d "$PROJECT_ROOT/scripts/automation" ]; then

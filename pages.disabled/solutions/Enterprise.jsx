@@ -1,7 +1,6 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';
-import {
-
+import {}
   Building2,
   Shield,
   Globe,
@@ -10,6 +9,7 @@ import {
   BarChart3,'
   Lock} from 'lucide-react';
 
+:pages.disabled/solutions/Enterprise.jsx
 const EnterpriseSolutions = () => {
   const solutions = [
     {
@@ -18,30 +18,30 @@ const EnterpriseSolutions = () => {
       description:''
         'Transform your data into actionable insights with our advanced AI analytics platform.','
       features: [''
-        'Real-time data processing',Predictive analytics',Custom dashboards',Automated reporting',Multi-source integration',
-      ],
+        'Real-time data processing',Predictive analytics',Custom dashboards',Automated reporting',Multi-source integration',],
       icon: BarChart3,'
       href: '/services/ai-autonomous-systems'},
+:pages.disabled/solutions/Enterprise.jsx
     {
 '
       title: 'Enterprise Cybersecurity Suite','
       description:''
         'Comprehensive security solutions designed for large organizations.','
       features: [''
-        'Threat detection & response',Compliance management',Identity & access control',Security monitoring',Incident response',
-      ],
+        'Threat detection & response',Compliance management',Identity & access control',Security monitoring',Incident response',],
       icon: Shield,'
       href: '/services/cybersecurity'},
+:pages.disabled/solutions/Enterprise.jsx
     {
 '
       title: 'Cloud Infrastructure Management','
       description:''
         'Scalable cloud solutions optimized for enterprise workloads.','
       features: [''
-        'Multi-cloud strategy',Cost optimization',Performance monitoring',Disaster recovery',Security compliance',
-      ],
+        'Multi-cloud strategy',Cost optimization',Performance monitoring',Disaster recovery',Security compliance',],
       icon: Globe,'
       href: '/services/it-infrastructure'},
+:pages.disabled/solutions/Enterprise.jsx
     {
 '
       title: 'AI Process Automation','
@@ -91,11 +91,11 @@ const EnterpriseSolutions = () => {
       ]},
   ];
   return()
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
-      {/* Header Section */}""
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Header Section */}""
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+:pages.disabled/solutions/Enterprise.jsx
             Enterprise Solutions"
           </h1>""
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -112,32 +112,31 @@ const EnterpriseSolutions = () => {
             </Link>"
             <Link""
               to="/contact""
-              className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
-            >
-              Get Enterprise Quote
+              className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">
+              Get Enterprise Quote;
             </Link>
           </div>
         </div>
       </div>
-"
-      {/* Core Solutions */}""
+:pages.disabled/solutions/Enterprise.jsx
+"{/* Core Solutions */}""
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+:pages.disabled/solutions/Enterprise.jsx
             Core Enterprise Solutions
-          </h2>"
-""
+          </h2>"""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => {
-
+            {solutions.map((solution, index) => {}
               const Icon = solution.icon;
               return()
-                <div"
-                  key={index}""
+:pages.disabled/solutions/Enterprise.jsx
+                <div"key={index}""
                   className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300""
                 >""
                   <div className="flex items-center mb-6">""
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">""
+:pages.disabled/solutions/Enterprise.jsx
                       <Icon className="w-8 h-8 text-white" />"
                     </div>""
                     <h3 className="text-2xl font-bold">{solution.title}</h3>
@@ -147,8 +146,7 @@ const EnterpriseSolutions = () => {
 ""
                   <ul className="space-y-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (
-                      <li"
-                        key={featureIndex}""
+                      <li"key={featureIndex}""
                         className="flex items-center space-x-3""
                       >""
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>""
@@ -157,23 +155,23 @@ const EnterpriseSolutions = () => {
                     ))}
                   </ul>
 
+:pages.disabled/solutions/Enterprise.jsx
                   <Link"
                     to={solution.href}""
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                   >
-                    Learn More"
-                    <svg""
+                    Learn More"<svg""
                       className="w-4 h-4 ml-2""
                       fill="none""
                       stroke="currentColor""
+:pages.disabled/solutions/Enterprise.jsx
                       viewBox="0 0 24 24"
-                    >"
-                      <path""
+                    >"<path""
                         strokeLinecap="round""
                         strokeLinejoin="round""
                         strokeWidth={2}""
-                        d="M9 5l7 7-7 7"
-                      />
+:pages.disabled/solutions/Enterprise.jsx
+                        d="M9 5l7 7-7 7"/>
                     </svg>
                   </Link>
                 </div>
@@ -182,25 +180,25 @@ const EnterpriseSolutions = () => {
           </div>
         </div>
       </div>
-"
-      {/* Industry Solutions */}""
+:pages.disabled/solutions/Enterprise.jsx
+"{/* Industry Solutions */}""
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+:pages.disabled/solutions/Enterprise.jsx
             Industry-Specific Solutions
-          </h2>"
-""
+          </h2>"""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => {
-
+            {industries.map((industry, index) => {}
               const Icon = industry.icon;
               return()
-                <div"
-                  key={index}""
+:pages.disabled/solutions/Enterprise.jsx
+                <div"key={index}""
                   className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300""
                 >""
                   <div className="flex items-center mb-6">""
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">""
+:pages.disabled/solutions/Enterprise.jsx
                       <Icon className="w-8 h-8 text-white" />"
                     </div>""
                     <h3 className="text-2xl font-bold">{industry.name}</h3>
@@ -210,8 +208,7 @@ const EnterpriseSolutions = () => {
 ""
                   <div className="grid grid-cols-1 gap-3">
                     {industry.solutions.map((solution, solutionIndex) => (
-                      <div"
-                        key={solutionIndex}""
+                      <div"key={solutionIndex}""
                         className="bg-gray-700/50 rounded-lg p-3""
                       >""
                         <span className="text-gray-300">{solution}</span>
@@ -224,12 +221,13 @@ const EnterpriseSolutions = () => {
           </div>
         </div>
       </div>
-"
-      {/* Benefits Section */}""
+:pages.disabled/solutions/Enterprise.jsx
+"{/* Benefits Section */}""
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Why Choose Zion Tech Group?
+:pages.disabled/solutions/Enterprise.jsx
           </h2>"
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -258,8 +256,7 @@ const EnterpriseSolutions = () => {
               return (""
                 <div key={index} className="text-center">""
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">""
-                    <Icon className="w-10 h-10 text-white" />"
-                  </div>""
+                    <Icon className="w-10 h-10 text-white" />"</div>""
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>""
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
@@ -268,12 +265,13 @@ const EnterpriseSolutions = () => {
           </div>
         </div>
       </div>
-"
-      {/* CTA Section */}""
+:pages.disabled/solutions/Enterprise.jsx
+"{/* CTA Section */}""
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-4xl mx-auto text-center">""
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30">""
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
+:pages.disabled/solutions/Enterprise.jsx
               Ready to Transform Your Enterprise?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8">'
@@ -289,9 +287,8 @@ const EnterpriseSolutions = () => {
               </Link>"
               <Link""
                 to="/contact""
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
-              >
-                Contact Sales Team
+                className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">
+                Contact Sales Team;
               </Link>
             </div>
           </div>
@@ -301,5 +298,6 @@ const EnterpriseSolutions = () => {
   );
 };
 
+:pages.disabled/solutions/Enterprise.jsx
 export default EnterpriseSolutions;'"
 '"'"

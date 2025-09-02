@@ -1,5 +1,6 @@
 export default mimeTypeFallback;
 
+:pages.disabled/utils/mimeTypeFallback.tsx
 interface MimeTypeMapping {
   [key: string]: string}
 
@@ -37,33 +38,30 @@ class MimeTypeFallback {
   async checkAndFixMimeType (url: string: any): Promise < any> {
 
     try {
-      if (!response.ok) {
-
-        console.warn (`Resource not found: ${url}`) ;
+      if (!response.ok) {console.warn (`Resource not found: ${url}`) ;
         return false}
 
-      
+:pages.disabled/utils/mimeTypeFallback.tsx
       if (!contentType) {
-`
-        console.warn (`No content - type header for: ${url}`) ;
+`console.warn (`No content - type header for: ${url}`) ;
         return false}
 
-      
+:pages.disabled/utils/mimeTypeFallback.tsx
       if (contentType.includes (expectedType) ||'
         contentType.includes ('application / octet - stream') ) {
 
-        return true; // MIME type is correct or generic
-      }
+        return true; // MIME type is correct or generic}
 `
       console.warn (`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`) ;
 
+:pages.disabled/utils/mimeTypeFallback.tsx
       // Try to fix with fallback URL
       return await this.tryFallbackUrl (url) } catch (error) {
-`
-      console.error (`Error checking MIME type for ${url}:`, error) ;
+`console.error (`Error checking MIME type for ${url}:`, error) ;
       return await this.tryFallbackUrl (url) }
   }
 
+:pages.disabled/utils/mimeTypeFallback.tsx
   private async tryFallbackUrl (originalUrl: string: any): Promise < any> {
 
     if (fallbackUrl) {
@@ -74,18 +72,18 @@ class MimeTypeFallback {
         if (response.ok) {
 
           if (contentType && contentType.includes (expectedType) ) {
-`
-            console.log (`Fallback URL has correct MIME type: ${fallbackUrl}`) ;
+`console.log (`Fallback URL has correct MIME type: ${fallbackUrl}`) ;
             this.replaceResource (originalUrl, fallbackUrl) ;
             return true}
         }
+:pages.disabled/utils/mimeTypeFallback.tsx
       } catch (error) {
-`
-        console.error (`Fallback URL failed: ${fallbackUrl}`, error) }
+`console.error (`Fallback URL failed: ${fallbackUrl}`, error) }
     }
 
     return false}
 
+:pages.disabled/utils/mimeTypeFallback.tsx
   private replaceResource (originalUrl: string, fallbackUrl: string) {
 
     // Replace script tags
@@ -109,26 +107,25 @@ class MimeTypeFallback {
 `
           console.warn (`Critical resource has MIME type issues: ${resource}`) }
       } catch (error) {
-`
-        console.error (`Error preloading resource: ${resource}`, error) }
+`console.error (`Error preloading resource: ${resource}`, error) }
     }
   }
 
+:pages.disabled/utils/mimeTypeFallback.tsx
   createResourceElement (url: string,'
     type: 'script' | 'stylesheet') : HTMLElement {
 '
-    if (type === 'script') {
-
-      script.src = url;
+    if (type === 'script') {script.src = url;
       script.async = true;'
       script.type = 'text / javascript';
+:pages.disabled/utils/mimeTypeFallback.tsx
       return script} else {
-'
-      link.rel = 'stylesheet';
+'link.rel = 'stylesheet';
       link.href = url;'
       link.type = 'text / css';
       return link}
   }
+:pages.disabled/utils/mimeTypeFallback.tsx
 '
   injectResource (url: anystring, type: 'script' | 'stylesheet': any): Promise < any> {
 
@@ -146,12 +143,11 @@ class MimeTypeFallback {
 '
       if (type === 'script') {
 
-        document.head.appendChild (element) } else {
-
-        document.head.appendChild (element) }
+        document.head.appendChild (element) } else {document.head.appendChild (element) }
     }) }
 }
 
+:pages.disabled/utils/mimeTypeFallback.tsx
 // Create singleton instance
 
 '`

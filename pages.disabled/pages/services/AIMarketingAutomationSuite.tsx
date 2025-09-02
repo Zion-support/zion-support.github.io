@@ -1,5 +1,4 @@
-import {
-
+import {}
   BarChart3,
   Target,
   Users,
@@ -13,22 +12,22 @@ import {
   MessageSquare,
   Mail as MailIcon} from 'lucide-react.ts';
 
-export default function AIMarketingAutomationSuite(...args: any[]): any {
-
-  return()
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+export default function AIMarketingAutomationSuite(...args: any[]): any {return()
     <div className="min-h-screen bg-white">""
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">""
         <div className="max-w-5xl mx-auto px-6">""
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            AI Marketing Automation Suite"
-          </h1>""
+            AI Marketing Automation Suite"</h1>""
           <p className="text-purple-100 text-xl">
-            Transform your marketing with intelligent automation, predictive
+            Transform your marketing with intelligent automation, predictive;
             analytics, and personalized customer experiences.
           </p>
         </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
       </section>"
 ""
       <section className="py-16 max-w-6xl mx-auto px-6">""
@@ -37,11 +36,11 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Revolutionary Marketing Features"
             </h2>""
-            <ul className="space-y-3">"
-              {features.map(f => (""
+            <ul className="space-y-3">"{features.map(f => (""
                 <li key={f} className="flex items-start">""
                   <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               ))}"
             </ul>""
             <div className="mt-6 text-sm text-zion-slate-light">
@@ -54,30 +53,29 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             </h3>""
             <div className="grid md: anygrid-cols-1 gap-4">
               {tiers.map(t => (
-                <div"
-                  key={t.name}""
+                <div"key={t.name}""
                   className="rounded-lg p-4 border border-zion-slate-light/30""
                 >""
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-purple-600 mb-2">
-                    {t.price}"
-                  </div>""
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+                    {t.price}"</div>""
                   <ul className="text-sm text-zion-slate-dark space-y-1">
                     {t.details.map(d => (
                       <li key={d}>{d}</li>
                     ))}
                   </ul>
                 </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               ))}"
             </div>""
-            <div className="mt-6 flex flex-wrap gap-3">"
-              <a""
+            <div className="mt-6 flex flex-wrap gap-3">"<a""
                 href="/pricing""
                 className="px-5 py-3 bg-purple-600/10 text-purple-600 rounded-lg hover:bg-purple-600/20 transition-colors inline-flex items-center""
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
-              </a>"
-              <a""
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+              </a>"<a""
                 href="https://ziontechgroup.com""
                 target="_blank""
                 rel="noreferrer""
@@ -86,6 +84,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 Learn More <ExternalLink className="w-4 h-4 ml-2"  />              </a>
             </div>
           </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
         </div>"
 ""
         <div className="mt-12 grid md:grid-cols-2 gap-8">"
@@ -93,26 +92,26 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Marketing Benefits"
             </h3>""
-            <ul className="space-y-3">"
-              {benefits.map(b => (""
+            <ul className="space-y-3">"{benefits.map(b => (""
                 <li key={b} className="flex items-start">""
                   <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
             </ul>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
           </div>"
           <div>""
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Use Cases"
             </h3>""
-            <ul className="space-y-3">"
-              {useCases.map(u => (""
+            <ul className="space-y-3">"{useCases.map(u => (""
                 <li key={u} className="flex items-start">""
                   <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
             </ul>
           </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
         </div>"
 ""
         <div className="mt-12">""
@@ -121,14 +120,14 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {marketingChannels.map(c => (
-              <div"
-                key={c}""
+              <div"key={c}""
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
               >""
                 <MessageSquare className="w-6 h-6 text-purple-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
         </div>"
 ""
         <div className="mt-12">""
@@ -137,14 +136,14 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {aiCapabilities.map(c => (
-              <div"
-                key={c}""
+              <div"key={c}""
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
               >""
                 <Brain className="w-6 h-6 text-purple-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
         </div>"
 ""
         <div className="mt-12 bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-8">""
@@ -157,78 +156,78 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 1"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-                Data Collection"
-              </h4>""
+                Data Collection"</h4>""
               <p className="text-sm text-zion-slate-light">
-                AI-powered audience insights
+                AI-powered audience insights;
               </p>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
             </div>"
             <div>""
               <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
                 2"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-                Segmentation"
-              </h4>""
+                Segmentation"</h4>""
               <p className="text-sm text-zion-slate-light">
-                Smart customer grouping
+                Smart customer grouping;
               </p>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
             </div>"
             <div>""
               <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
                 3"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-                Automation"
-              </h4>""
+                Automation"</h4>""
               <p className="text-sm text-zion-slate-light">
-                Trigger-based campaigns
+                Trigger-based campaigns;
               </p>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
             </div>"
             <div>""
               <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">
                 4"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-                Optimization"
-              </h4>""
+                Optimization"</h4>""
               <p className="text-sm text-zion-slate-light">
-                AI-driven improvements
+                AI-driven improvements;
               </p>
             </div>
           </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
         </div>"
 ""
         <div className="mt-14 text-center">""
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to revolutionize your marketing?"
           </div>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-            <a""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
               href="tel:+13024640950""
               className="inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg""
             >""
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
-            </a>"
-            <a""
+            </a>"<a""
               href="mailto:kleber@ziontechgroup.com""
               className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg""
             >""
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
           <div className="mt-4 text-sm text-zion-slate-light">'
-            Visit us at:{' '}"
-            <a""
+            Visit us at:{' '}"<a""
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
-              className="text-purple-600 hover:underline"
-            >
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
+              className="text-purple-600 hover:underline">
               https://ziontechgroup.com            </a>
           </div>
         </div>
       </section>
     </div>
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
   )}'"
 '"'"

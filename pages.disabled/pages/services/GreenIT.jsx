@@ -1,8 +1,7 @@
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { SEO } from '../../components/SEO';
-import {
-
+import {}
   Leaf,
   Zap,
   Globe,
@@ -20,6 +19,7 @@ import {
   Network,'
   Battery} from 'lucide-react';
 
+:pages.disabled/pages/services/GreenIT.jsx
 export default function GreenIT() {
   const services = [
     {
@@ -124,18 +124,18 @@ export default function GreenIT() {
         title="Green IT Services - Zion Tech Group""
         description="Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services."
       />
-"
-      {/* Hero Section */}""
+"{/* Hero Section */}""
       <section className="relative py-20 px-4">""
         <div className="container mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-          >""
+:pages.disabled/pages/services/GreenIT.jsx
+            transition={{ duration: 0.6 }}">""
             <div className="flex justify-center mb-6">""
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center">""
                 <Leaf className="w-10 h-10 text-white" />
+:pages.disabled/pages/services/GreenIT.jsx
               </div>"
             </div>""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -155,54 +155,53 @@ export default function GreenIT() {
               </a>"
               <a""
                 href="/services-overview""
-                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
-              >
-                View All Services
+                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
+                View All Services;
               </a>
             </div>
           </motion.div>
         </div>
       </section>
-"
-      {/* Services Grid */}""
+:pages.disabled/pages/services/GreenIT.jsx
+"{/* Services Grid */}""
       <section className="py-20 px-4">""
         <div className="container mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.6 }}""
+:pages.disabled/pages/services/GreenIT.jsx
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Green IT Services"
-            </h2>""
+:pages.disabled/pages/services/GreenIT.jsx
+              Green IT Services"</h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Comprehensive sustainable technology solutions designed to
-              minimize environmental impact while maximizing efficiency and
+              Comprehensive sustainable technology solutions designed to;
+              minimize environmental impact while maximizing efficiency and;
               performance.
             </p>
-          </motion.div>"
-""
+:pages.disabled/pages/services/GreenIT.jsx
+          </motion.div>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <motion.div;
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}"
-                transition={{ duration: 0.6, delay: index * 0.1 }}""
+:pages.disabled/pages/services/GreenIT.jsx
+                whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">""
+:pages.disabled/pages/services/GreenIT.jsx
                   <service.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {service.title}"
-                </h3>""
+                  {service.title}"</h3>""
                 <p className="text-slate-300 mb-4">{service.description}</p>""
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li"
-                      key={idx}""
+:pages.disabled/pages/services/GreenIT.jsx
+                    <li"key={idx}""
                       className="flex items-center text-sm text-slate-400""
                     >""
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -215,93 +214,94 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-"
-      {/* Benefits Section */}""
+:pages.disabled/pages/services/GreenIT.jsx
+"{/* Benefits Section */}""
       <section className="py-20 px-4 bg-slate-800/30">""
         <div className="container mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.6 }}""
+:pages.disabled/pages/services/GreenIT.jsx
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Benefits of Green IT"
-            </h2>""
+:pages.disabled/pages/services/GreenIT.jsx
+              Benefits of Green IT"</h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Adopting sustainable technology solutions delivers multiple
+              Adopting sustainable technology solutions delivers multiple;
               benefits for your business and the environment.
             </p>
-          </motion.div>"
-""
+:pages.disabled/pages/services/GreenIT.jsx
+          </motion.div>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <motion.div
+              <motion.div;
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}"
-                transition={{ duration: 0.6, delay: index * 0.1 }}""
+:pages.disabled/pages/services/GreenIT.jsx
+                whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
                 className="text-center""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+:pages.disabled/pages/services/GreenIT.jsx
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  {benefit.title}"
-                </h3>""
+                  {benefit.title}"</h3>""
                 <p className="text-slate-300 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-"
-      {/* Technologies Section */}""
+:pages.disabled/pages/services/GreenIT.jsx
+"{/* Technologies Section */}""
       <section className="py-20 px-4">""
         <div className="container mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.6 }}""
+:pages.disabled/pages/services/GreenIT.jsx
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Green Technologies"
-            </h2>""
+:pages.disabled/pages/services/GreenIT.jsx
+              Green Technologies"</h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Leveraging cutting-edge technologies to create sustainable and
+              Leveraging cutting-edge technologies to create sustainable and;
               energy-efficient IT infrastructure.
             </p>
-          </motion.div>"
-""
+:pages.disabled/pages/services/GreenIT.jsx
+          </motion.div>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
-              <motion.div
+              <motion.div;
                 key={tech.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}"
-                transition={{ duration: 0.6, delay: index * 0.1 }}""
+:pages.disabled/pages/services/GreenIT.jsx
+                whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">""
+:pages.disabled/pages/services/GreenIT.jsx
                   <tech.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  {tech.title}"
-                </h3>""
+                  {tech.title}"</h3>""
                 <p className="text-slate-300 text-sm">{tech.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-"
-      {/* CTA Section */}""
+:pages.disabled/pages/services/GreenIT.jsx
+"{/* CTA Section */}""
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">""
         <div className="container mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+:pages.disabled/pages/services/GreenIT.jsx
             transition={{ duration: 0.6 }}"
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -320,9 +320,8 @@ export default function GreenIT() {
               </a>"
               <a""
                 href="/services-overview""
-                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
-              >
-                Explore More Services
+                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
+                Explore More Services;
               </a>
             </div>
           </motion.div>
@@ -330,5 +329,6 @@ export default function GreenIT() {
       </section>
     </div>
   );
+:pages.disabled/pages/services/GreenIT.jsx
 }'"
 '"'"

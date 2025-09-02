@@ -2,12 +2,12 @@ import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from 'lucide-react';
 export { function };
-export default function AICustomerServiceAutomation() {
-    const features = [
-        {
-
+export default function AICustomerServiceAutomation() {}
+    const features = []
+        {}
             icon: Brain,
             title: "AI Chatbots",""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
             description: "Intelligent chatbots that understand context and provide accurate responses 24/7"
         },
         {
@@ -43,13 +43,12 @@ export default function AICustomerServiceAutomation() {
     ];
     const pricingPlans = [
         {
-"
-""
+"""
             name: "Starter",""
             price: "$199",""
             period: "/month",""
-            description: "Perfect for small businesses and startups","
-            features[;""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+            description: "Perfect for small businesses and startups","features[;""
                 "Up to 1,000 conversations/month",""
                 "Basic AI chatbot",""
                 "Email and chat support",""
@@ -58,16 +57,16 @@ export default function AICustomerServiceAutomation() {
                 "Mobile app access""
             ],;""
             cta: "Start Free Trial",
-            popular: false
+            popular: false;
         },
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
         {
-"
-""
+"""
             name: "Professional",""
             price: "$599",""
             period: "/month",""
-            description: "Ideal for growing businesses and mid-size companies","
-            features[;""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+            description: "Ideal for growing businesses and mid-size companies","features[;""
                 "Up to 10,000 conversations/month",""
                 "Advanced AI chatbot",""
                 "Multi-channel support",""
@@ -78,16 +77,16 @@ export default function AICustomerServiceAutomation() {
                 "Sentiment analysis""
             ],;""
             cta: "Start Free Trial",
-            popular: true
+            popular: true;
         },
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
         {
-"
-""
+"""
             name: "Enterprise",""
             price: "$1,999",""
             period: "/month",""
-            description: "For large corporations and global customer service teams","
-            features[;""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+            description: "For large corporations and global customer service teams","features[;""
                 "Unlimited conversations",""
                 "Custom AI models",""
                 "Omnichannel support",""
@@ -98,9 +97,10 @@ export default function AICustomerServiceAutomation() {
                 "Advanced compliance""
             ],;""
             cta: "Contact Sales",
-            popular: false
+            popular: false;
         }
     ];
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
     const benefits = [
         {
 "
@@ -177,12 +177,12 @@ export default function AICustomerServiceAutomation() {
             description: "Support for WhatsApp, Facebook Messenger, Slack, and other messaging platforms"
         }"
     ];""
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 pt-20">"
-      {/* Hero Section */}""
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 pt-20">"{/* Hero Section */}""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">""
         <div className="text-center mb-16">""
           <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-6">""
             <MessageCircle className="w-4 h-4 mr-2"/>
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
             AI-Powered Customer Service Technology
           </div>"
           ""
@@ -196,18 +196,18 @@ export default function AICustomerServiceAutomation() {
           ""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-              Start Free Trial"
-            </Link>""
+              Start Free Trial"</Link>""
             <Link to="/request-demo" className="px-8 py-3 border border-indigo-500 text-indigo-400 font-medium rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
-              Request Demo
+              Request Demo;
             </Link>
           </div>
         </div>
-"
-        {/* Key Stats */}""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+"{/* Key Stats */}""
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">""
           <div className="text-center">""
             <div className="text-3xl font-bold text-indigo-400 mb-2">60%</div>""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
             <div className="text-gray-400">Cost Reduction</div>"
           </div>""
           <div className="text-center">""
@@ -216,47 +216,47 @@ export default function AICustomerServiceAutomation() {
           </div>""
           <div className="text-center">""
             <div className="text-3xl font-bold text-indigo-400 mb-2">90%</div>""
-            <div className="text-gray-400">Resolution Rate</div>"
-          </div>""
+            <div className="text-gray-400">Resolution Rate</div>"</div>""
           <div className="text-center">""
             <div className="text-3xl font-bold text-indigo-400 mb-2">&lt;1s</div>""
             <div className="text-gray-400">Response Time</div>
           </div>
         </div>
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
 "
         {/* Features Grid */}""
         <div className="mb-16">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Customer Service Features
-          </h2>"
-          ""
+          </h2>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {features.map((feature, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">""
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">""
-                  <feature.icon className="w-6 h-6 text-white"/>"
-                </div>""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+                  <feature.icon className="w-6 h-6 text-white"/>"</div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                 <p className="text-gray-400">{feature.description}</p>
               </div>))}
           </div>
         </div>
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
 "
         {/* Support Channels Section */}""
         <div className="mb-16">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Multi-Channel Support
-          </h2>"
-          ""
+          </h2>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {channels.map((channel, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">""
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">""
-                  <channel.icon className="w-6 h-6 text-white"/>"
-                </div>""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+                  <channel.icon className="w-6 h-6 text-white"/>"</div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>""
                 <p className="text-gray-400">{channel.description}</p>
               </div>))}
           </div>
         </div>
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
 "
         {/* Pricing Section */}""
         <div className="mb-16">""
@@ -266,33 +266,32 @@ export default function AICustomerServiceAutomation() {
           ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">'
             {pricingPlans.map((plan, idx) => (<div key={idx} className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular''`
-                ? 'border-indigo-500 bg-indigo-500/5''`'"`
-                : 'border-gray-700'}`}>""
+                ? 'border-indigo-500 bg-indigo-500/5''`'"`: 'border-gray-700'}`}>""
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
+                      Most Popular;
                     </span>
-                  </div>)}"
-                ""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+                  </div>)}"""
                 <div className="text-center mb-6">""
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
                   <div className="text-4xl font-bold text-indigo-400 mb-1">
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
                     {plan.price}"
                   </div>""
                   <div className="text-gray-400 mb-4">{plan.period}</div>""
                   <p className="text-gray-300">{plan.description}</p>
-                </div>"
-                ""
+                </div>"""
                 <ul className="space-y-3 mb-8">""
                   {plan.features.map((feature, featureIdx) => (<li key={featureIdx} className="flex items-center space-x-3">""
                       <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0"/>""
                       <span className="text-gray-300">{feature}</span>
                     </li>))}
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
                 </ul>"
                 ""
                 <button className="w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">""
-                  {plan.popular ? (<span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white block">"
-                      {plan.cta}""
+                  {plan.popular ? (<span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white block">"{plan.cta}""
                     </span>) : (<span className="border border-gray-600 text-gray-300 block hover:border-indigo-500 hover:text-indigo-400">
                       {plan.cta}
                     </span>)}
@@ -300,28 +299,29 @@ export default function AICustomerServiceAutomation() {
               </div>))}
           </div>
         </div>
-"
-        {/* Benefits Section */}""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+"{/* Benefits Section */}""
         <div className="mb-16">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose AI Customer Service Automation?
-          </h2>"
-          ""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+          </h2>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {benefits.map((benefit, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">""
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">""
-                  <benefit.icon className="w-6 h-6 text-white"/>"
-                </div>""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+                  <benefit.icon className="w-6 h-6 text-white"/>"</div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""
                 <p className="text-gray-400">{benefit.description}</p>
               </div>))}
           </div>
         </div>
-"
-        {/* CTA Section */}""
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
+"{/* CTA Section */}""
         <div className="text-center">""
           <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 border border-indigo-500/20 rounded-2xl p-8">""
             <h2 className="text-3xl font-bold text-white mb-4">
+:pages.disabled/pages/services/AICustomerServiceAutomation.jsx
               Ready to Transform Your Customer Service?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -329,10 +329,9 @@ export default function AICustomerServiceAutomation() {
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                Start Free Trial Today"
-              </Link>""
+                Start Free Trial Today"</Link>""
               <Link to="/request-demo" className="px-8 py-3 border border-indigo-500 text-indigo-400 font-medium rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </div>

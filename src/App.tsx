@@ -1,71 +1,96 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
-import LoadingSpinner from './components/ui/loading-spinner';
+import { motion, AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
+import Layout from './components/layout/Layout';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
-const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing2025').then(module => ({ default: module.default })));
+const Home = lazy(() => import('./pages/index'));
+const About = lazy(() => import('./pages/about'));
+const Contact = lazy(() => import('./pages/contact'));
+const Careers = lazy(() => import('./pages/careers'));
+const Services = lazy(() => import('./pages/services/index'));
+const AIServices = lazy(() => import('./pages/services/ai-services'));
+const ITServices = lazy(() => import('./pages/services/it-services'));
+const MicroSaaS = lazy(() => import('./pages/services/micro-saas'));
+const Pricing = lazy(() => import('./pages/pricing'));
+const PricingGuide = lazy(() => import('./pages/pricing-guide'));
+const Blog = lazy(() => import('./pages/blog'));
+const CaseStudies = lazy(() => import('./pages/case-studies'));
+const WhitePapers = lazy(() => import('./pages/white-papers'));
+const Webinars = lazy(() => import('./pages/webinars'));
+const Team = lazy(() => import('./pages/team'));
+const Privacy = lazy(() => import('./pages/privacy'));
+const Terms = lazy(() => import('./pages/terms'));
+const Sitemap = lazy(() => import('./pages/sitemap'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
-const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
+// Service sub-pages
+const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AICustomerExperience = lazy(() => import('./pages/services/AICustomerExperience'));
+const AIHealthcareDiagnostics = lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
+const AIEnterpriseOrchestrator = lazy(() => import('./pages/services/AIEnterpriseOrchestrator'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
+const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlanning'));
 
-
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
-    </div>
-  </div>
-);
-
-function App() {
+const App: React.FC = () => {
   return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <div className="min-h-screen">
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/*" element={<ServicesPage />} />
-              <Route path="/pricing" element={<ComprehensivePricing />} />
-              <Route path="/comprehensive-services" element={<SimplePage />} />
-              <Route path="/solutions" element={<SimplePage />} />
-              <Route path="/solutions/*" element={<SimplePage />} />
-              <Route path="/about" element={<SimplePage />} />
-              <Route path="/about/*" element={<SimplePage />} />
-              <Route path="/contact" element={<SimplePage />} />
-              <Route path="/blog" element={<SimplePage />} />
-              <Route path="/blog/*" element={<SimplePage />} />
-              <Route path="/careers" element={<SimplePage />} />
-              <Route path="/partners" element={<SimplePage />} />
-              <Route path="/press" element={<SimplePage />} />
-              <Route path="/case-studies" element={<SimplePage />} />
-              <Route path="/research-development" element={<SimplePage />} />
-              <Route path="/docs" element={<SimplePage />} />
-              <Route path="/api" element={<SimplePage />} />
-              <Route path="/developer" element={<SimplePage />} />
-              <Route path="/help" element={<SimplePage />} />
-              <Route path="/training" element={<SimplePage />} />
-              <Route path="/community" element={<SimplePage />} />
-              <Route path="/support" element={<SimplePage />} />
-              <Route path="/sitemap" element={<SimplePage />} />
-              <Route path="/comprehensive-sitemap" element={<SimplePage />} />
-              <Route path="/privacy-policy" element={<SimplePage />} />
-              <Route path="/terms-of-service" element={<SimplePage />} />
-              <Route path="/cookie-policy" element={<SimplePage />} />
-              <Route path="/request-quote" element={<SimplePage />} />
-              <Route path="*" element={<SimplePage />} />
-            </Routes>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Layout>
+          <Suspense fallback={<LoadingSpinner />}>
+            <AnimatePresence mode="wait">
+              <Routes>
+                {/* Main Routes */}
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/team" element={<Team />} />
+                
+                {/* Services Routes */}
+                <Route path="/services" element={<Services />} />
+                <Route path="/services-overview" element={<Services />} />
+                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/it-services" element={<ITServices />} />
+                <Route path="/micro-saas" element={<MicroSaaS />} />
+                
+                {/* Service Sub-pages */}
+                <Route path="/services/ai-autonomous-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+                <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperience />} />
+                <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+                <Route path="/services/ai-enterprise-orchestrator" element={<AIEnterpriseOrchestrator />} />
+                <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
+                <Route path="/services/ai-financial-planning" element={<AIFinancialPlanning />} />
+                
+                {/* Pricing Routes */}
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/pricing-guide" element={<PricingGuide />} />
+                
+                {/* Content Routes */}
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
+                
+                {/* Legal Routes */}
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                
+                {/* 404 Route */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </AnimatePresence>
           </Suspense>
-        </div>
-      </div>
-    </ErrorBoundary>
+        </Layout>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
-}
+};
 
 export default App;
-

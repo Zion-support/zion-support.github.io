@@ -1,11 +1,11 @@
 
+:pages.disabled/pages/services/MobileSurvey.tsx
 export default function MobileSurvey() {
     'Mobile-first NPS/CSAT/CES templates',;'
     'QR code and link campaigns',;'
     'AI topic clustering and sentiment',;'
     'Webhooks to CRM/Slack',;'
-    'Kiosk mode for in-person feedback',;'
-    'Multilingual with auto-translate';
+    'Kiosk mode for in-person feedback',;''Multilingual with auto-translate';
   ];
   '
     { name: 'Starter', price: '$39/mo', details: ['1,000 responses',Email export'] },;'
@@ -17,6 +17,7 @@ export default function MobileSurvey() {
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">""
         <div className="max-w-5xl mx-auto px-6">""
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">""
+:pages.disabled/pages/services/MobileSurvey.tsx
             <Smartphone className="w-4 h-4 mr-2" /> Capture feedback anywhere, anytime"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Mobile Feedback Surveys</h1>"          <p className="text-white/90 text-xl">Modern, fast surveys with AI insights to improve customer experience.</p>
@@ -32,13 +33,13 @@ export default function MobileSurvey() {
         </div>""
         <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">""
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>""
-          <div className="grid md:grid-cols-3 gap-4">"
-            {pricing.map((p) => (""
+          <div className="grid md:grid-cols-3 gap-4">"{pricing.map((p) => (""
               <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">""
                 <div className="text-lg font-semibold mb-1">{p.name}</div>""
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{p.price}</div>""
                 <ul className="text-sm text-zion-slate-dark space-y-1">{p.details.map((d) => (<li key={d}>{d}</li>))}</ul>
               </div>
+:pages.disabled/pages/services/MobileSurvey.tsx
             ))}"
           </div>""
           <div className="mt-6 flex gap-3">""
@@ -46,19 +47,19 @@ export default function MobileSurvey() {
         </div>"
       </section>""
       <section className="pb-16 max-w-6xl mx-auto px-6">""
-        <div className="grid md:grid-cols-3 gap-6">'"
-          {[{icon: MessageSquare, t: 'Conversational UX'}, {icon: Users, t: 'High Completion'}, {icon: BarChart2, t: 'AI Insights'}].map((c) => (""
+        <div className="grid md:grid-cols-3 gap-6">'"{[{icon: MessageSquare, t: 'Conversational UX'}, {icon: Users, t: 'High Completion'}, {icon: BarChart2, t: 'AI Insights'}].map((c) => (""
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">""
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
             </div>
-          ))}"
-        </div>""
+:pages.disabled/pages/services/MobileSurvey.tsx
+          ))}"</div>""
         <div className="mt-10 text-center">""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2" /> +1 302 464 0950</a>;""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com</a>;          </div>;
         </div>;
       </section>;
+:pages.disabled/pages/services/MobileSurvey.tsx
     </div>;'"
   )}}'"'"

@@ -1,12 +1,11 @@
-export class LinkChecker {
+export class LinkChecker {}
 export default LinkChecker;
+:pages.disabled/utils/linkChecker.tsx
 export interface LinkInfo {
 export interface PageInfo {
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/utils/linkChecker.tsx
-  url: string;
+:pages.disabled/utils/linkChecker.tsxexport interface LinkInfo {}
+export interface PageInfo {}
+url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
   anchor?: string;
@@ -21,6 +20,7 @@ export interface PageInfo {
   private visitedUrls: Set < string> = new Set () ;
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
+:pages.disabled/utils/linkChecker.tsx
 '
   constructor (baseUrl: string = 'https://ziontechgroup.com') {
 
@@ -55,14 +55,12 @@ export interface PageInfo {
   }
 
   // Extract all links from a page
-  extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {
+  extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {const links: LinkInfo[] = [];
 
-    const links: LinkInfo[] = [];
-
-    // Extract href attributes from anchor tags
-    
+    // Extract href attributes from anchor tags;
     let match;
 
+:pages.disabled/utils/linkChecker.tsx
     while ( (match = hrefRegex.exec (pageContent) ) !== null) {
 
       if (url &&'
@@ -88,11 +86,11 @@ export interface PageInfo {
 
           url: normalizedUrl,'
           status: 'working',
-          page: pagePath}) }
-    }
+          page: pagePath}) }}
 
     return links}
 
+:pages.disabled/utils/linkChecker.tsx
   // Check if a page exists
   async checkPageExists (url: string: any): Promise < any> {
 
@@ -109,12 +107,11 @@ export interface PageInfo {
 
     for (const link of links) {
 
-      if (this.visitedUrls.has (link.url) ) {
-
-        continue}
+      if (this.visitedUrls.has (link.url) ) {continue}
 
       this.visitedUrls.add (link.url) ;
 
+:pages.disabled/utils/linkChecker.tsx
       if (this.isInternalLink (link.url) ) {
 
         if (exists) {
@@ -124,11 +121,11 @@ export interface PageInfo {
           link.status = 'missing';
           this.missingPages.push (link.url) }
       } else {
-'
-        link.status = 'external'}
+'link.status = 'external'}
 
       checkedLinks.push (link) }
 
+:pages.disabled/utils/linkChecker.tsx
     return {
 
       path: pagePath,
@@ -156,9 +153,7 @@ export interface PageInfo {
     return this.brokenLinks}
 
   // Get all missing pages
-  getMissingPages () : string[] {
-
-    return this.missingPages}
+  getMissingPages () : string[] {return this.missingPages}
 }
 
 '`
