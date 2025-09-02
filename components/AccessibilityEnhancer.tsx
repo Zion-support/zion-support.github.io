@@ -115,10 +115,14 @@ const AccessibilityEnhancer: React.FC = () => {
       </div>
 
       {/* Main content wrapper with accessibility attributes */}
-<main id="main-content" role="main" aria-label="Main content">"        {children}"      </main>
+      <main id="main-content" role="main" aria-label="Main content">
+        {children}
+      </main>
 
       {/* Accessibility styles */}
-      <style jsx global>{``        /* High contrast mode */.high-contrast {
+      <style jsx global>{`
+        /* High contrast mode */
+        .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;
         }
@@ -129,11 +133,12 @@ const AccessibilityEnhancer: React.FC = () => {
           border-color: black !important;
         }
         
-.high-contrast button, .high-contrast a {
+        .high-contrast button, .high-contrast a {
           border: 2px solid black !important;
         }
         
-        .high-contrast button: hover, .high-contrast a: hover {background-color: black !important;
+        .high-contrast button:hover, .high-contrast a:hover {
+          background-color: black !important;
           color: white !important;
         }
 
@@ -155,15 +160,17 @@ const AccessibilityEnhancer: React.FC = () => {
         }
 
         /* Reduced motion */
-.reduced-motion *, .reduced-motion *: :before,
-        .reduced-motion *: :after {animation-duration: 0.01ms !important;
+        .reduced-motion *, .reduced-motion *::before,
+        .reduced-motion *::after {
+          animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
           scroll-behavior: auto !important;
         }
 
         /* Focus indicators */
-*: focus {outline: 2px solid #3b82f6 !important;
+        *:focus {
+          outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
 
@@ -180,7 +187,8 @@ const AccessibilityEnhancer: React.FC = () => {
           border: 0;
         }
 
-.focus\\: not-sr-only: focus {;position: static;
+        .focus\\:not-sr-only:focus {
+          position: static;
           width: auto;
           height: auto;
           padding: inherit;
@@ -189,7 +197,9 @@ const AccessibilityEnhancer: React.FC = () => {
           clip: auto;
           white-space: normal;
         }
-`}</style>`</>);
+      `}</style>
+    </>
+  );
 };
 
 export default AccessibilityEnhancer;

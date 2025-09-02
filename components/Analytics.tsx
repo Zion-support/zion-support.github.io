@@ -8,6 +8,17 @@ declare global {
 interface AnalyticsProps {
   trackingId?: string;
 }
+
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
+  useEffect(() => {
+    if (typeof window === 'undefined' || !trackingId) return;
+
+    // Load Google Analytics script
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    document.head.appendChild(script1);
+
     const script2 = document.createElement('script');
     script2.innerHTML = `
       window.dataLayer = window.dataLayer || [];
@@ -17,7 +28,8 @@ interface AnalyticsProps {
         page_title: document.title,
         page_location: window.location.href,
         send_page_view: true
-      })`;;
+      });
+    `;
     document.head.appendChild(script2);
 
     // Track page views on route changes
@@ -65,7 +77,7 @@ export const trackEvent = (action: string, category: string, label?: string, val
     gtag('event', action, {
       event_category: category,
       event_label: label,
-      value: value,
+      value: value
     });
   }
 };

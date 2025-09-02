@@ -1,45 +1,39 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, { Component, ReactNode } from 'react';
 import Link from 'next/link';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
-   fallback?: ReactNode;
-}
-
-interface State {
+interface ErrorBoundaryState {
   hasError: boolean;
-   error?: Error;
-   errorInfo?: ErrorInfo;
+  error?: Error;
+  errorInfo?: React.ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
-    
-    // Log error to monitoring service
-    if (typeof window !== 'undefined') {
-      // You can integrate with error monitoring services like Sentry here
-      console.error('Error details:', {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack
-      });
-    }
-  }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    this.setState({
+      hasError: true,
+      error,
+      errorInfo
+    });
 
     // Log error to monitoring service
-ursor/automate-test-fix-improve-and-merge-code-48f3
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
@@ -73,17 +67,27 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto">
                   <div className="mb-2">
                     <strong>Error: </strong> {this.state.error.message}
-                  </div>                  {this.state.errorInfo && (
+                  </div>
+                  {this.state.errorInfo && (
                     <div>
                       <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">"                        {this.state.errorInfo.componentStack}"                      </pre></div>
+                      <pre className="whitespace-pre-wrap mt-1">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
                   )}
                 </div>
               </details>
             )}
 
-<div className="flex flex-col sm: flex-row gap-3">"              <button"                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200""              >"                <RefreshCw className="w-4 h-4 mr-2" />"                Try Again"              </button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
+              </button>
               
               <Link
                 href="/"
@@ -100,7 +104,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 <Link href="/contact" className="text-blue-600 hover:text-blue-700">
                   contact our support team
                 </Link>
-              </p>            </div>
+              </p>
+            </div>
           </div>
         </div>
       );

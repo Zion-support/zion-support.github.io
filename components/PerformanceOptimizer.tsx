@@ -3,8 +3,8 @@ import Head from 'next/head';
 
 interface PerformanceOptimizerProps {
   preloadImages?: string[];
-   preloadFonts?: string[];
-   criticalCSS?: string;
+  preloadFonts?: string[];
+  criticalCSS?: string;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -47,12 +47,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'preload';
         link.href = href;
         link.as = as;
-        if (type) link.type = type;        document.head.appendChild(link);
+        if (type) link.type = type;
+        document.head.appendChild(link);
       };
 
       // Preload critical resources
       preloadImages.forEach(image => {
-ursor/automate-test-fix-improve-and-merge-code-48f3
+        addResourceHint(image, 'image');
+      });
+
+      preloadFonts.forEach(font => {
+        addResourceHint(font, 'style');
+      });
+    }
+  }, [preloadImages, preloadFonts]);
+
   return (
     <Head>
       {/* Critical CSS inlined for above-the-fold content */}
@@ -82,14 +91,30 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               (link as HTMLLinkElement).rel = 'stylesheet';
             }
           }}
-        />      ))}
+        />
+      ))}
       
       {/* Performance hints */}
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      
+      {/* Service Worker registration */}
       <script
         dangerouslySetInnerHTML={{
-ursor/automate-test-fix-improve-and-merge-code-48f3
-            }          ``        }}/>
+          __html: `
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                  .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                  })
+                  .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                  });
+              });
+            }
+          `
+        }}
+      />
     </Head>
   );
 };

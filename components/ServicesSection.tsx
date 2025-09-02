@@ -9,7 +9,7 @@ import {
   Database, 
   Code, 
   Smartphone,
-  ArrowRight ;
+  ArrowRight
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
