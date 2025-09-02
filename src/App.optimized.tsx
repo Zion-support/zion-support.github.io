@@ -35,12 +35,6 @@ const Privacy = createLazyComponent(() => import('./pages/Privacy.tsx'));
 const Terms = createLazyComponent(() => import('./pages/Terms.tsx'));
 
 // Service pages
-const AIServices = createLazyComponent(() => import('./pages/AIServices.tsx'));
-const CloudServices = createLazyComponent(() => import('./pages/CloudServices.tsx'));
-const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices.tsx'));
-const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices.tsx'));
-const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices.tsx'));
-const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices.tsx'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void  }) => (
