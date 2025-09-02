@@ -1,14 +1,16 @@
 {
-  "name": "Zion Tech Group - Future Technology Solutions",
+  "name": "Zion Tech Group - Leading Technology Solutions Provider",
   "short_name": "Zion Tech",
-  "description": "Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation.",
+  "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0ea5e9",
+  "background_color": "#1e40af",
+  "theme_color": "#3b82f6",
   "orientation": "portrait-primary",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
+  "scope": "/",
+  "id": "zion-tech-group",
 
   "icons": [
     {

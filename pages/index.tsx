@@ -4,6 +4,7 @@ import MainLayout from '../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe } from 'lucide-react';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
@@ -18,13 +19,17 @@ const Home: NextPage = () => {
   ];
 
   return (
-    <MainLayout>
+    <MainLayout
+      title="Zion Tech Group - Transform Your Business with Cutting-Edge Technology Solutions"
+      description="Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services. From micro SaaS applications to enterprise AI solutions."
+      keywords="technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, business automation, enterprise solutions"
+    >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Zion Tech Group</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400" aria-label="Zion Tech Group"> Zion Tech Group</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Leading technology solutions provider helping businesses transform their digital presence 
@@ -33,30 +38,38 @@ const Home: NextPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
+              aria-label="Get started with Zion Tech Group services"
+            >
               Get Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link 
+              href="/services" 
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+              aria-label="Explore our comprehensive technology services"
+            >
               Explore Services
             </Link>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">1000+</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16" role="region" aria-label="Company Statistics">
+            <div className="text-center" role="img" aria-label="1000 plus projects completed">
+              <div className="text-3xl font-bold text-blue-400" aria-hidden="true">1000+</div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">75+</div>
+            <div className="text-center" role="img" aria-label="75 plus expert team members">
+              <div className="text-3xl font-bold text-purple-400" aria-hidden="true">75+</div>
               <div className="text-gray-300">Expert Team Members</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-400">99%</div>
+            <div className="text-center" role="img" aria-label="99 percent client satisfaction">
+              <div className="text-3xl font-bold text-indigo-400" aria-hidden="true">99%</div>
               <div className="text-gray-300">Client Satisfaction</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">24/7</div>
+            <div className="text-center" role="img" aria-label="24/7 support available">
+              <div className="text-3xl font-bold text-cyan-400" aria-hidden="true">24/7</div>
               <div className="text-gray-300">Support Available</div>
             </div>
           </div>
@@ -64,20 +77,20 @@ const Home: NextPage = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" aria-labelledby="services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Comprehensive Technology Solutions</h2>
+            <h2 id="services-heading" className="text-4xl font-bold text-gray-900 mb-4">Our Comprehensive Technology Solutions</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               From innovative micro SaaS applications to enterprise-grade AI solutions and cutting-edge IT services, 
               we provide end-to-end technology solutions that drive measurable business results and competitive advantages.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8" role="list" aria-label="Technology Services">
             {/* Micro SaaS Services */}
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="text-blue-600 mb-4">
+            <article className="bg-white p-8 rounded-lg shadow-lg" role="listitem">
+              <div className="text-blue-600 mb-4" aria-hidden="true">
                 <Zap className="w-12 h-12" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
@@ -85,14 +98,18 @@ const Home: NextPage = () => {
                 Innovative, focused software solutions that solve specific business problems with minimal overhead. 
                 Starting from $12/month, our micro SaaS applications deliver immediate ROI and scale with your business.
               </p>
-              <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
+              <Link 
+                href="/services/micro-saas" 
+                className="text-blue-600 hover:text-blue-700 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 rounded"
+                aria-label="Learn more about Micro SaaS Solutions"
+              >
                 Learn More →
               </Link>
-            </div>
+            </article>
 
             {/* IT Services */}
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="text-blue-600 mb-4">
+            <article className="bg-white p-8 rounded-lg shadow-lg" role="listitem">
+              <div className="text-blue-600 mb-4" aria-hidden="true">
                 <Shield className="w-12 h-12" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
@@ -100,14 +117,18 @@ const Home: NextPage = () => {
                 Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses. 
                 From $2,000 to $75,000, our IT services ensure your infrastructure is secure, scalable, and optimized.
               </p>
-              <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
+              <Link 
+                href="/services/it-services" 
+                className="text-blue-600 hover:text-blue-700 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 rounded"
+                aria-label="Learn more about IT Services"
+              >
                 Learn More →
               </Link>
-            </div>
+            </article>
 
             {/* AI Services */}
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="text-blue-600 mb-4">
+            <article className="bg-white p-8 rounded-lg shadow-lg" role="listitem">
+              <div className="text-blue-600 mb-4" aria-hidden="true">
                 <Globe className="w-12 h-12" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
@@ -115,25 +136,33 @@ const Home: NextPage = () => {
                 Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages. 
                 From $4,000 to $100,000, our AI services transform your business with machine learning and automation.
               </p>
-              <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
+              <Link 
+                href="/services/ai-services" 
+                className="text-blue-600 hover:text-blue-700 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 rounded"
+                aria-label="Learn more about AI Services"
+              >
                 Learn More →
               </Link>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-blue-600" aria-labelledby="cta-heading">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 id="cta-heading" className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join 1000+ successful businesses that have transformed their operations with our technology solutions. 
             Get a free consultation and discover how we can accelerate your growth and efficiency.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <Link 
+            href="/contact" 
+            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+            aria-label="Contact us to get started with your business transformation"
+          >
             Get Started Today
           </Link>
         </div>
