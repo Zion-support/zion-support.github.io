@@ -1,6 +1,9 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';'
+import { motion } from
+  'framer-motion';
 import {}
   TrendingUp,
   BarChart3,
@@ -11,8 +14,10 @@ import {}
   Zap,
   Brain,
   Globe,
-  Shield,'
-  Clock} from 'lucide-react';
+  Shield,
+  '
+  Clock} from 'lucide-react
+  ';
 
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
 const AIBusinessIntelligence = () => {
@@ -20,100 +25,135 @@ const AIBusinessIntelligence = () => {
     {
 
       icon: Brain,'
-      title: 'AI-Powered Analytics','
-      description:''
-        'Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data','
+      title:,
+  AI-Powered Analytics',
+  '
+      description: ''Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data,
+  ,
+  '
       benefits: [''
-        'Predictive modeling',Anomaly detection',Pattern recognition',Automated insights',
+  'Predictive modeling,Anomaly detection
+  ',Pattern recognition',Automated insights
+  ',
       ]},
     {
 
       icon: BarChart3,'
-      title: 'Real-time Dashboards','
-      description:''
-        'Interactive, customizable dashboards that provide instant visibility into key business metrics','
+      title:,
+  Real-time Dashboards',
+  '
+      description: ''Interactive, customizable dashboards that provide instant visibility into key business metrics,
+  ,
+  '
       benefits: [''
-        'Live data updates',Customizable views',Role-based access',Mobile responsive',
+  'Live data updates,Customizable views
+  ',Role-based access',Mobile responsive
+  ',
       ]},
     {
 
       icon: TrendingUp,'
-      title: 'Predictive Analytics','
-      description:''
-        'Forecast future trends and outcomes using historical data and advanced statistical models','
-      benefits: [''
-        'Sales forecasting',Demand planning',Risk assessment',Trend prediction',
+      title:,
+  Predictive Analytics',
+  '
+      description: ''
+  'Forecast future trends and outcomes using historical data and advanced statistical models,
+,
+  benefits: [''
+  'Sales forecasting,Demand planning
+  ',Risk assessment',Trend prediction
+  ',
       ]},
     {
 
       icon: Target,'
-      title: 'Performance Tracking','
-      description:''
-        'Monitor and measure business performance against goals and benchmarks in real-time','
-      benefits: [''
-        'KPI monitoring',Goal tracking',Benchmarking',Performance alerts',
+      title:,
+  Performance Tracking',
+  '
+      description: ''
+  'Monitor and measure business performance against goals and benchmarks in real-time,
+,
+  benefits: [''
+  'KPI monitoring,Goal tracking,
+  ,Benchmarking',Performance alerts
+  ',
       ]},
   ];
   const solutions = [
     {
 '
-      category: 'Sales & Marketing',
-      icon: Users,'
-      solutions: [''
-        'Customer behavior analysis',Lead scoring and qualification',Campaign performance optimization',Market trend analysis',Customer lifetime value prediction',
+      category: 'Sales & Marketing,
+      icon: Users,
+,
+  solutions: [''
+  'Customer behavior analysis,Lead scoring and qualification,
+  ,Campaign performance optimization',Market trend analysis
+  ',Customer lifetime value prediction',
       ]},
     {
-'
-      category: 'Operations & Supply Chain',
+  '
+      category: 'Operations & Supply Chain,
       icon: Activity,'
-      solutions: [''
-        'Inventory optimization',Supply chain risk assessment',Operational efficiency analysis',Quality control monitoring',Resource allocation optimization',
+      solutions: [,
+  '
+        'Inventory optimization
+  ',Supply chain risk assessment',Operational efficiency analysis
+  ',Quality control monitoring',Resource allocation optimization
+  ',
       ]},
     {
 '
-      category: 'Financial Analytics',
-      icon: TrendingUp,'
-      solutions: [''
-        'Revenue forecasting',Cost analysis and optimization',Profitability analysis',Cash flow prediction',Investment decision support',
+      category: 'Financial Analytics,
+      icon: TrendingUp,
+,
+  solutions: [''
+  'Revenue forecasting,Cost analysis and optimization,
+  ,Profitability analysis',Cash flow prediction
+  ',Investment decision support',
       ]},
     {
-'
-      category: 'Human Resources',
+  '
+      category: 'Human Resources,
       icon: Users,'
-      solutions: [''
-        'Employee performance analytics',Talent acquisition insights',Workforce planning',Employee retention prediction',Training effectiveness analysis',
+      solutions: [,
+  '
+        'Employee performance analytics
+  ',Talent acquisition insights',Workforce planning
+  ',Employee retention prediction',Training effectiveness analysis
+  ',
       ]},
   ];
   const technologies = [
     {
 '
-      name: 'Machine Learning','
-      description:''
-        'Advanced ML algorithms for pattern recognition and prediction',
+      name: 'Machine Learning,
+,
+  description: ''
+  'Advanced ML algorithms for pattern recognition and prediction,
       icon: Brain},
-    {
-'
-      name: 'Big Data Processing','
-      description: 'Scalable data processing for large datasets',
+    {,
+  name: 'Big Data Processing,'
+      description:
+  'Scalable data processing for large datasets',
       icon: Database},
-    {
-'
-      name: 'Real-time Analytics','
-      description: 'Instant data processing and insights delivery',
+    {,
+  name: 'Real-time Analytics,'
+      description:
+  'Instant data processing and insights delivery',
       icon: Zap},
-    {
-'
-      name: 'Cloud Infrastructure','
-      description: 'Scalable cloud-based BI platform',
+    {,
+  name: 'Cloud Infrastructure,'
+      description:
+  'Scalable cloud-based BI platform',
       icon: Globe},
-    {
-'
-      name: 'Data Security','
-      description: 'Enterprise-grade security and compliance',
+    {,
+  name: 'Data Security,'
+      description:
+  'Enterprise-grade security and compliance',
       icon: Shield},
-    {
-'
-      name: '24/7 Monitoring','description: 'Continuous monitoring and alerting',
+    {,
+  name: '24/7 Monitoring,'description:
+  'Continuous monitoring and alerting',
       icon: Clock}
   ];
   const containerVariants = {}
@@ -372,4 +412,4 @@ const AIBusinessIntelligence = () => {
 
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
 export default AIBusinessIntelligence;'"
-'"'"
+  '"'"

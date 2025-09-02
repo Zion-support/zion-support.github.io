@@ -4,7 +4,8 @@ import {}
   DollarSign,
   ExternalLink,
   Phone,
-  Mail} from 'lucide-react.ts';
+  Mail} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx
 const CustomerSupportChatbot: React.FC = (): JSX.Element => {
@@ -25,9 +26,13 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx
         </p>"
 ""
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">'
+        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+  '
           {[''
-            'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets',Secure PII redaction and audit logs',Fallback to live agents with summaries',
+  'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations
+  ',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets
+  ',Secure PII redaction and audit logs',Fallback to live agents with summaries
+  ',
           ].map(b => (
             <div"key={b}""
               className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4""
@@ -75,4 +80,4 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
 ;
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx
 export { CustomerSupportChatbot };export default CustomerSupportChatbot;'"
-'"'"
+  '"'"

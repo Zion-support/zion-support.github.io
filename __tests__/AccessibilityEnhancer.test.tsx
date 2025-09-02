@@ -1,21 +1,30 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import { describe, it, expect, vi } from 'vitest';
+import React from,
+  react';
+import { render, screen, fireEvent } from
+  '@testing-library/react';
+import AccessibilityEnhancer from
+  '../components/AccessibilityEnhancer';
+import { describe, it, expect, vi } from
+  'vitest';
 
-describe('AccessibilityEnhancer', () => {
-  it('renders children correctly', () => {
+describe(
+  'AccessibilityEnhancer', () => {
+  it(
+  'renders children correctly', () => {
     render(
       <AccessibilityEnhancer>
         <div data-testid="test-child">Test Content</div>
       </AccessibilityEnhancer>
     );
 
-    expect(screen.getByTestId('test-child')).toBeInTheDocument();
-    expect(screen.getByText('Test Content')).toBeInTheDocument();
+    expect(screen.getByTestId(
+  'test-child')).toBeInTheDocument();
+    expect(screen.getByText(
+  'Test Content')).toBeInTheDocument();
   });
 
-  it('applies accessibility props correctly', () => {
+  it(
+  'applies accessibility props correctly', () => {
     render(
       <AccessibilityEnhancer
         role="button"
@@ -26,12 +35,18 @@ describe('AccessibilityEnhancer', () => {
       </AccessibilityEnhancer>
     );
 
-    const element = screen.getByRole('button');
-    expect(element).toHaveAttribute('aria-label', 'Test Button');
-    expect(element).toHaveAttribute('tabindex', '0');
+    const element = screen.getByRole(
+  'button');
+    expect(element).toHaveAttribute(
+  'aria-label',
+  'Test Button');
+    expect(element).toHaveAttribute(
+  'tabindex',
+  '0');
   });
 
-  it('handles keyboard events correctly', () => {
+  it(
+  'handles keyboard events correctly', () => {
     const handleClick = vi.fn();
     render(
       <AccessibilityEnhancer
@@ -43,30 +58,40 @@ describe('AccessibilityEnhancer', () => {
       </AccessibilityEnhancer>
     );
 
-    const element = screen.getByRole('button');
-    fireEvent.keyDown(element, { key: 'Enter' });
+    const element = screen.getByRole(
+  'button');
+    fireEvent.keyDown(element, { key: 'Enter });
     expect(handleClick).toHaveBeenCalledTimes(1);
 
-    fireEvent.keyDown(element, { key: ' ' });
+    fireEvent.keyDown(element, { key:,
+  ' });
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
 
-  it('applies focus styles when focusable', () => {
+  it(
+  'applies focus styles when focusable', () => {
     render(
       <AccessibilityEnhancer
         role="button"
         tabIndex={0}
-        className="focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="focus: outline-none focus:ring-2 focus:ring-blue-500"
       >
         <span>Focusable Element</span>
       </AccessibilityEnhancer>
     );
 
-    const element = screen.getByRole('button');
-    expect(element).toHaveClass('focus:outline-none', 'focus:ring-2', 'focus:ring-blue-500');
+    const element = screen.getByRole(
+  'button');
+    expect(element).toHaveClass(
+  'focus:outline-none,
+,
+  focus: ring-2,
+,
+  focus: ring-blue-500);
   });
 
-  it('disables focus when not focusable', () => {
+  it(
+  'disables focus when not focusable', () => {
     render(
       <AccessibilityEnhancer
         role="button"
@@ -76,7 +101,10 @@ describe('AccessibilityEnhancer', () => {
       </AccessibilityEnhancer>
     );
 
-    const element = screen.getByRole('button');
-    expect(element).toHaveAttribute('tabindex', '-1');
+    const element = screen.getByRole(
+  'button');
+    expect(element).toHaveAttribute(
+  'tabindex',
+  '-1');
   });
 });
