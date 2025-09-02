@@ -201,6 +201,5 @@ const HealthcareSolutions = () => {
       </div>
     </div>
   )}
-;
 :pages.disabled/solutions/Healthcare.jsx;
 export default HealthcareSolutions'';''"

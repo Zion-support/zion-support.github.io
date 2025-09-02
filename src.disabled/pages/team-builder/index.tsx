@@ -59,7 +59,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
     if (isValid) {
       setCurrentStep((prev) => prev + 1)}
   }
-;
   const handlePreviousStep: React.FC = ($2) => {
     setCurrentStep((prev) => prev - 1)}
 
@@ -94,7 +93,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       toast.error(error.message || 'An error occurred while generating the team.')} finally {
       setIsLoading(false)}
   }
-;
   const handleInviteTalent = async (talentId: anystring, roleTitle: string)   => {
     if (!projectBriefSubmitted) {
       toast.error('Cannot send invite without a project context.');
@@ -108,9 +106,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved;
                                                 // If not saving briefs, this might be null or another identifier.;
       // teamRecommendationId: teamRecommendation?.id,
-  // If recommendations are saved and have an ID;
-}
-;
+  // If recommendations are saved and have an ID}
     try {
       const response = await fetch('/api/team-builder/invite', {
         method: 'POST',
@@ -126,7 +122,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`)}
   }
-;
   const renderRecommendation: React.FC = ($2) => {
     if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available
     return (
@@ -135,7 +130,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
         projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent}
       />)}
-;
   // In the main return of TeamBuilderPage:;
   // Remove the step-based rendering for the last step (results view);
   // Instead, conditionally render the form or the recommendation display:
@@ -312,5 +306,4 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       </div>
     </AppLayout>
   )}
-;
 export default TeamBuilderPage

@@ -39,8 +39,7 @@ import { Truck,
   Eye,
   ShoppingCart,
   Heart,
-  Leaf'} from 'lucide-react.ts';
-{'
+  Leaf'} from 'lucide-react.ts'{'
       title: 'End-to-End Visibility',';
       description: 'Complete transparency across the entire supply chain from raw materials to final delivery',
       icon: Eye,';
@@ -674,5 +673,4 @@ import { Truck,
     </div>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx)}''`;
 export default AIAutonomousSupplyChain''`;''`)}
-;
 export default AIAutonomousSupplyChain''`

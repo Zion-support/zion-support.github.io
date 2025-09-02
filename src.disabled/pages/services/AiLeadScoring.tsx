@@ -74,7 +74,6 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/AiLeadScoring.tsx;
 export { AiLeadScoring }';
 export default AiLeadScoring}'''"

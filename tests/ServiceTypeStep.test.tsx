@@ -17,7 +17,6 @@ const baseData: QuoteFormData = {
   budget: { amount: 0, type:,
   fixed' },
   contactInfo: { name: ', email:', phone: ', company: '' }}
-;
 it(
   'shows results when searching services', async () => {
   const data = { ...baseData }

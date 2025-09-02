@@ -29,7 +29,6 @@ const SpaceTech = () => {}
       </section>
     </div>
   )}
-;
 export { SpaceTech }
 :pages.disabled/pages/services/SpaceTech.jsx;
 export default SpaceTech'';'''

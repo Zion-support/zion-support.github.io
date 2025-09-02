@@ -119,7 +119,6 @@ function generateManifest() {
     lang: 'en-US,
     orientation:;
   'portrait-primary'}
-;
   const manifestPath = path.join(__dirname,
   '../public/manifest.json')  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log(
@@ -156,7 +155,6 @@ function generateStructuredData() {
       'Cloud Solutions',
       'Digital Transformation',
       'IT Consulting']}
-;
   const structuredDataPath = path.join(__dirname,
   '../public/structured-data.json')  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
   console.log(
@@ -182,4 +180,3 @@ export {
   generateRobotsTxt,
   generateManifest,
   generateStructuredData}
-;

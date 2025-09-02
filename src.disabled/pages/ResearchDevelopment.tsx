@@ -299,18 +299,15 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       default:;
         return 'bg-zinc-500/20 text-zinc-400'}
   }
-;
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long'})}
-;
   const formatFunding = (amount: number) => {
     if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`}
     return `$${amount}`}
-;
   ];
 import React from 'react.ts'
 

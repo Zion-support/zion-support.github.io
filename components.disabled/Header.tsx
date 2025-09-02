@@ -13,7 +13,6 @@ const Header: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0)}
-;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   const navigationItems = [
@@ -98,5 +97,4 @@ const Header: React.FC = () => {
       </div>
     </header>
   )}
-;
 export default Header

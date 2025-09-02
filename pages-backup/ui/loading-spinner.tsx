@@ -1,20 +1,16 @@
 
   ;
-  ;
   xl:,
   w-32 h-32'}
-;
   ';
   primary: 'border-cyan-400,';
   secondary:,
   border-blue-400',
   ';
   white: 'border-white,
-  ;
   cyan:,
   border-cyan-400;
   '}
-;
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md,
   color = 'primary;
@@ -82,8 +78,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   {
         duration: 1,
         repeat: Infinity,';
-  ease: 'linear';
-}}
+  ease: 'linear'}}
     />'
     <span className='sr-only'>Loading</span>
   </div>

@@ -122,7 +122,6 @@ async function runContinuousImprovement() {
   '⚠️  Bundle analysis failed but continuing...')}
     // Generate report;
   status: 'completed}
-;
     const reportPath = path.join(process.cwd(),
   'continuous-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

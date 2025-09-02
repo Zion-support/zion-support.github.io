@@ -36,7 +36,6 @@ export const AccessibilityProvider = ({ children }) => {
         const root = document.documentElement;
         // High contrast mode;
         if (highContrast) {
-;
             root.classList.add('high-contrast');
         else {
             root.classList.remove('high-contrast');

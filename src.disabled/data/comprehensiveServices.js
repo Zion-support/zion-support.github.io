@@ -294,13 +294,10 @@ export const pricingTiers = [{
 ];
 export const getServiceById = (id) => {
   return comprehensiveServices.find(service => service.id === id)}
-;
 export const getServicesByCategory = (category) => {
   return comprehensiveServices.filter(service => service.category === category)}
-;
 export const getPopularServices = () => {
   return comprehensiveServices.filter(service => service.popular)}
-;
 export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
   const service = getServiceById(serviceId);
   if (!service) return 0;

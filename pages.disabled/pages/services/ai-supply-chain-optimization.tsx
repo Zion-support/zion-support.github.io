@@ -299,6 +299,5 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
       </section>
     </div>
   )}
-;
 export default AISupplyChainOptimization''`;
   ''`''`

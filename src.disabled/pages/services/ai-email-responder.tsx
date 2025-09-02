@@ -52,6 +52,5 @@ const AIEmailResponder: React.FC = () => {
       </div>
     </div>
   )}
-;
 export default AIEmailResponder;
 "

@@ -365,5 +365,4 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx)}''`;
 export default AISupplyChainOptimizationPlatform''`;''`)}
-;
 export default AISupplyChainOptimizationPlatform'"`

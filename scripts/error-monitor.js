@@ -37,7 +37,6 @@ class ErrorMonitor {
             message: error.message,
             stack: error.stack}
         : null}
-;
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (error) {
       console.error(error)}
@@ -203,7 +202,6 @@ class ErrorMonitor {
   'build').length      },
       errors: this.errors,
       recommendations: this.generateRecommendations()}
-;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(
   'info', `Error report generated: ${reportFile}`);

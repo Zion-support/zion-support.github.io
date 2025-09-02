@@ -273,6 +273,5 @@ const AIDataGovernancePlatform: React.FC = props {
       </section>
     </div>
   )}
-;
 export default AIDataGovernancePlatform''`;
   ''`''`

@@ -79,13 +79,10 @@ export default function SmartContractRiskScanner(...args: []):  {}
       popular: false}
   ];
   ;
-  ;
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx;
   roi: '300-500% within 6 months'}}
-;
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
 <:pages.disabled/pages/services/SmartContractRiskScanner.tsx}
-;
   const supportedNetworks = [;
     'Ethereum',
     'Binance Smart Chain',

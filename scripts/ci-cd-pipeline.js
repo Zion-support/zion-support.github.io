@@ -130,7 +130,6 @@ class CICDPipeline {
         error: null,
         critical: stage.critical,
         timestamp: new Date().toISOString()}
-;
       this.pipelineLog.stages.push(stageResult);
       this.pipelineLog.summary.successful++;
       console.log(`✅ ${stage.name} completed successfully (${duration}ms)`)} catch (error) {
@@ -144,7 +143,6 @@ class CICDPipeline {
         error: error.message,
         critical: stage.critical,
         timestamp: new Date().toISOString()}
-;
       this.pipelineLog.stages.push(stageResult);
       this.pipelineLog.summary.failed++;
       console.log(`❌ ${stage.name} failed (${duration}ms): ${error.message}`);
@@ -168,7 +166,6 @@ class CICDPipeline {
       'Performance Testing': 'node scripts/performance-monitor-improved.js',
       'Deploy to Staging': 'echo 'Deploying to staging...'',
       'Deploy to Production': 'echo 'Deploying to production...''}
-;
     const command = stageCommands[stage.name] || 'echo 'No command defined'';
     return new Promise((resolve, reject) => {
       const [cmd, ...args] = command.split(' ');

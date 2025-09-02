@@ -123,12 +123,10 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   const formatTime = (time: number | null): string => {
     if (time === null) return 'N/A';
     return `${Math.round(time)}ms`}
-;
   // Format CLS value;
   const formatCLS = (cls: number | null): string => {
     if (cls === null) return 'N/A';
     return cls.toFixed(3)}
-;
   // Get metric rating;
   const getMetricRating = (metric: string, value: number | null): string => {
     if (value === null) return 'N/A';
@@ -144,7 +142,6 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       default:;
         return 'N/A'}
   }
-;
   if (!isVisible) {
     return(
       <button;
@@ -246,5 +243,4 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       )}
     </div>
   )}
-;
 export default AdvancedPerformanceMonitor

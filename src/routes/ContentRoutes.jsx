@@ -1,6 +1,7 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Home } from 'lucide-react';
 
+import { Routes, Route, Navigate } from 'react-router-dom';
 // Import all the page components
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -26,7 +27,6 @@ import VideoCall from '../pages/VideoCall';
 import SearchPage from '../pages/SearchPage';
 import Sitemap from '../pages/Sitemap';
 import SitemapPage from '../pages/SitemapPage';
-
 const ContentRoutes = () => {
   return (
     <Routes>
@@ -46,7 +46,7 @@ const ContentRoutes = () => {
       <Route path="/support" element={<HelpCenterPage />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<BlogPost />} />
+      <Route path="/blog/: slug" element={<BlogPost />} />
       <Route path="/content/blog" element={<Blog />} />
       <Route path="/content/blog/:slug" element={<BlogPost />} />
       <Route path="/green-it" element={<GreenIT />} />
@@ -63,6 +63,5 @@ const ContentRoutes = () => {
     </Routes>
   );
 };
-
 export { ContentRoutes };
 export default ContentRoutes;

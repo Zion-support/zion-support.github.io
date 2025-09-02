@@ -1,7 +1,7 @@
 # Next.js static export project. The build creates a static site in the 'out' folder.
 
 [build]
-  command = "npm ci && npm run build"
+  command = "yarn install && yarn build"
   publish = "out"
   base = "."
 

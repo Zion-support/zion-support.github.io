@@ -403,5 +403,4 @@ const Startups: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default Startups

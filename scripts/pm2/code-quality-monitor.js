@@ -29,7 +29,6 @@ class CodeQualityMonitor {
         lines: content.split('\n;
   ').length,
         issues: []}
-;
       // Check for common code quality issues;
       const lines = content.split('\n;
   ');
@@ -145,7 +144,6 @@ class CodeQualityMonitor {
         issuesBySeverity},
       files: analyses.filter(analysis => analysis.issues.length > 0),
       recommendations: this.generateRecommendations(issuesByType, totalIssues)}
-;
     return report;
   generateRecommendations(issuesByType, totalIssues) {
     const recommendations = [];

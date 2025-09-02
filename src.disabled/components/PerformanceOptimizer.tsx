@@ -11,7 +11,6 @@ const preloadCriticalResources = () => {
   'link')'        link.rel =;
   'preload'        link.as =;
   'style'        link.href = font        document.head.appendChild(link)})}
-;
     // Optimize images;
 const optimizeImages = () => {
       const images = document.querySelectorAll(,

@@ -1,2 +1,2 @@
- export default OpenAppRedirect';
+ export default OpenAppRedirect';'
 ;

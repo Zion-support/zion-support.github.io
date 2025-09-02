@@ -63,9 +63,7 @@ export default function TalentProfilePage() {}
 :src/pages/talent/[id].jsx
     </>)}}}}}
 export { TalentProfilePage }
-;
 export { TalentProfilePage }
-;
 export { TalentProfilePage }
 
 export { TalentProfilePage }

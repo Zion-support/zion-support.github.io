@@ -351,5 +351,4 @@ const Partners: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default Partners

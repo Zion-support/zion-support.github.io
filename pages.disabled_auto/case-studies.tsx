@@ -508,5 +508,4 @@ const CaseStudies: React.FC = () => {
       </section>
     </div>
   )}
-;
 export default CaseStudies

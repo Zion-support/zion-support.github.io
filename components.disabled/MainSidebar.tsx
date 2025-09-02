@@ -42,10 +42,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         ? prev.filter(s => s !== section);
         : [...prev, section]
     )}
-;
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 const navigation = {
-;
     main: [{ name:,
   Home;
   ', href: '/, icon: Home }, { name:,
@@ -246,5 +244,4 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
         </div>
       </div>
 </>)}
-;
 export default MainSidebar

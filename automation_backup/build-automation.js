@@ -570,7 +570,6 @@ export default {
         successRate:;
           (this.buildSuccesses / (this.buildSuccesses + this.buildFailures)) *;
           100}
-;
       fs.writeFileSync(metricsPath, JSON.stringify(metrics, null, 2));
       this.log(
   'Build metrics generated')} catch (error) {

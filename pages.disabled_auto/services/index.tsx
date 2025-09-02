@@ -446,5 +446,4 @@ const ServicesPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default ServicesPage

@@ -1,0 +1,137 @@
+{
+  "timestamp": "2025-09-02T22:01:48.921Z",
+  "summary": {
+    "total": 8,
+    "successful": 4,
+    "failed": 4
+  },
+  "results": [
+    {
+      "success": false,
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n"
+    },
+    {
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./node_modules/next/dist/client/components/redirect-status-code.js\nError: Unexpected module status 5. Cannot require() ES Module /workspace/babel.config.js because it is not yet fully loaded. This may be caused by a race condition if the module is simultaneously dynamically import()-ed via Promise.all(). Try await-ing the import() sequentially in a loop instead. (from /workspace/node_modules/next/dist/build/babel/loader/get-config.js)\nThis is caused by either a bug in Node.js or incorrect usage of Node.js internals.\nPlease open an issue with this stack trace at https://github.com/nodejs/node/issues\n\n    at Function.fail (node:internal/assert:17:9)\n    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:404:16)\n    at loadESMFromCJS (node:internal/modules/cjs/loader:1561:24)\n    at Module._compile (node:internal/modules/cjs/loader:1712:5)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n    at getCustomBabelConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:157:16)\n    at getFreshConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:291:41)\n    at async getConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:385:25)\n    at async transform (/workspace/node_modules/next/dist/build/babel/loader/transform.js:74:25)\n    at async /workspace/node_modules/next/dist/build/babel/loader/index.js:36:108\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async nextBabelLoader (/workspace/node_modules/next/dist/build/babel/loader/index.js:36:63)\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n\nImport trace for requested module:\n./node_modules/next/dist/client/components/redirect-status-code.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n./node_modules/next/dist/pages/_error.js\nError: Unexpected module status 5. Cannot require() ES Module /workspace/babel.config.js because it is not yet fully loaded. This may be caused by a race condition if the module is simultaneously dynamically import()-ed via Promise.all(). Try await-ing the import() sequentially in a loop instead. (from /workspace/node_modules/next/dist/build/babel/loader/get-config.js)\nThis is caused by either a bug in Node.js or incorrect usage of Node.js internals.\nPlease open an issue with this stack trace at https://github.com/nodejs/node/issues\n\n    at Function.fail (node:internal/assert:17:9)\n    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:404:16)\n    at loadESMFromCJS (node:internal/modules/cjs/loader:1561:24)\n    at Module._compile (node:internal/modules/cjs/loader:1712:5)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n    at getCustomBabelConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:157:16)\n    at getFreshConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:291:41)\n    at async getConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:385:25)\n    at async transform (/workspace/node_modules/next/dist/build/babel/loader/transform.js:74:25)\n    at async /workspace/node_modules/next/dist/build/babel/loader/index.js:36:108\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async nextBabelLoader (/workspace/node_modules/next/dist/build/babel/loader/index.js:36:63)\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n\nImport trace for requested module:\n./node_modules/next/dist/pages/_error.js\n\n./node_modules/next/dist/shared/lib/errors/constants.js\nError: Unexpected module status 5. Cannot require() ES Module /workspace/babel.config.js because it is not yet fully loaded. This may be caused by a race condition if the module is simultaneously dynamically import()-ed via Promise.all(). Try await-ing the import() sequentially in a loop instead. (from /workspace/node_modules/next/dist/build/babel/loader/get-config.js)\nThis is caused by either a bug in Node.js or incorrect usage of Node.js internals.\nPlease open an issue with this stack trace at https://github.com/nodejs/node/issues\n\n    at Function.fail (node:internal/assert:17:9)\n    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:404:16)\n    at loadESMFromCJS (node:internal/modules/cjs/loader:1561:24)\n    at Module._compile (node:internal/modules/cjs/loader:1712:5)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n    at getCustomBabelConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:157:16)\n    at getFreshConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:291:41)\n    at async getConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:385:25)\n    at async transform (/workspace/node_modules/next/dist/build/babel/loader/transform.js:74:25)\n    at async /workspace/node_modules/next/dist/build/babel/loader/index.js:36:108\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async nextBabelLoader (/workspace/node_modules/next/dist/build/babel/loader/index.js:36:63)\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n\nImport trace for requested module:\n./node_modules/next/dist/shared/lib/errors/constants.js\n./node_modules/next/dist/server/stream-utils/node-web-streams-helper.js\n./node_modules/next/dist/server/render-result.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n./node_modules/next/dist/shared/lib/get-hostname.js\nError: Unexpected module status 5. Cannot require() ES Module /workspace/babel.config.js because it is not yet fully loaded. This may be caused by a race condition if the module is simultaneously dynamically import()-ed via Promise.all(). Try await-ing the import() sequentially in a loop instead. (from /workspace/node_modules/next/dist/build/babel/loader/get-config.js)\nThis is caused by either a bug in Node.js or incorrect usage of Node.js internals.\nPlease open an issue with this stack trace at https://github.com/nodejs/node/issues\n\n    at Function.fail (node:internal/assert:17:9)\n    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:404:16)\n    at loadESMFromCJS (node:internal/modules/cjs/loader:1561:24)\n    at Module._compile (node:internal/modules/cjs/loader:1712:5)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n    at getCustomBabelConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:157:16)\n    at getFreshConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:291:41)\n    at async getConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:385:25)\n    at async transform (/workspace/node_modules/next/dist/build/babel/loader/transform.js:74:25)\n    at async /workspace/node_modules/next/dist/build/babel/loader/index.js:36:108\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async nextBabelLoader (/workspace/node_modules/next/dist/build/babel/loader/index.js:36:63)\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n\nImport trace for requested module:\n./node_modules/next/dist/shared/lib/get-hostname.js\n./node_modules/next/dist/server/web/next-url.js\n./node_modules/next/dist/server/web/spec-extension/request.js\n./node_modules/next/dist/server/web/spec-extension/adapters/next-request.js\n./node_modules/next/dist/server/pipe-readable.js\n./node_modules/next/dist/server/render-result.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n./node_modules/next/dist/shared/lib/invariant-error.js\nError: Unexpected module status 5. Cannot require() ES Module /workspace/babel.config.js because it is not yet fully loaded. This may be caused by a race condition if the module is simultaneously dynamically import()-ed via Promise.all(). Try await-ing the import() sequentially in a loop instead. (from /workspace/node_modules/next/dist/build/babel/loader/get-config.js)\nThis is caused by either a bug in Node.js or incorrect usage of Node.js internals.\nPlease open an issue with this stack trace at https://github.com/nodejs/node/issues\n\n    at Function.fail (node:internal/assert:17:9)\n    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:404:16)\n    at loadESMFromCJS (node:internal/modules/cjs/loader:1561:24)\n    at Module._compile (node:internal/modules/cjs/loader:1712:5)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n    at getCustomBabelConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:157:16)\n    at getFreshConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:291:41)\n    at async getConfig (/workspace/node_modules/next/dist/build/babel/loader/get-config.js:385:25)\n    at async transform (/workspace/node_modules/next/dist/build/babel/loader/transform.js:74:25)\n    at async /workspace/node_modules/next/dist/build/babel/loader/index.js:36:108\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async nextBabelLoader (/workspace/node_modules/next/dist/build/babel/loader/index.js:36:63)\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n\nImport trace for requested module:\n./node_modules/next/dist/shared/lib/invariant-error.js\n./node_modules/next/dist/server/render-result.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n\n> Build failed because of webpack errors\n"
+    },
+    {
+      "name": "Performance Optimizer",
+      "success": true,
+      "result": {
+        "issues": [
+          {
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Potential infinite re-render - check dependencies"
+          },
+          {
+            "file": "/workspace/src/components/PerformanceOptimizer.tsx",
+            "issue": "Potential N+1 query problem - consider using useMemo"
+          },
+          {
+            "file": "/workspace/src/components/accessibility/AccessibilityEnhancer.tsx",
+            "issue": "Potential N+1 query problem - consider using useMemo"
+          },
+          {
+            "file": "/workspace/src/pages/Checkout.jsx",
+            "issue": "Potential infinite re-render - check dependencies"
+          },
+          {
+            "file": "/workspace/src/pages/SavedTalentsPage.jsx",
+            "issue": "Potential infinite re-render - check dependencies"
+          }
+        ],
+        "count": 5
+      }
+    },
+    {
+      "name": "Security Scanner",
+      "success": true,
+      "result": {
+        "issues": [
+          {
+            "file": "/workspace/src/components/ErrorBoundary.jsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/error/ErrorBoundary.tsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "issue": "Potential XSS vulnerability - sanitize HTML"
+          },
+          {
+            "file": "/workspace/src/store/wishlistSlice.jsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/utils/helpers.js",
+            "issue": "Use of eval() detected - security risk"
+          }
+        ],
+        "count": 7
+      }
+    },
+    {
+      "name": "Code Quality Analyzer",
+      "success": true,
+      "result": {
+        "issues": [
+          {
+            "file": "/workspace/src/components/ErrorBoundary.tsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/header/LanguageSelector.jsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/header/UserMenu.jsx",
+            "issue": "Console.log in production code - remove for production"
+          }
+        ],
+        "count": 4
+      }
+    },
+    {
+      "name": "Dependency Checker",
+      "success": true,
+      "result": {
+        "outdatedDeps": [
+          {
+            "dep": "react",
+            "current": "^18.2.0",
+            "recommended": "18.2.0"
+          },
+          {
+            "dep": "next",
+            "current": "^15.5.2",
+            "recommended": "15.5.2"
+          }
+        ],
+        "securityIssues": [],
+        "totalDeps": 45
+      }
+    }
+  ]
+}

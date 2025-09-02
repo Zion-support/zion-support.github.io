@@ -8,7 +8,6 @@ import React from;
  * @returns {*} Function return value;
  */;
 function CaseStudies () {
-;
   id: string,
   title: string, description: string,
   industry: string, results: {

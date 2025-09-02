@@ -7,31 +7,26 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'All Services', href: '/services' }
-    ],
+      { name: 'AI Services', href: '/services/ai-services' },
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' }
+    ], 
     solutions: [
-      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-      { name: 'Email Automation', href: '/solutions/email-automation' },
-      { name: 'Customer Support Platform', href: '/solutions/customer-support' },
-      { name: 'Event Management', href: '/solutions/event-management' },
-      { name: 'Project Management', href: '/solutions/project-management' },
-      { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
-    ],
+      { name: 'Custom Development', href: '/solutions/custom-development' }, 
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation' }, 
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise' }
+    ], 
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about' },
-      { name: 'Careers', href: '/about' },
+      { name: 'About Us', href: '/about' }, 
+      { name: 'Our Team', href: '/team' }, 
+      { name: 'Careers', href: '/careers' }, 
       { name: 'Contact', href: '/contact' }
-    ],
+    ], 
     resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/blog' },
-      { name: 'Documentation', href: '/blog' },
-      { name: 'Support', href: '/contact' },
-      { name: 'Pricing Guide', href: '/pricing-guide' }
+      { name: 'Blog', href: '/blog' }, 
+      { name: 'Case Studies', href: '/case-studies' }, 
+      { name: 'Documentation', href: '/docs' }, 
+      { name: 'Support', href: '/support' }
     ]
   };
 
@@ -50,26 +45,26 @@ const Footer: React.FC = () => {
             <div className='space-y-3'>
               <div className='flex items-center text-gray-300'>
                 <Mail className='h-5 w-5 mr-3 text-blue-400' />
-                <a href='mailto:kleber@ziontechgroup.com' className='hover:text-blue-400 transition-colors'>kleber@ziontechgroup.com</a>
+                <span>info@ziontechgroup.com</span>
               </div>
               <div className='flex items-center text-gray-300'>
                 <Phone className='h-5 w-5 mr-3 text-blue-400' />
-                <a href='tel:+13024640950' className='hover:text-blue-400 transition-colors'>+1 302 464 0950</a>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className='flex items-center text-gray-300'>
                 <MapPin className='h-5 w-5 mr-3 text-blue-400' />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <span>Delaware, USA</span>
               </div>
             </div>
             {/* Social Links */}
             <div className='flex space-x-4 mt-6'>
-              <a href='#' className='text-gray-400 hover:text-blue-400 transition-colors'>
+              <a href='https://linkedin.com/company/ziontechgroup' className='text-gray-400 hover:text-blue-400 transition-colors' target='_blank' rel='noopener noreferrer'>
                 <Linkedin className='h-6 w-6' />
               </a>
-              <a href='#' className='text-gray-400 hover:text-blue-400 transition-colors'>
+              <a href='https://twitter.com/ziontechgroup' className='text-gray-400 hover:text-blue-400 transition-colors' target='_blank' rel='noopener noreferrer'>
                 <Twitter className='h-6 w-6' />
               </a>
-              <a href='#' className='text-gray-400 hover:text-blue-400 transition-colors'>
+              <a href='https://github.com/ziontechgroup' className='text-gray-400 hover:text-blue-400 transition-colors' target='_blank' rel='noopener noreferrer'>
                 <Github className='h-6 w-6' />
               </a>
             </div>

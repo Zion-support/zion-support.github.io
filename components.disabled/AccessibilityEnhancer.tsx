@@ -25,13 +25,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.add('reduced-motion')} else {
       root.classList.remove('reduced-motion')}
   }
-;
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion)}
-;
   const changeFontSize = (newSize: 'small' | 'normal' | 'large' | 'extra-large') => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
@@ -98,5 +96,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       `}</style>
     </>
   )}
-;
 export default AccessibilityEnhancer

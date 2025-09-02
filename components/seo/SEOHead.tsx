@@ -1,6 +1,40 @@
 import React from 'react';
-import Head from 'next/head';
+import { User } from 'lucide-react';
 
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import Head from 'next/head';
 interface SEOHeadProps {
   title?: string;
    description?: string;
@@ -90,7 +124,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
                 '@type': 'ContactPoint',
                 'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},
               'sameAs': [;
-                'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
+                'https://linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
               ], 'offers': {
                 '@type': 'AggregateOffer',
                 'offerCount': '500+', 'description': 'Technology solutions and services'}
@@ -98,5 +132,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         />)}
     </Head>
   )}
-;
 export default SEOHead

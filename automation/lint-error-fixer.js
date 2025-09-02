@@ -141,7 +141,6 @@ class LintErrorFixer {
     ];
     let totalFiles = 0;
     for (const pattern of patterns) {
-;
       const files = this.glob(pattern);
       for (const fixed = await this.fixFile(file);
         if (fixed) totalFixed++}

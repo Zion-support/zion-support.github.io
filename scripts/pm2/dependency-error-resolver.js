@@ -40,7 +40,6 @@ class DependencyErrorResolver {
         failed: [],
         skipped: []},
       recommendations: []}
-;
     try {
       // Check for missing dependencies;
       await this.checkMissingDependencies(report);

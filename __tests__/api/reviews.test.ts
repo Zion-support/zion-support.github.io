@@ -118,7 +118,6 @@ describe(
         token_type: 'bearer;
   ',
         expires_at: Date.now() + 3600000}
-;
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: mockSupabaseSession },
         error: null})
@@ -160,7 +159,6 @@ describe(
         token_type: 'bearer;
   ',
         expires_at: Date.now() + 3600000}
-;
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: mockSupabaseSession },
         error: null})

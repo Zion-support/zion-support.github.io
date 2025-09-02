@@ -339,6 +339,5 @@ import {}
       </section>
     </div>
   )}
-;
 export default AIBusinessIntelligenceDashboard''`;
   ''`''`

@@ -24,7 +24,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709,
   website:,
   https: //ziontechgroup.com}
-;
 const features = [,
   Identity verification',
   'Device trust scoring',

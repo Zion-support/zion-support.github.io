@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EnhancedSEO.dynamic from '../components/EnhancedSEO.dynamic';
+import EnhancedSEOdynamic from "../components/EnhancedSEO.dynamic";
 
-describe('EnhancedSEO.dynamic', () => {
+describe('EnhancedSEOdynamic', () => {
   test('renders without crashing', () => {
-    render(<EnhancedSEO.dynamic />);
+    render(<EnhancedSEOdynamic />);
     expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<EnhancedSEO.dynamic />);
+    render(<EnhancedSEOdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<EnhancedSEO.dynamic />);
+    render(<EnhancedSEOdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<EnhancedSEO.dynamic />);
+    render(<EnhancedSEOdynamic />);
     // Add styling tests if needed
   })})

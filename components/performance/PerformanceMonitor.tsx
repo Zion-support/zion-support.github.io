@@ -1,4 +1,39 @@
 import React, { useEffect } from 'react';
+import { User } from 'lucide-react';
+
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -12,7 +47,6 @@ const PerformanceMonitor: React.FC = () => {
     // Only run in browser environment;
     if (typeof window === 'undefined') return;
     const metrics: PerformanceMetrics = {}
-;
     // First Contentful Paint (FCP);
     const fcpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -32,7 +66,7 @@ const PerformanceMonitor: React.FC = () => {
     // First Input Delay (FID);
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        metrics.fid = (entry as any).processingStart - entry.startTime;
+        metrics.fid = (entry as unknown).processingStart - entry.startTime;
         console.log('FID: ', metrics.fid)}
     })
     fidObserver.observe({ entryTypes: ['first-input'] })
@@ -40,8 +74,8 @@ const PerformanceMonitor: React.FC = () => {
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value}
+        if (!(entry as unknown).hadRecentInput) {
+          clsValue += (entry as unknown).value}
       }
       metrics.cls = clsValue;
       console.log('CLS: ', clsValue)})
@@ -62,9 +96,9 @@ const PerformanceMonitor: React.FC = () => {
     fmpObserver.observe({ entryTypes: ['paint'] })
     // Send metrics to analytics after page load;
     const sendMetrics = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
+      if (typeof window !== 'undefined' && (window as unknown).gtag) {
         // Send to Google Analytics;
-        (window as any).gtag('event', 'web_vitals', {
+        (window as unknown).gtag('event', 'web_vitals', {
           event_category: 'Performance', event_label: 'Core Web Vitals',
           custom_map: {
             metric_1: 'fcp', metric_2: 'lcp',
@@ -75,11 +109,9 @@ const PerformanceMonitor: React.FC = () => {
         fetch('/api/analytics/performance', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'},
-          body: JSON.stringify({
+            'Content-Type': 'application/json'}, body: JSON.stringify({
             url: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
     }
-;
     // Send metrics when page is about to unload;
     window.addEventListener('beforeunload', sendMetrics);
     // Also send after a delay to capture late metrics;
@@ -93,6 +125,6 @@ const PerformanceMonitor: React.FC = () => {
       fmpObserver.disconnect();
       window.removeEventListener('beforeunload', sendMetrics)}
   }, []);
-  return null // This component doesn&apos;t render anything'}
+  return null // This component doesn&apos;t render unknownthing'}
 ;
 export default PerformanceMonitor

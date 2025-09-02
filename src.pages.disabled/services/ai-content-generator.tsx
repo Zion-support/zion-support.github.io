@@ -267,5 +267,4 @@ const AIContentGenerator: React.FC = () => {
       </section>
     </Layout>
   )}
-;
 export default AIContentGenerator

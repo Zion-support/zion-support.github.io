@@ -75,5 +75,4 @@ const Dashboard = lazy(() => import('../pages/Dashboard'))';const ClientDashboar
       </Routes>
     </Suspense>
   )}
-;
 export default DashboardRoutes'

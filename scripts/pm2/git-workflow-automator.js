@@ -180,7 +180,6 @@ class GitWorkflowAutomator {
 ,
   R;
   ': 'renamed}
-;
     const summary = changes.reduce((acc, change) => {
       const type = change.charAt(0);
       const file = change.substring(3);
@@ -365,7 +364,6 @@ execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe;
       localBranches: await this.getLocalBranches(),
       remoteBranches: await this.getRemoteBranches(),
       recommendations: []}
-;
     // Generate recommendations;
     if (report.branchStatus && report.branchStatus.behind > 0) {
       report.recommendations.push(`Branch is ${report.branchStatus.behind} commits behind origin. Consider pulling latest changes.`)}

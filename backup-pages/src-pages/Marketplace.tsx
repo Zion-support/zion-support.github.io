@@ -62,7 +62,6 @@ const Marketplace: React.FC = () => {
   ';
         return 'bg-slate-500/20 text-slate-400}
   }
-;
       case,
   popular;
   ': ';
@@ -89,12 +88,9 @@ const Marketplace: React.FC = () => {
 ';
       stars.push(<Star key={`empty-${i}`} className='w-4 h-4 text-gray-400'  />)}
     return stars}
-;
     return category ? category.icon : Globe}
-;
     return category ? category.name :,
   General'}
-;
       case;
   'Best Seller': ';
         return 'bg-gradient-to-r from-green-500 to-emerald-500;
@@ -120,7 +116,6 @@ const Marketplace: React.FC = () => {
       default:';
         return;
   'bg-gradient-to-r from-gray-500 to-slate-500}  }
-;
   return()
     <>
       <SEO'

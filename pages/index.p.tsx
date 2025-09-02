@@ -44,19 +44,19 @@ export default function Index() {
         display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
         textAlign: 'center'
-      }}>
+      }}>;
         <h1 style={{
           fontSize: '3rem', fontWeight: 'bold',
           marginBottom: '1rem', background: 'linear-gradient(45deg, #00d4ff, #0099cc)', WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent', backgroundClip: 'text'
-        }}>
-          Zion Tech Group
+        }}>;
+          Zion Tech Group;
         </h1>
         <p style={{
           fontSize: '1.2rem',
           marginBottom: '2rem', color: '#a0aec0',
           maxWidth: '600px'
-        }}>
+        }}>;
           Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
         </p>
         <div style={{
@@ -97,6 +97,7 @@ export default function Index() {
           </a>
         </div>
       </div>
-    </>
+</>
   );
 }
+;

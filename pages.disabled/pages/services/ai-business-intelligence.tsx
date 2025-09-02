@@ -48,7 +48,6 @@ import {
   BookOpen,
   LineChart,
   ShoppingBag} from 'lucide-react&apos;
-;
 export default function AIBusinessIntelligence() {
   const features = [
     {

@@ -58,7 +58,6 @@ const mockApiRes = () => {
     setHeader: vi.fn().mockReturnThis(),
     end: vi.fn().mockReturnThis()}
   return res as NextApiResponse}
-;
 describe('/api/auth/login API Handler;
   ', () => {
   beforeEach(() => {
