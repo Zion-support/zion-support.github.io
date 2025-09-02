@@ -1,8 +1,8 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
 import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
 import {
   Map, ArrowRight,
   ExternalLink, Home,
@@ -79,11 +79,6 @@ const SitemapPage: React.FC = () => {
 
   return (
     <>
-      <SEO
-        title='Sitemap'
-        description='Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.'
-        keywords='sitemap, website navigation, pages, services, resources'
-      />
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
           <motion.div

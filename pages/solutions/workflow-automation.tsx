@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 import {
   Workflow,
   ArrowRight,
@@ -59,11 +58,6 @@ export default function WorkflowAutomation() {
 
   return (
     <>
-      <SEO
-        title="Workflow Automation Platform - Zion Tech Group"
-        description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."
-        keywords="workflow automation, process automation, business automation, integration, workflow management"
-      />
       <Head>
         <title>Workflow Automation Platform - Zion Tech Group</title>
       </Head>

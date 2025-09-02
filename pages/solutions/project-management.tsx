@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 import {
   FolderKanban,
   ArrowRight,
@@ -59,11 +58,6 @@ export default function ProjectManagement() {
 
   return (
     <>
-      <SEO
-        title="Project Management Platform - Zion Tech Group"
-        description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects."
-        keywords="project management, task management, team collaboration, time tracking, project planning"
-      />
       <Head>
         <title>Project Management Platform - Zion Tech Group</title>
       </Head>

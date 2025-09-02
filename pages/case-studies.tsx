@@ -1,24 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-=======
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
->>>>>>> origin/main
+import { Card } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
 import { 
   TrendingUp,
   Users,
@@ -180,10 +166,6 @@ const CaseStudies: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Case Studies - Zion Tech Group" 
-        description="Explore real-world success stories of AI implementations across various industries. See how our solutions drive measurable business results."
-      />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -375,9 +357,8 @@ const CaseStudies: React.FC = () => {
                         key={industry.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           industry.active 
-                            ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white
-  ': 'text-gray-300 hover:bg-slate-700
+                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+                            : 'text-gray-300 hover:bg-slate-700'
                         }`}
                       >
                         <span>{industry.name}</span>

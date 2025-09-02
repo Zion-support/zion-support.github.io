@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 import {
   Brain,
   ArrowRight,
@@ -113,13 +112,11 @@ export default function AIContentCreation() {
 
   return (
     <>
-      <SEO
-        title="AI Content Creation - Zion Tech Group"
-        description="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI."
-        keywords="AI content creation, automated content, blog generation, social media content, SEO optimization"
-      />
       <Head>
         <title>AI Content Creation - Zion Tech Group</title>
+        <meta name="description" content="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/solutions/ai-content-creation" />
       </Head>
 
       {/* Hero Section */}
