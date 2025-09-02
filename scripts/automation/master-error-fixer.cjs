@@ -7,8 +7,8 @@ const path = require('path');
 class MasterErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/master-error-fixer.log');
-    this.errorLogFile = path.join(this.projectRoot, 'automation/logs/master-error-fixer-error.log');
+    this.logFile = path.join(this.projectRoot, 'logs/master-error-fixer.log');
+    this.errorLogFile = path.join(this.projectRoot, 'logs/master-error-fixer-error.log');
     this.reportFile = path.join(this.projectRoot, 'master-error-fixer-report.json');
     
     // Ensure logs directory exists
@@ -414,7 +414,8 @@ process.on('SIGTERM', () => {
 });
 
 // Start the master error fixer
-runContinuous().catch(error => {
+const masterErrorFixer = new MasterErrorFixer();
+masterErrorFixer.runContinuous().catch(error => {
   console.error('❌ Failed to start master error fixer:', error);
   process.exit(1);
 });

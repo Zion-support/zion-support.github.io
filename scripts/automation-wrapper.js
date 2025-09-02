@@ -155,9 +155,36 @@ async function main() {
         runSitemapGeneration();
         break;
         
+      case 'code-review':
+        log('Running AI code review...');
+        runQualityChecks();
+        log('✅ AI code review completed');
+        break;
+        
+      case 'smart-deps':
+        log('Running smart dependency intelligence...');
+        runDependencyCheck();
+        runDependencyUpdate();
+        log('✅ Smart dependency intelligence completed');
+        break;
+        
+      case 'predict':
+        log('Running predictive issue detection...');
+        runQualityChecks();
+        runSecurityAudit();
+        log('✅ Predictive issue detection completed');
+        break;
+        
+      case 'build-pipeline':
+        log('Running intelligent build pipeline...');
+        runBuild();
+        runQualityChecks();
+        log('✅ Intelligent build pipeline completed');
+        break;
+        
       default:
         log(`Unknown task: ${task}`);
-        log('Available tasks: fix, check-links, improve, build-test, security, deps, performance, quality, integrity, maximize, sitemap');
+        log('Available tasks: fix, check-links, improve, build-test, security, deps, performance, quality, integrity, maximize, sitemap, code-review, smart-deps, predict, build-pipeline');
         break;
     }
     

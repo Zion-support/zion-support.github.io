@@ -1,23 +1,28 @@
 #!/usr/bin/env node
 
+/**
+ * Comprehensive Error Fixer Automation
+ * Fixes multiple types of errors comprehensively
+ * Runs every 30 minutes
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
+const { execSync } = require('child_process');
 const glob = require('glob');
 
 class ComprehensiveErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.errorReport = {
-      timestamp: new Date().toISOString(),
-      duration: 0,
-      fixesApplied: [],
-      errorsFound: [],
-      summary: {
-        totalErrors: 0,
-        fixedErrors: 0,
-        remainingErrors: 0
-      }
+    this.logFile = path.join(this.projectRoot, 'automation/logs/comprehensive-error-fixer.log');
+    this.ensureLogDirectory();
+    this.fixCount = 0;
+    this.errorTypes = {
+      syntax: 0,
+      import: 0,
+      component: 0,
+      dependency: 0,
+      build: 0
     };
     this.startTime = Date.now();
     // Get automation interval from environment variable (default: 30 minutes)
@@ -336,24 +341,41 @@ class ComprehensiveErrorFixer {
     this.log('Generating error report...');
     
     try {
-      // Run final checks
-      const typeCheckResult = execSync('npx tsc --noEmit --pretty false 2>&1', { 
-        encoding: 'utf8' 
-      });
+      // Step 1: Fix syntax errors
+      this.fixSyntaxErrors();
       
-      const lintResult = execSync('npx eslint . --ext .js,.jsx,.ts,.tsx 2>&1', { 
-        encoding: 'utf8' 
-      });
+      // Step 2: Fix import issues
+      this.fixImportIssues();
       
-      this.errorReport.summary.totalErrors = 
-        (typeCheckResult.match(/error TS\d+/g) || []).length +
-        (lintResult.match(/error/g) || []).length;
+      // Step 3: Fix component issues
+      this.fixComponentIssues();
       
-      this.errorReport.summary.fixedErrors = this.errorReport.fixesApplied.length;
-      this.errorReport.summary.remainingErrors = this.errorReport.summary.totalErrors;
+      // Step 4: Fix dependency issues
+      await this.fixDependencyIssues();
+      
+      // Step 5: Fix build issues
+      await this.fixBuildIssues();
+      
+      // Step 6: Run type check
+      const typeCheckPassed = await this.runTypeCheck();
+      
+      // Step 7: Run lint
+      const lintPassed = await this.runLint();
+      
+      // Generate report
+      const report = await this.generateReport();
+      
+      this.log(`Comprehensive Error Fixer completed. Fixed ${this.fixCount} errors.`);
+      this.log(`Error types fixed: ${JSON.stringify(this.errorTypes)}`);
+      
+      if (typeCheckPassed && lintPassed) {
+        this.log('All checks passed successfully!');
+      } else {
+        this.log('Some checks failed, but errors were fixed');
+      }
       
     } catch (error) {
-      this.log(`Error generating report: ${error.message}`);
+      this.log(`Error in Comprehensive Error Fixer: ${error.message}`);
     }
   }
 
@@ -391,5 +413,16 @@ class ComprehensiveErrorFixer {
 const fixer = new ComprehensiveErrorFixer();
 fixer.runContinuous().catch(error => {
   console.error('❌ Failed to start comprehensive error fixer:', error);
+  process.exit(1);
+});
+
+process.on('SIGTERM', () => {
+  fixer.log('Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Run the fixer
+fixer.run().catch(error => {
+  fixer.log(`Unhandled error: ${error.message}`);
   process.exit(1);
 });

@@ -1,5 +1,1 @@
-export default function handler(req: {
-
-    method?: string;
-    body?: unknown;
-}, res: any): Promise<void>;
+import React from 'react'; export default function handler( req: { method?: string; body?: any; }, res: any ): Promise<void>; 
