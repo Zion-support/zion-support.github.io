@@ -1,13 +1,8 @@
-import React from,
-  react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../components/layout/MainLayout';
-import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from
-  'lucide-react';
-import Link from
-  'next/link';
+import React from 'react';
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from 'lucide-react';
+import Link from 'next/link';
 
 const Whitepapers: NextPage = () => {
   const whitepapers = [
