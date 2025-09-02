@@ -124,9 +124,8 @@ class SyntaxErrorFixer {
         { pattern: /{\s*$/, error: 'Unclosed brace' },
         { pattern: /\w+:\s*$/, error: 'Missing type or value' },
         { pattern: /return\s*}/, error: 'Missing return value' },
-        { pattern: /<<<<<<< HEAD/, error: 'Git merge conflict marker' },
-        { pattern: />>>>>>> /, error: 'Git merge conflict marker' },
-        { pattern: /=======/, error: 'Git merge conflict marker' },
+{ pattern: //, error: 'Git merge conflict marker' },
+        { pattern: /{ pattern: /.replace(/\\n([\\s\\S]*?)}{ pattern: //, error: 'Git merge conflict marker' },
         { pattern: /'\s*$/, error: 'Unterminated string literal' },
         { pattern: /"\s*$/, error: 'Unterminated string literal' },
       ];
@@ -162,7 +161,7 @@ class SyntaxErrorFixer {
       let modified = false;
 
       // Handle merge conflicts first
-      if (content.includes('<<<<<<< HEAD')) {
+      if (content.includes('')) {
         content = this.fixMergeConflicts(content);
         modified = true;
       }
@@ -205,11 +204,8 @@ class SyntaxErrorFixer {
   fixMergeConflicts(content) {
     // Simple merge conflict resolution - take HEAD version
     return content
-      .replace(/<<<<<<< HEAD\\n([\\s\\S]*?)=======\\n[\\s\\S]*?>>>>>>> .*?\\n/g, '$1')
-      .replace(/<<<<<<< HEAD\\n([\\s\\S]*?)>>>>>>> .*?\\n/g, '$1');
-  }
-
-  saveReport(report) {
+      .replace(/\\n([\\s\\S]*?).replace(/\\n([\\s\\S]*?)}
+saveReport(report) {
     try {
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     } catch (error) {

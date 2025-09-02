@@ -328,6 +328,11 @@ const ServicesPage: NextPage = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover our most popular and innovative solutions that are transforming businesses across industries.
             </p>
+            <div className="mt-6">
+              <Link href="/services/expanded" className="inline-block text-blue-600 hover:text-blue-700 font-semibold underline">
+                Browse the expanded services catalog
+              </Link>
+            </div>
           </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
