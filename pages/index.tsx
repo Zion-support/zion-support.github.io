@@ -2,7 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -113,13 +113,13 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Micro SaaS Solutions</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.
+                Innovative, focused software solutions including AI Code Reviewer, Smart Contract Auditor, Blockchain Analytics, and IoT Device Management.
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">8+ Solutions</div>
+                <div className="text-sm text-gray-400">20+ Solutions</div>
               </div>
             </div>
 
@@ -130,15 +130,15 @@ const Home: NextPage = () => {
                   <Shield className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">IT Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">Advanced IT Services</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses.
+                Cutting-edge IT solutions including Edge Computing, Quantum Computing Readiness, Zero Trust Security, and 5G Network Implementation.
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/it-services" className="text-purple-600 hover:text-purple-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">12+ Services</div>
+                <div className="text-sm text-gray-400">18+ Services</div>
               </div>
             </div>
 
@@ -149,15 +149,15 @@ const Home: NextPage = () => {
                   <Globe className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">AI Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">AI & Machine Learning</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
+                Revolutionary AI solutions including Drug Discovery, Climate Modeling, Autonomous Systems, and Personalized Medicine platforms.
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/ai-services" className="text-indigo-600 hover:text-indigo-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">10+ Solutions</div>
+                <div className="text-sm text-gray-400">22+ Solutions</div>
               </div>
             </div>
           </div>
@@ -205,6 +205,145 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Results</h3>
               <p className="text-gray-600">98% client satisfaction and 500+ successful projects</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Featured Innovative Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Discover our most cutting-edge solutions that are transforming industries and driving digital innovation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Drug Discovery */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="text-4xl mb-4">💊</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Drug Discovery Platform</h3>
+              <p className="text-gray-600 mb-4 text-sm">Revolutionary AI-powered drug discovery using machine learning for molecular design and clinical trial optimization.</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-green-600">$50K+</span>
+                <span className="text-sm text-gray-500">Starting Price</span>
+              </div>
+              <Link href="/services/ai-drug-discovery" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Quantum Computing */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum Computing Readiness</h3>
+              <p className="text-gray-600 mb-4 text-sm">Future-proof your technology infrastructure with quantum computing readiness assessment and preparation services.</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-purple-600">$25K+</span>
+                <span className="text-sm text-gray-500">Starting Price</span>
+              </div>
+              <Link href="/services/quantum-computing-readiness" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Smart Contract Auditor */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="text-4xl mb-4">🔐</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Contract Security Auditor</h3>
+              <p className="text-gray-600 mb-4 text-sm">AI-powered smart contract auditing platform for blockchain security analysis and vulnerability detection.</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-orange-600">$199+</span>
+                <span className="text-sm text-gray-500">Starting Price</span>
+              </div>
+              <Link href="/services/smart-contract-auditor" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Edge Computing */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Edge Computing Solutions</h3>
+              <p className="text-gray-600 mb-4 text-sm">Comprehensive edge computing implementation for low-latency applications, IoT, and real-time processing.</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-blue-600">$12K+</span>
+                <span className="text-sm text-gray-500">Starting Price</span>
+              </div>
+              <Link href="/services/edge-computing-solutions" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* AI Climate Modeling */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="text-4xl mb-4">🌡️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Climate Modeling</h3>
+              <p className="text-gray-600 mb-4 text-sm">Advanced AI climate modeling system for weather prediction, climate change analysis, and environmental impact assessment.</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-teal-600">$30K+</span>
+                <span className="text-sm text-gray-500">Starting Price</span>
+              </div>
+              <Link href="/services/ai-climate-modeling" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Zero Trust Security */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Zero Trust Security</h3>
+              <p className="text-gray-600 mb-4 text-sm">Complete zero trust security architecture implementation with identity verification and continuous monitoring.</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-red-600">$15K+</span>
+                <span className="text-sm text-gray-500">Starting Price</span>
+              </div>
+              <Link href="/services/zero-trust-security" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Contact us today to discuss your project requirements and get a personalized quote.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+              <p className="text-blue-200">+1 302 464 0950</p>
+              <p className="text-sm text-blue-300 mt-1">Mon-Fri 9AM-6PM EST</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+              <p className="text-blue-200">kleber@ziontechgroup.com</p>
+              <p className="text-sm text-blue-300 mt-1">24/7 Support Available</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+              <p className="text-blue-200">364 E Main St STE 1008</p>
+              <p className="text-sm text-blue-300 mt-1">Middletown DE 19709</p>
             </div>
           </div>
         </div>

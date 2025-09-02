@@ -8,8 +8,9 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-    { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -75,16 +76,31 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
+                  <div className="p-2">
+                    {serviceCategories.map((category) => (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-md"
+                      >
+                        <div className="font-medium">{category.name}</div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          {category.name === 'Micro SaaS' && '20+ Solutions'}
+                          {category.name === 'IT Services' && '18+ Services'}
+                          {category.name === 'AI Services' && '22+ Solutions'}
+                        </div>
+                      </Link>
+                    ))}
+                    <div className="border-t border-gray-100 mt-2 pt-2">
+                      <Link
+                        href="/services"
+                        className="block px-4 py-2 text-blue-600 hover:bg-blue-50 transition-colors rounded-md font-medium"
+                      >
+                        View All Services →
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 
