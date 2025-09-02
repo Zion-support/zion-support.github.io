@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import CaseStudies from './CaseStudies';
-
 describe('CaseStudies', () => {
   it('renders without crashing', () => {
     render(<CaseStudies />)

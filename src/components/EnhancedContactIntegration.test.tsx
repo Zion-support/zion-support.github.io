@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedContactIntegration from './EnhancedContactIntegration';
-
 describe('EnhancedContactIntegration', () => {
   it('renders without crashing', () => {
     render(<EnhancedContactIntegration />)

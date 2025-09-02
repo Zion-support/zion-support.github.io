@@ -4,90 +4,64 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import EnhancedHero from '../components/EnhancedHero';
 import { 
-  Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, 
-  Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, 
-  Database, Network, Smartphone, Building, Heart, Award, MessageCircle, 
-  Phone, Mail, MapPin 
+  Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, 
+  Database, Network, Smartphone, Building, Heart, Award, MessageCircle, Phone, Mail, MapPin 
 } from 'lucide-react';
-
 export default React.memo(function Home() {
   const features = [
     { 
-      icon: Brain, 
-      title: 'AI-Powered Solutions', 
-      description: 'Cutting-edge artificial intelligence that transforms business operations and drives innovation.', 
-      color: 'from-purple-500 to-pink-500' 
+      icon: Brain, title: 'AI-Powered Solutions', 
+      description: 'Cutting-edge artificial intelligence that transforms business operations and drives innovation.', color: 'from-purple-500 to-pink-500' 
     },
     { 
-      icon: Atom, 
-      title: 'Quantum Computing', 
-      description: 'Next-generation quantum solutions that solve complex problems beyond classical computing.', 
-      color: 'from-orange-500 to-red-500' 
+      icon: Atom, title: 'Quantum Computing', 
+      description: 'Next-generation quantum solutions that solve complex problems beyond classical computing.', color: 'from-orange-500 to-red-500' 
     },
     { 
-      icon: Rocket, 
-      title: 'Micro SAAS Platform', 
-      description: 'Innovative software-as-a-service solutions that scale with your business needs.', 
-      color: 'from-blue-500 to-cyan-500' 
+      icon: Rocket, title: 'Micro SAAS Platform', 
+      description: 'Innovative software-as-a-service solutions that scale with your business needs.', color: 'from-blue-500 to-cyan-500' 
     },
     { 
-      icon: Shield, 
-      title: 'Enterprise Security', 
-      description: 'Military-grade cybersecurity and compliance solutions for enterprise protection.', 
-      color: 'from-green-500 to-emerald-500' 
+      icon: Shield, title: 'Enterprise Security', 
+      description: 'Military-grade cybersecurity and compliance solutions for enterprise protection.', color: 'from-green-500 to-emerald-500' 
     }
   ];
-
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Team Members', icon: Users },
-    { number: '25+', label: 'Countries Served', icon: Globe },
-    { number: '99%', label: 'Client Satisfaction', icon: Star }
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle }, { number: '50+', label: 'Team Members', icon: Users },
+    { number: '25+', label: 'Countries Served', icon: Globe }, { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
-
   const services = [
     { 
-      title: 'AI Services', 
-      description: 'Comprehensive AI solutions for business automation and intelligence', 
-      href: '/ai-services', 
-      icon: Brain, 
+      title: 'AI Services', description: 'Comprehensive AI solutions for business automation and intelligence', 
+      href: '/ai-services', icon: Brain, 
       color: 'from-purple-500 to-pink-500' 
-    },
-    { 
+    }, { 
       title: 'IT Infrastructure', 
-      description: 'Enterprise-grade IT solutions and cloud architecture', 
-      href: '/it-services', 
-      icon: Server, 
-      color: 'from-green-500 to-emerald-500' 
+      description: 'Enterprise-grade IT solutions and cloud architecture', href: '/it-services', 
+      icon: Server, color: 'from-green-500 to-emerald-500' 
     },
     { 
-      title: 'Quantum Solutions', 
-      description: 'Cutting-edge quantum computing and technology services', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
+      title: 'Quantum Solutions', description: 'Cutting-edge quantum computing and technology services', 
+      href: '/services/quantum-computing', icon: Atom, 
       color: 'from-orange-500 to-red-500' 
-    },
-    { 
+    }, { 
       title: 'Micro SAAS', 
-      description: 'Innovative software solutions for modern businesses', 
-      href: '/micro-saas', 
-      icon: Rocket, 
-      color: 'from-blue-500 to-cyan-500' 
+      description: 'Innovative software solutions for modern businesses', href: '/micro-saas', 
+      icon: Rocket, color: 'from-blue-500 to-cyan-500' 
     }
   ];
-
   return (
     <>
       <SEO 
         title="Zion Tech Group - Leading AI & Quantum Technology Solutions"
-        description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Enterprise-grade technology solutions for the future."
+        description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Enterprise-grade technology solutions for the future."'
         keywords="AI services, quantum computing, micro SAAS, IT infrastructure, cybersecurity, Zion Tech Group, technology solutions"
       />
       <EnhancedHero />
       
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -284,6 +258,6 @@ export default React.memo(function Home() {
           </div>
         </div>
       </section>
-    </>
+</>
   );
 });

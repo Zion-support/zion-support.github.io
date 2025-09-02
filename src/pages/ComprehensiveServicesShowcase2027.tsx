@@ -1,61 +1,35 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  // Blockchain icon removed - not available in lucide-react
+  Brain, Cloud,
+  Shield, Server,
+  Zap, Globe,
+  Cpu, Database,
+  Network, Lock,
+  Code, Rocket,
+  Users, Search,
+  Filter, Star,
+  TrendingUp, DollarSign,
+  Clock, CheckCircle,
+  ArrowRight, Play,
+  BookOpen, MessageCircle,
+  Phone, Mail,
+  MapPin, Globe as GlobeIcon,
+  Atom, // Blockchain icon removed - not available in lucide-react
   Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck,
-  Eye,
-  Download,
-  ExternalLink,
-  Award,
-  Target,
-  Lightbulb,
-  BarChart3,
-  PieChart,
-  Activity,
-  Gauge,
-  ShieldCheck,
-  X
+  Scale, Factory,
+  Satellite, ShoppingCart,
+  Building, Truck,
+  Eye, Download,
+  ExternalLink, Award,
+  Target, Lightbulb,
+  BarChart3, PieChart,
+  Activity, Gauge,
+  ShieldCheck, X
 } from 'lucide-react';
-
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices } from '../data/comprehensiveServices';
-
 interface Service {
   id: string;
   name: string;
@@ -89,73 +63,49 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
-    
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
       services.push({
-        id: service.id,
-        name: service.name,
-        category: service.category,
-        description: service.description,
-        features: service.features,
-        benefits: service.benefits,
+        id: service.id, name: service.name,
+        category: service.category, description: service.description,
+        features: service.features, benefits: service.benefits,
         pricing: {
-          starter: service.pricing.starter,
-          professional: service.pricing.professional,
-          enterprise: service.pricing.enterprise,
-          currency: service.pricing.currency,
+          starter: service.pricing.starter, professional: service.pricing.professional,
+          enterprise: service.pricing.enterprise, currency: service.pricing.currency,
           billingCycle: service.pricing.billingCycle
-        },
-        rating: service.rating,
-        reviewCount: service.reviewCount,
-        launchDate: service.launchDate,
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
+        }, rating: service.rating,
+        reviewCount: service.reviewCount, launchDate: service.launchDate,
+        status: service.status, marketPrice: service.marketPrice,
+        estimatedDelivery: service.estimatedDelivery, website: service.website,
         contactInfo: service.contactInfo
       });
     });
-
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
       services.push({
-        id: service.id,
-        name: service.name,
-        category: service.category,
-        description: service.description,
-        features: service.features,
-        benefits: service.benefits,
+        id: service.id, name: service.name,
+        category: service.category, description: service.description,
+        features: service.features, benefits: service.benefits,
         pricing: {
-          starter: service.pricing.starter,
-          professional: service.pricing.professional,
-          enterprise: service.pricing.enterprise,
-          currency: service.pricing.currency,
+          starter: service.pricing.starter, professional: service.pricing.professional,
+          enterprise: service.pricing.enterprise, currency: service.pricing.currency,
           billingCycle: service.pricing.billingCycle
-        },
-        rating: service.rating,
-        reviewCount: service.reviewCount,
-        launchDate: service.launchDate,
-        status: service.status,
-        marketPrice: service.marketPrice,
-        estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
+        }, rating: service.rating,
+        reviewCount: service.reviewCount, launchDate: service.launchDate,
+        status: service.status, marketPrice: service.marketPrice,
+        estimatedDelivery: service.estimatedDelivery, website: service.website,
         contactInfo: service.contactInfo
       });
     });
-
     return services;
   }, []);
-
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]);
-
   const filteredServices = useMemo(() => {
     const filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -164,74 +114,50 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-
     // Sort services
     switch (sortBy) {
-      case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      case 'name': filtered.sort((a, b) => a.name.localeCompare(b.name));
         break;
-      case 'price':
-        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter);
+      case 'price': filtered.sort((a, b) => a.pricing.starter - b.pricing.starter);
         break;
-      case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
+      case 'rating': filtered.sort((a, b) => b.rating - a.rating);
         break;
-      case 'newest':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+      case 'newest': filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break;
     }
 
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Artificial Intelligence':
-        return <Brain className="w-6 h-6" />;
-      case 'Quantum Computing':
-        return <Atom className="w-6 h-6" />;
-      case 'Neuromorphic Computing':
-        return <Cpu className="w-6 h-6" />;
-      case 'Synthetic Biology':
-        return <Heart className="w-6 h-6" />;
-      case 'Blockchain':
-        return <Blockchain className="w-6 h-6" />;
-      case 'Cybersecurity':
-        return <Shield className="w-6 h-6" />;
-      case 'Internet of Things':
-        return <Network className="w-6 h-6" />;
-      case 'Metaverse':
-        return <Globe className="w-6 h-6" />;
-      case 'Robotics':
-        return <Factory className="w-6 h-6" />;
-      case 'Space Technology':
-        return <Satellite className="w-6 h-6" />;
-      default:
-        return <Lightbulb className="w-6 h-6" />;
+      case 'Artificial Intelligence': return <Brain className="w-6 h-6" />;
+      case 'Quantum Computing': return <Atom className="w-6 h-6" />;
+      case 'Neuromorphic Computing': return <Cpu className="w-6 h-6" />;
+      case 'Synthetic Biology': return <Heart className="w-6 h-6" />;
+      case 'Blockchain': return <Blockchain className="w-6 h-6" />;
+      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
+      case 'Internet of Things': return <Network className="w-6 h-6" />;
+      case 'Metaverse': return <Globe className="w-6 h-6" />;
+      case 'Robotics': return <Factory className="w-6 h-6" />;
+      case 'Space Technology': return <Satellite className="w-6 h-6" />;
+      default: return <Lightbulb className="w-6 h-6" />;
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
-      case 'live':
-        return 'bg-green-100 text-green-800';
-      case 'beta':
-        return 'bg-blue-100 text-blue-800';
-      case 'coming soon':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'preview':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
+      case 'live': return 'bg-green-100 text-green-800';
+      case 'beta': return 'bg-blue-100 text-blue-800';
+      case 'coming soon': return 'bg-yellow-100 text-yellow-800';
+      case 'preview': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -245,7 +171,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               Discover our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
               From quantum computing to autonomous business operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -280,7 +206,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
             </div>
@@ -290,7 +216,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -303,7 +229,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
@@ -386,7 +312,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2">
-                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                     Get Started
                   </button>
                   <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">
@@ -442,7 +368,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                   </div>
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                    className="p-2 hover: bg-white/10 rounded-lg transition-colors"
                   >
                     <X className="w-6 h-6 text-gray-400" />
                   </button>
@@ -514,7 +440,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                       <h4 className="text-white font-semibold mb-2">Market Information</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-blue-200">Market Price:</span>
+                          <span className="text-blue-200">Market Price: </span>
                           <span className="text-white">{selectedService.marketPrice}</span>
                         </div>
                         <div className="flex justify-between">
@@ -552,7 +478,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">
-                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                     Get Started Now
                   </button>
                   <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-200">
@@ -569,7 +495,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       </AnimatePresence>
 
       {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -602,5 +528,4 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default ComprehensiveServicesShowcase2027;

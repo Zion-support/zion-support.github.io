@@ -1,9 +1,8 @@
 import { Helmet } from;
-  'react-helmet-async'';interface SEOProps {
+  'react-helmet-async'';interface SEOProps {'
   title?: string;
   description?: string;
   import { Helmet} from 'react-helmet-async';
-export default function Page() {
 export default function Page() {
 interface SEOProps {
   title?: string;

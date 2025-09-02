@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react.ts';
-
 interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{
 
 }> {
@@ -10,13 +9,11 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
-
         // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-
         // Add some gravity effect
         this.vy += 0.01}
 
@@ -31,7 +28,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
           ctx.fill();
-
           // Add glow effect
           ctx.shadowColor = this.color;
           ctx.shadowBlur = 10;
@@ -49,7 +45,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
       spacing: number;
       offset: number;
-
       constructor() {
 
         this.spacing = 60;
@@ -63,7 +58,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
         if (ctx) {;
           ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
           ctx.lineWidth = 1;
-
           // Vertical lines
           for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
 
@@ -90,7 +84,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       frequency: number;
       speed: number;
       offset: number;
-
       constructor() {
 
         this.amplitude = 50;
@@ -107,7 +100,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
           ctx.strokeStyle = 'rgba(150, 100, 255, 0.3)';
           ctx.lineWidth = 2;
           ctx.beginPath();
-
           for (let x = 0; x < canvas.width; x++) {
 
             const y = Math.sin(x * this.frequency + this.offset) * this.amplitude + canvas.height / 2;
@@ -127,7 +119,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
     const particles: Particle[] = [];
     const grid = new Grid();
     const waves: Wave[] = [];
-
     // Initialize particles
     for (let i = 0; i < 100; i++) {
 
@@ -147,37 +138,30 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       // Clear canvas with fade effect;
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw grid
       grid.update();
       grid.draw();
-
       // Update and draw waves
       waves.forEach(wave = > {;
         wave.update();
         wave.draw()});
-
       // Update and draw particles
       particles.forEach((particle, index) => {
 
         particle.update();
         particle.draw();
-
         if (particle.isDead()) {
 
           particles[index] = new Particle()}
       });
-
       // Draw connections between nearby particles
       ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
       ctx.lineWidth = 1;
-
       for (let i = 0; i < particles.length; i++) {
 
         for (let j = i + 1; j < particles.length; j++) {
 
           const distance = Math.sqrt(dx * dx + dy * dy);
-
           if (distance < 100) {
 
             const alpha = 1 - distance / 100;
@@ -194,7 +178,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       ctx.save();
       ctx.translate(canvas.width / 2, canvas.height / 2);
       ctx.rotate(time * 0.1);
-
       // Draw rotating hexagon
       ctx.strokeStyle = 'rgba(255, 100, 200, 0.2)';
       ctx.lineWidth = 2;
@@ -213,7 +196,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       }
       ctx.closePath();
       ctx.stroke();
-
       // Draw inner triangle
       ctx.strokeStyle = 'rgba(100, 255, 200, 0.2)';
       ctx.lineWidth = 2;
@@ -232,13 +214,9 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       }
       ctx.closePath();
       ctx.stroke();
-
       ctx.restore();
-
       animationId = requestAnimationFrame(animate)};
-
     animate();
-
     // Cleanup
     return () => {
 
@@ -247,7 +225,6 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
         cancelAnimationFrame(animationId)}
     }}, []);
-
   return (
     <div className = {`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
@@ -257,8 +234,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
   {
 
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0,
-  1) 100%)'
+          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0,'
+  1) 100%)''
         
 
 

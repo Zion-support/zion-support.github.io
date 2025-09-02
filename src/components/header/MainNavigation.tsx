@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';
-
 export function MainNavigation({ className = '' }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -11,7 +10,7 @@ export function MainNavigation({ className = '' }) {
       {/* Home */}
       <Link
         to='/';
-        className='text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'>
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Home
       </Link>
       {/* Services Dropdown */}
@@ -19,7 +18,7 @@ export function MainNavigation({ className = '' }) {
         <button;
           onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
-          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'
+          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'
         >
           <Zap className='w-4 h-4' />
           <span>Services</span>
@@ -40,7 +39,7 @@ export function MainNavigation({ className = '' }) {
                   </h4>
                   <ul className='space-y-2 text-sm'>
                     <li>
-                      <Link to='/services' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
+                      <Link to='/services' className='text-zion-slate-light hover: text-zion-cyan transition-colors'>
                         All Services
                       </Link>
                     </li>
@@ -166,7 +165,7 @@ export function MainNavigation({ className = '' }) {
               <div className='mt-4 pt-4 border-t border-zion-purple/20'>
                 <Link
                   to='/services';
-                  className='text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
+                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
                   View All Services
                   <TrendingUp className='w-4 h-4 ml-2' />
                 </Link>
@@ -180,7 +179,7 @@ export function MainNavigation({ className = '' }) {
         <button;
           onMouseEnter={() => setIsSolutionsOpen(true)}
           onMouseLeave={() => setIsSolutionsOpen(false)}
-          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'
+          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'
         >
           <Brain className='w-4 h-4' />
           <span>Solutions</span>
@@ -201,7 +200,7 @@ export function MainNavigation({ className = '' }) {
                   </h4>
                   <ul className='space-y-2 text-sm'>
                     <li>
-                      <Link to='/talent' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
+                      <Link to='/talent' className='text-zion-slate-light hover: text-zion-cyan transition-colors'>
                         Find Experts
                       </Link>
                     </li>
@@ -254,7 +253,7 @@ export function MainNavigation({ className = '' }) {
               <div className='mt-4 pt-4 border-t border-zion-purple/20'>
                 <Link
                   to='/request-quote';
-                  className='text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
+                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
                   Get Custom Quote
                   <TrendingUp className='w-4 h-4 ml-2' />
                 </Link>
@@ -268,7 +267,7 @@ export function MainNavigation({ className = '' }) {
         <button;
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
-          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'
+          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'
         >
           <Building2 className='w-4 h-4' />
           <span>Company</span>
@@ -283,7 +282,7 @@ export function MainNavigation({ className = '' }) {
             <div className='p-4'>
               <ul className='space-y-2 text-sm'>
                 <li>
-                  <Link to='/about' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
+                  <Link to='/about' className='text-zion-slate-light hover: text-zion-cyan transition-colors'>
                     About Us
                   </Link>
                 </li>
@@ -325,19 +324,19 @@ export function MainNavigation({ className = '' }) {
       {/* Resources */}
       <Link
         to='/resources';
-        className='text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'>
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Resources
       </Link>
       {/* Blog */}
       <Link
         to='/blog';
-        className='text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'>
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Blog
       </Link>
       {/* Pricing */}
       <Link
         to='/pricing';
-        className='text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors'>
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Pricing
       </Link>
     </nav>

@@ -40,7 +40,6 @@ const __rest = (this && this.__rest) || function (s, e) {
                 t[p[i]] = s[p[i]]}
     return t};
 import { jsx as _jsx } from "react/jsx-runtime";
-import React from 'react';
 import { cn } from '@/lib/utils';
 const Card = React.forwardRef((_a, ref) => {
     let { className } = _a, props = __rest(_a, ["className"]);

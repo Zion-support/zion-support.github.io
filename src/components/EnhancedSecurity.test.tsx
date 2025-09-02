@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedSecurity from './EnhancedSecurity';
-
 describe('EnhancedSecurity', () => {
   it('renders without crashing', () => {
     render(<EnhancedSecurity />)

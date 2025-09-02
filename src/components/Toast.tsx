@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
-
 interface Toast {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
@@ -22,12 +21,10 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     const newToast = { ...toast, id }
     
     setToasts(prev => [...prev, newToast]);
-    
     // Auto remove after duration
     const duration = toast.duration || 5000;
     setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, []);
-
   const removeToast = useCallback((id: string) => {
     setToasts(prev => prev.filter(t => t.id !== id))}, [])
 
@@ -55,10 +52,8 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: 
 
 function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
   const bgColor = {
-    success: 'bg-green-500',
-    error: 'bg-red-500',
-    warning: 'bg-yellow-500',
-    info: 'bg-blue-500',
+    success: 'bg-green-500', error: 'bg-red-500',
+    warning: 'bg-yellow-500', info: 'bg-blue-500',
   }[toast.type]
 
   return (
@@ -72,7 +67,7 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
         </div>
         <button
           onClick={() => onRemove(toast.id)}
-          className="ml-2 text-white hover:text-gray-200"
+          className="ml-2 text-white hover: text-gray-200"
         >
           ×
         </button>

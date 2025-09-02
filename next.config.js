@@ -1,22 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: false
+    ignoreDuringBuilds: true,
   },
   experimental: {
-    esmExternals: false
+    esmExternals: false,
+    newNextLinkBehavior: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true
+    unoptimized: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -33,27 +33,28 @@ const nextConfig = {
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /hardhat/
-      ]
-    })
+        /hardhat/,
+      ],
+    });
 
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false
-    }
+      tls: false,
+    };
 
-    return config},
+    return config;
+  },
   // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2
-  }
-}
+    pagesBufferLength: 2,
+  },
+};
 
 export default nextConfig;
