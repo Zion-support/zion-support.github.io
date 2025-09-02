@@ -23,10 +23,10 @@ describe('register and login flow', () => {
     const testDisplayName = Cypress.env('TEST_USER_DISPLAY_NAME');
     // Register - API call will be live;
     cy.visit('/signup');
-    cy.get('[data-testid='display-name-input']').type(testDisplayName);
-    cy.get('[data-testid='email-input']').type(uniqueEmail);
-    cy.get('[data-testid='password-input']').type(testPassword);
-    cy.get('[data-testid='confirm-password-input']').type(testPassword);
+    cy.get('[data-testid="display-name-input"]').type(testDisplayName);
+    cy.get('[data-testid="email-input"]').type(uniqueEmail);
+    cy.get('[data-testid="password-input"]').type(testPassword);
+    cy.get('[data-testid="confirm-password-input"]').type(testPassword);
     cy.get('[data-testid='terms-checkbox']').check();
     cy.get('[data-testid='create-account-button']').click();
     // After registration, user should be redirected to dashboard;
