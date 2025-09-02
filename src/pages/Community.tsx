@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
 import { Users,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MessageCircle,
   Star,
   TrendingUp,
@@ -24,10 +23,8 @@ import { Users,
   ArrowRight
 } from 'lucide-react';
 import { SEO              } from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Community(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const communityStats = [;
     { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;
     { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;
@@ -179,10 +176,8 @@ export default function Community(...args: any[]): any {
       color: 'from-orange-500 to-red-500';
     };
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function Community(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -265,7 +260,6 @@ export default function Community(...args[]: any):  {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {communityForums.map((forum, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={forum.title}
                 initial = {
@@ -342,7 +336,6 @@ export default function Community(...args[]: any):  {
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-16">
           {upcomingEvents.map((event, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={event.title}
               initial = {
@@ -423,7 +416,6 @@ export default function Community(...args[]: any):  {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {featuredDiscussions.map((discussion, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={discussion.title}
                 initial = {
@@ -503,7 +495,6 @@ export default function Community(...args[]: any):  {
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {communityResources.map((resource, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={resource.title}
               initial = {

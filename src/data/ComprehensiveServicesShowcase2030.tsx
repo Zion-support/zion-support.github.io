@@ -6,7 +6,6 @@ import { comprehensiveAIServices2030               } from '../data/comprehensive
 
 const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('microsaas');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getFilteredServices = () => {;
@@ -22,7 +21,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
         services = comprehensiveAIServices2030;
         break}
     if (searchTerm) {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;

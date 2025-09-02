@@ -32,7 +32,6 @@ fps: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UsePerformanceOptimizationOptions {
 
@@ -49,12 +48,10 @@ interface UsePerformanceOptimizationOptions {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   threshold?: number}
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {;
   const {;
@@ -117,8 +114,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     const checkMemoryUsage = () => {;
       if ('memory' in performance) {;
         const memory = (performance as ).memory;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
@@ -130,7 +125,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     const intervalId = setInterval(checkMemoryUsage, 5000);
     return () => clearInterval(intervalId)}, [enableMemoryManagement]);
   // Intersection Observer for lazy loading
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     if (observerRef.current) {
       observerRef.current.disconnect()}
@@ -146,7 +140,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
   // Performance monitoring
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
         console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
@@ -161,14 +154,11 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   // Debounced function utility
     
     return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
   // Throttled function utility
     
     return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -188,7 +178,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }), [getMetrics]);
   // Cleanup on unmount
   useEffect(()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return cleanup}, [cleanup]);
   return {
     lazyLoad,
@@ -217,6 +206,5 @@ declare global {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     gtag?: (...args[])  => void}
 }

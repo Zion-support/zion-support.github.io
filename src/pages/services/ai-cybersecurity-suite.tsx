@@ -2,9 +2,7 @@ import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function AICybersecuritySuite(...args: []):  {
   return (
     <>
@@ -60,7 +58,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Brain,
@@ -91,7 +88,6 @@ export default function AICybersecuritySuite(...args: []):  {
                   icon: Lock,
                   title: "Data Encryption",
                   description: "End-to-end encryption with AI-powered key management and access control."
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -118,7 +114,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   layer: "01",
@@ -139,7 +134,6 @@ export default function AICybersecuritySuite(...args: []):  {
                   layer: "04",
                   title: "Data Security",
                   description: "Encryption, access control, and data loss prevention."
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((layer, index)  => (
                 <div key={index} className="text-center">
@@ -219,7 +213,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "SOC 2 Type II",
@@ -256,7 +249,6 @@ export default function AICybersecuritySuite(...args: []):  {
                   description: "Cybersecurity framework alignment and implementation.",
                   icon: Activity,
                   features: ["Framework mapping", "Gap analysis", "Implementation guidance"]
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((compliance, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">

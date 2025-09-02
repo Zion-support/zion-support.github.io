@@ -64,7 +64,6 @@ import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing
              } from '@/data/expandedServicesPricing2027';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
       pricing = pricing.filter(p =>
@@ -75,7 +74,6 @@ import { ALL_EXPANDED_SERVICES_PRICING,
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {
       case 'Cybersecurity':;
       pricing = pricing.filter(p => ;
@@ -87,7 +85,6 @@ import { ALL_EXPANDED_SERVICES_PRICING,
   }, [selectedCategory, searchQuery]);
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {;
       case 'Cybersecurity':;
         return Shield;
@@ -105,15 +102,12 @@ import { ALL_EXPANDED_SERVICES_PRICING,
         return Rocket}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'from-gray-500 to-slate-600'}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'bg-gray-100 text-gray-800'}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </a>;
             </div>;
           </div>;
@@ -235,8 +229,6 @@ import { ALL_EXPANDED_SERVICES_PRICING,
                 className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
                 {categories.map((category)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category}>
                     {category}
                   </option>

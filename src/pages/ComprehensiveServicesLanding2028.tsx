@@ -1,7 +1,6 @@
 import React, { useState              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Brain, 
   Cloud, 
   Shield, 
@@ -49,7 +48,6 @@ import { Brain,
   Play,
   ChevronRight,
   ChevronLeft
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
  } from 'lucide-react';
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
@@ -58,13 +56,11 @@ import { revolutionaryMicroSaasServices2028,
 import { SEO               } from '@/components/SEO';
 import { Button               } from '@/components/ui/button';
 import { Badge               } from '@/components/ui/badge';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensiveServicesLanding2028(...args[]: any):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     };
       company: "BioTech Innovations",;
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",;
@@ -79,12 +75,10 @@ export default function ComprehensiveServicesLanding2028(...args[]: any):  {
     { number: "24/7", label: "Support Available", icon: Clock };
   ];
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return Rocket}
   };
 
   const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',;
@@ -229,7 +223,6 @@ export default function ComprehensiveServicesLanding2028(...args[]: any):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {allServices.slice(0, 6).map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 initial = {

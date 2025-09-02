@@ -22,7 +22,6 @@ import { Brain,
   Clock,
   Star,
   Heart
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 import SEO from '../components/SEO';
 const AIServices = [
@@ -123,10 +122,8 @@ const AIServices = [
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
     };
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const AIServicesPage: React.FC = (): JSX.Element => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <>
       <SEO
@@ -217,7 +214,6 @@ const AIServicesPage: React.FC = (): JSX.Element => {
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
 
                   <h3 className="text-xl font-semibold text-white mb-2">{study.comp}</h3>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
                   <div className="space-y-3">
                     <div>

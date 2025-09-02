@@ -15,7 +15,6 @@ export interface HealthcareAIService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -37,11 +36,9 @@ export interface HealthcareAIService {
   useCases: string[];
   technologies: string[];
   contactInfo: {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     phone: string;
     email: string;
     website: string;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     address: string}}
 // Zion Tech Group Contact Information
 const zionContact = {

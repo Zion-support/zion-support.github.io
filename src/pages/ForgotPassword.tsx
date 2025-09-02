@@ -1,7 +1,6 @@
 import React, { useState              } from 'react.ts';
 import { Link               } from 'react-router-dom.ts';
 import { motion               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Mail, 
   ArrowLeft, 
   CheckCircle, 
@@ -16,7 +15,6 @@ import { Mail,
   RefreshCw
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     setIsLoading(true);
     setError('');
@@ -29,7 +27,6 @@ import { Mail,
       setIsLoading(false)}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     setIsLoading(true);
     setError('');
@@ -42,7 +39,6 @@ import { Mail,
       setIsLoading(false)}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     if (newPassword !== confirmPassword) {
       setError('Passwords do not match');
@@ -59,7 +55,6 @@ import { Mail,
       setIsLoading(false)};
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       description: 'Enhanced security with verification codes';
     },;
     {;

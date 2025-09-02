@@ -47,7 +47,6 @@ import {
   ExternalLink
              } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function InnovativeServicesLanding2025(...args: any[]): any {
   const featuredServices = [
     {
@@ -58,7 +57,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
       features: ['Process Automation', 'Workflow Optimization', 'AI Decision Making', 'Integration Hub'],
       href: '/services/ai-workflow-orchestrator',
       color: 'from-blue-500 to-purple-600'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     {
       name: 'Cloud DevOps Platform',
@@ -105,7 +103,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
       href: '/services/finops-advisor',
       color: 'from-emerald-500 to-teal-600'
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const serviceCategories = [
@@ -186,11 +183,9 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 2025 Innovative
               </span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <br />
               <span className="text-white">Services Landing</span>
             </h1>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover our revolutionary AI, cloud, and emerging technology services designed to transform your business in 2025 and beyond.
             </p>
@@ -202,7 +197,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
                 Get Started
               </button>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -218,7 +212,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Featured Services
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our most popular and innovative services that are transforming businesses across industries.
@@ -241,7 +234,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
                   <div>
                     <span className="text-xs text-blue-400 font-medium">{service.category}</span>
                     <h3 className="text-xl font-semibold text-white">{service.name}</h3>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                 </div>
                 
@@ -358,7 +350,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
                 <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Explore Category
                 </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.div>
             ))}
           </div>
@@ -375,7 +366,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -420,7 +410,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
                 <p className="text-gray-300 text-sm">{feature.description}</p>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -435,7 +424,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join the future of technology with our innovative services and expert guidance.
@@ -447,7 +435,6 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
               <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Contact Us
               </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
         </div>
@@ -457,4 +444,3 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
 };
 
 export default InnovativeServicesLanding2025;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

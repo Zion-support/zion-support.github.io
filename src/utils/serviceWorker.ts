@@ -1,15 +1,12 @@
       // // // // // // // console.log(`Registering service worker: anyanyanyanyanyanyanyanyanyanyanyanyany${swUrl} (${isDev ? 'dev' : 'prod'})`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       navigator.serviceWorker
         .register(swUrl)
         .then((registration)              => {
           // // // // // // // console.log('SW registered: anyanyanyanyanyanyanyanyanyanyanyanyany', registration);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
           // Handle updates
           registration.addEventListener('updatefound', ()              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const newWorker = registration.installing;
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
@@ -23,8 +20,6 @@
         })
         .catch((registrationError) => {
           // // // // // // // console.error('SW registration failed: anyanyanyanyanyanyanyanyanyanyanyanyany', registrationError);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 // Service Worker Registration and Management
 export function registerServiceWorker(swUrl: string, isDev: boolean = false) {
@@ -45,7 +40,6 @@ export function registerServiceWorker(swUrl: string, isDev: boolean = false) {
               }
             });
           }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         });
       })
       .catch((registrationError) => {
@@ -99,7 +93,6 @@ self.addEventListener('install', (event: anyanyanyanyanyanyanyanyanyanyanyanyany
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 });
 
@@ -115,7 +108,6 @@ self.addEventListener('activate', (event: ExtendableEvent)              => {
           }
         })
       );
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     })
   );
 });
@@ -225,7 +217,6 @@ async function networkFirst(request: Request, cacheName: string): Promise<any> {
 }
 
 // Helper functions to determine request type
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 function isStaticAsset(request: Request): boolean {
   const url = new URL(request.url);
   return STATIC_ASSETS.some(asset => url.pathname === asset);
@@ -249,7 +240,6 @@ self.addEventListener('sync', (event: anyanyanyanyanyanyanyanyanyanyanyanyanySyn
 });
 
 async function doBackgroundSync(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
@@ -295,7 +285,6 @@ self.addEventListener('push', (event: PushEvent)              => {
     body: anyanyanyanyanyanyanyanyanyanyanyanyanyevent.data?.text() || 'New notification from Zion Tech Group',
     icon: '/icon-192x192.png',
     badge: '/badge-72x72.png',
-=======
     // Return a fallback response if both network and cache fail
     return new Response('Content not available offline', {
       status: 503,
@@ -350,14 +339,12 @@ self.addEventListener('push', (event: PushEvent) => {
     body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
     icon: '/favicon.ico',
     badge: '/favicon.ico',
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
     }
   };
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
@@ -366,7 +353,6 @@ self.addEventListener('push', (event: PushEvent) => {
 self.addEventListener('notificationclick', (event: NotificationEvent) => {
   console.log('Notification clicked:', event);
   event.notification.close();
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
@@ -379,7 +365,6 @@ self.addEventListener('message', (event: ExtendableMessageEvent) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
   }
@@ -395,4 +380,3 @@ async function syncOfflineData(data: any[]): Promise<void> {
 }
 // Export for testing purposes
 export {};
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

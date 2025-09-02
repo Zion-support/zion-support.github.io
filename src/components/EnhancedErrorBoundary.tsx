@@ -1,7 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { AlertTriangle, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   RefreshCw, 
   Home, 
   ArrowLeft, 
@@ -12,16 +11,13 @@ import { AlertTriangle,
   Share2
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Props extends React.PropsWithChildren<{}> {
 
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReactNode;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo)               => void;
   showDetails?: boolean;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 interface State {
@@ -57,7 +53,6 @@ interface State {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
@@ -105,7 +100,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       // Example: Send to external error tracking service
       if (typeof window !== 'undefined' && (window as ).gtag) {
         (window as ).gtag('event', 'exception', {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           description: error.message,
           fatal: false,
           error_id: this.state.errorId
@@ -138,11 +132,9 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       };
 
       // // // // // // // console.error('Failed to log error:', logError);
-=======
       // Send to analytics endpoint
       fetch('/api/analytics/error', {
         method: anyanyanyanyanyanyanyanyanyanyanyanyanyany'POST',
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         headers: {
           'Content-Type': 'application/json',
         },
@@ -150,17 +142,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       }).catch(e               => console.warn('Failed to send error report:', e));
     } catch (e) {
       console.warn('Failed to prepare error report:', e);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }
   }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   handleCopyErrorDetails = async () => {
     if (!this.state.error) return;
 
     const errorText = `
 Error Details: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMessage: ${this.state.error.message}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 Stack: ${this.state.error.stack}
 Component Stack: ${this.state.errorInfo.componentStack}
 Error ID: ${this.state.errorId}
@@ -180,7 +169,6 @@ Timestamp: ${new Date().toISOString()}
     }, 3000);
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -421,7 +409,6 @@ export function useErrorHandler(...args: any[]): any {
     // Log to external service
     if (typeof window !== 'undefined' && (window as ).gtag) {
       (window as ).gtag('event', 'exception', {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         description: error.message,
         fatal: false
       });
@@ -446,5 +433,3 @@ export function withErrorBoundary<P extends object>(
 }
 
 export default EnhancedErrorBoundary;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

@@ -9,7 +9,6 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   text?: string;
 
 export function LoadingSkeleton(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)               => (
@@ -36,7 +35,6 @@ export function ButtonLoader(...args: any[]): any {
   );
 // Page loading overlay
 export function PageLoaderOverlay(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
       <div className="bg-white rounded-lg p-6 shadow-xl">

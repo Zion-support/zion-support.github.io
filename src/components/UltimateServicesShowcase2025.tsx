@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle               } from 'lucide-react.ts';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '../data/innovativeMicroSaasServices2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface ServiceContact {
 
@@ -39,7 +37,6 @@ website: string;
 
 
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 }
 
@@ -71,7 +68,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
     { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s               => s.category === 'Sustainability').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🌱' },
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s               => s.category === 'Blockchain').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🔗' },
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s               => s.category === 'Metaverse').length, icon: '🌍' }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -99,14 +95,11 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
   });
 
     };
-=======;
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
       <Rocket className="w-6 h-6" />;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
@@ -225,7 +218,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
             transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.4 }}
           >
             {categories.map((category)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -575,6 +567,3 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

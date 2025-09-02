@@ -2,9 +2,7 @@ import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function LLMContentStudio(...args: []):  {
   return (
     <>
@@ -60,7 +58,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Sparkles,
@@ -91,7 +88,6 @@ export default function LLMContentStudio(...args: []):  {
                   icon: Shield,
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -118,7 +114,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Blog Posts & Articles",
@@ -155,7 +150,6 @@ export default function LLMContentStudio(...args: []):  {
                   description: "Stories, scripts, and creative content projects.",
                   icon: PenTool,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((contentType, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -243,7 +237,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   step: "01",
@@ -264,7 +257,6 @@ export default function LLMContentStudio(...args: []):  {
                   step: "04",
                   title: "Publishing",
                   description: "Final content is optimized and published across platforms."
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
                 <div key={index} className="text-center">
@@ -342,7 +334,6 @@ export default function LLMContentStudio(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   metric: "Engagement",
@@ -363,7 +354,6 @@ export default function LLMContentStudio(...args: []):  {
                   metric: "ROI",
                   title: "Content ROI",
                   description: "Calculate return on investment for content"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((metric, index)  => (
                 <div key={index} className="text-center">

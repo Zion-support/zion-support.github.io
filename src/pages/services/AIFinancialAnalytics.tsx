@@ -36,7 +36,6 @@ import { BarChart3,
 import { SEO              } from '../../components/SEO';
 
 const AIFinancialAnalytics = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -121,7 +120,6 @@ const AIFinancialAnalytics = () => {
         "SLA guarantees",
         "Regulatory compliance"
       ],
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       popular: false
 
   ];
@@ -309,7 +307,6 @@ const AIFinancialAnalytics = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -356,7 +353,6 @@ const AIFinancialAnalytics = () => {
                   </p>
                 </div>
               </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ))}
           </div>
         </div>
@@ -452,7 +448,6 @@ const AIFinancialAnalytics = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -487,7 +482,6 @@ const AIFinancialAnalytics = () => {
                 viewport={{ once: true }}
                 className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
@@ -500,7 +494,6 @@ const AIFinancialAnalytics = () => {
                   plan.popular 
                     ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                     : 'border-white/20 hover:border-cyan-400/40'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 }`}>
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -534,7 +527,6 @@ const AIFinancialAnalytics = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </section>
 
@@ -647,7 +639,6 @@ const AIFinancialAnalytics = () => {
               </div>
             </div>
           </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </section>
     </div>
@@ -655,4 +646,3 @@ const AIFinancialAnalytics = () => {
 };
 
 export default AIFinancialAnalytics;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Star, 
   Zap, 
@@ -56,10 +55,8 @@ import {
   MapPin as MapPinIcon
              } from 'lucide-react';
 import EnhancedSEOManager from '../components/EnhancedSEOManager';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensiveImprovements2025(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const improvements = [
     {
       category: 'AI & Machine Learning Services',
@@ -215,7 +212,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
     };
   ];
   return (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <EnhancedSEOManager 
         title="Comprehensive Improvements 2025 - Zion Tech Group"
@@ -302,7 +298,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {improvements.map((improvement, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={improvement.category}
                 initial = {
@@ -377,7 +372,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial = {
@@ -444,7 +438,6 @@ export default function ComprehensiveImprovements2025(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={benefit.title}
                 initial = {

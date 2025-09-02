@@ -1,4 +1,3 @@
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { Link               } from 'react-router-dom.ts';
 import { Atom, 
@@ -17,7 +16,6 @@ import { Atom,
   Database,
   Cloud,
   Lock,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Globe,
   TrendingUp,
   Users,
@@ -25,7 +23,6 @@ import { Atom,
               } from 'lucide-react.ts';
 import { SEO               } from '@/components/SEO';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const QuantumAIPlatform = () => {
   const features = [
     {
@@ -212,7 +209,6 @@ const QuantumAIPlatform = () => {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {quantumAdvantages.map((advantage, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -240,7 +236,6 @@ const QuantumAIPlatform = () => {
         </div>
       </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Features Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,7 +261,6 @@ const QuantumAIPlatform = () => {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -304,7 +298,6 @@ const QuantumAIPlatform = () => {
         </div>
       </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Pricing Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,7 +323,6 @@ const QuantumAIPlatform = () => {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -389,7 +381,6 @@ const QuantumAIPlatform = () => {
         </div>
       </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Use Cases Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -415,7 +406,6 @@ const QuantumAIPlatform = () => {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

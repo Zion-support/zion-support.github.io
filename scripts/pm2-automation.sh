@@ -1,43 +1,46 @@
 #!/bin/bash
 
-# PM2 Automation Script to replace GitHub Actions
-# This script handles CI/CD tasks locally
+# PM2 Automation Script - Replaces GitHub Actions
+# This script handles building, testing, and quality checks
 
 set -e
 
-echo "🚀 Starting PM2 Automation..."
+echo "🚀 Starting PM2 Automation Pipeline..."
 
-# Function to run linting
-run_lint() {
-    echo "🔍 Running linting..."
+# Function to run quality checks
+run_quality_checks() {
+    echo "🔍 Running quality checks..."
+    
+    # Install dependencies
+    echo "📦 Installing dependencies..."
+    npm install
+    
+    # Lint check
+    echo "🧹 Running linting..."
     npm run lint
-    echo "✅ Linting completed"
-}
-
-# Function to run type checking
-run_type_check() {
-    echo "🔍 Running type checking..."
+    
+    # Type check
+    echo "🔍 Running type check..."
     npm run type-check
-    echo "✅ Type checking completed"
-}
-
-# Function to run tests
-run_tests() {
-    echo "🧪 Running tests..."
-    if npm test --if-present; then
-        echo "✅ Tests completed successfully"
-    else
-        echo "⚠️  Tests completed with warnings"
-    fi
+    
+    echo "✅ Quality checks completed successfully!"
 }
 
 # Function to build project
 build_project() {
-    echo "🏗️  Building project..."
+    echo "🏗️ Building project..."
+    
+    # Clean previous build
+    if [ -d "dist" ]; then
+        echo "🧹 Cleaning previous build..."
+        rm -rf dist
+    fi
+    
+    # Build project
     npm run build
     
     # Verify build output
-    if [ ! -d dist ]; then
+    if [ ! -d "dist" ]; then
         echo "❌ Build failed: dist folder not found"
         exit 1
     fi
@@ -53,135 +56,105 @@ build_project() {
         exit 1
     fi
     
-    if [ -f dist/css/index-*.css ]; then
+    if [ -f dist/assets/index-*.css ] || [ -f dist/css/index-*.css ]; then
         echo "✓ CSS files found"
     else
         echo "✗ CSS files not found"
         exit 1
     fi
     
-    if [ -f dist/js/index-*.js ]; then
+    if [ -f dist/assets/index-*.js ] || [ -f dist/js/index-*.js ]; then
         echo "✓ JavaScript files found"
     else
-        echo "✗ JavaScript files found"
+        echo "✗ JavaScript files not found"
         exit 1
+    fi
+    
+    echo "✅ Build verification completed!"
+}
+
+# Function to run tests
+run_tests() {
+    echo "🧪 Running tests..."
+    
+    # Check if test script exists
+    if npm run | grep -q "test"; then
+        npm test
+        echo "✅ Tests completed!"
+    else
+        echo "⚠️ No test script found, skipping tests"
     fi
 }
 
-# Function to deploy
-deploy() {
-    echo "🚀 Deploying to production..."
-    echo "Build completed successfully at $(date)"
+# Function to deploy with PM2
+deploy_with_pm2() {
+    echo "🚀 Deploying with PM2..."
     
-    # Start production app with PM2
+    # Stop existing processes
+    pm2 stop bolt-zion-app 2>/dev/null || true
+    pm2 delete bolt-zion-app 2>/dev/null || true
+    
+    # Start the application with PM2
     pm2 start ecosystem.config.js --env production
     
-    echo "✅ Deployment completed"
+    # Save PM2 configuration
+    pm2 save
+    
+    # Setup PM2 to start on system boot
+    pm2 startup
+    
+    echo "✅ PM2 deployment completed!"
 }
 
-# Function to start development
-start_dev() {
-    echo "🔄 Starting development mode..."
-    pm2 start ecosystem.config.js
-    echo "✅ Development mode started"
-}
-
-# Function to monitor
-monitor() {
-    echo "📊 PM2 Status:"
+# Function to monitor application
+monitor_application() {
+    echo "📊 Monitoring application..."
+    
+    # Show PM2 status
     pm2 status
     
-    echo "📊 PM2 Logs:"
-    pm2 logs --lines 10
-}
-
-# Function to restart
-restart() {
-    echo "🔄 Restarting application..."
-    pm2 restart bolt-app
-    echo "✅ Application restarted"
-}
-
-# Function to stop
-stop() {
-    echo "🛑 Stopping application..."
-    pm2 stop bolt-app
-    echo "✅ Application stopped"
-}
-
-# Function to delete
-delete() {
-    echo "🗑️  Deleting application from PM2..."
-    pm2 delete bolt-app
-    echo "✅ Application deleted from PM2"
+    # Show logs
+    echo "📋 Recent logs:"
+    pm2 logs bolt-zion-app --lines 10
+    
+    # Show system resources
+    echo "💻 System resources:"
+    pm2 monit
 }
 
 # Main execution
-case "${1:-}" in
-    "lint")
-        run_lint
-        ;;
-    "type-check")
-        run_type_check
-        ;;
-    "test")
-        run_tests
+case "${1:-all}" in
+    "quality")
+        run_quality_checks
         ;;
     "build")
         build_project
         ;;
-    "deploy")
-        build_project
-        deploy
+    "test")
+        run_tests
         ;;
-    "start")
-        start_dev
+    "deploy")
+        deploy_with_pm2
         ;;
     "monitor")
-        monitor
+        monitor_application
         ;;
-    "restart")
-        restart
-        ;;
-    "stop")
-        stop
-        ;;
-    "delete")
-        delete
-        ;;
-    "ci")
-        echo "🔄 Running full CI pipeline..."
-        run_lint
-        run_type_check
-        run_tests
+    "all")
+        echo "🔄 Running complete pipeline..."
+        run_quality_checks
         build_project
-        echo "✅ CI pipeline completed successfully"
-        ;;
-    "cd")
-        echo "🚀 Running full CD pipeline..."
-        run_lint
-        run_type_check
         run_tests
-        build_project
-        deploy
-        echo "✅ CD pipeline completed successfully"
+        deploy_with_pm2
+        echo "🎉 Complete pipeline finished successfully!"
         ;;
     *)
-        echo "Usage: $0 {lint|type-check|test|build|deploy|start|monitor|restart|stop|delete|ci|cd}"
-        echo ""
-        echo "Commands:"
-        echo "  lint       - Run ESLint"
-        echo "  type-check - Run TypeScript type checking"
-        echo "  test       - Run tests"
-        echo "  build      - Build the project"
-        echo "  deploy     - Build and deploy to production"
-        echo "  start      - Start development mode with PM2"
-        echo "  monitor    - Show PM2 status and logs"
-        echo "  restart    - Restart the application"
-        echo "  stop       - Stop the application"
-        echo "  delete     - Remove application from PM2"
-        echo "  ci         - Run full CI pipeline"
-        echo "  cd         - Run full CD pipeline"
+        echo "Usage: $0 {quality|build|test|deploy|monitor|all}"
+        echo "  quality  - Run quality checks (lint, type-check)"
+        echo "  build    - Build the project"
+        echo "  test     - Run tests"
+        echo "  deploy   - Deploy with PM2"
+        echo "  monitor  - Monitor application"
+        echo "  all      - Run complete pipeline (default)"
         exit 1
         ;;
 esac

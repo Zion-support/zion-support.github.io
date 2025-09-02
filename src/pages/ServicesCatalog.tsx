@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import { SEO               } from '@/components/SEO';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 type Service = {;
   name: string;
   path: string;
@@ -42,9 +41,7 @@ const services: Service[] = [
 ];
 
   return acc}, {});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
         </div>;

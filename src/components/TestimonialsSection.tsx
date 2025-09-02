@@ -1,6 +1,5 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Star, 
   Quote, 
@@ -12,7 +11,6 @@ import {
   Users
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface Testimonial {
 
 
@@ -129,7 +127,6 @@ const stats = [
 ];
 
 export const TestimonialsSection: React.FC = (): JSX.Element => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const nextTestimonial = () => {
@@ -140,7 +137,6 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
   };
 
   const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setCurrentTestimonial(index);
   };
   // Auto-play functionality

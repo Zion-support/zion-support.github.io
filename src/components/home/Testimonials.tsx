@@ -32,8 +32,6 @@ interface Testimonial {
 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   role: string;
@@ -56,9 +54,7 @@ industry: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const nextTestimonial = () => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
@@ -67,7 +63,6 @@ industry: string;
   };
 
   const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setCurrentIndex(index);
   };
   return (

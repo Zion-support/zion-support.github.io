@@ -29,10 +29,8 @@ import { Search,
   CheckCircle
 } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedServicesPage(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -50,11 +48,9 @@ export default function EnhancedServicesPage(...args[]: any):  {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Code className = "w-5 h-5" />};
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 onClick = {
   () => window.open(CONTACT_INFO.website,
   '_blank')

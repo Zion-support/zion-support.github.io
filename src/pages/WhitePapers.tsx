@@ -3,11 +3,9 @@
 import React, { useState } from 'react.ts';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award              } from 'lucide-react.ts';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function WhitePapers(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
@@ -28,7 +26,6 @@ export default function WhitePapers(...args: any[]): any {
       id: anyanyanyanyanyanyanyanyanyanyanyanyany1,
       title: 'AI Autonomous Research: Revolutionizing Business Intelligence',
       description: 'Comprehensive guide on implementing AI Autonomous Research Assistant systems that discover, analyze, and synthesize information across multiple sources autonomously.',
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       category: 'ai-ml',
       author: 'Dr. Sarah Chen',
       publishDate: '2025-01-15',
@@ -192,7 +189,6 @@ export default function WhitePapers(...args: any[]): any {
   const filteredWhitePapers = whitePapers.filter(paper => {;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-=======
       title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
       description: 'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
       category: 'strategy',
@@ -219,7 +215,6 @@ export default function WhitePapers(...args: any[]): any {
       icon: <Cloud className="w-6 h-6" />,;
       link: '/insights/cloud-success-stories';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const getCategoryCount = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
@@ -237,8 +232,6 @@ export default function WhitePapers(...args: any[]): any {
   const filteredPapers = whitePapers.filter(paper => {;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
     return matchesSearch && matchesCategory;
@@ -266,7 +259,6 @@ export default function WhitePapers(...args: any[]): any {
         description="Download our comprehensive white papers and research on AI, cybersecurity, cloud computing, and emerging technologies."
       />
       ;
-=======;
   const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
@@ -282,7 +274,6 @@ export default function WhitePapers(...args: any[]): any {
       return (downloads / 1000).toFixed(1) + 'K';
 
     return downloads.toString();
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
@@ -368,7 +359,6 @@ export default function WhitePapers(...args: any[]): any {
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-xs text-slate-400">{stat.label}</div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
@@ -434,7 +424,6 @@ export default function WhitePapers(...args: any[]): any {
                   ))}
                 </select>
               </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
           </div>
         </motion.div>
@@ -451,7 +440,6 @@ export default function WhitePapers(...args: any[]): any {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
       {/* White Papers Grid/List */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -706,7 +694,6 @@ export default function WhitePapers(...args: any[]): any {
           </div>
         </div>
       </section>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       {/* White Papers Grid */}
       <div className="py-16">
@@ -762,7 +749,6 @@ export default function WhitePapers(...args: any[]): any {
                   <div className="flex flex-wrap gap-2">
                     {paper.tags.map((tag) => (
                       <span key={tag} className="px-2 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         {tag}
                       </span>
                     ))}

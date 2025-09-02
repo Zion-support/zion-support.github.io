@@ -1,6 +1,5 @@
 import { API_BASE_URL              } from '../config/constants';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
@@ -14,7 +13,6 @@ class ApiError extends Error {
     this.name = 'ApiError';
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ApiClientOptions {
 
 
@@ -48,7 +46,6 @@ interface ApiClientOptions {
 }
 
 export async function apiClient(...args: any[]): any {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { method = 'GET', body, headers = {} } = options;
   const config: RequestInit = {
     method: options.method || 'GET',
@@ -87,7 +84,6 @@ export const api = {
     apiClient(endpoint, { method: anyanyanyanyanyanyanyanyanyanyanyanyany'PUT', body: JSON.stringify(data), headers: headers || {} }),
   
   delete: (endpoint: string, headers?: Record<string, any>)              => 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
 };
 // Export types for use in components

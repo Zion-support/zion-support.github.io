@@ -3,7 +3,6 @@ import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
 import { Brain,
   Shield,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Cloud,
   Database,
   Globe,
@@ -14,7 +13,6 @@ import { Brain,
   CheckCircle,
   Search
                } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface Service {
 
@@ -32,7 +30,6 @@ interface Service {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -276,7 +273,6 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
 
 export default function EnhancedServicesShowcase(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
@@ -490,9 +486,7 @@ export default function EnhancedServicesShowcase(...args[]: any):  {
 
 }}
 =======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const EnhancedServicesShowcase: React.FC = (): JSX.Element => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = [
     {
       title: 'AI Workflow Automation',
@@ -584,9 +578,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
 
   const filteredServices = selectedCategory === 'All'
     ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service               => service.category === selectedCategory);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}
@@ -627,9 +619,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
   margin: "-100px" 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={itemVariants}
@@ -841,8 +831,6 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
   delay: index * 0.1 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               View All Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>

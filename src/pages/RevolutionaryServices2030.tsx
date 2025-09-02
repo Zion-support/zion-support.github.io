@@ -39,7 +39,6 @@ import { Brain,
   Globe2,
   Bot,
   Code,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Server,
   Chip,
   Wifi,
@@ -50,10 +49,8 @@ import { Brain,
   TrendingUp as TrendingUpIcon
 } from 'lucide-react';
 import { allRevolutionaryServices2030              } from '../data/revolutionaryServices2030';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function RevolutionaryServices2030(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -92,13 +89,11 @@ export default function RevolutionaryServices2030(...args: any[]): any {
     return categoryMatch && priceMatch;
   });
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Service Card Component
 const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyanyanyanyany; type: 'microSaas' | 'itService' | 'aiService' })              => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (category.includes('AI') || category.includes('Neural')) return Brain;
     if (category.includes('Quantum')) return Atom;
     if (category.includes('Space')) return Satellite;
@@ -264,7 +259,6 @@ const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyan
 export default function RevolutionaryServices2030(...args: any[]): any {
   const [activeTab, setActiveTab] = useState<any>('all');
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const tabs = [
     { id: 'all', label: 'All Services', count: allRevolutionaryServices2030.microSaas.length + allRevolutionaryServices2030.itServices.length + allRevolutionaryServices2030.aiServices.length },
     { id: 'microSaas', label: 'Micro SAAS', count: allRevolutionaryServices2030.microSaas.length },
@@ -379,7 +373,6 @@ export default function RevolutionaryServices2030(...args: any[]): any {
         </div>
       </div>
       {/* Services Section */}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <div className="relative z-10 pb-20">
         <div className="container mx-auto px-4">
           {/* Tab Navigation */}
@@ -541,7 +534,6 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                         key={index}
                         className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
                       >
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
                   <div className="space-y-4">

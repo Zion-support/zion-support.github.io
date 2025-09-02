@@ -332,7 +332,6 @@ export const EnhancedNavigation: React.FC = () => {
 =======
               {/* Mobile Navigation */}
               <div className="space-y-4">
->>>>>>> bb9f345ec29d22bee9995e045f36838dca876fa2
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.children ? (
@@ -375,14 +374,45 @@ export const EnhancedNavigation: React.FC = () => {
                         to={item.href}
                         className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors py-3"
                       >
-                        {item.icon && <item.icon className="w-5 h-5" />}
-                        <span className="font-medium">{item.name}</span>
-                      </Link>
-                    )}
-                  </div>
-                ))}
-
-              </div>
+                        <div className="flex items-center space-x-2">
+                          {item.icon && <item.icon className="w-5 h-5" />}
+                          <span className="font-medium">{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-5 h-5 transition-transform ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      {activeDropdown === item.name && (
+                        <div className="ml-6 mt-2 space-y-2">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.href}
+                              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors py-2"
+                            >
+                              <span>{child.name}</span>
+                              {child.badge && (
+                                <span className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-400 rounded-full">
+                                  {child.badge}
+                                </span>
+                              )}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors py-3"
+                    >
+                      {item.icon && <item.icon className="w-5 h-5" />}
+                      <span className="font-medium">{item.name}</span>
+                    </Link>
+                  )}
+                </div>
+              ))}
 
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-slate-700/50">
@@ -414,3 +444,5 @@ export const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
+
+export default EnhancedNavigation;

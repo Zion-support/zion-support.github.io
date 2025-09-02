@@ -14,7 +14,6 @@ export default function CompWorkspace(...args[]: any):  {
     const { comp, isLoading, error } = useCompWorkspace(compSlug);
     const { isWhitelabel, tenant, brandName } = useWhitelabel();
     if (isLoading) {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Navigate to = "/unauthorized"/>}
     return (<ProtectedRoute>
       <SEO title = {`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>;

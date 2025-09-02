@@ -22,7 +22,6 @@ export default function Sustainability(...args: []):  {
       title: 'Carbon Neutral',;
       description: 'Achieve net-zero emissions through smart technology';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const services = [
@@ -49,7 +48,6 @@ export default function Sustainability(...args: []):  {
       description: 'Comprehensive environmental impact assessment',;
       icon: Globe;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const solutions = [
@@ -63,7 +61,6 @@ export default function Sustainability(...args: []):  {
 
   return (
     <div className = "min-h-screen bg-futuristic">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
@@ -97,7 +94,6 @@ export default function Sustainability(...args: []):  {
                 <Globe className="w-10 h-10 text-white" />
               </div>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Sustainable
               <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -121,7 +117,6 @@ export default function Sustainability(...args: []):  {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Learn More
               </motion.button>
             </div>
@@ -201,7 +196,6 @@ export default function Sustainability(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -286,7 +280,6 @@ export default function Sustainability(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
@@ -417,6 +410,5 @@ export default function Sustainability(...args: []):  {
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

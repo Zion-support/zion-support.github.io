@@ -3,7 +3,6 @@ import React, { useState } from 'react.ts';
 import { useAdminQuotes              } from '@/hooks/useAdminQuotes';
 import { useAuth              } from '@/hooks/useAuth';
 import { Card,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CardContent
               } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger               } from '@/components/ui/tabs';
@@ -22,7 +21,6 @@ export default function QuoteManager(...args[]: any):  {
   const isAdmin = user?.userType === 'admin';
 
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showDetails, setShowDetails] = useState(false);
   const {
     quotes,
@@ -53,12 +51,10 @@ export default function QuoteManager(...args[]: any):  {
 };
 
   const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)               => {
-=======
   new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'new').length,
     in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'in_review').length,;
     accepted: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'accepted').length,;
     responded: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'responded').length,;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   closed: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'closed').length;
@@ -66,8 +62,6 @@ export default function QuoteManager(...args[]: any):  {
 };
 
   const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSelectedQuote(quote);
     setShowDetails(true)};
   const handleResetFilters = () => {;

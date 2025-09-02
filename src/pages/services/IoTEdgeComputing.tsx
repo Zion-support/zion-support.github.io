@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Cpu, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Network, 
   Zap, 
   Globe, 
@@ -23,11 +22,9 @@ import { Cpu,
   Router,
   Satellite
              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { SEO              } from '@/components/SEO';
 
 export default function IoTEdgeComputing(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Cpu,
@@ -104,7 +101,6 @@ export default function IoTEdgeComputing(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">
@@ -158,9 +154,7 @@ export default function IoTEdgeComputing(...args: any[]): any {
           </motion.div>
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -198,14 +192,11 @@ export default function IoTEdgeComputing(...args: any[]): any {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -245,7 +236,6 @@ export default function IoTEdgeComputing(...args: any[]): any {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

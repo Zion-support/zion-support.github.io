@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState } from 'react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
@@ -15,9 +14,6 @@ const DropdownMenu({ children }) {
     </DropdownMenuContext.Provider>);
 }
 export function DropdownMenuTrigger(...args: any[]): any {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
@@ -27,8 +23,7 @@ export function DropdownMenuTrigger(...args: any[]): any {;
       {children}
     </div>)}
 export function DropdownMenuContent(...args[]: any):  {;
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
         return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
         {children};
       </div>);
@@ -38,9 +33,6 @@ export function DropdownMenuContent(...args[]: any):  {;
     </div>);
 }
 export function DropdownMenuContent(...args: any[]): any {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
@@ -58,8 +50,7 @@ export function DropdownMenuContent(...args: any[]): any {;
       {children}
     </div>)}
 export function DropdownMenuItem(...args[]: any):  {
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
   start: 'left-0',;
         center: 'left-1/2 transform -translate-x-1/2',;
   ;
@@ -72,9 +63,6 @@ export function DropdownMenuItem(...args[]: any):  {
     </div>);
 }
 export function DropdownMenuItem(...args: any[]): any {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuItem must be used within DropdownMenu');
