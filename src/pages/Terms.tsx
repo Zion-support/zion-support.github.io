@@ -3,7 +3,7 @@ import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-rea
 const Terms: React.FC = () => {
   const sections = [
     {
-      title: 'Acceptance of Terms', icon: CheckCircle,
+     , title: 'Acceptance of Terms', icon: CheckCircle,
       content: [;
         'By accessing and using our services, you accept and agree to be bound by these terms',
         'If you do not agree to these terms, you may not use our services',
@@ -41,7 +41,7 @@ const Terms: React.FC = () => {
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6, lg:px-8 py-16'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ const Terms: React.FC = () => {
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Information</h2>
           <p className='text-gray-600 mb-4'>
             If you have any questions about these Terms of Service, please contact us: </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='grid grid-cols-1, md:grid-cols-2 gap-4'>
             <div>
               <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>
               <p className='text-gray-600'>kleber@ziontechgroup.com</p>

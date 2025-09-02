@@ -110,14 +110,14 @@ export default function Partners() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-8">
               {partnershipTypes.map((type, index) => (
                 <motion.div
                   key={type.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300, hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
                     <type.icon className="w-8 h-8 text-white" />
@@ -146,14 +146,14 @@ export default function Partners() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-8">
               {partners.map((partner, index) => (
                 <motion.div
                   key={partner.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300, hover:scale-105"
                 >
                   <div className="h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                     <div className="text-4xl opacity-20 font-bold text-white">{partner.name.charAt(0)}</div>
@@ -210,7 +210,7 @@ export default function Partners() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
@@ -255,7 +255,7 @@ export default function Partners() {
                 </a>
                 <a
                   href="/about"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400, hover:text-white transition-all duration-200"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Learn More

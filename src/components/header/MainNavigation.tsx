@@ -9,7 +9,7 @@ export function MainNavigation({ className = '' }) {
     <nav className={`flex items-center space-x-8 ${className}`}>
       {/* Home */}
       <Link
-        to='/';
+        to='/'
         className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Home
       </Link>
@@ -164,8 +164,8 @@ export function MainNavigation({ className = '' }) {
               </div>
               <div className='mt-4 pt-4 border-t border-zion-purple/20'>
                 <Link
-                  to='/services';
-                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
+                  to='/services'
+                  className='text-zion-cyan, hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
                   View All Services
                   <TrendingUp className='w-4 h-4 ml-2' />
                 </Link>
@@ -252,8 +252,8 @@ export function MainNavigation({ className = '' }) {
               </div>
               <div className='mt-4 pt-4 border-t border-zion-purple/20'>
                 <Link
-                  to='/request-quote';
-                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
+                  to='/request-quote'
+                  className='text-zion-cyan, hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
                   Get Custom Quote
                   <TrendingUp className='w-4 h-4 ml-2' />
                 </Link>
@@ -312,7 +312,7 @@ export function MainNavigation({ className = '' }) {
                   </Link>
                 </li>
                 <li>
-                  <Link to='/contact' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
+                  <Link to='/contact' className='text-zion-slate-light, hover:text-zion-cyan transition-colors'>
                     Contact
                   </Link>
                 </li>
@@ -323,19 +323,19 @@ export function MainNavigation({ className = '' }) {
       </div>
       {/* Resources */}
       <Link
-        to='/resources';
+        to='/resources'
         className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Resources
       </Link>
       {/* Blog */}
       <Link
-        to='/blog';
+        to='/blog'
         className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Blog
       </Link>
       {/* Pricing */}
       <Link
-        to='/pricing';
+        to='/pricing'
         className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
         Pricing
       </Link>

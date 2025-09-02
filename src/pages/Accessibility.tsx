@@ -3,7 +3,7 @@ import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, S
 const Accessibility: React.FC = () => {
   const features = [
     {
-      title: 'Visual Accessibility', icon: Eye,
+     , title: 'Visual Accessibility', icon: Eye,
       description: 'Support for users with visual impairments', features: [;
         'High contrast mode support', 'Screen reader compatibility',
         'Text scaling and zoom functionality', 'Alternative text for images',
@@ -38,7 +38,7 @@ const Accessibility: React.FC = () => {
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6, lg:px-8 py-16'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -133,7 +133,7 @@ const Accessibility: React.FC = () => {
           <p className='text-gray-600 mb-4'>
             Our website can be navigated entirely using a keyboard. Here are the key navigation shortcuts:
           </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='grid grid-cols-1, md:grid-cols-2 gap-4'>
             <div>
               <h3 className='font-semibold text-gray-900 mb-2'>General Navigation</h3>
               <ul className='space-y-1'>
@@ -224,7 +224,7 @@ const Accessibility: React.FC = () => {
           <p className='text-gray-600 mb-4'>
             We welcome your feedback on the accessibility of our website. If you encounter any;
             accessibility barriers or have suggestions for improvement, please contact us: </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='grid grid-cols-1, md:grid-cols-2 gap-4'>
             <div>
               <h3 className='font-semibold text-gray-900 mb-2'>Accessibility Contact</h3>
               <p className='text-gray-600'>accessibility@ziontechgroup.com</p>

@@ -33,7 +33,7 @@ export default function Research() {
       featured: true
     }, {
       id: 2,
-      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park", "David Kumar"], journal: "IEEE Security & Privacy",
+      title: "AI-Driven, Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park", "David Kumar"], journal: "IEEE Security & Privacy",
       date: "2025-01-05", citations: 18,
       featured: true
     }, {
@@ -76,7 +76,7 @@ export default function Research() {
                   <input
                     type="text"
                     placeholder="Search research publications..."
-                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500, focus:border-transparent"
                   />
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function Research() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300, hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-4`}>
                     <FileText className="w-8 h-8 text-white" />
@@ -185,11 +185,11 @@ export default function Research() {
                       {new Date(publication.date).toLocaleDateString()}
                     </div>
                     <div className="flex gap-2">
-                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">
+                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                         <ExternalLink className="w-4 h-4 inline mr-1" />
                         View Paper
                       </button>
-                      <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hover:bg-slate-700 transition-colors">
+                      <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg, hover:bg-slate-700 transition-colors">
                         <Download className="w-4 h-4" />
                       </button>
                     </div>
@@ -227,7 +227,7 @@ export default function Research() {
                 </a>
                 <a
                   href="/about"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400, hover:text-white transition-all duration-200"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Learn More
@@ -238,5 +238,5 @@ export default function Research() {
         </section>
       </div>
 </>
-  );
+  )
 }

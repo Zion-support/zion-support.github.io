@@ -3,7 +3,7 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number;
+ , networkLatency: number;
 }
 
 export const PerformanceOptimizer: React.FC = () => {
@@ -106,7 +106,7 @@ export const PerformanceOptimizer: React.FC = () => {
       {!isOptimized && (
         <button
           onClick={optimizePerformance}
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors"
         >
           Optimize Performance
         </button>
@@ -114,4 +114,4 @@ export const PerformanceOptimizer: React.FC = () => {
     </div>
   );
 };
-export default PerformanceOptimizer;
+export default PerformanceOptimizer

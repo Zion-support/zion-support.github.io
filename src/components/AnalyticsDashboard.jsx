@@ -68,7 +68,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (num >= 1000);
             return `${(num / 1000).toFixed(1)}K`
         return num.toString()}
-    return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
+    return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200, dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
       <div className='bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white'>''''
         <div className='flex items-center justify-between'>''''
           <h3 className='text-lg font-semibold flex items-center gap-2'>''''
@@ -91,7 +91,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 setSelectedTimeRange(e.target.value)';'
                 handleDashboardInteraction('time_range_changed', {}
                   timeRange: e.target.value})';'}}'''';
-              className='px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50''''>'''''
+              className='px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2, focus:ring-white/50''''>'''''
               <option value='1h'>1 Hour</option>''''
               <option value='24h'>24 Hours</option>''''
               <option value='7d'>7 Days</option>''''
@@ -112,12 +112,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       </div>
 '''{/* Key Metrics Overview */}'''''
       <div className='p-4 border-b border-gray-200 dark:border-gray-700'>''''
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>'''{/* Session Duration */}'''''
+        <div className='grid grid-cols-2, md:grid-cols-4 gap-4'>'''{/* Session Duration */}'''''
           <div className='text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg'>''''
             <div className='flex items-center justify-center mb-2'>''''
               <Clock className='w-5 h-5 text-purple-500' />''''
             </div>''''
-            <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <div className='text-2xl font-bold text-gray-900, dark:text-white'>
               {analyticsSummary;
                 ? formatDuration(analyticsSummary.sessionDuration)';'
                 : 'N/A'}''''
@@ -131,7 +131,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <div className='flex items-center justify-center mb-2'>''''
               <Eye className='w-5 h-5 text-blue-500' />''''
             </div>''''
-            <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <div className='text-2xl font-bold text-gray-900, dark:text-white'>
               {analyticsSummary?.pageViews || 0}''''
             </div>''''
             <div className='text-xs text-gray-600 dark:text-gray-400'>
@@ -143,7 +143,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <div className='flex items-center justify-center mb-2'>''''
               <Activity className='w-5 h-5 text-green-500' />''''
             </div>''''
-            <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <div className='text-2xl font-bold text-gray-900, dark:text-white'>
               {formatNumber(events.length)}''''
             </div>''''
             <div className='text-xs text-gray-600 dark: text-gray-400'>
@@ -155,7 +155,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <div className='flex items-center justify-center mb-2'>''''
               <TrendingUp className='w-5 h-5 text-orange-500' />''''
             </div>''''
-            <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+            <div className='text-2xl font-bold text-gray-900, dark:text-white'>
               {getPerformanceScore()}''''
             </div>''''
             <div className='text-xs text-gray-600 dark: text-gray-400'>
@@ -166,7 +166,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       </div>
 '''{/* Real-time Events Feed */}'''''
       <div className='p-4 border-b border-gray-200 dark:border-gray-700'>''''
-        <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
+        <h4 className='font-medium text-gray-900, dark:text-white mb-3 flex items-center gap-2'>''''
           <Activity className='w-4 h-4' />
           Real-time Events'''{showRealTime && ('''''
             <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse'></div>
@@ -213,7 +213,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       </div>
       {/* Detailed Analytics */}'''{isExpanded && ('''''
         <div className='border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800'>''''
-          <h4 className='font-medium text-gray-900 dark:text-white mb-3'>
+          <h4 className='font-medium text-gray-900, dark:text-white mb-3'>
             Detailed Analytics
           </h4>
           {/* Performance Metrics */}'''{performanceMetrics && ('''''
@@ -224,7 +224,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               <div className='grid grid-cols-2 gap-3 text-xs'>''''
                 <div className='flex justify-between'>''''
                   <span className='text-blue-700 dark:text-blue-300'>
-                    Page Load:''''
+                    Page, Load:''''
                   </span>''''
                   <span className='font-medium'>
                     {performanceMetrics.pageLoadTime.toFixed(0)}ms
@@ -232,7 +232,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>''''
                 <div className='flex justify-between'>''''
                   <span className='text-blue-700 dark: text-blue-300'>
-                    Time to Interactive:''''
+                    Time to, Interactive:''''
                   </span>''''
                   <span className='font-medium'>
                     {performanceMetrics.timeToInteractive.toFixed(0)}ms
@@ -240,7 +240,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>''''
                 <div className='flex justify-between'>''''
                   <span className='text-blue-700 dark: text-blue-300'>
-                    First Paint:''''
+                    First, Paint:''''
                   </span>''''
                   <span className='font-medium'>
                     {performanceMetrics.firstContentfulPaint.toFixed(0)}ms
@@ -248,7 +248,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>''''
                 <div className='flex justify-between'>''''
                   <span className='text-blue-700 dark: text-blue-300'>
-                    Layout Shift:''''
+                    Layout, Shift:''''
                   </span>''''
                   <span className='font-medium'>
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
@@ -259,7 +259,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           )}
 '''{/* Events by Category */}'''''
           <div className='mb-4 p-3 bg-green-50 dark: bg-green-900/20 rounded-lg'>''''
-            <h5 className='font-medium text-green-800 dark:text-green-200 mb-2'>
+            <h5 className='font-medium text-green-800, dark:text-green-200 mb-2'>
               Events by Category''''
             </h5>''''
             <div className='space-y-2'>
@@ -295,7 +295,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               <div className='space-y-2 text-xs'>''''
                 <div className='flex justify-between'>''''
                   <span className='text-purple-700 dark:text-purple-300'>
-                    Session ID:''''
+                    Session, ID:''''
                   </span>''''
                   <span className='font-medium font-mono text-xs'>
                     {currentSession.id.slice(-8)}
@@ -303,7 +303,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>''''
                 <div className='flex justify-between'>''''
                   <span className='text-purple-700 dark: text-purple-300'>
-                    Device Type:''''
+                    Device, Type:''''
                   </span>''''
                   <span className='font-medium capitalize'>
                     {currentSession.deviceInfo.type}
@@ -311,7 +311,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>''''
                 <div className='flex justify-between'>''''
                   <span className='text-purple-700 dark:text-purple-300'>
-                    Screen:''''
+                   , Screen:''''
                   </span>''''
                   <span className='font-medium'>
                     {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}
@@ -319,7 +319,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>''''
                 <div className='flex justify-between'>''''
                   <span className='text-purple-700 dark:text-purple-300'>
-                    Referrer:''''
+                   , Referrer:''''
                   </span>''''
                   <span className='font-medium text-xs max-w-32 truncate'>'{currentSession.referrer || 'Direct'}'
                   </span>
@@ -330,7 +330,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         </div>
       )}
 '''{/* Controls */}'''''
-      <div className='p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800'>''''
+      <div className='p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50, dark:bg-gray-800'>''''
         <div className='flex gap-2'>
           <button;
             onClick={() => {}

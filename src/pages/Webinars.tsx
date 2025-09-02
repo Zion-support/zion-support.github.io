@@ -7,14 +7,14 @@ import {
 export default function Webinars() {
   const upcomingWebinars = [
     {
-      id: 1, title: "AI Revolution: Transforming Business Operations",
+      id: 1, title: "AI, Revolution: Transforming Business Operations",
       description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.", date: "2025-01-15",
       time: "2:00 PM EST", duration: "60 minutes",
       speaker: "Dr. Sarah Chen", attendees: 1250,
       featured: true
     }, {
       id: 2,
-      title: "Quantum Computing: The Future is Now", description: "Explore the latest developments in quantum computing and their real-world applications.",
+      title: "Quantum, Computing: The Future is Now", description: "Explore the latest developments in quantum computing and their real-world applications.",
       date: "2025-01-20", time: "3:00 PM EST",
       duration: "45 minutes", speaker: "Prof. Michael Rodriguez",
       attendees: 890, featured: true
@@ -88,7 +88,7 @@ export default function Webinars() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8">
               {upcomingWebinars.map((webinar, index) => (
                 <motion.div
                   key={webinar.id}
@@ -131,7 +131,7 @@ export default function Webinars() {
                     <p className="text-blue-400 font-medium">{webinar.speaker}</p>
                   </div>
 
-                  <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                  <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700, hover:to-purple-700 transition-all duration-200">
                     Register Now
                   </button>
                 </motion.div>
@@ -202,7 +202,7 @@ export default function Webinars() {
                       <Play className="w-4 h-4 inline mr-2" />
                       Watch Now
                     </button>
-                    <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hover:bg-slate-700 transition-colors">
+                    <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg, hover:bg-slate-700 transition-colors">
                       <Download className="w-4 h-4" />
                     </button>
                   </div>
@@ -238,7 +238,7 @@ export default function Webinars() {
                 </a>
                 <a
                   href="/training"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400, hover:text-white transition-all duration-200"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   View Training Programs

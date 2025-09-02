@@ -9,8 +9,8 @@ import {
 export const Sidebar: React.FC = () => {
   const serviceCategories = [
     {
-      title: 'AI & Machine Learning', icon: Brain,
-      links: [{ name: 'AI Services Overview', href: '/ai-services' },
+     , title: 'AI & Machine Learning', icon: Brain,
+      links: [{, name: 'AI Services Overview', href: '/ai-services' },
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'AI Project Management', href: '/services/ai-project-management' },
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
@@ -18,23 +18,23 @@ export const Sidebar: React.FC = () => {
       ]}, {
       title: 'Cloud & Infrastructure',
       icon: Cloud, links: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }, { name: 'IT Infrastructure', href: '/it-services' }, { name: 'Cloud Migration', href: '/services/cloud-migration-services' }, { name: 'FinOps Advisor', href: '/services/finops-advisor' }
+        {, name: 'Cloud DevOps', href: '/services/cloud-devops' }, { name: 'IT Infrastructure', href: '/it-services' }, { name: 'Cloud Migration', href: '/services/cloud-migration-services' }, { name: 'FinOps Advisor', href: '/services/finops-advisor' }
       ]}, {
       title: 'Cybersecurity',
       icon: Shield, links: [
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' }, { name: 'Security Headers & CSP', href: '/services/security-headers-csp' }, { name: 'Zero Trust Network', href: '/services/zero-trust-network-access' }, { name: 'DSR Privacy Portal', href: '/services/dsr-portal' }
+        {, name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' }, { name: 'Security Headers & CSP', href: '/services/security-headers-csp' }, { name: 'Zero Trust Network', href: '/services/zero-trust-network-access' }, { name: 'DSR Privacy Portal', href: '/services/dsr-portal' }
       ]}, {
       title: 'Development',
       icon: Code, links: [
-        { name: 'Micro SaaS Solutions', href: '/micro-saas' }, { name: 'Custom Development', href: '/services/custom-development' }, { name: 'API Development', href: '/services/api-development' }, { name: 'Mobile Apps', href: '/services/mobile-development' }
+        {, name: 'Micro SaaS Solutions', href: '/micro-saas' }, { name: 'Custom Development', href: '/services/custom-development' }, { name: 'API Development', href: '/services/api-development' }, { name: 'Mobile Apps', href: '/services/mobile-development' }
       ]}, {
       title: 'Data & Analytics',
       icon: Database, links: [
-        { name: 'Data Analytics', href: '/services/data-analytics' }, { name: 'Business Intelligence', href: '/services/business-intelligence' }, { name: 'Data Governance', href: '/services/ai-data-governance-platform' }, { name: 'Predictive Analytics', href: '/services/ai-predictive-maintenance' }
+        {, name: 'Data Analytics', href: '/services/data-analytics' }, { name: 'Business Intelligence', href: '/services/business-intelligence' }, { name: 'Data Governance', href: '/services/ai-data-governance-platform' }, { name: 'Predictive Analytics', href: '/services/ai-predictive-maintenance' }
       ]}, {
       title: 'Infrastructure',
       icon: Network, links: [
-        { name: 'Network Solutions', href: '/services/network-solutions' }, { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' }, { name: 'Digital Twin Platform', href: '/services/digital-twin' }, { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
+        {, name: 'Network Solutions', href: '/services/network-solutions' }, { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' }, { name: 'Digital Twin Platform', href: '/services/digital-twin' }, { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
       ]}
   ];
   const companyLinks = [
@@ -112,13 +112,13 @@ export const Sidebar: React.FC = () => {
           <h3 className='text-sm font-semibold text-blue-900 mb-3'>Quick Actions</h3>
           <div className='space-y-2'>
             <Link
-              to='/contact';
-              className='block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700 transition-colors'>
+              to='/contact'
+              className='block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors'>
               Get Quote
             </Link>
             <Link
-              to='/help';
-              className='block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50 transition-colors'>
+              to='/help'
+              className='block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg, hover:bg-blue-50 transition-colors'>
               Support
             </Link>
           </div>

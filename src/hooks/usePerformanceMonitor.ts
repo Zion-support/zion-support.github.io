@@ -5,7 +5,7 @@ import { useEffect, useState, useCallback, useRef } from 'react'  interface Perf
    cls: number | null;
    ttfb: number | null;
    domLoadTime: number | null;
-   resourceLoadTime: number | null} interface PerformanceObserver {
+  , resourceLoadTime: number | null} interface PerformanceObserver {
    observe: (options: any) => void;
-   disconnect: () => void} export const usePerformanceMonitor = () => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoadTime: null, resourceLoadTime: null})  const [isMonitoring, setIsMonitoring] = useState(false) const observerRef = useRef<PerformanceObserver | null>(null)  const measureCoreWebVitals = useCallback(() => { if ('PerformanceObserver' in window) {';'
+  , disconnect: () => void} export const usePerformanceMonitor = () => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoadTime: null, resourceLoadTime: null})  const [isMonitoring, setIsMonitoring] = useState(false) const observerRef = useRef<PerformanceObserver | null>(null)  const measureCoreWebVitals = useCallback(() => { if ('PerformanceObserver' in window) {';'
 ;

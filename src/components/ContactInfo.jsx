@@ -15,7 +15,7 @@ export function ContactInfo() {
           </p>
         </div>''';'
 ''''
-        <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>'''{/* Contact Information */}'''''
+        <div className='grid grid-cols-1, lg: grid-cols-2 gap-8'>'''{/* Contact Information */}'''''
           <div className='space-y-6'>''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
@@ -102,7 +102,7 @@ export function ContactInfo() {
                   <div className='flex justify-between'>''''
                     <span>Saturday</span>''''
                     <span className='text-zion-cyan'>
-                      10:00 AM - 4:00 PM EST
+                      10:00 AM -, 4:00 PM EST
                     </span>''''
                   </div>''''
                   <div className='flex justify-between'>''''
@@ -167,7 +167,7 @@ export function ContactInfo() {
                   <div className='flex items-center gap-2'>''''
                     <Phone className='h-4 w-4 text-zion-cyan' />''''
                     <span className='text-zion-cyan font-medium'>
-                      Call us now: +1 302 464 0950
+                      Call us, now: +1 302 464 0950
                     </span>
                   </div>
                 </div>
@@ -234,7 +234,7 @@ export function ContactInfo() {
                   size='lg'''';'
                   variant='outline'''';'
                   className='border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 '>
-                  Call Now: +1 302 464 0950
+                  Call, Now: +1 302 464 0950
                 </Button>
               </a>
             </div>

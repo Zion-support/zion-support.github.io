@@ -14,11 +14,11 @@ interface State {
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {, hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {, hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -90,8 +90,8 @@ export class ErrorBoundary extends Component<Props, State> {
                 Refresh Page
               </button>
               <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="flex-1 bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                onClick={() => this.setState({, hasError: false, error: undefined, errorInfo: undefined })}
+                className="flex-1 bg-gray-200 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500, focus:ring-offset-2"
               >
                 Try Again
               </button>
@@ -100,7 +100,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="mt-4 text-center">
               <p className="text-xs text-gray-400">
                 If the problem persists, please{' '}
-                <a href="/contact" className="text-blue-600 hover: text-blue-500">
+                <a href="/contact" className="text-blue-600 hover:text-blue-500">
                   contact support
                 </a>
               </p>
@@ -114,4 +114,4 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

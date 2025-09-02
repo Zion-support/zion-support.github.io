@@ -115,7 +115,7 @@ export default function Pricing() {
                     plan.popular 
                       ? 'border-blue-400/50 ring-2 ring-blue-400/20' 
                       : 'border-slate-600/50'
-                  } hover:border-cyan-400/50 transition-all duration-300 hover:scale-105`}
+                  } hover:border-cyan-400/50 transition-all duration-300, hover:scale-105`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -149,7 +149,7 @@ export default function Pricing() {
                   <button className={`w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700'
-                      : 'border border-slate-600 text-gray-300 hover:bg-slate-700'
+                      : 'border border-slate-600 text-gray-300, hover:bg-slate-700'
                   }`}>
                     Get Started
                   </button>
@@ -174,14 +174,14 @@ export default function Pricing() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-4 gap-8">
               {serviceCategories.map((service, index) => (
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 text-center"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300, hover:scale-105 text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <service.icon className="w-8 h-8 text-white" />
@@ -224,7 +224,7 @@ export default function Pricing() {
                 </a>
                 <a
                   href="/services"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400, hover:text-white transition-all duration-200"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   View All Services

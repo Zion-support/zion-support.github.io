@@ -39,14 +39,14 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
             {/* CTA Buttons */}
             <div className='flex flex-col sm: flex-row gap-4 justify-center mb-12'>
               <Link
-                to='/revolutionary-services-showcase-2025';
+                to='/revolutionary-services-showcase-2025'
                 className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg group'>
                 Explore All Services
                 <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
               </Link>
               <Link
-                to='/revolutionary-pricing-guide-2025';
-                className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
+                to='/revolutionary-pricing-guide-2025'
+                className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white, hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
                 <DollarSign className='w-5 h-5' />
                 View Pricing
               </Link>
@@ -82,14 +82,14 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
             </div>
             <div className='flex flex-col sm:flex-row gap-3'>
               <a
-                href='tel:+13024640950';
+                href='tel:+13024640950'
                 className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
                 <Phone className='w-4 h-4' />
                 Call +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';
-                className='inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover: bg-gray-200 transition-colors'>
+                href='mailto:kleber@ziontechgroup.com'
+                className='inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg, hover: bg-gray-200 transition-colors'>
                 <Mail className='w-4 h-4' />
                 Email Us
               </a>
@@ -146,7 +146,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
                 </div>
               </div>
               <Link
-                to='/revolutionary-services-showcase-2025';
+                to='/revolutionary-services-showcase-2025'
                 className='w-full bg-blue-600 text-white py-3 rounded-lg hover: bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                 Explore Micro SAAS
                 <ArrowRight className='w-4 h-4' />
@@ -188,7 +188,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
                 </div>
               </div>
               <Link
-                to='/revolutionary-services-showcase-2025';
+                to='/revolutionary-services-showcase-2025'
                 className='w-full bg-purple-600 text-white py-3 rounded-lg hover: bg-purple-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                 Explore IT Services
                 <ArrowRight className='w-4 h-4' />
@@ -230,7 +230,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
                 </div>
               </div>
               <Link
-                to='/revolutionary-services-showcase-2025';
+                to='/revolutionary-services-showcase-2025'
                 className='w-full bg-green-600 text-white py-3 rounded-lg hover: bg-green-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                 Explore AI Services
                 <ArrowRight className='w-4 h-4' />
@@ -277,7 +277,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
                 </div>
                 <div className='space-y-3'>
                   <Link
-                    to='/revolutionary-services-showcase-2025';
+                    to='/revolutionary-services-showcase-2025'
                     className='w-full bg-blue-600 text-white py-3 rounded-lg hover: bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                     Learn More
                     <ArrowRight className='w-4 h-4' />
@@ -306,7 +306,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               solutions that drive real results.
             </p>
           </div>
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
+          <div className='grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-8'>
             {benefits.map((benefit, index) => (
               <div key={index} className='text-center'>
                 <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -333,19 +333,19 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>
             <Link
-              to='/revolutionary-services-showcase-2025';
+              to='/revolutionary-services-showcase-2025'
               className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
               Explore All Services
               <ArrowRight className='w-5 h-5' />
             </Link>
             <Link
-              to='/revolutionary-pricing-guide-2025';
+              to='/revolutionary-pricing-guide-2025'
               className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
               <DollarSign className='w-5 h-5' />
               View Pricing
             </Link>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
+          <div className='grid grid-cols-1, md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
             <div className='text-center'>
               <div className='text-3xl font-bold text-white mb-2'>+1 302 464 0950</div>
               <div className='text-blue-100'>Call us anytime</div>
@@ -364,7 +364,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
       {/* Footer */}
       <footer className='bg-gray-900 text-white py-16'>
         <div className='container mx-auto px-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2, lg:grid-cols-4 gap-8'>
             <div className='lg:col-span-2'>
               <div className='flex items-center space-x-3 mb-4'>
                 <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -414,7 +414,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
             </div>
           </div>
           <div className='border-t border-gray-800 mt-12 pt-8'>
-            <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+            <div className='flex flex-col md:flex-row justify-between items-center space-y-4, md:space-y-0'>
               <div className='text-sm text-gray-400'>
                 <p>&copy 2024 Zion Tech Group. All rights reserved.</p>
               </div>

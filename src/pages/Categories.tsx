@@ -1,7 +1,7 @@
 import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
 const Categories: React.FC = () => {
   const categories = [
-    { name: 'AI Services', icon: Brain, count: 25 }, { name: 'Cloud Solutions', icon: Cloud, count: 15 },
+    {, name: 'AI Services', icon: Brain, count: 25 }, { name: 'Cloud Solutions', icon: Cloud, count: 15 },
     { name: 'Cybersecurity', icon: Shield, count: 12 }, { name: 'Development', icon: Code, count: 18 },
     { name: 'Data Analytics', icon: Database, count: 10 }, { name: 'Infrastructure', icon: Network, count: 8 }
   ]
@@ -12,7 +12,7 @@ const Categories: React.FC = () => {
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>Service Categories</h1>
           <p className='text-xl text-gray-600'>Explore our comprehensive range of technology services</p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-6'>
           {categories.map((category, index) => (
             <div key={index} className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow'>
               <div className='flex items-center mb-4'>

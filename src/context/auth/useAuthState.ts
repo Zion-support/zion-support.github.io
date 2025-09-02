@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'  interface User {
    id: string;
-   email: string;
+  , email: string;
    displayName?: string;
    avatar?: string;
    role?: string;
@@ -8,5 +8,5 @@ import { useState, useEffect } from 'react'  interface User {
    createdAt?: string;
    updatedAt?: string} interface AuthTokens {
    accessToken: string | null;
-   refreshToken: string | null} export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => { const [user, setUser] = useState<any>(null) const [isLoading, setIsLoading] = useState(true) const [onboardingStep, setOnboardingStep] = useState(0) const [tokens, setTokens] = useState<any>({ accessToken: null, refreshToken: null })  useEffect(() => {';'
+  , refreshToken: string | null} export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => { const [user, setUser] = useState<any>(null) const [isLoading, setIsLoading] = useState(true) const [onboardingStep, setOnboardingStep] = useState(0) const [tokens, setTokens] = useState<any>({ accessToken: null, refreshToken: null })  useEffect(() => {';'
 ;

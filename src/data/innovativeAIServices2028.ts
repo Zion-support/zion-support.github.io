@@ -20,4 +20,4 @@ export interface InnovativeAIService2028 {
    contactInfo: { phone: string;
    email: string;
    website: string;
-   address: string} technicalSpecs?: { technology: string[] integrations: string[] aiModels: string[] accuracy: string trainingData: string apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string uniqueValueProposition: string aiScore: number ethicalAI: string[] } export const INNOVATIVE_AI_SERVICES_2028: InnovativeAIService2028[] = [;
+  , address: string} technicalSpecs?: { technology: string[] integrations: string[] aiModels: string[] accuracy: string trainingData: string apiEndpoints: number, uptime: string, security: string[]  } competitors?: string[] marketSize?: string uniqueValueProposition: string aiScore: number, ethicalAI: string[] } export const INNOVATIVE_AI_SERVICES_2028: InnovativeAIService2028[] = [;

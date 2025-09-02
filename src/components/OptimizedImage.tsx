@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 interface OptimizedImageProps {
   src: string;
-  alt: string;
+ , alt: string;
   width?: number;
   height?: number;
   className?: string;

@@ -3,7 +3,7 @@ import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
 const Privacy: React.FC = () => {
   const sections = [
     {
-      title: 'Information We Collect', icon: Database,
+     , title: 'Information We Collect', icon: Database,
       content: [;
         'Personal information you provide (name, email, phone number)', 'Business information for service delivery',
         'Technical information (IP address, browser type, device information)', 'Usage data and analytics to improve our services',
@@ -44,7 +44,7 @@ const Privacy: React.FC = () => {
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6, lg:px-8 py-16'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ const Privacy: React.FC = () => {
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>
           <p className='text-gray-600 mb-4'>
             If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='grid grid-cols-1, md:grid-cols-2 gap-4'>
             <div>
               <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>
               <p className='text-gray-600'>kleber@ziontechgroup.com</p>

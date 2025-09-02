@@ -53,8 +53,8 @@ export default function Contact() {
       details: 'ziontechgroup.com', link: 'https://ziontechgroup.com'}
   ];
   const officeHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
+    { day: 'Monday - Friday', hours: '9:00 AM -, 6:00 PM EST' },
+    { day: 'Saturday', hours: '10:00 AM -, 4:00 PM EST' },
     { day: 'Sunday', hours: 'Closed' }
   ]
   return(
@@ -75,7 +75,7 @@ export default function Contact() {
         </div>
       </section>
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
+        <div className='grid grid-cols-1, lg:grid-cols-2 gap-16'>
           {/* Contact Form */}
           <div>
             <h2 className='text-3xl font-bold text-gray-900 mb-8'>Send us a Message</h2>
@@ -105,7 +105,7 @@ export default function Contact() {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required;
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'/>
+                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500, focus:border-transparent'/>
                 </div>
                 <div>
                   <label htmlFor='lastName' className='block text-sm font-medium text-gray-700 mb-2'>
@@ -121,7 +121,7 @@ export default function Contact() {
                     className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'/>
                 </div>
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+              <div className='grid grid-cols-1, md:grid-cols-2 gap-6'>
                 <div>
                   <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-2'>
                     Email Address *
@@ -133,7 +133,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required;
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'/>
+                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500, focus:border-transparent'/>
                 </div>
                 <div>
                   <label htmlFor='phone' className='block text-sm font-medium text-gray-700 mb-2'>
@@ -145,7 +145,7 @@ export default function Contact() {
                     name='phone';
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'/>
+                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500, focus:border-transparent'/>
                 </div>
               </div>
               <div>
@@ -158,7 +158,7 @@ export default function Contact() {
                   name='company';
                   value={formData.company}
                   onChange={handleInputChange}
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'/>
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500, focus:border-transparent'/>
               </div>
               <div>
                 <label htmlFor='service' className='block text-sm font-medium text-gray-700 mb-2'>
@@ -169,7 +169,7 @@ export default function Contact() {
                   name='service';
                   value={formData.service}
                   onChange={handleInputChange}
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'>
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500, focus:border-transparent'>
                   <option value=''>Select a service</option>
                   {services.map((service, index) => (
                     <option key={index} value={service}>
@@ -189,13 +189,13 @@ export default function Contact() {
                   onChange={handleInputChange}
                   required;
                   rows={6}
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500, focus:border-transparent'
                   placeholder='Tell us about your project, goals, or how we can help...'/>
               </div>
               <button
                 type='submit';
                 disabled={isSubmitting}
-                className='w-full bg-blue-600 hover: bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-colors'>{isSubmitting ? 'Sending Message...' : 'Send Message'}
+                className='w-full bg-blue-600 hover: bg-blue-700, disabled:bg-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-colors'>{isSubmitting ? 'Sending Message...' : 'Send Message'}
               </button>
             </form>
           </div>
@@ -216,7 +216,7 @@ export default function Contact() {
                           href={method.link}
                           target={method.link.startsWith('http') ? '_blank' : '_self'}
                           rel={method.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                          className='text-blue-600 hover:text-blue-700 hover:underline'>{method.details}
+                          className='text-blue-600 hover:text-blue-700, hover:underline'>{method.details}
                         </a>
                       </div>
                     </div>
@@ -248,7 +248,7 @@ export default function Contact() {
                   <Link to='/about' className='block text-blue-600 hover:text-blue-700 hover:underline'>
                     About Zion Tech Group
                   </Link>
-                  <Link to='/pricing' className='block text-blue-600 hover:text-blue-700 hover:underline'>
+                  <Link to='/pricing' className='block text-blue-600 hover:text-blue-700, hover:underline'>
                     Pricing Information
                   </Link>
                 </div>
@@ -260,8 +260,8 @@ export default function Contact() {
                   For urgent technical issues or system emergencies, contact our 24/7 support team.
                 </p>
                 <a
-                  href='tel: +13024640950';
-                  className='inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors'>
+                  href='tel: +13024640950'
+                  className='inline-flex items-center bg-blue-600, hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors'>
                   <svg className='w-4 h-4 mr-2' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' />
                   </svg>

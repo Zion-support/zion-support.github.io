@@ -100,14 +100,14 @@ export default function Training() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-4 gap-8">
               {trainingTypes.map((type, index) => (
                 <motion.div
                   key={type.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300, hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
                     <type.icon className="w-8 h-8 text-white" />
@@ -182,7 +182,7 @@ export default function Training() {
 
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-white">{course.price}</span>
-                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
+                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700, hover:to-purple-700 transition-all duration-200">
                       Enroll Now
                     </button>
                   </div>
@@ -218,7 +218,7 @@ export default function Training() {
                 </a>
                 <a
                   href="/about"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400, hover:text-white transition-all duration-200"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Learn More
@@ -229,5 +229,5 @@ export default function Training() {
         </section>
       </div>
 </>
-  );
+  )
 }

@@ -2,13 +2,13 @@ import React, { createContext, useContext, useState, useCallback } from 'react';
 interface Toast {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
+ , title: string;
   message?: string;
   duration?: number}
 
 interface ToastContextType {
   toasts: Toast[];
-  addToast: (toast: Omit<Toast, 'id'>) => void
+ , addToast: (toast: Omit<Toast, 'id'>) => void
   removeToast: (id: string) => void}
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined)
@@ -41,7 +41,7 @@ export function useToast() {
     throw new Error('useToast must be used within a ToastProvider')}
   return context}
 
-function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (id: string) => void }) {
+function ToastContainer({ toasts, removeToast }: { toasts: Toast[];, removeToast: (id: string) => void }) {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {toasts.map(toast => (
@@ -50,7 +50,7 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: 
     </div>
   )}
 
-function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
+function Toast({ toast, onRemove }: { toast: Toast;, onRemove: (id: string) => void }) {
   const bgColor = {
     success: 'bg-green-500', error: 'bg-red-500',
     warning: 'bg-yellow-500', info: 'bg-blue-500',

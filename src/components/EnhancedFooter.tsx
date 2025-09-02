@@ -23,30 +23,30 @@ export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
     {
-      title: 'Featured Services', links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
+      title: 'Featured Services', links: [{, name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
       ]}, {
       title: 'Core Services',
       links: [
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code }, { name: 'AI Services', href: '/ai-services', icon: Brain },
+        {, name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code }, { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Infrastructure', href: '/it-services', icon: Server }, { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield }, { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star },
         { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Star }
       ]}, {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }, { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users },
+        {, name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }, { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users },
         { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server },
         { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }, { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
       ]}, {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award },
+        {, name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award },
         { name: 'Careers', href: '/careers', icon: Users }, { name: 'News & Press', href: '/press', icon: BookOpen },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }, { name: 'Partners', href: '/partners', icon: Handshake }
       ]}, {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog', icon: BookOpen }, { name: 'Documentation', href: '/documentation', icon: FileText },
+        {, name: 'Blog', href: '/blog', icon: BookOpen }, { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'Help Center', href: '/help', icon: HelpCircle }, { name: 'Webinars', href: '/webinars', icon: Video },
         { name: 'White Papers', href: '/white-papers', icon: FileText }, { name: 'Training', href: '/training', icon: GraduationCap }
       ]}
@@ -68,7 +68,7 @@ export function EnhancedFooter() {
     <footer className='bg-zinc-900 border-t border-white/20'>
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2, lg:grid-cols-6 gap-8'>
           {/* Company Info */}
           <div className='lg:col-span-2'>
             <div className='flex items-center space-x-3 mb-6'>
@@ -126,7 +126,7 @@ export function EnhancedFooter() {
                     <Link
                       to={link.href}
                       className={`flex items-center space-x-2 text-gray-300 hover: text-white transition-colors group ${
-                        link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : ''}`}
+                        link.featured ? 'font-medium text-blue-300, hover:text-blue-200' : ''}`}
                     >
                       <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
                         link.featured ? 'text-blue-400' : 'text-blue-400'}`} />
@@ -143,7 +143,7 @@ export function EnhancedFooter() {
         </div>
         {/* Quick Links Section */}
         <div className='mt-12 pt-8 border-t border-white/20'>
-          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4'>
+          <div className='grid grid-cols-2 md: grid-cols-3, lg:grid-cols-6 gap-4'>
             {quickLinks.map((link) => (
               <Link
                 key={link.name}
@@ -169,7 +169,7 @@ export function EnhancedFooter() {
                 type='email';
                 placeholder='Enter your email';
                 className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
-              <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>
+              <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform, hover:scale-105'>
                 Subscribe
               </button>
             </div>
@@ -179,7 +179,7 @@ export function EnhancedFooter() {
       {/* Bottom Footer */}
       <div className='border-t border-white/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-          <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+          <div className='flex flex-col md:flex-row items-center justify-between space-y-4, md:space-y-0'>
             {/* Copyright */}
             <div className='text-gray-400 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.
@@ -192,7 +192,7 @@ export function EnhancedFooter() {
               <Link to='/terms' className='text-gray-400 hover:text-white transition-colors'>
                 Terms of Service
               </Link>
-              <Link to='/cookies' className='text-gray-400 hover:text-white transition-colors'>
+              <Link to='/cookies' className='text-gray-400, hover:text-white transition-colors'>
                 Cookie Policy
               </Link>
             </div>
@@ -213,10 +213,10 @@ export function EnhancedFooter() {
         transition={{ delay: 0.5 }}
         className='fixed bottom-6 right-6 z-50'>
         <Link
-          to='/contact';
+          to='/contact'
           className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
           <MessageCircle className='w-5 h-5 group-hover:scale-110 transition-transform' />
-          <span className='hidden sm:block font-medium'>Contact Us</span>
+          <span className='hidden, sm:block font-medium'>Contact Us</span>
         </Link>
       </motion.div>
     </footer>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react.ts' import { motion, AnimatePresence 
    highContrast: boolean;
    reducedMotion: boolean;
    soundEnabled: boolean;
-   theme: 'light' | 'dark' | 'auto';
+  , theme: 'light' | 'dark' | 'auto';
    export function Accessibility(...args: any[]): any {
    const [isOpen, setIsOpen] = useState(false);
    const [settings, setSettings] = useState<any>({

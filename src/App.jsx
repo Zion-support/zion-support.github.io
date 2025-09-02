@@ -39,7 +39,7 @@ const ServicesPage = () => (
           Comprehensive technology solutions to drive your business forward
         </p>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-8'>
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
           <h3 className='text-xl font-bold text-white mb-4'>
             AI & Machine Learning

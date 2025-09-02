@@ -9,51 +9,51 @@ export default function Sitemap() {
   const siteStructure = [
     {
       title: "Main Pages", pages: [
-        { name: "Home", url: "/", description: "Welcome to Zion Tech Group" },
+        {, name: "Home", url: "/", description: "Welcome to Zion Tech Group" },
         { name: "About", url: "/about", description: "Learn about our company and mission" }, { name: "Services", url: "/services", description: "Our comprehensive technology services" },
         { name: "Contact", url: "/contact", description: "Get in touch with our team" }
       ]
     }, {
       title: "AI Services",
       pages: [
-        { name: "AI Services Overview", url: "/ai-services", description: "Comprehensive AI solutions" }, { name: "AI Content Generator", url: "/services/ai-content-generator", description: "AI-powered content creation" },
+        {, name: "AI Services Overview", url: "/ai-services", description: "Comprehensive AI solutions" }, { name: "AI Content Generator", url: "/services/ai-content-generator", description: "AI-powered content creation" },
         { name: "AI Project Management", url: "/services/ai-project-management", description: "AI-driven project optimization" }, { name: "AI Business Intelligence", url: "/services/ai-business-intelligence", description: "Advanced analytics & ML insights" }
       ]
     }, {
       title: "Quantum Computing",
       pages: [
-        { name: "Quantum Computing Solutions", url: "/services/quantum-computing", description: "Next-generation computing power" }, { name: "Quantum AI Platform", url: "/services/quantum-ai-hybrid-platform", description: "Revolutionary quantum-AI computing" },
+        {, name: "Quantum Computing Solutions", url: "/services/quantum-computing", description: "Next-generation computing power" }, { name: "Quantum AI Platform", url: "/services/quantum-ai-hybrid-platform", description: "Revolutionary quantum-AI computing" },
         { name: "Quantum Financial Trading", url: "/services/ai-quantum-financial-trading-platform", description: "Advanced quantum trading" }, { name: "Quantum Machine Learning", url: "/services/quantum-machine-learning", description: "Quantum-enhanced ML algorithms" }
       ]
     }, {
       title: "Cybersecurity",
       pages: [
-        { name: "AI Cybersecurity Platform", url: "/services/ai-cybersecurity-platform", description: "Advanced AI-powered security" }, { name: "Security Headers & CSP", url: "/services/security-headers-csp", description: "Web security hardening" },
+        {, name: "AI Cybersecurity Platform", url: "/services/ai-cybersecurity-platform", description: "Advanced AI-powered security" }, { name: "Security Headers & CSP", url: "/services/security-headers-csp", description: "Web security hardening" },
         { name: "DSR Privacy Portal", url: "/services/dsr-portal", description: "GDPR/CCPA compliance" }, { name: "Zero Trust Network Access", url: "/services/zero-trust-network-access", description: "Modern security architecture" }
       ]
     }, {
       title: "Company",
       pages: [
-        { name: "Our Team", url: "/team", description: "Meet our expert professionals" }, { name: "Partners", url: "/partners", description: "Strategic partnerships" },
+        {, name: "Our Team", url: "/team", description: "Meet our expert professionals" }, { name: "Partners", url: "/partners", description: "Strategic partnerships" },
         { name: "Careers", url: "/careers", description: "Join our growing team" }, { name: "News", url: "/news", description: "Company announcements" }
       ]
     }, {
       title: "Resources",
       pages: [
-        { name: "Blog", url: "/blog", description: "Latest insights and updates" }, { name: "Documentation", url: "/documentation", description: "Technical guides and API reference" },
+        {, name: "Blog", url: "/blog", description: "Latest insights and updates" }, { name: "Documentation", url: "/documentation", description: "Technical guides and API reference" },
         { name: "Help Center", url: "/help", description: "Find answers and solutions" }, { name: "Webinars", url: "/webinars", description: "Educational sessions" },
         { name: "Training", url: "/training", description: "Skill development programs" }, { name: "Research", url: "/research", description: "Our research initiatives" }
       ]
     }, {
       title: "Marketplace",
       pages: [
-        { name: "Marketplace", url: "/marketplace", description: "Explore products and services" }, { name: "AI Tools", url: "/marketplace/ai-tools", description: "AI-powered applications" },
+        {, name: "Marketplace", url: "/marketplace", description: "Explore products and services" }, { name: "AI Tools", url: "/marketplace/ai-tools", description: "AI-powered applications" },
         { name: "Micro SaaS", url: "/micro-saas", description: "Curated micro SaaS solutions" }, { name: "IT Services", url: "/it-services", description: "Enterprise IT offerings" }
       ]
     }, {
       title: "Legal & Support",
       pages: [
-        { name: "Privacy Policy", url: "/privacy", description: "How we protect your data" }, { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },
+        {, name: "Privacy Policy", url: "/privacy", description: "How we protect your data" }, { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },
         { name: "Cookie Policy", url: "/cookies", description: "Cookie usage information" }, { name: "FAQ", url: "/faq", description: "Frequently asked questions" },
         { name: "System Status", url: "/system-status", description: "Service availability" }
       ]
@@ -110,7 +110,7 @@ export default function Sitemap() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-4 gap-6">
               {quickLinks.map((link, index) => (
                 <motion.a
                   key={link.name}
@@ -118,7 +118,7 @@ export default function Sitemap() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 text-center"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300, hover:scale-105 text-center"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <link.icon className="w-6 h-6 text-white" />
@@ -145,7 +145,7 @@ export default function Sitemap() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3, xl:grid-cols-4 gap-8">
               {siteStructure.map((section, sectionIndex) => (
                 <motion.div
                   key={section.title}
@@ -202,7 +202,7 @@ export default function Sitemap() {
                 <input
                   type="text"
                   placeholder="Search our website..."
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500, focus:border-transparent"
                 />
               </div>
             </motion.div>

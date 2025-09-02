@@ -73,9 +73,9 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             </label>''''
             <textarea id='message' value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className='w-full p-2 mb-4 border border-gray-300 rounded'/>''''
           </div>''''
-          <button type='submit' className='px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700 disabled:opacity-50' disabled={isLoading}>'{isLoading ? 'Sending...' : 'Send Message'}'''
+          <button type='submit' className='px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700, disabled:opacity-50' disabled={isLoading}>'{isLoading ? 'Sending...' : 'Send Message'}'''
           </button>''''
-          <button type='button' onClick={onClose} className='ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50' disabled={isLoading}>
+          <button type='button' onClick={onClose} className='ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600, disabled:opacity-50' disabled={isLoading}>
             Cancel
           </button>
         </form>

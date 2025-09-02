@@ -201,13 +201,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     ? fieldValidation.isValid'';
                         ? 'border-green-500 focus: ring-green-200'''`;
                         : 'border-red-500 focus:ring-red-200''`'`
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {}
+                    : 'border-gray-300 focus:ring-blue-200, focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {}
   (e) => handleFieldChange(field.name, e.target.value)`;
 ``} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';'
                     ? fieldValidation.isValid'';
                         ? 'border-green-500 focus: ring-green-200'''`;
                         : 'border-red-500 focus:ring-red-200''`''`;'
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>''''
+                    : 'border-gray-300 focus:ring-blue-200, focus:border-blue-500'}`}>''''
               <option value=''>Select an option</option>
               {field.options?.map(option => (<option key={option.value} value={option.value}>
                   {option.label}''''
@@ -216,7 +216,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               <input type='checkbox' name={field.name} checked={fieldValue} onChange = {}
   (e) => handleFieldChange(field.name, e.target.checked)''';'
 ''''} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>''''
-              <span className='text-sm text-gray-600 dark:text-gray-400'>
+              <span className='text-sm text-gray-600, dark:text-gray-400'>
                 {field.placeholder}
               </span>''
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {}
@@ -225,7 +225,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     ? fieldValidation.isValid'';
                         ? 'border-green-500 focus: ring-green-200'''`;
                         : 'border-red-500 focus:ring-red-200''`'`
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
+                    : 'border-gray-300 focus:ring-blue-200, focus:border-blue-500'}`}/>)}
 '''{/* Password Toggle */}''''{isPasswordField && (<button type='button' onClick={() => togglePasswordVisibility(field.name)} className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors'>''''{showPassword[field.name] ? <EyeOff className='w-4 h-4'/> : <Eye className='w-4 h-4'/>}'
             </button>)}
 '''{/* Validation Icon */}''''{fieldValidation?.isTouched && (<div className='absolute right-3 top-1/2 transform -translate-y-1/2'>''''{fieldValidation.isValid ? (<CheckCircle className='w-5 h-5 text-green-500'/>) : (<AlertCircle className='w-5 h-5 text-red-500'/>)}'
@@ -249,7 +249,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <h3 className='text-2xl font-bold text-green-800 dark:text-green-200 mb-2'>
           Thank You!''''
         </h3>''''
-        <p className='text-green-600 dark:text-green-300'>';'
+        <p className='text-green-600, dark:text-green-300'>';'
           Your message has been sent successfully. We'll get back to you soon!'
         </p>
       </motion.div>)}
@@ -257,7 +257,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1,
   y: 0 `;
-``}} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
+``}} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200, dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white'>''''
         <h2 className='text-2xl font-bold mb-2'>{title}</h2>''''
         <p className='text-blue-100'>{subtitle}</p>
@@ -268,7 +268,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             <span>{Math.round(progress)}%</span>''''
           </div>''`
           <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2'>'`'`
-            <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
+            <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{, width: 0 }} animate={{ width: `${progress}%` }}/>
           </div>
         </div>) }
 '''{/* Form */}'''''
@@ -279,7 +279,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 '`{/* Submit Button */}'`''`
         <motion.button type='submit' disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting''`;
             ? 'bg-gray-400 cursor-not-allowed''`'`;
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>'''{isSubmitting ? (<>'''''
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform, hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>'''{isSubmitting ? (<>'''''
               <Loader2 className='w-5 h-5 animate-spin'/>
               Sending...''''
 </>) : (<>''''
@@ -295,7 +295,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   height: 'auto'}} exit = {}
   { opacity: 0, height: 0 ''';'
 ''''}} className='p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg'>''''
-              <p className='text-sm text-red-600 dark:text-red-400'>
+              <p className='text-sm text-red-600, dark:text-red-400'>
                 Please fix the errors above before submitting the form.</p>
             </motion.div>) }
         </AnimatePresence>

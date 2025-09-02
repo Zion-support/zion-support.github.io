@@ -11,15 +11,15 @@ const FloatingActionButton = ({ className = '' }) => {}
       icon: ChatBubbleLeftRightIcon, ';'
       label: 'Live Chat', ';'
       action: () => window.open('https: //ziontechgroup.com/chat', _blank'), ';
-      color: 'bg-green-500 hover:bg-green-600'}, {}
+      color: 'bg-green-500, hover:bg-green-600'}, {}
       icon: PhoneIcon,';'
       label: 'Call Us', ';'
       action: () => window.open('tel: +1-555-0123', _self'), ';
-      color: 'bg-blue-500 hover:bg-blue-600'}, {}
+      color: 'bg-blue-500, hover:bg-blue-600'}, {}
       icon: EnvelopeIcon,';'
       label: 'Email', ';'
       action: () => window.open('mailto: info@ziontechgroup.com', _self'), ';
-      color: 'bg-purple-500 hover:bg-purple-600'}
+      color: 'bg-purple-500, hover:bg-purple-600'}
   ];
   return ()
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
@@ -39,7 +39,7 @@ const FloatingActionButton = ({ className = '' }) => {}
                 className='flex items-center space-x-3 '>
                 <motion.button`;
                   onClick={item.action}``;
-                  className={`${item.color} text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110`}
+                  className={`${item.color} text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform, hover:scale-110`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={item.label}'''>'''''
@@ -58,7 +58,7 @@ const FloatingActionButton = ({ className = '' }) => {}
       <motion.button''';'
         onClick={toggleMenu}'''';
         className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110''';
-        whileHover={{ scale: 1.1 }}
+        whileHover={{, scale: 1.1 }}
         whileTap={{ scale: 0.95 }}';'
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}'''>'''''
         <AnimatePresence mode='wait'>

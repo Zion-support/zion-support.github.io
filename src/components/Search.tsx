@@ -6,7 +6,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react' import {
    type: 'page' | 'service' | 'blog' | 'case - study';
    category: string;
    tags: string[];
-   relevance: number} interface SearchProps {
+  , relevance: number} interface SearchProps {
    className?: string;
    placeholder?: string;
    onSearch?: (query: string) => void;

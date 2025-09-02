@@ -34,7 +34,7 @@ const FAQ: React.FC = () => {
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6, lg:px-8 py-16'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,20 +98,20 @@ const FAQ: React.FC = () => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
-                href='/contact';
+                href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover: bg-blue-700 transition-colors'>
                 <MessageCircle className='h-5 w-5 mr-2' />
                 Contact Us
               </a>
               <a
-                href='tel:+13024640950';
+                href='tel:+13024640950'
                 className='inline-flex items-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover: bg-green-700 transition-colors'>
                 <Phone className='h-5 w-5 mr-2' />
                 Call Us
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';
-                className='inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover: bg-purple-700 transition-colors'>
+                href='mailto:kleber@ziontechgroup.com'
+                className='inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg, hover: bg-purple-700 transition-colors'>
                 <Mail className='h-5 w-5 mr-2' />
                 Email Us
               </a>

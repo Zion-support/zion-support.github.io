@@ -12,7 +12,7 @@ import {
   Search} from 'lucide-react';
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [{
-      title: 'AI Workflow Automation', description: 'Transform business operations with intelligent automation that learns and scales',
+     , title: 'AI Workflow Automation', description: 'Transform business operations with intelligent automation that learns and scales',
       price: 'From $299/month', path: '/services/ai-workflow-automation',
               icon: GitFork, category: 'AI & Automation',
       features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'], benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%'], color: 'from-cyan-500 to-blue-600',
@@ -44,10 +44,10 @@ export const EnhancedServicesShowcase: React.FC = () => {
       glowColor: 'pink'}
   ];
   const containerVariants = {
-    hidden: { opacity: 0 }, visible: {
-      opacity: 1,
+    hidden: {, opacity: 0 }, visible: {
+     , opacity: 1,
       transition: {
-        staggerChildren: 0.1}
+       , staggerChildren: 0.1}
     }
   }
 ;

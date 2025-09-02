@@ -55,7 +55,7 @@ export const HireNowCTA = ({}
         </div>''';'
 ''''
         <div className='text-center text-sm text-gray-500'>
-          <p>Response time: Usually within 2 hours</p>
+          <p>Response, time: Usually within 2 hours</p>
           <p>Available for new projects</p>
         </div>
       </CardContent>

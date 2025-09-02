@@ -42,7 +42,7 @@ interface Service {
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string;
+   , billingCycle: string;
   };
   rating: number;
   reviewCount: number;
@@ -54,7 +54,7 @@ interface Service {
   contactInfo?: {
     phone: string;
     email: string;
-    address: string;
+   , address: string;
   };
 }
 
@@ -69,11 +69,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
       services.push({
-        id: service.id, name: service.name,
+       , id: service.id, name: service.name,
         category: service.category, description: service.description,
         features: service.features, benefits: service.benefits,
         pricing: {
-          starter: service.pricing.starter, professional: service.pricing.professional,
+         , starter: service.pricing.starter, professional: service.pricing.professional,
           enterprise: service.pricing.enterprise, currency: service.pricing.currency,
           billingCycle: service.pricing.billingCycle
         }, rating: service.rating,
@@ -90,7 +90,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         category: service.category, description: service.description,
         features: service.features, benefits: service.benefits,
         pricing: {
-          starter: service.pricing.starter, professional: service.pricing.professional,
+         , starter: service.pricing.starter, professional: service.pricing.professional,
           enterprise: service.pricing.enterprise, currency: service.pricing.currency,
           billingCycle: service.pricing.billingCycle
         }, rating: service.rating,
@@ -140,7 +140,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'Metaverse': return <Globe className="w-6 h-6" />;
       case 'Robotics': return <Factory className="w-6 h-6" />;
       case 'Space Technology': return <Satellite className="w-6 h-6" />;
-      default: return <Lightbulb className="w-6 h-6" />;
+     , default: return <Lightbulb className="w-6 h-6" />;
     }
   };
   const getStatusColor = (status: string) => {
@@ -149,7 +149,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'beta': return 'bg-blue-100 text-blue-800';
       case 'coming soon': return 'bg-yellow-100 text-yellow-800';
       case 'preview': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
+     , default: return 'bg-gray-100 text-gray-800';
     }
   };
   return (
@@ -159,7 +159,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{, opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -167,13 +167,13 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Comprehensive Services 2027
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+            <p className="text-xl, md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Discover our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
               From quantum computing to autonomous business operations.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{, scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
@@ -196,7 +196,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       {/* Search and Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col, lg:flex-row gap-6">
             {/* Search */}
             <div className="flex-1">
               <div className="relative">
@@ -206,7 +206,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2, focus:ring-purple-500"
                 />
               </div>
             </div>
@@ -216,7 +216,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2, focus:ring-purple-500"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -229,7 +229,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2, focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
@@ -243,7 +243,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
@@ -312,10 +312,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2">
-                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
+                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                     Get Started
                   </button>
-                  <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">
+                  <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium, hover:bg-white/10 transition-all duration-200">
                     <Eye className="w-4 h-4" />
                   </button>
                 </div>
@@ -374,7 +374,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1, lg:grid-cols-2 gap-8">
                   {/* Left Column */}
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
@@ -484,7 +484,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                   <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-200">
                     Schedule Demo
                   </button>
-                  <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-200">
+                  <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold, hover:bg-white/10 transition-all duration-200">
                     Download Brochure
                   </button>
                 </div>
@@ -503,7 +503,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >
@@ -521,11 +521,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>
           <div className="mt-6 text-gray-400">
             <p>364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
+            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400, hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027

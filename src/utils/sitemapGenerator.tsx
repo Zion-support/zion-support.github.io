@@ -7,7 +7,7 @@ interface SitemapUrl {
 
 interface SitemapConfig {
   baseUrl: string;
-  urls: SitemapUrl[];
+ , urls: SitemapUrl[];
   outputPath?: string;
 }
 
@@ -42,5 +42,5 @@ ${xmlUrls}
 }
 
 export const defaultSitemapConfig: SitemapConfig = {
-  baseUrl: 'https://example.com', urls: []
+ , baseUrl: 'https://example.com', urls: []
 };

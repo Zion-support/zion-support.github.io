@@ -5,7 +5,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})
     const [editorState, setEditorState] = useState({}
         content: initialContent, ';'
-        selection: { start: 0, end: 0, text: '' }, version: 0,
+        selection: {, start: 0, end: 0, text: '' }, version: 0,
         changes[], suggestions[], conflicts[]})
     const [showSuggestions] = useState(true);
     const [showCollaborators, setShowCollaborators] = useState(false);
@@ -32,7 +32,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 version: prev.version + 1}
             return {}
                 ...prev, content: newContent,
-                selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1,
+                selection: {, start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1,
                 changes[...prev.changes, change]
             }})
         // Sync with other collaborators;
@@ -42,7 +42,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '';
 ''';'
                 type: 'text_change', content: newContent,
-                selection: { start: selectionStart, end: selectionEnd },
+                selection: {, start: selectionStart, end: selectionEnd },
                 version: editorState.version + 1})}';'
         // Track text change'';
         trackEvent('editor', text_changed',content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent]);
@@ -222,7 +222,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 generateAISuggestions()}
         }, 3000)`;
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])`
-    return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
+    return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200, dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white'>''''
         <div className='flex items-center justify-between'>''''
           <h3 className='text-lg font-semibold flex items-center gap-2'>''''
@@ -237,7 +237,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 <Users className='w-4 h-4'/>
                 {collaboration.onlineUsers.length}
               </button>) }
-            '''{/* AI Suggestions */}''''{enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className='px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50'>''''{isProcessing ? (<Loader2 className='w-4 h-4 animate-spin'/>) : (<Sparkles className='w-4 h-4'/>)}'
+            '''{/* AI Suggestions */}''''{enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className='px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2, disabled:opacity-50'>''''{isProcessing ? (<Loader2 className='w-4 h-4 animate-spin'/>) : (<Sparkles className='w-4 h-4'/>)}'
                 AI
               </button>) }
             '''{/* Save Button */}'''''
@@ -251,7 +251,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '''{/* Main Editor Area */}'''''
       <div className='flex h-96'>'''{/* Editor */}'''''
         <div className='flex-1 p-4'>''''
-          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder='Start typing your document...' className='w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm'/>
+          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder='Start typing your document...' className='w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900, dark:text-gray-100 resize-none font-mono text-sm'/>
           '''{/* Status Bar */}'''''
           <div className='flex items-center justify-between mt-2 text-xs text-gray-500'>
             <span>
@@ -263,8 +263,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           </div>
         </div>
 '''{/* Sidebar */}'''''
-        <div className='w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700'>'''{/* AI Suggestions */}''''{enableAI && showSuggestions && (<div className='p-4 border-b border-gray-200 dark:border-gray-600'>'''''
-              <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
+        <div className='w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50, dark:bg-gray-700'>'''{/* AI Suggestions */}''''{enableAI && showSuggestions && (<div className='p-4 border-b border-gray-200 dark:border-gray-600'>'''''
+              <h4 className='font-medium text-gray-900, dark:text-white mb-3 flex items-center gap-2'>''''
                 <Sparkles className='w-4 h-4'/>
                 AI Suggestions
               </h4>''';'
@@ -278,7 +278,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     <div className='flex items-start justify-between mb-2'>'`'`
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
-                        'bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300'}`}>{suggestion.type}''''
+                        'bg-blue-100 text-blue-700 dark: bg-blue-900/30, dark:text-blue-300'}`}>{suggestion.type}''''
                       </span>''''
                       <span className='text-xs text-gray-500'>
                         {Math.round(suggestion.confidence * 100)}%
@@ -302,20 +302,20 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               </div>
             </div>) }
 '''{/* Collaborators */}''''{enableCollaboration && showCollaborators && (<div className='p-4 border-b border-gray-200 dark: border-gray-600'>'''''
-              <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
+              <h4 className='font-medium text-gray-900, dark:text-white mb-3 flex items-center gap-2'>''''
                 <Users className='w-4 h-4'/>
                 Collaborators ({collaboration.onlineUsers.length})
               </h4>''';'
               ''''
               <div className='space-y-2'>''''{collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg'>''''
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>''''
+                    <div className='w-3 h-3 rounded-full' style={{, backgroundColor: user.color }}></div>''''
                     <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
                       {user.name}''''
                     </span>''''
                     <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>
                   </div>))}''''
                 ''''{collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60'>''''
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>''''
+                    <div className='w-3 h-3 rounded-full' style={{, backgroundColor: user.color }}></div>''''
                     <span className='text-sm text-gray-500 dark:text-gray-400'>
                       {user.name}''''
                     </span>''''

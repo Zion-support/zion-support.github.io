@@ -102,7 +102,7 @@ const Search: React.FC = () => {
       case 'services': return <Server className="w-5 h-5 text-blue-400" />;
       case 'talent': return <Users className="w-5 h-5 text-purple-400" />;
       case 'equipment': return <Building className="w-5 h-5 text-orange-400" />;
-      default: return <SearchIcon className="w-5 h-5 text-gray-400" />;
+     , default: return <SearchIcon className="w-5 h-5 text-gray-400" />;
     }
   };
   const getTypeLabel = (type: string) => {
@@ -110,7 +110,7 @@ const Search: React.FC = () => {
       case 'services': return 'Service';
       case 'talent': return 'Talent';
       case 'equipment': return 'Equipment';
-      default: return 'Unknown';
+     , default: return 'Unknown';
     }
   };
   return (
@@ -152,7 +152,7 @@ const Search: React.FC = () => {
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-md font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-md font-semibold hover:from-blue-600, hover:to-purple-600 transition-all duration-300"
                 >
                   Search
                 </button>
@@ -281,13 +281,13 @@ const Search: React.FC = () => {
                             ))}
                           </div>
                           <div className="flex items-center gap-2">
-                            <button className="p-2 text-gray-400 hover: text-white transition-colors">
+                            <button className="p-2 text-gray-400 hover:text-white transition-colors">
                               <Bookmark className="w-4 h-4" />
                             </button>
                             <button className="p-2 text-gray-400 hover:text-white transition-colors">
                               <Share2 className="w-4 h-4" />
                             </button>
-                            <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                            <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-sm font-medium hover:from-blue-600, hover:to-purple-600 transition-all duration-300">
                               View Details
                             </button>
                           </div>
@@ -316,4 +316,4 @@ const Search: React.FC = () => {
 </>
   );
 };
-export default Search;
+export default Search

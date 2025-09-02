@@ -6,17 +6,17 @@ interface State {
   hasError: boolean;
    error?: Error}
 export class ErrorBoundary extends Component<Props, State> {
-  public state: State = { hasError: false}
+  public state: State = {, hasError: false}
 ;
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return {, hasError: true, error }
   }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     
     // Log to external service in production;
     if(process.env.NODE_ENV === 'production') {
       // You can integrate with services like Sentry here
-      console.error('Production error: ', { error, errorInfo })}
+      console.error('Production, error: ', { error, errorInfo })}
   }
   public render() {
     if(this.state.hasError) {
@@ -35,7 +35,7 @@ export class ErrorBoundary extends Component<Props, State> {
               <div className='mt-6'>
                 <button;
                   onClick={() => window.location.reload()}
-                  className='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'>
+                  className='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2, focus:ring-blue-500'>
                   Refresh Page
                 </button>
               </div>

@@ -126,7 +126,7 @@ const AdvancedAnalyticsDashboard = () => {}
         initial={{ opacity: 0, y: 20 }}''';'
         animate={{ opacity: 1, y: 0 }}'''';
         className='mb-8''''>'''''
-        <div className='flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4'>''''
+        <div className='flex flex-col lg: flex-row lg:items-center, lg:justify-between gap-4'>''''
           <div>''''
             <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>
               Advanced Analytics Dashboard''''
@@ -154,7 +154,7 @@ const AdvancedAnalyticsDashboard = () => {}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}''';'
         transition={{ delay: 0.1 }}'''';
-        className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8 '>{metrics.map((metric, index) => (
+        className='grid grid-cols-1 md: grid-cols-2, lg:grid-cols-4 gap-6 mb-8 '>{metrics.map((metric, index) => (
           <motion.div;
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -394,7 +394,7 @@ const AdvancedAnalyticsDashboard = () => {}
           </p>''''
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
             <Button'''';
-              className='bg-white text-zion-purple hover: bg-zion-slate-light''';
+              className='bg-white text-zion-purple, hover: bg-zion-slate-light''';
               onClick={() =>';'
                 window.open('';
                   'mailto: kleber@ziontechgroup.com?subject=Analytics Dashboard Access', _blank')}'''>''''
@@ -403,7 +403,7 @@ const AdvancedAnalyticsDashboard = () => {}
             </Button>''''
             <Button'''';
               variant='outline''''';
-              className='border-white text-white hover: bg-white hover:text-zion-purple''';
+              className='border-white text-white hover: bg-white, hover:text-zion-purple''';
               onClick={() => window.open('tel: +13024640950', _blank')}'''>''''
               <Shield className='w-5 h-5 mr-2' />
               Schedule Demo

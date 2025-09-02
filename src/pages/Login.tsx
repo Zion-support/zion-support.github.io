@@ -31,7 +31,7 @@ export default function Login() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{, opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -64,7 +64,7 @@ export default function Login() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500, focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -83,7 +83,7 @@ export default function Login() {
                     required
                     value={formData.password}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-12 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-10 pr-12 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500, focus:border-transparent"
                     placeholder="Enter your password"
                   />
                   <button
@@ -110,7 +110,7 @@ export default function Login() {
                 </div>
 
                 <div className="text-sm">
-                  <Link to="/forgot-password" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  <Link to="/forgot-password" className="text-blue-400, hover:text-blue-300 transition-colors">
                     Forgot your password?
                   </Link>
                 </div>
@@ -119,7 +119,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full flex justify-center items-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                className="w-full flex justify-center items-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 disabled:opacity-50, disabled:cursor-not-allowed transition-all duration-200"
               >
                 {isLoading ? (
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -153,7 +153,7 @@ export default function Login() {
                   <span className="ml-2">Google</span>
                 </button>
 
-                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-600 rounded-lg bg-slate-800/50 text-sm font-medium text-gray-300 hover:bg-slate-700/50 transition-colors">
+                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-600 rounded-lg bg-slate-800/50 text-sm font-medium text-gray-300, hover:bg-slate-700/50 transition-colors">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
@@ -165,7 +165,7 @@ export default function Login() {
             <div className="mt-6 text-center">
               <p className="text-gray-300">
                 Don't have an account?{' '}'
-                <Link to="/signup" className="text-blue-400 hover: text-blue-300 transition-colors font-medium">
+                <Link to="/signup" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">
                   Sign up here
                 </Link>
               </p>
@@ -174,5 +174,5 @@ export default function Login() {
         </div>
       </div>
 </>
-  );
+  )
 }

@@ -39,7 +39,7 @@ export function ComprehensiveServicesShowcase() {}
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);
   const containerVariants = {}
-    hidden: { opacity: 0 }, visible: {}
+    hidden: {, opacity: 0 }, visible: {}
       opacity: 1,
       transition: {}
         staggerChildren: 0.1, delayChildren: 0.2}
@@ -47,7 +47,7 @@ export function ComprehensiveServicesShowcase() {}
   }
 ;
   const itemVariants = {}
-  hidden: { y: 20, opacity: 0},
+  hidden: {, y: 20, opacity: 0},
     visible: {}
       y: 0, opacity: 1,
       transition: {}
@@ -58,7 +58,7 @@ export function ComprehensiveServicesShowcase() {}
   }
 ;
   const cardVariants = {}
-  hidden: { scale: 0.95, opacity: 0},
+  hidden: {, scale: 0.95, opacity: 0},
     visible: {}
       scale: 1, opacity: 1,
       transition: {}
@@ -69,7 +69,7 @@ export function ComprehensiveServicesShowcase() {}
   }';';
   return (''''
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
-      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto px-4 sm: px-6, lg:px-8'>
         {/* Header Section */}''''
         <motion.div '''';
           className='text-center mb-16''';
@@ -132,14 +132,14 @@ export function ComprehensiveServicesShowcase() {}
 `'`'`;
                 selectedCategory === category.id`'`'`'`;'
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`'`'`
-                  : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30'````}`}
+                  : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate, hover:text-zion-cyan border border-zion-cyan/30'````}`}
             >{category.icon}
               <span>{category.name}</span>
             </button>) ) }
         </motion.div>
         {/* Services Grid */}''''
         <motion.div''''
-          className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'''';'
+          className='grid grid-cols-1 md: grid-cols-2, lg:grid-cols-3 gap-8'''';'
           variants={containerVariants}'''';
           initial='hidden'''';'
           animate='visible'''>{currentServices.map((service) => (
@@ -252,7 +252,7 @@ export function ComprehensiveServicesShowcase() {}
               <a''''
                 href='tel:+13024640950'''';'
                 className='bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover: bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 '>
-                Call Now: +1 302 464 0950
+                Call, Now: +1 302 464 0950
               </a>
             </div>
           </div>
@@ -343,7 +343,7 @@ export function ComprehensiveServicesShowcase() {}
                   </Link>''''
                   <a''''
                     href='tel:+13024640950'''';'
-                    className='bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover: bg-zion-slate-dark transition-all duration-300 text-center '>
+                    className='bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30, hover: bg-zion-slate-dark transition-all duration-300 text-center '>
                     Call for Consultation
                   </a>
                 </div>

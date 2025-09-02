@@ -32,8 +32,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
-  const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
-  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
+  const [touchStart, setTouchStart] = useState<{ x: number; y: number;, time: number } | null>(null);
+  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number;, time: number } | null>(null);
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showGestureGuide, setShowGestureGuide] = useState(false);
@@ -79,7 +79,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const handleTouchStart = (e: TouchEvent) => {
       const touch = e.touches[0];
       setTouchStart({
-        x: touch.clientX, y: touch.clientY,
+       , x: touch.clientX, y: touch.clientY,
         time: Date.now()
       });
     };
@@ -90,7 +90,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       if (!touchStart) return;
       const touch = e.changedTouches[0];
       const touchEndData = {
-        x: touch.clientX, y: touch.clientY,
+       , x: touch.clientX, y: touch.clientY,
         time: Date.now()
       };
       setTouchEnd(touchEndData);
@@ -102,7 +102,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       // Minimum distance and time for gesture recognition
       if (distance > 50 && deltaTime < 500) {
         const gesture: TouchGesture = {
-          type: 'swipe', distance,
+         , type: 'swipe', distance,
           duration: deltaTime
         };
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
@@ -219,20 +219,20 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         <motion.div
           initial={{ y: -100 }}
           animate={{ y: 0 }}
-          className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg"
+          className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200, dark:border-slate-700 shadow-lg"
         >
           <div className="flex items-center justify-between px-4 py-3">
             <div className="flex items-center space-x-3">
               <button
                 onClick={() => handleMobileNavigation('back')}
-                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200, dark:hover:bg-slate-600 transition-colors"
                 aria-label="Go back"
               >
                 <ArrowLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => handleMobileNavigation('home')}
-                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200, dark:hover:bg-slate-600 transition-colors"
                 aria-label="Go home"
               >
                 <Home className="w-5 h-5" />
@@ -242,14 +242,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             <div className="flex items-center space-x-3">
               <button
                 onClick={() => handleMobileNavigation('search')}
-                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200, dark:hover:bg-slate-600 transition-colors"
                 aria-label="Search"
               >
                 <Search className="w-5 h-5" />
               </button>
               <button
                 onClick={() => handleMobileNavigation('menu')}
-                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200, dark:hover:bg-slate-600 transition-colors"
                 aria-label="Menu"
               >
                 <Menu className="w-5 h-5" />
@@ -269,7 +269,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             className="fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"
           >
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Menu</h3>
+              <h3 className="text-lg font-semibold text-slate-900, dark:text-white">Menu</h3>
               <button
                 onClick={() => setShowMobileMenu(false)}
                 className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
@@ -304,7 +304,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <a href="/contact" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">
                 <div className="flex items-center space-x-3">
                   <User className="w-5 h-5 text-slate-600 dark:text-slate-400" />
-                  <span className="text-slate-900 dark:text-white">Contact</span>
+                  <span className="text-slate-900, dark:text-white">Contact</span>
                 </div>
               </a>
             </div>
@@ -320,7 +320,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setShowGestureGuide(!showGestureGuide)}
-          className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400, focus:ring-offset-2"
           aria-label="Show gesture guide"
           title="Gesture Guide"
         >
@@ -387,7 +387,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                   </div>
                   <div>
                     <div className="text-sm font-medium text-slate-900 dark:text-white">Swipe Down</div>
-                    <div className="text-xs text-slate-600 dark:text-slate-400">Scroll to bottom</div>
+                    <div className="text-xs text-slate-600, dark:text-slate-400">Scroll to bottom</div>
                   </div>
                 </div>
               </div>

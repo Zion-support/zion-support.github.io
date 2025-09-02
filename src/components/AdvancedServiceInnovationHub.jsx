@@ -147,7 +147,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 1,
   y: 0 ''';'
 ''''}} className='mb-8'>''''
-        <div className='flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4'>''''
+        <div className='flex flex-col lg: flex-row lg:items-center, lg:justify-between gap-4'>''''
           <div>''''
             <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>
               Advanced Service Innovation Hub''''
@@ -169,7 +169,7 @@ const AdvancedServiceInnovationHub = () => {}
   { opacity: 1,
   y: 0 ''';'
 ''''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>''''
+            <div className='grid grid-cols-1 md:grid-cols-2, lg:grid-cols-4 gap-4'>''''
               <div>''''
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Category</label>''''
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className='w-full p-2 border border-zion-slate-light rounded-md'>{categories.map(category => (<option key={category.id} value={category.id}>
@@ -253,7 +253,7 @@ const AdvancedServiceInnovationHub = () => {}
                         <span className='text-sm text-zion-slate-light'>Adoption Rate: </span>''''
                         <div className='flex items-center gap-2'>''''
                           <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>''''
-                            <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={{ width: `${trend.adoption}%` }}></div>''''
+                            <div className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full' style={{, width: `${trend.adoption}%` }}></div>''''
                           </div>''''
                           <span className='text-sm font-medium'>{trend.adoption}%</span>
                         </div>
@@ -386,7 +386,7 @@ const AdvancedServiceInnovationHub = () => {}
                     <span className='font-semibold text-zion-cyan'>$150B+</span>''''
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
-                    <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' }}></div>
+                    <div className='bg-zion-cyan h-2 rounded-full' style={{, width: '85%' }}></div>
                   </div>''';'
                   ''''
                   <div className='flex justify-between items-center'>''''
@@ -520,14 +520,14 @@ const AdvancedServiceInnovationHub = () => {}
             of emerging technologies and capitalize on future opportunities.''''
           </p>''''
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
-            <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
+            <Button className='bg-white text-zion-purple, hover:bg-zion-slate-light' onClick = {}
 ';'
   () => window.open('mailto: kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', _blank');'
 '''}>'''''
               <Users className='w-5 h-5 mr-2'/>
               Get Innovation Strategy''''
             </Button>''''
-            <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = {}
+            <Button variant='outline' className='border-white text-white hover: bg-white, hover:text-zion-purple' onClick = {}
 ';'
   () => window.open('tel: +13024640950', _blank');'
 '''}>'''''

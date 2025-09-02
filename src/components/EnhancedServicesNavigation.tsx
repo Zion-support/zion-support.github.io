@@ -114,7 +114,7 @@
           <span>🚀</span>
           <span > Services</span>
           <motion.span
-            animate={{ rotate: isOpen ? 180 : 0 }}
+            animate={{, rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
             ▼

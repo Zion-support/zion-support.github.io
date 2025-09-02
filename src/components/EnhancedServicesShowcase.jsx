@@ -16,21 +16,21 @@ const EnhancedServicesShowcase = () => {}
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch})
   const containerVariants = {}
-    hidden: { opacity: 0 }, visible: {}
+    hidden: {, opacity: 0 }, visible: {}
       opacity: 1,
       transition: {}
         staggerChildren: 0.1, delayChildren: 0.2}}}
   const itemVariants = {}
-    hidden: { opacity: 0, y: 20 }, visible: {}
+    hidden: {, opacity: 0, y: 20 }, visible: {}
       opacity: 1,
-      y: 0, transition: { duration: 0.5 }}}
+      y: 0, transition: {, duration: 0.5 }}}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>'''{/* Hero Section */}'''''
       <section className='py-20 px-4 sm: px-6 lg:px-8'>''''
         <div className='max-w-7xl mx-auto text-center'>''''
           <motion.h1'''';
             className='text-4xl md: text-6xl font-bold mb-6''';
-            initial={{ opacity: 0, y: 20 }}
+            initial={{, opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >''';'
@@ -72,7 +72,7 @@ const EnhancedServicesShowcase = () => {}
           {/* Search and Filter */}''''
           <motion.div'''';
             className='flex flex-col md: flex-row gap-4 justify-center items-center mb-12''';
-            initial={{ opacity: 0, y: 20 }}
+            initial={{, opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >''''
@@ -81,7 +81,7 @@ const EnhancedServicesShowcase = () => {}
               placeholder='Search services...''';
               value={searchTerm}''';'
               onChange={e => setSearchTerm(e.target.value)}'''';
-              className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''''/>'''''
+              className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full, md:w-80''''/>'''''
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
                 <button;
@@ -91,7 +91,7 @@ const EnhancedServicesShowcase = () => {}
 ';'
                     selectedCategory === category.id'';
                       ? 'bg-blue-600 border-blue-400 text-white'''`;
-                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``}`}'''>'''''
+                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20, hover:border-white/40'``}`}'''>'''''
                   <span className='mr-2'>{category.icon}</span>
                   {category.name}
                 </button>
@@ -104,7 +104,7 @@ const EnhancedServicesShowcase = () => {}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>''''
         <div className='max-w-7xl mx-auto'>''''
           <motion.div''''
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'''';'
+            className='grid grid-cols-1 md:grid-cols-2, lg:grid-cols-3 gap-8'''';'
             variants={containerVariants}'''';
             initial='hidden'''';'
             whileInView='visible''';
@@ -113,7 +113,7 @@ const EnhancedServicesShowcase = () => {}
               <motion.div;
                 key={service.id}''';'
                 variants={itemVariants}'''';
-                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group '>'''{/* Service Header */}'''''
+                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform, hover:scale-105 group '>'''{/* Service Header */}'''''
                 <div className='text-center mb-6'>`
                   <div``
                     className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}
@@ -232,7 +232,7 @@ const EnhancedServicesShowcase = () => {}
         <div className='max-w-4xl mx-auto text-center'>''''
           <motion.h2''''
             className='text-3xl md: text-4xl font-bold text-white mb-6''';
-            initial={{ opacity: 0, y: 20 }}
+            initial={{, opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -250,7 +250,7 @@ const EnhancedServicesShowcase = () => {}
 ''''
           <motion.div'''';
             className='flex flex-col sm: flex-row gap-4 justify-center mb-8''';
-            initial={{ opacity: 0, y: 20 }}
+            initial={{, opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >''''
@@ -268,7 +268,7 @@ const EnhancedServicesShowcase = () => {}
 ''''
           <motion.div'''';
             className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto''';
-            initial={{ opacity: 0, y: 20 }}
+            initial={{, opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}'''>'''''
             <h3 className='text-lg font-semibold text-white mb-4'>
@@ -296,7 +296,7 @@ const EnhancedServicesShowcase = () => {}
 ''''
           <motion.div''''
             className='mt-8 text-sm text-gray-400''';
-            initial={{ opacity: 0 }}
+            initial={{, opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
@@ -307,7 +307,7 @@ const EnhancedServicesShowcase = () => {}
               <a''''
                 href='https://ziontechgroup.com'''';'
                 className='text-blue-400 hover: text-blue-300 '>
-                https://ziontechgroup.com
+               , https://ziontechgroup.com
               </a>
             </p>
           </motion.div>

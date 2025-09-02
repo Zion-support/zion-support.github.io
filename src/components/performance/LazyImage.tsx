@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react' import { motion } from 'framer-motion' interface LazyImageProps {
   src: string;
-   alt: string;
+  , alt: string;
    className?: string;
    width?: number;
    height?: number;

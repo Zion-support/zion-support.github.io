@@ -304,7 +304,7 @@ const AdvancedServiceRecommendation = () => {}
         </div>''';'
 ''''
         <div className='mt-8 text-center'>''''
-          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>'''{isAnalyzing ? (<>'''''
+          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark, hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>'''{isAnalyzing ? (<>'''''
                 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
                 Analyzing Your Profile...''''
 </>) : (<>''''
@@ -400,7 +400,7 @@ const AdvancedServiceRecommendation = () => {}
                         </div>''';'
                         ''''
                         <div className='mt-4'>''''
-                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}
+                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark, hover:to-zion-purple-dark' onClick = {}
 ';'
   () => window.open(rec.service.link, _blank')}>''';
                             Learn More''''
@@ -426,14 +426,14 @@ const AdvancedServiceRecommendation = () => {}
                 for your business needs. Contact us today for a personalized consultation.''''
               </p>''''
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
-                <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
+                <Button className='bg-white text-zion-purple, hover:bg-zion-slate-light' onClick = {}
 ';'
   () => window.open('mailto: kleber@ziontechgroup.com?subject=Service Recommendation Consultation', _blank');'
 '''}>'''''
                   <Users className='w-5 h-5 mr-2'/>
                   Get Expert Consultation''''
                 </Button>''''
-                <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = {}
+                <Button variant='outline' className='border-white text-white hover: bg-white, hover:text-zion-purple' onClick = {}
 ';'
   () => window.open('tel: +13024640950', _blank');'
 '''}>'''''

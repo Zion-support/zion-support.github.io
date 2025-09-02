@@ -30,7 +30,7 @@ export function MobileNavigation() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors"
+                className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.icon}
@@ -41,5 +41,5 @@ export function MobileNavigation() {
         </div>
       )}
     </div>
-  );
+  )
 }

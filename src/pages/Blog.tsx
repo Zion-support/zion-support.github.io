@@ -9,35 +9,35 @@ import {
 export default function Blog() {
   const blogPosts = [
     {
-      id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
+      id: 1, title: "The Future of AI in, Enterprise: 2025 Trends and Predictions",
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",
       date: "2025-01-15", readTime: "8 min read",
       category: "AI & Machine Learning", tags: ["AI", "Enterprise", "Technology"], image: "/api/placeholder/600/400",
       featured: true
     }, {
       id: 2,
-      title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",
+      title: "Quantum Computing, Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",
       author: "Prof. Michael Rodriguez", date: "2025-01-12",
       readTime: "12 min read", category: "Quantum Computing",
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/600/400",
       featured: true
     }, {
       id: 3,
-      title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",
+      title: "Micro SaaS, Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",
       author: "Alex Thompson", date: "2025-01-10",
       readTime: "6 min read", category: "Micro SaaS",
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/600/400",
       featured: false
     }, {
       id: 4,
-      title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",
+      title: "Cybersecurity in the Age of, AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",
       author: "Lisa Park", date: "2025-01-08",
       readTime: "10 min read", category: "Cybersecurity",
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/600/400",
       featured: false
     }, {
       id: 5,
-      title: "Digital Transformation: A Complete Guide for 2025", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",
+      title: "Digital, Transformation: A Complete Guide for 2025", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",
       author: "David Kumar", date: "2025-01-05",
       readTime: "15 min read", category: "Digital Transformation",
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/600/400",
@@ -114,7 +114,7 @@ export default function Blog() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: index * 0.1 }}
-                        className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                        className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300, hover:scale-105"
                       >
                         <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                           <div className="text-6xl opacity-20">
@@ -170,7 +170,7 @@ export default function Blog() {
                       transition={{ duration: 0.8, delay: index * 0.1 }}
                       className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
                     >
-                      <div className="flex flex-col md:flex-row gap-6">
+                      <div className="flex flex-col, md:flex-row gap-6">
                         <div className="md:w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                           <div className="text-4xl opacity-20">
                             {post.category === "AI & Machine Learning" && <Brain />}
@@ -233,7 +233,7 @@ export default function Blog() {
                       <Link
                         key={category.name}
                         to={`/blog/category/${category.name.toLowerCase().replace(/\\s+/g, '-')}`}
-                        className="flex items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"
+                        className="flex items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center">
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover:text-blue-300" />
@@ -257,7 +257,7 @@ export default function Blog() {
                       placeholder="Enter your email"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700, hover:to-purple-700 transition-all duration-200">
                       Subscribe
                     </button>
                   </div>
@@ -268,5 +268,5 @@ export default function Blog() {
         </div>
       </div>
 </>
-  );
+  )
 }

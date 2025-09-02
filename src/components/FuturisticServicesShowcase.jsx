@@ -79,7 +79,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                 <div className='text-xs text-gray-500'>{service.marketPrice}</div>
               </div>''';'
               ''''
-              <button className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30'>
+              <button className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400 hover:to-blue-400 transition-all duration-300 transform, hover:scale-105 shadow-lg shadow-cyan-500/30'>
                 Get Started
               </button>
             </div>
@@ -143,7 +143,7 @@ export const FuturisticServicesShowcase = () => {}
                 animationDuration: `${3 + Math.random() * 4}s`}}/>))}
       </div>''';'
 ''''
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6, lg:px-8'>
         {/* Header Section */}
         <motion.div initial = {}
   { opacity: 0, y: -50}} animate = {}
@@ -155,13 +155,13 @@ export const FuturisticServicesShowcase = () => {}
               Advanced Micro SAAS
             </span>''''
           </h1>''''
-          <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-xl, lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
             Discover cutting-edge micro SAAS solutions powered by AI, quantum computing, and next-generation technologies
           </p>
           '''{/* Search and Filter Controls */}'''''
-          <div className='flex flex-col lg: flex-row items-center justify-center space-y-4 lg:space-y-0 lg:space-x-6 mb-12'>'''{/* Search Bar */}'''''
+          <div className='flex flex-col lg: flex-row items-center justify-center space-y-4 lg:space-y-0, lg:space-x-6 mb-12'>'''{/* Search Bar */}'''''
             <div className='relative w-full max-w-md'>''''
-              <input type='text' placeholder='Search services...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='w-full px-6 py-3 bg-black/50 border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'/>''''
+              <input type='text' placeholder='Search services...' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='w-full px-6 py-3 bg-black/50 border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2, focus:ring-cyan-400/20 transition-all duration-300'/>''''
               <div className='absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400'>
                 🔍
               </div>
@@ -169,13 +169,13 @@ export const FuturisticServicesShowcase = () => {}
 '''{/* Category Filter */}''`'
             <div className='flex flex-wrap justify-center gap-2'>`'`{categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105 ${selectedCategory === category''`;'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''`'`
-                : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>'{category === 'all' ? 'All Services' : category}'
+                : 'bg-black/50 border border-cyan-500/30 text-cyan-400, hover:bg-cyan-500/20'}`}>'{category === 'all' ? 'All Services' : category}'
                 </button>) ) }
             </div>
           </div>
         </motion.div>
 '''{/* Services Grid */}'''''
-        <div className='grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 lg: grid-cols-2, xl:grid-cols-3 gap-8'>
           <AnimatePresence>
             {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has(index) }/>) ) }
           </AnimatePresence>
@@ -198,7 +198,7 @@ export const FuturisticServicesShowcase = () => {}
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30'>
                 Schedule Consultation''''
               </button>''''
-              <button className='px-8 py-4 bg-transparent border-2 border-cyan-500 text-cyan-400 rounded-xl font-bold text-lg hover:bg-cyan-500/20 transition-all duration-300 transform hover:scale-105'>
+              <button className='px-8 py-4 bg-transparent border-2 border-cyan-500 text-cyan-400 rounded-xl font-bold text-lg hover:bg-cyan-500/20 transition-all duration-300 transform, hover:scale-105'>
                 View All Services
               </button>
             </div>
