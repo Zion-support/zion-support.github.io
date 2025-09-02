@@ -34,11 +34,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.classList.remove('high-contrast');
     }
-
+    
     // Font size adjustments
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root.classList.add(`font-${fontSize}`);
-
+    
     // Reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
@@ -114,8 +114,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {/* Screen reader only content */}
       <div className="sr-only">
         <h1>Zion Tech Group - Technology Solutions Provider</h1>
-        <p>
-          Leading technology solutions provider helping businesses transform their digital presence 
+        <p>Leading technology solutions provider helping businesses transform their digital presence 
           with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
         </p>
       </div>
@@ -139,13 +138,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           border-color: black !important;
         }
         
-        .high-contrast button,
-        .high-contrast a {
+        .high-contrast button, .high-contrast a {
           border: 2px solid black !important;
         }
         
-        .high-contrast button:hover,
-        .high-contrast a:hover {
+        .high-contrast button:hover, .high-contrast a:hover {
           background-color: black !important;
           color: white !important;
         }
@@ -168,8 +165,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
 
         /* Reduced motion */
-        .reduced-motion *,
-        .reduced-motion *::before,
+        .reduced-motion *, .reduced-motion *::before,
         .reduced-motion *::after {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
