@@ -1,53 +1,36 @@
-import type { NextPage } from,
-  next';
-import MainLayout from
-  '../components/layout/MainLayout';
-import { Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from
-  'lucide-react';
-import Link from
-  'next/link';
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import { Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from 'lucide-react';
+import Link from 'next/link';
 
 const AboutPage: NextPage = () => {
   const stats = [
-    { number:
-  '500+, label:
-  'Projects Completed', icon: <Award className="w-8 h-8" /> },
-    { number:,
-  50+', label: 'Happy Clients, icon: <Users className="w-8 h-8" /> },
-    { number:,
-  99.9%', label: 'Uptime Guarantee, icon: <Shield className="w-8 h-8" /> },
-    { number:,
-  24/7', label: 'Support Available, icon: <Globe className="w-8 h-8" /> },
+    { number: '500+', label: 'Projects Completed', icon: <Award className="w-8 h-8" /> },
+    { number: '50+', label: 'Happy Clients', icon: <Users className="w-8 h-8" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" /> },
+    { number: '24/7', label: 'Support Available', icon: <Globe className="w-8 h-8" /> },
   ];
 
   const values = [
     {
       icon: <Lightbulb className="w-8 h-8" />,
-      title:,
-  Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title:,
-  Customer Focus',
-      description: 'Our clients\ success is our success. We build lasting partnerships based on trust, transparency, and mutual growth.
-  '
+      title: 'Customer Focus',
+      description: 'Our clients\' success is our success. We build lasting partnerships based on trust, transparency, and mutual growth.'
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title:,
-  Excellence
-  ',
-      description: We maintain the highest standards of quality in everything we do, from code to customer service.
-  '
+      title: 'Excellence',
+      description: 'We maintain the highest standards of quality in everything we do, from code to customer service.'
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title:,
-  Results-Driven
-  ',
-      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.
+      title: 'Results-Driven',
+      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'
     }
   ];
 
