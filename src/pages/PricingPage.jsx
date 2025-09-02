@@ -17,11 +17,7 @@ const categoryIcons = {;
     'EdTech': GraduationCap;
 };
 const pricingFeatures = {;
-<<<<<<< HEAD;"
-    basic: [;";"
-=======;";"
     basic[;"";"
->>>>>>> 82b8c9da73d581e93549ea90cb9ba854068d51e8";"Core service functionality",";"Standard support (8/5)",";"Basic integrations",";"Community documentation",";"Email support";";"
     ],;"";"
     professional: [";"All Basic features",";"Advanced analytics",";"Priority support (12/7)",";"Custom integrations",";"Phone & email support",";"Dedicated account manager",";"Training sessions";";"
     ],;"";"
