@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AccessibilityEnhancer_BACKUP_15796 from './AccessibilityEnhancer_BACKUP_15796';
 

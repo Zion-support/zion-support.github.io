@@ -1,4 +1,4 @@
-import React from 'react'; export interface TalentProfileProps {
+ export interface TalentProfileProps {
   id: string;
    full_name: string;
    bio?: string;

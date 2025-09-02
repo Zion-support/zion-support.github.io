@@ -1,4 +1,4 @@
-import React from 'react'; export interface AdvancedITService {
+ export interface AdvancedITService {
   id: string;
    title: string;
    description: string;

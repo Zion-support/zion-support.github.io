@@ -1,4 +1,4 @@
-import React from 'react'; interface CommunityVerifiedBadgeProps {
+ interface CommunityVerifiedBadgeProps {
   endorsementCount: number;
    threshold?: number;
    className?: string;

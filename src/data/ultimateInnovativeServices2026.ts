@@ -1,4 +1,4 @@
-import React from 'react'; export interface UltimateInnovativeService {
+ export interface UltimateInnovativeService {
   id: string;
    title: string;
    description: string;

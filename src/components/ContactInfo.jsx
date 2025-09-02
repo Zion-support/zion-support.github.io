@@ -1,4 +1,3 @@
-import React from 'react';
 ;
 ;
 ;
@@ -24,7 +23,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   Contact Details;
                 </CardTitle>"""
 import { Link } from "react - router - dom";
-import React from 'react'';"
+';"
 ';""
 import { Button } from "../ui/button"';""
 import { Badge } from "../ui/badge"';""

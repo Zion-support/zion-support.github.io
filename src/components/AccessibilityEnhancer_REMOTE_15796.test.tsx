@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AccessibilityEnhancer_REMOTE_15796 from './AccessibilityEnhancer_REMOTE_15796';
 

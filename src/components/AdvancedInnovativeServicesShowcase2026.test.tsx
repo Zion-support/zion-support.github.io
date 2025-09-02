@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AdvancedInnovativeServicesShowcase2026 from './AdvancedInnovativeServicesShowcase2026';
 

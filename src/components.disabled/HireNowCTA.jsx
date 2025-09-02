@@ -1,4 +1,3 @@
-import React from 'react';
 ;
 ;
 ;import { MessageCircle, Calendar, Star } from 'lucide-react';

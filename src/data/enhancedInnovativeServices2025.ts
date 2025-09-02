@@ -1,4 +1,4 @@
-import React from 'react'; export interface ServiceContact {
+ export interface ServiceContact {
   phone: string;
    email: string;
    website: string;

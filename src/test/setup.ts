@@ -39,6 +39,6 @@ global.scrollTo = jest.fn()
 // @ts-expect-error override console in test env
 global.console = {
   ...console,
-  warn: vi.fn(),
-  error: vi.fn(),
+  warn: jest.fn(),
+  error: jest.fn(),
 };
