@@ -1,20 +1,25 @@
-import React from
-  'react'
-import { Link } from
-  'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from
-  'lucide-react'
-import PageTransition from
-  '../src/components/PageTransition'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ModernHeader } from '../src/components/header/ModernHeader';
+import { SimpleFooter } from '../src/components/layout/SimpleFooter';
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award, Mail, Smartphone, Target, FileText, BarChart, Settings, Headphones, ShieldCheck, Cpu, Wifi, Monitor } from 'lucide-react';
 
 export default function Services() {
-	const title =
-  'Services — Zion Tech Group'
-	const description =
-  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const title = 'Services — Zion Tech Group';
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
-		<PageTransition>
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta name="description" content={description} />
+				<meta name="keywords" content="AI services, cloud platforms, cybersecurity, micro SaaS, IT services, technology solutions" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="canonical" href="https://ziontechgroup.com/services" />
+			</Head>
+			
+			<ModernHeader />
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -269,6 +274,42 @@ export default function Services() {
 							</div>
 						</div>
 
+						{/* AI Content Creation Platform */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Code className="h-5 w-5 text-purple-600" />
+								<h3 className="font-semibold text-gray-900">AI Content Creation Suite</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Generate high-quality articles, social media posts, and marketing materials with AI.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Multi-language content generation</li>
+								<li>• SEO optimization and brand voice consistency</li>
+								<li>• Content calendar automation</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-purple-600">From $199/mo</span>
+								<Link to="/contact" className="text-purple-600 hover: text-purple-500">Try demo →</Link>
+							</div>
+						</div>
+
+						{/* AI Email Automation */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Mail className="h-5 w-5 text-green-600" />
+								<h3 className="font-semibold text-gray-900">AI Email Automation Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Intelligent email follow-up sequences with AI-powered personalization.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Smart follow-up timing and content</li>
+								<li>• CRM integration and lead scoring</li>
+								<li>• A/B testing and performance analytics</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-green-600">From $149/mo</span>
+								<Link to="/contact" className="text-green-600 hover: text-green-500">Get started →</Link>
+							</div>
+						</div>
+
 						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
 							<div className="flex items-center gap-3 mb-3">
 								<Database className="h-5 w-5 text-indigo-600" />
@@ -398,6 +439,96 @@ export default function Services() {
 								<Link to="/contact" className="text-teal-600 hover: text-teal-500">Book a walkthrough →</Link>
 							</div>
 						</div>
+
+						{/* Mobile Survey Platform */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Smartphone className="h-5 w-5 text-pink-600" />
+								<h3 className="font-semibold text-gray-900">Mobile-First Survey Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Engaging, conversational surveys optimized for mobile devices.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Interactive question types and gamification</li>
+								<li>• Real-time analytics and response tracking</li>
+								<li>• Multi-channel distribution and targeting</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-pink-600">From $99/mo</span>
+								<Link to="/contact" className="text-pink-600 hover: text-pink-500">Try free →</Link>
+							</div>
+						</div>
+
+						{/* AI Customer Support Platform */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Headphones className="h-5 w-5 text-indigo-600" />
+								<h3 className="font-semibold text-gray-900">AI Customer Support Suite</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Intelligent chatbots and support automation with human handoff.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Multi-language support and sentiment analysis</li>
+								<li>• Knowledge base integration and ticket routing</li>
+								<li>• Performance analytics and customer satisfaction tracking</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-indigo-600">From $179/mo</span>
+								<Link to="/contact" className="text-indigo-600 hover: text-indigo-500">See demo →</Link>
+							</div>
+						</div>
+
+						{/* AI Financial Analytics */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<BarChart className="h-5 w-5 text-emerald-600" />
+								<h3 className="font-semibold text-gray-900">AI Financial Analytics Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Advanced financial data analysis with predictive insights and anomaly detection.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Real-time financial monitoring and alerts</li>
+								<li>• Predictive modeling and risk assessment</li>
+								<li>• Automated reporting and compliance tracking</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-emerald-600">From $299/mo</span>
+								<Link to="/contact" className="text-emerald-600 hover: text-emerald-500">Request demo →</Link>
+							</div>
+						</div>
+
+						{/* IoT Edge Computing */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Cpu className="h-5 w-5 text-cyan-600" />
+								<h3 className="font-semibold text-gray-900">IoT Edge Computing Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Edge computing solutions for IoT devices with real-time processing.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Low-latency data processing and analytics</li>
+								<li>• Device management and remote monitoring</li>
+								<li>• Scalable infrastructure and security protocols</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-cyan-600">From $399/mo</span>
+								<Link to="/contact" className="text-cyan-600 hover: text-cyan-500">Learn more →</Link>
+							</div>
+						</div>
+
+						{/* AI Legal Document Analyzer */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<FileText className="h-5 w-5 text-amber-600" />
+								<h3 className="font-semibold text-gray-900">AI Legal Document Analyzer</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Automated legal document analysis with risk identification and compliance checking.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Contract analysis and clause extraction</li>
+								<li>• Risk assessment and compliance verification</li>
+								<li>• Document comparison and version control</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-amber-600">From $349/mo</span>
+								<Link to="/contact" className="text-amber-600 hover: text-amber-500">Book consultation →</Link>
+							</div>
+						</div>
 					</div>
 
 					<div className="mt-10 text-center text-sm text-gray-500">
@@ -408,6 +539,11 @@ export default function Services() {
 						or call
 						{' '}
 						<a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500">+1 302 464 0950</a>.
+						<br />
+						<span className="text-xs text-gray-400 mt-2 block">
+							Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{' '}
+							<a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-500 underline" target="_blank" rel="noreferrer">ziontechgroup.com</a>
+						</span>
 					</div>
 				</div>
 			</section>
@@ -486,6 +622,8 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
-	)
+			
+			<SimpleFooter />
+		</>
+	);
 }
