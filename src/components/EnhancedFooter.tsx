@@ -1,1 +1,35 @@
-import React from 'react'; import { Link } from 'react-router-dom'; import { Zap, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Facebook, Instagram, Youtube, Github, ArrowRight, Shield, Users, Code, Building, BookOpen, HelpCircle, Star, Brain, Cloud, Award, TrendingUp, Lightbulb, Rocket, Target, CheckCircle, Heart, MessageCircle, ShoppingCart, Cpu, Database, Network, Lock, BarChart3, Server, Smartphone, Cpu as CpuIcon, Wifi, ShieldCheck, Globe2, Bot, Workflow, Eye, Sparkles, ExternalLink, Handshake, FileText, Video, GraduationCap, Atom, PenTool, Leaf, ChevronRight, ChevronDown, DollarSign, Package } from 'lucide-react'; export function EnhancedFooter() { const currentYear = new Date().getFullYear(); const serviceCategories = [ { title: 'Company', links: [ { name: 'About Us', href: '/about', description: 'Our mission and values' }, { name: 'Our Team', href: '/team', description: 'Meet our experts' }, { name: 'Leadership', href: '/leadership', description: 'Executive team' }, { name: 'Careers', href: '/careers', description: 'Join our team' }, { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }, { name: 'News', href: '/news', description: 'Latest updates' }, ] }, { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-solutions', description: 'Machine learning & automation' }, { name: 'Cloud Services', href: '/services/cloud-devops', description: 'Infrastructure & DevOps' }, { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', description: 'Security & compliance' }, { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' }, { name: 'Quantum Computing', href: '/services/ai-quantum-financial-trading-platform', description: 'Next-gen computing power' }, { name: 'Smart City Solutions', href: '/services/ai-smart-city-infrastructure-management', description: 'Urban infrastructure management' }, { name: 'Autonomous Systems', href: '/services/ai-autonomous-vehicle-management-platform', description: 'AI-powered automation' }, { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' }, { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' }, ] }, { title: 'Solutions', links: [ { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale solutions' }, { name: 'Healthcare', href: '/solutions/healthcare', description: 'Medical technology' }, { name: 'Financial', href: '/financial-solutions', description: 'Fintech solutions' }, { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industry 4.0' }, { name: 'Research & Development', href: '/research-development', description: 'Innovation labs' }, { name: 'Green IT', href: '/green-it', description: 'Sustainable technology' }, ] }, { title: 'Events & Media', links: [ { name: 'Blog', href: '/blog', description: 'Insights & updates' }, { name: 'Case Studies', href: '/case-studies', description: 'Success stories' }, { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }, { name: 'Webinars', href: '/webinars', description: 'Educational content' }, { name: 'Documentation', href: '/documentation', description: 'Technical guides' }, { name: 'API Reference', href: '/api', description: 'Developer resources' }, ] }, { title: 'Support', links: [ { name: 'Help Center', href: '/help', description: 'Find answers' }, { name: 'FAQ', href: '/faq', description: 'Common questions' }, { name: 'Contact Support', href: '/support', description: 'Get help' }, { name: 'Training', href: '/training', description: 'Skill development' }, { name: 'Status Page', href: '/status', description: 'Service status' }, { name: 'Community', href: '/community', description: 'User forums' }, ] } ];
+import React from,
+  react'; import { Link } from
+  'react-router-dom'; import { motion } from
+  'framer-motion'; import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from
+  'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [ { title:
+  'Services, links: [ { name:,
+  AI Solutions', href: '/services/ai-services }, { name:,
+  IT & Security', href: '/services/it-services }, { name:,
+  Blockchain & Web3', href: '/services/blockchain-services }, { name:,
+  Sustainability', href: '/services/sustainability }, { name:,
+  Healthcare Tech', href: '/services/healthcare-tech }, { name:,
+  Edge Computing', href: '/services/edge-computing } ] }, { title:,
+  Solutions', links: [ { name:
+  'Enterprise, href:,
+  /solutions/enterprise' }, { name: 'Startups, href:,
+  /solutions/startups' }, { name: 'Healthcare, href:,
+  /solutions/healthcare' }, { name: 'Financial Services, href:,
+  /solutions/financial' }, { name: 'Manufacturing, href:,
+  /solutions/manufacturing' }, { name: 'Education, href:,
+  /solutions/education' } ] }, { title: 'Company, links: [ { name:,
+  About Us', href: '/about }, { name:,
+  Our Team', href: '/about/team }, { name:,
+  Careers', href: '/careers }, { name:,
+  Partners', href: '/partners }, { name:,
+  Press', href: '/press }, { name:,
+  Case Studies', href: '/case-studies } ] }, { title:,
+  Resources', links: [ { name:
+  'Blog, href:,
+  /blog' }, { name: 'Documentation, href:,
+  /docs' }, { name: 'API Reference, href:,
+  /api' }, { name: 'Developer Tools, href:,
+  /developer' }, { name: 'Training, href:,
+  /training' }, { name: 'Support, href:,
+  /support' } ] } ]; const socialLinks = [ { name: 'LinkedIn, href:,
+  https: ''

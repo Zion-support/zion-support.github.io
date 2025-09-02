@@ -171,3 +171,4 @@ For questions or issues related to these improvements, please contact:
 **Last Updated**: January 2025
 **Version**: 2.0.0
 **Status**: Production Ready ✅
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

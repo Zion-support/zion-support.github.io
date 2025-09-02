@@ -124,3 +124,6 @@ monitor-*.sh
 manage-*.sh
 backups/sync-backups/
 tsconfig.tsbuildinfo
+
+# Ignore local backups
+backups/
