@@ -1,0 +1,1 @@
+"const FloatingActionButton = ({ className = " }) => {" const [isOpen, setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { icon: MessageCircle, label: "Live Chat"," action: () => window.open("https:"""

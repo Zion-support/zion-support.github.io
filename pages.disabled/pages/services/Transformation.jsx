@@ -1,5 +1,7 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';
 const DigitalTransformation = () => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">""
@@ -62,4 +64,4 @@ const DigitalTransformation = () => {}
 export { DigitalTransformation };
 :pages.disabled/pages/services/Transformation.jsx
 export default DigitalTransformation;'"
-'"'"
+  '"'"

@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
+=======
+import React from 'react'
+import  Link from 'next/link''import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'''const EnhancedFooter: React.FC = () => {'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -20,17 +25,18 @@ const EnhancedFooter: React.FC = () => {
               Leading technology solutions provider helping businesses transform their digital presence 
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
+<<<<<<< HEAD
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/zion-tech-group/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https: //linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://github.com/ZionTechGroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/ZionTechGroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -40,166 +46,128 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/services/ai-development" className="text-gray-300 hover:text-white transition-colors">
-                  AI Development
-                </Link>
+              <li><Link href="/services/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link href="/services/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SaaS</Link></li>
+              <li><Link href="/services/it-services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link href="/services/cloud-services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
+=======
+<div className="flex space-x-4">"              <a href="https: //linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Linkedin className="w-5 h-5" />"              </a>"              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Twitter className="w-5 h-5" />"              </a>"              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Github className="w-5 h-5" />"              </a>"              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">"                <Facebook className="w-5 h-5" />"              </a>"            </div></div>"
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>"            <ul className="space-y-2">"              <li>"                <Link href="/services/ai-development" className="text-gray-300 hover:text-white transition-colors">"                  AI Development"                </Link>"
               </li>
               <li>
-                <Link href="/services/cloud-services" className="text-gray-300 hover:text-white transition-colors">
-                  Cloud Services
-                </Link>
+                <Link href="/services/cloud-services" className="text-gray-300 hover:text-white transition-colors">"                  Cloud Services"                </Link>
               </li>
               <li>
-                <Link href="/services/web-development" className="text-gray-300 hover:text-white transition-colors">
-                  Web Development
-                </Link>
+                <Link href="/services/web-development" className="text-gray-300 hover:text-white transition-colors">"                  Web Development"                </Link>
               </li>
               <li>
-                <Link href="/services/mobile-development" className="text-gray-300 hover:text-white transition-colors">
-                  Mobile Development
-                </Link>
+                <Link href="/services/mobile-development" className="text-gray-300 hover:text-white transition-colors">"                  Mobile Development"                </Link>
               </li>
               <li>
-                <Link href="/services/blockchain-solutions" className="text-gray-300 hover:text-white transition-colors">
-                  Blockchain Solutions
-                </Link>
+                <Link href="/services/blockchain-solutions" className="text-gray-300 hover:text-white transition-colors">"                  Blockchain Solutions"                </Link>
               </li>
               <li>
-                <Link href="/services/iot-platforms" className="text-gray-300 hover:text-white transition-colors">
-                  IoT Platforms
-                </Link>
+                <Link href="/services/iot-platforms" className="text-gray-300 hover:text-white transition-colors">"                  IoT Platforms"                </Link>
               </li>
               <li>
-                <Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
+                <Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">"                  Cybersecurity"                </Link></li>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </ul>
           </div>
 
           {/* Solutions */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">
-                  Enterprise Solutions
-                </Link>
+              <li><Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
+              <li><Link href="/solutions/startups" className="text-gray-300 hover:text-white transition-colors">Startups</Link></li>
+              <li><Link href="/solutions/small-business" className="text-gray-300 hover:text-white transition-colors">Small Business</Link></li>
+              <li><Link href="/solutions/digital-transformation" className="text-gray-300 hover:text-white transition-colors">Digital Transformation</Link></li>
+=======
+<h3 className="text-lg font-semibold mb-4">Solutions</h3>"            <ul className="space-y-2">"              <li>"                <Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">"                  Enterprise Solutions"                </Link>"
               </li>
               <li>
-                <Link href="/solutions/small-business" className="text-gray-300 hover:text-white transition-colors">
-                  Small Business
-                </Link>
+                <Link href="/solutions/small-business" className="text-gray-300 hover:text-white transition-colors">"                  Small Business"                </Link>
               </li>
               <li>
-                <Link href="/solutions/startups" className="text-gray-300 hover:text-white transition-colors">
-                  Startups
-                </Link>
+                <Link href="/solutions/startups" className="text-gray-300 hover:text-white transition-colors">"                  Startups"                </Link>
               </li>
               <li>
-                <Link href="/solutions/healthcare" className="text-gray-300 hover:text-white transition-colors">
-                  Healthcare
-                </Link>
+                <Link href="/solutions/healthcare" className="text-gray-300 hover:text-white transition-colors">"                  Healthcare"                </Link>
               </li>
               <li>
-                <Link href="/solutions/finance" className="text-gray-300 hover:text-white transition-colors">
-                  Finance
-                </Link>
-              </li>
+                <Link href="/solutions/finance" className="text-gray-300 hover:text-white transition-colors">"                  Finance"                </Link></li>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </ul>
           </div>
 
-          {/* Company & Contact */}
+          {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-gray-300 hover:text-white transition-colors">
-                  Products
-                </Link>
-              </li>
-            </ul>
-            
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
+                <span className="text-gray-300">contact@ziontechgroup.com</span>
+=======
+<h3 className="text-lg font-semibold mb-4">Company</h3>"            <ul className="space-y-2 mb-6">"              <li>"                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">"                  About Us"                </Link>"
+              </li>
+              <li>
+                <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">"                  Careers"                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">"                  Blog"                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-gray-300 hover:text-white transition-colors">"                  Products"                </Link>
+              </li>
+            </ul>
+            
+<h3 className="text-lg font-semibold mb-4">Contact</h3>"            <div className="space-y-3">"              <div className="flex items-center space-x-2">"                <Mail className="w-4 h-4 text-blue-400" />"                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">"                  info@ziontechgroup.com"                </a>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 302 464 0950
-                </a>
+                <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="text-gray-300">
-                  364 E Main St STE 1008<br />
-                  Middletown, DE 19709
-                </span>
+              <div className="flex items-start space-x-2">
+                <MapPin className="w-4 h-4 text-blue-400 mt-1" />
+                <span className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Newsletter Section */}
-      <div className="border-t border-gray-700 py-8">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest tech insights and updates.</p>
-            <div className="flex max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors">
-                Subscribe
-              </button>
+<<<<<<< HEAD
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md: flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved.
             </div>
+            <div className="flex space-x-6 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</Link>
+            </div>
+=======
+      {/* Newsletter Section */}
+<div className="border-t border-gray-700 py-8">"        <div className="container mx-auto px-4">"          <div className="text-center">"            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>"            <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest tech insights and updates.</p>"            <div className="flex max-w-md mx-auto">"              <input"                type="email""                placeholder="Enter your email""                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500""              />"              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors">"                Subscribe"              </button></div>"
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-700 py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; 2024 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/sitemap" className="text-gray-300 hover:text-white text-sm transition-colors">
-                Sitemap
-              </Link>
-            </div>
+<div className="border-t border-gray-700 py-6">"        <div className="container mx-auto px-4">"          <div className="flex flex-col md:flex-row justify-between items-center">"            <p className="text-gray-300 text-sm">"              &copy; 2024 Zion Tech Group. All rights reserved."            </p>"
+            <div className="flex space-x-6 mt-4 md: mt-0">"              <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">"                Privacy Policy"              </Link>"
+              <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">"                Terms of Service"              </Link>
+              <Link href="/sitemap" className="text-gray-300 hover:text-white text-sm transition-colors">"                Sitemap"              </Link></div>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
           </div>
         </div>
       </div>
