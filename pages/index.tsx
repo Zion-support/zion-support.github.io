@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
+import Sidebar from '../components/Sidebar';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
 
 export default function Home() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -67,6 +69,7 @@ export default function Home() {
       </Head>
       
       <Navigation />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -88,6 +91,13 @@ export default function Home() {
                 <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
                   View Services
                 </Link>
+                <button 
+                  onClick={() => setSidebarOpen(true)}
+                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center"
+                >
+                  <Menu className="w-4 h-4 mr-2" />
+                  Explore Menu
+                </button>
               </div>
             </div>
           </div>
