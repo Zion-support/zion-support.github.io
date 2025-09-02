@@ -4,6 +4,9 @@ import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import ComprehensivePerformanceOptimizer from '../../src/components/ComprehensivePerformanceOptimizer';
+import EnhancedSEOOptimizer from '../../src/components/EnhancedSEOOptimizer';
+import EnhancedAccessibilityOptimizer from '../../src/components/EnhancedAccessibilityOptimizer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -101,6 +104,21 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
+      <ComprehensivePerformanceOptimizer 
+        enableMonitoring={true} 
+        enableOptimizations={true} 
+      />
+      <EnhancedSEOOptimizer 
+        title={title}
+        description={description}
+        keywords={keywords}
+        ogImage={ogImage}
+        canonicalUrl="https://ziontechgroup.com"
+      />
+      <EnhancedAccessibilityOptimizer 
+        enableControls={true} 
+        enableMonitoring={true} 
+      />
       
       <div className="min-h-screen flex flex-col">
         <Header />
