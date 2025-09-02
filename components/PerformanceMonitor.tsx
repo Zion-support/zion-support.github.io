@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-import React, { useEffect, useState } from 'react' from 'react'';interface PerformanceMetrics {
   fcp?: number;
   lcp?: number;
   fid?: number;
   cls?: number;
   ttfb?: number;
 }
-;
-const PerformanceMonitor: React.FC = () => {;
+
+const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
