@@ -19,7 +19,7 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+import PageTransition from '../components/PageTransition';
 
 export default function Services() {
 	const title =
