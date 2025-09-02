@@ -76,7 +76,6 @@ describe(
       </AccessibilityEnhancer>
     );
 
-<<<<<<< HEAD
     const element = screen.getByRole(
   'button');
     expect(element).toHaveClass(
@@ -84,16 +83,7 @@ describe(
 ,
   focus: ring-2,
 ,
-  focus: ring-blue-500);
-=======
-    const element = screen.getByRole('button');
-    expect(element).toHaveClass(
-      'focus:outline-none',
-      'focus:ring-2',
-      'focus:ring-blue-500'
-    );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  });
+  focus: ring-blue-500);  });
 
   it(
   'disables focus when not focusable', () => {

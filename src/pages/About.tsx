@@ -1,20 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../layout/Header';
-import Footer from '../layout/Footer';
-=======
-<<<<<<< HEAD
-React from
-  'react';
-import { SEO } from
-  '../components/SEO';''
-  'const About: React.FC = () => {'
-=======
-import React from 'react'
-import  { SEO } from '../components/SEO'''const About: React.FC = () => {''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  return (
+import Footer from '../layout/Footer';  return (
     <>
       <SEO 
         title="About Us - Zion Tech Group""        description="Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions."''      />'      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>"          <p className="text-lg text-gray-600 mb-6">"            Zion Tech Group is a leading technology solutions provider dedicated to helping "            organizations transform their digital infrastructure and achieve their business goals.'
@@ -23,7 +10,6 @@ import  { SEO } from '../components/SEO'''const About: React.FC = () => {''
       </div>
 </>);
 };
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8c53
 
 export default function About() {
   const values = [

@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/pricing-guide.tsx
+:src.disabled/pages/pricing-guide.tsx
 import React from
   'react';
-=======
 import React from 'react';
 export default React.memo(function PricingGuide () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/pricing-guide.tsx
 
 ;
   return (;

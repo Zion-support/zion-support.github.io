@@ -1,22 +1,20 @@
-<<<<<<< HEAD:src.disabled/components/PricingSection.tsx
+:src.disabled/components/PricingSection.tsx
 import React, { useState } from
   'react';
 import { motion } from
   'framer-motion';
 import { Link } from
   'react-router-dom';
-=======
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
 import { 
   Check, Star, 
   Zap, Shield, 
   Users, ArrowRight,
   Crown, Rocket,
   Building
-<<<<<<< HEAD:src.disabled/components/PricingSection.tsx
+:src.disabled/components/PricingSection.tsx
 } from
   'lucide-react';
 
@@ -95,7 +93,6 @@ export const PricingSection: React.FC = () => {
       popular: false,
       color:
   'from-yellow-500 to-orange-500'
-=======
 } from 'lucide-react'
 
 export const PricingSection: React.FC = () => {
@@ -129,16 +126,13 @@ export const PricingSection: React.FC = () => {
         '24/7 phone & chat supportSOC 2 complianceUnlimited team members', 'Custom SLA guaranteesOn-premise deployment optionsWhite-label solutions'
       ], cta: 'Contact Sales',
       popular: false, color: 'from-yellow-500 to-orange-500'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
     }
   ]
 
-<<<<<<< HEAD:src.disabled/components/PricingSection.tsx
+:src.disabled/components/PricingSection.tsx
   const savings = billingCycle ===
   'annual' ? 25 : 0;
-=======
   const savings = billingCycle === 'annual' ? 25 : 0
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
 
   return (
     <section className="py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">
@@ -158,12 +152,10 @@ export const PricingSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-<<<<<<< HEAD:src.disabled/components/PricingSection.tsx
+:src.disabled/components/PricingSection.tsx
             Simple,{,
   '}
-=======
             Simple, {' '}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Transparent Pricing
             </span>
@@ -241,15 +233,13 @@ export const PricingSection: React.FC = () => {
                 )}
 
                 {/* Main Card */}
-<<<<<<< HEAD:src.disabled/components/PricingSection.tsx
+:src.disabled/components/PricingSection.tsx
                 <div className={`relative h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${
                   plan.popular ?,
   border-zion-cyan/50 bg-zion-blue-light/20
   ': '
-=======
                 <div className={`relative h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${
                   plan.popular ? 'border-zion-cyan/50 bg-zion-blue-light/20' : ''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
                 }`}>
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
@@ -359,7 +349,6 @@ export const PricingSection: React.FC = () => {
     </section>
   );
 };
-=======
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export const PricingSection: React.FC = () => {;
@@ -583,4 +572,3 @@ import { motion } from 'framer - motion';
       </div>;
     </section>;) ;
 };";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/PricingSection.tsx

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/services/it-services.tsx
+:src.disabled/pages/services/it-services.tsx
 import React from
   'react';
 
@@ -13,7 +13,6 @@ const ITServices: React.FC = () => {
         <li>Zero Trust and Compliance</li>
       </ul>
     </div>
-=======
 import React from 'react';
 ;
 const ITServices: React.FC = () => {;
@@ -27,7 +26,6 @@ const ITServices: React.FC = () => {;
         <li>Zero Trust and Compliance</li>;
       </ul>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/it-services.tsx
   );
 };
 ;

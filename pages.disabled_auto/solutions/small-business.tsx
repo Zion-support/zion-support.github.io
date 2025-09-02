@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from, react';'
 import type { NextPage } from
   'next';
@@ -8,18 +7,9 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
   'lucide-react';
 import Link from
   'next/link';
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../../components/layout/MainLayout'
-import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from 'lucide-react'
-import Link from 'next/link'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
 const SmallBusiness: NextPage = () => {
   const solutions = [
     {
-<<<<<<< HEAD
       title: 'Cloud-Based Business Management, '
       description: 'Complete business management suite in the cloud',
       icon: <Globe className="w-8 h-8" />, features: [,
@@ -46,36 +36,12 @@ const SmallBusiness: NextPage = () => {
       description: 'Comprehensive security for your business data', icon: <Shield className="w-8 h-8" />,
       features: [
   'Data encryption', 'Regular security audits',
-  'Backup and recovery', 'Employee training'
-=======
-      title: 'Cloud-Based Business Management', description: 'Complete business management suite in the cloud', icon: <Globe className="w-8 h-8" />, features: [
-        'Customer relationship managementInventory trackingFinancial reporting', 'Team collaboration tools'
-      ]
-    }, {
-      title: 'AI-Powered Customer Support',
-      description: 'Automated customer service with human touch', icon: <Users className="w-8 h-8" />,
-      features: [
-        '24/7 chatbot supportTicket management systemKnowledge base integration', 'Performance analytics'
-      ]
-    }, {
-      title: 'Digital Marketing Automation',
-      description: 'Streamline your marketing efforts with AI', icon: <Zap className="w-8 h-8" />,
-      features: [
-        'Email marketing campaignsSocial media managementContent generation', 'Lead nurturing automation'
-      ]
-    }, {
-      title: 'Cybersecurity Protection',
-      description: 'Comprehensive security for your business data', icon: <Shield className="w-8 h-8" />,
-      features: [
-        'Data encryptionRegular security auditsBackup and recovery', 'Employee training'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
+  'Backup and recovery', 'Employee training'      ]
     }
   ]
 
   const benefits = [
     {
-<<<<<<< HEAD
       icon: <DollarSign className="w-6 h-6" />, title:,
   Cost Effective', '
       description: 'Reduce operational costs by up to 40% with our efficient solutions'
@@ -91,27 +57,11 @@ const SmallBusiness: NextPage = () => {
     }, {
       icon: <Users className="w-6 h-6" />,
       title:, Dedicated Support','
-      description: 'Personal support team for your business needs'
-=======
-      icon: <DollarSign className="w-6 h-6" />, title: 'Cost Effective',
-      description: 'Reduce operational costs by up to 40% with our efficient solutions'
-    }, {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Quick Implementation', description: 'Get up and running in weeks, not months'
-    }, {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Scalable Growth', description: 'Solutions that grow with your business'
-    },
-    {
-      icon: <Users className="w-6 h-6" />, title: 'Dedicated Support',
-      description: 'Personal support team for your business needs'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
+      description: 'Personal support team for your business needs'    }
   ]
 
   const pricing = [
     {
-<<<<<<< HEAD
       name:, Starter','
       price: '$299, '
       period:,
@@ -143,29 +93,7 @@ const SmallBusiness: NextPage = () => {
   'Unlimited users,'
   'Full feature access', 'Dedicated account manager',
   '24/7 phone support', 'Custom development',
-  'Advanced security features'
-=======
-      name: 'Starter', price: '$299',
-      period: '/month', description: 'Perfect for small businesses just getting started',
-      features: [
-        'Up to 5 usersBasic CRM functionalityEmail support', 'Standard security features',
-        'Monthly reporting'
-      ]
-    }, {
-      name: 'Growth',
-      price: '$599', period: '/month',
-      description: 'Ideal for growing small businesses', features: [
-        'Up to 15 usersAdvanced CRM featuresAI customer support',
-        'Priority supportAdvanced analyticsCustom integrations'
-      ]
-    }, {
-      name: 'Professional',
-      price: '$999', period: '/month',
-      description: 'Complete solution for established small businesses', features: [
-        'Unlimited usersFull feature accessDedicated account manager',
-        '24/7 phone supportCustom developmentAdvanced security features'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
+  'Advanced security features'      ]
     }
   ];
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/services/ai-email-responder.tsx
+:src.disabled/pages/services/ai-email-responder.tsx
 import React from
   'react';
 
@@ -27,7 +27,6 @@ const AIEmailResponder: React.FC = () => {
         <a href="https://www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
       </div>
     </div>
-=======
 import React from 'react';
 ;
 const AIEmailResponder: React.FC = () => {;
@@ -55,7 +54,6 @@ const AIEmailResponder: React.FC = () => {;
         <a href="https://www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>;
       </div>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-email-responder.tsx
   );
 };
 ;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props { children: ReactNode;
@@ -58,5 +57,3 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-=======
->>>>>>> pr-10728

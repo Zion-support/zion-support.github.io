@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/services/ai-seo-optimizer.tsx
+:src.disabled/pages/services/ai-seo-optimizer.tsx
 import React from
   'react';
 
@@ -26,7 +26,6 @@ const AISeoOptimizer: React.FC = () => {
         <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO guide</a>
       </div>
     </div>
-=======
 import React from 'react';
 ;
 const AISeoOptimizer: React.FC = () => {;
@@ -53,7 +52,6 @@ const AISeoOptimizer: React.FC = () => {;
         <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO guide</a>;
       </div>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-seo-optimizer.tsx
   );
 };
 ;

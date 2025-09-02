@@ -14,14 +14,7 @@ import {}
 const ITServices = () => {}
   return()
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"{/* Hero Section */}""
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"{/* Hero Section */}""      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center">""
             <div className="flex justify-center mb-6">""
@@ -47,33 +40,7 @@ const ITServices = () => {}
               </Link>"
               <Link""
                 to="/case-studies""
-<<<<<<< HEAD
-                className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-=======
-                className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
-              </div>
-            </div>""
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services;
-            </h1>""
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions that keep your business running;
-              smoothly. From infrastructure management to cybersecurity, we;
-              provide end-to-end IT support for modern enterprises.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link""
-                to="/contact""
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
-              >
-                Get IT Support;
-              </Link>
-              <Link""
-                to="/case-studies""
-                className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg""
-              >
->>>>>>> pr-10728
-                View Success Stories;
+                className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">                View Success Stories;
               </Link>
             </div>
           </div>
@@ -87,21 +54,7 @@ const ITServices = () => {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
             <div>""
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-<<<<<<< HEAD
-                Complete IT Infrastructure Solutions"</h2>""
-=======
-                Complete IT Infrastructure Solutions"
-
-      {/* Service Overview */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>""
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Complete IT Infrastructure Solutions;
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-lg text-gray-300 mb-6">
+                Complete IT Infrastructure Solutions"</h2>""              <p className="text-lg text-gray-300 mb-6">
                 Zion Tech Group delivers enterprise-grade IT services designed;
                 to optimize your technology infrastructure, enhance security,
                 and drive operational efficiency. Our team of certified;
@@ -112,19 +65,7 @@ const ITServices = () => {}
               <p className="text-lg text-gray-300 mb-6">
                 Whether you need ongoing IT support, infrastructure upgrades, or
                 strategic technology consulting, we provide scalable solutions
-<<<<<<< HEAD
-                that grow with your business."</p>""
-=======
-                that grow with your business."
-                secure, and performing at peak levels.
-              </p>""
-              <p className="text-lg text-gray-300 mb-6">
-                Whether you need ongoing IT support, infrastructure upgrades, or;
-                strategic technology consulting, we provide scalable solutions;
-                that grow with your business.
-              </p>""
->>>>>>> pr-10728
-              <div className="grid grid-cols-2 gap-4">""
+                that grow with your business."</p>""              <div className="grid grid-cols-2 gap-4">""
                 <div className="flex items-center space-x-2">""
                   <div className="w-3 h-3 bg-blue-400 rounded-full"></div>""
 :pages.disabled/pages/services/ITServices.jsx
@@ -136,34 +77,12 @@ const ITServices = () => {}
                 </div>""
                 <div className="flex items-center space-x-2">""
                   <div className="w-3 h-3 bg-purple-400 rounded-full"></div>""
-<<<<<<< HEAD
-                  <span className="text-gray-300">Cloud Solutions</span>"</div>""
-=======
-                  <span className="text-gray-300">Cloud Solutions</span>"
-                  <span className="text-gray-300">24/7 Support</span>
-                </div>""
-                <div className="flex items-center space-x-2">""
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>""
-                  <span className="text-gray-300">Proactive Monitoring</span>
-                </div>""
-                <div className="flex items-center space-x-2">""
-                  <div className="w-3 h-3 bg-purple-400 rounded-full"></div>""
-                  <span className="text-gray-300">Cloud Solutions</span>
-                </div>""
->>>>>>> pr-10728
-                <div className="flex items-center space-x-2">""
+                  <span className="text-gray-300">Cloud Solutions</span>"</div>""                <div className="flex items-center space-x-2">""
                   <div className="w-3 h-3 bg-orange-400 rounded-full"></div>""
                   <span className="text-gray-300">Cybersecurity</span>
                 </div>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-              </div>"</div>""
-=======
-              </div>"
-              </div>
-            </div>""
->>>>>>> pr-10728
-            <div className="relative">""
+              </div>"</div>""            <div className="relative">""
               <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-8 rounded-2xl border border-blue-500/30">""
                 <div className="space-y-4">""
                   <div className="flex items-center space-x-3">""
@@ -193,38 +112,7 @@ const ITServices = () => {}
                   </div>""
                   <div className="flex items-center space-x-3">""
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">""
-<<<<<<< HEAD
-                      <WrenchScrewdriverIcon className="h-5 w-5 text-white" />"</div>""
-=======
-                      <WrenchScrewdriverIcon className="h-5 w-5 text-white" />"
-                      <ServerIcon className="h-5 w-5 text-white" />
-                    </div>""
-                    <span className="text-lg font-semibold">
-                      Infrastructure Management;
-                    </span>
-                  </div>""
-                  <div className="flex items-center space-x-3">""
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">""
-                      <ShieldCheckIcon className="h-5 w-5 text-white" />
-                    </div>""
-                    <span className="text-lg font-semibold">
-                      Security & Compliance;
-                    </span>
-                  </div>""
-                  <div className="flex items-center space-x-3">""
-                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">""
-                      <CloudIcon className="h-5 w-5 text-white" />
-                    </div>""
-                    <span className="text-lg font-semibold">
-                      Cloud Services;
-                    </span>
-                  </div>""
-                  <div className="flex items-center space-x-3">""
-                    <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">""
-                      <WrenchScrewdriverIcon className="h-5 w-5 text-white" />
-                    </div>""
->>>>>>> pr-10728
-                    <span className="text-lg font-semibold">
+                      <WrenchScrewdriverIcon className="h-5 w-5 text-white" />"</div>""                    <span className="text-lg font-semibold">
                       Technical Support;
                     </span>
                   </div>
@@ -235,25 +123,11 @@ const ITServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-"{/* Core Services */}""
-=======
-"
-
-      {/* Core Services */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+"{/* Core Services */}""      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-            Core IT Services"</h2>""
-=======
-            Core IT Services"
-            Core IT Services;
-          </h2>""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+            Core IT Services"</h2>""          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/ITServices.jsx
@@ -264,21 +138,7 @@ const ITServices = () => {}
               </h3>""
               <p className="text-gray-300 mb-4">
                 Comprehensive management of your IT infrastructure including
-<<<<<<< HEAD
-                servers, networks, storage, and data centers."</p>""
-=======
-                servers, networks, storage, and data centers."
-                <ServerIcon className="h-8 w-8 text-blue-400" />
-              </div>""
-              <h3 className="text-xl font-semibold mb-3">
-                Infrastructure Management;
-              </h3>""
-              <p className="text-gray-300 mb-4">
-                Comprehensive management of your IT infrastructure including;
-                servers, networks, storage, and data centers.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-sm text-gray-300">
+                servers, networks, storage, and data centers."</p>""              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Server administration & maintenance</li>
                 <li>• Network design & optimization</li>
                 <li>• Storage management & backup</li>
@@ -294,23 +154,7 @@ const ITServices = () => {}
               <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>""
               <p className="text-gray-300 mb-4">
                 Advanced security solutions to protect your business from cyber
-<<<<<<< HEAD
-                threats and ensure compliance with industry standards."</p>""
-=======
-                threats and ensure compliance with industry standards."
-            </div>
-""
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
-              <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">""
-                <ShieldCheckIcon className="h-8 w-8 text-green-400" />
-              </div>""
-              <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>""
-              <p className="text-gray-300 mb-4">
-                Advanced security solutions to protect your business from cyber;
-                threats and ensure compliance with industry standards.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-sm text-gray-300">
+                threats and ensure compliance with industry standards."</p>""              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Threat detection & prevention</li>
                 <li>• Security audits & assessments</li>
                 <li>• Compliance management</li>
@@ -326,23 +170,7 @@ const ITServices = () => {}
               <h3 className="text-xl font-semibold mb-3">Cloud Services</h3>""
               <p className="text-gray-300 mb-4">
                 Strategic cloud solutions to modernize your infrastructure and
-<<<<<<< HEAD
-                improve scalability and cost efficiency."</p>""
-=======
-                improve scalability and cost efficiency."
-            </div>
-""
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
-              <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">""
-                <CloudIcon className="h-8 w-8 text-purple-400" />
-              </div>""
-              <h3 className="text-xl font-semibold mb-3">Cloud Services</h3>""
-              <p className="text-gray-300 mb-4">
-                Strategic cloud solutions to modernize your infrastructure and;
-                improve scalability and cost efficiency.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-sm text-gray-300">
+                improve scalability and cost efficiency."</p>""              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Cloud migration & strategy</li>
                 <li>• Multi-cloud management</li>
                 <li>• Cloud security & compliance</li>
@@ -358,23 +186,7 @@ const ITServices = () => {}
               <h3 className="text-xl font-semibold mb-3">Technical Support</h3>""
               <p className="text-gray-300 mb-4">
                 Round-the-clock technical support to resolve issues quickly and
-<<<<<<< HEAD
-                keep your systems running smoothly."</p>""
-=======
-                keep your systems running smoothly."
-            </div>
-""
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
-              <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">""
-                <WrenchScrewdriverIcon className="h-8 w-8 text-orange-400" />
-              </div>""
-              <h3 className="text-xl font-semibold mb-3">Technical Support</h3>""
-              <p className="text-gray-300 mb-4">
-                Round-the-clock technical support to resolve issues quickly and;
-                keep your systems running smoothly.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-sm text-gray-300">
+                keep your systems running smoothly."</p>""              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• 24/7 help desk support</li>
                 <li>• Remote & on-site assistance</li>
                 <li>• System troubleshooting</li>
@@ -392,25 +204,7 @@ const ITServices = () => {}
               </h3>""
               <p className="text-gray-300 mb-4">
                 Expert administration of your critical systems including user
-<<<<<<< HEAD
-                management, updates, and performance optimization."</p>""
-=======
-                management, updates, and performance optimization."
-            </div>
-""
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
-              <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">""
-                <CogIcon className="h-8 w-8 text-cyan-400" />
-              </div>""
-              <h3 className="text-xl font-semibold mb-3">
-                System Administration;
-              </h3>""
-              <p className="text-gray-300 mb-4">
-                Expert administration of your critical systems including user;
-                management, updates, and performance optimization.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-sm text-gray-300">
+                management, updates, and performance optimization."</p>""              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• User & access management</li>
                 <li>• System updates & patches</li>
                 <li>• Performance monitoring</li>
@@ -426,23 +220,7 @@ const ITServices = () => {}
               <h3 className="text-xl font-semibold mb-3">Desktop Support</h3>""
               <p className="text-gray-300 mb-4">
                 Comprehensive desktop and end-user support to ensure
-<<<<<<< HEAD
-                productivity across your organization."</p>""
-=======
-                productivity across your organization."
-            </div>
-""
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
-              <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">""
-                <ComputerDesktopIcon className="h-8 w-8 text-pink-400" />
-              </div>""
-              <h3 className="text-xl font-semibold mb-3">Desktop Support</h3>""
-              <p className="text-gray-300 mb-4">
-                Comprehensive desktop and end-user support to ensure;
-                productivity across your organization.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-sm text-gray-300">
+                productivity across your organization."</p>""              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Hardware & software support</li>
                 <li>• Device management</li>
                 <li>• Software deployment</li>
@@ -453,25 +231,11 @@ const ITServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-"{/* Specialized Solutions */}""
-=======
-"
-
-      {/* Specialized Solutions */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
+"{/* Specialized Solutions */}""      <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-            Specialized IT Solutions"</h2>""
-=======
-            Specialized IT Solutions"
-            Specialized IT Solutions;
-          </h2>""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
+            Specialized IT Solutions"</h2>""          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">""
               <h3 className="text-2xl font-semibold mb-4 text-blue-400">
 :pages.disabled/pages/services/ITServices.jsx
@@ -480,19 +244,7 @@ const ITServices = () => {}
               <p className="text-gray-300 mb-6">
                 Scalable IT solutions designed for large enterprises with
                 complex infrastructure needs. Our enterprise-grade solutions
-<<<<<<< HEAD
-                ensure reliability, security, and performance at scale."</p>""
-=======
-                ensure reliability, security, and performance at scale."
-                Enterprise IT;
-              </h3>""
-              <p className="text-gray-300 mb-6">
-                Scalable IT solutions designed for large enterprises with;
-                complex infrastructure needs. Our enterprise-grade solutions;
-                ensure reliability, security, and performance at scale.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-3 text-gray-300">""
+                ensure reliability, security, and performance at scale."</p>""              <ul className="space-y-3 text-gray-300">""
                 <li className="flex items-start space-x-3">""
                   <span className="text-blue-400 mt-1">•</span>
 :pages.disabled/pages/services/ITServices.jsx
@@ -504,22 +256,7 @@ const ITServices = () => {}
                 </li>""
                 <li className="flex items-start space-x-3">""
                   <span className="text-blue-400 mt-1">•</span>
-<<<<<<< HEAD
-                  <span>Disaster recovery planning</span>"</li>""
-=======
-                  <span>Disaster recovery planning</span>"
-                  <span>High-availability infrastructure design</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-blue-400 mt-1">•</span>
-                  <span>Enterprise security frameworks</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-blue-400 mt-1">•</span>
-                  <span>Disaster recovery planning</span>
-                </li>""
->>>>>>> pr-10728
-                <li className="flex items-start space-x-3">""
+                  <span>Disaster recovery planning</span>"</li>""                <li className="flex items-start space-x-3">""
                   <span className="text-blue-400 mt-1">•</span>
                   <span>Compliance & governance</span>
                 </li>
@@ -534,23 +271,7 @@ const ITServices = () => {}
               <p className="text-gray-300 mb-6">
                 Sustainable IT solutions that reduce environmental impact while
                 improving efficiency and reducing costs. Our green IT
-<<<<<<< HEAD
-                initiatives help businesses meet sustainability goals."</p>""
-=======
-                initiatives help businesses meet sustainability goals."
-            </div>
-""
-            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">""
-              <h3 className="text-2xl font-semibold mb-4 text-green-400">
-                Green IT;
-              </h3>""
-              <p className="text-gray-300 mb-6">
-                Sustainable IT solutions that reduce environmental impact while;
-                improving efficiency and reducing costs. Our green IT;
-                initiatives help businesses meet sustainability goals.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-3 text-gray-300">""
+                initiatives help businesses meet sustainability goals."</p>""              <ul className="space-y-3 text-gray-300">""
                 <li className="flex items-start space-x-3">""
                   <span className="text-green-400 mt-1">•</span>
 :pages.disabled/pages/services/ITServices.jsx
@@ -562,22 +283,7 @@ const ITServices = () => {}
                 </li>""
                 <li className="flex items-start space-x-3">""
                   <span className="text-green-400 mt-1">•</span>
-<<<<<<< HEAD
-                  <span>Renewable energy integration</span>"</li>""
-=======
-                  <span>Renewable energy integration</span>"
-                  <span>Energy-efficient infrastructure</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-green-400 mt-1">•</span>
-                  <span>Virtualization & consolidation</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-green-400 mt-1">•</span>
-                  <span>Renewable energy integration</span>
-                </li>""
->>>>>>> pr-10728
-                <li className="flex items-start space-x-3">""
+                  <span>Renewable energy integration</span>"</li>""                <li className="flex items-start space-x-3">""
                   <span className="text-green-400 mt-1">•</span>
                   <span>Sustainability reporting</span>
                 </li>
@@ -592,23 +298,7 @@ const ITServices = () => {}
               <p className="text-gray-300 mb-6">
                 Internet of Things solutions that connect devices and systems to
                 create intelligent, automated environments. Our IoT expertise
-<<<<<<< HEAD
-                drives innovation and operational efficiency."</p>""
-=======
-                drives innovation and operational efficiency."
-            </div>
-""
-            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">""
-              <h3 className="text-2xl font-semibold mb-4 text-purple-400">
-                IoT Services;
-              </h3>""
-              <p className="text-gray-300 mb-6">
-                Internet of Things solutions that connect devices and systems to;
-                create intelligent, automated environments. Our IoT expertise;
-                drives innovation and operational efficiency.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-3 text-gray-300">""
+                drives innovation and operational efficiency."</p>""              <ul className="space-y-3 text-gray-300">""
                 <li className="flex items-start space-x-3">""
                   <span className="text-purple-400 mt-1">•</span>
 :pages.disabled/pages/services/ITServices.jsx
@@ -620,22 +310,7 @@ const ITServices = () => {}
                 </li>""
                 <li className="flex items-start space-x-3">""
                   <span className="text-purple-400 mt-1">•</span>
-<<<<<<< HEAD
-                  <span>Automation & control systems</span>"</li>""
-=======
-                  <span>Automation & control systems</span>"
-                  <span>IoT device management</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-purple-400 mt-1">•</span>
-                  <span>Data collection & analytics</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-purple-400 mt-1">•</span>
-                  <span>Automation & control systems</span>
-                </li>""
->>>>>>> pr-10728
-                <li className="flex items-start space-x-3">""
+                  <span>Automation & control systems</span>"</li>""                <li className="flex items-start space-x-3">""
                   <span className="text-purple-400 mt-1">•</span>
                   <span>Security & privacy</span>
                 </li>
@@ -645,29 +320,11 @@ const ITServices = () => {}
 ""
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">""
               <h3 className="text-2xl font-semibold mb-4 text-orange-400">
-<<<<<<< HEAD
-                Mobile Services"</h3>""
-=======
-                Mobile Services"
-            </div>
-""
-            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">""
-              <h3 className="text-2xl font-semibold mb-4 text-orange-400">
-                Mobile Services;
-              </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300 mb-6">
+                Mobile Services"</h3>""              <p className="text-gray-300 mb-6">
                 Mobile-first IT solutions that enable your workforce to be;
                 productive where, time. Our mobile services ensure secure,
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-                seamless access to business resources."</p>""
-=======
-                seamless access to business resources."
-                seamless access to business resources.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-3 text-gray-300">""
+                seamless access to business resources."</p>""              <ul className="space-y-3 text-gray-300">""
                 <li className="flex items-start space-x-3">""
                   <span className="text-orange-400 mt-1">•</span>
 :pages.disabled/pages/services/ITServices.jsx
@@ -679,22 +336,7 @@ const ITServices = () => {}
                 </li>""
                 <li className="flex items-start space-x-3">""
                   <span className="text-orange-400 mt-1">•</span>
-<<<<<<< HEAD
-                  <span>Secure mobile access</span>"</li>""
-=======
-                  <span>Secure mobile access</span>"
-                  <span>Mobile device management</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-orange-400 mt-1">•</span>
-                  <span>Mobile application development</span>
-                </li>""
-                <li className="flex items-start space-x-3">""
-                  <span className="text-orange-400 mt-1">•</span>
-                  <span>Secure mobile access</span>
-                </li>""
->>>>>>> pr-10728
-                <li className="flex items-start space-x-3">""
+                  <span>Secure mobile access</span>"</li>""                <li className="flex items-start space-x-3">""
                   <span className="text-orange-400 mt-1">•</span>
                   <span>Mobile security policies</span>
                 </li>
@@ -704,36 +346,15 @@ const ITServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-"{/* Service Process */}""
-=======
-"
-
-      {/* Service Process */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+"{/* Service Process */}""      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-            Our Service Process"</h2>""
-=======
-            Our Service Process"
-            Our Service Process;
-          </h2>""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""
+            Our Service Process"</h2>""          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""
             <div className="text-center">""
               <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-                <span className="text-2xl font-bold text-blue-400">1</span>"</div>""
-=======
-                <span className="text-2xl font-bold text-blue-400">1</span>"
-                <span className="text-2xl font-bold text-blue-400">1</span>
-              </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold mb-3">Assessment</h3>""
+                <span className="text-2xl font-bold text-blue-400">1</span>"</div>""              <h3 className="text-xl font-semibold mb-3">Assessment</h3>""
               <p className="text-gray-300">
                 Comprehensive evaluation of your current IT infrastructure,
                 identifying areas for improvement and optimization;
@@ -744,18 +365,7 @@ const ITServices = () => {}
 ""
             <div className="text-center">""
               <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                <span className="text-2xl font-bold text-green-400">2</span>"</div>""
-=======
-                <span className="text-2xl font-bold text-green-400">2</span>"
-            </div>
-""
-            <div className="text-center">""
-              <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
-                <span className="text-2xl font-bold text-green-400">2</span>
-              </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold mb-3">Strategy</h3>""
+                <span className="text-2xl font-bold text-green-400">2</span>"</div>""              <h3 className="text-xl font-semibold mb-3">Strategy</h3>""
               <p className="text-gray-300">
                 Development of a customized IT strategy aligned with your;
                 business objectives, including technology roadmap and;
@@ -766,18 +376,7 @@ const ITServices = () => {}
 ""
             <div className="text-center">""
               <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                <span className="text-2xl font-bold text-purple-400">3</span>"</div>""
-=======
-                <span className="text-2xl font-bold text-purple-400">3</span>"
-            </div>
-""
-            <div className="text-center">""
-              <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
-                <span className="text-2xl font-bold text-purple-400">3</span>
-              </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold mb-3">Implementation</h3>""
+                <span className="text-2xl font-bold text-purple-400">3</span>"</div>""              <h3 className="text-xl font-semibold mb-3">Implementation</h3>""
               <p className="text-gray-300">
                 Expert execution of your IT strategy with minimal disruption,
                 ensuring smooth transitions and optimal system performance.
@@ -787,18 +386,7 @@ const ITServices = () => {}
 ""
             <div className="text-center">""
               <div className="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                <span className="text-2xl font-bold text-orange-400">4</span>"</div>""
-=======
-                <span className="text-2xl font-bold text-orange-400">4</span>"
-            </div>
-""
-            <div className="text-center">""
-              <div className="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
-                <span className="text-2xl font-bold text-orange-400">4</span>
-              </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold mb-3">Support</h3>""
+                <span className="text-2xl font-bold text-orange-400">4</span>"</div>""              <h3 className="text-xl font-semibold mb-3">Support</h3>""
               <p className="text-gray-300">
                 Ongoing support and maintenance to ensure your IT systems;
                 continue to perform optimally and adapt to changing business;
@@ -809,25 +397,11 @@ const ITServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-"{/* Why Choose Us */}""
-=======
-"
-
-      {/* Why Choose Us */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
+"{/* Why Choose Us */}""      <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-            Why Choose Zion Tech Group for IT Services?"</h2>""
-=======
-            Why Choose Zion Tech Group for IT Services?"
-            Why Choose Zion Tech Group for IT Services?
-          </h2>""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
+            Why Choose Zion Tech Group for IT Services?"</h2>""          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             <div className="space-y-6">""
               <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
@@ -836,31 +410,14 @@ const ITServices = () => {}
                 </div>"
                 <div>""
                   <h3 className="text-xl font-semibold mb-2">
-<<<<<<< HEAD
-                    Certified Expertise"</h3>""
-=======
-                    Certified Expertise"
-                </div>
-                <div>""
-                  <h3 className="text-xl font-semibold mb-2">
-                    Certified Expertise;
-                  </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
+                    Certified Expertise"</h3>""                  <p className="text-gray-300">
                     Our team holds industry-leading certifications and stays;
                     current with the latest technology trends and best;
                     practices.
                   </p>
                 </div>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-              </div>"""
-=======
-              </div>"
-              </div>
-""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
+              </div>"""              <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/ITServices.jsx
@@ -875,67 +432,26 @@ const ITServices = () => {}
                     proactive monitoring, maintenance, and strategic planning.
                   </p>
                 </div>
-<<<<<<< HEAD
-              </div>"""
-=======
-              </div>"
-                </div>
-                <div>""
-                  <h3 className="text-xl font-semibold mb-2">
-                    Proactive Approach;
-                  </h3>""
-                  <p className="text-gray-300">
-                    We don't just fix problems - we prevent them through;
-                    proactive monitoring, maintenance, and strategic planning.
-                  </p>
-                </div>
-              </div>
-""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
+              </div>"""              <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/ITServices.jsx
                 </div>"
                 <div>""
                   <h3 className="text-xl font-semibold mb-2">
-<<<<<<< HEAD
-                    Scalable Solutions"</h3>""
-=======
-                    Scalable Solutions"
-                </div>
-                <div>""
-                  <h3 className="text-xl font-semibold mb-2">
-                    Scalable Solutions;
-                  </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
+                    Scalable Solutions"</h3>""                  <p className="text-gray-300">
                     Our IT services grow with your business, providing flexible;
                     solutions that adapt to changing needs and requirements.
                   </p>
                 </div>
               </div>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-            </div>"""
-=======
-            </div>"
-            </div>
-""
->>>>>>> pr-10728
-            <div className="space-y-6">""
+            </div>"""            <div className="space-y-6">""
               <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-                </div>"<div>""
-=======
-                </div>"
-                </div>
-                <div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>""
+                </div>"<div>""                  <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>""
                   <p className="text-gray-300">
                     Round-the-clock support ensures your IT systems are always;
                     running smoothly, with rapid response times for critical;
@@ -943,61 +459,27 @@ const ITServices = () => {}
                   </p>
                 </div>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-              </div>"""
-=======
-              </div>"
-              </div>
-""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
+              </div>"""              <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/ITServices.jsx
                 </div>"
                 <div>""
                   <h3 className="text-xl font-semibold mb-2">
-<<<<<<< HEAD
-                    Cost Optimization"</h3>""
-=======
-                    Cost Optimization"
-                </div>
-                <div>""
-                  <h3 className="text-xl font-semibold mb-2">
-                    Cost Optimization;
-                  </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
+                    Cost Optimization"</h3>""                  <p className="text-gray-300">
                     Strategic IT planning and implementation that reduces costs;
                     while improving efficiency and system reliability.
                   </p>
                 </div>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-              </div>"""
-=======
-              </div>"
-              </div>
-""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
+              </div>"""              <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/ITServices.jsx
                 </div>"
                 <div>""
                   <h3 className="text-xl font-semibold mb-2">
-<<<<<<< HEAD
-                    Business Alignment"</h3>""
-=======
-                    Business Alignment"
-                </div>
-                <div>""
-                  <h3 className="text-xl font-semibold mb-2">
-                    Business Alignment;
-                  </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
+                    Business Alignment"</h3>""                  <p className="text-gray-300">
                     IT solutions that are directly aligned with your business;
                     objectives, driving growth and competitive advantage.
                   </p>
@@ -1008,14 +490,7 @@ const ITServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/ITServices.jsx
-<<<<<<< HEAD
-"{/* CTA Section */}""
-=======
-"
-
-      {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">""
+"{/* CTA Section */}""      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
 :pages.disabled/pages/services/ITServices.jsx
@@ -1034,29 +509,7 @@ const ITServices = () => {}
             </Link>"
             <Link""
               to="/pricing""
-<<<<<<< HEAD
-              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
-=======
-              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
-            Ready to Optimize Your IT Infrastructure?
-          </h2>""
-          <p className="text-xl text-gray-300 mb-8">
-            Let Zion Tech Group transform your IT operations with comprehensive,
-            reliable, and cost-effective solutions that drive business success.
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link""
-              to="/contact""
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
-            >
-              Get IT Support Today;
-            </Link>
-            <Link""
-              to="/pricing""
-              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg""
-            >
->>>>>>> pr-10728
-              View Pricing Plans;
+              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">              View Pricing Plans;
             </Link>
           </div>
         </div>
@@ -1067,10 +520,4 @@ const ITServices = () => {}
 export { ITServices };
 :pages.disabled/pages/services/ITServices.jsx
 export default ITServices;'"
-<<<<<<< HEAD
   '"'"
-=======
-'"'"
-export default ITServices;
-'""
->>>>>>> pr-10728

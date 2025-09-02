@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/white-papers.tsx
+:src.disabled/pages/white-papers.tsx
 import React from
   'react';
-=======
 import React from 'react';
 export default React.memo(function WhitePapers () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/white-papers.tsx
 
 ;
   return (;

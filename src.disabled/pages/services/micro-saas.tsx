@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/services/micro-saas.tsx
+:src.disabled/pages/services/micro-saas.tsx
 import React from
   'react';
 
@@ -13,7 +13,6 @@ const MicroSaaS: React.FC = () => {
         <li>Interview Assessment AI</li>
       </ul>
     </div>
-=======
 import React from 'react';
 ;
 const MicroSaaS: React.FC = () => {;
@@ -27,7 +26,6 @@ const MicroSaaS: React.FC = () => {;
         <li>Interview Assessment AI</li>;
       </ul>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/micro-saas.tsx
   );
 };
 ;

@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 const fs = require(,
   fs');
 const path = require(
-  'path');
-=======
-const fs = require('fs')
-const path = require('path')
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-function toCamelCase(str) {
+  'path');function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
       const numberWords = {
-<<<<<<< HEAD
   '5': 'Five,
 ,
   4': 'Four,
@@ -24,21 +17,9 @@ function toCamelCase(str) {
 ,
   0': 'Zero
       
-=======
-  '5': 'Five',4': 'Four',3': 'Three',2': 'Two',1': 'One',
-          '0': 'Zero'      
->>>>>>> pr-10728
-
-<<<<<<< HEAD
 };
       return numberWords[match] || match}),
-  0': 'Zero
-=======
-}
-      return numberWords[match] || match})
-  '0': 'Zero'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      
+  0': 'Zero      
 
 
 
@@ -129,16 +110,10 @@ function fixedCount = 0;
   
   return fixedCount}
 // Start fixing files
-<<<<<<< HEAD
 // // // // // // // console.log(
   'Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles(
-  './pages');
-=======
-// // // // // // // console.log('Fixing invalid variable names in TypeScript files...')
-const fixedCount = findAndFixFiles('./pages');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-// // // // // // // console.log(`Fixed ${fixedCount} files.`);
+  './pages');// // // // // // // console.log(`Fixed ${fixedCount} files.`);
 console.log(`Fixed ${fixedCount} files.`);
 ;
 export { toCamelCase };

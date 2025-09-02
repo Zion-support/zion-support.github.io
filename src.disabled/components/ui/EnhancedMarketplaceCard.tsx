@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/components/ui/EnhancedMarketplaceCard.tsx
+:src.disabled/components/ui/EnhancedMarketplaceCard.tsx
 import React from 'react.ts';
 
 interface EnhancedMarketplaceCardProps extends React.PropsWithChildren<{}> {
@@ -20,5 +20,3 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   );
 };
 export default EnhancedMarketplaceCard;}
-=======
->>>>>>> pr-10728:src/components/ui/EnhancedMarketplaceCard.tsx

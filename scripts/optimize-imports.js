@@ -23,7 +23,6 @@ class ImportOptimizer {
   }
 
   async optimizeImports() {
-<<<<<<< HEAD
     console.log(
   '⚡ Optimizing imports to reduce bundle size...');
     
@@ -32,12 +31,6 @@ class ImportOptimizer {
   'components',
   'src'
     ];
-=======
-    console.log('⚡ Optimizing imports to reduce bundle size...');
-
-    const directories = ['pages', 'components', 'src'];
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {
@@ -112,14 +105,8 @@ class ImportOptimizer {
 
   optimizeLucideImports(content) {
     // Convert individual icon imports to single import
-<<<<<<< HEAD
     const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[
-  '"]lucide-react['"];?\s*/g;
-=======
-    const lucidePattern =
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    const matches = [...content.matchAll(lucidePattern)];
+  '"]lucide-react['"];?\s*/g;    const matches = [...content.matchAll(lucidePattern)];
 
     if (matches.length > 1) {
       const allIcons = new Set();
@@ -128,19 +115,12 @@ class ImportOptimizer {
   ',').map(icon => icon.trim());
         icons.forEach(icon => allIcons.add(icon));
       });
-<<<<<<< HEAD
       
       const optimizedImport = `import { ${Array.from(allIcons).join(
   ', ')} } from
   'lucide-react';\n`;
       return content.replace(lucidePattern, '
-  ').replace(/^/, optimizedImport);
-=======
-
-      const optimizedImport = `import { ${Array.from(allIcons).join(', ')} } from 'lucide-react';\n`;
-      return content.replace(lucidePattern, '').replace(/^/, optimizedImport);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    }
+  ').replace(/^/, optimizedImport);    }
 
     return content;
   }
@@ -157,14 +137,8 @@ class ImportOptimizer {
 
   optimizeRadixImports(content) {
     // Group Radix UI imports
-<<<<<<< HEAD
     const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]@radix-ui\/([^
-  '"]+)['"];?\s*/g;
-=======
-    const radixPattern =
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]@radix-ui\/([^'"]+)['"];?\s*/g;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    const matches = [...content.matchAll(radixPattern)];
+  '"]+)['"];?\s*/g;    const matches = [...content.matchAll(radixPattern)];
 
     if (matches.length > 1) {
       const groupedImports = new Map();
@@ -177,15 +151,9 @@ class ImportOptimizer {
         }
         components.forEach(comp => groupedImports.get(packageName).add(comp));
       });
-<<<<<<< HEAD
       
       let optimizedImports = '
-  ';
-=======
-
-      let optimizedImports = '';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      groupedImports.forEach((components, packageName) => {
+  ';      groupedImports.forEach((components, packageName) => {
         optimizedImports += `import { ${Array.from(components).join(',
   ')} } from '@radix-ui/${packageName}
   ';\n`;
@@ -215,7 +183,6 @@ class ImportOptimizer {
     });
 
     // Remove unused imports (simplified)
-<<<<<<< HEAD
     return lines.filter(line => {
       if (line.trim().startsWith(
   'import')) {
@@ -229,27 +196,7 @@ class ImportOptimizer {
       }
       return true;
     }).join(
-  '\n');
-=======
-    return lines
-      .filter(line => {
-        if (line.trim().startsWith('import')) {
-          const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
-          if (importMatch) {
-            const importedItems = importMatch[1]
-              .split(',')
-              .map(item => item.trim());
-            const hasUsedItems = importedItems.some(item =>
-              usedIdentifiers.has(item)
-            );
-            return hasUsedItems;
-          }
-        }
-        return true;
-      })
-      .join('\n');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  }
+  '\n');  }
 }
 
 // Run the optimizer

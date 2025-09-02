@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';
 import type { NextPage } from
@@ -9,18 +8,9 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
   'lucide-react';
 import Link from
   'next/link';
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../../components/layout/MainLayout'
-import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react'
-import Link from 'next/link'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
 const DigitalTransformation: NextPage = () => {
   const transformationServices = [
     {
-<<<<<<< HEAD
       icon: Cloud, title:,
   Cloud Migration', '
       description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.,'
@@ -66,37 +56,11 @@ const DigitalTransformation: NextPage = () => {
       benefits: [,
   Better customer satisfaction', '
   'Increased engagement',
-  'Higher retention', 'Improved loyalty']
-=======
-      icon: Cloud, title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced security', 'Better performance']
-    }, {
-      icon: Database,
-      title: 'Data Modernization', description: 'Transform your data architecture to support modern analytics and business intelligence.',
-      benefits: ['Real-time analyticsImproved data qualityBetter insights', 'Automated reporting']
-    }, {
-      icon: Users,
-      title: 'Process Automation', description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
-      benefits: ['Increased productivityReduced errorsCost savings', 'Better compliance']
-    }, {
-      icon: Zap,
-      title: 'AI Integration', description: 'Integrate artificial intelligence into your business processes for enhanced decision making.',
-      benefits: ['Predictive analyticsAutomated insightsImproved accuracy', 'Competitive advantage']
-    }, {
-      icon: Shield,
-      title: 'Security Enhancement', description: 'Implement modern security measures to protect your digital assets and ensure compliance.',
-      benefits: ['Enhanced securityCompliance assuranceRisk reduction', 'Peace of mind']
-    }, {
-      icon: Target,
-      title: 'Customer Experience', description: 'Improve customer interactions through digital channels and personalized experiences.',
-      benefits: ['Better customer satisfactionIncreased engagementHigher retention', 'Improved loyalty']
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
+  'Higher retention', 'Improved loyalty']    }
   ]
 
   const transformationStages = [
     {
-<<<<<<< HEAD
       stage: 'Assessment, '
       title:,
   Current State Analysis', '
@@ -122,21 +86,10 @@ const DigitalTransformation: NextPage = () => {
       title: 'Continuous Improvement, '
       description:,
   We monitor performance and continuously optimize your digital solutions for maximum impact.', '
-      duration: 'Ongoing'
-=======
-      stage: 'Assessment', title: 'Current State Analysis', description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'
-    }, {
-      stage: 'Strategy', title: 'Digital Strategy Development', description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'
-    }, {
-      stage: 'Implementation', title: 'Solution Implementation', description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'
-    }, {
-      stage: 'Optimization', title: 'Continuous Improvement', description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
+      duration: 'Ongoing'    }
   ]
 
   const industries = [
-<<<<<<< HEAD
     { name:, Healthcare', description: Digital health records, telemedicine, and patient management systems, '
   },
     { name: 'Finance, description:,'
@@ -158,21 +111,7 @@ const DigitalTransformation: NextPage = () => {
   Improvement in operational efficiency' }, '
     { metric: '90%, label:, '
   Customer Satisfaction', description: 'Increase in customer satisfaction scores }, { metric:,
-  75%', label: 'Time Savings, description: 'Reduction in time-to-market for new products' }
-=======
-    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
-    { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' },
-    { name: 'Manufacturing', description: 'IoT integration, predictive maintenance, and supply chain optimization' },
-    { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },
-    { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },
-    { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }
-  ]
-
-  const successMetrics = [
-    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' }, { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },
-    { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' }, { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  ];
+  75%', label: 'Time Savings, description: 'Reduction in time-to-market for new products' }  ];
 
   return (
     <MainLayout

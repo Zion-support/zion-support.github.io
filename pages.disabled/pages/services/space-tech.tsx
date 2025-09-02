@@ -34,39 +34,14 @@ export default function SpaceTechnology(...args: any[]): any {
       />
 "
       {/* Hero Section */}""
-<<<<<<< HEAD
       <section className="relative py-20 overflow-hidden">"
   '"
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20"></div>'"        <div className="absolute inset-0 bg-[url(
-  'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>"""
-=======
-      <section className="relative py-20 overflow-hidden">"'"
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20"></div>'"        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>"
-export default function SpaceTechnology(...args: any[]): any {}
-  return()
-    <div className="min-h-screen bg-slate-950 text-white">
-      <SEO""
-        title="Space Technology Services | Zion Tech Group""
-        description="Revolutionary space technology solutions including satellite systems, launch vehicles, AI-powered operations, and advanced space communications.""
-      />
-
-      {/* Hero Section */}""
-      <section className="relative py-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20"></div>'"        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
-""
->>>>>>> pr-10728
-        <div className="container-responsive relative z-10">
+  'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>"""        <div className="container-responsive relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-            animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
-            animate={{ opacity: 1, y: 0 }}"
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center max-w-4xl mx-auto""
+            animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""            className="text-center max-w-4xl mx-auto""
           >""
             <div className="flex justify-center mb-6">""
               <div className="w-20 h-20 bg-gradient-to-br from-blue-400 via-purple-500 to-cyan-400 rounded-2xl flex items-center justify-center">""
@@ -76,18 +51,7 @@ export default function SpaceTechnology(...args: any[]): any {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">
               Space Technology
-<<<<<<< HEAD
-            </h1>"""
-=======
-            </h1>"
-            </div>
-""
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">
-              Space Technology;
-            </h1>
-""
->>>>>>> pr-10728
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            </h1>"""            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Pioneering the future of space exploration with cutting-edge;
               technology, AI-powered operations, and revolutionary space;
               infrastructure solutions.
@@ -98,127 +62,52 @@ export default function SpaceTechnology(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-=======
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-            </p>
-""
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}""
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300""
-              >
->>>>>>> pr-10728
-                Explore Services;
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300">                Explore Services;
               </motion.button>
 :pages.disabled/pages/services/space-tech.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
-                className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300">
-=======
-                className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300"
-              <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}""
-                className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300""
-              >
->>>>>>> pr-10728
-                Contact Us;
+                className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300">                Contact Us;
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-"{/* Features Section */}""
-=======
-"
-
-      {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-900/50">""
+"{/* Features Section */}""      <section className="py-20 bg-slate-900/50">""
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
-            whileInView={{ opacity: 1, y: 0 }}"
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""            className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-              Revolutionary Space Solutions"</h2>""
-=======
-              Revolutionary Space Solutions"
-              Revolutionary Space Solutions;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Revolutionary Space Solutions"</h2>""            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our comprehensive space technology portfolio combines cutting-edge;
               innovation with proven expertise to deliver next-generation space;
               capabilities.
             </p>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-          </motion.div>"""
-=======
-          </motion.div>"
-          </motion.div>
-""
->>>>>>> pr-10728
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          </motion.div>"""          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div;
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-                whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
-                whileInView={{ opacity: 1, y: 0 }}"
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300""
+                whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/space-tech.tsx
                   <feature.icon className="w-8 h-8 text-blue-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
-                  {feature.title}"</h3>""
-=======
-                  {feature.title}"
-                  <feature.icon className="w-8 h-8 text-blue-400" />
-                </div>""
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>""
->>>>>>> pr-10728
-                <p className="text-slate-300 mb-4">{feature.description}</p>""
+                  {feature.title}"</h3>""                <p className="text-slate-300 mb-4">{feature.description}</p>""
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-                    <li"key={idx}""
-=======
-                    <li"
-                    <li;
-                      key={idx}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-slate-400""
+                    <li"key={idx}""                      className="flex items-center text-sm text-slate-400""
                     >""
                       <Star className="w-4 h-4 text-blue-400 mr-2"  />                      {benefit}
                     </li>
@@ -230,78 +119,34 @@ export default function SpaceTechnology(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-"{/* Applications Section */}""
-=======
-"
-
-      {/* Applications Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
+"{/* Applications Section */}""      <section className="py-20">""
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
-            whileInView={{ opacity: 1, y: 0 }}"
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""            className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-              Space Applications"</h2>""
-=======
-              Space Applications"
-              Space Applications;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Space Applications"</h2>""            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               From commercial space ventures to scientific research and defense;
               applications, our space technology solutions serve diverse mission;
               requirements.
             </p>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-          </motion.div>"""
-=======
-          </motion.div>"
-          </motion.div>
-""
->>>>>>> pr-10728
-          <div className="grid md: anygrid-cols-2 gap-8">
+          </motion.div>"""          <div className="grid md: anygrid-cols-2 gap-8">
             {applications.map((app, index) => (
               <motion.div;
                 key={app.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-                whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
-                whileInView={{ opacity: 1, x: 0 }}"
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8""
+                whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8""
               >""
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">""
 :pages.disabled/pages/services/space-tech.tsx
                   <Target className="w-6 h-6 text-blue-400 mr-3"  />                  {app.category}"
                 </h3>""
-<<<<<<< HEAD
-                <ul className="space-y-3">"{app.services.map((service, idx) => (""
-=======
-                <ul className="space-y-3">"
-                  <Target className="w-6 h-6 text-blue-400 mr-3"  />                  {app.category}
-                </h3>""
-                <ul className="space-y-3">
-                  {app.services.map((service, idx) => (""
->>>>>>> pr-10728
-                    <li key={idx} className="flex items-center text-slate-300">""
+                <ul className="space-y-3">"{app.services.map((service, idx) => (""                    <li key={idx} className="flex items-center text-slate-300">""
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {service}
                     </li>
@@ -313,63 +158,28 @@ export default function SpaceTechnology(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-"{/* Technologies Section */}""
-=======
-"
-
-      {/* Technologies Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-900/50">""
+"{/* Technologies Section */}""      <section className="py-20 bg-slate-900/50">""
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
-            whileInView={{ opacity: 1, y: 0 }}"
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""            className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-              Cutting-Edge Technologies"</h2>""
-=======
-              Cutting-Edge Technologies"
-              Cutting-Edge Technologies;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Cutting-Edge Technologies"</h2>""            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our space technology solutions leverage the latest advancements in;
               AI, quantum computing, and cybersecurity to deliver unprecedented;
               capabilities.
             </p>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-          </motion.div>"""
-=======
-          </motion.div>"
-          </motion.div>
-""
->>>>>>> pr-10728
-          <div className="grid md: anygrid-cols-2 gap-8">
+          </motion.div>"""          <div className="grid md: anygrid-cols-2 gap-8">
             {technologies.map((tech, index) => (
               <motion.div;
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-                whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
-                whileInView={{ opacity: 1, y: 0 }}"
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300""
+                whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300""
               >""
                 <div className="flex items-center mb-4">""
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mr-4">""
@@ -378,44 +188,19 @@ export default function SpaceTechnology(...args: any[]): any {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white">
                     {tech.name}
-<<<<<<< HEAD
-                  </h3>"</div>""
-=======
-                  </h3>"
-                    <tech.icon className="w-6 h-6 text-blue-400" />
-                  </div>""
-                  <h3 className="text-xl font-semibold text-white">
-                    {tech.name}
-                  </h3>
-                </div>""
->>>>>>> pr-10728
-                <p className="text-slate-300">{tech.description}</p>
+                  </h3>"</div>""                <p className="text-slate-300">{tech.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-"{/* CTA Section */}""
-=======
-"
-
-      {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
+"{/* CTA Section */}""      <section className="py-20">""
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
-            whileInView={{ opacity: 1, y: 0 }}"
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center""
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""            className="text-center""
           >""
             <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-400/30 rounded-3xl p-12">""
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -430,40 +215,13 @@ export default function SpaceTechnology(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-=======
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-                Ready to Launch Your Space Mission?
-              </h2>""
-              <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Partner with Zion Tech Group to access cutting-edge space;
-                technology solutions and turn your space ambitions into reality.
-              </p>""
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}""
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300""
-                >
->>>>>>> pr-10728
-                  Get Started;
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300">                  Get Started;
                 </motion.button>
 :pages.disabled/pages/services/space-tech.tsx
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
-                  className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300">
-=======
-                  className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300"
-                <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}""
-                  className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300""
-                >
->>>>>>> pr-10728
-                  Learn More;
+                  className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300">                  Learn More;
                 </motion.button>
               </div>
             </div>
@@ -471,14 +229,7 @@ export default function SpaceTechnology(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
-"{/* Contact Info */}""
-=======
-"
-
-      {/* Contact Info */}""
->>>>>>> pr-10728
-      <section className="py-16 bg-slate-900/50">""
+"{/* Contact Info */}""      <section className="py-16 bg-slate-900/50">""
         <div className="container-responsive">""
           <div className="text-center">""
             <h3 className="text-2xl font-semibold text-white mb-4">
@@ -487,18 +238,7 @@ export default function SpaceTechnology(...args: any[]): any {}
             </h3>""
             <p className="text-slate-300 mb-6">
               Ready to explore the final frontier? Get in touch with our space
-<<<<<<< HEAD
-              technology experts."</p>""
-=======
-              technology experts."
-              Contact Our Space Technology Team;
-            </h3>""
-            <p className="text-slate-300 mb-6">
-              Ready to explore the final frontier? Get in touch with our space;
-              technology experts.
-            </p>""
->>>>>>> pr-10728
-            <div className="flex flex-wrap justify-center gap-6 text-slate-300">""
+              technology experts."</p>""            <div className="flex flex-wrap justify-center gap-6 text-slate-300">""
               <div className="flex items-center">""
                 <Phone className="w-5 h-5 text-blue-400 mr-2"  />
 :pages.disabled/pages/services/space-tech.tsx
@@ -506,18 +246,7 @@ export default function SpaceTechnology(...args: any[]): any {}
               </div>""
               <div className="flex items-center">""
                 <Mail className="w-5 h-5 text-blue-400 mr-2"  />
-<<<<<<< HEAD
-                <span>kleber@ziontechgroup.com</span>"</div>""
-=======
-                <span>kleber@ziontechgroup.com</span>"
-                <span>+1 302 464 0950</span>
-              </div>""
-              <div className="flex items-center">""
-                <Mail className="w-5 h-5 text-blue-400 mr-2"  />
-                <span>kleber@ziontechgroup.com</span>
-              </div>""
->>>>>>> pr-10728
-              <div className="flex items-center">""
+                <span>kleber@ziontechgroup.com</span>"</div>""              <div className="flex items-center">""
                 <MapPin className="w-5 h-5 text-blue-400 mr-2"  />                <span>Middletown, DE 19709</span>
               </div>
             </div>
@@ -526,13 +255,6 @@ export default function SpaceTechnology(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/space-tech.tsx
-<<<<<<< HEAD
   )}
   '"
 '"'"
-=======
-  )}'"
-'"'"
-  )}
-'""
->>>>>>> pr-10728

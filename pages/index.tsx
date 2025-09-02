@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React from
   'react';
 import Head from
   'next/head';
-=======
-import React from 'react'
-import Head from 'next/head';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
 export default function Home() {
   return (
     <>

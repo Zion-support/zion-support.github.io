@@ -27,22 +27,13 @@ const bundleStats = {
   44.8 kB',
   main: '34.4 kB,
   pages: {
-<<<<<<< HEAD
     home:,
   36.1 kB',
     about: '4.52 kB,
     contact:,
   4.15 kB',
     services: '3.67 kB
-  }
-=======
-    home: '36.1 kB',
-    about: '4.52 kB',
-    contact: '4.15 kB',
-    services: '3.67 kB',
-  },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-};
+  }};
 
 console.log(
   'Bundle Statistics:');
@@ -55,7 +46,6 @@ console.log(,
 // 2. Performance Recommendations
 const recommendations = [
   {
-<<<<<<< HEAD
     category: 'Code Splitting,
     priority:,
   High
@@ -104,39 +94,7 @@ const recommendations = [
     impact:,
   Improve accessibility score to 95+
   '
-  }
-=======
-    category: 'Code Splitting',
-    priority: 'High',
-    description: 'Implement dynamic imports for service pages',
-    impact: 'Reduce initial bundle size by 20-30%',
-  },
-  {
-    category: 'Image Optimization',
-    priority: 'High',
-    description: 'Add next/image optimization for all images',
-    impact: 'Improve LCP by 15-25%',
-  },
-  {
-    category: 'Caching',
-    priority: 'Medium',
-    description: 'Implement service worker for offline support',
-    impact: 'Improve repeat visit performance by 40%',
-  },
-  {
-    category: 'SEO',
-    priority: 'High',
-    description: 'Add structured data and meta tags',
-    impact: 'Improve search rankings and social sharing',
-  },
-  {
-    category: 'Accessibility',
-    priority: 'Medium',
-    description: 'Add ARIA labels and keyboard navigation',
-    impact: 'Improve accessibility score to 95+',
-  },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-];
+  }];
 
 console.log('🎯 Performance Recommendations: );
 recommendations.forEach((rec, index) => {
@@ -150,7 +108,6 @@ const performanceReport = {
   timestamp: new Date().toISOString(),
   bundleStats,
   recommendations,
-<<<<<<< HEAD
   optimizations: [,
   ✅ Fixed critical syntax errors
   ',
@@ -175,25 +132,7 @@ const performanceReport = {
     lighthouseScore: '90+ (estimated),
     accessibility: 'Improved
   '
-  }
-=======
-  optimizations: [
-    '✅ Fixed critical syntax errors',
-    '✅ Added modern animations with Framer Motion',
-    '✅ Implemented error boundaries',
-    '✅ Enhanced SEO with structured data',
-    '✅ Added loading states and error handling',
-    '✅ Improved mobile responsiveness',
-    '✅ Added scroll effects and modern UI patterns',
-  ],
-  metrics: {
-    buildTime: '< 30s',
-    bundleSize: 'Optimized',
-    lighthouseScore: '90+ (estimated)',
-    accessibility: 'Improved',
-  },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-};
+  }};
 
 // Save report
 const reportPath = path.join(__dirname, '..

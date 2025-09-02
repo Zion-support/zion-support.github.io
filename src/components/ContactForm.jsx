@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; export default ContactForm; const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: " }) ; const [isSubmitting, setIsSubmitting] = useState (false) ; const [submitStatus, setSubmitStatus] = useState ("idle") ; const handleInputChange = (e) => { const { name, value } = e.target; setFormData (prev => ({ ...prev, [name]: value }) ) }; const handleSubmit = async (e) => { e.preventDefault () ; setIsSubmitting (true) ; setSubmitStatus ("idle") ; try {"""";
-=======
-import React from 'react'; export default ContactForm; const ContactForm = () => { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: " }); const [isSubmitting, setIsSubmitting] = useState(false); const [submitStatus, setSubmitStatus] = useState("idle"); const handleInputChange = (e) => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value }) ) }; const handleSubmit = async(e) => { e.preventDefault(); setIsSubmitting(true); setSubmitStatus("idle"); try {
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import React, { useState } from 'react';
+import React from 'react'; export default ContactForm; const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: " }) ; const [isSubmitting, setIsSubmitting] = useState (false) ; const [submitStatus, setSubmitStatus] = useState ("idle") ; const handleInputChange = (e) => { const { name, value } = e.target; setFormData (prev => ({ ...prev, [name]: value }) ) }; const handleSubmit = async (e) => { e.preventDefault () ; setIsSubmitting (true) ; setSubmitStatus ("idle") ; try {"""";import React, { useState } from 'react';
 import { Button } from "./ui/Button.jsx";
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -169,4 +162,3 @@ export { ContactForm };
 export { ContactForm };
 
 export { ContactForm };
->>>>>>> pr-10728

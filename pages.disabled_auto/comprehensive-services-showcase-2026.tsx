@@ -1,4 +1,4 @@
-<<<<<<< HEAD:pages.disabled_auto/comprehensive-services-showcase-2026.tsx
+:pages.disabled_auto/comprehensive-services-showcase-2026.tsx
 import React, { useState } from,
   react'
 import { Link } from
@@ -29,7 +29,6 @@ export default function ComprehensiveServicesShowcase2026() {
 			service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
 		return matchesCategory && matchesSearch
 	})
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -70,13 +69,12 @@ export default function ComprehensiveServicesShowcase2026() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
 
   const popularServices = comprehensiveExpandedServices.filter(
     service => service.popular
   );
 
-<<<<<<< HEAD:pages.disabled_auto/comprehensive-services-showcase-2026.tsx
+:pages.disabled_auto/comprehensive-services-showcase-2026.tsx
 	return (
 		<PageTransition>
 			{/* Hero Section */}
@@ -110,7 +108,6 @@ export default function ComprehensiveServicesShowcase2026() {
 					</div>
 				</div>
 			</section>
-=======
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -146,7 +143,6 @@ export default function ComprehensiveServicesShowcase2026() {
           </div>
         </div>
       </section>
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
 
       {/* Search and Filter Section */}
       <section className="bg-white py-12">
@@ -180,7 +176,7 @@ export default function ComprehensiveServicesShowcase2026() {
               </div>
             </div>
 
-<<<<<<< HEAD:pages.disabled_auto/comprehensive-services-showcase-2026.tsx
+:pages.disabled_auto/comprehensive-services-showcase-2026.tsx
 						{/* Category Filter */}
 						<div className="flex flex-wrap gap-2">
 							<button
@@ -214,7 +210,6 @@ export default function ComprehensiveServicesShowcase2026() {
 					</div>
 				</div>
 			</section>
-=======
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               <button
@@ -244,7 +239,6 @@ export default function ComprehensiveServicesShowcase2026() {
           </div>
         </div>
       </section>
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
 
       {/* Popular Services Section */}
       {popularServices.length > 0 && (

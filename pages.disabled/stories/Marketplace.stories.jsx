@@ -1,18 +1,8 @@
 import Marketplace from "../pages/Marketplace";
-<<<<<<< HEAD
 import { MemoryRouter } from,
   react-router-dom';: pages.disabled/stories/Marketplace.stories.jsx
 const meta = {
-  'title: 'Pages/Marketplace,
-=======
-import { MemoryRouter } from 'react-router-dom';
-:pages.disabled/stories/Marketplace.stories.jsx
-const meta = {
-'
-const meta = {}
-  title: 'Pages/Marketplace',
->>>>>>> pr-10728
-    component: Marketplace,
+  'title: 'Pages/Marketplace,    component: Marketplace,
   decorators: []
         (Story) => (<MemoryRouter>
         <Story />
@@ -25,50 +15,22 @@ export default meta;
 :pages.disabled/stories/Marketplace.stories.jsx
 export const Grid = {
 
-<<<<<<< HEAD
   render: () => {,
   localStorage.setItem(
   'marketplaceView',grid
-  ');
-=======
-  render: () => {
-'
-export const Grid = {}
-  render: () => {}
-        localStorage.setItem('marketplaceView',grid');
->>>>>>> pr-10728
-        return <Marketplace />;
+  ');        return <Marketplace />;
 
 }
-<<<<<<< HEAD
 };: pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
 
   render: () => {
 'localStorage.setItem(
   'marketplaceView,list
-  ');
-=======
-};
-:pages.disabled/stories/Marketplace.stories.jsx
-export const List = {
-
-  render: () => {
-'
-export const List = {}
-  render: () => {}
-        localStorage.setItem('marketplaceView',list');
->>>>>>> pr-10728
-        return <Marketplace />;
+  ');        return <Marketplace />;
 
 }
 :pages.disabled/stories/Marketplace.stories.jsx
 };'"
-<<<<<<< HEAD
 }}
   '"'"
-=======
-}}'"'"
-};
-}}'""
->>>>>>> pr-10728

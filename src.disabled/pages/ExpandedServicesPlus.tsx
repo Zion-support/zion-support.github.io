@@ -1,9 +1,7 @@
-<<<<<<< HEAD:src.disabled/pages/ExpandedServicesPlus.tsx
+:src.disabled/pages/ExpandedServicesPlus.tsx
 import React from
   'react';''export default function ExpandedServicesPlus() {
-=======
 import React from 'react'''export default function ExpandedServicesPlus() {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/ExpandedServicesPlus.tsx
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">"      <section className="py-12 border-b border-slate-800">"        <div className="container mx-auto px-4 sm: px-6 lg:px-8">"          <div className="mb-6 inline-flex items-center rounded-full border border-slate-700 bg-slate-800/60 px-4 py-1 text-sm text-slate-300">"            Zion Tech Group • Expanded Services Catalog"          </div>"
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">High-Impact Micro SaaS, IT, and AI Services</h1>"          <p className="mt-3 max-w-3xl text-slate-300">"            Add-on solutions you can deploy quickly, with transparent pricing and clear ROI. We don’t replace your"            existing tools—we make them smarter and more effective across growth, operations, and security."
@@ -70,9 +68,7 @@ import React from 'react'''export default function ExpandedServicesPlus() {
     </div>
   );
 }
-=======
 import React from 'react';''export default React.memo(function ExpandedServicesPlus () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ExpandedServicesPlus.tsx
 
   return (;
     <div className="min - h-screen bg - slate - 950 text - slate - 100">"      <section className="py - 12 border - b border - slate - 800">"        <div className="container mx - auto px - 4 sm: px - 6 lg:px - 8">"          <div className="mb - 6 inline - flex items - center rounded - full border border - slate - 700 bg - slate - 800 / 60 px - 4 py - 1 text - sm text - slate - 300">"            Zion Tech Group • Expanded Services Catalog"          </div>"";

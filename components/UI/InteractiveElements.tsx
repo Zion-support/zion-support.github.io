@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from
   'react';
 import { motion, useAnimation, useInView } from
@@ -13,14 +12,6 @@ type ButtonSize =
   'sm' |
   'md' |
   'lg';
-=======
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, useAnimation, useInView } from 'framer-motion'
-
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient'
-type ButtonSize = 'sm' | 'md' | 'lg';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
 interface InteractiveButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -33,7 +24,6 @@ interface InteractiveButtonProps {
 }
 
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
-<<<<<<< HEAD
   children, onClick,
   variant =, primary','
   size =
@@ -41,37 +31,6 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   loading = false, icon,
   className = ''
   ', '
-=======
-  children, onClick, variant = 'primary', size = 'md', disabled = false, loading = false, icon, className = '', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-}) => {
-  const [isHovered, setIsHovered] = useState(false)
-
-<<<<<<< HEAD
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden;'
-  const variantClasses: Record<ButtonVariant, string> = {
-    primary:,
-  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500, secondary:,
-  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:,
-  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:,
-  bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-500, };
-  const sizeClasses: Record<ButtonSize, string> = {
-    sm:,
-  px-3 py-2 text-sm
-  ', '
-    md: 'px-4 py-2 text-base,'
-    lg: 'px-6 py-3 text-lg'
-  ', '
-  };
-=======
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden'
-  const variantClasses: Record<ButtonVariant, string> = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600', ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
-    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500', }
-  const sizeClasses: Record<ButtonSize, string> = {
-    sm: 'px-3 py-2 text-sm', md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg', }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
   return (
     <motion.button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
@@ -105,7 +64,6 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
-<<<<<<< HEAD
   delay?: number;
   direction?: 'up'
   ' | 'down
@@ -119,17 +77,6 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className 
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const controls = useAnimation();
-=======
-  delay?: number
-  direction?: 'up' | 'down' | 'left' | 'right'
-}
-
-export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = '', delay = 0, direction = 'up' }) => {
-  const ref = useRef<HTMLDivElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const controls = useAnimation()
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
   useEffect(() => {
     if (isInView) controls.start(
   'visible');
@@ -188,7 +135,6 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
 interface FloatingActionButtonProps {
   icon: React.ReactNode;
   onClick: () => void;
-<<<<<<< HEAD
   tooltip?: string;
   position?:, bottom-right' |'
   'bottom-left' |
@@ -219,24 +165,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
     purple:, bg-purple-600 hover: bg-purple-700 focus:ring-purple-500,
     red:, bg-red-600 hover: bg-red-700 focus:ring-red-500,
   };
-=======
-  tooltip?: string
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left'
-  color?: 'blue' | 'green' | 'purple' | 'red'
-}
-
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position = 'bottom-right', color = 'blue' }) => {
-  const [showTooltip, setShowTooltip] = useState(false)
-  const positionClasses: Record<NonNullable<FloatingActionButtonProps['position']>, string> = {
-    'bottom-right': 'bottom-6 right-6',
-    'bottom-left': 'bottom-6 left-6', 'top-right': 'top-6 right-6',
-    'top-left': 'top-6 left-6', }
-  const colorClasses: Record<NonNullable<FloatingActionButtonProps['color']>, string> = {
-    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500',
-    green: 'bg-green-600 hover:bg-green-700 focus:ring-green-500', purple: 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-500',
-    red: 'bg-red-600 hover:bg-red-700 focus:ring-red-500', }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
       <motion.button

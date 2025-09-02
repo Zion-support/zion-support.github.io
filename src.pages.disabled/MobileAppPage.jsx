@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src.pages.disabled/MobileAppPage.jsx
+:src.pages.disabled/MobileAppPage.jsx
 import React from 'react'; export default MobileAppPage; const MobileAppPage = () => { return ( (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs" />) , (<MobileAppHero />) , (<AppFeatures />) , (<AppScreenshots />) , (<AppTestimonials />) , (<DownloadSection />) , (<AppStoreBanner />) ) ; }; ";"
-=======
 import React from 'react'; export default MobileAppPage; const MobileAppPage = () => { return ( (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs" />) , (<MobileAppHero />) , (<AppFeatures />) , (<AppScreenshots />) , (<AppTestimonials />) , (<DownloadSection />) , (<AppStoreBanner />) ) ; }; ";"""";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/MobileAppPage.jsx

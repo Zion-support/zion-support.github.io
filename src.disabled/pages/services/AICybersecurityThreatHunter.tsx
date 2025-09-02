@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/services/AICybersecurityThreatHunter.tsx
+:src.disabled/pages/services/AICybersecurityThreatHunter.tsx
 
 export default function AICybersecurityThreatHunter(...args: unknown[]): unknown {
   const features = [
@@ -182,5 +182,3 @@ export default function AICybersecurityThreatHunter(...args: unknown[]): unknown
     </div>
   );
 }
-=======
->>>>>>> pr-10728:src/pages/services/AICybersecurityThreatHunter.tsx

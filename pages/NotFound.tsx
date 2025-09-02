@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -8,15 +7,7 @@ import { SEO } from
 import { Button } from
   '../components/ui/Button';
 import { Card } from
-  '../components/ui/Card';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
-import { Button } from '../components/ui/Button'
-import { Card } from '../components/ui/Card'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-import { 
+  '../components/ui/Card';import { 
   Home, ArrowLeft,
   Search, HelpCircle,
   Phone, Mail,
@@ -41,13 +32,8 @@ const NotFound: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
       <SEO 
         title="Page Not Found - Zion Tech Group" 
-<<<<<<< HEAD
         description="The page you"
-  're looking for doesn&apos;t exist. Find what you need with our helpful navigation and search options.""
-=======
-        description="The page you&apos;re looking for doesn&apos;t exist. Find what you need with our helpful navigation and search options."
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      />
+  're looking for doesn&apos;t exist. Find what you need with our helpful navigation and search options.""      />
       
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
@@ -76,21 +62,13 @@ const NotFound: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>
             <p className="text-xl text-gray-300 mb-6">
-<<<<<<< HEAD
               Sorry, the page you
   're looking for doesn&apos;t exist or has been moved.
             </p>
             <p className="text-gray-400">
               Don
   't worry, we&apos;ll help you find what you
-  're looking for.'
-=======
-              Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
-            </p>
-            <p className="text-gray-400">
-              Don&apos;t worry, we&apos;ll help you find what you&aposre looking for.''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-            </p>
+  're looking for.'            </p>
           </motion.div>
 
           {/* Action Buttons */}

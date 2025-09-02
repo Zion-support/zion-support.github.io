@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/Enterprise.tsx
+:src.disabled/pages/Enterprise.tsx
 import React from
   'react';
 
@@ -22,9 +22,7 @@ const Enterprise: React.FC = () => {
   );
 };
 
-=======
 import React from 'react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Enterprise.tsx
 export default Enterprise;
 
 ;

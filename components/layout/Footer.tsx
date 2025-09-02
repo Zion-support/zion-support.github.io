@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 React from
   'react';
 import { Link } from
-  'react-router-dom';'import { ;'  Brain, Mail,
-=======
-import React from 'react'
-import  { Link } from 'react-router-dom''import { ;'  Brain, Mail,''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  Phone, MapPin,
+  'react-router-dom';'import { ;'  Brain, Mail,  Phone, MapPin,
   Linkedin, Twitter,
   Github, Youtube,
   Instagram, ArrowRight,
@@ -18,17 +12,11 @@ import  { Link } from 'react-router-dom''import { ;'  Brain, Mail,''
   Database, Network,
   Target, CheckCircle,
   ExternalLink
-<<<<<<< HEAD
 } from
   'lucide-react';'{ Button } from'
   '../ui/Button';
 import { Badge } from
   '../ui/Badge';''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
-=======
-} from 'lucide-react''import { Button } from '../ui/Button''
-import  { Badge } from '../ui/Badge'''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
   const serviceCategories = [;
     {
 title: "AI & Automation", icon: Brain,"      color: "text-blue-400", services: ["        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" }, { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" }, { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" }, { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }"      ]"    }, {;

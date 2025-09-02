@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 React, { useEffect, useState } from, react';'
 import { motion, AnimatePresence } from
   'framer-motion';'import { Download, X, Smartphone, Monitor } from'
@@ -8,15 +7,7 @@ import { motion, AnimatePresence } from
   readonly userChoice: Promise<{;
     outcome: 'accepted'
   ' | 'dismissed
-  ';'    platform: string;  }>;prompt(): Promise<void>;
-=======
-import React, { useEffect, useState } from 'react'
-import  { motion, AnimatePresence } from 'framer-motion''import { Download, X, Smartphone, Monitor } from 'lucide-react''interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[];
-  readonly userChoice: Promise<{;
-    outcome: 'accepted' | 'dismissed''    platform: string  }>;prompt(): Promise<void>;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-}
+  ';'    platform: string;  }>;prompt(): Promise<void>;}
 
 const PWARegistration: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
@@ -25,13 +16,8 @@ const PWARegistration: React.FC = () => {
 
   useEffect(() => {
     // Check if app is already installed
-<<<<<<< HEAD
 if (window.matchMedia(, (display-mode: standalone)').matches) {'
-  '      setIsInstalled(true);      return;'
-=======
-if (window.matchMedia('(display-mode: standalone)').matches) {'      setIsInstalled(true)'      return;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
+  '      setIsInstalled(true);      return;'    }
 
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {;e.preventDefault();
@@ -45,7 +31,6 @@ const handleAppInstalled = () => {;setIsInstalled(true);
       setDeferredPrompt(null);
     };
 
-<<<<<<< HEAD
 window.addEventListener(, beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener(
   'appinstalled', handleAppInstalled);''
   '    // Register service worker'
@@ -62,31 +47,17 @@ window.addEventListener(, beforeinstallprompt', handleBeforeInstallPrompt);'    
       window.removeEventListener(
   'beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener('
   'appinstalled', handleAppInstalled);'    };'  }, []);
-=======
-window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener('appinstalled', handleAppInstalled)''    // Register service worker'
-    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration)'        })'        .catch((error) => {'
-          console.log('Service Worker registration failed: ', error)'        });'    }
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener('appinstalled', handleAppInstalled)'    };'  }, [])'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
   const handleInstallClick = async () => {;if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     
-<<<<<<< HEAD
 if (outcome ===
   'accepted') {
   '      console.log('User accepted the install prompt
   ');'    } else {
   '      console.log('User dismissed the install prompt
-  ');'    }'setDeferredPrompt(null);'
-=======
-if (outcome === 'accepted') {'      console.log('User accepted the install prompt')'    } else {'      console.log('User dismissed the install prompt')'    }'setDeferredPrompt(null)'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    setShowInstallPrompt(false);
+  ');'    }'setDeferredPrompt(null);'    setShowInstallPrompt(false);
   };
 
 const handleDismiss = () => {;setShowInstallPrompt(false);

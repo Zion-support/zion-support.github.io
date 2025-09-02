@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src.pages.disabled/Events.test.tsx
+:src.pages.disabled/Events.test.tsx
 describe ('Events', () => {}; '; it ('renders without crashing', () => {}; render (<Events />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Events />) ;
-=======
 
 describe ('Events', () => {}; '; it ('renders without crashing', () => {}; render (<Events />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Events />) ;''';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Events.test.tsx

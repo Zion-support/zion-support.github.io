@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 React, { useEffect } from
   'react';
 import Head from
   'next/head';''
-  'interface PerformanceOptimizerProps {preloadImages?: string[];'
-=======
-import React, { useEffect } from 'react'
-import  Head from 'next/head''interface PerformanceOptimizerProps {'
-  preloadImages?: string[]
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  preloadFonts?: string[];
+  'interface PerformanceOptimizerProps {preloadImages?: string[];'  preloadFonts?: string[];
   criticalCSS?: string;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-<<<<<<< HEAD
 preloadImages = [], preloadFonts = [,
   https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'  ], criticalCSS,'
   }) => {
@@ -49,38 +41,14 @@ if (entry.entryType ===
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document.createElement('link'
   ');'        link.rel =
-  'preload';'        link.href = href;'        link.as = as;if (type) link.type = type;
-=======
-preloadImages = [], preloadFonts = [
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800900&display=swap''  ], criticalCSS'}) => {
-  useEffect(() => {
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-if (entry.entryType === 'largest-contentful-paint') {'            console.log('LCP: ', entry.startTime)'          }'          if (entry.entryType === 'first-input') {'            console.log('FID: ', entry.processingStart - entry.startTime)'          }'          if (entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console.log('CLS: ', (entry as any).value)'            }'          }}
-      })
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paintfirst-inputlayout-shift'] })'      } catch (e) {'        // Fallback for browsers that don&apost support all entry types''        console.log('Performance monitoring not fully supported')'      }'
-      // Resource hints for better performance
-      const addResourceHint = (href: string, as: string, type?: string) => {
-        const link = document.createElement('link')'        link.rel = 'preload''        link.href = href;'        link.as = as;if (type) link.type = type'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-        document.head.appendChild(link);
+  'preload';'        link.href = href;'        link.as = as;if (type) link.type = type;        document.head.appendChild(link);
       };
 
       // Preload critical resources
       preloadImages.forEach(image => {
-<<<<<<< HEAD
 addResourceHint(image, 'image');'      });'
       preloadFonts.forEach(font => {
         addResourceHint(font, 'style');'      });'    }}, [preloadImages, preloadFonts]);
-=======
-addResourceHint(image, 'image')'      });'
-      preloadFonts.forEach(font => {
-        addResourceHint(font, 'style')'      });'    }}, [preloadImages, preloadFonts]);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
   return (
     <Head>
       {/* Critical CSS inlined for above-the-fold content */}
@@ -95,21 +63,14 @@ key={`preload-image-${index}`}`          rel="preload""          as="image""    
       
       {preloadFonts.map((font, index) => (
         <link
-<<<<<<< HEAD
 key={`preload-font-${index}`}`          rel="preload""          as="style""          href={font}"          onLoad={() => {"
             const link = document.querySelector(`link[href="${font}"]`);"            if (link) {"              (link as HTMLLinkElement).rel =, stylesheet';'            }
-  '          }}`        />'
-=======
-key={`preload-font-${index}`}`          rel="preload""          as="style""          href={font}"          onLoad={() => {"
-            const link = document.querySelector(`link[href="${font}"]`)"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet''            }'          }}`        />
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      ))}
+  '          }}`        />'      ))}
       
       {/* Performance hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
       <script
         dangerouslySetInnerHTML={{
-<<<<<<< HEAD
           __html: ``            if ('serviceWorker'
   ' in navigator) {'              window.addEventListener(
   'load, function() {, '
@@ -117,12 +78,7 @@ key={`preload-font-${index}`}`          rel="preload""          as="style""     
   ')'                  .then(function(registration) {
   '                    console.log('SW registered:  , registration);, })
   '                  .catch(function(registrationError) {'
-                    console.log('SW registration failed:  , registrationError);'                  });'              });'
-=======
-          __html: ``            if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration)'                  })'                  .catch(function(registrationError) {
-                    console.log('SW registration failed: ', registrationError)'                  });'              });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-            }
+                    console.log('SW registration failed:  , registrationError);'                  });'              });'            }
           ``        }}/>
     </Head>
   );

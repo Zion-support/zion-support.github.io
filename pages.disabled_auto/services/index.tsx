@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from, react';'
 import type { NextPage } from
   'next';
@@ -44,41 +43,7 @@ const ServicesPage: NextPage = () => {
     {
       icon: <Award className="w-8 h-8" />, title:,
   Expert Support', '
-      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.''
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../../components/layout/MainLayout'
-import { services, getServicesByCategory } from '../../data/services'
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-const ServicesPage: NextPage = () => {
-  const microSaasServices = getServicesByCategory('micro-saas')
-  const itServices = getServicesByCategory('it-services')
-  const aiServices = getServicesByCategory('ai-services')
-
-  const stats = [
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },
-    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp },
-  ]
-
-  const benefits = [
-    {
-      icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing',
-      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
-    },
-    {
-      icon: <Target className="w-8 h-8" />, title: 'Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'
-    }, {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
-    }, {
-      icon: <Award className="w-8 h-8" />,
-      title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
+      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.''    }
   ];
 
   return (

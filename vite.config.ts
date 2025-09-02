@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import { defineConfig } from
   'vite';
 import react from
-  '@vitejs/plugin-react';
-=======
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-export default defineConfig({
+  '@vitejs/plugin-react';export default defineConfig({
   plugins: [react()],
   build: {
     sourcemap: false,

@@ -4,14 +4,7 @@ const RagSearch: React.FC = (): JSX.Element => (
     <SEO title="RAG Search - Zion Tech Group" description="AI search over your documents and data with citations and guardrails."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
-      <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>"</section>""
-=======
-      <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>"
-      <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>
-    </section>""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
+      <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>"</section>""    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Features</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
@@ -20,28 +13,14 @@ const RagSearch: React.FC = (): JSX.Element => (
           <li>Observability and feedback loops</li>
           <li>PII redaction + compliance filters</li>
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
-        </ul>"</div>""
-=======
-        </ul>"
-        </ul>
-      </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
+        </ul>"</div>""      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Stack</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>Embeddings: OpenAI, Cohere, Voyage</li>
           <li>Vector DB: Pinecone, Weaviate, pgvector</li>
           <li>Indexers: Unstructured.io, LangChain</li>
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
-        </ul>"</div>""
-=======
-        </ul>"
-        </ul>
-      </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
+        </ul>"</div>""      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Pricing</h3>""
         <ul className="text-slate-300 space-y-1">
           <li>Starter: $699/mo up to 100k tokens/day</li>
@@ -49,14 +28,7 @@ const RagSearch: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, VPC + SSO</li>
         </ul>;
 :pages.disabled/pages/services/RagSearch.tsx
-<<<<<<< HEAD
-      </div>;"</section>;""
-=======
-      </div>;"
-      </div>;
-    </section>;""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-16">;""
+      </div>;"</section>;""    <section className="container mx-auto px-4 pb-16">;""
       <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Request a quote</a>;
     </section>;
   </div>;
@@ -66,10 +38,4 @@ export { RagSearch };
 export default RagSearch;
 :pages.disabled/pages/services/RagSearch.tsx
 "
-<<<<<<< HEAD
   '"'"
-=======
-'"'"
-
-'""
->>>>>>> pr-10728

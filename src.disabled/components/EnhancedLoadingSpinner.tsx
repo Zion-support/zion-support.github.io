@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/components/EnhancedLoadingSpinner.tsx
+:src.disabled/components/EnhancedLoadingSpinner.tsx
 import React from,
   react''import { motion } from
   'framer-motion'';'interface EnhancedLoadingSpinnerProps {
@@ -22,7 +22,6 @@ export default function EnhancedLoadingSpinner({
   text-sm', md: 'text-base,
 ,
   lg: 'text-lg'  }'
-=======
 import React from 'react''import { motion } from 'framer-motion'''interface EnhancedLoadingSpinnerProps {'
   size?: 'sm' | 'md' | 'lg''  text?: string'  className?: string
 }
@@ -32,7 +31,6 @@ export default function EnhancedLoadingSpinner({
     sm: 'w-8 h-8', md: 'w-12 h-12','    lg: 'w-16 h-16''  }''
   const textSizes = {
     sm: 'text-sm', md: 'text-base','    lg: 'text-lg''  }''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/EnhancedLoadingSpinner.tsx
   return (
     <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>`      <motion.div
         className={`${sizeClasses[size]} relative`}`        animate={{ rotate: 360 }}
@@ -57,7 +55,6 @@ export default function EnhancedLoadingSpinner({
             key={i}
             className="w-2 h-2 bg-blue-600 rounded-full""            animate={{ "              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]
             }}
-=======
 import React from 'react''import { motion } from 'framer - motion';';'interface EnhancedLoadingSpinnerProps {';
 export default React.memo(/**
  * EnhancedLoadingSpinner function
@@ -94,7 +91,6 @@ function EnhancedLoadingSpinner ({;
             key={i}";
             className="w - 2 h - 2 bg - blue - 600 rounded - full""            animate={{ "              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5];
             }};
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/EnhancedLoadingSpinner.tsx
             transition={{ ;
               duration: 1.5, repeat: Infinity, ;";
               delay: i * 0.2, ease: "easeInOut""            }}"          />) ) };

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';
 import type { NextPage } from
@@ -9,18 +8,9 @@ import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
   'lucide-react';
 import Link from
   'next/link';
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../components/layout/MainLayout'
-import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from 'lucide-react'
-import Link from 'next/link'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
 const Documentation: NextPage = () => {
   const docCategories = [
     {
-<<<<<<< HEAD
       icon: Book, title:,
   Getting Started', '
       description: 'Quick start guides and basic setup instructions,'
@@ -28,35 +18,11 @@ const Documentation: NextPage = () => {
         { title:, Introduction to Zion Tech Group', href: '/docs/introduction }, { title:,
   Account Setup', href: '/docs/account-setup },
         { title:, First Steps', href: '/docs/first-steps }, { title:,
-  Basic Configuration', href: '/docs/basic-config }
-=======
-      icon: Book, title: 'Getting Started', description: 'Quick start guides and basic setup instructions', articles: [
-        { title: 'Introduction to Zion Tech Group', href: '/docs/introduction' }, { title: 'Account Setup', href: '/docs/account-setup' }, { title: 'First Steps', href: '/docs/first-steps' }, { title: 'Basic Configuration', href: '/docs/basic-config' }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
+  Basic Configuration', href: '/docs/basic-config }      ]
     }, {
       icon: Code,
-<<<<<<< HEAD
       title:, API Reference','
-      description: 'Complete API documentation and examples, '
-=======
-      title: 'API Reference', description: 'Complete API documentation and examples', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      articles: [
-        { title:,
-  Authentication', href: '/docs/api/auth },
-        { title:, Endpoints', href: '/docs/api/endpoints }, { title:,
-  SDKs', href: '/docs/api/sdks },
-        { title:, Rate Limits', href: '/docs/api/rate-limits }
-      ]
-    }, {
-      icon: Database,
-<<<<<<< HEAD
-      title:, Data Management','
-      description: Data handling, storage, and processing guides,  ,
-=======
-      title: 'Data Management', description: 'Data handling, storage, and processing guides',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      articles: [
+      description: 'Complete API documentation and examples, '      articles: [
         { title:
   'Data Models, href:,'
   /docs/data/models' }, '
@@ -69,59 +35,8 @@ const Documentation: NextPage = () => {
       ]
     }, {
       icon: Cloud,
-<<<<<<< HEAD
       title:, Cloud Services','
-      description: 'Cloud infrastructure and deployment guides, '
-=======
-      title: 'Cloud Services', description: 'Cloud infrastructure and deployment guides', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      articles: [
-        { title:,
-  Cloud Setup', href: '/docs/cloud/setup },
-        { title:, Deployment', href: '/docs/cloud/deployment }, { title:,
-  Scaling', href: '/docs/cloud/scaling },
-        { title:, Monitoring', href: '/docs/cloud/monitoring }
-      ]
-    }, {
-      icon: Shield,
-<<<<<<< HEAD
-      title:, Security','
-      description: 'Security best practices and implementation, '
-=======
-      title: 'Security', description: 'Security best practices and implementation', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      articles: [
-        { title:,
-  Security Overview', href: '/docs/security/overview },
-        { title:, Authentication', href: '/docs/security/auth }, { title:,
-  Authorization', href: '/docs/security/authorization },
-        { title:, Compliance', href: '/docs/security/compliance }
-      ]
-    }, {
-      icon: Zap,
-<<<<<<< HEAD
-      title:, Advanced Features','
-      description: 'Advanced functionality and customization, '
-=======
-      title: 'Advanced Features', description: 'Advanced functionality and customization', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      articles: [
-        { title:,
-  Custom Integrations', href: '/docs/advanced/integrations },
-        { title:, Workflow Automation', href: '/docs/advanced/automation }, { title:,
-  Performance Optimization', href: '/docs/advanced/performance },
-        { title:, Troubleshooting', href: '/docs/advanced/troubleshooting }
-      ]
-    }
-  ]
-
-  const quickLinks = [
-<<<<<<< HEAD
-    { title:, API Playground', href: '/api-playground, icon: Code },
-    { title:, Status Page', href: '/status, icon: Zap },
-    { title:, Support', href: '/help, icon: Book },
-    { title:, Community', href: '/community, icon: ExternalLink }
-=======
-    { title: 'API Playground', href: '/api-playground', icon: Code }, { title: 'Status Page', href: '/status', icon: Zap }, { title: 'Support', href: '/help', icon: Book }, { title: 'Community', href: '/community', icon: ExternalLink }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  ];
+      description: 'Cloud infrastructure and deployment guides, '  ];
 
   return (
     <MainLayout
@@ -284,13 +199,8 @@ const Documentation: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Can
-  't find what you&apos;re looking for? Our support team is here to help.
-=======
-              Can&apos;t find what you&apos;re looking for? Our support team is here to help.
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-            </p>
+  't find what you&apos;re looking for? Our support team is here to help.            </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link
                 href="/help"

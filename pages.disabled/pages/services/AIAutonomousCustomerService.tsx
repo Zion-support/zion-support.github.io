@@ -26,15 +26,7 @@ import {}
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
 const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
 
-<<<<<<< HEAD
-  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
-  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
-  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -48,34 +40,13 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Customer Service with""
-<<<<<<< HEAD
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
   '{' 
   '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-            </h1>"""
-=======
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">'
-            transition={{ duration: 0.8 }}
-          >""
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">""
-              <MessageCircle className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Customer Service;
-            </div>
-""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Customer Service with""
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                {' '}
-                AI Intelligence;
-              </span>
-:pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-            </h1>"
-            </h1>
-""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            </h1>"""            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your customer service with our AI-powered autonomous;
               platform. Provide instant support, resolve issues faster, and;
               enhance customer satisfaction.
@@ -84,18 +55,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
-                Start Free Trial"</button>""
-=======
-                Start Free Trial"
-            </p>
-""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial;
-              </button>""
->>>>>>> pr-10728
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Start Free Trial"</button>""              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Schedule Demo;
               </button>
             </div>
@@ -103,131 +63,58 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-"{/* Features Section */}""
-=======
-"
-
-      {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
+"{/* Features Section */}""      <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
-            transition={{ duration: 0.8 }}"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-              Advanced Customer Service Features"</h2>""
-=======
-              Advanced Customer Service Features"
-              Advanced Customer Service Features;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Advanced Customer Service Features"</h2>""            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI platform provides comprehensive customer service;
               capabilities for modern businesses;
             </p>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-          </motion.div>"""
-=======
-          </motion.div>"
-          </motion.div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          </motion.div>"""          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-                transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300""
+                transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
-                  {feature.title}"</h3>""
-=======
-                  {feature.title}"
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>""
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">{feature.description}</p>
+                  {feature.title}"</h3>""                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-"{/* Benefits Section */}""
-=======
-"
-
-      {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+"{/* Benefits Section */}""      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
-            transition={{ duration: 0.8 }}"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-              Why Choose AI Autonomous Customer Service?"</h2>""
-=======
-              Why Choose AI Autonomous Customer Service?"
-              Why Choose AI Autonomous Customer Service?
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Why Choose AI Autonomous Customer Service?"</h2>""            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in customer service performance;
               and satisfaction;
             </p>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-          </motion.div>"""
-=======
-          </motion.div>"
-          </motion.div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </motion.div>"""          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -238,19 +125,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Key Benefits"
               </h3>""
-<<<<<<< HEAD
-              <div className="space-y-4">"{benefits.map((benefit, index) => (""
-=======
-              <div className="space-y-4">"
-              viewport={{ once: true }}
-            >""
-              <h3 className="text-2xl font-semibold text-white mb-6">
-                Key Benefits;
-              </h3>""
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (""
->>>>>>> pr-10728
-                  <div key={index} className="flex items-center space-x-3">""
+              <div className="space-y-4">"{benefits.map((benefit, index) => (""                  <div key={index} className="flex items-center space-x-3">""
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -261,14 +136,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
-              transition={{ duration: 0.8 }}"
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}""
->>>>>>> pr-10728
-              className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-8""
+              transition={{ duration: 0.8 }}"viewport={{ once: true }}""              className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-8""
             >""
               <h3 className="text-2xl font-semibold text-white mb-6">
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
@@ -276,18 +144,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
               </h3>""
               <p className="text-gray-300 mb-6">
                 Join thousands of businesses already using AI to enhance their
-<<<<<<< HEAD
-                customer service."</p>""
-=======
-                customer service."
-                Ready to Transform Customer Service?
-              </h3>""
-              <p className="text-gray-300 mb-6">
-                Join thousands of businesses already using AI to enhance their;
-                customer service.
-              </p>""
->>>>>>> pr-10728
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                customer service."</p>""              <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
                 Get Started Today;
               </button>
             </motion.div>
@@ -295,14 +152,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-<<<<<<< HEAD
-"{/* CTA Section */}""
-=======
-"
-
-      {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
+"{/* CTA Section */}""      <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -320,25 +170,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-<<<<<<< HEAD
-                Start Free Trial"</button>""
-=======
-                Start Free Trial"
-            viewport={{ once: true }}
-          >""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Customer Service?
-            </h2>""
-            <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered customer service with our;
-              comprehensive platform.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-                Start Free Trial;
-              </button>""
->>>>>>> pr-10728
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Start Free Trial"</button>""              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Contact Sales;
               </button>
             </div>
@@ -350,10 +182,4 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {}
 
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
 export default AIAutonomousCustomerService;'"
-<<<<<<< HEAD
   '"'"
-=======
-'"'"
-export default AIAutonomousCustomerService;
-'""
->>>>>>> pr-10728
