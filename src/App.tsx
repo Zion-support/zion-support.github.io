@@ -106,6 +106,7 @@ const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ZionInnovativeServices2025 = lazy(() => import('./pages/ZionInnovativeServices2025'));
 const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const InnovativeServicesShowcase2026 = lazy(() => import('./pages/InnovativeServicesShowcase2026'));
 
 // 2026 Innovative Services
 const InnovativeServicesShowcase2026 = lazy(() => import('./pages/InnovativeServicesShowcase2026'));
@@ -119,6 +120,9 @@ const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Conten
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
 const AIBusinessIntelligencePlatform = lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+const AIQuantumFinancialAnalyticsPlatform = lazy(() => import('./pages/services/AI-Quantum-Financial-Analytics-Platform'));
+const AIAutonomousSupplyChainManagementPlatform = lazy(() => import('./pages/services/AI-Autonomous-Supply-Chain-Management-Platform'));
+const AICybersecurityOperationsCenter = lazy(() => import('./pages/services/AI-Cybersecurity-Operations-Center'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -448,6 +452,7 @@ function App() {
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   <Route path="/zion-innovative-services-2025" element={<ZionInnovativeServices2025 />} />
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                  <Route path="/innovative-services-showcase-2026" element={<InnovativeServicesShowcase2026 />} />
 
                   {/* 2026 Innovative Services Routes */}
                   <Route path="/innovative-services-showcase-2026" element={<InnovativeServicesShowcase2026 />} />
@@ -579,6 +584,9 @@ function App() {
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
                   <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
                   <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                  <Route path="/services/ai-quantum-financial-analytics-platform" element={<AIQuantumFinancialAnalyticsPlatform />} />
+                  <Route path="/services/ai-autonomous-supply-chain-management-platform" element={<AIAutonomousSupplyChainManagementPlatform />} />
+                  <Route path="/services/ai-cybersecurity-operations-center" element={<AICybersecurityOperationsCenter />} />
 
                   {/* Additional Core Routes */}
                   <Route path="/events" element={<Events />} />

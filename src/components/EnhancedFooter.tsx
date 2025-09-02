@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import { 
   Zap, Mail, Phone, MapPin, Globe, Twitter, Linkedin, 
   Facebook, Instagram, Youtube, Github, ArrowRight,
-  Shield, Users, Code, Building, BookOpen, HelpCircle
+  Shield, Users, Code, Building, BookOpen, HelpCircle,
+  Star, Brain, Cloud, Award, TrendingUp, Lightbulb, 
+  Rocket, Target, CheckCircle, Heart, MessageCircle,
+  ShoppingCart, Cpu, Database, Network, Lock, BarChart3,
+  Server, Smartphone, Cpu as CpuIcon, Wifi, ShieldCheck,
+  Globe2, Bot, Workflow, Eye, Sparkles, ExternalLink,
+  Handshake, FileText, Video, GraduationCap, Atom,
+  PenTool, Leaf, ChevronRight, ChevronDown, DollarSign, Package
 } from 'lucide-react';
 
 export function EnhancedFooter() {
@@ -68,6 +75,16 @@ export function EnhancedFooter() {
         { name: 'Community', href: '/community', description: 'User forums' },
       ]
     }
+  ];
+
+  // Featured Services for quick access
+  const featuredServices = [
+    { name: 'AI Quantum Financial Analytics', href: '/services/ai-quantum-financial-analytics-platform', icon: BarChart3, featured: true },
+    { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-management-platform', icon: Package, featured: true },
+    { name: 'AI Cybersecurity Operations', href: '/services/ai-cybersecurity-operations-center', icon: Shield, featured: true },
+    { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
+    { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+    { name: '2026 Services Showcase', href: '/innovative-services-showcase-2026', icon: Sparkles, featured: true }
   ];
 
   const legalLinks = [

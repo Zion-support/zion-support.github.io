@@ -74,6 +74,7 @@ export function EnhancedHeader() {
         { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', description: 'Next-generation computing power' },
         { name: 'Quantum Financial Trading', href: '/services/ai-quantum-financial-trading-platform', description: 'Advanced quantum trading' },
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', description: 'Quantum-enhanced ML algorithms' },
+        { name: 'AI Quantum Financial Analytics', href: '/services/ai-quantum-financial-analytics-platform', description: 'Revolutionary quantum AI financial platform' },
       ]
     },
     {
@@ -93,9 +94,19 @@ export function EnhancedHeader() {
       color: 'from-red-500 to-orange-500',
       services: [
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced AI-powered security' },
+        { name: 'AI Cybersecurity Operations', href: '/services/ai-cybersecurity-operations-center', description: 'Autonomous security operations center' },
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening' },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', description: 'GDPR/CCPA compliance' },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Modern security architecture' },
+      ]
+    },
+    {
+      title: 'Supply Chain & Logistics',
+      icon: Truck,
+      color: 'from-green-500 to-blue-600',
+      services: [
+        { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-management-platform', description: 'Self-learning supply chain management' },
+        { name: 'Autonomous Logistics', href: '/services/autonomous-logistics', description: 'Smart supply chain automation' },
       ]
     },
     {
@@ -129,7 +140,6 @@ export function EnhancedHeader() {
         { name: 'AI Autonomous Vehicle Platform', href: '/services/ai-autonomous-vehicle-management-platform', description: 'Fleet management & safety' },
         { name: 'Drone Management', href: '/services/drone-management', description: 'Autonomous drone operations' },
         { name: 'Robotics Automation', href: '/services/robotics-automation', description: 'Industrial robotics solutions' },
-        { name: 'Autonomous Logistics', href: '/services/autonomous-logistics', description: 'Smart supply chain automation' },
       ]
     },
     {
@@ -143,6 +153,58 @@ export function EnhancedHeader() {
         { name: 'Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
         { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance insights' },
       ]
+    }
+  ];
+
+  // Featured services for quick access
+  const services = [
+    {
+      name: 'AI Content Creation Studio Pro',
+      description: 'Advanced AI-powered content creation platform',
+      href: '/services/AI-Content-Creation-Studio-Pro',
+      icon: PenTool,
+      color: 'from-purple-500 to-pink-500',
+      featured: true
+    },
+    {
+      name: 'Quantum AI Trading Platform',
+      description: 'Revolutionary quantum-enhanced trading system',
+      href: '/services/Quantum-AI-Trading-Platform',
+      icon: BarChart3,
+      color: 'from-orange-500 to-red-500',
+      featured: true
+    },
+    {
+      name: 'AI Quantum Financial Analytics',
+      description: 'Revolutionary quantum AI financial platform',
+      href: '/services/ai-quantum-financial-analytics-platform',
+      icon: BarChart3,
+      color: 'from-blue-500 to-purple-600',
+      featured: true
+    },
+    {
+      name: 'AI Autonomous Supply Chain',
+      description: 'Self-learning supply chain management',
+      href: '/services/ai-autonomous-supply-chain-management-platform',
+      icon: Truck,
+      color: 'from-green-500 to-blue-600',
+      featured: true
+    },
+    {
+      name: 'AI Cybersecurity Operations',
+      description: 'Autonomous security operations center',
+      href: '/services/ai-cybersecurity-operations-center',
+      icon: Shield,
+      color: 'from-red-500 to-orange-600',
+      featured: true
+    },
+    {
+      name: '2026 Services Showcase',
+      description: 'Latest innovative services showcase',
+      href: '/innovative-services-showcase-2026',
+      icon: Sparkles,
+      color: 'from-yellow-500 to-orange-500',
+      featured: true
     }
   ];
 
