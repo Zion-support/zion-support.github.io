@@ -2,14 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Calendar, 
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Calendar,
-  Clock,
-  MapPin,
-  Users,
-  Video,
   Clock, 
   MapPin, 
   Users, 
@@ -40,7 +32,6 @@ export default function Events() {
     { id: 'awards', name: 'Awards & Recognition', icon: Award }
   ];
 
-    return matchesType && matchesCategory && matchesStatus && matchesSearch;
   const timeFilters = [
     { id: 'upcoming', name: 'Upcoming' },
     { id: 'past', name: 'Past Events' },
@@ -219,12 +210,6 @@ export default function Events() {
     });
   };
 
-  const getStatusBadge = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
-    if (status === 'upcoming') {
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
-    } else {
-      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
-    }
   const isUpcoming = (dateString: string) => {
     return new Date(dateString) >= new Date();
   };
@@ -250,24 +235,6 @@ export default function Events() {
         </div>
       </section>
 
-      {/* Filters Section */}
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              {/* Search */}
-              <div className="md:col-span-2">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search events..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                  />
-                </div>
-              </div>
       {/* Search and Filter Section */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="max-w-7xl mx-auto">
@@ -318,25 +285,10 @@ export default function Events() {
                 </button>
               ))}
             </div>
-            {eventCategories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  selectedCategory === category
-                    ? "bg-cyan-500 text-white"
-                    : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
           </div>
+        </div>
+      </section>
 
-      {/* Upcoming Events */}
-      {upcomingEvents.length > 0 && (
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Featured Events */}
       {featuredEvents.length > 0 && (
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -417,21 +369,9 @@ export default function Events() {
               ))}
             </div>
           </div>
+        </section>
+      )}
 
-      {/* Past Events */}
-      {pastEvents.length > 0 && (
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
-              <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
-            </motion.div>
       {/* Regular Events */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="max-w-7xl mx-auto">
@@ -551,5 +491,4 @@ export default function Events() {
       </section>
     </div>
   );
-}
 }

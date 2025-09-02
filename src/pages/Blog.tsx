@@ -226,9 +226,10 @@ export default function Blog() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-zion-cyan mb-6">
               Insights & Innovation
@@ -236,32 +237,6 @@ export default function Blog() {
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8">
               Explore the latest insights, trends, and thought leadership in AI, technology, and digital transformation.
             </p>
-            
-            {/* Search and Filter */}
-            <div className="max-w-2xl mx-auto space-y-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-              
-              <div className="flex flex-wrap justify-center gap-2">
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                >
-                  <option value="latest">Latest</option>
-                  <option value="popular">Most Popular</option>
-                  <option value="likes">Most Liked</option>
-                </select>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>

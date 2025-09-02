@@ -61,14 +61,6 @@ import {
   Scale,
   Home,
   BookOpen,
-import React, { useState              } from 'react.ts';
-import { Link                } from 'react-router-dom.ts';
-import { cn                } from '@/lib/utils';
-import { NavLink                } from 'react-router-dom.ts';
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp                } from 'lucide-react.ts';
-export function MainNavigation(...args[]: any):  {
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   Calendar,
   PenTool,
   Briefcase
@@ -283,13 +275,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
         )}
       </div>
 
-      {/* Support */}
-      <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
-        <HelpCircle className="w-4 h-4 mr-1" />
-        Support
-      </Link>
-
-      {/* Pricing */}
+      {/* Direct Links */}
       <NavLink 
         to="/pricing" 
         className={({ isActive }) => 
@@ -302,7 +288,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Pricing
       </NavLink>
 
-      {/* Contact */}
       <NavLink 
         to="/contact" 
         className={({ isActive }) => 
@@ -317,3 +302,5 @@ export function MainNavigation({ className }: MainNavigationProps) {
     </nav>
   );
 }
+
+

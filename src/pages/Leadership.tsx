@@ -1,10 +1,3 @@
-import React from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Users,
-  Award,
-  Star,
-  Target,
-  TrendingUp,
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -127,20 +120,8 @@ export default function Leadership() {
             </p>
           </motion.div>
         </div>
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-          <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
-        </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
       {/* Executive Team */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -227,14 +208,6 @@ export default function Leadership() {
         </div>
       </section>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)              => (
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300 text-sm">{value.description}</p>
       {/* Advisory Board */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="max-w-7xl mx-auto">
@@ -293,12 +266,6 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Achievements */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Achievements
       {/* Leadership Values */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
