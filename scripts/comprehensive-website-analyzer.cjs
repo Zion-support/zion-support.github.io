@@ -22,7 +22,7 @@ class ComprehensiveWebsiteAnalyzer {
     this.checkedUrls.add(url);
 
     try {
-      console.log(`Checking: ${url}');
+      console.log(`Checking: ${url}`);
       const response = await axios.get(url, {
         timeout: 10000,
         validateStatus: status => status < 500,
