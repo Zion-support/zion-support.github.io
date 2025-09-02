@@ -8,18 +8,16 @@ const About: React.FC = () => {
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions."
       />
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Zion Tech Group is a leading technology solutions provider dedicated to helping 
-            organizations transform their digital infrastructure and achieve their business goals.
-          </p>
-          <p className="text-lg text-gray-600">
-            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, 
-            and digital transformation services.
-          </p>
-        </div>
+      <div className="max-w-5xl mx-auto px-4 py-12 text-white">
+        <h1 className="text-4xl font-bold mb-4">About Zion Tech Group</h1>
+        <p className="text-gray-300 mb-4">
+          Zion Tech Group is a leading technology solutions provider dedicated to helping 
+          organizations transform their digital infrastructure and achieve their business goals.
+        </p>
+        <p className="text-gray-300">
+          Our team of experts specializes in AI, cybersecurity, cloud infrastructure, 
+          and digital transformation services.
+        </p>
       </div>
     </>
   );
