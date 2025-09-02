@@ -1,10 +1,21 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import {
+<<<<<<< HEAD
+  FileText,
+  Scale,
+  Shield,
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+} from 'lucide-react';
+
+=======
   FileText, Scale,
   Shield, AlertTriangle,
   CheckCircle, XCircle,
 } from 'lucide-react';
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 const Terms: NextPage = () => {
   return (
     <Layout
@@ -60,7 +71,11 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 Zion Tech Group provides technology consulting and development
+<<<<<<< HEAD
+                services, including but not limited to:
+=======
                 services, including but not limited to: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>AI and Machine Learning Development</li>
@@ -124,7 +139,11 @@ const Terms: NextPage = () => {
               <p className="text-gray-600 mb-4">
                 All content, trademarks, and intellectual property on our
                 website and in our services are owned by Zion Tech Group or our
+<<<<<<< HEAD
+                licensors. You may not:
+=======
                 licensors. You may not: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>
@@ -145,8 +164,12 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 We strive to maintain high availability of our services, but we
+<<<<<<< HEAD
+                cannot guarantee uninterrupted access. We reserve the right to:
+=======
                 cannot guarantee uninterrupted access. We reserve the right
                 to: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Modify or discontinue services with reasonable notice</li>
@@ -185,7 +208,11 @@ const Terms: NextPage = () => {
                 To the maximum extent permitted by law, Zion Tech Group shall
                 not be liable for any indirect, incidental, special,
                 consequential, or punitive damages, including but not limited
+<<<<<<< HEAD
+                to:
+=======
                 to: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Loss of profits or revenue</li>
@@ -203,7 +230,11 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 You agree to indemnify and hold harmless Zion Tech Group from
+<<<<<<< HEAD
+                any claims, damages, or expenses arising from:
+=======
                 any claims, damages, or expenses arising from: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your use of our services</li>
@@ -221,7 +252,11 @@ const Terms: NextPage = () => {
               <p className="text-gray-600 mb-4">
                 We may terminate or suspend your access to our services at any
                 time, with or without cause, with or without notice. Upon
+<<<<<<< HEAD
+                termination:
+=======
                 termination: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your right to use our services will cease immediately</li>
@@ -254,7 +289,11 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 We reserve the right to modify these Terms at any time. We will
+<<<<<<< HEAD
+                notify users of any material changes by:
+=======
                 notify users of any material changes by: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Posting the updated Terms on our website</li>
@@ -274,7 +313,11 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 If you have any questions about these Terms of Service, please
+<<<<<<< HEAD
+                contact us:
+=======
                 contact us: {' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2">
@@ -284,7 +327,11 @@ const Terms: NextPage = () => {
                   <strong>Phone:</strong> +1 (302) 464-0950
                 </p>
                 <p className="text-gray-700 mb-2">
+<<<<<<< HEAD
+                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown,
+=======
                   <strong>Address: </strong> 364 E Main St STE 1008, Middletown,
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   DE 19709
                 </p>
               </div>
@@ -315,10 +362,17 @@ const Terms: NextPage = () => {
             Questions About Our Terms?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
+            We're here to help clarify any questions you may have about our
+            Terms of Service.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+=======
             We&apos;re here to help clarify any questions you may have about our'
             Terms of Service.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -337,4 +391,8 @@ const Terms: NextPage = () => {
     </Layout>
   );
 };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Terms;

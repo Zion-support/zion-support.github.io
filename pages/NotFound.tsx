@@ -37,7 +37,10 @@ const NotFound: React.FC = () => {
       <SEO
         title="Page Not Found - Zion Tech Group"
         description="The page you are looking for does not exist. Find what you need with our helpful navigation and search options."
+<<<<<<< HEAD
+=======
 
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       />
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
@@ -123,7 +126,10 @@ const NotFound: React.FC = () => {
                   >
                     <link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" />
                     <span className="text-gray-300 group-hover:text-white text-sm text-center">
+<<<<<<< HEAD
+=======
 
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                       {link.name}
                     </span>
                   </motion.a>
@@ -146,11 +152,18 @@ const NotFound: React.FC = () => {
                 If you can&apos;t find what you&apos;re looking for, our team is
                 here to help.
               </p>
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
+=======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
 
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Contact Support
@@ -158,7 +171,10 @@ const NotFound: React.FC = () => {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors"
+<<<<<<< HEAD
+=======
 
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Email Us
@@ -173,4 +189,7 @@ const NotFound: React.FC = () => {
 };
 
 export default NotFound;
+<<<<<<< HEAD
+=======
 
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27

@@ -4,6 +4,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+console.log('🔒 Starting continuous security audit automation...');
+=======
 class SecurityAuditor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -11,6 +14,7 @@ class SecurityAuditor {
     this.recommendations = [];
     this.securityScore = 100;
   }
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
@@ -18,7 +22,16 @@ class SecurityAuditor {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
+<<<<<<< HEAD
+async function runSecurityAudit() {
+  try {
+    console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
+
+    // Run npm audit
+    console.log(`'🔍 Running npm security audit...');
+=======
   async auditDependencies() {
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     try {
       this.log('Auditing dependencies for security vulnerabilities...');
       
@@ -235,6 +248,55 @@ class SecurityAuditor {
   }
 }
 
+<<<<<<< HEAD
+// Main continuous loop
+async function runContinuous() {
+  console.log(🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
+  );
+
+  // Run initial security audit
+  await runSecurityAudit();
+
+  // Set up continuous execution
+  setInterval(async () => {
+    await runSecurityAudit();
+  }, AUTOMATION_INTERVAL);
+
+  console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+async function runContinuous() {
+  console.log('🔄 Starting continuous security audit...');
+  
+  // Run initial security audit
+  await runSecurityAudit();
+
+  // Set up continuous execution
+  setInterval(async () => {
+    await runSecurityAudit();
+  }, AUTOMATION_INTERVAL);
+
+  console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous security audit
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous security audit:', error);
+  process.exit(1);
+});
+=======
 // Run security audit
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27

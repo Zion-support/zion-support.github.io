@@ -34,7 +34,11 @@ const TestimonialsSection: React.FC = () => {
   ];
   return (
     <section className="py-20 bg-white">
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,11 +49,19 @@ const TestimonialsSection: React.FC = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about working with us.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
             Don&apos;t just take our word for it. Here&apos;s what our satisfied
             clients have to say about working with us.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}

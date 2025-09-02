@@ -274,4 +274,15 @@ For technical support or questions about the website:
 
 This project is proprietary to Zion Tech Group. All rights reserved.
 
+## 🆘 Support
+
+For support, email support@ziontechgroup.com or join our Slack channel.
+
+## 🔗 Links
+
+- [Website](https://ziontechgroup.com)
+- [Documentation](https://docs.ziontechgroup.com)
+- [API Reference](https://api.ziontechgroup.com/docs)
+- [Community](https://community.ziontechgroup.com)
+
 **Built with ❤️ by Zion Tech Group Team**

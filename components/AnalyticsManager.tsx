@@ -64,8 +64,15 @@ const AnalyticsManager: React.FC = () => {
 
     // Initialize other analytics services
     initializeCustomAnalytics();
+<<<<<<< HEAD
+
     setIsInitialized(true);
   }, []);
+
+=======
+    setIsInitialized(true);
+  }, []);
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const initializeCustomAnalytics = useCallback(() => {
     // Custom analytics initialization
     const sessionId = generateSessionId();
@@ -86,11 +93,19 @@ const AnalyticsManager: React.FC = () => {
       language: navigator.language,
     });
   }, []);
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const generateSessionId = useCallback(() => {
     return (
       'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
     );
   }, []);
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const getUserId = useCallback(() => {
     let userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
@@ -108,6 +123,10 @@ const AnalyticsManager: React.FC = () => {
       referrer: document.referrer,
       timestamp: new Date().toISOString(),
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', 'page_view', pageData);
@@ -122,9 +141,17 @@ const AnalyticsManager: React.FC = () => {
       custom_parameters: pageData,
     });
   }, []);
+<<<<<<< HEAD
+
   const trackEvent = useCallback(
     (event: AnalyticsEvent) => {
       if (!isInitialized) return;
+
+=======
+  const trackEvent = useCallback(
+    (event: AnalyticsEvent) => {
+      if (!isInitialized) return;
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Google Analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', event.name, {
@@ -134,6 +161,15 @@ const AnalyticsManager: React.FC = () => {
           ...event.custom_parameters,
         });
       }
+<<<<<<< HEAD
+
+      // Custom analytics
+      sendAnalyticsEvent(event);
+    },
+    [isInitialized]
+  );
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 
       // Custom analytics
       sendAnalyticsEvent(event);
@@ -150,6 +186,10 @@ const AnalyticsManager: React.FC = () => {
         page_url: window.location.href,
         user_agent: navigator.userAgent,
       };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Send to custom analytics endpoint
       await fetch('/api/analytics', {
         method: 'POST',
@@ -158,7 +198,13 @@ const AnalyticsManager: React.FC = () => {
         },
         body: JSON.stringify(eventData),
       });
+<<<<<<< HEAD
+    } catch (error) {
+      console.error('Analytics: Failed to send event', error);
+    }
+=======
     } catch (error) {}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   }, []);
   const trackUserProperties = useCallback((properties: Record<string, any>) => {
     if (typeof gtag !== 'undefined') {
@@ -175,6 +221,10 @@ const AnalyticsManager: React.FC = () => {
       custom_parameters: properties,
     });
   }, []);
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const trackPerformance = useCallback((metrics: PerformanceMetrics) => {
     // Google Analytics
     if (typeof gtag !== 'undefined') {
@@ -208,6 +258,10 @@ const AnalyticsManager: React.FC = () => {
       custom_parameters: metrics,
     });
   }, []);
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const trackConversion = useCallback(
     (conversionType: string, value?: number) => {
       trackEvent({
@@ -219,19 +273,38 @@ const AnalyticsManager: React.FC = () => {
     },
     [trackEvent]
   );
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const startSessionTimer = useCallback(() => {
     const updateSessionDuration = () => {
       // Session duration tracking logic can be added here if needed
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     const interval = setInterval(updateSessionDuration, 1000);
     // Store interval ID for cleanup
     (window as any).analyticsSessionInterval = interval;
   }, []);
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const endSession = useCallback(() => {
     const interval = (window as any).analyticsSessionInterval;
     if (interval) {
       clearInterval(interval);
     }
+<<<<<<< HEAD
+
+    const sessionDuration =
+      Date.now() -
+      parseInt(sessionStorage.getItem('analytics_start_time') || '0');
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 
     const sessionDuration =
       Date.now() -
@@ -265,11 +338,19 @@ const AnalyticsManager: React.FC = () => {
         });
       }
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     const handleScroll = () => {
       const scrollPercent = Math.round(
         (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
           100
       );
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       if (scrollPercent > 0 && scrollPercent % 25 === 0) {
         trackEvent({
           name: 'scroll_depth',
@@ -279,6 +360,10 @@ const AnalyticsManager: React.FC = () => {
         });
       }
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     const handleFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
       trackEvent({
@@ -288,6 +373,10 @@ const AnalyticsManager: React.FC = () => {
         label: form.action || form.className,
       });
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     document.addEventListener('click', handleClick);
     document.addEventListener('scroll', handleScroll);
     document.addEventListener('submit', handleFormSubmit);
@@ -306,6 +395,13 @@ const AnalyticsManager: React.FC = () => {
       trackUserProperties,
     };
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
+<<<<<<< HEAD
+
+  return null; // This component doesn't render anything
+};
+
+=======
   return null; // This component doesn&apos;t render anything'
 };
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default AnalyticsManager;

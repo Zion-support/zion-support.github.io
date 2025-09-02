@@ -90,7 +90,11 @@ export default function Contact() {
               {contactMethods.map((method, index) => (
                 <div
                   key={index}
+<<<<<<< HEAD
+                  className="text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow"
+=======
                   className="text-center p-6 rounded-2xl border border-gray-200 hover: shadow-lg transition-shadow"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 >
                   <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">
                     <method.icon className="w-6 h-6 text-white" />
@@ -257,7 +261,11 @@ export default function Contact() {
                     {businessHours.map((schedule, index) => (
                       <div
                         key={index}
+<<<<<<< HEAD
+                        className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
+=======
                         className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                       >
                         <span className="font-medium text-gray-900">
                           {schedule.day}

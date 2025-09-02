@@ -48,6 +48,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         }
       };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Track when user leaves
       const handleBeforeUnload = () => {
         isActive = false;
@@ -60,12 +64,20 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           });
         }
       };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Track scroll depth
       const trackScrollDepth = () => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
             100
         );
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'scroll', {
@@ -109,6 +121,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         }
       };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Track form interactions
       const trackFormInteractions = (e: Event) => {
         const target = e.target as
@@ -129,6 +145,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         }
       };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Set up event listeners
       window.addEventListener('beforeunload', handleBeforeUnload);
       window.addEventListener('scroll', trackScrollDepth, { passive: true });
@@ -144,6 +164,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         clearInterval(interval);
       };
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Track custom events
     const trackCustomEvents = () => {
       customEvents.forEach(event => {
@@ -156,10 +180,18 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         }
       });
     };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Initialize tracking
     trackPageView();
     const cleanup = trackEngagement();
     trackCustomEvents();
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     return cleanup;
   }, [pageName, customEvents]);
   return (
@@ -167,7 +199,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       {/* Google Analytics 4 */}
       <script
         async
+<<<<<<< HEAD
+        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+=======
         src="https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       />
       <script
         dangerouslySetInnerHTML={{
@@ -215,4 +251,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     </Head>
   );
 };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default AnalyticsTracker;

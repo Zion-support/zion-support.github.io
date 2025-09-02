@@ -33,7 +33,11 @@ export const OrganizationSchema = () => {
     },
     sameAs: [
       'https://linkedin.com/company/ziontechgroup',
+<<<<<<< HEAD
+      'https://twitter.com/ziontechgroup',
+=======
       'https: //twitter.com/ziontechgroup',
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     ],
     foundingDate: '2020',
     numberOfEmployees: '50-100',

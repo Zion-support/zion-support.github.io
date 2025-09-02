@@ -1,10 +1,19 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
+<<<<<<< HEAD
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: React.ReactNode;
+};
+
+export function Button({ children, ...rest }: Props) {
+  return <button {...rest}>{children}</button>;
+=======
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   asChild?: boolean;
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

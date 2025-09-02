@@ -41,7 +41,11 @@ const Navigation: React.FC = () => {
   };
   return (
     <nav className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50">
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -61,7 +65,11 @@ const Navigation: React.FC = () => {
                     <div className="relative">
                       <button
                         onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
+                        className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+=======
                         className="text-white hover: text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                       >
                         {item.name}
                         <ChevronDown className="ml-1 h-4 w-4" />
@@ -72,7 +80,11 @@ const Navigation: React.FC = () => {
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
+<<<<<<< HEAD
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+=======
                               className="block px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                               onClick={() => setActiveDropdown(null)}
                             >
                               {dropdownItem.name}
@@ -94,10 +106,17 @@ const Navigation: React.FC = () => {
             </div>
           </div>
           {/* Mobile menu button */}
+<<<<<<< HEAD
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white hover:text-blue-300 p-2 rounded-md transition-colors"
+=======
           <div className="md: hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover: text-blue-300 p-2 rounded-md transition-colors"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -110,7 +129,11 @@ const Navigation: React.FC = () => {
       </div>
       {/* Mobile Navigation */}
       {isOpen && (
+<<<<<<< HEAD
+        <div className="md:hidden">
+=======
         <div className="md: hidden">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95">
             {navigationItems.map(item => (
               <div key={item.name}>
@@ -118,7 +141,11 @@ const Navigation: React.FC = () => {
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
+                      className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+=======
                       className="text-white hover: text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                     >
                       {item.name}
                       <ChevronDown className="h-4 w-4" />
@@ -129,7 +156,11 @@ const Navigation: React.FC = () => {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
+<<<<<<< HEAD
+                            className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+=======
                             className="text-gray-300 hover: text-white block px-3 py-2 rounded-md text-sm"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                             onClick={() => {
                               setIsOpen(false);
                               setActiveDropdown(null)}}
@@ -157,4 +188,8 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
+<<<<<<< HEAD
+
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Navigation;
