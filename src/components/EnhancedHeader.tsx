@@ -12,12 +12,15 @@ export const EnhancedHeader: React.FC = () => {
       label: 'Services', 
       href: '/services',
       dropdown: [
-        { label: 'All Services', href: '/comprehensive-services-2025', icon: Zap },
-        { label: 'Micro SAAS', href: '/services/micro-saas', icon: Zap },
-        { label: 'AI Services', href: '/services/ai-services', icon: Brain },
+        { label: 'All Services', href: '/comprehensive-services-showcase-2026', icon: Zap },
+        { label: 'Micro SaaS', href: '/services/micro-saas', icon: Zap },
+        { label: 'AI & Machine Learning', href: '/services/ai-services', icon: Brain },
         { label: 'IT Services', href: '/services/it-services', icon: Cloud },
-        { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { label: 'Emerging Tech', href: '/services/emerging-tech', icon: Zap }
+        { label: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure', icon: Cloud },
+        { label: 'Data & Analytics', href: '/services/data-analytics', icon: Database },
+        { label: 'Developer Tools', href: '/services/developer-tools', icon: Code },
+        { label: 'Industry Solutions', href: '/services/industry-solutions', icon: Building },
+        { label: 'Emerging Technology', href: '/services/emerging-tech', icon: Rocket }
       ]
     },
     { label: 'Solutions', href: '/solutions' },

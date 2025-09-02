@@ -14,12 +14,15 @@ const EnhancedFooter: React.FC = () => {
     {
       title: 'Services',
       links: [
-        { name: 'All Services', href: '/comprehensive-services-2025' },
-        { name: 'Micro SAAS', href: '/services/micro-saas' },
-        { name: 'AI Services', href: '/services/ai-services' },
+        { name: 'All Services', href: '/comprehensive-services-showcase-2026' },
+        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'AI & Machine Learning', href: '/services/ai-services' },
         { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Emerging Tech', href: '/services/emerging-tech' }
+        { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure' },
+        { name: 'Data & Analytics', href: '/services/data-analytics' },
+        { name: 'Developer Tools', href: '/services/developer-tools' },
+        { name: 'Industry Solutions', href: '/services/industry-solutions' },
+        { name: 'Emerging Technology', href: '/services/emerging-tech' }
       ]
     },
     {
