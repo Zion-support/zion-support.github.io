@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import ROICalculator from './ROICalculator';
-
 describe('ROICalculator', () => {
   it('renders without crashing', () => {
     render(<ROICalculator />)

@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import SimpleFooter from './SimpleFooter';
-
 describe('SimpleFooter', () => {
   it('renders without crashing', () => {
     render(<SimpleFooter />)

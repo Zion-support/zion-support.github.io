@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -13,14 +12,10 @@ interface SEOEnhancerProps {
 }
 
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
-  keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting',
-  canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
+  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
+  keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website',
+  twitterCard = 'summary_large_image', structuredData
 }) => {
   useEffect(() => {
     // Update page title dynamically
@@ -34,40 +29,30 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            console.log('Page load time:', entry.duration);
+            
           }
         });
       });
       observer.observe({ entryTypes: ['navigation'] });
     }
   }, [title]);
-
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
+    "@context": "https://schema.org", "@type": "Organization",
+    "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png", "description": description,
     "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+      "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown", "addressRegion": "DE",
+      "postalCode": "19709", "addressCountry": "US"
     },
     "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "@type": "ContactPoint", "telephone": "+1-302-464-0950",
+      "contactType": "customer service", "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
       "https://ziontechgroup.com"
     ]
   };
-
   return (
     <Head>
       <title>{title}</title>
@@ -76,7 +61,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
+      <meta property="og: title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
@@ -101,7 +86,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       />
       
       {/* Performance hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://ziontechgroup.com" />
       
@@ -112,5 +97,4 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Head>
   );
 };
-
 export default SEOEnhancer;

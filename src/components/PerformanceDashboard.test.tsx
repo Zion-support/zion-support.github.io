@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import PerformanceDashboard from './PerformanceDashboard';
-
 describe('PerformanceDashboard', () => {
   it('renders without crashing', () => {
     render(<PerformanceDashboard />)

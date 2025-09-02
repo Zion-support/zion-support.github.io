@@ -13,11 +13,12 @@ class AppImprover {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..');
     this.improvements = [];
-    this.fixes = []}
+    this.fixes = [];
+  }
 
   async runImprovements() {
     console.log('🔧 Running comprehensive app improvements...');
-    
+
     await this.optimizePerformance();
     await this.improveCodeQuality();
     await this.enhanceSecurity();
@@ -26,27 +27,29 @@ class AppImprover {
     await this.enhanceUserExperience();
     await this.optimizeBuild();
     await this.improveDocumentation();
-    
-    this.generateReport()}
+
+    this.generateReport();
+  }
 
   async optimizePerformance() {
     console.log('⚡ Optimizing performance...');
-    
+
     // Optimize images
     await this.optimizeImages();
-    
+
     // Add performance optimizations to Next.js config
     await this.optimizeNextConfig();
-    
+
     // Create performance monitoring
     await this.createPerformanceMonitoring();
-    
-    this.improvements.push('Performance optimizations applied')}
+
+    this.improvements.push('Performance optimizations applied');
+  }
 
   async optimizeImages() {
     const publicDir = path.join(this.projectRoot, 'public');
     if (!fs.existsSync(publicDir)) return;
-    
+
     // Create optimized image component
     const optimizedImageComponent = `import Image from 'next/image';
 import { useState } from 'react';
@@ -102,22 +105,25 @@ export default function OptimizedImage({
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true })}
-    
+      fs.mkdirSync(componentsDir, { recursive: true });
+    }
+
     fs.writeFileSync(
       path.join(componentsDir, 'OptimizedImage.tsx'),
       optimizedImageComponent
     );
-    
-    this.fixes.push('Created OptimizedImage component for better performance')}
+
+    this.fixes.push('Created OptimizedImage component for better performance');
+  }
 
   async optimizeNextConfig() {
     const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
     let nextConfig = '';
-    
+
     if (fs.existsSync(nextConfigPath)) {
-      nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
-    
+      nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
+    }
+
     // Add performance optimizations
     const performanceOptimizations = `
 // Performance optimizations
@@ -199,7 +205,8 @@ const nextConfig = {
 module.exports = nextConfig;`;
 
     fs.writeFileSync(nextConfigPath, performanceOptimizations);
-    this.fixes.push('Optimized Next.js configuration for performance')}
+    this.fixes.push('Optimized Next.js configuration for performance');
+  }
 
   async createPerformanceMonitoring() {
     const performanceMonitor = `import { useEffect } from 'react';
@@ -232,28 +239,31 @@ export function reportWebVitals(metric) {
 
     const hooksDir = path.join(this.projectRoot, 'src', 'hooks');
     if (!fs.existsSync(hooksDir)) {
-      fs.mkdirSync(hooksDir, { recursive: true })}
-    
+      fs.mkdirSync(hooksDir, { recursive: true });
+    }
+
     fs.writeFileSync(
       path.join(hooksDir, 'usePerformanceMonitoring.ts'),
       performanceMonitor
     );
-    
-    this.fixes.push('Created performance monitoring hook')}
+
+    this.fixes.push('Created performance monitoring hook');
+  }
 
   async improveCodeQuality() {
     console.log('📝 Improving code quality...');
-    
+
     // Create ESLint configuration
     await this.createESLintConfig();
-    
+
     // Create Prettier configuration
     await this.createPrettierConfig();
-    
+
     // Create TypeScript strict configuration
     await this.updateTypeScriptConfig();
-    
-    this.improvements.push('Code quality improvements applied')}
+
+    this.improvements.push('Code quality improvements applied');
+  }
 
   async createESLintConfig() {
     const eslintConfig = `module.exports = {
@@ -293,8 +303,9 @@ export function reportWebVitals(metric) {
       path.join(this.projectRoot, 'eslint.config.js'),
       eslintConfig
     );
-    
-    this.fixes.push('Created comprehensive ESLint configuration')}
+
+    this.fixes.push('Created comprehensive ESLint configuration');
+  }
 
   async createPrettierConfig() {
     const prettierConfig = `module.exports = {
@@ -315,16 +326,18 @@ export function reportWebVitals(metric) {
       path.join(this.projectRoot, '.prettierrc.js'),
       prettierConfig
     );
-    
-    this.fixes.push('Created Prettier configuration')}
+
+    this.fixes.push('Created Prettier configuration');
+  }
 
   async updateTypeScriptConfig() {
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
-    let tsConfig = {}
-    
+    let tsConfig = {};
+
     if (fs.existsSync(tsConfigPath)) {
-      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}
-    
+      tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+    }
+
     // Add strict TypeScript configuration
     tsConfig.compilerOptions = {
       ...tsConfig.compilerOptions,
@@ -336,21 +349,25 @@ export function reportWebVitals(metric) {
       noFallthroughCasesInSwitch: true,
       noUncheckedIndexedAccess: true,
       exactOptionalPropertyTypes: true,
-    }
-    
+    };
+
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
-    this.fixes.push('Updated TypeScript configuration for strict type checking')}
+    this.fixes.push(
+      'Updated TypeScript configuration for strict type checking'
+    );
+  }
 
   async enhanceSecurity() {
     console.log('🔒 Enhancing security...');
-    
+
     // Create security headers middleware
     await this.createSecurityMiddleware();
-    
+
     // Create environment validation
     await this.createEnvironmentValidation();
-    
-    this.improvements.push('Security enhancements applied')}
+
+    this.improvements.push('Security enhancements applied');
+  }
 
   async createSecurityMiddleware() {
     const securityMiddleware = `import { NextResponse } from 'next/server';
@@ -389,8 +406,9 @@ export const config = {
 
     const middlewarePath = path.join(this.projectRoot, 'middleware.ts');
     fs.writeFileSync(middlewarePath, securityMiddleware);
-    
-    this.fixes.push('Created security middleware with CSP headers')}
+
+    this.fixes.push('Created security middleware with CSP headers');
+  }
 
   async createEnvironmentValidation() {
     const envValidation = `import { z } from 'zod';
@@ -409,28 +427,28 @@ export type Env = z.infer<typeof envSchema>;`;
 
     const libDir = path.join(this.projectRoot, 'src', 'lib');
     if (!fs.existsSync(libDir)) {
-      fs.mkdirSync(libDir, { recursive: true })}
-    
-    fs.writeFileSync(
-      path.join(libDir, 'env.ts'),
-      envValidation
-    );
-    
-    this.fixes.push('Created environment validation schema')}
+      fs.mkdirSync(libDir, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(libDir, 'env.ts'), envValidation);
+
+    this.fixes.push('Created environment validation schema');
+  }
 
   async optimizeSEO() {
     console.log('🔍 Optimizing SEO...');
-    
+
     // Create SEO component
     await this.createSEOComponent();
-    
+
     // Create sitemap generator
     await this.createSitemapGenerator();
-    
+
     // Create robots.txt
     await this.createRobotsTxt();
-    
-    this.improvements.push('SEO optimizations applied')}
+
+    this.improvements.push('SEO optimizations applied');
+  }
 
   async createSEOComponent() {
     const seoComponent = `import Head from 'next/head';
@@ -510,14 +528,13 @@ export default function SEO({
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true })}
-    
-    fs.writeFileSync(
-      path.join(componentsDir, 'SEO.tsx'),
-      seoComponent
-    );
-    
-    this.fixes.push('Created comprehensive SEO component')}
+      fs.mkdirSync(componentsDir, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoComponent);
+
+    this.fixes.push('Created comprehensive SEO component');
+  }
 
   async createSitemapGenerator() {
     const sitemapGenerator = `import fs from 'fs';
@@ -559,8 +576,9 @@ if (require.main === module) {
       path.join(this.projectRoot, 'scripts', 'generate-sitemap.js'),
       sitemapGenerator
     );
-    
-    this.fixes.push('Created sitemap generator')}
+
+    this.fixes.push('Created sitemap generator');
+  }
 
   async createRobotsTxt() {
     const robotsTxt = `User-agent: *
@@ -578,19 +596,21 @@ Disallow: /private/`;
       path.join(this.projectRoot, 'public', 'robots.txt'),
       robotsTxt
     );
-    
-    this.fixes.push('Created robots.txt file')}
+
+    this.fixes.push('Created robots.txt file');
+  }
 
   async improveAccessibility() {
     console.log('♿ Improving accessibility...');
-    
+
     // Create accessibility utilities
     await this.createAccessibilityUtils();
-    
+
     // Create skip link component
     await this.createSkipLink();
-    
-    this.improvements.push('Accessibility improvements applied')}
+
+    this.improvements.push('Accessibility improvements applied');
+  }
 
   async createAccessibilityUtils() {
     const accessibilityUtils = `// Accessibility utilities
@@ -651,14 +671,16 @@ export const isHighContrast = (color1: string, color2: string): boolean => {
 
     const utilsDir = path.join(this.projectRoot, 'src', 'utils');
     if (!fs.existsSync(utilsDir)) {
-      fs.mkdirSync(utilsDir, { recursive: true })}
-    
+      fs.mkdirSync(utilsDir, { recursive: true });
+    }
+
     fs.writeFileSync(
       path.join(utilsDir, 'accessibility.ts'),
       accessibilityUtils
     );
-    
-    this.fixes.push('Created accessibility utilities')}
+
+    this.fixes.push('Created accessibility utilities');
+  }
 
   async createSkipLink() {
     const skipLink = `import Link from 'next/link';
@@ -675,28 +697,28 @@ export default function SkipLink() {
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true })}
-    
-    fs.writeFileSync(
-      path.join(componentsDir, 'SkipLink.tsx'),
-      skipLink
-    );
-    
-    this.fixes.push('Created skip link component')}
+      fs.mkdirSync(componentsDir, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(componentsDir, 'SkipLink.tsx'), skipLink);
+
+    this.fixes.push('Created skip link component');
+  }
 
   async enhanceUserExperience() {
     console.log('✨ Enhancing user experience...');
-    
+
     // Create loading components
     await this.createLoadingComponents();
-    
+
     // Create error boundary
     await this.createErrorBoundary();
-    
+
     // Create toast notifications
     await this.createToastSystem();
-    
-    this.improvements.push('User experience enhancements applied')}
+
+    this.improvements.push('User experience enhancements applied');
+  }
 
   async createLoadingComponents() {
     const loadingSpinner = `import { cn } from '@/lib/utils';
@@ -756,19 +778,18 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true })}
-    
+      fs.mkdirSync(componentsDir, { recursive: true });
+    }
+
     fs.writeFileSync(
       path.join(componentsDir, 'LoadingSpinner.tsx'),
       loadingSpinner
     );
-    
-    fs.writeFileSync(
-      path.join(componentsDir, 'Skeleton.tsx'),
-      skeleton
-    );
-    
-    this.fixes.push('Created loading components (spinner and skeleton)')}
+
+    fs.writeFileSync(path.join(componentsDir, 'Skeleton.tsx'), skeleton);
+
+    this.fixes.push('Created loading components (spinner and skeleton)');
+  }
 
   async createErrorBoundary() {
     const errorBoundary = `import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -838,14 +859,16 @@ export default class ErrorBoundary extends Component<Props, State> {
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true })}
-    
+      fs.mkdirSync(componentsDir, { recursive: true });
+    }
+
     fs.writeFileSync(
       path.join(componentsDir, 'ErrorBoundary.tsx'),
       errorBoundary
     );
-    
-    this.fixes.push('Created error boundary component')}
+
+    this.fixes.push('Created error boundary component');
+  }
 
   async createToastSystem() {
     const toastSystem = `import React, { createContext, useContext, useState, useCallback } from 'react';
@@ -932,25 +955,25 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
 
     const componentsDir = path.join(this.projectRoot, 'src', 'components');
     if (!fs.existsSync(componentsDir)) {
-      fs.mkdirSync(componentsDir, { recursive: true })}
-    
-    fs.writeFileSync(
-      path.join(componentsDir, 'Toast.tsx'),
-      toastSystem
-    );
-    
-    this.fixes.push('Created toast notification system')}
+      fs.mkdirSync(componentsDir, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(componentsDir, 'Toast.tsx'), toastSystem);
+
+    this.fixes.push('Created toast notification system');
+  }
 
   async optimizeBuild() {
     console.log('🔨 Optimizing build process...');
-    
+
     // Create build optimization script
     await this.createBuildOptimizer();
-    
+
     // Create bundle analyzer
     await this.createBundleAnalyzer();
-    
-    this.improvements.push('Build optimizations applied')}
+
+    this.improvements.push('Build optimizations applied');
+  }
 
   async createBuildOptimizer() {
     const buildOptimizer = `import fs from 'fs';
@@ -998,8 +1021,9 @@ runOptimizations();`;
       path.join(this.projectRoot, 'scripts', 'build-optimizer.js'),
       buildOptimizer
     );
-    
-    this.fixes.push('Created build optimization script')}
+
+    this.fixes.push('Created build optimization script');
+  }
 
   async createBundleAnalyzer() {
     const bundleAnalyzer = `import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -1030,19 +1054,21 @@ module.exports = withBundleAnalyzer;`;
       path.join(this.projectRoot, 'scripts', 'bundle-analyzer.js'),
       bundleAnalyzer
     );
-    
-    this.fixes.push('Created bundle analyzer configuration')}
+
+    this.fixes.push('Created bundle analyzer configuration');
+  }
 
   async improveDocumentation() {
     console.log('📚 Improving documentation...');
-    
+
     // Create README
     await this.createREADME();
-    
+
     // Create API documentation
     await this.createAPIDocumentation();
-    
-    this.improvements.push('Documentation improvements applied')}
+
+    this.improvements.push('Documentation improvements applied');
+  }
 
   async createREADME() {
     const readme = `# Zion Tech Group
@@ -1178,12 +1204,10 @@ This project is licensed under the MIT License.
 
 For support, email support@ziontechgroup.com or create an issue in the repository.`;
 
-    fs.writeFileSync(
-      path.join(this.projectRoot, 'README.md'),
-      readme
-    );
-    
-    this.fixes.push('Created comprehensive README')}
+    fs.writeFileSync(path.join(this.projectRoot, 'README.md'), readme);
+
+    this.fixes.push('Created comprehensive README');
+  }
 
   async createAPIDocumentation() {
     const apiDocs = `# API Documentation
@@ -1283,14 +1307,13 @@ API requests are rate limited to 100 requests per minute per IP address.
 
     const docsDir = path.join(this.projectRoot, 'docs');
     if (!fs.existsSync(docsDir)) {
-      fs.mkdirSync(docsDir, { recursive: true })}
-    
-    fs.writeFileSync(
-      path.join(docsDir, 'API.md'),
-      apiDocs
-    );
-    
-    this.fixes.push('Created API documentation')}
+      fs.mkdirSync(docsDir, { recursive: true });
+    }
+
+    fs.writeFileSync(path.join(docsDir, 'API.md'), apiDocs);
+
+    this.fixes.push('Created API documentation');
+  }
 
   generateReport() {
     const report = {
@@ -1300,32 +1323,39 @@ API requests are rate limited to 100 requests per minute per IP address.
       summary: {
         totalImprovements: this.improvements.length,
         totalFixes: this.fixes.length,
-      }
-    }
+      },
+    };
 
     // Save report
-    const reportPath = path.join(this.projectRoot, 'app-improvement-report.json');
+    const reportPath = path.join(
+      this.projectRoot,
+      'app-improvement-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     // Display summary
     console.log('\n🎉 App Improvement Summary:');
     console.log(`Total Improvements: ${this.improvements.length}`);
     console.log(`Total Fixes: ${this.fixes.length}`);
-    
+
     console.log('\n📋 Improvements Applied:');
     this.improvements.forEach(improvement => {
-      console.log(`✅ ${improvement}`)})
-    
+      console.log(`✅ ${improvement}`);
+    });
+
     console.log('\n🔧 Fixes Applied:');
     this.fixes.forEach(fix => {
-      console.log(`✅ ${fix}`)})
-    
-    console.log(`\n📄 Full report saved to: ${reportPath}`)}
+      console.log(`✅ ${fix}`);
+    });
+
+    console.log(`\n📄 Full report saved to: ${reportPath}`);
+  }
 }
 
 // Run improvements
 async function main() {
   const improver = new AppImprover();
-  await improver.runImprovements()}
+  await improver.runImprovements();
+}
 
 main().catch(console.error);

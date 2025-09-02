@@ -9,15 +9,20 @@ const withBundleAnalyzer = (nextConfig = {}) => {
           new BundleAnalyzerPlugin({
             analyzerMode: 'static',
             openAnalyzer: false,
-            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',
+            reportFilename: isServer
+              ? 'server-bundle.html'
+              : 'client-bundle.html',
           })
-        )}
-      
+        );
+      }
+
       if (nextConfig.webpack) {
-        return nextConfig.webpack(config, { dev, isServer })}
-      
-      return config},
-  }
-}
+        return nextConfig.webpack(config, { dev, isServer });
+      }
+
+      return config;
+    },
+  };
+};
 
 module.exports = withBundleAnalyzer;

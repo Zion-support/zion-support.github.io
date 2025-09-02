@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import ModernHeader from "./ModernHeader";
 import ModernFooter from "./ModernFooter";
-
 interface ModernLayoutProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;
@@ -13,11 +12,9 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
 
-  children,
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  children, title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
+  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group', canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
 })               => {
 
   return (
@@ -32,7 +29,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
+        <meta property="og: type" content="website" />
         <meta property="og:url" content={canonical} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -65,20 +62,14 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 
             __html: JSON.stringify({
 
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
+              "@context": "https://schema.org", "@type": "Organization",
+              "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png", "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
               "address": {
 
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-  "addressCountry": "US"
+                "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown", "addressRegion": "DE",
+                "postalCode": "19709", "addressCountry": "US"
               
 
 
@@ -89,15 +80,12 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 },
               "contactPoint": {
 
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
+                "@type": "ContactPoint", "telephone": "+1-302-464-0950",
+                "contactType": "customer service", "email": "kleber@ziontechgroup.com"
               },
               "sameAs"[
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
+                "https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
+                "https: //github.com/ziontechgroup"
               ]
             })
           }}
@@ -111,8 +99,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         </main>;
         <ModernFooter />;
       </div>;
-    </>;
+</>;
   );
 };
-
 export default ModernLayout;}

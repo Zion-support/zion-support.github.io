@@ -120,7 +120,7 @@ export default [
       'react/prop-types': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
-        { argsIgnorePattern: '^_' }
+        { argsIgnorePattern: '^_' },
       ],
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -259,7 +259,7 @@ export default [
       'test_build/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx'
-    ]
-  }
+      'test*.tsx',
+    ],
+  },
 ];

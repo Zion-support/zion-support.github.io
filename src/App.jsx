@@ -4,7 +4,7 @@ import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.tsx';
 ('');
-// Home and main pages';
+// Home and main pages';'
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
@@ -28,7 +28,7 @@ const ServicesPage = () => (
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
     <div className='container mx-auto px-4 py-16'>
       <div className='text-center mb-16'>
-        <h1 className='text-4xl md:text-6xl font-bold mb-6'>
+        <h1 className='text-4xl md: text-6xl font-bold mb-6'>
           Our
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
             {' '}
@@ -86,7 +86,7 @@ function App() {}
               <Route path='/pricing' element={<ComprehensivePricing />} />{/* Services routes */}
               <Route path='/services' element={<ServicesPage />} />{/* Catch-all route for 404 */}
               <Route
-                path='*'''';
+                path='*'''';'
                 element={}
                   <div className='flex items-center justify-center min-h-screen'>
                     <div className='text-center'>
@@ -97,8 +97,8 @@ function App() {}
                         The page you're looking for doesn't exist.
                       </p>
                       <a
-                        href='/'''';
-                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors'''">
+                        href='/'''';'
+                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'''">"
                         Go Home
                       </a>
                     </div>

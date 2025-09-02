@@ -12,4 +12,4 @@ module.exports = {
   bracketSpacing: true,
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
-}
+};

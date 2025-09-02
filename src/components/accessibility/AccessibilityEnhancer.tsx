@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityMetrics {
   contrastRatio: number;
   fontSize: number;
@@ -13,7 +12,6 @@ export const AccessibilityEnhancer: React.FC = () => {
   const [isAccessible, setIsAccessible] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
-
   useEffect(() => {
     const checkAccessibility = () => {
       if (typeof window !== 'undefined') {
@@ -22,48 +20,37 @@ export const AccessibilityEnhancer: React.FC = () => {
         const bodyStyles = window.getComputedStyle(bodyElement);
         const backgroundColor = bodyStyles.backgroundColor;
         const color = bodyStyles.color;
-        
         // Count alt texts
         const images = document.querySelectorAll('img');
         const altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== '').length;
-        
         // Count headings
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;
-        
         // Check font size
         const fontSize = parseFloat(bodyStyles.fontSize);
-        
         setMetrics({
           contrastRatio: 4.5, // Simplified - would need actual contrast calculation
           fontSize,
-          focusVisible: true,
-          altTexts,
+          focusVisible: true, altTexts,
           headings
         });
-
         const isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
         setIsAccessible(isGoodAccessibility);
       }
     };
-
     checkAccessibility();
-    
     // Re-check on DOM changes
     const observer = new MutationObserver(checkAccessibility);
     observer.observe(document.body, { childList: true, subtree: true });
-    
     return () => observer.disconnect();
   }, []);
-
   const enhanceAccessibility = () => {
     if (typeof document !== 'undefined') {
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
-
       // Add ARIA landmarks
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
@@ -73,7 +60,6 @@ export const AccessibilityEnhancer: React.FC = () => {
 
       // Enhance focus visibility
       document.documentElement.style.setProperty('--focus-ring', '2px solid #3b82f6');
-      
       // Add focus trap for modals
       const modals = document.querySelectorAll('[role="dialog"]');
       modals.forEach(modal => {
@@ -81,25 +67,21 @@ export const AccessibilityEnhancer: React.FC = () => {
           modal.setAttribute('aria-modal', 'true');
         }
       });
-
       setIsAccessible(true);
     }
   };
-
   const toggleHighContrast = () => {
     setHighContrast(!highContrast);
     if (typeof document !== 'undefined') {
       document.documentElement.classList.toggle('high-contrast', !highContrast);
     }
   };
-
   const toggleLargeText = () => {
     setLargeText(!largeText);
     if (typeof document !== 'undefined') {
       document.documentElement.classList.toggle('large-text', !largeText);
     }
   };
-
   return (
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">
       <div className="flex items-center justify-between mb-2">
@@ -161,5 +143,4 @@ export const AccessibilityEnhancer: React.FC = () => {
     </div>
   );
 };
-
 export default AccessibilityEnhancer;

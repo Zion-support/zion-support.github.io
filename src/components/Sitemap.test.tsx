@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import Sitemap from './Sitemap';
-
 describe('Sitemap', () => {
   it('renders without crashing', () => {
     render(<Sitemap />)

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -10,35 +9,26 @@ interface PerformanceMetrics {
 export const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimized, setIsOptimized] = useState(false);
-
   useEffect(() => {
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
-        
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-        
         // Memory usage (if available)
         const memoryUsage = (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0;
-        
         // Network latency estimation
         const networkLatency = navigation.responseEnd - navigation.requestStart;
-
         setMetrics({
-          loadTime,
-          renderTime,
-          memoryUsage,
-          networkLatency
+          loadTime, renderTime,
+          memoryUsage, networkLatency
         });
-
         // Check if performance is optimized
         const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance);
       }
     };
-
     // Measure performance after page load
     if (document.readyState === 'complete') {
       measurePerformance();
@@ -50,16 +40,13 @@ export const PerformanceOptimizer: React.FC = () => {
       window.removeEventListener('load', measurePerformance);
     };
   }, []);
-
   const optimizePerformance = () => {
     // Implement performance optimizations
     if (typeof window !== 'undefined') {
       // Preload critical resources
       const criticalResources = [
-        '/fonts/inter.woff2',
-        '/images/hero-bg.jpg'
+        '/fonts/inter.woff2', '/images/hero-bg.jpg'
       ];
-
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -70,7 +57,6 @@ export const PerformanceOptimizer: React.FC = () => {
         }
         document.head.appendChild(link);
       });
-
       // Enable service worker for caching
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(console.error);
@@ -79,7 +65,6 @@ export const PerformanceOptimizer: React.FC = () => {
       setIsOptimized(true);
     }
   };
-
   if (!metrics) {
     return null;
   }
@@ -99,19 +84,19 @@ export const PerformanceOptimizer: React.FC = () => {
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-600">Render Time:</span>
+          <span className="text-gray-600">Render Time: </span>
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>
             {metrics.renderTime.toFixed(0)}ms
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-600">Memory:</span>
+          <span className="text-gray-600">Memory: </span>
           <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>
             {metrics.memoryUsage.toFixed(1)}MB
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-gray-600">Network:</span>
+          <span className="text-gray-600">Network: </span>
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>
             {metrics.networkLatency.toFixed(0)}ms
           </span>
@@ -121,7 +106,7 @@ export const PerformanceOptimizer: React.FC = () => {
       {!isOptimized && (
         <button
           onClick={optimizePerformance}
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors"
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"
         >
           Optimize Performance
         </button>
@@ -129,5 +114,4 @@ export const PerformanceOptimizer: React.FC = () => {
     </div>
   );
 };
-
 export default PerformanceOptimizer;
