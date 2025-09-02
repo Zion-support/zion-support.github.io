@@ -10,11 +10,17 @@ export const EnhancedHeader: React.FC = () => {
               Zion Tech Group
             </a>
           </div>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6">
             <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
             <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
             <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
             <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>
+            <a href="/micro-saas" className="text-gray-700 hover:text-blue-600">Micro SAAS</a>
+            <a href="/it-services" className="text-gray-700 hover:text-blue-600">IT Services</a>
+            <a href="/marketplace" className="text-gray-700 hover:text-blue-600">Marketplace</a>
+            <a href="/news" className="text-gray-700 hover:text-blue-600">News</a>
+            <a href="/blog" className="text-gray-700 hover:text-blue-600">Blog</a>
+            <a href="/careers" className="text-gray-700 hover:text-blue-600">Careers</a>
             <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
           </nav>
         </div>
