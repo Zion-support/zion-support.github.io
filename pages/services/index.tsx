@@ -1,6 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
+import PricingGuide from '../../components/PricingGuide';
 import { services, getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
 import Link from 'next/link';
@@ -343,6 +344,9 @@ const ServicesPage: NextPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Pricing Guide */}
+      <PricingGuide />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">

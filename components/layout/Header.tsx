@@ -26,9 +26,24 @@ const Header: React.FC = () => {
   ];
 
   const serviceCategories = [
-    { name: 'Micro SaaS', href: '/services/micro-saas' },
-    { name: 'IT Services', href: '/services/it-services' },
-    { name: 'AI Services', href: '/services/ai-services' },
+    { 
+      name: 'Micro SaaS', 
+      href: '/services/micro-saas',
+      description: 'Innovative focused software solutions',
+      popular: ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking']
+    },
+    { 
+      name: 'IT Services', 
+      href: '/services/it-services',
+      description: 'Enterprise infrastructure & security',
+      popular: ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks']
+    },
+    { 
+      name: 'AI Services', 
+      href: '/services/ai-services',
+      description: 'Cutting-edge AI & machine learning',
+      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery']
+    },
   ];
 
   return (
@@ -44,17 +59,17 @@ const Header: React.FC = () => {
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-2 sm:mb-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="hover:text-blue-300 transition-colors">+1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300 transition-colors">kleber@ziontechgroup.com</a>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 text-sm">
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
@@ -91,16 +106,44 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-4">
+                      {serviceCategories.map((category) => (
+                        <div key={category.name} className="border-b border-gray-100 last:border-b-0 pb-4 last:pb-0">
+                          <Link
+                            href={category.href}
+                            className="block group/item"
+                          >
+                            <div className="font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors">
+                              {category.name}
+                            </div>
+                            <div className="text-sm text-gray-600 mt-1">
+                              {category.description}
+                            </div>
+                            <div className="flex flex-wrap gap-1 mt-2">
+                              {category.popular.map((service) => (
+                                <span key={service} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                                  {service}
+                                </span>
+                              ))}
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <Link
+                        href="/services"
+                        className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center"
+                      >
+                        View All Services
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -157,16 +200,27 @@ const Header: React.FC = () => {
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-2">Services</div>
+                  <div className="text-gray-700 font-medium mb-3">Services</div>
                   {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {category.name}
-                    </Link>
+                    <div key={category.name} className="mb-4">
+                      <Link
+                        href={category.href}
+                        className="block py-2 text-gray-900 hover:text-blue-600 transition-colors font-medium"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {category.name}
+                      </Link>
+                      <div className="text-sm text-gray-600 mb-2">
+                        {category.description}
+                      </div>
+                      <div className="flex flex-wrap gap-1">
+                        {category.popular.slice(0, 3).map((service) => (
+                          <span key={service} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                            {service}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
 
