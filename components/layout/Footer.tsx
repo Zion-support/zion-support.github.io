@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
         { name: 'AI Chatbots', href: '/services/ai-services' },
         { name: 'Data Analytics', href: '/services/ai-services' },
         { name: 'AI Automation', href: '/services/ai-services' },
-        { name: 'AI Consulting', href: '/services/ai-services' },
+        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
       ]
     }
   ];

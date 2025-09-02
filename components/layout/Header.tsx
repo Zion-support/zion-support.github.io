@@ -17,11 +17,10 @@ const Header: React.FC = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Products', href: '/products' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -30,12 +29,13 @@ const Header: React.FC = () => {
     { name: 'Micro SaaS', href: '/services/micro-saas' },
     { name: 'IT Services', href: '/services/it-services' },
     { name: 'AI Services', href: '/services/ai-services' },
+    { name: 'AI Content Generator', href: '/services/ai-content-generator' },
   ];
 
   const solutionCategories = [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Custom Development', href: '/solutions/custom-development' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Small Business', href: '/solutions/small-business' },
+    { name: 'Startup Solutions', href: '/solutions/startups' },
   ];
 
   return (
