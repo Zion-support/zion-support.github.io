@@ -100,12 +100,10 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
     services: [
-      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' },
-      { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' },
-      { name: 'Data & Analytics', href: '/services/data', icon: Database, description: 'Data pipelines & ML ops' },
-      { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' },
-      { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },
+      { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
+      { name: 'IT Services', href: '/it-services', icon: Server, description: 'Enterprise IT solutions' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Store, description: 'Specialized software solutions' },
+      { name: 'All Services', href: '/services', icon: Briefcase, description: 'Complete service portfolio' },
     ],
     solutions: [
       { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' },

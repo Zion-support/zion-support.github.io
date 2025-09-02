@@ -32,7 +32,13 @@ import {
   Smartphone,
   Cloud,
   Server,
-  Network
+  Network,
+  TestTube,
+  Leaf,
+  Heart,
+  Building2,
+  Atom,
+  User
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -299,11 +305,155 @@ export default function AIServices() {
         'Consumer behavior insights',
         'Price optimization recommendations',
         'Market opportunity identification',
-        'Real-time market intelligence reports'
+        'Real-time competitive intelligence'
       ],
-      pricing: '$5,000 - $18,000/month',
-      delivery: '6-12 weeks',
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-10 weeks',
       category: 'Market AI'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Advanced AI system for pharmaceutical research and drug development',
+      icon: TestTube,
+      features: [
+        'Molecular structure analysis and prediction',
+        'Drug-target interaction modeling',
+        'Toxicity and side effect prediction',
+        'Clinical trial optimization',
+        'Patent landscape analysis',
+        'Regulatory compliance assistance'
+      ],
+      pricing: '$50,000 - $200,000/month',
+      delivery: '16-24 weeks',
+      category: 'Pharma AI'
+    },
+    {
+      title: 'AI-Powered Climate Analytics',
+      description: 'Intelligent climate modeling and environmental impact assessment',
+      icon: Leaf,
+      features: [
+        'Climate change prediction modeling',
+        'Carbon footprint analysis and optimization',
+        'Renewable energy optimization',
+        'Environmental risk assessment',
+        'Sustainability reporting automation',
+        'Green technology recommendations'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '10-16 weeks',
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Trading System',
+      description: 'Intelligent algorithmic trading with risk management and portfolio optimization',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and prediction',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Sentiment analysis integration',
+        'Backtesting and strategy validation',
+        'Regulatory compliance monitoring'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'Trading AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Platform',
+      description: 'Advanced threat detection and response with behavioral analysis',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response',
+        'Zero-day vulnerability identification',
+        'Security posture assessment',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security AI'
+    },
+    {
+      title: 'AI-Powered Mental Health Assistant',
+      description: 'Intelligent mental health monitoring and intervention platform',
+      icon: Heart,
+      features: [
+        'Emotional state monitoring and analysis',
+        'Personalized intervention recommendations',
+        'Crisis detection and alert system',
+        'Therapy session optimization',
+        'Medication adherence tracking',
+        'Privacy-compliant data handling'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '10-16 weeks',
+      category: 'Health AI'
+    },
+    {
+      title: 'AI-Powered Smart City Platform',
+      description: 'Intelligent urban management with IoT integration and predictive analytics',
+      icon: Building2,
+      features: [
+        'Traffic flow optimization',
+        'Energy consumption management',
+        'Public safety monitoring',
+        'Infrastructure maintenance prediction',
+        'Citizen service optimization',
+        'Environmental monitoring and control'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'Smart City AI'
+    },
+    {
+      title: 'AI-Powered Quantum Computing Simulator',
+      description: 'Advanced quantum algorithm development and simulation platform',
+      icon: Atom,
+      features: [
+        'Quantum algorithm design and optimization',
+        'Quantum circuit simulation',
+        'Quantum error correction',
+        'Quantum machine learning models',
+        'Performance benchmarking',
+        'Integration with quantum hardware'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '20-32 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Intelligent space mission design and optimization platform',
+      icon: Globe,
+      features: [
+        'Mission trajectory optimization',
+        'Resource allocation and planning',
+        'Risk assessment and mitigation',
+        'Satellite constellation management',
+        'Space debris monitoring',
+        'Mission success prediction'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-40 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Personalized Medicine',
+      description: 'Genomic analysis and personalized treatment recommendation system',
+      icon: User,
+      features: [
+        'Genomic data analysis and interpretation',
+        'Personalized treatment recommendations',
+        'Drug interaction prediction',
+        'Disease risk assessment',
+        'Clinical trial matching',
+        'Pharmacogenomics analysis'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-20 weeks',
+      category: 'Personalized Medicine AI'
     }
   ];
 
@@ -377,7 +527,7 @@ export default function AIServices() {
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
               <Link
-                href="/pricing-guide"
+                href="/pricing"
                 className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
               >
                 View Pricing <span aria-hidden="true">→</span>

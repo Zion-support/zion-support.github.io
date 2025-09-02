@@ -18,20 +18,25 @@ const Footer: React.FC = () => {
       { name: 'Customer Support Platform', href: '/solutions/customer-support' },
       { name: 'Event Management', href: '/solutions/event-management' },
       { name: 'Project Management', href: '/solutions/project-management' },
-      { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
+      { name: 'Video Content Creator', href: '/solutions/video-content-creator' },
+      { name: 'Contract Management', href: '/solutions/contract-management' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/about' },
       { name: 'Careers', href: '/about' },
-      { name: 'Contact', href: '/contact' }
+      { name: 'Contact', href: '/contact' },
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' }
     ],
     resources: [
       { name: 'Blog', href: '/blog' },
       { name: 'Case Studies', href: '/blog' },
       { name: 'Documentation', href: '/blog' },
       { name: 'Support', href: '/contact' },
-      { name: 'Pricing Guide', href: '/pricing-guide' }
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Help Center', href: '/help' }
     ]
   };
 
@@ -142,15 +147,18 @@ const Footer: React.FC = () => {
             <p className='text-gray-400 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className='flex space-x-6 mt-4 md:mt-0'>
+            <div className='flex flex-wrap gap-4 mt-4 md:mt-0'>
               <Link href='/privacy' className='text-gray-400 hover:text-blue-400 text-sm transition-colors'>
                 Privacy Policy
               </Link>
               <Link href='/terms' className='text-gray-400 hover:text-blue-400 text-sm transition-colors'>
                 Terms of Service
               </Link>
-              <Link href='/cookies' className='text-gray-400 hover:text-blue-400 text-sm transition-colors'>
-                Cookie Policy
+              <Link href='/help' className='text-gray-400 hover:text-blue-400 text-sm transition-colors'>
+                Help Center
+              </Link>
+              <Link href='/sitemap' className='text-gray-400 hover:text-blue-400 text-sm transition-colors'>
+                Sitemap
               </Link>
             </div>
           </div>

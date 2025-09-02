@@ -29,7 +29,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  Brain
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -299,16 +300,128 @@ export default function ITServices() {
       description: 'Financial technology solutions and payment system integration',
       icon: Database,
       features: [
-        'Payment gateway integration',
-        'Financial API development',
-        'Compliance and regulatory solutions',
-        'Fraud detection and prevention',
-        'Digital banking solutions',
-        'Cryptocurrency integration'
+        'Payment gateway integration and optimization',
+        'Cryptocurrency and blockchain solutions',
+        'Financial data analytics and reporting',
+        'Compliance and regulatory support',
+        'Risk management and fraud detection',
+        'Mobile payment and digital wallet solutions'
       ],
-      pricing: '$8,000 - $60,000/month',
-      delivery: '10-24 weeks',
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-20 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'Edge Computing & CDN Solutions',
+      description: 'Edge computing infrastructure and content delivery network optimization',
+      icon: Server,
+      features: [
+        'Edge computing platform setup',
+        'CDN optimization and management',
+        'Edge AI and machine learning deployment',
+        'Latency reduction strategies',
+        'Global content distribution',
+        'Edge security and monitoring'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'Edge Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Lock,
+      features: [
+        'Zero trust network architecture design',
+        'Identity and access management (IAM)',
+        'Micro-segmentation implementation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Security automation and orchestration'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '8-20 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Hybrid Cloud & Multi-Cloud Management',
+      description: 'Hybrid and multi-cloud strategy, implementation, and optimization',
+      icon: Cloud,
+      features: [
+        'Multi-cloud architecture design',
+        'Cloud cost optimization and FinOps',
+        'Hybrid cloud connectivity and security',
+        'Cloud migration and modernization',
+        'Disaster recovery across clouds',
+        'Cloud governance and compliance'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '10-24 weeks',
+      category: 'Cloud Services'
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'AI infrastructure setup, machine learning operations, and model deployment',
+      icon: Brain,
+      features: [
+        'AI infrastructure design and setup',
+        'MLOps pipeline development',
+        'Model training and deployment automation',
+        'AI model monitoring and management',
+        'GPU cluster optimization',
+        'AI security and governance'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'AI Infrastructure'
+    },
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description: 'Digital twin development and simulation platform implementation',
+      icon: Monitor,
+      features: [
+        'Digital twin architecture design',
+        'Real-time data integration and processing',
+        'Simulation and modeling capabilities',
+        'IoT sensor integration',
+        'Predictive analytics and optimization',
+        'Visualization and dashboard development'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Robotic Process Automation (RPA)',
+      description: 'End-to-end RPA implementation and intelligent automation solutions',
+      icon: Settings,
+      features: [
+        'RPA strategy and roadmap development',
+        'Bot development and deployment',
+        'Process mining and optimization',
+        'Intelligent document processing',
+        'RPA governance and management',
+        'Integration with AI and ML systems'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'Satellite & Space Technology Solutions',
+      description: 'Satellite communication, space technology, and ground station services',
+      icon: Globe,
+      features: [
+        'Satellite communication system design',
+        'Ground station setup and management',
+        'Space data processing and analytics',
+        'Satellite constellation management',
+        'Space mission planning and optimization',
+        'Regulatory compliance and licensing'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space Technology'
     }
   ];
 
@@ -382,7 +495,7 @@ export default function ITServices() {
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
               <Link
-                href="/pricing-guide"
+                href="/pricing"
                 className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600"
               >
                 View Pricing <span aria-hidden="true">→</span>

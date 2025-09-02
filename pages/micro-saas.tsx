@@ -32,7 +32,13 @@ import {
   Cpu,
   Network,
   Terminal,
-  Calendar
+  Calendar,
+  Video,
+  BookOpen,
+  Truck,
+  Building,
+  Store,
+  DollarSign
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -298,6 +304,166 @@ export default function MicroSaaS() {
       category: 'Finance SaaS'
     },
     {
+      title: 'AI-Powered Video Content Creator',
+      description: 'Automated video generation platform with AI avatars, voice synthesis, and editing',
+      icon: Video,
+      features: [
+        'AI avatar creation and customization',
+        'Text-to-video generation',
+        'Voice cloning and synthesis',
+        'Automated video editing and transitions',
+        'Multi-language support',
+        'Brand template integration'
+      ],
+      pricing: '$399 - $1,500/month',
+      delivery: '3-5 weeks',
+      category: 'Video SaaS'
+    },
+    {
+      title: 'Intelligent Contract Management Platform',
+      description: 'AI-powered contract analysis, risk assessment, and automated compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and extraction',
+        'Risk assessment and scoring',
+        'Compliance monitoring and alerts',
+        'Contract lifecycle management',
+        'Template generation and customization',
+        'Integration with legal databases'
+      ],
+      pricing: '$499 - $2,000/month',
+      delivery: '4-6 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'Smart Energy Management System',
+      description: 'IoT-powered energy monitoring and optimization platform for buildings and facilities',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'Predictive maintenance alerts',
+        'Energy optimization recommendations',
+        'Carbon footprint tracking',
+        'Cost analysis and reporting',
+        'Integration with smart devices'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '3-5 weeks',
+      category: 'Energy SaaS'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Intelligent e-learning platform with personalized content and adaptive assessments',
+      icon: BookOpen,
+      features: [
+        'Personalized learning paths',
+        'Adaptive assessments and quizzes',
+        'AI tutoring and feedback',
+        'Progress tracking and analytics',
+        'Content recommendation engine',
+        'Multi-modal learning support'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '4-6 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'Smart Fleet Management Platform',
+      description: 'Comprehensive fleet tracking and optimization with predictive maintenance',
+      icon: Truck,
+      features: [
+        'Real-time GPS tracking and monitoring',
+        'Predictive maintenance scheduling',
+        'Route optimization algorithms',
+        'Driver behavior analysis',
+        'Fuel consumption optimization',
+        'Compliance and reporting tools'
+      ],
+      pricing: '$399 - $1,500/month',
+      delivery: '5-8 weeks',
+      category: 'Fleet SaaS'
+    },
+    {
+      title: 'AI-Powered Healthcare Scheduling',
+      description: 'Intelligent appointment scheduling with patient preference learning and optimization',
+      icon: Calendar,
+      features: [
+        'Smart appointment scheduling',
+        'Patient preference learning',
+        'Resource optimization',
+        'Automated reminders and notifications',
+        'Waitlist management',
+        'Analytics and reporting'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '3-5 weeks',
+      category: 'Healthcare SaaS'
+    },
+    {
+      title: 'Intelligent Property Management System',
+      description: 'AI-powered property management with predictive maintenance and tenant analytics',
+      icon: Building,
+      features: [
+        'Predictive maintenance scheduling',
+        'Tenant behavior analytics',
+        'Automated rent collection',
+        'Property performance tracking',
+        'Market analysis and pricing',
+        'Maintenance request automation'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '4-6 weeks',
+      category: 'Property SaaS'
+    },
+    {
+      title: 'Smart Restaurant Management Platform',
+      description: 'AI-powered restaurant operations with inventory optimization and customer analytics',
+      icon: Store,
+      features: [
+        'Inventory optimization and forecasting',
+        'Customer preference analytics',
+        'Dynamic pricing recommendations',
+        'Staff scheduling optimization',
+        'Food waste reduction tracking',
+        'Integration with POS systems'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '4-6 weeks',
+      category: 'Restaurant SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Finance Manager',
+      description: 'Intelligent personal finance tracking with investment recommendations and budgeting',
+      icon: DollarSign,
+      features: [
+        'Automated expense categorization',
+        'Investment recommendation engine',
+        'Budget optimization suggestions',
+        'Bill payment automation',
+        'Financial goal tracking',
+        'Credit score monitoring'
+      ],
+      pricing: '$9.99 - $29.99/month',
+      delivery: '2-4 weeks',
+      category: 'Personal Finance SaaS'
+    },
+    {
+      title: 'Smart Supply Chain Visibility Platform',
+      description: 'End-to-end supply chain tracking with predictive analytics and risk management',
+      icon: Network,
+      features: [
+        'Real-time shipment tracking',
+        'Predictive delay analysis',
+        'Risk assessment and mitigation',
+        'Supplier performance monitoring',
+        'Cost optimization insights',
+        'Sustainability tracking'
+      ],
+      pricing: '$499 - $2,000/month',
+      delivery: '6-10 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
       title: 'AI-Powered Customer Onboarding Platform',
       description: 'Intelligent customer onboarding with personalized journey mapping and automation',
       icon: Users,
@@ -417,7 +583,7 @@ export default function MicroSaaS() {
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
               <Link
-                href="/pricing-guide"
+                href="/pricing"
                 className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
               >
                 View Pricing <span aria-hidden="true">→</span>
