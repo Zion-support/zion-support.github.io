@@ -2,24 +2,39 @@ import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
+import Layout from './components/layout/Layout';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
-// Enhanced Components
-import { ErrorBoundary } from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/accessibility/AccessibilityEnhancer';
-import SEOOptimizer from './components/SEOOptimizer';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
-import { ChatAssistant } from './components/ChatAssistant/ChatAssistant';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import ComprehensiveOptimizer from './components/ComprehensiveOptimizer';
-import ComprehensiveSEOEnhancer from './components/ComprehensiveSEOEnhancer';
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/index'));
+const About = lazy(() => import('./pages/about'));
+const Contact = lazy(() => import('./pages/contact'));
+const Careers = lazy(() => import('./pages/careers'));
+const Services = lazy(() => import('./pages/services/index'));
+const AIServices = lazy(() => import('./pages/services/ai-services'));
+const ITServices = lazy(() => import('./pages/services/it-services'));
+const MicroSaaS = lazy(() => import('./pages/services/micro-saas'));
+const Pricing = lazy(() => import('./pages/pricing'));
+const PricingGuide = lazy(() => import('./pages/pricing-guide'));
+const Blog = lazy(() => import('./pages/blog'));
+const CaseStudies = lazy(() => import('./pages/case-studies'));
+const WhitePapers = lazy(() => import('./pages/white-papers'));
+const Webinars = lazy(() => import('./pages/webinars'));
+const Team = lazy(() => import('./pages/team'));
+const Privacy = lazy(() => import('./pages/privacy'));
+const Terms = lazy(() => import('./pages/terms'));
+const Sitemap = lazy(() => import('./pages/sitemap'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Simple loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-  </div>
-);
+// Service sub-pages
+const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AICustomerExperience = lazy(() => import('./pages/services/AICustomerExperience'));
+const AIHealthcareDiagnostics = lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
+const AIEnterpriseOrchestrator = lazy(() => import('./pages/services/AIEnterpriseOrchestrator'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
+const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlanning'));
 
 // Simple header component
 const SimpleHeader = () => (
@@ -479,6 +494,6 @@ function App() {
       </ErrorBoundary>
     </HelmetProvider>
   );
-}
+};
 
 export default App;
