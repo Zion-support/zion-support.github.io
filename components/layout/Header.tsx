@@ -31,6 +31,15 @@ const Header: React.FC = () => {
     { name: 'AI Services', href: '/services/ai-services' },
   ];
 
+  const popularServices = [
+    { name: 'AI Content Generator Pro', href: '/services/ai-content-generator' },
+    { name: 'Cloud Migration Expert', href: '/services/cloud-migration' },
+    { name: 'Custom AI Model Development', href: '/services/custom-ai-models' },
+    { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
+    { name: 'AI Video Editor Pro', href: '/services/ai-video-editor' },
+    { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
+  ];
+
   const solutionCategories = [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Custom Development', href: '/solutions/custom-development' },
@@ -94,16 +103,43 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="p-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-3 text-sm">Service Categories</h4>
+                        {serviceCategories.map((category) => (
+                          <Link
+                            key={category.name}
+                            href={category.href}
+                            className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded text-sm"
+                          >
+                            {category.name}
+                          </Link>
+                        ))}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-3 text-sm">Popular Services</h4>
+                        {popularServices.slice(0, 3).map((service) => (
+                          <Link
+                            key={service.name}
+                            href={service.href}
+                            className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded text-sm"
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-100">
+                      <Link
+                        href="/services"
+                        className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                      >
+                        View All Services
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 

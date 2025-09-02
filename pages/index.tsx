@@ -212,8 +212,94 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Zion Tech Group */}
+      {/* Featured Services Section */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Innovative Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our latest cutting-edge services that are transforming industries and driving business success
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <motion.div 
+              className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 border border-blue-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🎬</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Video Editor Pro</h3>
+              <p className="text-gray-600 mb-4">
+                Intelligent video editing with AI-powered features for automatic editing, scene detection, and content optimization.
+              </p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-blue-600">$29</span>
+                <span className="text-sm text-gray-500">/month</span>
+              </div>
+              <Link href="/services/ai-video-editor" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 border border-green-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum Computing Solutions</h3>
+              <p className="text-gray-600 mb-4">
+                Revolutionary quantum computing applications for optimization, cryptography, and scientific research.
+              </p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-green-600">$999</span>
+                <span className="text-sm text-gray-500">/month</span>
+              </div>
+              <Link href="/services/quantum-computing-solutions" className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                Learn More →
+              </Link>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-8 border border-purple-200"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🏥</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Medical Diagnosis Platform</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced AI medical diagnosis platform assisting healthcare professionals with accurate diagnosis and treatment.
+              </p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-purple-600">$150K</span>
+                <span className="text-sm text-gray-500">starting</span>
+              </div>
+              <Link href="/services/ai-medical-diagnosis" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                Learn More →
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Zion Tech Group */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -284,7 +370,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
