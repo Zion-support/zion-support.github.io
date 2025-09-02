@@ -1,4 +1,8 @@
-import React from 'react';'import Head from 'next/head';''interface SEOEnhancerProps {title?: string;
+import React from 'react';
+import Head from 'next/head';
+
+interface SEOEnhancerProps {
+  title?: string;
   description?: string;
   keywords?: string;
   ogImage?: string;

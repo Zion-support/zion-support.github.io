@@ -1,4 +1,5 @@
-import AIChatAssistant from './AIChatAssistant';''describe('AIChatAssistant', () => {''  it('renders without crashing', () => {''    render(<AIChatAssistant />);
+import AIChatAssistant from './AIChatAssistant';
+''describe('AIChatAssistant', () => {''  it('renders without crashing', () => {''    render(<AIChatAssistant />);
     expect(screen.getByRole('main')).toBeInTheDocument();'  });'
   it('displays correct content', () => {''    render(<AIChatAssistant />);
     // Add specific content checks based on component functionality

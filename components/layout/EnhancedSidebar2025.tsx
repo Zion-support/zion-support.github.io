@@ -1,5 +1,9 @@
-import React, { useState, useEffect              } from 'react.ts';'import Link from 'next/link.ts';'import { motion, AnimatePresence               } from 'framer-motion.ts';'import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
-              } from 'lucide-react.ts';''interface SidebarItem {name: string;
+import React, { useState, useEffect              } from 'react.ts';
+'import Link from 'next/link.ts';
+'import { motion, AnimatePresence               } from 'framer-motion.ts';
+'import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
+              } from 'lucide-react.ts';
+''interface SidebarItem {name: string;
   href: string;
   icon: React.ReactNode;
   description?: string;
@@ -53,7 +57,8 @@ const sidebarSections = [;
 
         name: 'Resources','        href: '/resources', icon: BookOpen,'        description: 'Educational content and documentation', subItems['          { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api-docs' }, { name: 'Blog & News', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Whitepapers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }'        ]'      }, {;
 
-        name: 'Support','        href: '/support', icon: HelpCircle,'        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';'},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ];'      };];
+        name: 'Support','        href: '/support', icon: HelpCircle,'        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';
+'},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ];'      };];
   };
 ];
 
@@ -88,7 +93,8 @@ export default function EnhancedSidebar2025(...args[]: any): {const [expandedSec
 
     if (isOpen) {
 
-document.body.style.overflow = 'hidden'} else {''      document.body.style.overflow = 'unset'}';'    return () => {;
+document.body.style.overflow = 'hidden'} else {''      document.body.style.overflow = 'unset'}';
+'    return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);''  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (
     <>
       {/* Backdrop */}

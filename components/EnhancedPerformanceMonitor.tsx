@@ -1,4 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';''interface PerformanceMetrics {fcp: number;
+import React, { useEffect, useState, useCallback } from 'react';
+'import { motion, AnimatePresence } from 'framer-motion';
+'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
+''interface PerformanceMetrics {fcp: number;
   lcp: number;
   fid: number;
   cls: number;
@@ -107,9 +110,15 @@ if (newMetrics.fcp > 3000) newAlerts.push('First Contentful Paint is slow');'   
   }, [updateMetrics, autoRefresh, refreshInterval]);
 
 const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-500';'    if (score >= 70) return 'text-yellow-500';'    return 'text-red-500';'  };'
+    if (score >= 90) return 'text-green-500';
+'    if (score >= 70) return 'text-yellow-500';
+'    return 'text-red-500';
+'  };'
   const getScoreBgColor = (score: number): string => {;
-    if (score >= 90) return 'bg-green-100';'    if (score >= 70) return 'bg-yellow-100';'    return 'bg-red-100';'  };'
+    if (score >= 90) return 'bg-green-100';
+'    if (score >= 70) return 'bg-yellow-100';
+'    return 'bg-red-100';
+'  };'
   if (!showDetails) {
     return (
       <div className="fixed bottom-4 right-4 z-50">"        <motion.div"          initial={{ scale: 0, opacity: 0 }}

@@ -1,11 +1,14 @@
-import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, 
+import React, { useEffect, useState, useCallback } from 'react';
+'import { motion, AnimatePresence } from 'framer-motion';
+'import { ;'  BarChart3, Users, 
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,
   Monitor, Tablet,
   Download, Share2,
   Heart, MessageCircle
-} from 'lucide-react';''interface AnalyticsData {pageViews: number;
+} from 'lucide-react';
+''interface AnalyticsData {pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
@@ -72,7 +75,9 @@ console.error('Error fetching analytics: ', error);'    } finally {'      setIsL
   }, [fetchAnalytics, autoRefresh, refreshInterval, timeRange]);
 
 const formatNumber = (num: number): string => {;
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';'    return num.toString();'  };
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+'    return num.toString();'  };
 
   const formatDuration = (seconds: number): string => {;
     const minutes = Math.floor(seconds / 60);

@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';''const SecurityHeaders: React.FC = () => {
+import React, { useEffect } from 'react';
+''const SecurityHeaders: React.FC = () => {
   useEffect(() => {
     // Add security headers via meta tags
     const addSecurityHeaders = () => {;

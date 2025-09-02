@@ -1,4 +1,8 @@
-import React, { useEffect } from 'react';'import Head from 'next/head';''interface PerformanceOptimizerProps {preloadImages?: string[];
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+
+interface PerformanceOptimizerProps {
+  preloadImages?: string[];
   preloadFonts?: string[];
   criticalCSS?: string;
 }
@@ -17,7 +21,8 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types''        console.log('Performance monitoring not fully supported');'      }'
       // Resource hints for better performance
       const addResourceHint = (href: string, as: string, type?: string) => {;
-        const link = document.createElement('link');'        link.rel = 'preload';'        link.href = href;'        link.as = as;if (type) link.type = type;
+        const link = document.createElement('link');'        link.rel = 'preload';
+'        link.href = href;'        link.as = as;if (type) link.type = type;
         document.head.appendChild(link);
       };
 
@@ -42,7 +47,8 @@ key={`preload-image-${index}`}`          rel="preload""          as="image""    
       {preloadFonts.map((font, index) => (
         <link
 key={`preload-font-${index}`}`          rel="preload""          as="style""          href={font}"          onLoad={() => {
-            const link = document.querySelector(`link[href="${font}"]`);"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet';'            }'          }}`        />
+            const link = document.querySelector(`link[href="${font}"]`);"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet';
+'            }'          }}`        />
       ))}
       
       {/* Performance hints */}
