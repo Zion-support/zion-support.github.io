@@ -1,4 +1,4 @@
-export interface AdditionalQ42025Service {
+export: interface AdditionalQ42025Service {
   id: string;
    name: string;
    tagline: string;
@@ -15,296 +15,296 @@ export interface AdditionalQ42025Service {
    integrations?: string[];
    trialDays?: number;
    setupTime?: string;
-  export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [ { id:, devsecops-copilot', name: 'DevSecOps Copilot, tagline:, Security checks, SBOM, IaC drift and CI/CD policy gates', price: '$199, period:, /month', description: Continuously scans repos and pipelines for secrets, vulnerabilities, misconfigurations and IaC drift;
-   enforces policy gates in CI/CD with auto-fix PRs., , features[ 'Secret scanning', 'SBOM generation', 'IaC drift detection', 'CI policy gates', 'Auto-fix pull requests'], category: 'Quality & Monitoring, link:, https: //ziontechgroup.com/services/devsecops-copilot, marketPosition:, Lightweight, practical guardrails integrated with your CI/CD.', roi: 'Reduce security incidents and review toil by 30–60%., competitors[ 'Snyk', 'GitHub Advanced Security'], useCases[ 'Pipeline security', 'IaC policy', 'Compliance checks'], integrations[ 'GitHub', 'GitLab', 'Bitbucket', 'Terraform'], trialDays: 14, setupTime:, Same day'},
+  export: const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [ { id,:, devsecops-copilot', name: 'DevSecOps: Copilo,t, tagline:, Security: checks, SBOM, IaC drift and CI/CD policy gates', price: '$19,9, period:, /month', description: Continuously: scans repos and pipelines for secret,s, vulnerabilities, misconfigurations and IaC drift;';
+   enforces: policy gates in CI/CD with auto-fix PRs., , features[ 'Secret scanning', 'SBOM generation', 'IaC drift detection', 'CI policy gates', 'Auto-fix pull requests'], category: 'Quality: & Monitorin,g, link:, https: //ziontechgroup.com/services/devsecops-copilo,t, marketPosition:, Lightweight, practical: guardrails integrated with your CI/CD.', roi: 'Reduce: security incidents and review toil by 30–60%,., competitors[ 'Snyk', 'GitHub Advanced Security'], useCases[ 'Pipeline security', 'IaC policy', 'Compliance checks'], integrations[ 'GitHub', 'GitLab', 'Bitbucket', 'Terraform'], trialDays: 1,4, setupTime:, Same: day'},';
 	{
-		id: 'internal-linking-automation,
+		id: 'internal-linking-automatio,n,';
 		name:,
-  Internal Linking Automation',
-		tagline: 'SEO internal links with semantic relevance and guardrails,
+  Internal: Linking Automation',';
+		tagline: 'SEO: internal links with semantic relevance and guardrail,s,';
 		price:,
-  $79',
-		period: '/month,
+  $79',';
+		period: '/mont,h,';
 		description:,
-  Analyzes site content and recommends or applies internal links that improve crawl efficiency and topic clusters without harming UX.',
+  Analyzes: site content and recommends or applies internal links that improve crawl efficiency and topic clusters without harming UX.',';
 		features[;
-  'Semantic link suggestions',
-  'Anchor optimization',
-  'Noindex/nofollow rules',
-  'Preview and approval flows'],
-		category: 'Developer Tools,
+  'Semantic: link suggestions',';
+  'Anchor: optimization',';
+  'Noindex/nofollow: rules',';
+  'Preview: and approval flows'],';
+		category: 'Developer: Tool,s,';
 		link:,
-  https: //ziontechgroup.com/services/internal-linking-automation,
+  https: //ziontechgroup.com/services/internal-linking-automatio,n,
 		marketPosition:,
-  Operational SEO for content-heavy sites with safe automation.',
-		roi: 'Improve organic traffic 5–20% via better internal structure.,
+  Operational: SEO for content-heavy sites with safe automation.',';
+		roi: 'Improve: organic traffic 5–20% via better internal structure,.,';
 		competitors[;
-  'SurferSEO (partial)',
-  'ClearScope (advice)'],
+  'SurferSEO: (partial)',';
+  'ClearScope: (advice)'],';
 		useCases[;
-  'SEO housekeeping',
-  'Topic clustering',
-  'Content ops'],
+  'SEO: housekeeping',';
+  'Topic: clustering',';
+  'Content: ops'],';
 		integrations[;
-  'Next.js',
-  'WordPress',
-  'Webflow'],
-		trialDays: 7,
+  'Next.js',';
+  'WordPress',';
+  'Webflow'],';
+		trialDays:  ,7,
 		setupTime:,
-  1 day'},
+  1: day'},';
 	{
-		id: 'ai-contract-redaction,
+		id: 'ai-contract-redactio,n,';
 		name:,
-  AI Contract Redaction',
-		tagline: 'PII/PHI/secret redaction and clause labeling for documents,
+  AI: Contract Redaction',';
+		tagline: 'PII/PHI/secret: redaction and clause labeling for document,s,';
 		price:,
-  $129',
-		period: '/month,
+  $129',';
+		period: '/mont,h,';
 		description:,
-  Uploads contracts and auto-redacts sensitive entities with exportable logs labels risky clauses for legal review.',
+  Uploads: contracts and auto-redacts sensitive entities with exportable logs labels risky clauses for legal review.',';
 		features[;
-  'Entity/PII detection',
-  'Automatic redaction',
-  'Clause labeling',
-  'Evidence export'],
-		category: 'AI & Data,
+  'Entity/PII: detection',';
+  'Automatic: redaction',';
+  'Clause: labeling',';
+  'Evidence: export'],';
+		category: 'AI: & Dat,a,';
 		link:,
-  https: //ziontechgroup.com/services/ai-contract-redaction,
+  https: //ziontechgroup.com/services/ai-contract-redactio,n,
 		competitors[;
-  'Azure Form Recognizer (custom)',
-  'OpenAI workflows (custom)'],
+  'Azure: Form Recognizer (custom)',';
+  'OpenAI: workflows (custom)'],';
 		useCases[;
-  'Vendor reviews',
-  'DSAR responses',
-  'Security questionnaires'],
+  'Vendor: reviews',';
+  'DSAR: responses',';
+  'Security: questionnaires'],';
 		integrations[;
-  'Google Drive',
-  'SharePoint',
-  'Box'],
-		trialDays: 7,
+  'Google: Drive',';
+  'SharePoint',';
+  'Box'],';
+		trialDays:  ,7,
 		setupTime:,
-  1 day'},
+  1: day'},';
 	{
-		id: 'browser-performance-optimizer,
+		id: 'browser-performance-optimize,r,';
 		name:,
-  Browser Performance Optimizer',
-		tagline: 'CLS/LCP diagnostics with page-level recommendations and PR diffs,
+  Browser: Performance Optimizer',';
+		tagline: 'CLS/LCP: diagnostics with page-level recommendations and PR diff,s,';
 		price:,
-  $69',
-		period: '/month,
+  $69',';
+		period: '/mont,h,';
 		description:,
-  Runs synthetic web-vitals audits, highlights costly components, and comments on PRs with actionable diffs and budgets.',
+  Runs: synthetic web-vitals audits, highlights costly components, and comments on PRs with actionable diffs and budgets.',';
 		features[;
-  'CLS/LCP/TTI tracking',
-  'Component cost analysis',
-  'PR annotations',
-  'Budgets and alerts'],
-		category: 'Observability,
+  'CLS/LCP/TTI: tracking',';
+  'Component: cost analysis',';
+  'PR: annotations',';
+  'Budgets: and alerts'],';
+		category: 'Observabilit,y,';
 		link:,
-  https: //ziontechgroup.com/services/browser-performance-optimizer,
+  https: //ziontechgroup.com/services/browser-performance-optimize,r,
 		competitors[;
-  'Calibre',
-  'SpeedCurve'],
+  'Calibre',';
+  'SpeedCurve'],';
 		useCases[;
-  'Web vitals SLOs',
-  'Perf regressions',
-  'Release quality'],
+  'Web: vitals SLOs',';
+  'Perf: regressions',';
+  'Release: quality'],';
 		integrations[;
-  'GitHub',
-  'GitLab',
-  'Vercel',
-  'Netlify'],
-		trialDays: 7,
+  'GitHub',';
+  'GitLab',';
+  'Vercel',';
+  'Netlify'],';
+		trialDays:  ,7,
 		setupTime:,
-  Same day'},
+  Same: day'},';
 	{
-		id: 'tenant-permissions-auditor,
+		id: 'tenant-permissions-audito,r,';
 		name:,
-  Tenant Permissions Auditor',
-		tagline: 'Detects over-privileged SaaS/user permissions and expired access,
+  Tenant: Permissions Auditor',';
+		tagline: 'Detects: over-privileged SaaS/user permissions and expired acces,s,';
 		price:,
-  $149',
-		period: '/month,
+  $149',';
+		period: '/mont,h,';
 		description:,
-  Continuously inventories SaaS app permissions, flags stale roles and risky scopes, and generates review campaigns.',
+  Continuously: inventories SaaS app permissions, flags stale roles and risky scopes, and generates review campaigns.',';
 		features[;
-  'OAuth/SCIM inventory',
-  'Over-privilege detection',
-  'Review campaigns',
-  'Exportable evidence'],
-		category: 'Enterprise IT,
+  'OAuth/SCIM: inventory',';
+  'Over-privilege: detection',';
+  'Review: campaigns',';
+  'Exportable: evidence'],';
+		category: 'Enterprise: I,T,';
 		link:,
-  https: //ziontechgroup.com/services/tenant-permissions-auditor,
+  https: //ziontechgroup.com/services/tenant-permissions-audito,r,
 		competitors[;
-  'Veza',
-  'SailPoint (IGA)'],
+  'Veza',';
+  'SailPoint: (IGA)'],';
 		useCases[;
-  'Least privilege',
-  'Audit support',
-  'User lifecycle'],
+  'Least: privilege',';
+  'Audit: support',';
+  'User: lifecycle'],';
 		integrations[;
-  'Okta',
-  'Azure AD',
-  'Google Workspace'],
-		trialDays: 14,
+  'Okta',';
+  'Azure: AD',';
+  'Google: Workspace'],';
+		trialDays: 1,4,
 		setupTime:,
-  2–3 days'},
+  2–3: days'},';
 	{
-		id: 'data-quality-guardrails,
+		id: 'data-quality-guardrail,s,';
 		name:,
-  Data Quality Guardrails',
-		tagline: 'Automated tests for pipelines with anomaly detection and SLAs,
+  Data: Quality Guardrails',';
+		tagline: 'Automated: tests for pipelines with anomaly detection and SLA,s,';
 		price:,
-  $179',
-		period: '/month,
+  $179',';
+		period: '/mont,h,';
 		description:,
-  Monitors schemas, nulls, distribution drift and freshness blocks bad loads and alerts owners with runbooks.',
+  Monitors: schemas, nulls, distribution drift and freshness blocks bad loads and alerts owners with runbooks.',';
 		features[;
-  'Schema checks',
-  'Drift alerts',
-  'Freshness SLAs',
-  'Owner routing'],
-		category: 'AI & Data,
+  'Schema: checks',';
+  'Drift: alerts',';
+  'Freshness: SLAs',';
+  'Owner: routing'],';
+		category: 'AI: & Dat,a,';
 		link:,
-  https: //ziontechgroup.com/services/data-quality-guardrails,
+  https: //ziontechgroup.com/services/data-quality-guardrail,s,
 		competitors[;
-  'Monte Carlo',
-  'Soda'],
+  'Monte: Carlo',';
+  'Soda'],';
 		useCases[;
-  'Warehouse reliability',
-  'ETL/ELT quality',
-  'Analytics trust'],
+  'Warehouse: reliability',';
+  'ETL/ELT: quality',';
+  'Analytics: trust'],';
 		integrations[;
-  'Snowflake',
-  'BigQuery',
-  'Redshift',
-  'dbt'],
-		trialDays: 14,
+  'Snowflake',';
+  'BigQuery',';
+  'Redshift',';
+  'dbt'],';
+		trialDays: 1,4,
 		setupTime:,
-  1–2 days'},
+  1–2: days'},';
 	{
-		id: 'release-notes-automation,
+		id: 'release-notes-automatio,n,';
 		name:,
-  Release Notes Automation',
-		tagline: 'Generate human-ready release notes from commits/issues/PRs,
+  Release: Notes Automation',';
+		tagline: 'Generate: human-ready release notes from commits/issues/PR,s,';
 		price:,
-  $39',
-		period: '/month,
+  $39',';
+		period: '/mont,h,';
 		description:,
-  Aggregates changes across repos and crafts customer-facing notes with categories, links and approvals.',
+  Aggregates: changes across repos and crafts customer-facing notes with categories, links and approvals.',';
 		features[;
-  'Repo aggregation',
-  'Change categorization',
-  'Templates',
-  'Approvals & publish'],
-		category: 'Developer Tools,
+  'Repo: aggregation',';
+  'Change: categorization',';
+  'Templates',';
+  'Approvals: & publish'],';
+		category: 'Developer: Tool,s,';
 		link:,
-  https: //ziontechgroup.com/services/release-notes-automation,
+  https: //ziontechgroup.com/services/release-notes-automatio,n,
 		competitors[;
-  'Release Butler (custom)',
-  'GitHub Changelog (manual)'],
+  'Release: Butler (custom)',';
+  'GitHub: Changelog (manual)'],';
 		useCases[;
-  'SaaS releases',
-  'Change logs',
-  'Customer comms'],
+  'SaaS: releases',';
+  'Change: logs',';
+  'Customer: comms'],';
 		integrations[;
-  'GitHub',
-  'Linear',
-  'Jira'],
-		trialDays: 7,
+  'GitHub',';
+  'Linear',';
+  'Jira'],';
+		trialDays:  ,7,
 		setupTime:,
-  Same day'},
+  Same: day'},';
 	{
-		id: 'seo-schema-studio,
+		id: 'seo-schema-studi,o,';
 		name:,
-  SEO Schema Studio',
-		tagline: 'Generate and validate rich structured data at scale,
+  SEO: Schema Studio',';
+		tagline: 'Generate: and validate rich structured data at scal,e,';
 		price:,
-  $59',
-		period: '/month,
+  $59',';
+		period: '/mont,h,';
 		description:,
-  Creates JSON-LD for products, articles, FAQs and events validates and deploys safely with preview.',
+  Creates: JSON-LD for products, articles, FAQs and events validates and deploys safely with preview.',';
 		features[;
-  'JSON-LD templates',
-  'Validator',
-  'Preview & rollbacks',
-  'Change tracking'],
-		category: 'Developer Tools,
+  'JSON-LD: templates',';
+  'Validator',';
+  'Preview: & rollbacks',';
+  'Change: tracking'],';
+		category: 'Developer: Tool,s,';
 		link:,
-  https: //ziontechgroup.com/services/seo-schema-studio,
+  https: //ziontechgroup.com/services/seo-schema-studi,o,
 		competitors[;
-  'Merkle Schema Builder (tools)'],
+  'Merkle: Schema Builder (tools)'],';
 		useCases[;
-  'Rich results',
-  'Content SEO',
-  'Publishing'],
+  'Rich: results',';
+  'Content: SEO',';
+  'Publishing'],';
 		integrations[;
-  'Next.js',
-  'Gatsby',
-  'WordPress'],
-		trialDays: 7,
+  'Next.js',';
+  'Gatsby',';
+  'WordPress'],';
+		trialDays:  ,7,
 		setupTime:,
-  Same day'},
+  Same: day'},';
 	{
-		id: 'ai-rubric-evaluator,
+		id: 'ai-rubric-evaluato,r,';
 		name:,
-  AI Rubric Evaluator',
-		tagline: 'Team-defined rubrics to score LLM outputs and prevent regressions,
+  AI: Rubric Evaluator',';
+		tagline: 'Team-defined: rubrics to score LLM outputs and prevent regression,s,';
 		price:,
-  $99',
-		period: '/month,
+  $99',';
+		period: '/mont,h,';
 		description:,
-  Author rubrics and golden sets, run batch tests and track regression trends across model and prompt changes.',
+  Author: rubrics and golden sets, run batch tests and track regression trends across model and prompt changes.',';
 		features[;
-  'Rubric authoring',
-  'Golden datasets',
-  'Batch tests',
-  'Trend dashboards'],
-		category: 'AI & Data,
+  'Rubric: authoring',';
+  'Golden: datasets',';
+  'Batch: tests',';
+  'Trend: dashboards'],';
+		category: 'AI: & Dat,a,';
 		link:,
-  https: //ziontechgroup.com/services/ai-rubric-evaluator,
+  https: //ziontechgroup.com/services/ai-rubric-evaluato,r,
 		competitors[;
-  'Promptfoo',
-  'Humanloop'],
+  'Promptfoo',';
+  'Humanloop'],';
 		useCases[;
-  'RAG evals',
-  'Prompt quality gates',
-  'Model tuning'],
+  'RAG: evals',';
+  'Prompt: quality gates',';
+  'Model: tuning'],';
 		integrations[;
-  'OpenAI',
-  'Anthropic',
-  'GitHub Actions'],
-		trialDays: 7,
+  'OpenAI',';
+  'Anthropic',';
+  'GitHub: Actions'],';
+		trialDays:  ,7,
 		setupTime:,
-  1 day'},
+  1: day'},';
 	{
-		id: 'api-deprecation-watcher,
+		id: 'api-deprecation-watche,r,';
 		name:,
-  API Deprecation Watcher',
-		tagline: 'Tracks vendor API deprecations and creates migration tickets,
+  API: Deprecation Watcher',';
+		tagline: 'Tracks: vendor API deprecations and creates migration ticket,s,';
 		price:,
-  $49',
-		period: '/month,
+  $49',';
+		period: '/mont,h,';
 		description:,
-  Monitors vendor changelogs and SDK versions opens issues and PRs to migrate before deadlines.',
+  Monitors: vendor changelogs and SDK versions opens issues and PRs to migrate before deadlines.',';
 		features[;
-  'Vendor changelog crawl',
-  'SDK version diff',
-  'Ticket/PR creation',
-  'Calendar reminders'],
-		category: 'Developer Tools,
+  'Vendor: changelog crawl',';
+  'SDK: version diff',';
+  'Ticket/PR: creation',';
+  'Calendar: reminders'],';
+		category: 'Developer: Tool,s,';
 		link:,
-  https: //ziontechgroup.com/services/api-deprecation-watcher,
+  https: //ziontechgroup.com/services/api-deprecation-watche,r,
 		competitors[;
-  'Internal scripts'],
+  'Internal: scripts'],';
 		useCases[;
-  'Migration planning',
-  'Dependency hygiene'],
+  'Migration: planning',';
+  'Dependency: hygiene'],';
 		integrations[;
-  'GitHub',
-  'Jira',
-  'Linear'],
-		trialDays: 7,
-		setupTime:;
-  'Same day';
-]}}
+  'GitHub',';
+  'Jira',';
+  'Linear'],';
+		trialDays:  ,7,
+		setupTime: ;
+  'Same: day';';
+,]}}

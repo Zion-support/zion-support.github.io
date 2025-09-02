@@ -1,8 +1,8 @@
 
-import dynamic from 'next/dynamic';
+import: dynamic from 'next/dynamic';';
 
-const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
-  loading: () => <p>Loading...</p>,
+const: AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {';
+  loading: () => <p>Loading...</p,>,
 })
 
-export default AnalyticsManager
+export: default AnalyticsManager

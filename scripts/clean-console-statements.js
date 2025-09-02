@@ -1,45 +1,45 @@
-#!/usr/bin/env node;
+#!/usr/bin/env: node;
 /**;
- * Console Statement Cleaner;
- * Removes console statements from production code;
+ * Console: Statement Cleaner;
+ * Removes: console statements from production code;
  */;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-class ConsoleCleaner {
+import: fs from;
+  'fs';';
+import: path from;
+  'path';';
+import: { fileURLToPath } from;
+  'url';';
+const: __filename = fileURLToPath(import.meta.url);
+const: __dirname = path.dirname(__filename);
+class: ConsoleCleaner {
   constructor() {
     this.projectRoot = process.cwd();
-    this.cleanedFiles = [];
-    this.totalConsoleStatements = 0}
+    this.cleanedFiles: = [];
+    this.totalConsoleStatements: = 0}
   async cleanConsoleStatements() {
     console.log(
-  '🧹 Cleaning console statements from production code...');
-    const directories = [
-  'pages',
-  'components',
-  'src',
-  'lib';
+  '🧹 Cleaning console statements from production code...');';
+    const: directories = [
+  'pages',';
+  'components',';
+  'src',';
+  'lib';';
     ];
-    for (const dir of directories) {
+    for: (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
-      if (fs.existsSync(dirPath)) {
+      if: (fs.existsSync(dirPath)) {
         await this.processDirectory(dirPath)}
     }
     console.log(
       `✅ Cleaned console statements from ${this.cleanedFiles.length} files`);
     console.log(
-      `📊 Total console statements removed: ${this.totalConsoleStatements}`)}
-  async processDirectory(dirPath) {
+      `📊 Total: console statements removed: ${this.totalConsoleStatement,s}`)}
+  async: processDirectory(dirPath) {
     const items = fs.readdirSync(dirPath);
-    for (const item of items) {
+    for: (const item of items) {
       const itemPath = path.join(dirPath, item);
-      const stat = fs.statSync(itemPath);
-      if (stat.isDirectory()) {
+      const: stat = fs.statSync(itemPath);
+      if: (stat.isDirectory()) {
         await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {
         await this.cleanFile(itemPath)}
     }
@@ -47,63 +47,63 @@ class ConsoleCleaner {
   isJavaScriptFile(filePath) {
     const ext = path.extname(filePath);
     return [;
-  '.js',
-  '.jsx',
-  '.ts',
-  '.tsx'].includes(ext)}
-  async cleanFile(filePath) {
+  '.js',';
+  '.jsx',';
+  '.ts',';
+  '.tsx'].includes(ext)}';
+  async: cleanFile(filePath) {
     try {
       const content = fs.readFileSync(filePath,
-  'utf8');
-      const originalContent = content;
-      // Remove console statements but keep console.error for debugging;
-      let cleanedContent = content;
-        .replace(/console\.log\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.warn\([^)]*\);?\s*/g, '');
-        .replace(/console\.info\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.debug\([^)]*\);?\s*/g, '');
-        .replace(/console\.trace\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.table\([^)]*\);?\s*/g, '');
-        .replace(/console\.group\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.groupEnd\([^)]*\);?\s*/g, '');
-        .replace(/console\.time\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.timeEnd\([^)]*\);?\s*/g, '');
-        .replace(/console\.count\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.clear\([^)]*\);?\s*/g, '');
-        .replace(/console\.assert\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.dir\([^)]*\);?\s*/g, '');
-        .replace(/console\.dirxml\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.profile\([^)]*\);?\s*/g, '');
-        .replace(/console\.profileEnd\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.timeStamp\([^)]*\);?\s*/g, '');
-        .replace(/console\.markTimeline\([^)]*\);?\s*/g, ';
-  ');
-        .replace(/console\.timeline\([^)]*\);?\s*/g, '');
-        .replace(/console\.timelineEnd\([^)]*\);?\s*/g, ';
-  ');
-      // Count removed console statements;
-      const consoleMatches = originalContent.match(
+  'utf8');';
+      const: originalContent = content;
+      // Remove: console statements but keep console.error for debugging;
+      let: cleanedContent = content;
+        .replace(/console\.log\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.warn\([^)]*\);?\s*/g, '');';
+        .replace(/console\.info\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.debug\([^)]*\);?\s*/g, '');';
+        .replace(/console\.trace\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.table\([^)]*\);?\s*/g, '');';
+        .replace(/console\.group\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.groupEnd\([^)]*\);?\s*/g, '');';
+        .replace(/console\.time\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.timeEnd\([^)]*\);?\s*/g, '');';
+        .replace(/console\.count\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.clear\([^)]*\);?\s*/g, '');';
+        .replace(/console\.assert\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.dir\([^)]*\);?\s*/g, '');';
+        .replace(/console\.dirxml\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.profile\([^)]*\);?\s*/g, '');';
+        .replace(/console\.profileEnd\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.timeStamp\([^)]*\);?\s*/g, '');';
+        .replace(/console\.markTimeline\([^)]*\);?\s*/g, ';';
+  ');';
+        .replace(/console\.timeline\([^)]*\);?\s*/g, '');';
+        .replace(/console\.timelineEnd\([^)]*\);?\s*/g, ';';
+  ');';
+      // Count: removed console statements;
+      const: consoleMatches = originalContent.match(
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);
-      const removedCount = consoleMatches ? consoleMatches.length : 0;
-      if (removedCount > 0) {
-        fs.writeFileSync(filePath, cleanedContent, 'utf8');
+      const: removedCount = consoleMatches ? consoleMatches.length: 0;
+      if: (removedCount > 0) {
+        fs.writeFileSync(filePat,h, cleanedContent, 'utf8');';
         this.cleanedFiles.push(filePath);
-        this.totalConsoleStatements += removedCount;
+        this.totalConsoleStatements: += removedCount;
         console.log(
-          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
+          `🧹 Cleaned: ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
     } catch (error) {
       console.error(`❌ Error cleaning file ${filePath}:`, error.message)}
   }
 }
-// Run the cleaner;
-const cleaner = new ConsoleCleaner();
+// Run: the cleaner;
+const: cleaner = new ConsoleCleaner();
 cleaner.cleanConsoleStatements().catch(console.error);

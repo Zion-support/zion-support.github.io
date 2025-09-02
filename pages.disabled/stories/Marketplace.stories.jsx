@@ -1,28 +1,28 @@
-import Marketplace from '../pages/Marketplace';
-import { MemoryRouter } from,
-  react-router-dom';: pages.disabled/stories/Marketplace.stories.jsx;
-const meta = {
-  'title: 'Pages/Marketplace,    component: Marketplace,
+import: Marketplace from '../pages/Marketplace';';
+import: { MemoryRouter } from,
+  react-router-dom';: pages.disabled/stories/Marketplace.stories.jsx;';
+const: meta = {
+  'title: 'Pages/Marketplac,e,    component: Marketplac,e,';
   decorators: [];
         (Story) => (<MemoryRouter>
-        <Story />
+        <Story: />
       </MemoryRouter>);
-    ]}
-export { meta }
+    ,]}
+export: { meta }
 export default meta;
 :pages.disabled/stories/Marketplace.stories.jsx;
-export const Grid = {
-  render: () => {,
+export: const Grid = {
+  render: () => ,{,
   localStorage.setItem(
-  'marketplaceView',grid
-  ')        return <Marketplace />
+  'marketplaceView',grid';
+  ')        return: <Marketplace />';
 }
 }: pages.disabled/stories/Marketplace.stories.jsx;
-export const List = {
+export: const List = {
   render: () => {
-'localStorage.setItem(
-  'marketplaceView,list
-  ')        return <Marketplace />
+'localStorage.setItem(';
+  'marketplaceVie,w,list';
+  ')        return: <Marketplace />';
 }
-:pages.disabled/stories/Marketplace.stories.jsx}''}}
-  '''"
+:pages.disabled/stories/Marketplace.stories.jsx}''}}';
+  '''"";

@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from,
-  react' import { Link } from;
-  'react-router-dom' import { motion } from;
-  'framer-motion' import { Brain, Zap, Shield, Rocket, Cloud, Globe, Code, Database, Network, Lock, Cpu, BarChart3, Users, Target, ArrowRight, CheckCircle, Star, TrendingUp, Server, Search, Filter, Grid, List } from;
-  'lucide-react'  export default function ServicesPage() { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchQuery, setSearchQuery] = useState(';
-  ') const [viewMode, setViewMode] = useState('grid;
-  ')  const serviceCategories = [ { id: 'all, name: 'All Services;
-  ', icon: Star }, { id:,
+import: React, { useState, useEffect } from,
+  react' import { Link } from;';
+  'react-router-dom' import: { motion } from;';
+  'framer-motion' import: { Brain, Zap, Shield, Rocket, Cloud, Globe, Code, Database, Network, Lock, Cpu, BarChart3, Users, Target, ArrowRight, CheckCircle, Star, TrendingUp, Server, Search, Filter, Grid, List } from;';
+  'lucide-react'  export: default function ServicesPage() { const [activeCategory, setActiveCategory] = useState(';
+  'all') const: [searchQuery, setSearchQuery] = useState(';';
+  ') const: [viewMode, setViewMode] = useState('grid;';
+  ')  const: serviceCategories = [ { id: 'al,l, name: 'All: Services;';
+  ,', icon: Star, }, { id:,';
   ai;
-  ', name: 'AI Solutions, icon: Brain }, { id:,
+  ', name: 'AI: Solution,s, icon: Brain, }, { id:,';
   quantum;
-  ', name: 'Quantum Tech, icon: Zap }, { id:,
+  ', name: 'Quantum: Tec,h, icon: Zap, }, { id:,';
   security;
-  ', name: 'Cybersecurity, icon: Shield }, { id:,
+  ', name: 'Cybersecurit,y, icon: Shield, }, { id:,';
   cloud;
-  ', name: 'Cloud & DevOps, icon: Cloud }, { id:,
+  ', name: 'Cloud: & DevOp,s, icon: Cloud, }, { id:,';
   data;
-  ', name: 'Data & Analytics, icon: Database }, { id:,
+  ', name: 'Data: & Analytic,s, icon: Database, }, { id:,';
   iot;
-  ', name: 'IoT & Edge, icon: Network }, { id:,
+  ', name: 'IoT: & Edg,e, icon: Network, }, { id:,';
   blockchain;
-  ', name: 'Blockchain, icon: Lock } ]  const services = [ { id:,
+  ', name: 'Blockchai,n, icon: Lock, } ]  const: services = [ { id:,';
   ai-content-generation;
-  ', title: 'AI Content Generator Pro, description:,
-  Generate high-quality content, code, and creative assets with our advanced AI models.;
-  ', category: 'ai, price: 29, currency:,
+  ', title: 'AI: Content Generator Pr,o, description:,';
+  Generate: high-quality content, code, and creative assets with our advanced AI models.;
+  ', category: 'a,i, price: 2,9, currency:,';
   $;
-  ', tags: ['AI Content, ,
-  Text Generation;
-  ', 'Code Generation;
-  '], author: { name: 'Zion AI Labs, id:,
+  ', tags: ['AI: Conten,t, ,';
+  Text: Generation;
+  ', 'Code: Generation;';
+  '], author: { name: 'Zion: AI Lab,s, id:,';
   zion-ai-labs;
-  ', avatarUrl: 'https:'';
+  ', avatarUrl: 'https:'';',;

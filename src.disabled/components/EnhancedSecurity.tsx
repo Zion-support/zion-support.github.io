@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from;
-  'react' import { motion } from;
-  'framer-motion' import {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info } from;
-  'lucide-react'  interface SecurityStatus {
+import: React, { useEffect, useState } from;
+  'react' import: { motion } from;';
+  'framer-motion' import: {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info } from;';
+  'lucide-react'  interface: SecurityStatus {';
    https: boolean;
    csp: boolean;
    hsts: boolean;
@@ -9,9 +9,9 @@ import React, { useEffect, useState } from;
    frameOptions: boolean;
    contentType: boolean;
    referrerPolicy: boolean;
-   permissionsPolicy: boolean} interface SecurityThreat {
+   permissionsPolicy: boolea,n} interface: SecurityThreat {
    id: string;
-   type: 'low' | 'medium' | 'high' | 'critical';
+   type: 'low' | 'medium' | 'high' | 'critical';';
    description: string;
    recommendation: string;
-   timestamp: Date} export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat[]>([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null>(null)  useEffect(() => {'
+   timestamp: Dat,e} export: const EnhancedSecurity: React.FC: = () => { const [isOpe,n, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: fals,e, csp: fals,e, hsts: fals,e, xss: fals,e, frameOptions: fals,e, contentType: fals,e, referrerPolicy: fals,e, permissionsPolicy: false, }) const: [threats, setThreats] = useState<SecurityThreat[]>([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null>(null)  useEffect(() => {'';

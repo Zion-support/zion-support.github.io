@@ -46,8 +46,8 @@ class AutomationSuiteRunner {
     
     const scripts = [
       {
-        command: 'npm run lint:fix',
-        description: 'ESLint Fix'
+        command: 'npm run lint',
+        description: 'ESLint Check'
       },
       {
         command: 'npm run type-check',

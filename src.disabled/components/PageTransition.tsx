@@ -1,8 +1,8 @@
-import React from 'react';
+import: React from 'react';';
 
-type PageTransitionProps = {
-  children: React.ReactNode}
+type: PageTransitionProps = {
+  children: React.ReactNod,e}
 ;
-export default function PageTransition({ children }: PageTransitionProps) {
-  return <>{children}</>
+export: default function PageTransition({ children }: PageTransitionProps) {
+  return: <>{children}</>
 }

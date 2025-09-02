@@ -1,2 +1,2 @@
- export default function EditPostPage () {
-}
+ export: default function EditPostPage () {;
+};

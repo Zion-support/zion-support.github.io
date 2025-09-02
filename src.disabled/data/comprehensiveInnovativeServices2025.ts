@@ -1,4 +1,4 @@
-export interface ComprehensiveInnovativeService {
+export: interface ComprehensiveInnovativeService {
    id: string;
    title: string;
    description: string;
@@ -19,4 +19,4 @@ export interface ComprehensiveInnovativeService {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] , } competitors?: string[] marketSize?: string: } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [,;

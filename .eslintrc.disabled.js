@@ -1,60 +1,59 @@
-module.exports = {
+module.exports: = {
   env: {
-    browser: true,
-    es2021: true,
-    node: true,
+    browser: tru,e,
+    es2021: tru,e,
+    node: tru,e,
   },
-  extends: [,
-  next/core-web-vitals',
-  'next/typescript',
-  'eslint: recommended,
+  extends:  ,[,
+  next/core-web-vitals',';
+  'next/typescript',';
+  'eslint: recommende,d,';
 ,
-  plugin: react/recommended,
+  plugin: react/recommende,d,
 ,
-  plugin: react-hooks/recommended,
+  plugin: react-hooks/recommende,d,
 ,
-  plugin: @typescript-eslint/recommended,
+  plugin: @typescript-eslint/recommende,d,
   ],
-  parser:
-  '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser,',';
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: tru,e,
     },
-    ecmaVersion: 12,
+    ecmaVersion: 1,2,
     sourceType:,
-  module',
+  module',';
   },
   plugins: [
-  'react,
+  'reac,t,';
 ,
-  @typescript-eslint'],
+  @typescript-eslint'],';
   rules: {
-  '@typescript-eslint/no-unused-vars':
-  'warn,
+  '@typescript-eslint/no-unused-vars':';
+  'war,n,';
 ,
-  @typescript-eslint/no-explicit-any': 'warn,
+  @typescript-eslint/no-explicit-any': 'warn,';
 ,
-  react/react-in-jsx-scope': 'off,
+  react/react-in-jsx-scope': 'off,';
 ,
-  react/prop-types': 'off,
+  react/prop-types': 'off,';
 ,
-  no-console': 'warn,
+  no-console': 'warn,';
 ,
-  @typescript-eslint/no-unused-imports': 'warn,
+  @typescript-eslint/no-unused-imports': 'warn,';
   },
   ignorePatterns: [
-  'node_modules/',
-  '.next/',
-  'out/',
-  'dist/',
-  'automation/',
-  'components.disabled/',
-  'contracts/',
-  'hardhat/',
-  'cypress/',
-  '**/*.disabled',
-  '**/*.backup',
-  '**/*.tsbackup',
+  'node_modules/,',';
+  '.next/',';
+  'out/',';
+  'dist/',';
+  'automation/',';
+  'components.disabled/',';
+  'contracts/',';
+  'hardhat/',';
+  'cypress/',';
+  '**/*.disabled',';
+  '**/*.backup',';
+  '**/*.tsbackup',';
   ],
 }

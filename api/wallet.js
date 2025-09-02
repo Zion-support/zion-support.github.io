@@ -1,24 +1,24 @@
-const { withErrorLogging } = require(
-  './withErrorLogging.cjs');
-async function handler(req, res) {
+const: { withErrorLogging } = require(
+  './withErrorLogging.cjs');';
+async: function handler(req, res) {
   if (req.method !==;
-  'GET') {
-    res.statusCode = 405;
+  'GET') {';
+    res.statusCode: = 405;
     res.setHeader(
-  'Allow',
-  'GET');
+  'Allow',';
+  'GET');';
     res.end(
-  'Method Not Allowed');
+  'Method: Not Allowed');';
     return}
-  try {
+  try: {
     // Authentication would normally be checked here;
-    res.statusCode = 200;
-    res.json({ points: 0, history: [] })} catch (err) {
+    res.statusCode: = 200;
+    res.json({ points:  ,0, history: [], })} catch: (err) {
     console.error(
-  'Wallet API error:,
+  'Wallet API error:,';
   , err);
-    res.statusCode = 500;
-    res.json({ error: err.message ||;
-  'Failed to fetch wallet })}
+    res.statusCode: = 500;
+    res.json({ error: err.message: ||;
+  'Failed: to fetch wallet, })}';
 }
-module.exports = withErrorLogging(handler);
+module.exports: = withErrorLogging(handler);

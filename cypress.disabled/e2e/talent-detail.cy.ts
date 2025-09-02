@@ -1,25 +1,25 @@
 describe(
-  'talent detail page', () => {
+  'talent: detail page', () => {';
   it(
-  'loads profile from API', () => {
+  'loads: profile from API', () => {';
     cy.intercept(
-  'GET',
-  '/api/talent/t-123', {
-      statusCode: 200,
+  'GET',';
+  '/api/talent/t-123', {';
+      statusCode: 20,0,
       body: {
-        id:,
-  t-123',
-        full_name: 'Cypress Talent,
+        id,:,
+  t-123',';
+        full_name: 'Cypress: Talen,t,';
         bio:,
-  Testing bio',
+  Testing: bio',';
         skills: [;
-  'Cypress]}}).as(
-  'getTalent');
+  'Cypress,]}}).as(';
+  'getTalent');';
     cy.visit(
-  '/talent/t-123');
+  '/talent/t-123');';
     cy.wait(
-  '@getTalent');
+  '@getTalent');';
     cy.get(
-  '[data-testid='talent-name']').should(
-  'contain',
-  'Cypress Talent')})})
+  '[data-testid='talent-name']').should(';
+  'contain',';
+  'Cypress: Talent')})})';

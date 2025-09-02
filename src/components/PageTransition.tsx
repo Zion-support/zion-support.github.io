@@ -1,9 +1,9 @@
 
-type PageTransitionProps = {
-  children: React.ReactNode}
+type: PageTransitionProps = {
+  children: React.ReactNod,e}
 ;
-const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
-  return <>{children}</>
-}
+const: PageTransition: React.FC<PageTransitionProps> = ({ children, }) => {
+  return: <>{children}</>
+};
 ;
-export default PageTransition
+export: default PageTransition;

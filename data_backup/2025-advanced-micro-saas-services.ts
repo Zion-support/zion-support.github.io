@@ -1,502 +1,502 @@
-export const advancedMicroSaasServices2025 = [{
+export: const advancedMicroSaasServices2025 = [{
     id:,
-  ai-powered-customer-success-platform',
-    name: 'CustomerSuccess AI Pro,
-    description:;
-  'Intelligent customer success platform that predicts churn, automates onboarding, and drives customer lifetime value through AI-powered insights and automation.',
+  ai-powered-customer-success-platform',';
+    name: 'CustomerSuccess: AI Pr,o,';
+    description: ;
+  'Intelligent: customer success platform that predicts chur,n, automates onboarding, and drives customer lifetime value through AI-powered insights and automation.',';
     features[;
-  'AI-powered churn prediction with 94% accuracy',
-  'Automated customer onboarding workflows',
-  'Real-time health score monitoring',
-  'Personalized success playbooks',
-  'Integration with 50+ CRM and support tools',
-  'Advanced analytics and reporting dashboard',
-  'Automated check-in scheduling',
-  'Customer sentiment analysis';
+  'AI-powered: churn prediction with 94% accuracy',';
+  'Automated: customer onboarding workflows',';
+  'Real-time: health score monitoring',';
+  'Personalized: success playbooks',';
+  'Integration: with 50+ CRM and support tools',';
+  'Advanced: analytics and reporting dashboard',';
+  'Automated: check-in scheduling',';
+  'Customer: sentiment analysis';';
     ],
     pricing: {
-      starter: { price: 89, period:;
-  'month', features[;
-  'Up to 500 customers',
-  'Basic AI insights',
-  'Email automation'] },
-      professional: { price: 199, period:;
-  'month', features[;
-  'Up to 2,000 customers',
-  'Advanced AI models',
-  'Full automation suite',
-  'Custom integrations'] },
-      enterprise: { price: 499, period:,
-  month', features[;
-  'Unlimited customers',
-  'Custom AI training',
-  'White-label solution',
-  'Dedicated success manager'] }
+      starter: { price: 8,9, period: ;
+  'month,', features[;';
+  'Up: to 500 customers',';
+  'Basic: AI insights',';
+  'Email: automation'] },';
+      professional: { price: 19,9, period: ;
+  'month,', features[;';
+  'Up: to 2,000 customers',';
+  'Advanced: AI models',';
+  'Full: automation suite',';
+  'Custom: integrations'] },';
+      enterprise: { price: 49,9, period:,
+  month', features[;';
+  'Unlimited: customers',';
+  'Custom: AI training',';
+  'White-label: solution',';
+  'Dedicated: success manager'] }';
     },
-    category: 'Customer Success,
+    category: 'Customer: Succes,s,';
     tags[,
-  AI',
-  'Customer Success',
-  'Automation',
-  'Analytics'],
-    website: 'https://ziontechgroup.com/customer-success-ai-pro,
+  AI',';
+  'Customer: Success',';
+  'Automation',';
+  'Analytics'],';
+    website: 'https://ziontechgroup.com/customer-success-ai-pr,o,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $2.1B',
-    targetAudience: SaaS companies, subscription businesses, enterprise software,
+  $2.1B',';
+    targetAudience: SaaS: companie,s, subscription businesses, enterprise software,
   ,
-    competitiveAdvantage: Industry-leading AI accuracy in churn prediction, comprehensive automation, and seamless integration ecosystem},
+    competitiveAdvantage: Industry-leading: AI accuracy in churn predictio,n, comprehensive automation, and seamless integration ecosystem},
   {
-    id: 'intelligent-inventory-optimization,
+    id: 'intelligent-inventory-optimizatio,n,';
     name:,
-  SmartInventory AI',
-    description: AI-powered inventory management platform that optimizes stock levels, predicts demand, and automates reordering to reduce costs and improve cash flow.',
+  SmartInventory: AI',';
+    description: AI-powered: inventory management platform that optimizes stock level,s, predicts demand, and automates reordering to reduce costs and improve cash flow.',';
     features[;
-  'Machine learning demand forecasting',
-  'Automated reorder point calculation',
-  'Multi-location inventory tracking',
-  'Supplier performance analytics',
-  'Real-time stock level monitoring',
-  'Integration with major e-commerce platforms',
-  'Advanced reporting and analytics',
-  'Mobile app for warehouse management';
+  'Machine: learning demand forecasting',';
+  'Automated: reorder point calculation',';
+  'Multi-location: inventory tracking',';
+  'Supplier: performance analytics',';
+  'Real-time: stock level monitoring',';
+  'Integration: with major e-commerce platforms',';
+  'Advanced: reporting and analytics',';
+  'Mobile: app for warehouse management';';
     ],
     pricing: {
-      starter: { price: 79, period:;
-  'month', features[;
-  'Up to 1,000 SKUs',
-  'Basic forecasting',
-  'Email alerts'] },
-      professional: { price: 179, period:;
-  'month', features[;
-  'Up to 10,000 SKUs',
-  'Advanced AI models',
-  'Full automation',
-  'Multi-location support'] },
-      enterprise: { price: 399, period:,
-  month', features[;
-  'Unlimited SKUs',
-  'Custom AI training',
-  'API access',
-  'Dedicated support'] }
+      starter: { price: 7,9, period: ;
+  'month,', features[;';
+  'Up: to 1,000 SKUs',';
+  'Basic: forecasting',';
+  'Email: alerts'] },';
+      professional: { price: 17,9, period: ;
+  'month,', features[;';
+  'Up: to 10,000 SKUs',';
+  'Advanced: AI models',';
+  'Full: automation',';
+  'Multi-location: support'] },';
+      enterprise: { price: 39,9, period:,
+  month', features[;';
+  'Unlimited: SKUs',';
+  'Custom: AI training',';
+  'API: access',';
+  'Dedicated: support'] }';
     },
-    category: 'Inventory Management,
+    category: 'Inventory: Managemen,t,';
     tags[,
-  AI',
-  'Inventory',
-  'Supply Chain',
-  'Automation'],
-    website: 'https://ziontechgroup.com/smart-inventory-ai,
+  AI',';
+  'Inventory',';
+  'Supply: Chain',';
+  'Automation'],';
+    website: 'https://ziontechgroup.com/smart-inventory-a,i,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $3.8B',
-    targetAudience: E-commerce businesses, retail chains, manufacturers, distributors,
+  $3.8B',';
+    targetAudience: E-commerce: businesse,s, retail chains, manufacturers, distributors,
   ,
-    competitiveAdvantage: Advanced AI demand forecasting with 92% accuracy, comprehensive automation, and seamless e-commerce integration},
+    competitiveAdvantage: Advanced: AI demand forecasting with 92% accurac,y, comprehensive automation, and seamless e-commerce integration},
   {
-    id: 'automated-hr-compliance-suite,
+    id: 'automated-hr-compliance-suit,e,';
     name:,
-  HRCompliance Pro',
-    description: Comprehensive HR compliance platform that automates policy management, tracks regulatory changes, and ensures legal compliance across all HR operations.',
+  HRCompliance: Pro',';
+    description: Comprehensive: HR compliance platform that automates policy managemen,t, tracks regulatory changes, and ensures legal compliance across all HR operations.',';
     features[;
-  'Automated policy template library',
-  'Real-time regulatory change alerts',
-  'Compliance audit trail',
-  'Employee handbook builder',
-  'Training completion tracking',
-  'Integration with major HRIS platforms',
-  'Advanced reporting and analytics',
-  'Legal document generation';
+  'Automated: policy template library',';
+  'Real-time: regulatory change alerts',';
+  'Compliance: audit trail',';
+  'Employee: handbook builder',';
+  'Training: completion tracking',';
+  'Integration: with major HRIS platforms',';
+  'Advanced: reporting and analytics',';
+  'Legal: document generation';';
     ],
     pricing: {
-      starter: { price: 99, period:;
-  'month', features[;
-  'Up to 100 employees',
-  'Basic compliance tools',
-  'Policy templates'] },
-      professional: { price: 249, period:;
-  'month', features[;
-  'Up to 500 employees',
-  'Advanced automation',
-  'Custom policies',
-  'Full compliance suite'] },
-      enterprise: { price: 599, period:,
-  month', features[;
-  'Unlimited employees',
-  'Custom compliance rules',
-  'White-label solution',
-  'Legal consultation'] }
+      starter: { price: 9,9, period: ;
+  'month,', features[;';
+  'Up: to 100 employees',';
+  'Basic: compliance tools',';
+  'Policy: templates'] },';
+      professional: { price: 24,9, period: ;
+  'month,', features[;';
+  'Up: to 500 employees',';
+  'Advanced: automation',';
+  'Custom: policies',';
+  'Full: compliance suite'] },';
+      enterprise: { price: 59,9, period:,
+  month', features[;';
+  'Unlimited: employees',';
+  'Custom: compliance rules',';
+  'White-label: solution',';
+  'Legal: consultation'] }';
     },
-    category: 'HR & Compliance,
+    category: 'HR: & Complianc,e,';
     tags[,
-  HR',
-  'Compliance',
-  'Automation',
-  'Legal'],
-    website: 'https://ziontechgroup.com/hr-compliance-pro,
+  HR',';
+  'Compliance',';
+  'Automation',';
+  'Legal'],';
+    website: 'https://ziontechgroup.com/hr-compliance-pr,o,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $4.2B',
-    targetAudience: HR departments, legal teams, compliance officers, small to enterprise businesses,
+  $4.2B',';
+    targetAudience: HR: department,s, legal teams, compliance officers, small to enterprise businesses,
   ,
-    competitiveAdvantage: Comprehensive compliance automation, real-time regulatory updates, and seamless HRIS integration},
+    competitiveAdvantage: Comprehensive: compliance automatio,n, real-time regulatory updates, and seamless HRIS integration},
   {
-    id: 'intelligent-expense-management,
+    id: 'intelligent-expense-managemen,t,';
     name:,
-  ExpenseAI Manager',
-    description: AI-powered expense management platform that automates receipt processing, enforces policy compliance, and provides real-time spending insights.',
+  ExpenseAI: Manager',';
+    description: AI-powered: expense management platform that automates receipt processin,g, enforces policy compliance, and provides real-time spending insights.',';
     features[;
-  'AI-powered receipt OCR with 98% accuracy',
-  'Automated expense categorization',
-  'Policy compliance enforcement',
-  'Real-time spending analytics',
-  'Mobile app for receipt capture',
-  'Integration with accounting software',
-  'Advanced reporting and dashboards',
-  'Automated approval workflows';
+  'AI-powered: receipt OCR with 98% accuracy',';
+  'Automated: expense categorization',';
+  'Policy: compliance enforcement',';
+  'Real-time: spending analytics',';
+  'Mobile: app for receipt capture',';
+  'Integration: with accounting software',';
+  'Advanced: reporting and dashboards',';
+  'Automated: approval workflows';';
     ],
     pricing: {
-      starter: { price: 59, period:;
-  'month', features[;
-  'Up to 50 users',
-  'Basic OCR',
-  'Expense tracking'] },
-      professional: { price: 149, period:;
-  'month', features[;
-  'Up to 200 users',
-  'Advanced AI',
-  'Full automation',
-  'Custom policies'] },
-      enterprise: { price: 349, period:,
-  month', features[;
-  'Unlimited users',
-  'Custom AI training',
-  'API access',
-  'Dedicated support'] }
+      starter: { price: 5,9, period: ;
+  'month,', features[;';
+  'Up: to 50 users',';
+  'Basic: OCR',';
+  'Expense: tracking'] },';
+      professional: { price: 14,9, period: ;
+  'month,', features[;';
+  'Up: to 200 users',';
+  'Advanced: AI',';
+  'Full: automation',';
+  'Custom: policies'] },';
+      enterprise: { price: 34,9, period:,
+  month', features[;';
+  'Unlimited: users',';
+  'Custom: AI training',';
+  'API: access',';
+  'Dedicated: support'] }';
     },
-    category: 'Expense Management,
+    category: 'Expense: Managemen,t,';
     tags[,
-  AI',
-  'Expense Management',
-  'OCR',
-  'Automation'],
-    website: 'https://ziontechgroup.com/expense-ai-manager,
+  AI',';
+  'Expense: Management',';
+  'OCR',';
+  'Automation'],';
+    website: 'https://ziontechgroup.com/expense-ai-manage,r,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $2.8B',
-    targetAudience: Finance teams, accounting firms, small to enterprise businesses,
+  $2.8B',';
+    targetAudience: Finance: team,s, accounting firms, small to enterprise businesses,
   ,
-    competitiveAdvantage: Industry-leading OCR accuracy, comprehensive automation, and seamless accounting software integration},
+    competitiveAdvantage: Industry-leading: OCR accurac,y, comprehensive automation, and seamless accounting software integration},
   {
-    id: 'smart-contract-automation-platform,
+    id: 'smart-contract-automation-platfor,m,';
     name:,
-  ContractFlow AI',
-    description: Intelligent contract management platform that automates contract creation, negotiation, and lifecycle management using AI-powered insights and automation.',
+  ContractFlow: AI',';
+    description: Intelligent: contract management platform that automates contract creatio,n, negotiation, and lifecycle management using AI-powered insights and automation.',';
     features[;
-  'AI-powered contract analysis',
-  'Automated template generation',
-  'Contract lifecycle tracking',
-  'Risk assessment and scoring',
-  'Integration with e-signature platforms',
-  'Advanced analytics and reporting',
-  'Custom workflow automation',
-  'Legal compliance monitoring';
+  'AI-powered: contract analysis',';
+  'Automated: template generation',';
+  'Contract: lifecycle tracking',';
+  'Risk: assessment and scoring',';
+  'Integration: with e-signature platforms',';
+  'Advanced: analytics and reporting',';
+  'Custom: workflow automation',';
+  'Legal: compliance monitoring';';
     ],
     pricing: {
-      starter: { price: 129, period:;
-  'month', features[;
-  'Up to 100 contracts',
-  'Basic AI analysis',
-  'Template library'] },
-      professional: { price: 299, period:;
-  'month', features[;
-  'Up to 1,000 contracts',
-  'Advanced AI',
-  'Full automation',
-  'Custom workflows'] },
-      enterprise: { price: 699, period:,
-  month', features[;
-  'Unlimited contracts',
-  'Custom AI training',
-  'White-label solution',
-  'Legal consultation'] }
+      starter: { price: 12,9, period: ;
+  'month,', features[;';
+  'Up: to 100 contracts',';
+  'Basic: AI analysis',';
+  'Template: library'] },';
+      professional: { price: 29,9, period: ;
+  'month,', features[;';
+  'Up: to 1,000 contracts',';
+  'Advanced: AI',';
+  'Full: automation',';
+  'Custom: workflows'] },';
+      enterprise: { price: 69,9, period:,
+  month', features[;';
+  'Unlimited: contracts',';
+  'Custom: AI training',';
+  'White-label: solution',';
+  'Legal: consultation'] }';
     },
-    category: 'Contract Management,
+    category: 'Contract: Managemen,t,';
     tags[,
-  AI',
-  'Contract Management',
-  'Legal Tech',
-  'Automation'],
-    website: 'https://ziontechgroup.com/contract-flow-ai,
+  AI',';
+  'Contract: Management',';
+  'Legal: Tech',';
+  'Automation'],';
+    website: 'https://ziontechgroup.com/contract-flow-a,i,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $3.1B',
-    targetAudience: Legal departments, contract managers, procurement teams, enterprise businesses,
+  $3.1B',';
+    targetAudience: Legal: department,s, contract managers, procurement teams, enterprise businesses,
   ,
-    competitiveAdvantage: Advanced AI contract analysis, comprehensive automation, and seamless legal workflow integration},
+    competitiveAdvantage: Advanced: AI contract analysi,s, comprehensive automation, and seamless legal workflow integration},
   {
-    id: 'intelligent-vendor-management,
+    id: 'intelligent-vendor-managemen,t,';
     name:,
-  VendorIQ Pro',
-    description: AI-powered vendor management platform that streamlines procurement, monitors vendor performance, and optimizes supplier relationships.',
+  VendorIQ: Pro',';
+    description: AI-powered: vendor management platform that streamlines procuremen,t, monitors vendor performance, and optimizes supplier relationships.',';
     features[;
-  'Vendor performance scoring',
-  'Automated procurement workflows',
-  'Contract compliance monitoring',
-  'Spend analysis and optimization',
-  'Integration with ERP systems',
-  'Advanced analytics and reporting',
-  'Risk assessment and mitigation',
-  'Supplier diversity tracking';
+  'Vendor: performance scoring',';
+  'Automated: procurement workflows',';
+  'Contract: compliance monitoring',';
+  'Spend: analysis and optimization',';
+  'Integration: with ERP systems',';
+  'Advanced: analytics and reporting',';
+  'Risk: assessment and mitigation',';
+  'Supplier: diversity tracking';';
     ],
     pricing: {
-      starter: { price: 89, period:;
-  'month', features[;
-  'Up to 50 vendors',
-  'Basic performance tracking',
-  'Procurement tools'] },
-      professional: { price: 199, period:;
-  'month', features[;
-  'Up to 200 vendors',
-  'Advanced AI',
-  'Full automation',
-  'Custom workflows'] },
-      enterprise: { price: 449, period:,
-  month', features[;
-  'Unlimited vendors',
-  'Custom AI training',
-  'API access',
-  'Dedicated support'] }
+      starter: { price: 8,9, period: ;
+  'month,', features[;';
+  'Up: to 50 vendors',';
+  'Basic: performance tracking',';
+  'Procurement: tools'] },';
+      professional: { price: 19,9, period: ;
+  'month,', features[;';
+  'Up: to 200 vendors',';
+  'Advanced: AI',';
+  'Full: automation',';
+  'Custom: workflows'] },';
+      enterprise: { price: 44,9, period:,
+  month', features[;';
+  'Unlimited: vendors',';
+  'Custom: AI training',';
+  'API: access',';
+  'Dedicated: support'] }';
     },
-    category: 'Vendor Management,
+    category: 'Vendor: Managemen,t,';
     tags[,
-  AI',
-  'Vendor Management',
-  'Procurement',
-  'Automation'],
-    website: 'https://ziontechgroup.com/vendor-iq-pro,
+  AI',';
+  'Vendor: Management',';
+  'Procurement',';
+  'Automation'],';
+    website: 'https://ziontechgroup.com/vendor-iq-pr,o,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $2.5B',
-    targetAudience: Procurement teams, supply chain managers, enterprise businesses,
+  $2.5B',';
+    targetAudience: Procurement: team,s, supply chain managers, enterprise businesses,
   ,
-    competitiveAdvantage: Comprehensive vendor performance analytics, advanced automation, and seamless ERP integration},
+    competitiveAdvantage: Comprehensive: vendor performance analytic,s, advanced automation, and seamless ERP integration},
   {
-    id: 'automated-project-management-ai,
+    id: 'automated-project-management-a,i,';
     name:,
-  ProjectAI Manager',
-    description: Intelligent project management platform that uses AI to optimize resource allocation, predict project risks, and automate project workflows.',
+  ProjectAI: Manager',';
+    description: Intelligent: project management platform that uses AI to optimize resource allocatio,n, predict project risks, and automate project workflows.',';
     features[;
-  'AI-powered resource optimization',
-  'Risk prediction and mitigation',
-  'Automated task assignment',
-  'Real-time project analytics',
-  'Integration with development tools',
-  'Advanced reporting and dashboards',
-  'Custom workflow automation',
-  'Team collaboration tools';
+  'AI-powered: resource optimization',';
+  'Risk: prediction and mitigation',';
+  'Automated: task assignment',';
+  'Real-time: project analytics',';
+  'Integration: with development tools',';
+  'Advanced: reporting and dashboards',';
+  'Custom: workflow automation',';
+  'Team: collaboration tools';';
     ],
     pricing: {
-      starter: { price: 69, period:;
-  'month', features[;
-  'Up to 10 projects',
-  'Basic AI insights',
-  'Task management'] },
-      professional: { price: 169, period:;
-  'month', features[;
-  'Up to 50 projects',
-  'Advanced AI',
-  'Full automation',
-  'Custom workflows'] },
-      enterprise: { price: 399, period:,
-  month', features[;
-  'Unlimited projects',
-  'Custom AI training',
-  'API access',
-  'Dedicated support'] }
+      starter: { price: 6,9, period: ;
+  'month,', features[;';
+  'Up: to 10 projects',';
+  'Basic: AI insights',';
+  'Task: management'] },';
+      professional: { price: 16,9, period: ;
+  'month,', features[;';
+  'Up: to 50 projects',';
+  'Advanced: AI',';
+  'Full: automation',';
+  'Custom: workflows'] },';
+      enterprise: { price: 39,9, period:,
+  month', features[;';
+  'Unlimited: projects',';
+  'Custom: AI training',';
+  'API: access',';
+  'Dedicated: support'] }';
     },
-    category: 'Project Management,
+    category: 'Project: Managemen,t,';
     tags[,
-  AI',
-  'Project Management',
-  'Automation',
-  'Analytics'],
-    website: 'https://ziontechgroup.com/project-ai-manager,
+  AI',';
+  'Project: Management',';
+  'Automation',';
+  'Analytics'],';
+    website: 'https://ziontechgroup.com/project-ai-manage,r,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $5.2B',
-    targetAudience: Project managers, development teams, consulting firms, enterprise businesses,
+  $5.2B',';
+    targetAudience: Project: manager,s, development teams, consulting firms, enterprise businesses,
   ,
-    competitiveAdvantage: Advanced AI resource optimization, comprehensive risk prediction, and seamless development tool integration},
+    competitiveAdvantage: Advanced: AI resource optimizatio,n, comprehensive risk prediction, and seamless development tool integration},
   {
-    id: 'intelligent-workflow-automation,
+    id: 'intelligent-workflow-automatio,n,';
     name:,
-  WorkflowAI Studio',
-    description: AI-powered workflow automation platform that intelligently designs, optimizes, and executes business processes across  industry.',
+  WorkflowAI: Studio',';
+    description: AI-powered: workflow automation platform that intelligently design,s, optimizes, and executes business processes across  industry.',';
     features[;
-  'AI-powered process discovery',
-  'Intelligent workflow design',
-  'Automated process optimization',
-  'Real-time performance monitoring',
-  'Integration with 100+ business tools',
-  'Advanced analytics and reporting',
-  'Custom automation rules',
-  'Process mining and analysis';
+  'AI-powered: process discovery',';
+  'Intelligent: workflow design',';
+  'Automated: process optimization',';
+  'Real-time: performance monitoring',';
+  'Integration: with 100+ business tools',';
+  'Advanced: analytics and reporting',';
+  'Custom: automation rules',';
+  'Process: mining and analysis';';
     ],
     pricing: {
-      starter: { price: 79, period:;
-  'month', features[;
-  'Up to 10 workflows',
-  'Basic automation',
-  'Process templates'] },
-      professional: { price: 199, period:;
-  'month', features[;
-  'Up to 100 workflows',
-  'Advanced AI',
-  'Full automation',
-  'Custom rules'] },
-      enterprise: { price: 499, period:,
-  month', features[;
-  'Unlimited workflows',
-  'Custom AI training',
-  'White-label solution',
-  'Dedicated support'] }
+      starter: { price: 7,9, period: ;
+  'month,', features[;';
+  'Up: to 10 workflows',';
+  'Basic: automation',';
+  'Process: templates'] },';
+      professional: { price: 19,9, period: ;
+  'month,', features[;';
+  'Up: to 100 workflows',';
+  'Advanced: AI',';
+  'Full: automation',';
+  'Custom: rules'] },';
+      enterprise: { price: 49,9, period:,
+  month', features[;';
+  'Unlimited: workflows',';
+  'Custom: AI training',';
+  'White-label: solution',';
+  'Dedicated: support'] }';
     },
-    category: 'Workflow Automation,
+    category: 'Workflow: Automatio,n,';
     tags[,
-  AI',
-  'Workflow Automation',
-  'Process Mining',
-  'Integration'],
-    website: 'https://ziontechgroup.com/workflow-ai-studio,
+  AI',';
+  'Workflow: Automation',';
+  'Process: Mining',';
+  'Integration'],';
+    website: 'https://ziontechgroup.com/workflow-ai-studi,o,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $8.7B',
-    targetAudience: Business analysts, operations teams, process improvement specialists, enterprise businesses,
+  $8.7B',';
+    targetAudience: Business: analyst,s, operations teams, process improvement specialists, enterprise businesses,
   ,
-    competitiveAdvantage: Advanced AI process discovery, comprehensive automation, and extensive business tool integration},
+    competitiveAdvantage: Advanced: AI process discover,y, comprehensive automation, and extensive business tool integration},
   {
-    id: 'smart-data-governance-platform,
+    id: 'smart-data-governance-platfor,m,';
     name:,
-  DataGuardian AI',
-    description: Intelligent data governance platform that automates data quality monitoring, enforces compliance policies, and provides real-time data insights.',
+  DataGuardian: AI',';
+    description: Intelligent: data governance platform that automates data quality monitorin,g, enforces compliance policies, and provides real-time data insights.',';
     features[;
-  'AI-powered data quality scoring',
-  'Automated compliance monitoring',
-  'Real-time data lineage tracking',
-  'Privacy impact assessment',
-  'Integration with data warehouses',
-  'Advanced analytics and reporting',
-  'Custom governance rules',
-  'Data catalog management';
+  'AI-powered: data quality scoring',';
+  'Automated: compliance monitoring',';
+  'Real-time: data lineage tracking',';
+  'Privacy: impact assessment',';
+  'Integration: with data warehouses',';
+  'Advanced: analytics and reporting',';
+  'Custom: governance rules',';
+  'Data: catalog management';';
     ],
     pricing: {
-      starter: { price: 149, period:;
-  'month', features[;
-  'Up to 1TB data',
-  'Basic quality monitoring',
-  'Compliance templates'] },
-      professional: { price: 349, period:;
-  'month', features[;
-  'Up to 10TB data',
-  'Advanced AI',
-  'Full automation',
-  'Custom rules'] },
-      enterprise: { price: 799, period:,
-  month', features[;
-  'Unlimited data',
-  'Custom AI training',
-  'White-label solution',
-  'Dedicated support'] }
+      starter: { price: 14,9, period: ;
+  'month,', features[;';
+  'Up: to 1TB data',';
+  'Basic: quality monitoring',';
+  'Compliance: templates'] },';
+      professional: { price: 34,9, period: ;
+  'month,', features[;';
+  'Up: to 10TB data',';
+  'Advanced: AI',';
+  'Full: automation',';
+  'Custom: rules'] },';
+      enterprise: { price: 79,9, period:,
+  month', features[;';
+  'Unlimited: data',';
+  'Custom: AI training',';
+  'White-label: solution',';
+  'Dedicated: support'] }';
     },
-    category: 'Data Governance,
+    category: 'Data: Governanc,e,';
     tags[,
-  AI',
-  'Data Governance',
-  'Compliance',
-  'Data Quality'],
-    website: 'https://ziontechgroup.com/data-guardian-ai,
+  AI',';
+  'Data: Governance',';
+  'Compliance',';
+  'Data: Quality'],';
+    website: 'https://ziontechgroup.com/data-guardian-a,i,';
     contact: {
-      phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+      phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $4.8B',
-    targetAudience: Data governance teams, compliance officers, data engineers, enterprise businesses,
+  $4.8B',';
+    targetAudience: Data: governance team,s, compliance officers, data engineers, enterprise businesses,
   ,
-    competitiveAdvantage: Advanced AI data quality scoring, comprehensive compliance automation, and seamless data warehouse integration},
+    competitiveAdvantage: Advanced: AI data quality scorin,g, comprehensive compliance automation, and seamless data warehouse integration},
   {
-    id: 'intelligent-api-management-suite,
+    id: 'intelligent-api-management-suit,e,';
     name:,
-  APIGuardian Pro',
-    description: AI-powered API management platform that provides intelligent monitoring, security, and optimization for enterprise API ecosystems.',
+  APIGuardian: Pro',';
+    description: AI-powered: API management platform that provides intelligent monitorin,g, security, and optimization for enterprise API ecosystems.',';
     features[;
-  'AI-powered API performance monitoring',
-  'Automated security threat detection',
-  'Intelligent rate limiting',
-  'Real-time API analytics',
-  'Integration with major cloud platforms',
-  'Advanced reporting and dashboards',
-  'Custom security policies',
-  'API versioning and lifecycle management';
+  'AI-powered: API performance monitoring',';
+  'Automated: security threat detection',';
+  'Intelligent: rate limiting',';
+  'Real-time: API analytics',';
+  'Integration: with major cloud platforms',';
+  'Advanced: reporting and dashboards',';
+  'Custom: security policies',';
+  'API: versioning and lifecycle management';';
     ],
     pricing: {
-      starter: { price: 99, period:;
-  'month', features[;
-  'Up to 100 API calls/min',
-  'Basic monitoring',
-  'Security alerts'] },
-      professional: { price: 249, period:;
-  'month', features[;
-  'Up to 1,000 API calls/min',
-  'Advanced AI',
-  'Full automation',
-  'Custom policies'] },
-      enterprise: { price: 599, period:,
-  month', features[;
-  'Unlimited API calls',
-  'Custom AI training',
-  'White-label solution',
-  'Dedicated support'] }
+      starter: { price: 9,9, period: ;
+  'month,', features[;';
+  'Up: to 100 API calls/min',';
+  'Basic: monitoring',';
+  'Security: alerts'] },';
+      professional: { price: 24,9, period: ;
+  'month,', features[;';
+  'Up: to 1,000 API calls/min',';
+  'Advanced: AI',';
+  'Full: automation',';
+  'Custom: policies'] },';
+      enterprise: { price: 59,9, period:,
+  month', features[;';
+  'Unlimited: API calls',';
+  'Custom: AI training',';
+  'White-label: solution',';
+  'Dedicated: support'] }';
     },
-    category: 'API Management,
+    category: 'API: Managemen,t,';
     tags[,
-  AI',
-  'API Management',
-  'Security',
-  'Monitoring'],
-    website: 'https://ziontechgroup.com/api-guardian-pro,
+  AI',';
+  'API: Management',';
+  'Security',';
+  'Monitoring'],';
+    website: 'https://ziontechgroup.com/api-guardian-pr,o,';
     contact: {
-phone:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com},
+phone,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m},';
     marketSize:,
-  $3.9B',
-    targetAudience: API developers, DevOps teams, enterprise businesses, cloud platforms,
+  $3.9B',';
+    targetAudience: API: developer,s, DevOps teams, enterprise businesses, cloud platforms,
   ,
-    competitiveAdvantage: Advanced AI performance monitoring, comprehensive security automation, and seamless cloud platform integration';
+    competitiveAdvantage: Advanced: AI performance monitorin,g, comprehensive security automation, and seamless cloud platform integration';';
 ]}

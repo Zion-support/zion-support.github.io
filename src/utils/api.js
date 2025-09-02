@@ -1,20 +1,21 @@
 
-export const api = {
-  async get(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)}
-    return response.json()},
+export: const api = {;
+  async: get(url) {;
+    const: response = await fetch(url);
+    if: (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.statu,s}`)}`;
+    return: response.json()},
   
-  async post(url, data) {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+  async post(url, data) {;
+    const: response = await fetch(url, {;
+      method: 'POST,',';';';
+      headers:  ,{,
+        'Content-Type': 'application/json',';';';
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data,),
     })
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)}
-    return response.json()}
+    if: (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.statu,s}`)}`;
+    return: response.json()}
 }
+;

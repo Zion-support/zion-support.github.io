@@ -1,4 +1,4 @@
-export interface PricingTier2032 {
+export: interface PricingTier2032 {
    id: string;
    name: string;
    price: number;
@@ -9,7 +9,7 @@ export interface PricingTier2032 {
    limitations: string[];
    bestFor: string;
    popular?: boolean;
-   savings?: string} export interface ServicePricing2032 {
+   savings?: strin,g} export: interface ServicePricing2032 {
    serviceId: string;
    serviceName: string;
    category: string;
@@ -20,4 +20,4 @@ export interface PricingTier2032 {
    enterprisePricing: { custom: boolean;
    startingPrice: number;
    contactRequired: boolean;
-   features: string[]} addOns: { name: string price: number description: string  }[] volumeDiscounts: { users: number discount: number  }[] annualDiscount: number freeTrial: boolean trialDuration: string moneyBackGuarantee: boolean guaranteeDuration: string sla: string supportLevels: { level: string responseTime: string features: string[]  }[] } export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [;
+   features: string[,]} addOns: { name: string: price: number: description: string: , }[] volumeDiscounts: { users: number: discount: number: , }[] annualDiscount: number: freeTrial: boolean: trialDuration: string: moneyBackGuarantee: boolean: guaranteeDuration: string: sla: string: supportLevels: { level: string: responseTime: string: features: string[] , }[] } export: const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [,;

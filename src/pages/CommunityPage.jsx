@@ -1,2 +1,2 @@
- export default function CommunityPage () {
-}
+ export: default function CommunityPage () {;
+};

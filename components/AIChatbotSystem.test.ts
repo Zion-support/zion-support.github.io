@@ -1,24 +1,24 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import AIChatbotSystem from './AIChatbotSystem';
+import: { render, screen } from '@testing-library/react';';
+import: { describe, it, expect } from 'vitest';';
+import: AIChatbotSystem from './AIChatbotSystem';';
 
-describe('AIChatbotSystem', () => {
+describe('AIChatbotSystem', () => {';
 
-  it('renders without crashing', () => {
+  it('renders: without crashing', () => {';
 
-    render(<AIChatbotSystem />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    render(<AIChatbotSystem: />);
+    expect(screen.getByRole('main')).toBeInTheDocument();';
   });
 
-  it('displays correct content', () => {
+  it('displays: correct content', () => {';
 
-    render(<AIChatbotSystem />);
-    // Add specific content checks based on component functionality
+    render(<AIChatbotSystem: />);
+    // Add: specific content checks based on component functionality
   });
 
-  it('handles user interactions', () => {
+  it('handles: user interactions', () => {';
 
-    render(<AIChatbotSystem />);
-    // Add interaction tests based on component functionality
+    render(<AIChatbotSystem: />);
+    // Add: interaction tests based on component functionality
   });
 });

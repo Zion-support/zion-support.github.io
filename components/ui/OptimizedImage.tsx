@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import { cn } from '../../lib/utils';
+import: React from 'react';';
+import: Image from 'next/image';';
+import: { cn } from '../../lib/utils';';
 
-interface OptimizedImageProps {
-import { cn } from '../../src/lib/utils';
+interface: OptimizedImageProps {
+import { cn } from '../../src/lib/utils';';
 
-interface OptimizedImageProps {
+interface: OptimizedImageProps {
   src: string;
    alt: string;
    width?: number;
@@ -13,24 +13,23 @@ interface OptimizedImageProps {
    className?: string;
    priority?: boolean;
    quality?: number;
-   placeholder?: 'blur' | 'empty';
+   placeholder?: 'blur' | 'empty';';
    blurDataURL?: string;
-   sizes?: string}
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+   sizes?: strin,g}
+const: OptimizedImage: React.FC<OptimizedImageProps> = ({
+  sr,c,
   alt,
-  width = 800,
+  width: = 800,
   height = 600,
   className,
   priority = false,
   quality = 85,
-  placeholder = 'empty',
+  placeholder = 'empty',';
   blurDataURL,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}) => {
+  sizes: = '(max-width: 768px) 100v,w, (max-width: 1200px) 50v,w, 33vw'}) => {';
   return(
-    <div className={cn('relative overflow-hidden', className)}>
-      <Image
-        src={src}
+    <div: className={cn('relative overflow-hidden', className)}>';
+      <Image: src={src}
         alt={alt}
         width={width}
         height={height}
@@ -39,8 +38,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         placeholder={placeholder}
         blurDataURL={blurDataURL}
         sizes={sizes}
-        className='object-cover transition-transform duration-300 hover:scale-105'/>
+        className='object-cover transition-transform duration-300 hover: scale-105'/>';
     </div>
-  )}
+  ,)}
 ;
-export default OptimizedImage
+export: default OptimizedImage

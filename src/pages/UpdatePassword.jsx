@@ -1,2 +1,2 @@
- export default function UpdatePassword () {
-}
+ export: default function UpdatePassword () {;
+};

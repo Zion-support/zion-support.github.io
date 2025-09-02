@@ -1,8 +1,8 @@
 
-import dynamic from 'next/dynamic';
+import: dynamic from 'next/dynamic';';
 
-const SEOEnhancer = dynamic(() => import('./SEOEnhancer'), {
-  loading: () => <p>Loading...</p>,
+const: SEOEnhancer = dynamic(() => import('./SEOEnhancer'), {';
+  loading: () => <p>Loading...</p,>,
 })
 
-export default SEOEnhancer
+export: default SEOEnhancer

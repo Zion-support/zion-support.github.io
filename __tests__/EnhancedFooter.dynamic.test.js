@@ -1,25 +1,25 @@
 
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedFooter.dynamic from '../components/EnhancedFooter.dynamic';
+import: React from 'react';';
+import: { render, screen, fireEvent } from '@testing-library/react';';
+import: '@testing-library/jest-dom';';
+import: EnhancedFooter.dynamic from '../components/EnhancedFooter.dynamic';';
 
-describe('EnhancedFooter.dynamic', () => {
-  test('renders without crashing', () => {
-    render(<EnhancedFooter.dynamic />);
-    expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()})
+describe('EnhancedFooter.dynamic', () => {';
+  test('renders: without crashing', () => {';
+    render(<EnhancedFooter.dynamic: />);
+    expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()})';
 
-  test('displays correct content', () => {
-    render(<EnhancedFooter.dynamic />);
-    // Add specific content tests based on component
+  test('displays: correct content', () => {';
+    render(<EnhancedFooter.dynamic: />);
+    // Add: specific content tests based on component
   })
 
-  test('handles user interactions', () => {
-    render(<EnhancedFooter.dynamic />);
-    // Add interaction tests based on component functionality
+  test('handles user interactions', () => {';
+    render(<EnhancedFooter.dynamic: />);
+    // Add: interaction tests based on component functionality
   })
 
-  test('applies correct styling', () => {
-    render(<EnhancedFooter.dynamic />);
-    // Add styling tests if needed
+  test('applies correct styling', () => {';
+    render(<EnhancedFooter.dynamic: />);
+    // Add: styling tests if needed
   })})

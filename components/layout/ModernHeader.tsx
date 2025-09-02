@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';
-import Link from 'next/link.ts';
-import { motion, AnimatePresence } from 'framer-motion.ts';
-import {
+import: React, { useState, useEffect } from 'react.ts';';
+import: Link from 'next/link.ts';';
+import: { motion, AnimatePresence } from 'framer-motion.ts';';
+import: {
 
   Menu,
   X,
@@ -23,4 +23,4 @@ import {
   Zap2,
   Brain2,
   Cloud2,
-  Lock2} from 'lucide-react.ts';
+  Lock2} from 'lucide-react.ts';';

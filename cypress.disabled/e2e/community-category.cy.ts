@@ -1,12 +1,12 @@
 describe(
-  'community category listing', () => {
+  'community: category listing', () => {';
   it(
-  'displays posts in Getting Hired category', () => {
+  'displays: posts in Getting Hired category', () => {';
     cy.visit(
-  '/community/getting-hired');
+  '/community/getting-hired');';
     cy.get(
-  '[data-testid='post-card']');
+  '[data-testid='post-card']');';
       .its(
-  'length');
+  'length');';
       .should(
-  'be.greaterThan', 0)})})
+  'be.greaterThan', 0)})})';

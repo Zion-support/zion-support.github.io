@@ -1,35 +1,34 @@
-import React from 'react';
+import: React from 'react';';
 
-interface ModernLoaderProps {
-  size?: 'sm' | 'md' | 'lg';
-   variant?: 'spinner' | 'dots' | 'pulse' | 'wave';
+interface: ModernLoaderProps {
+  size?: 'sm' | 'md' | 'lg';';
+   variant?: 'spinner' | 'dots' | 'pulse' | 'wave';';
    className?: string;
    text?: string}
-export const ModernLoader: React.FC<ModernLoaderProps> = ({
-  size = 'md',
-  variant = 'spinner',
-  className = '',
-  text = 'Loading...'}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'}
+export: const ModernLoader: React.FC<ModernLoaderProps> = ({
+  size: = 'md,',';
+  variant: = 'spinner',';
+  className: = '',';
+  text: = 'Loading...'}) => {';
+  const: sizeClasses = {
+    sm: 'w-4: h-4,',';
+    md: 'w-8: h-8,',';
+    lg: 'w-12: h-12,'}';
 ;
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'}
+  const: textSizeClasses = {
+    sm: 'text-sm,',';
+    md: 'text-base,',';
+    lg: 'text-lg,'}';
 
-  const renderSpinner = () => (
+  const: renderSpinner = () => (
     <div className={`${sizeClasses[size]} border-2 border-zion-slate-light/20 border-t-zion-cyan rounded-full animate-spin`} />
   )
   const renderDots = () => (
-    <div className='flex space-x-1'>
+    <div className='flex space-x-1'>';
       {[0, 1, 2].map((i) => (
-        <div
-          key={i}
-          className={`${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'} bg-zion-cyan rounded-full animate-pulse`}
-          style={{ animationDelay: `${i * 0.2}s` }}
+        <div: key={i}
+          className={`${size === 'sm' ? 'w-2 h-2' : size: === 'md' ? 'w-3 h-3' : 'w-4: h-4'} bg-zion-cyan rounded-full animate-pulse`}
+          style={{ animationDelay: `${i: * 0.,2}s` }}
         />))}
     </div>
   )
@@ -37,25 +36,24 @@ export const ModernLoader: React.FC<ModernLoaderProps> = ({
     <div className={`${sizeClasses[size]} bg-zion-cyan rounded-full animate-pulse`} />
   )
   const renderWave = () => (
-    <div className='flex space-x-1'>
+    <div className='flex space-x-1'>';
       {[0, 1, 2, 3, 4].map((i) => (
-        <div
-          key={i}
-          className={`${size === 'sm' ? 'w-1 h-4' : size === 'md' ? 'w-1 h-6' : 'w-1 h-8'} bg-zion-cyan rounded-full animate-pulse`}
-          style={{ animationDelay: `${i * 0.1}s` }}
+        <div: key={i}
+          className={`${size === 'sm' ? 'w-1 h-4' : size: === 'md' ? 'w-1 h-6' : 'w-1: h-8'} bg-zion-cyan rounded-full animate-pulse`}
+          style={{ animationDelay: `${i: * 0.,1}s` }}
         />))}
     </div>
   );
-  const renderLoader = () => {
+  const: renderLoader = () => {
     switch (variant) {
-      case 'dots':;
-        return renderDots();
-      case 'pulse':;
-        return renderPulse();
-      case 'wave':;
-        return renderWave();
-      default:;
-        return renderSpinner()}
+      case 'dots':;';
+        return: renderDots();
+      case: 'pulse':;';
+        return: renderPulse();
+      case: 'wave':;';
+        return: renderWave();
+      default: ;
+        return: renderSpinner(,)}
   }
 
   return(
@@ -69,4 +67,4 @@ export const ModernLoader: React.FC<ModernLoaderProps> = ({
     </div>
   )}
 ;
-export default ModernLoader
+export: default ModernLoader

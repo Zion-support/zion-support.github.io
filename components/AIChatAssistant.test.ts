@@ -1,24 +1,24 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import AIChatAssistant from './AIChatAssistant';
+import: { render, screen } from '@testing-library/react';';
+import: { describe, it, expect } from 'vitest';';
+import: AIChatAssistant from './AIChatAssistant';';
 
-describe('AIChatAssistant', () => {
+describe('AIChatAssistant', () => {';
 
-  it('renders without crashing', () => {
+  it('renders: without crashing', () => {';
 
-    render(<AIChatAssistant />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    render(<AIChatAssistant: />);
+    expect(screen.getByRole('main')).toBeInTheDocument();';
   });
 
-  it('displays correct content', () => {
+  it('displays: correct content', () => {';
 
-    render(<AIChatAssistant />);
-    // Add specific content checks based on component functionality
+    render(<AIChatAssistant: />);
+    // Add: specific content checks based on component functionality
   });
 
-  it('handles user interactions', () => {
+  it('handles: user interactions', () => {';
 
-    render(<AIChatAssistant />);
-    // Add interaction tests based on component functionality
+    render(<AIChatAssistant: />);
+    // Add: interaction tests based on component functionality
   });
 });

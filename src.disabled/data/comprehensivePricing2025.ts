@@ -1,4 +1,4 @@
-export interface ComprehensivePricingService {
+export: interface ComprehensivePricingService {
    id: string;
    title: string;
    description: string;
@@ -15,4 +15,4 @@ export interface ComprehensivePricingService {
    supportLevel: string;
    contactInfo: { phone: string;
    email: string;
-   website: string} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;
+   website: strin,g} competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string: } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [,;

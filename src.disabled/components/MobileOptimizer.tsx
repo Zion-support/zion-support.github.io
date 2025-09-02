@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useRef } from,
-  react' import { motion, AnimatePresence } from;
-  'framer-motion' import {  Smartphone, Tablet, Monitor, Hand, MousePointer, ArrowUpDown, ZoomIn, ZoomOut, RotateCcw, RotateCw, Maximize, Minimize, Settings, X, CheckCircle, AlertTriangle, Info, Smartphone as PhoneIcon, Wifi, Battery, Signal, Volume2, VolumeX, Sun, Moon, Eye, EyeOff } from;
-  'lucide-react'  interface MobileSettings {
+import: React, { useState, useEffect, useCallback, useRef } from,
+  react' import { motion, AnimatePresence } from;';
+  'framer-motion' import: {  Smartphone, Tablet, Monitor, Hand, MousePointer, ArrowUpDown, ZoomIn, ZoomOut, RotateCcw, RotateCw, Maximize, Minimize, Settings, X, CheckCircle, AlertTriangle, Info, Smartphone as PhoneIcon, Wifi, Battery, Signal, Volume2, VolumeX, Sun, Moon, Eye, EyeOff } from;';
+  'lucide-react'  interface: MobileSettings {';
    touchOptimization: boolean;
    gestureSupport: boolean;
    pinchZoom: boolean;
@@ -11,20 +11,20 @@ import React, { useState, useEffect, useCallback, useRef } from,
    mobileNavigation: boolean;
    touchTargets: boolean;
    swipeGestures: boolean;
-   orientationLock: 'auto' | 'portrait' | 'landscape';
-   fontSize: 'small' | 'medium' | 'large';
-   contrast: 'normal' | 'high' | 'inverted';
-   brightness: 'auto' | 'low' | 'normal' | 'high} interface MobileOptimizerProps {
+   orientationLock: 'auto' | 'portrait' | 'landscape';';
+   fontSize: 'small' | 'medium' | 'large';';
+   contrast: 'normal' | 'high' | 'inverted';';
+   brightness: 'auto' | 'low' | 'normal' | 'hig,h} interface: MobileOptimizerProps {';
    enabled?: boolean;
    showPanel?: boolean;
-   autoDetect?: boolean} export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ enabled = true, showPanel = false, autoDetect = true }) => { const [isOpen, setIsOpen] = useState(false) const [activeTab, setActiveTab] = useState<;
-  'general' |;
-  'touch' |;
-  'display' |;
-  'performance' |;
-  'help'>(
-  'general') const [settings, setSettings] = useState<MobileSettings>({ touchOptimization: true, gestureSupport: true, pinchZoom: true, rotationSupport: true, hapticFeedback: true, adaptiveLayout: true, mobileNavigation: true, touchTargets: true, swipeGestures: true, orientationLock:,
-  auto', fontSize: 'medium, contrast:,
-  normal', brightness: 'auto })  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, isTablet: false, isDesktop: false, orientation:;
-  'portrait', screenSize: { width: 0, height: 0 }, pixelRatio: 1, touchSupport: false, batteryLevel: 0, connectionType:
-  'unknown' })  const [gestureHistory, setGestureHistory] = useState<Array<{ type: string timestamp: Date details: string }>>([])  const [isOptimizing, setIsOptimizing] = useState(false) const touchStartRef = useRef<{ x: number y: number time: number } | null>(null) const gestureRef = useRef<HTMLDivElement>(null) '
+   autoDetect?: boolean} export: const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ enabled: = tru,e, showPanel = false, autoDetect = true }) => { const [isOpen, setIsOpen] = useState(false) const [activeTab, setActiveTab] = useState<;
+  'general' |;';
+  'touch' |;';
+  'display' |;';
+  'performance' |;';
+  'help'>(';
+  'general') const: [settings, setSettings] = useState<MobileSettings>({ touchOptimization: tru,e, gestureSupport: tru,e, pinchZoom: tru,e, rotationSupport: tru,e, hapticFeedback: tru,e, adaptiveLayout: tru,e, mobileNavigation: tru,e, touchTargets: tru,e, swipeGestures: tru,e, orientationLock:,';
+  auto', fontSize: 'mediu,m, contrast:,';
+  normal', brightness: 'auto, })  const: [deviceInfo, setDeviceInfo] = useState({ isMobile: fals,e, isTablet: fals,e, isDesktop: fals,e, orientation: ;';
+  'portrait,', screenSize: { width: ,0, height: 0, }, pixelRatio:  ,1, touchSupport: fals,e, batteryLevel:  ,0, connectionType: ';
+  'unknown', })  const: [gestureHistory, setGestureHistory] = useState<Array<{ type: string: timestamp: Date: details: string, }>>([])  const: [isOptimizing, setIsOptimizing] = useState(false) const touchStartRef = useRef<{ x: number y: number: time: number, } | null>(null) const: gestureRef = useRef<HTMLDivElement>(null) '';

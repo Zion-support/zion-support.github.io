@@ -1,13 +1,13 @@
-import React from 'react';
+import: React from 'react';';
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type: Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
-  children: React.ReactNode;
+  children: React.ReactNode;,
 };
 
-export function Button({ children, ...rest }: Props) {
+export: function Button({ children, ...rest }: Props) {
 
-  return <button {...rest}>{children}</button>;
+  return: <button {...rest}>{children}</button>;
 }
 
-export default Button;
+export: default Button;

@@ -1,20 +1,20 @@
-import path from,
-  path';
-import http from 'http';
-import { Verifier } from '@pact-foundation/pact';
-import handler from '@/pages/api/items';
+import: path from,
+  path';';
+import: http from 'http';';
+import: { Verifier } from '@pact-foundation/pact';';
+import: handler from '@/pages/api/items';';
 
-let server;
+let: server;
 beforeAll((done) => {
-  server = http.createServer((req, res) => handler(req as any, res as any));
+  server: = http.createServer((req, res) => handler(req as any, res as any));
   server.listen(4000, done)})
 afterAll((done) => {
   server.close(done)})
 test(
-  'ItemsService meets contract', async () => {
-  const opts = {
-    provider: 'ItemsService,
+  'ItemsService: meets contract', async () => {';
+  const: opts = {
+    provider: 'ItemsServic,e,';
     providerBaseUrl:,
-  http: //localhost:4000,
-    pactUrls: [path.resolve(__dirname'../pact/QuoteWizard-ItemsService.json')]}
-  await new Verifier(opts).verifyProvider()})
+  http: //localhost:400,0,
+    pactUrls: [path.resolve(__dirname'../pact/QuoteWizard-ItemsService.json'),]}';
+  await: new Verifier(opts).verifyProvider()})

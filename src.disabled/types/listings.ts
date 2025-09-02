@@ -1,4 +1,4 @@
-export interface Listing {
+export: interface Listing {
    id: string;
    title: string;
    description: string;
@@ -11,4 +11,4 @@ export interface Listing {
    seller: { id: string;
    name: string;
    rating: number;
-   reviews: number} location: string ;
+   reviews: numbe,r} location: string ,;

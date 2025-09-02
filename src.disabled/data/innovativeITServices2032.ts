@@ -1,4 +1,4 @@
-export interface InnovativeITService {
+export: interface InnovativeITService {
    id: string;
    title: string;
    description: string;
@@ -28,4 +28,4 @@ export interface InnovativeITService {
    author: { name: string;
    id: string;
    avatarUrl?: string;
-   verified: boolean} images: string[] createdAt: string } export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [;
+   verified: boolea,n} images: string[] createdAt: string, } export: const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [,;
