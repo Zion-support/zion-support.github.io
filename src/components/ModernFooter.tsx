@@ -1,1 +1,0 @@
-const ModernFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const scrollToTop = () => { window.scrollTo({ top: 0, behavior: "smooth" }); }; const footerSections = [ { title: "Services", links: [ { label: "AI & Machine Learning", href: "#ai" }, { label: "Cybersecurity", href: "#cybersecurity" }, 

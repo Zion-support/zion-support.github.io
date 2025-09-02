@@ -1,1 +1,1 @@
-"const defaultConfig = {" 
+import React, { createContext, useContext, useState } from 'react'; const WhitelabelContext = createContext(); export function WhitelabelProvider({ children }) { const [isWhitelabel, setIsWhitelabel] = useState(false); const [primaryColor, setPrimaryColor] = useState('#06b6d4');

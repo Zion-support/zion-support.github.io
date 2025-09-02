@@ -1,1 +1,1 @@
-export function ContactSection(...args[]): { 
+import React from 'react.ts'; import { motion } from 'framer-motion.ts'; import { Link } from 'react-router-dom.ts'; export function ContactSection(...args[]): { const contactInfo = [ { icon: Phone, title: "Phone", value: "+1 302 464 0950", link: "tel:+13024640950" }, { icon: Mail, title: "Email", value: "kleber@ziontechgroup.com", link: "mailto:kleber@ziontechgroup.com" },; {; icon: MapPin,; title: "Address",; value: "364 E Main St STE 1008 Middletown DE 19709",; link: "https:

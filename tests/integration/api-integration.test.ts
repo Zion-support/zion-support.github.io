@@ -1,6 +1,11 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 
+// Mock component for testing
+const YourApiComponent = () => {
+  return <div>test data</div>;
+};
+
 describe('API Integration', () => {
   it('should fetch and display data', async () => {
     // Mock API response

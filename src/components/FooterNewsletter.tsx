@@ -1,1 +1,1 @@
-// // // // // // // // // // // console.error("Newsletter subscription failed:", error)} finally { setIsSubmitting(false); setTimeout(() => setIsSubmitted(false), 3000)} catch (error) { 
+import React, { useState } from 'react.ts'; import { Mail, Send, CheckCircle } from 'lucide-react.ts';

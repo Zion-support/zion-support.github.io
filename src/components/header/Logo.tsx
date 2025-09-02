@@ -1,0 +1,1 @@
+import React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; interface LogoProps { customLogo?: string; customColor?: string; } export function Logo({ customLogo, customColor }: LogoProps) { const logoColor = customColor || '#06b6d4';
