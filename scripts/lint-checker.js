@@ -1,44 +1,81 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require(
+  'fs');
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
 // Common lint issues to check for
 const lintRules = {
   'no-console': /console\.(log|warn|error|info|debug)/g,
-  'no-unused-imports': /import\s+[^}]+from\s+['"][^'"]+['"];?\s*$/gm,
-  'no-unused-vars': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
-  'no-debugger': /debugger;/g,
-  'no-alert': /alert\(/g,
-  'no-eval': /eval\(/g,
-  'no-var': /var\s+/g,
-  'prefer-const': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,
-  'no-empty-blocks': /\{\s*\}/g,
-  'no-trailing-spaces': /[ \t]+$/gm,
-  'no-multiple-empty-lines': /\n\s*\n\s*\n/g,
-  'no-unused-jsx-props': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g
+  'no-unused-imports': /import\s+[^}]+from\s+[
+  '"][^'"]+[
+  '"];?\s*$/gm,
+  'no-unused-vars
+  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
+  'no-debugger
+  ': /debugger;/g,
+  'no-alert
+  ': /alert\(/g,
+  'no-eval
+  ': /eval\(/g,
+  'no-var
+  ': /var\s+/g,
+  'prefer-const
+  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,
+  'no-empty-blocks
+  ': /\{\s*\}/g,
+  'no-trailing-spaces
+  ': /[ \t]+$/gm,
+  'no-multiple-empty-lines
+  ': /\n\s*\n\s*\n/g,
+  'no-unused-jsx-props
+  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g
 };
 // File extensions to check
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const extensions = ['.js
+  ', '.jsx
+  ', '.ts
+  ', '.tsx
+  '];
 // Directories to ignore
 const ignoreDirs = [
-  'node_modules',
-  '.git',
-  'dist',
-  'build',
-  '.next',
-  'out',
-  'coverage',
-  'temp',
-  'tmp',
-  'logs',
-  'reports',
-  'test-reports',
-  'security-reports',
-  'ci-cd-reports',
-  'link-reports',
-  'broken_files_backup',
-  'temp_backup',
-  'temp_working'
+  'node_modules
+  ',
+  '.git
+  ',
+  'dist
+  ',
+  'build
+  ',
+  '.next
+  ',
+  'out
+  ',
+  'coverage
+  ',
+  'temp
+  ',
+  'tmp
+  ',
+  'logs
+  ',
+  'reports
+  ',
+  'test-reports
+  ',
+  'security-reports
+  ',
+  'ci-cd-reports
+  ',
+  'link-reports
+  ',
+  'broken_files_backup
+  ',
+  'temp_backup
+  ',
+  'temp_working
+  '
 ];
 // Issues found
 const issues = [];
@@ -48,8 +85,10 @@ function shouldIgnoreFile(filePath) {
   return ignoreDirs.some(dir => filePath.includes(dir));
 function checkFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
+    const content = fs.readFileSync(filePath, 'utf8
+  ');
+    const lines = content.split('\n
+  ');
     totalFiles++;
     const fileIssues = [];
     // Check each line for issues
@@ -85,12 +124,14 @@ function walkDir(dir) {
         checkFile(filePath);
   });
 function generateReport() {
-  // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n');
+  // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n
+  ');
   // // // // // // // console.log(`Total files checked: ${totalFiles}`);
   // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);
   // // // // // // // console.log(`Total issues found: ${issues.length}\n`);
   if (issues.length === 0) {
-    // // // // // // // console.log('✅ No lint issues found!');
+    // // // // // // // console.log('✅ No lint issues found!
+  ');
     return;
   // Group issues by file
   const issuesByFile = { /* empty */ };
@@ -106,7 +147,8 @@ function generateReport() {
     });
   });
   // Summary by rule
-  // // // // // // // console.log('\n📊 Issues by rule:');
+  // // // // // // // console.log(,
+  \n📊 Issues by rule: );
   const ruleCounts = { /* empty */ };
   issues.forEach(issue => {
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1;
@@ -117,7 +159,8 @@ function generateReport() {
       // // // // // // // console.log(`  ${rule}: ${count}`);
     });
 function main() {
-  // // // // // // // console.log('🔍 Starting lint check...');
+  // // // // // // // console.log('🔍 Starting lint check...
+  ');
   const startTime = Date.now();
   walkDir('.');
   const endTime = Date.now();

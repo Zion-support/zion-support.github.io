@@ -29,11 +29,10 @@ import {}
   Bot,
   Workflow,
   Eye,
-  Sparkles} from 'lucide-react';
-
-:pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-const AIQuantumHybridPlatform: React.FC = () => {
-'const [activeTab, setActiveTab] = useState('overview');
+  Sparkles} from,
+  lucide-react';: pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
+const AIQuantumHybridPlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview
+  ');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {}
@@ -57,7 +56,8 @@ const AIQuantumHybridPlatform: React.FC = () => {
               AI-Quantum Hybrid Platform"
             </h1>""
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">'
-              The world's first integrated platform combining artificial
+              The world
+  's first integrated platform combining artificial
               intelligence with quantum computing, delivering unprecedented
               computational power and intelligence for the most complexchallenges.
             </p>
@@ -206,11 +206,11 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
-                className={`relative bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-'
-                  tier.popular''
-                    ? 'border-purple-500 scale-105'''`
-                    : 'border-purple-500/20'``
+                className={`relative bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
+  tier.popular'
+  '
+                    ? 'border-purple-500 scale-105''
+  '`: 'border-purple-500/20``
                 }`}
               >"{tier.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -258,11 +258,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 "
                 <Link""`
                   to="/contact"``
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    tier.popular''
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'''`
-                      : 'border-2 border-purple-500 text-purple-300 hover:bg-purple-500 hover:text-white'``}`}
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+  tier.popular'
+  '
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700''
+  '`
+                      : 'border-2 border-purple-500 text-purple-300 hover:bg-purple-500 hover:text-white``}`}
                 >
                   Get Started;
                 </Link>
@@ -367,4 +368,4 @@ const AIQuantumHybridPlatform: React.FC = () => {
   )};
 
 export default AIQuantumHybridPlatform;'"`
-'"`'"`
+  '"`'"`

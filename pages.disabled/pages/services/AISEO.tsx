@@ -19,7 +19,8 @@ import {}
   Share2,
   Brain,
   Zap,
-  Shield} from 'lucide-react.ts';
+  Shield} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AISEO.tsx
 const AISEO: React.FC = (): JSX.Element => {
@@ -39,7 +40,9 @@ const AISEO: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Dominate Search Rankings with""
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI-Powered SEO;
               </span>
 :pages.disabled/pages/services/AISEO.tsx
@@ -196,4 +199,4 @@ const AISEO: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AISEO.tsx
 export default AISEO;'"
-'"'"
+  '"'"
