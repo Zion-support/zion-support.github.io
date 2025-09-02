@@ -1,30 +1,21 @@
-import { renderHook, waitFor } from,
-  @testing-library/react';
-import { QueryClient, QueryClientProvider } from
-  '@tanstack/react-query';
-import { usePostsByCategory } from
-  '@/hooks/usePostsByCategory';
-import * as forumService from
-  '@/services/forumPostService';
+import { renderHook, waitFor } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { usePostsByCategory } from '@/hooks/usePostsByCategory';
+import * as forumService from '@/services/forumPostService';
 
 it(
   'returns posts for slug', async () => {
-  jest.spyOn(forumService,
-  'fetchPostsByCategory').mockResolvedValue([
+  jest.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([
     {
-      id: '1,
-      title:,
-  Test',
-      content: 'c,
-      authorId:,
-  1',
-      authorName: 'Test,
-      categoryId:
-  'getting-hired',
+      id: '1',
+      title: 'Test',
+      content: 'content',
+      authorId: '1',
+      authorName: 'Test Author',
+      categoryId: 'getting-hired',
       tags: [],
-      createdAt:,
-  ',
-      updatedAt: ',
+      createdAt: '2023-01-01',
+      updatedAt: '2023-01-01',
       upvotes: 0,
       downvotes: 0,
       replyCount: 0,
@@ -36,8 +27,7 @@ it(
     <div />
   );
 
-  const { result } = renderHook(() => usePostsByCategory(
-  'getting-hired', 1), { wrapper });
+  const { result } = renderHook(() => usePostsByCategory('getting-hired', 1), { wrapper });
 
   await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0));
 });

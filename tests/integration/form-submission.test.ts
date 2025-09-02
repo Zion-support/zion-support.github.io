@@ -32,15 +32,14 @@ describe(
     // Fill out form
     const input = screen.getByLabelText(/email/i);
     fireEvent.change(input, { target: { value:
-  'test@example.com } });
+  'test@example.com' });
     
     // Submit form
     const submitButton = screen.getByText(/submit/i);
     fireEvent.click(submitButton);
     
     await waitFor(() => {
-      expect(input).toHaveValue(
-  'test@example.com');
+      expect(input).toHaveValue('test@example.com');
     });
   });
 });

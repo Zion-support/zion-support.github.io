@@ -273,8 +273,7 @@ export interface BaseComponentProps {
 }
 
 export interface ButtonProps extends BaseComponentProps {
-  variant?:,
-  primary' |
+  variant?: 'primary' |
   'secondary' |
   'outline' |
   'ghost' |
@@ -285,10 +284,9 @@ export interface ButtonProps extends BaseComponentProps {
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
-  type?:
-  'button' |
+  type?: 'button' |
   'submit' |
-  'reset;
+  'reset';
 }
 
 export interface InputProps extends BaseComponentProps {
