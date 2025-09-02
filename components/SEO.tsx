@@ -1,4 +1,7 @@
-import React from 'react';'import { Helmet } from 'react-helmet-async';''interface SEOProps {title: string;
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+
+interface SEOProps {title: string;
   description: string;
   keywords?: string;
   image?: string;
@@ -9,7 +12,8 @@ import React from 'react';'import { Helmet } from 'react-helmet-async';''interfa
 
 const SEO: React.FC<SEOProps> = ({
 title, description,
-  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", image = "https: //ziontechgroup.com/api/placeholder/1200/630","  url = "https: //ziontechgroup.com", type = "website","  siteName = "Zion Tech Group""}) => {"  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;'  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;''  return (`    <Helmet>
+  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", image = "https: //ziontechgroup.com/api/placeholder/1200/630","  url = "https: //ziontechgroup.com", type = "website","  siteName = "Zion Tech Group""}) => {"  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group;'  const fullUrl = url.startsWith('http') ? url : https://ziontechgroup.com${url}`;
+  return (`    <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />"      <meta name="keywords" content={keywords} />"      <meta name="author" content="Zion Tech Group" />"      <meta name="robots" content="index, follow" />"      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"      "      {/* Open Graph Meta Tags */}

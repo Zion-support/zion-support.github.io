@@ -1,4 +1,7 @@
-import Head from 'next/head';'import { useRouter } from 'next/router';''interface SEOProps {title?: string;
+import Head from 'next/head;
+import { useRouter } from 'next/router;
+
+interface SEOProps {title?: string;
   description?: string;
   image?: string;
   url?: string;
@@ -14,7 +17,13 @@ import Head from 'next/head';'import { useRouter } from 'next/router';''interfac
 }
 
 const defaultSEO = {;
-  title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: 'https://ziontechgroup.com/og-image.svg','  url: 'https://ziontechgroup.com', type: 'website','  keywords: ['    'technology solutions', 'AI development','    'quantum computing', 'blockchain infrastructure','    'digital transformation', 'enterprise software','    'cloud solutions', 'cybersecurity','    'micro SaaS', 'Zion Tech Group''  ], author: 'Zion Tech Group','};'
+  title: 'Zion Tech Group - Leading Technology Solutions Provider',
+    description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: 'https://ziontechgroup.com/og-image.svg',
+    image: '  url: 'https://ziontechgroup.com',
+    type: 'website',
+    type: '  keywords: ['    'technology solutions', 'AI development','    'quantum computing', 'blockchain infrastructure','    'digital transformation', 'enterprise software','    'cloud solutions', 'cybersecurity','    'micro SaaS', 'Zion Tech Group
+  ], author: 'Zion Tech Group',
+    author: '};'
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title = defaultSEO.title, description = defaultSEO.description,
   image = defaultSEO.image, url,
@@ -24,9 +33,12 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   tags, noindex = false,
   nofollow = false, }) => {
   const router = useRouter();
-  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;`  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;`
+
+  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath};  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;`
   const robotsContent = [;
-    noindex ? 'noindex' : 'index', nofollow ? 'nofollow' : 'follow','  ].join(', ');''  return (
+    noindex ? 'noindex' : 'index', nofollow ? 'nofollow' : 'follow','  ].join(', ');
+
+  return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -40,7 +52,13 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="theme-color" content="#0ea5e9" />"      <meta name="msapplication-TileColor" content="#0ea5e9" />"      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />"      "      {/* Structured Data */}
       <script
         type="application/ld+json""        dangerouslySetInnerHTML={{"          __html: JSON.stringify({
-            '@context': 'https://schema.org', '@type': 'Organization','            name: 'Zion Tech Group', url: 'https://ziontechgroup.com','            logo: 'https://ziontechgroup.com/logo.png', description: description,'            address: {'              '@type': 'PostalAddress', addressCountry: 'US','            }, contactPoint: {'              '@type': 'ContactPoint','              telephone: '+1-555-ZION-TECH', contactType: 'customer service','            }, sameAs: ['              'https://twitter.com/ziontechgroup','              'https: //linkedin.com/company/zion-tech-group', 'https: //github.com/zion-tech-group','            ], }), }}'      /></Head>
+            '@context': 'https://schema.org', '@type': 'Organization','            name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    url: '            logo: 'https://ziontechgroup.com/logo.png',
+    description: description,'            address: {'              '@type': 'PostalAddress', addressCountry: 'US',
+    addressCountry: '            }, contactPoint: {'              '@type': 'ContactPoint','              telephone: '+1-555-ZION-TECH',
+    contactType: 'customer service',
+    contactType: '            }, sameAs: ['              'https://twitter.com/ziontechgroup','              'https: //linkedin.com/company/zion-tech-group', 'https: //github.com/zion-tech-group','            ], }), }}'      /></Head>
   );
 };
 

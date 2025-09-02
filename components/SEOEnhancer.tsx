@@ -1,4 +1,7 @@
-import React from 'react';'import Head from 'next/head';''interface SEOEnhancerProps {title?: string;
+import React from 'react;
+import Head from 'next/head;
+
+interface SEOEnhancerProps {title?: string;
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -25,7 +28,8 @@ title = 'Zion Tech Group - Leading Technology Solutions Provider', description =
       <link rel="preconnect" href="https://fonts.googleapis.com" />"      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"      <link rel="preconnect" href="https://www.google-analytics.com" />"      <link rel="preconnect" href="https://www.googletagmanager.com" />"      "      {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />"      <link rel="dns-prefetch" href="//www.google-analytics.com" />"      <link rel="dns-prefetch" href="//www.googletagmanager.com" />"      "      {/* Structured Data */}
       <script
-        type="application/ld+json""        dangerouslySetInnerHTML={{"          __html: JSON.stringify(finalStructuredData);}}
+        type="application/ld+json""        dangerouslySetInnerHTML={{"          __html: JSON.stringify(finalStructuredData);
+}}
       />
       
       {/* Additional Performance Hints */}
