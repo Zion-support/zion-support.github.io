@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
 const Contact: NextPage = () => {
