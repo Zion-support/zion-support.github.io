@@ -1,5 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from
+  'react';
+import { Helmet } from
+  'react-helmet-async';
 import { 
   Target, 
   TrendingUp, 
@@ -17,7 +19,8 @@ import {
   Calendar,
   DollarSign,
   Headphones
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 export default function AISalesCopilot() {
   return (
