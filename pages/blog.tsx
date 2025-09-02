@@ -1,241 +1,365 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+import { 
+  Calendar,
+  Clock,
+  User,
+  ArrowRight,
+  Search,
+  Filter,
+  Tag,
+  BookOpen,
+  TrendingUp,
+  Star,
+  Eye,
+  MessageCircle,
+  Share2,
+  Heart,
+  Brain,
+  Zap,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Code,
+  Rocket,
+  Target,
+  Globe,
+  Phone,
+  Mail
+} from 'lucide-react';
 
-const Blog: NextPage = () => {
+const Blog: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'The Future of AI in Business: Trends and Predictions for 2025',
-      excerpt: 'Explore the latest AI trends shaping the business landscape and how companies can leverage these technologies for competitive advantage.',
-      author: 'Sarah Johnson',
-      date: '2025-01-25',
-      readTime: '8 min read',
-      category: 'AI & Technology',
-      image: '/api/placeholder/600/400',
+      title: "The Future of AI in Business: 2025 Trends and Predictions",
+      excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.",
+      author: "Sarah Johnson",
+      date: "2025-01-15",
+      readTime: "8 min read",
+      category: "AI Trends",
+      image: "/api/placeholder/600/400",
+      tags: ["AI", "Business", "Trends", "2025"],
       featured: true
     },
     {
       id: 2,
-      title: 'Quantum Computing: Breaking Down the Barriers to Mainstream Adoption',
-      excerpt: 'Understanding the current state of quantum computing and what it means for businesses looking to stay ahead of the curve.',
-      author: 'Dr. Michael Chen',
-      date: '2025-01-22',
-      readTime: '12 min read',
-      category: 'Quantum Computing',
-      image: '/api/placeholder/600/400',
+      title: "Building Scalable AI Solutions: Best Practices and Architecture",
+      excerpt: "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.",
+      author: "Michael Chen",
+      date: "2025-01-12",
+      readTime: "12 min read",
+      category: "Technical",
+      image: "/api/placeholder/600/400",
+      tags: ["AI Architecture", "Scalability", "Best Practices"],
       featured: false
     },
     {
       id: 3,
-      title: 'Micro SaaS Success Stories: Building Profitable Niche Applications',
-      excerpt: 'Learn from successful micro SaaS entrepreneurs and discover the strategies that led to their breakthrough moments.',
-      author: 'Alex Rodriguez',
-      date: '2025-01-20',
-      readTime: '6 min read',
-      category: 'Micro SaaS',
-      image: '/api/placeholder/600/400',
+      title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
+      excerpt: "Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.",
+      author: "Emily Rodriguez",
+      date: "2025-01-10",
+      readTime: "10 min read",
+      category: "Security",
+      image: "/api/placeholder/600/400",
+      tags: ["Cybersecurity", "AI Security", "Threat Protection"],
       featured: false
     },
     {
       id: 4,
-      title: 'Blockchain Infrastructure: The Foundation of Web3 Innovation',
-      excerpt: 'Dive deep into blockchain infrastructure solutions and how they enable the next generation of decentralized applications.',
-      author: 'Emma Thompson',
-      date: '2025-01-18',
-      readTime: '10 min read',
-      category: 'Blockchain',
-      image: '/api/placeholder/600/400',
+      title: "Cloud Migration Strategies: A Complete Guide for 2025",
+      excerpt: "Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.",
+      author: "David Kim",
+      date: "2025-01-08",
+      readTime: "15 min read",
+      category: "Cloud",
+      image: "/api/placeholder/600/400",
+      tags: ["Cloud Migration", "Strategy", "Best Practices"],
       featured: false
     },
     {
       id: 5,
-      title: 'Edge Computing: Bringing Intelligence Closer to the Source',
-      excerpt: 'Explore how edge computing is revolutionizing data processing and enabling real-time decision making across industries.',
-      author: 'David Park',
-      date: '2025-01-15',
-      readTime: '7 min read',
-      category: 'Edge Computing',
-      image: '/api/placeholder/600/400',
+      title: "AI-Powered Customer Experience: Transforming Business Interactions",
+      excerpt: "How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
+      author: "Lisa Wang",
+      date: "2025-01-05",
+      readTime: "9 min read",
+      category: "Customer Experience",
+      image: "/api/placeholder/600/400",
+      tags: ["Customer Experience", "AI", "Automation"],
       featured: false
     },
     {
       id: 6,
-      title: 'Zero Trust Security: A New Paradigm for Enterprise Protection',
-      excerpt: 'Understand the principles of zero trust security and how to implement this approach in your organization.',
-      author: 'Lisa Wang',
-      date: '2025-01-12',
-      readTime: '9 min read',
-      category: 'Cybersecurity',
-      image: '/api/placeholder/600/400',
+      title: "Data Analytics and Machine Learning: Driving Business Intelligence",
+      excerpt: "Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
+      author: "James Wilson",
+      date: "2025-01-03",
+      readTime: "11 min read",
+      category: "Analytics",
+      image: "/api/placeholder/600/400",
+      tags: ["Data Analytics", "Machine Learning", "Business Intelligence"],
       featured: false
     }
   ];
 
   const categories = [
-    'All Posts',
-    'AI & Technology',
-    'Quantum Computing',
-    'Micro SaaS',
-    'Blockchain',
-    'Edge Computing',
-    'Cybersecurity',
-    'Industry Insights'
+    { name: "All", count: 24, active: true },
+    { name: "AI Trends", count: 6, active: false },
+    { name: "Technical", count: 8, active: false },
+    { name: "Security", count: 4, active: false },
+    { name: "Cloud", count: 3, active: false },
+    { name: "Customer Experience", count: 2, active: false },
+    { name: "Analytics", count: 1, active: false }
   ];
 
   const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
 
   return (
-    <MainLayout
-      title="Blog - Zion Tech Group"
-      description="Stay updated with the latest insights, trends, and innovations in technology. Read our expert articles on AI, quantum computing, blockchain, and more."
-      keywords="technology blog, AI insights, quantum computing, blockchain, edge computing, cybersecurity, tech trends"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Technology Insights & Innovation</h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Stay ahead of the curve with expert insights on the latest technology trends, 
-              innovations, and best practices from our team of industry experts.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Blog - Zion Tech Group" 
+        description="Stay updated with the latest insights on AI, technology trends, and business innovation. Expert articles and thought leadership from Zion Tech Group."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge variant="secondary" className="mb-4">
+              <BookOpen className="w-4 h-4 mr-2" />
+              Latest Insights
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Technology Blog
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Stay ahead with expert insights on AI, technology trends, and business innovation.
             </p>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Category Filter */}
-        <section className="py-8 bg-white border-b">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
-                    index === 0 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Post */}
-        {featuredPost && (
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Article</h2>
-              </div>
-              
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl overflow-hidden shadow-xl">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                  <div className="flex flex-col justify-center">
-                    <div className="flex items-center mb-4">
-                      <Tag className="w-4 h-4 text-blue-600 mr-2" />
-                      <span className="text-blue-600 font-medium">{featuredPost.category}</span>
+      {/* Featured Post */}
+      {featuredPost && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div className="relative h-64 lg:h-full">
+                    <img 
+                      src={featuredPost.image} 
+                      alt={featuredPost.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                        <Star className="w-4 h-4 mr-1" />
+                        Featured
+                      </Badge>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{featuredPost.title}</h3>
-                    <p className="text-gray-600 mb-6 text-lg">{featuredPost.excerpt}</p>
-                    <div className="flex items-center text-gray-500 mb-6">
-                      <User className="w-4 h-4 mr-2" />
-                      <span className="mr-4">{featuredPost.author}</span>
-                      <Calendar className="w-4 h-4 mr-2" />
-                      <span className="mr-4">{featuredPost.date}</span>
-                      <Clock className="w-4 h-4 mr-2" />
-                      <span>{featuredPost.readTime}</span>
-                    </div>
-                    <Link
-                      href={`/blog/${featuredPost.id}`}
-                      className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                    >
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
                   </div>
-                  <div className="relative">
-                    <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                      <span className="text-gray-500">Featured Image</span>
+                  <div className="p-8">
+                    <div className="flex items-center mb-4">
+                      <Badge variant="outline" className="mr-3">{featuredPost.category}</Badge>
+                      <span className="text-gray-400 text-sm">{featuredPost.readTime}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{featuredPost.title}</h3>
+                    <p className="text-gray-300 mb-6">{featuredPost.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-gray-400 text-sm">
+                        <User className="w-4 h-4 mr-2" />
+                        {featuredPost.author}
+                        <Calendar className="w-4 h-4 ml-4 mr-2" />
+                        {new Date(featuredPost.date).toLocaleDateString()}
+                      </div>
+                      <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                        Read More
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-        )}
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
-        {/* Blog Posts Grid */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Discover our latest insights and expert analysis on emerging technologies and industry trends.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map((post) => (
-                <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                    <span className="text-gray-500">Article Image</span>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-3">
-                      <Tag className="w-4 h-4 text-blue-600 mr-2" />
-                      <span className="text-blue-600 text-sm font-medium">{post.category}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                    <div className="flex items-center text-gray-500 text-sm mb-4">
-                      <User className="w-4 h-4 mr-2" />
-                      <span className="mr-4">{post.author}</span>
-                      <Calendar className="w-4 h-4 mr-2" />
-                      <span className="mr-4">{post.date}</span>
-                      <Clock className="w-4 h-4 mr-2" />
-                      <span>{post.readTime}</span>
-                    </div>
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+      {/* Blog Posts Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main Content */}
+            <div className="lg:w-2/3">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8"
+              >
+                <h2 className="text-3xl font-bold text-white mb-6">Latest Articles</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {blogPosts.filter(post => !post.featured).map((post, index) => (
+                    <motion.div
+                      key={post.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.1 * index }}
                     >
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </article>
-              ))}
+                      <Card className="overflow-hidden h-full">
+                        <div className="relative h-48">
+                          <img 
+                            src={post.image} 
+                            alt={post.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-4 left-4">
+                            <Badge variant="outline">{post.category}</Badge>
+                          </div>
+                        </div>
+                        <div className="p-6">
+                          <div className="flex items-center mb-3 text-sm text-gray-400">
+                            <User className="w-4 h-4 mr-2" />
+                            {post.author}
+                            <Calendar className="w-4 h-4 ml-4 mr-2" />
+                            {new Date(post.date).toLocaleDateString()}
+                            <Clock className="w-4 h-4 ml-4 mr-2" />
+                            {post.readTime}
+                          </div>
+                          <h3 className="text-xl font-bold text-white mb-3">{post.title}</h3>
+                          <p className="text-gray-300 mb-4 text-sm">{post.excerpt}</p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex flex-wrap gap-2">
+                              {post.tags.slice(0, 2).map((tag, tagIndex) => (
+                                <Badge key={tagIndex} variant="secondary" className="text-xs">
+                                  <Tag className="w-3 h-3 mr-1" />
+                                  {tag}
+                                </Badge>
+                              ))}
+                            </div>
+                            <Button variant="outline" size="sm">
+                              Read More
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </Button>
+                          </div>
+                        </div>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             </div>
-          </div>
-        </section>
 
-        {/* Newsletter Signup */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter and never miss the latest insights and innovations in technology.
-            </p>
-            <div className="max-w-md mx-auto flex">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-lg font-semibold transition-colors">
-                Subscribe
-              </button>
+            {/* Sidebar */}
+            <div className="lg:w-1/3">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="space-y-8"
+              >
+                {/* Categories */}
+                <Card className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>
+                  <div className="space-y-2">
+                    {categories.map((category, index) => (
+                      <button
+                        key={category.name}
+                        className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                          category.active 
+                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 
+                            : 'text-gray-300 hover:bg-slate-700'
+                        }`}
+                      >
+                        <span>{category.name}</span>
+                        <Badge variant="secondary" className="text-xs">
+                          {category.count}
+                        </Badge>
+                      </button>
+                    ))}
+                  </div>
+                </Card>
+
+                {/* Newsletter Signup */}
+                <Card className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Get the latest AI insights and technology trends delivered to your inbox.
+                  </p>
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                      Subscribe
+                    </Button>
+                  </div>
+                </Card>
+
+                {/* Popular Tags */}
+                <Card className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Popular Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {["AI", "Machine Learning", "Cloud", "Security", "Automation", "Analytics", "IoT", "Blockchain"].map((tag, index) => (
+                      <Badge key={index} variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </Card>
+              </motion.div>
             </div>
           </div>
-        </section>
-      </div>
-    </MainLayout>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our experts help you implement the latest AI technologies and drive innovation in your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                <Phone className="w-5 h-5 mr-2" />
+                Schedule Consultation
+              </Button>
+              <Button size="lg" variant="outline">
+                <Mail className="w-5 h-5 mr-2" />
+                Contact Us
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 
