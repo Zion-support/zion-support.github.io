@@ -1,4 +1,11 @@
-import type { NextPage } from 'next';'import MainLayout from '../../components/layout/MainLayout';'import Link from 'next/link';'import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from 'lucide-react';''const Solutions: NextPage = () => {
+type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';'Link from
+  'next/link';
+import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from
+  'lucide-react';'
+  'const Solutions: NextPage = () => {
   return (
     <MainLayout
       title="Technology Solutions - Zion Tech Group""      description="Discover comprehensive technology solutions tailored for enterprises, small businesses, startups, and specific industries. Transform your business with Zion Tech Group.""    >"      {/* Hero Section */}
