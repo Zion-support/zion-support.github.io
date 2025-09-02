@@ -41,7 +41,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       />
       
       <AccessibilityEnhancer>
-      
         <div className="min-h-screen flex flex-col">
           <Header />
           <main id="main-content" className="flex-grow" role="main">

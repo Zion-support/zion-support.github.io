@@ -29,7 +29,7 @@ const EnhancedNavigation: React.FC = () => {
             
             {/* Services Dropdown */}
             <div className="relative group">
-              <button 
+              <button
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
@@ -37,7 +37,7 @@ const EnhancedNavigation: React.FC = () => {
                 Services
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-              <div 
+              <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
@@ -56,7 +56,7 @@ const EnhancedNavigation: React.FC = () => {
 
             {/* Solutions Dropdown */}
             <div className="relative group">
-              <button 
+              <button
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
@@ -64,7 +64,7 @@ const EnhancedNavigation: React.FC = () => {
                 Solutions
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-              <div 
+              <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}

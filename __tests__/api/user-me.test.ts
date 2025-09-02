@@ -1,6 +1,9 @@
-import { expect, test, vi } from 'vitest';
-import handler from '@/pages/api/users/me';
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { expect, test, vi } from
+  'vitest';
+import handler from
+  '@/pages/api/users/me';
+import type { NextApiRequest, NextApiResponse } from
+  'next';
 
 // Define a more specific type for the mocked response
 interface MockApiResponse extends NextApiResponse {
@@ -29,30 +32,37 @@ function mockRes(): MockApiResponse {
   return res as MockApiResponse;
 }
 
-test('GET returns profile', () => {
-  const req = mockReq('GET');
+test(,
+  GET returns profile', () => {
+  const req = mockReq(
+  'GET');
   const res = mockRes();
   handler(req, res);
   expect(res.status).toHaveBeenCalledWith(200);
   expect(res.json).toHaveBeenCalledWith(
     expect.objectContaining({
-      email: 'jane@example.com',
+      email: 'jane@example.com,
       points: expect.any(Number),
     })
   );
 });
 
-test('PUT updates profile', () => {
-  const req = mockReq('PUT', { name: 'New' });
+test(,
+  PUT updates profile', () => {
+  const req = mockReq(
+  'PUT', { name: 'New });
   const res = mockRes();
   handler(req, res);
   expect(res.json).toHaveBeenCalledWith(
-    expect.objectContaining({ name: 'New' })
+    expect.objectContaining({ name:
+  'New' })
   );
 });
 
-test('DELETE soft deletes account', () => {
-  const req = mockReq('DELETE');
+test(
+  'DELETE soft deletes account', () => {
+  const req = mockReq(
+  'DELETE');
   const res = mockRes();
   handler(req, res);
   expect(res.json).toHaveBeenCalledWith({ success: true });

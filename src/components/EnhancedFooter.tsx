@@ -1,48 +1,151 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from 'lucide-react';
 
-export const EnhancedFooter: React.FC = () => {
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI Solutions', href: '/services/ai-services' },
+        { name: 'IT & Security', href: '/services/it-services' },
+        { name: 'Blockchain & Web3', href: '/services/blockchain-services' },
+        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'Healthcare Tech', href: '/services/healthcare-tech' },
+        { name: 'Edge Computing', href: '/services/edge-computing' }
+      ]
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise', href: '/solutions/enterprise' },
+        { name: 'Startups', href: '/solutions/startups' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Financial Services', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Education', href: '/solutions/education' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Press', href: '/press' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Developer Tools', href: '/developer' },
+        { name: 'Training', href: '/training' },
+        { name: 'Support', href: '/support' }
+      ]
+    }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontech', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontech', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontech', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/zion-tech', icon: Github }
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
-              cloud infrastructure, and digital transformation services.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <Shield className="h-8 w-8 text-blue-500" />
+              <span className="text-xl font-bold">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading the future of technology with innovative AI, blockchain, and enterprise solutions.
             </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <motion.a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </motion.a>
+                );
+              })}
+            </div>
           </div>
-          <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/services/ai" className="hover:text-white">AI Solutions</a></li>
-              <li><a href="/services/cybersecurity" className="hover:text-white">Cybersecurity</a></li>
-              <li><a href="/services/cloud" className="hover:text-white">Cloud Services</a></li>
-              <li><a href="/services/transformation" className="hover:text-white">Digital Transformation</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-md font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/about" className="hover:text-white">About</a></li>
-              <li><a href="/careers" className="hover:text-white">Careers</a></li>
-              <li><a href="/news" className="hover:text-white">News</a></li>
-              <li><a href="/case-studies" className="hover:text-white">Case Studies</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-md font-semibold mb-4">Legal</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
-              <li><a href="/terms" className="hover:text-white">Terms of Service</a></li>
-              <li><a href="/contact" className="hover:text-white">Contact</a></li>
-            </ul>
-          </div>
+
+          {/* Footer Sections */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
+                {section.title}
+              </h3>
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                    >
+                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+
+        {/* Bottom Section */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-4 text-sm text-gray-400 mb-4 md:mb-0">
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-4 w-4" />
+                <span>San Francisco, CA</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4" />
+                <span>contact@ziontech.com</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4 text-sm text-gray-400">
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
+              <div className="flex items-center space-x-1">
+                <Heart className="h-4 w-4 text-red-500" />
+                <span>Made with passion</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+
+export default EnhancedFooter;
