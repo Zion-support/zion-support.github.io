@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
 import { comprehensiveExpandedServices, serviceCategories } from '../data/comprehensive-2026-expanded-services'
 
 export default function ComprehensiveServicesShowcase2026() {
@@ -22,7 +21,7 @@ export default function ComprehensiveServicesShowcase2026() {
 	const popularServices = comprehensiveExpandedServices.filter(service => service.popular)
 
 	return (
-		<PageTransition>
+		<div>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -38,14 +37,14 @@ export default function ComprehensiveServicesShowcase2026() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
 							>
 								Get Started
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
 							<Link
-								to="/services"
+								href="/services"
 								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
 							>
 								View Core Services <span aria-hidden="true">→</span>
@@ -156,7 +155,7 @@ export default function ComprehensiveServicesShowcase2026() {
 										</div>
 									</div>
 									<Link
-										to={service.link}
+										href={service.link}
 										className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors"
 									>
 										Learn more
@@ -208,7 +207,6 @@ export default function ComprehensiveServicesShowcase2026() {
 											<h4 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h4>
 											<p className="text-sm text-gray-600 mb-3">{service.tagline}</p>
 											<p className="text-gray-700 text-sm mb-4 line-clamp-3">{service.description}</p>
-											
 											{/* Features */}
 											<div className="mb-4">
 												<h5 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h5>
@@ -221,7 +219,6 @@ export default function ComprehensiveServicesShowcase2026() {
 													))}
 												</ul>
 											</div>
-
 											{/* Pricing and Stats */}
 											<div className="flex items-center justify-between mb-4">
 												<div className="text-xl font-bold text-blue-600">
@@ -233,7 +230,6 @@ export default function ComprehensiveServicesShowcase2026() {
 													<span className="text-sm font-medium text-gray-900">{service.rating}</span>
 												</div>
 											</div>
-
 											{/* Market Info */}
 											<div className="mb-4 p-3 bg-gray-50 rounded-lg">
 												<div className="flex items-center justify-between text-xs text-gray-600 mb-2">
@@ -245,7 +241,6 @@ export default function ComprehensiveServicesShowcase2026() {
 													<span className="font-medium text-green-600">{service.growthRate}</span>
 												</div>
 											</div>
-
 											{/* ROI and Setup */}
 											<div className="mb-4 text-xs text-gray-600">
 												<div className="flex items-center gap-1 mb-1">
@@ -257,18 +252,17 @@ export default function ComprehensiveServicesShowcase2026() {
 													<span className="font-medium">Setup:</span> {service.setupTime}
 												</div>
 											</div>
-
 											{/* Action Buttons */}
 											<div className="flex items-center gap-3">
 												<Link
-													to={service.link}
+													href={service.link}
 													className="flex-1 inline-flex items-center justify-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors"
 												>
 													Learn more
 													<ArrowRight className="ml-2 h-4 w-4" />
 												</Link>
 												<Link
-													to="/contact"
+													href="/contact"
 													className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
 												>
 													Get Quote
@@ -302,7 +296,6 @@ export default function ComprehensiveServicesShowcase2026() {
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
 							Our team of experts is ready to help you implement the right solutions for your business needs.
 						</p>
-						
 						{/* Contact Details */}
 						<div className="mt-12 grid gap-8 md:grid-cols-3 text-center">
 							<div className="flex flex-col items-center">
@@ -314,7 +307,6 @@ export default function ComprehensiveServicesShowcase2026() {
 								<h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
 								<p className="text-gray-300">+1 302 464 0950</p>
 							</div>
-							
 							<div className="flex flex-col items-center">
 								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4">
 									<svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -324,7 +316,6 @@ export default function ComprehensiveServicesShowcase2026() {
 								<h3 className="text-lg font-semibold text-white mb-2">Email</h3>
 								<p className="text-gray-300">kleber@ziontechgroup.com</p>
 							</div>
-							
 							<div className="flex flex-col items-center">
 								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4">
 									<svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -336,10 +327,9 @@ export default function ComprehensiveServicesShowcase2026() {
 								<p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
 							</div>
 						</div>
-
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 transition-colors"
 							>
 								Get in touch
@@ -357,6 +347,6 @@ export default function ComprehensiveServicesShowcase2026() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
+		</div>
 	)
 }
