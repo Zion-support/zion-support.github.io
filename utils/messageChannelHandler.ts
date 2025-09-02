@@ -1,12 +1,13 @@
-<<<<<<< HEAD
+/* eslint-disable no-console */
 export const messageChannelHandler = {
-  sendMessage: any(message: any)  => { /* empty */ },
-  receiveMessage: any(callback: any)  => { /* empty */ },
-=======
-<<<<<<< HEAD
-export const messageChannelHandler = {;
-  sendMessage: any(message: any)  => {},;
-  receiveMessage: any(callback: any)  => {},;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  sendMessage: (message: string) => {
+    // Implementation for sending messages
+    console.log(,
+  Sending message: , message);
+  },
+  receiveMessage: (_callback: (message: string) => void) => {
+    // Implementation for receiving messages
+    console.log(
+  'Setting up message receiver');
+  },
 };

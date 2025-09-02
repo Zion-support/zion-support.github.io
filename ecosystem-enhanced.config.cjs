@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     // Main application
     {
-      name: 'zion-app',
+      name: 'bolt-app',
       script: 'npm',
       args: 'start',
       cwd: './',
@@ -12,301 +12,78 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000
-      }
-    },
-
-    // 🧠 NEW: AI Code Reviewer - Intelligent code analysis and suggestions
-    {
-      name: 'ai-code-reviewer',
-      script: './scripts/automation/ai-code-reviewer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
+        PORT: 3000,
       },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: './logs/ai-code-reviewer.log',
-      error_file: './logs/ai-code-reviewer-error.log',
-      out_file: './logs/ai-code-reviewer-out.log'
     },
 
-    // 🧠 NEW: Smart Dependency Optimizer - Intelligent dependency management
+    // MASTER ERROR FIXING AUTOMATIONS (HIGHEST PRIORITY)
     {
-      name: 'smart-dependency-optimizer',
-      script: './scripts/automation/smart-dependency-optimizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 4 * * *', // Daily at 4 AM
-      log_file: './logs/smart-dependency-optimizer.log',
-      error_file: './logs/smart-dependency-optimizer-error.log',
-      out_file: './logs/smart-dependency-optimizer-out.log'
-    },
-
-    // 🧠 NEW: Intelligent Performance Monitor - Learning-based performance optimization
-    {
-      name: 'intelligent-performance-monitor',
-      script: './scripts/automation/intelligent-performance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/20 * * * *', // Every 20 minutes
-      log_file: './logs/intelligent-performance-monitor.log',
-      error_file: './logs/intelligent-performance-monitor-error.log',
-      out_file: './logs/intelligent-performance-monitor-out.log'
-    },
-
-    // Build Health Monitor - Prevents build issues
-    {
-      name: 'build-health-monitor',
-      script: './automation/build-health-monitor.js',
+      name: 'master-error-fixer',
+      script: './scripts/automation/master-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AI_ANALYSIS_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '0 0 * * *', // Restart daily at midnight
-      log_file: './logs/build-monitor.log',
-      error_file: './logs/build-monitor-error.log',
-      out_file: './logs/build-monitor-out.log'
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/ai-code-analyzer.log',
+      error_file: './logs/ai-code-analyzer-error.log',
+      out_file: './logs/ai-code-analyzer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Code Quality Monitor - Prevents code issues
+    // TypeScript error fixer - runs every 15 minutes (HIGH PRIORITY)
     {
-      name: 'code-quality-monitor',
-      script: './automation/code-quality-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 6 * * *', // Restart daily at 6 AM
-      log_file: './logs/code-quality.log',
-      error_file: './logs/code-quality-error.log',
-      out_file: './logs/code-quality-out.log'
-    },
-
-    // Dependency Health Monitor - Prevents dependency issues
-    {
-      name: 'dependency-monitor',
-      script: './automation/dependency-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 12 * * *', // Restart daily at noon
-      log_file: './logs/dependency.log',
-      error_file: './logs/dependency-error.log',
-      out_file: './logs/dependency-out.log'
-    },
-
-    // Build Automation - Automatically fixes common issues
-    {
-      name: 'build-automation',
-      script: './automation/build-automation.js',
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        PERFORMANCE_OPTIMIZATION_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '0 18 * * *', // Restart daily at 6 PM
-      log_file: './logs/build-automation.log',
-      error_file: './logs/build-automation-error.log',
-      out_file: './logs/build-automation-out.log'
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      log_file: './logs/smart-performance-optimizer.log',
+      error_file: './logs/smart-performance-optimizer-error.log',
+      out_file: './logs/smart-performance-optimizer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // File Integrity Monitor - Prevents file corruption
+    // ESLint error fixer - runs every 20 minutes (HIGH PRIORITY)
     {
-      name: 'file-integrity-monitor',
-      script: './automation/file-integrity-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 3 * * *', // Restart daily at 3 AM
-      log_file: './logs/file-integrity.log',
-      error_file: './logs/file-integrity-error.log',
-      out_file: './logs/file-integrity-out.log'
-    },
-
-    // Project Health Management Automations
-    {
-      name: 'project-health-monitor',
-      script: './scripts/automation/project-health-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      log_file: './logs/project-health-monitor.log',
-      error_file: './logs/project-health-monitor-error.log',
-      out_file: './logs/project-health-monitor-out.log'
-    },
-
-    {
-      name: 'typescript-syntax-fixer',
-      script: './scripts/automation/typescript-syntax-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      log_file: './logs/typescript-syntax-fixer.log',
-      error_file: './logs/typescript-syntax-fixer-error.log',
-      out_file: './logs/typescript-syntax-fixer-out.log'
-    },
-
-    {
-      name: 'dependency-manager',
-      script: './scripts/automation/dependency-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: './logs/dependency-manager.log',
-      error_file: './logs/dependency-manager-error.log',
-      out_file: './logs/dependency-manager-out.log'
-    },
-
-    {
-      name: 'project-health-dashboard',
-      script: './scripts/automation/project-health-dashboard.cjs',
+      name: 'eslint-error-fixer',
+      script: './scripts/automation/eslint-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        DEPENDENCY_MANAGEMENT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      log_file: './logs/project-health-dashboard.log',
-      error_file: './logs/project-health-dashboard-error.log',
-      out_file: './logs/project-health-dashboard-out.log'
+      cron_restart: '0 6,18 * * *', // Restart at 6 AM and 6 PM
+      log_file: './logs/intelligent-dependency-manager.log',
+      error_file: './logs/intelligent-dependency-manager-error.log',
+      out_file: './logs/intelligent-dependency-manager-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // 🚀 NEW: Enhanced Security Automation
-    {
-      name: 'enhanced-security-automation',
-      script: './scripts/automation/enhanced-security-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      log_file: './logs/enhanced-security-automation.log',
-      error_file: './logs/enhanced-security-automation-error.log',
-      out_file: './logs/enhanced-security-automation-out.log'
-    },
-
-    // 🚀 NEW: Enhanced Testing Automation
-    {
-      name: 'enhanced-testing-automation',
-      script: './scripts/automation/enhanced-testing-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 8 * * *', // Daily at 8 AM
-      log_file: './logs/enhanced-testing-automation.log',
-      error_file: './logs/enhanced-testing-automation-error.log',
-      out_file: './logs/enhanced-testing-automation-out.log'
-    },
-
-    // 🚀 NEW: Enhanced CI/CD Automation
-    {
-      name: 'enhanced-ci-cd-automation',
-      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/30 * * * *', // Every 30 minutes
-      log_file: './logs/enhanced-ci-cd-automation.log',
-      error_file: './logs/enhanced-ci-cd-automation-error.log',
-      out_file: './logs/enhanced-ci-cd-automation-out.log'
-    },
-
-    // 🚀 NEW: Enhanced Link Checker
-    {
-      name: 'enhanced-link-checker',
-      script: './scripts/automation/enhanced-link-checker.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 10 * * *', // Daily at 10 AM
-      log_file: './logs/enhanced-link-checker.log',
-      error_file: './logs/enhanced-link-checker-error.log',
-      out_file: './logs/enhanced-link-checker-out.log'
-    },
-
-    // 🚀 NEW: PM2 Sync Automation
-    {
-      name: 'pm2-sync-automation',
-      script: './scripts/automation/pm2-sync-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/45 * * * *', // Every 45 minutes
-      log_file: './logs/pm2-sync-automation.log',
-      error_file: './logs/pm2-sync-automation-error.log',
-      out_file: './logs/pm2-sync-automation-out.log'
-    },
-
-    // 🚀 NEW: Console Error Fixer
+    // Console error fixer - runs every 10 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
@@ -315,32 +92,102 @@ module.exports = {
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        DEPLOYMENT_AUTOMATION_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '*/25 * * * *', // Every 25 minutes
-      log_file: './logs/console-error-fixer.log',
-      error_file: './logs/console-error-fixer-error.log',
-      out_file: './logs/console-error-fixer-out.log'
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: './logs/smart-deployment-automation.log',
+      error_file: './logs/smart-deployment-automation-error.log',
+      out_file: './logs/smart-deployment-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // 🚀 NEW: Continuous Improvement Automation
+    // Comprehensive error fixer - runs every 45 minutes (HIGH PRIORITY)
     {
-      name: 'continuous-improvement',
-      script: './scripts/automation/continuous-improvement.cjs',
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        CI_CD_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '0 14 * * *', // Daily at 2 PM
-      log_file: './logs/continuous-improvement.log',
-      error_file: './logs/continuous-improvement-error.log',
-      out_file: './logs/continuous-improvement-out.log'
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: './logs/enhanced-ci-cd-automation.log',
+      error_file: './logs/enhanced-ci-cd-automation-error.log',
+      out_file: './logs/enhanced-ci-cd-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // 🚀 NEW: Daily Build Test Automation
+    // JSX error fixer - runs every 25 minutes (HIGH PRIORITY)
+    {
+      name: 'jsx-error-fixer',
+      script: './scripts/automation/jsx-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        SECURITY_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/enhanced-security-automation.log',
+      error_file: './logs/enhanced-security-automation-error.log',
+      out_file: './logs/enhanced-security-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // ERROR PREVENTION AND MONITORING
+    {
+      name: 'error-prevention-monitor',
+      script: './scripts/automation/error-prevention-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        TESTING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      log_file: './logs/enhanced-testing-automation.log',
+      error_file: './logs/enhanced-testing-automation-error.log',
+      out_file: './logs/enhanced-testing-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    {
+      name: 'typescript-error-monitor',
+      script: './scripts/automation/typescript-error-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        HEALTH_MONITORING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: './logs/project-health-monitor.log',
+      error_file: './logs/project-health-monitor-error.log',
+      out_file: './logs/project-health-monitor-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // BUILD AND TEST AUTOMATIONS
     {
       name: 'daily-build-test',
       script: './scripts/automation/daily-build-test.cjs',
@@ -349,270 +196,39 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        SYNC_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '0 16 * * *', // Daily at 4 PM
-      log_file: './logs/daily-build-test.log',
-      error_file: './logs/daily-build-test-error.log',
-      out_file: './logs/daily-build-test-out.log'
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/pm2-sync-automation.log',
+      error_file: './logs/pm2-sync-automation-error.log',
+      out_file: './logs/pm2-sync-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // 🚀 NEW: Sitemap Runner
     {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 20 * * *', // Daily at 8 PM
-      log_file: './logs/sitemap-runner.log',
-      error_file: './logs/sitemap-runner-error.log',
-      out_file: './logs/sitemap-runner-out.log'
-    },
-
-    // 🚀 NEW: Test Generator
-    {
-      name: 'test-generator',
-      script: './automation/test-generator.cjs',
+      name: 'build-error-detector',
+      script: './scripts/automation/build-error-detector.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        MONITORING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '0 22 * * *', // Daily at 10 PM
-      log_file: './logs/test-generator.log',
-      error_file: './logs/test-generator-error.log',
-      out_file: './logs/test-generator-out.log'
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: './logs/pm2-sync-monitor.log',
+      error_file: './logs/pm2-sync-monitor-error.log',
+      out_file: './logs/pm2-sync-monitor-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // 🚀 NEW: SEO Optimizer
-    {
-      name: 'seo-optimizer',
-      script: './automation/seo-optimizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 1 * * *', // Daily at 1 AM
-      log_file: './logs/seo-optimizer.log',
-      error_file: './logs/seo-optimizer-error.log',
-      out_file: './logs/seo-optimizer-out.log'
-    },
-
-    // 🚀 NEW: Security Scanner
-    {
-      name: 'security-scanner',
-      script: './automation/security-scanner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 5 * * *', // Daily at 5 AM
-      log_file: './logs/security-scanner.log',
-      error_file: './logs/security-scanner-error.log',
-      out_file: './logs/security-scanner-out.log'
-    },
-
-    // 🚀 NEW: Content Generator
-    {
-      name: 'content-generator',
-      script: './automation/content-generator.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 7 * * *', // Daily at 7 AM
-      log_file: './logs/content-generator.log',
-      error_file: './logs/content-generator-error.log',
-      out_file: './logs/content-generator-out.log'
-    },
-
-    // 🚀 NEW: Edge Cache Warmer
-    {
-      name: 'edge-cache-warmer',
-      script: './automation/edge-cache-warmer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/60 * * * *', // Every hour
-      log_file: './logs/edge-cache-warmer.log',
-      error_file: './logs/edge-cache-warmer-error.log',
-      out_file: './logs/edge-cache-warmer-out.log'
-    },
-
-    // 🚀 NEW: Footer Injector
-    {
-      name: 'footer-injector',
-      script: './automation/footer-injector.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 9 * * *', // Daily at 9 AM
-      log_file: './logs/footer-injector.log',
-      error_file: './logs/footer-injector-error.log',
-      out_file: './logs/footer-injector-out.log'
-    },
-
-    // 🚀 NEW: OG Meta Auditor
-    {
-      name: 'og-meta-auditor',
-      script: './automation/og-meta-auditor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 11 * * *', // Daily at 11 AM
-      log_file: './logs/og-meta-auditor.log',
-      error_file: './logs/og-meta-auditor-error.log',
-      out_file: './logs/og-meta-auditor-out.log'
-    },
-
-    // 🚀 NEW: Site Link Crawler
-    {
-      name: 'site-link-crawler',
-      script: './automation/site-link-crawler.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 13 * * *', // Daily at 1 PM
-      log_file: './logs/site-link-crawler.log',
-      error_file: './logs/site-link-crawler-error.log',
-      out_file: './logs/site-link-crawler-out.log'
-    },
-
-    // 🚀 NEW: Site Link Fixer
-    {
-      name: 'site-link-fixer',
-      script: './automation/site-link-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 15 * * *', // Daily at 3 PM
-      log_file: './logs/site-link-fixer.log',
-      error_file: './logs/site-link-fixer-error.log',
-      out_file: './logs/site-link-fixer-out.log'
-    },
-
-    // 🚀 NEW: Front Maximizer
-    {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 17 * * *', // Daily at 5 PM
-      log_file: './logs/front-maximizer.log',
-      error_file: './logs/front-maximizer-error.log',
-      out_file: './logs/front-maximizer-out.log'
-    },
-
-    // 🚀 NEW: Performance Monitor
-    {
-      name: 'performance-monitor',
-      script: './scripts/automation/performance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/35 * * * *', // Every 35 minutes
-      log_file: './logs/performance-monitor.log',
-      error_file: './logs/performance-monitor-error.log',
-      out_file: './logs/performance-monitor-out.log'
-    },
-
-    // 🚀 NEW: Link Integrity Checker
-    {
-      name: 'link-integrity',
-      script: './scripts/automation/link-integrity.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 19 * * *', // Daily at 7 PM
-      log_file: './logs/link-integrity.log',
-      error_file: './logs/link-integrity-error.log',
-      out_file: './logs/link-integrity-out.log'
-    },
-
-    // 🚀 NEW: Quality Checks
-    {
-      name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '*/40 * * * *', // Every 40 minutes
-      log_file: './logs/quality-checks.log',
-      error_file: './logs/quality-checks-error.log',
-      out_file: './logs/quality-checks-out.log'
-    },
-
-    // 🚀 NEW: Security Audit
-    {
-      name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 21 * * *', // Daily at 9 PM
-      log_file: './logs/security-audit.log',
-      error_file: './logs/security-audit-error.log',
-      out_file: './logs/security-audit-out.log'
-    },
-
-    // 🚀 NEW: Dependency Updates
+    // DEPENDENCY AND SECURITY AUTOMATIONS
     {
       name: 'dependency-updates',
       script: './scripts/automation/dependency-updates.cjs',
@@ -621,59 +237,326 @@ module.exports = {
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        LINK_CHECKING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '0 23 * * *', // Daily at 11 PM
-      log_file: './logs/dependency-updates.log',
-      error_file: './logs/dependency-updates-error.log',
-      out_file: './logs/dependency-updates-out.log'
+      cron_restart: '0 8,20 * * *', // Restart at 8 AM and 8 PM
+      log_file: './logs/link-checker-automation.log',
+      error_file: './logs/link-checker-automation-error.log',
+      out_file: './logs/link-checker-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // 🚀 NEW: Repo Fitness Score
     {
-      name: 'repo-fitness-score',
-      script: './automation/repo-fitness-score.cjs',
+      name: 'security-audit',
+      script: './scripts/automation/security-audit.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        SYNTAX_FIXING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '0 6 * * 0', // Weekly on Sunday at 6 AM
-      log_file: './logs/repo-fitness-score.log',
-      error_file: './logs/repo-fitness-score-error.log',
-      out_file: './logs/repo-fitness-score-out.log'
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: './logs/typescript-syntax-fixer.log',
+      error_file: './logs/typescript-syntax-fixer-error.log',
+      out_file: './logs/typescript-syntax-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // 🚀 NEW: Pre-build Health Check
     {
-      name: 'pre-build-health-check',
-      script: './automation/pre-build-health-check.cjs',
+      name: 'smart-dependency-intelligence',
+      script: './scripts/automation/smart-dependency-intelligence.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        ERROR_FIXING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
-      cron_restart: '*/55 * * * *', // Every 55 minutes
-      log_file: './logs/pre-build-health-check.log',
-      error_file: './logs/pre-build-health-check-error.log',
-      out_file: './logs/pre-build-health-check-out.log'
-    }
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: './logs/console-error-fixer.log',
+      error_file: './logs/console-error-fixer-error.log',
+      out_file: './logs/console-error-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // QUALITY AND PERFORMANCE AUTOMATIONS
+    {
+      name: 'quality-checks',
+      script: './scripts/automation/quality-checks.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        DEPENDENCY_MANAGEMENT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 7,19 * * *', // Restart at 7 AM and 7 PM
+      log_file: './logs/dependency-manager.log',
+      error_file: './logs/dependency-manager-error.log',
+      out_file: './logs/dependency-manager-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    {
+      name: 'performance-monitor',
+      script: './scripts/automation/performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        PERFORMANCE_MONITORING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: './logs/performance-monitor.log',
+      error_file: './logs/performance-monitor-error.log',
+      out_file: './logs/performance-monitor-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    {
+      name: 'continuous-improvement',
+      script: './scripts/automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        FRONTEND_OPTIMIZATION_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      log_file: './logs/front-maximizer.log',
+      error_file: './logs/front-maximizer-error.log',
+      out_file: './logs/front-maximizer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // INTELLIGENT AUTOMATION SYSTEMS
+    {
+      name: 'ai-code-review-automation',
+      script: './scripts/automation/ai-code-review-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './automation/logs/ai-code-review-automation.log',
+      error_file: './automation/logs/ai-code-review-automation-error.log',
+      out_file: './automation/logs/ai-code-review-automation-out.log',
+    },
+
+    {
+      name: 'predictive-issue-detection',
+      script: './scripts/automation/predictive-issue-detection.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './automation/logs/predictive-issue-detection.log',
+      error_file: './automation/logs/predictive-issue-detection-error.log',
+      out_file: './automation/logs/predictive-issue-detection-out.log',
+    },
+
+    {
+      name: 'intelligent-build-pipeline',
+      script: './scripts/automation/intelligent-build-pipeline.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './automation/logs/intelligent-build-pipeline.log',
+      error_file: './automation/logs/intelligent-build-pipeline-error.log',
+      out_file: './automation/logs/intelligent-build-pipeline-out.log',
+    },
+
+    // MONITORING AND DASHBOARDS
+    {
+      name: 'error-analytics-dashboard',
+      script: './scripts/automation/error-analytics-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        SITEMAP_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 5,17 * * *', // Restart at 5 AM and 5 PM
+      log_file: './logs/sitemap-runner.log',
+      error_file: './logs/sitemap-runner-error.log',
+      out_file: './logs/sitemap-runner-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    {
+      name: 'project-health-dashboard',
+      script: './scripts/automation/project-health-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        QUALITY_CHECK_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/quality-checks.log',
+      error_file: './logs/quality-checks-error.log',
+      out_file: './logs/quality-checks-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    {
+      name: 'unified-automation-dashboard',
+      script: './scripts/automation/unified-automation-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000', // 5 minutes
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      log_file: './automation/logs/unified-automation-dashboard.log',
+      error_file: './automation/logs/unified-automation-dashboard-error.log',
+      out_file: './automation/logs/unified-automation-dashboard-out.log',
+    },
+
+    // RECOVERY AND MAINTENANCE
+    {
+      name: 'auto-recovery-manager',
+      script: './scripts/automation/auto-recovery-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        SECURITY_AUDIT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 3,15 * * *', // Restart at 3 AM and 3 PM
+      log_file: './logs/security-audit.log',
+      error_file: './logs/security-audit-error.log',
+      out_file: './logs/security-audit-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    {
+      name: 'critical-error-alert-system',
+      script: './scripts/automation/critical-error-alert-system.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        CONTINUOUS_IMPROVEMENT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 */8 * * *', // Restart every 8 hours
+      log_file: './logs/continuous-improvement.log',
+      error_file: './logs/continuous-improvement-error.log',
+      out_file: './logs/continuous-improvement-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // UTILITY AUTOMATIONS
+    {
+      name: 'link-checker',
+      script: './scripts/automation/link-checker.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        BUILD_TEST_MODE: 'true',
+        PM2_PATH: 'npx pm2',
+      },
+      cron_restart: '0 2 * * *', // Restart daily at 2 AM
+      log_file: './logs/daily-build-test.log',
+      error_file: './logs/daily-build-test-error.log',
+      out_file: './logs/daily-build-test-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
   ],
 
   deploy: {
     production: {
-      user: 'miami2',
+      user: 'root',
       host: 'localhost',
       ref: 'origin/main',
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/Users/miami2/zion-app-clone',
       'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem-enhanced.config.cjs --env production',
-      'pre-setup': ''
-    }
-  }
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env production',
+      'pre-setup': '',
+    },
+    staging: {
+      user: 'miami2',
+      host: 'localhost',
+      ref: 'origin/staging',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/Users/miami2/zion-app-staging',
+      'pre-deploy-local': '',
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env staging',
+      'pre-setup': '',
+    },
+    development: {
+      user: 'miami2',
+      host: 'localhost',
+      ref: 'origin/develop',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/Users/miami2/zion-app-dev',
+      'pre-deploy-local': '',
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env development',
+      'pre-setup': '',
+    },
+  },
 };

@@ -1,13 +1,17 @@
 #!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
+;
+const fs = require(
+  'fs');
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
+;
 class AutoCommitFixes {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log');
+    this.logFile = path.join(this.projectRoot,logs/pm2/auto-commit-fixes.log
+  ');
     this.startTime = Date.now();
     this.commitsMade = 0;
     this.filesChanged = 0;
@@ -16,40 +20,28 @@ class AutoCommitFixes {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-<<<<<<< HEAD
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
-
-=======
-    // // // // // // // console.log(message);
-
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      // // // // // // // console.error('Failed to write to log file:', error.message);
-    }
-  }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async checkGitStatus() {
     try {
-      const status = execSync('git status --porcelain', {
+      const status = execSync('git status --porcelain
+  ', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding: 'utf8
+  '
       });
 
       if (!status.trim()) {
         return { hasChanges: false, files: [] };
 
-      const files = status.split('\n')
+      const files = status.split('\n
+  ')
         .filter(line => line.trim())
         .map(line => {
           const parts = line.trim().split(/\s+/);
           return {
             status: parts[0],
-            file: parts.slice(1).join(' ')
+            file: parts.slice(1).join(' 
+  ')
           };
         });
 
@@ -61,12 +53,15 @@ class AutoCommitFixes {
 
   async getStagedFiles() {
     try {
-      const staged = execSync('git diff --cached --name-only', {
+      const staged = execSync('git diff --cached --name-only
+  ', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding: 'utf8
+  '
       });
 
-      return staged.split('\n').filter(line => line.trim());
+      return staged.split('\n
+  ').filter(line => line.trim());
     } catch (error) {
       this.log(`Error getting staged files: ${error.message}`);
       return [];
@@ -74,12 +69,15 @@ class AutoCommitFixes {
 
   async getUnstagedFiles() {
     try {
-      const unstaged = execSync('git diff --name-only', {
+      const unstaged = execSync('git diff --name-only
+  ', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding: 'utf8
+  '
       });
 
-      return unstaged.split('\n').filter(line => line.trim());
+      return unstaged.split('\n
+  ').filter(line => line.trim());
     } catch (error) {
       this.log(`Error getting unstaged files: ${error.message}`);
       return [];
@@ -89,9 +87,11 @@ class AutoCommitFixes {
     try {
       if (files.length === 0) return;
 
-      execSync(`git add ${files.join(' ')}`, {
+      execSync(`git add ${files.join(' 
+  ')}`, {
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe
+  '
       });
 
       this.log(`Staged ${files.length} files`);
@@ -101,11 +101,13 @@ class AutoCommitFixes {
 
   async createCommit(message, files) {
     try {
-      const commitMessage = `🔧 ${message}\n\nFiles changed:\n${files.map(f => `- ${f}`).join('\n')}`;
+      const commitMessage = `🔧 ${message}\n\nFiles changed:\n${files.map(f => `- ${f}`).join('\n
+  ')}`;
 
       execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe
+  '
       });
 
       this.commitsMade++;
@@ -129,13 +131,18 @@ class AutoCommitFixes {
       const status = file.status;
       const fileName = file.file;
 
-      if (status === 'A' || status === '??') {
+      if (status === 'A
+  ' || status === '??
+  ') {
         changes.added.push(fileName);
-      } else if (status === 'M') {
+      } else if (status === 'M
+  ') {
         changes.modified.push(fileName);
-      } else if (status === 'D') {
+      } else if (status === 'D
+  ') {
         changes.deleted.push(fileName);
-      } else if (status === 'R') {
+      } else if (status === 'R
+  ') {
         changes.renamed.push(fileName);
       } else {
         changes.other.push(fileName);
@@ -162,31 +169,36 @@ class AutoCommitFixes {
     if (changes.other.length > 0) {
       messages.push(`Other changes in ${changes.other.length} file(s)`);
 
-    return messages.join(', ');
+    return messages.join(',);
 
   async run() {
-    this.log('🚀 Starting Auto Commit Fixes...');
+    this.log(
+  '🚀 Starting Auto Commit Fixes...');
     this.log(`Project root: ${this.projectRoot}`);
 
     try {
-      // Create logs directory if it doesn't exist
+      // Create logs directory if it doesn
+  't exist
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
 
       // Check git status
-      this.log('📋 Checking git status...');
+      this.log('📋 Checking git status...
+  ');
       const gitStatus = await this.checkGitStatus();
 
       if (!gitStatus.hasChanges) {
-        this.log('✨ No changes to commit');
+        this.log('✨ No changes to commit
+  ');
         return;
 
       this.log(`📁 Found ${gitStatus.files.length} changed files`);
 
       // Analyze changes
       const changes = await this.analyzeChanges(gitStatus.files);
-      this.log('🔍 Analyzing changes...');
+      this.log('🔍 Analyzing changes...
+  ');
 
       Object.entries(changes).forEach(([type, files]) => {
         if (files.length > 0) {
@@ -195,7 +207,8 @@ class AutoCommitFixes {
       });
 
       // Stage all changes
-      this.log('📦 Staging all changes...');
+      this.log('📦 Staging all changes...
+  ');
       await this.stageFiles(gitStatus.files.map(f => f.file));
 
       // Generate commit message
@@ -203,24 +216,29 @@ class AutoCommitFixes {
       this.log(`💬 Commit message: ${commitMessage}`);
 
       // Create commit
-      this.log('💾 Creating commit...');
+      this.log(,
+  💾 Creating commit...
+  ');
       const success = await this.createCommit(commitMessage, gitStatus.files.map(f => f.file));
 
       if (success) {
-        this.log('✅ Successfully committed changes');
+        this.log('✅ Successfully committed changes
+  ');
         this.filesChanged = gitStatus.files.length;
       } else {
-        this.log('❌ Failed to create commit');
+        this.log('❌ Failed to create commit
+  ');
 
       const duration = Date.now() - this.startTime;
 
-      this.log('\n📊 Auto Commit Fixes Summary:');
+      this.log('\n📊 Auto Commit Fixes Summary: );
       this.log(`Files changed: ${this.filesChanged}`);
       this.log(`Commits made: ${this.commitsMade}`);
       this.log(`Duration: ${duration}ms`);
 
       if (this.commitsMade > 0) {
-        this.log('🎉 Auto-commit process completed successfully!');
+        this.log('🎉 Auto-commit process completed successfully!
+  ');
       } else {
         this.log('⚠️  No commits were made');
 
@@ -230,13 +248,9 @@ class AutoCommitFixes {
 
 
 
-// Run the auto commit fixes
+// Run the auto commit fixes;
 const autoCommit = new AutoCommitFixes();
 autoCommit.run().catch(error => {
-<<<<<<< HEAD
-=======
-  // // // // // // // console.error('Fatal error:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React from 'react.ts';
-import Head from 'next/head.ts';
+import { Helmet              } from 'react-helmet-async.ts';
 import ModernHeader from "./ModernHeader";
 import ModernFooter from "./ModernFooter";
-=======
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import ModernHeader from "./ModernHeader";
-import ModernFooter from "./ModernFooter";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface ModernLayoutProps extends React.PropsWithChildren<{}> {
 
@@ -16,19 +9,17 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {
   title?: string;
   description?: string;
   keywords?: string;
-<<<<<<< HEAD
-  canonical?: string;
-=======
   canonical?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
+
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https: anyany//ziontechgroup.com'
-})   => {
+  canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
+})               => {
+
   return (
     <>
       <Helmet>
@@ -69,8 +60,11 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML = {
+
   {
+
             __html: JSON.stringify({
+
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -78,21 +72,17 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
               "logo": "https://ziontechgroup.com/logo.png",
               "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
               "address": {
+
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
                 "addressLocality": "Middletown",
                 "addressRegion": "DE",
                 "postalCode": "19709",
   "addressCountry": "US"
-              
-
-
-
-
-
 
 },
               "contactPoint": {
+
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
@@ -107,23 +97,10 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
           }}
         />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-black text-white flex flex-col">
-=======
       
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <ModernHeader />
         <main className="flex-1 pt-20">
-<<<<<<< HEAD
-          {children}
-        </main>
-        <ModernFooter />
-      </div>;
-    </>;
-  )};
-=======
           {children};
         </main>;
         <ModernFooter />;
@@ -131,6 +108,5 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ModernLayout;}

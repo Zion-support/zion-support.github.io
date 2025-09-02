@@ -1,180 +1,61 @@
 #!/bin/bash
 
-# Script to merge only the open PRs from GitHub
+# Script to merge all open PRs into main branch
 set -e
 
-echo "🚀 Starting merge of open PRs only..."
-echo "⏰ Started at: $(date)"
-echo "---"
+echo "🚀 Starting to merge open PRs into main branch..."
 
-# Create a backup branch
-BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
-echo "🔒 Creating backup branch: $BACKUP_BRANCH"
-git checkout -b "$BACKUP_BRANCH"
-git push origin "$BACKUP_BRANCH"
-git checkout main
+# List of PR numbers from open_prs.json
+PR_NUMBERS=(10918 10917 10916 10915 10914)
 
-# Initialize counters
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
-CONFLICT_RESOLUTIONS=0
-
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    local branch="$2"
+for pr_number in "${PR_NUMBERS[@]}"; do
+    echo "📋 Processing PR #$pr_number..."
     
-    echo "🔧 Resolving conflicts in $file for branch $branch..."
+    # Get the branch name for this PR
+    branch_name=$(git ls-remote --heads origin | grep "pull/$pr_number" | head -1 | sed 's/.*refs\/heads\///')
     
-    # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
-            echo "📚 Documentation file, keeping both versions where possible..."
-            # Remove conflict markers but try to preserve content
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
-        
-        echo "✅ Resolved conflicts in $file"
-        CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
+    if [ -z "$branch_name" ]; then
+        # Try alternative branch naming patterns
+        branch_name=$(git ls-remote --heads origin | grep -E "(cursor|pr-$pr_number)" | head -1 | sed 's/.*refs\/heads\///')
     fi
-}
-
-# Function to merge a single branch
-merge_branch() {
-    local branch="$1"
     
-    echo "🔄 Attempting to merge $branch..."
-    
-    # Fetch the latest version of the branch
-    git fetch origin "$branch"
-    
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        git commit -m "Merge $branch into main - $(date)"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        return 0
+    if [ -n "$branch_name" ]; then
+        echo "🔍 Found branch: $branch_name"
+        
+        # Fetch the branch
+        git fetch origin "$branch_name"
+        
+        # Try to merge the branch
+        if git merge "origin/$branch_name" --no-ff -m "Merge PR #$pr_number: $branch_name"; then
+            echo "✅ Successfully merged PR #$pr_number"
+        else
+            echo "⚠️  Merge conflict in PR #$pr_number, attempting to resolve..."
+            
+            # Check for merge conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "🔧 Resolving merge conflicts..."
+                
+                # Use our conflict resolution approach
+                find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.html" -o -name "*.cjs" -o -name "*.sh" \) -exec sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> [^>]/d' {} \;
+                
+                # Add resolved files
+                git add .
+                
+                # Complete the merge
+                git commit --no-edit
+                echo "✅ Resolved conflicts and merged PR #$pr_number"
+            else
+                echo "❌ Failed to merge PR #$pr_number"
+                git merge --abort
+            fi
+        fi
     else
-        echo "⚠️  Merge conflicts detected in $branch, resolving..."
-        
-        # Get list of conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$CONFLICTED_FILES" ]; then
-            echo "📋 Conflicted files: $CONFLICTED_FILES"
-            
-            for file in $CONFLICTED_FILES; do
-                if [ -f "$file" ]; then
-                    resolve_conflicts "$file" "$branch"
-                fi
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            git commit -m "Resolve merge conflicts for $branch - $(date)"
-            
-            echo "✅ Successfully resolved conflicts and merged $branch"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-            return 0
-        else
-            echo "❌ No conflicted files found, but merge failed. Aborting..."
-            git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
-        fi
+        echo "⚠️  Could not find branch for PR #$pr_number, skipping..."
     fi
-}
-
-# Get the list of open PRs and extract branch information
-echo "📋 Fetching open PRs from GitHub..."
-curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
-
-# Extract PR information and process each one
-echo "🔄 Processing open PRs..."
-awk '
-/"number":/ {
-    number = $2
-    gsub(/,/, "", number)
-    pr_number = number
-}
-/"head":/ {
-    in_head = 1
-}
-/"ref":/ && in_head {
-    ref = substr($0, index($0, ":") + 3)
-    gsub(/,$/, "", ref)
-    gsub(/"/, "", ref)
-    if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url") {
-        printf "%s|%s\n", pr_number, ref
-        in_head = 0
-    }
-}
-' prs.json | while IFS='|' read -r pr_number branch_name; do
-    if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
-        echo ""
-        echo "=========================================="
-        echo "🔄 Processing PR #$pr_number from branch: $branch_name"
-        echo "=========================================="
-        
-        if merge_branch "$branch_name"; then
-            echo "✅ PR #$pr_number processed successfully"
-        else
-            echo "❌ PR #$pr_number processing failed"
-        fi
-        
-        echo "=========================================="
-        echo ""
-        
-        # Push changes every 5 successful merges to avoid losing work
-        if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
-            echo "💾 Pushing progress to remote..."
-            git push origin main
-        fi
-    fi
+    
+    echo "---"
 done
 
-# Final push
-echo "💾 Pushing final changes to remote..."
-git push origin main
-
-# Summary
-echo ""
-echo "🎉 Open PR merge process completed!"
-echo "📊 Final Summary:"
-echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
-echo "   🔒 Backup branch: $BACKUP_BRANCH"
-echo "⏰ Completed at: $(date)"
-
-# Cleanup recommendations
-echo ""
-echo "🧹 Cleanup recommendations:"
-echo "   1. Review the merged changes: git log --oneline -20"
-echo "   2. Test the application thoroughly"
-echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-echo "   4. Consider cleaning up old feature branches"
-echo "   5. Run tests to ensure everything works correctly"
+echo "🎉 Finished merging open PRs!"
+echo "📊 Current status:"
+git status --short
