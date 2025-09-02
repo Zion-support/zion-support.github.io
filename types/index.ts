@@ -230,14 +230,14 @@ export interface FormState {
   isValid: boolean;
 }
 
-// Utility types
-export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+// Utility types;export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 
 // Component prop types
+
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
@@ -246,10 +246,14 @@ export interface BaseComponentProps {
 }
 
 export interface ButtonProps extends BaseComponentProps {
+<<<<<<< HEAD
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;
+=======
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
@@ -265,6 +269,7 @@ export interface InputProps extends BaseComponentProps {
 }
 
 // API types
+
 export interface ApiError {
   status: number;
   message: string;
@@ -281,6 +286,7 @@ export interface ApiRequest {
 }
 
 // Environment types
+
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;

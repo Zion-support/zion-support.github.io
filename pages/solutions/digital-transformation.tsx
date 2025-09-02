@@ -1,90 +1,177 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react';
-import Link from 'next/link';
+<<<<<<< HEAD
+import React from
+  'react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from
+  'lucide-react';
+import Link from
+  'next/link';
+=======
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../../components/layout/MainLayout'
+import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const DigitalTransformation: NextPage = () => {
   const transformationServices = [
     {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.',
-      benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance']
-    },
-    {
+<<<<<<< HEAD
+      icon: Cloud, title:,
+  Cloud Migration', '
+      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.,'
+      benefits: [
+  'Reduced infrastructure costs', 'Improved scalability',
+  'Enhanced security', 'Better performance']
+    }, {
       icon: Database,
-      title: 'Data Modernization',
-      description: 'Transform your data architecture to support modern analytics and business intelligence.',
-      benefits: ['Real-time analytics', 'Improved data quality', 'Better insights', 'Automated reporting']
-    },
-    {
+      title:, Data Modernization','
+      description: 'Transform your data architecture to support modern analytics and business intelligence., '
+      benefits: [
+  'Real-time analytics',
+  'Improved data quality', 'Better insights',
+  'Automated reporting']
+    }, {
       icon: Users,
-      title: 'Process Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
-      benefits: ['Increased productivity', 'Reduced errors', 'Cost savings', 'Better compliance']
-    },
-    {
+      title:, Process Automation','
+      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors., '
+      benefits: [
+  'Increased productivity',
+  'Reduced errors', 'Cost savings',
+  'Better compliance']
+    }, {
       icon: Zap,
-      title: 'AI Integration',
-      description: 'Integrate artificial intelligence into your business processes for enhanced decision making.',
-      benefits: ['Predictive analytics', 'Automated insights', 'Improved accuracy', 'Competitive advantage']
-    },
-    {
+      title:, AI Integration','
+      description: 'Integrate artificial intelligence into your business processes for enhanced decision making., '
+      benefits: [
+  'Predictive analytics',
+  'Automated insights', 'Improved accuracy',
+  'Competitive advantage']
+    }, {
       icon: Shield,
-      title: 'Security Enhancement',
-      description: 'Implement modern security measures to protect your digital assets and ensure compliance.',
-      benefits: ['Enhanced security', 'Compliance assurance', 'Risk reduction', 'Peace of mind']
-    },
-    {
+      title:, Security Enhancement','
+      description: 'Implement modern security measures to protect your digital assets and ensure compliance., '
+      benefits: [
+  'Enhanced security',
+  'Compliance assurance', 'Risk reduction',
+  'Peace of mind']
+    }, {
       icon: Target,
-      title: 'Customer Experience',
-      description: 'Improve customer interactions through digital channels and personalized experiences.',
-      benefits: ['Better customer satisfaction', 'Increased engagement', 'Higher retention', 'Improved loyalty']
+      title:, Customer Experience','
+      description: 'Improve customer interactions through digital channels and personalized experiences., '
+      benefits: [,
+  Better customer satisfaction', '
+  'Increased engagement',
+  'Higher retention', 'Improved loyalty']
+=======
+      icon: Cloud, title: 'Cloud Migration',
+      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced security', 'Better performance']
+    }, {
+      icon: Database,
+      title: 'Data Modernization', description: 'Transform your data architecture to support modern analytics and business intelligence.',
+      benefits: ['Real-time analyticsImproved data qualityBetter insights', 'Automated reporting']
+    }, {
+      icon: Users,
+      title: 'Process Automation', description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
+      benefits: ['Increased productivityReduced errorsCost savings', 'Better compliance']
+    }, {
+      icon: Zap,
+      title: 'AI Integration', description: 'Integrate artificial intelligence into your business processes for enhanced decision making.',
+      benefits: ['Predictive analyticsAutomated insightsImproved accuracy', 'Competitive advantage']
+    }, {
+      icon: Shield,
+      title: 'Security Enhancement', description: 'Implement modern security measures to protect your digital assets and ensure compliance.',
+      benefits: ['Enhanced securityCompliance assuranceRisk reduction', 'Peace of mind']
+    }, {
+      icon: Target,
+      title: 'Customer Experience', description: 'Improve customer interactions through digital channels and personalized experiences.',
+      benefits: ['Better customer satisfactionIncreased engagementHigher retention', 'Improved loyalty']
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const transformationStages = [
     {
-      stage: 'Assessment',
-      title: 'Current State Analysis',
-      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.',
-      duration: '2-4 weeks'
+<<<<<<< HEAD
+      stage: 'Assessment, '
+      title:,
+  Current State Analysis', '
+      description: We analyze your current systems, processes, and technology stack to identify opportunities for improvement.,
+  , duration: '2-4 weeks'
     },
     {
-      stage: 'Strategy',
-      title: 'Digital Strategy Development',
-      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.',
+      stage:, Strategy','
+      title: 'Digital Strategy Development, '
+      description:,
+  We create a comprehensive digital transformation roadmap aligned with your business objectives.', '
       duration: '3-6 weeks'
     },
     {
-      stage: 'Implementation',
-      title: 'Solution Implementation',
-      description: 'We implement the digital solutions using agile methodologies and best practices.',
+      stage:, Implementation','
+      title: 'Solution Implementation, '
+      description:,
+  We implement the digital solutions using agile methodologies and best practices.', '
       duration: '8-24 weeks'
     },
     {
-      stage: 'Optimization',
-      title: 'Continuous Improvement',
-      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.',
+      stage:, Optimization','
+      title: 'Continuous Improvement, '
+      description:,
+  We monitor performance and continuously optimize your digital solutions for maximum impact.', '
       duration: 'Ongoing'
+=======
+      stage: 'Assessment', title: 'Current State Analysis', description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'
+    }, {
+      stage: 'Strategy', title: 'Digital Strategy Development', description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'
+    }, {
+      stage: 'Implementation', title: 'Solution Implementation', description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'
+    }, {
+      stage: 'Optimization', title: 'Continuous Improvement', description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const industries = [
+<<<<<<< HEAD
+    { name:, Healthcare', description: Digital health records, telemedicine, and patient management systems, '
+  },
+    { name: 'Finance, description:,'
+  Digital banking, fraud detection, and automated trading systems' }, '
+    { name: 'Manufacturing, description:, '
+  IoT integration, predictive maintenance, and supply chain optimization' },'
+    { name: 'Retail, description:,'
+  E-commerce platforms, inventory management, and customer analytics' }, '
+    { name: 'Education, description:, '
+  Learning management systems, virtual classrooms, and student analytics' },'
+    { name: 'Government, description:,'
+  Citizen services, digital governance, and public safety systems' }'
+  ];
+
+  const successMetrics = [
+    { metric: '85%, label:,'
+  Cost Reduction', description: 'Average cost savings achieved through digital transformation },
+    { metric:, 60%', label: 'Efficiency Gain, description:,
+  Improvement in operational efficiency' }, '
+    { metric: '90%, label:, '
+  Customer Satisfaction', description: 'Increase in customer satisfaction scores }, { metric:,
+  75%', label: 'Time Savings, description: 'Reduction in time-to-market for new products' }
+=======
     { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
     { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' },
     { name: 'Manufacturing', description: 'IoT integration, predictive maintenance, and supply chain optimization' },
     { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },
     { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },
     { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }
-  ];
+  ]
 
   const successMetrics = [
-    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' },
-    { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },
-    { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' },
-    { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
+    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' }, { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },
+    { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' }, { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   ];
 
   return (
@@ -97,7 +184,7 @@ const DigitalTransformation: NextPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Digital Transformation Solutions</h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">Digital Transformation Solutions</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Transform your business for the digital age with our comprehensive digital transformation services. 
               Modernize your operations, improve efficiency, and drive sustainable growth.
@@ -115,9 +202,9 @@ const DigitalTransformation: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {transformationServices.map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
                   <service.icon className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -145,9 +232,9 @@ const DigitalTransformation: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {transformationStages.map((stage, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-white rounded-lg p-6 text-center hover: shadow-lg transition-shadow">
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                     {index + 1}
                   </div>
@@ -170,9 +257,9 @@ const DigitalTransformation: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{industry.name}</h3>
                   <p className="text-gray-600">{industry.description}</p>
                 </div>
@@ -191,7 +278,7 @@ const DigitalTransformation: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {successMetrics.map((metric, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl font-bold text-blue-400 mb-2">{metric.metric}</div>
@@ -213,7 +300,7 @@ const DigitalTransformation: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               <div className="text-center p-6">
                 <TrendingUp className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Track Record</h3>
@@ -240,9 +327,9 @@ const DigitalTransformation: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your digital transformation goals and drive sustainable growth.
+              Let&aposs discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"

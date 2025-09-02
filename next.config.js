@@ -1,21 +1,38 @@
-/** @type {import('next').NextConfig} */
+/** @type {import(
+  'next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     esmExternals: false,
+    newNextLinkBehavior: true,
   },
+<<<<<<< HEAD
+=======
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+>>>>>>> origin/main
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
+<<<<<<< HEAD
     ignoreBuildErrors: true,
   },
+=======
+    ignoreBuildErrors: true,},
+>>>>>>> origin/main
   images: {
-    domains: ['ziontechgroup.com'],
+    domains: [
+  'ziontechgroup.com'],
     unoptimized: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV ===
+  'production',
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -26,8 +43,7 @@ const nextConfig = {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-        /components\//,
-        /\.backup/,
+/\.backup/,
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
@@ -45,10 +61,15 @@ const nextConfig = {
       tls: false,
     };
     
-    return config;
+    return config
   },
   // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: [
+    'tsx',
+    'ts',
+    'jsx',
+    'js'
+  ],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
