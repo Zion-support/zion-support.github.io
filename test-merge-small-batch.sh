@@ -1,5 +1,7 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+=======
 # Test script to merge a small batch of branches first
 set -e
 
@@ -11,6 +13,7 @@ echo "---"
 # Configuration - small batch for testing
 BATCH_SIZE=3
 BACKUP_BRANCH="test-backup-$(date +%Y%m%d-%H%M%S)"
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 # Test script to merge a small batch of cursor branches into main
 set -e
 
@@ -23,9 +26,13 @@ echo "---"
 BATCH_SIZE=5
 BACKUP_BRANCH="test-merge-backup-$(date +%Y%m%d-%H%M%S)"
 LOG_FILE="test-merge-log-$(date +%Y%m%d-%H%M%S).txt"
+<<<<<<< HEAD
+
+=======
 =======
 
 # Create a backup branch
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
@@ -36,12 +43,15 @@ SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 CONFLICT_RESOLUTIONS=0
 
+<<<<<<< HEAD
+=======
 # Get first few cursor branches
 BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | head -$BATCH_SIZE)
 
 echo "📋 Testing with branches:"
 echo "$BRANCHES"
 echo "---"
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 SKIPPED_BRANCHES=0
 TOTAL_PROCESSED=0
 
@@ -50,7 +60,10 @@ log_message() {
     local message="$1"
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" | tee -a "$LOG_FILE"
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 
 # Function to resolve conflicts in a file
 resolve_conflicts() {
@@ -58,6 +71,24 @@ resolve_conflicts() {
     local branch="$2"
     
     echo "🔧 Resolving conflicts in $file for branch $branch..."
+<<<<<<< HEAD
+    log_message "🔧 Resolving conflicts in $file for branch $branch..."
+    
+    # Create a backup of the conflicted file
+    cp "$file" "${file}.backup.$(date +%s)"
+    
+    # Strategy: Keep both versions where possible, prefer main branch for critical files
+    if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+        echo "📦 Critical file detected, keeping main version and merging dependencies..."
+        log_message "📦 Critical file detected, keeping main version and merging dependencies..."
+    else
+        echo "📝 Regular file, attempting to merge both versions..."
+        log_message "📝 Regular file, attempting to merge both versions..."
+    fi
+    echo "✅ Resolved conflicts in $file"
+    log_message "✅ Resolved conflicts in $file"
+    CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
+=======
     
     # Check if file has merge conflicts
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
@@ -81,6 +112,7 @@ resolve_conflicts() {
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 }
 
 # Function to check if a branch can be merged
@@ -105,7 +137,10 @@ merge_branch() {
     local branch="$1"
     
     log_message "🔄 Attempting to merge $branch..."
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     echo "🔄 Attempting to merge $branch..."
     
     # Fetch the latest version of the branch
@@ -114,11 +149,18 @@ merge_branch() {
     # Try to merge
     if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
         echo "✅ Successfully merged $branch"
+<<<<<<< HEAD
+        log_message "✅ Successfully merged $branch"
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
         git commit -m "Test merge $branch into main - $(date)"
         SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
         return 0
     else
         echo "⚠️  Merge conflicts detected in $branch, resolving..."
+<<<<<<< HEAD
+        log_message "⚠️  Merge conflicts detected in $branch, resolving..."
+=======
         log_message "✅ Successfully merged $branch"
         git commit -m "Merge $branch into main - $(date)"
         SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
@@ -126,14 +168,20 @@ merge_branch() {
     else
         log_message "⚠️  Merge conflicts detected in $branch, resolving..."
 =======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
         
         # Get list of conflicted files
         CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
         
         if [ -n "$CONFLICTED_FILES" ]; then
+<<<<<<< HEAD
+            echo "📋 Conflicted files: $CONFLICTED_FILES"
+            log_message "📋 Conflicted files: $CONFLICTED_FILES"
+=======
             log_message "📋 Conflicted files: $CONFLICTED_FILES"
 =======
             echo "📋 Conflicted files: $CONFLICTED_FILES"
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
             
             # Resolve conflicts in each file
             for file in $CONFLICTED_FILES; do
@@ -153,6 +201,9 @@ merge_branch() {
             return 0
         else
             echo "❌ No conflicted files found, but merge failed. Aborting..."
+<<<<<<< HEAD
+            log_message "❌ No conflicted files found, but merge failed. Aborting..."
+=======
             git commit -m "Resolve merge conflicts for $branch - $(date)"
             
             log_message "✅ Successfully resolved conflicts and merged $branch"
@@ -161,6 +212,7 @@ merge_branch() {
         else
             log_message "❌ No conflicted files found, but merge failed. Aborting..."
 =======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
             git merge --abort
             FAILED_MERGES=$((FAILED_MERGES + 1))
             return 1
@@ -172,6 +224,8 @@ merge_branch() {
 echo "🔄 Starting test batch processing..."
 echo "---"
 
+<<<<<<< HEAD
+=======
 for branch in $BRANCHES; do
     echo "📋 Processing test branch: $branch"
     
@@ -179,6 +233,7 @@ for branch in $BRANCHES; do
     if ! can_merge_branch "$branch"; then
         echo "⏭️  Skipping $branch (already merged or doesn't exist)"
 # Main processing loop
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 log_message "🧪 Starting test processing..."
 log_message "📊 Batch size: $BATCH_SIZE"
 log_message "---"
@@ -211,13 +266,37 @@ for ((j=0; j<total_branches; j++)); do
     if ! can_merge_branch "$branch"; then
         log_message "⏭️  Skipping $branch (already merged or doesn't exist)"
         SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
         continue
     fi
     
     # Try to merge the branch
     if merge_branch "$branch"; then
         echo "✅ Test branch $branch processed successfully"
+<<<<<<< HEAD
+        log_message "✅ Branch $branch processed successfully"
+        batch_success=$((batch_success + 1))
+    else
+        echo "❌ Failed to process test branch $branch"
+        log_message "❌ Failed to process branch $branch"
+        batch_failures=$((batch_failures + 1))
+    fi
+    
+    # Progress update
+    echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+    log_message "📊 Batch progress: $batch_success successful, $batch_failures failed"
+    log_message "📊 Overall progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+    echo "---"
+    log_message "---"
+done
+
+# Push changes after the test batch
+echo "💾 Pushing test changes to remote..."
+log_message "💾 Pushing test batch changes to remote..."
+=======
     else
         echo "❌ Failed to process test branch $branch"
     fi
@@ -228,6 +307,7 @@ done
 
 # Push changes
 echo "💾 Pushing test changes to remote..."
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 git push origin main
 
 # Summary
@@ -240,6 +320,12 @@ echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 
+<<<<<<< HEAD
+log_message "✅ Test batch completed: $batch_success successful, $batch_failures failed"
+log_message "---"
+
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 # Next steps
 echo ""
 echo "🚀 Next steps:"
@@ -251,6 +337,9 @@ else
 fi
 echo "   1. Review the merged changes: git log --oneline -10"
 echo "   2. Test the application"
+<<<<<<< HEAD
+
+=======
         log_message "✅ Branch $branch processed successfully"
         batch_success=$((batch_success + 1))
     else
@@ -273,6 +362,7 @@ log_message "---"
 
 # Summary
 echo ""
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 log_message "🧪 Test merge of cursor branches completed!"
 log_message "📊 Summary:"
 log_message "   ✅ Successful merges: $SUCCESSFUL_MERGES"
@@ -284,6 +374,9 @@ log_message "   🔒 Backup branch: $BACKUP_BRANCH"
 log_message "   📝 Log file: $LOG_FILE"
 log_message "⏰ Completed at: $(date)"
 
+<<<<<<< HEAD
+echo "   3. Delete the test backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
+=======
 # Test results
 echo ""
 if [ $FAILED_MERGES -eq 0 ]; then
@@ -467,3 +560,4 @@ trap 'log "Script interrupted. Cleaning up..."; git checkout main 2>/dev/null ||
 
 # Run main function
 main "$@"
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
