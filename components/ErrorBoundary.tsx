@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';'import { AlertTriangle, RefreshCw, Home } from 'lucide-react';'import Link from 'next/link';''interface Props {children: ReactNode;
+import React, { Component, ErrorInfo, ReactNode } from 'react';\nimport { AlertTriangle, RefreshCw, Home } from 'lucide-react';\nimport Link from 'next/link';''interface Props {children: ReactNode;
   fallback?: ReactNode;
 }
 

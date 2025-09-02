@@ -1,4 +1,4 @@
-import React from 'react';'import { Loader2 } from 'lucide-react';''interface LoadingSpinnerProps {
+import React from 'react';\nimport { Loader2 } from 'lucide-react';''interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';'  text?: string;'  className?: string;
 }
 

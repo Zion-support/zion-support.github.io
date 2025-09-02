@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { Download, X, Smartphone, Monitor } from 'lucide-react';''interface BeforeInstallPromptEvent extends Event {
+import React, { useEffect, useState } from 'react';\nimport { motion, AnimatePresence } from 'framer-motion';\nimport { Download, X, Smartphone, Monitor } from 'lucide-react';''interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{;
     outcome: 'accepted' | 'dismissed';'    platform: string;'  }>;prompt(): Promise<void>;

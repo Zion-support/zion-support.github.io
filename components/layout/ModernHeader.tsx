@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';'import Link from 'next/link.ts';'import {;'
+import React, { useState, useEffect } from 'react.ts';\nimport Link from 'next/link.ts';\nimport {;'
   Menu, X,
   ChevronDown, Zap,
   Shield, Cpu,
