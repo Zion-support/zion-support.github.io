@@ -4,19 +4,33 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true
-  },
   typescript: {
     ignoreBuildErrors: true
   },
   images: {
-    domains: ['ziontechgroup.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ziontechgroup.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     unoptimized: true
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
+  },
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  // Enable static optimization
+  trailingSlash: false,
+  // Optimize bundle size
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion']
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build

@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
+import { OrganizationSchema, WebSiteSchema, ServiceSchema } from '../components/StructuredData';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
@@ -40,13 +42,39 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zion Tech Group</title>
-        <meta name='description' content='Leading technology solutions provider' />
+        <title>Zion Tech Group - Leading AI & Technology Solutions Provider</title>
+        <meta name='description' content='Zion Tech Group delivers cutting-edge AI services, cybersecurity solutions, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions.' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='keywords' content='AI services, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group, artificial intelligence, IT services' />
+        <meta name='author' content='Zion Tech Group' />
+        <meta name='robots' content='index, follow' />
+        
+        {/* Open Graph / Facebook */}
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ziontechgroup.com/' />
+        <meta property='og:title' content='Zion Tech Group - Leading AI & Technology Solutions Provider' />
+        <meta property='og:description' content='Transform your business with cutting-edge AI services, cybersecurity solutions, and cloud infrastructure from Zion Tech Group.' />
+        <meta property='og:image' content='https://ziontechgroup.com/og-image.png' />
+        
+        {/* Twitter */}
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://ziontechgroup.com/' />
+        <meta property='twitter:title' content='Zion Tech Group - Leading AI & Technology Solutions Provider' />
+        <meta property='twitter:description' content='Transform your business with cutting-edge AI services, cybersecurity solutions, and cloud infrastructure from Zion Tech Group.' />
+        <meta property='twitter:image' content='https://ziontechgroup.com/og-image.png' />
+        
+        {/* Additional SEO */}
+        <link rel='canonical' href='https://ziontechgroup.com/' />
+        <meta name='theme-color' content='#2563eb' />
+        
+        {/* Structured Data */}
+        <OrganizationSchema />
+        <WebSiteSchema />
+        <ServiceSchema />
       </Head>
       <main className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
-        <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
+        <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600' role='banner'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32'>
             <div className='text-center'>
               <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6'>
