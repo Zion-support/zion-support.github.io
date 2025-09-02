@@ -17,21 +17,24 @@ export default function Home() {
   const services = [
     {
       title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
+      description: 'Cutting-edge artificial intelligence solutions including machine learning, NLP, and computer vision',
       icon: Brain,
-      href: '/ai-services'
+      href: '/ai-services',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive information technology services',
+      description: 'Comprehensive information technology services including cloud infrastructure and cybersecurity',
       icon: Network,
-      href: '/it-services'
+      href: '/it-services',
+      features: ['Cloud Migration', 'Cybersecurity', 'Network Management', 'DevOps']
     },
     {
       title: 'Micro SaaS',
-      description: 'Scalable software as a service solutions',
+      description: 'Custom software solutions and micro SaaS applications tailored to your business needs',
       icon: Cloud,
-      href: '/micro-saas'
+      href: '/micro-saas',
+      features: ['Custom Applications', 'API Development', 'Integration Services', 'Mobile Apps']
     }
   ];
   return (
@@ -53,14 +56,24 @@ export default function Home() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {services.map((service, index) => (
-              <Card key={index} className='p-8 text-center hover:shadow-lg transition-shadow'>
-                <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6'>
+              <Card key={index} className='p-8 text-center hover:shadow-lg transition-shadow group'>
+                <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover:scale-110 transition-transform'>
                   <service.icon className='w-8 h-8 text-white' />
                 </div>
-                <h3 className='text-2xl font-bold text-white mb-4'>{service.title}</h3>
-                <p className='text-gray-300 mb-6'>{service.description}</p>
+                <h3 className='text-2xl font-bold text-gray-900 mb-4'>{service.title}</h3>
+                <p className='text-gray-600 mb-6'>{service.description}</p>
+                <div className='mb-6'>
+                  <ul className='text-sm text-gray-500 space-y-1'>
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className='flex items-center justify-center'>
+                        <CheckCircle className='w-4 h-4 text-green-500 mr-2' />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <Link href={service.href}>
-                  <Button variant='outline' className='w-full'>
+                  <Button variant='outline' className='w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-colors'>
                     Learn More
                     <ArrowRight className='w-4 h-4 ml-2' />
                   </Button>
