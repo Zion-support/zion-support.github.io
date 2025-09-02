@@ -1,9 +1,9 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
 
-console.log('[INFO] 🔧 Starting advanced syntax error fix automation...');
+console.log(`'[INFO] 🔧 Starting advanced syntax error fix automation...');
 
 function fixAdvancedSyntaxErrors(filePath) {
   try {
@@ -13,7 +13,7 @@ function fixAdvancedSyntaxErrors(filePath) {
 
     // Fix script tags with malformed comments and JSX structure
     const scriptTagRegex = /<script type="application\/ld\+json" \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
-    content = content.replace(scriptTagRegex, '<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
+    content = content.replace(scriptTagRegex, '<script type="''application/ld''+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
 
     // Fix malformed JSX return statements
     const malformedReturnRegex = /return \(<>\s*<script[^>]*><\/script>\s*<Header \/>\s*<main[^>]*>/g;
@@ -22,7 +22,7 @@ function fixAdvancedSyntaxErrors(filePath) {
     });
 
     // Fix duplicate useEffect comments
-    const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed/g;
+    const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ''needed/g'';
     content = content.replace(duplicateCommentsRegex, '  // TODO: Add dependencies if needed');
 
     // Fix malformed useEffect with extra commas
@@ -30,8 +30,7 @@ function fixAdvancedSyntaxErrors(filePath) {
     content = content.replace(malformedUseEffectRegex, '}, []);');
 
     // Fix orphaned closing braces and semicolons
-    const orphanedPatterns = [
-      /^\s*}, \[\]\);\s*$/gm,
+    const orphanedPatterns = ['/^\s*}', '\[\']\);\s*$/gm,
       /^\s*}, \[\]\);;\s*$/gm,
       /^\s*}, \[\]\), \[\]\);\s*$/gm
     ];
@@ -69,12 +68,11 @@ function fixAdvancedSyntaxErrors(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       fixes++;
-      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)}`);
+      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});
     }
 
     return fixes;
-  } catch (error) {
-    console.log(`[ERROR] Failed to fix ${filePath}: ${error.message}`);
+  } catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}``);
     return 0;
   }
 }
@@ -115,18 +113,13 @@ for (const file of files) {
     fixedFiles.push(path.basename(file));
   }
 }
-
-console.log(`\n🎯 Advanced Syntax Error Fixer Summary:`);
-console.log(`✅ Total fixes applied: ${totalFixes}`);
-console.log(`📁 Files fixed: ${fixedFiles.length}`);
-console.log(`📋 Fixed files: ${fixedFiles.join(', ')}`);
+console.log(`\n🎯 Advanced Syntax Error Fixer Summary:`);console.log(`✅ Total fixes applied: ${totalFixes}`);console.log(`📁 Files fixed: ${fixedFiles.length}`);console.log(`📋 Fixed files: ${fixedFiles.join(', ')}`);
 
 // Generate report
 const report = {
   timestamp: new Date().toISOString(),
   totalFixes,
-  fixedFiles,
-  summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`
+  fixedFiles,summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`
 };
 
 const logsDir = path.join(process.cwd(), 'logs');
@@ -138,5 +131,4 @@ fs.writeFileSync(
   path.join(logsDir, 'advanced-syntax-fixes.json'),
   JSON.stringify(report, null, 2)
 );
-
-console.log(`📊 Report generated: logs/advanced-syntax-fixes.json`);
+console.log(`📊 Report generated: ''logs/advanced-syntax-fixes.json''`);

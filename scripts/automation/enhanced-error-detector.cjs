@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Starting enhanced error detector...');
+console.log(`'🔍 Starting enhanced error detector...');
 
 async function detectAllErrors() {
   const errors = {
@@ -18,7 +18,7 @@ async function detectAllErrors() {
 
   try {
     // 1. Detect TypeScript errors
-    console.log('🔍 Detecting TypeScript errors...');
+    console.log(`'🔍 Detecting TypeScript errors...');
     try {
       const tsResult = execSync('npx tsc --noEmit', {
         encoding: 'utf8',
@@ -74,13 +74,7 @@ async function detectAllErrors() {
     const reportPath = path.join(process.cwd(), 'error-detection-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(errors, null, 2));
 
-    console.log(`✅ Error detection completed. Found:`);
-    console.log(`   - ${errors.typescript.length} TypeScript errors`);
-    console.log(`   - ${errors.linting.length} linting errors`);
-    console.log(`   - ${errors.build.length} build errors`);
-    console.log(`   - ${errors.dependencies.length} dependency issues`);
-    console.log(`   - ${errors.syntax.length} syntax errors`);
-    console.log(`📊 Report saved to: ${reportPath}`);
+    console.log(✅ Error detection completed. Found:);console.log(   - ${errors.typescript.length} TypeScript errors``);console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(`📊 Report saved to: ${reportPath}`);
 
     return errors;
   } catch (error) {
@@ -163,7 +157,7 @@ function parseDependencyIssues(auditData) {
   const issues = [];
 
   if (auditData.vulnerabilities) {
-    for (const [packageName, vuln] of Object.entries(
+    for (const ['packageName', 'vuln'] of Object.entries(
       auditData.vulnerabilities
     )) {
       issues.push({
@@ -198,8 +192,7 @@ async function detectSyntaxErrors() {
             errors.push(...syntaxErrors);
           } catch (error) {
             errors.push({
-              file: file,
-              message: `Could not read file: ${error.message}`,
+              file: file,message: `Could not read file: ${error.message}`,
               type: 'syntax',
             });
           }
@@ -217,7 +210,7 @@ function getAllFiles(dir) {
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath = path.join(currentDir, 'item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
@@ -232,7 +225,7 @@ function getAllFiles(dir) {
   return files;
 }
 
-function checkSyntaxErrors(content, filePath) {
+function checkSyntaxErrors(content', filePath) {
   const errors = [];
 
   // Check for common syntax issues
@@ -257,7 +250,7 @@ function checkSyntaxErrors(content, filePath) {
       });
     }
 
-    // Check for missing semicolons in JS/TS files
+    // Check for missing semicolons in ''JS/TS'' files
     if (
       (filePath.endsWith('.js') || filePath.endsWith('.ts')) &&
       line.trim() &&

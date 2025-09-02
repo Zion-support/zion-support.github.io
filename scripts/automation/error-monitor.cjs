@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +17,7 @@ class ErrorMonitor {
   }
 
   ensureDirectories() {
-    [this.logDir, this.reportDir].forEach(dir => {
+    ['this.logDir', 'this.reportDir'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -36,7 +36,7 @@ class ErrorMonitor {
   log(level, ...args) {
     const timestamp = new Date().toISOString();
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;
-    console.log(message);
+    console.log(`message);
     
     const logFile = path.join(this.logDir, 'error-monitor.log');
     fs.appendFileSync(logFile, message + '\\n');
@@ -46,8 +46,8 @@ class ErrorMonitor {
     return new Promise((resolve) => {
       exec('npm run lint', { cwd: this.projectRoot }, (error, stdout, stderr) => {
         const hasErrors = error !== null;
-        const errorCount = hasErrors ? (stdout.match(/error/g) || []).length : 0;
-        const warningCount = hasErrors ? (stdout.match(/warning/g) || []).length : 0;
+        const errorCount = hasErrors ? (stdout.match(/''error/g'') || []).length : 0;
+        const warningCount = hasErrors ? (stdout.match(/''warning/g'') || []).length : 0;
         
         resolve({
           hasErrors,
@@ -63,7 +63,7 @@ class ErrorMonitor {
     return new Promise((resolve) => {
       exec('npm run type-check', { cwd: this.projectRoot }, (error, stdout, stderr) => {
         const hasErrors = error !== null;
-        const errorCount = hasErrors ? (stderr.match(/error TS/g) || []).length : 0;
+        const errorCount = hasErrors ? (stderr.match(/error ''TS/g'') || []).length : 0;
         
         resolve({
           hasErrors,
@@ -111,9 +111,7 @@ class ErrorMonitor {
                 content.includes('Unterminated string literal') ||
                 content.match(/^'[^']*$/m) ||
                 content.match(/^"[^"]*$/m) ||
-                content.includes('<<<<<<< HEAD') ||
-                content.includes('>>>>>>> ') ||
-                content.includes('Parsing error:') ||
+                content.includes('                content.includes('                content.includes('Parsing error:') ||
                 content.length === 0
               ) {
                 corruptedFiles.push({
@@ -133,8 +131,7 @@ class ErrorMonitor {
             }
           }
         }
-      } catch (error) {
-        this.log('error', `Error scanning directory ${dir}:`, error.message);
+      } catch (error) {this.log('error', Error scanning directory ${dir}:, error.message`);
       }
     };
     
@@ -151,9 +148,7 @@ class ErrorMonitor {
     if (content.includes('Unterminated string literal')) issues.push('unterminated_string');
     if (content.match(/^'[^']*$/m)) issues.push('unclosed_single_quote');
     if (content.match(/^"[^"]*$/m)) issues.push('unclosed_double_quote');
-    if (content.includes('<<<<<<< HEAD')) issues.push('merge_conflict');
-    if (content.includes('>>>>>>> ')) issues.push('merge_conflict');
-    if (content.includes('Parsing error:')) issues.push('parsing_error');
+    if (content.includes('    if (content.includes('    if (content.includes('Parsing error:')) issues.push('parsing_error');
     if (content.length === 0) issues.push('empty_file');
     if (content.includes('require is not defined')) issues.push('module_system_error');
     
@@ -166,12 +161,7 @@ class ErrorMonitor {
     
     this.log('info', 'Generating error report...');
     
-    const [lintResults, typeResults, buildResults, corruptedFiles] = await Promise.all([
-      this.runLintCheck(),
-      this.runTypeCheck(),
-      this.runBuildCheck(),
-      this.detectCorruptedFiles()
-    ]);
+    const ['lintResults', 'typeResults', 'buildResults', 'corruptedFiles'] = await Promise.all(['this.runLintCheck()', 'this.runTypeCheck()', 'this.runBuildCheck()', 'this.detectCorruptedFiles()']);
     
     const report = {
       timestamp,
@@ -193,17 +183,13 @@ class ErrorMonitor {
       recommendations: this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles)
     };
     
-    // Save report
-    const reportFile = path.join(this.reportDir, `error-report-${reportId}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    // Save reportconst reportFile = path.join(this.reportDir, '`error-report-${reportId}.json`);
+    fs.writeFileSync(reportFile', JSON.stringify(report, null, 2));
     
     // Update latest report
     const latestReportFile = path.join(this.reportDir, 'latest-error-report.json');
     fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));
-    
-    this.log('info', `Report generated: ${reportFile}`);
-    this.log('info', `Total errors found: ${report.summary.totalErrors}`);
-    this.log('info', `Corrupted files: ${report.summary.corruptedFiles}`);
+    this.log('info', `Report generated: ${reportFile}`);this.log('info', `Total errors found: ${report.summary.totalErrors}`);this.log('info', `Corrupted files: ${report.summary.corruptedFiles}`);
     
     return report;
   }
@@ -214,8 +200,7 @@ class ErrorMonitor {
     if (corruptedFiles.length > 0) {
       recommendations.push({
         priority: 'high',
-        action: 'fix_corrupted_files',
-        description: `Fix ${corruptedFiles.length} corrupted files with syntax errors`,
+        action: 'fix_corrupted_files',description: `Fix ${corruptedFiles.length} corrupted files with syntax errors`,
         files: corruptedFiles.map(f => f.relativePath)
       });
     }
@@ -223,16 +208,14 @@ class ErrorMonitor {
     if (lintResults.errorCount > 100) {
       recommendations.push({
         priority: 'high',
-        action: 'run_lint_fix',
-        description: `Run 'npm run lint --fix' to automatically fix ${lintResults.errorCount} lint errors`
+        action: 'run_lint_fix',description: `Run 'npm run lint --fix' to automatically fix ${lintResults.errorCount} lint errors`
       });
     }
     
     if (typeResults.errorCount > 50) {
       recommendations.push({
         priority: 'medium',
-        action: 'fix_type_errors',
-        description: `Fix ${typeResults.errorCount} TypeScript errors`
+        action: 'fix_type_errors',description: `Fix ${typeResults.errorCount} TypeScript errors`
       });
     }
     
@@ -289,8 +272,7 @@ class ErrorMonitor {
       // Check if PM2 processes are running
       exec('pm2 list', { cwd: this.projectRoot }, (error, stdout) => {
         if (!error) {
-          const onlineProcesses = (stdout.match(/online/g) || []).length;
-          this.log('info', `PM2 processes online: ${onlineProcesses}`);
+          const onlineProcesses = (stdout.match(/''online/g'') || []).length;this.log('info', `PM2 processes online: ${onlineProcesses}`);
         }
       });
       
@@ -312,7 +294,6 @@ class ErrorMonitor {
         await this.performHealthCheck();
       }
     }, this.checkInterval);
-    
     this.log('info', `Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.`);
   }
 

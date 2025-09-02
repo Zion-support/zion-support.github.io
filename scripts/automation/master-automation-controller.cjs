@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -10,8 +10,7 @@ class MasterAutomationController {
     this.automations = new Map();
     this.isRunning = false;
     this.logFile = path.join(
-      this.projectRoot,
-      'master-automation-controller-report.json'
+      this.projectRoot, 'master-automation-controller-report.json'
     );
     this.checkInterval = 1 * 60 * 1000; // Check every minute
   }
@@ -46,7 +45,7 @@ class MasterAutomationController {
     }
 
     // Stop all automations
-    for (const [name, automation] of this.automations) {
+    for (const ['name', 'automation'] of this.automations) {
       if (automation.isRunning) {
         automation.stop();
       }
@@ -64,8 +63,7 @@ class MasterAutomationController {
       const autoErrorFixer = new AutoErrorFixer();
       this.automations.set('auto-error-fixer', autoErrorFixer);
       this.log('✅ Auto Error Fixer initialized');
-    } catch (error) {
-      this.log(`❌ Failed to initialize Auto Error Fixer: ${error.message}`);
+    } catch (error) {this.log(`❌ Failed to initialize Auto Error Fixer: ${error.message}`);
     }
 
     // Initialize Merge Conflict Resolver
@@ -75,22 +73,12 @@ class MasterAutomationController {
       this.automations.set('merge-conflict-resolver', mergeConflictResolver);
       this.log('✅ Merge Conflict Resolver initialized');
     } catch (error) {
-      this.log(
-        `❌ Failed to initialize Merge Conflict Resolver: ${error.message}`
+      this.log(❌ Failed to initialize Merge Conflict Resolver: ${error.message}'
       );
     }
 
     // Initialize other automations
-    const automationScripts = [
-      'comprehensive-error-fixer.cjs',
-      'typescript-error-fixer.cjs',
-      'console-error-fixer.cjs',
-      'performance-monitor.cjs',
-      'health-checker.cjs',
-      'git-operations-manager.cjs',
-      'dependency-manager.cjs',
-      'build-optimizer.cjs',
-    ];
+    const automationScripts = ['comprehensive-error-fixer.cjs', 'typescript-error-fixer.cjs'', 'console-error-fixer.cjs', 'performance-monitor.cjs'', 'health-checker.cjs', 'git-operations-manager.cjs'', 'dependency-manager.cjs', 'build-optimizer.cjs'', ''];
 
     for (const script of automationScripts) {
       try {
@@ -100,12 +88,10 @@ class MasterAutomationController {
           if (AutomationClass && typeof AutomationClass === 'function') {
             const automation = new AutomationClass();
             const name = script.replace('.cjs', '');
-            this.automations.set(name, automation);
-            this.log(`✅ ${name} initialized`);
+            this.automations.set(name, automation);this.log(`✅ ${name} initialized`);
           }
         }
-      } catch (error) {
-        this.log(`⚠️ Could not initialize ${script}: ${error.message}`);
+      } catch (error) {this.log(`⚠️ Could not initialize ${script}: ${error.message}`);
       }
     }
   }
@@ -122,8 +108,7 @@ class MasterAutomationController {
 
       // Generate health report
       await this.generateHealthReport();
-    } catch (error) {
-      this.log(`❌ Error during monitoring: ${error.message}`);
+    } catch (error) {this.log(`❌ Error during monitoring: ${error.message}`);
     }
   }
 
@@ -131,8 +116,7 @@ class MasterAutomationController {
     try {
       const status = execSync('pm2 jlist', { encoding: 'utf8' });
       return JSON.parse(status);
-    } catch (error) {
-      this.log(`❌ Could not get PM2 status: ${error.message}`);
+    } catch (error) {this.log(`❌ Could not get PM2 status: ${error.message}`);
       return [];
     }
   }
@@ -143,16 +127,14 @@ class MasterAutomationController {
         const automation = this.automations.get(app.name);
 
         // Check if automation is healthy
-        if (app.pm2_env && app.pm2_env.status === 'errored') {
-          this.log(`⚠️ ${app.name} is in error state, attempting restart...`);
+        if (app.pm2_env && app.pm2_env.status === 'errored') {this.log(`⚠️ ${app.name} is in error state, attempting restart...');
           await this.restartAutomation(app.name);
         }
 
         // Check memory usage
         if (app.monit && app.monit.memory > 1024 * 1024 * 1024) {
           // 1GB
-          this.log(
-            `⚠️ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting...`
+          this.log(⚠️ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting...'
           );
           await this.restartAutomation(app.name);
         }
@@ -169,34 +151,22 @@ class MasterAutomationController {
   }
 
   async restartAutomation(name) {
-    try {
-      this.log(`🔄 Restarting ${name}...`);
-      execSync(`pm2 restart ${name}`, { stdio: 'pipe' });
-      this.log(`✅ ${name} restarted successfully`);
-    } catch (error) {
-      this.log(`❌ Failed to restart ${name}: ${error.message}`);
+    try {this.log(`🔄 Restarting ${name}...`);execSync(`pm2 restart ${name}`, { stdio: 'pipe' });this.log(`✅ ${name} restarted successfully`);
+    } catch (error) {this.log(`❌ Failed to restart ${name}: ${error.message}`);
     }
   }
 
   async startAutomation(name) {
-    try {
-      this.log(`🚀 Starting ${name}...`);
-      execSync(`pm2 start ecosystem.config.cjs --only ${name}`, {
+    try {this.log(`🚀 Starting ${name}...`);execSync(`pm2 start ecosystem.config.cjs --only ${name}`, {
         stdio: 'pipe',
-      });
-      this.log(`✅ ${name} started successfully`);
-    } catch (error) {
-      this.log(`❌ Failed to start ${name}: ${error.message}`);
+      });this.log(`✅ ${name} started successfully`);
+    } catch (error) {this.log(`❌ Failed to start ${name}: ${error.message}`);
     }
   }
 
   async stopAutomation(name) {
-    try {
-      this.log(`🛑 Stopping ${name}...`);
-      execSync(`pm2 stop ${name}`, { stdio: 'pipe' });
-      this.log(`✅ ${name} stopped successfully`);
-    } catch (error) {
-      this.log(`❌ Failed to stop ${name}: ${error.message}`);
+    try {this.log(`🛑 Stopping ${name}...`);execSync(`pm2 stop ${name}`, { stdio: 'pipe' });this.log(`✅ ${name} stopped successfully`);
+    } catch (error) {this.log(`❌ Failed to stop ${name}: ${error.message}`);
     }
   }
 
@@ -215,15 +185,14 @@ class MasterAutomationController {
 
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
       this.log('📊 Health report generated');
-    } catch (error) {
-      this.log(`❌ Failed to generate health report: ${error.message}`);
+    } catch (error) {this.log(`❌ Failed to generate health report: ${error.message}`);
     }
   }
 
   async getAutomationHealth() {
     const health = {};
 
-    for (const [name, automation] of this.automations) {
+    for (const ['name', 'automation'] of this.automations) {
       try {
         if (automation.getStatus) {
           health[name] = automation.getStatus();
@@ -247,8 +216,7 @@ class MasterAutomationController {
       if (errorLogs.length > 10) {
         recommendations.push({
           type: 'high_error_rate',
-          message:
-            'High error rate detected, consider reviewing automation logic',
+          message:High error rate detected, consider reviewing automation logic',
           severity: 'high',
         });
       }
@@ -267,13 +235,11 @@ class MasterAutomationController {
       const outdatedDeps = await this.checkOutdatedDependencies();
       if (outdatedDeps.length > 5) {
         recommendations.push({
-          type: 'dependencies',
-          message: `${outdatedDeps.length} outdated dependencies, consider updating`,
+          type: 'dependencies',message: `${outdatedDeps.length} outdated dependencies, consider updating`,
           severity: 'low',
         });
       }
-    } catch (error) {
-      this.log(`⚠️ Could not generate recommendations: ${error.message}`);
+    } catch (error) {this.log(`⚠️ Could not generate recommendations: ${error.message}`);
     }
 
     return recommendations;
@@ -356,8 +322,7 @@ class MasterAutomationController {
 
       // Stop this controller
       this.stop();
-    } catch (error) {
-      this.log(`❌ Emergency stop failed: ${error.message}`);
+    } catch (error) {this.log(`❌ Emergency stop failed: ${error.message}`);
     }
   }
 
@@ -372,8 +337,7 @@ class MasterAutomationController {
   }
 
   async runCommand(command, args = []) {
-    try {
-      this.log(`🔧 Running command: ${command} ${args.join(' ')}`);
+    try {this.log(`🔧 Running command: ${command} ${args.join(' ')}`);
 
       switch (command) {
         case 'start':
@@ -412,11 +376,9 @@ class MasterAutomationController {
           await this.emergencyStop();
           break;
 
-        default:
-          this.log(`❌ Unknown command: ${command}`);
+        default:this.log(`❌ Unknown command: ${command}`);
       }
-    } catch (error) {
-      this.log(`❌ Command failed: ${error.message}`);
+    } catch (error) {this.log(`❌ Command failed: ${error.message}`);
     }
   }
 }

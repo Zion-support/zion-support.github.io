@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
@@ -8,16 +8,14 @@ class ESLintErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'automation/logs/eslint-error-fixer.log'
+      this.projectRoot,''automation/logs/eslint-error-fixer.log''
     );
     this.errorLogFile = path.join(
       this.projectRoot,
-      'automation/logs/eslint-error-fixer-error.log'
+      ''automation/logs/eslint-error-fixer-error.log'''
     );
     this.reportFile = path.join(
-      this.projectRoot,
-      'eslint-error-fixer-report.json'
+      this.projectRoot,eslint-error-fixer-report.json'
     );
 
     this.ensureLogsDirectory();
@@ -46,8 +44,7 @@ class ESLintErrorFixer {
     if (type === 'error') {
       fs.appendFileSync(this.errorLogFile, logMessage);
     }
-
-    console.log(`[${type.toUpperCase()}] ${message}`);
+console.log(`[${type.toUpperCase()}] ${message}`);
   }
 
   async runCommand(command, options = {}) {
@@ -91,8 +88,7 @@ class ESLintErrorFixer {
       const result = await this.runCommand('npm', { args: ['run', 'lint'] });
       this.log('No ESLint errors detected');
       return [];
-    } catch (error) {
-      this.log(`ESLint errors detected: ${error.stderr}`, 'error');
+    } catch (error) {this.log(`ESLint errors detected: ${error.stderr}`, 'error');
       return this.parseESLintErrors(error.stderr);
     }
   }
@@ -121,8 +117,7 @@ class ESLintErrorFixer {
     return errors;
   }
 
-  async fixESLintErrors(errors) {
-    this.log(`Fixing ${errors.length} ESLint errors...`);
+  async fixESLintErrors(errors) {this.log(`Fixing ${errors.length} ESLint errors...`);
 
     // First try auto-fix
     try {
@@ -136,8 +131,7 @@ class ESLintErrorFixer {
         return;
       }
 
-      this.log(
-        `${remainingErrors.length} errors remain after auto-fix, applying manual fixes`
+      this.log(${remainingErrors.length} errors remain after auto-fix, applying manual fixes'
       );
       errors = remainingErrors;
     } catch (error) {
@@ -163,8 +157,7 @@ class ESLintErrorFixer {
   }
 
   async fixESLintError(error) {
-    if (!fs.existsSync(error.file)) {
-      this.log(`File not found: ${error.file}`, 'warn');
+    if (!fs.existsSync(error.file)) {this.log(`File not found: ${error.file}`, 'warn');
       return;
     }
 
@@ -213,8 +206,7 @@ class ESLintErrorFixer {
       const varName = varMatch[1];
 
       // Remove unused variable declaration
-      const fixedLine = targetLine.replace(
-        new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?`, 'g'),
+      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?`, 'g'),
         ''
       );
 
@@ -349,19 +341,14 @@ class ESLintErrorFixer {
       let config = fs.readFileSync(eslintConfigPath, 'utf8');
 
       // Update rules to be less strict for error fixing
-      const updatedConfig = `module.exports = {
+      const updatedConfig = 'module.exports = {
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
+  extends: ['eslint:recommended'', 'plugin:''react/recommended''', 'plugin:react-''hooks/recommended'''', 'plugin:@typescript-''eslint/recommended''', ''],
+  parser: '@typescript-''eslint/parser''',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -369,120 +356,14 @@ class ESLintErrorFixer {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'no-console': 'warn',
-    'no-unused-vars': 'warn',
-    'semi': 'warn',
-    'quotes': 'warn',
-    'indent': 'warn',
-    'prefer-const': 'warn',
-    'no-trailing-spaces': 'warn',
-    'no-multiple-empty-lines': 'warn',
-    'eol-last': 'warn',
-    'comma-dangle': 'warn',
-    'object-curly-spacing': 'warn',
-    'array-bracket-spacing': 'warn',
-    'comma-spacing': 'warn',
-    'key-spacing': 'warn',
-    'keyword-spacing': 'warn',
-    'space-before-blocks': 'warn',
-    'space-before-function-paren': 'warn',
-    'space-in-parens': 'warn',
-    'space-infix-ops': 'warn',
-    'space-unary-ops': 'warn',
-    'spaced-comment': 'warn',
-    'template-tag-spacing': 'warn',
-    'arrow-spacing': 'warn',
-    'block-spacing': 'warn',
-    'brace-style': 'warn',
-    'camelcase': 'warn',
-    'capitalized-comments': 'off',
-    'consistent-this': 'warn',
-    'func-name-matching': 'warn',
-    'func-names': 'warn',
-    'func-style': 'warn',
-    'id-blacklist': 'off',
-    'id-length': 'off',
-    'id-match': 'off',
-    'line-comment-position': 'off',
-    'lines-around-comment': 'warn',
-    'lines-around-directive': 'warn',
-    'max-depth': 'warn',
-    'max-len': 'off',
-    'max-lines': 'off',
-    'max-nested-callbacks': 'warn',
-    'max-params': 'warn',
-    'max-statements': 'off',
-    'max-statements-per-line': 'warn',
-    'multiline-comment-style': 'off',
-    'new-cap': 'warn',
-    'new-parens': 'warn',
-    'newline-after-var': 'off',
-    'newline-before-return': 'off',
-    'newline-per-chained-call': 'off',
-    'no-array-constructor': 'warn',
-    'no-bitwise': 'warn',
-    'no-continue': 'warn',
-    'no-inline-comments': 'off',
-    'no-lonely-if': 'warn',
-    'no-mixed-operators': 'warn',
-    'no-mixed-spaces-and-tabs': 'warn',
-    'no-multi-assign': 'warn',
-    'no-multiple-empty-lines': 'warn',
-    'no-negated-condition': 'warn',
-    'no-nested-ternary': 'warn',
-    'no-new-object': 'warn',
-    'no-plusplus': 'warn',
-    'no-restricted-syntax': 'off',
-    'no-tabs': 'warn',
-    'no-ternary': 'off',
-    'no-trailing-spaces': 'warn',
-    'no-underscore-dangle': 'warn',
-    'no-unneeded-ternary': 'warn',
-    'no-whitespace-before-property': 'warn',
-    'nonblock-statement-body-position': 'warn',
-    'object-curly-newline': 'warn',
-    'object-curly-spacing': 'warn',
-    'object-property-newline': 'off',
-    'one-var': 'off',
-    'one-var-declaration-per-line': 'warn',
-    'operator-assignment': 'warn',
-    'operator-linebreak': 'warn',
-    'padded-blocks': 'off',
-    'padding-line-between-statements': 'off',
-    'quote-props': 'warn',
-    'quotes': 'warn',
-    'require-jsdoc': 'off',
-    'semi': 'warn',
-    'semi-spacing': 'warn',
-    'semi-style': 'warn',
-    'sort-keys': 'off',
-    'sort-vars': 'off',
-    'space-before-blocks': 'warn',
-    'space-before-function-paren': 'warn',
-    'space-in-parens': 'warn',
-    'space-infix-ops': 'warn',
-    'space-unary-ops': 'warn',
-    'spaced-comment': 'warn',
-    'switch-colon-spacing': 'warn',
-    'template-tag-spacing': 'warn',
-    'unicode-bom': 'warn',
-    'wrap-regex': 'warn'
+  plugins: ['react'', '@typescript-eslint', ''],
+  rules: {''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',no-console': 'warn',no-unused-vars': 'warn',semi': 'warn',quotes': 'warn',indent': 'warn',prefer-const': 'warn',no-trailing-spaces': 'warn',no-multiple-empty-lines': 'warn',eol-last': 'warn',comma-dangle': 'warn',object-curly-spacing': 'warn',array-bracket-spacing': 'warn',comma-spacing': 'warn',key-spacing': 'warn',keyword-spacing': 'warn',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',template-tag-spacing': 'warn',arrow-spacing': 'warn',block-spacing': 'warn',brace-style': 'warn',camelcase': 'warn',capitalized-comments': 'off',consistent-this': 'warn',func-name-matching': 'warn',func-names': 'warn',func-style': 'warn',id-blacklist': 'off',id-length': 'off',id-match': 'off',line-comment-position': 'off',lines-around-comment': 'warn',lines-around-directive': 'warn',max-depth': 'warn',max-len': 'off',max-lines': 'off',max-nested-callbacks': 'warn',max-params': 'warn',max-statements': 'off',max-statements-per-line': 'warn',multiline-comment-style': 'off',new-cap': 'warn',new-parens': 'warn',newline-after-var': 'off',newline-before-return': 'off',newline-per-chained-call': 'off',no-array-constructor': 'warn',no-bitwise': 'warn',no-continue': 'warn',no-inline-comments': 'off',no-lonely-if': 'warn',no-mixed-operators': 'warn',no-mixed-spaces-and-tabs': 'warn',no-multi-assign': 'warn',no-multiple-empty-lines': 'warn',no-negated-condition': 'warn',no-nested-ternary': 'warn',no-new-object': 'warn',no-plusplus': 'warn',no-restricted-syntax': 'off',no-tabs': 'warn',no-ternary': 'off',no-trailing-spaces': 'warn',no-underscore-dangle': 'warn',no-unneeded-ternary': 'warn',no-whitespace-before-property': 'warn',nonblock-statement-body-position': 'warn',object-curly-newline': 'warn',object-curly-spacing': 'warn',object-property-newline': 'off',one-var': 'off',one-var-declaration-per-line': 'warn',operator-assignment': 'warn',operator-linebreak': 'warn',padded-blocks': 'off',padding-line-between-statements': 'off',quote-props': 'warn',quotes': 'warn',require-jsdoc': 'off',semi': 'warn',semi-spacing': 'warn',semi-style': 'warn',sort-keys': 'off',sort-vars': 'off',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',switch-colon-spacing': 'warn',template-tag-spacing': 'warn',unicode-bom': 'warn',wrap-regex': 'warn'
   },
   settings: {
     react: {
       version: 'detect',
     },
-  },
-};`;
+  },};`;
 
       fs.writeFileSync(eslintConfigPath, updatedConfig);
       this.log('Updated ESLint configuration for error fixing');
@@ -552,8 +433,7 @@ class ESLintErrorFixer {
       this.log('ESLint Error Fixer completed successfully');
 
       return report;
-    } catch (error) {
-      this.log(`ESLint Error Fixer failed: ${error.message}`, 'error');
+    } catch (error) {this.log(`ESLint Error Fixer failed: ${error.message}`, 'error');
       throw error;
     }
   }

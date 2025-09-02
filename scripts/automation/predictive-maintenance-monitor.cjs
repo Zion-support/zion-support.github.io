@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔮 Starting Predictive Maintenance Monitor...');
+console.log(`'🔮 Starting Predictive Maintenance Monitor...');
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL =
@@ -34,22 +34,20 @@ class PredictiveMaintenanceMonitor {
   loadHistoricalData() {
     try {
       const historicalFile = path.join(
-        this.reportDir,
-        'maintenance-history.json'
+        this.reportDir,maintenance-history.json'
       );
       if (fs.existsSync(historicalFile)) {
         const data = JSON.parse(fs.readFileSync(historicalFile, 'utf8'));
         this.maintenanceMetrics = { ...this.maintenanceMetrics, ...data };
       }
     } catch (error) {
-      console.log('No historical maintenance data found, starting fresh');
+      console.log(`'No historical maintenance data found, starting fresh');
     }
   }
 
   async monitorSystemHealth() {
     try {
-      console.log(
-        `🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}`
+      console.log(`🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}'
       );
 
       // Analyze system performance
@@ -80,8 +78,7 @@ class PredictiveMaintenanceMonitor {
         '✅ Predictive maintenance monitoring completed successfully'
       );
     } catch (error) {
-      console.error(
-        '❌ Predictive maintenance monitoring failed:',
+      console.error(❌ Predictive maintenance monitoring failed:',
         error.message
       );
     }
@@ -121,8 +118,7 @@ class PredictiveMaintenanceMonitor {
         metrics: performanceMetrics,
       });
 
-      console.log(
-        `📊 Performance metrics collected: Build time: ${performanceMetrics.buildTime}ms, Bundle size: ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB`
+      console.log(📊 Performance metrics collected: Build time: ${performanceMetrics.buildTime}ms, Bundle size: ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB'
       );
     } catch (error) {
       console.log('⚠️ Performance analysis failed:', error.message);
@@ -176,8 +172,7 @@ class PredictiveMaintenanceMonitor {
         });
         const outdated = JSON.parse(outdatedOutput);
         if (Object.keys(outdated).length > 0) {
-          buildHealth.warnings.push(
-            `Found ${Object.keys(outdated).length} outdated dependencies`
+          buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies'
           );
         }
       } catch (error) {
@@ -193,8 +188,7 @@ class PredictiveMaintenanceMonitor {
         });
       }
 
-      console.log(
-        `📊 Build health: ${buildHealth.success ? 'Healthy' : 'Issues detected'}`
+      console.log(📊 Build health: ${buildHealth.success ? 'Healthy' : 'Issues detected'}
       );
     } catch (error) {
       console.log('⚠️ Build health monitoring failed:', error.message);
@@ -250,13 +244,7 @@ class PredictiveMaintenanceMonitor {
       }
 
       // Identify large dependencies
-      const largeDependencies = [
-        'lodash',
-        'moment',
-        'date-fns',
-        'framer-motion',
-        'recharts',
-      ];
+      const largeDependencies = ['lodash'', 'moment', 'date-fns'', 'framer-motion', 'recharts'', ''];
       dependencyHealth.largeDependencies = Object.keys(dependencies).filter(
         dep => largeDependencies.includes(dep)
       );
@@ -264,8 +252,7 @@ class PredictiveMaintenanceMonitor {
       if (dependencyHealth.outdatedDependencies > 5) {
         this.maintenanceMetrics.riskFactors.push({
           type: 'outdated_dependencies',
-          severity: 'medium',
-          description: `Found ${dependencyHealth.outdatedDependencies} outdated dependencies`,
+          severity: 'medium',description: Found ${dependencyHealth.outdatedDependencies} outdated dependencies,
           timestamp: new Date().toISOString(),
         });
       }
@@ -273,14 +260,12 @@ class PredictiveMaintenanceMonitor {
       if (dependencyHealth.securityVulnerabilities > 0) {
         this.maintenanceMetrics.riskFactors.push({
           type: 'security_vulnerabilities',
-          severity: 'high',
-          description: `Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities`,
-          timestamp: new Date().toISOString(),
+          severity: 'high',description: Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities',
+          timestamp: new Date(`).toISOString(),
         });
       }
 
-      console.log(
-        `📊 Dependency health: ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities`
+      console.log(`📊 Dependency health: ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities'
       );
     } catch (error) {
       console.log('⚠️ Dependency health analysis failed:', error.message);
@@ -305,8 +290,8 @@ class PredictiveMaintenanceMonitor {
       };
 
       // Count lint errors and warnings
-      const errorMatches = lintOutput.match(/error/g);
-      const warningMatches = lintOutput.match(/warning/g);
+      const errorMatches = lintOutput.match(/''error/g'');
+      const warningMatches = lintOutput.match(/''warning/g'');
 
       qualityMetrics.lintErrors = errorMatches ? errorMatches.length : 0;
       qualityMetrics.lintWarnings = warningMatches ? warningMatches.length : 0;
@@ -314,12 +299,7 @@ class PredictiveMaintenanceMonitor {
       // Calculate code complexity (simplified)
       const srcPath = path.join(process.cwd(), 'src');
       if (fs.existsSync(srcPath)) {
-        const allFiles = this.findFiles(srcPath, [
-          '.ts',
-          '.tsx',
-          '.js',
-          '.jsx',
-        ]);
+        const allFiles = this.findFiles(srcPath, ['.ts'', '.tsx', '.js'', '.jsx', '']);
         qualityMetrics.codeComplexity = allFiles.length;
       }
 
@@ -333,13 +313,12 @@ class PredictiveMaintenanceMonitor {
         this.maintenanceMetrics.riskFactors.push({
           type: 'code_quality_degradation',
           severity: 'medium',
-          description: `High number of lint errors: ${qualityMetrics.lintErrors}`,
+          description: High number of lint errors: ${qualityMetrics.lintErrors}',
           timestamp: new Date().toISOString(),
         });
       }
 
-      console.log(
-        `📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}`
+      console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}'
       );
     } catch (error) {
       console.log('⚠️ Code quality monitoring failed:', error.message);
@@ -410,17 +389,16 @@ class PredictiveMaintenanceMonitor {
         type: 'build_instability',
         probability: 'high',
         description: 'Build process is unstable',
-        recommendation: 'Fix build errors and implement CI/CD checks',
+        recommendation: 'Fix build errors and implement ''CI/CD'' checks',
         estimatedImpact: 'high',
       });
     }
 
-    this.maintenanceMetrics.predictedIssues = predictions;
-    console.log(`🔮 Predicted ${predictions.length} potential issues`);
+    this.maintenanceMetrics.predictedIssues = predictions;console.log(🔮 Predicted ${predictions.length} potential issues``);
   }
 
   async generateMaintenanceRecommendations() {
-    console.log('💡 Generating maintenance recommendations...');
+    console.log(`'💡 Generating maintenance recommendations...');
 
     const recommendations = [];
 
@@ -504,13 +482,12 @@ class PredictiveMaintenanceMonitor {
     }
 
     this.maintenanceMetrics.maintenanceRecommendations = recommendations;
-    console.log(
-      `💡 Generated ${recommendations.length} maintenance recommendations`
+    console.log(`💡 Generated ${recommendations.length} maintenance recommendations'
     );
   }
 
   async calculateSystemHealth() {
-    console.log('📊 Calculating system health score...');
+    console.log(`'📊 Calculating system health score...');
 
     let healthScore = 100;
 
@@ -550,8 +527,7 @@ class PredictiveMaintenanceMonitor {
     // Ensure health score doesn't go below 0
     this.maintenanceMetrics.systemHealth = Math.max(0, healthScore);
 
-    console.log(
-      `📊 System health score: ${this.maintenanceMetrics.systemHealth}/100`
+    console.log(📊 System health score: ${this.maintenanceMetrics.systemHealth}/100'
     );
   }
 
@@ -575,8 +551,7 @@ class PredictiveMaintenanceMonitor {
     };
 
     const reportPath = path.join(
-      this.reportDir,
-      `maintenance-${Date.now()}.json`
+      this.reportDir,maintenance-${Date.now()}.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
@@ -592,12 +567,10 @@ class PredictiveMaintenanceMonitor {
 
     // Also save latest report
     const latestReportPath = path.join(
-      process.cwd(),
-      'maintenance-report.json'
+      process.cwd(),maintenance-report.json'
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-
-    console.log(`📊 Maintenance report saved to ${reportPath}`);
+console.log(📊 Maintenance report saved to ${reportPath});
   }
 
   findFiles(dir, extensions) {
@@ -664,8 +637,7 @@ class PredictiveMaintenanceMonitor {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `🔮 Starting predictive maintenance monitor with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(🔮 Starting predictive maintenance monitor with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   const monitor = new PredictiveMaintenanceMonitor();
@@ -678,9 +650,8 @@ async function runContinuous() {
     await monitor.monitorSystemHealth();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    `✅ Predictive maintenance monitor running. Next monitoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+  console.log( ✅ Predictive maintenance monitor running. Next monitoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

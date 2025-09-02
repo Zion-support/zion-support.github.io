@@ -1,13 +1,15 @@
-import '@testing-library/jest-dom';
-
-// Mock Next.js router
-jest.mock('next/router', () => ({
+ursor/automate-test-fix-improve-and-merge-code-48f3;
+// Mock Next.js router;
+jest.mock(
+  'next/router', () => ({
   useRouter() {
     return {
-      route: '/',
-      pathname: '/',
+      route: '/,
+      pathname:;
+  '/',
       query: {},
-      asPath: '/',
+      asPath:;
+  '/',
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
@@ -17,41 +19,32 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
-      },
-      isFallback: false,
-    };
-  },
-}));
-
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
+        emit: jest.fn()},
+      isFallback: false}
+  }}));
+// Mock Next.js Image component;
+jest.mock(
+  'next/image', () => ({
   __esModule: true,
   default: props => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />;
-  },
-}));
-
+    return <img {...props} />
+  }}));
 // Mock Next.js Link component
-jest.mock('next/link', () => ({
+jest.mock(
+  'next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
     return (
       <a href={href} {...props}>
         {children}
       </a>
-    );
-  },
-}));
-
-// Global test utilities
+    )}}));
+// Global test utilities;
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
+  disconnect: jest.fn()}));
 global.matchMedia = jest.fn().mockImplementation(query => ({
   matches: false,
   media: query,
@@ -60,5 +53,4 @@ global.matchMedia = jest.fn().mockImplementation(query => ({
   removeListener: jest.fn(),
   addEventListener: jest.fn(),
   removeEventListener: jest.fn(),
-  dispatchEvent: jest.fn(),
-}));
+  dispatchEvent: jest.fn()}))

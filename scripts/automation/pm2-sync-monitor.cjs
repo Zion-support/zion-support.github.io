@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * PM2 Sync Monitor System
@@ -26,8 +26,8 @@ class PM2SyncMonitor {
       healthCheckPort: 3001,
       maxErrors: 10,
       maxRestarts: 5,
-      logFile: 'logs/pm2-sync-monitor.log',
-      metricsFile: 'logs/pm2-sync-metrics.json',
+      logFile: '''logs/pm2-sync-monitor.log''',
+      metricsFile: '''logs/pm2-sync-metrics.json''',
     };
 
     this.metrics = {
@@ -59,7 +59,7 @@ class PM2SyncMonitor {
     this.log = (message, level = 'INFO') => {
       const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] [${level}] ${message}`;
-      console.log(logMessage);
+      console.log(`logMessage);
 
       try {
         fs.appendFileSync(this.config.logFile, logMessage + '\n');
@@ -83,8 +83,7 @@ class PM2SyncMonitor {
       await this.performHealthCheck();
 
       this.log('PM2 Sync Monitor System initialized successfully');
-    } catch (error) {
-      this.log(`Initialization failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(Initialization failed: ${error.message}, 'ERROR'`);
       this.recordError(error);
       this.restartAfterDelay();
     }
@@ -126,9 +125,7 @@ class PM2SyncMonitor {
       } else {
         this.metrics.failedChecks++;
         this.metrics.systemStatus = 'unhealthy';
-        this.log(
-          `Health check failed: ${healthStatus.issues.join(', ')}`,
-          'WARN'
+        this.log(Health check failed: ${healthStatus.issues.join(', ')}',WARN'
         );
 
         // Attempt to fix issues
@@ -137,8 +134,7 @@ class PM2SyncMonitor {
 
       this.metrics.lastHealthCheck = Date.now();
       await this.saveMetrics();
-    } catch (error) {
-      this.log(`Health check failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Health check failed: ${error.message}`, 'ERROR');
       this.recordError(error);
       this.metrics.failedChecks++;
       this.metrics.systemStatus = 'error';
@@ -183,8 +179,7 @@ class PM2SyncMonitor {
         isHealthy: issues.length === 0,
         issues: issues,
       };
-    } catch (error) {
-      issues.push(`Health check error: ${error.message}`);
+    } catch (error) {issues.push(`Health check error: ${error.message}`);
       return {
         isHealthy: false,
         issues: issues,
@@ -201,16 +196,11 @@ class PM2SyncMonitor {
       let isHealthy = true;
 
       // Check if all required processes are running
-      const requiredProcesses = [
-        'pm2-sync-automation',
-        'pm2-sync-monitor',
-        'zion-app',
-      ];
+      const requiredProcesses = ['pm2-sync-automation'', 'pm2-sync-monitor', 'zion-app'', ''];
 
       requiredProcesses.forEach(processName => {
         const process = processes.find(p => p.name === processName);
-        if (!process || process.pm2_env.status !== 'online') {
-          issues.push(`Process ${processName} is not running`);
+        if (!process || process.pm2_env.status !== 'online') {issues.push(`Process ${processName} is not running`);
           isHealthy = false;
         }
       });
@@ -218,8 +208,7 @@ class PM2SyncMonitor {
       return { isHealthy, issues };
     } catch (error) {
       return {
-        isHealthy: false,
-        issues: [`PM2 status check failed: ${error.message}`],
+        isHealthy: false,issues: [`PM2 status check failed: ${error.message}`],
       };
     }
   }
@@ -232,8 +221,7 @@ class PM2SyncMonitor {
       // Check critical directories
       const criticalDirs = ['src', 'pages', 'components', 'utils', 'public'];
       criticalDirs.forEach(dir => {
-        if (!fs.existsSync(dir)) {
-          issues.push(`Critical directory missing: ${dir}`);
+        if (!fs.existsSync(dir)) {issues.push(`Critical directory missing: ${dir}`);
           isHealthy = false;
         }
       });
@@ -246,16 +234,14 @@ class PM2SyncMonitor {
 
       // Check disk space
       const diskUsage = await this.getDiskUsage();
-      if (diskUsage.usagePercent > 90) {
-        issues.push(`Disk usage high: ${diskUsage.usagePercent}%`);
+      if (diskUsage.usagePercent > 90) {issues.push(`Disk usage high: ${diskUsage.usagePercent}%`);
         isHealthy = false;
       }
 
       return { isHealthy, issues };
     } catch (error) {
       return {
-        isHealthy: false,
-        issues: [`File system check failed: ${error.message}`],
+        isHealthy: false,issues: [`File system check failed: ${error.message}`],
       };
     }
   }
@@ -297,8 +283,7 @@ class PM2SyncMonitor {
       return { isHealthy, issues };
     } catch (error) {
       return {
-        isHealthy: false,
-        issues: [`Git repository check failed: ${error.message}`],
+        isHealthy: false,issues: [`Git repository check failed: ${error.message}`],
       };
     }
   }
@@ -327,8 +312,7 @@ class PM2SyncMonitor {
       return { isHealthy, issues };
     } catch (error) {
       return {
-        isHealthy: false,
-        issues: [`Build status check failed: ${error.message}`],
+        isHealthy: false,issues: [`Build status check failed: ${error.message}`],
       };
     }
   }
@@ -365,8 +349,7 @@ class PM2SyncMonitor {
       return { isHealthy, issues };
     } catch (error) {
       return {
-        isHealthy: false,
-        issues: [`Dependencies check failed: ${error.message}`],
+        isHealthy: false,issues: [`Dependencies check failed: ${error.message}`],
       };
     }
   }
@@ -388,9 +371,7 @@ class PM2SyncMonitor {
           await this.triggerBuild();
         }
       } catch (error) {
-        this.log(
-          `Failed to resolve issue "${issue}": ${error.message}`,
-          'ERROR'
+        this.log(Failed to resolve issue '${issue}": ${error.message}',ERROR'
         );
       }
     }
@@ -398,9 +379,7 @@ class PM2SyncMonitor {
 
   async restartProcess(issue) {
     const processName = issue.match(/Process (.+) is not running/)?.[1];
-    if (processName) {
-      this.log(`Restarting process: ${processName}`);
-      execSync(`pm2 restart ${processName}`, { stdio: 'pipe' });
+    if (processName) {this.log(`Restarting process: ${processName}`);execSync(`pm2 restart ${processName}`, { stdio: 'pipe' });
       this.metrics.restarts++;
     }
   }
@@ -444,8 +423,7 @@ class PM2SyncMonitor {
       this.metrics.uptime = Date.now() - this.metrics.startTime;
 
       await this.saveMetrics();
-    } catch (error) {
-      this.log(`Failed to collect metrics: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to collect metrics: ${error.message}`, 'ERROR');
     }
   }
 
@@ -477,8 +455,8 @@ class PM2SyncMonitor {
     try {
       const output = execSync('df .', { encoding: 'utf8' });
       const lines = output.trim().split('\n');
-      const [, usageLine] = lines;
-      const [, used, available] = usageLine.split(/\s+/);
+      const ['', 'usageLine'] = lines;
+      const ['', 'used', 'available'] = usageLine.split(/\s+/);
 
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
@@ -504,8 +482,7 @@ class PM2SyncMonitor {
       }
     } catch (error) {
       // Ignore timeout errors from pm2 monit
-      if (!error.message.includes('timeout')) {
-        this.log(`Performance monitoring failed: ${error.message}`, 'ERROR');
+      if (!error.message.includes('timeout')) {this.log(`Performance monitoring failed: ${error.message}`, 'ERROR');
       }
     }
   }
@@ -520,12 +497,11 @@ class PM2SyncMonitor {
         const maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days
 
         files.forEach(file => {
-          const filePath = path.join(logDir, file);
+          const filePath = path.join(logDir, 'file);
           const stats = fs.statSync(filePath);
 
           if (now - stats.mtime.getTime() > maxAge) {
-            fs.unlinkSync(filePath);
-            this.log(`Cleaned up old log file: ${file}`);
+            fs.unlinkSync(filePath);this.log(`Cleaned up old log file: ${file}`);
           }
         });
       }
@@ -534,15 +510,14 @@ class PM2SyncMonitor {
       if (this.metrics.errors.length > this.config.maxErrors) {
         this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors);
       }
-    } catch (error) {
-      this.log(`Cleanup failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Cleanup failed: ${error.message}`', 'ERROR');
     }
   }
 
   startHealthCheckServer() {
     const server = http.createServer((req, res) => {
       if (req.url === '/health') {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.writeHead(200, { 'Content-Type': '''application/json''' });
         res.end(
           JSON.stringify({
             status: this.metrics.systemStatus,
@@ -555,7 +530,7 @@ class PM2SyncMonitor {
           })
         );
       } else if (req.url === '/metrics') {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.writeHead(200, { 'Content-Type': '''application/json''' });
         res.end(JSON.stringify(this.metrics));
       } else {
         res.writeHead(404);
@@ -564,8 +539,7 @@ class PM2SyncMonitor {
     });
 
     server.listen(this.config.healthCheckPort, () => {
-      this.log(
-        `Health check server listening on port ${this.config.healthCheckPort}`
+      this.log(Health check server listening on port ${this.config.healthCheckPort}'
       );
     });
   }
@@ -593,13 +567,11 @@ class PM2SyncMonitor {
         this.config.metricsFile,
         JSON.stringify(this.metrics, null, 2)
       );
-    } catch (error) {
-      this.log(`Failed to save metrics: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save metrics: ${error.message}`, 'ERROR');
     }
   }
 
-  restartAfterDelay(delay = 5000) {
-    this.log(`Restarting monitor in ${delay}ms...`);
+  restartAfterDelay(delay = 5000) {this.log(`Restarting monitor in ${delay}ms...`);
     setTimeout(() => {
       this.initialize();
     }, delay);

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * PM2 Sync Automation System
@@ -25,38 +25,14 @@ class PM2SyncAutomation {
   constructor() {
     this.config = {
       projectRoot: process.cwd(),
-      watchPatterns: [
-        'src/**/*',
-        'pages/**/*',
-        'components/**/*',
-        'utils/**/*',
-        'types/**/*',
-        'public/**/*',
-        '*.{js,ts,tsx,jsx,json,md}',
-        '!node_modules/**',
-        '!dist/**',
-        '!.next/**',
-        '!build/**',
-        '!logs/**',
-        '!temp_*/**',
-      ],
-      ignorePatterns: [
-        'node_modules/**',
-        'dist/**',
-        '.next/**',
-        'build/**',
-        'logs/**',
-        'temp_*/**',
-        '*.log',
-        '*.tmp',
-        '*.backup.*',
-      ],
+      watchPatterns: ['src/**/*'', 'pages/**/*', 'components/**/*'', 'utils/**/*', 'types/**/*'', 'public/**/*', '*.{js', 'ts', 'tsx', 'jsx', 'json', 'md}'', '!node_modules/**', '!dist/**'', '!.next/**', '!build/**'', '!logs/**', '!temp_*/**'', ''],
+      ignorePatterns: ['node_modules/**', 'dist/**'', '.next/**', 'build/**'', 'logs/**', 'temp_*/**'', '*.log', '*.tmp'', '*.backup.*', ''],
       syncInterval: 30000, // 30 seconds
       buildInterval: 300000, // 5 minutes
       testInterval: 600000, // 10 minutes
       securityInterval: 1800000, // 30 minutes
       maxRetries: 3,
-      logFile: 'logs/pm2-sync-automation.log',
+      logFile: '''logs/pm2-sync-automation.log''',
     };
 
     this.watcher = null;
@@ -82,7 +58,7 @@ class PM2SyncAutomation {
     this.log = (message, level = 'INFO') => {
       const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] [${level}] ${message}`;
-      console.log(logMessage);
+      console.log(`logMessage);
 
       try {
         fs.appendFileSync(this.config.logFile, logMessage + '\n');
@@ -116,8 +92,7 @@ class PM2SyncAutomation {
 
       this.log('PM2 Sync Automation System initialized successfully');
       this.isRunning = true;
-    } catch (error) {
-      this.log(`Initialization failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(Initialization failed: ${error.message}, 'ERROR'`);
       this.errorCount++;
       this.restartAfterDelay();
     }
@@ -134,8 +109,7 @@ class PM2SyncAutomation {
   initializeGitRepository() {
     try {
       execSync('git init', { cwd: this.config.projectRoot, stdio: 'pipe' });
-      execSync(
-        'git remote add origin https://github.com/Zion-Holdings/zion.app.git',
+      execSync(git remote add origin https://github.''com/Zion-Holdings/zion.app.git''',
         {
           cwd: this.config.projectRoot,
           stdio: 'pipe',
@@ -143,8 +117,7 @@ class PM2SyncAutomation {
       );
       this.log('Git repository initialized');
     } catch (error) {
-      this.log(
-        `Failed to initialize git repository: ${error.message}`,
+      this.log(Failed to initialize git repository: ${error.message}',
         'ERROR'
       );
     }
@@ -167,8 +140,7 @@ class PM2SyncAutomation {
       .on('add', filePath => this.handleFileChange(filePath, 'add'))
       .on('change', filePath => this.handleFileChange(filePath, 'change'))
       .on('unlink', filePath => this.handleFileChange(filePath, 'delete'))
-      .on('error', error =>
-        this.log(`Watcher error: ${error.message}`, 'ERROR')
+      .on('error', error =>this.log(`Watcher error: ${error.message}`, 'ERROR')
       )
       .on('ready', () => this.log('File watcher ready'));
   }
@@ -179,8 +151,7 @@ class PM2SyncAutomation {
     if (this.shouldIgnoreFile(relativePath)) {
       return;
     }
-
-    this.log(`File ${event}: ${relativePath}`);
+this.log(`File ${event}: ${relativePath}`);
     this.pendingChanges.add(relativePath);
 
     // Debounce changes
@@ -191,19 +162,7 @@ class PM2SyncAutomation {
   }
 
   shouldIgnoreFile(filePath) {
-    const ignorePatterns = [
-      /\.log$/,
-      /\.tmp$/,
-      /\.backup\./,
-      /\.git\//,
-      /node_modules\//,
-      /\.next\//,
-      /dist\//,
-      /build\//,
-      /temp_/,
-      /\.DS_Store$/,
-      /Thumbs\.db$/,
-    ];
+    const ignorePatterns = ['/\.log$/', '/\.tmp$/', '/\.backup\./', '/\.git\//', '/node_modules\//', '/\.next\//', '/dist\//', '/build\//', '/temp_/', '/\.DS_Store$/', '/Thumbs\.db$/', ''];
 
     return ignorePatterns.some(pattern => pattern.test(filePath));
   }
@@ -211,8 +170,7 @@ class PM2SyncAutomation {
   async processPendingChanges() {
     if (this.pendingChanges.size === 0) return;
 
-    try {
-      this.log(`Processing ${this.pendingChanges.size} pending changes...`);
+    try {this.log(`Processing ${this.pendingChanges.size} pending changes...`);
 
       const changes = Array.from(this.pendingChanges);
       this.pendingChanges.clear();
@@ -238,8 +196,7 @@ class PM2SyncAutomation {
 
       this.successCount++;
       this.log('Changes processed successfully');
-    } catch (error) {
-      this.log(`Failed to process changes: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to process changes: ${error.message}`, 'ERROR');
       this.errorCount++;
 
       // Re-add failed changes
@@ -250,27 +207,21 @@ class PM2SyncAutomation {
   async stageChanges(changes) {
     try {
       // Add all changes
-      execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });
-      this.log(`Staged ${changes.length} changes`);
-    } catch (error) {
-      throw new Error(`Failed to stage changes: ${error.message}`);
+      execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });this.log(`Staged ${changes.length} changes`);
+    } catch (error) {throw new Error(`Failed to stage changes: ${error.message}`);
     }
   }
 
   async commitChanges(changes) {
     try {
       const timestamp = new Date().toISOString();
-      const changeSummary = changes.slice(0, 5).join(', ');
-      const commitMessage = `Auto-sync: ${changes.length} changes - ${changeSummary} - ${timestamp}`;
-
-      execSync(`git commit -m "${commitMessage}"`, {
+      const changeSummary = changes.slice(0, 5).join(', ');const commitMessage = `Auto-sync: ${changes.length} changes - ${changeSummary} - ${timestamp}`;
+execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.config.projectRoot,
         stdio: 'pipe',
       });
-
-      this.log(`Committed changes: ${commitMessage}`);
-    } catch (error) {
-      throw new Error(`Failed to commit changes: ${error.message}`);
+this.log(`Committed changes: ${commitMessage}`);
+    } catch (error) {throw new Error(`Failed to commit changes: ${error.message}`);
     }
   }
 
@@ -283,20 +234,12 @@ class PM2SyncAutomation {
 
       this.log('Changes pushed to repository');
       this.lastSync = Date.now();
-    } catch (error) {
-      throw new Error(`Failed to push changes: ${error.message}`);
+    } catch (error) {throw new Error(`Failed to push changes: ${error.message}`);
     }
   }
 
   shouldTriggerBuild(changes) {
-    const buildTriggers = [
-      /\.(ts|tsx|js|jsx)$/,
-      /package\.json$/,
-      /tsconfig\.json$/,
-      /tailwind\.config\./,
-      /next\.config\./,
-      /vite\.config\./,
-    ];
+    const buildTriggers = ['/\.(ts|tsx|js|jsx)$/', '/package\.json$/', '/tsconfig\.json$/', '/tailwind\.config\./', '/next\.config\./', '/vite\.config\./', ''];
 
     return changes.some(change =>
       buildTriggers.some(pattern => pattern.test(change))
@@ -304,12 +247,7 @@ class PM2SyncAutomation {
   }
 
   shouldRunTests(changes) {
-    const testTriggers = [
-      /\.(test|spec)\.(ts|tsx|js|jsx)$/,
-      /test/,
-      /spec/,
-      /__tests__/,
-    ];
+    const testTriggers = ['/\.(test|spec)\.(ts|tsx|js|jsx)$/', '/test/', '/spec/', '/__tests__/', ''];
 
     return changes.some(change =>
       testTriggers.some(pattern => pattern.test(change))
@@ -392,8 +330,7 @@ class PM2SyncAutomation {
           });
           this.log('Restored stashed changes');
         } catch (error) {
-          this.log(
-            'Failed to restore stashed changes, resolving conflicts...',
+          this.log(Failed to restore stashed changes, resolving conflicts...',
             'WARN'
           );
           await this.resolveConflicts();
@@ -401,8 +338,7 @@ class PM2SyncAutomation {
       }
 
       this.log('Full sync completed successfully');
-    } catch (error) {
-      this.log(`Full sync failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Full sync failed: ${error.message}`, 'ERROR');
       await this.resolveConflicts();
     }
   }
@@ -438,8 +374,7 @@ class PM2SyncAutomation {
       });
 
       this.log('Conflicts resolved successfully');
-    } catch (error) {
-      this.log(`Failed to resolve conflicts: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to resolve conflicts: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -466,8 +401,7 @@ class PM2SyncAutomation {
 
       this.log('Build completed successfully');
       this.lastBuild = Date.now();
-    } catch (error) {
-      this.log(`Build failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Build failed: ${error.message}`, 'ERROR');
       await this.fixBuildIssues();
     }
   }
@@ -477,7 +411,7 @@ class PM2SyncAutomation {
       this.log('Attempting to fix build issues...');
 
       // Clear build cache
-      const cacheDirs = ['.next', 'dist', 'build', 'node_modules/.cache'];
+      const cacheDirs = ['.next', 'dist', 'build', '''node_modules/.cache'''];
       cacheDirs.forEach(dir => {
         if (fs.existsSync(dir)) {
           fs.rmSync(dir, { recursive: true, force: true });
@@ -494,8 +428,7 @@ class PM2SyncAutomation {
 
       // Try build again
       await this.performBuild();
-    } catch (error) {
-      this.log(`Failed to fix build issues: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to fix build issues: ${error.message}`, 'ERROR');
       this.errorCount++;
     }
   }
@@ -515,8 +448,7 @@ class PM2SyncAutomation {
 
       this.log('Tests completed successfully');
       this.lastTest = Date.now();
-    } catch (error) {
-      this.log(`Tests failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Tests failed: ${error.message}`, 'ERROR');
       await this.fixTestIssues();
     }
   }
@@ -535,8 +467,7 @@ class PM2SyncAutomation {
 
       // Try tests again
       await this.runTests();
-    } catch (error) {
-      this.log(`Failed to fix test issues: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to fix test issues: ${error.message}`, 'ERROR');
       this.errorCount++;
     }
   }
@@ -556,16 +487,14 @@ class PM2SyncAutomation {
         });
         this.log('Security vulnerabilities fixed');
       } catch (error) {
-        this.log(
-          'Some vulnerabilities could not be fixed automatically',
+        this.log(Some vulnerabilities could not be fixed automatically',
           'WARN'
         );
       }
 
       this.log('Security scan completed');
       this.lastSecurity = Date.now();
-    } catch (error) {
-      this.log(`Security scan failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Security scan failed: ${error.message}`, 'ERROR');
       this.errorCount++;
     }
   }
@@ -586,8 +515,7 @@ class PM2SyncAutomation {
     this.log('PM2 Sync Automation System stopped');
   }
 
-  restartAfterDelay(delay = 5000) {
-    this.log(`Restarting in ${delay}ms...`);
+  restartAfterDelay(delay = 5000) {this.log(`Restarting in ${delay}ms...`);
     setTimeout(() => {
       this.initialize();
     }, delay);

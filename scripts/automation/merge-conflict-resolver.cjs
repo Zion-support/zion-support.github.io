@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -10,8 +10,7 @@ class MergeConflictResolver {
     this.conflictsResolved = 0;
     this.conflictsFound = [];
     this.logFile = path.join(
-      this.projectRoot,
-      'merge-conflict-resolver-report.json'
+      this.projectRoot,merge-conflict-resolver-report.json'
     );
     this.isRunning = false;
     this.checkInterval = 2 * 60 * 1000; // Check every 2 minutes
@@ -51,22 +50,19 @@ class MergeConflictResolver {
 
       const conflicts = await this.findMergeConflicts();
 
-      if (conflicts.length > 0) {
-        this.log(`⚠️ Found ${conflicts.length} merge conflicts`);
+      if (conflicts.length > 0) {this.log(`⚠️ Found ${conflicts.length} merge conflicts`);
         this.conflictsFound = conflicts;
 
         for (const conflict of conflicts) {
           await this.resolveConflict(conflict);
         }
-
-        this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
+this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
       } else {
         this.log('✅ No merge conflicts found');
       }
 
       this.saveReport();
-    } catch (error) {
-      this.log(`❌ Error during conflict resolution: ${error.message}`);
+    } catch (error) {this.log(`❌ Error during conflict resolution: ${error.message}`);
     }
   }
 
@@ -87,8 +83,7 @@ class MergeConflictResolver {
             markers: this.extractConflictMarkers(content),
           });
         }
-      } catch (error) {
-        this.log(`⚠️ Could not read ${file}: ${error.message}`);
+      } catch (error) {this.log(`⚠️ Could not read ${file}: ${error.message}`);
       }
     }
 
@@ -124,8 +119,7 @@ class MergeConflictResolver {
   }
 
   async resolveConflict(conflict) {
-    try {
-      this.log(`🔧 Resolving conflict in ${conflict.file}`);
+    try {this.log(`🔧 Resolving conflict in ${conflict.file}`);
 
       const content = fs.readFileSync(conflict.file, 'utf8');
       let resolvedContent = content;
@@ -137,23 +131,17 @@ class MergeConflictResolver {
       );
 
       if (resolvedContent !== content) {
-        fs.writeFileSync(conflict.file, resolvedContent);
-        this.log(`✅ Auto-resolved conflict in ${conflict.file}`);
+        fs.writeFileSync(conflict.file, resolvedContent);this.log(`✅ Auto-resolved conflict in ${conflict.file}`);
         this.conflictsResolved++;
 
         // Stage the resolved file
-        try {
-          execSync(`git add "${conflict.file}"`, { stdio: 'pipe' });
-          this.log(`📝 Staged resolved file ${conflict.file}`);
-        } catch (error) {
-          this.log(`⚠️ Could not stage ${conflict.file}: ${error.message}`);
+        try {execSync(`git add "${conflict.file}"`, { stdio: 'pipe' });this.log(`📝 Staged resolved file ${conflict.file}`);
+        } catch (error) {this.log(`⚠️ Could not stage ${conflict.file}: ${error.message}`);
         }
-      } else {
-        this.log(`⚠️ Could not auto-resolve conflict in ${conflict.file}`);
+      } else {this.log(`⚠️ Could not auto-resolve conflict in ${conflict.file}');
       }
     } catch (error) {
-      this.log(
-        `❌ Error resolving conflict in ${conflict.file}: ${error.message}`
+      this.log(❌ Error resolving conflict in ${conflict.file}: ${error.message}'
       );
     }
   }
@@ -295,8 +283,7 @@ class MergeConflictResolver {
 
     // Fix JSX syntax
     fixed = fixed.replace(
-      /<>([\s\S]*?)<\/>/g,
-      '<React.Fragment>$1</React.Fragment>'
+      /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>'
     );
 
     return fixed;
@@ -309,8 +296,7 @@ class MergeConflictResolver {
         .trim()
         .split('\n')
         .filter(line => line.length > 0);
-    } catch (error) {
-      this.log(`❌ Could not check git status: ${error.message}`);
+    } catch (error) {this.log(`❌ Could not check git status: ${error.message}`);
       return [];
     }
   }
@@ -322,17 +308,13 @@ class MergeConflictResolver {
         line => line.startsWith('M ') || line.startsWith('A ')
       );
 
-      if (resolvedFiles.length > 0) {
-        this.log(`📝 Committing ${resolvedFiles.length} resolved files...`);
-
-        const message = `Auto-resolve merge conflicts: ${resolvedFiles.length} files resolved`;
-        execSync(`git commit -m "${message}"`, { stdio: 'pipe' });
+      if (resolvedFiles.length > 0) {this.log(`📝 Committing ${resolvedFiles.length} resolved files...`);
+const message = `Auto-resolve merge conflicts: ${resolvedFiles.length} files resolved`;execSync(`git commit -m "${message}"`, { stdio: 'pipe' });
 
         this.log('✅ Conflicts committed successfully');
         return true;
       }
-    } catch (error) {
-      this.log(`❌ Could not commit resolved conflicts: ${error.message}`);
+    } catch (error) {this.log(`❌ Could not commit resolved conflicts: ${error.message}`);
     }
 
     return false;

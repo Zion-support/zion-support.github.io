@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Smart Testing Automation - PM2 Automation
@@ -15,18 +15,15 @@ class SmartTestingAutomation {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'smart-testing-automation.log'
     );
     this.testResultsLog = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'test-results.json'
     );
     this.coverageLog = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'test-coverage.json'
     );
     this.ensureLogsDirectory();
@@ -47,26 +44,17 @@ class SmartTestingAutomation {
           testType: 'utility',
         },
         {
-          pattern: /export\s+const\s+([a-z][a-zA-Z0-9]*)\s*=/g,
-          testType: 'utility',
-        },
-      ],
+          pattern: /export\s+const\s+([a-z]['a-zA-Z0-9]*)\s*=/g', 'testType: 'utility'', '}', ''],
       hooks: [
         {
-          pattern: /export\s+(?:default\s+)?function\s+use([A-Z][a-zA-Z0-9]*)/g,
-          testType: 'hook',
-        },
-      ],
+          pattern: /export\s+(?:default\s+)?function\s+use([A-Z]['a-zA-Z0-9]*)/g', 'testType: 'hook'', '}', ''],
       utils: [
         {
           pattern: /export\s+(?:default\s+)?function\s+([a-z][a-zA-Z0-9]*)/g,
           testType: 'utility',
         },
         {
-          pattern: /export\s+(?:default\s+)?const\s+([a-z][a-zA-Z0-9]*)\s*=/g,
-          testType: 'utility',
-        },
-      ],
+          pattern: /export\s+(?:default\s+)?const\s+([a-z]['a-zA-Z0-9]*)\s*=/g', 'testType: 'utility'', '}', ''],
     };
   }
 
@@ -81,8 +69,7 @@ class SmartTestingAutomation {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async runSmartTesting() {
@@ -129,8 +116,7 @@ class SmartTestingAutomation {
       if (generatedTests.length > 0 || fixedTests.length > 0) {
         await this.commitTestImprovements(generatedTests, fixedTests);
       }
-    } catch (error) {
-      this.log(`Smart testing automation failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Smart testing automation failed: ${error.message}`, 'ERROR');
     }
 
     return { testResults, coverageData, generatedTests };
@@ -154,8 +140,7 @@ class SmartTestingAutomation {
         this.log('📊 Running Jest coverage analysis...');
 
         try {
-          const coverageOutput = execSync(
-            'npm run test -- --coverage --watchAll=false',
+          const coverageOutput = execSync(npm run test -- --coverage --watchAll=false',
             {
               cwd: this.projectRoot,
               stdio: 'pipe',
@@ -166,16 +151,14 @@ class SmartTestingAutomation {
           // Parse coverage output
           const coverageData = this.parseCoverageOutput(coverageOutput);
           Object.assign(coverage, coverageData);
-        } catch (error) {
-          this.log(`Coverage analysis failed: ${error.message}`, 'WARN');
+        } catch (error) {this.log(`Coverage analysis failed: ${error.message}`, 'WARN');
         }
       }
 
       // Analyze test files structure
       const testStructure = this.analyzeTestStructure();
       Object.assign(coverage, testStructure);
-    } catch (error) {
-      this.log(`Coverage analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Coverage analysis failed: ${error.message}`, 'ERROR');
     }
 
     return coverage;
@@ -225,16 +208,7 @@ class SmartTestingAutomation {
     const srcDir = path.join(this.projectRoot, 'src');
 
     if (fs.existsSync(testsDir)) {
-      const testFiles = this.getAllFiles(testsDir, [
-        '.test.js',
-        '.test.ts',
-        '.test.jsx',
-        '.test.tsx',
-        '.spec.js',
-        '.spec.ts',
-        '.spec.jsx',
-        '.spec.tsx',
-      ]);
+      const testFiles = this.getAllFiles(testsDir, ['.test.js'', '.test.ts', '.test.jsx'', '.test.tsx', '.spec.js'', '.spec.ts', '.spec.jsx'', '.spec.tsx', '']);
       structure.testFiles = testFiles.length;
 
       for (const testFile of testFiles) {
@@ -267,13 +241,13 @@ class SmartTestingAutomation {
     const describeMatches = content.match(/describe\(/g);
     analysis.suites = describeMatches ? describeMatches.length : 0;
 
-    // Count test cases (it/test blocks)
+    // Count test cases (''it/test'' blocks)
     const testMatches = content.match(/(?:it|test)\(/g);
     analysis.cases = testMatches ? testMatches.length : 0;
 
     // Identify what's being tested
     const componentMatches = content.match(
-      /import\s+{?\s*([A-Z][a-zA-Z0-9]*)\s*}?\s+from/g
+      /import\s+{?\s*([A-Z][a-zA-Z0-9]*)\s*}?\s+''from/g''
     );
     if (componentMatches) {
       componentMatches.forEach(match => {
@@ -300,12 +274,7 @@ class SmartTestingAutomation {
       return untested;
     }
 
-    const sourceFiles = this.getAllFiles(srcDir, [
-      '.tsx',
-      '.ts',
-      '.jsx',
-      '.js',
-    ]);
+    const sourceFiles = this.getAllFiles(srcDir, ['.tsx'', '.ts', '.jsx'', '.js', '']);
 
     for (const file of sourceFiles) {
       try {
@@ -313,7 +282,7 @@ class SmartTestingAutomation {
         const fileAnalysis = this.analyzeSourceFile(content, file);
 
         // Check if each exported item has tests
-        for (const [category, items] of Object.entries(fileAnalysis)) {
+        for (const ['category', 'items'] of Object.entries(fileAnalysis)) {
           for (const item of items) {
             if (!this.hasTestForItem(item, category)) {
               untested[category].push({
@@ -328,8 +297,7 @@ class SmartTestingAutomation {
           }
         }
       } catch (error) {
-        this.log(
-          `Error analyzing source file ${file}: ${error.message}`,
+        this.log(Error analyzing source file ${file}: ${error.message}',
           'WARN'
         );
       }
@@ -346,7 +314,7 @@ class SmartTestingAutomation {
     };
 
     // Analyze each test pattern category
-    for (const [category, patterns] of Object.entries(this.testPatterns)) {
+    for (const ['category', 'patterns'] of Object.entries(this.testPatterns)) {
       for (const pattern of patterns) {
         const matches = content.matchAll(pattern.pattern);
         for (const match of matches) {
@@ -378,16 +346,7 @@ class SmartTestingAutomation {
     const testsDir = path.join(this.projectRoot, 'tests');
     if (!fs.existsSync(testsDir)) return false;
 
-    const testFiles = this.getAllFiles(testsDir, [
-      '.test.js',
-      '.test.ts',
-      '.test.jsx',
-      '.test.tsx',
-      '.spec.js',
-      '.spec.ts',
-      '.spec.jsx',
-      '.spec.tsx',
-    ]);
+    const testFiles = this.getAllFiles(testsDir, ['.test.js'', '.test.ts', '.test.jsx'', '.test.tsx', '.spec.js'', '.spec.ts', '.spec.jsx'', '.spec.tsx', '']);
 
     for (const testFile of testFiles) {
       try {
@@ -406,7 +365,7 @@ class SmartTestingAutomation {
   async generateMissingTests(untestedItems) {
     const generatedTests = [];
 
-    for (const [category, items] of Object.entries(untestedItems)) {
+    for (const ['category', 'items'] of Object.entries(untestedItems)) {
       if (category === 'total') continue;
 
       for (const item of items) {
@@ -424,13 +383,11 @@ class SmartTestingAutomation {
             timestamp: new Date().toISOString(),
           });
 
-          this.log(
-            `Generated test for ${item.name} in ${testFilePath}`,
+          this.log(Generated test for ${item.name} in ${testFilePath}',
             'INFO'
           );
         } catch (error) {
-          this.log(
-            `Failed to generate test for ${item.name}: ${error.message}`,
+          this.log(Failed to generate test for ${item.name}: ${error.message}',
             'ERROR'
           );
         }
@@ -450,9 +407,8 @@ class SmartTestingAutomation {
     return testTemplates[item.type] || testTemplates.utility;
   }
 
-  getComponentTestTemplate(item) {
-    return `import React from 'react';
-import { render, screen } from '@testing-library/react';
+  getComponentTestTemplate(item) {return `import React from 'react';
+import { render, screen } from '@testing-''library/react''';
 import { ${item.name} } from '${this.getRelativeImportPath(item.file)}';
 
 describe('${item.name}', () => {
@@ -470,12 +426,11 @@ describe('${item.name}', () => {
     render(<${item.name} />);
     // Add interaction tests based on component behavior
   });
-});
-`;
+});;
   }
 
   getUtilityTestTemplate(item) {
-    return `import { ${item.name} } from '${this.getRelativeImportPath(item.file)}';
+    return 'import { ${item.name} } from '${this.getRelativeImportPath(item.file)}';
 
 describe('${item.name}', () => {
   it('should work correctly with valid input', () => {
@@ -490,12 +445,11 @@ describe('${item.name}', () => {
   it('should handle invalid input gracefully', () => {
     // Add error handling tests
   });
-});
-`;
+});;
   }
 
   getHookTestTemplate(item) {
-    return `import { renderHook, act } from '@testing-library/react';
+    return 'import { renderHook, act } from '@testing-''library/react''';
 import { ${item.name} } from '${this.getRelativeImportPath(item.file)}';
 
 describe('${item.name}', () => {
@@ -520,8 +474,7 @@ describe('${item.name}', () => {
     unmount();
     // Verify cleanup logic
   });
-});
-`;
+});;
   }
 
   getRelativeImportPath(filePath) {
@@ -586,8 +539,7 @@ describe('${item.name}', () => {
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
 
-      this.log(
-        `Tests completed: ${results.passed} passed, ${results.failed} failed`
+      this.log(Tests completed: ${results.passed} passed, ${results.failed} failed'
       );
     } catch (error) {
       results.success = false;
@@ -601,8 +553,7 @@ describe('${item.name}', () => {
       } catch (parseError) {
         this.log(`Failed to parse test output: ${parseError.message}`, 'WARN');
       }
-
-      this.log(`Tests failed: ${error.message}`, 'ERROR');
+this.log(`Tests failed: ${error.message}`, 'ERROR');
     }
 
     return results;
@@ -640,13 +591,11 @@ describe('${item.name}', () => {
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
 
-      this.log(
-        `New tests completed: ${results.passed} passed, ${results.failed} failed`
+      this.log(New tests completed: ${results.passed} passed, ${results.failed} failed'
       );
     } catch (error) {
       results.success = false;
-      results.errors.push(error.message);
-      this.log(`New tests failed: ${error.message}`, 'ERROR');
+      results.errors.push(error.message);this.log(`New tests failed: ${error.message}`, 'ERROR');
     }
 
     return results;
@@ -692,14 +641,12 @@ describe('${item.name}', () => {
             fixedTests.push(failure);
           }
         } catch (error) {
-          this.log(
-            `Failed to fix test failure in ${failure.testFile}: ${error.message}`,
+          this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}',
             'ERROR'
           );
         }
       }
-    } catch (error) {
-      this.log(`Auto-fix process failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Auto-fix process failed: ${error.message}`, 'ERROR');
     }
 
     return fixedTests;
@@ -745,8 +692,7 @@ describe('${item.name}', () => {
     // Save coverage data
     fs.writeFileSync(this.coverageLog, JSON.stringify(coverageData, null, 2));
 
-    this.log(
-      `Test report generated: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed`
+    this.log(Test report generated: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed'
     );
   }
 
@@ -757,19 +703,15 @@ describe('${item.name}', () => {
       // Stage all changes
       execSync('git add .', { cwd: this.projectRoot, stdio: 'pipe' });
 
-      // Commit with descriptive message
-      const commitMessage = `🧪 Test Improvements: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed`;
-      execSync(`git commit -m "${commitMessage}"`, {
+      // Commit with descriptive messageconst commitMessage = `🧪 Test Improvements: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed`;execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
         stdio: 'pipe',
       });
 
-      this.log(
-        `Committed test improvements: ${generatedTests.length} generated, ${fixedTests.length} fixed`,
+      this.log(Committed test improvements: ${generatedTests.length} generated, ${fixedTests.length} fixed',
         'INFO'
       );
-    } catch (error) {
-      this.log(`Failed to commit test improvements: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to commit test improvements: ${error.message}`, 'ERROR');
     }
   }
 
@@ -781,11 +723,11 @@ describe('${item.name}', () => {
     const items = fs.readdirSync(dir);
 
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath = path.join(dir, 'item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        files.push(...this.getAllFiles(fullPath, extensions));
+        files.push(...this.getAllFiles(fullPath', extensions));
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
@@ -801,8 +743,7 @@ describe('${item.name}', () => {
     try {
       await this.runSmartTesting();
       this.log('🧪 Smart Testing Automation completed successfully');
-    } catch (error) {
-      this.log(`Smart Testing Automation failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Smart Testing Automation failed: ${error.message}`, 'ERROR');
     }
   }
 }

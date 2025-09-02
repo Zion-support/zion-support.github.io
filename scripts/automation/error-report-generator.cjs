@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -12,8 +12,7 @@ class ErrorReportGenerator {
   }
 
   log(message) {
-    console.log(
-      `[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`
+    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}'
     );
   }
 
@@ -24,7 +23,7 @@ class ErrorReportGenerator {
       await this.generateErrorReport();
       this.log('Error report generation completed.');
     } catch (error) {
-      this.log(`Error during report generation: ${error.message}`);
+      this.log(Error during report generation: ${error.message}`);
     }
   }
 
@@ -41,8 +40,7 @@ class ErrorReportGenerator {
     try {
       // TypeScript check
       try {
-        const typeCheckResult = execSync(
-          'npx tsc --noEmit --pretty false 2>&1',
+        const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1',
           {
             encoding: 'utf8',
           }
@@ -67,7 +65,7 @@ class ErrorReportGenerator {
         });
         report.projectStatus.eslint = {
           status: 'error',
-          errorCount: (lintResult.match(/error/g) || []).length,
+          errorCount: (lintResult.match(/''error/g'') || []).length,
           details: lintResult,
         };
       } catch (error) {
@@ -98,9 +96,7 @@ class ErrorReportGenerator {
       // Save report
       const timestamp = Date.now();
       const reportPath = path.join(
-        this.projectRoot,
-        'error-reports',
-        `comprehensive-error-report-${timestamp}.json`
+        this.projectRoot,error-reports', `comprehensive-error-report-${timestamp}.json`
       );
 
       const dir = path.dirname(reportPath);
@@ -108,10 +104,8 @@ class ErrorReportGenerator {
         fs.mkdirSync(dir, { recursive: true });
       }
 
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      this.log(`Error report saved to: ${reportPath}`);
-    } catch (error) {
-      this.log(`Error generating report: ${error.message}`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Error report saved to: ${reportPath}`);
+    } catch (error) {this.log(`Error generating report: ${error.message}`);
     }
   }
 
@@ -127,8 +121,7 @@ class ErrorReportGenerator {
     }
 
     if (report.projectStatus.build?.status === 'error') {
-      recommendations.push(
-        'Fix build errors to ensure project compiles correctly'
+      recommendations.push(Fix build errors to ensure project compiles correctly'
       );
     }
 

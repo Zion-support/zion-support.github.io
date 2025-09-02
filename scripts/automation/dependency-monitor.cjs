@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -46,9 +46,7 @@ class DependencyMonitor {
     if (outdatedResult.success) {
       try {
         const outdatedData = JSON.parse(outdatedResult.output);
-        if (Object.keys(outdatedData).length > 0) {
-          this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, 'warn');
-          this.errorsFound.push(`Outdated dependencies: ${Object.keys(outdatedData).join(', ')}`);
+        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, 'warn');this.errorsFound.push(`Outdated dependencies: ${Object.keys(outdatedData).join(', ')}`);
         } else {
           this.log('All dependencies are up to date', 'success');
         }
@@ -63,9 +61,7 @@ class DependencyMonitor {
       try {
         const auditData = JSON.parse(auditResult.output);
         if (auditData.vulnerabilities) {
-          const vulnCount = Object.keys(auditData.vulnerabilities).length;
-          this.log(`Found ${vulnCount} security vulnerabilities`, 'warn');
-          this.errorsFound.push(`Security vulnerabilities: ${vulnCount} found`);
+          const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, 'warn');this.errorsFound.push(`Security vulnerabilities: ${vulnCount} found`);
         } else {
           this.log('No security vulnerabilities found', 'success');
         }
@@ -99,7 +95,6 @@ class DependencyMonitor {
 
     await this.ensureDirectoryExists(path.dirname(this.logFile));
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
-    
     this.log(`Dependency monitor report generated: ${this.logFile}`);
   }
 
@@ -111,9 +106,7 @@ class DependencyMonitor {
       await this.generateReport();
       
       this.log('Dependency monitoring completed', 'success');
-    } catch (error) {
-      this.log(`Error during dependency monitoring: ${error.message}`, 'error');
-      this.errorsFound.push(`Process error: ${error.message}`);
+    } catch (error) {this.log(`Error during dependency monitoring: ${error.message}`, 'error');this.errorsFound.push(`Process error: ${error.message}`);
       await this.generateReport();
     }
   }

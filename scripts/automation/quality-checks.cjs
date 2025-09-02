@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Starting continuous quality checks automation...');
+console.log(`'🔍 Starting continuous quality checks automation...');
 
 // Get automation interval from environment variable (default: 3 hours)
 const AUTOMATION_INTERVAL =
@@ -12,15 +12,15 @@ const AUTOMATION_INTERVAL =
 
 async function runQualityChecks() {
   try {
-    console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
+    console.log(`🔍 Running quality checks at ${new Date().toISOString()});
 
     // Run linting
-    console.log('🔍 Running ESLint...');
+    console.log(`'🔍 Running ESLint...');
     try {
       execSync('npm run lint', { stdio: 'inherit' });
-      console.log('✅ ESLint completed successfully');
+      console.log('✅ ESLint completed successfully'`);
     } catch (error) {
-      console.log('⚠️  ESLint issues found but continuing...');
+      console.log(`'⚠️  ESLint issues found but continuing...');
     }
 
     // Run type checking
@@ -86,8 +86,7 @@ async function runQualityChecks() {
     };
 
     const reportPath = path.join(process.cwd(), 'quality-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Quality report saved to ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Quality report saved to ${reportPath});
 
     console.log('✅ Continuous quality checks completed successfully');
   } catch (error) {
@@ -98,8 +97,7 @@ async function runQualityChecks() {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   // Run initial quality checks
@@ -110,9 +108,8 @@ async function runContinuous() {
     await runQualityChecks();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    `✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+  console.log( ✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

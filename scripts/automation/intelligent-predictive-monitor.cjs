@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Zion Tech Group - Intelligent Predictive Monitor
@@ -41,7 +41,7 @@ class IntelligentPredictiveMonitor {
           reject(err);
           return;
         }
-        console.log('✅ Connected to PM2 for predictive monitoring');
+        console.log(`'✅ Connected to PM2 for predictive monitoring');
         this.startMonitoring();
         resolve();
       });
@@ -52,7 +52,7 @@ class IntelligentPredictiveMonitor {
     try {
       await fs.mkdir(this.reportDir, { recursive: true });
     } catch (error) {
-      console.log('Report directory already exists');
+      console.log(`'Report directory already exists');
     }
   }
 
@@ -129,8 +129,7 @@ class IntelligentPredictiveMonitor {
     console.log(`📊 Pattern Analysis:
       Memory Trend: ${memoryTrend > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
       CPU Trend: ${cpuTrend > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Error Trend: ${errorTrend > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly}`);
+      Error Trend: ${errorTrend > 0 ? '↗️ Increasing' : '↘️ Decreasing'}Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly});
   }
 
   calculateTrend(data) {
@@ -179,10 +178,10 @@ class IntelligentPredictiveMonitor {
       this.generateOptimizationSuggestions();
     this.predictions.nextMaintenance = this.predictNextMaintenance();
 
-    console.log(`🔮 Predictions:
+    console.log(🔮 Predictions:
       Failure Probability: ${(this.predictions.failureProbability * 100).toFixed(2)}%
       Performance Score: ${(this.predictions.performanceScore * 100).toFixed(2)}%
-      Next Maintenance: ${this.predictions.nextMaintenance}`);
+      Next Maintenance: ${this.predictions.nextMaintenance}');
   }
 
   calculateFailureProbability(errorRate, memoryUsage, cpuUsage) {
@@ -218,8 +217,7 @@ class IntelligentPredictiveMonitor {
 
     if (memoryUsage > 1024 * 1024 * 1024) {
       // > 1GB
-      suggestions.push(
-        'Consider increasing memory limits or optimizing memory usage'
+      suggestions.push(Consider increasing memory limits or optimizing memory usage'
       );
     }
 
@@ -254,9 +252,8 @@ class IntelligentPredictiveMonitor {
 
   async optimizePerformance() {
     if (this.predictions.failureProbability > this.mlModel.failureThreshold) {
-      console.log(
-        '🚨 High failure probability detected - initiating preventive measures'
-      );
+      console.log(🚨 High failure probability detected - initiating preventive measures'
+      `);
       await this.initiatePreventiveMeasures();
     }
 
@@ -273,8 +270,7 @@ class IntelligentPredictiveMonitor {
 
       processes.forEach(process => {
         if (process.pm2_env.restart_time > 5) {
-          console.log(
-            `🔄 Restarting ${process.name} due to high restart count`
+          console.log(🔄 Restarting ${process.name} due to high restart count'
           );
           pm2.restart(process.name);
         }
@@ -289,8 +285,7 @@ class IntelligentPredictiveMonitor {
 
       processes.forEach(process => {
         if (process.monit.memory > 1024 * 1024 * 1024) {
-          // > 1GB
-          console.log(`💾 Optimizing memory for ${process.name}`);
+          // > 1GBconsole.log(💾 Optimizing memory for ${process.name}');
           // Could implement memory optimization strategies here
         }
       });
@@ -322,12 +317,11 @@ class IntelligentPredictiveMonitor {
     };
 
     const reportPath = path.join(
-      this.reportDir,
-      `predictive-report-${Date.now()}.json`
+      this.reportDir,predictive-report-${Date.now()}.json'
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
-    console.log(`📊 Predictive report saved to ${reportPath}`);
+    console.log(📊 Predictive report saved to ${reportPath}``);
   }
 }
 

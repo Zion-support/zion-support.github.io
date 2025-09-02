@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -15,7 +15,7 @@ class ErrorPreventionMonitor {
   }
 
   ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
+    ['this.logsPath', 'this.reportsPath'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -25,7 +25,7 @@ class ErrorPreventionMonitor {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
 
     const logFile = path.join(this.logsPath, 'error-prevention-monitor.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -45,14 +45,12 @@ class ErrorPreventionMonitor {
         const errors = this.analyzeFileForPotentialErrors(filePath, content);
         potentialErrors.push(...errors);
       } catch (error) {
-        this.log(
-          `⚠️ Could not read file ${filePath}: ${error.message}`,
+        this.log(⚠️ Could not read file ${filePath}: ${error.message}',
           'WARN'
         );
       }
     }
-
-    this.log(`Found ${potentialErrors.length} potential error patterns`);
+this.log(Found ${potentialErrors.length} potential error patterns`);
     return potentialErrors;
   }
 
@@ -135,27 +133,16 @@ class ErrorPreventionMonitor {
   }
 
   detectUnsafeCode(line) {
-    const unsafePatterns = [
-      /eval\s*\(/,
-      /Function\s*\(/,
-      /innerHTML\s*=/,
-      /outerHTML\s*=/,
-      /document\.write\s*\(/,
-      /setTimeout\s*\([^,]*,\s*0\)/,
-      /setInterval\s*\([^,]*,\s*0\)/,
-    ];
+    const unsafePatterns = ['/eval\s*\(/', '/Function\s*\(/', '/innerHTML\s*=/', '/outerHTML\s*=/', '/document\.write\s*\(/', '/setTimeout\s*\([^', '']*,\s*0\)/,
+      /setInterval\s*\(['^', ']*', '\s*0\)/', ''];
 
     return unsafePatterns.some(pattern => pattern.test(line));
   }
 
   detectMemoryLeak(line) {
-    const memoryLeakPatterns = [
-      /addEventListener\s*\([^,]*,\s*[^,]*,\s*false\)/,
-      /setInterval\s*\([^,]*,\s*\d+\)/,
-      /setTimeout\s*\([^,]*,\s*\d+\)/,
-      /new\s+Promise\s*\(/,
-      /fetch\s*\(/,
-    ];
+    const memoryLeakPatterns = ['/addEventListener\s*\([^', '']*,\s*['^', '']*,\s*false\)/,
+      /setInterval\s*\(['^', '']*,\s*\d+\)/,
+      /setTimeout\s*\(['^', ']*', '\s*\d+\)/', '/new\s+Promise\s*\(/', '/fetch\s*\(/', ''];
 
     return memoryLeakPatterns.some(pattern => pattern.test(line));
   }
@@ -163,30 +150,24 @@ class ErrorPreventionMonitor {
   detectAsyncError(line) {
     const asyncErrorPatterns = [
       /\.then\s*\([^)]*\)/,
-      /\.catch\s*\([^)]*\)/,
-      /async\s+function/,
-      /await\s+/,
-    ];
+      /\.catch\s*\(['^)]*\)/', '/async\s+function/', '/await\s+/', ''];
 
     return asyncErrorPatterns.some(pattern => pattern.test(line));
   }
 
   detectTypeIssue(line) {
-    const typeIssuePatterns = [
-      /:\s*any\s*[=,]/,
+    const typeIssuePatterns = ['/:\s*any\s*[=', '']/,
       /as\s+any/,
       /<any>/,
       /any\[\]/,
       /Record<string,\s*any>/,
-      /{[^}]*:\s*any[^}]*}/,
-    ];
+      /{[^}]*:\s*any['^}]*}/', ''];
 
     return typeIssuePatterns.some(pattern => pattern.test(line));
   }
 
   async applyPreventiveFixes(potentialErrors) {
-    this.log(
-      `🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`
+    this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...'
     );
 
     let fixedCount = 0;
@@ -205,9 +186,7 @@ class ErrorPreventionMonitor {
           timestamp: new Date().toISOString(),
         });
       } catch (fixError) {
-        this.log(
-          `❌ Error applying preventive fix: ${fixError.message}`,
-          'ERROR'
+        this.log( `❌ Error applying preventive fix: ${fixError.message}',ERROR'
         );
         fixResults.push({
           error,
@@ -270,15 +249,13 @@ class ErrorPreventionMonitor {
 
       if (fixed) {
         lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join('\n'));
-        this.log(`✅ Applied preventive fix in ${filePath}:${error.line}`);
+        fs.writeFileSync(filePath, lines.join('\n'));this.log(`✅ Applied preventive fix in ${filePath}:${error.line}');
         return true;
       }
 
       return false;
     } catch (fixError) {
-      this.log(
-        `❌ Failed to apply preventive fix: ${fixError.message}`,
+      this.log(❌ Failed to apply preventive fix: ${fixError.message}',
         'ERROR'
       );
       return false;
@@ -296,8 +273,7 @@ class ErrorPreventionMonitor {
     // Replace innerHTML with textContent where possible
     if (line.includes('.innerHTML =')) {
       fixedLine = line.replace(
-        /\.innerHTML\s*=\s*([^;]+)/g,
-        '.textContent = $1'
+        /\.innerHTML\s*=\s*([^;]+)/g,.textContent = $1'
       );
     }
 
@@ -310,8 +286,7 @@ class ErrorPreventionMonitor {
     // Add cleanup for event listeners
     if (line.includes('addEventListener')) {
       fixedLine = line.replace(
-        /addEventListener\s*\(([^,]+),\s*([^,]+),\s*false\)/g,
-        'addEventListener($1, $2, { once: true })'
+        /addEventListener\s*\((['^', '']+),\s*(['^', '']+),\s*false\)/g,addEventListener($1, $2, { once: true })'
       );
     }
 
@@ -334,11 +309,11 @@ class ErrorPreventionMonitor {
 
     // Replace any with more specific types
     if (line.includes(': any')) {
-      fixedLine = line.replace(/: any/g, ': unknown');
+      fixedLine = line.replace(/: ''any/g'', ': unknown');
     }
 
     if (line.includes('as any')) {
-      fixedLine = line.replace(/as any/g, 'as unknown');
+      fixedLine = line.replace(/as ''any/g'', 'as unknown');
     }
 
     return fixedLine;
@@ -360,17 +335,11 @@ class ErrorPreventionMonitor {
             : 100,
       },
       fixResults: fixResults.results,
-      recommendations: [
-        'Review applied fixes to ensure they meet your requirements',
-        'Consider adding more specific type annotations',
-        'Implement proper error handling for async operations',
-        'Regularly review code for potential security issues',
-      ],
+      recommendations: ['Review applied fixes to ensure they meet your requirements'', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations'', 'Regularly review code for potential security issues', ''],
     };
 
     const reportFile = path.join(
-      this.reportsPath,
-      'error-prevention-monitor-report.json'
+      this.reportsPath,error-prevention-monitor-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
@@ -396,8 +365,7 @@ class ErrorPreventionMonitor {
       // Generate report
       const report = await this.generateReport(fixResults);
 
-      this.log('🎉 Error Prevention Monitor completed!');
-      this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
+      this.log('🎉 Error Prevention Monitor completed!');this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
 
       return {
         success: fixResults.fixedCount > 0,
@@ -405,8 +373,7 @@ class ErrorPreventionMonitor {
         fixed: fixResults.fixedCount,
         report,
       };
-    } catch (error) {
-      this.log(`💥 Error Prevention Monitor failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`💥 Error Prevention Monitor failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }

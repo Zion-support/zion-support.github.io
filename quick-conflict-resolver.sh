@@ -49,10 +49,8 @@ resolve_file_conflicts() {
         cp "$file" "${file}.backup.$(date +%s)"
         
         # Remove conflict markers and keep the most recent version
-        sed -i '/^<<<<<<< /d' "$file"
-        sed -i '/^=======$/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        
+        sed -i '/^        sed -i '/^=======$/d' "$file"
+        sed -i '/^        
         git add "$file"
     else
         # For other files, use main branch version

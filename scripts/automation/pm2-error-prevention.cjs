@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * PM2 Error Prevention Automation
@@ -21,7 +21,7 @@ class PM2ErrorPrevention {
   }
 
   async start() {
-    console.log('🚀 Starting PM2 Error Prevention Automation...');
+    console.log(`'🚀 Starting PM2 Error Prevention Automation...');
 
     // Set up monitoring
     this.setupMonitoring();
@@ -34,7 +34,7 @@ class PM2ErrorPrevention {
     // Create PM2 ecosystem configuration for error prevention
     const ecosystemConfig = {
       name: 'error-prevention',
-      script: 'scripts/automation/pm2-error-prevention.cjs',
+      script: '''scripts/automation/pm2-error-prevention.cjs''',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -47,15 +47,14 @@ class PM2ErrorPrevention {
 
     // Write PM2 ecosystem config
     const ecosystemPath = path.join(
-      this.projectRoot,
-      'ecosystem-error-prevention.config.cjs'
+      this.projectRoot,ecosystem-error-prevention.config.cjs'
     );
     fs.writeFileSync(
       ecosystemPath,
-      `module.exports = ${JSON.stringify(ecosystemConfig, null, 2)};`
-    );
+      module.exports = ${JSON.stringify(ecosystemConfig, null, 2)};
+    `);
 
-    console.log('✅ PM2 ecosystem configuration created');
+    console.log(`'✅ PM2 ecosystem configuration created');
   }
 
   startPreventionLoop() {
@@ -69,7 +68,7 @@ class PM2ErrorPrevention {
   }
 
   async runPreventionChecks() {
-    console.log('🔍 Running error prevention checks...');
+    console.log(`'🔍 Running error prevention checks...');
 
     // Check 1: TypeScript errors
     await this.checkTypeScriptErrors();
@@ -83,7 +82,7 @@ class PM2ErrorPrevention {
     // Check 4: Unused imports
     await this.checkUnusedImports();
 
-    console.log('✅ Prevention checks completed');
+    console.log(`'✅ Prevention checks completed');
   }
 
   async checkTypeScriptErrors() {
@@ -95,8 +94,7 @@ class PM2ErrorPrevention {
       });
 
       if (result.includes('error TS')) {
-        const errorCount = (result.match(/error TS/g) || []).length;
-        console.log(`⚠️  Found ${errorCount} TypeScript errors`);
+        const errorCount = (result.match(/error ''TS/g'') || []).length;console.log(⚠️  Found ${errorCount} TypeScript errors);
 
         if (this.config.autoFix && errorCount > this.config.maxErrors) {
           await this.autoFixTypeScriptErrors();
@@ -107,8 +105,7 @@ class PM2ErrorPrevention {
     } catch (error) {
       // TypeScript check failed, which means there are errors
       const errorOutput = error.stdout || error.stderr || '';
-      const errorCount = (errorOutput.match(/error TS/g) || []).length;
-      console.log(`⚠️  Found ${errorCount} TypeScript errors`);
+      const errorCount = (errorOutput.match(/error ''TS/g'') || []).length;console.log(⚠️  Found ${errorCount} TypeScript errors`);
 
       if (this.config.autoFix && errorCount > this.config.maxErrors) {
         await this.autoFixTypeScriptErrors();
@@ -129,21 +126,20 @@ class PM2ErrorPrevention {
       }
 
       // Check for duplicate imports
-      const importLines = content.match(/import.*from/g) || [];
+      const importLines = content.match(/import.*''from/g'') || [];
       const uniqueImports = new Set(importLines);
       if (importLines.length !== uniqueImports.size) {
         importIssues++;
       }
     }
 
-    if (importIssues > 0) {
-      console.log(`⚠️  Found ${importIssues} import issues`);
+    if (importIssues > 0) {console.log(⚠️  Found ${importIssues} import issues``);
 
       if (this.config.autoFix) {
         await this.autoFixImportIssues();
       }
     } else {
-      console.log('✅ No import issues found');
+      console.log(`'✅ No import issues found');
     }
   }
 
@@ -170,14 +166,13 @@ class PM2ErrorPrevention {
       }
     }
 
-    if (syntaxIssues > 0) {
-      console.log(`⚠️  Found ${syntaxIssues} syntax issues`);
+    if (syntaxIssues > 0) {console.log(`⚠️  Found ${syntaxIssues} syntax issues);
 
       if (this.config.autoFix) {
         await this.autoFixSyntaxIssues();
       }
     } else {
-      console.log('✅ No syntax issues found');
+      console.log(`'✅ No syntax issues found');
     }
   }
 
@@ -190,10 +185,9 @@ class PM2ErrorPrevention {
         stdio: 'pipe',
       });
 
-      const unusedImportCount = (result.match(/unused/g) || []).length;
+      const unusedImportCount = (result.match(/''unused/g'') || []).length;
 
-      if (unusedImportCount > 0) {
-        console.log(`⚠️  Found ${unusedImportCount} unused imports`);
+      if (unusedImportCount > 0) {console.log(⚠️  Found ${unusedImportCount} unused imports`);
 
         if (this.config.autoFix) {
           await this.autoFixUnusedImports();
@@ -212,7 +206,7 @@ class PM2ErrorPrevention {
 
     try {
       // Run the comprehensive error fixer
-      execSync('node scripts/automation/comprehensive-error-fixer.cjs', {
+      execSync('node ''scripts/automation/comprehensive-error-fixer.cjs''', {
         cwd: this.projectRoot,
         stdio: 'inherit',
       });
@@ -228,7 +222,7 @@ class PM2ErrorPrevention {
 
     try {
       // Run the import fixer
-      execSync('node scripts/automation/fix-imports.cjs', {
+      execSync('node ''scripts/automation/fix-imports.cjs''', {
         cwd: this.projectRoot,
         stdio: 'inherit',
       });
@@ -244,7 +238,7 @@ class PM2ErrorPrevention {
 
     try {
       // Run the syntax fixer
-      execSync('node scripts/automation/fix-syntax.cjs', {
+      execSync('node ''scripts/automation/fix-syntax.cjs''', {
         cwd: this.projectRoot,
         stdio: 'inherit',
       });

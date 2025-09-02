@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -15,7 +15,7 @@ class ESLintErrorCleaner {
   }
 
   ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
+    ['this.logsPath', 'this.reportsPath'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -25,7 +25,7 @@ class ESLintErrorCleaner {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
 
     const logFile = path.join(this.logsPath, 'eslint-error-cleaner.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -43,8 +43,7 @@ class ESLintErrorCleaner {
       return { success: true, output: result, errors: [] };
     } catch (error) {
       if (error.stdout) {
-        const errors = this.parseESLintErrors(error.stdout);
-        this.log(`❌ ESLint check failed with ${errors.length} errors`);
+        const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -76,8 +75,7 @@ class ESLintErrorCleaner {
   async fixESLintError(error) {
     const filePath = path.resolve(this.workspacePath, error.file);
 
-    if (!fs.existsSync(filePath)) {
-      this.log(`⚠️ File not found: ${filePath}`, 'WARN');
+    if (!fs.existsSync(filePath)) {this.log(`⚠️ File not found: ${filePath}`, 'WARN');
       return false;
     }
 
@@ -134,17 +132,14 @@ class ESLintErrorCleaner {
       if (fixed) {
         lines[lineIndex] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
-        this.log(
-          `✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})`
+        this.log(✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})'
         );
         return true;
       }
 
       return false;
     } catch (fixError) {
-      this.log(
-        `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,
-        'ERROR'
+      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}',ERROR'
       );
       return false;
     }
@@ -165,7 +160,7 @@ class ESLintErrorCleaner {
 
     // For function parameters, add underscore prefix
     if (line.includes('function') || line.includes('=>')) {
-      return line.replace(/(\w+)(?=\s*[,\)])/g, '_$1');
+      return line.replace(/(\w+)(?=\s*['', '\)'])/g, '_$1');
     }
 
     return line;
@@ -198,9 +193,7 @@ class ESLintErrorCleaner {
       for (let i = lineIndex - 1; i >= Math.max(0, lineIndex - 10); i--) {
         const prevLine = lines[i];
         if (
-          prevLine.includes(`const ${variable}`) ||
-          prevLine.includes(`let ${variable}`) ||
-          prevLine.includes(`var ${variable}`)
+          prevLine.includes(`const ${variable}`) ||prevLine.includes(`let ${variable}`) ||prevLine.includes(`var ${variable}`)
         ) {
           // Variable is defined, this might be a scope issue
           return line;
@@ -208,8 +201,7 @@ class ESLintErrorCleaner {
       }
 
       // Variable not found, add declaration
-      if (line.includes('=')) {
-        return `const ${line}`;
+      if (line.includes('=')) {return `const ${line}`;
       }
     }
 
@@ -266,8 +258,7 @@ class ESLintErrorCleaner {
     return fixedLine;
   }
 
-  async attemptFixes(errors) {
-    this.log(`🔧 Attempting to fix ${errors.length} ESLint errors...`);
+  async attemptFixes(errors) {this.log(`🔧 Attempting to fix ${errors.length} ESLint errors...`);
 
     let fixedCount = 0;
     const fixResults = [];
@@ -285,15 +276,13 @@ class ESLintErrorCleaner {
           timestamp: new Date().toISOString(),
         });
 
-        // Track fix attempts
-        const errorKey = `${error.file}:${error.line}:${error.message}`;
+        // Track fix attemptsconst errorKey = `${error.file}:${error.line}:${error.message}';
         this.fixAttempts.set(
           errorKey,
           (this.fixAttempts.get(errorKey) || 0) + 1
         );
       } catch (fixError) {
-        this.log(
-          `❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,
+        this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}',
           'ERROR'
         );
         fixResults.push({
@@ -341,21 +330,14 @@ class ESLintErrorCleaner {
             : 100,
       },
       fixResults: fixResults.results,
-      recommendations: [
-        'Review any remaining errors manually',
-        'Consider adding ESLint disable comments for intentional violations',
-        'Run npm run lint to verify fixes',
-        'Monitor for recurring error patterns',
-      ],
+      recommendations: ['Review any remaining errors manually'', 'Consider adding ESLint disable comments for intentional violations', 'Run npm run lint to verify fixes'', 'Monitor for recurring error patterns', ''],
     };
 
     const reportFile = path.join(
-      this.reportsPath,
-      'eslint-error-cleaner-report.json'
+      this.reportsPath,eslint-error-cleaner-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report generated: ${reportFile}`);
+this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
 
@@ -381,8 +363,7 @@ class ESLintErrorCleaner {
       const report = await this.generateReport(fixResults);
 
       this.log('🎉 ESLint Error Cleaner completed!');
-      this.log(
-        `📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`
+      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors'
       );
 
       return {
@@ -391,8 +372,7 @@ class ESLintErrorCleaner {
         fixed: fixResults.fixedCount,
         report,
       };
-    } catch (error) {
-      this.log(`💥 ESLint Error Cleaner failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`💥 ESLint Error Cleaner failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }

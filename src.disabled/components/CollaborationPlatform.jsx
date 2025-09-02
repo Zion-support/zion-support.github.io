@@ -1,0 +1,2 @@
+import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff const mockParticipants = [ 
+;

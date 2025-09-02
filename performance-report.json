@@ -1,6 +1,33 @@
 {
-  "timestamp": "2025-08-30T07:49:50.632Z",
-  "buildSize": 2158130,
-  "largeFiles": [],
-  "summary": "Performance monitoring completed"
+  "timestamp": "2025-09-02T17:30:09.269Z",
+  "system": {
+    "platform": "linux",
+    "arch": "x64",
+    "nodeVersion": "v22.16.0",
+    "memoryUsage": {
+      "rss": 51060736,
+      "heapTotal": 5832704,
+      "heapUsed": 4905024,
+      "external": 1865515,
+      "arrayBuffers": 18144
+    },
+    "uptime": 0.027207474,
+    "cpuUsage": {
+      "user": 26315,
+      "system": 3759
+    }
+  },
+  "application": {
+    "buildExists": true,
+    "packageName": "zion-tech-group",
+    "packageVersion": "0.1.0",
+    "dependencies": 58,
+    "devDependencies": 38
+  },
+  "build": {
+    "exists": true,
+    "size": 49926639,
+    "lastModified": "2025-09-02T17:28:00.435Z"
+  },
+  "errors": []
 }

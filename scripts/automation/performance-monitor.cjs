@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -12,18 +12,17 @@ const AUTOMATION_INTERVAL =
 
 async function runPerformanceMonitor() {
   try {
-    console.log(
-      `📊 Running performance monitoring at ${new Date().toISOString()}`
+    console.log(`📊 Running performance monitoring at ${new Date().toISOString()}'
     );
 
     // Build the project first
-    console.log('🏗️ Building project for performance analysis...');
+    console.log(`'🏗️ Building project for performance analysis...');
     execSync('npm run build', { stdio: 'inherit' });
 
     // Check bundle size
     console.log('📦 Analyzing bundle size...');
     try {
-      execSync('node scripts/analyze-bundle.js', { stdio: 'inherit' });
+      execSync('node ''scripts/analyze-bundle.js''', { stdio: 'inherit' });
       console.log('✅ Bundle analysis completed');
     } catch (error) {
       console.log('⚠️  Bundle analysis failed but continuing...');
@@ -52,8 +51,7 @@ async function runPerformanceMonitor() {
       if (largeFiles.length > 0) {
         console.log('⚠️  Large files found in build output:');
         largeFiles.forEach(file => {
-          console.log(
-            `  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`
+          console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB'
           );
         });
       } else {
@@ -80,12 +78,11 @@ async function runPerformanceMonitor() {
 
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Performance report saved to ${reportPath}`);
+    console.log(✅ Performance report saved to ${reportPath});
 
     console.log('✅ Continuous performance monitoring completed successfully');
   } catch (error) {
-    console.error(
-      '❌ Continuous performance monitoring failed:',
+    console.error(❌ Continuous performance monitoring failed:',
       error.message
     );
     // Don't exit, just log the error and continue
@@ -101,14 +98,14 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {
       const items = fs.readdirSync(currentDir);
 
       for (const item of items) {
-        const fullPath = path.join(currentDir, item);
+        const fullPath = path.join(currentDir, 'item);
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
           scanDirectory(fullPath);
         } else if (stat.isFile() && stat.size > maxSize) {
           largeFiles.push({
-            path: path.relative(process.cwd(), fullPath),
+            path: path.relative(process.cwd()', fullPath),
             size: stat.size,
           });
         }
@@ -150,8 +147,7 @@ function getDirectorySize(dir) {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   // Run initial performance monitoring
@@ -162,9 +158,8 @@ async function runContinuous() {
     await runPerformanceMonitor();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    `✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+  console.log( ✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

@@ -86,17 +86,13 @@ class SyntaxFixer {
     let changes = 0;
     
     // Remove merge conflict markers and take the HEAD version
-    const mergeConflictPattern = /<<<<<<< HEAD\\n([\\s\\S]*?)=======\\n[\\s\\S]*?>>>>>>> [^\\n]+\\n/g;
-    fixed = fixed.replace(mergeConflictPattern, (match, headContent) => {
-      changes++;
+    const mergeConflictPattern = /      changes++;
       return headContent;
     });
     
     // Remove standalone conflict markers
-    fixed = fixed.replace(/^<<<<<<< HEAD\\n/gm, () => { changes++; return ''; });
-    fixed = fixed.replace(/^=======\\n/gm, () => { changes++; return ''; });
-    fixed = fixed.replace(/^>>>>>>> [^\\n]+\\n/gm, () => { changes++; return ''; });
-    
+    fixed = fixed.replace(/^    fixed = fixed.replace(/^=======\\n/gm, () => { changes++; return ''; });
+    fixed = fixed.replace(/^    
     return { content: fixed, changes };
   }
 
@@ -330,7 +326,29 @@ export default ${name.toLowerCase()};
     const reportFile = path.join(this.projectRoot, 'syntax-error-fixer-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
+    // Reset counters for next run
+    this.fixesApplied = 0;
+    this.filesProcessed = 0;
+    
     return report;
+  }
+
+  async runContinuously() {
+    this.log('info', 'Syntax Fixer running in continuous mode...');
+    
+    // Run initial fix
+    await this.run();
+    
+    // Set up interval to run every 6 hours (21600000 ms)
+    setInterval(async () => {
+      this.log('info', 'Running scheduled syntax fix...');
+      await this.run();
+    }, 6 * 60 * 60 * 1000);
+    
+    // Keep the process alive
+    setInterval(() => {
+      this.log('info', 'Syntax Fixer heartbeat - running normally');
+    }, 60 * 60 * 1000); // Heartbeat every hour
   }
 
   shutdown() {
@@ -339,11 +357,10 @@ export default ${name.toLowerCase()};
   }
 }
 
-// Run the fixer
+// Run the fixer in continuous mode
 const fixer = new SyntaxFixer();
-fixer.run().then(() => {
-  fixer.log('info', 'Syntax fixing completed successfully');
-  process.exit(0);
+fixer.runContinuously().then(() => {
+  fixer.log('info', 'Syntax Fixer started in continuous mode');
 }).catch(error => {
   console.error('Syntax fixer failed:', error);
   process.exit(1);

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Zion Tech Group - Smart Dependency Manager
@@ -30,7 +30,7 @@ class SmartDependencyManager {
 
   async initialize() {
     await this.ensureDirectories();
-    console.log('📦 Smart Dependency Manager initialized');
+    console.log(`'📦 Smart Dependency Manager initialized');
   }
 
   async ensureDirectories() {
@@ -39,7 +39,7 @@ class SmartDependencyManager {
   }
 
   async runDependencyAnalysis() {
-    console.log('🔍 Starting Smart Dependency Analysis...');
+    console.log(`'🔍 Starting Smart Dependency Analysis...');
 
     try {
       await this.loadDependencies();
@@ -51,7 +51,7 @@ class SmartDependencyManager {
       await this.applySmartUpdates();
       await this.generateReport();
 
-      console.log('✅ Smart Dependency Analysis completed successfully');
+      console.log(`'✅ Smart Dependency Analysis completed successfully');
     } catch (error) {
       console.error('❌ Smart Dependency Analysis failed:', error.message);
     }
@@ -71,11 +71,10 @@ class SmartDependencyManager {
       this.dependencies.peer = packageJson.peerDependencies || {};
       this.dependencies.optional = packageJson.optionalDependencies || {};
 
-      console.log(`📊 Loaded dependencies:
+      console.log(📊 Loaded dependencies:
         Production: ${Object.keys(this.dependencies.production).length}
         Development: ${Object.keys(this.dependencies.development).length}
-        Peer: ${Object.keys(this.dependencies.peer).length}
-        Optional: ${Object.keys(this.dependencies.optional).length}`);
+        Peer: ${Object.keys(this.dependencies.peer).length}Optional: ${Object.keys(this.dependencies.optional).length});
     } catch (error) {
       console.error('❌ Failed to load dependencies:', error.message);
     }
@@ -100,11 +99,10 @@ class SmartDependencyManager {
         location: outdatedData[pkg].location,
       }));
 
-      console.log(
-        `📊 Found ${this.analysis.outdated.length} outdated packages`
-      );
+      console.log(📊 Found ${this.analysis.outdated.length} outdated packages'
+      `);
     } catch (error) {
-      console.log('⚠️  Could not check outdated packages:', error.message);
+      console.log(`'⚠️  Could not check outdated packages:', error.message);
     }
   }
 
@@ -116,7 +114,7 @@ class SmartDependencyManager {
       const conflicts = [];
 
       // Analyze peer dependencies
-      for (const [pkg, version] of Object.entries(this.dependencies.peer)) {
+      for (const ['pkg', 'version'] of Object.entries(this.dependencies.peer)) {
         const installedVersion = this.getInstalledVersion(pkg);
         if (
           installedVersion &&
@@ -134,7 +132,7 @@ class SmartDependencyManager {
 
       // Check for version conflicts in production dependencies
       const prodVersions = new Map();
-      for (const [pkg, version] of Object.entries(
+      for (const ['pkg', 'version'] of Object.entries(
         this.dependencies.production
       )) {
         if (prodVersions.has(pkg)) {
@@ -151,14 +149,14 @@ class SmartDependencyManager {
       }
 
       this.analysis.conflicts = conflicts;
-      console.log(`⚠️  Found ${conflicts.length} dependency conflicts`);
+      console.log(⚠️  Found ${conflicts.length} dependency conflicts);
     } catch (error) {
       console.log('⚠️  Could not detect conflicts:', error.message);
     }
   }
 
   async checkVulnerabilities() {
-    console.log('🛡️  Checking for vulnerabilities...');
+    console.log('🛡️  Checking for vulnerabilities...'`);
 
     try {
       const auditOutput = execSync('npm audit --audit-level moderate --json', {
@@ -169,8 +167,7 @@ class SmartDependencyManager {
       const auditData = JSON.parse(auditOutput);
       this.analysis.vulnerabilities = auditData.vulnerabilities || [];
 
-      console.log(
-        `🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities`
+      console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities'
       );
     } catch (error) {
       console.log('⚠️  Could not check vulnerabilities:', error.message);
@@ -193,11 +190,9 @@ class SmartDependencyManager {
         devDependencies: depcheckData.devDependencies || [],
       };
 
-      console.log(
-        `📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies`
+      console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies'
       );
-      console.log(
-        `📊 Found ${this.analysis.unused.devDependencies.length} unused development dependencies`
+      console.log( 📊 Found ${this.analysis.unused.devDependencies.length} unused development dependencies
       );
     } catch (error) {
       console.log('⚠️  Could not find unused dependencies:', error.message);
@@ -205,7 +200,7 @@ class SmartDependencyManager {
   }
 
   async generateRecommendations() {
-    console.log('💡 Generating smart recommendations...');
+    console.log('💡 Generating smart recommendations...'`);
 
     const recommendations = [];
 
@@ -213,8 +208,7 @@ class SmartDependencyManager {
     if (this.analysis.vulnerabilities.length > 0) {
       recommendations.push({
         type: 'security',
-        priority: 'critical',
-        message: `Update ${this.analysis.vulnerabilities.length} vulnerable packages immediately`,
+        priority: 'critical',message: Update ${this.analysis.vulnerabilities.length} vulnerable packages immediately,
         action: 'run npm audit fix',
       });
     }
@@ -224,10 +218,8 @@ class SmartDependencyManager {
       if (conflict.severity === 'high') {
         recommendations.push({
           type: 'conflict',
-          priority: 'high',
-          message: `Resolve peer dependency conflict for ${conflict.package}`,
-          action: `update ${conflict.package} to compatible version`,
-        });
+          priority: 'high',message: Resolve peer dependency conflict for ${conflict.package}`,action: `update ${conflict.package} to compatible version`,
+        }`);
       }
     }
 
@@ -239,8 +231,7 @@ class SmartDependencyManager {
     if (criticalUpdates.length > 0) {
       recommendations.push({
         type: 'update',
-        priority: 'high',
-        message: `Consider major version updates for ${criticalUpdates.length} packages`,
+        priority: 'high',message: `Consider major version updates for ${criticalUpdates.length} packages`,
         action: 'review and update major versions carefully',
       });
     }
@@ -249,29 +240,27 @@ class SmartDependencyManager {
     if (this.analysis.unused.dependencies.length > 0) {
       recommendations.push({
         type: 'cleanup',
-        priority: 'medium',
-        message: `Remove ${this.analysis.unused.dependencies.length} unused production dependencies`,
+        priority: 'medium',message: `Remove ${this.analysis.unused.dependencies.length} unused production dependencies`,
         action: 'remove unused dependencies to reduce bundle size',
       });
     }
 
-    this.analysis.recommendations = recommendations;
-    console.log(`💡 Generated ${recommendations.length} recommendations`);
+    this.analysis.recommendations = recommendations;console.log(`💡 Generated ${recommendations.length} recommendations`);
   }
 
   async applySmartUpdates() {
-    console.log('🔧 Applying smart updates...');
+    console.log(`'🔧 Applying smart updates...');
 
     let updatesApplied = 0;
 
     // Apply security fixes first
     if (this.analysis.vulnerabilities.length > 0) {
       try {
-        console.log('🛡️  Applying security fixes...');
+        console.log(`'🛡️  Applying security fixes...');
         execSync('npm audit fix', { stdio: 'inherit' });
         updatesApplied++;
       } catch (error) {
-        console.log('⚠️  Security fixes failed:', error.message);
+        console.log(`'⚠️  Security fixes failed:', error.message);
       }
     }
 
@@ -282,12 +271,9 @@ class SmartDependencyManager {
 
     for (const pkg of safeUpdates.slice(0, 5)) {
       // Limit to 5 updates at a time
-      try {
-        console.log(`📦 Updating ${pkg.name} to ${pkg.wanted}...`);
-        execSync(`npm install ${pkg.name}@${pkg.wanted}`, { stdio: 'pipe' });
+      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
         updatesApplied++;
-      } catch (error) {
-        console.log(`⚠️  Failed to update ${pkg.name}:`, error.message);
+      } catch (error) {console.log(`⚠️  Failed to update ${pkg.name}:`, error.message);
       }
     }
 
@@ -295,22 +281,17 @@ class SmartDependencyManager {
     if (this.analysis.unused.dependencies.length > 0) {
       const unusedPkgs = this.analysis.unused.dependencies.slice(0, 3); // Limit to 3 removals
       for (const pkg of unusedPkgs) {
-        try {
-          console.log(`🗑️  Removing unused dependency ${pkg}...`);
-          execSync(`npm uninstall ${pkg}`, { stdio: 'pipe' });
+        try {console.log(`🗑️  Removing unused dependency ${pkg}...`);execSync(`npm uninstall ${pkg}`, { stdio: 'pipe' });
           updatesApplied++;
-        } catch (error) {
-          console.log(`⚠️  Failed to remove ${pkg}:`, error.message);
+        } catch (error) {console.log(`⚠️  Failed to remove ${pkg}:`, error.message);
         }
       }
     }
-
-    console.log(`✅ Applied ${updatesApplied} smart updates`);
+console.log(`✅ Applied ${updatesApplied} smart updates`);
   }
 
   getInstalledVersion(packageName) {
-    try {
-      const packageJsonPath = require.resolve(`${packageName}/package.json`);
+    try {const packageJsonPath = require.resolve(`${packageName}/package.json`);
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       return packageJson.version;
     } catch (error) {
@@ -351,12 +332,10 @@ class SmartDependencyManager {
     };
 
     const reportPath = path.join(
-      this.reportDir,
-      `dependency-analysis-${Date.now()}.json`
+      this.reportDir,dependency-analysis-${Date.now()}.json'
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-
-    console.log(`📊 Dependency analysis report saved to ${reportPath}`);
+console.log(`📊 Dependency analysis report saved to ${reportPath}`);
   }
 }
 

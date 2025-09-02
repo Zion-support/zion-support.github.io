@@ -1,1 +1,1 @@
-// Lazy load heavy components" const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent")); ";"
+

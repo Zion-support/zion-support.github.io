@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-09-02T16:01:24.318Z",
+  "overall": "unhealthy",
+  "checks": [
+    {
+      "name": "Package.json",
+      "status": "pass",
+      "result": "Package: zion-tech-group v0.1.0"
+    },
+    {
+      "name": "Dependencies",
+      "status": "pass",
+      "result": "Dependencies: 43 prod, 11 dev"
+    },
+    {
+      "name": "TypeScript",
+      "status": "fail",
+      "error": "TypeScript compilation failed"
+    },
+    {
+      "name": "Code Formatting",
+      "status": "fail",
+      "error": "Code formatting issues found"
+    }
+  ]
+}

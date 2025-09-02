@@ -1,71 +1,79 @@
-import React from 'react';
+import React from,
+  react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import { describe, it, expect, vi } from 'vitest';
 
-describe'AccessibilityEnhancer': unknown, (: unknown {
-  it'renders children correctly': unknown, (: unknown {
+describe(
+  'AccessibilityEnhancer', () => {
+  it(
+  'renders children correctly', () => {
     render(
       <AccessibilityEnhancer>
-        <div data-testid="test-child">Test Content</div>
+        <div data-testid='test-child'>Test Content</div>
       </AccessibilityEnhancer>
     );
-
-    expect(screen.getByTestId('test-child')).toBeInTheDocument();
-    expect(screen.getByText('Test Content')).toBeInTheDocument();
-  });
-
-  it'applies accessibility props correctly': unknown, (: unknown {
+    expect(screen.getByTestId(
+  'test-child')).toBeInTheDocument()
+    expect(screen.getByText(
+  'Test Content')).toBeInTheDocument()})
+  it(
+  'applies accessibility props correctly', () => {
     render(
       <AccessibilityEnhancer
-        role="button"
-        aria-label="Test Button"
+        role='button';
+        aria-label='Test Button';
         tabIndex={0}
       >
         <span>Button Text</span>
       </AccessibilityEnhancer>
     );
-
-    const element = screen.getByRole('button');
-    expect(element).toHaveAttribute('aria-label',Test Button');
-    expect(element).toHaveAttribute('tabindex',0');
-  });
-
-  it'handles keyboard events correctly': unknown, (: unknown {
-    const mockOnKeyDown = jest.fn();
-
+    const element = screen.getByRole(
+  'button');
+    expect(element).toHaveAttribute(
+  'aria-label''Test Button');
+    expect(element).toHaveAttribute(
+  'tabindex''0')})
+  it(
+  'handles keyboard events correctly', () => {
+    const handleClick = vi.fn()
     render(
-      <AccessibilityEnhancer role="button" onKeyDown={mockOnKeyDown}>
-        <span>Button Text</span>
+      <AccessibilityEnhancer role='button' onClick={handleClick} tabIndex={0}>
+        <span>Clickable Element</span>
       </AccessibilityEnhancer>
     );
-
-    const button = screen.getByRole('button');
-    fireEvent.keyDown(button, { key: 'Enter' });
-
-    expect(mockOnKeyDown).toHaveBeenCalled();
-  });
-
-  it'applies focus styles when focusable': unknown, (: unknown {
+    const element = screen.getByRole(
+  'button');
+    fireEvent.keyDown(element, { key: 'Enter })
+    expect(handleClick).toHaveBeenCalledTimes(1)
+    fireEvent.keyDown(element, { key:' })
+    expect(handleClick).toHaveBeenCalledTimes(2)})
+  it(
+  'applies focus styles when focusable', () => {
     render(
-      <AccessibilityEnhancer focusable={true}>
-        <span>Content</span>
+      <AccessibilityEnhancer
+        role='button';
+        tabIndex={0}
+        className='focus: outline-none focus:ring-2 focus:ring-blue-500'>
+        <span>Focusable Element</span>
       </AccessibilityEnhancer>
     );
-
-    const element = screen.getByText('Content').parentElement;
+    const element = screen.getByRole(
+  'button')
     expect(element).toHaveClass(
-      'focus:outline-none',focus:ring-2',focus:ring-blue-500'
-    );
-  });
-
-  it'disables focus when not focusable': unknown, (: unknown {
+  'focus:outline-none,
+,
+  focus: ring-2,
+,
+  focus: ring-blue-500)  })
+  it(
+  'disables focus when not focusable', () => {
     render(
-      <AccessibilityEnhancer focusable={false}>
-        <span>Content</span>
+      <AccessibilityEnhancer role='button' tabIndex={-1}>
+        <span>Non-focusable Element</span>
       </AccessibilityEnhancer>
     );
-
-    const element = screen.getByText('Content').parentElement;
-    expect(element).toHaveAttribute('tabindex',-1');
-  });
-});
+    const element = screen.getByRole(
+  'button')
+    expect(element).toHaveAttribute(
+  'tabindex''-1')})})

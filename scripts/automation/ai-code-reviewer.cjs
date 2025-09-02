@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * AI Code Reviewer - PM2 Automation
@@ -16,8 +16,7 @@ class AICodeReviewer {
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-reviewer.log');
     this.reviewsLog = path.join(this.projectRoot, 'logs', 'ai-reviews.json');
     this.learningData = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'ai-learning-data.json'
     );
     this.ensureLogsDirectory();
@@ -60,8 +59,7 @@ class AICodeReviewer {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async analyzeCodeQuality() {
@@ -107,11 +105,9 @@ class AICodeReviewer {
       // 8. Auto-apply safe improvements
       const appliedFixes = await this.autoApplySafeFixes(suggestions);
 
-      this.log(
-        `✅ AI Code Review completed: ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied`
+      this.log(✅ AI Code Review completed: ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied'
       );
-    } catch (error) {
-      this.log(`AI Code Review failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`AI Code Review failed: ${error.message}`, 'ERROR');
     }
 
     return { reviews, suggestions, performance };
@@ -138,8 +134,7 @@ class AICodeReviewer {
           suggestions.push(...analysis.suggestions);
         }
       }
-    } catch (error) {
-      this.log(`TypeScript analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`TypeScript analysis failed: ${error.message}`, 'ERROR');
     }
 
     return { reviews, suggestions };
@@ -199,8 +194,7 @@ class AICodeReviewer {
             file: filePath,
             line: lineNum,
             code: line.trim(),
-            suggestion:
-              'Extract smaller, focused functions for better maintainability',
+            suggestion:Extract smaller, focused functions for better maintainability',
           });
         }
       }
@@ -223,8 +217,7 @@ class AICodeReviewer {
         reviews.push(...analysis.reviews);
         suggestions.push(...analysis.suggestions);
       }
-    } catch (error) {
-      this.log(`React analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`React analysis failed: ${error.message}`, 'ERROR');
     }
 
     return { reviews, suggestions };
@@ -245,8 +238,7 @@ class AICodeReviewer {
           severity: 'MEDIUM',
           message: 'Consider if useEffect needs dependencies',
           file: filePath,
-          suggestion:
-            'Review useEffect dependencies to prevent unnecessary re-renders',
+          suggestion:Review useEffect dependencies to prevent unnecessary re-renders',
         });
       }
     }
@@ -256,8 +248,7 @@ class AICodeReviewer {
       suggestions.push({
         type: 'REACT_ARCHITECTURE',
         severity: 'LOW',
-        message:
-          'Consider using Context or state management for deep prop drilling',
+        message:Consider using Context or state management for deep prop drilling',
         file: filePath,
         suggestion:
           'Implement React Context or Redux for better state management',
@@ -284,8 +275,7 @@ class AICodeReviewer {
       // Check for performance anti-patterns in code
       const perfIssues = this.findPerformanceIssues();
       performance.renderOptimization = perfIssues;
-    } catch (error) {
-      this.log(`Performance analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Performance analysis failed: ${error.message}`, 'ERROR');
     }
 
     return performance;
@@ -310,12 +300,10 @@ class AICodeReviewer {
 
         if (totalSize > 5 * 1024 * 1024) {
           // 5MB
-          stats.warning =
-            'Bundle size is large - consider code splitting and optimization';
+          stats.warning =Bundle size is large - consider code splitting and optimization';
         }
       }
-    } catch (error) {
-      this.log(`Bundle size analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Bundle size analysis failed: ${error.message}`, 'ERROR');
     }
 
     return stats;
@@ -334,16 +322,14 @@ class AICodeReviewer {
         if (content.includes('map(') && content.includes('filter(')) {
           issues.push({
             type: 'PERFORMANCE_ANTI_PATTERN',
-            message:
-              'Multiple array operations in render - consider memoization',
+            message:Multiple array operations in render - consider memoization',
             file: file,
             suggestion:
               'Use useMemo or useCallback to optimize expensive calculations',
           });
         }
       }
-    } catch (error) {
-      this.log(`Performance issue detection failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Performance issue detection failed: ${error.message}`, 'ERROR');
     }
 
     return issues;
@@ -385,8 +371,7 @@ class AICodeReviewer {
           });
         }
       }
-    } catch (error) {
-      this.log(`Security analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Security analysis failed: ${error.message}`, 'ERROR');
     }
 
     return { reviews, suggestions };
@@ -407,8 +392,7 @@ class AICodeReviewer {
         type: 'AI_SUGGESTION',
         severity: 'MEDIUM',
         message: 'High number of TypeScript anti-patterns detected',
-        suggestion:
-          'Consider running a TypeScript refactoring session to improve code quality',
+        suggestion:Consider running a TypeScript refactoring session to improve code quality',
       });
     }
 
@@ -417,8 +401,7 @@ class AICodeReviewer {
         type: 'AI_SUGGESTION',
         severity: 'LOW',
         message: 'Multiple React best practice violations',
-        suggestion:
-          'Review React component architecture and consider implementing a component library',
+        suggestion:Review React component architecture and consider implementing a component library',
       });
     }
 
@@ -428,8 +411,7 @@ class AICodeReviewer {
         type: 'AI_SUGGESTION',
         severity: 'MEDIUM',
         message: 'Bundle size optimization needed',
-        suggestion:
-          'Implement code splitting, lazy loading, and tree shaking to reduce bundle size',
+        suggestion:Implement code splitting, lazy loading, and tree shaking to reduce bundle size',
       });
     }
 
@@ -481,13 +463,10 @@ class AICodeReviewer {
     };
 
     const reportPath = path.join(
-      this.projectRoot,
-      'logs',
-      `ai-review-report-${Date.now()}.json`
+      this.projectRoot,logs', `ai-review-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log(`📊 AI Review Report generated: ${reportPath}`);
+this.log(`📊 AI Review Report generated: ${reportPath}`);
     return report;
   }
 
@@ -495,14 +474,12 @@ class AICodeReviewer {
     const recommendations = [];
 
     if (reviews.filter(r => r.severity === 'CRITICAL').length > 0) {
-      recommendations.push(
-        '🔴 Critical issues detected - immediate attention required'
+      recommendations.push(🔴 Critical issues detected - immediate attention required'
       );
     }
 
     if (reviews.filter(r => r.severity === 'HIGH').length > 5) {
-      recommendations.push(
-        '🟠 High priority issues detected - schedule refactoring session'
+      recommendations.push(🟠 High priority issues detected - schedule refactoring session'
       );
     }
 
@@ -539,12 +516,10 @@ class AICodeReviewer {
               result: fixResult,
             });
           }
-        } catch (error) {
-          this.log(`Failed to apply suggestion: ${error.message}`, 'WARN');
+        } catch (error) {this.log(`Failed to apply suggestion: ${error.message}`, 'WARN');
         }
       }
-    } catch (error) {
-      this.log(`Auto-fix application failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Auto-fix application failed: ${error.message}`, 'ERROR');
     }
 
     return appliedFixes;
@@ -612,10 +587,8 @@ class AICodeReviewer {
 
     try {
       const result = await this.analyzeCodeQuality();
-
-      this.log(`✅ AI Code Review completed successfully`);
-      this.log(
-        `📊 Found ${result.reviews.length} issues and ${result.suggestions.length} suggestions`
+this.log(`✅ AI Code Review completed successfully');
+      this.log(📊 Found ${result.reviews.length} issues and ${result.suggestions.length} suggestions'
       );
 
       return result;
