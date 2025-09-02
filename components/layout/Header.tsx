@@ -19,6 +19,7 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Products', href: '/products' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
@@ -94,7 +95,17 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
+<<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+=======
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <Link
+                    href="/services"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
+                  >
+                    All Services
+                  </Link>
+>>>>>>> cursor/website-audit-content-update-and-deployment-32ee
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
@@ -115,6 +126,7 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
+<<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   {solutionCategories.map((category) => (
                     <Link
@@ -147,6 +159,36 @@ const Header: React.FC = () => {
                 Contact
               </Link>
 
+=======
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <Link
+                    href="/solutions"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
+                  >
+                    All Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/enterprise"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    Enterprise Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/small-business"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    Small Business
+                  </Link>
+                  <Link
+                    href="/solutions/startups"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    Startup Solutions
+                  </Link>
+                </div>
+              </div>
+
+>>>>>>> cursor/website-audit-content-update-and-deployment-32ee
               {/* CTA Button */}
               <Link
                 href="/contact"
@@ -197,7 +239,18 @@ const Header: React.FC = () => {
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
+<<<<<<< HEAD
                   <div className="text-gray-700 font-medium mb-3">Services</div>
+=======
+                  <div className="text-gray-700 font-medium mb-2">Services</div>
+                  <Link
+                    href="/services"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors font-semibold"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    All Services
+                  </Link>
+>>>>>>> cursor/website-audit-content-update-and-deployment-32ee
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
@@ -225,6 +278,43 @@ const Header: React.FC = () => {
                   ))}
                 </div>
 
+<<<<<<< HEAD
+=======
+                {/* Mobile Solutions */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-2">Solutions</div>
+                  <Link
+                    href="/solutions"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors font-semibold"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    All Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/enterprise"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Enterprise Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/small-business"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Small Business
+                  </Link>
+                  <Link
+                    href="/solutions/startups"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Startup Solutions
+                  </Link>
+                </div>
+
+                {/* Mobile CTA */}
+>>>>>>> cursor/website-audit-content-update-and-deployment-32ee
                 <Link
                   href="/about"
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
