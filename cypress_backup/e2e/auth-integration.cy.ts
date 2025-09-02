@@ -32,31 +32,18 @@ describe('register and login flow', () => {
     cy.get('[data-testid="confirm-password-input"]').type(testPassword);
     cy.get('[data-testid="terms-checkbox"]').check();
     cy.get('[data-testid="create-account-button"]').click();
-<<<<<<< HEAD
     // After registration, user should be redirected to dashboard
     // Adding a timeout because the page load and session setting might take a moment
     cy.url().should('include', '/dashboard', { timeout: 10000 });
     // Verify user session by calling /api/users/me
     // This request will use the session cookie set by Supabase during setSession
-=======
-    // After registration, user should be redirected to dashboard;
-    // Adding a timeout because the page load and session setting might take a moment.;
-    cy.url().should('include', '/dashboard', { timeout: 10000 })
-    // Verify user session by calling /api/users/me;
-    // This request will use the session cookie set by Supabase during setSession;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-d04d
     cy.request('/api/users/me').then(response => {
       expect(response.status).to.eq(200);
       expect(response.body).to.have.property('id');
       expect(response.body.email).to.eq(uniqueEmail);
-<<<<<<< HEAD
       // Optionally, check for display_name if it's consistently set by your backend
       // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName)
     });
-=======
-      // Optionally, check for display_name if it's consistently set by your backend;
-      // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName)
->>>>>>> cursor/fix-lint-push-and-merge-to-main-d04d
     // Example: Check for a known element on the dashboard page
     // cy.contains('Welcome to your Dashboard!').should('be.visible');
     // This line is commented out as we don't know the exact content of the dashboard.
@@ -81,27 +68,16 @@ describe('Login Flow Tests', () => {
         'TEST_USER_DISPLAY_NAME environment variable is not set.');
     }
   });
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-d04d
   it('should fail to login with invalid credentials and show error toast', () => {
     cy.visit('/login');
     cy.get('[data-testid="login-email-input"]').type(
       Cypress.env('TEST_USER_EMAIL'));
     cy.get('[data-testid="login-password-input"]').type('wrongPassword123');
     cy.get('[data-testid="login-submit-button"]').click();
-<<<<<<< HEAD
     cy.url().should('include', '/login'); // Should remain on login page
     // Check for Sonner toast (common toast library)
     // Adjust selector if your toast implementation differs
     // This selector targets a toast that is marked as destructive (error)
-=======
-    cy.url().should('include', '/login') // Should remain on login page;
-    // Check for Sonner toast (common toast library);
-    // Adjust selector if your toast implementation differs.;
-    // This selector targets a toast that is marked as destructive (error);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-d04d
     cy.get('[data-sonner-toast][data-type="error"]', { timeout: 5000 })
       .should('be.visible')
       .invoke('text') // Use invoke to get text content
@@ -110,10 +86,6 @@ describe('Login Flow Tests', () => {
         expect(text.toLowerCase()).to.include('invalid login credentials');
       });
   });
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-d04d
   it('should login successfully with valid credentials and redirect', () => {
     cy.visit('/login');
     cy.get('[data-testid="login-email-input"]').type(
@@ -121,13 +93,8 @@ describe('Login Flow Tests', () => {
     cy.get('[data-testid="login-password-input"]').type(
       Cypress.env('TEST_USER_PASSWORD'));
     cy.get('[data-testid="login-submit-button"]').click();
-<<<<<<< HEAD
     // User should be redirected (e.g., to dashboard)
     // Adding a timeout because the page load and session setting might take a moment
-=======
-    // User should be redirected (e.g., to dashboard);
-    // Adding a timeout because the page load and session setting might take a moment.;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-d04d
     cy.url().should('include', '/dashboard', { timeout: 10000 });
     // Verify user session by calling /api/users/me
     cy.request('/api/users/me').then(response => {
@@ -135,10 +102,6 @@ describe('Login Flow Tests', () => {
       expect(response.body).to.have.property('id');
       expect(response.body.email.toLowerCase()).to.eq(
         Cypress.env('TEST_USER_EMAIL').toLowerCase());
-<<<<<<< HEAD
-=======
-          });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-d04d
     });
   });
 });
