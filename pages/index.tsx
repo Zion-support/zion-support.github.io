@@ -5,7 +5,7 @@ import { services, getServicesByCategory } from '../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { InteractiveButton, AnimatedCard, InteractiveStats, FloatingActionButton } from '../src/components/UI/InteractiveElements';
+import { InteractiveButton, AnimatedCard, InteractiveStats, FloatingActionButton } from '../components/UI/InteractiveElements';
 
 const Home: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
