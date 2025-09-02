@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
+import { Heart, } from 'lucide-react';
+import { useWishlist, } from '@/hooks/useWishlist';
+import { Button, } from '@/components/ui/button';
 import {
   Tooltip, TooltipContent,
   TooltipProvider, TooltipTrigger
 } from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
-import { useMediaQuery } from 'usehooks-ts';
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { captureException } from '@sentry/nextjs';
+import { useDispatch, } from 'react-redux';
+import { addItem, } from '@/store/cartSlice';
+import { useAuth, } from '@/context/auth/AuthProvider';
+import { useRouter, } from 'next/router';
+import { useMediaQuery, } from 'usehooks-ts';
+import { useEnqueueSnackbar, } from '@/context/SnackbarContext';
+import { captureException, } from '@sentry/nextjs';
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();

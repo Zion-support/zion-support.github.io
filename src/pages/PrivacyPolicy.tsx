@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';
 export default function PrivacyPolicy() {
   return (

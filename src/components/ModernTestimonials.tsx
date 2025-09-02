@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' import {  Quote, Star, ChevronLeft, ChevronRight, Building, User, Globe, TrendingUp } from 'lucide - react' import { ModernCard } from './ui / ModernCard'  interface Testimonial {
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' ;import {  Quote, Star, ChevronLeft, ChevronRight, Building, User, Globe, TrendingUp } from 'lucide - react' ;import { ModernCard, } from './ui / ModernCard'  ;interface Testimonial {
    id: number;
    name: string;
    position: string;

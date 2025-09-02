@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Layout Components;
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
-import { Sidebar } from './components/Sidebar';
+import { EnhancedHeader, } from './components/EnhancedHeader';
+import { EnhancedFooter, } from './components/EnhancedFooter';
+import { Sidebar, } from './components/Sidebar';
 // Loading component
 const LoadingSpinner = () => (
   <div className='flex items-center justify-center min-h-screen'>
@@ -334,7 +334,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
 export default App;
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorBoundary, } from 'react-error-boundary';
 ('')
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
         <PerformanceOptimizer>

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, } from 'framer-motion';
 import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
 const Accessibility: React.FC = () => {
   const features = [

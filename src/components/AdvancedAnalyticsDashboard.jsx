@@ -1,5 +1,5 @@
 import React, { useState } from 'react'';'
-import { motion } from 'framer-motion';
+import { motion, } from 'framer-motion';
 import {}
   TrendingUp, TrendingDown,
   Users, DollarSign,
@@ -10,9 +10,9 @@ import {}
   Shield, '';
   Brain, ''';'
   Rocket} from 'lucide-react'';'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'
-import { Button } from './ui/button'';'
-import { Badge } from './ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';';'
+import { Button, } from './ui/button';';'
+import { Badge, } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {}
 ';'
 '';

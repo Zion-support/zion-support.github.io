@@ -2,4 +2,4 @@
   loc: string;
    lastmod: string;
    changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-   priority: number} const SitemapGenerator: React.FC = () => { const baseUrl = 'https:'''
+   priority: number} const SitemapGenerator: React.FC = () => { const baseUrl = 'https:''';

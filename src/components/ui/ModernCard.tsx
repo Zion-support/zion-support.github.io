@@ -1,4 +1,4 @@
- import { motion } from 'framer-motion' import { cn } from '@/lib/utils'  interface ModernCardProps {
+ import { motion, } from 'framer-motion' ;import { cn, } from '@/lib/utils'  ;interface ModernCardProps {
    children: React.ReactNode;
    className?: string;
    variant?: 'default' | 'elevated' | 'glass' | 'neon';

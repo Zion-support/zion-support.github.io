@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, } from 'framer-motion';
 import { 
   Search as SearchIcon, Filter, 
   Server, Users, 
@@ -9,7 +9,7 @@ import {
   Calendar, Eye,
   Bookmark, Share2
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, } from '../components/SEO';
 const Search: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');

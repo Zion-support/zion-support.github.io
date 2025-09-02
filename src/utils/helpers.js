@@ -1,6 +1,5 @@
 
-export const formatDate = (date) => {
-  return new Date(date).toLocaleDateString()}
+export const formatDate = (date) => {return new Date(date).toLocaleDateString();}
 
 export const debounce = (func, wait) => {
   let timeout;

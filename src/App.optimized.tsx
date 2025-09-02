@@ -6,13 +6,13 @@ import { HelmetProvider } from;
   'react-helmet-async';
 export default function Page() {
 // Core Components;
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-  import { SEO } from './components/SEO';
-  import { ErrorBoundary } from './components/ErrorBoundary';
-  import { LoadingSpinner  } from './components/ui/loading-spinner';
+import { PerformanceOptimizer, } from './components/PerformanceOptimizer';
+  import { SEO, } from './components/SEO';
+  import { ErrorBoundary, } from './components/ErrorBoundary';
+  import { LoadingSpinner, } from './components/ui/loading-spinner';
 // Layout Components;
-import { EnhancedHeader } from './components/EnhancedHeader';
-  import { EnhancedFooter } from './components/EnhancedFooter';
+import { EnhancedHeader, } from './components/EnhancedHeader';
+  import { EnhancedFooter, } from './components/EnhancedFooter';
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)
   return (props: any) => (
@@ -137,7 +137,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
   </div>
 )
 function App() {
-return (
+  return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />''
           <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader />'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}''
@@ -151,7 +151,8 @@ return (
                 <Route path='/services/transformation' element={<TransformationServices />} />''
                 <Route path='/services/consulting' element={<ConsultingServices />} />{/* Legal */}''
                 <Route path='/privacy' element={<Privacy />} />''
-                <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}''
+                <Route path='/terms' element={<Terms />} />{/* 404 Fallback */;
+}''
                 <Route path='*' element={';'
                   <div className='min-h-screen flex items-center justify-center'>''
                     <div className='text-center'>''

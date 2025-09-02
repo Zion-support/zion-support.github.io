@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Video, Calendar, Clock, Users, Play, Star, ArrowRight, ExternalLink, Download
 } from 'lucide-react';

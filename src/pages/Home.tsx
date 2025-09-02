@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { Link, } from 'react-router-dom';
+import { SEO, } from '../components/SEO';
 import EnhancedHero from '../components/EnhancedHero';
 import { 
   Zap, Brain, Rocket, Shield, Globe, Users, ArrowRight, CheckCircle, Star, Cpu, Atom, Cloud, Lock, Target, TrendingUp, Lightbulb, Code, Server, 

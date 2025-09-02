@@ -25,10 +25,9 @@ import VideoCall from '../pages/VideoCall';
 import SearchPage from '../pages/SearchPage';
 import Sitemap from '../pages/Sitemap';
 import SitemapPage from '../pages/SitemapPage';
-const ContentRoutes = () => {
-  return (
+const ContentRoutes = () => {return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />;} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />

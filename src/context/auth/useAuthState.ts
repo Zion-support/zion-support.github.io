@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'  interface User {
+import { useState, useEffect } from 'react'  ;interface User {
    id: string;
    email: string;
    displayName?: string;

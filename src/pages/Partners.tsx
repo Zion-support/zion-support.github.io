@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink 
 } from 'lucide-react';

@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Search, FileText, Users, Calendar, ArrowRight, ExternalLink, Download, Star, TrendingUp, Globe
 } from 'lucide-react';

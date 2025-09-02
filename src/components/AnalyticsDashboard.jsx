@@ -105,7 +105,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 '';
 ''';'
                 isExpanded ? 'Collapse dashboard' : 'Expand dashboard''}'''
-            >'''{isExpanded ? '−' : '+'}'
+            >'''{isExpanded ? '−" : }"
             </button>
           </div>
         </div>

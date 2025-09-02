@@ -14,3 +14,4 @@ export const api = {
       throw new Error(`HTTP error! status: ${response.status}`)}
     return response.json()}
 }
+;

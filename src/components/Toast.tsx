@@ -73,4 +73,4 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
         </button>
       </div>
     </div>
-  )}
+  )};

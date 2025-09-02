@@ -1,31 +1,25 @@
 import React from 'react';
-const Card = ({ children, className = '' }) => {
-    return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+const Card = ({ children, className = '' }) => {return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className;}`}>
       {children}
     </div>);
 };
-const CardHeader = ({ children, className = '' }) => {
-    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
+const CardHeader = ({ children, className = '' }) => {return (<div className={`flex flex-col space-y-1.5 p-6 ${className;}`}>
       {children}
     </div>);
 };
-const CardTitle = ({ children, className = '' }) => {
-    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
+const CardTitle = ({ children, className = '' }) => {return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className;}`}>
       {children}
     </h3>);
 };
-const CardDescription = ({ children, className = '' }) => {
-    return (<p className={`text-sm text-muted-foreground ${className}`}>
+const CardDescription = ({ children, className = '' }) => {return (<p className={`text-sm text-muted-foreground ${className;}`}>
       {children}
     </p>);
 };
-const CardContent = ({ children, className = '' }) => {
-    return (<div className={`p-6 pt-0 ${className}`}>
+const CardContent = ({ children, className = '' }) => {return (<div className={`p-6 pt-0 ${className;}`}>
       {children}
     </div>);
 };
-const CardFooter = ({ children, className = '' }) => {
-    return (<div className={`flex items-center p-6 pt-0 ${className}`}>
+const CardFooter = ({ children, className = '' }) => {return (<div className={`flex items-center p-6 pt-0 ${className;}`}>
       {children}
     </div>);
 };
@@ -39,8 +33,8 @@ const __rest = (this && this.__rest) || function (s, e) {
             if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
                 t[p[i]] = s[p[i]]}
     return t};
-import { jsx as _jsx } from "react/jsx-runtime";
-import { cn } from '@/lib/utils';
+import { jsx, as, _jsx, } from "react/jsx-runtime";
+import { cn, } from '@/lib/utils';
 const Card = React.forwardRef((_a, ref) => {
     let { className } = _a, props = __rest(_a, ["className"]);
     return (_jsx("div", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))});

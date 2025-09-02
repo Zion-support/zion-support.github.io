@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Linkedin, Twitter, Github, Mail, Award, Users, 
   Brain, Atom, Shield, Rocket, Globe, Code, 

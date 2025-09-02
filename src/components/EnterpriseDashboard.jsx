@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'';'
-import { motion, AnimatePresence } from 'framer-motion'';'
+import { motion, AnimatePresence } from 'framer-motion';';'
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
@@ -287,7 +287,7 @@ export const EnterpriseDashboard = () => {
                       <span className={`flex items-center gap-1 ${metric.trend === 'up' ? 'text-red-600' : '`''`;'
                     metric.trend === 'down' ? 'text-green-600' : 'text-gray-600'}`}>''''''{metric.trend === 'up' ? <TrendingUp className='w-4 h-4'/> :''''''
                     metric.trend === 'down' ? <TrendingDown className='w-4 h-4'/> :''''
-                        <Clock3 className='w-4 h-4'/>}'{metric.change > 0 ? '+' : ''}{metric.change}%'''
+                        <Clock3 className='w-4 h-4'/>}"{metric.change > 0 ?  : "'}{metric.change}%'''
                       </span>''''
                       <span className='text-gray-500'>
                         {metric.lastUpdated.toLocaleTimeString()}

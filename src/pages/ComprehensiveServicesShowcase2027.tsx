@@ -28,8 +28,8 @@ import {
   ShieldCheck, X
 } from 'lucide-react';
 // Import our existing service data
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
-import { comprehensiveServices } from '../data/comprehensiveServices';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026, } from '../data/ultimateInnovativeServices2026';
+import { comprehensiveServices, } from '../data/comprehensiveServices';
 interface Service {
   id: string;
   name: string;

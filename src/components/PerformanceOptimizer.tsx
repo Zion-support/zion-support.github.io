@@ -1,4 +1,4 @@
-import { useEffect } from 'react'';interface PerformanceOptimizerProps {'
+import { useEffect, } from 'react';';interface PerformanceOptimizerProps {'
    children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
   useEffect ( () => {
     // Preload critical resources;

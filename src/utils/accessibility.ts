@@ -47,4 +47,4 @@ export const getContrastRatio = (color1: string, color2: string): number => {
 }
 
 export const isHighContrast = (color1: string, color2: string): boolean => {
-  return getContrastRatio(color1, color2) >= 4.5}
+  return getContrastRatio(color1, color2) >= 4.5};

@@ -1,7 +1,7 @@
 
 ;
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motion, } from 'framer-motion';
+import { Link, } from 'react-router-dom';
 import {
   Brain, Shield,
   Cloud, Database,

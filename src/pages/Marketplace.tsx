@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,
   Search, Grid, List, Heart, ExternalLink

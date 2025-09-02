@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
 export default function TermsOfService() {
   return (

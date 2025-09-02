@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
 import { 
   Check, Star, ArrowRight, Users, Zap, Shield, 
   Brain, Atom, Rocket, Globe, Award

@@ -1,4 +1,4 @@
-import { motion     } from 'framer-motion';
+import { motion, } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react';
 interface CaseStudy {
   id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode}[];
@@ -23,7 +23,8 @@ const caseStudies: CaseStudy[] = [{ id: '1', title: 'AI-Powered Customer Service
 export default function CaseStudies() {
   return (<section className='py-24 sm: py-32 bg-gradient-to-br from-slate-50 to-blue-50'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        {/* Header */}
+        {/* Header */;
+}
         <div className='mx-auto max-w-2xl lg:text-center mb-16'>
           <motion.h2
             className='text-base font-semibold leading-7 text-blue-600';
