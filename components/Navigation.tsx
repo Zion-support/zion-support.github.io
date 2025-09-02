@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Brain, 
   ChevronDown, 
@@ -27,25 +27,25 @@ const Navigation = () => {
     {
       name: 'AI & Machine Learning',
       services: [
-        { name: 'AI-Powered CRM', href: '/services#ai-powered-crm' },
-        { name: 'Quantum Computing', href: '/services#quantum-computing' },
-        { name: 'Edge AI Computing', href: '/services#edge-ai-computing' }
+        { name: 'AI-Powered CRM', href: '/services/ai-services#ai-powered-crm' },
+        { name: 'Quantum Computing', href: '/services/ai-services#quantum-computing' },
+        { name: 'Edge AI Computing', href: '/services/ai-services#edge-ai-computing' }
       ]
     },
     {
       name: 'Emerging Technologies',
       services: [
-        { name: 'Blockchain Solutions', href: '/services#blockchain' },
-        { name: 'AR/VR Business', href: '/services#ar-vr' },
-        { name: 'IoT Intelligence', href: '/services#iot' }
+        { name: 'Blockchain Solutions', href: '/services/it-services#blockchain' },
+        { name: 'AR/VR Business', href: '/services/it-services#ar-vr' },
+        { name: 'IoT Intelligence', href: '/services/it-services#iot' }
       ]
     },
     {
       name: 'Industry Solutions',
       services: [
-        { name: 'Healthcare IT', href: '/services#healthcare' },
-        { name: 'FinTech Solutions', href: '/services#fintech' },
-        { name: 'GreenTech Analytics', href: '/services#greentech' }
+        { name: 'Healthcare IT', href: '/services/it-services#healthcare' },
+        { name: 'FinTech Solutions', href: '/services/it-services#fintech' },
+        { name: 'GreenTech Analytics', href: '/services/it-services#greentech' }
       ]
     }
   ];
@@ -56,7 +56,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
@@ -71,7 +71,7 @@ const Navigation = () => {
               return (
                 <Link
                   key={item.name}
-                  to={item.href}
+                  href={item.href}
                   className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-zion-slate-light hover:text-white hover:bg-white/10"
                 >
                   <Icon className="w-4 h-4" />
@@ -102,7 +102,7 @@ const Navigation = () => {
                             {category.services.map((service) => (
                               <Link
                                 key={service.name}
-                                to={service.href}
+                                href={service.href}
                                 className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                                 onClick={() => setIsServicesOpen(false)}
                               >
@@ -149,7 +149,7 @@ const Navigation = () => {
               return (
                 <Link
                   key={item.name}
-                  to={item.href}
+                  href={item.href}
                   className="flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors text-zion-slate-light hover:text-white hover:bg-white/10"
                   onClick={() => setIsOpen(false)}
                 >
@@ -170,7 +170,7 @@ const Navigation = () => {
                       {category.services.map((service) => (
                         <Link
                           key={service.name}
-                          to={service.href}
+                          href={service.href}
                           className="block px-3 py-1 text-sm text-zion-slate-light hover:text-white rounded transition-colors"
                           onClick={() => setIsOpen(false)}
                         >

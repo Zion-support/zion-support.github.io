@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Phone, 
   Mail, 
@@ -13,7 +13,7 @@ import {
   Heart
 } from 'lucide-react';
 
-export function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
@@ -94,7 +94,7 @@ export function Footer() {
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-zion-slate-light text-sm hover:text-zion-cyan transition-colors"
                   >
                     {link.name}
@@ -111,7 +111,7 @@ export function Footer() {
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-zion-slate-light text-sm hover:text-zion-cyan transition-colors"
                   >
                     {link.name}
@@ -128,7 +128,7 @@ export function Footer() {
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-zion-slate-light text-sm hover:text-zion-cyan transition-colors"
                   >
                     {link.name}
@@ -186,4 +186,6 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
