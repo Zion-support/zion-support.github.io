@@ -4513,6 +4513,340 @@ export const services: Service[] = [
     technologies: ['Neuromorphic Hardware', 'Spiking Neural Networks', 'Event-Driven Processing', 'Low-Power AI', 'Research Tools'],
     link: 'https://ziontechgroup.com/services/ai-neuromorphic-computing',
     icon: '🧬'
+  },
+  {
+    id: 'ai-legal-contract-review-pro',
+    name: 'AI Legal Contract Review Pro',
+    category: 'micro-saas',
+    description: 'Automated contract review micro SaaS with clause extraction, risk scoring, and redline suggestions for NDAs, MSAs, SOWs, and DPAs.',
+    features: [
+      'Clause extraction and tagging',
+      'Risk and compliance scoring',
+      'Auto redlines and suggestions',
+      'Playbook-based review rules',
+      'Version comparison and diff',
+      'PII detection and masking',
+      'Export to Word/PDF',
+      'API for DMS/CLM integration'
+    ],
+    pricing: {
+      starter: 49,
+      professional: 129,
+      enterprise: 499,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce review time by 70%',
+      'Improve legal compliance',
+      'Consistent playbook enforcement',
+      'Lower outside counsel costs',
+      'Faster deal cycles'
+    ],
+    useCases: [
+      'Procurement contract intake',
+      'Sales contract review',
+      'Vendor risk assessments',
+      'Policy compliance checks'
+    ],
+    technologies: ['RAG', 'LLMs', 'NLP', 'Node.js', 'Next.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/ai-legal-contract-review-pro',
+    icon: '⚖️'
+  },
+  {
+    id: 'ecommerce-repricing-optimizer',
+    name: 'eCommerce Repricing Optimizer',
+    category: 'micro-saas',
+    description: 'Real-time automated repricing engine for marketplaces and storefronts to maximize buy-box win rate and margins.',
+    features: [
+      'Competitor price tracking',
+      'Dynamic repricing rules',
+      'MAP policy enforcement',
+      'Cost and fee awareness',
+      'Inventory-aware pricing',
+      'A/B price testing',
+      'Alerts and anomaly detection',
+      'CSV and API imports'
+    ],
+    pricing: {
+      starter: 39,
+      professional: 99,
+      enterprise: 299,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase buy-box wins',
+      'Grow gross margin',
+      'Reduce manual pricing work',
+      'Protect brand pricing policies'
+    ],
+    useCases: [
+      'Amazon and Walmart marketplaces',
+      'Shopify and BigCommerce',
+      'B2B price lists',
+      'Promo and seasonal pricing'
+    ],
+    technologies: ['TypeScript', 'Next.js', 'Queues', 'Redis', 'PostgreSQL', 'Playwright'],
+    link: 'https://ziontechgroup.com/services/ecommerce-repricing-optimizer',
+    icon: '💹'
+  },
+  {
+    id: 'customer-feedback-mining',
+    name: 'Customer Feedback Mining',
+    category: 'micro-saas',
+    description: 'AI-driven feedback aggregation from reviews, tickets, and NPS to extract themes, sentiment, and product opportunities.',
+    features: [
+      'Multi-source ingestion',
+      'Topic modeling and clustering',
+      'Sentiment and emotion detection',
+      'Feature request surfacing',
+      'Churn risk signals',
+      'Dashboards and alerts',
+      'Exports to Jira/Linear',
+      'Slack/MS Teams integration'
+    ],
+    pricing: {
+      starter: 29,
+      professional: 79,
+      enterprise: 249,
+      currency: 'USD'
+    },
+    benefits: [
+      'Prioritize roadmap by data',
+      'Faster bug/issue detection',
+      'Reduce churn with insights',
+      'Amplify customer voice'
+    ],
+    useCases: [
+      'Product ops and UX research',
+      'CS leadership reporting',
+      'Marketing messaging testing',
+      'C-suite customer health'
+    ],
+    technologies: ['Python', 'NLP', 'Vector DB', 'Next.js', 'Airflow/Temporal'],
+    link: 'https://ziontechgroup.com/services/customer-feedback-mining',
+    icon: '🗣️'
+  },
+  {
+    id: 'cloud-migration-accelerator',
+    name: 'Cloud Migration Accelerator',
+    category: 'it-services',
+    description: 'Blueprint-driven assessment, landing zone setup, and phased migration to AWS/Azure/GCP with zero-trust security and FinOps.',
+    features: [
+      'TCO/ROI assessment',
+      'Landing zone and guardrails',
+      'Workload discovery and grouping',
+      'Data migration and cutover',
+      'Zero-downtime strategies',
+      'Observability and SRE setup',
+      'FinOps and cost optimization',
+      'Knowledge transfer and docs'
+    ],
+    pricing: {
+      starter: 15000,
+      professional: 65000,
+      enterprise: 250000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Accelerate time-to-cloud',
+      'Reduce migration risk',
+      'Improve security posture',
+      'Lower run costs with FinOps'
+    ],
+    useCases: [
+      'Data center exit',
+      'Modernize legacy apps',
+      'Disaster recovery setup',
+      'Global scalability needs'
+    ],
+    technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Datadog'],
+    link: 'https://ziontechgroup.com/services/cloud-migration-accelerator',
+    icon: '☁️'
+  },
+  {
+    id: 'kubernetes-platform-engineering',
+    name: 'Kubernetes Platform Engineering',
+    category: 'it-services',
+    description: 'Enterprise-grade Kubernetes platform with golden paths, GitOps, self-service environments, and security by default.',
+    features: [
+      'Cluster design and hardening',
+      'GitOps (Argo CD/Flux)',
+      'Golden paths and templates',
+      'Service mesh and policies',
+      'CI/CD and artifact supply chain',
+      'Observability stack',
+      'Secrets and identity',
+      'Runbooks and training'
+    ],
+    pricing: {
+      starter: 12000,
+      professional: 48000,
+      enterprise: 180000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Faster developer onboarding',
+      'Higher deployment velocity',
+      'Improved reliability and SLOs',
+      'Governance and compliance'
+    ],
+    useCases: [
+      'Multi-tenant platforms',
+      'Hybrid/multi-cloud',
+      'Regulated environments',
+      'Edge and on-prem clusters'
+    ],
+    technologies: ['Kubernetes', 'Helm', 'Argo CD', 'Istio/Linkerd', 'OPA/Gatekeeper'],
+    link: 'https://ziontechgroup.com/services/kubernetes-platform-engineering',
+    icon: '🐳'
+  },
+  {
+    id: 'soc2-compliance-implementation',
+    name: 'SOC 2 Compliance Implementation',
+    category: 'it-services',
+    description: 'End-to-end SOC 2 readiness, controls implementation, evidence automation, and audit support.',
+    features: [
+      'Gap assessment and roadmap',
+      'Policy and control library',
+      'Evidence automation',
+      'Vulnerability management',
+      'Security awareness training',
+      'Risk register and treatments',
+      'Vendor risk management',
+      'Audit coordination'
+    ],
+    pricing: {
+      starter: 8000,
+      professional: 35000,
+      enterprise: 120000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Faster audit readiness',
+      'Reduced manual evidence work',
+      'Improved security hygiene',
+      'Stronger customer trust'
+    ],
+    useCases: [
+      'Pre-seed to enterprise SaaS',
+      'Healthcare and fintech',
+      'B2B vendor due diligence',
+      'Continuous compliance'
+    ],
+    technologies: ['GRC Platforms', 'CIS Benchmarks', 'SIEM', 'CSPM', 'IaC'],
+    link: 'https://ziontechgroup.com/services/soc2-compliance-implementation',
+    icon: '🔒'
+  },
+  {
+    id: 'ragt-knowledge-bot',
+    name: 'RAG Knowledge Bot',
+    category: 'ai-services',
+    description: 'Retrieval-augmented generation assistant grounded in your docs, tickets, and code with robust guardrails and analytics.',
+    features: [
+      'Multi-repo document ingestion',
+      'Embeddings and vector search',
+      'Conversation memory and tools',
+      'Citations and source tracing',
+      'Quality and safety guardrails',
+      'Analytics and feedback loops',
+      'SSO and role permissions',
+      'SDK and API access'
+    ],
+    pricing: {
+      starter: 7000,
+      professional: 18000,
+      enterprise: 120000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce support tickets',
+      'Accelerate onboarding',
+      'Improve answer accuracy',
+      'Protect IP and privacy'
+    ],
+    useCases: [
+      'Internal IT helpdesk',
+      'Customer self-service',
+      'Sales and SE enablement',
+      'Policy and compliance Q&A'
+    ],
+    technologies: ['RAG', 'Vector DB', 'OpenAI/Azure OpenAI', 'LangChain', 'Next.js'],
+    link: 'https://ziontechgroup.com/services/rag-knowledge-bot',
+    icon: '🤖'
+  },
+  {
+    id: 'computer-vision-inspection',
+    name: 'Computer Vision Quality Inspection',
+    category: 'ai-services',
+    description: 'High-accuracy vision models for defect detection, part counting, and assembly verification on the factory line.',
+    features: [
+      'Dataset labeling workflows',
+      'Model training and evaluation',
+      'On-edge inference optimization',
+      'Active learning loops',
+      'Real-time alarms and APIs',
+      'Lifecycle MLOps',
+      'Integration with PLC/SCADA',
+      'Secure on-prem deployment'
+    ],
+    pricing: {
+      starter: 20000,
+      professional: 90000,
+      enterprise: 400000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce scrap and rework',
+      'Increase throughput and OEE',
+      'Consistent quality at scale',
+      'Lower inspection costs'
+    ],
+    useCases: [
+      'Electronics assembly',
+      'Automotive parts',
+      'Pharmaceutical packaging',
+      'Food and beverage lines'
+    ],
+    technologies: ['PyTorch', 'ONNX/TensorRT', 'Edge AI', 'OpenCV', 'MLOps'],
+    link: 'https://ziontechgroup.com/services/computer-vision-inspection',
+    icon: '📷'
+  },
+  {
+    id: 'ai-sales-forecasting-suite',
+    name: 'AI Sales Forecasting Suite',
+    category: 'ai-services',
+    description: 'Probabilistic demand and revenue forecasting with scenario planning and driver analysis for sales and operations teams.',
+    features: [
+      'Time-series feature store',
+      'Hierarchical forecasting',
+      'Causal and driver analysis',
+      'Promotion and seasonality modeling',
+      'Scenario planning and what-ifs',
+      'BI dashboards and exports',
+      'Data quality and lineage',
+      'API for ERP/CRM integration'
+    ],
+    pricing: {
+      starter: 10000,
+      professional: 35000,
+      enterprise: 150000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Improve forecast accuracy',
+      'Optimize inventory levels',
+      'Increase service levels',
+      'Align finance and supply chain'
+    ],
+    useCases: [
+      'CPG demand planning',
+      'SaaS ARR forecasting',
+      'Retail allocation',
+      'Manufacturing S&OP'
+    ],
+    technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
+    link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
+    icon: '📈'
   }
 ];
 
