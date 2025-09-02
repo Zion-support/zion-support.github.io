@@ -12,21 +12,10 @@ import {
   Instagram,
   ArrowRight,
   Heart,
-  Globe,
-  Shield,
-  Users,
-  Award,
-  Star,
-  Zap,
   Cloud,
-  Database,
-  Network,
-  Target,
-  CheckCircle,
-  ExternalLink
+  Database
 } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
