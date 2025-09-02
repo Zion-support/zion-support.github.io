@@ -1,1 +1,0 @@
-import { ProductListing } from '@/src/src/types/listings';

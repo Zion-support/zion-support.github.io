@@ -1,10 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
-import SEOEnhancer from '../SEOEnhancer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -23,7 +22,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 }) => {
   return (
     <>
-      <PerformanceOptimizer />
       <SEOEnhancer 
         title={title}
         description={description}

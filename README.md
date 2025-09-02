@@ -99,55 +99,10 @@ A modern, responsive website for Zion Tech Group, showcasing comprehensive techn
 - **Starter**: $5,000+
 - **Professional**: $25,000+
 - **Enterprise**: $100,000+
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-0451
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-<<<<<<< HEAD
-- Node.js 18+
-- npm or yarn
-- PM2 (for automation)
-
-### Installation
-```bash
-npm install
-npm run dev
-```
-
-### Automation Setup
-```bash
-chmod +x start-error-automation.sh
-./start-error-automation.sh
-```
-
-## 🔧 Available Scripts
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript checks
-
-## 📊 Automation Features
-- **Error Prevention**: Automatically detects and prevents errors
-- **Performance Monitoring**: Continuous performance optimization
-- **Code Quality**: Automated code quality improvements
-- **Security Scanning**: Continuous security monitoring
-- **Dependency Management**: Automated dependency updates
-
-## 🤝 Contributing
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## 📄 License
-This project is licensed under the MIT License.
-
-## 🆘 Support
-For support and questions, please contact our team or create an issue in the repository.
-=======
 - Node.js 20.18.1 or higher
 - npm 10.0.0 or higher
 
