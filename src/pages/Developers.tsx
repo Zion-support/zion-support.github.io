@@ -39,7 +39,6 @@ import { Code,
   ExternalLink
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Developers(...args: any[]): any {
   const apis = [
@@ -75,7 +74,6 @@ export default function Developers(...args: any[]): any {
       documentation: '/docs/api/security',;
       status: 'Production';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const sdks = [
@@ -111,7 +109,6 @@ export default function Developers(...args: any[]): any {
       repository: 'https://github.com/ziontechgroup/go-sdk',;
       documentation: '/docs/sdk/go';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const tools = [
@@ -143,7 +140,6 @@ export default function Developers(...args: any[]): any {
       href: '/examples',;
       category: 'Learning';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quickStartSteps = [
@@ -180,7 +176,6 @@ export default function Developers(...args: any[]): any {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Developer Portal - Zion Tech Group"
         description="Access our APIs, SDKs, and developer resources. Build powerful applications with Zion Tech Group's AI and technology platforms."
       />

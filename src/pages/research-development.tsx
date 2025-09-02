@@ -32,14 +32,12 @@ import { FlaskConical,
   Target,
   BookOpen,
   GraduationCap,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lightbulb,
   Microscope,
   TestTube,
   Satellite,
   Telescope
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const researchAreas = [
   {
@@ -304,7 +302,6 @@ const patents = [
     area: 'Cloud-Native',;
     description: 'A security architecture pattern for cloud-native applications.';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function ResearchDevelopment(...args[]: any):  {
@@ -323,10 +320,7 @@ export default function ResearchDevelopment(...args[]: any):  {
   });
 
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -371,7 +365,6 @@ export default function ResearchDevelopment(...args[]: any):  {
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {areas.map(area               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={area} value={area}>{area}</option>
                   ))}
                 </select>
@@ -385,14 +378,12 @@ export default function ResearchDevelopment(...args[]: any):  {
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={status} value={status}>{status}</option>
                   ))}
                 </select>
               </div>
             </div>
           </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 
@@ -412,7 +403,6 @@ export default function ResearchDevelopment(...args[]: any):  {
 ;
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = area.icon;
               return (
                 <motion.div
@@ -485,7 +475,6 @@ export default function ResearchDevelopment(...args[]: any):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -524,7 +513,6 @@ export default function ResearchDevelopment(...args[]: any):  {
 ;
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
             {filteredProjects.map((project, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
@@ -640,7 +628,6 @@ export default function ResearchDevelopment(...args[]: any):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -679,7 +666,6 @@ export default function ResearchDevelopment(...args[]: any):  {
 
           <div className="space-y-6">
             {publications.map((pub, index) => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={area.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -743,7 +729,6 @@ export default function ResearchDevelopment(...args[]: any):  {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {patents.map((patent, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}

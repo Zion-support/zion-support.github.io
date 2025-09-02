@@ -1,6 +1,5 @@
 import { ProductListing              } from '@/types/listings';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Enhanced Zion Tech Group Services 2025 - Real Micro SAAS, IT & AI Solutions
 export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -761,7 +760,6 @@ export const getEnhancedServiceById = (id: anyanyanyanyanyanyanyanyanyanyanyanya
 };
 
 export const getEnhancedServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.category === category);
 };
 export const getEnhancedServiceCategories = () => {;
@@ -772,13 +770,11 @@ export const getFeaturedEnhancedServices = () => {;
 };
 
 export const getEnhancedServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
   );
 };
 
 export const getEnhancedServicesByAIScore = (minScore: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };}}}}}}}}}}}}}}}}

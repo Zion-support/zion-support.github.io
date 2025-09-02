@@ -9,7 +9,6 @@ import { Search,
   Phone, 
   Mail, 
   Video, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   FileText,
   HelpCircle,
   Brain,
@@ -21,11 +20,9 @@ import { Search,
   ArrowRight,
   ExternalLink,
   ChevronRight
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
 export default function Help(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState<string[]>([]);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
@@ -331,7 +328,6 @@ export default function Help(...args[]: any):  {
           >
             <h2 className="text-3xl font-bold text-white mb-4">Popular Articles</h2>
             <p className="text-xl text-gray-300">Most frequently accessed help content</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </motion.div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
@@ -367,7 +363,6 @@ export default function Help(...args[]: any):  {
                 </Link>
               </motion.div>
             )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </section>
       )}
@@ -472,7 +467,6 @@ export default function Help(...args[]: any):  {
                     <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
                       View All {category.name} Help
                     </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                 </motion.div>
               ))}
@@ -673,7 +667,6 @@ export default function Help(...args[]: any):  {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Get Help Fast</h2>
@@ -684,7 +677,6 @@ export default function Help(...args[]: any):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {supportOptions.map((option, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={channel.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -785,7 +777,6 @@ export default function Help(...args[]: any):  {
                           </a>
                         ))}
                       </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     </div>
                   </motion.div>
                 )}
@@ -836,7 +827,6 @@ export default function Help(...args[]: any):  {
 
             ].map((resource, index)              => (
               <motion.a
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

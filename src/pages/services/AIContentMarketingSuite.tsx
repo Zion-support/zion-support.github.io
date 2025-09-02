@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AIContentMarketingSuite: React.FC = (): JSX.Element => {
   const features = [
@@ -29,7 +28,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
       icon: BarChart3,
       benefits: ["Real-time tracking", "Predictive analytics", "ROI measurement"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const capabilities = [
@@ -79,7 +77,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
       ],
       popular: false
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -111,7 +108,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-purple-dark">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         {/* Animated Background */}
@@ -166,7 +162,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             <p className="text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-zion-slate-light">
               Revolutionize your content marketing with AI-powered creation, optimization, and automation. 
               Generate engaging content that converts and scales your business.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -203,7 +198,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Everything you need to create, optimize, and distribute content that drives results
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </motion.div>
 
@@ -225,7 +219,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-zion-cyan">
                       <CheckCircle className="w-4 h-4 mr-2" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       {benefit}
                     </li>
                   ))}
@@ -251,7 +244,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               From blog posts to video scripts, our AI handles all your content needs
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </motion.div>
 
@@ -267,7 +259,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
                     <content.icon className="w-8 h-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                   <h3 className="text-2xl font-bold text-white">{content.type}</h3>
                 </div>
@@ -318,7 +309,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Choose the plan that fits your content marketing needs. All plans include our core AI features.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </motion.div>
 
@@ -333,7 +323,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
                   plan.popular 
                     ? 'border-zion-cyan/40 scale-105 shadow-lg shadow-zion-cyan/25' 
                     : 'border-zion-cyan/20 hover:border-zion-cyan/40'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 }`}
 
                 {plan.popular && (
@@ -377,7 +366,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       {/* CTA Section */}
       <div className="relative py-24">
@@ -394,7 +382,6 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Join thousands of businesses using AI to create engaging content that converts. 
               Start your free trial today or schedule a personalized demo.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -422,4 +409,3 @@ const AIContentMarketingSuite: React.FC = (): JSX.Element => {
 };
 
 export default AIContentMarketingSuite;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

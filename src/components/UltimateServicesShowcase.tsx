@@ -21,12 +21,10 @@ import { Brain,
   MapPin
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import the new services
 import { ultimateInnovativeServices2025               } from '../../data/2025-ultimate-innovative-services-expansion';
 import { enterpriseITInfrastructureServices2025               } from '../../data/2025-enterprise-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025               } from '../../data/2025-innovative-micro-saas-solutions';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
 
@@ -44,7 +42,6 @@ interface Service {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   tagline: string;
@@ -160,7 +157,6 @@ const patentStatusColors = {
 };
 
 export function UltimateServicesShowcase(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
   const allServices = [;
@@ -170,9 +166,7 @@ export function UltimateServicesShowcase(...args[]: any):  {
   ];
   const filteredServices = selectedCategory === 'all'
     ? allServices: anyanyanyanyanyanyanyanyanyanyanyanyanyanycategories.find(cat               => cat.id === selectedCategory)?.services || [];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

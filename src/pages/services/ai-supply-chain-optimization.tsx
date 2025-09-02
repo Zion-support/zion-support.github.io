@@ -2,8 +2,6 @@ import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>
@@ -98,10 +96,8 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -163,10 +159,8 @@ import { Link               } from 'react-router-dom.ts';
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
@@ -236,10 +230,8 @@ import { Link               } from 'react-router-dom.ts';
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
                 }
               ].map((capability, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
@@ -291,7 +283,6 @@ import { Link               } from 'react-router-dom.ts';
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }
                   ].map((item, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-blue-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -339,8 +330,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Continuously monitor, optimize, and improve supply chain performance."
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

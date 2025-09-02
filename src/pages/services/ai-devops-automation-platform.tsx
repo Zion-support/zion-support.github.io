@@ -243,7 +243,6 @@ const AIDevOpsAutomationPlatform = () => {
     keywords: "AI DevOps, DevOps automation, CI/CD automation, automated testing, infrastructure automation, DevOps platform",
     url: "https://ziontechgroup.com/services/ai-devops-automation-platform"
   };
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
   return (
     <>
@@ -323,7 +322,6 @@ const AIDevOpsAutomationPlatform = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -358,7 +356,6 @@ const AIDevOpsAutomationPlatform = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {automationAreas.map((area, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -400,7 +397,6 @@ const AIDevOpsAutomationPlatform = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -448,7 +444,6 @@ const AIDevOpsAutomationPlatform = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-zion-slate-dark/50 border rounded-xl p-8 ${
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                     plan.popular 
                       ? 'border-zion-cyan shadow-lg shadow-zion-cyan/20' 
                       : 'border-zion-purple/20'

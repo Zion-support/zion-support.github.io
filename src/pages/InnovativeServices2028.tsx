@@ -27,11 +27,8 @@ import { Brain,
   ChevronUp
 } from 'lucide-react';
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo              } from '../data/innovativeServices2028';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function InnovativeServices2028(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
@@ -55,7 +52,6 @@ export default function InnovativeServices2028(...args[]: any):  {
         return 0}
   });
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>;
           </div>;
         </div>;

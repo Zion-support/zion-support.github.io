@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIProjectManagement(...args: any[]): any {
   const features = [
@@ -195,7 +194,6 @@ export default function AIProjectManagement(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -234,7 +232,6 @@ export default function AIProjectManagement(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {solutions.map((solution, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -323,7 +320,6 @@ export default function AIProjectManagement(...args: any[]): any {
         </div>
       </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-600/20 to-red-600/20">
         <div className="max-w-4xl mx-auto text-center">

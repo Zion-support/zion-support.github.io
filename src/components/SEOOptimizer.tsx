@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 import { Helmet } from 'react-helmet-async';
 
 export interface SEOData {
@@ -41,7 +40,6 @@ import { Search,
   RefreshCw
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SEOAnalysis {
 
 
@@ -77,7 +75,6 @@ lastUpdated: Date;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOIssue {
 
@@ -116,7 +113,6 @@ category: 'content' | 'technical' | 'performance' | 'accessibility';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOSuggestion {
 
@@ -154,7 +150,6 @@ estimatedImpact: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOMetrics {
 
@@ -183,13 +178,11 @@ coreWebVitals: {;
     cls: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber}}
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
   onAnalysisComplete?: (analysis: anyanyanyanyanyanyanyanyanyanyanyanyanyanySEOAnalysis)                => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
@@ -198,7 +191,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   onAnalysisComplete;
 }) => {;
   const [analysis, setAnalysis] = useState<any>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -275,7 +267,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       };
     },;
     lastUpdated: new Date();
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }), []);
 
   // Analyze SEO
@@ -293,17 +284,14 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     if (autoAnalyze) {
       analyzeSEO()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [autoAnalyze, analyzeSEO]);
 
   // Get score color
       default: return 'text-zion-slate'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get priority color
       default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Filter issues by category
@@ -332,7 +320,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     }) || [];
   }, [analysis]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   if (!analysis && !isAnalyzing) {
     return (
@@ -348,9 +335,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       </div>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export const defaultSEO: SEOData = {
   title: 'Zion Tech Group - Innovation • Technology • Growth',
@@ -633,13 +617,11 @@ export const ServiceSEO: React.FC<SEOOptimizerProps & {
       {children}
     </SEOOptimizer>
   );
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 };
 =======
 // Hook for using SEO optimization
 export const useSEOOptimization = () => {;
   const [analysis, setAnalysis] = useState<any>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const optimizePage = useCallback(async () => {;
@@ -653,5 +635,3 @@ export const useSEOOptimization = () => {;
     isOptimizing,
     optimizePage
   }};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

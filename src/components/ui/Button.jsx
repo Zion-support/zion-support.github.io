@@ -1,10 +1,8 @@
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react';
 import { cva } from 'class-variance-authority';
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva("inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none", {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     variants: {
       variant: {
         default: "bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 focus:ring-blue-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1",
@@ -57,5 +55,3 @@ const Button = React.forwardRef(({ className, variant, size, fullWidth, loading 
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

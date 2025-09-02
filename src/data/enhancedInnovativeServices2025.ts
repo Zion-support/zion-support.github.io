@@ -31,7 +31,6 @@ address: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface MicroSaasService {
 
 
@@ -51,7 +50,6 @@ export interface MicroSaasService {
   name: string;
   category: string;
   pricing: string;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   description: string;
   category: 'Micro SAAS' | 'IT Services' | 'AI Solutions' | 'Emerging Tech';
   subcategory: string;
@@ -83,7 +81,6 @@ trialPeriod: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface ITService {
 
 
@@ -129,7 +126,6 @@ support: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface AIService {
 
 
@@ -151,7 +147,6 @@ export interface AIService {
   description: string;
   pricing: string;
   price: number;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   pricingModel: string;
   features: string[];
   benefits: string[];
@@ -200,10 +195,8 @@ useCases: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
     id: "ai-powered-customer-success-automation",
     title: "AI-Powered Customer Success Automation Platform",

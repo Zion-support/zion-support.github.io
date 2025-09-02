@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback               } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { Eye, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   EyeOff, 
   Volume2, 
   VolumeX, 
@@ -24,7 +23,6 @@ import { Eye,
   Check,
   AlertTriangle
                } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface AccessibilitySettings {
 
@@ -42,7 +40,6 @@ interface AccessibilitySettings {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -64,7 +61,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Apply accessibility settings to the document
       root.style.removeProperty('--accent-color')}
@@ -73,7 +69,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
     if (newSettings.largeText) {
       root.style.fontSize = '120%'} else {
       root.style.fontSize = '100%'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Reduced motion;
     if (newSettings.reducedMotion) {;
@@ -81,7 +76,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
       root.style.setProperty('--transition-duration', '0.01ms')} else {
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--transition-duration')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Color blindness simulation
     if (newSettings.colorBlindness !== 'none') {
@@ -111,8 +105,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
     } else {
       root.style.filter = 'none';
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Font size
     const fontSizes = {
@@ -143,7 +135,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
     if (newSettings.keyboardNavigation) {
       document.addEventListener('keydown', handleKeyboardNavigation)} else {
       document.removeEventListener('keydown', handleKeyboardNavigation)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Save settings
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
@@ -151,12 +142,10 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
   // Handle keyboard navigation
           document.activeElement.click()}
         break}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // Screen reader announcements
         announcement.parentNode.removeChild(announcement)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, 1000);
 
     setAnnouncements(prev => [...prev, message]);
@@ -180,7 +169,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
 
@@ -208,7 +196,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
 };
     
     announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)}, [settings, applySettings, announceToScreenReader]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Reset to defaults
   const resetToDefaults = useCallback(() => {
@@ -234,7 +221,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
 
 };
     
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     setSettings(defaultSettings);
     applySettings(defaultSettings);
     announceToScreenReader('Accessibility settings reset to defaults')}, [applySettings, announceToScreenReader]);

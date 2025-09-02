@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   BarChart3, 
   TrendingUp, 
@@ -27,8 +26,6 @@ import {
   RefreshCw
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AnalyticsData {
 
 
@@ -67,7 +64,6 @@ interface AnalyticsEvent {
 }
 
 interface UserBehavior {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   pageViews: number;
   sessionDuration: number;
   bounceRate: number;
@@ -75,7 +71,6 @@ interface UserBehavior {
   topPages: Array<any>;
   userAgents: Array<any>;
   locations: Array<any>;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   performance: {
     loadTime: number;
     firstPaint: number;
@@ -92,7 +87,6 @@ interface UserBehavior {
 
 interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled: boolean;
   trackingId?: string;
   enableHeatmap?: boolean;
@@ -100,10 +94,8 @@ interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
   enableAITesting?: boolean;
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AdvancedAnalytics(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
   const [analyticsData, setAnalyticsData] = useState<any>({
 =======
@@ -141,7 +133,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   const [sessionId] = useState(() => generateSessionId());
   const [userId, setUserId] = useState<string | null>(null);
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     pageViews: 0,
     sessionDuration: 0,
     bounceRate: 0,
@@ -164,7 +155,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   const [userSession, setUserSession] = useState<any>('');
   const [heatmapData, setHeatmapData] = useState<Array<any>>([]);
   
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const trackingRef = useRef<{
     pageViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber;
     clicks: number;
@@ -215,7 +205,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       sessionId,
       userId: userId || undefined,
       page,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       referrer: document.referrer,
       userAgent: navigator.userAgent,
       screenResolution: `${screen.width}x${screen.height}`,
@@ -224,7 +213,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Track performance metrics
     trackPerformance();
     // Setup click tracking
@@ -232,7 +220,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       const target = e.target as HTMLElement;
       const position = { x: anyanyanyanyanyanyanyanyanyanyanyanyanyanye.clientX, y: e.clientY };
       
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       trackInteraction('click', { target, position });
       // Add to heatmap data
       if (enableHeatmap) {
@@ -329,7 +316,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       lcpObserver.observe({ entryTypes: anyanyanyanyanyanyanyanyanyanyanyanyanyany['largest-contentful-paint'] });
 
       return ()               => lcpObserver.disconnect();
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     } catch (error) {
       console.warn('PerformanceObserver not supported:', error);
     }
@@ -408,7 +394,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   const trackEvent = useCallback(async (event: AnalyticsEvent) => {
     try {
       await fetch(apiEndpoint, {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -475,7 +460,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
           depth: maxScroll,
           timestamp: Date.now()
         });
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       }
     });
 

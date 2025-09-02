@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import SEO from '../components/SEO';
 import { motion              } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import {
   Code,
   BookOpen,
@@ -35,7 +34,6 @@ import {
   Lightbulb
              } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const apiFeatures = [
@@ -184,7 +182,6 @@ const data = await response.json();
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {quickStartSteps.map((step, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tool.title}
                 initial = {
@@ -251,7 +248,6 @@ const data = await response.json();
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {apiFeatures.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,7 +289,6 @@ const data = await response.json();
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {codeExamples.map((example, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -334,7 +329,6 @@ const data = await response.json();
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {resources.map((resource, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={resource.title}
                 initial = {
@@ -367,7 +361,6 @@ const data = await response.json();
                   </div>
                 </div>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <h3 className="text-lg font-bold text-white mb-3 text-center">{resource.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{resource.description}</p>
                 <div className="flex items-center justify-between">

@@ -16,7 +16,6 @@ import { Brain,
   Atom,
   Activity,
   Code,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Database,
   Server,
   Network,
@@ -183,7 +182,6 @@ import { Brain,
   Psi,
   Omega as OmegaIcon
 } from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function ServicesPage(...args: any[]): any {
   const location = useLocation();
@@ -1307,7 +1305,6 @@ export function ServicesPage(...args: any[]): any {
       ]
     }
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const getCurrentService = () => {
     if (!currentService || currentService === 'services') {
@@ -1333,7 +1330,6 @@ export function ServicesPage(...args: any[]): any {
                 <div className={`w-24 h-24 bg-gradient-to-r ${currentServiceData.color} rounded-2xl flex items-center justify-center`}>
                   <currentServiceData.icon className="w-12 h-12 text-white" />
                 </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
               <h1 className="text-5xl font-bold text-white mb-4">{currentServiceData.title}</h1>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-6">
@@ -1368,7 +1364,6 @@ export function ServicesPage(...args: any[]): any {
                       <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       <span>{feature}</span>
                     </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   ))}
                 </div>
               </div>
@@ -1384,7 +1379,6 @@ export function ServicesPage(...args: any[]): any {
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-300">{benefit}</span>
                     </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   ))}
                 </div>
               </div>
@@ -1453,7 +1447,6 @@ export function ServicesPage(...args: any[]): any {
                 </div>
               </div>
             </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </div>
@@ -1587,7 +1580,6 @@ export function ServicesPage(...args: any[]): any {
             </h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
               Let's discuss how our services can help you achieve your technology goals
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1604,7 +1596,6 @@ export function ServicesPage(...args: any[]): any {
               >
                 <span>Request a Quote</span>
               </Link>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
         </div>

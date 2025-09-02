@@ -403,9 +403,7 @@ import { Search,
   Crown
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '../data/innovativeMicroSaasServices2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ServiceContact {
 
 
@@ -427,7 +425,6 @@ interface ServiceContact {
   website: string;
 
 const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
@@ -502,7 +499,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
         return 0;
   });
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -526,7 +522,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
   };
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {;
       case 'AI & Automation': return <Bot className="w-5 h-5" />;
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;
@@ -543,7 +538,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
   };
 
   const getInnovationIcon = (level: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (level) {;
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
@@ -629,7 +623,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
                   {categories.map((category)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
@@ -645,7 +638,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
                   {innovationLevels.map((level)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
                     </option>
@@ -740,7 +732,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
               : 'space-y-4'
 
             {sortedServices.map((service)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 variants={itemVariants}

@@ -23,8 +23,6 @@ import { Shield,
 
 export default function Security(...args: any[]): any {
   const [expandedCompliance, setExpandedCompliance] = useState<any>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const securityFeatures = [
     {
@@ -133,7 +131,6 @@ export default function Security(...args: any[]): any {
     setExpandedCompliance(expandedCompliance === name ? null : name);
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -188,7 +185,6 @@ export default function Security(...args: any[]): any {
           </div>
         </div>
       </section>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
             {/* Security Features */}
             <motion.div
@@ -258,7 +254,6 @@ export default function Security(...args: any[]): any {
           </div>
         </div>
       </section>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
             {/* Security Measures */}
             <motion.div
@@ -318,7 +313,6 @@ export default function Security(...args: any[]): any {
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl mr-4 flex-shrink-0">
                   <practice.icon className="w-6 h-6 text-red-400" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-4">Privacy Controls</h3>

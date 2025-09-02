@@ -53,7 +53,6 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       description: "Objective assessment algorithms that eliminate unconscious bias in hiring."
     }
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const benefits = [
     "Reduce hiring time by 50-70% with automated assessments",
@@ -633,4 +632,3 @@ export default function InterviewAssessmentAI(...args: any[]): any {
     </div>;
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

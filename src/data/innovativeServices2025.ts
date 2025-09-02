@@ -1,4 +1,3 @@
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   useCases: string[];
   targetAudience: string[];
   marketPrice: string;
@@ -53,8 +52,6 @@ contactInfo: {;
   marketSize?: string;
 =======
 import { ProductListing              } from '@/types/listings';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -628,8 +625,5 @@ export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Updates": "Regular feature updates and security patches included",
   "Training": "Comprehensive onboarding and training included"
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 export default INNOVATIVE_SERVICES_2025;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

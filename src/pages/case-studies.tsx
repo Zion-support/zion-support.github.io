@@ -8,7 +8,6 @@ import { CheckCircle,
   Clock,
   Target,
   ArrowRight,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Brain,
   Shield,
@@ -16,7 +15,6 @@ import { CheckCircle,
   Zap,
   Globe
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const caseStudies = [
   {
@@ -169,7 +167,6 @@ const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Ma
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
 
 export default function CaseStudies(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -248,8 +245,6 @@ export default function CaseStudies(...args: any[]): any {
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -263,9 +258,7 @@ export default function CaseStudies(...args: any[]): any {
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {technologies.map(tech               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={tech} value={tech}>{tech}</option>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   ))}
                 </select>
               </div>
@@ -279,7 +272,6 @@ export default function CaseStudies(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {filteredCaseStudies.map((study, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}

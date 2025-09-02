@@ -20,7 +20,6 @@ import { Cpu,
   RotateCcw
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function DigitalTwin(...args: any[]): any {
   const features = [
@@ -54,7 +53,6 @@ export default function DigitalTwin(...args: any[]): any {
       title: "Security & Compliance",;
       description: "Enterprise-grade security with industry compliance standards";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -76,7 +74,6 @@ export default function DigitalTwin(...args: any[]): any {
       description: "Patient monitoring, medical device management, and facility optimization",;
       benefits: ["Patient care", "Equipment tracking", "Resource optimization"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technologies = [
@@ -138,7 +135,6 @@ export default function DigitalTwin(...args: any[]): any {
       cta: "Contact Sales",;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -209,7 +205,6 @@ export default function DigitalTwin(...args: any[]): any {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
               initial = {
   { opacity: 0,
@@ -241,7 +236,6 @@ export default function DigitalTwin(...args: any[]): any {
                 A Digital Twin is a virtual representation of a physical object, system, or process
                 that mirrors its real-world counterpart in real-time. It combines IoT sensors,
                 AI algorithms, and advanced analytics to provide unprecedented insights and control.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

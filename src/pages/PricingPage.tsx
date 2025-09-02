@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { CheckCircle,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Zap,
   Brain,
@@ -45,7 +44,6 @@ import { COMPREHENSIVE_PRICING_GUIDE_2025              } from '../data/comprehen
 export function PricingPage(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const services = [
     {
@@ -187,7 +185,6 @@ export function PricingPage(...args: any[]): any {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gray-900 text-white pt-20">
@@ -283,7 +280,6 @@ export function PricingPage(...args: any[]): any {
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                                           {React.createElement(getCategoryIcon(service.category), { className: "w-8 h-8 text-white" })}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                   <h2 className="text-3xl font-bold mb-4">{service.name}</h2>
                   <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
@@ -435,7 +431,6 @@ export function PricingPage(...args: any[]): any {
                   >
                     Get Started
                   </a>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
               </motion.div>
             ))}

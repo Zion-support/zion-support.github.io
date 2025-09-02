@@ -1,7 +1,6 @@
 import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon              } from 'lucide-react.ts';
 
 export default function EmailSequencer(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 	const features = [;
 		'Multi-step sequences with A/B testing',;
 		'AI subject line and body suggestions',;
@@ -36,7 +35,6 @@ export default function EmailSequencer(...args: any[]): any {
 
 				<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 mb-16">
 					{features.map((f)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 						<div key={f} className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg">
 							<Check className="w-5 h-5 text-zion-cyan mb-3" />
 							<p className="text-white text-sm">{f}</p>

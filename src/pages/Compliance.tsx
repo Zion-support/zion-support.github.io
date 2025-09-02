@@ -9,7 +9,6 @@ import { Shield,
   Users, 
   Lock, 
   Eye, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Database,
   FileText,
   Clock,
@@ -35,11 +34,8 @@ import { Shield,
   Info
 } from 'lucide-react';
 import { SEO              } from '../components/SEO';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Compliance(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const complianceFrameworks = [
     {
       name: "ISO 27001",
@@ -326,7 +322,6 @@ export default function Compliance(...args[]: any):  {
                     <h3 className="text-xl font-semibold text-white">{framework.title}</h3>
                     <p className="text-slate-400 text-sm">{framework.description}</p>
                   </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">98.5%</div>
@@ -349,7 +344,6 @@ export default function Compliance(...args[]: any):  {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <h2 className="text-3xl font-bold text-white mb-6">
                 Our Compliance Commitment
               </h2>
@@ -404,7 +398,6 @@ export default function Compliance(...args[]: any):  {
                         <CheckCircle className="h-4 w-4 mr-1" />
                         {framework.status}
                       </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </div>
                   </div>
                   
@@ -521,7 +514,6 @@ export default function Compliance(...args[]: any):  {
               <div className="text-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${standard.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <standard.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
               </div>
       {/* Compliance Processes */}
@@ -620,7 +612,6 @@ export default function Compliance(...args[]: any):  {
                 </div>
               </motion.div>
             ))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </section>
       </div>
@@ -665,7 +656,6 @@ export default function Compliance(...args[]: any):  {
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
           {complianceTools.map((tool, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -787,7 +777,6 @@ export default function Compliance(...args[]: any):  {
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                       <span className="text-green-400 text-sm font-medium">@</span>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     </div>
                     <h3 className="text-lg font-bold text-white mb-2">{process.step}</h3>
                     <p className="text-gray-300 text-sm mb-3">{process.description}</p>

@@ -2,7 +2,6 @@ import React, { useState
 } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { Plus, MessageCircle, Phone, Mail, ArrowUp, X                } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);

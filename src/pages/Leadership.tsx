@@ -21,10 +21,8 @@ import { Users,
   MapPin
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Leadership(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const leadershipTeam = [
     {
       name: "Dr. Sarah Chen",
@@ -231,7 +229,6 @@ export default function Leadership(...args: any[]): any {
                       </a>
                     </div>
                   </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold text-white mb-1">{stat.label}</div>
@@ -273,7 +270,6 @@ export default function Leadership(...args: any[]): any {
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-cyan-400" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm">{value.description}</p>
@@ -304,7 +300,6 @@ export default function Leadership(...args: any[]): any {
               </div>
             ))}
           </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
     </div>

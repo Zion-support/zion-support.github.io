@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Brain,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   TrendingUp,
   Users,
   Zap,
@@ -33,10 +32,7 @@ import { Brain,
   Star
 } from 'lucide-react';
 import { SEO              } from '../../components/SEO';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -278,7 +274,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -329,7 +324,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -390,7 +384,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {useCases.map((useCase, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -451,7 +444,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -502,7 +494,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -581,7 +572,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 step: '01',
@@ -604,7 +594,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 description: 'Go live with monitoring and ongoing optimization support'
 
             ].map((phase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

@@ -1,7 +1,6 @@
 import React, { useState, useMemo              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -29,10 +28,8 @@ import { CheckCircle,
 import { innovativeAIServices2030              } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030              } from '../data/innovativeCybersecurityServices2030';
 import { innovativeCloudDevOpsServices2030              } from '../data/innovativeCloudDevOpsServices2030';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [;
@@ -54,7 +51,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
   ];
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (category.toLowerCase().includes('ai')) return Brain;
     if (category.toLowerCase().includes('cybersecurity')) return Shield;
     if (category.toLowerCase().includes('cloud')) return Cloud;
@@ -62,7 +58,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
   };
 
   const getPricingTier = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
@@ -304,8 +299,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
             {filteredServices.map((service, index)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               return (
@@ -438,7 +431,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
           </motion.div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 icon: DollarSign,
@@ -471,7 +463,6 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
                 description: "Round-the-clock support included in all plans. No additional support fees."
 
             ].map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

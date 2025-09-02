@@ -13,7 +13,6 @@ export interface IndustrySolution {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -484,7 +483,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
   }
 ];
 export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry);

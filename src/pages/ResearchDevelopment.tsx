@@ -3,7 +3,6 @@
   Award,
   ArrowRight
 const ResearchDevelopment: React.FC = (): JSX.Element => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedArea, setSelectedArea] = useState('all');
   const [selectedStatus, setSelectedStatus] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -328,10 +327,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
   ];
 =======
 import React from 'react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ResearchDevelopment(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
@@ -617,7 +614,6 @@ export default function ResearchDevelopment(...args: any[]): any {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {filteredProjects.map((project, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -730,7 +726,6 @@ export default function ResearchDevelopment(...args: any[]): any {
                       <p><span className="text-zion-cyan font-semibold">Type:</span> {partner.type}</p>
                       <p><span className="text-zion-cyan font-semibold">Focus:</span> {partner.focus}</p>
                       <p><span className="text-zion-cyan font-semibold">Duration:</span> {partner.duration}</p>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     </div>
                   </div>
                 ) : (
@@ -878,7 +873,6 @@ export default function ResearchDevelopment(...args: any[]): any {
           </div>
         </div>
       </section>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
       {/* CTA Section */}
       <div className="bg-zinc-800/30 border-t border-zinc-700/50">

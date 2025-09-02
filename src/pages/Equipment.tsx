@@ -3,7 +3,6 @@ import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Link              } from 'react-router-dom.ts';
 import { Server, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search, 
   Filter, 
   Grid, 
@@ -459,8 +458,6 @@ export default function Equipment(...args: any[]): any {
   const [selectedCondition, setSelectedCondition] = useState('all');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedEquipment, setExpandedEquipment] = useState<any>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const equipmentItems = [
     {
@@ -542,7 +539,6 @@ export default function Equipment(...args: any[]): any {
       />
     ));
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -686,7 +682,6 @@ export default function Equipment(...args: any[]): any {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 <Grid className="w-5 h-5" />
               </button>
@@ -722,7 +717,6 @@ export default function Equipment(...args: any[]): any {
           {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
               {filteredEquipment.map((equipment, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}

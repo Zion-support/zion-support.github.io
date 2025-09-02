@@ -85,7 +85,6 @@ export const generateCSPHeader = (): string => {
 export const securityMiddleware = (req: Request, res: Response, next: NextFunction) => {
   // Set security headers
   Object.entries(securityConfig.headers).forEach(([key, value]) => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     res.setHeader(key, value);
   });
 
@@ -142,7 +141,6 @@ export const corsConfig = {
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   exposedHeaders: ['X-RateLimit-Limit', 'X-RateLimit-Remaining', 'X-RateLimit-Reset'],
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 };
 
 // Helmet configuration for additional security
@@ -166,4 +164,3 @@ export const helmetConfig = {
 
 // Export default configuration
 export default securityConfig;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

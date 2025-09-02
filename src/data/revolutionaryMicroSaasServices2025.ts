@@ -12,7 +12,6 @@ export interface RevolutionaryMicroSaasService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -49,7 +48,6 @@ contactInfo: {;
 
 
 };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

@@ -3,7 +3,6 @@ import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
 import { Heart, 
   Brain, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Activity, 
   Heart, 
   Brain, 
@@ -20,7 +19,6 @@ import { Heart,
   TrendingUp,
   AlertTriangle
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIHealthcareAnalyticsPlatform() {
   const features = [
@@ -250,7 +248,6 @@ export default function AIHealthcareAnalyticsPlatform() {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -432,7 +429,6 @@ export default function AIHealthcareAnalyticsPlatform() {
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 text-lg">{useCase.description}</p>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </motion.div>
             ))}
           </div>
@@ -459,7 +455,6 @@ export default function AIHealthcareAnalyticsPlatform() {
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
             {complianceStandards.map((standard, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
@@ -496,7 +491,6 @@ export default function AIHealthcareAnalyticsPlatform() {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

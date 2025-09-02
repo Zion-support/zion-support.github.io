@@ -2,7 +2,6 @@ import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Leaf, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap, 
   Sun, 
   Wind, 
@@ -176,7 +175,6 @@ import { Leaf,
 
 export default function GreenIT(...args: any[]): any {
   const [expandedSection, setExpandedSection] = useState<any>(null);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = [
     { id: 'all', name: 'All Solutions', count: 12 },
@@ -585,13 +583,11 @@ export default function GreenIT(...args: any[]): any {
   ];
 
   const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
   const filteredSolutions = selectedCategory === 'all' 
     ? greenSolutions: anyanyanyanyanyanyanyanyanyanyanyanyanygreenSolutions.filter(solution              => solution.category === selectedCategory);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -646,7 +642,6 @@ export default function GreenIT(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {environmentalImpact.map((impact, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={impact.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -698,7 +693,6 @@ export default function GreenIT(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -805,7 +799,6 @@ export default function GreenIT(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {certifications.map((cert, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={cert.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -840,7 +833,6 @@ export default function GreenIT(...args: any[]): any {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {caseStudies.map((study, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={study.title}
                 initial={{ opacity: 0, y: 20 }}

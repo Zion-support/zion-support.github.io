@@ -71,7 +71,6 @@ export default function SecurityHeadersCSP(...args: any[]): any {
       description: "Server-level security hardening and configuration optimization."
     }
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const benefits = [
     "Reduce security vulnerabilities by 80-90% with proper headers",
@@ -646,4 +645,3 @@ export default function SecurityHeadersCSP(...args: any[]): any {
     </div>;
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

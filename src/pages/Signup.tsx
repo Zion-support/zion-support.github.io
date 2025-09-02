@@ -7,7 +7,6 @@ import React, { useState } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
 import { Mail,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lock,
   Cpu,
   Wifi,
@@ -31,8 +30,6 @@ import { Mail,
   CheckCircle
               } from 'lucide-react.ts';
 export default function Signup(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const [formData, setFormData] = useState({
     firstName: '',

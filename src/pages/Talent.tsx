@@ -3,7 +3,6 @@ import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Link              } from 'react-router-dom.ts';
 import { Users, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search, 
   Filter, 
   Grid, 
@@ -471,9 +470,7 @@ export default function Talent(...args: any[]): any {
   const [selectedExperience, setSelectedExperience] = useState('all');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedTalent, setExpandedTalent] = useState<any>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = [
     { id: 'all', name: 'All Categories', count: 45 },
     { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 },
@@ -606,7 +603,6 @@ export default function Talent(...args: any[]): any {
   ];
 
   const toggleTalentExpansion = (talentId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedTalent(expandedTalent === talentId ? null : talentId);
   };
   const filteredTalent = talentPool.filter(talent => {
@@ -621,7 +617,6 @@ export default function Talent(...args: any[]): any {
   });
 
   const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -633,7 +628,6 @@ export default function Talent(...args: any[]): any {
   };
 
   const getExperienceColor = (experience: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (experience) {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400';
@@ -649,7 +643,6 @@ export default function Talent(...args: any[]): any {
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -775,7 +768,6 @@ export default function Talent(...args: any[]): any {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {talentPool.filter(t              => t.featured).map((talent, index) => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={talent.id}
                 initial={{ opacity: 0, y: 20 }}

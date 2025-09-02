@@ -3,7 +3,6 @@ import { SEO               } from '../../components/SEO';
 import { motion               } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function IoTEdge(...args: []):  {
   const features = [
     {
@@ -115,7 +114,6 @@ export default function IoTEdge(...args: []):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial = {
@@ -167,7 +165,6 @@ export default function IoTEdge(...args: []):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.title}
                 initial = {
@@ -234,7 +231,6 @@ export default function IoTEdge(...args: []):  {
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
             {industries.map((industry, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={industry.name}
                 initial = {

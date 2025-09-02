@@ -23,7 +23,6 @@ import { Database,
              } from 'lucide-react.ts';
 
 const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -116,7 +115,6 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
     'SOX (Sarbanes-Oxley Act)',
     'ISO 27001 (Information Security Management)',
     'SOC 2 Type II (Service Organization Control)'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -224,7 +222,6 @@ const AIDataGovernancePlatform: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               ))}
             </div>
           </div>

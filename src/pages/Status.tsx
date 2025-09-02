@@ -32,7 +32,6 @@ export default function Status(...args: any[]): any {
   };
 
   const services = [
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       name: 'AI Services Platform',
       status: 'operational',
@@ -171,7 +170,6 @@ export default function Status(...args: any[]): any {
         return 'text-gray-400 bg-gray-500/20';
     }
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (status) {
@@ -198,7 +196,6 @@ export default function Status(...args: any[]): any {
         return 'bg-red-500/20 text-red-400';
       case 'critical':
         return 'bg-red-600/20 text-red-500';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default:
         return 'text-green-500';
     }
@@ -308,7 +305,6 @@ export default function Status(...args: any[]): any {
                 <div className="text-gray-400 text-xs">{metric.period}</div>
               </motion.div>
             ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
 
       {/* Service Status */}
@@ -335,7 +331,6 @@ export default function Status(...args: any[]): any {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
               >
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   {getStatusIcon(service.status)}
@@ -519,7 +514,6 @@ export default function Status(...args: any[]): any {
                 <AlertCircle className="w-5 h-5 mr-2" />
                 Report an Issue
               </a>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
           </div>
 

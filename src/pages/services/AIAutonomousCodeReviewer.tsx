@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Code, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle, 
   Shield, 
   Zap, 
@@ -43,7 +42,6 @@ import { Code,
   Bitbucket
              } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIAutonomousCodeReviewer = () => {
   const features = [
     {
@@ -216,7 +214,6 @@ const AIAutonomousCodeReviewer = () => {
         </div>
       </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,7 +234,6 @@ const AIAutonomousCodeReviewer = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -275,7 +271,6 @@ const AIAutonomousCodeReviewer = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -346,7 +341,6 @@ const AIAutonomousCodeReviewer = () => {
         </div>
       </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Pricing Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -367,7 +361,6 @@ const AIAutonomousCodeReviewer = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -434,7 +427,6 @@ const AIAutonomousCodeReviewer = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

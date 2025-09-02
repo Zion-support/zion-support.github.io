@@ -10,7 +10,6 @@ import {
   Database, 
   Network, 
   Globe, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Rocket,
   Star,
   CheckCircle,
@@ -41,7 +40,6 @@ import {
              } from 'lucide-react.ts';
 
 export default function AIQuantumHybridPlatform(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Atom,
@@ -67,7 +65,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
       description: 'Process massive datasets with quantum algorithms for instant insights',
       benefits: ['Exponential speedup', 'Real-time big data analysis', 'Quantum machine learning']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -137,7 +134,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
         'Custom algorithm development'
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -148,7 +144,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(120,119,198,0.1)_50%,transparent_70%)] animate-pulse"></div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
@@ -157,7 +152,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
   { opacity: 0,
   y: 20 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 
 
@@ -260,7 +254,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold">{feature.title}</h3>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
@@ -288,7 +281,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 
 
@@ -318,7 +310,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
@@ -340,7 +331,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
                 
                 <div className="text-purple-400 font-semibold text-lg">
                   {useCase.price}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </motion.div>
             ))}
@@ -435,7 +425,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
                 </motion.button>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -489,7 +478,6 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
                 Contact Sales
               </motion.button>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -583,4 +571,3 @@ export default function AIQuantumHybridPlatform(...args: any[]): any {
     </div>
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

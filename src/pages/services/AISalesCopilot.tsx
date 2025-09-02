@@ -3,7 +3,6 @@ import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../../components/SEO';
 import { Users, 
   TrendingUp, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Target, 
   Users, 
   BarChart3, 
@@ -17,7 +16,6 @@ import { Users,
              } from 'lucide-react.ts';
 
 const AISalesCopilot = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Users,
@@ -81,7 +79,6 @@ const AISalesCopilot = () => {
       title: "Revenue Optimization",;
       description: "Data-driven strategies to maximize deal size and improve win rates.";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const integrations = [
@@ -145,7 +142,6 @@ const AISalesCopilot = () => {
       title: "Competitive Advantage",;
       description: "Stay ahead of competitors with AI-powered sales intelligence and automation.";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const testimonials = [
@@ -358,7 +354,6 @@ const AISalesCopilot = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -565,7 +560,6 @@ const AISalesCopilot = () => {
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <stage.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
@@ -707,6 +701,4 @@ const AISalesCopilot = () => {
     </div>
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

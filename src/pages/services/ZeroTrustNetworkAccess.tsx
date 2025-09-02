@@ -6,7 +6,6 @@ import { Shield,
   CheckCircle, 
   Users, 
   Clock, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Play,
   Settings,
@@ -35,7 +34,6 @@ import { Shield,
              } from 'lucide-react.ts';
 
 const ZeroTrustNetworkAccess = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Shield,
@@ -76,7 +74,6 @@ const ZeroTrustNetworkAccess = () => {
     'Comply with industry security standards',;
     'Improve incident response time by 80%',;
     'Enhance user experience with seamless access';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -96,7 +93,6 @@ const ZeroTrustNetworkAccess = () => {
       industry: 'Enterprise',;
       description: 'Protected access to corporate resources and applications';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const securityLayers = [
@@ -120,7 +116,6 @@ const ZeroTrustNetworkAccess = () => {
       title: 'Application Security',;
       description: 'API security, application-level access controls, and data protection';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -159,7 +154,6 @@ const ZeroTrustNetworkAccess = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Zero Trust
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Network Access</span>
             </h1>
@@ -167,7 +161,6 @@ const ZeroTrustNetworkAccess = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your security posture with our Zero Trust Network Access solution 
               that provides secure, seamless access to resources from anywhere in the world.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -258,7 +251,6 @@ const ZeroTrustNetworkAccess = () => {
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -551,7 +543,6 @@ const ZeroTrustNetworkAccess = () => {
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -570,7 +561,6 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 
 

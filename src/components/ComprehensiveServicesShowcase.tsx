@@ -26,11 +26,9 @@ import { Brain,
   ExternalLink,
   Search
 } from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { Link               } from 'react-router-dom.ts';
 import { EXPANDED_INNOVATIVE_SERVICES_2025               } from '../data/expandedInnovativeServices2025';
 import { EMERGING_TECH_SERVICES_2025               } from '../data/emergingTechServices2025';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface Service {
 
 
@@ -47,7 +45,6 @@ interface Service {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -93,12 +90,9 @@ website: string;
   };
 }
 const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Combine all services
   const allServices: Service[] = [
     ...EXPANDED_INNOVATIVE_SERVICES_2025,
@@ -159,7 +153,6 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
       default:
         return <Star className = "h-6 w-6" />};
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
   return (
@@ -246,8 +239,6 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category                => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -263,8 +254,6 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {innovationLevels.map(level                => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
                   </option>

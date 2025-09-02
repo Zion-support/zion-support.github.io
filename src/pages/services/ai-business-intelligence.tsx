@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Brain, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   BarChart3, 
   Target, 
   TrendingUp, 
@@ -22,8 +21,6 @@ import { Brain,
   Factory
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIBusinessIntelligence(...args: any[]): any {
   const features = [
@@ -136,7 +133,6 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                 <Brain className="w-8 h-8 text-white" />
               </div>
               <span className="text-cyan-400 font-medium">AI-Powered Solutions</span>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -180,7 +176,6 @@ export default function AIBusinessIntelligence(...args: any[]): any {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -280,7 +275,6 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                   <BarChart3 className="w-20 h-20 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">AI Analytics Dashboard</h3>
                   <p className="text-gray-300">Real-time insights at your fingertips</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
             </motion.div>
@@ -291,7 +285,6 @@ export default function AIBusinessIntelligence(...args: any[]): any {
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -309,7 +302,6 @@ export default function AIBusinessIntelligence(...args: any[]): any {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -448,7 +440,6 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                 
                 {index < process.length - 1 && (
                   <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transform translate-x-1/2"></div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 )}
 
                 <div className="text-center mb-8">

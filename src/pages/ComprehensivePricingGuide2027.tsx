@@ -42,7 +42,6 @@ import { >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Diamond
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { INNOVATIVE_SERVICES_2025, InnovativeService2025              } from '../data/innovativeServices2025';
 
 import React, { useState, useMemo } from 'react';
@@ -90,7 +89,6 @@ import { SEO } from '../components/SEO';
 import INNOVATIVE_SERVICES_2025 from '../data/innovativeServices2025';
 
 interface Service {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   id: string;
   title: string;
   description: string;
@@ -151,7 +149,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
   }, [searchTerm, selectedCategory, selectedPriceRange]);
 
   const toggleServiceExpansion = (serviceId: string) => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     const newExpanded = new Set(expandedServices);
     if (newExpanded.has(serviceId)) {
       newExpanded.delete(serviceId);
@@ -187,7 +184,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       newExpanded.delete(serviceId)} else {
       newExpanded.add(serviceId)}
     setExpandedServices(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const getPriceRangeLabel = (range: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     switch (range) {;
@@ -201,7 +197,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
         description="Explore our complete pricing guide for AI, IT infrastructure, and blockchain services. Get detailed pricing, features, and ROI information for all our innovative solutions."
       />
@@ -357,7 +352,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
               Explore our comprehensive pricing guide for all AI-powered services, IT solutions, and micro SAAS tools. 
               Find the perfect solution for your business needs and budget with transparent pricing and detailed comparisons.
             </p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950" 
@@ -394,7 +388,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
               <MapPin className="w-6 h-6 text-zion-cyan" />
               <span className="text-white font-semibold">364 E Main St STE 1008</span>
               <span className="text-zion-slate-light text-sm">Middletown DE 19709</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </div>
@@ -697,7 +690,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
             const categoryColor = getCategoryColor(service.category);
             
             return (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -779,7 +771,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                             {service.features.map((feature, idx) => (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                                 <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                                 <span>{feature}</span>
                               </div>
                             ))}
@@ -793,7 +784,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                             {service.benefits.map((benefit, idx) => (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                                 <span>{benefit}</span>
                               </div>
                             ))}
@@ -807,7 +797,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                             {service.useCases.map((useCase, idx) => (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                                 <Target className="w-3 h-3 text-blue-400 flex-shrink-0" />
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                                 <span>{useCase}</span>
                               </div>
                             ))}
@@ -844,11 +833,9 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                       <span className="text-2xl font-bold text-zion-cyan">
                         {service.currency}{service.price}
                       </span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     </div>
                     <div className="text-zion-slate-light text-sm">
                       per {service.pricingModel}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </div>
                   </div>
 
@@ -911,7 +898,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                         <span>Get Quote</span>
                         <ArrowRight className="w-4 h-4" />
                       </a>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                     </div>
                   </div>
                 </div>
@@ -1004,7 +990,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                     </li>
                   ))}
                 </ul>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.div>
             ))}
           </div>
@@ -1105,7 +1090,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
               Our team of experts is ready to help you find the perfect solution for your business needs. 
               Get in touch today for a personalized consultation and custom pricing.
             </p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <Phone className="w-8 h-8 text-purple-400 mx-auto mb-3" />
@@ -1147,7 +1131,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                 Schedule Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
 
@@ -1218,8 +1201,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
     </div>
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 =======
             );
           })}
@@ -1273,4 +1254,3 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
 };
 
 export default ComprehensivePricingGuide2027;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

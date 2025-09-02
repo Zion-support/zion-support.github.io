@@ -28,7 +28,6 @@ import { BarChart3,
   FileText
 } from 'lucide-react';
 import SEO from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function DataAnalytics(...args: []):  {
   const features = [
@@ -52,7 +51,6 @@ export default function DataAnalytics(...args: []):  {
       title: 'Automated Reporting',;
       description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const solutions = [
@@ -80,7 +78,6 @@ export default function DataAnalytics(...args: []):  {
       icon: Activity,;
       benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -108,7 +105,6 @@ export default function DataAnalytics(...args: []):  {
       icon: Cpu,;
       metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -132,7 +128,6 @@ export default function DataAnalytics(...args: []):  {
       title: 'Strategic Planning',;
       description: 'Develop informed strategies and plans based on predictive analytics and trends';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

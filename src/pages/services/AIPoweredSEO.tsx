@@ -22,7 +22,6 @@ import { Search,
   Smartphone,
   Monitor
              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIPoweredSEO(...args: any[]): any {
   const features = [
@@ -51,7 +50,6 @@ export default function AIPoweredSEO(...args: any[]): any {
       title: "Local SEO",
       description: "AI-driven local search optimization and Google My Business management."
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -94,7 +92,6 @@ export default function AIPoweredSEO(...args: any[]): any {
       description: "Comprehensive reporting and ROI measurement",
       icon: Eye
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -129,7 +126,6 @@ export default function AIPoweredSEO(...args: any[]): any {
       <SEO 
         title="AI-Powered SEO - Zion Tech Group"
         description="Transform your search engine optimization with AI-powered tools. Improve rankings, increase traffic, and drive organic growth."
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       
       {/* Hero Section */}
@@ -189,7 +185,6 @@ export default function AIPoweredSEO(...args: any[]): any {
               >
                 Schedule Demo
               </motion.button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
         </div>
@@ -273,7 +268,6 @@ export default function AIPoweredSEO(...args: any[]): any {
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -337,7 +331,6 @@ export default function AIPoweredSEO(...args: any[]): any {
                     <span className="text-gray-300">{benefit}</span>
                   </motion.div>
                 ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </div>
 

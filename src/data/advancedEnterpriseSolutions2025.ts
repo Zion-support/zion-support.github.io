@@ -14,7 +14,6 @@ export interface EnterpriseSolution {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -399,7 +398,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     support: 'Strategic advisory team'
 ];
 export const getEnterpriseSolutionsByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring): EnterpriseSolution[]               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category);

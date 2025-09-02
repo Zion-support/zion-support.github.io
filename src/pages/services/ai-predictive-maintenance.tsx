@@ -2,7 +2,6 @@ import React from 'react.ts';
 import SEO from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = (): JSX.Element => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
@@ -270,7 +269,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
         </div>
       </section>
@@ -295,7 +293,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {applications.map((application, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,6 @@
 import { ProductListing               } from '@/types/listings';
 import { COMPREHENSIVE_SERVICES_INDEX_2030               } from './comprehensiveServicesIndex2030';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
 export interface PricingTier {
@@ -19,7 +18,6 @@ export interface PricingTier {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: number;
   features: string[];
@@ -39,7 +37,6 @@ support: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ServicePricing {
 
@@ -56,7 +53,6 @@ export interface ServicePricing {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   serviceId: string;
   serviceName: string;
   category: string;
@@ -82,9 +78,7 @@ enterpriseFeatures: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
   {
@@ -385,7 +379,6 @@ export const PRICING_ANALYSIS_2030 = {
   priceRange: anyanyanyanyanyanyanyanyanyanyanyanyany{
     min: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s              => s.basePrice)),
   max: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s              => s.basePrice))
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
 ;
 ;

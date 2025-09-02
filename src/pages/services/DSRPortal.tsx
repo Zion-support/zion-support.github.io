@@ -63,7 +63,6 @@ export default function DSRPortal(...args: any[]): any {
       description: "Enterprise-grade security for sensitive personal data processing."
     }
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const benefits = [
     "Ensure 100% GDPR and CCPA compliance with automated workflows",
@@ -643,4 +642,3 @@ export default function DSRPortal(...args: any[]): any {
     </div>;
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

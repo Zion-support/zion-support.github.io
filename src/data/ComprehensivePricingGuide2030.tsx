@@ -7,7 +7,6 @@ import { comprehensiveAIServices2030               } from '../data/comprehensive
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('microsaas');
   const [priceRange, setPriceRange] = useState<any>([0, 5000]);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getFilteredServices = () => {;
     let services: any[] = [];

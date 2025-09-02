@@ -6,7 +6,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState<any>('');
   const [sortBy, setSortBy] = useState<any>('name');
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = ['All', ...getEnhancedServiceCategories()];
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -107,7 +106,6 @@ const EnhancedZionTechServices2025: React.FC = (): JSX.Element => {;
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
               {categories.map(category              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <option key={category} value={category}>{category}</option>
               ))}
             </select>

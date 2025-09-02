@@ -29,7 +29,6 @@ import { Search,
   MapPin
 } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026              } from '../data/innovativeMicroSaasServices2026';
 
 const Services2026: React.FC = (): JSX.Element => {;
@@ -65,13 +64,11 @@ const Services2026: React.FC = (): JSX.Element => {;
         s.tags?.some(t => t.toLowerCase().includes(q));
       );
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(s => s.category === selectedCategory);
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort services
     switch (sortBy) {

@@ -9,7 +9,6 @@ import { Workflow,
   BarChart3, 
   Users, 
   Clock,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle,
   ArrowRight,
   Clock,
@@ -24,7 +23,6 @@ import { Workflow,
   Server,
   ShoppingCart
              } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIWorkflowOrchestrator() {
   const features = [
@@ -269,7 +267,6 @@ export default function AIWorkflowOrchestrator() {
                 ))}
               </div>
             </motion.div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
         </div>
       </section>
@@ -619,7 +616,6 @@ export default function AIWorkflowOrchestrator() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
                   Start Free Trial
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </button>
               </motion.div>
             ))}

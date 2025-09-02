@@ -14,8 +14,6 @@ import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const pricingData2028 = {
   aiServices[
     {
@@ -146,8 +144,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
 };
 
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   const categories = [;
@@ -163,7 +159,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const getAllServices = () => {;
     return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'AI Services' })),;
@@ -183,7 +178,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
   });
 
   const calculateROI = (roi: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return parseInt(roi.replace('%', ''));
   };
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));

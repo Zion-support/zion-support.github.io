@@ -1,6 +1,5 @@
 import { ProductListing              } from '@/types/listings';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {

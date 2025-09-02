@@ -4,7 +4,6 @@ import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
 import { Badge              } from '../../components/ui/Badge';
 import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AISupplyChainOptimization: React.FC = (): JSX.Element => {
   return (
@@ -256,7 +255,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   Monthly reports
                 </li>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </ul>
               <Button className="w-full bg-green-600 hover:bg-green-700">
                 Get Started
@@ -392,7 +390,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
               Schedule Demo
             </Button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
           
           <p className="text-sm text-gray-400 mt-6">
@@ -502,7 +499,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 20 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 
 
@@ -546,5 +542,3 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

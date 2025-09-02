@@ -52,7 +52,6 @@ import { Search,
   MessageCircle as MessageCircleIcon
 } from 'lucide-react';
 import { enhancedServicesCatalog2025, EnhancedService              } from '../data/enhancedServicesCatalog2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedServicesShowcase2025(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
@@ -255,7 +254,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
         </div>;
       </div>;
     </motion.div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
   const ServiceList = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyanyanyanyEnhancedService })              => (
@@ -354,7 +352,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
         </div>;
       </div>;
     </motion.div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
   return (
@@ -445,7 +442,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 }}
                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-3`} />
                   <div className="text-3xl font-bold text-white font-orbitron">{stat.value}</div>
                   <div className="text-gray-400 font-medium">{stat.label}</div>
@@ -663,7 +659,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
 // Icon components for view mode toggle

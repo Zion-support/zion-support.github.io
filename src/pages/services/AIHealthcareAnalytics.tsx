@@ -33,7 +33,6 @@ import { Activity,
 import { SEO              } from '@/components/SEO';
 
 const AIHealthcareAnalytics = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     'Real-time patient data analytics and insights',
     'Predictive disease modeling and risk assessment',
@@ -79,7 +78,6 @@ const AIHealthcareAnalytics = () => {
       icon: Pill,
       applications: ['Clinical research', 'Market analysis', 'Safety monitoring', 'Efficacy studies']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricing = [
@@ -160,7 +158,6 @@ const AIHealthcareAnalytics = () => {
       category: 'Population Health',
       features: ['Disease prevalence tracking', 'Preventive care metrics', 'Social determinants analysis', 'Community health insights']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -676,5 +673,3 @@ const AIHealthcareAnalytics = () => {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

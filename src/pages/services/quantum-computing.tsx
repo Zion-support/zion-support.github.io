@@ -23,7 +23,6 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       title: 'Quantum Simulation',;
       description: 'Model complex molecular and physical systems';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -47,7 +46,6 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
       description: 'Solve complex routing and supply chain problems',;
       icon: '🚚';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -62,7 +60,6 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for AI, cryptography, and scientific research. Achieve quantum supremacy with our cutting-edge technology."
       />

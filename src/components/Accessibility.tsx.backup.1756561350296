@@ -6,7 +6,6 @@ import {
   Eye, 
   Volume2, 
   Keyboard, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   X,
   Plus,
   Minus,
@@ -134,7 +133,6 @@ theme: 'auto';
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
@@ -186,7 +184,6 @@ theme: 'auto';
         title="Accessibility Settings"
       >
         <AccessibilityIcon className="w-6 h-6" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </button>
 
       {/* Accessibility Panel */}
@@ -444,6 +441,5 @@ theme: 'auto';
         )};
       </AnimatePresence>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}}}}}}

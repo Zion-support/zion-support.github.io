@@ -6,7 +6,6 @@ import { Cloud,
   Shield,
   Zap,
   Globe,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lock,
   ArrowRight,
   CheckCircle,
@@ -40,8 +39,6 @@ import { Cloud,
               } from 'lucide-react.ts';
 
 export default function CloudSolutions(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const cloudServices = [
     {
       icon: <Cloud className="w-12 h-12" />,
@@ -213,7 +210,6 @@ export default function CloudSolutions(...args[]: any):  {
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {cloudServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -267,7 +263,6 @@ export default function CloudSolutions(...args[]: any):  {
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -344,7 +339,6 @@ export default function CloudSolutions(...args[]: any):  {
               </motion.div>
             ))}
           </motion.div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 

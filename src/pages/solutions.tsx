@@ -2,7 +2,6 @@ import React, { useState } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
 import { Building, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Shield, 
   Cloud, 
   Brain, 
@@ -30,7 +29,6 @@ import { Building,
   Play
               } from 'lucide-react.ts';
 import { SEO               } from '@/components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const solutionCategories = [
   {
@@ -349,7 +347,6 @@ const Solutions: React.FC = (): JSX.Element => {
 
   const filteredSolutions = selectedIndustry === 'all' ;
     ? solutions: anyanyanyanyanyanyanyanyanyanyanyanyanysolutions.filter(solution               => solution.industry === selectedIndustry);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -455,7 +452,6 @@ const Solutions: React.FC = (): JSX.Element => {
                       {solution.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           <span>{feature}</span>
                         </div>
                       ))}
@@ -471,7 +467,6 @@ const Solutions: React.FC = (): JSX.Element => {
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{benefit}</span>
                         </li>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       ))}
                     </ul>
                   </div>

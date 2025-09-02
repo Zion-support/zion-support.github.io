@@ -17,7 +17,6 @@ import { Menu,
   FileText,
   Phone,
   Mail,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MapPin,
   ChevronDown,
   Globe,
@@ -37,13 +36,11 @@ import { Menu,
   DollarSign
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function Header(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const location = useLocation();
 
   useEffect(() => {
@@ -141,7 +138,6 @@ export function Header(...args: any[]): any {
     setActiveDropdown(null);
   }, [location.pathname]);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

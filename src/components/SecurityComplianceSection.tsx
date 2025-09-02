@@ -12,7 +12,6 @@ import { Shield,
   Eye
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions'];
     };
   ];
@@ -91,7 +90,6 @@ const complianceFeatures = [
 ];
 
 export function SecurityComplianceSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -117,7 +115,6 @@ export function SecurityComplianceSection(...args: any[]): any {
           </p>
         </motion.div>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
   y: 20 
@@ -133,8 +130,6 @@ export function SecurityComplianceSection(...args: any[]): any {
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
           {securityMetrics.map((metric, index)                => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = metric.icon;
             return (
               <div key = {metric.label} className="text-center">
@@ -233,7 +228,6 @@ export function SecurityComplianceSection(...args: any[]): any {
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {complianceFeatures.map((category, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">
                 <h4 className="text-xl font-bold text-white mb-4 text-center">
                   {category.category}

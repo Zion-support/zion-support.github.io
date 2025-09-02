@@ -6,7 +6,6 @@ import { Brain,
   TrendingUp, 
   Target, 
   BarChart3, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -35,7 +34,6 @@ import { Brain,
               } from 'lucide-react.ts';
 
 export default function AIHRPlatform(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered candidate screening and matching",
     "Intelligent resume parsing and analysis",
@@ -126,7 +124,6 @@ export default function AIHRPlatform(...args[]: any):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI HR Platform - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, performance management, and employee engagement. Streamline hiring and improve retention."
       />
@@ -622,5 +619,3 @@ export default function AIHRPlatform(...args[]: any):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -14,7 +14,6 @@ import { Brain,
   Rocket
 import { Link               } from 'react-router-dom.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AIService {
 
 
@@ -63,7 +62,6 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [sortBy, setSortBy] = useState<any>('popularity');
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const aiServices: AIService[] = [
     {
       id: 'ai-project-management',
@@ -157,7 +155,6 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
         return 0;
   });
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -205,9 +202,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
               />
               <Brain className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {/* Sort Options */}
             <select
               value={sortBy}
@@ -221,7 +216,6 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
           </div>
         </motion.div>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Category Filters */}
         <motion.div
           initial = {

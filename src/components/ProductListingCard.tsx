@@ -7,14 +7,11 @@ import { DollarSign                } from 'lucide-react.ts';
 import { RatingStars                } from '@/components/RatingStars';
 import { FavoriteButton                } from '@/components/FavoriteButton';
 import { useDispatch                } from 'react-redux.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import type { AppDispatch } from '@/store';
 import { addItem               } from '@/store/cartSlice';
 ; // Import next/image
 
   listing: anyanyanyanyanyanyanyanyanyanyanyanyanyanyProductListing;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string)                => void;
   /**
@@ -22,15 +19,12 @@ import { addItem               } from '@/store/cartSlice';
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
 
   const handleRequestQuote = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     e.stopPropagation();
     if (onRequestQuote) {

@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -34,7 +33,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     cls: 0.1
   }
 }) => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -144,7 +142,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       return () => clearTimeout(timer);
     }
   }, [metrics, autoHide]);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   if (!isVisible) return null;
 
@@ -205,7 +202,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {getMetricIcon(getPerformanceScore('cls'))}
             <span className={`text-sm font-medium ${getMetricColor(getPerformanceScore('cls'))}`}>
               {metrics.cls ? metrics.cls.toFixed(3) : '—'}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </span>
           </div>
         </div>
@@ -249,7 +245,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       >
         ×
       </button>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     </motion.div>
   );
 };

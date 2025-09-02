@@ -2,7 +2,6 @@ import React, { useState } from 'react.ts';
 import { Link               } from 'react-router-dom.ts';
 import { motion               } from 'framer-motion.ts';
 import { Twitter,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Linkedin,
   Instagram,
 =======
@@ -11,7 +10,6 @@ import { Twitter,
   Twitter, 
   Facebook, 
   Instagram, 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Youtube,
   Github,
   Zap,
@@ -36,7 +34,6 @@ import { Twitter,
   Database,
   Network,
   Server
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   Rocket,
   Target,
@@ -68,7 +65,6 @@ import { Twitter,
   Users2,
   Settings,
   Palette
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 } from 'lucide-react';
 
 export function Footer(...args: any[]): any {
@@ -91,7 +87,6 @@ export function Footer(...args: any[]): any {
     },
     {
       title: 'AI & Quantum Solutions',
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       icon: Brain,
       category: "Core Services",
       services: [
@@ -136,7 +131,6 @@ export function Footer(...args: any[]): any {
         { name: 'Manufacturing', href: '/manufacturing-solutions' },
         { name: 'Industry Solutions', href: '/industry-solutions' },
         { name: 'Emerging Tech', href: '/emerging-tech' }
->>>>>>> 4cf84cee096ee4bad48102099687eb335d856d5c
 
       ]
     },
@@ -189,7 +183,6 @@ export function Footer(...args: any[]): any {
   ];
 =======
 =======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
@@ -282,7 +275,6 @@ export function Footer(...args: any[]): any {
                   ))}
                 </div>
               </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           ))}
         </div>
@@ -309,12 +301,10 @@ export function Footer(...args: any[]): any {
                   <MapPin className="w-4 h-4 text-cyan-400" />
                   <span>123 Innovation Drive, Tech City, TC 12345</span>
                 </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
               <div className="flex items-center text-zion-slate-light text-sm">
                 <MapPin className="w-4 h-4 mr-2 text-zion-cyan" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </div>
             <div className="flex space-x-4">

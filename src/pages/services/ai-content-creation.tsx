@@ -23,7 +23,6 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       title: 'Creative Design',;
       description: 'AI-powered design tools and templates';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const contentTypes = [
@@ -47,7 +46,6 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
       description: 'Compelling product copy and descriptions',;
       icon: '🛍️';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -62,7 +60,6 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Content Creation Services - Zion Tech Group"
         description="Transform your content strategy with AI-powered creation tools. Generate high-quality text, images, and videos at scale."
       />

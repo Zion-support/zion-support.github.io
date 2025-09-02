@@ -66,7 +66,6 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
         'White-label solutions';
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technicalSpecs = {
@@ -102,7 +101,6 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
       type: 'Video Content',;
       solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

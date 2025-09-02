@@ -25,7 +25,6 @@ export default function Press(...args: any[]): any {
     { id: 'awards', name: 'Awards & Recognition', count: 8 },;
     { id: 'thought-leadership', name: 'Thought Leadership', count: 4 };
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function Press(...args[]: any):  {
   const pressReleases = [
@@ -105,8 +104,6 @@ export default function Press(...args[]: any):  {
       featured: false,;
       tags: ["Global Expansion", "Europe", "Market Growth"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const mediaResources = [
@@ -139,7 +136,6 @@ export default function Press(...args[]: any):  {
       url: "https://venturebeat.com/zion-tech-group-startup",;
       featured: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const awards = [
@@ -170,7 +166,6 @@ export default function Press(...args[]: any):  {
       description: "Outstanding achievement in AI-powered cybersecurity solutions",;
       image: "/images/awards/infosec.png";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const filteredContent = selectedCategory === 'all'
@@ -202,12 +197,10 @@ export default function Press(...args[]: any):  {
       y: 0,;
       transition: { duration: 0.6 };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
     <div className = "min-h-screen bg-futuristic">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -238,7 +231,6 @@ export default function Press(...args[]: any):  {
 
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <Newspaper className="w-10 h-10 text-white" />
           </motion.div>
@@ -311,7 +303,6 @@ export default function Press(...args[]: any):  {
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-xs text-slate-400">{stat.label}</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </div>
 
@@ -393,7 +384,6 @@ export default function Press(...args[]: any):  {
                   <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </motion.article>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ))}
           </div>
         </div>
@@ -458,7 +448,6 @@ export default function Press(...args[]: any):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
@@ -561,7 +550,6 @@ export default function Press(...args[]: any):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
@@ -591,7 +579,6 @@ export default function Press(...args[]: any):  {
                 </div>
               </motion.article>
             ))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
         </div>
       </section>
@@ -604,7 +591,6 @@ export default function Press(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -627,7 +613,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Download className="w-8 h-8 text-white" />
               </div>
@@ -652,7 +637,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-8 h-8 text-white" />
               </div>
@@ -677,7 +661,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-8 h-8 text-white" />
               </div>
@@ -702,7 +685,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-8 h-8 text-white" />
               </div>
@@ -712,7 +694,6 @@ export default function Press(...args[]: any):  {
                 Download
               </button>
             </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
         </div>
       </section>
@@ -743,9 +724,7 @@ export default function Press(...args[]: any):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Contact Our Media Team
             </h2>
@@ -793,5 +772,3 @@ export default function Press(...args[]: any):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

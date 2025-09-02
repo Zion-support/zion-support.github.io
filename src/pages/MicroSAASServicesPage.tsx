@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import { SEO               } from '@/components/SEO';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const MicroSAASServicesPage = () => {
   return (
     <>
@@ -11,7 +10,6 @@ const MicroSAASServicesPage = () => {
         keywords="micro SAAS, specialized solutions, niche services, business software"
       />
       
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
@@ -23,7 +21,6 @@ const MicroSAASServicesPage = () => {
             </p>
           </div>
           
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-indigo-400/20">
               <div className="text-4xl mb-4">🎯</div>
@@ -31,14 +28,12 @@ const MicroSAASServicesPage = () => {
               <p className="text-gray-300 mb-4">Focused solutions for specific industry needs</p>
             </div>
             
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-indigo-400/20">
               <div className="text-4xl mb-4">⚙️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Custom Development</h3>
               <p className="text-gray-300 mb-4">Tailored software development services</p>
             </div>
             
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-indigo-400/20">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-white mb-3">Rapid Deployment</h3>
@@ -52,5 +47,3 @@ const MicroSAASServicesPage = () => {
   )};
 
 export default MicroSAASServicesPage;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

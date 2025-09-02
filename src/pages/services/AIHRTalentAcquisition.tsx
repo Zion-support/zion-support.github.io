@@ -20,7 +20,6 @@ import { Users,
               } from 'lucide-react.ts';
 
 const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',
@@ -78,8 +77,6 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
       price: '$2,499/mo', ;
       details: ['Unlimited job postings', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -144,7 +141,6 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               ))}
             </div>
@@ -253,7 +249,6 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                 <p className="text-slate-300 font-medium">{useCase}</p>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -480,5 +475,3 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -27,7 +27,6 @@ import { BarChart3,
   Tablet
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ReportData {
 
 
@@ -44,7 +43,6 @@ interface ReportData {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -72,7 +70,6 @@ rating: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ReportMetrics {
 
@@ -90,7 +87,6 @@ interface ReportMetrics {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalReports: number;
   activeReports: number;
   totalViews: number;
@@ -112,7 +108,6 @@ recentActivity: Array<any>;
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
   showMetrics?: boolean;
   showFilters?: boolean;
@@ -129,8 +124,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [selectedType, setSelectedType] = useState<any>('all');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showReportForm, setShowReportForm] = useState(false);
@@ -278,7 +271,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     filtered.sort((a, b) => {
       let aValue: , bValue: ;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
@@ -335,7 +327,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 }, {} as Record<string, any>);
 =======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalReports: reports.length,
     activeReports: reports.filter(r = > r.status === 'active').length,
     totalViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)               => sum + r.views, 0),
@@ -355,10 +346,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 }, {} as Record<string, any>);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return Object.entries(catCounts)
         .map(([name, count]) => ({
           name,
@@ -389,15 +377,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     };
     return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' }};
   // Get priority color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get status color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Handle report actions
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           // // // // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
@@ -411,7 +396,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
   // Export report data
   const exportReport = (report: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReportData, format: 'pdf' | 'excel' | 'csv')               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
           // // // // console.log(`Downloading ${report.title}`);
           break;
@@ -426,7 +410,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     }
   };
   // Export report data
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>;
           </motion.div>;
         )};

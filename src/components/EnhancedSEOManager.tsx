@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface SEOData {
 
 
@@ -44,7 +43,6 @@ interface EnhancedSEOManagerProps extends React.PropsWithChildren<{
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children;
 }) => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     // Update meta tags dynamically
     const updateMetaTags = () => {;

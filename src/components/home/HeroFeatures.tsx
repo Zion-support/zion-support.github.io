@@ -37,7 +37,6 @@ icon: React.ComponentType<{ className?: string;
 gradient: string;
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
   features: HeroFeature[]}
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
@@ -49,7 +48,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.6 }}
 
       {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         <motion.div
           key={feature.title}
           className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"

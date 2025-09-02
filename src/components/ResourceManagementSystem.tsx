@@ -56,10 +56,8 @@ utilization: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 =======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ResourceStats {
 
 
@@ -76,7 +74,6 @@ interface ResourceStats {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -99,7 +96,6 @@ topDepartments: Array<any>;
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
   showStats?: boolean;
   showFilters?: boolean;
@@ -116,8 +112,6 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const [selectedType, setSelectedType] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
   const [selectedPriority, setSelectedPriority] = useState<any>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showResourceForm, setShowResourceForm] = useState(false);
@@ -219,7 +213,6 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     setFilteredResources(sampleResources)}, []);
   // Filter resources
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     let filtered = resources;
     if (selectedType !== 'all') {
       filtered = filtered.filter(r => r.type === selectedType)}
@@ -260,7 +253,6 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 }, {} as Record<string, any>);
 =======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalResources: resources.length,
     availableResources: resources.filter(r = > r.status === 'available').length,
     allocatedResources: anyanyanyanyanyanyanyanyanyanyanyanyanyanyresources.filter(r               => r.status === 'allocated').length,
@@ -282,10 +274,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 }, {} as Record<string, any>);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
           name,
@@ -296,20 +285,16 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .slice(0, 5)})()
   };
   // Get status color and icon
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
   };
   // Get type icon
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return <Globe className = "w-5 h-5" />};
   };
   // Get priority color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Format currency
   const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -319,8 +304,6 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
   // Get utilization color
   const getUtilizationColor = (utilization: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
     if (utilization >= 50) return 'text-blue-400';

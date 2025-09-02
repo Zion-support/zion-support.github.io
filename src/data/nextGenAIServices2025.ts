@@ -13,7 +13,6 @@ export interface NextGenAIService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -398,7 +397,6 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   }
 ];
 export const getNextGenAIServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): NextGenAIService[]              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return NEXT_GEN_AI_SERVICES_2025;
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);

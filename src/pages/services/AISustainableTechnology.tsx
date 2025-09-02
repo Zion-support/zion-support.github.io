@@ -46,7 +46,6 @@ import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, T
       price: '$2,499/mo', ;
       details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

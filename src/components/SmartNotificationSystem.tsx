@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import {
   Bell,
   X,
@@ -40,7 +39,6 @@ interface Notification {
 
   id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   message: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'system';
@@ -68,13 +66,11 @@ action?: {;
 };
   priority: 'low' | 'medium' | 'high';
   category: string;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   expiresAt?: Date;
 }
 
 interface Props extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
   maxNotifications?: number;
   autoDismiss?: boolean;
@@ -88,7 +84,6 @@ export function SmartNotificationSystem(...args: any[]): any {;
   const [isVisible, setIsVisible] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showSettings, setShowSettings] = useState(false);
   const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -119,7 +114,6 @@ label: 'Get Started',;
 onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Get Started clicked');
         
 }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
         id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'2',
@@ -134,7 +128,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
           label: 'View Details',
           onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('View Details clicked')
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
         id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'3',
@@ -156,7 +149,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
           onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Update Now clicked')
         }
       }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
         priority: anyanyanyanyanyanyanyanyanyanyanyanyanyany'high',;
         category: 'security',;
@@ -165,7 +157,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
           onClick: ()               => console.log('Update Now clicked');
         };
       };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
 
     setNotifications(sampleNotifications);
@@ -173,7 +164,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
   }, []);
 
   // Initialize with sample notifications
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     if (settings.sound) {
       audioRef.current = new Audio('/notification-sound.mp3');
@@ -218,11 +208,9 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
     setNotifications(prev => {;
       const updated = prev.map(n => ;
         n.id === id ? { ...n, read: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue } : n;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       );
       setUnreadCount(updated.filter(n               => !n.read).length);
       return updated;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     });
 
     // Play sound if enabled
@@ -285,7 +273,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
       setUnreadCount(filtered.filter(n => !n.read).length);
       return filtered;
     });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   }, []);
 
   // Clear all notifications
@@ -346,7 +333,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
     if (minutes < 60) return `${minutes}m ago`;
     if (hours < 24) return `${hours}h ago`;
     return `${days}d ago`;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   // Request notification permission

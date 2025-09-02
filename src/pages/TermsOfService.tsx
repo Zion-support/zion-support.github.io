@@ -1,6 +1,5 @@
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
   const sections = [
@@ -32,7 +31,6 @@ export default function TermsOfService() {
   const website = 'https://ziontechgroup.com';
   
   const termsSections = [
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     {
       id: 'services',
       title: 'Description of Services',
@@ -308,7 +306,6 @@ export default function TermsOfService() {
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
                 {sections.map((section, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -334,7 +331,6 @@ export default function TermsOfService() {
                   </motion.a>
                 ))}
 =======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </motion.div>
           </div>
@@ -342,7 +338,6 @@ export default function TermsOfService() {
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
                 {keyProvisions.map((provision, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={provision.title}
                     initial = {
@@ -426,7 +421,6 @@ export default function TermsOfService() {
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
                 {disputeResolution.map((step, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={step.step}
                     initial = {
@@ -503,6 +497,5 @@ export default function TermsOfService() {
 =======
       </div>
     </>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 }

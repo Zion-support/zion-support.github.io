@@ -3,7 +3,6 @@ import { Link               } from 'react-router-dom.ts';
 import { motion               } from 'framer-motion.ts';
 import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const categories = [
   {
     title: "Comprehensive Services",
@@ -59,7 +58,6 @@ interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
   showTitle?: boolean;
 
 export function CategoriesSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -125,7 +123,6 @@ export function CategoriesSection(...args: any[]): any {
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
           {categories.map((category, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={category.title}
               variants={itemVariants}

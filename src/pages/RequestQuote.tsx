@@ -29,7 +29,6 @@ import { Calculator,
   Building2,
   Users,
   Globe,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Shield,
   Zap,
   Database,
@@ -70,7 +69,6 @@ import { Calculator,
  
  
  
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
 export default function RequestQuote(...args: any[]): any {
@@ -92,7 +90,6 @@ export default function RequestQuote(...args: any[]): any {
   const [expandedService, setExpandedService] = useState<any>(null);
   const [isSubmitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const companySizes = [
     { value: 'startup', label: 'Startup (1-50 employees)' },
@@ -305,7 +302,6 @@ export default function RequestQuote(...args: any[]): any {
   ];
 
   const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | string[])              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -341,11 +337,9 @@ export default function RequestQuote(...args: any[]): any {
     if (formStep > 1) {
       setFormStep(formStep - 1);
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setSubmitting(true);
     
@@ -412,7 +406,6 @@ export default function RequestQuote(...args: any[]): any {
                 <div>
                   <div className="text-white font-medium">Initial Review</div>
                   <div className="text-gray-300 text-sm">Our team reviews your requirements and project scope</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
       {/* Benefits */}
@@ -420,7 +413,6 @@ export default function RequestQuote(...args: any[]): any {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -874,7 +866,6 @@ export default function RequestQuote(...args: any[]): any {
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

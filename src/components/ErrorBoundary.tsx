@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   showDetails?: boolean;
   autoRecover?: boolean;
   maxRetries?: number;
@@ -22,7 +21,6 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   retryCount: number;
   isRecovering: boolean;
   showErrorDetails: boolean;
@@ -86,9 +84,7 @@ interface State {
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -125,7 +121,6 @@ export class ErrorBoundary extends Component<Props, State> {
 
 
       // // // // // // // console.log('Error logged:', errorData);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       // Example: Send to external service
       // fetch('/api/errors', {
@@ -135,7 +130,6 @@ export class ErrorBoundary extends Component<Props, State> {
       // });
     } catch (logError) {
       // // // // // // // console.error('Failed to log error:', logError);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
     // Auto-recovery logic
     if (autoRecover && retryCount < maxRetries) {
@@ -153,7 +147,6 @@ export class ErrorBoundary extends Component<Props, State> {
           isRecovering: false 
         });
       }, 2000 + (retryCount * 1000)); // Exponential backoff
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     }
 
     // Send error to analytics/monitoring service
@@ -192,7 +185,6 @@ export class ErrorBoundary extends Component<Props, State> {
   };
 
   private resetError = () => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     this.setState({
       hasError: false,
       error: null,
@@ -227,7 +219,6 @@ User Agent: ${navigator.userAgent}
         document.execCommand('copy');
         document.body.removeChild(textArea);
       });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
     try {
       await navigator.clipboard.writeText(errorText);
@@ -245,7 +236,6 @@ User Agent: ${navigator.userAgent}
 
   // Navigate home
 =======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   private goHome = () => {
     window.location.href = '/';
   };
@@ -505,7 +495,6 @@ export const useErrorHandler = () => {
   const [error, setError] = React.useState<Error | null>(null);
 
   const handleError = React.useCallback((error: Error) => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     setError(error);
     console.error('Error caught by useErrorHandler:', error);
   }, []);
@@ -531,10 +520,8 @@ export const withErrorBoundary = <P extends object>(
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   return WrappedComponent;
 };
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
     // // // // // // // console.error('Error caught by useErrorHandler:', error, errorInfo);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     // You can add custom error handling logic here
     // For example, sending to an error reporting service
@@ -544,7 +531,6 @@ export const withErrorBoundary = <P extends object>(
   }, []);
 }}}}}}}}}}}}}}}}
 =======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Global error handler for unhandled errors
 if (typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {

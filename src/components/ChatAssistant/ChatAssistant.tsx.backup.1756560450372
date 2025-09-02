@@ -24,7 +24,6 @@ export interface Message {
 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: string;
   role: 'user' | 'assistant';
   message: string;
@@ -33,13 +32,10 @@ read?: boolean;
 }
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   isOpen?: boolean;
   onClose?: () => void;
 }
 export function ChatAssistant(...args: any[]): any {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
@@ -55,7 +51,6 @@ export function ChatAssistant(...args: any[]): any {;
 
 };
     setMessages(prev            => [...prev, userMessage]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setInputMessage('');
     // Simulate AI response
     setTimeout(() => {
@@ -84,7 +79,6 @@ export function ChatAssistant(...args: any[]): any {;
     setIsChatOpen(!isChatOpen);
   };
   const closeChat = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setIsChatOpen(false);
     if (onClose) onClose()};
   if (!isChatOpen) {
@@ -100,8 +94,6 @@ export function ChatAssistant(...args: any[]): any {;
       </button>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className = "fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
       {/* Header */}
@@ -164,5 +156,3 @@ export function ChatAssistant(...args: any[]): any {;
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

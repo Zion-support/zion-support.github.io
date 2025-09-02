@@ -1,6 +1,5 @@
 import React, { useState              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { User, 
   Mail, 
   Phone, 
@@ -36,7 +35,6 @@ import { User,
   Rocket
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface UserProfile {
 
 
@@ -52,7 +50,6 @@ interface UserProfile {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   firstName: string;
   lastName: string;
   email: string;
@@ -77,7 +74,6 @@ avatar: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface NotificationSettings {
 
@@ -94,7 +90,6 @@ interface NotificationSettings {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   emailNotifications: boolean;
   pushNotifications: boolean;
   marketingEmails: boolean;
@@ -114,7 +109,6 @@ weeklyReports: boolean;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecuritySettings {
 
@@ -131,7 +125,6 @@ interface SecuritySettings {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   twoFactorEnabled: boolean;
   sessionTimeout: number;
   passwordLastChanged: string;
@@ -149,12 +142,9 @@ loginHistory: Array<any>;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const Profile: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('profile');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -248,7 +238,6 @@ const Profile: React.FC = (): JSX.Element => {;
   };
 
   const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanyanyanyanyanykeyof NotificationSettings)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNotifications(prev => ({;
       ...prev,;
       [key]: !prev[key];
@@ -256,8 +245,6 @@ const Profile: React.FC = (): JSX.Element => {;
   };
 
   const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -422,7 +409,6 @@ const Profile: React.FC = (): JSX.Element => {;
               <input
                 type="text"
                 value={profile.comp}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   company: e.target.value 
@@ -461,8 +447,6 @@ const Profile: React.FC = (): JSX.Element => {;
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {industries.map((industry)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>

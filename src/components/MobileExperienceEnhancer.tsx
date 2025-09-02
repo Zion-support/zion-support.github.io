@@ -11,7 +11,6 @@ import {
   Volume2,
   VolumeX,
   RotateCcw,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Settings,
   X,
   CheckCircle,
@@ -216,7 +215,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {;
         const scale = distance / pinchDistance;
         document.documentElement.style.setProperty('--mobile-zoom', scale.toString());
       }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       // Handle rotation
       const angle = Math.atan2(
@@ -251,7 +249,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {;
         handleSwipe('down');
       }
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     setTouchStart(null);
     setTouchEnd(null);
@@ -280,7 +277,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {;
         case 'down':
           // Refresh
           // // // // // // console.log('Swipe down - Refresh');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
           break;
 
 
@@ -462,7 +458,6 @@ interface MobileMetrics {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 interface MobileExperienceEnhancerProps extends React.PropsWithChildren<{}> {
@@ -483,7 +478,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {
   const [touchFeedback, setTouchFeedback] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
   const gestureHistoryRef = useRef<string[]>([]);
   const serviceWorkerRef = useRef<ServiceWorkerRegistration | null>(null);
@@ -714,7 +708,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {
   }, [metrics]);
 
   // Initialize mobile detection
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     if (!enabled) return;
 
@@ -1399,7 +1392,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {
                         <Battery className="w-4 h-4 text-gray-500" />
                       )}
                       <span className="text-sm font-medium">{metrics.batteryLevel}%</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </div>
                   </div>
                 </div>
@@ -1441,7 +1433,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {
                     />
                     <span className="text-sm text-gray-700 dark:text-gray-300">Mobile Menu</span>
                   </label>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
 
@@ -1456,7 +1447,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {
                       <div key={index} className="flex items-center gap-2 text-xs text-green-600 dark:text-green-400">
                         <CheckCircle className="w-3 h-3" />
                         {opt}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       </div>
                     ))}
                   </div>
@@ -1520,7 +1510,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {
               opacity: 1;
             }
           `}</style>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       )}
     </>

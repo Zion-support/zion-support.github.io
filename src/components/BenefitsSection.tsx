@@ -1,9 +1,7 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star               } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface Benefit {
 
 
@@ -28,7 +26,6 @@ interface Benefit {
   features: string[];
 
 const benefits: Benefit[] = [;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
 title: "AI-Powered Matchmaking",;
 description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",;
@@ -103,7 +100,6 @@ features: [;
 export function BenefitsSection(...args: any[]): any {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -177,7 +173,6 @@ export function BenefitsSection(...args: any[]): any {
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
           {stats.map((stat, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={statsVariants}
@@ -251,7 +246,6 @@ export function BenefitsSection(...args: any[]): any {
                   <AnimatePresence>
                     {hoveredIndex === index && (
                       <motion.div
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10 rounded-2xl"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -265,7 +259,6 @@ export function BenefitsSection(...args: any[]): any {
             ))}
           </div>
         </motion.div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       </div>
     </section>
   );

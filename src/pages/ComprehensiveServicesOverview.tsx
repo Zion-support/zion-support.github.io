@@ -30,7 +30,6 @@ import { Brain,
              } from 'lucide-react.ts';
   };
   const getServicePrice = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof service.price === 'number') {
       return service.price;
     }

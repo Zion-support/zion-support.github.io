@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { ThemeToggle              } from '../components/ThemeToggle';
 import { ZionLoadingSpinner              } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar              } from '../components/Sidebar';
 import { EnhancedSearch              } from '../components/EnhancedSearch';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 export function AppHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +14,6 @@ export function AppHeader(...args: any[]): any {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,7 +96,6 @@ export function AppHeader(...args: any[]): any {
                     </p>
                   </div>
                 </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </Link>
             </div>
 
@@ -118,7 +113,6 @@ export function AppHeader(...args: any[]): any {
                   )}
                 </Link>
               ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
               {/* Services Dropdown */}
               <div className="relative group">
@@ -154,7 +148,6 @@ export function AppHeader(...args: any[]): any {
                               </div>
                               <div className="ml-4 flex-1">
                                 <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                                   {service.name}
                                 </div>
                                 <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
@@ -196,7 +189,6 @@ export function AppHeader(...args: any[]): any {
                             </Link>
                           ))}
                         </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       </div>
 
                       <div className="mt-6 pt-4 border-t border-slate-700/50">
@@ -270,7 +262,6 @@ export function AppHeader(...args: any[]): any {
               >
                 {mobileMenuOpen ? (
                   <X className="w-6 h-6" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 ) : (
                   <Link
                     to={item.href}
@@ -308,7 +299,6 @@ export function AppHeader(...args: any[]): any {
                 </div>
               </Link>
             </div>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">

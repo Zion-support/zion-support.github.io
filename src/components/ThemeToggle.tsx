@@ -1,6 +1,5 @@
 import React, { useState, useEffect               } from 'react.ts';
 import { Sun, Moon, Monitor                } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 type Theme = 'light' | 'dark' | 'system' | 'cyberpunk' | 'minimal' | 'retro';
 
@@ -12,9 +11,7 @@ interface ThemeToggleProps extends React.PropsWithChildren<{}> {
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
   const [theme, setTheme] = useState<any>('system');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [mounted, setMounted] = useState(false);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const themes: { value: Theme; label: string; icon: React.ComponentType<any>; description: string }[] = [
     { value: 'light', label: 'Light', icon: Sun, description: 'Clean and bright interface' },
@@ -166,7 +163,6 @@ export function ThemeToggleDropdown(...args: any[]): any {
     }
     
     localStorage.setItem('theme', theme);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [theme, mounted]);
 
   if (!mounted) {
@@ -192,9 +188,7 @@ export function ThemeToggleDropdown(...args: any[]): any {
       >
         {themes.find(t => t.value === theme)?.icon({ className: 'w-4 h-4' })}
         <span className="text-sm font-medium">{themes.find(t => t.value === theme)?.label}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </button>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
       {/* Quick Theme Switcher */}
       <AnimatePresence>
@@ -223,7 +217,6 @@ export function ThemeToggleDropdown(...args: any[]): any {
                 <span>{themeOption.label}</span>
               </button>
             ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </motion.div>
         )}
       </AnimatePresence>

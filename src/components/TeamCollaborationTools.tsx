@@ -65,7 +65,6 @@ import { Users,
   PieChart
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface TeamMember {
 
 
@@ -82,7 +81,6 @@ interface TeamMember {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   role: string;
@@ -107,7 +105,6 @@ availability: 'available' | 'busy' | 'unavailable';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Project {
 
@@ -125,7 +122,6 @@ interface Project {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   description: string;
@@ -153,7 +149,6 @@ tags: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Task {
 
@@ -171,7 +166,6 @@ interface Task {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -198,7 +192,6 @@ comments: Comment[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Comment {
 
@@ -216,7 +209,6 @@ interface Comment {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   author: string;
   content: string;
@@ -237,7 +229,6 @@ replies: Comment[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Message {
 
@@ -255,14 +246,12 @@ interface Message {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   sender: string;
   content: string;
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   reactions: { type: string; count: number 
 }[];
   isRead: boolean}
@@ -282,7 +271,6 @@ interface FileItem {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
@@ -309,7 +297,6 @@ version: string;
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
   showTeamMembers?: boolean;
   showProjects?: boolean;
@@ -329,8 +316,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const [messages, setMessages] = useState<any>([]);
   const [files, setFiles] = useState<any>([]);
   const [selectedProject, setSelectedProject] = useState<any>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -383,23 +368,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     setMessages(sampleMessages);
     setFiles(sampleFiles)}, []);
   // Get status color and icon
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }};
   };
   // Get project status color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get priority color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get file type icon
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return <File className = "w-5 h-5" />};
   };
   // Format file size
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           existingReaction.count += 1} else {
           msg.reactions.push({ type: reactionType, count: 1 })}
       }

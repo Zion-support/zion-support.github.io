@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -11,7 +10,6 @@ import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
   BarChart3, 
   Cloud, 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Rocket,
   Zap,
 
@@ -24,7 +22,6 @@ import { motion              } from 'framer-motion.ts';
   Phone,
   Mail,
   MapPin
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
@@ -205,7 +202,6 @@ export default function ServicesOverview(...args: any[]): any {
     ...specializedIndustryServices,
     ...allServices
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Categories for filtering
   const categories = [
@@ -221,7 +217,6 @@ export default function ServicesOverview(...args: any[]): any {
     { id: 'Marketing', name: 'Marketing', icon: ShoppingCart },
     { id: 'Development', name: 'Development', icon: Building },
     { id: 'SAAS', name: 'SAAS Solutions', icon: Cloud }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const itServices = [
@@ -297,7 +292,6 @@ export default function ServicesOverview(...args: any[]): any {
       color: 'from-blue-600 to-cyan-600',
       description: 'Enterprise-grade IT infrastructure and digital transformation solutions',
       count: INNOVATIVE_SERVICES_2025.filter(s => s.category === 'IT Services').length
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
     },
     {
@@ -485,11 +479,9 @@ export default function ServicesOverview(...args: any[]): any {
       icon: <Headphones className="w-6 h-6" />,
       link: "/help"
     }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   };
 =======
   const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     <motion.div
       key={service.id}
       className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
@@ -504,7 +496,6 @@ export default function ServicesOverview(...args: any[]): any {
           {service.isPopular && (
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs px-3 py-1 rounded-full">
               Popular
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </span>
           )}
           {service.isNew && (
@@ -604,7 +595,6 @@ export default function ServicesOverview(...args: any[]): any {
               {service.setupTime}
             </span>
           )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </div>
     </motion.div>
@@ -688,7 +678,6 @@ export default function ServicesOverview(...args: any[]): any {
             </h2>
             <div className="text-gray-400">
               Showing {filteredServices.length} of {allAvailableServices.length} services
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
 
@@ -758,7 +747,6 @@ export default function ServicesOverview(...args: any[]): any {
               <p className="text-gray-300 text-sm">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </p>
             </motion.div>
 
@@ -835,7 +823,6 @@ export default function ServicesOverview(...args: any[]): any {
               transform your business, enhance efficiency, and drive competitive advantage.
             </motion.p>
             <motion.div 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}

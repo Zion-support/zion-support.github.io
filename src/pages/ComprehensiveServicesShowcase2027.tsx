@@ -51,11 +51,9 @@ import { Brain,
   X
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026              } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices              } from '../data/comprehensiveServices';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
 
@@ -108,11 +106,9 @@ billingCycle: string;
     phone: string;
     email: string;
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       services.push({
         id: service.id,
         name: service.name,
@@ -140,7 +136,6 @@ billingCycle: string;
 
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service = > {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       services.push({
         id: service.id,
         name: service.name,
@@ -165,14 +160,12 @@ billingCycle: string;
         contactInfo: service.contactInfo;
       });
     });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return services}, []);
 
   const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const filtered = allServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -195,16 +188,13 @@ billingCycle: string;
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
 
         return <Lightbulb className = "w-6 h-6" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
         return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -292,7 +282,6 @@ billingCycle: string;
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -656,7 +645,5 @@ billingCycle: string;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default ComprehensiveServicesShowcase2027;}}}}}

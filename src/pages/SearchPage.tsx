@@ -63,7 +63,6 @@ interface SearchResult {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
@@ -185,7 +184,6 @@ const filters = {
 };
 
 export default function SearchPage(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');

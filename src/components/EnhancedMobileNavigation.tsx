@@ -34,7 +34,6 @@ import { Menu,
   Clock
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationItem {
 
 
@@ -51,7 +50,6 @@ interface NavigationItem {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
@@ -160,7 +158,6 @@ const quickActions = [
   };
 ];
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       }
     };
     if (isOpen) {
@@ -174,10 +171,8 @@ const quickActions = [
         newSet.delete(label)} else {
         newSet.add(label)}
       return newSet})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (path === '/') {;
       return activePath === '/';
     return activePath.startsWith(path);

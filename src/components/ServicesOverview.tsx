@@ -28,10 +28,8 @@ import { Brain,
   Clock
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES                } from '@/data/innovativeMicroSaasServices2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function ServicesOverview(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const serviceCategories = [
     {
       id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'ai-analytics',
@@ -128,7 +126,6 @@ export function ServicesOverview(...args[]: any):  {
     };
 =======;
       icon: anyanyanyanyanyanyanyanyanyanyanyanyanyanyHeart,;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       color: 'from-zion-pink to-zion-purple',;
       description: 'Healthcare artificial intelligence solutions',;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s               => s.category.includes('Healthcare'));
@@ -232,7 +229,6 @@ export function ServicesOverview(...args[]: any):  {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 className="card-futuristic group"

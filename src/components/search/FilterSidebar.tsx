@@ -48,7 +48,6 @@ count?: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterGroup {
 
@@ -85,7 +84,6 @@ type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'checkbox' | 'radio' | 'range';
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
@@ -93,10 +91,8 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   onClearFilters: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void;
   isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
   onClose: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function FilterSidebar(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <>
       {/* Mobile overlay */}
@@ -129,13 +125,11 @@ export function FilterSidebar(...args: any[]): any {
             <button
               onClick={onClearFilters}
               className="text-sm text-zion-cyan hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanytext-zion-cyan-light transition-colors underline"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             >
               Clear all
             </button>
           </div>
           {/* Filter groups */}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           {filters.map((group) => (;
             <div key={group.key} className="space-y-3">;
               <h4 className="font-medium text-white">{group.title}</h4>;

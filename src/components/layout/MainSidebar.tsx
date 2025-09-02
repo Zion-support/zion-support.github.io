@@ -1,6 +1,5 @@
 import React, { useState } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Menu, 
   X, 
@@ -31,7 +30,6 @@ import {
   Network,
   Palette,
   Video,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   PenTool,
   Atom,
   Server,
@@ -48,7 +46,6 @@ import {
  
 } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   Building2,
   TestTube,
@@ -64,7 +61,6 @@ import {
 
 } from 'lucide-react';
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SidebarItem {
 
 
@@ -107,24 +103,19 @@ interface NavigationSection {
   items: SidebarItem[];
 }
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 export function MainSidebar() {
 =======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function MainSidebar(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   const toggleSection = (section: string) => {
 =======
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -275,7 +266,6 @@ export function MainSidebar(...args: any[]): any {
     {
       title: 'Resources',
       items: [
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         {
           name: 'Documentation',
           href: '/docs',

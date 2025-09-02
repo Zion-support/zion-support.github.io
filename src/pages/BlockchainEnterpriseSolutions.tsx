@@ -266,8 +266,6 @@ import { Brain,
   Treap,
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const blockchainSolutions = [
   {
     id: 1,
@@ -487,15 +485,12 @@ const blockchainBenefits = [
 ];
 
 export default function BlockchainEnterpriseSolutions(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
   const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
   const filteredSolutions = selectedCategory === 'All'
     ? blockchainSolutions: anyanyanyanyanyanyanyanyanyanyanyanyanyblockchainSolutions.filter(solution              => solution.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -580,7 +575,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {blockchainBenefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -637,7 +631,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {blockchainTechnologies.map((technology, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={technology.name}
                 initial = {
@@ -695,7 +688,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={step.step}
                 initial = {
@@ -766,7 +758,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={solution.id}
                 initial = {
@@ -845,7 +836,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={story.id}
                 initial = {

@@ -4,7 +4,6 @@ import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
 import { Badge              } from '../../components/ui/Badge';
 import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AIProjectManagement: React.FC = (): JSX.Element => {
   return (
@@ -12,7 +11,6 @@ const AIProjectManagement: React.FC = (): JSX.Element => {
       <SEO 
         title="AI Project Management Platform - Zion Tech Group"
         description="Revolutionary AI-powered project management platform that automates planning, resource allocation, and risk management with predictive analytics and intelligent workflow optimization."
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       
       {/* Hero Section */}
@@ -74,7 +72,6 @@ const AIProjectManagement: React.FC = (): JSX.Element => {
               <h3 className="text-xl font-semibold text-white mb-3">95% Risk Prediction</h3>
               <p className="text-gray-300">Advanced AI algorithms predict and prevent project risks before they occur</p>
             </Card>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -90,7 +87,6 @@ const AIProjectManagement: React.FC = (): JSX.Element => {
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-blue-400" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
               <h3 className="text-lg font-semibold text-white mb-3">AI-Powered Planning</h3>
               <p className="text-gray-300">Intelligent project planning with predictive analytics and automated resource allocation</p>
@@ -152,7 +148,6 @@ const AIProjectManagement: React.FC = (): JSX.Element => {
                 <Badge variant="secondary" className="bg-blue-600 text-white">
                   Most Popular
                 </Badge>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
               <div className="text-4xl font-bold text-white mb-2">$799</div>
@@ -298,7 +293,6 @@ const AIProjectManagement: React.FC = (): JSX.Element => {
             <div className="flex items-center text-gray-300">
               <Mail className="w-5 h-5 mr-2" />
               <span>kleber@ziontechgroup.com</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
           
@@ -321,4 +315,3 @@ const AIProjectManagement: React.FC = (): JSX.Element => {
 };
 
 export default AIProjectManagement;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -15,7 +15,6 @@ import { Rocket,
 	Play,
 	Pause
            } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
 
 
@@ -46,7 +45,6 @@ status: 'active' | 'beta' | 'new';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',
@@ -121,15 +119,12 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 	}, [isPlaying]);
 	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
 		switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
 			default: return 'UNKNOWN'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
 	return (
 		<div className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -380,5 +375,3 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 		</div>;
 	);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

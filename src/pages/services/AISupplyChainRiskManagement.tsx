@@ -40,7 +40,6 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
       features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;
@@ -295,6 +294,5 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

@@ -32,7 +32,6 @@ import { Rocket,
   Globe2,
   ShieldCheck
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function InnovativeServicesHub() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -518,7 +517,6 @@ export default function InnovativeServicesHub() {
 ;
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
           {serviceCategories.map((category)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -536,7 +534,6 @@ export default function InnovativeServicesHub() {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -601,7 +598,6 @@ export default function InnovativeServicesHub() {
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {featuredServices.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
               initial={{ opacity: 0, y: 20 }}

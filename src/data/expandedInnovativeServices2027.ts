@@ -15,7 +15,6 @@ export interface ExpandedService2027 {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   category: string;
@@ -1079,7 +1078,6 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ];
 // Helper function to get services by category
 export const getExpandedServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedService2027[]              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return ALL_EXPANDED_SERVICES_2027;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);

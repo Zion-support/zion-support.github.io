@@ -11,7 +11,6 @@ import { Globe,
 
       established: '2022';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 =======
 const globalOffices = [
@@ -44,7 +43,6 @@ const globalOffices = [
     description: "Canadian market and development center";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const globalStats = [;
   { label: "Countries Served", value: "25+", icon: "🌍" },;
@@ -83,7 +81,6 @@ export function GlobalPresenceSection(...args: any[]): any {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Global Presence
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -126,10 +123,8 @@ export function GlobalPresenceSection(...args: any[]): any {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >;
           {globalStats.map((stat, index)           => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const IconComponent = stat.icon;
             return (
               <div key = {stat.label} className="text-center">
@@ -224,8 +219,6 @@ export function GlobalPresenceSection(...args: any[]): any {
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">{office.icon}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 
                 <div className="mb-2">
@@ -323,7 +316,6 @@ export function GlobalPresenceSection(...args: any[]): any {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Go Global?
@@ -357,8 +349,6 @@ export default GlobalPresenceSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default GlobalPresenceSection;
 export default GlobalPresenceSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

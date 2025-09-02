@@ -24,7 +24,6 @@ import { Brain,
              } from 'lucide-react.ts';
 
 const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     'AI-powered customer journey mapping and analysis',
     'Real-time sentiment analysis and emotion detection',
@@ -36,7 +35,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
     'Automated customer satisfaction scoring',;
     'Real-time customer experience monitoring',;
     'AI-driven customer experience optimization recommendations';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [;
@@ -82,7 +80,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
     'Automated customer feedback processing',
     'Advanced segmentation and targeting',
     'Competitive benchmarking insights'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -190,7 +187,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               ))}
             </div>
           </div>
@@ -212,7 +208,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 From real-time sentiment analysis to predictive modeling, our platform provides everything you need to understand your customers.
               </p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -395,5 +390,3 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

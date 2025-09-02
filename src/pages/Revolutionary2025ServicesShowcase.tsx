@@ -83,7 +83,6 @@ import { Search,
   SkipForward2,
   PlayCircle,
   PauseCircle
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 import { revolutionary2025AdvancedMicroSaasServices              } from '../data/revolutionary-2025-advanced-micro-saas-v2';
 import { revolutionary2025SpecializedITAIServices              } from '../data/revolutionary-2025-specialized-it-ai-services';
@@ -91,8 +90,6 @@ import { revolutionary2025SpecializedITAIServices              } from '../data/r
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
 const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ALL_SERVICES);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

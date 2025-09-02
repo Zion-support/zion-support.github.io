@@ -3,7 +3,6 @@ import React from 'react.ts';
 import { useParams, Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
 import { Calendar, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   User, 
   Clock, 
   Tag, 
@@ -26,7 +25,6 @@ import { Calendar,
 import { SEO              } from '../components/SEO';
 
 export default function BlogPost(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { slug } = useParams();
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
@@ -165,7 +163,6 @@ export default function BlogPost(...args: any[]): any {
   };
 
   const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -174,7 +171,6 @@ export default function BlogPost(...args: any[]): any {
   };
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const categoryIcons: { [key: string]: any } = {
       ai: Brain,
       quantum: Cpu,
@@ -188,7 +184,6 @@ export default function BlogPost(...args: any[]): any {
   };
 
   const getCategoryName = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence',
       quantum: 'Quantum Computing',
@@ -371,7 +366,6 @@ export default function BlogPost(...args: any[]): any {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {blogPost.relatedPosts.map((post, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}

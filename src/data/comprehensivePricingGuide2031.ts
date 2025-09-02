@@ -13,7 +13,6 @@ export interface PricingTier2031 {
 
 
   id: string;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
@@ -59,7 +58,6 @@ export interface ServiceCategory2031 {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -96,7 +94,6 @@ contactInfo: {;
 
 };
   }[];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 // Contact Information for Zion Tech Group
@@ -705,7 +702,6 @@ export default comprehensivePricingGuide2031;
 export const PRICING_SUMMARY_2031 = {
   totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category)              => acc + category.services.length, 0),
   totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   priceRange: {
     min: "$299/month",
     max: "$50,000/project"

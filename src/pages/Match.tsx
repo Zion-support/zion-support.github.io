@@ -39,10 +39,8 @@ import { Sparkles,
   Settings as SettingsIcon
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const Match: React.FC = (): JSX.Element => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const categories = [;
@@ -254,7 +252,6 @@ const Match: React.FC = (): JSX.Element => {;
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 initial = {
@@ -383,7 +380,6 @@ const Match: React.FC = (): JSX.Element => {;
           </motion.div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 step: "01",
@@ -404,7 +400,6 @@ const Match: React.FC = (): JSX.Element => {;
                 icon: Sparkles
 
             ].map((step, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

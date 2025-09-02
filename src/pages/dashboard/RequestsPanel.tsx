@@ -8,7 +8,6 @@ import { useAuth              } from '@/hooks/useAuth';
 import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
 import { QuoteDetails              } from '@/components/quotes/QuoteDetails';
 import { RequestsHeader,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   QuoteRequestsList
              } from '@/components/quotes';
 import type { QuoteRequest } from "@/types/quotes";
@@ -18,7 +17,6 @@ export default function RequestsPanel(...args[]: any):  {
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showDetails, setShowDetails] = useState(false);
   const {
     quotes,
@@ -33,15 +31,12 @@ export default function RequestsPanel(...args[]: any):  {
     toggleArchive
   } = useTalentQuotes();
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (quote.status = == 'new') {;
       markAsViewed(quote.id);
   };
   // Filter quotes by archive status
   const archivedQuotes = quotes.filter((q: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => q.is_archived);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <ProtectedRoute>
       <div>

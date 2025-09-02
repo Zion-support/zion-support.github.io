@@ -10,7 +10,6 @@ import { Star,
   Award
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Testimonial {
 
 
@@ -27,7 +26,6 @@ interface Testimonial {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   position: string;
@@ -52,9 +50,7 @@ avatar: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const testimonials: Testimonial[] = [
   {
     id: '1',
@@ -118,7 +114,6 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function EnhancedTestimonialsSection(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   useEffect(() => {
@@ -134,7 +129,6 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)};
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   animate = {
   { rotate: [0,
   360] 

@@ -45,7 +45,6 @@ const PerformanceAnalytics: React.FC = (): JSX.Element => {;
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [selectedTimeframe, setSelectedTimeframe] = useState<any>('24h');
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Mock performance data - in real implementation, this would come from actual monitoring
   const generateMockData = useCallback((): PerformanceData => {;
     const now = Date.now();
@@ -131,7 +130,6 @@ icon: Clock;
   }, []);
 
   useEffect(()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (isMonitoring) {
       const interval = setInterval(() => {;
         setPerformanceData(generateMockData());
@@ -139,10 +137,8 @@ icon: Clock;
       return () => clearInterval(interval);
     }
   }, [isMonitoring, generateMockData]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
@@ -151,7 +147,6 @@ icon: Clock;
   };
 
   const getStatusBgColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
@@ -160,7 +155,6 @@ icon: Clock;
   };
 
   const getTrendIcon = (trend: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400" />;
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400" />;
@@ -217,7 +211,6 @@ icon: Clock;
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                   : 'bg-green-600 hover:bg-green-700 text-white'
               }`}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             >
               <Activity className="w-5 h-5" />
               Start Monitoring

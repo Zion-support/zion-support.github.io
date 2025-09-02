@@ -24,7 +24,6 @@ import {
   Shield,
   Users,
   BarChart3,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap,
   ArrowRight,
   CheckCircle,
@@ -40,7 +39,6 @@ import {
   Smartphone
 export default function DigitalTransformation(...args: any[]): any {
   const features = [
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       title: 'Process Automation',
       description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
@@ -167,7 +165,6 @@ export default function DigitalTransformation(...args: any[]): any {
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (
               <motion.div
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                 initial={{ opacity: 0, y: 30 }}
@@ -296,8 +293,6 @@ export default function DigitalTransformation(...args: any[]): any {
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
@@ -340,7 +335,6 @@ export default function DigitalTransformation(...args: any[]): any {
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {benefits.map((benefit, index)              => (
               <motion.div
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -378,7 +372,6 @@ export default function DigitalTransformation(...args: any[]): any {
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
             {industries.map((industry, index)              => (
               <motion.div
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                 initial={{ opacity: 0, y: 20 }}
@@ -416,7 +409,6 @@ export default function DigitalTransformation(...args: any[]): any {
               { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
             ].map((phase, index)              => (
               <motion.div
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}

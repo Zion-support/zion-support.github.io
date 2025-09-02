@@ -32,7 +32,6 @@ import { MessageCircle,
 import { SEO              } from '../../components/SEO';
 
 const AICustomerSupportAutomation = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Bot,
@@ -119,7 +118,6 @@ const AICustomerSupportAutomation = () => {
       ],
       popular: false
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -208,7 +206,6 @@ const AICustomerSupportAutomation = () => {
   return (
     <>
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI-Powered Customer Support Automation - Zion Tech Group"
         description="Transform customer support with AI automation. 24/7 availability, instant responses, and 60-80% cost reduction. Start from $199/month."
       />
@@ -306,7 +303,6 @@ const AICustomerSupportAutomation = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -328,7 +324,6 @@ const AICustomerSupportAutomation = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to automate and optimize your customer support
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </motion.div>
           
@@ -345,7 +340,6 @@ const AICustomerSupportAutomation = () => {
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {feature.title}
@@ -355,7 +349,6 @@ const AICustomerSupportAutomation = () => {
                   </p>
                 </div>
               </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ))}
           </div>
         </div>
@@ -639,7 +632,6 @@ const AICustomerSupportAutomation = () => {
               <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </div>
           </div>
@@ -704,4 +696,3 @@ const Heart = ({ className }: { className?: string }) => (
 );
 
 export default AICustomerSupportAutomation;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

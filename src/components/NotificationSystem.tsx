@@ -15,8 +15,6 @@ import { CheckCircle,
   Clock
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 export interface Notification {
 
@@ -35,7 +33,6 @@ export interface Notification {
 
 
   id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   type: NotificationType;
   title: string;
   message: string;
@@ -85,7 +82,6 @@ interface NotificationSettings {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   sound: boolean;
   vibration: boolean;
   autoDismiss: boolean;
@@ -106,9 +102,7 @@ defaultDuration: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5,
   position = 'top-right',
@@ -119,8 +113,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 }) => {;
   const [notifications, setNotifications] = useState<any>([]);
   const [settings, setSettings] = useState<any>({
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     sound: enableSound,
     vibration: enableVibration,
     autoDismiss: autoDismiss,
@@ -186,7 +178,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     triggerVibration()}, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]);
   // Dismiss notification
   const dismissNotification = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
   // Mark notification as read
@@ -205,8 +196,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, []);
   // Get notification icon
   const getNotificationIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotificationType, priority: string)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const iconProps = { className: "w-5 h-5" };
     switch (type) {
       case 'success':
@@ -223,7 +212,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
         return <Bell {...iconProps} className = "w-5 h-5 text-zion-slate" />};
   };
   // Get notification styles
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return baseStyles + 'border-zion-slate bg-zion-slate/10'}
   };
   // Get position classes
@@ -242,7 +230,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
   // Update settings
   const updateSettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPartial<NotificationSettings>)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSettings(prev => ({ ...prev, ...newSettings }));
   }, []);
   // Expose addNotification method globally for external use
@@ -458,7 +445,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   ))
                 )}
               </AnimatePresence>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>;
           </motion.div>;
         )};
@@ -471,7 +457,6 @@ export const useNotifications = () => {;
   const addNotification = useCallback((notification: anyanyanyanyanyanyanyanyanyanyanyanyanyanyOmit<Notification, 'id' | 'timestamp' | 'read'>)               => {;
     if ((window as ).addNotification) {;
       (window as ).addNotification(notification);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
   }, []);
   return { addNotification }};
@@ -487,7 +472,6 @@ export const notificationUtils = {
 })};
 =======;
         priority: anyanyanyanyanyanyanyanyanyanyanyanyanyany'medium',;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   ...options;
@@ -497,7 +481,6 @@ export const notificationUtils = {
   },
 
   warning: (title: string, message: string, options?: Partial<Notification>)                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'warning',
@@ -509,7 +492,6 @@ export const notificationUtils = {
   },
 
   error: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'error',
@@ -521,7 +503,6 @@ export const notificationUtils = {
   },
 
   info: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'info',
@@ -533,7 +514,6 @@ export const notificationUtils = {
   },
 
   achievement: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'achievement',

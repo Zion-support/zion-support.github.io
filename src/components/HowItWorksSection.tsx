@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const steps = [
   {
     icon: <Search className="w-8 h-8" />,
@@ -192,7 +191,6 @@ export function HowItWorksSection(...args: any[]): any {
           viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
           {stats.map((stat, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={statsVariants}
@@ -219,7 +217,6 @@ export function HowItWorksSection(...args: any[]): any {
           </div>
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={containerVariants}

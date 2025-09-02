@@ -2,8 +2,6 @@ import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -70,7 +68,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Global blockchain networks for international business operations."
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -134,7 +131,6 @@ import { Link               } from 'react-router-dom.ts';
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
                 }
               ].map((useCase, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -300,7 +296,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Deploy and integrate with existing enterprise systems."
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -321,7 +316,6 @@ import { Link               } from 'react-router-dom.ts';
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Leverage the power of blockchain technology to secure, automate, and optimize your operations.
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

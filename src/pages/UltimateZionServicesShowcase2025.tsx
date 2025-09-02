@@ -1,8 +1,6 @@
 import React from 'react.ts';
 import { SEO              } from '../components/SEO';
 import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025              } from '../data/ultimateZionServices2025';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -169,7 +167,6 @@ import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ul
                       ${service.price.toLocaleString()}
                       <span className="text-sm text-gray-400">/month</span>
                     </span>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                   <div className="flex flex-col items-end gap-2">
                     {service.new && (
@@ -446,7 +443,6 @@ import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ul
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">

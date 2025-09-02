@@ -20,8 +20,6 @@ import { BarChart3,
               } from 'lucide-react.ts';
 
 export default function Dashboard(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const stats = [
       icon: <TrendingUp className="h-6 w-6 text-orange-500" />;
     };
@@ -138,7 +136,6 @@ export default function Dashboard(...args[]: any):  {
   ];
 
   const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (status) {;
       case "Completed":;
         return "bg-green-100 text-green-800";
@@ -151,7 +148,6 @@ export default function Dashboard(...args[]: any):  {
   };
 
   const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (priority) {;
       case "High":;
         return "bg-red-100 text-red-800";

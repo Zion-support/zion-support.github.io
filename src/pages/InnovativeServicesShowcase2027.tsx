@@ -2,8 +2,6 @@
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027               } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027               } from '@/data/emergingTechServices2027';
 export default function InnovativeServicesShowcase2027(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -125,7 +123,6 @@ const InnovativeServicesShowcase2027 = () => {
       link: "/services/ai-autonomous-financial-advisor",
       features: ["Investment Analysis", "Portfolio Optimization", "Risk Management", "Market Prediction"],
       pricing: "Starting at $99/month"
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     },
     {
       title: "AI Autonomous Healthcare Diagnostics",
@@ -269,8 +266,6 @@ const InnovativeServicesShowcase2027 = () => {
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -325,7 +320,6 @@ const InnovativeServicesShowcase2027 = () => {
                   <Mail className="w-5 h-5" />
                   Get Consultation
                 </a>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </motion.div>
           </div>
@@ -613,7 +607,6 @@ const InnovativeServicesShowcase2027 = () => {
             </div>
           </div>
                 transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.3 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 {filteredServices.map((service, index)  => (
                   <motion.div
@@ -807,7 +800,6 @@ const InnovativeServicesShowcase2027 = () => {
         </section>
       </div>
     </EnhancedSEO>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 };
 

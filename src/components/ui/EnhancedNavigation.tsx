@@ -332,7 +332,6 @@ export const EnhancedNavigation: React.FC = () => {
 =======
               {/* Mobile Navigation */}
               <div className="space-y-4">
->>>>>>> bb9f345ec29d22bee9995e045f36838dca876fa2
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.children ? (

@@ -15,7 +15,6 @@ import { Shield,
   Share
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const PrivacyPolicy = () => {;
   const lastUpdated = '2025-01-15';
   const sections = [
@@ -584,7 +583,6 @@ const PrivacyPolicy = () => {;
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
                 {sections.map((section, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -669,7 +667,6 @@ const PrivacyPolicy = () => {;
               
               <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
                 {dataCategories.map((category, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={category.category}
                     initial = {
@@ -734,7 +731,6 @@ const PrivacyPolicy = () => {;
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
                 {securityMeasures.map((measure, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={measure.measure}
                     initial = {

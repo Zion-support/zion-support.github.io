@@ -7,7 +7,6 @@ interface LayoutProps extends React.PropsWithChildren<{}> {
 const navigation: NavItem[] = [;
 { label: 'Home', href: '/';
 },
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
     label: 'Services',
     href: '/services',
@@ -34,7 +33,6 @@ export default function Layout(...args[]: any):  {
   const location = useLocation();
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
   const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
   return (

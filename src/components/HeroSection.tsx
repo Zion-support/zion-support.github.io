@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
 import { ArrowRight,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Play,
   Star,
   CheckCircle,
@@ -18,7 +17,6 @@ import { ArrowRight,
   Pause
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface HeroSlide {
 
 
@@ -135,7 +133,6 @@ const swipePower = (offset: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber, ve
 };
 
 export default function HeroSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
@@ -156,7 +153,6 @@ export default function HeroSection(...args: any[]): any {
 
   const goToSlide = useCallback((index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
     setDirection(index > currentSlide ? 1: anyanyanyanyanyanyanyanyanyanyanyanyanyany-1);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   }, [currentSlide]);

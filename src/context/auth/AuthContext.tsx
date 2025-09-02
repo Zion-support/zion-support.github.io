@@ -15,7 +15,6 @@ interface User {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   email: string;
   displayName?: string;
@@ -38,7 +37,6 @@ updatedAt?: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AuthTokens {
 
@@ -72,7 +70,6 @@ refreshToken: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring | null;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AuthContextType {
 
@@ -90,7 +87,6 @@ interface AuthContextType {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
@@ -118,9 +114,7 @@ loginWithWeb3: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => Pr
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AuthContext = createContext<AuthContextType | null>(null);
 export const useAuth = () => {;
   const context = useContext(AuthContext);

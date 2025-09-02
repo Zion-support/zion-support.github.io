@@ -1,6 +1,5 @@
 import React from 'react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface Stat {
 
 
@@ -39,7 +38,6 @@ interface InteractiveStatsProps extends React.PropsWithChildren<{
 
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "";
 }) => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className={`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 ${className}`}>
       {stats.map((stat, index)               => (

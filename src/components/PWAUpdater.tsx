@@ -4,7 +4,6 @@ import { RefreshCw, X, CheckCircle, AlertTriangle, Info               } from 'lu
 
 interface PWAUpdaterProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   autoCheck?: boolean;
   checkInterval?: number;
   showUpdatePrompt?: boolean;
@@ -30,7 +29,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           setRegistration(reg);
           console.log('Service Worker registered successfully: anyanyanyanyanyanyanyanyanyanyanyanyanyany', reg);
           
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           // Check for updates
           if (autoCheck) {
             checkForUpdates(reg);
@@ -70,7 +68,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   }, [autoCheck, showUpdatePrompt]);
 
   useEffect(()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (autoCheck && registration) {
       const interval = setInterval(() => {
         checkForUpdates(registration);
@@ -80,7 +77,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   }, [autoCheck, checkInterval, registration]);
 
   const checkForUpdates = async (reg: anyanyanyanyanyanyanyanyanyanyanyanyanyanyServiceWorkerRegistration)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     try {
       await reg.update();
       console.log('Service Worker update check completed');

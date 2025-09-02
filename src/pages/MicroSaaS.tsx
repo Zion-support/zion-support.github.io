@@ -36,7 +36,6 @@ export default function MicroSaaS(...args: any[]): any {
       link: '/contact'
     },
   ];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const benefits = [
   {
@@ -85,7 +84,6 @@ export default function MicroSAAS() {
                 </ul>
                 <Link to={p.link} className="mt-6 inline-flex btn-futuristic">Start</Link>
               </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             ))}
           </div>
 

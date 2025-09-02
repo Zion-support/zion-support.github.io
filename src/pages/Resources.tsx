@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
 import {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   BookOpen,
   FileText,
   Video,
@@ -193,7 +192,6 @@ const Resources: React.FC = (): JSX.Element => {;
       ]
     },
     {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       id: 'pricing-guide-2025',
       title: 'Pricing Guide 2025',
       icon: DollarSign,
@@ -364,7 +362,6 @@ const Resources: React.FC = (): JSX.Element => {;
 
             <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
               {featuredResources.map((resource, index)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
@@ -463,7 +460,6 @@ const Resources: React.FC = (): JSX.Element => {;
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {resourceCategories.filter(cat              => cat.featured).map((category, index) => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={category.id}
                 initial = {
@@ -557,7 +553,6 @@ const Resources: React.FC = (): JSX.Element => {;
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {resourceCategories.map((category, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={category.id}
                 id={category.id}
@@ -632,7 +627,6 @@ const Resources: React.FC = (): JSX.Element => {;
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {additionalResources.map((resource, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={resource.id}
                 id={resource.id}

@@ -22,7 +22,6 @@ import { Shield,
   Download,
   Share2
              } from 'lucide-react.ts';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const features = [
     {

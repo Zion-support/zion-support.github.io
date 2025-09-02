@@ -56,11 +56,9 @@ import { Brain,
   Leaf
 } from 'lucide-react';
 import SEO from "@/components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { ULTIMATE_INNOVATIVE_SERVICES_2026              } from '@/data/ultimateInnovativeServices2026';
 
 export default function UltimateInnovativeServices2026(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -94,12 +92,10 @@ export default function UltimateInnovativeServices2026(...args[]: any):  {
     { id: 'roi', name: 'ROI Potential' };
   ];
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 0}
   });
 
   const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
   return (
@@ -184,8 +180,6 @@ export default function UltimateInnovativeServices2026(...args[]: any):  {
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {category.name}
                   </option>
@@ -200,8 +194,6 @@ export default function UltimateInnovativeServices2026(...args[]: any):  {
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {priceRanges.map(range               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {range.name}
                   </option>
@@ -240,7 +232,6 @@ export default function UltimateInnovativeServices2026(...args[]: any):  {
           </div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <AnimatePresence>
               {sortedServices.map((service, index)               => (
                 <motion.div

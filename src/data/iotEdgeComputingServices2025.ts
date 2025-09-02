@@ -13,7 +13,6 @@ export interface IoTEdgeService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -30,7 +29,6 @@ export interface IoTEdgeService {
     enterprise: string;
     custom: string;
   };
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -386,7 +384,6 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     deployment: 'Cloud-based analytics platform'
 ];
 export const getIoTEdgeServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IoTEdgeService[]              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return IOT_EDGE_COMPUTING_SERVICES_2025;
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);

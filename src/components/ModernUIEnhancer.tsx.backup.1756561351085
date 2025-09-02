@@ -57,7 +57,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         800: '#1e293b',
         900: '#0f172a'
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     // Apply CSS custom properties
@@ -69,7 +68,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           root.style.setProperty(`--color-${key}-${shade}`, colorValue);
         });
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
 
     // Apply accent color variations
@@ -112,7 +110,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   const enhanceShadows = useCallback(() => {
     if (!enabled) return;
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const root = document.documentElement;
     
     // Modern shadow system
@@ -197,7 +194,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
   const enhanceComponents = useCallback(() => {
     if (!enabled) return;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Add modern button styles
     const buttons = document.querySelectorAll('button, .btn, [role="button"]');
@@ -254,4 +250,3 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   // Don't render anything - this is a utility component
   return null;
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

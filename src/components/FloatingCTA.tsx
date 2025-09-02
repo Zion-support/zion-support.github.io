@@ -97,7 +97,6 @@ import { MessageCircle,
   VolumeX
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const FloatingCTA: React.FC = (): JSX.Element => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -235,7 +234,6 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
 =======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             onClick={() => setIsExpanded(false)};
           />;
         )};

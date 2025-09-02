@@ -1,6 +1,5 @@
 import { useState, useEffect               } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Accessibility as AccessibilityIcon, 
   Type, 
@@ -60,7 +59,6 @@ theme: 'auto';
 });
 
   useEffect(()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -90,7 +88,6 @@ theme: 'auto';
   }, []);
 
   const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const root = document.documentElement;
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
@@ -116,7 +113,6 @@ theme: 'auto';
   };
 
   const updateSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newSettings = {
   ...settings,;
   ;

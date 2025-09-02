@@ -14,7 +14,6 @@ import { Code,
 
       color: 'from-red-500 to-pink-500';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 =======
 const technologyCategories = [
@@ -63,7 +62,6 @@ const technologyCategories = [
     color: "from-orange-500 to-red-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const emergingTech = [;
   { name: "Quantum Computing", icon: "⚛️", status: "Research" },;
@@ -104,7 +102,6 @@ export function TechnologyStackSection(...args: any[]): any {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Technology Stack
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -154,7 +151,6 @@ export function TechnologyStackSection(...args: any[]): any {
               <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                 <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
                   <span className="text-sm">⚡</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 {category.category}
               </h3>
@@ -195,7 +191,6 @@ export function TechnologyStackSection(...args: any[]): any {
               </div>
             </motion.div>
           ))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
 
         {/* Emerging Technologies */}
@@ -234,7 +229,6 @@ export function TechnologyStackSection(...args: any[]): any {
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Emerging Technologies
           </h3>
           
@@ -277,7 +271,6 @@ export function TechnologyStackSection(...args: any[]): any {
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{tech.icon}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
               )})}
           </div>
@@ -385,7 +378,6 @@ export function TechnologyStackSection(...args: any[]): any {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Build with Modern Tech?
@@ -419,8 +411,6 @@ export default TechnologyStackSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default TechnologyStackSection;
 export default TechnologyStackSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

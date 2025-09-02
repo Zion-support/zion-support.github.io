@@ -23,7 +23,6 @@ import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, G
       title: 'Quantum Optimization',;
       description: 'Solve complex optimization problems instantly';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const applications = [
@@ -47,7 +46,6 @@ import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, G
       description: 'Train large language models faster',;
       icon: '🤖';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -62,7 +60,6 @@ import { Brain, Zap, Target, CheckCircle, Clock, TrendingUp, Database, Shield, G
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Quantum Machine Learning Services - Zion Tech Group"
         description="Revolutionize your AI with quantum machine learning. Achieve exponential speedup and solve previously intractable problems with quantum computing."
       />

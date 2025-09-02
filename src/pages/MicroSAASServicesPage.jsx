@@ -115,7 +115,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
 
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -282,7 +281,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
                 kleber@ziontechgroup.com
               </Button>
             </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
         </div>
       </div>
@@ -308,7 +306,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
 
       {/* Filters and Search */}
       <div className="sticky top-16 z-40 bg-zion-slate-dark/80 backdrop-blur-md border-b border-zion-blue-light/20 py-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {/* Search */}
@@ -376,7 +373,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
               {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
             </div>
           </>)}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       </div>
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
@@ -387,7 +383,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Our team of experts is ready to help you implement the perfect solution for your business needs.
             Get in touch today for a personalized consultation.
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover:from-zion-purple-light hover:to-zion-cyan-light">

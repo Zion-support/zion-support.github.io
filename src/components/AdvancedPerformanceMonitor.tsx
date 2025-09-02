@@ -15,7 +15,6 @@ import React, { useEffect, useState, useCallback, useMemo
 } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info                } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface PerformanceMetrics {
   fcp: number;
@@ -46,7 +45,6 @@ interface PerformanceMetrics {
 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   fps: number;
   memory: number;
   loadTime: number;
@@ -67,7 +65,6 @@ timestamp: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface PerformanceAlert {
 
@@ -105,7 +102,6 @@ timestamp: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({;
@@ -118,7 +114,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   });
 
   const [alerts, setAlerts] = useState<any>([]);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [score, setScore] = useState<PerformanceScore | null>(null);
@@ -271,7 +266,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       setMetrics(prev = > ({ ...prev, networkLatency: anyanyanyanyanyanyanyanyanyanyanyanyanyanylatency }))} catch (error) {
       // If health check fails, use a default value;
       setMetrics(prev                => ({ ...prev, networkLatency: 0 }))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // CPU usage estimation
@@ -280,7 +274,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
     let frameCount = 0;
     
     const measureFrame = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       frameCount++;
       const currentTime = performance.now();
 
@@ -293,11 +286,9 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       requestAnimationFrame(measureFrame)};
     
     requestAnimationFrame(measureFrame)}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Performance alerts
       })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (metrics.memory > 100) {
       newAlerts.push({
@@ -308,7 +299,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         value: metrics.memory,
         timestamp: Date.now()
       })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (metrics.loadTime > 3000) {
       newAlerts.push({
@@ -319,7 +309,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         value: metrics.loadTime,
         timestamp: Date.now()
       })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (metrics.networkLatency > 1000) {
       newAlerts.push({
@@ -333,11 +322,9 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
     if (newAlerts.length > 0) {
       setAlerts(prev = > [...prev, ...newAlerts])};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // Auto-hide alerts after 5 seconds
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     if (isVisible) {
       startMonitoring();
@@ -376,7 +363,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   const getPerformanceScore = useMemo(() => {;
     let score = 100;
     
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (metrics.fps < 30) score -= 30;
     else if (metrics.fps < 50) score -= 15;
 
@@ -390,7 +376,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
     else if (metrics.networkLatency > 500) score -= 5;
     
     return Math.max(0, score)}, [metrics]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
         whileHover={{ scale: 1.1 }};
         whileTap={{ scale: 0.9 }};
@@ -399,9 +384,6 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       </motion.button>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>

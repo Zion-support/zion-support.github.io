@@ -3,7 +3,6 @@ import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Link              } from 'react-router-dom.ts';
 import { Check, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star, 
   Zap, 
   Shield, 
@@ -12,7 +11,6 @@ import { Check,
   CreditCard,
   Clock,
 import { Check, Star, Zap, Shield, Users, Globe } from 'lucide-react';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 const Pricing = () => {
   const pricingTiers = [
@@ -23,13 +21,11 @@ const Pricing = () => {
   Calendar
              } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function Pricing(...args: any[]): any {
   const [billingCycle, setBillingCycle] = useState<any>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<any>(null);
 
   const pricingPlans = [
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       name: "Starter",
       price: "$99",
@@ -161,10 +157,8 @@ export default function Pricing(...args: any[]): any {
         description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."
       />
       
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -241,7 +235,6 @@ export default function Pricing(...args: any[]): any {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,7 +257,6 @@ export default function Pricing(...args: any[]): any {
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                   <div className="mb-4">
                     <span className="text-4xl font-bold text-white">{tier.price}</span>
                     {tier.period && (
@@ -325,7 +317,6 @@ export default function Pricing(...args: any[]): any {
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-lg mb-4">
                   <pkg.icon className="w-6 h-6 text-cyan-400" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
 
                 <ul className="space-y-4 mb-8">
@@ -348,7 +339,6 @@ export default function Pricing(...args: any[]): any {
                   {tier.cta}
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
             {addOns.map((addon, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={addon.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -365,7 +355,6 @@ export default function Pricing(...args: any[]): any {
                 <p className="text-gray-300 text-sm">{addon.description}</p>
 =======
                 </a>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </motion.div>
             ))}
           </div>
@@ -416,11 +405,9 @@ export default function Pricing(...args: any[]): any {
             Frequently Asked Questions
           </motion.h2>
           
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
           <div className="space-y-6">
 =======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-4xl mx-auto">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 question: "Can I change my plan at any time?",

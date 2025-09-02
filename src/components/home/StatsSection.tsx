@@ -33,22 +33,18 @@ interface Stat {
 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   number: string;
   label: string;
   description: string;
   avatar: string;
 icon: React.ComponentType<{ className?: string;
 }>;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   color: string}
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
   stats: Stat[]}
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [counts, setCounts] = useState<any>({});
   useEffect(()  => {
     if (isInView) {
@@ -96,7 +92,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
         <div ref={ref} className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index)                => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"

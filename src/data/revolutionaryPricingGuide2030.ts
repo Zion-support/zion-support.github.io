@@ -57,7 +57,6 @@ export interface EnterprisePricing {
   description: string;
   pricing: string;
   features: string[];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   benefits: string[];
   customizations: string[];
   contactInfo: {
@@ -538,7 +537,6 @@ export const pricingRecommendations = {
   }
 };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Export all pricing data
 export const allRevolutionaryPricing2030 = {
   microSaas: revolutionaryMicroSaasPricing,

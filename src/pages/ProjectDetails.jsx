@@ -432,7 +432,6 @@ function ProjectDetailsContent() {
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -471,7 +470,6 @@ function ProjectDetailsContent() {
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
                   <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
                   </Button>
                 </CardFooter>)}
@@ -501,4 +499,3 @@ export default function ProjectDetails() {
       <ProjectDetailsContent />
     </ProtectedRoute>);
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

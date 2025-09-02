@@ -20,14 +20,12 @@ import { Workflow,
              } from 'lucide-react.ts';
 
 const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     'Reduce manual work by up to 80%',
     'Improve process efficiency by 60%',
     'Cut operational costs by 40%',
     'Ensure 99.9% compliance accuracy',
     'Scale workflows automatically with demand'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -135,7 +133,6 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               ))}
             </div>
           </div>
@@ -360,5 +357,3 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

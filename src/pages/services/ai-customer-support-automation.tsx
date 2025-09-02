@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AICustomerSupportAutomation(...args: any[]): any {
   const features = [
@@ -339,7 +338,6 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
             {solutions.map((solution, index)              => (
               <motion.div
                 key={index}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -409,7 +407,6 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
             {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

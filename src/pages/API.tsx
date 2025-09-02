@@ -3,7 +3,6 @@ import SEO from '../components/SEO';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Code,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search,
   Filter,
   ArrowRight,
@@ -27,7 +26,6 @@ import { Code,
              } from 'lucide-react.ts';
 
 const API: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const endpoints = [
     {
       method: 'GET',
@@ -35,7 +33,6 @@ const API: React.FC = (): JSX.Element => {
       description: 'Retrieve all available services',
       auth: 'Required'
     },
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       id: 'auth',
       name: 'Authentication',
@@ -156,7 +153,6 @@ const API: React.FC = (): JSX.Element => {
 export default function API(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -247,7 +243,6 @@ export default function API(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {apiCategories.map((category, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -367,7 +362,6 @@ export default function API(...args: any[]): any {
                       {endpoint.method}
                     </span>
                     <code className="text-blue-300 font-mono text-lg">{endpoint.path}</code>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                 </div>
                 <p className="text-gray-300 mt-3">{endpoint.description}</p>
@@ -459,7 +453,6 @@ export default function API(...args: any[]): any {
                     <BookOpen className="w-4 h-4 inline mr-1" />
                     Docs
                   </button>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
               </div>
             </div>

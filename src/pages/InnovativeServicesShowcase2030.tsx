@@ -1,6 +1,5 @@
 import React, { useState, useEffect              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Brain, 
   Shield, 
   Cloud, 
@@ -24,8 +23,6 @@ import { innovativeCybersecurityServices2030              } from '../data/innova
 import { innovativeCloudDevOpsServices2030              } from '../data/innovativeCloudDevOpsServices2030';
 
 const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [;
@@ -307,7 +304,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
           </motion.div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 icon: Award,
@@ -328,7 +324,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                 icon: Users,
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               }
             ].map((feature, index)  => (
               <motion.div

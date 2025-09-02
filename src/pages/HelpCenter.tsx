@@ -61,8 +61,6 @@ interface HelpSection {
 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   icon: ;
@@ -111,7 +109,6 @@ interface FAQItem {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 const helpSections: HelpSection[] = [
   {
@@ -369,7 +366,6 @@ export function HelpCenter(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
 
   const handleSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -384,7 +380,6 @@ export function HelpCenter(...args: any[]): any {
   const filteredFAQ = selectedCategory === 'All' 
     ? faqData: anyanyanyanyanyanyanyanyanyanyanyanyanyfaqData.filter(item              => item.category === selectedCategory);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
@@ -561,7 +556,6 @@ export function HelpCenter(...args: any[]): any {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                           className="border-t border-cyan-400/20"
                         >
                           <div className="p-6 space-y-4">

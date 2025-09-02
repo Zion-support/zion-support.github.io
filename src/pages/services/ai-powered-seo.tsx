@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 
 const seoData = {
@@ -12,7 +11,6 @@ const seoData = {
   ogImage: "/images/services/ai-powered-seo.jpg",
   canonicalUrl: "https://ziontechgroup.com/services/ai-powered-seo"
 };
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 export default function AIPoweredSEO(...args: any[]): any {
   const features = [
@@ -196,7 +194,6 @@ export default function AIPoweredSEO(...args: any[]): any {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -235,12 +232,10 @@ export default function AIPoweredSEO(...args: any[]): any {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {benefits.map((benefit, index) => (
 =======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -346,13 +341,11 @@ export default function AIPoweredSEO(...args: any[]): any {
             </p>
           </motion.div>
           
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
 =======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

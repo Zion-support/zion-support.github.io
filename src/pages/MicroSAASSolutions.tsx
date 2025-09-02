@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import { SEO              } from '../components/SEO';
 import { Code,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap,
   Users,
   TrendingUp,
@@ -25,8 +24,6 @@ import { Code,
               } from 'lucide-react.ts';
 
 export default function MicroSAASSolutions(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = [
     {
       title: "Custom SAAS Development",
@@ -202,7 +199,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div
                   key={service.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -236,7 +232,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div
                   key={benefit.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -262,7 +257,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div
                   key={industry.name}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -288,7 +282,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div key={step.step} className="text-center">
                   <div className="relative mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">

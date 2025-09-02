@@ -16,7 +16,6 @@ import { ArrowRight,
   TrendingUp
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface HeroSlide {
 
 
@@ -33,7 +32,6 @@ interface HeroSlide {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   subtitle: string;
   description: string;
@@ -45,10 +43,8 @@ interface HeroSlide {
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 }[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedHeroSection(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const heroSlides: HeroSlide[] = [
@@ -102,7 +98,6 @@ export default function EnhancedHeroSection(...args[]: any):  {
   ];
 
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (!isAutoPlaying) return;
     const interval = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -115,7 +110,6 @@ export default function EnhancedHeroSection(...args[]: any):  {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false)};
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             animate = {
   {
               y: [0, -20, 0],

@@ -127,7 +127,6 @@ export const EnhancedSidebar: React.FC = () => {
         : [...prev, sectionName]
     );
   };
->>>>>>> 7aacc8f3888f3c25dfcbd91800787c6038ad4767
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);

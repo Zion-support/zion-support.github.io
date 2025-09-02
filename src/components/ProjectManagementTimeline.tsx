@@ -25,7 +25,6 @@ import { Calendar,
   Settings
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Project {
 
 
@@ -42,7 +41,6 @@ interface Project {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   description: string;
@@ -70,7 +68,6 @@ milestones: Milestone[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Milestone {
 
@@ -88,7 +85,6 @@ interface Milestone {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -111,7 +107,6 @@ priority: 'low' | 'medium' | 'high';
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
   showFilters?: boolean;
   showStats?: boolean;
@@ -125,8 +120,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const [filteredProjects, setFilteredProjects] = useState<any>([]);
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
   const [selectedPriority, setSelectedPriority] = useState<any>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('timeline');
   const [showProjectForm, setShowProjectForm] = useState(false);
@@ -246,7 +239,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setFilteredProjects(sampleProjects)}, []);
   // Filter projects
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     let filtered = projects;
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(p => p.status === selectedStatus)}
@@ -292,7 +284,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'on-hold').length,;
     totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.budget, 0),;
     averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.progress,;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   0) / projects.length || 0;
@@ -315,16 +306,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
   };
   // Get priority color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get milestone status color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Format currency
   const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -334,8 +322,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
   // Calculate days remaining
   const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const end = new Date(endDate);
     const today = new Date();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

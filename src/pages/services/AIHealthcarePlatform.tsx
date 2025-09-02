@@ -6,7 +6,6 @@ import {
   Target, 
   BarChart3, 
   CheckCircle,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Star,
   Globe,
@@ -29,7 +28,6 @@ import {
              } from 'lucide-react.ts';
 
 const AIHealthcarePlatform: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -70,7 +68,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
     'Optimize treatment plans',
     'Reduce healthcare costs by 25%',
     'Improve patient engagement'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -107,7 +104,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
               </button>
             </div>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </section>
 
@@ -115,7 +111,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -130,7 +125,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
               <motion.div
@@ -143,7 +137,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -172,7 +165,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -187,7 +179,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </motion.div>
             
@@ -205,7 +196,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
               <button className="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300">
                 Get Started Today
               </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </motion.div>
           </div>
         </div>
@@ -234,7 +224,6 @@ const AIHealthcarePlatform: React.FC = (): JSX.Element => {
                 Contact Sales
               </button>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </motion.div>
         </div>
       </section>

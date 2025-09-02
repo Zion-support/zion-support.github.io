@@ -3,7 +3,6 @@ import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { SEO               } from '@/components/SEO';
 import { Users, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Target, 
   Award, 
   Globe, 
@@ -23,10 +22,8 @@ import { Users,
               } from 'lucide-react.ts';
 
 export default function About(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 function About() {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Team Members', icon: Users },
@@ -177,7 +174,6 @@ function About() {
                 key={index}
                 className="text-center group"
                 initial={{ opacity: 0, y: 30 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -207,7 +203,6 @@ function About() {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -238,7 +233,6 @@ function About() {
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}

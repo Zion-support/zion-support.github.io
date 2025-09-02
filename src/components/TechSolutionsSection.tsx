@@ -15,7 +15,6 @@ import { Brain,
   Server
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
       color: 'from-indigo-500 to-purple-500';
     };
@@ -64,10 +63,8 @@ const techSolutions = [
     color: "from-yellow-500 to-orange-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function TechSolutionsSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -95,7 +92,6 @@ export function TechSolutionsSection(...args: any[]): any {
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
           {techSolutions.map((solution, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={solution.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"

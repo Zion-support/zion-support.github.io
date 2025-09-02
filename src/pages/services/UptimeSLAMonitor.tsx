@@ -3,9 +3,7 @@ import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
 import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target               } from 'lucide-react.ts';
 import { SEO               } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function UptimeSLAMonitor(...args: []):  {
   const features = [
     {
@@ -204,8 +202,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -245,8 +241,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {monitoringTypes.map((type, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -286,8 +280,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -329,8 +321,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

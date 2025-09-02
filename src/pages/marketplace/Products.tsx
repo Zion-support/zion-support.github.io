@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Filter, 
   Star, 
   ShoppingCart, 
@@ -58,7 +57,6 @@ import { Search,
 import { SEO              } from '../../components/SEO';
 
 export default function MarketplaceProducts(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -364,7 +362,6 @@ export default function MarketplaceProducts(...args: any[]): any {
   });
 
   const formatPrice = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, currency: string)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency
@@ -373,7 +370,6 @@ export default function MarketplaceProducts(...args: any[]): any {
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <Star
         key={i}
         className={`w-4 h-4 ${

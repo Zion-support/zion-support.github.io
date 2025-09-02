@@ -15,7 +15,6 @@ export interface ExpandedServicePricing {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   serviceId: string;
   serviceName: string;
   category: string;
@@ -1162,7 +1161,6 @@ export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyany
 };
 
 export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||

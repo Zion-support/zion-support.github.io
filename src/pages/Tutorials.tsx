@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 const Tutorials = () => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const tutorialCategories = [
     {
       title: "Beginner",
@@ -208,7 +207,6 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
                 {/* Tutorial Image Placeholder */}
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-zion-cyan" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <div className="absolute top-3 right-3">
                   <span className={`px-2 py-1 text-xs font-medium rounded-full ${
@@ -250,7 +248,6 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
                     {path.courses} courses
                   </div>
                   <div className="flex items-center justify-center gap-2">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <Clock className="w-4 h-4" />
                     <span>{tutorial.duration}</span>
                   </div>

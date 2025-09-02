@@ -23,9 +23,7 @@ import { Brain,
   MapPin
 } from 'lucide-react';
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory               } from '../data/innovativeServices2027';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
   'Quantum AI': 'from-blue-500 to-cyan-500',
@@ -44,7 +42,6 @@ const categoryColors: { [key: string]: string } = {
 export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [expandedService, setExpandedService] = useState<any>(null);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(;
@@ -64,7 +61,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
     : getServicesByCategory(selectedCategory);
 
   const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
   const contactInfo = {
@@ -136,14 +132,11 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light/50 text-gray-300 hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-light/70 hover:text-white';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               }`};
             >;
               All Categories;
             </button>;
             {serviceCategories2027.map((category)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -177,8 +170,6 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   delay: 0.4 
 }}
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         >
           {filteredServices.map((service, index)  => (
             <motion.div

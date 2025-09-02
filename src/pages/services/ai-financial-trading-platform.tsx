@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -17,7 +16,6 @@ import { TrendingUp,
   Shield, 
   Zap, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Clock,
   Target,
@@ -26,11 +24,9 @@ import { TrendingUp,
   Smartphone,
   Cloud,
   Database,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Cpu,
 =======
   BarChart3,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Activity,
   Clock,
   CheckCircle,
@@ -44,7 +40,6 @@ import { TrendingUp,
   Globe,
   Cpu,
   Bot,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   LineChart,
   PieChart,
   BarChart,
@@ -71,7 +66,6 @@ import { TrendingUp,
 =======
   PieChart
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const AIFinancialTradingPlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -306,14 +300,12 @@ const AIFinancialTradingPlatform: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {performanceMetrics.map((item, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
       {/* Performance Metrics Section */}
       <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {performanceMetrics.map((metric, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={metric.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -353,12 +345,10 @@ const AIFinancialTradingPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {features.map((feature, index) => (
 =======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -405,12 +395,10 @@ const AIFinancialTradingPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {tradingStrategies.map((strategy, index) => (
 =======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={strategy.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -530,9 +518,7 @@ const AIFinancialTradingPlatform: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{market.title}</h3>
                 <p className="text-gray-300 text-lg">{market.description}</p>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </motion.div>
             ))}
           </div>
@@ -559,11 +545,9 @@ const AIFinancialTradingPlatform: React.FC = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

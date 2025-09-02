@@ -132,7 +132,6 @@ const ComprehensiveServices2029: React.FC = () => {
                 </span>
               </button>
             ))}
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
           </div>
         </div>
       </section>
@@ -141,7 +140,6 @@ const ComprehensiveServices2029: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -180,7 +178,6 @@ const ComprehensiveServices2029: React.FC = () => {
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                   </div>
                 </div>
               </motion.div>
@@ -294,7 +291,6 @@ const ComprehensiveServices2029: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     </div>
   );
 };

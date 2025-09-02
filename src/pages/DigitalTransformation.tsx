@@ -6,7 +6,6 @@ import { Rocket,
   Users,
   TrendingUp,
   Globe,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle,
   Star,
   TrendingUp,
@@ -38,7 +37,6 @@ const DigitalTransformation = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -84,7 +82,6 @@ const DigitalTransformation = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {transformationServices.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -214,7 +211,6 @@ const DigitalTransformation = () => {
                       >
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: anyanyanyanyanyanyanyanyanyanyanyanyanyany</div>
                         {phase.activities.map((activity, activityIndex)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
                             {activity}
@@ -244,7 +240,6 @@ const DigitalTransformation = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

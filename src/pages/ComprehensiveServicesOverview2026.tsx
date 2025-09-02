@@ -82,11 +82,9 @@ import { Brain,
   Leaf as LeafIcon
 } from 'lucide-react';
 import SEO from "@/components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { ULTIMATE_INNOVATIVE_SERVICES_2026              } from '@/data/ultimateInnovativeServices2026';
 
 export default function ComprehensiveServicesOverview2026(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<any>(null);
   const serviceCategories = [
@@ -206,7 +204,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       innovationLevel: 'Advanced';
     };
   ];
@@ -214,7 +211,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
     ? serviceCategories: anyanyanyanyanyanyanyanyanyanyanyanyanyserviceCategories.filter(cat              => cat.id === selectedCategory);
 
   const toggleCategoryExpansion = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
   const totalMarketSize = '$3.2+ trillion';
@@ -432,8 +428,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                       >
                         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
                           {category.services.map((service, serviceIndex)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                             <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
                               <div className="flex items-start justify-between mb-4">
                                 <h4 className="text-lg font-semibold text-white">{service.title}</h4>

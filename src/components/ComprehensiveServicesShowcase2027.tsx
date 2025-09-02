@@ -6,10 +6,7 @@ import { cuttingEdgeComprehensiveServices2027               } from '../../data/2
 import { specializedInnovativeServices2027               } from '../../data/2027-specialized-innovative-services';
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',
   'Quantum Computing & AI': 'from-blue-600 to-cyan-700',
@@ -83,7 +80,6 @@ const contactInfo = {
 };
 
 export function ComprehensiveServicesShowcase2027(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
   // Combine all services

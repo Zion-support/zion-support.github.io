@@ -94,14 +94,12 @@ export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanya
 };
 
 export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
 
 export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanyanyanyanystring[])              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   );

@@ -32,7 +32,6 @@ address: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface MicroSaasService {
 
@@ -49,7 +48,6 @@ export interface MicroSaasService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -86,7 +84,6 @@ growthRate: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ITService {
 
@@ -103,7 +100,6 @@ export interface ITService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -137,7 +133,6 @@ compliance: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
 
@@ -154,7 +149,6 @@ export interface AIService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -189,9 +183,7 @@ ethicalAI: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",

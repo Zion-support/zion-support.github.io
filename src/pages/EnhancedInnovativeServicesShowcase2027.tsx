@@ -30,8 +30,6 @@ import { Brain,
   ExternalLink,
  } from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories               } from '../data/enhancedInnovativeServices2027';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const categoryColors: { [key: string]: string } = {
   'Web3 Solutions': 'from-purple-500 to-pink-500',
   'Metaverse Solutions': 'from-blue-500 to-cyan-500',
@@ -88,7 +86,6 @@ import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027       
 
 const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ENHANCED_INNOVATIVE_SERVICES_2027);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
@@ -119,7 +116,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   });
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {;
       case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
       case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
@@ -136,7 +132,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   };
 
   const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (level) {;
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -146,7 +141,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   };
 
   const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyEnhancedInnovativeService2027)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSelectedService(service);
     setCurrentSlide(0);
   };
@@ -280,8 +274,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
             className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
             {sortedServices.map((service)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 variants={itemVariants}

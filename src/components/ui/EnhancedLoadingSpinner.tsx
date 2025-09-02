@@ -9,7 +9,6 @@ interface LoadingState {
   duration?: number;
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface EnhancedLoadingSpinnerProps {
   state?: LoadingState;
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -187,7 +186,6 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             <span>{Math.round(progress)}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               className="bg-blue-600 h-2 rounded-full"
               initial={{ width: 0 }}
@@ -199,7 +197,6 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
       )}
 
       {showMessage && localState.message && (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -293,4 +290,3 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     </div>
   </div>
 );
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

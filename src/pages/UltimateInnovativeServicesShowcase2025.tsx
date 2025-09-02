@@ -31,8 +31,6 @@ import { Brain,
   Shield as ShieldIcon
 } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES              } from '../data/ultimateInnovativeServices2025';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function UltimateInnovativeServicesShowcase2025(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -47,7 +45,6 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
 
     if (selectedSubcategory !== 'all') {
       filtered = filtered.filter(service => service.subcategory === selectedSubcategory)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (searchTerm) {
       filtered = filtered.filter(service =>;
@@ -56,8 +53,6 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort services
     switch (sortBy) {
@@ -85,16 +80,13 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
           const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]);
           const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
           return aIndex - bIndex})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return filtered}, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
       default: return <Star className = "w-6 h-6" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
         return <span className = "px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -116,7 +108,6 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
               transition={{ delay: 0.2 }}
               className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Discover the future of technology with our revolutionary micro SAAS services.
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
@@ -168,9 +159,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
                   setSelectedSubcategory('all');
                 }}
                 className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option value="all">All Categories</option>
                 {SERVICE_CATEGORIES.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -406,5 +395,3 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

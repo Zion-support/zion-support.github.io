@@ -5,8 +5,6 @@ import { Badge               } from './ui/badge';
 import { Alert, AlertDescription               } from './ui/alert';
 import { Progress               } from './ui/progress';
 import { Shield, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lock, 
   AlertTriangle, 
   CheckCircle, 
@@ -20,7 +18,6 @@ import { Shield,
   Database
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SecurityThreat {
 
 
@@ -37,7 +34,6 @@ interface SecurityThreat {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   type: 'xss' | 'csrf' | 'injection' | 'authentication' | 'authorization' | 'data-leak';
   severity: 'critical' | 'high' | 'medium' | 'low';
@@ -46,7 +42,6 @@ interface SecurityThreat {
   timestamp: Date;
   status: 'active' | 'mitigated' | 'resolved';
 }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SecurityMetrics {
 =======
 status: 'active' | 'mitigated' | 'resolved';
@@ -64,7 +59,6 @@ status: 'active' | 'mitigated' | 'resolved';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityMetrics {
 
@@ -82,7 +76,6 @@ interface SecurityMetrics {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   overallScore: number;
   vulnerabilities: number;
   threatsBlocked: number;
@@ -90,7 +83,6 @@ interface SecurityMetrics {
   complianceScore: number;
   encryptionStrength: number;
 }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SecurityCheck {
 =======
 encryptionStrength: number;
@@ -108,7 +100,6 @@ encryptionStrength: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityCheck {
 
@@ -126,7 +117,6 @@ interface SecurityCheck {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   status: 'pass' | 'fail' | 'warning';
@@ -147,13 +137,10 @@ category: 'authentication' | 'data-protection' | 'network-security' | 'complianc
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 const SecurityEnhancer: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({
     overallScore: 85,
@@ -204,7 +191,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   
   // Generate security checks
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const checks: SecurityCheck[] = [
       {
         id: '1',
@@ -264,7 +250,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     }));
 
   const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'mitigated' as const };
@@ -273,7 +258,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   }, []);
 
   const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'resolved' as const };
@@ -282,7 +266,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   }, []);
 
   const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {;
 =======
     setIsScanning(false);
@@ -303,7 +286,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   }, []);
   const getThreatIcon = (type: SecurityThreat['type']) => {
     switch (type) {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       case 'xss': return <Bug className="h-4 w-4" />;
       case 'csrf': return <Network className="h-4 w-4" />;
       case 'injection': return <Database className="h-4 w-4" />;
@@ -314,19 +296,15 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     }
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'bg-gray-500'}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'bg-gray-100 text-gray-800'}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return <AlertTriangle className = "h-4 w-4 text-gray-600" />};
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
             Consider running a comprehensive security audit and implementing the suggested improvements.;
           </AlertDescription>;
@@ -497,7 +475,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
         </CardContent>
       </Card>
     </div>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 };
 export default SecurityEnhancer;

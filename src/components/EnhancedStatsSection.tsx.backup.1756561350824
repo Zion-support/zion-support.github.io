@@ -11,7 +11,6 @@ import { Users,
   Rocket
              } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Stat {
 
 
@@ -45,7 +44,6 @@ gradient: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const stats: Stat[] = [
   {
@@ -106,7 +104,6 @@ const stats: Stat[] = [
 
 export default function EnhancedStatsSection(...args[]: any):  {
   const [countedValues, setCountedValues] = useState<any>({});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: anyanyanyanyanyanyanyanyanyanyanyany0.3,
@@ -116,7 +113,6 @@ export default function EnhancedStatsSection(...args[]: any):  {
   useEffect(()              => {
     if (inView) {
       controls.start('visible')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [controls, inView]);
 
   const animateCount = (target: string, duration: number = 2000) => {;
@@ -134,10 +130,8 @@ export default function EnhancedStatsSection(...args[]: any):  {
       setCountedValues(prev = > ({;
         ...prev,;
         [target]: Math.floor(current);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }));
     }, 16);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return timer};
 
@@ -150,8 +144,6 @@ export default function EnhancedStatsSection(...args[]: any):  {
         return () => clearTimeout(timer);
       });
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [inView]);
 
   return (
@@ -194,7 +186,6 @@ export default function EnhancedStatsSection(...args[]: any):  {
 
 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           }}
           className="text-center mb-16"
 
@@ -239,7 +230,6 @@ export default function EnhancedStatsSection(...args[]: any):  {
 
 }
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               }}
               className="group relative"
 
@@ -298,7 +288,6 @@ export default function EnhancedStatsSection(...args[]: any):  {
 
 }}
                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                     {countedValues[stat.value] || 0}
                     {stat.value.includes('%') && '%'}
@@ -356,7 +345,6 @@ export default function EnhancedStatsSection(...args[]: any):  {
 
 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           }}
           className="mt-16"
 
@@ -396,5 +384,3 @@ export default function EnhancedStatsSection(...args[]: any):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

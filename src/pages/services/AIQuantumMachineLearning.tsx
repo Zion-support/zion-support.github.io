@@ -46,7 +46,6 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
       price: '$12,999/mo', ;
       details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

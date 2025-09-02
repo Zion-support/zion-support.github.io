@@ -528,7 +528,6 @@ export default function Events(...args: any[]): any {
           </motion.div>
         </div>
       </section>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     </div>
   );
 }

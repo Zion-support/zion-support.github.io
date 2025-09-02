@@ -2,7 +2,6 @@ import React, { useEffect, useCallback, useState } from 'react.ts';
 
 interface ModernUIEnhancerProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
 
 }
@@ -53,7 +52,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       }
     };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Apply CSS custom properties
     Object.entries(colors).forEach(([key, value]) => {
       if (typeof value === 'string') {
@@ -94,7 +92,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     };
 
     Object.entries(spacing).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--spacing-${key}`, value);
     });
   }, [enabled]);
@@ -113,7 +110,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     };
 
     Object.entries(shadows).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--shadow-${key}`, value);
     });
   }, [enabled]);
@@ -131,7 +127,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     };
 
     Object.entries(transitions).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--transition-${key}`, value);
     });
   }, [enabled]);
@@ -151,7 +146,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     };
 
     Object.entries(radius).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--radius-${key}`, value);
     });
   }, [enabled]);

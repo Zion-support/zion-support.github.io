@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { cn               } from '../../utils/cn';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   className?: string;
   width?: string | number;
@@ -20,7 +19,6 @@ export function Skeleton(...args: any[]): any {
     circular: 'rounded-full',
     rectangular: '',
     rounded: 'rounded-lg'
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
 // Predefined skeleton components for common use cases
@@ -33,7 +31,6 @@ export function SkeletonText(...args: any[]): any {
           variant="text"
           width={i === lines - 1 ? '75%' : '100%'}
           className="h-4"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         />
       ))}
     </>
@@ -54,7 +51,6 @@ export function SkeletonCard(...args: any[]): any {
       <div className="flex space-x-2">
         <Skeleton variant="rounded" width={80} height={32} />
         <Skeleton variant="rounded" width={100} height={32} />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       </div>
     </div>
     <Skeleton className="h-4 w-full mb-2" />
@@ -84,7 +80,6 @@ export function SkeletonTable(...args: any[]): any {
               height={16}
             />
           ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       ))}
     </div>
@@ -128,4 +123,3 @@ export function SkeletonHero(...args: any[]): any {
     </div>
   );
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

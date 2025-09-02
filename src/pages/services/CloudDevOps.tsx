@@ -11,7 +11,6 @@ import { Cloud,
   Lock,
   BarChart3
              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const CloudDevOps = () => {
   const services = [
@@ -75,7 +74,6 @@ const CloudDevOps = () => {
           >
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8">
               <Cloud className="w-12 h-12 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cloud & DevOps
@@ -161,7 +159,6 @@ const CloudDevOps = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
@@ -173,7 +170,6 @@ const CloudDevOps = () => {
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
                     <BarChart3 className="w-4 h-4 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                   <span className="text-white font-medium">{benefit}</span>
                 </motion.div>
@@ -216,4 +212,3 @@ const CloudDevOps = () => {
 };
 
 export default CloudDevOps;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

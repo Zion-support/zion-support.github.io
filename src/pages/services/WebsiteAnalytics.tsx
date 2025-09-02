@@ -150,7 +150,6 @@ import { BarChart3,
              } from 'lucide-react.ts';
 
 const WebsiteAnalytics = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: BarChart3,
@@ -720,4 +719,3 @@ const WebsiteAnalytics = () => {
 
 export default WebsiteAnalytics;
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

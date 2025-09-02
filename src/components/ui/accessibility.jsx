@@ -355,7 +355,6 @@ const AccessibilityPanel = () => {
               className="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <h2 className="text-xl font-semibold text-gray-900">Accessibility Settings</h2>
@@ -421,7 +420,6 @@ const AccessibilityPanel = () => {
                 >
                   Done
                 </button>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </div>
             </motion.div>
           </motion.div>
@@ -456,4 +454,3 @@ const AccessibilityPanel = () => {
 };
 
 export default AccessibilityPanel;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

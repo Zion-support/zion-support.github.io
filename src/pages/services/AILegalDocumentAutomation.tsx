@@ -31,7 +31,6 @@ import { FileText,
 import { SEO              } from '@/components/SEO';
 
 export default function AILegalDocumentAutomation(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     'AI-powered contract analysis and generation',
     'Legal document template automation',
@@ -77,7 +76,6 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
       icon: Rocket,
       applications: ['Founder agreements', 'Investment documents', 'IP protection', 'Employment contracts']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricing = [
@@ -491,5 +489,3 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
     </div>
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

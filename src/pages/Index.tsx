@@ -10,7 +10,6 @@ import { BenefitsSection              } from '@/components/BenefitsSection';
 import { HowItWorksSection              } from '@/components/HowItWorksSection';
 import { WaitlistSection              } from '@/components/WaitlistSection';
 import { BlogSection              } from '@/components/BlogSection';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import SEO from "@/components/SEO";
 import { Button              } from '@/components/ui/button';
 import { Link              } from 'react-router-dom.ts';
@@ -31,7 +30,6 @@ import { ArrowRight,
              } from 'lucide-react.ts';
 
 export default function Index(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   // Tools and features showcase
@@ -102,7 +100,6 @@ export default function Index(...args: any[]): any {
 
           <div className={`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <Link
                 key={index}
                 to={feature.link}

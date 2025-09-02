@@ -8,7 +8,6 @@ import {
   Shield, 
   Brain, 
   Globe, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Rocket,
   DollarSign,
   Users,
@@ -37,7 +36,6 @@ export default function ComprehensivePricing2028(...args: any[]): any {
         ? prev.filter(id => id !== categoryId)
         : [...prev, categoryId]
     );
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const selectedPlanData = COMPREHENSIVE_PRICING_PLANS_2028.find(plan => plan.id === selectedPlan);
@@ -60,7 +58,6 @@ export default function ComprehensivePricing2028(...args: any[]): any {
               transition={{ duration: 0.8 }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <Star className="w-4 h-4 mr-2" />
               2028 Pricing Guide
             </motion.div>
@@ -103,7 +100,6 @@ export default function ComprehensivePricing2028(...args: any[]): any {
                 <span>Proven Success</span>
               </div>
             </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </div>
@@ -275,7 +271,6 @@ export default function ComprehensivePricing2028(...args: any[]): any {
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                           <TrendingUp className="w-3 h-3 text-green-400" />
                           <span>{benefit}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         </div>
                       ))}
                     </div>
@@ -408,7 +403,6 @@ export default function ComprehensivePricing2028(...args: any[]): any {
                             <div key={idx} className="flex items-center gap-2 text-xs text-gray-400">
                               <Check className="w-3 h-3 text-green-400" />
                               <span>{feature}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                             </div>
                           ))}
                         </div>
@@ -419,7 +413,6 @@ export default function ComprehensivePricing2028(...args: any[]): any {
               )}
             </motion.div>
           ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </div>
 
@@ -442,7 +435,6 @@ export default function ComprehensivePricing2028(...args: any[]): any {
             <div className="flex items-center gap-2 text-white">
               <Phone className="w-5 h-5" />
               <span>+1 302 464 0950</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <div className="flex items-center gap-2 text-white">
               <Mail className="w-5 h-5" />
@@ -468,4 +460,3 @@ export default function ComprehensivePricing2028(...args: any[]): any {
     </div>
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

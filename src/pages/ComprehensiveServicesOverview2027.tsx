@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Brain,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Shield,
   TrendingUp,
   Zap,
@@ -99,7 +98,6 @@ import { Brain,
   Grid,
   List,
   ChevronDown,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ShoppingCart,
   MessageCircle,
   HelpCircle,
@@ -113,7 +111,6 @@ import SEO from '@/components/SEO';
 import { Button              } from '@/components/ui/button';
 import { Badge              } from '@/components/ui/badge';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
   {
@@ -175,7 +172,6 @@ const categories = [;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const pricingModels = [;
   { id: 'all', name: 'All Pricing' },;
   { id: 'monthly', name: 'Monthly' },;
@@ -184,8 +180,6 @@ const pricingModels = [;
   { id: 'usage-based', name: 'Usage-based' };
 ];
 export default function ComprehensiveServicesOverview2027(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');

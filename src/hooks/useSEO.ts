@@ -15,7 +15,6 @@ interface SEOData {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   description: string;
   keywords?: string;
@@ -38,7 +37,6 @@ structuredData?: object;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UseSEOOptions {
 
@@ -58,7 +56,6 @@ interface UseSEOOptions {
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enableAnalytics?: boolean}
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   const {;
@@ -72,7 +69,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     const siteName = 'Zion Tech Group';
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
   // Memoize the canonical URL
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const canonicalUrl = useMemo(() => {;
     if (seoData.canonical) {;
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
@@ -120,7 +116,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }, [canonicalUrl]);
   // Update Open Graph tags
   const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof document === 'null') return;
     const ogTags = [
       { property: anyanyanyanyanyanyanyanyanyanyanyanyany'og:title', content: fullTitle },;
@@ -133,7 +128,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     ];
 
     ogTags.forEach(({ property, content })               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -142,7 +136,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
   // Update Twitter Card tags
   const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof document === 'null') return;
     const twitterTags = [;
       { name: anyanyanyanyanyanyanyanyanyanyanyanyany'twitter:card', content: data.twitterCard || 'summary_large_image' },;
@@ -153,7 +146,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     ];
 
     twitterTags.forEach(({ name, content })               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
@@ -162,7 +154,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
   // Add structured data
   const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanyobject)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (!enableStructuredData || typeof document === 'null') return;
     // Remove existing structured data
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
@@ -198,7 +189,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     sameAs: [;
       'https://www.linkedin.com/company/zion-tech-group',;
       'https://twitter.com/ziontechgroup',;
@@ -338,7 +328,6 @@ declare global {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     gtag?: (...args[])  => void;
     dataLayer?[]}
 }

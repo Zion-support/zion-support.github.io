@@ -11,7 +11,6 @@ import { Users,
   Rocket
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Stat {
 
 
@@ -28,7 +27,6 @@ interface Stat {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   icon: React.ComponentType<any>;
   value: string;
@@ -50,9 +48,7 @@ gradient: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const stats: Stat[] = [
   {
     id: 'clients',
@@ -110,7 +106,6 @@ const stats: Stat[] = [
 ];
 
 export default function EnhancedStatsSection(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -119,7 +114,6 @@ export default function EnhancedStatsSection(...args[]: any):  {
   });
 
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (inView) {
       controls.start('visible')}
   }, [controls, inView]);

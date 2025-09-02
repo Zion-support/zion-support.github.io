@@ -1,4 +1,3 @@
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -23,8 +22,6 @@ import { TrendingUp,
               } from 'lucide-react.ts';
 
 export default function AIFinancialTradingRiskManagement(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: TrendingUp,
@@ -205,7 +202,6 @@ export default function AIFinancialTradingRiskManagement(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -256,7 +252,6 @@ export default function AIFinancialTradingRiskManagement(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {servicePackages.map((pkg, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -318,7 +313,6 @@ export default function AIFinancialTradingRiskManagement(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
               {supportedAssets.map((asset, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -366,7 +360,6 @@ export default function AIFinancialTradingRiskManagement(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -416,7 +409,6 @@ export default function AIFinancialTradingRiskManagement(...args[]: any):  {
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
               {technologies.map((tech, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

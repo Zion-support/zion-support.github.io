@@ -128,7 +128,6 @@ import { ArrowRight,
   Omega
 } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026              } from '../data/innovativeMicroSaasServices2026';
 
 const Home2026: React.FC = (): JSX.Element => {;
@@ -182,7 +181,6 @@ const Home2026: React.FC = (): JSX.Element => {;
       color: "from-teal-500 to-cyan-600",;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s              => s.category === 'Sustainability').length;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const stats = [;
@@ -256,7 +254,6 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] &&
                 React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 24 })
 
@@ -289,7 +286,6 @@ const Home2026: React.FC = (): JSX.Element => {;
             transition={{ duration: 1 }}
           >
             {/* Logo and Comp Name */}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl mb-6 shadow-2xl shadow-cyan-400/30">
                 <Zap className="w-12 h-12 text-white" />
@@ -387,7 +383,6 @@ const Home2026: React.FC = (): JSX.Element => {;
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
             <motion.div
               className="w-1 h-3 bg-cyan-400 rounded-full mt-2"

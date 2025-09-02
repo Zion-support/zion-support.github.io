@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Heart, 
   Activity, 
@@ -323,7 +322,6 @@ import {
   CloudSleet10
              } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIHealthcareAnalyticsPlatform = () => {
   const features = [
     {
@@ -521,8 +519,6 @@ const AIHealthcareAnalyticsPlatform = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {keyMetrics.map((item, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -555,9 +551,7 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -594,7 +588,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -628,7 +621,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -662,7 +654,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-4">
             {complianceStandards.map((standard, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -695,8 +686,6 @@ const AIHealthcareAnalyticsPlatform = () => {
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -750,10 +739,8 @@ const AIHealthcareAnalyticsPlatform = () => {
             </p>
           </motion.div>
           
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

@@ -66,7 +66,6 @@ export default function HelpdeskPlatform(...args: any[]): any {
       description: "Centralized knowledge base with AI-powered search and suggestions."
     }
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const benefits = [
     "Reduce support response time by 60-80% with AI automation",
@@ -646,4 +645,3 @@ export default function HelpdeskPlatform(...args: any[]): any {
     </div>;
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

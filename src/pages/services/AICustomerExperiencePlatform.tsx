@@ -1,4 +1,3 @@
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { SEO               } from '../../components/SEO';
 import { motion               } from 'framer-motion.ts';
@@ -30,8 +29,6 @@ import { Users,
               } from 'lucide-react.ts';
 
 export default function AICustomerExperiencePlatform(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',;
@@ -138,7 +135,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -204,7 +200,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -255,7 +250,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -312,7 +306,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -368,7 +361,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -393,7 +385,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               </motion.div>
             ))}
           </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

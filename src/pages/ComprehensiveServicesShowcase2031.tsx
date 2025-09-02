@@ -5,7 +5,6 @@ import { Search,
   Star, 
   ArrowRight, 
   ChevronDown, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Globe, 
   Zap, 
   Cpu, 
@@ -167,7 +166,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
     { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s              => s.category === 'Sustainability').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🌱' },;
     { id: 'Managed Services', name: 'Managed Services', count: allServices.filter(s              => s.category === 'Managed Services').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🔄' },;
     { id: 'Digital Transformation', name: 'Digital Transformation', count: allServices.filter(s              => s.category === 'Digital Transformation').length, icon: '🔄' };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   // Combine all services
@@ -229,7 +227,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
         return 'text-green-400';
       default:
         return 'text-gray-400';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
   };
 
@@ -352,7 +349,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
               >
                 List
               </button>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
           </div>
 
@@ -433,7 +429,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
                 <div className="text-2xl mb-2">{getCategoryIcon(service.category)}</div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getInnovationColor(service.innovationLevel)} bg-white/10`}>
                   {service.innovationLevel}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </span>
               </button>
             ))}
@@ -587,7 +582,6 @@ const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
                           <span className="text-white ml-2">{selectedService.technicalSpecs.apiEndpoints}</span>
                         </div>
                       </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">

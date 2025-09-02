@@ -12,8 +12,6 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
     ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),;
     ...SPECIALIZED_IT_SERVICES_2025.map(service              => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services' })),;
     ...ADVANCED_AI_SERVICES_2025.map(service              => ({ ...service, source: 'AI Solutions' }));
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -312,7 +310,6 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
                   {service.currency}{service.price.toLocaleString()}
                 </span>
               </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
                   {/* Service Content */}
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>

@@ -46,6 +46,5 @@ export const EnhancedInnovativeServicesShowcase = () => {
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedInnovativeServicesShowcase;

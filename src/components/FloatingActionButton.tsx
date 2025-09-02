@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect               } from 'react.ts';
 import { Plus, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MessageCircle, 
   Phone, 
   Mail, 
@@ -48,7 +47,6 @@ interface FloatingAction {
 
 
 }>;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   label: string;
   action: ()               => void;
   color: string;
@@ -64,7 +62,6 @@ interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
   showContactActions?: boolean;
   showUtilityActions?: boolean;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
@@ -101,7 +98,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     const handleScroll = () => {
       setShowScrollButton(window.scrollY > 300);
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -231,8 +227,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     
     // Custom actions
     ...actions
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const finalActions = actions.length > 0 ? actions : defaultActions;
@@ -274,7 +268,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   }, []);
 
   // Get position classes
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const getPositionClasses = () => {
     switch (position) {
       case 'bottom-left':

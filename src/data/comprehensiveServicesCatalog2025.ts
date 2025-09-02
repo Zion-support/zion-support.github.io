@@ -1,7 +1,6 @@
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES              } from './innovativeMicroSaasServices2025';
 import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025              } from './expandedInnovativeServices2025';
 import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025              } from './emergingTechServices2025';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export interface ComprehensiveService2025 {
 
@@ -18,7 +17,6 @@ export interface ComprehensiveService2025 {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -42,7 +40,6 @@ export interface ComprehensiveService2025 {
     email: string;
     website: string;
   };
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -123,10 +120,8 @@ export const SUPPORT_LEVELS = [
 export const calculateServiceStats = () => {
   const stats = {
     totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     categories: SERVICE_CATEGORIES.length,
     pricingTiers: anyanyanyanyanyanyanyanyanyanyanyanyanyPRICING_TIERS.map(tier              => ({;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       ...tier,;
   ;
   ;
@@ -145,7 +140,6 @@ export const calculateServiceStats = () => {
       ).length
     })),
     supportLevels: anyanyanyanyanyanyanyanyanyanyanyanyanySUPPORT_LEVELS.map(level              => ({;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       ...level,;
       count: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service              => ;
         service.supportLevel.toLowerCase() === level.id;
@@ -206,7 +200,6 @@ export const getTrendingServices = (limit: number = 10) => {;
 };
 // Get services by industry
 export const getServicesByIndustry = (industry: string) => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   const industryMap: { [key: string]: string[] } = {
     'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
     'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],
@@ -236,7 +229,6 @@ export const getServiceRecommendations = (preferences: {
   budget?: number;
   innovationLevel?: string;
   supportLevel?: string}) => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
   if (preferences.industry) {
     recommendations = getServicesByIndustry(preferences.industry);

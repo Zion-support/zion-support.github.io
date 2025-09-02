@@ -2,8 +2,6 @@ import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices              } from '../data/innovativeServices2025';
 
 const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -190,8 +188,6 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -206,8 +202,6 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {priceRanges.map(range               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
               </select>
@@ -220,8 +214,6 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {sortOptions.map(option               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
               </select>

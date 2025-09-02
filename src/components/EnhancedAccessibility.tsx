@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Volume2,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   VolumeX,
   Eye,
   EyeOff,
@@ -11,7 +10,6 @@ import { Volume2,
   Settings,
   X
                } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilitySettings {
 
@@ -29,7 +27,6 @@ interface AccessibilitySettings {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -49,7 +46,6 @@ keyboardNavigation: boolean;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface EnhancedAccessibilityProps extends React.PropsWithChildren<{}> {
 ;
@@ -58,7 +54,6 @@ interface EnhancedAccessibilityProps extends React.PropsWithChildren<{}> {
   className?: string;
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled = true,;
   showControls = true,;
   className = '';
@@ -78,7 +73,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   const [currentFocus, setCurrentFocus] = useState<any>(null);
   const [announcements, setAnnouncements] = useState<any>([]);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Apply accessibility settings to document
   const applySettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {;
     const root = document.documentElement;
@@ -112,14 +106,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   }, []);
 
   const toggleSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings)                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSettings(prev => ({
       ...prev,;
       [key]: !prev[key];
     }))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Screen reader announcements
   const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
@@ -138,7 +129,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     if (!settings.keyboardNavigation) return;
 
     const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       const target = e.target as HTMLElement;
       // Skip if in input/textarea
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
@@ -177,7 +167,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     if (!settings.focusIndicator) return;
 
     const handleFocusIn = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyFocusEvent)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #3b82f6';
       target.style.outlineOffset = '2px';
@@ -189,7 +178,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     };
 
     const handleFocusOut = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyFocusEvent)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -211,7 +199,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     return ()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
     };
@@ -236,7 +223,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 };
         applySettings(newSettings);
         announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
@@ -261,7 +247,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 };
         applySettings(newSettings);
         announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
@@ -391,7 +376,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
                   onClick={() => setIsOpen(false)}
                   className="p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-slate-800"
                   aria-label="Close accessibility panel"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 >
                   <X className="w-6 h-6" />;
                 </button>;

@@ -5,7 +5,6 @@ import { Button               } from '@/components/ui/button';
 import { Badge               } from '@/components/ui/badge';
 import { Link               } from 'react-router-dom.ts';
 import { ArrowRight,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Users,
   Zap,
   Settings,
@@ -36,8 +35,6 @@ import { ArrowRight,
                } from 'lucide-react.ts';
 
 export function FeatureCTAs(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "AI Services & Solutions",
@@ -173,7 +170,6 @@ export function FeatureCTAs(...args[]: any):  {
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index)                => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">

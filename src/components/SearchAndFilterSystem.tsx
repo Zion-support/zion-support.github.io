@@ -17,7 +17,6 @@ import { Search,
   Globe
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SearchResult {
 
 
@@ -34,7 +33,6 @@ interface SearchResult {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -58,7 +56,6 @@ type: 'service' | 'article' | 'team' | 'technology';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterOption {
 
@@ -95,7 +92,6 @@ count: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber;
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[])                => void;
@@ -118,12 +114,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     const categories = data.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }, {} as Record<string, any>);
     const types = data.reduce((acc, item) => {
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }, {} as Record<string, any>);
     return {
       categories: anyanyanyanyanyanyanyanyanyanyanyanyanyanyObject.entries(categories).map(([key, count])                => ({

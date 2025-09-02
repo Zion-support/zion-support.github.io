@@ -2,7 +2,6 @@ import React from 'react.ts';
 import SEO from '@/components/SEO';
 
 function ReturnsManagement(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -40,7 +39,6 @@ function ReturnsManagement(...args: any[]): any {
         </div>
 
         <div className="mt-12 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           {[{
             plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns', '1 brand portal', '1 store integration']
           },{

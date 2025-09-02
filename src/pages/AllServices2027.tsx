@@ -26,11 +26,8 @@ import { Brain,
               } from 'lucide-react.ts';
 
 const AllServices2027: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = [;
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;
@@ -44,7 +41,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
   );
 
   const getCategoryStats = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (categoryId === 'All') {
       return {
               count: anyanyanyanyanyanyanyanyanyanyanyanyanyinnovativeServices2027.length,
@@ -62,7 +58,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
   );
 
   const getCategoryStats = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (categoryId === 'All') {;
       return {;
         count: anyanyanyanyanyanyanyanyanyanyanyanyanyINNOVATIVE_SERVICES_2027.length,;
@@ -180,8 +175,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
           </div>;
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
               return (
@@ -234,8 +227,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
             className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <ServiceCard key={service.id} service={service} />
             ))}
           </motion.div>

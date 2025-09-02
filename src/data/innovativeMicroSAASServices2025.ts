@@ -70,7 +70,6 @@ contactInfo: {;
     caseStudies?: string[];
   };
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService2025[] = [
   // AI-Powered Content Generation Platform
@@ -1765,7 +1764,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService2025
       ]
     }
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;}}

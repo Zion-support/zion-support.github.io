@@ -2,9 +2,7 @@ import React, { useState } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar                } from 'lucide-react.ts';
 import { Link                } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const featuredListings = [
   {
     id: 1,
@@ -70,14 +68,12 @@ const featuredListings = [
 ];
 
 export function FeaturedListingsSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<any>(null);
   const [showFilters, setShowFilters] = useState(false);
   const filteredListings = selectedCategory === "All"
     ? featuredListings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyfeaturedListings.filter(listing               => listing.category === selectedCategory);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -89,7 +85,6 @@ export function FeaturedListingsSection(...args: any[]): any {
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
@@ -121,7 +116,6 @@ export function FeaturedListingsSection(...args: any[]): any {
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
           {featuredServices.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">

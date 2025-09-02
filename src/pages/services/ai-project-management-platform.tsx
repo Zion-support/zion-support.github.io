@@ -8,9 +8,7 @@ import { Brain,
   Shield, 
   Zap, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Clock,
   DollarSign,
   CheckCircle,
@@ -43,7 +41,6 @@ import { Brain,
   Smartphone,
   Cloud
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const AIProjectManagementPlatform: React.FC = () => {
   const features = [
@@ -401,7 +398,6 @@ const AIProjectManagementPlatform: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -419,7 +415,6 @@ const AIProjectManagementPlatform: React.FC = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -487,7 +482,6 @@ const AIProjectManagementPlatform: React.FC = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 
@@ -514,7 +508,6 @@ const AIProjectManagementPlatform: React.FC = () => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}

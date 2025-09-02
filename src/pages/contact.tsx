@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Phone, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Mail, 
   MapPin, 
   Clock, 
@@ -15,7 +14,6 @@ import { Phone,
              } from 'lucide-react.ts';
 
 export default function Contact(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,7 +34,6 @@ export default function Contact(...args: any[]): any {
   };
 
   const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -283,8 +280,6 @@ export default function Contact(...args: any[]): any {
               </button>
             </form>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
       {/* Contact Form & Info */}

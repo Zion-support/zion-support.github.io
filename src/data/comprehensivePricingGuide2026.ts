@@ -14,7 +14,6 @@
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: number;
   currency: string;
@@ -56,7 +55,6 @@ export interface ServicePricing {
 
 =======
 export interface ComprehensivePricingService {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   id: string;
   title: string;
   description: string;
@@ -95,7 +93,6 @@ export interface ComprehensivePricingService {
   implementationTime: string;
   support: string;
   contactInfo: {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     phone: string;
     email: string;
     website: string;
@@ -103,7 +100,6 @@ export interface ComprehensivePricingService {
   };
   ctaLabel: string;
   href: string;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ComprehensivePricingService[] = [

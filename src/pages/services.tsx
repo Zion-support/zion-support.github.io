@@ -1,7 +1,6 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Brain, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Cloud, 
   Shield, 
   Rocket, 
@@ -115,11 +114,9 @@ const microSaaS: Service[] = [
   },
 ];
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const Services: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const serviceCategories = [
     {
       title: 'AI & Machine Learning',
@@ -336,7 +333,6 @@ const Services: React.FC = (): JSX.Element => {
                       Reference
                     </a>
                   )}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
@@ -398,7 +394,6 @@ const Services: React.FC = (): JSX.Element => {
                       Learn more
                     </a>
                   )}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
               </motion.div>
             ))}

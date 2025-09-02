@@ -158,7 +158,6 @@ const statuses = ['All', 'upcoming', 'past'];
 
 export default function Events(...args: any[]): any {
   const [selectedType, setSelectedType] = useState('All');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -200,7 +199,6 @@ export default function Events(...args: any[]): any {
       case 'IoT & Edge': return Zap;
       case 'Digital Transformation': return Globe;
       default: return BookOpen;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
   ];
 
@@ -211,7 +209,6 @@ export default function Events(...args: any[]): any {
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
     }
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -317,7 +314,6 @@ export default function Events(...args: any[]): any {
                   ))}
                 </select>
               </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
             {eventCategories.map((category) => (
               <button
@@ -366,7 +362,6 @@ export default function Events(...args: any[]): any {
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
                           <CategoryIcon className="w-6 h-6 text-white" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         </div>
                         <div className="flex items-center space-x-2 text-gray-400">
                           <Clock className="w-4 h-4" />
@@ -483,7 +478,6 @@ export default function Events(...args: any[]): any {
                   </motion.div>
                 );
               })}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
           )}
         </div>
@@ -517,4 +511,3 @@ export default function Events(...args: any[]): any {
     </div>
   );
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

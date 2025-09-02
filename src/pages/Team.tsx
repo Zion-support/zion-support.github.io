@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Linkedin, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Twitter, 
   Mail, 
   Globe, 
@@ -40,7 +39,6 @@ import { Linkedin,
              } from 'lucide-react.ts';
 
 export default function Team(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const teamMembers = [
     {
       id: 1,
@@ -429,7 +427,6 @@ export default function Team(...args: any[]): any {
       {/* Team Members Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -534,7 +531,6 @@ export default function Team(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}

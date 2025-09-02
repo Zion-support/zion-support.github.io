@@ -3,7 +3,6 @@ import { motion                } from 'framer-motion.ts';
 import { Link                } from 'react-router-dom.ts';
 import { Check, Star, Zap, Shield, Brain, Cloud                } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       icon: Shield;
     };
   ];
@@ -59,10 +58,8 @@ const pricingTiers = [
     color: "from-green-500 to-emerald-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function PricingSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -90,7 +87,6 @@ export function PricingSection(...args: any[]): any {
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}

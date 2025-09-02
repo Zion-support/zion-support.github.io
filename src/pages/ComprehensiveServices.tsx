@@ -7,7 +7,6 @@ import { zionEmergingTechServices2029              } from '../../data/zion-2029-
 import { Link              } from 'react-router-dom.ts';
 import { Brain,
   Zap,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Shield,
   Cloud,
   Cpu,
@@ -44,14 +43,12 @@ import { Brain,
   TrendingUp,
   Award,
   TrendingUp
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
 export default function ComprehensiveServices(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [sortBy, setSortBy] = useState<any>('popular');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   // Comprehensive service categories with real market prices
   const serviceCategories = [
@@ -412,7 +409,6 @@ export default function ComprehensiveServices(...args: any[]): any {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50"
                 />
               </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
 
             {/* Category Filter */}
@@ -427,7 +423,6 @@ export default function ComprehensiveServices(...args: any[]): any {
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 ))}
               </select>
             </div>
@@ -481,7 +476,6 @@ export default function ComprehensiveServices(...args: any[]): any {
               {sortedServices.map((service, index)              => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>
           ) : (
             <>

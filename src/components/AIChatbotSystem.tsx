@@ -28,7 +28,6 @@ import { MessageCircle,
   AlertCircle
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ChatMessage {
 
 
@@ -45,7 +44,6 @@ interface ChatMessage {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   content: string;
   sender: 'user' | 'bot';
@@ -56,7 +54,6 @@ metadata?: {;
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     estimatedResponseTime?: number}}
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
   showHeader?: boolean;
@@ -70,8 +67,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   autoScroll = true;
 }) => {;
   const [messages, setMessages] = useState<any>([]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -99,7 +94,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         metadata: {
           confidence: 0.95,
           suggestions: anyanyanyanyanyanyanyanyanyanyanyanyanyany['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
   estimatedResponseTime: 2;
         ;
@@ -114,7 +108,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
   // Simulate AI response
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
       };
@@ -136,7 +129,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         confidence: 0.85 + Math.random() * 0.1,
         suggestions: randomResponse.suggestions,
         relatedServices: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrandomResponse.relatedServices,;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   estimatedResponseTime: 1 + Math.random() * 2;
@@ -146,16 +138,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     };
 
     setMessages(prev               => [...prev, botMessage]);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setIsTyping(false);
   };
   // Handle message submission
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       setMessages(prev = > [...prev, fileMessage])};
   };
   // Handle suggestion click
   const handleSuggestionClick = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent<HTMLElement>): void              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setInputValue(suggestion);
   };
   // Rate response

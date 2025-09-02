@@ -1,10 +1,8 @@
 import React from 'react.ts';
 import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIMetaverseDevelopmentPlatform(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [;
     'AI-powered 3D world generation and design',;
     'Intelligent avatar creation and customization',;

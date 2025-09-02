@@ -46,7 +46,6 @@ import {
   Workflow,
   Eye,
   Sparkles
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
            } from 'lucide-react.ts';
 export function EnhancedFooter(...args: any[]): any {
   const currentYear = new Date().getFullYear();
@@ -73,7 +72,6 @@ export function EnhancedFooter(...args: any[]): any {
         { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory },
         { name: "Retail", href: "/solutions/retail", icon: ShoppingBag },
         { name: "Education", href: "/solutions/education", icon: GraduationCap },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       ]
     },
     {
@@ -85,7 +83,6 @@ export function EnhancedFooter(...args: any[]): any {
         { name: "Partners", href: "/partners", icon: Handshake },
         { name: "News", href: "/news", icon: Newspaper },
         { name: "Blog", href: "/blog", icon: BookOpen },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       ]
         { name: "Documentation", href: "/docs", icon: FileText },
         { name: "API Reference", href: "/api", icon: Code },
@@ -104,12 +101,10 @@ export function EnhancedFooter(...args: any[]): any {
         { name: "Request Quote", href: "/request-quote", icon: DollarSign },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Live Chat", href: "/chat", icon: MessageCircle },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       ]
 
 =======
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-aca0
   ];
 
   const quickLinks = [
@@ -160,7 +155,6 @@ export function EnhancedFooter(...args: any[]): any {
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mr-4">
                   <Zap className="w-6 h-6 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
@@ -174,7 +168,6 @@ export function EnhancedFooter(...args: any[]): any {
               </p>
               
               {/* Contact info */}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="space-y-3">
                 <div className="flex items-center text-slate-300 hover:text-cyan-400 transition-colors duration-300">
                   <Phone className="w-4 h-4 mr-3 text-cyan-400" />
@@ -300,7 +293,6 @@ export function EnhancedFooter(...args: any[]): any {
                   {link.name}
                 </h5>
               </Link>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-aca0
             ))}
           </div>
         </div>
@@ -538,13 +530,10 @@ export function EnhancedFooter(...args: any[]): any {
                   Subscribe
                 </button>
               </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
         </div>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-aca0
 =======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </div>
 
       {/* Floating elements */}

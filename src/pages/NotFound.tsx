@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
 import { Home, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search, 
   MapPin, 
   ArrowRight, 
@@ -42,7 +41,6 @@ import { Home,
              } from 'lucide-react.ts';
 
 export default function NotFound(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const popularPages = [
     { name: 'Home', path: '/', icon: Home, description: 'Main landing page' },
     { name: 'Services', path: '/services', icon: Zap, description: 'All our services' },

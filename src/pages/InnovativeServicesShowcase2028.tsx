@@ -241,7 +241,6 @@ import { Search,
   Clock,
   Users,
   Target,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle,
   ArrowRight,
   Atom,
@@ -269,7 +268,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   // Enhanced service categories with real market prices and features
   const serviceCategories = [
@@ -544,7 +542,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
       default:
         return <Rocket className="w-6 h-6" />;
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
@@ -557,7 +554,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
         return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default:
         return 'bg-gradient-to-r from-gray-600 to-slate-600';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
   };
 
@@ -653,8 +649,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
                 ))}
               </select>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
         </div>
       </section>
@@ -678,7 +672,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
 
           <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {featuredServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -875,8 +868,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
               </div>
             </motion.div>
           ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 

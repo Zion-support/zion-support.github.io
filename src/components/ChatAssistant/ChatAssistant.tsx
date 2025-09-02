@@ -30,37 +30,28 @@ export interface Message {
 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
 read?: boolean;
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onClose?: () => void;
 }
 export function ChatAssistant(...args: any[]): any {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
       timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   ;
   ;
 };
     setMessages(prev               => [...prev, userMessage]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setInputMessage('');
     // Simulate AI response
     setTimeout(() => {
@@ -69,7 +60,6 @@ export function ChatAssistant(...args: any[]): any {;
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   ;

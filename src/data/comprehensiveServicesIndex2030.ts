@@ -1,7 +1,6 @@
 import { ProductListing               } from '@/types/listings';
 import { REVOLUTIONARY_SERVICES_2030               } from './revolutionaryServices2030';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
@@ -44,7 +43,6 @@ export const SERVICE_STATISTICS_2030 = {
   totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
   averagePrice: Math.round(
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
@@ -54,11 +52,8 @@ export const SERVICE_STATISTICS_2030 = {
   ) / 10,
   featuredServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => service.featured).length,
   aiServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     service.category.includes('AI') || service.aiScore > 90
   emergingTechServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service               => 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     service.category === 'Emerging Technology'
   ).length
   ).length,;

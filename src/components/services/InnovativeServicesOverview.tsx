@@ -1,8 +1,6 @@
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory               } from '../../data/innovativeServices2025';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   maxServices?: number;
   category?: string;
   showViewAllButton?: boolean}

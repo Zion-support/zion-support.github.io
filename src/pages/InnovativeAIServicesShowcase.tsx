@@ -6,10 +6,8 @@ import { Zap, Sparkles, TrendingUp, Route, Users, PenTool,
   BarChart3, Shield, Briefcase, Package, Target
 } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function InnovativeAIServicesShowcase(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = [
     {
       id: 'ai-project-manager',

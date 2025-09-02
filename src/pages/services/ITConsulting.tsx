@@ -149,7 +149,6 @@ import { Users,
   Building2
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function ITConsulting(...args: []):  {
   const services = [
     {
@@ -292,7 +291,6 @@ export default function ITConsulting(...args: []):  {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -357,7 +355,6 @@ export default function ITConsulting(...args: []):  {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map((area, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -410,7 +407,6 @@ export default function ITConsulting(...args: []):  {
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -448,7 +444,6 @@ export default function ITConsulting(...args: []):  {
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
             {industries.map((industry, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -488,7 +483,6 @@ export default function ITConsulting(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },
               { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },

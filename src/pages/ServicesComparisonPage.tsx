@@ -1,9 +1,7 @@
 import React from 'react.ts';
 import { SEO              } from '../components/SEO';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function ServicesComparisonPage(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-slate-900 text-white pt-20">
       <div className="container mx-auto px-4 py-12">

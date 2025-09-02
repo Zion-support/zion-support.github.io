@@ -3,7 +3,6 @@ import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
 import { Cookie, 
   Shield, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Settings, 
   Shield, 
   Eye, 
@@ -23,13 +22,11 @@ import { Cookie,
 export default function Cookies(...args: any[]): any {
   const [expandedSection, setExpandedSection] = useState<any>(null);
   const [cookiePreferences, setCookiePreferences] = useState({
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     essential: true,
     analytics: false,
     marketing: false,
     functional: false
   });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const cookieCategories = [
     {
@@ -199,7 +196,6 @@ export default function Cookies(...args: any[]): any {
       functional: false
     });
     savePreferences();
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
@@ -405,7 +401,6 @@ export default function Cookies(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {cookieTypes.map((type, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={method.title}
                 initial={{ opacity: 0, y: 20 }}

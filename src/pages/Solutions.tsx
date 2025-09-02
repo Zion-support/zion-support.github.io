@@ -14,7 +14,6 @@
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -311,7 +310,6 @@ const Solutions: React.FC = (): JSX.Element => {;
           </div>
         </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Industry Filter */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -345,7 +343,6 @@ const Solutions: React.FC = (): JSX.Element => {;
   { opacity: 0,
   y: 20 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }}
                   whileInView = {
   { opacity: 1,
@@ -358,7 +355,6 @@ const Solutions: React.FC = (): JSX.Element => {;
 
 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 >
                   <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
                     <solution.icon className="w-8 h-8 text-blue-400" />
@@ -390,7 +386,6 @@ const Solutions: React.FC = (): JSX.Element => {;
                     </ul>
                   </div>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   {/* Actions */}
                   <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
                     <div className="flex space-x-2">
@@ -466,5 +461,3 @@ const Solutions: React.FC = (): JSX.Element => {;
   )};
 
 export default Solutions;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

@@ -41,7 +41,6 @@ export default function AICybersecurity(...args: any[]): any {
       icon: Eye,
       title: "Continuous Monitoring",
       description: "24/7 surveillance of your digital infrastructure with AI-driven insights"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     {
       icon: Lock,
