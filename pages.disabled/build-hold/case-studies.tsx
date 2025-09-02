@@ -1,4 +1,13 @@
-import React from 'react';'import { motion } from 'framer-motion';'import { SEO } from '../components/SEO';'import { Button } from '../components/ui/Button';'import { Card } from '../components/ui/Card';'import { Badge } from '../components/ui/Badge';'import { ;'  TrendingUp, Users,
+React from
+  'react';
+import { motion } from
+  'framer-motion';'{ SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';'{ Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';'import { ;'  TrendingUp, Users,
   DollarSign, Clock,
   Target, CheckCircle,
   ArrowRight, Star,
@@ -10,7 +19,9 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
   Mail, Eye,
   Download, Share2,
   Filter, Search
-} from 'lucide-react';''const CaseStudies: React.FC = () => {
+} from
+  'lucide-react';'
+  'const CaseStudies: React.FC = () => {
   const caseStudies = [;
     {;
       id: 1, title: "AI-Powered Supply Chain Optimization for Global Manufacturing","      company: "TechCorp Industries", industry: "Manufacturing","      challenge: "Inefficient supply chain operations leading to 30% inventory waste and delayed deliveries", solution: "Implemented AI-driven demand forecasting and autonomous logistics optimization","      results: ["        "40% reduction in inventory costs", "60% improvement in delivery times","        "25% increase in customer satisfaction", "$2.5M annual cost savings""      ], duration: "6 months","      teamSize: "12 experts", technologies: ["Machine Learning", "IoT", "Predictive Analytics", "Cloud Computing"], image: "/api/placeholder/600/400","      featured: true"    }, {;
@@ -39,7 +50,8 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
           >
             <Badge variant="secondary" className="mb-4">"              <Award className="w-4 h-4 mr-2" />"              Success Stories"            </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">"              Case Studies"            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"              Discover how we&apos;ve helped businesses across industries achieve remarkable results with AI-powered solutions.''            </p>'          </motion.div>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"              Discover how we&apos;ve helped businesses across industries achieve remarkable results with AI-powered solutions.''            </p>
+  '          </motion.div>
         </div>
       </section>
 
@@ -107,7 +119,9 @@ import React from 'react';'import { motion } from 'framer-motion';'import { SEO 
                 <Card className="p-6">"                  <h3 className="text-xl font-bold text-white mb-4">Filter by Industry</h3>"                  <div className="space-y-2">"                    {industries.map((industry, index) => ("                      <button
                         key={industry.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${`                          industry.active 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' '                            : 'text-gray-300 hover:bg-slate-700''                        }`}'                      >`                        <span>{industry.name}</span>
+                            ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white
+  ' ': 'text-gray-300 hover:bg-slate-700'                        }`}'                      >`                        <span>{industry.name}</span>
                         <Badge variant="secondary" className="text-xs">"                          {industry.count}"                        </Badge>
                       </button>
                     ))}
