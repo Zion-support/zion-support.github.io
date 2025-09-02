@@ -52,6 +52,12 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "api-backup/**/*",
+    "automation/backups/**/*",
+    "automation_backup/**/*",
+    "**/*.backup.*",
+    "**/*.disabled.*",
+    "**/*.old.*"
   ]
 }
