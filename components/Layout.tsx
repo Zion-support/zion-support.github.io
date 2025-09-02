@@ -13,7 +13,6 @@ const Layout: React.FC<LayoutProps> = ({
         <EnhancedFooter />
       </div>
 </>
-  );
-}
+  );}
 
 export default Layout;

@@ -1,21 +1,21 @@
+:pages/comprehensive-services-showcase-2026.tsx
 import React, { useState } from 'react''import { Link } from 'react-router-dom''import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from 'lucide-react''import PageTransition from '../src/components/PageTransition''import { comprehensiveExpandedServices, serviceCategories } from '../data/comprehensive-2026-expanded-services'';'export default function ComprehensiveServicesShowcase2026() {
 	const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group''	const description = 'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'''	const [selectedCategory, setSelectedCategory] = useState<string>('all')'	const [searchTerm, setSearchTerm] = useState('')''	const filteredServices = comprehensiveExpandedServices.filter(service => {;
-		const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory'		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||'			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-			service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
+		const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory'		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||'			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
 		return matchesCategory && matchesSearch
 	})
 
 	const popularServices = comprehensiveExpandedServices.filter(service => service.popular);
 	return (
-		<PageTransition>
+		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm: py-32">"				<div className="mx-auto max-w-7xl px-6 lg:px-8">"					<div className="mx-auto max-w-2xl text-center">"						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">"							Comprehensive{' '}'							<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">"								Services Portfolio"							</span>
 						</h1>
+:pages/comprehensive-services-showcase-2026.tsx
 						<p className="mt-6 text-lg leading-8 text-gray-600">"							Discover our expanded suite of AI-powered solutions, cloud infrastructure, and emerging technology platforms designed to accelerate your digital transformation."						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">"							<Link"								to="/contact""								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl""							>"								Get Started
 								<ArrowRight className="ml-2 h-4 w-4 inline" />"							</Link>"							<Link
-								to="/services""								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors""							>"								View Core Services <span aria-hidden="true">→</span>"							</Link>"						</div>
-					</div>
+								to="/services""								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors""							>"								View Core Services <span aria-hidden="true">→</span>"							</Link>"						</div></div>
 				</div>
 			</section>
 
@@ -46,6 +46,7 @@ import React, { useState } from 'react''import { Link } from 'react-router-dom''
 				<section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">"					<div className="mx-auto max-w-7xl px-6 lg: px-8">"						<div className="mx-auto max-w-2xl text-center mb-12">"							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">"								Most Popular Services"							</h2>
 							<p className="mt-4 text-lg text-gray-600">"								Our most requested solutions that are transforming businesses across industries"							</p>
 						</div>
+:pages/comprehensive-services-showcase-2026.tsx
 						<div className="grid gap-8 lg:grid-cols-2">"							{popularServices.map((service) => ("								<div key={service.id} className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-lg hover: shadow-xl transition-all duration-300">"									<div className="flex items-start justify-between mb-4">"										<div className="flex items-center gap-x-3">"											<div className="text-4xl">{service.icon}</div>"											<div>"												<h3 className="text-xl font-semibold text-gray-900">{service.name}</h3>"												<p className="text-sm text-gray-600">{service.tagline}</p>"											</div>"										</div>
 										<div className="flex items-center gap-1 text-yellow-400">"											<Star className="h-4 w-4 fill-current" />"											<span className="text-sm font-medium text-gray-900">{service.rating}</span>"										</div>"									</div>
 									<p className="text-gray-600 mb-4">{service.description}</p>"									<div className="flex items-center justify-between mb-4">"										<div className="text-2xl font-bold text-blue-600">"											{service.price}"											{service.period && <span className="text-sm font-normal text-gray-500">{service.period}</span>}"										</div>"										<div className="text-sm text-gray-500">"											{service.customers} customers"										</div>
@@ -56,8 +57,7 @@ import React, { useState } from 'react''import { Link } from 'react-router-dom''
 									<Link
 										to={service.link}
 										className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors""									>"										Learn more
-										<ArrowRight className="ml-2 h-4 w-4" />"									</Link>"								</div>
-							))}
+										<ArrowRight className="ml-2 h-4 w-4" />"									</Link>"								</div>))}
 						</div>
 					</div>
 				</section>
@@ -94,11 +94,11 @@ import React, { useState } from 'react''import { Link } from 'react-router-dom''
 											<div className="mb-4 text-xs text-gray-600">"												<div className="flex items-center gap-1 mb-1">"													<TrendingUp className="h-3 w-3 text-green-500" />"													<span className="font-medium">ROI:</span> {service.roi}"												</div>"												<div className="flex items-center gap-1">"													<Clock className="h-3 w-3 text-blue-500" />"													<span className="font-medium">Setup:</span> {service.setupTime}"												</div>"											</div>
 
 											{/* Action Buttons */}
+:pages/comprehensive-services-showcase-2026.tsx
 											<div className="flex items-center gap-3">"												<Link"													to={service.link}
 													className="flex-1 inline-flex items-center justify-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors""												>"													Learn more
 													<ArrowRight className="ml-2 h-4 w-4" />"												</Link>"												<Link
-													to="/contact""													className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors""												>"													Get Quote
-												</Link>
+													to="/contact""													className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors""												>"													Get Quote</Link>
 											</div>
 										</div>
 									))}
@@ -125,12 +125,12 @@ import React, { useState } from 'react''import { Link } from 'react-router-dom''
 							<div className="flex flex-col items-center">"								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4">"									<svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">"										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />"										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />"									</svg>"								</div>
 								<h3 className="text-lg font-semibold text-white mb-2">Address</h3>"								<p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>"							</div>"						</div>
 
+:pages/comprehensive-services-showcase-2026.tsx
 						<div className="mt-10 flex items-center justify-center gap-x-6">"							<Link"								to="/contact""								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 transition-colors""							>"								Get in touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />"							</Link>"							<a
-								href="https://ziontechgroup.com""								target="_blank""								rel="noopener noreferrer""								className="text-sm font-semibold leading-6 text-white hover:text-blue-300 transition-colors""							>"								Visit our website <span aria-hidden="true">→</span>"							</a>"						</div>
-					</div>
+								href="https://ziontechgroup.com""								target="_blank""								rel="noopener noreferrer""								className="text-sm font-semibold leading-6 text-white hover:text-blue-300 transition-colors""							>"								Visit our website <span aria-hidden="true">→</span>"							</a>"						</div></div>
 				</div>
 			</section>
-		</PageTransition>
+		</>
 	)
 }

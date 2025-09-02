@@ -62,12 +62,12 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
+:pages/services/index.tsx
               <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">"                <Zap className="w-12 h-12" />"              </div>"              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>"              <p className="text-gray-600 mb-6">"                Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact."              </p>
               <div className="mb-6">"                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>"                <ul className="text-sm text-gray-600 space-y-1">"                  <li>• AI Content Generator Pro</li>"                  <li>• AI Email Responder</li>
                   <li>• Event Management Dashboard</li>
                   <li>• AI SEO Optimizer</li>
-                  <li>• Quantum Computing Solutions</li>
-                </ul>
+                  <li>• Quantum Computing Solutions</li></ul>
               </div>
               <div className="mb-6">"                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>"                <div className="text-lg font-semibold text-green-600">$12 - $9,999/month</div>"              </div>"              <Link href="/services/micro-saas" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">"                View All Micro SaaS <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"              </Link>"            </motion.div>
 
@@ -78,11 +78,12 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
+:pages/services/index.tsx
               <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">"                <Shield className="w-12 h-12" />"              </div>"              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>"              <p className="text-gray-600 mb-6">"                Comprehensive IT infrastructure, cloud migration, cybersecurity, and enterprise solutions for modern businesses."              </p>
               <div className="mb-6">"                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>"                <ul className="text-sm text-gray-600 space-y-1">"                  <li>• Cloud Migration Expert</li>"                  <li>• Edge Computing Solutions</li>
-                  <li>• Blockchain Infrastructure</li>
-                  <li>• Zero Trust Security</li>
-                  <li>• 5G Network Implementation</li>
+                  <li>• Blockchain Infrastructure</li><li>• Zero Trust Security</li>
+                  <li>• Data Platform Modernization</li>
+                  <li>• MLOps Foundations</li>
                 </ul>
               </div>
               <div className="mb-6">"                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>"                <div className="text-lg font-semibold text-green-600">$2, 000 - $500,000/project</div>"              </div>"              <Link href="/services/it-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">"                View All IT Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"              </Link>"            </motion.div>
@@ -94,12 +95,12 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
+:pages/services/index.tsx
               <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">"                <Globe className="w-12 h-12" />"              </div>"              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>"              <p className="text-gray-600 mb-6">"                Cutting-edge artificial intelligence solutions to automate processes, gain insights, and achieve competitive advantages."              </p>
               <div className="mb-6">"                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>"                <ul className="text-sm text-gray-600 space-y-1">"                  <li>• AI Drug Discovery Platform</li>"                  <li>• AI Climate Modeling</li>
                   <li>• AI Space Exploration</li>
                   <li>• AI Neuroscience Research</li>
-                  <li>• AI Financial Trading</li>
-                </ul>
+                  <li>• AI Financial Trading</li></ul>
               </div>
               <div className="mb-6">"                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>"                <div className="text-lg font-semibold text-green-600">$4,000 - $2, 000,000/project</div>"              </div>"              <Link href="/services/ai-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">"                View All AI Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"              </Link>"            </motion.div>
           </div>

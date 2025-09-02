@@ -1,5 +1,4 @@
-import React from 'react';'import Header from './Header';'import Footer from './Footer';'import PerformanceOptimizer from '../PerformanceOptimizer';'import AccessibilityEnhancer from '../AccessibilityEnhancer';'import SEOEnhancer from '../SEOEnhancer';''interface MainLayoutProps {
-  children: React.ReactNode;
+import React from 'react';'import Header from './Header';'import Footer from './Footer';'import PerformanceOptimizer from '../PerformanceOptimizer';'import AccessibilityEnhancer from '../AccessibilityEnhancer';'import SEOEnhancer from '../SEOEnhancer';''interface MainLayoutProps {children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -22,11 +21,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap''        ]}'      />
       
       <AccessibilityEnhancer>
-      
-        <div className="min-h-screen flex flex-col">"          <Header />"          <main id="main-content" className="flex-grow" role="main">"            {children}"          </main>
+<div className="min-h-screen flex flex-col">"          <Header />"          <main id="main-content" className="flex-grow" role="main">"            {children}"          </main>
           <Footer />
-        </div>
-      </AccessibilityEnhancer>
+        </div></AccessibilityEnhancer>
 </>
   );
 };

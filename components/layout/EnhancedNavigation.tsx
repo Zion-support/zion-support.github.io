@@ -13,7 +13,7 @@ import React, { useState } from 'react';'import Link from 'next/link';'import { 
             <div className="relative group">"              <button "                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors""                onMouseEnter={() => setServicesOpen(true)}"                onMouseLeave={() => setServicesOpen(false)}
               >
                 Services
-                <ChevronDown className="ml-1 w-4 h-4" />"              </button>"              <div 
+<ChevronDown className="ml-1 w-4 h-4" />"              </button>"              <div 
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}'                onMouseEnter={() => setServicesOpen(true)}'                onMouseLeave={() => setServicesOpen(false)}`              >
                 <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600">"                  AI Development"                </Link>
                 <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Cloud Services"                </Link>
@@ -21,15 +21,14 @@ import React, { useState } from 'react';'import Link from 'next/link';'import { 
                 <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Mobile Development"                </Link>
                 <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Blockchain Solutions"                </Link>
                 <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  IoT Platforms"                </Link>
-                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Cybersecurity"                </Link>
-              </div>
+                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Cybersecurity"                </Link></div>
             </div>
 
             {/* Solutions Dropdown */}
             <div className="relative group">"              <button "                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors""                onMouseEnter={() => setSolutionsOpen(true)}"                onMouseLeave={() => setSolutionsOpen(false)}
               >
                 Solutions
-                <ChevronDown className="ml-1 w-4 h-4" />"              </button>"              <div 
+<ChevronDown className="ml-1 w-4 h-4" />"              </button>"              <div 
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}'                onMouseEnter={() => setSolutionsOpen(true)}'                onMouseLeave={() => setSolutionsOpen(false)}`              >
                 <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600">"                  Enterprise Solutions"                </Link>
                 <Link href="/solutions/small-business" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">"                  Small Business"                </Link>
@@ -44,8 +43,7 @@ import React, { useState } from 'react';'import Link from 'next/link';'import { 
             <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">"              About"            </Link>
             <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">"              Blog"            </Link>
             <Link href="/careers" className="text-gray-600 hover:text-blue-600 transition-colors">"              Careers"            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">"              Contact"            </Link>
-          </div>
+            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">"              Contact"            </Link></div>
 
           {/* CTA Button */}
           <div className="hidden lg:block">"            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block">"              Get Started"            </Link>
