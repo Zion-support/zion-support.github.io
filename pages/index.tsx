@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -38,13 +39,13 @@ export default function Home() {
     }
   ];
   return (
-    <>
+    <Layout>
       <Head>
         <title>Zion Tech Group</title>
         <meta name='description' content='Leading technology solutions provider' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <main className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
+      <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
         <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32'>
@@ -161,7 +162,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
-    </>
+      </div>
+    </Layout>
   );
 }
