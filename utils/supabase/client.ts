@@ -1,5 +1,4 @@
 // Mock Supabase client for development
-
 export const supabase = {
   auth: {
     signIn: () => Promise.resolve({ data: null, error: null }),
@@ -13,3 +12,4 @@ export const supabase = {
     delete: () => Promise.resolve({ data: null, error: null }),
   }),
 };
+
