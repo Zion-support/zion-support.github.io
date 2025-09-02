@@ -17,7 +17,8 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award
+  Award,
+  Network
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 
@@ -232,6 +233,103 @@ export default function Services() {
 									aria-label='Get started with custom software services'
 								>
 									Get started with SaaS
+									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
+								</Link>
+							</div>
+						</div>
+					</div>
+					{/* Additional Core Services */}
+					<div className='grid gap-8 lg:grid-cols-2 mt-16'>
+						{/* Blockchain & Web3 Services */}
+						<div id='blockchain' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-indigo-300'>
+							<div className='flex items-center gap-x-3 mb-6'>
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-600 group-hover:bg-indigo-700 transition-colors'>
+									<Database className='h-7 w-7 text-white' />
+								</div>
+								<div>
+									<h2 className='text-xl font-semibold text-gray-900'>Blockchain & Web3 Solutions</h2>
+									<p className='text-sm text-indigo-600 font-medium'>Decentralized Innovation</p>
+								</div>
+							</div>
+							<p className='text-gray-600 mb-6'>
+								Build secure, scalable blockchain applications and Web3 solutions for the decentralized future.
+							</p>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-indigo-600' />
+									<span className='text-sm text-gray-700'>Smart contract development and auditing</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-indigo-600' />
+									<span className='text-sm text-gray-700'>DeFi protocols and DApp development</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-indigo-600' />
+									<span className='text-sm text-gray-700'>NFT marketplace and tokenization</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-indigo-600' />
+									<span className='text-sm text-gray-700'>Cross-chain interoperability solutions</span>
+								</li>
+							</ul>
+							<div className='flex items-center justify-between'>
+								<div className='flex items-center space-x-2 text-sm text-gray-500'>
+									<Clock className='h-4 w-4' />
+									<span>4-12 weeks delivery</span>
+								</div>
+								<Link
+									href='https://ziontechgroup.com/blockchain-solutions'
+									className='inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-500 transition-colors group'
+									aria-label='Get started with blockchain services'
+								>
+									Get started with Web3
+									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
+								</Link>
+							</div>
+						</div>
+						{/* IoT & Edge Computing */}
+						<div id='iot' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-teal-300'>
+							<div className='flex items-center gap-x-3 mb-6'>
+								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-teal-600 group-hover:bg-teal-700 transition-colors'>
+									<Network className='h-7 w-7 text-white' />
+								</div>
+								<div>
+									<h2 className='text-xl font-semibold text-gray-900'>IoT & Edge Computing</h2>
+									<p className='text-sm text-teal-600 font-medium'>Connected Intelligence</p>
+								</div>
+							</div>
+							<p className='text-gray-600 mb-6'>
+								Connect and manage IoT devices with edge computing for real-time data processing and analytics.
+							</p>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-teal-600' />
+									<span className='text-sm text-gray-700'>IoT device management and monitoring</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-teal-600' />
+									<span className='text-sm text-gray-700'>Edge computing and real-time analytics</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-teal-600' />
+									<span className='text-sm text-gray-700'>Industrial IoT and predictive maintenance</span>
+								</li>
+								<li className='flex items-center gap-x-3'>
+									<CheckCircle className='h-4 w-4 text-teal-600' />
+									<span className='text-sm text-gray-700'>Smart city and building automation</span>
+								</li>
+							</ul>
+							<div className='flex items-center justify-between'>
+								<div className='flex items-center space-x-2 text-sm text-gray-500'>
+									<Clock className='h-4 w-4' />
+									<span>6-16 weeks delivery</span>
+								</div>
+								<Link
+									href='https://ziontechgroup.com/iot-solutions'
+									className='inline-flex items-center text-sm font-semibold text-teal-600 hover:text-teal-500 transition-colors group'
+									aria-label='Get started with IoT services'
+								>
+									Get started with IoT
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -537,6 +635,370 @@ export default function Services() {
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $79/mo</span>
 								<Link href='/contact' className='text-red-600 hover:text-red-500'>Automate workflows →</Link>
+							</div>
+						</div>
+						{/* New AI-Powered Micro SaaS Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Brain className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Lead Scoring & Qualification</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Intelligent lead scoring with behavioral analysis and conversion prediction.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time lead scoring with 95%+ accuracy</li>
+								<li>• Behavioral pattern recognition and intent analysis</li>
+								<li>• Automated follow-up recommendations and timing</li>
+								<li>• CRM integration with Salesforce, HubSpot, Pipedrive</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $199/mo</span>
+								<Link href='https://ziontechgroup.com/ai-lead-scoring' className='text-purple-600 hover:text-purple-500'>Try demo →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Data Quality & Enrichment Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Automated data cleaning, validation, and enrichment with AI accuracy.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time data validation and deduplication</li>
+								<li>• AI-powered data enrichment from 50+ sources</li>
+								<li>• Automated data quality scoring and monitoring</li>
+								<li>• GDPR/CCPA compliant data processing</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $299/mo</span>
+								<Link href='https://ziontechgroup.com/data-quality' className='text-blue-600 hover:text-blue-500'>Clean your data →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Shield className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Fraud Detection & Prevention</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Real-time fraud detection with machine learning and behavioral analysis.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time transaction monitoring and scoring</li>
+								<li>• Behavioral biometrics and device fingerprinting</li>
+								<li>• Customizable risk rules and thresholds</li>
+								<li>• Integration with payment processors and banks</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $499/mo</span>
+								<Link href='https://ziontechgroup.com/fraud-detection' className='text-green-600 hover:text-green-500'>Secure transactions →</Link>
+							</div>
+						</div>
+						{/* New IT Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Cloud className='h-5 w-5 text-cyan-600' />
+								<h3 className='font-semibold text-gray-900'>Multi-Cloud Migration & Management</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Seamless migration between AWS, Azure, GCP with cost optimization.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Zero-downtime migration strategies</li>
+								<li>• Automated cost optimization and rightsizing</li>
+								<li>• Disaster recovery and backup solutions</li>
+								<li>• 24/7 monitoring and support</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-cyan-600'>From $5k–$25k</span>
+								<Link href='https://ziontechgroup.com/cloud-migration' className='text-cyan-600 hover:text-cyan-500'>Migrate now →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Server className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Kubernetes & Container Orchestration</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Production-ready Kubernetes clusters with auto-scaling and monitoring.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Managed Kubernetes clusters (EKS, AKS, GKE)</li>
+								<li>• Auto-scaling and load balancing</li>
+								<li>• CI/CD pipeline integration</li>
+								<li>• Security hardening and compliance</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $2k–$8k</span>
+								<Link href='https://ziontechgroup.com/kubernetes' className='text-orange-600 hover:text-orange-500'>Deploy K8s →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Lock className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Zero-Trust Security Implementation</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Complete zero-trust architecture with identity and access management.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Identity and access management (IAM)</li>
+								<li>• Network segmentation and micro-segmentation</li>
+								<li>• Endpoint detection and response (EDR)</li>
+								<li>• Security awareness training and testing</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $10k–$50k</span>
+								<Link href='https://ziontechgroup.com/zero-trust' className='text-red-600 hover:text-red-500'>Secure your network →</Link>
+							</div>
+						</div>
+						{/* New Micro SaaS Solutions */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Inventory Optimization</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Predictive inventory management with demand forecasting and automated reordering.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Demand forecasting with 90%+ accuracy</li>
+								<li>• Automated reorder point calculations</li>
+								<li>• Supplier performance analytics</li>
+								<li>• Integration with ERP and e-commerce platforms</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $149/mo</span>
+								<Link href='https://ziontechgroup.com/inventory-optimization' className='text-indigo-600 hover:text-indigo-500'>Optimize inventory →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Users className='h-5 w-5 text-pink-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Employee Onboarding Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Automated onboarding workflows with AI-powered personalization and compliance tracking.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Personalized onboarding journeys</li>
+								<li>• Automated document collection and verification</li>
+								<li>• Compliance tracking and reporting</li>
+								<li>• Integration with HRIS and payroll systems</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-pink-600'>From $99/mo</span>
+								<Link href='https://ziontechgroup.com/employee-onboarding' className='text-pink-600 hover:text-pink-500'>Streamline onboarding →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Globe className='h-5 w-5 text-teal-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered SEO & Content Optimization</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Automated SEO analysis, content optimization, and keyword research with AI insights.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time SEO audits and recommendations</li>
+								<li>• AI-generated content suggestions</li>
+								<li>• Competitor analysis and gap identification</li>
+								<li>• Automated technical SEO monitoring</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-teal-600'>From $199/mo</span>
+								<Link href='https://ziontechgroup.com/seo-optimization' className='text-teal-600 hover:text-teal-500'>Boost SEO →</Link>
+							</div>
+						</div>
+						{/* Advanced AI Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Brain className='h-5 w-5 text-violet-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Customer Service Automation</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Intelligent chatbots and virtual assistants with natural language processing.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-language chatbot with 95%+ accuracy</li>
+								<li>• Sentiment analysis and escalation routing</li>
+								<li>• Integration with CRM and ticketing systems</li>
+								<li>• Custom training on your business data</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-violet-600'>From $399/mo</span>
+								<Link href='https://ziontechgroup.com/ai-customer-service' className='text-violet-600 hover:text-violet-500'>Automate support →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-emerald-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Predictive Analytics Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Advanced predictive modeling for business forecasting and decision making.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Revenue and sales forecasting</li>
+								<li>• Customer churn prediction and prevention</li>
+								<li>• Market trend analysis and insights</li>
+								<li>• Custom model development and training</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-emerald-600'>From $599/mo</span>
+								<Link href='https://ziontechgroup.com/predictive-analytics' className='text-emerald-600 hover:text-emerald-500'>Predict the future →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Zap className='h-5 w-5 text-yellow-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Code Review & Quality Assurance</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Automated code analysis, security scanning, and quality improvement suggestions.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Automated code review with AI insights</li>
+								<li>• Security vulnerability detection</li>
+								<li>• Performance optimization recommendations</li>
+								<li>• Integration with GitHub, GitLab, Bitbucket</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-yellow-600'>From $199/mo</span>
+								<Link href='https://ziontechgroup.com/ai-code-review' className='text-yellow-600 hover:text-yellow-500'>Improve code quality →</Link>
+							</div>
+						</div>
+						{/* Emerging Technology Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Brain className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Voice & Video Analytics</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Real-time speech recognition, sentiment analysis, and video content understanding.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-language voice transcription with 99%+ accuracy</li>
+								<li>• Real-time sentiment and emotion analysis</li>
+								<li>• Video content analysis and object detection</li>
+								<li>• Integration with Zoom, Teams, and custom platforms</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $299/mo</span>
+								<Link href='https://ziontechgroup.com/voice-video-analytics' className='text-purple-600 hover:text-purple-500'>Analyze media →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-cyan-600' />
+								<h3 className='font-semibold text-gray-900'>Quantum-Ready Data Encryption</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Future-proof encryption solutions preparing for quantum computing threats.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Post-quantum cryptography implementation</li>
+								<li>• Quantum key distribution (QKD) systems</li>
+								<li>• Hybrid classical-quantum security protocols</li>
+								<li>• Compliance with NIST quantum standards</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-cyan-600'>From $2k–$15k</span>
+								<Link href='https://ziontechgroup.com/quantum-encryption' className='text-cyan-600 hover:text-cyan-500'>Secure future →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Globe className='h-5 w-5 text-rose-600' />
+								<h3 className='font-semibold text-gray-900'>Metaverse & Virtual Reality Solutions</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Immersive virtual experiences and metaverse platform development.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• VR/AR application development</li>
+								<li>• Virtual event and conference platforms</li>
+								<li>• 3D virtual showrooms and retail spaces</li>
+								<li>• Cross-platform metaverse integration</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-rose-600'>From $5k–$30k</span>
+								<Link href='https://ziontechgroup.com/metaverse-solutions' className='text-rose-600 hover:text-rose-500'>Enter metaverse →</Link>
+							</div>
+						</div>
+						{/* Specialized Industry Solutions */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Shield className='h-5 w-5 text-emerald-600' />
+								<h3 className='font-semibold text-gray-900'>Healthcare AI & HIPAA Compliance</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered healthcare solutions with full HIPAA compliance and medical data security.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Medical image analysis and diagnosis assistance</li>
+								<li>• Patient data anonymization and privacy protection</li>
+								<li>• Clinical decision support systems</li>
+								<li>• Integration with EHR and medical devices</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-emerald-600'>From $8k–$50k</span>
+								<Link href='https://ziontechgroup.com/healthcare-ai' className='text-emerald-600 hover:text-emerald-500'>Transform healthcare →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-amber-600' />
+								<h3 className='font-semibold text-gray-900'>FinTech & RegTech Solutions</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Financial technology solutions with regulatory compliance and risk management.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Automated KYC/AML compliance systems</li>
+								<li>• Real-time fraud detection and prevention</li>
+								<li>• Cryptocurrency trading and portfolio management</li>
+								<li>• Regulatory reporting and audit automation</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-amber-600'>From $10k–$75k</span>
+								<Link href='https://ziontechgroup.com/fintech-solutions' className='text-amber-600 hover:text-amber-500'>Innovate finance →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Users className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>EdTech & Learning Management AI</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Intelligent learning platforms with personalized education and assessment.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• AI-powered personalized learning paths</li>
+								<li>• Automated content generation and curation</li>
+								<li>• Intelligent assessment and grading systems</li>
+								<li>• Student performance analytics and insights</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $5k–$25k</span>
+								<Link href='https://ziontechgroup.com/edtech-solutions' className='text-indigo-600 hover:text-indigo-500'>Transform education →</Link>
+							</div>
+						</div>
+						{/* Advanced Automation Services */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Zap className='h-5 w-5 text-lime-600' />
+								<h3 className='font-semibold text-gray-900'>Hyperautomation Platform</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>End-to-end business process automation with AI, RPA, and intelligent workflows.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Robotic Process Automation (RPA) implementation</li>
+								<li>• Intelligent document processing and OCR</li>
+								<li>• Business process mining and optimization</li>
+								<li>• Cross-system integration and orchestration</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-lime-600'>From $3k–$20k</span>
+								<Link href='https://ziontechgroup.com/hyperautomation' className='text-lime-600 hover:text-lime-500'>Automate everything →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Server className='h-5 w-5 text-violet-600' />
+								<h3 className='font-semibold text-gray-900'>Edge AI & Real-Time Processing</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Deploy AI models at the edge for ultra-low latency and real-time decision making.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Edge AI model optimization and deployment</li>
+								<li>• Real-time video and image processing</li>
+								<li>• IoT sensor data analysis and insights</li>
+								<li>• Autonomous system control and decision making</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-violet-600'>From $4k–$25k</span>
+								<Link href='https://ziontechgroup.com/edge-ai' className='text-violet-600 hover:text-violet-500'>Deploy edge AI →</Link>
+							</div>
+						</div>
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Lock className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>AI-Powered Threat Intelligence</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Advanced threat detection and response with machine learning and behavioral analysis.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time threat detection and analysis</li>
+								<li>• Automated incident response and remediation</li>
+								<li>• Threat hunting and intelligence gathering</li>
+								<li>• Security orchestration and automation (SOAR)</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $2k–$15k</span>
+								<Link href='https://ziontechgroup.com/threat-intelligence' className='text-red-600 hover:text-red-500'>Defend against threats →</Link>
 							</div>
 						</div>
 					</div>
