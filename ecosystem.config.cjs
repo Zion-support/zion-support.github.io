@@ -192,6 +192,78 @@ module.exports = {
       cron_restart: '0 2 * * *', // Run daily at 2 AM
       pmx: true,
     },
+
+    // CI Automation - replaces GitHub Actions CI workflow
+    {
+      name: 'ci-automation',
+      script: './scripts/automation/ci-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '800M',
+      env: {
+        NODE_ENV: 'production',
+      },
+      error_file: './logs/ci-automation-error.log',
+      out_file: './logs/ci-automation-out.log',
+      log_file: './logs/ci-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */4 * * *', // Run every 4 hours
+      pmx: true,
+    },
+
+    // Deploy Automation - replaces GitHub Actions Deploy workflow
+    {
+      name: 'deploy-automation',
+      script: './scripts/automation/deploy-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+      },
+      error_file: './logs/deploy-automation-error.log',
+      out_file: './logs/deploy-automation-out.log',
+      log_file: './logs/deploy-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 0 * * *', // Run daily at midnight
+      pmx: true,
+    },
+
+    // Test Automation - replaces GitHub Actions Test workflow
+    {
+      name: 'test-automation',
+      script: './scripts/automation/test-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '800M',
+      env: {
+        NODE_ENV: 'production',
+      },
+      error_file: './logs/test-automation-error.log',
+      out_file: './logs/test-automation-out.log',
+      log_file: './logs/test-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '30s',
+      restart_delay: 5000,
+      cron_restart: '0 */2 * * *', // Run every 2 hours
+      pmx: true,
+    },
   ],
 
   deploy: {
