@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import SEOEnhancer from '../SEOEnhancer';
@@ -41,14 +39,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       />
       
       <AccessibilityEnhancer>
-      
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main id="main-content" className="flex-grow" role="main">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <main id="main-content" role="main">
+          {children}
+        </main>
       </AccessibilityEnhancer>
     </>
   );

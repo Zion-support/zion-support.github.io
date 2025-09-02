@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { HelmetProvider } from 'react-helmet-async';
 import '../src/index.css';
+import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -17,7 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <HelmetProvider>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </HelmetProvider>
   );
 }
