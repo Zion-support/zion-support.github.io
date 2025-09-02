@@ -1,9 +1,6 @@
-React, { useEffect, useState, useCallback } from
-  'react';
-import { motion, AnimatePresence } from
-  'framer-motion';'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from
-  'lucide-react';'
-  'interface PerformanceMetrics {fcp: number;
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';''interface PerformanceMetrics {fcp: number;
   lcp: number;
   fid: number;
   cls: number;

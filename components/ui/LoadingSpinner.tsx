@@ -1,12 +1,6 @@
-React from,
-  react';
-import { motion } from
-  'framer-motion';'
-  'interface LoadingSpinnerProps {
-  size?: 'sm
-  ' | 'md
-  ' | 'lg
-  ';'  className?: string;}
+import React from 'react';
+import { motion } from 'framer-motion';''interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';'  className?: string;'}
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size =,

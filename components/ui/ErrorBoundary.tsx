@@ -1,8 +1,5 @@
-React, { Component, ErrorInfo, ReactNode } from
-  'react';
-import { AlertTriangle, RefreshCw } from
-  'lucide-react';'
-  'interface Props {children: ReactNode;
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react';''interface Props {children: ReactNode;
   fallback?: ReactNode;
 }
 

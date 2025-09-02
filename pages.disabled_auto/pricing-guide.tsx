@@ -38,8 +38,7 @@ import {
   BookOpen,
   Lightbulb,
   HelpCircle
-} from
-  'lucide-react';
+} from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [

@@ -1,22 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Brain, Mail,
-  Phone, MapPin,
-  Linkedin, Twitter,
-  Github, Facebook
-} from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const EnhancedFooter: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
+                <span className="text-white font-bold text-xl">Z</span>
               </div>
               <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
@@ -112,4 +108,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default EnhancedFooter;

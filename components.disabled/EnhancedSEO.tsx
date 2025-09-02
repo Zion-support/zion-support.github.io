@@ -1,8 +1,5 @@
-Head from
-  'next/head';
-import { useRouter } from
-  'next/router';'
-  'interface SEOProps {title?: string;
+import Head from 'next/head';
+import { useRouter } from 'next/router';''interface SEOProps {title?: string;
   description?: string;
   image?: string;
   url?: string;
