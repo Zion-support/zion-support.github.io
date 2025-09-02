@@ -12,6 +12,9 @@ const Home: NextPage = () => {
   const aiServices = getServicesByCategory('ai-services');
 
   const stats = [
+    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap },
+    { number: '35+', label: 'IT Services', icon: Shield },
+    { number: '30+', label: 'AI Services', icon: Globe },
     { number: '500+', label: 'Projects Completed', icon: TrendingUp },
     { number: '50+', label: 'Happy Clients', icon: Users },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Award },
