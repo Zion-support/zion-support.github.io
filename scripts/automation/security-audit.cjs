@@ -1,10 +1,10 @@
-#!/''usr/bin/env'' node
+#!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🔒 Starting continuous security audit automation...');
+console.log('🔒 Starting continuous security audit automation...');
 
 // Get automation interval from environment variable (default: 4 hours)
 const AUTOMATION_INTERVAL =
@@ -12,7 +12,7 @@ const AUTOMATION_INTERVAL =
 
 async function runSecurityAudit() {
   try {
-    console.log(`🔒 Running security audit at ${new Date().toISOString()});
+    console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
 
     // Run npm audit
     console.log(`'🔍 Running npm security audit...');
@@ -87,8 +87,21 @@ async function runContinuous() {
     await runSecurityAudit();
   }, AUTOMATION_INTERVAL);
 
-  console.log( ✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
-  `);
+  console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+async function runContinuous() {
+  console.log('🔄 Starting continuous security audit...');
+  
+  // Run initial security audit
+  await runSecurityAudit();
+
+  // Set up continuous execution
+  setInterval(async () => {
+    await runSecurityAudit();
+  }, AUTOMATION_INTERVAL);
+
+  console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 
 // Handle graceful shutdown

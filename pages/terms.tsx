@@ -1,6 +1,13 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import {
+  FileText,
+  Scale,
+  Shield,
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+} from 'lucide-react';
 
 const Terms: NextPage = () => {
   return (
@@ -13,10 +20,14 @@ const Terms: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Terms of
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Service</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              {' '}
+              Service
+            </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Please read these terms carefully before using our website and services.
+            Please read these terms carefully before using our website and
+            services.
           </p>
           <p className="text-sm text-gray-300">
             Last updated: January 15, 2024
@@ -35,18 +46,25 @@ const Terms: NextPage = () => {
                 Agreement to Terms
               </h2>
               <p className="text-gray-600 mb-4">
-                These Terms of Service ("Terms") govern your use of the Zion Tech Group website located at ziontechgroup.com and our services. By accessing or using our website and services, you agree to be bound by these Terms.
+                These Terms of Service ("Terms") govern your use of the Zion
+                Tech Group website located at ziontechgroup.com and our
+                services. By accessing or using our website and services, you
+                agree to be bound by these Terms.
               </p>
               <p className="text-gray-600">
-                If you do not agree to these Terms, please do not use our website or services.
+                If you do not agree to these Terms, please do not use our
+                website or services.
               </p>
             </div>
 
             {/* Services Description */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Our Services
+              </h2>
               <p className="text-gray-600 mb-4">
-                Zion Tech Group provides technology consulting and development services, including but not limited to:
+                Zion Tech Group provides technology consulting and development
+                services, including but not limited to:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>AI and Machine Learning Development</li>
@@ -73,8 +91,12 @@ const Terms: NextPage = () => {
                 <li>Use our services in compliance with applicable laws</li>
                 <li>Respect intellectual property rights</li>
                 <li>Not engage in any illegal or harmful activities</li>
-                <li>Maintain the confidentiality of any credentials provided</li>
-                <li>Notify us of any security breaches or unauthorized access</li>
+                <li>
+                  Maintain the confidentiality of any credentials provided
+                </li>
+                <li>
+                  Notify us of any security breaches or unauthorized access
+                </li>
               </ul>
             </div>
 
@@ -100,27 +122,40 @@ const Terms: NextPage = () => {
 
             {/* Intellectual Property */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Intellectual Property Rights</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Intellectual Property Rights
+              </h2>
               <p className="text-gray-600 mb-4">
-                All content, trademarks, and intellectual property on our website and in our services are owned by Zion Tech Group or our licensors. You may not:
+                All content, trademarks, and intellectual property on our
+                website and in our services are owned by Zion Tech Group or our
+                licensors. You may not:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>Copy, modify, or distribute our content without permission</li>
+                <li>
+                  Copy, modify, or distribute our content without permission
+                </li>
                 <li>Use our trademarks or logos without authorization</li>
                 <li>Reverse engineer or attempt to extract source code</li>
-                <li>Create derivative works based on our intellectual property</li>
+                <li>
+                  Create derivative works based on our intellectual property
+                </li>
               </ul>
             </div>
 
             {/* Service Availability */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Availability</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Service Availability
+              </h2>
               <p className="text-gray-600 mb-4">
-                We strive to maintain high availability of our services, but we cannot guarantee uninterrupted access. We reserve the right to:
+                We strive to maintain high availability of our services, but we
+                cannot guarantee uninterrupted access. We reserve the right to:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Modify or discontinue services with reasonable notice</li>
-                <li>Perform maintenance that may temporarily affect availability</li>
+                <li>
+                  Perform maintenance that may temporarily affect availability
+                </li>
                 <li>Suspend services for security or legal reasons</li>
                 <li>Update or upgrade our systems</li>
               </ul>
@@ -128,7 +163,9 @@ const Terms: NextPage = () => {
 
             {/* Payment Terms */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Payment Terms</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Payment Terms
+              </h2>
               <p className="text-gray-600 mb-4">
                 For paid services, the following terms apply:
               </p>
@@ -148,7 +185,10 @@ const Terms: NextPage = () => {
                 Limitation of Liability
               </h2>
               <p className="text-gray-600 mb-4">
-                To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                To the maximum extent permitted by law, Zion Tech Group shall
+                not be liable for any indirect, incidental, special,
+                consequential, or punitive damages, including but not limited
+                to:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Loss of profits or revenue</li>
@@ -161,9 +201,12 @@ const Terms: NextPage = () => {
 
             {/* Indemnification */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Indemnification</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Indemnification
+              </h2>
               <p className="text-gray-600 mb-4">
-                You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from:
+                You agree to indemnify and hold harmless Zion Tech Group from
+                any claims, damages, or expenses arising from:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your use of our services</li>
@@ -175,15 +218,22 @@ const Terms: NextPage = () => {
 
             {/* Termination */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Termination</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Termination
+              </h2>
               <p className="text-gray-600 mb-4">
-                We may terminate or suspend your access to our services at any time, with or without cause, with or without notice. Upon termination:
+                We may terminate or suspend your access to our services at any
+                time, with or without cause, with or without notice. Upon
+                termination:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your right to use our services will cease immediately</li>
                 <li>We may delete your account and data</li>
                 <li>You remain liable for any outstanding obligations</li>
-                <li>Provisions that should survive termination will remain in effect</li>
+                <li>
+                  Provisions that should survive termination will remain in
+                  effect
+                </li>
               </ul>
             </div>
 
@@ -194,15 +244,20 @@ const Terms: NextPage = () => {
                 Governing Law
               </h2>
               <p className="text-gray-600 mb-4">
-                These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to conflict of law principles.
+                These Terms shall be governed by and construed in accordance
+                with the laws of the State of Delaware, United States, without
+                regard to conflict of law principles.
               </p>
             </div>
 
             {/* Changes to Terms */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to Terms</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Changes to Terms
+              </h2>
               <p className="text-gray-600 mb-4">
-                We reserve the right to modify these Terms at any time. We will notify users of any material changes by:
+                We reserve the right to modify these Terms at any time. We will
+                notify users of any material changes by:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Posting the updated Terms on our website</li>
@@ -210,20 +265,31 @@ const Terms: NextPage = () => {
                 <li>Providing notice through our services</li>
               </ul>
               <p className="text-gray-600">
-                Continued use of our services after changes constitutes acceptance of the new Terms.
+                Continued use of our services after changes constitutes
+                acceptance of the new Terms.
               </p>
             </div>
 
             {/* Contact Information */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Contact Information
+              </h2>
               <p className="text-gray-600 mb-4">
-                If you have any questions about these Terms of Service, please contact us:
+                If you have any questions about these Terms of Service, please
+                contact us:
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
-                <p className="text-gray-700 mb-2"><strong>Email:</strong> kleber@ziontechgroup.com</p>
-                <p className="text-gray-700 mb-2"><strong>Phone:</strong> +1 (302) 464-0950</p>
-                <p className="text-gray-700 mb-2"><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
+                <p className="text-gray-700 mb-2">
+                  <strong>Email:</strong> kleber@ziontechgroup.com
+                </p>
+                <p className="text-gray-700 mb-2">
+                  <strong>Phone:</strong> +1 (302) 464-0950
+                </p>
+                <p className="text-gray-700 mb-2">
+                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown,
+                  DE 19709
+                </p>
               </div>
             </div>
 
@@ -231,10 +297,14 @@ const Terms: NextPage = () => {
             <div className="mb-12 bg-blue-50 border-l-4 border-blue-400 p-6">
               <div className="flex items-center mb-4">
                 <CheckCircle className="w-6 h-6 text-blue-600 mr-2" />
-                <h3 className="text-lg font-semibold text-blue-800">Acknowledgment</h3>
+                <h3 className="text-lg font-semibold text-blue-800">
+                  Acknowledgment
+                </h3>
               </div>
               <p className="text-blue-700">
-                By using our website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+                By using our website and services, you acknowledge that you have
+                read, understood, and agree to be bound by these Terms of
+                Service.
               </p>
             </div>
           </div>
@@ -244,15 +314,24 @@ const Terms: NextPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Questions About Our Terms?</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Questions About Our Terms?
+          </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're here to help clarify any questions you may have about our Terms of Service.
+            We're here to help clarify any questions you may have about our
+            Terms of Service.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="mailto:kleber@ziontechgroup.com" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               Contact Us
             </a>
-            <a href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <a
+              href="/contact"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               Get in Touch
             </a>
           </div>
