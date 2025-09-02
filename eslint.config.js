@@ -46,22 +46,21 @@ export default [
         expect: 'readonly',
         vi: 'readonly',
         Deno: 'readonly',
-        React: 'readonly'},
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true}}},
+        React: 'readonly',
+      },
+    },
     plugins: {
       react,
-      'react-hooks': reactHooks},
+      'react-hooks': reactHooks,
+    },
     rules: {
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'no-undef': 'error'},
-    settings: {
-      react: {
-        version: 'detect'}}},
+    },
+  },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -70,7 +69,9 @@ export default [
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true}},
+          jsx: true,
+        },
+      },
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -107,29 +108,32 @@ export default [
         vi: 'readonly',
         Deno: 'readonly',
         React: 'readonly',
-        HTMLDivElement: 'readonly',
-        MouseEvent: 'readonly',
-        Node: 'readonly',
-        RequestInit: 'readonly',
-        Response: 'readonly',
-        Headers: 'readonly',
-        HTMLElement: 'readonly'}},
+      },
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint},
+      '@typescript-eslint': tseslint,
+    },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' }
+      ],
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-unused-vars': 'off',
       'no-console': 'warn',
-      'no-undef': 'off'},
+      'no-undef': 'off',
+    },
     settings: {
       react: {
-        version: 'detect'}}},
+        version: 'detect',
+      },
+    },
+  },
   {
     ignores: [
       'src/**',
@@ -156,6 +160,7 @@ export default [
       'health-endpoint.js',
       'services/**',
       'data/**',
+      'data_backup/**',
       'temp_working/**',
       'supabase/**',
       'ecosystem*.js',
@@ -250,9 +255,11 @@ export default [
       '**/comprehensive-automation-test.js',
       '**/debug-paths.js',
       '**/pages/**',
-      '**/components/**',
+      'pages.disabled_auto/**',
+      'test_build/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx';
-    ]}
+      'test*.tsx'
+    ]
+  }
 ];

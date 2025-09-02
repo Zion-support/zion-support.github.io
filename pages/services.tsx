@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 import {
   ArrowRight,
   Brain,
@@ -42,7 +43,8 @@ export default function Services() {
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
-		<PageTransition>
+		<Layout>
+			<PageTransition>
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -1507,5 +1509,6 @@ export default function Services() {
 				</div>
 			</section>
 		</PageTransition>
+		</Layout>
 	);
 }
