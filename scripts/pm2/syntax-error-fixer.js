@@ -1,16 +1,22 @@
 #!/usr/bin/env node
 
-import { execSync, spawn } from 'child_process';
-import fs from 'fs';
-import path from 'path';
+import { execSync, spawn } from
+  'child_process';
+import fs from
+  'fs';
+import path from
+  'path';
 
 class SyntaxErrorFixer {
   constructor() {
     this.scanInterval = process.env.SCAN_INTERVAL || 300000; // 5 minutes
-    this.autoFix = process.env.AUTO_FIX === 'true';
-    this.logFile = 'error-reports/syntax-error-fixer-report.json';
+    this.autoFix = process.env.AUTO_FIX ===
+  'true';
+    this.logFile =
+  'error-reports/syntax-error-fixer-report.json';
     
-    console.log('🔧 Syntax Error Fixer started');
+    console.log(
+  '🔧 Syntax Error Fixer started');
     console.log(`Scan interval: ${this.scanInterval}ms`);
     console.log(`Auto-fix enabled: ${this.autoFix}`);
   }
@@ -26,7 +32,8 @@ class SyntaxErrorFixer {
   }
 
   async scanAndFix() {
-    console.log('🔍 Starting syntax error scan...');
+    console.log(
+  '🔍 Starting syntax error scan...');
     
     const report = {
       timestamp: new Date().toISOString(),
@@ -73,13 +80,23 @@ class SyntaxErrorFixer {
       console.log(`✅ Fixed: ${report.fixes.applied.length}, ❌ Failed: ${report.fixes.failed.length}, ⏭️ Skipped: ${report.fixes.skipped.length}`);
       
     } catch (error) {
-      console.error('Error during syntax scan:', error);
+      console.error(
+  'Error during syntax scan:', error);
     }
   }
 
   findSyntaxErrorFiles() {
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
-    const directories = ['src', 'pages', 'components', 'utils', 'types'];
+    const extensions = [
+  '.ts',
+  '.tsx',
+  '.js',
+  '.jsx'];
+    const directories = [
+  'src',
+  'pages',
+  'components',
+  'utils',
+  'types'];
     const files = [];
 
     for (const dir of directories) {
@@ -114,21 +131,31 @@ class SyntaxErrorFixer {
     const errors = [];
     
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\\n');
+      const content = fs.readFileSync(filePath,
+  'utf8');
+      const lines = content.split(
+  '\\n');
 
       // Check for common syntax error patterns
       const patterns = [
-        { pattern: /export\s*$/, error: 'Incomplete export statement' },
-        { pattern: /:\s*;/, error: 'Missing type annotation' },
-        { pattern: /{\s*$/, error: 'Unclosed brace' },
-        { pattern: /\w+:\s*$/, error: 'Missing type or value' },
-        { pattern: /return\s*}/, error: 'Missing return value' },
-        { pattern: /<<<<<<< HEAD/, error: 'Git merge conflict marker' },
-        { pattern: />>>>>>> /, error: 'Git merge conflict marker' },
-        { pattern: /=======/, error: 'Git merge conflict marker' },
-        { pattern: /'\s*$/, error: 'Unterminated string literal' },
-        { pattern: /"\s*$/, error: 'Unterminated string literal' },
+        { pattern: /export\s*$/, error:
+  'Incomplete export statement' },
+        { pattern: /:\s*;/, error:
+  'Missing type annotation' },
+        { pattern: /{\s*$/, error:
+  'Unclosed brace' },
+        { pattern: /\w+:\s*$/, error:
+  'Missing type or value' },
+        { pattern: /return\s*}/, error:
+  'Missing return value' },
+{ pattern: //, error:
+  'Git merge conflict marker' },
+        { pattern: /{ pattern: /.replace(/\\n([\\s\\S]*?)}{ pattern: //, error:,
+  Git merge conflict marker' },
+        { pattern: /\s*$/, error: 'Unterminated string literal
+  ' },
+        { pattern: /"\s*$/, error: 'Unterminated string literal
+  ' },
       ];
 
       lines.forEach((line, index) => {
@@ -138,7 +165,8 @@ class SyntaxErrorFixer {
               line: index + 1,
               content: line.trim(),
               error,
-              type: 'syntax'
+              type: 'syntax
+  '
             });
           }
         });
@@ -149,7 +177,8 @@ class SyntaxErrorFixer {
         line: 1,
         content: '',
         error: `File read error: ${error.message}`,
-        type: 'file-error'
+        type:
+  'file-error'
       });
     }
 
@@ -158,37 +187,49 @@ class SyntaxErrorFixer {
 
   async fixSyntaxErrors(filePath, errors) {
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
+      let content = fs.readFileSync(filePath,
+  'utf8');
       let modified = false;
 
       // Handle merge conflicts first
-      if (content.includes('<<<<<<< HEAD')) {
+      if (content.includes('
+  ')) {
         content = this.fixMergeConflicts(content);
         modified = true;
       }
 
       // Fix incomplete exports
       content = content.replace(/export\\s*$/gm, 'export default {};');
-      if (content !== fs.readFileSync(filePath, 'utf8')) modified = true;
+      if (content !== fs.readFileSync(filePath,
+  'utf8')) modified = true;
 
       // Fix missing type annotations
-      content = content.replace(/(\\w+):\\s*;/g, '$1: any;');
-      if (content !== fs.readFileSync(filePath, 'utf8')) modified = true;
+      content = content.replace(/(\\w+):\\s*;/g,
+,
+  $1: any;);
+      if (content !== fs.readFileSync(filePath,
+  'utf8')) modified = true;
 
       // Fix unclosed braces
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
       if (openBraces > closeBraces) {
-        content += '\\n'.repeat(openBraces - closeBraces) + '}'.repeat(openBraces - closeBraces);
+        content +=
+  '\\n'.repeat(openBraces - closeBraces) +
+  '}'.repeat(openBraces - closeBraces);
         modified = true;
       }
 
       // Fix unterminated strings
-      content = content.replace(/'/g, "'").replace(/"/g, '"');
+      content = content.replace(/
+  '/g, "'").replace(/"/g,
+  '"');
 
       if (modified) {
         // Create backup
-        fs.writeFileSync(filePath + '.backup', fs.readFileSync(filePath, 'utf8'));
+        fs.writeFileSync(filePath +
+  '.backup', fs.readFileSync(filePath,
+  'utf8'));
         
         // Write fixed content
         fs.writeFileSync(filePath, content);
@@ -205,15 +246,13 @@ class SyntaxErrorFixer {
   fixMergeConflicts(content) {
     // Simple merge conflict resolution - take HEAD version
     return content
-      .replace(/<<<<<<< HEAD\\n([\\s\\S]*?)=======\\n[\\s\\S]*?>>>>>>> .*?\\n/g, '$1')
-      .replace(/<<<<<<< HEAD\\n([\\s\\S]*?)>>>>>>> .*?\\n/g, '$1');
-  }
-
-  saveReport(report) {
+      .replace(/\\n([\\s\\S]*?).replace(/\\n([\\s\\S]*?)}
+saveReport(report) {
     try {
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     } catch (error) {
-      console.error('Error saving report:', error.message);
+      console.error(
+  'Error saving report:', error.message);
     }
   }
 }
@@ -223,12 +262,16 @@ const fixer = new SyntaxErrorFixer();
 fixer.start().catch(console.error);
 
 // Handle graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('🔧 Syntax Error Fixer shutting down...');
+process.on(
+  'SIGTERM', () => {
+  console.log(
+  '🔧 Syntax Error Fixer shutting down...');
   process.exit(0);
 });
 
-process.on('SIGINT', () => {
-  console.log('🔧 Syntax Error Fixer interrupted');
+process.on(
+  'SIGINT', () => {
+  console.log(
+  '🔧 Syntax Error Fixer interrupted');
   process.exit(0);
 });

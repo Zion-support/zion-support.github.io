@@ -1,23 +1,33 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from
+  'fs';
+import path from
+  'path';
+import { fileURLToPath } from
+  'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Analyze the website structure and identify issues
 function analyzeWebsite() {
-  console.log('🔍 Analyzing Zion Tech Group Website...\n');
+  console.log(
+  '🔍 Analyzing Zion Tech Group Website...\n');
 
-  const srcDir = path.join(__dirname, '..', 'src');
-  const pagesDir = path.join(srcDir, 'pages');
-  const componentsDir = path.join(srcDir, 'components');
+  const srcDir = path.join(__dirname,
+  '..',
+  'src');
+  const pagesDir = path.join(srcDir,
+  'pages');
+  const componentsDir = path.join(srcDir,
+  'components');
   
   // Read App.tsx to extract all routes
-  const appTsxPath = path.join(srcDir, 'App.tsx');
-  const appContent = fs.readFileSync(appTsxPath, 'utf8');
+  const appTsxPath = path.join(srcDir,
+  'App.tsx');
+  const appContent = fs.readFileSync(appTsxPath,
+  'utf8');
   
   // Extract route paths from App.tsx
   const routeRegex = /path="([^"]+)"/g;
@@ -35,7 +45,8 @@ function analyzeWebsite() {
   const existingPages = [];
   const missingPages = [];
   
-  function scanDirectory(dir, basePath = '') {
+  function scanDirectory(dir, basePath = '
+  ') {
     const items = fs.readdirSync(dir);
     
     items.forEach(item => {
@@ -44,7 +55,9 @@ function analyzeWebsite() {
       
       if (stat.isDirectory()) {
         scanDirectory(fullPath, path.join(basePath, item));
-      } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
+      } else if (item.endsWith('.tsx
+  ') || item.endsWith('.jsx
+  ')) {
         const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));
         existingPages.push(pagePath);
       }
@@ -58,12 +71,16 @@ function analyzeWebsite() {
   
   // Check for missing pages
   routes.forEach(route => {
-    if (route === '*') return; // Skip 404 route
+    if (route ===
+  '*') return; // Skip 404 route
     
-    const routePath = route.replace(/^\//, '').replace(/\//g, '-');
+    const routePath = route.replace(/^\//, '
+  ').replace(/\//g, '-
+  ');
     const hasPage = existingPages.some(page => 
       page.includes(routePath) || 
-      page.includes(route.replace(/\//g, '-')) ||
+      page.includes(route.replace(/\//g, '-
+  ')) ||
       page.includes(route.replace(/\//g, ''))
     );
     
@@ -78,9 +95,11 @@ function analyzeWebsite() {
   // Check for placeholder pages (files with minimal content)
   const placeholderPages = [];
   existingPages.forEach(pagePath => {
-    const fullPath = path.join(pagesDir, pagePath + '.tsx');
+    const fullPath = path.join(pagesDir, pagePath +
+  '.tsx');
     if (fs.existsSync(fullPath)) {
-      const content = fs.readFileSync(fullPath, 'utf8');
+      const content = fs.readFileSync(fullPath,
+  'utf8');
       if (content.length < 5000) { // Less than 5KB is considered placeholder
         placeholderPages.push(pagePath);
       }
@@ -103,7 +122,9 @@ function analyzeWebsite() {
   };
   
   fs.writeFileSync(
-    path.join(__dirname, '..', 'website-analysis-report.json'),
+    path.join(__dirname,
+  '..',
+  'website-analysis-report.json'),
     JSON.stringify(report, null, 2)
   );
   
@@ -116,6 +137,7 @@ function analyzeWebsite() {
 try {
   analyzeWebsite();
 } catch (error) {
-  console.error('❌ Error analyzing website:', error.message);
+  console.error(
+  '❌ Error analyzing website:', error.message);
   process.exit(1);
 }
