@@ -40,9 +40,9 @@ const Home: NextPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, quantum-ready security, blockchain infrastructure, and innovative development services. 
+            with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. 
             From AI-powered micro SaaS applications to enterprise-grade autonomous systems, we deliver measurable results 
-            that drive growth, efficiency, and competitive advantage.
+            that drive growth, efficiency, and competitive advantage. Trusted by 500+ companies worldwide.
           </motion.p>
           
           <motion.div 
@@ -283,6 +283,115 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to transform your business? Contact our expert team for a free consultation and discover how our cutting-edge solutions can drive your success.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+              <p className="text-gray-600 mb-4">Call us for immediate assistance</p>
+              <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                +1 302 464 0950
+              </a>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+              <p className="text-gray-600 mb-4">Send us a message anytime</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
+              <p className="text-gray-600 mb-4">Visit our headquarters</p>
+              <address className="text-purple-600 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg text-gray-600 mb-6">
+              <strong>Business Hours:</strong> Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+              <strong>Emergency Support:</strong> 24/7 available for enterprise clients
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact" className="group">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+              <a href="https://ziontechgroup.com" className="group">
+                <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  Visit Our Website
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -294,7 +403,7 @@ const Home: NextPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that have already transformed their operations with our cutting-edge technology solutions.
+              Join 500+ companies that have already transformed their operations with our cutting-edge AI, quantum computing, and innovative technology solutions. Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact" className="group">
