@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
@@ -35,12 +35,6 @@ const Home: React.FC = () => {
       href: "/micro-saas"
     }
   ];
-=======
-import React from
-  'react';
-import Head from
-  'next/head';
->>>>>>> origin/main
 
 export default function Home() {
   return (
@@ -64,16 +58,15 @@ export default function Home() {
               services, and cutting-edge innovations.
             </p>
           </div>
-<<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {services.map((service, index) => (
               <Card key={index} className="p-8 text-center hover:shadow-lg transition-shadow">
                 <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
                 <Link href={service.href}>
                   <Button variant="outline" className="w-full">
                     Learn More
@@ -83,8 +76,6 @@ export default function Home() {
               </Card>
             ))}
           </div>
-=======
->>>>>>> origin/main
         </div>
       </main>
     </>

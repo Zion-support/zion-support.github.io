@@ -159,6 +159,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const interval = setInterval(updateMetrics, refreshInterval);
       return () => clearInterval(interval);
     }
+    
+    return undefined;
   }, [updateMetrics, autoRefresh, refreshInterval]);
 
   const getScoreColor = (score: number): string => {

@@ -34,7 +34,7 @@ import {
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
-export default function Services() {
+export default function ServicesEnhanced() {
   const title = 'Services — Zion Tech Group';
   const description = 'Comprehensive AI, IT, and Micro SaaS solutions for modern businesses.';
 
