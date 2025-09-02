@@ -632,6 +632,182 @@ export default function ITServices() {
       pricing: '$75,000 - $750,000/month',
       delivery: '32-64 weeks',
       category: 'Space Mission IT Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for real-time processing and low-latency applications',
+      icon: Cpu,
+      features: [
+        'Edge data center deployment and management',
+        'Real-time data processing and analytics',
+        'IoT device integration and management',
+        'Content delivery network optimization',
+        'Edge AI and machine learning deployment',
+        '5G network integration and optimization'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation with continuous verification and monitoring',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM) implementation',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring and analytics',
+        'Privileged access management (PAM)',
+        'Security orchestration and automated response (SOAR)',
+        'Compliance automation and reporting'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '12-20 weeks',
+      category: 'Zero-Trust Security Services'
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Integrated compute, storage, and networking solutions for simplified data center management',
+      icon: Server,
+      features: [
+        'HCI platform design and implementation',
+        'Software-defined storage and networking',
+        'Automated resource provisioning and scaling',
+        'Disaster recovery and backup solutions',
+        'Performance monitoring and optimization',
+        'Migration from traditional infrastructure'
+      ],
+      pricing: '$15,000 - $80,000/month',
+      delivery: '10-18 weeks',
+      category: 'HCI Services'
+    },
+    {
+      title: 'Multi-Cloud Orchestration Platform',
+      description: 'Unified management platform for multi-cloud environments with cost optimization',
+      icon: Cloud,
+      features: [
+        'Multi-cloud resource management and monitoring',
+        'Cost optimization and FinOps implementation',
+        'Cloud migration and workload placement',
+        'Disaster recovery across cloud providers',
+        'Security and compliance management',
+        'Performance optimization and auto-scaling'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-20 weeks',
+      category: 'Multi-Cloud Services'
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup with machine learning operations and model deployment',
+      icon: Brain,
+      features: [
+        'AI/ML infrastructure design and implementation',
+        'Model training and deployment pipelines',
+        'MLOps workflow automation',
+        'Model monitoring and performance tracking',
+        'Data pipeline and feature store setup',
+        'AI governance and compliance frameworks'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'AI Infrastructure Services'
+    },
+    {
+      title: 'Quantum Computing Integration',
+      description: 'Quantum computing infrastructure and hybrid classical-quantum system integration',
+      icon: Cpu,
+      features: [
+        'Quantum computing platform evaluation and selection',
+        'Hybrid classical-quantum system design',
+        'Quantum algorithm development and optimization',
+        'Quantum security and cryptography implementation',
+        'Quantum machine learning integration',
+        'Quantum network and communication setup'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-48 weeks',
+      category: 'Quantum Computing Services'
+    },
+    {
+      title: 'Autonomous Systems Infrastructure',
+      description: 'Infrastructure for autonomous vehicles, drones, and robotic systems',
+      icon: Car,
+      features: [
+        'Autonomous system communication networks',
+        'Real-time data processing and decision making',
+        'Sensor fusion and data integration',
+        'Safety and failover systems',
+        'Regulatory compliance and testing',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-32 weeks',
+      category: 'Autonomous Systems Services'
+    },
+    {
+      title: 'Digital Twin Platform',
+      description: 'Digital twin creation and management for physical assets and processes',
+      icon: Monitor,
+      features: [
+        '3D modeling and simulation platform setup',
+        'Real-time data integration and synchronization',
+        'Predictive analytics and maintenance',
+        'IoT sensor integration and data collection',
+        'Virtual reality and augmented reality interfaces',
+        'Performance optimization and scenario modeling'
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '16-28 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Blockchain Infrastructure & DApps',
+      description: 'Blockchain network setup and decentralized application development',
+      icon: Network,
+      features: [
+        'Blockchain network design and deployment',
+        'Smart contract development and auditing',
+        'Decentralized application (DApp) development',
+        'Cryptocurrency wallet and payment integration',
+        'Blockchain security and consensus mechanisms',
+        'Interoperability and cross-chain solutions'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Blockchain Infrastructure Services'
+    },
+    {
+      title: 'Neuromorphic Computing Systems',
+      description: 'Brain-inspired computing infrastructure for AI and machine learning applications',
+      icon: Brain,
+      features: [
+        'Neuromorphic hardware evaluation and integration',
+        'Spiking neural network implementation',
+        'Low-power AI inference optimization',
+        'Real-time learning and adaptation systems',
+        'Sensor integration and data processing',
+        'Performance benchmarking and optimization'
+      ],
+      pricing: '$40,000 - $300,000/month',
+      delivery: '20-36 weeks',
+      category: 'Neuromorphic Computing Services'
+    },
+    {
+      title: 'Satellite Communication Networks',
+      description: 'Satellite-based communication infrastructure and ground station management',
+      icon: Satellite,
+      features: [
+        'Satellite communication system design',
+        'Ground station setup and management',
+        'Orbit optimization and constellation management',
+        'Signal processing and data transmission',
+        'Network redundancy and failover systems',
+        'Regulatory compliance and licensing'
+      ],
+      pricing: '$100,000 - $1,000,000/month',
+      delivery: '24-48 weeks',
+      category: 'Satellite Communication Services'
     }
   ];
 

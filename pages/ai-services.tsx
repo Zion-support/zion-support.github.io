@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -830,6 +830,198 @@ export default function AIServices() {
       pricing: '$100,000 - $500,000/month',
       delivery: '60-120 weeks',
       category: 'Consciousness AI'
+    },
+    {
+      title: 'Generative AI Content Studio',
+      description: 'Advanced AI-powered content creation platform with multi-modal generation capabilities',
+      icon: FileText,
+      features: [
+        'Multi-modal content generation (text, image, video, audio)',
+        'Brand-specific content customization and consistency',
+        'Real-time collaboration and version control',
+        'Content performance analytics and optimization',
+        'Multi-language content generation and localization',
+        'Integration with marketing and social media platforms'
+      ],
+      pricing: '$2,999 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'Generative AI'
+    },
+    {
+      title: 'AI-Powered Climate Change Modeling',
+      description: 'Advanced climate prediction and environmental impact analysis using AI and machine learning',
+      icon: Globe,
+      features: [
+        'Climate pattern prediction and modeling',
+        'Environmental impact assessment and forecasting',
+        'Carbon footprint optimization recommendations',
+        'Renewable energy resource optimization',
+        'Disaster risk assessment and early warning systems',
+        'Sustainability strategy development and monitoring'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI-Powered Drug Repurposing Platform',
+      description: 'Machine learning platform for identifying new therapeutic uses for existing drugs',
+      icon: Heart,
+      features: [
+        'Drug-target interaction prediction and analysis',
+        'Side effect prediction and safety assessment',
+        'Clinical trial outcome prediction',
+        'Biomarker identification and validation',
+        'Drug combination optimization',
+        'Regulatory pathway analysis and compliance'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-28 weeks',
+      category: 'Pharmaceutical AI'
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Intelligent space mission design and optimization using advanced AI algorithms',
+      icon: Satellite,
+      features: [
+        'Mission trajectory optimization and planning',
+        'Resource allocation and payload optimization',
+        'Risk assessment and mitigation strategies',
+        'Launch window optimization and scheduling',
+        'Satellite constellation design and management',
+        'Space debris avoidance and collision prediction'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Quantum Algorithm Development',
+      description: 'Machine learning-driven quantum algorithm design and optimization platform',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm discovery and optimization',
+        'Quantum circuit design and simulation',
+        'Quantum error correction and fault tolerance',
+        'Quantum machine learning model development',
+        'Quantum advantage identification and benchmarking',
+        'Hybrid classical-quantum algorithm integration'
+      ],
+      pricing: '$75,000 - $750,000/month',
+      delivery: '24-48 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI-Powered Synthetic Biology Platform',
+      description: 'Intelligent biological system design and optimization for biotechnology applications',
+      icon: Heart,
+      features: [
+        'DNA sequence design and optimization',
+        'Protein structure prediction and engineering',
+        'Metabolic pathway design and optimization',
+        'Biological circuit design and simulation',
+        'Synthetic organism development and testing',
+        'Biomanufacturing process optimization'
+      ],
+      pricing: '$40,000 - $400,000/month',
+      delivery: '20-36 weeks',
+      category: 'Synthetic Biology AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Trading System',
+      description: 'Advanced algorithmic trading platform with AI-driven market analysis and execution',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and prediction',
+        'Multi-asset portfolio optimization',
+        'Risk management and position sizing',
+        'High-frequency trading algorithm development',
+        'Market sentiment analysis and news impact assessment',
+        'Regulatory compliance and audit trail management'
+      ],
+      pricing: '$30,000 - $300,000/month',
+      delivery: '16-28 weeks',
+      category: 'Financial AI'
+    },
+    {
+      title: 'AI-Powered Materials Discovery Platform',
+      description: 'Machine learning platform for discovering and optimizing new materials for various applications',
+      icon: Cpu,
+      features: [
+        'Material property prediction and optimization',
+        'Crystal structure prediction and design',
+        'Composition optimization for specific applications',
+        'Manufacturing process optimization',
+        'Material performance simulation and testing',
+        'Patent landscape analysis and intellectual property management'
+      ],
+      pricing: '$35,000 - $350,000/month',
+      delivery: '18-32 weeks',
+      category: 'Materials AI'
+    },
+    {
+      title: 'AI-Powered Personalized Medicine Platform',
+      description: 'Precision medicine platform with AI-driven treatment personalization and optimization',
+      icon: Heart,
+      features: [
+        'Genomic analysis and interpretation',
+        'Personalized treatment recommendation',
+        'Drug dosage optimization and monitoring',
+        'Adverse reaction prediction and prevention',
+        'Clinical trial matching and enrollment',
+        'Health outcome prediction and monitoring'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-24 weeks',
+      category: 'Precision Medicine AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Hunting',
+      description: 'Advanced AI-driven threat detection and response platform with autonomous security operations',
+      icon: Shield,
+      features: [
+        'Advanced persistent threat (APT) detection',
+        'Zero-day vulnerability identification',
+        'Automated incident response and remediation',
+        'Threat intelligence analysis and correlation',
+        'Security orchestration and automated response',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '12-20 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description: 'Intelligent energy grid management and optimization platform for smart cities and utilities',
+      icon: Zap,
+      features: [
+        'Real-time energy demand prediction and optimization',
+        'Renewable energy integration and management',
+        'Grid stability monitoring and control',
+        'Energy storage optimization and management',
+        'Peak demand management and load balancing',
+        'Carbon emission reduction and sustainability tracking'
+      ],
+      pricing: '$40,000 - $300,000/month',
+      delivery: '20-32 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Fleet Management',
+      description: 'Intelligent fleet coordination and optimization platform for autonomous vehicles',
+      icon: Car,
+      features: [
+        'Fleet routing and optimization algorithms',
+        'Real-time traffic and weather adaptation',
+        'Vehicle health monitoring and predictive maintenance',
+        'Passenger demand prediction and matching',
+        'Safety monitoring and incident prevention',
+        'Regulatory compliance and reporting'
+      ],
+      pricing: '$50,000 - $400,000/month',
+      delivery: '24-36 weeks',
+      category: 'Autonomous Vehicle AI'
     }
   ];
   const aiTechnologies = [
