@@ -488,4 +488,5 @@ technology: ['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
     customers: 850,
     rating: 4.8,
     reviews: 480
+  },
 ];
