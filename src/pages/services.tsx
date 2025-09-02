@@ -1,47 +1,18 @@
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Rocket, 
-  TrendingUp, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Globe,
-  Database,
-  Lock,
-  Cpu,
-  Network,
-  Smartphone,
-  BarChart3,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  GitFork,
-  Eye,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  MessageSquare,
-  FileText,
-  Search,
-  Clock
-             } from 'lucide-react.ts';
+import React from 'react';
+import { SEO } from '../components/SEO';
 
-type Service = {
-  title: string;
-  description: string;
-  priceRange: string;
-  learnMoreUrl?: string;
-  ctaUrl?: string;
+const Services: React.FC = () => {
+  return (
+    <>
+      <SEO title="Services - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
 };
 
 const featuredServices: Service[] = [
