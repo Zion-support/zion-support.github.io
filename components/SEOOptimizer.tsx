@@ -14,7 +14,6 @@ interface SEOOptimizerProps {
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-<<<<<<< HEAD
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics',
@@ -34,16 +33,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       : description;
   const currentUrl =
     canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-=======
-  title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',
-  ogType = 'website', canonicalUrl,
-  structuredData, noindex = false,
-  nofollow = false}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   // Default structured data for organization
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -178,10 +167,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Head>
   );
 };
-<<<<<<< HEAD
 
 export default SEOOptimizer;
-=======
-;
-export default SEOOptimizer;
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27

@@ -59,17 +59,11 @@ const SecurityEnhancer: React.FC = () => {
       // Detect iframe injection attempts
       const iframes = document.querySelectorAll('iframe');
       iframes.forEach(iframe => {
-<<<<<<< HEAD
         if (
           !iframe.src.startsWith(window.location.origin) &&
           !iframe.src.includes('youtube.com') &&
           !iframe.src.includes('vimeo.com')
         ) {
-=======
-        if (!iframe.src.startsWith(window.location.origin) &&
-            !iframe.src.includes('youtube.com') &&
-            !iframe.src.includes('vimeo.com')) {
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
           console.warn('Potentially malicious iframe detected: ', iframe.src);
           iframe.remove();
         }
@@ -107,7 +101,6 @@ const SecurityEnhancer: React.FC = () => {
         });
       });
     };
-<<<<<<< HEAD
     // Initialize security monitoring;
     detectXSS();
     monitorSuspiciousActivity();
@@ -117,19 +110,6 @@ const SecurityEnhancer: React.FC = () => {
       monitorSuspiciousActivity();
     }, 30000); // Check every 30 seconds;
     return () => {
-=======
-
-    // Initialize security monitoring
-    detectXSS();
-    monitorSuspiciousActivity();
-
-    // Set up periodic security checks
-    const securityInterval = setInterval(() => {
-      detectXSS();
-      monitorSuspiciousActivity();
-    }, 30000); // Check every 30 seconds
-    return () => {;
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       clearInterval(securityInterval);
     };
   }, []);
@@ -137,7 +117,6 @@ const SecurityEnhancer: React.FC = () => {
   return (;
     <Head>
       {/* Security Headers */}
-<<<<<<< HEAD
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />
@@ -154,18 +133,6 @@ const SecurityEnhancer: React.FC = () => {
         httpEquiv="Content-Security-Policy"
         content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"
       />
-=======
-      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
-      <meta httpEquiv='X-Frame-Options' content='DENY' />
-      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />;
-      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
-      <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=()' />
-      {/* Content Security Policy */}
-      <meta
-        httpEquiv='Content-Security-Policy';
-        content='default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'';
-      />;
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       {/* Additional Security Meta Tags */}
       <meta name="robots" content="index, follow, noarchive, nosnippet" />
       <meta name="googlebot" content="index, follow, noarchive, nosnippet" />

@@ -37,11 +37,7 @@ const Footer: React.FC = () => {
   };
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-=======
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -56,11 +52,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
                 <a
-<<<<<<< HEAD
                   href="mailto:kleber@ziontechgroup.com"
-=======
-                  href="mailto: kleber@ziontechgroup.com"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   className="hover:text-blue-400 transition-colors"
                 >
                   kleber@ziontechgroup.com
@@ -110,11 +102,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-300 hover:text-blue-400 transition-colors"
-=======
-                    className="text-gray-300 hover: text-blue-400 transition-colors"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   >
                     {link.name}
                   </Link>
@@ -130,11 +118,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-300 hover:text-blue-400 transition-colors"
-=======
-                    className="text-gray-300 hover: text-blue-400 transition-colors"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   >
                     {link.name}
                   </Link>
@@ -150,11 +134,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-300 hover:text-blue-400 transition-colors"
-=======
-                    className="text-gray-300 hover: text-blue-400 transition-colors"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   >
                     {link.name}
                   </Link>
@@ -167,11 +147,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-300 hover:text-blue-400 transition-colors"
-=======
-                    className="text-gray-300 hover: text-blue-400 transition-colors"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   >
                     {link.name}
                   </Link>
@@ -182,11 +158,7 @@ const Footer: React.FC = () => {
         </div>
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-<<<<<<< HEAD
           <div className="flex flex-col md:flex-row justify-between items-center">
-=======
-          <div className="flex flex-col md: flex-row justify-between items-center">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
@@ -216,8 +188,5 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Footer;

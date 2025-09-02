@@ -39,10 +39,7 @@ export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description =
     'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const aiServices = [
     {
       title: 'AI-Powered Email Responder',
@@ -325,7 +322,6 @@ export default function AIServices() {
       delivery: '6-12 weeks',
       category: 'Market AI',
     },
-<<<<<<< HEAD
     {
       title: 'AI Autonomous Agents Platform',
       description:
@@ -562,8 +558,6 @@ export default function AIServices() {
       delivery: '14-26 weeks',
       category: 'Blockchain AI',
     },
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
   const aiTechnologies = [
     {
@@ -715,11 +709,7 @@ export default function AIServices() {
             {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
-<<<<<<< HEAD
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-=======
-                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
@@ -748,11 +738,7 @@ export default function AIServices() {
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
-<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
-=======
-                href="mailto: kleber@ziontechgroup.com"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 className="text-blue-600 hover:text-blue-500"
               >
                 kleber@ziontechgroup.com
@@ -771,11 +757,7 @@ export default function AIServices() {
             {aiServices.map((service, index) => (
               <div
                 key={index}
-<<<<<<< HEAD
                 className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-=======
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
@@ -834,13 +816,8 @@ export default function AIServices() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
-<<<<<<< HEAD
               Let's discuss how our AI solutions can drive your business
               forward. Get a free consultation and custom proposal.
-=======
-              Let&apos;s discuss how our AI solutions can drive your business'
-              forward. ' Get a free consultation and custom proposal.'
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

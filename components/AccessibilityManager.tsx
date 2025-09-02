@@ -15,10 +15,7 @@ const AccessibilityManager: React.FC = () => {
     focusVisible: false,
     screenReader: false,
   });
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     // Check for user preferences
@@ -28,10 +25,7 @@ const AccessibilityManager: React.FC = () => {
     const prefersHighContrast = window.matchMedia(
       '(prefers-contrast: high)'
     ).matches;
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Load saved settings
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -49,10 +43,7 @@ const AccessibilityManager: React.FC = () => {
       window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
     setSettings(prev => ({ ...prev, screenReader: hasScreenReader }));
   }, []);
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   useEffect(() => {
     // Apply accessibility settings
     const root = document.documentElement;
@@ -82,20 +73,14 @@ const AccessibilityManager: React.FC = () => {
     // Save settings
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const updateSetting = <K extends keyof AccessibilitySettings>(
     key: K,
     value: AccessibilitySettings[K]
   ) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const announceToScreenReader = (message: string) => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
@@ -109,18 +94,12 @@ const AccessibilityManager: React.FC = () => {
       }, 1000);
     }
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const handleToggle = (key: keyof AccessibilitySettings, value: boolean) => {
     updateSetting(key, value);
     announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`);
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const handleFontSizeChange = (size: AccessibilitySettings['fontSize']) => {
     updateSetting('fontSize', size);
     announceToScreenReader(`Font size changed to ${size}`);
@@ -131,11 +110,7 @@ const AccessibilityManager: React.FC = () => {
       <div className="accessibility-controls fixed bottom-4 right-4 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
           className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-=======
-          className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover: bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
           aria-label="Open accessibility settings"
           aria-expanded={isOpen}
         >
@@ -268,8 +243,5 @@ const AccessibilityManager: React.FC = () => {
     </>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default AccessibilityManager;

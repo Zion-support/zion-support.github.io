@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 
-=======
-import React, { Suspense, lazy } from 'react';"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 // Layout Components;
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';

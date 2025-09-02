@@ -39,10 +39,7 @@ export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description =
     'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const microSaaSServices = [
     {
       title: 'AI-Powered Email Responder',
@@ -367,7 +364,6 @@ export default function MicroSaaS() {
       delivery: '3-5 weeks',
       category: 'Development SaaS',
     },
-<<<<<<< HEAD
     {
       title: 'AI-Powered Legal Document Analyzer',
       description:
@@ -623,8 +619,6 @@ export default function MicroSaaS() {
       delivery: '5-8 weeks',
       category: 'Supply Chain SaaS',
     },
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
   const technologies = [
     {
@@ -774,11 +768,7 @@ export default function MicroSaaS() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-<<<<<<< HEAD
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-=======
-                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">
@@ -807,11 +797,7 @@ export default function MicroSaaS() {
               applications include design, development, testing, and deployment.
               Contact us at{' '}
               <a
-<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
-=======
-                href="mailto: kleber@ziontechgroup.com"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 className="text-orange-600 hover:text-orange-500"
               >
                 kleber@ziontechgroup.com
@@ -830,11 +816,7 @@ export default function MicroSaaS() {
             {microSaaSServices.map((service, index) => (
               <div
                 key={index}
-<<<<<<< HEAD
                 className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-=======
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
@@ -954,15 +936,9 @@ export default function MicroSaaS() {
               Ready to Build Your Custom SaaS Solution?
             </h2>
             <p className="mt-6 text-lg leading-8 text-orange-100">
-<<<<<<< HEAD
               Let's discuss your requirements and create a custom solution that
               drives your business forward. Get a free consultation and project
               estimate.
-=======
-              Let&apos;s discuss your requirements and create a custom solution
-              that' drives your business forward. ' Get a free consultation and'
-              project estimate.
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

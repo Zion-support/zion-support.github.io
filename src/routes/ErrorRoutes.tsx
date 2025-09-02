@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-=======
-import { Route, Routes } from 'react-router-dom';"
-import { Suspense, lazy } from 'react';"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load error pages
 const NotFound = lazy(() => import('../pages/NotFound'));

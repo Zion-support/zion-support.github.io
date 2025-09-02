@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import {
-<<<<<<< HEAD
   HelpCircle,
   Search,
   MessageCircle,
@@ -48,34 +47,9 @@ const Help: NextPage = () => {
       answer:
         'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.',
     },
-=======
-  HelpCircle, Search,
-  MessageCircle, Phone,
-  Mail, BookOpen,
-  Video, FileText,
-  Users, Clock,
-  CheckCircle, } from 'lucide-react';
-const Help: NextPage = () => {
-  const faqs = [
-    {
-      question: 'What services does Zion Tech Group offer?', answer: 'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.',
-    }, {
-      question: 'How do I get started with a project?',
-      answer: "Contact us through our website, email, or phone to schedule a consultation. We&apos;ll discuss your requirements and provide a customized solution proposal.", '
-    },
-    {
-      question: 'What is your typical project timeline?', answer: 'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.', },
-    {
-      question: 'Do you provide ongoing support and maintenance?', answer: 'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.', },
-    {
-      question: 'What technologies do you work with?', answer: 'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.', },
-    {
-      question: 'How do you ensure data security?', answer: 'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.', },
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
   const supportChannels = [
     {
-<<<<<<< HEAD
       icon: Mail,
       title: 'Email Support',
       description: 'Get help via email with detailed responses',
@@ -120,43 +94,15 @@ const Help: NextPage = () => {
       description: 'Searchable articles and troubleshooting guides',
       link: '/knowledge-base',
     },
-=======
-      icon: Mail, title: 'Email Support',
-      description: 'Get help via email with detailed responses', contact: 'kleber@ziontechgroup.com',
-      responseTime: 'Within 24 hours', color: 'blue',
-    }, {
-      icon: Phone,
-      title: 'Phone Support', description: 'Speak directly with our technical team',
-      contact: '+1 (302) 464-0950', responseTime: 'Mon-Fri 9AM-6PM EST',
-      color: 'green', },
-    {
-      icon: MessageCircle, title: 'Live Chat',
-      description: 'Get instant help through our live chat', contact: 'Available on website',
-      responseTime: 'Real-time', color: 'purple',
-    },  ];
-  const resources = [
-    {
-      icon: BookOpen, title: 'Documentation',
-      description: 'Comprehensive guides and API documentation', link: '/docs',
-    }, {
-      icon: Video,
-      title: 'Video Tutorials', description: 'Step-by-step video guides and tutorials',
-      link: '/tutorials', },
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     {
       icon: FileText, title: 'Knowledge Base',
       description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base',
     }, {
       icon: Users,
-<<<<<<< HEAD
       title: 'Community Forum',
       description: 'Connect with other users and get peer support',
       link: '/community',
     },
-=======
-      title: 'Community Forum', description: 'Connect with other users and get peer support',
-      link: '/community', },
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
   return (
     <Layout
@@ -174,13 +120,8 @@ const Help: NextPage = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-<<<<<<< HEAD
             We're here to help you succeed. Find answers, get support, and
             access resources to make the most of our services.
-=======
-            We&apos;re here to help you succeed. Find answers, get support, and'
-            access resources to make the most of our services.''
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
           </p>
         </div>
       </section>
@@ -211,11 +152,7 @@ const Help: NextPage = () => {
             {supportChannels.map((channel, index) => (
               <div
                 key={index}
-<<<<<<< HEAD
                 className="bg-white border border-gray-200 rounded-lg p-8 text-center hover:shadow-lg transition-shadow"
-=======
-                className="bg-white border border-gray-200 rounded-lg p-8 text-center hover: shadow-lg transition-shadow"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div
                   className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center bg-${channel.color}-100`}
@@ -244,20 +181,12 @@ const Help: NextPage = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Helpful Resources
           </h2>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             {resources.map((resource, index) => (
               <Link
                 key={index}
                 href={resource.link}
-<<<<<<< HEAD
                 className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow group"
-=======
-                className="bg-white border border-gray-200 rounded-lg p-6 hover: shadow-lg transition-shadow group"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="w-12 h-12 mb-4 rounded-lg bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                   <resource.icon className="w-6 h-6 text-blue-600" />
@@ -300,11 +229,7 @@ const Help: NextPage = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             Quick Actions
           </h2>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center transition-colors"
@@ -363,17 +288,10 @@ const Help: NextPage = () => {
             Still Need Help?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Can't find what you're looking for? Our support team is ready to
             help you with any questions or concerns.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-=======
-            Can&apos;t find what you&apos;re looking for? Our support team is ready to
-            help you with any questions or concerns.
-          </p>
-          <div className="flex flex-col sm: flex-row justify-center gap-4">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -392,8 +310,5 @@ const Help: NextPage = () => {
     </Layout>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Help;

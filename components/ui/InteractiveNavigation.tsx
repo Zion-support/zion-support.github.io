@@ -6,11 +6,7 @@ const InteractiveNavigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="text-xl font-bold text-gray-800">Interactive Nav</div>
-<<<<<<< HEAD
           <div className="hidden md:flex space-x-8">
-=======
-          <div className="hidden md: flex space-x-8">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/"
               className="text-gray-600 hover:text-gray-900 transition-colors"

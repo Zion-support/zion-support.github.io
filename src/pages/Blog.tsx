@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-=======
-import { motion } from 'framer-motion';"
-import { Link } from 'react-router-dom';"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 import { SEO } from '../components/SEO';
 import { 
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 

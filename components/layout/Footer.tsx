@@ -106,11 +106,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-=======
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -159,11 +155,7 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-<<<<<<< HEAD
                   className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-400 hover:text-white transition-colors"
-=======
-                  className="p-2 rounded-lg bg-slate-800 hover: bg-slate-700 text-gray-400 hover:text-white transition-colors"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
@@ -173,11 +165,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Services */}
-<<<<<<< HEAD
           <div className="lg:col-span-2">
-=======
-          <div className="lg: col-span-2">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceCategories.map(category => (
@@ -195,11 +183,7 @@ const Footer: React.FC = () => {
                       <li key={service.name}>
                         <Link
                           href={service.href}
-<<<<<<< HEAD
                           className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
-=======
-                          className="text-gray-300 hover: text-white transition-colors text-sm flex items-center group"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                         >
                           <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                           {service.name}
@@ -213,22 +197,14 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links & Newsletter */}
-<<<<<<< HEAD
           <div className="lg:col-span-1">
-=======
-          <div className="lg: col-span-1">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4 mb-8">
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
-<<<<<<< HEAD
                   className="text-gray-300 hover:text-white transition-colors text-sm"
-=======
-                  className="text-gray-300 hover: text-white transition-colors text-sm"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 >
                   {link.name}
                 </Link>
@@ -245,11 +221,7 @@ const Footer: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-<<<<<<< HEAD
                   className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-=======
-                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 text-sm"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 />
                 <Button
                   size="sm"
@@ -300,11 +272,7 @@ const Footer: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-<<<<<<< HEAD
                     className="text-gray-400 hover:text-white transition-colors text-sm"
-=======
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   >
                     {link.name}
                   </Link>
@@ -322,8 +290,5 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Footer;
