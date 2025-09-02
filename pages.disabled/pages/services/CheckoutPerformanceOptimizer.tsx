@@ -4,7 +4,8 @@ import {}
   CreditCard,
   ExternalLink,
   Mail,
-  Phone} from 'lucide-react.ts';
+  Phone} from
+  'lucide-react.ts';
 
 export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
   return()
@@ -21,22 +22,25 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
         </p>""
         <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
           {[
+            {,
+  title: 'RUM & Session Replay,'
+              desc:,
+  Find slow steps and rage clicks across funnels.'},
             {
-'
-              title: 'RUM & Session Replay','
-              desc: 'Find slow steps and rage clicks across funnels.'},
+  '
+              title: 'Experimentation,'
+              desc:,
+  One‑click A/B templates for forms, shipping, and offers.'},
             {
-'
-              title: 'Experimentation','
-              desc: 'One‑click A/B templates for forms, shipping, and offers.'},
+  '
+              title: 'Payment resilience,'
+              desc:,
+  Smart retries, 3DS prompts, and dunning flows.'},
             {
-'
-              title: 'Payment resilience','
-              desc: 'Smart retries, 3DS prompts, and dunning flows.'},
-            {
-'
-              title: 'Analytics & alerts','
-              desc: 'Error budgets, drop‑off heatmaps and Slack alerts.'},
+  '
+              title: 'Analytics & alerts,'
+              desc:
+  'Error budgets, drop‑off heatmaps and Slack alerts.'},
           ].map(f => (
             <div"key={f.title}""
               className="rounded-xl border border-white/10 bg-white/5 p-5""
@@ -48,8 +52,9 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             </div>
           ))}"
         </div>""
-        <div className="mt-8 text-sm text-slate-300">'"
-          Typical pricing:{' '}""
+        <div className="mt-8 text-sm text-slate-300">,
+  "
+          Typical pricing: {'}""
           <span className="font-semibold text-cyan-300">$99–$399/mo</span>."
         </div>""
         <div className="mt-4 flex gap-4 text-sm">"<a""
@@ -84,4 +89,4 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
   )}'"
-'"'"
+  '"'"

@@ -19,7 +19,8 @@ import {}
   Share2,
   Zap,
   Shield,
-  DollarSign as DollarSignIcon} from 'lucide-react.ts';
+  DollarSign as DollarSignIcon} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousSales.tsx
 const AIAutonomousSales: React.FC = (): JSX.Element => {
@@ -39,7 +40,9 @@ const AIAutonomousSales: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Sales with""
-              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousSales.tsx
@@ -196,4 +199,4 @@ const AIAutonomousSales: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousSales.tsx
 export default AIAutonomousSales;'"
-'"'"
+  '"'"

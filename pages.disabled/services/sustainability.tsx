@@ -8,25 +8,30 @@ export default function Sustainability(...args: []):  {
   const services = [
     {
 
-      title: 'Green IT Infrastructure','description: 'Energy-efficient data centers and computing systems',
+      title:,
+  Green IT Infrastructure',
+  'description: 'Energy-efficient data centers and computing systems,
       icon: Cpu;
     },
 :pages.disabled/services/sustainability.tsx
-    {
-'
-      title: 'Sustainable Software','description: 'Eco-friendly application development and optimization',
+    {,
+  title: 'Sustainable Software,
+,
+  description: 'Eco-friendly application development and optimization,
       icon: Database;
     },
 :pages.disabled/services/sustainability.tsx
-    {
-'
-      title: 'Energy Monitoring','description: 'Real-time tracking and optimization of power usage',
+    {,
+  title: 'Energy Monitoring,
+,
+  description: 'Real-time tracking and optimization of power usage,
       icon: BarChart3;
     },
 :pages.disabled/services/sustainability.tsx
-    {
-'
-      title: 'Carbon Footprint Analysis','description: 'Comprehensive environmental impact assessment',
+    {,
+  title: 'Carbon Footprint Analysis,
+,
+  description: 'Comprehensive environmental impact assessment,
       icon: Globe};
   ]};
   ];
@@ -308,4 +313,4 @@ Sustainability Solutions;
     </div>;
 :pages.disabled/services/sustainability.tsx
   )}'"
-'"'"
+  '"'"
