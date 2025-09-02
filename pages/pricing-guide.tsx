@@ -18,6 +18,7 @@ import {
   TrendingUp,
   Award,
   Clock,
+  Network,
   Target,
   Brain,
   Server,

@@ -67,11 +67,7 @@
         "src/styles/*"
       ],
       "@data/*": [
-<<<<<<< HEAD
-        "data/*"
-=======
         "src/data/*"
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       ],
       "@services/*": [
         "src/services/*"
@@ -103,18 +99,8 @@
   },
   "include": [
     "next-env.d.ts",
-<<<<<<< HEAD
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-=======
     "**/*.ts",
     "**/*.tsx",
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -125,7 +111,6 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
-<<<<<<< HEAD
     "contracts",
     "cypress",
     "temp_working",
@@ -143,12 +128,6 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled"
-=======
-    "components",
-    "contracts",
-    "cypress",
     "**/*.backup",
     "**/*.disabled",
     "temp_working",
@@ -175,6 +154,5 @@
     "src/services/**",
     "src/types/**",
     "src/utils/**"
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   ]
 }
