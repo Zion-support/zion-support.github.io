@@ -128,6 +128,11 @@ const AIAutonomousHRPlatform = createLazyComponent(() => import('./pages/service
 // New Autonomous AI Services Showcase 2025
 const NewAutonomousAIServicesShowcase2025 = createLazyComponent(() => import('./pages/NewAutonomousAIServicesShowcase2025'));
 
+// Dashboard Components
+const AdminDashboard = createLazyComponent(() => import('./pages/AdminDashboard'));
+const TestingDashboard = createLazyComponent(() => import('./components/testing/TestingDashboard'));
+const MonitoringDashboard = createLazyComponent(() => import('./components/monitoring/MonitoringDashboard'));
+
 function App() {
   return (
     <HelmetProvider>
@@ -171,6 +176,11 @@ function App() {
                   
                   {/* Showcase pages */}
                   <Route path="/new-autonomous-ai-services-2025" element={<NewAutonomousAIServicesShowcase2025 />} />
+                  
+                  {/* Dashboard routes */}
+                  <Route path="/admin" element={<AdminDashboard />} />
+                  <Route path="/testing" element={<TestingDashboard />} />
+                  <Route path="/monitoring" element={<MonitoringDashboard />} />
                   
                   {/* Legacy routes for compatibility */}
                   <Route path="/privacy" element={<PrivacyPolicy />} />
