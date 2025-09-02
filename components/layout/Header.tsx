@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, Mail, Brain, Cloud, Code, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail, Brain, Cloud, Code, ChevronDown, Link2, BarChart3, MessageSquare, RotateCcw, FileText } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +10,11 @@ const Header: React.FC = () => {
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence Solutions' },
     { name: 'IT Services', href: '/it-services', icon: Cloud, description: 'Information Technology Services' },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Code, description: 'Custom Software Solutions' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-marketing-tracking', icon: Link2, description: 'Advanced Attribution Platform' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Small Business Analytics' },
+    { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: FileText, description: 'Automated Content Production' },
+    { name: 'Customer Support', href: '/services/customer-support-platform', icon: MessageSquare, description: 'Complete Helpdesk Solution' },
+    { name: 'E-commerce Returns', href: '/services/ecommerce-returns', icon: RotateCcw, description: 'Return Management System' },
     { name: 'All Services', href: '/services', icon: null, description: 'Complete Service Portfolio' }
   ];
 
@@ -51,27 +56,29 @@ const Header: React.FC = () => {
                         <ChevronDown className='ml-1 h-4 w-4' />
                       </button>
                       {isServicesOpen && (
-                        <div className='absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50'>
+                        <div className='absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50'>
                           <div className='px-4 py-2 border-b border-gray-100'>
                             <h3 className='text-sm font-semibold text-gray-900'>Our Services</h3>
                           </div>
-                          {services.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              className='flex items-center px-4 py-3 hover:bg-gray-50 transition-colors'
-                            >
-                              {service.icon && (
-                                <div className='flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3'>
-                                  <service.icon className='h-4 w-4 text-blue-600' />
+                          <div className='grid grid-cols-1 gap-1 max-h-96 overflow-y-auto'>
+                            {services.map((service) => (
+                              <Link
+                                key={service.name}
+                                href={service.href}
+                                className='flex items-center px-4 py-3 hover:bg-gray-50 transition-colors'
+                              >
+                                {service.icon && (
+                                  <div className='flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3 flex-shrink-0'>
+                                    <service.icon className='h-4 w-4 text-blue-600' />
+                                  </div>
+                                )}
+                                <div className='min-w-0'>
+                                  <div className='text-sm font-medium text-gray-900 truncate'>{service.name}</div>
+                                  <div className='text-xs text-gray-500 truncate'>{service.description}</div>
                                 </div>
-                              )}
-                              <div>
-                                <div className='text-sm font-medium text-gray-900'>{service.name}</div>
-                                <div className='text-xs text-gray-500'>{service.description}</div>
-                              </div>
-                            </Link>
-                          ))}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>

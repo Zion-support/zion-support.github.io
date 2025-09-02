@@ -5,7 +5,7 @@ import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Link2, BarChart3, MessageSquare } from 'lucide-react';
 
 export default function Home() {
   const stats = [
@@ -124,6 +124,88 @@ export default function Home() {
                   </Link>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Innovative Solutions Section */}
+        <section className='py-20 sm:py-32 bg-gray-50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <Badge className='mb-4 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold'>
+                New & Innovative
+              </Badge>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
+                Cutting-Edge Business Solutions
+              </h2>
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
+                Discover our latest innovative services designed to solve real business challenges with intelligent automation.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+              <Card className='p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
+                <div className='p-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 w-fit mb-4'>
+                  <Link2 className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-lg font-bold text-gray-900 mb-3'>Affiliate Marketing Tracking</h3>
+                <p className='text-gray-600 mb-4 text-sm'>Advanced attribution platform with fraud detection and automated commission management.</p>
+                <div className='text-sm text-blue-600 font-semibold mb-3'>Starting $299/month</div>
+                <Link href='/services/affiliate-marketing-tracking'>
+                  <Button size='sm' className='w-full bg-blue-600 hover:bg-blue-700 text-white'>
+                    Learn More
+                  </Button>
+                </Link>
+              </Card>
+
+              <Card className='p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
+                <div className='p-3 rounded-full bg-gradient-to-r from-green-500 to-green-600 w-fit mb-4'>
+                  <BarChart3 className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-lg font-bold text-gray-900 mb-3'>Website Analytics</h3>
+                <p className='text-gray-600 mb-4 text-sm'>Intuitive analytics platform designed for small business owners without technical expertise.</p>
+                <div className='text-sm text-green-600 font-semibold mb-3'>Starting $29/month</div>
+                <Link href='/services/website-analytics'>
+                  <Button size='sm' className='w-full bg-green-600 hover:bg-green-700 text-white'>
+                    Learn More
+                  </Button>
+                </Link>
+              </Card>
+
+              <Card className='p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
+                <div className='p-3 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 w-fit mb-4'>
+                  <Brain className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-lg font-bold text-gray-900 mb-3'>AI Content Creation</h3>
+                <p className='text-gray-600 mb-4 text-sm'>Revolutionary AI suite for automated text, image, and video generation at scale.</p>
+                <div className='text-sm text-purple-600 font-semibold mb-3'>Starting $99/month</div>
+                <Link href='/services/ai-content-creation'>
+                  <Button size='sm' className='w-full bg-purple-600 hover:bg-purple-700 text-white'>
+                    Learn More
+                  </Button>
+                </Link>
+              </Card>
+
+              <Card className='p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
+                <div className='p-3 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-600 w-fit mb-4'>
+                  <MessageSquare className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-lg font-bold text-gray-900 mb-3'>Customer Support Platform</h3>
+                <p className='text-gray-600 mb-4 text-sm'>Complete helpdesk solution with AI chatbots, ticket management, and live chat.</p>
+                <div className='text-sm text-indigo-600 font-semibold mb-3'>Starting $49/month</div>
+                <Link href='/services/customer-support-platform'>
+                  <Button size='sm' className='w-full bg-indigo-600 hover:bg-indigo-700 text-white'>
+                    Learn More
+                  </Button>
+                </Link>
+              </Card>
+            </div>
+            <div className='text-center mt-12'>
+              <Link href='/services'>
+                <Button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3'>
+                  View All Services
+                  <ArrowRight className='w-5 h-5 ml-2' />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

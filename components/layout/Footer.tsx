@@ -19,7 +19,11 @@ import {
   Users,
   BarChart3,
   Settings,
-  Zap
+  Zap,
+  Link2,
+  MessageSquare,
+  RotateCcw,
+  FileText
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 
@@ -33,9 +37,9 @@ const Footer: React.FC = () => {
       color: 'text-blue-400',
       services: [
         { name: 'AI Services', href: '/ai-services' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
         { name: 'Machine Learning', href: '/ai-services#ml' },
-        { name: 'Natural Language Processing', href: '/ai-services#nlp' },
-        { name: 'Computer Vision', href: '/ai-services#vision' }
+        { name: 'Natural Language Processing', href: '/ai-services#nlp' }
       ]
     },
     {
@@ -50,14 +54,25 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: 'Software Solutions',
+      title: 'Business Solutions',
       icon: Code,
       color: 'text-orange-400',
       services: [
         { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Custom Applications', href: '/micro-saas#custom' },
-        { name: 'API Development', href: '/micro-saas#api' },
-        { name: 'Integration Services', href: '/micro-saas#integration' }
+        { name: 'Website Analytics', href: '/services/website-analytics' },
+        { name: 'Customer Support Platform', href: '/services/customer-support-platform' },
+        { name: 'E-commerce Returns', href: '/services/ecommerce-returns' }
+      ]
+    },
+    {
+      title: 'Marketing & Sales',
+      icon: BarChart3,
+      color: 'text-purple-400',
+      services: [
+        { name: 'Affiliate Marketing Tracking', href: '/services/affiliate-marketing-tracking' },
+        { name: 'Marketing Analytics', href: '/services/website-analytics' },
+        { name: 'Content Creation', href: '/services/ai-content-creation' },
+        { name: 'Customer Support', href: '/services/customer-support-platform' }
       ]
     }
   ];
@@ -149,19 +164,19 @@ const Footer: React.FC = () => {
           {/* Services */}
           <div className='lg:col-span-2'>
             <h3 className='text-xl font-bold text-white mb-6'>Our Services</h3>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
               {serviceCategories.map((category) => (
                 <div key={category.title}>
                   <div className='flex items-center mb-4'>
                     <category.icon className={`w-5 h-5 mr-2 ${category.color}`} />
-                    <h4 className='text-white font-semibold'>{category.title}</h4>
+                    <h4 className='text-white font-semibold text-sm'>{category.title}</h4>
                   </div>
                   <ul className='space-y-2'>
                     {category.services.map((service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
-                          className='text-gray-300 hover:text-white transition-colors text-sm flex items-center group'
+                          className='text-gray-300 hover:text-white transition-colors text-xs flex items-center group'
                         >
                           <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity' />
                           {service.name}
