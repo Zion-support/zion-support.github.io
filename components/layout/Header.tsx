@@ -8,8 +8,9 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-    { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -22,34 +23,39 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top bar with contact info */}
-      <div className="bg-blue-900 text-white py-2">
+      <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 lg:mb-0">
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-4 h-4 text-blue-300" />
+                <span className="font-medium">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <Mail className="w-4 h-4 text-blue-300" />
+                <span className="font-medium">kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-4 h-4 text-blue-300" />
+              <span className="font-medium">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main navigation */}
-      <nav className="bg-white">
+      <nav className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-blue-900">Zion Tech Group</div>
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-900 to-indigo-900 bg-clip-text text-transparent">
+                Zion Tech Group
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -88,9 +94,9 @@ const Header: React.FC = () => {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                Get Quote
+                Get Free Quote
               </Link>
             </div>
 
@@ -140,10 +146,10 @@ const Header: React.FC = () => {
                 {/* Mobile CTA */}
                 <Link
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-center shadow-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get Quote
+                  Get Free Quote
                 </Link>
               </div>
             </div>
