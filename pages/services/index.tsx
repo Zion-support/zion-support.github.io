@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Star, Clock, Users, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Clock, Users, Shield, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 
 const ServicesPage: NextPage = () => {
@@ -55,9 +55,9 @@ const ServicesPage: NextPage = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
               </Link>
-              <Link href="#pricing">
+              <Link href="tel:+13024640950">
                 <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
-                  View Pricing
+                  Call Now: +1 302 464 0950
                 </span>
               </Link>
             </div>
@@ -410,6 +410,154 @@ const ServicesPage: NextPage = () => {
                 Call +1 302 464 0950
               </span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Overview Section */}
+      <section id="pricing" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Competitive pricing with flexible plans to fit your business needs. All prices are in USD and include setup and initial support.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-4">$15 - $550</div>
+              <p className="text-gray-600 mb-6">Monthly subscription plans</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Quick setup & deployment</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>24/7 technical support</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Regular updates & features</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>API access included</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-600 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-4">$2,000 - $200,000</div>
+              <p className="text-gray-600 mb-6">Project-based pricing</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Custom solutions</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Dedicated project manager</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Comprehensive documentation</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Post-deployment support</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-4">$5,000 - $500,000</div>
+              <p className="text-gray-600 mb-6">Custom AI development</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Custom AI model training</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Data science expertise</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Performance optimization</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span>Ongoing model maintenance</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Contact our expert team today for a free consultation. We'll help you choose the right solution for your business needs.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="bg-blue-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+              <p className="text-blue-200 mb-4">+1 302 464 0950</p>
+              <Link href="tel:+13024640950">
+                <span className="bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer">
+                  Call Now
+                </span>
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+              <p className="text-blue-200 mb-4">kleber@ziontechgroup.com</p>
+              <Link href="mailto:kleber@ziontechgroup.com">
+                <span className="bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer">
+                  Send Email
+                </span>
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+              <p className="text-blue-200 mb-4">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <Link href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709">
+                <span className="bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer">
+                  Get Directions
+                </span>
+              </Link>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Consultation</h3>
+              <p className="text-blue-200 mb-4">Free 30-minute consultation</p>
+              <Link href="/contact">
+                <span className="bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer">
+                  Schedule Now
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
