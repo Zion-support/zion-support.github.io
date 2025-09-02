@@ -1,295 +1,91 @@
-import React, { useState } from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Phone, Mail, MapPin, Clock, MessageSquare, Send, CheckCircle, Loader2 } from 'lucide-react';
+import React, { useState } from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import { Phone, Mail, MapPin, Clock, MessageSquare, Send, CheckCircle, Loader2 } from 'lucide-react'
+const ContactPage: NextPage = () => {
+  const [formData, setFormData] = useState({
+:pages.disabled_auto/contact.tsx
+    name:, ', email: ', company:, ', phone: ', service:, ', message: '
+    name: '', email: '', company: '', phone: '', service: '', message: ''
+  })
 
-const ContactPage: NextPage = () => {;
-  const [formData, setFormData] = useState({;
-:pages.disabled_auto/contact.tsx;
-    name:,;
-  ',;
-    email: ',;
-    company:,;
-  ',;
-    phone: ',;
-    service:,;
-  ',;
-    message: ';
-    name: '', email: '',;
-    company: '', phone: '',;
-    service: '', message: '';
-  });
-;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<;
-  'idle' |;
-  'success' |;
-  'error'>(;
-  'idle');
-;
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-    setFormData({;
-      ...formData, [e.target.name]: e.target.value;
-    });
-  };
-;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
-    setIsSubmitting(true);
-;
-    // Simulate form submission;
-    setTimeout(() => {;
-      setIsSubmitting(false);
-      setSubmitStatus(,;
-  success');
-      setFormData({;
-:pages.disabled_auto/contact.tsx;
-        name: ',;
-        email:,;
-  ',;
-        company: ',;
-        phone:,;
-  ',;
-        service: ',;
-        message: '';
-        name: '', email: '',;
-        company: '', phone: '',;
-        service: '', message: '';
-      });
-    }, 2000);
-  };
-;
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<
+  'idle' |
+  'success' |
+  'error'>(
+  'idle')
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData, [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setSubmitStatus(, success')
+      setFormData({
+:pages.disabled_auto/contact.tsx
+        name: ', email:, ', company: ', phone:, ', service: ', message: ''
+        name: '', email: '', company: '', phone: '', service: '', message: ''
+      })
+    }, 2000)
+  }
+
   const contactInfo = [
-    {;
-:pages.disabled_auto/contact.tsx;
-      icon: <Phone className='w-6 h-6' />,;
-      title:,;
-  Phone',;
-      details: '+1 302 464 0950,;
-      link:,;
-  tel: +13024640950;
-    },;
-    {;
-      icon: <Mail className='w-6 h-6' />,;
-      title:,;
-  Email',;
-      details: 'kleber@ziontechgroup.com,;
-      link:,;
-  mailto: kleber@ziontechgroup.com;
-    },;
-    {;
-      icon: <MapPin className='w-6 h-6' />,;
-      title:,;
-  Address',;
-      details: 364 E Main St STE 1008, Middletown DE 19709,;
-  ,;
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709;
-    },;
-    {;
-      icon: <Clock className='w-6 h-6' />,;
-      title:,;
-  Business Hours',;
-      details: 'Mon-Fri: 9AM-6PM EST,;
-      icon: <Phone className='w-6 h-6' />, title: 'Phone',;
-      details: '+1 302 464 0950', link: 'tel:+13024640950';
-    },;
-    {;
-      icon: <Mail className='w-6 h-6' />, title: 'Email',;
-      details: 'kleber@ziontechgroup.com', link: 'mailto:kleber@ziontechgroup.com';
-    },;
-    {;
-      icon: <MapPin className='w-6 h-6' />, title: 'Address',;
-      details: '364 E Main St STE 1008, Middletown DE 19709',;
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';
-    }, {;
-      icon: <Clock className='w-6 h-6' />,;
-      title: 'Business Hours', details: 'Mon-Fri: 9AM-6PM EST',;
-      link: null;
+    {
+:pages.disabled_auto/contact.tsx
+      icon: <Phone className='w-6 h-6' />, title:, Phone', details: '+1 302 464 0950, link:, tel: +13024640950
+    }, {
+      icon: <Mail className='w-6 h-6' />, title:, Email', details: 'kleber@ziontechgroup.com, link:, mailto: kleber@ziontechgroup.com
+    }, {
+      icon: <MapPin className='w-6 h-6' />, title:, Address', details: 364 E Main St STE 1008, Middletown DE 19709, , link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709
+    }, {
+      icon: <Clock className='w-6 h-6' />, title:, Business Hours', details: 'Mon-Fri: 9AM-6PM EST, icon: <Phone className='w-6 h-6' />, title: 'Phone', details: '+1 302 464 0950', link: 'tel:+13024640950'
+    }, {
+      icon: <Mail className='w-6 h-6' />, title: 'Email', details: 'kleber@ziontechgroup.com', link: 'mailto:kleber@ziontechgroup.com'
+    }, {
+      icon: <MapPin className='w-6 h-6' />, title: 'Address', details: '364 E Main St STE 1008, Middletown DE 19709', link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+    }, {
+      icon: <Clock className='w-6 h-6' />, title: 'Business Hours', details: 'Mon-Fri: 9AM-6PM EST', link: null
     }
-  ];
+  ]
   const services = [
-:pages.disabled_auto/contact.tsx;
-    // Micro SaaS Services,;
-  AI Content Generator Pro',;
-  'Social Media Scheduler Pro',;
-  'Email Marketing Automation Suite',;
-  'Smart Invoice Management',;
-  'Time Tracking & Productivity Suite',;
-  'CRM & Sales Pipeline Manager',;
-  'Smart Appointment Booking',;
-  'Inventory & POS System',;
-  'Document Management & Collaboration',;
-  'Survey & Feedback Platform',;
-  'Expense Management & Reimbursement',;
-  'Smart Project Manager',;
-  'Inventory Tracker Pro',;
-  'AI Support Assistant',;
-  'AI Video Editor Pro',;
-  'AI Voice Cloning Studio',;
-  'AI Code Reviewer Pro',;
-  'AI Meeting Transcriber & Analyzer',;
-  'AI Personal Finance Manager',;
-  'AI Health & Wellness Coach',;
-  'AI Language Learning Tutor',;
-  'AI Interior Design Studio',;
-  'AI Job Matching Platform',;
-  'AI Social Media Analyzer',;
-  'Smart Expense Tracker',;
-  'AI Lead Scoring Platform',;
-  'Time Tracking Analytics Pro',;
-  'Website Speed Optimizer',;
-  'API Monitoring Platform',;
-  'Business Password Manager',;
-  'Advanced Form Builder',;
-  'Screenshot API Service',;
-  'AI Email Responder Pro',;
-  'Mobile-First Survey Platform',;
-  'Industry-Specific Productivity Planner',;
-  'Smart Event Management Dashboard',;
-  'AI SEO Content Optimizer',;
-  'AI Talent Matching Platform',;
-  'AI Recruiting Platform',;
-  'Quantum Computing Solutions',;
-    // IT Services;
-  'Cloud Migration Expert',;
-  'Multi-Cloud Strategy & Management',;
-  'Container Orchestration & Kubernetes',;
-  'Serverless Architecture Implementation',;
-  'Network Security & Infrastructure Audit',;
-  'Database Optimization & Migration',;
-  'API Gateway & Microservices Management',;
-  'Disaster Recovery & Business Continuity',;
-  'IT Infrastructure Monitoring & Management',;
-  'Identity & Access Management (IAM)',;
-  'Cybersecurity Assessment',;
-  'DevOps Automation Suite',;
-  'Data Backup & Recovery',;
-  'Kubernetes Orchestration',;
-  'API Gateway & Management',;
-  'Database Performance Optimization',;
-  'Network Security Audit',;
-  'Disaster Recovery Planning',;
-  'Microservices Architecture Design',;
-  'Application Performance Monitoring',;
-  'Identity & Access Management',;
-  'Quantum Cloud Computing Solutions',;
-  'Metaverse Infrastructure & Development',;
-  'Autonomous Systems Development',;
-  'Digital Twin Platform Development',;
-  'Cyber-Physical Systems Integration',;
-  'Neuromorphic Computing Solutions',;
-  'Satellite Communication Systems',;
-  'Advanced Biometric Security Systems',;
-  'Edge Computing Solutions',;
-  'Blockchain Infrastructure & Development',;
-  'Zero Trust Security Architecture',;
-  '5G Network Implementation & Optimization',;
-  'Hyperautomation Platform',;
-    // AI Services;
-  'Custom AI Model Development',;
-  'Computer Vision & Image Recognition',;
-  'Natural Language Processing (NLP)',;
-  'Predictive Analytics & Forecasting',;
-  'AI-Powered Recommendation Engine',;
-  'AI-Powered Workflow Automation',;
-  'AI Data Analytics & Business Intelligence',;
-  'AI Chatbot & Voice Assistant Development',;
-  'AI Fraud Detection & Security',;
-  'AI Content Moderation & Safety',;
-  'AI Supply Chain Optimization',;
-  'AI Process Automation',;
-  'AI Analytics Platform',;
-  'AI Chatbot Development',;
-  'AI Drug Discovery Platform',;
-  'AI Climate Modeling & Prediction',;
-  'AI Space Exploration Solutions',;
-  'AI Neuroscience Research Platform',;
-  'AI Robotics & Automation',;
-  'AI Financial Trading Platform',;
-  'AI Weather Prediction & Climate Modeling',;
-  'AI Mental Health & Wellness Platform',;
-  'AI Legal Research & Analysis Platform',;
-  'AI Sports Analytics & Performance Platform',;
-  'AI Education Personalization Platform',;
-  'AI Energy Optimization & Smart Grid',;
-  'AI Cybersecurity Threat Intelligence',;
-  'AI Augmented Reality Solutions',;
-  'Other';
-    // Micro SaaS Services;
-    'AI Content Generator Pro', 'Social Media Scheduler Pro',;
-    'Email Marketing Automation Suite', 'Smart Invoice Management',;
-    'Time Tracking & Productivity Suite', 'CRM & Sales Pipeline Manager',;
-    'Smart Appointment Booking', 'Inventory & POS System',;
-    'Document Management & Collaboration', 'Survey & Feedback Platform',;
-    'Expense Management & Reimbursement', 'Smart Project Manager',;
-    'Inventory Tracker Pro', 'AI Support Assistant',;
-    'AI Video Editor Pro', 'AI Voice Cloning Studio',;
-    'AI Code Reviewer Pro', 'AI Meeting Transcriber & Analyzer',;
-    'AI Personal Finance Manager', 'AI Health & Wellness Coach',;
-    'AI Language Learning Tutor', 'AI Interior Design Studio',;
-    'AI Job Matching Platform', 'AI Social Media Analyzer',;
-    'Smart Expense Tracker', 'AI Lead Scoring Platform',;
-    'Time Tracking Analytics Pro', 'Website Speed Optimizer',;
-    'API Monitoring Platform', 'Business Password Manager',;
-    'Advanced Form Builder', 'Screenshot API Service',;
-    'AI Email Responder Pro', 'Mobile-First Survey Platform',;
-    'Industry-Specific Productivity Planner', 'Smart Event Management Dashboard',;
-    'AI SEO Content Optimizer', 'AI Talent Matching Platform',;
-    'AI Recruiting Platform', 'Quantum Computing Solutions',;
-    // IT Services;
-    'Cloud Migration Expert', 'Multi-Cloud Strategy & Management',;
-    'Container Orchestration & Kubernetes', 'Serverless Architecture Implementation',;
-    'Network Security & Infrastructure Audit', 'Database Optimization & Migration',;
-    'API Gateway & Microservices Management', 'Disaster Recovery & Business Continuity',;
-    'IT Infrastructure Monitoring & Management', 'Identity & Access Management (IAM)', 'Cybersecurity Assessment',;
-    'DevOps Automation Suite', 'Data Backup & Recovery',;
-    'Kubernetes Orchestration', 'API Gateway & Management',;
-    'Database Performance Optimization', 'Network Security Audit',;
-    'Disaster Recovery Planning', 'Microservices Architecture Design',;
-    'Application Performance Monitoring', 'Identity & Access Management',;
-    'Quantum Cloud Computing Solutions', 'Metaverse Infrastructure & Development',;
-    'Autonomous Systems Development', 'Digital Twin Platform Development',;
-    'Cyber-Physical Systems Integration', 'Neuromorphic Computing Solutions',;
-    'Satellite Communication Systems', 'Advanced Biometric Security Systems',;
-    'Edge Computing Solutions', 'Blockchain Infrastructure & Development',;
-    'Zero Trust Security Architecture', '5G Network Implementation & Optimization',;
-    'Hyperautomation Platform', // AI Services;
-    'Custom AI Model Development',;
-    'Computer Vision & Image Recognition', 'Natural Language Processing (NLP)', 'Predictive Analytics & Forecasting',;
-    'AI-Powered Recommendation Engine', 'AI-Powered Workflow Automation',;
-    'AI Data Analytics & Business Intelligence', 'AI Chatbot & Voice Assistant Development',;
-    'AI Fraud Detection & Security', 'AI Content Moderation & Safety',;
-    'AI Supply Chain Optimization', 'AI Process Automation',;
-    'AI Analytics Platform', 'AI Chatbot Development',;
-    'AI Drug Discovery Platform', 'AI Climate Modeling & Prediction',;
-    'AI Space Exploration Solutions', 'AI Neuroscience Research Platform',;
-    'AI Robotics & Automation', 'AI Financial Trading Platform',;
-    'AI Weather Prediction & Climate Modeling', 'AI Mental Health & Wellness Platform',;
-    'AI Legal Research & Analysis Platform', 'AI Sports Analytics & Performance Platform',;
-    'AI Education Personalization Platform', 'AI Energy Optimization & Smart Grid',;
-    'AI Cybersecurity Threat Intelligence', 'AI Augmented Reality Solutions',;
-    'Other';
-  ];
-  return (;
+:pages.disabled_auto/contact.tsx
+    // Micro SaaS Services, AI Content Generator Pro', 'Social Media Scheduler Pro', 'Email Marketing Automation Suite', 'Smart Invoice Management', 'Time Tracking & Productivity Suite', 'CRM & Sales Pipeline Manager', 'Smart Appointment Booking', 'Inventory & POS System', 'Document Management & Collaboration', 'Survey & Feedback Platform', 'Expense Management & Reimbursement', 'Smart Project Manager', 'Inventory Tracker Pro', 'AI Support Assistant', 'AI Video Editor Pro', 'AI Voice Cloning Studio', 'AI Code Reviewer Pro', 'AI Meeting Transcriber & Analyzer', 'AI Personal Finance Manager', 'AI Health & Wellness Coach', 'AI Language Learning Tutor', 'AI Interior Design Studio', 'AI Job Matching Platform', 'AI Social Media Analyzer', 'Smart Expense Tracker', 'AI Lead Scoring Platform', 'Time Tracking Analytics Pro', 'Website Speed Optimizer', 'API Monitoring Platform', 'Business Password Manager', 'Advanced Form Builder', 'Screenshot API Service', 'AI Email Responder Pro', 'Mobile-First Survey Platform', 'Industry-Specific Productivity Planner', 'Smart Event Management Dashboard', 'AI SEO Content Optimizer', 'AI Talent Matching Platform', 'AI Recruiting Platform', 'Quantum Computing Solutions', // IT Services
+  'Cloud Migration Expert', 'Multi-Cloud Strategy & Management', 'Container Orchestration & Kubernetes', 'Serverless Architecture Implementation', 'Network Security & Infrastructure Audit', 'Database Optimization & Migration', 'API Gateway & Microservices Management', 'Disaster Recovery & Business Continuity', 'IT Infrastructure Monitoring & Management', 'Identity & Access Management (IAM)', 'Cybersecurity Assessment', 'DevOps Automation Suite', 'Data Backup & Recovery', 'Kubernetes Orchestration', 'API Gateway & Management', 'Database Performance Optimization', 'Network Security Audit', 'Disaster Recovery Planning', 'Microservices Architecture Design', 'Application Performance Monitoring', 'Identity & Access Management', 'Quantum Cloud Computing Solutions', 'Metaverse Infrastructure & Development', 'Autonomous Systems Development', 'Digital Twin Platform Development', 'Cyber-Physical Systems Integration', 'Neuromorphic Computing Solutions', 'Satellite Communication Systems', 'Advanced Biometric Security Systems', 'Edge Computing Solutions', 'Blockchain Infrastructure & Development', 'Zero Trust Security Architecture', '5G Network Implementation & Optimization', 'Hyperautomation Platform', // AI Services
+  'Custom AI Model Development', 'Computer Vision & Image Recognition', 'Natural Language Processing (NLP)', 'Predictive Analytics & Forecasting', 'AI-Powered Recommendation Engine', 'AI-Powered Workflow Automation', 'AI Data Analytics & Business Intelligence', 'AI Chatbot & Voice Assistant Development', 'AI Fraud Detection & Security', 'AI Content Moderation & Safety', 'AI Supply Chain Optimization', 'AI Process Automation', 'AI Analytics Platform', 'AI Chatbot Development', 'AI Drug Discovery Platform', 'AI Climate Modeling & Prediction', 'AI Space Exploration Solutions', 'AI Neuroscience Research Platform', 'AI Robotics & Automation', 'AI Financial Trading Platform', 'AI Weather Prediction & Climate Modeling', 'AI Mental Health & Wellness Platform', 'AI Legal Research & Analysis Platform', 'AI Sports Analytics & Performance Platform', 'AI Education Personalization Platform', 'AI Energy Optimization & Smart Grid', 'AI Cybersecurity Threat Intelligence', 'AI Augmented Reality Solutions', 'Other'
+    // Micro SaaS Services
+    'AI Content Generator Pro', 'Social Media Scheduler Pro', 'Email Marketing Automation Suite', 'Smart Invoice Management', 'Time Tracking & Productivity Suite', 'CRM & Sales Pipeline Manager', 'Smart Appointment Booking', 'Inventory & POS System', 'Document Management & Collaboration', 'Survey & Feedback Platform', 'Expense Management & Reimbursement', 'Smart Project Manager', 'Inventory Tracker Pro', 'AI Support Assistant', 'AI Video Editor Pro', 'AI Voice Cloning Studio', 'AI Code Reviewer Pro', 'AI Meeting Transcriber & Analyzer', 'AI Personal Finance Manager', 'AI Health & Wellness Coach', 'AI Language Learning Tutor', 'AI Interior Design Studio', 'AI Job Matching Platform', 'AI Social Media Analyzer', 'Smart Expense Tracker', 'AI Lead Scoring Platform', 'Time Tracking Analytics Pro', 'Website Speed Optimizer', 'API Monitoring Platform', 'Business Password Manager', 'Advanced Form Builder', 'Screenshot API Service', 'AI Email Responder Pro', 'Mobile-First Survey Platform', 'Industry-Specific Productivity Planner', 'Smart Event Management Dashboard', 'AI SEO Content Optimizer', 'AI Talent Matching Platform', 'AI Recruiting Platform', 'Quantum Computing Solutions', // IT Services
+    'Cloud Migration Expert', 'Multi-Cloud Strategy & Management', 'Container Orchestration & Kubernetes', 'Serverless Architecture Implementation', 'Network Security & Infrastructure Audit', 'Database Optimization & Migration', 'API Gateway & Microservices Management', 'Disaster Recovery & Business Continuity', 'IT Infrastructure Monitoring & Management', 'Identity & Access Management (IAM)', 'Cybersecurity Assessment', 'DevOps Automation Suite', 'Data Backup & Recovery', 'Kubernetes Orchestration', 'API Gateway & Management', 'Database Performance Optimization', 'Network Security Audit', 'Disaster Recovery Planning', 'Microservices Architecture Design', 'Application Performance Monitoring', 'Identity & Access Management', 'Quantum Cloud Computing Solutions', 'Metaverse Infrastructure & Development', 'Autonomous Systems Development', 'Digital Twin Platform Development', 'Cyber-Physical Systems Integration', 'Neuromorphic Computing Solutions', 'Satellite Communication Systems', 'Advanced Biometric Security Systems', 'Edge Computing Solutions', 'Blockchain Infrastructure & Development', 'Zero Trust Security Architecture', '5G Network Implementation & Optimization', 'Hyperautomation Platform', // AI Services
+    'Custom AI Model Development', 'Computer Vision & Image Recognition', 'Natural Language Processing (NLP)', 'Predictive Analytics & Forecasting', 'AI-Powered Recommendation Engine', 'AI-Powered Workflow Automation', 'AI Data Analytics & Business Intelligence', 'AI Chatbot & Voice Assistant Development', 'AI Fraud Detection & Security', 'AI Content Moderation & Safety', 'AI Supply Chain Optimization', 'AI Process Automation', 'AI Analytics Platform', 'AI Chatbot Development', 'AI Drug Discovery Platform', 'AI Climate Modeling & Prediction', 'AI Space Exploration Solutions', 'AI Neuroscience Research Platform', 'AI Robotics & Automation', 'AI Financial Trading Platform', 'AI Weather Prediction & Climate Modeling', 'AI Mental Health & Wellness Platform', 'AI Legal Research & Analysis Platform', 'AI Sports Analytics & Performance Platform', 'AI Education Personalization Platform', 'AI Energy Optimization & Smart Grid', 'AI Cybersecurity Threat Intelligence', 'AI Augmented Reality Solutions', 'Other'
+  ]
+  return (
     <MainLayout
-      title='Contact Us - Zion Tech Group';
-:pages.disabled_auto/contact.tsx;
-      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We;
-  're here to help transform your business.';
-      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business.'';
-    >;
+      title='Contact Us - Zion Tech Group'
+:pages.disabled_auto/contact.tsx
+      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We
+  're here to help transform your business.'
+      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business.''
+    >
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>
-:pages.disabled_auto/contact.tsx;
-              Lets Build Something Amazing Together;
-              Let&apos;s Build Something Amazing Together';
+:pages.disabled_auto/contact.tsx
+              Lets Build Something Amazing Together
+              Let&apos;s Build Something Amazing Together'
             </h1>
             <p className='text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed'>
-              Ready to transform your business with cutting-edge technology?;
-              Get in touch with our expert team today.;
+              Ready to transform your business with cutting-edge technology?
+              Get in touch with our expert team today.
             </p>
           </div>
         </div>
@@ -298,24 +94,24 @@ const ContactPage: NextPage = () => {;
       <section className='py-20'>
         <div className='container mx-auto px-4'>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>
-            {contactInfo.map((info, index) => (;
+            {contactInfo.map((info, index) => (
               <div key={index} className='text-center p-6 rounded-lg hover: shadow-lg transition-shadow'>
                 <div className='text-blue-600 mb-4 flex justify-center'>{info.icon}</div>
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{info.title}</h3>
-                {info.link ? (;
+                {info.link ? (
                   <a
                     href={info.link}
-                    className='text-gray-600 hover:text-blue-600 transition-colors';
-                    target={info.link.startsWith(;
-  'http') ?;
+                    className='text-gray-600 hover:text-blue-600 transition-colors'
+                    target={info.link.startsWith(
+  'http') ?
   '_blank' : undefined}
-                    rel={info.link.startsWith(;
-  'http') ?;
+                    rel={info.link.startsWith(
+  'http') ?
   'noopener noreferrer' : undefined}
-                  >;
+                  >
                     {info.details}
                   </a>
-                ) : (;
+                ) : (
                   <p className='text-gray-600'>{info.details}</p>
                 )}
               </div>
@@ -331,131 +127,131 @@ const ContactPage: NextPage = () => {;
             <div className='bg-white rounded-lg shadow-lg p-8'>
               <h2 className='text-3xl font-bold text-gray-900 mb-6'>Send Us a Message</h2>
               {submitStatus ===
-  'success' && (;
+  'success' && (
                 <div className='bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6'>
-:pages.disabled_auto/contact.tsx;
-                  Thank you for your message! We;
-  'll get back to you within 24 hours.;
-                  Thank you for your message! We&apos;ll get back to you within 24 hours.';
+:pages.disabled_auto/contact.tsx
+                  Thank you for your message! We
+  'll get back to you within 24 hours.
+                  Thank you for your message! We&apos;ll get back to you within 24 hours.'
                 </div>
               )}
-;
-              {submitStatus === 'error';
-  ' && (';
+
+              {submitStatus === 'error'
+  ' && ('
                 <div className='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6'>
-                  There was an error sending your message. Please try again or contact us directly.;
+                  There was an error sending your message. Please try again or contact us directly.
                 </div>
               )}
-;
+
               <form onSubmit={handleSubmit} className='space-y-6'>
                 <div className='grid md: grid-cols-2 gap-6'>
                   <div>
                     <label htmlFor='name' className='block text-sm font-medium text-gray-700 mb-2'>
-                      Full Name *;
+                      Full Name *
                     </label>
                     <input
-                      type='text';
-                      id='name';
-                      name='name';
+                      type='text'
+                      id='name'
+                      name='name'
                       value={formData.name}
                       onChange={handleInputChange}
-                      required;
-                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
-                      placeholder='Your full name';
-                    />;
+                      required
+                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                      placeholder='Your full name'
+                    />
                   </div>
                   <div>
                     <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-2'>
-                      Email Address *;
+                      Email Address *
                     </label>
                     <input
-                      type='email';
-                      id='email';
-                      name='email';
+                      type='email'
+                      id='email'
+                      name='email'
                       value={formData.email}
                       onChange={handleInputChange}
-                      required;
-                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
-                      placeholder='your.email@company.com';
-                    />;
+                      required
+                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                      placeholder='your.email@company.com'
+                    />
                   </div>
                 </div>
                 <div className='grid md:grid-cols-2 gap-6'>
                   <div>
                     <label htmlFor='company' className='block text-sm font-medium text-gray-700 mb-2'>
-                      Company;
+                      Company
                     </label>
                     <input
-                      type='text';
-                      id='company';
-                      name='company';
+                      type='text'
+                      id='company'
+                      name='company'
                       value={formData.company}
                       onChange={handleInputChange}
-                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
-                      placeholder='Your company name';
-                    />;
+                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                      placeholder='Your company name'
+                    />
                   </div>
                   <div>
                     <label htmlFor='phone' className='block text-sm font-medium text-gray-700 mb-2'>
-                      Phone Number;
+                      Phone Number
                     </label>
                     <input
-                      type='tel';
-                      id='phone';
-                      name='phone';
+                      type='tel'
+                      id='phone'
+                      name='phone'
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
-                      placeholder='+1 (555) 123-4567';
-                    />;
+                      className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                      placeholder='+1 (555) 123-4567'
+                    />
                   </div>
                 </div>
                 <div>
                   <label htmlFor='service' className='block text-sm font-medium text-gray-700 mb-2'>
-                    Service of Interest;
+                    Service of Interest
                   </label>
                   <select
-                    id='service';
-                    name='service';
+                    id='service'
+                    name='service'
                     value={formData.service}
                     onChange={handleInputChange}
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
-                  >;
+                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'
+                  >
                     <option value=''>Select a service</option>
-                    {services.map((service, index) => (;
+                    {services.map((service, index) => (
                       <option key={index} value={service}>{service}</option>
                     ))}
                   </select>
                 </div>
                 <div>
                   <label htmlFor='message' className='block text-sm font-medium text-gray-700 mb-2'>
-                    Message *;
+                    Message *
                   </label>
                   <textarea
-                    id='message';
-                    name='message';
+                    id='message'
+                    name='message'
                     value={formData.message}
                     onChange={handleInputChange}
-                    required;
+                    required
                     rows={6}
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
-                    placeholder='Tell us about your project or how we can help...';
-                  />;
+                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent'
+                    placeholder='Tell us about your project or how we can help...'
+                  />
                 </div>
                 <button
-                  type='submit';
+                  type='submit'
                   disabled={isSubmitting}
-                  className='w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center';
-                >;
-                  {isSubmitting ? (;
-                    <>;
+                  className='w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center'
+                >
+                  {isSubmitting ? (
+                    <>
                       <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
-                      Sending...;
+                      Sending...
 </>
-                  ) : (;
-                    <>;
+                  ) : (
+                    <>
                       <Send className='w-5 h-5 mr-2' />
-                      Send Message;
+                      Send Message
 </>
                   )}
                 </button>
@@ -466,12 +262,12 @@ const ContactPage: NextPage = () => {;
               <div>
                 <h2 className='text-3xl font-bold text-gray-900 mb-6'>Get in Touch</h2>
                 <p className='text-lg text-gray-600 mb-6'>
-                  We&aposre here to help you transform your business with cutting-edge technology solutions. '';
-                  Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.;
+                  We&aposre here to help you transform your business with cutting-edge technology solutions. ''
+                  Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.
                 </p>
                 <p className='text-gray-600'>
-                  Contact us today to schedule a free consultation and discover how we can help;
-                  you achieve your business goals.;
+                  Contact us today to schedule a free consultation and discover how we can help
+                  you achieve your business goals.
                 </p>
               </div>
               <div className='bg-white rounded-lg shadow-lg p-6'>
@@ -502,11 +298,11 @@ const ContactPage: NextPage = () => {;
               <div className='bg-blue-50 rounded-lg p-6'>
                 <h3 className='text-xl font-semibold text-gray-900 mb-4'>Quick Response Guarantee</h3>
                 <p className='text-gray-600 mb-4'>
-:pages.disabled_auto/contact.tsx;
-                  We understand that time is valuable. That;
-  's why we guarantee a response within 24 hours;
-                  We understand that time is valuable. That&apos;s why we guarantee a response within 24 hours ';
-                  for all inquiries.;
+:pages.disabled_auto/contact.tsx
+                  We understand that time is valuable. That
+  's why we guarantee a response within 24 hours
+                  We understand that time is valuable. That&apos;s why we guarantee a response within 24 hours '
+                  for all inquiries.
                 </p>
                 <div className='flex items-center text-blue-600'>
                   <MessageSquare className='w-5 h-5 mr-2' />
@@ -523,17 +319,17 @@ const ContactPage: NextPage = () => {;
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>Visit Our Office</h2>
             <p className='text-lg text-gray-600'>
-              Located in the heart of Delaware, our office is easily accessible and ready to welcome you.;
+              Located in the heart of Delaware, our office is easily accessible and ready to welcome you.
             </p>
           </div>
           <div className='bg-gray-200 rounded-lg h-96 flex items-center justify-center'>
             <div className='text-center'>
               <MapPin className='w-16 h-16 text-gray-400 mx-auto mb-4' />
               <p className='text-gray-600 text-lg'>
-                Interactive map coming soon;
+                Interactive map coming soon
               </p>
               <p className='text-gray-500 mt-2'>
-                364 E Main St STE 1008, Middletown DE 19709;
+                364 E Main St STE 1008, Middletown DE 19709
               </p>
             </div>
           </div>
@@ -544,29 +340,29 @@ const ContactPage: NextPage = () => {;
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Get Started?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
-            Don&apos;t wait to transform your business. Contact us today and let&apos;s discuss how we can help;
-            you achieve your technology goals.;
+            Don&apos;t wait to transform your business. Contact us today and let&apos;s discuss how we can help
+            you achieve your technology goals.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
             <a
-              href='tel:+13024640950';
-              className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center';
-            >;
+              href='tel:+13024640950'
+              className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center'
+            >
               <Phone className='mr-2 w-5 h-5' />
-              Call +1 302 464 0950;
+              Call +1 302 464 0950
             </a>
             <a
-              href='mailto:kleber@ziontechgroup.com';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center';
-            >;
+              href='mailto:kleber@ziontechgroup.com'
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center'
+            >
               <Mail className='mr-2 w-5 h-5' />
-              Send Email;
+              Send Email
             </a>
           </div>
         </div>
       </section>
     </MainLayout>
-  );
-};
-;
-export default ContactPage;
+  )
+}
+
+export default ContactPage

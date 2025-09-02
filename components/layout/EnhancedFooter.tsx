@@ -1,4 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3;
+ursor/automate-test-fix-improve-and-merge-code-48f3
   return (    <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
       <div className='container mx-auto px-4 py-12'>
@@ -12,8 +12,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
               <div className='text-xl font-bold'>Zion Tech Group</div>
             </div>
             <p className='text-gray-300 mb-4'>
-              Leading technology solutions provider helping businesses transform their digital presence;
-              with cutting-edge AI, cloud architecture, and innovative development services.;
+              Leading technology solutions provider helping businesses transform their digital presence
+              with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className='flex space-x-4'>
               <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
@@ -36,36 +36,36 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <ul className='space-y-2'>
               <li>
                 <Link href='/services/ai-services' className='text-gray-300 hover:text-white transition-colors'>
-                  AI Services;
+                  AI Services
                 </Link>              </li>
               <li>
                 <Link href='/services/it-services' className='text-gray-300 hover:text-white transition-colors'>
-                  IT Services;
+                  IT Services
                 </Link>
               </li>
               <li>
                 <Link href='/services/micro-saas' className='text-gray-300 hover:text-white transition-colors'>
-                  Micro SaaS;
+                  Micro SaaS
                 </Link>
               </li>
               <li>
                 <Link href='/services/ai-ops-copilot' className='text-gray-300 hover:text-white transition-colors'>
-                  AI Ops Copilot;
+                  AI Ops Copilot
                 </Link>
               </li>
               <li>
                 <Link href='/services/security-copilot' className='text-gray-300 hover:text-white transition-colors'>
-                  Security Copilot;
+                  Security Copilot
                 </Link>
               </li>
               <li>
                 <Link href='/services/data-platform' className='text-gray-300 hover:text-white transition-colors'>
-                  Data Platform;
+                  Data Platform
                 </Link>
               </li>
               <li>
                 <Link href='/services/martech-automation' className='text-gray-300 hover:text-white transition-colors'>
-                  MarTech Automation;
+                  MarTech Automation
                 </Link>
               </li>
             </ul>
@@ -76,21 +76,21 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <ul className='space-y-2'>
               <li>
                 <Link href='/solutions/enterprise' className='text-gray-300 hover:text-white transition-colors'>
-                  Enterprise Solutions;
+                  Enterprise Solutions
                 </Link>              </li>
               <li>
                 <Link href='/solutions/small-business' className='text-gray-300 hover:text-white transition-colors'>
-                  Small Business;
+                  Small Business
                 </Link>
               </li>
               <li>
                 <Link href='/solutions/startups' className='text-gray-300 hover:text-white transition-colors'>
-                  Startups;
+                  Startups
                 </Link>
               </li>
               <li>
                 <Link href='/solutions' className='text-gray-300 hover:text-white transition-colors'>
-                  Solutions Overview;
+                  Solutions Overview
                 </Link>
               </li>
             </ul>
@@ -101,21 +101,21 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <ul className='space-y-2 mb-6'>
               <li>
                 <Link href='/about' className='text-gray-300 hover:text-white transition-colors'>
-                  About Us;
+                  About Us
                 </Link>              </li>
               <li>
                 <Link href='/careers' className='text-gray-300 hover:text-white transition-colors'>
-                  Careers;
+                  Careers
                 </Link>
               </li>
               <li>
                 <Link href='/blog' className='text-gray-300 hover:text-white transition-colors'>
-                  Blog;
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link href='/products' className='text-gray-300 hover:text-white transition-colors'>
-                  Products;
+                  Products
                 </Link>
               </li>
             </ul>
@@ -124,7 +124,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
               <div className='flex items-center space-x-2'>
                 <Mail className='w-4 h-4 text-blue-400' />
                 <a href='mailto:info@ziontechgroup.com' className='text-gray-300 hover:text-white transition-colors'>
-                  info@ziontechgroup.com;
+                  info@ziontechgroup.com
                 </a>
               </div>
               <div className='flex items-center space-x-2'>
@@ -146,12 +146,12 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <p className='text-gray-300 mb-4'>Subscribe to our newsletter for the latest tech insights and updates.</p>
             <div className='flex max-w-md mx-auto'>
               <input
-                type='email';
-                placeholder='Enter your email';
-                className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500';
-              />;
+                type='email'
+                placeholder='Enter your email'
+                className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500'
+              />
               <button className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors'>
-                Subscribe;
+                Subscribe
               </button>
             </div>          </div>
         </div>
@@ -161,23 +161,23 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         <div className='container mx-auto px-4'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <p className='text-gray-300 text-sm'>
-              &copy 2024 Zion Tech Group. All rights reserved.;
+              &copy 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0'>
               <Link href='/privacy' className='text-gray-300 hover:text-white text-sm transition-colors'>
-                Privacy Policy;
+                Privacy Policy
               </Link>
               <Link href='/terms' className='text-gray-300 hover:text-white text-sm transition-colors'>
-                Terms of Service;
+                Terms of Service
               </Link>
               <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'>
-                Sitemap;
+                Sitemap
               </Link>
             </div>          </div>
         </div>
       </div>
     </footer>
-  );
-};
-;
-export default EnhancedFooter;
+  )
+}
+
+export default EnhancedFooter

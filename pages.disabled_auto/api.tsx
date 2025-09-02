@@ -1,141 +1,54 @@
-:pages.disabled_auto/api.tsx;
-import React from,;
-  react';
-import type { NextPage } from;
-  'next';
-import MainLayout from;
-  '../components/layout/MainLayout';
-import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
-  'lucide-react';
-import Link from;
-  'next/link';
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {;
-  Code,;
-  Key,;
-  Globe,;
-  Database,;
-  Shield,;
-  Zap,;
-  BookOpen,;
-  ExternalLink,;
-} from 'lucide-react';
-import Link from 'next/link';
-
-const API: NextPage = () => {;
+:pages.disabled_auto/api.tsx
+import React from, react'
+import type { NextPage } from
+  'next'
+import MainLayout from
+  '../components/layout/MainLayout'
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
+  'lucide-react'
+import Link from
+  'next/link'
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink, } from 'lucide-react'
+import Link from 'next/link'
+const API: NextPage = () => {
   const apiEndpoints = [
-    {;
-:pages.disabled_auto/api.tsx;
-      method:;
-  'GET,;
-      endpoint:,;
-  /api/v1/users',;
-      description: 'Retrieve user information,;
-      category:,;
-  Users';
-    },;
-    {;
-      method: 'POST,;
-      endpoint:,;
-  /api/v1/users',;
-      description: 'Create a new user,;
-      category:,;
-  Users';
-    },;
-    {;
-      method: 'GET,;
-      endpoint:,;
-  /api/v1/projects',;
-      description: 'List all projects,;
-      category:,;
-  Projects';
-    },;
-    {;
-      method: 'POST,;
-      endpoint:,;
-  /api/v1/projects',;
-      description: 'Create a new project,;
-      category:,;
-  Projects';
-    },;
-    {;
-      method: 'GET,;
-      endpoint:,;
-  /api/v1/analytics',;
-      description: 'Get analytics data,;
-      category:,;
-  Analytics';
-    },;
-    {;
-      method: 'POST,;
-      endpoint:,;
-  /api/v1/webhooks',;
-      description: 'Create a webhook,;
-      category:,;
-  Webhooks';
+    {
+:pages.disabled_auto/api.tsx
+      method:
+  'GET, endpoint:, /api/v1/users', description: 'Retrieve user information, category:, Users'
+    }, {
+      method: 'POST, endpoint:, /api/v1/users', description: 'Create a new user, category:, Users'
+    }, {
+      method: 'GET, endpoint:, /api/v1/projects', description: 'List all projects, category:, Projects'
+    }, {
+      method: 'POST, endpoint:, /api/v1/projects', description: 'Create a new project, category:, Projects'
+    }, {
+      method: 'GET, endpoint:, /api/v1/analytics', description: 'Get analytics data, category:, Analytics'
+    }, {
+      method: 'POST, endpoint:, /api/v1/webhooks', description: 'Create a webhook, category:, Webhooks'
     }
-  ];
+  ]
   const sdkLanguages = [
-    { name: 'JavaScript, version:,;
-  2.1.0', icon: '🟨 },;
-    { name:,;
-  Python', version: '1.8.2, icon:,;
-  🐍' },;
-    { name: 'PHP, version:,;
-  1.5.0', icon: '🐘 },;
-    { name:,;
-  Java', version: '1.3.0, icon:,;
-  ☕' },;
-    { name: 'Go, version:,;
-  1.2.0', icon: '🐹 },;
-    { name:,;
-  Ruby', version: '1.1.0, icon:;
+    { name: 'JavaScript, version:, 2.1.0', icon: '🟨 }, { name:, Python', version: '1.8.2, icon:, 🐍' }, { name: 'PHP, version:, 1.5.0', icon: '🐘 }, { name:, Java', version: '1.3.0, icon:, ☕' }, { name: 'Go, version:, 1.2.0', icon: '🐹 }, { name:, Ruby', version: '1.1.0, icon:
   '💎' }
-      method: 'GET',;
-      endpoint: '/api/v1/users',;
-      description: 'Retrieve user information',;
-      category: 'Users'},;
-    {;
-      method: 'POST',;
-      endpoint: '/api/v1/users',;
-      description: 'Create a new user',;
-      category: 'Users'},;
-    {;
-      method: 'GET',;
-      endpoint: '/api/v1/projects',;
-      description: 'List all projects',;
-      category: 'Projects'},;
-    {;
-      method: 'POST',;
-      endpoint: '/api/v1/projects',;
-      description: 'Create a new project',;
-      category: 'Projects'},;
-    {;
-      method: 'GET',;
-      endpoint: '/api/v1/analytics',;
-      description: 'Get analytics data',;
-      category: 'Analytics'},;
-    {;
-      method: 'POST',;
-      endpoint: '/api/v1/webhooks',;
-      description: 'Create a webhook',;
-      category: 'Webhooks'}];
-;
+      method: 'GET', endpoint: '/api/v1/users', description: 'Retrieve user information', category: 'Users'}, {
+      method: 'POST', endpoint: '/api/v1/users', description: 'Create a new user', category: 'Users'}, {
+      method: 'GET', endpoint: '/api/v1/projects', description: 'List all projects', category: 'Projects'}, {
+      method: 'POST', endpoint: '/api/v1/projects', description: 'Create a new project', category: 'Projects'}, {
+      method: 'GET', endpoint: '/api/v1/analytics', description: 'Get analytics data', category: 'Analytics'}, {
+      method: 'POST', endpoint: '/api/v1/webhooks', description: 'Create a webhook', category: 'Webhooks'}]
+
   const sdkLanguages = [
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' },;
-    { name: 'Python', version: '1.8.2', icon: '🐍' },;
-    { name: 'PHP', version: '1.5.0', icon: '🐘' },;
-    { name: 'Java', version: '1.3.0', icon: '☕' },;
-    { name: 'Go', version: '1.2.0', icon: '🐹' },;
-    { name: 'Ruby', version: '1.1.0', icon: '💎' }];
-;
-  return (;
+    { name: 'JavaScript', version: '2.1.0', icon: '🟨' }, { name: 'Python', version: '1.8.2', icon: '🐍' }, { name: 'PHP', version: '1.5.0', icon: '🐘' }, { name: 'Java', version: '1.3.0', icon: '☕' }, { name: 'Go', version: '1.2.0', icon: '🐹' }, { name: 'Ruby', version: '1.1.0', icon: '💎' }]
+
+  return (
     <MainLayout
-      title='API Reference - Zion Tech Group';
-      description='Complete API reference and documentation for Zion Tech Group services.';
-    >;
+      title='API Reference - Zion Tech Group'
+      description='Complete API reference and documentation for Zion Tech Group services.'
+    >
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4 text-center'>
@@ -143,14 +56,14 @@ const API: NextPage = () => {;
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>API Reference</span>
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Complete API documentation for integrating with Zion Tech Group services.;
+            Complete API documentation for integrating with Zion Tech Group services.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4'>
             <button className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors'>
-              Get API Key;
+              Get API Key
             </button>
             <Link href='/documentation' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-              View Documentation;
+              View Documentation
             </Link>
           </div>
         </div>
@@ -161,7 +74,7 @@ const API: NextPage = () => {;
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>API Overview</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our RESTful API provides programmatic access to all Zion Tech Group services.;
+              Our RESTful API provides programmatic access to all Zion Tech Group services.
             </p>
           </div>
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto'>
@@ -195,21 +108,21 @@ const API: NextPage = () => {;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center'>
                 <Key className='w-8 h-8 text-blue-600 mr-3' />
-                Authentication;
+                Authentication
               </h2>
               <p className='text-xl text-gray-600'>
-                Secure your API requests with our authentication methods.;
+                Secure your API requests with our authentication methods.
               </p>
             </div>
             <div className='bg-white p-8 rounded-lg shadow-lg'>
               <h3 className='text-2xl font-semibold text-gray-900 mb-6'>API Key Authentication</h3>
               <p className='text-gray-600 mb-6'>
-                Include your API key in the Authorization header of your requests:;
+                Include your API key in the Authorization header of your requests:
               </p>
               <div className='bg-gray-900 text-green-400 p-6 rounded-lg mb-6 overflow-x-auto'>
                 <pre className='text-sm'>
-{`curl -H 'Authorization: Bearer YOUR_API_KEY' \\;
-     -H 'Content-Type: application/json' \\;
+{`curl -H 'Authorization: Bearer YOUR_API_KEY' \\
+     -H 'Content-Type: application/json' \\
      https://api.ziontechgroup.com/v1/users`}
                 </pre>
               </div>
@@ -244,7 +157,7 @@ const API: NextPage = () => {;
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>API Endpoints</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Explore our comprehensive API endpoints organized by category.;
+              Explore our comprehensive API endpoints organized by category.
             </p>
           </div>
           <div className='max-w-6xl mx-auto'>
@@ -260,10 +173,10 @@ const API: NextPage = () => {;
                     </tr>
                   </thead>
                   <tbody className='bg-white divide-y divide-gray-200'>
-                    {apiEndpoints.map((endpoint, index) => (;
+                    {apiEndpoints.map((endpoint, index) => (
                       <tr key={index} className='hover: bg-gray-50'>
                         <td className='px-6 py-4 whitespace-nowrap'>
-:pages.disabled_auto/api.tsx;
+:pages.disabled_auto/api.tsx
                             {endpoint.method}
                           </span>
                         </td>
@@ -293,11 +206,11 @@ const API: NextPage = () => {;
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>Software Development Kits</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Use our official SDKs to integrate with our API in your preferred programming language.;
+              Use our official SDKs to integrate with our API in your preferred programming language.
             </p>
           </div>
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'>
-            {sdkLanguages.map((sdk, index) => (;
+            {sdkLanguages.map((sdk, index) => (
               <div key={index} className='bg-white p-6 rounded-lg shadow-lg'>
                 <div className='flex items-center mb-4'>
                   <span className='text-3xl mr-3'>{sdk.icon}</span>
@@ -308,10 +221,10 @@ const API: NextPage = () => {;
                 </div>
                 <div className='flex space-x-3'>
                   <button className='flex-1 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors'>
-                    Install;
+                    Install
                   </button>
                   <Link href={`/docs/sdk/${sdk.name.toLowerCase()}`} className='flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50 px-4 py-2 rounded-lg font-semibold transition-colors text-center'>
-                    Docs;
+                    Docs
                   </Link>
                 </div>
               </div>
@@ -325,7 +238,7 @@ const API: NextPage = () => {;
           <div className='text-center mb-12'>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>Interactive API Explorer</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Test our API endpoints directly in your browser.;
+              Test our API endpoints directly in your browser.
             </p>
           </div>
           <div className='max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg'>
@@ -344,13 +257,13 @@ const API: NextPage = () => {;
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>API Key</label>
                   <input
-                    type='password';
-                    placeholder='Enter your API key';
-                    className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500';
-                  />;
+                    type='password'
+                    placeholder='Enter your API key'
+                    className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  />
                 </div>
                 <button className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors'>
-                  Send Request;
+                  Send Request
                 </button>
               </div>
             </div>
@@ -361,23 +274,23 @@ const API: NextPage = () => {;
       <section className='py-16 bg-blue-600'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-3xl font-bold text-white mb-6'>
-            Need API Support?;
+            Need API Support?
           </h2>
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-            Our developer support team is here to help you integrate with our API.;
+            Our developer support team is here to help you integrate with our API.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4'>
             <Link href='/help' className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-              API Support;
+              API Support
             </Link>
             <Link href='/contact' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-              Contact Us;
+              Contact Us
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-  );
-};
-;
-export default API;
+  )
+}
+
+export default API

@@ -1,15 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import EnhancedMainPage from './EnhancedMainPage';
+import { render, screen } from '@testing-library/react'
+import EnhancedMainPage from './EnhancedMainPage'
+describe('EnhancedMainPage', () => {
+  it('renders without crashing', () => {
+    render(<EnhancedMainPage />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
-describe('EnhancedMainPage', () => {;
-  it('renders without crashing', () => {;
-    render(<EnhancedMainPage />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-;
-  it('displays expected content', () => {;
-    render(<EnhancedMainPage />);
-    // Add specific test assertions based on component content;
-  });
-});
-;
+  it('displays expected content', () => {
+    render(<EnhancedMainPage />)
+    // Add specific test assertions based on component content
+  })
+})

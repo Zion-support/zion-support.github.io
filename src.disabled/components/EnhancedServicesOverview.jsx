@@ -1,2 +1,0 @@
-
-'const ServiceCategory = ({ category, services }) => {'';;''";

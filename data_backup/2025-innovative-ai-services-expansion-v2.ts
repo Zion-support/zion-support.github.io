@@ -1101,4 +1101,4 @@ color: 'from-gray-500 to-slate-600,
         rating: 4.8,
     reviews: 67
 
-];}
+]}

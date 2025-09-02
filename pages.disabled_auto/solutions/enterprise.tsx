@@ -1,53 +1,45 @@
-:pages/solutions/enterprise.tsx;
-import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-:pages.disabled_auto/solutions/enterprise.tsx;
-import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';
-import type { NextPage } from;
-  'next';
-import Layout from;
-  '../../components/Layout';
-import Link from;
-  'next/link';
-import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
-  'lucide-react';
-import {;
-  Building,;
-  Users,;
-  Shield,;
-  Zap,;
-  Database,;
-  Globe,;
-  CheckCircle,;
-} from 'lucide-react';
-;
-const EnterpriseSolutions: NextPage = () => {;
+:pages/solutions/enterprise.tsx
+import type { NextPage } from 'next'
+import Layout from '../../components/Layout'
+import Link from 'next/link'
+:pages.disabled_auto/solutions/enterprise.tsx
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react'
+import type { NextPage } from
+  'next'
+import Layout from
+  '../../components/Layout'
+import Link from
+  'next/link'
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
+  'lucide-react'
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle, } from 'lucide-react'
+
+const EnterpriseSolutions: NextPage = () => {
   return (
     <Layout
-      title='Enterprise Solutions - Zion Tech Group';
-      description='Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.';
-    >;
+      title='Enterprise Solutions - Zion Tech Group'
+      description='Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.'
+    >
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4 text-center'>
           <h1 className='text-5xl md: text-6xl font-bold mb-6'>
-            Enterprise;
+            Enterprise
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Transform your enterprise with scalable, secure, and innovative technology solutions.;
-            We help large organizations modernize their IT infrastructure and drive digital transformation.;
+            Transform your enterprise with scalable, secure, and innovative technology solutions.
+            We help large organizations modernize their IT infrastructure and drive digital transformation.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>
             <Link href='/contact'>
               <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-                Transform Your Enterprise;
+                Transform Your Enterprise
               </a>
             </Link>
             <Link href='/solutions'>
               <a className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-                View All Solutions;
+                View All Solutions
               </a>
             </Link>
           </div>
@@ -59,7 +51,7 @@ const EnterpriseSolutions: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Technology Solutions</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Comprehensive solutions designed to meet the complex needs of large organizations and enterprises.;
+              Comprehensive solutions designed to meet the complex needs of large organizations and enterprises.
             </p>
           </div>
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -69,7 +61,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Digital Transformation</h3>
               <p className='text-gray-600 mb-4'>
-                End-to-end digital transformation strategies to modernize your enterprise operations.;
+                End-to-end digital transformation strategies to modernize your enterprise operations.
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Legacy System Modernization</li>
@@ -84,7 +76,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Enterprise Applications</h3>
               <p className='text-gray-600 mb-4'>
-                Custom enterprise applications designed for scalability, security, and performance.;
+                Custom enterprise applications designed for scalability, security, and performance.
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• ERP Systems</li>
@@ -99,7 +91,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Enterprise Security</h3>
               <p className='text-gray-600 mb-4'>
-                Comprehensive security solutions to protect your enterprise data and infrastructure.;
+                Comprehensive security solutions to protect your enterprise data and infrastructure.
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Identity Management</li>
@@ -114,7 +106,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Data & Analytics</h3>
               <p className='text-gray-600 mb-4'>
-                Advanced data analytics and business intelligence solutions for enterprise decision-making.;
+                Advanced data analytics and business intelligence solutions for enterprise decision-making.
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Big Data Processing</li>
@@ -129,7 +121,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Cloud Migration</h3>
               <p className='text-gray-600 mb-4'>
-                Strategic cloud migration services for enterprise-scale applications and infrastructure.;
+                Strategic cloud migration services for enterprise-scale applications and infrastructure.
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Multi-Cloud Strategy</li>
@@ -144,7 +136,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Global Infrastructure</h3>
               <p className='text-gray-600 mb-4'>
-                Worldwide infrastructure solutions for enterprises with global operations.;
+                Worldwide infrastructure solutions for enterprises with global operations.
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Multi-Region Deployment</li>
@@ -162,7 +154,7 @@ const EnterpriseSolutions: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Challenges We Solve</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We understand the unique challenges faced by large organizations and provide targeted solutions.;
+              We understand the unique challenges faced by large organizations and provide targeted solutions.
             </p>
           </div>
           <div className='grid md:grid-cols-2 gap-12'>
@@ -183,18 +175,18 @@ const EnterpriseSolutions: NextPage = () => {;
                     <span className='text-red-600 text-sm font-bold'>2</span>
                   </div>
                   <div>
-:pages.disabled_auto/solutions/enterprise.tsx;
+:pages.disabled_auto/solutions/enterprise.tsx
                     <h4 className='text-lg font-semibold mb-2'>Scalability Issues</h4>
-                    <p className='text-gray-600'>Systems that can;
+                    <p className='text-gray-600'>Systems that can
   't handle growth and increased user demands effectively.</p>
                     <h4 className='text-lg font-semibold mb-2'>
-                      Scalability Issues;
+                      Scalability Issues
                     </h4>
                     <p className='text-gray-600'>
-                      Systems that can&apos;t handle growth and increased user;
-                      demands effectively.;
+                      Systems that can&apos;t handle growth and increased user
+                      demands effectively.
                     </p>
-                    ';
+                    '
                   </div>
                 </div>
                 <div className='flex items-start space-x-4'>
@@ -267,7 +259,7 @@ const EnterpriseSolutions: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our Enterprise Engagement Process</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              A proven methodology for successful enterprise transformation with minimal business disruption.;
+              A proven methodology for successful enterprise transformation with minimal business disruption.
             </p>
           </div>
           <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -277,7 +269,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Assessment</h3>
               <p className='text-gray-600'>
-                Comprehensive analysis of your current systems, processes, and business objectives.;
+                Comprehensive analysis of your current systems, processes, and business objectives.
               </p>
             </div>
             <div className='text-center'>
@@ -286,7 +278,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Strategy</h3>
               <p className='text-gray-600'>
-                Development of a detailed transformation roadmap aligned with your business goals.;
+                Development of a detailed transformation roadmap aligned with your business goals.
               </p>
             </div>
             <div className='text-center'>
@@ -295,7 +287,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Implementation</h3>
               <p className='text-gray-600'>
-                Phased implementation with continuous testing and minimal business disruption.;
+                Phased implementation with continuous testing and minimal business disruption.
               </p>
             </div>
             <div className='text-center'>
@@ -304,7 +296,7 @@ const EnterpriseSolutions: NextPage = () => {;
               </div>
               <h3 className='text-xl font-semibold mb-4'>Optimization</h3>
               <p className='text-gray-600'>
-                Continuous monitoring, optimization, and support for ongoing success.;
+                Continuous monitoring, optimization, and support for ongoing success.
               </p>
             </div>
           </div>
@@ -316,7 +308,7 @@ const EnterpriseSolutions: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Industries We Serve</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our enterprise solutions are tailored to meet the unique challenges of various industries.;
+              Our enterprise solutions are tailored to meet the unique challenges of various industries.
             </p>
           </div>
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -353,7 +345,7 @@ const EnterpriseSolutions: NextPage = () => {;
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our Enterprise Solutions?</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We combine enterprise expertise with innovative technology to deliver solutions that drive real business value.;
+              We combine enterprise expertise with innovative technology to deliver solutions that drive real business value.
             </p>
           </div>
           <div className='grid md: grid-cols-2 gap-12 items-center'>
@@ -392,11 +384,11 @@ const EnterpriseSolutions: NextPage = () => {;
             <div className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white'>
               <h3 className='text-2xl font-bold mb-4'>Ready to Transform?</h3>
               <p className='mb-6 text-blue-100'>
-                Let&apos;s discuss how our enterprise solutions can modernize your organization and drive growth.'';
+                Let&apos;s discuss how our enterprise solutions can modernize your organization and drive growth.''
               </p>
               <Link href='/contact'>
                 <a className='bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>
-                  Schedule a Consultation;
+                  Schedule a Consultation
                 </a>
               </Link>
             </div>
@@ -408,25 +400,25 @@ const EnterpriseSolutions: NextPage = () => {;
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Enterprise?</h2>
           <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>
-            Join leading enterprises that have already transformed their operations with Zion Tech Group.;
-            Let&aposs build the future of your business together.'';
+            Join leading enterprises that have already transformed their operations with Zion Tech Group.
+            Let&aposs build the future of your business together.''
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>
             <Link href='/contact'>
               <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-                Transform Your Enterprise;
+                Transform Your Enterprise
               </a>
             </Link>
             <Link href='/solutions'>
               <a className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
-                Explore All Solutions;
+                Explore All Solutions
               </a>
             </Link>
           </div>
         </div>
       </section>
     </Layout>
-  );
-};
-;
-export default EnterpriseSolutions;
+  )
+}
+
+export default EnterpriseSolutions

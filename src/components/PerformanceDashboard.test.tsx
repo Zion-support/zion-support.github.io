@@ -1,15 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import PerformanceDashboard from './PerformanceDashboard';
+import { render, screen } from '@testing-library/react'
+import PerformanceDashboard from './PerformanceDashboard'
+describe('PerformanceDashboard', () => {
+  it('renders without crashing', () => {
+    render(<PerformanceDashboard />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
-describe('PerformanceDashboard', () => {;
-  it('renders without crashing', () => {;
-    render(<PerformanceDashboard />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-;
-  it('displays expected content', () => {;
-    render(<PerformanceDashboard />);
-    // Add specific test assertions based on component content;
-  });
-});
-;
+  it('displays expected content', () => {
+    render(<PerformanceDashboard />)
+    // Add specific test assertions based on component content
+  })
+})

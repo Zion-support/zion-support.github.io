@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  service: string;
-  message: string;
+  name: string
+  email: string
+  company: string
+  service: string
+  message: string
 }
 
 const ContactForm: React.FC = () => {
@@ -16,32 +15,29 @@ const ContactForm: React.FC = () => {
     company: '',
     service: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
+    e.preventDefault()
+    setIsSubmitting(true)
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setIsSubmitted(true)
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
   if (isSubmitted) {
     return (
       <div className='bg-green-50 border border-green-200 rounded-xl p-8 text-center'>
@@ -53,7 +49,7 @@ const ContactForm: React.FC = () => {
           Thank you for reaching out. We&apos;ll get back to you within 24 hours.
         </p>
       </div>
-    );
+    )
   }
 
   return (
@@ -200,7 +196,6 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-  );
-};
-
-export default ContactForm;
+  )
+}
+export default ContactForm

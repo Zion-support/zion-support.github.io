@@ -1,9 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
-const InfrastructureServices: React.FC = () => {;
+import React from 'react'
+import { SEO } from '../components/SEO'
+const InfrastructureServices: React.FC = () => {
   return (
-    <>;
+    <>
       <SEO title='InfrastructureServices - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
@@ -12,8 +11,7 @@ const InfrastructureServices: React.FC = () => {;
         </div>
       </div>
     </>
-  );
-};
-;
-export default InfrastructureServices;
-;
+  )
+}
+
+export default InfrastructureServices

@@ -1,46 +1,29 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-
+import Head from 'next/head'
+import { useRouter } from 'next/router'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  keywords?: string[];
-  author?: string;
+  title?: string
+  description?: string
+  image?: string
+  url?: string
+  type?: string
+  keywords?: string[]
+  author?: string
 }
-;
+
 const defaultSEO = {
-  title: 'Zion Tech Group - Leading Technology Solutions Provider',;
-  description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.',;
-  image: '/images/og-image.jpg',;
-  type: 'website',;
-  keywords: [;
-    'AI solutions',;
-    'quantum computing',;
-    'blockchain',;
-    'cloud infrastructure',;
-    'software development',;
-    'technology consulting';
-  ],;
-  author: 'Zion Tech Group';
-};
-;
-const EnhancedSEO: React.FC<SEOProps> = ({;
-  title = defaultSEO.title,;
-  description = defaultSEO.description,;
-  image = defaultSEO.image,;
-  url,;
-  type = defaultSEO.type,;
-  keywords = defaultSEO.keywords,;
-  author = defaultSEO.author;
-}) => {;
-  const router = useRouter();
-  const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;
-  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-;
-  return (;
+  title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: '/images/og-image.jpg', type: 'website', keywords: [
+    'AI solutions', 'quantum computing', 'blockchain', 'cloud infrastructure', 'software development', 'technology consulting'
+  ], author: 'Zion Tech Group'
+}
+
+const EnhancedSEO: React.FC<SEOProps> = ({
+  title = defaultSEO.title, description = defaultSEO.description, image = defaultSEO.image, url, type = defaultSEO.type, keywords = defaultSEO.keywords, author = defaultSEO.author
+}) => {
+  const router = useRouter()
+  const currentUrl = url || `https://ziontechgroup.com${router.asPath}`
+  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
+
+  return (
     <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
@@ -64,34 +47,19 @@ const EnhancedSEO: React.FC<SEOProps> = ({;
       <link rel='canonical' href={currentUrl} />
       {/* Structured Data */}
       <script
-        type='application/ld+json';
-        dangerouslySetInnerHTML={{;
-          __html: JSON.stringify({;
-            '@context': 'https://schema.org',;
-            '@type': 'Organization',;
-            'name': 'Zion Tech Group',;
-            'url': 'https://ziontechgroup.com',;
-            'logo': 'https://ziontechgroup.com/images/logo.png',;
-            'description': description,;
-            'address': {;
-              '@type': 'PostalAddress',;
-              'streetAddress': '364 E Main St STE 1008',;
-              'addressLocality': 'Middletown',;
-              'addressRegion': 'DE',;
-              'postalCode': '19709',;
-              'addressCountry': 'US';
-            },;
-            'contactPoint': {;
-              '@type': 'ContactPoint',;
-              'telephone': '+1-302-464-0950',;
-              'contactType': 'customer service',;
-              'email': 'kleber@ziontechgroup.com';
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org', '@type': 'Organization', 'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com', 'logo': 'https://ziontechgroup.com/images/logo.png', 'description': description, 'address': {
+              '@type': 'PostalAddress', 'streetAddress': '364 E Main St STE 1008', 'addressLocality': 'Middletown', 'addressRegion': 'DE', 'postalCode': '19709', 'addressCountry': 'US'
+            }, 'contactPoint': {
+              '@type': 'ContactPoint', 'telephone': '+1-302-464-0950', 'contactType': 'customer service', 'email': 'kleber@ziontechgroup.com'
             }
-          });
+          })
         }}
-      />;
+      />
     </Head>
-  );
-};
-;
-export default EnhancedSEO;
+  )
+}
+
+export default EnhancedSEO

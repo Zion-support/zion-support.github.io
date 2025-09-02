@@ -1,9 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
-const TransformationServices: React.FC = () => {;
+import React from 'react'
+import { SEO } from '../components/SEO'
+const TransformationServices: React.FC = () => {
   return (
-    <>;
+    <>
       <SEO title='TransformationServices - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
@@ -12,8 +11,7 @@ const TransformationServices: React.FC = () => {;
         </div>
       </div>
     </>
-  );
-};
-;
-export default TransformationServices;
-;
+  )
+}
+
+export default TransformationServices

@@ -1,15 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import EnhancedHero from './EnhancedHero';
+import { render, screen } from '@testing-library/react'
+import EnhancedHero from './EnhancedHero'
+describe('EnhancedHero', () => {
+  it('renders without crashing', () => {
+    render(<EnhancedHero />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
-describe('EnhancedHero', () => {;
-  it('renders without crashing', () => {;
-    render(<EnhancedHero />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-;
-  it('displays expected content', () => {;
-    render(<EnhancedHero />);
-    // Add specific test assertions based on component content;
-  });
-});
-;
+  it('displays expected content', () => {
+    render(<EnhancedHero />)
+    // Add specific test assertions based on component content
+  })
+})

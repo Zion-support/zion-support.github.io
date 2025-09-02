@@ -56,10 +56,14 @@
     "build:production": "NODE_ENV=production npm run build:optimized",
     "build:fast": "NEXT_TELEMETRY_DISABLED=1 next build --no-lint",
     "dev:optimized": "NEXT_TELEMETRY_DISABLED=1 next dev --turbo",
-    "start:optimized": "NODE_ENV=production next start -p 3000"
+    "start:optimized": "NODE_ENV=production next start -p 3000",
+    "clean:console": "node scripts/clean-console-logs.js",
+    "clean:repo": "node scripts/cleanup-repository.js",
+    "optimize:perf": "node scripts/optimize-performance.js",
+    "optimize:all": "npm run clean:repo && npm run clean:console && npm run optimize:perf"
   },
   "dependencies": {
-    "@esbuild/linux-x64": "^0.25.9",
+
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",

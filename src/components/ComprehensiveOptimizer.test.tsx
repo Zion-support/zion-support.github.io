@@ -1,15 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import ComprehensiveOptimizer from './ComprehensiveOptimizer';
+import { render, screen } from '@testing-library/react'
+import ComprehensiveOptimizer from './ComprehensiveOptimizer'
+describe('ComprehensiveOptimizer', () => {
+  it('renders without crashing', () => {
+    render(<ComprehensiveOptimizer />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
-describe('ComprehensiveOptimizer', () => {;
-  it('renders without crashing', () => {;
-    render(<ComprehensiveOptimizer />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-;
-  it('displays expected content', () => {;
-    render(<ComprehensiveOptimizer />);
-    // Add specific test assertions based on component content;
-  });
-});
-;
+  it('displays expected content', () => {
+    render(<ComprehensiveOptimizer />)
+    // Add specific test assertions based on component content
+  })
+})

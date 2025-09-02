@@ -1,65 +1,55 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react'
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState('normal');
-  const [reducedMotion, setReducedMotion] = useState(false);
-
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [fontSize, setFontSize] = useState('normal')
+  const [reducedMotion, setReducedMotion] = useState(false)
   useEffect(() => {
     // Check for user's motion preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setReducedMotion(prefersReducedMotion);
-
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    setReducedMotion(prefersReducedMotion)
     // Apply accessibility settings from localStorage
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = localStorage.getItem('fontSize') || 'normal';
-
-    setIsHighContrast(savedHighContrast);
-    setFontSize(savedFontSize);
-    setReducedMotion(prefersReducedMotion);
-    
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true'
+    const savedFontSize = localStorage.getItem('fontSize') || 'normal'
+    setIsHighContrast(savedHighContrast)
+    setFontSize(savedFontSize)
+    setReducedMotion(prefersReducedMotion)
     // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
-  }, []);
-
+    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion)
+  }, [])
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
-    const root = document.documentElement;
-
+    const root = document.documentElement
     // High contrast mode
     if (highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast')
     } else {
-      root.classList.remove('high-contrast');
+      root.classList.remove('high-contrast')
     }
 
     // Font size adjustments
-    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
-    root.classList.add(`font-${fontSize}`);
-
+    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large')
+    root.classList.add(`font-${fontSize}`)
     // Reduced motion
     if (reducedMotion) {
-      root.classList.add('reduced-motion');
+      root.classList.add('reduced-motion')
     } else {
-      root.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion')
     }
-  };
-
+  }
   const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
-
+    const newValue = !isHighContrast
+    setIsHighContrast(newValue)
+    localStorage.setItem('highContrast', newValue.toString())
+    applyAccessibilityStyles(newValue, fontSize, reducedMotion)
+  }
   const changeFontSize = (newSize: string) => {
-    setFontSize(newSize);
-    localStorage.setItem('fontSize', newSize);
-    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
+    setFontSize(newSize)
+    localStorage.setItem('fontSize', newSize)
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)
+  }
   return (
     <>
       {/* Accessibility Controls */}
@@ -123,83 +113,82 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       <style jsx global>{`
         /* High contrast mode */
         .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
+          --tw-bg-opacity: 1
+          --tw-text-opacity: 1
         }
 
         .high-contrast * {
-          background-color: white !important;
-          color: black !important;
-          border-color: black !important;
+          background-color: white !important
+          color: black !important
+          border-color: black !important
         }
         
         .high-contrast button, .high-contrast a {
-          border: 2px solid black !important;
+          border: 2px solid black !important
         }
         
         .high-contrast button:hover, .high-contrast a:hover {
-          background-color: black !important;
-          color: white !important;
+          background-color: black !important
+          color: white !important
         }
 
         /* Font size adjustments */
         .font-small {
-          font-size: 0.875rem;
+          font-size: 0.875rem
         }
 
         .font-normal {
-          font-size: 1rem;
+          font-size: 1rem
         }
 
         .font-large {
-          font-size: 1.125rem;
+          font-size: 1.125rem
         }
 
         .font-extra-large {
-          font-size: 1.25rem;
+          font-size: 1.25rem
         }
 
         /* Reduced motion */
         .reduced-motion *, .reduced-motion *::before,
         .reduced-motion *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important
+          animation-iteration-count: 1 !important
+          transition-duration: 0.01ms !important
+          scroll-behavior: auto !important
         }
 
         /* Focus indicators */
         *:focus {
-          outline: 2px solid #3b82f6 !important;
-          outline-offset: 2px !important;
+          outline: 2px solid #3b82f6 !important
+          outline-offset: 2px !important
         }
 
         /* Screen reader only content */
         .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
+          position: absolute
+          width: 1px
+          height: 1px
+          padding: 0
+          margin: -1px
+          overflow: hidden
+          clip: rect(0, 0, 0, 0)
+          white-space: nowrap
+          border: 0
         }
 
         .focus\\:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
+          position: static
+          width: auto
+          height: auto
+          padding: inherit
+          margin: inherit
+          overflow: visible
+          clip: auto
+          white-space: normal
         }
       `}</style>
     </>
-  );
-};
-
-export default AccessibilityEnhancer;
+  )
+}
+export default AccessibilityEnhancer

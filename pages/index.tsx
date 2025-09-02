@@ -1,19 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
-
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { SEO } from '../components/SEO'
+import { Button } from '../components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Badge } from '../components/ui/Badge'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react'
 export default function Home() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
-  ];
+  ]
   const services = [
     {
       title: 'AI Services',
@@ -33,7 +32,7 @@ export default function Home() {
       icon: Cloud,
       href: '/micro-saas'
     }
-  ];
+  ]
   return (
     <>
       <Head>
@@ -71,5 +70,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  );
+  )
 }

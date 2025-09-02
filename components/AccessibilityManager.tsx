@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react'
 interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: 'small' | 'normal' | 'large' | 'xlarge';
-  reducedMotion: boolean;
-  focusVisible: boolean;
-  screenReader: boolean;
+  highContrast: boolean
+  fontSize: 'small' | 'normal' | 'large' | 'xlarge'
+  reducedMotion: boolean
+  focusVisible: boolean
+  screenReader: boolean
 }
 
 const AccessibilityManager: React.FC = () => {
@@ -15,95 +14,84 @@ const AccessibilityManager: React.FC = () => {
     reducedMotion: false,
     focusVisible: false,
     screenReader: false
-  });
-
-  const [isOpen, setIsOpen] = useState(false);
-
+  })
+  const [isOpen, setIsOpen] = useState(false)
   useEffect(() => {
     // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
     // Load saved settings
-    const savedSettings = localStorage.getItem('accessibility-settings');
+    const savedSettings = localStorage.getItem('accessibility-settings')
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
+      setSettings(JSON.parse(savedSettings))
     } else {
       setSettings(prev => ({
         ...prev,
         reducedMotion: prefersReducedMotion,
         highContrast: prefersHighContrast
-      }));
+      }))
     }
 
     // Detect screen reader
-    const hasScreenReader = window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
-    setSettings(prev => ({ ...prev, screenReader: hasScreenReader }));
-  }, []);
-
+    const hasScreenReader = window.speechSynthesis && window.speechSynthesis.getVoices().length > 0
+    setSettings(prev => ({ ...prev, screenReader: hasScreenReader }))
+  }, [])
   useEffect(() => {
     // Apply accessibility settings
-    const root = document.documentElement;
-
+    const root = document.documentElement
     // High contrast
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast')
     } else {
-      root.classList.remove('high-contrast');
+      root.classList.remove('high-contrast')
     }
 
     // Font size
-    root.setAttribute('data-font-size', settings.fontSize);
-
+    root.setAttribute('data-font-size', settings.fontSize)
     // Reduced motion
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
+      root.classList.add('reduced-motion')
     } else {
-      root.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion')
     }
 
     // Focus visible
     if (settings.focusVisible) {
-      root.classList.add('focus-visible');
+      root.classList.add('focus-visible')
     } else {
-      root.classList.remove('focus-visible');
+      root.classList.remove('focus-visible')
     }
 
     // Save settings
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
-
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))
+  }, [settings])
   const updateSetting = <K extends keyof AccessibilitySettings>(
     key: K,
     value: AccessibilitySettings[K]
   ) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
-  };
-
+    setSettings(prev => ({ ...prev, [key]: value }))
+  }
   const announceToScreenReader = (message: string) => {
     if (settings.screenReader) {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-
+      const announcement = document.createElement('div')
+      announcement.setAttribute('aria-live', 'polite')
+      announcement.setAttribute('aria-atomic', 'true')
+      announcement.className = 'sr-only'
+      announcement.textContent = message
+      document.body.appendChild(announcement)
       setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
+        document.body.removeChild(announcement)
+      }, 1000)
     }
-  };
-
+  }
   const handleToggle = (key: keyof AccessibilitySettings, value: boolean) => {
-    updateSetting(key, value);
-    announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`);
-  };
-
+    updateSetting(key, value)
+    announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`)
+  }
   const handleFontSizeChange = (size: AccessibilitySettings['fontSize']) => {
-    updateSetting('fontSize', size);
-    announceToScreenReader(`Font size changed to ${size}`);
-  };
+    updateSetting('fontSize', size)
+    announceToScreenReader(`Font size changed to ${size}`)
+  }
   return (
     <>
       {/* Accessibility Controls */}
@@ -211,7 +199,6 @@ const AccessibilityManager: React.FC = () => {
         <p>This website includes accessibility features to ensure all users can access our content.</p>
       </div>
     </>
-  );
-};
-
-export default AccessibilityManager;
+  )
+}
+export default AccessibilityManager

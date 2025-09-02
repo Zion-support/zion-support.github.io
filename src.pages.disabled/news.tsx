@@ -1,9 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
-const News: React.FC = () => {;
+import React from 'react'
+import { SEO } from '../components/SEO'
+const News: React.FC = () => {
   return (
-    <>;
+    <>
       <SEO title='News - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
@@ -12,8 +11,7 @@ const News: React.FC = () => {;
         </div>
       </div>
     </>
-  );
-};
-;
-export default News;
-;
+  )
+}
+
+export default News

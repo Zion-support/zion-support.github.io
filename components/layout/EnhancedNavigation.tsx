@@ -1,7 +1,7 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
-  return (;
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
+  return (
     <nav className='bg-white shadow-lg sticky top-0 z-50'>
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center py-4'>
@@ -17,127 +17,127 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             <Link href='/' className='text-gray-600 hover:text-blue-600 transition-colors'>
-              Home;
+              Home
             </Link>
             {/* Services Dropdown */}
             <div className='relative group'>
-              <button;
-                className='flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors';
+              <button
+                className='flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors'
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-              >;
+              >
                 <span>Services</span>
                 <ChevronDown className='w-4 h-4' />
               </button>
-              <div;
+              <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-              >;
+              >
                 <Link href='/services/ai-services' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  AI Services;
+                  AI Services
                 </Link>
                 <Link href='/services/it-services' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  IT Services;
+                  IT Services
                 </Link>
                 <Link href='/services/micro-saas' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  Micro SaaS;
+                  Micro SaaS
                 </Link>
                 <Link href='/services/ai-ops-copilot' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
                   AI Ops Copilot                </Link>
                 <Link href='/services/security-copilot' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  Security Copilot;
+                  Security Copilot
                 </Link>
                 <Link href='/services/data-platform' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  Data Platform;
+                  Data Platform
                 </Link>
                 <Link href='/services/martech-automation' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  MarTech Automation;
+                  MarTech Automation
                 </Link>
               </div>
             </div>
             {/* Solutions Dropdown */}
             <div className='relative group'>
-              <button;
-                className='flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors';
+              <button
+                className='flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors'
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
-              >;
+              >
                 <span>Solutions</span>
                 <ChevronDown className='w-4 h-4' />
               </button>
-              <div;
+              <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
-              >;
+              >
                 <Link href='/solutions' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  Solutions Overview;
+                  Solutions Overview
                 </Link>
                 <Link href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  Enterprise Solutions;
+                  Enterprise Solutions
                 </Link>
                 <Link href='/solutions/small-business' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  Small Business;
+                  Small Business
                 </Link>
                 <Link href='/solutions/startups' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
-                  Startups;
+                  Startups
                 </Link>
                 <Link href='/case-studies' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
                   Case Studies                </Link>
               </div>
             </div>
             <Link href='/about' className='text-gray-700 hover: text-blue-600 transition-colors'>
-              About;
+              About
             </Link>
             <Link href='/contact' className='text-gray-700 hover:text-blue-600 transition-colors'>
-              Contact;
+              Contact
             </Link>
           </div>
           {/* CTA Button */}
           <div className='hidden lg:block'>
             <Link href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>
-              Get Started;
+              Get Started
             </Link>
           </div>
           {/* Mobile menu button */}
-          <button;
-            className='lg:hidden text-gray-600 hover:text-gray-900';
+          <button
+            className='lg:hidden text-gray-600 hover:text-gray-900'
             onClick={() => setIsOpen(!isOpen)}
-          >;
+          >
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
         {/* Mobile Navigation */}
-        {isOpen && (;
+        {isOpen && (
           <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link href='/' className='block py-2 text-gray-600 hover:text-blue-600'>
-                Home;
+                Home
               </Link>
               <div className='py-2'>
                 <div className='text-gray-600 font-semibold mb-2'>Services</div>
                 <div className='pl-4 space-y-2'>
                   <Link href='/services/ai-development' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    AI Development;
+                    AI Development
                   </Link>
                   <Link href='/services/cloud-services' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Cloud Services;
+                    Cloud Services
                   </Link>
                   <Link href='/services/web-development' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Web Development;
+                    Web Development
                   </Link>
                   <Link href='/services/mobile-development' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Mobile Development;
+                    Mobile Development
                   </Link>
                   <Link href='/services/blockchain-solutions' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Blockchain Solutions;
+                    Blockchain Solutions
                   </Link>
                   <Link href='/services/iot-platforms' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    IoT Platforms;
+                    IoT Platforms
                   </Link>
                   <Link href='/services/cybersecurity' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Cybersecurity;
+                    Cybersecurity
                   </Link>
                 </div>
               </div>
@@ -145,47 +145,47 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <div className='text-gray-600 font-semibold mb-2'>Solutions</div>
                 <div className='pl-4 space-y-2'>
                   <Link href='/solutions/enterprise' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Enterprise Solutions;
+                    Enterprise Solutions
                   </Link>
                   <Link href='/solutions/small-business' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Small Business;
+                    Small Business
                   </Link>
                   <Link href='/solutions/startups' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Startups;
+                    Startups
                   </Link>
                   <Link href='/solutions/healthcare' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Healthcare;
+                    Healthcare
                   </Link>
                   <Link href='/solutions/finance' className='block py-1 text-gray-500 hover:text-blue-600'>
-                    Finance;
+                    Finance
                   </Link>
                 </div>
               </div>
               <Link href='/products' className='block py-2 text-gray-600 hover:text-blue-600'>
-                Products;
+                Products
               </Link>
               <Link href='/about' className='block py-2 text-gray-600 hover:text-blue-600'>
-                About;
+                About
               </Link>
               <Link href='/blog' className='block py-2 text-gray-600 hover:text-blue-600'>
-                Blog;
+                Blog
               </Link>
               <Link href='/careers' className='block py-2 text-gray-600 hover:text-blue-600'>
-                Careers;
+                Careers
               </Link>
               <Link href='/contact' className='block py-2 text-gray-600 hover:text-blue-600'>
-                Contact;
+                Contact
               </Link>
               <div className='pt-4'>
                 <Link href='/contact' className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center'>
-                  Get Started;
+                  Get Started
                 </Link>
               </div>            </div>
           </div>
         )}
       </div>
     </nav>
-  );
-};
-;
-export default EnhancedNavigation;
+  )
+}
+
+export default EnhancedNavigation

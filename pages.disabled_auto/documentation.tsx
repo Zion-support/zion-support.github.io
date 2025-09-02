@@ -1,84 +1,54 @@
-:pages.disabled_auto/documentation.tsx;
-import React from;
-  'react';
-import type { NextPage } from;
-  'next';
-import MainLayout from;
-  '../components/layout/MainLayout';
-import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from;
-  'lucide-react';
-import Link from;
-  'next/link';
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {;
-  Book,;
-  Code,;
-  Database,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Download,;
-  ExternalLink,;
-} from 'lucide-react';
-import Link from 'next/link';
-
-const Documentation: NextPage = () => {;
+:pages.disabled_auto/documentation.tsx
+import React from
+  'react'
+import type { NextPage } from
+  'next'
+import MainLayout from
+  '../components/layout/MainLayout'
+import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
+  'lucide-react'
+import Link from
+  'next/link'
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink, } from 'lucide-react'
+import Link from 'next/link'
+const Documentation: NextPage = () => {
   const docCategories = [
-    {;
-      icon: Book,;
-      title:,;
-  Getting Started',;
-      description: 'Quick start guides and basic setup instructions,;
-      articles: [;
-:pages.disabled_auto/documentation.tsx;
-        { title:,;
-  Introduction to Zion Tech Group', href: '/docs/introduction },;
-        { title:,;
-  Account Setup', href: '/docs/account-setup },;
-        { title:,;
-  First Steps', href: '/docs/first-steps },;
-        { title:,;
-  Basic Configuration', href: '/docs/basic-config }
-      ];
-        {;
-          title: 'Introduction to Zion Tech Group',;
-          href: '/docs/introduction'},;
-        { title: 'Account Setup', href: '/docs/account-setup' },;
-        { title: 'First Steps', href: '/docs/first-steps' },;
-        { title: 'Basic Configuration', href: '/docs/basic-config' }]},;
-    {;
-      icon: Code,;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-      articles: [;
-:pages.disabled_auto/documentation.tsx;
-      icon: Cloud,;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-      articles: [;
-:pages.disabled_auto/documentation.tsx;
-      icon: Shield,;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-      articles: [;
-:pages.disabled_auto/documentation.tsx;
-      icon: Zap,;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-      articles: [;
-:pages.disabled_auto/documentation.tsx;
-  return (;
+    {
+      icon: Book, title:, Getting Started', description: 'Quick start guides and basic setup instructions, articles: [
+:pages.disabled_auto/documentation.tsx
+        { title:, Introduction to Zion Tech Group', href: '/docs/introduction }, { title:, Account Setup', href: '/docs/account-setup }, { title:, First Steps', href: '/docs/first-steps }, { title:, Basic Configuration', href: '/docs/basic-config }
+      ]
+        {
+          title: 'Introduction to Zion Tech Group', href: '/docs/introduction'}, { title: 'Account Setup', href: '/docs/account-setup' }, { title: 'First Steps', href: '/docs/first-steps' }, { title: 'Basic Configuration', href: '/docs/basic-config' }]}, {
+      icon: Code, ursor/automate-test-fix-improve-and-merge-code-48f3
+      articles: [
+:pages.disabled_auto/documentation.tsx
+      icon: Cloud, ursor/automate-test-fix-improve-and-merge-code-48f3
+      articles: [
+:pages.disabled_auto/documentation.tsx
+      icon: Shield, ursor/automate-test-fix-improve-and-merge-code-48f3
+      articles: [
+:pages.disabled_auto/documentation.tsx
+      icon: Zap, ursor/automate-test-fix-improve-and-merge-code-48f3
+      articles: [
+:pages.disabled_auto/documentation.tsx
+  return (
     <MainLayout
-      title='Documentation - Zion Tech Group';
-      description='Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and technical resources to help you succeed.';
-      keywords='documentation, API reference, guides, tutorials, technical documentation, developer resources';
-    >;
+      title='Documentation - Zion Tech Group'
+      description='Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and technical resources to help you succeed.'
+      keywords='documentation, API reference, guides, tutorials, technical documentation, developer resources'
+    >
       <div className='min-h-screen bg-gray-50'>
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
           <div className='container mx-auto px-4 text-center'>
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>Documentation</h1>
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
-              Comprehensive guides, API references, and technical resources to help you;
-              make the most of our services and build amazing solutions.;
+              Comprehensive guides, API references, and technical resources to help you
+              make the most of our services and build amazing solutions.
             </p>
           </div>
         </section>
@@ -86,12 +56,12 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         <section className='py-8 bg-white border-b'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-wrap justify-center gap-4'>
-              {quickLinks.map((link, index) => (;
+              {quickLinks.map((link, index) => (
                 <Link
                   key={index}
                   href={link.href}
-                  className='flex items-center px-4 py-2 bg-gray-100 hover: bg-gray-200 rounded-lg transition-colors';
-                >;
+                  className='flex items-center px-4 py-2 bg-gray-100 hover: bg-gray-200 rounded-lg transition-colors'
+                >
                   <link.icon className='w-4 h-4 mr-2' />
                   {link.title}
                 </Link>
@@ -105,17 +75,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4'>Documentation Categories</h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                Browse our documentation organized by topic and complexity level.;
+                Browse our documentation organized by topic and complexity level.
               </p>
             </div>
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
-              {docCategories.map((category, index) => (;
+              {docCategories.map((category, index) => (
                 <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow'>
                   <category.icon className='w-12 h-12 text-blue-600 mb-4' />
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{category.title}</h3>
                   <p className='text-gray-600 mb-4'>{category.description}</p>
                   <ul className='space-y-2'>
-                    {category.articles.map((article, idx) => (;
+                    {category.articles.map((article, idx) => (
                       <li key={idx}>
                         <Link href={article.href} className='text-blue-600 hover: text-blue-700 text-sm flex items-center'>
                           {article.title}
@@ -135,7 +105,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4'>Getting Started</h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                New to our platform? Start here with our essential guides and tutorials.;
+                New to our platform? Start here with our essential guides and tutorials.
               </p>
             </div>
             <div className='max-w-4xl mx-auto'>
@@ -144,19 +114,19 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   <div>
                     <h3 className='text-xl font-semibold text-gray-900 mb-4'>Quick Start Guide</h3>
                     <p className='text-gray-600 mb-4'>
-                      Get up and running in minutes with our step-by-step quick start guide.;
+                      Get up and running in minutes with our step-by-step quick start guide.
                     </p>
                     <Link href='/docs/quick-start' className='text-blue-600 font-semibold hover:text-blue-700'>
-                      Start Here →;
+                      Start Here →
                     </Link>
                   </div>
                   <div>
                     <h3 className='text-xl font-semibold text-gray-900 mb-4'>API Overview</h3>
                     <p className='text-gray-600 mb-4'>
-                      Learn about our API capabilities and how to integrate with our services.;
+                      Learn about our API capabilities and how to integrate with our services.
                     </p>
                     <Link href='/docs/api/overview' className='text-blue-600 font-semibold hover:text-blue-700'>
-                      View API Docs →;
+                      View API Docs →
                     </Link>
                   </div>
                 </div>
@@ -170,7 +140,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4'>Additional Resources</h2>
               <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                Explore additional resources to enhance your development experience.;
+                Explore additional resources to enhance your development experience.
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto'>
@@ -179,7 +149,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>SDKs & Libraries</h3>
                 <p className='text-gray-600 text-sm mb-4'>Download our official SDKs and libraries</p>
                 <Link href='/docs/sdks' className='text-blue-600 font-semibold hover:text-blue-700'>
-                  Download →;
+                  Download →
                 </Link>
               </div>
               <div className='bg-gray-50 rounded-lg p-6 text-center'>
@@ -187,7 +157,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>Code Examples</h3>
                 <p className='text-gray-600 text-sm mb-4'>Browse code examples and samples</p>
                 <Link href='/docs/examples' className='text-blue-600 font-semibold hover:text-blue-700'>
-                  View Examples →;
+                  View Examples →
                 </Link>
               </div>
               <div className='bg-gray-50 rounded-lg p-6 text-center'>
@@ -195,7 +165,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>Tutorials</h3>
                 <p className='text-gray-600 text-sm mb-4'>Step-by-step tutorials and guides</p>
                 <Link href='/docs/tutorials' className='text-blue-600 font-semibold hover:text-blue-700'>
-                  Start Learning →;
+                  Start Learning →
                 </Link>
               </div>
               <div className='bg-gray-50 rounded-lg p-6 text-center'>
@@ -203,7 +173,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>Community</h3>
                 <p className='text-gray-600 text-sm mb-4'>Join our developer community</p>
                 <Link href='/community' className='text-blue-600 font-semibold hover:text-blue-700'>
-                  Join Community →;
+                  Join Community →
                 </Link>
               </div>
             </div>
@@ -214,31 +184,31 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
           <div className='container mx-auto px-4 text-center'>
             <h2 className='text-3xl font-bold mb-4'>Need Help?</h2>
             <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto'>
-:pages.disabled_auto/documentation.tsx;
-              Can;
-  't find what you're looking for? Our support team is here to help.;
-              Can&apos;t find what you&apos;re looking for? Our support team is;
-              here to help.;
+:pages.disabled_auto/documentation.tsx
+              Can
+  't find what you're looking for? Our support team is here to help.
+              Can&apos;t find what you&apos;re looking for? Our support team is
+              here to help.
             </p>
             <div className='flex flex-col sm: flex-row justify-center gap-4'>
               <Link
-                href='/help';
-                className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors';
-              >;
-                Contact Support;
+                href='/help'
+                className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              >
+                Contact Support
               </Link>
               <Link
-                href='/faq';
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors';
-              >;
-                View FAQ;
+                href='/faq'
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors'
+              >
+                View FAQ
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-  );
-};
-;
-export default Documentation;
+  )
+}
+
+export default Documentation

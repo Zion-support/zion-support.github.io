@@ -1,13 +1,12 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
-
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react'
 const AIContentGenerator: React.FC = () => {
   return (
     <Layout
-      title='AI Content Generator - Zion Tech Group';
-      description='AI-powered content generation platform that creates high-quality content 10x faster with 95% accuracy.';
-    >;
+      title='AI Content Generator - Zion Tech Group'
+      description='AI-powered content generation platform that creates high-quality content 10x faster with 95% accuracy.'
+    >
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
         <div className='container mx-auto px-4 text-center'>
           <div className='flex justify-center mb-6'>
@@ -16,24 +15,24 @@ const AIContentGenerator: React.FC = () => {
             </div>
           </div>
           <h1 className='text-5xl md:text-6xl font-bold mb-6'>
-            AI Content Generator;
+            AI Content Generator
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Create high-quality content 10x faster with our AI-powered platform.;
-            Generate blogs, social media posts, emails, and more with 95% accuracy.;
+            Create high-quality content 10x faster with our AI-powered platform.
+            Generate blogs, social media posts, emails, and more with 95% accuracy.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4 mb-12'>
             <a
-              href='https://ziontechgroup.com/contact';
-              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Start Free Trial;
+              href='https://ziontechgroup.com/contact'
+              className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'
+            >
+              Start Free Trial
             </a>
             <a
-              href='https://ziontechgroup.com/contact';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Schedule Demo;
+              href='https://ziontechgroup.com/contact'
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'
+            >
+              Schedule Demo
             </a>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>
@@ -61,7 +60,7 @@ const AIContentGenerator: React.FC = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Key Features</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our AI content generator creates high-quality, engaging content for all your marketing needs.;
+              Our AI content generator creates high-quality, engaging content for all your marketing needs.
             </p>
           </div>
           <div className='grid md:grid-cols-2 gap-8'>
@@ -73,20 +72,20 @@ const AIContentGenerator: React.FC = () => {
                 <h3 className='text-2xl font-bold text-gray-900'>Multi-Format Content</h3>
               </div>
               <p className='text-gray-600 mb-6'>
-                Generate blogs, social media posts, emails, product descriptions, and more.;
+                Generate blogs, social media posts, emails, product descriptions, and more.
               </p>
               <ul className='space-y-2'>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Blog articles and posts;
+                  Blog articles and posts
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Social media content;
+                  Social media content
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Email campaigns;
+                  Email campaigns
                 </li>
               </ul>
             </div>
@@ -98,20 +97,20 @@ const AIContentGenerator: React.FC = () => {
                 <h3 className='text-2xl font-bold text-gray-900'>AI-Powered Intelligence</h3>
               </div>
               <p className='text-gray-600 mb-6'>
-                Advanced AI that understands your brand voice and creates personalized content.;
+                Advanced AI that understands your brand voice and creates personalized content.
               </p>
               <ul className='space-y-2'>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Brand voice matching;
+                  Brand voice matching
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  SEO optimization;
+                  SEO optimization
                 </li>
                 <li className='flex items-center text-green-600'>
                   <CheckCircle className='w-5 h-5 mr-2' />
-                  Tone adjustment;
+                  Tone adjustment
                 </li>
               </ul>
             </div>
@@ -123,7 +122,7 @@ const AIContentGenerator: React.FC = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Simple Pricing</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose the plan that fits your content needs.;
+              Choose the plan that fits your content needs.
             </p>
           </div>
           <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
@@ -150,16 +149,16 @@ const AIContentGenerator: React.FC = () => {
                 </li>
               </ul>
               <a
-                href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors';
-              >;
-                Get Started;
+                href='https://ziontechgroup.com/contact'
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'
+              >
+                Get Started
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-xl ring-2 ring-blue-500 relative'>
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                 <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                  Most Popular;
+                  Most Popular
                 </span>
               </div>
               <div className='text-center mb-8'>
@@ -188,10 +187,10 @@ const AIContentGenerator: React.FC = () => {
                 </li>
               </ul>
               <a
-                href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors';
-              >;
-                Get Started;
+                href='https://ziontechgroup.com/contact'
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors'
+              >
+                Get Started
               </a>
             </div>
             <div className='bg-white rounded-2xl p-8 shadow-lg'>
@@ -221,10 +220,10 @@ const AIContentGenerator: React.FC = () => {
                 </li>
               </ul>
               <a
-                href='https://ziontechgroup.com/contact';
-                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors';
-              >;
-                Get Started;
+                href='https://ziontechgroup.com/contact'
+                className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'
+              >
+                Get Started
               </a>
             </div>
           </div>
@@ -234,20 +233,20 @@ const AIContentGenerator: React.FC = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Content Creation?</h2>
           <p className='text-xl mb-8 max-w-3xl mx-auto'>
-            Join thousands of content creators already using our AI platform.;
+            Join thousands of content creators already using our AI platform.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4'>
             <a
-              href='https://ziontechgroup.com/contact';
-              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Start Free Trial;
+              href='https://ziontechgroup.com/contact'
+              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'
+            >
+              Start Free Trial
             </a>
             <a
-              href='tel:+13024640950';
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg';
-            >;
-              Call +1 302 464 0950;
+              href='tel:+13024640950'
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'
+            >
+              Call +1 302 464 0950
             </a>
           </div>
         </div>
@@ -274,7 +273,7 @@ const AIContentGenerator: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
-};
-;
-export default AIContentGenerator;
+  )
+}
+
+export default AIContentGenerator

@@ -1,5 +1,4 @@
-import { SEO } from '../components/SEO';
-
+import { SEO } from '../components/SEO'
 export default function Page() {
 export default function Page() {
 const Services: React.FC = () => {
@@ -12,8 +11,7 @@ const Services: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-;
-export default Services;
-;
+  )
+}
+
+export default Services
