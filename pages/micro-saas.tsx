@@ -31,7 +31,11 @@ import {
   Lock,
   Cpu,
   Network,
-  Terminal
+  Terminal,
+  Mic,
+  Search,
+  Calendar,
+  CreditCard
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -199,6 +203,230 @@ export default function MicroSaaS() {
       pricing: '$3,000 - $10,000/month',
       delivery: '4-7 weeks',
       category: 'Automation SaaS'
+    },
+    {
+      title: 'AI-Powered Social Media Manager',
+      description: 'Intelligent social media management with automated content creation and scheduling',
+      icon: Globe,
+      features: [
+        'AI-generated social media content',
+        'Optimal posting time recommendations',
+        'Hashtag optimization and trending analysis',
+        'Multi-platform scheduling and management',
+        'Engagement analytics and ROI tracking',
+        'Brand voice consistency across platforms'
+      ],
+      pricing: '$1,800 - $6,500/month',
+      delivery: '2-3 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
+      title: 'Smart Inventory Management System',
+      description: 'AI-driven inventory optimization with predictive analytics and automated reordering',
+      icon: Database,
+      features: [
+        'Predictive demand forecasting',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier performance analytics',
+        'Cost optimization recommendations',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$2,500 - $9,000/month',
+      delivery: '3-5 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'Voice-to-Text Meeting Assistant',
+      description: 'Real-time transcription and meeting intelligence with action item extraction',
+      icon: Mic,
+      features: [
+        'Real-time transcription in 50+ languages',
+        'Speaker identification and attribution',
+        'Automatic action item extraction',
+        'Meeting summary generation',
+        'Integration with calendar and CRM systems',
+        'Searchable meeting archives'
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '2-4 weeks',
+      category: 'Meeting SaaS'
+    },
+    {
+      title: 'AI-Powered Lead Scoring Platform',
+      description: 'Intelligent lead qualification and scoring with behavioral analysis',
+      icon: Target,
+      features: [
+        'Behavioral pattern analysis',
+        'Lead scoring algorithms',
+        'Engagement tracking across channels',
+        'Predictive conversion modeling',
+        'CRM integration and automation',
+        'Custom scoring criteria setup'
+      ],
+      pricing: '$2,000 - $7,500/month',
+      delivery: '3-4 weeks',
+      category: 'Sales SaaS'
+    },
+    {
+      title: 'Smart Expense Management',
+      description: 'Automated expense tracking with receipt OCR and policy compliance',
+      icon: CreditCard,
+      features: [
+        'Receipt scanning and OCR extraction',
+        'Automatic expense categorization',
+        'Policy compliance checking',
+        'Approval workflow automation',
+        'Integration with accounting systems',
+        'Real-time expense analytics'
+      ],
+      pricing: '$1,500 - $5,000/month',
+      delivery: '2-3 weeks',
+      category: 'Finance SaaS'
+    },
+    {
+      title: 'AI Customer Feedback Analyzer',
+      description: 'Sentiment analysis and insights from customer feedback across all channels',
+      icon: MessageSquare,
+      features: [
+        'Multi-channel feedback collection',
+        'Sentiment analysis and emotion detection',
+        'Topic modeling and trend identification',
+        'Competitor analysis and benchmarking',
+        'Actionable insight recommendations',
+        'Real-time alert system for issues'
+      ],
+      pricing: '$1,800 - $6,000/month',
+      delivery: '2-4 weeks',
+      category: 'Analytics SaaS'
+    },
+    {
+      title: 'Smart Contract Management',
+      description: 'AI-powered contract lifecycle management with risk assessment',
+      icon: FileText,
+      features: [
+        'Contract template library and generation',
+        'AI-powered risk assessment',
+        'Automated renewal and expiration alerts',
+        'Compliance monitoring and reporting',
+        'Electronic signature integration',
+        'Contract performance analytics'
+      ],
+      pricing: '$3,500 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'AI-Powered SEO Optimizer',
+      description: 'Automated SEO analysis and optimization recommendations',
+      icon: Search,
+      features: [
+        'Automated keyword research and analysis',
+        'Content optimization suggestions',
+        'Technical SEO auditing',
+        'Competitor analysis and benchmarking',
+        'Ranking tracking and reporting',
+        'Local SEO optimization tools'
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '1-2 weeks',
+      category: 'SEO SaaS'
+    },
+    {
+      title: 'Smart Time Tracking & Productivity',
+      description: 'AI-driven time tracking with productivity insights and optimization',
+      icon: Clock,
+      features: [
+        'Automatic time tracking with AI detection',
+        'Productivity pattern analysis',
+        'Distraction blocking and focus modes',
+        'Team productivity benchmarking',
+        'Project time estimation and planning',
+        'Integration with project management tools'
+      ],
+      pricing: '$800 - $3,000/month',
+      delivery: '2-3 weeks',
+      category: 'Productivity SaaS'
+    },
+    {
+      title: 'AI-Powered Email Marketing',
+      description: 'Intelligent email campaign management with personalization and optimization',
+      icon: Mail,
+      features: [
+        'AI-driven email content generation',
+        'Personalization and segmentation',
+        'Send time optimization',
+        'A/B testing automation',
+        'Deliverability monitoring and improvement',
+        'Advanced analytics and ROI tracking'
+      ],
+      pricing: '$1,500 - $5,500/month',
+      delivery: '2-3 weeks',
+      category: 'Marketing SaaS'
+    },
+    {
+      title: 'Smart Learning Management System',
+      description: 'AI-powered LMS with personalized learning paths and progress tracking',
+      icon: Brain,
+      features: [
+        'Personalized learning path creation',
+        'Adaptive content delivery',
+        'Progress tracking and analytics',
+        'Automated assessment and grading',
+        'Skill gap analysis and recommendations',
+        'Integration with HR and performance systems'
+      ],
+      pricing: '$2,500 - $8,500/month',
+      delivery: '4-6 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'AI-Powered Project Estimator',
+      description: 'Intelligent project cost and timeline estimation with risk analysis',
+      icon: BarChart3,
+      features: [
+        'Historical data analysis for accurate estimates',
+        'Risk factor identification and mitigation',
+        'Resource allocation optimization',
+        'Timeline prediction with confidence intervals',
+        'Cost breakdown and budget tracking',
+        'Integration with project management tools'
+      ],
+      pricing: '$2,000 - $7,000/month',
+      delivery: '3-4 weeks',
+      category: 'Project Management SaaS'
+    },
+    {
+      title: 'Smart Customer Onboarding',
+      description: 'Automated customer onboarding with personalized experiences',
+      icon: Users,
+      features: [
+        'Personalized onboarding workflows',
+        'Progress tracking and milestone management',
+        'Automated email sequences and notifications',
+        'In-app guidance and tutorials',
+        'Success metrics and analytics',
+        'Integration with CRM and support systems'
+      ],
+      pricing: '$1,800 - $6,000/month',
+      delivery: '3-4 weeks',
+      category: 'Customer Success SaaS'
+    },
+    {
+      title: 'AI-Powered A/B Testing Platform',
+      description: 'Intelligent experimentation platform with automated test optimization',
+      icon: TrendingUp,
+      features: [
+        'Automated test creation and management',
+        'Statistical significance monitoring',
+        'Multi-variate testing capabilities',
+        'Real-time results and insights',
+        'Automated winner selection',
+        'Integration with analytics and marketing tools'
+      ],
+      pricing: '$1,500 - $5,500/month',
+      delivery: '2-3 weeks',
+      category: 'Testing SaaS'
     }
   ];
 

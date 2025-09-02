@@ -28,7 +28,10 @@ import {
   FileText,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Brain,
+  Eye,
+  TrendingUp
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -164,6 +167,150 @@ export default function ITServices() {
       pricing: '$2,500 - $15,000/month',
       delivery: '2-4 weeks',
       category: 'Managed Services'
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for low-latency applications',
+      icon: Cpu,
+      features: [
+        'Edge server deployment and management',
+        'Content delivery network optimization',
+        'IoT device connectivity and management',
+        'Real-time data processing at the edge',
+        '5G network integration and optimization',
+        'Edge security and compliance management'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'Edge Computing'
+    },
+    {
+      title: 'Blockchain & Web3 Infrastructure',
+      description: 'Blockchain development and Web3 infrastructure services',
+      icon: Lock,
+      features: [
+        'Smart contract development and auditing',
+        'DeFi protocol implementation',
+        'NFT marketplace development',
+        'Blockchain node management',
+        'Cryptocurrency wallet integration',
+        'Web3 application development'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '6-16 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'Machine learning infrastructure and model deployment services',
+      icon: Brain,
+      features: [
+        'ML pipeline development and automation',
+        'Model training and deployment infrastructure',
+        'Data preprocessing and feature engineering',
+        'Model monitoring and performance tracking',
+        'A/B testing for ML models',
+        'MLOps workflow automation'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '4-12 weeks',
+      category: 'AI Infrastructure'
+    },
+    {
+      title: 'Quantum Computing Services',
+      description: 'Quantum computing infrastructure and algorithm development',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and optimization',
+        'Quantum hardware access and management',
+        'Quantum simulation and testing',
+        'Hybrid classical-quantum system integration',
+        'Quantum cryptography implementation',
+        'Quantum machine learning applications'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '8-24 weeks',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'IoT & Smart City Solutions',
+      description: 'Internet of Things infrastructure and smart city implementations',
+      icon: Wifi,
+      features: [
+        'IoT device management and connectivity',
+        'Sensor network deployment and monitoring',
+        'Smart city data analytics platforms',
+        'Environmental monitoring systems',
+        'Traffic management and optimization',
+        'Energy management and sustainability solutions'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-16 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'AR/VR Development & Infrastructure',
+      description: 'Augmented and virtual reality application development and deployment',
+      icon: Eye,
+      features: [
+        'AR/VR application development',
+        '3D modeling and animation services',
+        'Immersive experience design',
+        'AR/VR hardware integration',
+        'Spatial computing solutions',
+        'Metaverse platform development'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '8-20 weeks',
+      category: 'AR/VR Services'
+    },
+    {
+      title: 'Green IT & Sustainability',
+      description: 'Sustainable IT solutions and carbon footprint reduction',
+      icon: Globe,
+      features: [
+        'Carbon footprint assessment and reduction',
+        'Green data center design and optimization',
+        'Renewable energy integration',
+        'Sustainable software development practices',
+        'E-waste management and recycling',
+        'Environmental compliance and reporting'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-12 weeks',
+      category: 'Green IT'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Zero trust network architecture design',
+        'Identity and access management (IAM)',
+        'Micro-segmentation implementation',
+        'Continuous security monitoring',
+        'Privileged access management (PAM)',
+        'Security automation and orchestration'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-16 weeks',
+      category: 'Security Architecture'
+    },
+    {
+      title: '5G Network Implementation',
+      description: '5G network design, deployment, and optimization services',
+      icon: Network,
+      features: [
+        '5G network architecture design',
+        'Small cell deployment and management',
+        'Network slicing implementation',
+        '5G application development',
+        'Performance optimization and monitoring',
+        'Integration with existing infrastructure'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-24 weeks',
+      category: '5G Services'
     }
   ];
 

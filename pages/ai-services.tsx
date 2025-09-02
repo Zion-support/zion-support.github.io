@@ -159,6 +159,182 @@ export default function AIServices() {
       pricing: '$3,500 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Search AI'
+    },
+    {
+      title: 'AI-Powered Fraud Detection',
+      description: 'Advanced fraud detection and prevention using machine learning algorithms',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Risk scoring and assessment',
+        'Adaptive learning algorithms',
+        'False positive reduction',
+        'Compliance reporting and audit trails'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '6-10 weeks',
+      category: 'Security AI'
+    },
+    {
+      title: 'AI Voice Cloning & Synthesis',
+      description: 'High-quality voice synthesis and cloning for personalized audio content',
+      icon: Mic,
+      features: [
+        'Natural voice synthesis in multiple languages',
+        'Voice cloning with minimal training data',
+        'Emotion and tone control',
+        'Real-time voice conversion',
+        'API integration for applications',
+        'Voice authentication and verification'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'Voice AI'
+    },
+    {
+      title: 'AI-Powered Code Generation',
+      description: 'Intelligent code generation and software development assistance',
+      icon: Code,
+      features: [
+        'Automated code generation from natural language',
+        'Code review and optimization suggestions',
+        'Bug detection and fixing recommendations',
+        'Documentation generation',
+        'Multi-language support (Python, JavaScript, Java, etc.)',
+        'Integration with popular IDEs and development tools'
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '3-6 weeks',
+      category: 'Development AI'
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis',
+      description: 'Medical image analysis and diagnostic assistance using deep learning',
+      icon: Eye,
+      features: [
+        'Medical image analysis (X-rays, MRIs, CT scans)',
+        'Disease detection and classification',
+        'Treatment recommendation systems',
+        'Drug interaction analysis',
+        'Patient risk assessment',
+        'HIPAA-compliant data handling'
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics',
+      icon: TrendingUp,
+      features: [
+        'Demand forecasting and planning',
+        'Route optimization and logistics',
+        'Inventory optimization algorithms',
+        'Supplier performance analysis',
+        'Risk assessment and mitigation',
+        'Cost optimization recommendations'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '6-12 weeks',
+      category: 'Supply Chain AI'
+    },
+    {
+      title: 'AI-Powered Personalization Engine',
+      description: 'Real-time personalization for e-commerce and content platforms',
+      icon: Users,
+      features: [
+        'Real-time recommendation systems',
+        'Behavioral pattern analysis',
+        'Dynamic content personalization',
+        'A/B testing automation',
+        'Cross-platform user journey tracking',
+        'Conversion optimization algorithms'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '4-8 weeks',
+      category: 'Personalization AI'
+    },
+    {
+      title: 'AI-Powered Quality Assurance',
+      description: 'Automated quality testing and assurance for software and products',
+      icon: CheckCircle,
+      features: [
+        'Automated test case generation',
+        'Visual regression testing',
+        'Performance testing automation',
+        'Defect prediction and prevention',
+        'Quality metrics and reporting',
+        'Integration with CI/CD pipelines'
+      ],
+      pricing: '$3,500 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'QA AI'
+    },
+    {
+      title: 'AI-Powered Financial Trading',
+      description: 'Algorithmic trading and financial market analysis using AI',
+      icon: BarChart3,
+      features: [
+        'Market trend analysis and prediction',
+        'Automated trading strategies',
+        'Risk management and portfolio optimization',
+        'Real-time market monitoring',
+        'Sentiment analysis of financial news',
+        'Backtesting and strategy validation'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI-Powered Energy Management',
+      description: 'Smart energy optimization and consumption prediction systems',
+      icon: Zap,
+      features: [
+        'Energy consumption prediction and optimization',
+        'Smart grid management',
+        'Renewable energy integration',
+        'Load balancing algorithms',
+        'Cost optimization and savings analysis',
+        'Environmental impact monitoring'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '6-12 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Language Translation',
+      description: 'Real-time, context-aware translation with cultural adaptation',
+      icon: Globe,
+      features: [
+        'Real-time translation in 100+ languages',
+        'Context-aware translation with cultural adaptation',
+        'Document and website translation',
+        'Voice translation and interpretation',
+        'Custom domain-specific translation models',
+        'API integration for applications'
+      ],
+      pricing: '$2,500 - $10,000/month',
+      delivery: '2-4 weeks',
+      category: 'Translation AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity',
+      description: 'Advanced threat detection and cybersecurity automation',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Automated incident response',
+        'Behavioral anomaly detection',
+        'Vulnerability assessment and prioritization',
+        'Security orchestration and automation',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$7,000 - $25,000/month',
+      delivery: '4-8 weeks',
+      category: 'Cybersecurity AI'
     }
   ];
 
