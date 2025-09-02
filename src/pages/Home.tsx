@@ -1,1 +1,20 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react'; import { motion } from 'framer-motion'; import { Link } from 'react-router-dom'; import { SEO } from '../components/SEO'; import { Users, TrendingUp, Award, Globe, Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Play, ChevronLeft, ChevronRight, Rocket, Target, Handshake, Lightbulb, Cpu, Database, Network, Smartphone, Lock, BarChart3, Code, Server, Wifi, ShieldCheck, Globe2, Bot, Workflow, Eye, Sparkles, Phone, Mail, MapPin, Clock, DollarSign, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, FileText, MessageCircle, Search, BarChart, Users2, Settings, Palette, ArrowUpRight, CheckCircle2, Clock3, Target2, Building2, Truck, Scale, BookOpen, Home } from 'lucide-react'; import { SEO } from '@/components/SEO';
+React from
+  'react';
+import { SEO } from
+  '../components/SEO';''const Home: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="Zion Tech Group - Leading Technology Solutions""        description="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.""      />"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">"        <section className="relative py-20 px-4">"          <div className="max-w-7xl mx-auto text-center">"            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">"              Zion Tech Group"            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">"              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"              <a "                href="/services" "                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors""              >"                Our Services</a>
+              <a 
+                href="/contact" "                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors""              >"                Get Started</a>
+            </div>
+          </div>
+        </section>
+      </div>
+</>);
+};
+
+export default Home;
