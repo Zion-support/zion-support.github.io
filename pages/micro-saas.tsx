@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, Eye, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -587,6 +587,244 @@ export default function MicroSaaS() {
       pricing: '$2,500 - $8,000/month',
       delivery: '5-8 weeks',
       category: 'Supply Chain SaaS',
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Detection',
+      description:
+        'Advanced threat detection and response system with machine learning-powered security analytics',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response and remediation',
+        'Zero-day vulnerability identification',
+        'Security posture assessment and recommendations',
+        'Compliance monitoring and reporting',
+      ],
+      pricing: '$1,800 - $6,500/month',
+      delivery: '4-6 weeks',
+      category: 'Cybersecurity SaaS',
+    },
+    {
+      title: 'Smart Manufacturing Quality Control',
+      description:
+        'AI-driven quality control system with computer vision and predictive maintenance',
+      icon: Target,
+      features: [
+        'Real-time quality inspection using computer vision',
+        'Predictive maintenance scheduling',
+        'Defect detection and classification',
+        'Production line optimization',
+        'Quality analytics and reporting',
+        'Integration with manufacturing systems',
+      ],
+      pricing: '$3,000 - $10,000/month',
+      delivery: '5-7 weeks',
+      category: 'Manufacturing SaaS',
+    },
+    {
+      title: 'AI-Powered Customer Churn Prediction',
+      description:
+        'Intelligent customer retention platform with churn prediction and intervention strategies',
+      icon: TrendingUp,
+      features: [
+        'Advanced churn prediction algorithms',
+        'Customer behavior analysis and segmentation',
+        'Automated intervention campaigns',
+        'Retention strategy recommendations',
+        'Customer lifetime value optimization',
+        'Real-time alerts and notifications',
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '3-5 weeks',
+      category: 'Customer Analytics SaaS',
+    },
+    {
+      title: 'Smart Logistics Route Optimization',
+      description:
+        'AI-powered logistics optimization with dynamic routing and delivery management',
+      icon: Network,
+      features: [
+        'Dynamic route optimization with real-time traffic data',
+        'Delivery time prediction and customer notifications',
+        'Fleet utilization optimization',
+        'Fuel consumption and cost tracking',
+        'Driver performance analytics',
+        'Integration with e-commerce platforms',
+      ],
+      pricing: '$1,500 - $5,500/month',
+      delivery: '4-6 weeks',
+      category: 'Logistics SaaS',
+    },
+    {
+      title: 'AI-Powered Content Moderation Platform',
+      description:
+        'Intelligent content moderation with automated detection of inappropriate content',
+      icon: Eye,
+      features: [
+        'Automated content analysis and classification',
+        'Multi-language content moderation',
+        'Image and video content filtering',
+        'Custom moderation rules and policies',
+        'Human review workflow integration',
+        'Compliance and audit reporting',
+      ],
+      pricing: '$800 - $3,200/month',
+      delivery: '2-4 weeks',
+      category: 'Content Moderation SaaS',
+    },
+    {
+      title: 'Smart Retail Inventory Optimization',
+      description:
+        'AI-driven retail inventory management with demand forecasting and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Demand forecasting with seasonal adjustments',
+        'Automated reorder point calculations',
+        'Multi-location inventory synchronization',
+        'Supplier performance tracking',
+        'Price optimization and markdown management',
+        'Integration with POS and e-commerce systems',
+      ],
+      pricing: '$1,000 - $4,000/month',
+      delivery: '3-5 weeks',
+      category: 'Retail SaaS',
+    },
+    {
+      title: 'AI-Powered Fraud Detection System',
+      description:
+        'Advanced fraud detection with machine learning and real-time transaction monitoring',
+      icon: Shield,
+      features: [
+        'Real-time transaction fraud detection',
+        'Behavioral pattern analysis',
+        'Risk scoring and assessment',
+        'Automated fraud prevention workflows',
+        'Multi-channel fraud monitoring',
+        'Regulatory compliance and reporting',
+      ],
+      pricing: '$2,200 - $8,500/month',
+      delivery: '4-6 weeks',
+      category: 'Fraud Prevention SaaS',
+    },
+    {
+      title: 'Smart Energy Trading Platform',
+      description:
+        'AI-powered energy trading with market analysis and automated trading strategies',
+      icon: Zap,
+      features: [
+        'Real-time energy market analysis',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Renewable energy integration',
+        'Carbon credit trading',
+        'Regulatory compliance and reporting',
+      ],
+      pricing: '$3,500 - $12,000/month',
+      delivery: '6-10 weeks',
+      category: 'Energy Trading SaaS',
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis Assistant',
+      description:
+        'Intelligent medical diagnosis support with image analysis and symptom assessment',
+      icon: Brain,
+      features: [
+        'Medical image analysis and interpretation',
+        'Symptom assessment and differential diagnosis',
+        'Treatment recommendation engine',
+        'Drug interaction checking',
+        'Patient risk stratification',
+        'Integration with EHR systems',
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '8-12 weeks',
+      category: 'MedTech SaaS',
+    },
+    {
+      title: 'Smart Construction Project Management',
+      description:
+        'AI-driven construction management with progress tracking and resource optimization',
+      icon: Settings,
+      features: [
+        'Real-time project progress monitoring',
+        'Resource allocation optimization',
+        'Risk assessment and mitigation',
+        'Quality control and compliance tracking',
+        'Cost estimation and budget management',
+        'Integration with BIM and CAD systems',
+      ],
+      pricing: '$2,000 - $7,500/month',
+      delivery: '5-8 weeks',
+      category: 'Construction SaaS',
+    },
+    {
+      title: 'AI-Powered Language Learning Platform',
+      description:
+        'Intelligent language learning with personalized curriculum and speech recognition',
+      icon: Globe,
+      features: [
+        'Personalized learning path generation',
+        'Speech recognition and pronunciation feedback',
+        'Adaptive content delivery',
+        'Progress tracking and analytics',
+        'Gamification and engagement features',
+        'Multi-language support and localization',
+      ],
+      pricing: '$600 - $2,500/month',
+      delivery: '3-5 weeks',
+      category: 'EdTech SaaS',
+    },
+    {
+      title: 'Smart Water Management System',
+      description:
+        'AI-powered water resource management with leak detection and consumption optimization',
+      icon: Globe,
+      features: [
+        'Real-time water consumption monitoring',
+        'Leak detection and alert systems',
+        'Water quality monitoring and analysis',
+        'Predictive maintenance for water systems',
+        'Cost optimization and billing automation',
+        'Environmental impact tracking',
+      ],
+      pricing: '$1,200 - $4,200/month',
+      delivery: '4-6 weeks',
+      category: 'WaterTech SaaS',
+    },
+    {
+      title: 'AI-Powered Investment Portfolio Manager',
+      description:
+        'Intelligent investment management with automated rebalancing and risk optimization',
+      icon: TrendingUp,
+      features: [
+        'Automated portfolio rebalancing',
+        'Risk assessment and optimization',
+        'Market trend analysis and predictions',
+        'Tax-loss harvesting automation',
+        'Performance tracking and reporting',
+        'Integration with brokerage accounts',
+      ],
+      pricing: '$1,500 - $5,500/month',
+      delivery: '4-7 weeks',
+      category: 'WealthTech SaaS',
+    },
+    {
+      title: 'Smart Parking Management System',
+      description:
+        'AI-powered parking optimization with space utilization and revenue maximization',
+      icon: Target,
+      features: [
+        'Real-time parking space availability',
+        'Dynamic pricing optimization',
+        'Reservation and booking system',
+        'Payment processing and management',
+        'Traffic flow optimization',
+        'Revenue analytics and reporting',
+      ],
+      pricing: '$800 - $3,000/month',
+      delivery: '3-5 weeks',
+      category: 'Smart City SaaS',
     },
   ];
   const technologies = [

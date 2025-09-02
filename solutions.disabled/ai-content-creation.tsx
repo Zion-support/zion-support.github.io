@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+// import SEO from '../../components/SEO';
+// import { Card } from '../../components/ui/Card';
+// import { Button } from '../../components/ui/Button';
+// import { Badge } from '../../components/ui/Badge';
 import {
-  Mail,
+  Brain,
   ArrowRight,
   CheckCircle,
   Star,
@@ -16,94 +16,94 @@ import {
   Target,
   Lightbulb,
   TrendingUp,
+  FileText,
+  Globe,
+  Search,
+  PenTool,
   BarChart3,
-  Send,
-  UserCheck,
-  Aperture,
-  Clock,
 } from 'lucide-react';
 
-export default function EmailAutomation() {
+export default function AIContentCreation() {
   const features = [
     {
-      icon: Send,
-      title: 'Drip Campaigns',
+      icon: FileText,
+      title: 'Blog Post Generation',
       description:
-        'Create sophisticated email sequences that nurture leads and convert prospects into customers.',
+        'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.',
     },
     {
-      icon: UserCheck,
-      title: 'Personalization',
+      icon: PenTool,
+      title: 'Social Media Content',
       description:
-        'Deliver highly personalized emails using dynamic content and behavioral triggers.',
+        'Generate compelling social media posts, captions, and hashtags for all platforms.',
     },
     {
-      icon: Aperture,
-      title: 'A/B Testing',
+      icon: Search,
+      title: 'SEO Optimization',
       description:
-        'Optimize your email campaigns with built-in A/B testing and performance analytics.',
+        'Automatically optimize content for search engines with keyword research and optimization.',
+    },
+    {
+      icon: Globe,
+      title: 'Multi-language Support',
+      description:
+        'Create content in multiple languages with accurate translation and localization.',
     },
     {
       icon: BarChart3,
-      title: 'Analytics Dashboard',
+      title: 'Content Analytics',
       description:
-        'Track open rates, click-through rates, and conversions with detailed reporting.',
-    },
-    {
-      icon: Clock,
-      title: 'Automated Triggers',
-      description:
-        'Set up automated emails based on user behavior, time delays, and custom conditions.',
+        'Track performance metrics and optimize content strategy with detailed analytics.',
     },
     {
       icon: Zap,
-      title: 'Real-time Processing',
+      title: 'Real-time Generation',
       description:
-        'Process and send emails in real-time with our high-performance infrastructure.',
+        'Generate content instantly with our advanced AI models and processing capabilities.',
     },
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses starting with email marketing',
+      description: 'Perfect for small businesses and content creators',
       features: [
-        'Up to 10, 000 emails/month',
-        'Basic drip campaigns',
-        'Email templates',
-        'Basic analytics',
+        'Up to 50 blog posts/month',
+        'Social media content generation',
+        'Basic SEO optimization',
+        '2 languages supported',
         'Email support',
       ],
       popular: false,
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$599',
       period: '/month',
-      description: 'Ideal for growing businesses with advanced needs',
+      description: 'Ideal for growing businesses and marketing teams',
       features: [
-        'Up to 50, 000 emails/month',
-        'Advanced automation',
-        'A/B testing',
-        'Advanced analytics',
-        'Custom templates',
+        'Up to 200 blog posts/month',
+        'Advanced social media campaigns',
+        'Premium SEO optimization',
+        '5 languages supported',
+        'Content analytics dashboard',
         'Priority support',
       ],
       popular: true,
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$1,299',
       period: '/month',
-      description: 'For large organizations with high-volume needs',
+      description: 'For large organizations with high content needs',
       features: [
-        'Unlimited emails',
+        'Unlimited blog posts',
+        'Custom content templates',
+        'Advanced AI models',
+        'Unlimited languages',
         'Custom integrations',
-        'Advanced segmentation',
-        'Dedicated IP',
-        'Custom reporting',
         'Dedicated account manager',
         '24/7 phone support',
       ],
@@ -113,34 +113,32 @@ export default function EmailAutomation() {
 
   return (
     <>
-      <SEO
-        title="Email Automation - Zion Tech Group"
-        description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI."
-        keywords="email automation, email marketing, drip campaigns, personalization, A/B testing"
-      />
       <Head>
-        <title>Email Automation - Zion Tech Group</title>
+        <title>AI Content Creation - Zion Tech Group</title>
+        <meta name="description" content="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI." />
+        <meta name="keywords" content="AI content creation, automated content, blog generation, social media content, SEO optimization" />
       </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
-            <Badge className="mb-4 bg-blue-500 text-white">
-              <Mail className="w-4 h-4 mr-2" />
-              Marketing Automation
-            </Badge>
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-500 text-white mb-4">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Solution
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Email Automation
+              AI Content Creation
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 {' '}
                 Platform
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your email marketing with intelligent automation,
-              personalized campaigns, and advanced analytics. Drive engagement
-              and boost conversions with our powerful platform.
+              Transform your content strategy with our advanced AI-powered
+              content creation platform. Generate high-quality, SEO-optimized
+              content for blogs, social media, and marketing materials in
+              minutes.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
@@ -164,11 +162,11 @@ export default function EmailAutomation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Powerful Email Automation Features
+              Powerful Content Creation Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform provides everything you need to create, automate, and
-              optimize your email marketing campaigns.
+              Our AI-powered platform provides everything you need to create,
+              optimize, and manage content at scale.
             </p>
           </div>
 
@@ -201,8 +199,8 @@ export default function EmailAutomation() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the perfect plan for your email marketing needs. All plans
-              include our core automation features.
+              Select the perfect plan for your content creation needs. All plans
+              include our core AI features.
             </p>
           </div>
 
@@ -214,9 +212,9 @@ export default function EmailAutomation() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-blue-500 text-white px-4 py-1">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
                       Most Popular
-                    </Badge>
+                    </div>
                   </div>
                 )}
 
@@ -258,11 +256,11 @@ export default function EmailAutomation() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Automate Your Email Marketing?
+            Ready to Transform Your Content Strategy?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using our email automation
-            platform to increase engagement and drive conversions.
+            Join thousands of businesses already using our AI content creation
+            platform to scale their content marketing efforts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

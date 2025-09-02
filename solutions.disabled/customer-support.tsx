@@ -1,92 +1,90 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+// import SEO from '../../components/SEO';
+// import { Card } from '../../components/ui/Card';
+// import { Button } from '../../components/ui/Button';
+// import { Badge } from '../../components/ui/Badge';
 import {
-  Workflow,
+  Headphones,
   ArrowRight,
   CheckCircle,
-  Zap,
-  Settings,
-  BarChart3,
-  Shield,
+  MessageSquare,
+  Bot,
+  FileText,
   Globe,
+  BarChart3,
   Clock,
+  Users,
 } from 'lucide-react';
 
-export default function WorkflowAutomation() {
+export default function CustomerSupport() {
   const features = [
     {
-      icon: Zap,
-      title: 'Process Automation',
+      icon: Bot,
+      title: 'AI Chatbots',
       description:
-        'Automate repetitive business processes with custom workflows and triggers.',
+        'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.',
     },
     {
-      icon: Settings,
-      title: 'Integration APIs',
+      icon: MessageSquare,
+      title: 'Ticket Management',
       description:
-        'Connect with hundreds of third-party applications and services.',
+        'Comprehensive ticket system with priority levels, categorization, and automated routing.',
     },
     {
-      icon: Workflow,
-      title: 'Custom Workflows',
+      icon: FileText,
+      title: 'Knowledge Base',
       description:
-        'Build custom workflows with drag-and-drop workflow designer.',
+        'Self-service knowledge base with searchable articles, FAQs, and video tutorials.',
+    },
+    {
+      icon: Globe,
+      title: 'Multi-channel Support',
+      description:
+        'Support customers across email, chat, phone, social media, and other channels.',
     },
     {
       icon: BarChart3,
-      title: 'Monitoring & Analytics',
+      title: 'Analytics & Reporting',
       description:
-        'Track workflow performance and identify optimization opportunities.',
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description:
-        'Enterprise-grade security with compliance monitoring and audit trails.',
+        'Track performance metrics, customer satisfaction, and team productivity.',
     },
     {
       icon: Clock,
-      title: 'Real-time Processing',
+      title: '24/7 Availability',
       description:
-        'Execute workflows in real-time with high-performance infrastructure.',
+        'Round-the-clock customer support with automated responses and escalation.',
     },
   ];
 
   return (
     <>
-      <SEO
-        title="Workflow Automation Platform - Zion Tech Group"
-        description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."
-        keywords="workflow automation, process automation, business automation, integration, workflow management"
-      />
       <Head>
-        <title>Workflow Automation Platform - Zion Tech Group</title>
+        <title>Customer Support Platform - Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction." />
+        <meta name="keywords" content="customer support, AI chatbots, ticket management, knowledge base, helpdesk" />
       </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
-            <Badge className="mb-4 bg-blue-500 text-white">
-              <Workflow className="w-4 h-4 mr-2" />
-              Workflow Automation
-            </Badge>
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
+              <Headphones className="w-4 h-4 mr-2" />
+              Customer Support
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Workflow Automation
+              Customer Support
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 {' '}
                 Platform
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Streamline your business processes with powerful workflow
-              automation, custom integrations, and intelligent process
-              optimization.
+              Deliver exceptional customer support with our AI-powered platform
+              featuring intelligent chatbots, comprehensive ticket management,
+              and self-service knowledge base.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
@@ -110,15 +108,15 @@ export default function WorkflowAutomation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Powerful Workflow Automation Features
+              Comprehensive Support Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to automate, optimize, and scale your business
-              processes.
+              Everything you need to provide world-class customer support and
+              improve satisfaction.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -143,11 +141,11 @@ export default function WorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Automate Your Workflows?
+            Ready to Transform Your Customer Support?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using our workflow automation
-            platform to increase efficiency and reduce manual work.
+            Join thousands of businesses already using our customer support
+            platform to improve satisfaction and reduce support costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

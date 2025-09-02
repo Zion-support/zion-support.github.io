@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+// import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -149,10 +149,10 @@ export default function Solutions() {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
-            <Badge className="mb-4 bg-blue-500 text-white">
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
               <Lightbulb className="w-4 h-4 mr-2" />
               Innovative Solutions
-            </Badge>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Technology Solutions for
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">

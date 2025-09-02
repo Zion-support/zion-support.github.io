@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
@@ -161,6 +161,110 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional results through innovation, expertise, and dedication to your success
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Fast Delivery</h3>
+                <p className="text-gray-600 text-center mb-4">
+                  Quick turnaround times without compromising quality. Most projects delivered in 2-8 weeks.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• Rapid prototyping and MVP development</li>
+                  <li>• Agile development methodology</li>
+                  <li>• 24/7 development team availability</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Enterprise Security</h3>
+                <p className="text-gray-600 text-center mb-4">
+                  Bank-level security and compliance standards with SOC 2, GDPR, and HIPAA compliance.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• End-to-end encryption and data protection</li>
+                  <li>• Regular security audits and penetration testing</li>
+                  <li>• Compliance with industry standards</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Expert Team</h3>
+                <p className="text-gray-600 text-center mb-4">
+                  Dedicated professionals with years of experience in cutting-edge technologies.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• Certified AI and ML engineers</li>
+                  <li>• Full-stack developers and architects</li>
+                  <li>• DevOps and cloud specialists</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-orange-100 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Globe className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Global Reach</h3>
+                <p className="text-gray-600 text-center mb-4">
+                  Serving clients worldwide with local expertise and 24/7 support across all time zones.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• Multi-timezone development teams</li>
+                  <li>• Local compliance and regulations</li>
+                  <li>• International deployment expertise</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-red-100 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <TrendingUp className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Scalable Solutions</h3>
+                <p className="text-gray-600 text-center mb-4">
+                  Built to grow with your business from startup to enterprise scale.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• Auto-scaling cloud infrastructure</li>
+                  <li>• Microservices architecture</li>
+                  <li>• Performance optimization</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-indigo-100 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Award className="w-8 h-8 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Proven Results</h3>
+                <p className="text-gray-600 text-center mb-4">
+                  Track record of successful projects with measurable ROI and client satisfaction.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• 500+ successful projects delivered</li>
+                  <li>• 99.9% uptime guarantee</li>
+                  <li>• 50+ satisfied enterprise clients</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -177,6 +281,31 @@ export default function Home() {
               <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Learn More About Us
               </Link>
+            </div>
+            
+            {/* Contact Information */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="flex flex-col items-center">
+                <Phone className="w-8 h-8 text-blue-200 mb-3" />
+                <p className="text-blue-100 font-semibold">Phone</p>
+                <a href="tel:+13024640950" className="text-white hover:text-blue-200 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <Mail className="w-8 h-8 text-blue-200 mb-3" />
+                <p className="text-blue-100 font-semibold">Email</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-200 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <Globe className="w-8 h-8 text-blue-200 mb-3" />
+                <p className="text-blue-100 font-semibold">Website</p>
+                <a href="https://ziontechgroup.com" className="text-white hover:text-blue-200 transition-colors">
+                  ziontechgroup.com
+                </a>
+              </div>
             </div>
           </div>
         </section>

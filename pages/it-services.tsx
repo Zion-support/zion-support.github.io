@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, FileText, Flexible, From, Globe, Grid, Link2, Lock, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -531,6 +531,210 @@ export default function ITServices() {
       pricing: '$4,000 - $20,000/month',
       delivery: '4-12 weeks',
       category: 'Backup Services',
+    },
+    {
+      title: 'Edge AI & Machine Learning Infrastructure',
+      description:
+        'Edge computing infrastructure with AI/ML model deployment and optimization',
+      icon: Brain,
+      features: [
+        'Edge AI model deployment and management',
+        'Real-time inference optimization',
+        'Distributed training and model updates',
+        'Edge device orchestration and monitoring',
+        'Data preprocessing and feature engineering',
+        'Model versioning and A/B testing',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge AI Services',
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description:
+        'Comprehensive zero trust security implementation with identity and access management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM)',
+        'Multi-factor authentication (MFA)',
+        'Network segmentation and micro-segmentation',
+        'Device trust and compliance verification',
+        'Continuous security monitoring',
+        'Privileged access management (PAM)',
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'Zero Trust Services',
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description:
+        'Hyperconverged infrastructure design and implementation for modern data centers',
+      icon: Server,
+      features: [
+        'HCI platform evaluation and selection',
+        'Infrastructure design and planning',
+        'Migration from traditional infrastructure',
+        'Performance optimization and tuning',
+        'Disaster recovery and backup integration',
+        'Cost optimization and capacity planning',
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-20 weeks',
+      category: 'HCI Services',
+    },
+    {
+      title: 'Multi-Cloud Management & Governance',
+      description:
+        'Comprehensive multi-cloud strategy with governance and cost optimization',
+      icon: Cloud,
+      features: [
+        'Multi-cloud architecture design',
+        'Cloud governance and compliance',
+        'Cost optimization and FinOps',
+        'Cloud security and compliance',
+        'Disaster recovery across clouds',
+        'Cloud migration and modernization',
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'Multi-Cloud Services',
+    },
+    {
+      title: 'Advanced Analytics & Business Intelligence',
+      description:
+        'Enterprise analytics platform with real-time insights and predictive modeling',
+      icon: BarChart3,
+      features: [
+        'Data warehouse and data lake design',
+        'Real-time analytics and streaming',
+        'Business intelligence dashboard development',
+        'Predictive analytics and machine learning',
+        'Data governance and quality management',
+        'Self-service analytics platform',
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Analytics Services',
+    },
+    {
+      title: 'Robotic Process Automation (RPA)',
+      description:
+        'Intelligent automation with RPA bots and process optimization',
+      icon: Settings,
+      features: [
+        'RPA bot development and deployment',
+        'Process discovery and optimization',
+        'Integration with enterprise systems',
+        'Cognitive automation and AI integration',
+        'RPA governance and management',
+        'Performance monitoring and optimization',
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-16 weeks',
+      category: 'RPA Services',
+    },
+    {
+      title: 'Digital Workplace & Collaboration',
+      description:
+        'Modern digital workplace solutions with collaboration and productivity tools',
+      icon: Users,
+      features: [
+        'Microsoft 365 and Google Workspace implementation',
+        'Unified communications and collaboration',
+        'Digital employee experience optimization',
+        'Remote work infrastructure and security',
+        'Knowledge management and search',
+        'Employee engagement and analytics',
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-12 weeks',
+      category: 'Digital Workplace Services',
+    },
+    {
+      title: 'Advanced Threat Detection & Response',
+      description:
+        'Next-generation security operations center (SOC) with AI-powered threat detection',
+      icon: Shield,
+      features: [
+        'Security operations center (SOC) setup',
+        'Advanced threat detection and hunting',
+        'Incident response and forensics',
+        'Security orchestration and automation',
+        'Threat intelligence and analysis',
+        'Compliance monitoring and reporting',
+      ],
+      pricing: '$10,000 - $45,000/month',
+      delivery: '8-20 weeks',
+      category: 'Security Operations Services',
+    },
+    {
+      title: 'Hybrid Cloud & On-Premises Integration',
+      description:
+        'Seamless integration between cloud and on-premises infrastructure',
+      icon: Network,
+      features: [
+        'Hybrid cloud architecture design',
+        'Data synchronization and replication',
+        'Application portability and migration',
+        'Network connectivity and security',
+        'Identity federation and SSO',
+        'Cost optimization and governance',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-18 weeks',
+      category: 'Hybrid Cloud Services',
+    },
+    {
+      title: 'Advanced Data Protection & Privacy',
+      description:
+        'Comprehensive data protection with privacy compliance and encryption',
+      icon: Lock,
+      features: [
+        'Data classification and discovery',
+        'Encryption and key management',
+        'Privacy compliance (GDPR, CCPA)',
+        'Data loss prevention (DLP)',
+        'Backup and recovery optimization',
+        'Data governance and lifecycle management',
+      ],
+      pricing: '$6,000 - $28,000/month',
+      delivery: '6-16 weeks',
+      category: 'Data Protection Services',
+    },
+    {
+      title: 'Intelligent Document Processing',
+      description:
+        'AI-powered document management with automated processing and analysis',
+      icon: FileText,
+      features: [
+        'Document capture and digitization',
+        'OCR and intelligent data extraction',
+        'Document classification and routing',
+        'Workflow automation and approval',
+        'Compliance and audit trails',
+        'Integration with business systems',
+      ],
+      pricing: '$5,000 - $22,000/month',
+      delivery: '6-14 weeks',
+      category: 'Document Management Services',
+    },
+    {
+      title: 'Advanced Network Security & SD-WAN',
+      description:
+        'Software-defined networking with advanced security and optimization',
+      icon: Network,
+      features: [
+        'SD-WAN design and implementation',
+        'Network security and segmentation',
+        'Application performance optimization',
+        'Cloud connectivity and integration',
+        'Network monitoring and analytics',
+        'Disaster recovery and failover',
+      ],
+      pricing: '$7,000 - $32,000/month',
+      delivery: '6-16 weeks',
+      category: 'SD-WAN Services',
     },
   ];
   const technologies = [
