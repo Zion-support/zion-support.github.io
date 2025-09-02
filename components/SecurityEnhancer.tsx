@@ -14,70 +14,73 @@ const SecurityEnhancer: React.FC = () => {
       frame-src 'none';
       object-src 'none';
       base-uri 'self';
-      form-action 'self'`;;
-;
-    // Add CSP meta tag;
+      form-action 'self'`;
+
+    // Add CSP meta tag
     const cspMeta = document.createElement('meta');
     cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = csp;
     document.head.appendChild(cspMeta);
-;
-    // Security headers;
-    const securityHeaders = {;
-      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',;
-      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',;
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()';
+
+    // Security headers
+    const securityHeaders = {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1 mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     };
-;
-    // Add security headers via meta tags;
-    Object.entries(securityHeaders).forEach(([name, value]) => {;
+
+    // Add security headers via meta tags
+    Object.entries(securityHeaders).forEach(([name, value]) => {
       const meta = document.createElement('meta');
       meta.httpEquiv = name;
       meta.content = value;
       document.head.appendChild(meta);
     });
-;
-    // Detect and prevent XSS attempts;
-    const detectXSS = () => {;
+
+    // Detect and prevent XSS attempts
+    const detectXSS = () => {
       const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {;
-        if (script.src && !script.src.startsWith(window.location.origin) &&;
-            !script.src.includes('googletagmanager.com') &&;
-            !script.src.includes('google-analytics.com')) {;
+      scripts.forEach(script => {
+        if (script.src && !script.src.startsWith(window.location.origin) &&
+            !script.src.includes('googletagmanager.com') &&
+            !script.src.includes('google-analytics.com')) {
           console.warn('Potentially malicious script detected: ', script.src);
           script.remove();
         }
       });
     };
-;
-    // Monitor for suspicious activity;
-    const monitorSuspiciousActivity = () => {;
-      // Detect iframe injection attempts;
+    // Monitor for suspicious activity
+    const monitorSuspiciousActivity = () => {
+      // Detect iframe injection attempts
       const iframes = document.querySelectorAll('iframe');
-      iframes.forEach(iframe => {;
-        if (!iframe.src.startsWith(window.location.origin) &&;
-            !iframe.src.includes('youtube.com') &&;
-            !iframe.src.includes('vimeo.com')) {;
+      iframes.forEach(iframe => {
+        if (!iframe.src.startsWith(window.location.origin) &&
+            !iframe.src.includes('youtube.com') &&
+            !iframe.src.includes('vimeo.com')) {
           console.warn('Potentially malicious iframe detected: ', iframe.src);
           iframe.remove();
         }
       });
-;
-      // Detect suspicious form submissions;
+
+      // Detect suspicious form submissions
       const forms = document.querySelectorAll('form');
-      forms.forEach(form => {;
-        form.addEventListener('submit', (e) => {;
+      forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
           const formData = new FormData(form);
           const suspiciousPatterns = [
-            /<script/i, /javascript: /i,;
-            /on\w+\s*=/i, /eval\(/i,;
-            /expression\(/i;
+            /<script/i,
+            /javascript: /i,
+            /on\w+\s*=/i,
+            /eval\(/i,
+            /expression\(/i
           ];
-;
-          for (const [key, value] of formData.entries()) {;
-            if (typeof value === 'string') {;
-              suspiciousPatterns.forEach(pattern => {;
-                if (pattern.test(value)) {;
+
+          for (const [key, value] of formData.entries()) {
+            if (typeof value === 'string') {
+              suspiciousPatterns.forEach(pattern => {
+                if (pattern.test(value)) {
                   console.warn('Suspicious form data detected: ', { key, value });
                   e.preventDefault();
                   alert('Suspicious content detected. Please check your input.');
