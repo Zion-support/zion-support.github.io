@@ -16,7 +16,11 @@ import { EnhancedFooter } from './components/EnhancedFooter';
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
   return (props: any) => (
+<<<<<<< HEAD
     <Suspense fallback={fallback || <LoadingSpinner />}> 
+=======
+    <Suspense fallback={fallback || <LoadingSpinner />}>
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       <LazyComponent {...props} />
     </Suspense>
   );
@@ -28,8 +32,11 @@ const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Services = createLazyComponent(() => import('./pages/Services'));
+<<<<<<< HEAD
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
 const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 const Solutions = createLazyComponent(() => import('./pages/Solutions'));
 const News = createLazyComponent(() => import('./pages/News'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
@@ -54,8 +61,23 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
         {error.message || 'An unexpected error occurred. Please try again.'}
       </p>
       <div className="space-y-3">
+<<<<<<< HEAD
         <button onClick={resetErrorBoundary} className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">Try again</button>
         <button onClick={() => window.location.href = '/'} className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">Go home</button>
+=======
+        <button
+          onClick={resetErrorBoundary}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Try again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Go home
+        </button>
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       </div>
     </div>
   </div>
@@ -81,6 +103,7 @@ function App() {
                 <Route path="/case-studies" element={<CaseStudies />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/events" element={<News />} />
+<<<<<<< HEAD
 
                 {/* Services */}
                 <Route path="/services" element={<Services />} />
@@ -203,6 +226,11 @@ return (
                 <Route path="/services" element={<Services />} />
                 <Route path="/enterprise" element={<Enterprise />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
+=======
+                
+                {/* Services */}
+                <Route path="/services" element={<Services />} />
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
                 <Route path="/services/ai" element={<AIServices />} />
                 <Route path="/services/cloud" element={<CloudServices />} />
                 <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
@@ -224,7 +252,10 @@ return (
                         Go Home
                       </a>
                     </div>
+<<<<<<< HEAD
 >>>>>>> fix/links-and-nav
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
                   </div>
                 } />
               </Routes>

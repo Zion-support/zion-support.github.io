@@ -182,3 +182,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

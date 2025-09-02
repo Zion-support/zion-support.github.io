@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 describe ("ResearchDevelopment", () => { it ("renders without crashing", () => { render (<ResearchDevelopment />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<ResearchDevelopment />) ;""
+=======
+describe ("ResearchDevelopment", () => { it ("renders without crashing", () => { render (<ResearchDevelopment />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<ResearchDevelopment />) ;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

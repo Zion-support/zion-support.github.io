@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+<<<<<<< HEAD
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
@@ -13,6 +14,8 @@ module.exports = {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",

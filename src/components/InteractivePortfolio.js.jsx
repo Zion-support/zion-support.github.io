@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 const portfolioProjects = [ { id: "1", title: "AI-Powered E-commerce Platform", description: "A next-generation e-commerce solution with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.", category: "AI & ML", technologies["React", Node.js",TensorFlow", MongoDB",AWS"],; image: "https:"""
+=======
+const portfolioProjects = [ { id: "1", title: "AI-Powered E-commerce Platform", description: "A next-generation e-commerce solution with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.", category: "AI & ML", technologies["React",Node.js",TensorFlow",MongoDB",AWS"],; image: "https:
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 describe ("InnovativeServicesShowcase", () => { it ("renders without crashing", () => { render (<InnovativeServicesShowcase />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<InnovativeServicesShowcase />) ;""
+=======
+describe ("InnovativeServicesShowcase", () => { it ("renders without crashing", () => { render (<InnovativeServicesShowcase />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<InnovativeServicesShowcase />) ;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

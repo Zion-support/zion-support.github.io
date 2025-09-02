@@ -135,11 +135,19 @@ export default [
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-unused-vars': 'off',
       'no-console': 'off',
+=======
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'no-undef': 'off',
     },
     settings: {
@@ -150,6 +158,7 @@ export default [
   },
   {
     ignores: [
+<<<<<<< HEAD
       'src/**',
       'components/**',
       'pages/**',
@@ -178,11 +187,14 @@ export default [
       'ai-optimization-backups/**',
       'fix_utils_files.ts',
       '*.jsx',
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'node_modules/',
       '.next/',
       'out/',
       'dist/',
       'build/',
+<<<<<<< HEAD
       // Broad ignores to stabilize linting
       'src/**',
       'supabase/**',
@@ -215,6 +227,8 @@ export default [
       'fix-*.jsx',
       'fix_*.jsx',
       'fix_*.ts',
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       '*.config.js',
       '*.config.ts',
       'scripts/',

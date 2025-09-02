@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 describe ('ForgotPassword', () => {}; '; it ('renders without crashing', () => {}; render (<ForgotPassword />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ForgotPassword />) ;'''
+=======
+describe ('ForgotPassword', () => {}; '; it ('renders without crashing', () => {}; render (<ForgotPassword />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ForgotPassword />) ;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

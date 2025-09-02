@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 const API_URL = import.meta.env.VITE_API_URL || "; export async function loginUser(email: string, password: string): Promise<{ res: Response, data: any }> { const MAX_RETRIES = 3; let attempt = 0; let currentDelay = 1000;"""
+=======
+const API_URL = import.meta.env.VITE_API_URL || "; export async function loginUser(email: string, password: string): Promise<{ res: Response, data: any }> { const MAX_RETRIES = 3; let attempt = 0; let currentDelay = 1000;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

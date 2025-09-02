@@ -20,7 +20,16 @@ import {
   BookOpen,
   CheckCircle} from 'lucide-react.ts';
 
+<<<<<<< HEAD
 'All','
+=======
+
+
+
+
+=======
+  'All','
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   'AI & ML','
   'Cybersecurity','
   'Cloud & DevOps','
@@ -36,8 +45,20 @@ export default function Events(...args: any[]): any {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
+<<<<<<< HEAD
     return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;
 
+=======
+  
+    
+    
+    
+    return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;
+
+  
+  
+  
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     return date.toLocaleDateString('en-US', {
 
       weekday: 'long',
@@ -45,6 +66,10 @@ export default function Events(...args: any[]): any {
       month: 'long',
       day: 'numeric'})};
 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       case 'Cybersecurity':
         return Shield;
       case 'Cloud & DevOps':
@@ -185,6 +210,10 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {upcomingEvents.map((event, index) => {
 
+<<<<<<< HEAD
+=======
+                
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
                 return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -320,6 +349,10 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {pastEvents.map((event, index) => {
 
+<<<<<<< HEAD
+=======
+                
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
                 return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
