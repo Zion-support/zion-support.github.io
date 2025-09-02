@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import EnhancedHeader from '../components/EnhancedHeader';
+import EnhancedFooter from '../components/EnhancedFooter';
 import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucide-react';
 
 export default function Team() {
@@ -89,7 +89,7 @@ export default function Team() {
         <link rel="canonical" href="https://ziontechgroup.com/team" />
       </Head>
       
-      <Navigation />
+      <EnhancedHeader />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -189,7 +189,7 @@ export default function Team() {
         </section>
       </main>
       
-      <Footer />
+      <EnhancedFooter />
     </>
   );
 }

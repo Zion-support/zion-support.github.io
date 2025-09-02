@@ -98,11 +98,140 @@ export default function ITServices() {
         'Software installation and updates',
         'Hardware procurement and management',
         'User training and documentation',
-        'SLA-based response times'
+        'Asset management and tracking',
+        'Performance monitoring and optimization'
       ],
       pricing: '$1,500 - $8,000/month',
-      delivery: '1-2 weeks',
+      delivery: '1-3 weeks',
       category: 'Support Services'
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Strategic guidance for digital transformation and modernization initiatives',
+      icon: TrendingUp,
+      features: [
+        'Digital strategy development and roadmap creation',
+        'Legacy system modernization planning',
+        'Process automation and optimization',
+        'Change management and training programs',
+        'Technology stack evaluation and selection',
+        'ROI analysis and performance measurement'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '4-12 weeks',
+      category: 'Consulting Services'
+    },
+    {
+      title: 'DevOps & CI/CD Implementation',
+      description: 'Complete DevOps transformation with automated deployment pipelines',
+      icon: Code,
+      features: [
+        'CI/CD pipeline design and implementation',
+        'Infrastructure as Code (IaC) automation',
+        'Container orchestration with Kubernetes',
+        'Monitoring and logging solutions',
+        'Security scanning and compliance automation',
+        'Performance optimization and scaling'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '6-16 weeks',
+      category: 'DevOps Services'
+    },
+    {
+      title: 'Data Center & Colocation Services',
+      description: 'Enterprise-grade data center solutions and colocation services',
+      icon: Server,
+      features: [
+        'Tier III+ data center facilities',
+        'Redundant power and cooling systems',
+        '24/7/365 monitoring and support',
+        'Network connectivity and bandwidth management',
+        'Physical and logical security controls',
+        'Compliance and audit support'
+      ],
+      pricing: '$2,000 - $25,000/month',
+      delivery: '2-8 weeks',
+      category: 'Infrastructure Services'
+    },
+    {
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Blockchain development and Web3 technology implementation',
+      icon: Link2,
+      features: [
+        'Smart contract development and auditing',
+        'DeFi protocol design and implementation',
+        'NFT marketplace development',
+        'Blockchain integration and migration',
+        'Cryptocurrency wallet and payment solutions',
+        'Web3 application development'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '8-24 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'IoT & Edge Computing Solutions',
+      description: 'Internet of Things and edge computing infrastructure and applications',
+      icon: Cpu,
+      features: [
+        'IoT device management and monitoring',
+        'Edge computing infrastructure setup',
+        'Real-time data processing and analytics',
+        'Device connectivity and protocol management',
+        'Security and privacy protection',
+        'Scalable deployment and management'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '6-16 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM)',
+        'Multi-factor authentication (MFA)',
+        'Network segmentation and micro-segmentation',
+        'Continuous monitoring and threat detection',
+        'Privileged access management (PAM)',
+        'Security policy automation and enforcement'
+      ],
+      pricing: '$12,000 - $75,000/month',
+      delivery: '8-20 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Hyperautomation Platform',
+      description: 'End-to-end business process automation with AI and RPA',
+      icon: Zap,
+      features: [
+        'Robotic Process Automation (RPA) implementation',
+        'AI-powered decision making and automation',
+        'Workflow orchestration and management',
+        'Document processing and data extraction',
+        'Integration with existing systems',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$20,000 - $120,000/month',
+      delivery: '10-24 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'Digital Twin Platforms',
+      description: 'Digital twin technology for asset monitoring and predictive maintenance',
+      icon: Monitor,
+      features: [
+        '3D modeling and simulation capabilities',
+        'Real-time data integration and visualization',
+        'Predictive maintenance and analytics',
+        'Performance optimization recommendations',
+        'Remote monitoring and control',
+        'Integration with IoT and sensor networks'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '12-32 weeks',
+      category: 'Digital Twin Services'
     },
     {
       title: 'Data Management & Analytics',

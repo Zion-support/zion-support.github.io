@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import EnhancedSEO from '../../components/EnhancedSEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -113,7 +113,7 @@ export default function AIContentCreation() {
 
   return (
     <>
-      <SEO
+      <EnhancedSEO
         title="AI Content Creation - Zion Tech Group"
         description="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI."
         keywords="AI content creation, automated content, blog generation, social media content, SEO optimization"

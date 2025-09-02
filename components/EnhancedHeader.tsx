@@ -35,12 +35,11 @@ export default function EnhancedHeader() {
       name: 'Services',
       href: '/services',
       dropdown: [
-        { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'Web Development', href: '/services/web-development' },
-        { name: 'Cloud Services', href: '/services/cloud-services' },
-        { name: 'AI Development', href: '/services/ai-development' }
+        { name: 'Services Overview', href: '/services-overview' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'All Services', href: '/services' }
       ]
     },
     {
@@ -55,8 +54,8 @@ export default function EnhancedHeader() {
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
       ]
     },
+    { name: 'Pricing', href: '/pricing-guide' },
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' }
   ];

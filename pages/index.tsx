@@ -16,24 +16,30 @@ export default function Home() {
   const services = [
     {
       title: 'AI Services',
-      description: 'Revolutionary AI solutions including autonomous systems, machine learning, and intelligent automation',
+      description: 'Revolutionary AI solutions including autonomous systems, machine learning, quantum computing, and intelligent automation',
       icon: Brain,
       href: '/ai-services',
-      features: ['AI-Powered Drug Discovery', 'Quantum Computing Interface', 'Climate Analytics', 'Space Analytics']
+      features: ['AI-Powered Drug Discovery', 'Quantum Computing Interface', 'Climate Analytics', 'Space Analytics', 'Financial Trading AI', 'Supply Chain Optimization'],
+      pricing: '$1,500 - $500,000/month',
+      delivery: '1-24 weeks'
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive IT infrastructure, cybersecurity, cloud solutions, and digital transformation',
+      description: 'Comprehensive IT infrastructure, cybersecurity, cloud solutions, blockchain, and digital transformation',
       icon: Network,
       href: '/it-services',
-      features: ['Zero Trust Security', 'Edge Computing', 'Digital Twin Platforms', 'Hyperautomation']
+      features: ['Zero Trust Security', 'Edge Computing', 'Digital Twin Platforms', 'Hyperautomation', 'Blockchain Solutions', 'IoT Integration'],
+      pricing: '$1,500 - $150,000/month',
+      delivery: '1-32 weeks'
     },
     {
       title: 'Micro SaaS',
-      description: 'Innovative micro SaaS solutions for modern businesses with rapid deployment',
+      description: 'Innovative micro SaaS solutions for modern businesses with rapid deployment and scalable architecture',
       icon: Cloud,
       href: '/micro-saas',
-      features: ['Affiliate Marketing Tracker', 'Contract Management', 'Video Content Generator', 'Energy Management']
+      features: ['Affiliate Marketing Tracker', 'Contract Management', 'Video Content Generator', 'Energy Management', 'Lead Generation', 'Social Media Scheduler'],
+      pricing: '$800 - $12,000/month',
+      delivery: '2-8 weeks'
     }
   ];
 
@@ -141,6 +147,18 @@ export default function Home() {
                     </div>
                   </div>
                   
+                  {/* Pricing & Delivery Info */}
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-semibold text-gray-700">Pricing:</span>
+                      <span className="text-sm font-bold text-green-600">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-semibold text-gray-700">Delivery:</span>
+                      <span className="text-sm text-blue-600">{service.delivery}</span>
+                    </div>
+                  </div>
+                  
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
                       Explore Services
@@ -194,15 +212,19 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <span className="text-gray-700">Micro SaaS Solutions</span>
-                    <span className="font-semibold text-blue-600">$99 - $8,000/month</span>
+                    <span className="font-semibold text-blue-600">$800 - $12,000/month</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <span className="text-gray-700">AI Services</span>
-                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
+                    <span className="font-semibold text-blue-600">$1,500 - $500,000/month</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <span className="text-gray-700">IT Services</span>
-                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
+                    <span className="font-semibold text-blue-600">$1,500 - $150,000/month</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <span className="text-gray-700">Quantum Computing</span>
+                    <span className="font-semibold text-blue-600">$50,000 - $500,000/month</span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Enterprise Solutions</span>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import EnhancedSEO from '../../components/EnhancedSEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -59,7 +59,7 @@ export default function WorkflowAutomation() {
 
   return (
     <>
-      <SEO
+      <EnhancedSEO
         title="Workflow Automation Platform - Zion Tech Group"
         description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."
         keywords="workflow automation, process automation, business automation, integration, workflow management"

@@ -102,6 +102,118 @@ export default function AIServices() {
       category: 'HR AI'
     },
     {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Revolutionary AI system for pharmaceutical research and drug development',
+      icon: Brain,
+      features: [
+        'Molecular structure analysis and prediction',
+        'Drug-target interaction modeling',
+        'Clinical trial optimization',
+        'Side effect prediction and mitigation',
+        'Regulatory compliance automation',
+        'Real-time research collaboration tools'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '8-16 weeks',
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'Quantum Computing Interface',
+      description: 'Advanced quantum computing platform for complex problem solving',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and optimization',
+        'Hybrid classical-quantum computing workflows',
+        'Quantum machine learning implementations',
+        'Cryptographic security enhancement',
+        'Financial modeling and risk analysis',
+        'Scientific simulation acceleration'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'Climate Analytics AI',
+      description: 'Comprehensive climate data analysis and environmental impact prediction',
+      icon: Globe,
+      features: [
+        'Real-time climate data processing',
+        'Environmental impact modeling',
+        'Carbon footprint optimization',
+        'Renewable energy forecasting',
+        'Disaster prediction and mitigation',
+        'Sustainability reporting automation'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '6-12 weeks',
+      category: 'Environmental AI'
+    },
+    {
+      title: 'Space Analytics Platform',
+      description: 'AI-powered space data analysis for satellite operations and space exploration',
+      icon: Globe,
+      features: [
+        'Satellite orbit optimization',
+        'Space debris tracking and avoidance',
+        'Astronomical data analysis',
+        'Mission planning and execution',
+        'Space weather prediction',
+        'Resource utilization optimization'
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '10-20 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Suite',
+      description: 'Advanced threat detection and response system with machine learning',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly identification',
+        'Automated incident response',
+        'Zero-day vulnerability detection',
+        'Security orchestration and automation',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '4-8 weeks',
+      category: 'Security AI'
+    },
+    {
+      title: 'AI Financial Trading Platform',
+      description: 'Intelligent trading system with predictive analytics and risk management',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and prediction',
+        'Algorithmic trading strategy optimization',
+        'Risk assessment and portfolio management',
+        'Fraud detection and prevention',
+        'Regulatory compliance automation',
+        'Performance analytics and reporting'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '8-16 weeks',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics',
+      icon: Network,
+      features: [
+        'Demand forecasting and inventory optimization',
+        'Route optimization and logistics planning',
+        'Supplier risk assessment and management',
+        'Quality control and defect prediction',
+        'Cost optimization and efficiency analysis',
+        'Sustainability tracking and reporting'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '6-12 weeks',
+      category: 'Supply Chain AI'
+    },
+    {
       title: 'Computer Vision Solutions',
       description: 'Image and video analysis for quality control, security, and automation',
       icon: Eye,

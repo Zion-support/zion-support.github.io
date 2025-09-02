@@ -32,7 +32,8 @@ import {
   Cpu,
   Network,
   Terminal,
-  Calendar
+  Calendar,
+  Video
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -98,12 +99,156 @@ export default function MicroSaaS() {
         'Ticketing and registration system',
         'Attendee engagement tools',
         'Real-time analytics and reporting',
-        'Payment processing integration',
-        'Mobile app for attendees'
+        'Payment processing and revenue tracking',
+        'Multi-language support and localization'
       ],
       pricing: '$3,000 - $10,000/month',
       delivery: '4-6 weeks',
       category: 'Event SaaS'
+    },
+    {
+      title: 'Affiliate Marketing Tracker',
+      description: 'Comprehensive affiliate marketing management and tracking platform',
+      icon: TrendingUp,
+      features: [
+        'Affiliate link generation and management',
+        'Commission tracking and calculations',
+        'Performance analytics and reporting',
+        'Payment processing and automation',
+        'Fraud detection and prevention',
+        'Multi-tier affiliate program support'
+      ],
+      pricing: '$1,500 - $6,000/month',
+      delivery: '3-5 weeks',
+      category: 'Marketing SaaS'
+    },
+    {
+      title: 'Contract Management System',
+      description: 'AI-powered contract lifecycle management and automation platform',
+      icon: FileText,
+      features: [
+        'Contract creation and template management',
+        'AI-powered contract analysis and review',
+        'Automated approval workflows',
+        'Renewal tracking and notifications',
+        'Compliance monitoring and reporting',
+        'Electronic signature integration'
+      ],
+      pricing: '$2,500 - $8,000/month',
+      delivery: '4-6 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'Video Content Generator',
+      description: 'AI-powered video creation and editing platform for marketing and training',
+      icon: Video,
+      features: [
+        'AI-generated video content from text',
+        'Automated video editing and optimization',
+        'Multi-format export and distribution',
+        'Brand customization and templates',
+        'Analytics and performance tracking',
+        'Collaboration and approval workflows'
+      ],
+      pricing: '$3,500 - $12,000/month',
+      delivery: '5-8 weeks',
+      category: 'Content SaaS'
+    },
+    {
+      title: 'Energy Management Dashboard',
+      description: 'Smart energy monitoring and optimization platform for businesses',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'Cost optimization and savings recommendations',
+        'Predictive maintenance alerts',
+        'Carbon footprint tracking',
+        'Integration with smart devices',
+        'Sustainability reporting and analytics'
+      ],
+      pricing: '$2,000 - $7,000/month',
+      delivery: '3-6 weeks',
+      category: 'Energy SaaS'
+    },
+    {
+      title: 'Inventory Management System',
+      description: 'Advanced inventory tracking and optimization with AI predictions',
+      icon: Database,
+      features: [
+        'Real-time inventory tracking and updates',
+        'AI-powered demand forecasting',
+        'Automated reorder point management',
+        'Multi-location inventory synchronization',
+        'Barcode and QR code scanning',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$1,800 - $6,500/month',
+      delivery: '3-5 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'Customer Feedback Analytics',
+      description: 'Comprehensive customer feedback collection and analysis platform',
+      icon: MessageSquare,
+      features: [
+        'Multi-channel feedback collection',
+        'Sentiment analysis and categorization',
+        'Automated response and follow-up',
+        'Trend analysis and reporting',
+        'Integration with CRM systems',
+        'Action item tracking and management'
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '2-4 weeks',
+      category: 'Analytics SaaS'
+    },
+    {
+      title: 'Time Tracking & Productivity',
+      description: 'Advanced time tracking and productivity analytics for remote teams',
+      icon: Clock,
+      features: [
+        'Automatic time tracking and categorization',
+        'Productivity analytics and insights',
+        'Project and task management',
+        'Team collaboration and reporting',
+        'Integration with popular tools',
+        'Customizable dashboards and alerts'
+      ],
+      pricing: '$800 - $3,000/month',
+      delivery: '2-3 weeks',
+      category: 'Productivity SaaS'
+    },
+    {
+      title: 'Social Media Scheduler',
+      description: 'AI-powered social media management and content scheduling platform',
+      icon: Globe,
+      features: [
+        'Multi-platform content scheduling',
+        'AI-powered content optimization',
+        'Engagement analytics and reporting',
+        'Hashtag research and suggestions',
+        'Team collaboration and approval',
+        'Automated posting and engagement'
+      ],
+      pricing: '$1,000 - $4,000/month',
+      delivery: '2-4 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
+      title: 'Lead Generation Platform',
+      description: 'Automated lead generation and qualification system with AI',
+      icon: Target,
+      features: [
+        'Multi-channel lead capture',
+        'AI-powered lead scoring and qualification',
+        'Automated follow-up sequences',
+        'CRM integration and synchronization',
+        'Lead analytics and reporting',
+        'Customizable lead forms and landing pages'
+      ],
+      pricing: '$2,200 - $8,500/month',
+      delivery: '3-6 weeks',
+      category: 'Sales SaaS'
     },
     {
       title: 'AI Content Creation Suite',

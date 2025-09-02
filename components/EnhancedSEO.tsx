@@ -6,7 +6,7 @@ interface SEOProps {
   image?: string
   url?: string
   type?: string
-  keywords?: string[]
+  keywords?: string[] | string
   author?: string
 }
 
@@ -22,12 +22,13 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const router = useRouter()
   const currentUrl = url || `https://ziontechgroup.com${router.asPath}`
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords
 
   return (
     <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
-      <meta name='keywords' content={keywords.join(', ')} />
+      <meta name='keywords' content={keywordsString} />
       <meta name='author' content={author} />
       {/* Open Graph */}
       <meta property='og:title' content={title} />
