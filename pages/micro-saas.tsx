@@ -32,7 +32,13 @@ import {
   Cpu,
   Network,
   Terminal,
-  Calendar
+  Calendar,
+  Home,
+  Heart,
+  Car,
+  TreePine,
+  Satellite,
+  Mic
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -456,6 +462,230 @@ export default function MicroSaaS() {
       pricing: '$199 - $999/month',
       delivery: '4-5 weeks',
       category: 'HR Management SaaS'
+    },
+    {
+      title: 'Quantum-Enhanced Data Analytics Platform',
+      description: 'Next-generation analytics platform leveraging quantum computing for complex data processing and insights',
+      icon: Cpu,
+      features: [
+        'Quantum-powered data processing and analysis',
+        'Real-time complex pattern recognition',
+        'Advanced predictive modeling and forecasting',
+        'Multi-dimensional data visualization',
+        'Quantum machine learning algorithms',
+        'Integration with classical computing systems'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-20 weeks',
+      category: 'Quantum Analytics SaaS'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Intelligence',
+      description: 'Advanced threat detection and response platform with AI-driven security analytics',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'AI-powered behavioral anomaly detection',
+        'Automated incident response and remediation',
+        'Zero-day vulnerability identification',
+        'Threat intelligence and attribution',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '8-12 weeks',
+      category: 'Cybersecurity SaaS'
+    },
+    {
+      title: 'Blockchain-Based Supply Chain Transparency',
+      description: 'Immutable supply chain tracking and verification platform with smart contracts',
+      icon: Network,
+      features: [
+        'End-to-end supply chain visibility',
+        'Smart contract automation and execution',
+        'Product authenticity verification',
+        'Sustainability and compliance tracking',
+        'Real-time inventory and logistics management',
+        'Integration with IoT sensors and devices'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-16 weeks',
+      category: 'Blockchain SaaS'
+    },
+    {
+      title: 'AI-Powered Voice Commerce Platform',
+      description: 'Voice-activated e-commerce solution with natural language processing and personalization',
+      icon: Mic,
+      features: [
+        'Voice-activated shopping and ordering',
+        'Natural language product search and recommendations',
+        'Voice-based payment processing',
+        'Multi-language voice recognition',
+        'Personalized shopping experiences',
+        'Integration with smart home devices'
+      ],
+      pricing: '$3,500 - $15,000/month',
+      delivery: '6-10 weeks',
+      category: 'Voice Commerce SaaS'
+    },
+    {
+      title: 'Metaverse Business Platform',
+      description: 'Virtual business environment with 3D spaces, avatars, and immersive collaboration tools',
+      icon: Globe,
+      features: [
+        '3D virtual office spaces and meeting rooms',
+        'Avatar-based collaboration and networking',
+        'Virtual product demonstrations and showrooms',
+        'Immersive training and onboarding experiences',
+        'Virtual events and conferences',
+        'Integration with VR/AR devices'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Metaverse SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Finance Coach',
+      description: 'Intelligent financial planning and investment advisory platform with personalized recommendations',
+      icon: TrendingUp,
+      features: [
+        'AI-driven financial goal setting and tracking',
+        'Personalized investment recommendations',
+        'Real-time market analysis and alerts',
+        'Automated budget optimization',
+        'Tax planning and optimization',
+        'Integration with banking and investment accounts'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '4-6 weeks',
+      category: 'FinTech SaaS'
+    },
+    {
+      title: 'Smart Home Automation Hub',
+      description: 'AI-powered home automation platform with predictive maintenance and energy optimization',
+      icon: Home,
+      features: [
+        'Intelligent device control and automation',
+        'Predictive maintenance and diagnostics',
+        'Energy consumption optimization',
+        'Security monitoring and alerts',
+        'Voice and gesture control',
+        'Integration with 500+ smart devices'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '6-8 weeks',
+      category: 'IoT SaaS'
+    },
+    {
+      title: 'AI-Powered Mental Health Companion',
+      description: 'Intelligent mental wellness platform with mood tracking, therapy sessions, and crisis intervention',
+      icon: Heart,
+      features: [
+        'AI-powered mood analysis and tracking',
+        'Personalized therapy and meditation sessions',
+        'Crisis detection and intervention',
+        'Progress monitoring and insights',
+        'Integration with wearable devices',
+        'HIPAA-compliant data protection'
+      ],
+      pricing: '$149 - $699/month',
+      delivery: '8-12 weeks',
+      category: 'HealthTech SaaS'
+    },
+    {
+      title: 'Autonomous Fleet Management System',
+      description: 'AI-driven fleet optimization platform for autonomous and traditional vehicle management',
+      icon: Car,
+      features: [
+        'Autonomous vehicle coordination and routing',
+        'Predictive maintenance and diagnostics',
+        'Real-time traffic optimization',
+        'Fuel efficiency and cost optimization',
+        'Driver behavior analysis and coaching',
+        'Integration with telematics and sensors'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '10-16 weeks',
+      category: 'Fleet Management SaaS'
+    },
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent legal document processing platform with contract analysis and risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and review',
+        'Legal risk assessment and recommendations',
+        'Compliance monitoring and alerts',
+        'Document generation and templating',
+        'Case law research and citation',
+        'Integration with legal databases and systems'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '6-10 weeks',
+      category: 'LegalTech SaaS'
+    },
+    {
+      title: 'Smart Agriculture Management Platform',
+      description: 'AI-driven agricultural optimization platform with precision farming and yield prediction',
+      icon: TreePine,
+      features: [
+        'Precision farming and crop monitoring',
+        'AI-powered yield prediction and optimization',
+        'Weather and climate analysis',
+        'Pest and disease detection',
+        'Automated irrigation and fertilization',
+        'Integration with IoT sensors and drones'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '8-12 weeks',
+      category: 'AgriTech SaaS'
+    },
+    {
+      title: 'AI-Powered Energy Trading Platform',
+      description: 'Intelligent energy market platform with automated trading and grid optimization',
+      icon: Zap,
+      features: [
+        'AI-driven energy price prediction',
+        'Automated trading and arbitrage',
+        'Grid optimization and load balancing',
+        'Renewable energy integration',
+        'Carbon credit trading',
+        'Real-time market analysis and alerts'
+      ],
+      pricing: '$10,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'EnergyTech SaaS'
+    },
+    {
+      title: 'Virtual Reality Training Simulator',
+      description: 'Immersive VR training platform for complex skills and emergency response scenarios',
+      icon: Eye,
+      features: [
+        'Immersive VR training environments',
+        'Realistic scenario simulation',
+        'Performance tracking and analytics',
+        'Multi-user collaborative training',
+        'Custom scenario creation tools',
+        'Integration with learning management systems'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '10-16 weeks',
+      category: 'EdTech SaaS'
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Advanced space mission optimization platform with trajectory planning and resource management',
+      icon: Satellite,
+      features: [
+        'Orbital mechanics and trajectory optimization',
+        'Mission planning and resource allocation',
+        'Satellite constellation management',
+        'Space debris tracking and avoidance',
+        'Launch window optimization',
+        'Integration with space agency APIs'
+      ],
+      pricing: '$25,000 - $500,000/month',
+      delivery: '16-32 weeks',
+      category: 'SpaceTech SaaS'
     }
   ];
 
@@ -601,15 +831,17 @@ export default function MicroSaaS() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Custom software solutions tailored to your business needs. All applications include design, 
-              development, testing, and deployment. Contact us at{' '}
-              <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-500">
+              development, testing, and deployment. Our innovative micro SaaS solutions are designed to 
+              solve specific business challenges with cutting-edge technology and proven methodologies. 
+              Contact us at{' '}
+              <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-500 font-semibold">
                 kleber@ziontechgroup.com
               </a>{' '}
               or call{' '}
-              <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-500">
+              <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-500 font-semibold">
                 +1 302 464 0950
               </a>{' '}
-              for custom pricing.
+              for custom pricing and free consultation.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -707,8 +939,9 @@ export default function MicroSaaS() {
               Ready to Build Your Custom SaaS Solution?
             </h2>
             <p className="mt-6 text-lg leading-8 text-orange-100">
-              Let's discuss your requirements and create a custom solution that drives your business forward. 
-              Get a free consultation and project estimate.
+              Transform your business with our innovative micro SaaS solutions. From quantum computing to 
+              space technology, we deliver cutting-edge software that gives you a competitive advantage. 
+              Get a free consultation and detailed project estimate with our expert team.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

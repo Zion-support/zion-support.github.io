@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -638,6 +638,198 @@ export default function AIServices() {
       pricing: '$15,000 - $60,000/month',
       delivery: '16-32 weeks',
       category: 'Climate AI'
+    },
+    {
+      title: 'AI-Powered Quantum Machine Learning',
+      description: 'Next-generation machine learning leveraging quantum computing for complex pattern recognition',
+      icon: Cpu,
+      features: [
+        'Quantum neural network training and optimization',
+        'Quantum feature mapping and data encoding',
+        'Quantum kernel methods and support vector machines',
+        'Quantum reinforcement learning algorithms',
+        'Hybrid quantum-classical model training',
+        'Quantum advantage demonstration and benchmarking'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Quantum ML AI'
+    },
+    {
+      title: 'AI-Powered Synthetic Media Generation',
+      description: 'Advanced AI system for creating realistic synthetic media including deepfakes and virtual influencers',
+      icon: Video,
+      features: [
+        'High-fidelity voice cloning and synthesis',
+        'Realistic video generation and manipulation',
+        'Virtual influencer creation and management',
+        'Deepfake detection and prevention',
+        'Synthetic data generation for training',
+        'Ethical AI and content authenticity verification'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '12-24 weeks',
+      category: 'Synthetic Media AI'
+    },
+    {
+      title: 'AI-Powered Brain-Computer Interface',
+      description: 'Intelligent neural interface system for direct brain-computer communication and control',
+      icon: Brain,
+      features: [
+        'Neural signal acquisition and processing',
+        'Motor intention decoding and prosthetic control',
+        'Cognitive state monitoring and analysis',
+        'Real-time feedback and adaptation',
+        'Medical device integration and control',
+        'Non-invasive brain stimulation optimization'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '24-48 weeks',
+      category: 'BCI AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Drone Swarm',
+      description: 'Intelligent drone swarm coordination system for complex missions and operations',
+      icon: Network,
+      features: [
+        'Swarm formation and coordination algorithms',
+        'Autonomous mission planning and execution',
+        'Real-time obstacle avoidance and navigation',
+        'Distributed sensing and data fusion',
+        'Dynamic task allocation and optimization',
+        'Integration with ground control systems'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '16-32 weeks',
+      category: 'Drone Swarm AI'
+    },
+    {
+      title: 'AI-Powered Personalized Medicine',
+      description: 'Intelligent precision medicine platform with genomic analysis and treatment optimization',
+      icon: Heart,
+      features: [
+        'Genomic data analysis and interpretation',
+        'Personalized treatment recommendation engine',
+        'Drug response prediction and optimization',
+        'Biomarker discovery and validation',
+        'Clinical trial matching and enrollment',
+        'Integration with electronic health records'
+      ],
+      pricing: '$18,000 - $70,000/month',
+      delivery: '20-36 weeks',
+      category: 'Precision Medicine AI'
+    },
+    {
+      title: 'AI-Powered Space Debris Management',
+      description: 'Intelligent space debris tracking and collision avoidance system',
+      icon: Satellite,
+      features: [
+        'Real-time space debris tracking and cataloging',
+        'Collision risk assessment and prediction',
+        'Autonomous debris removal mission planning',
+        'Satellite constellation protection',
+        'Orbital mechanics optimization',
+        'Integration with space agency networks'
+      ],
+      pricing: '$30,000 - $120,000/month',
+      delivery: '24-48 weeks',
+      category: 'Space Management AI'
+    },
+    {
+      title: 'AI-Powered Fusion Energy Control',
+      description: 'Intelligent fusion reactor control system for plasma optimization and energy production',
+      icon: Zap,
+      features: [
+        'Plasma confinement and stability control',
+        'Magnetic field optimization and control',
+        'Energy output maximization algorithms',
+        'Reactor safety monitoring and protection',
+        'Predictive maintenance and diagnostics',
+        'Real-time performance optimization'
+      ],
+      pricing: '$40,000 - $150,000/month',
+      delivery: '32-64 weeks',
+      category: 'Fusion Energy AI'
+    },
+    {
+      title: 'AI-Powered Synthetic Biology Design',
+      description: 'Intelligent biological system design and optimization platform',
+      icon: Cpu,
+      features: [
+        'Genetic circuit design and optimization',
+        'Protein structure prediction and design',
+        'Metabolic pathway engineering',
+        'Synthetic organism design and testing',
+        'Biomanufacturing process optimization',
+        'Biosafety and biosecurity assessment'
+      ],
+      pricing: '$22,000 - $85,000/month',
+      delivery: '24-48 weeks',
+      category: 'Synthetic Biology AI'
+    },
+    {
+      title: 'AI-Powered Neuromorphic Computing',
+      description: 'Brain-inspired computing system with spiking neural networks and edge optimization',
+      icon: Brain,
+      features: [
+        'Spiking neural network design and training',
+        'Neuromorphic chip simulation and optimization',
+        'Edge AI processing and inference',
+        'Real-time learning and adaptation',
+        'Low-power computing optimization',
+        'Integration with IoT and edge devices'
+      ],
+      pricing: '$16,000 - $65,000/month',
+      delivery: '20-40 weeks',
+      category: 'Neuromorphic AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Underwater Vehicles',
+      description: 'Intelligent underwater vehicle coordination system for ocean exploration and research',
+      icon: Network,
+      features: [
+        'Underwater navigation and mapping',
+        'Autonomous mission planning and execution',
+        'Ocean current and weather adaptation',
+        'Marine life detection and monitoring',
+        'Underwater communication and coordination',
+        'Data collection and analysis automation'
+      ],
+      pricing: '$18,000 - $75,000/month',
+      delivery: '24-48 weeks',
+      category: 'Marine AI'
+    },
+    {
+      title: 'AI-Powered Digital Twin of Earth',
+      description: 'Comprehensive digital twin system for global environmental monitoring and prediction',
+      icon: Globe,
+      features: [
+        'Real-time global environmental data integration',
+        'Climate and weather prediction modeling',
+        'Ecosystem monitoring and analysis',
+        'Natural disaster prediction and response',
+        'Resource management and optimization',
+        'Sustainability planning and recommendations'
+      ],
+      pricing: '$50,000 - $200,000/month',
+      delivery: '40-80 weeks',
+      category: 'Earth Digital Twin AI'
+    },
+    {
+      title: 'AI-Powered Consciousness Simulation',
+      description: 'Advanced AI system for consciousness research and artificial general intelligence development',
+      icon: Brain,
+      features: [
+        'Consciousness modeling and simulation',
+        'Artificial general intelligence development',
+        'Cognitive architecture design and testing',
+        'Self-awareness and introspection capabilities',
+        'Ethical AI and consciousness assessment',
+        'Integration with neuroscience research'
+      ],
+      pricing: '$100,000 - $500,000/month',
+      delivery: '60-120 weeks',
+      category: 'Consciousness AI'
     }
   ];
   const aiTechnologies = [
@@ -724,9 +916,9 @@ export default function AIServices() {
               Artificial Intelligence Solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Transform your business with cutting-edge AI technologies. From
-              machine learning to natural language processing, we deliver
-              intelligent solutions that drive growth and efficiency.
+              Transform your business with cutting-edge AI technologies. From quantum machine learning 
+              to consciousness simulation, we deliver next-generation intelligent solutions that drive 
+              innovation, efficiency, and competitive advantage across all industries.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

@@ -29,7 +29,10 @@ import {
   Mail,
   Phone,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  Car,
+  Brain,
+  Satellite
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -421,6 +424,214 @@ export default function ITServices() {
       pricing: '$3,000 - $20,000/month',
       delivery: '4-8 weeks',
       category: 'SOC Services'
+    },
+    {
+      title: 'Quantum-Safe Cryptography Implementation',
+      description: 'Post-quantum cryptography solutions to protect against future quantum computing threats',
+      icon: Lock,
+      features: [
+        'Quantum-resistant encryption algorithms',
+        'Post-quantum digital signatures',
+        'Quantum key distribution (QKD) systems',
+        'Hybrid classical-quantum security protocols',
+        'Migration planning and implementation',
+        'Compliance with NIST post-quantum standards'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Security Services'
+    },
+    {
+      title: 'Neuromorphic Computing Infrastructure',
+      description: 'Brain-inspired computing systems for edge AI and low-power processing',
+      icon: Cpu,
+      features: [
+        'Neuromorphic chip integration and optimization',
+        'Spiking neural network deployment',
+        'Edge AI processing and inference',
+        'Low-power computing optimization',
+        'Real-time learning and adaptation',
+        'Integration with IoT and sensor networks'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Neuromorphic Computing Services'
+    },
+    {
+      title: 'Space-Based Computing Infrastructure',
+      description: 'Satellite-based computing and edge processing for global connectivity',
+      icon: Satellite,
+      features: [
+        'Satellite constellation management',
+        'Space-based edge computing deployment',
+        'Global low-latency connectivity',
+        'Orbital data processing and storage',
+        'Space-to-ground communication optimization',
+        'Integration with terrestrial networks'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-48 weeks',
+      category: 'Space Computing Services'
+    },
+    {
+      title: 'Fusion Energy IT Infrastructure',
+      description: 'Specialized IT infrastructure for fusion energy research and power generation',
+      icon: Zap,
+      features: [
+        'High-performance computing for plasma simulation',
+        'Real-time control systems for fusion reactors',
+        'Data acquisition and processing systems',
+        'Safety monitoring and emergency response',
+        'Integration with power grid systems',
+        'Research collaboration platforms'
+      ],
+      pricing: '$100,000 - $1,000,000/month',
+      delivery: '32-64 weeks',
+      category: 'Fusion Energy IT Services'
+    },
+    {
+      title: 'Synthetic Biology Computing Platform',
+      description: 'Specialized computing infrastructure for synthetic biology and bioengineering',
+      icon: Cpu,
+      features: [
+        'High-performance computing for genetic modeling',
+        'Bioinformatics data processing and analysis',
+        'Laboratory automation and control systems',
+        'Biological simulation and modeling platforms',
+        'Integration with laboratory equipment',
+        'Research data management and collaboration'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Synthetic Biology IT Services'
+    },
+    {
+      title: 'Autonomous Vehicle Infrastructure',
+      description: 'IT infrastructure for autonomous vehicle testing, deployment, and management',
+      icon: Car,
+      features: [
+        'Vehicle-to-everything (V2X) communication systems',
+        'Edge computing for real-time decision making',
+        'Fleet management and coordination platforms',
+        'Safety monitoring and incident response',
+        'Integration with smart city infrastructure',
+        'Regulatory compliance and reporting systems'
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '24-48 weeks',
+      category: 'Autonomous Vehicle IT Services'
+    },
+    {
+      title: 'Digital Twin Infrastructure Platform',
+      description: 'Comprehensive digital twin infrastructure for real-time simulation and monitoring',
+      icon: Monitor,
+      features: [
+        'Real-time data synchronization and modeling',
+        'High-fidelity simulation and visualization',
+        'IoT sensor integration and data processing',
+        'Predictive analytics and maintenance systems',
+        'Integration with existing business systems',
+        'Scalable cloud and edge computing infrastructure'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin Infrastructure Services'
+    },
+    {
+      title: 'Metaverse Infrastructure & Platform',
+      description: 'Complete metaverse infrastructure for virtual worlds and immersive experiences',
+      icon: Globe,
+      features: [
+        '3D world rendering and streaming infrastructure',
+        'Avatar and asset management systems',
+        'Real-time physics simulation and networking',
+        'Virtual economy and blockchain integration',
+        'Cross-platform compatibility and optimization',
+        'Content creation and management tools'
+      ],
+      pricing: '$40,000 - $300,000/month',
+      delivery: '24-48 weeks',
+      category: 'Metaverse Infrastructure Services'
+    },
+    {
+      title: 'Brain-Computer Interface Infrastructure',
+      description: 'Specialized IT infrastructure for brain-computer interface systems and neural data processing',
+      icon: Brain,
+      features: [
+        'Neural signal acquisition and processing systems',
+        'Real-time brain activity analysis and interpretation',
+        'Medical device integration and control',
+        'Data privacy and security for neural data',
+        'Integration with healthcare systems',
+        'Research collaboration and data sharing platforms'
+      ],
+      pricing: '$35,000 - $200,000/month',
+      delivery: '28-56 weeks',
+      category: 'BCI Infrastructure Services'
+    },
+    {
+      title: 'Underwater Computing Infrastructure',
+      description: 'Specialized computing infrastructure for underwater operations and marine research',
+      icon: Network,
+      features: [
+        'Underwater communication and networking systems',
+        'Marine data processing and analysis platforms',
+        'Autonomous underwater vehicle coordination',
+        'Oceanographic data collection and storage',
+        'Underwater sensor network management',
+        'Integration with surface and satellite systems'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Marine Computing Services'
+    },
+    {
+      title: 'Consciousness Research Computing Platform',
+      description: 'Advanced computing infrastructure for consciousness research and AGI development',
+      icon: Brain,
+      features: [
+        'High-performance computing for consciousness modeling',
+        'Neural network simulation and training',
+        'Cognitive architecture development platforms',
+        'Research collaboration and data sharing systems',
+        'Ethical AI monitoring and assessment tools',
+        'Integration with neuroscience research equipment'
+      ],
+      pricing: '$100,000 - $1,000,000/month',
+      delivery: '40-80 weeks',
+      category: 'Consciousness Research IT Services'
+    },
+    {
+      title: 'Climate Computing & Modeling Infrastructure',
+      description: 'High-performance computing infrastructure for climate modeling and environmental research',
+      icon: Globe,
+      features: [
+        'Climate simulation and modeling systems',
+        'Environmental data processing and analysis',
+        'Real-time weather and climate monitoring',
+        'Carbon tracking and sustainability analytics',
+        'Integration with satellite and sensor networks',
+        'Research collaboration and data sharing platforms'
+      ],
+      pricing: '$30,000 - $250,000/month',
+      delivery: '24-48 weeks',
+      category: 'Climate Computing Services'
+    },
+    {
+      title: 'Space Mission Computing Infrastructure',
+      description: 'Specialized computing infrastructure for space missions and satellite operations',
+      icon: Satellite,
+      features: [
+        'Mission planning and trajectory optimization systems',
+        'Satellite constellation management platforms',
+        'Space debris tracking and collision avoidance',
+        'Ground station communication and control',
+        'Space weather monitoring and prediction',
+        'Integration with space agency networks'
+      ],
+      pricing: '$75,000 - $750,000/month',
+      delivery: '32-64 weeks',
+      category: 'Space Mission IT Services'
     }
   ];
 
@@ -482,8 +693,9 @@ export default function ITServices() {
               Information Technology Solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Comprehensive IT services that keep your business running smoothly. From cloud infrastructure 
-              to cybersecurity, we provide end-to-end technology solutions.
+              Comprehensive IT services that keep your business running smoothly. From quantum-safe cryptography 
+              to space-based computing infrastructure, we provide cutting-edge technology solutions that prepare 
+              your organization for the future of computing and digital transformation.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
