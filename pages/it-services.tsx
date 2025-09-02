@@ -29,7 +29,9 @@ import {
   Mail,
   Phone,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  Brain,
+  Link2
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -309,6 +311,230 @@ export default function ITServices() {
       pricing: '$8,000 - $60,000/month',
       delivery: '10-24 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'Advanced Blockchain & Web3 Infrastructure',
+      description: 'Enterprise blockchain solutions with smart contracts and DeFi integration',
+      icon: Network,
+      features: [
+        'Multi-chain blockchain architecture design',
+        'Smart contract development and auditing',
+        'DeFi protocol integration and optimization',
+        'NFT marketplace and tokenization platforms',
+        'Cross-chain bridge development',
+        'Regulatory compliance and KYC/AML solutions'
+      ],
+      pricing: '$15,000 - $80,000/month',
+      delivery: '12-32 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'IoT & Edge Computing Solutions',
+      description: 'Comprehensive IoT ecosystem with edge computing and real-time analytics',
+      icon: Cpu,
+      features: [
+        'IoT device integration and management',
+        'Edge computing infrastructure deployment',
+        'Real-time data processing and analytics',
+        'Industrial IoT (IIoT) solutions',
+        'Smart city and building automation',
+        'Predictive maintenance and monitoring'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-24 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'Advanced Cybersecurity & Zero Trust',
+      description: 'Next-generation security architecture with AI-powered threat detection',
+      icon: Shield,
+      features: [
+        'Zero Trust security architecture implementation',
+        'AI-powered threat detection and response',
+        'Advanced persistent threat (APT) protection',
+        'Security orchestration and automation (SOAR)',
+        'Identity and access management (IAM)',
+        'Compliance automation and reporting'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-28 weeks',
+      category: 'Advanced Security'
+    },
+    {
+      title: 'Quantum Computing & Cryptography',
+      description: 'Quantum computing solutions and post-quantum cryptography implementation',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and optimization',
+        'Post-quantum cryptography implementation',
+        'Quantum key distribution (QKD) systems',
+        'Quantum simulation and modeling',
+        'Hybrid classical-quantum computing',
+        'Quantum security assessment and consulting'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-48 weeks',
+      category: 'Quantum Services'
+    },
+    {
+      title: 'Advanced Data Engineering & Analytics',
+      description: 'Enterprise data platforms with real-time processing and AI integration',
+      icon: Database,
+      features: [
+        'Real-time data streaming and processing',
+        'Advanced analytics and machine learning pipelines',
+        'Data lake and data warehouse architecture',
+        'ETL/ELT automation and optimization',
+        'Data governance and quality management',
+        'Business intelligence and visualization'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Data Services'
+    },
+    {
+      title: 'Microservices & API Architecture',
+      description: 'Scalable microservices architecture with API management and governance',
+      icon: Code,
+      features: [
+        'Microservices architecture design and implementation',
+        'API gateway and management platform',
+        'Service mesh implementation (Istio, Linkerd)',
+        'Container orchestration and management',
+        'API security and rate limiting',
+        'Service discovery and load balancing'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'Architecture Services'
+    },
+    {
+      title: 'Advanced Cloud Native Solutions',
+      description: 'Cloud-native application development with serverless and containerization',
+      icon: Cloud,
+      features: [
+        'Serverless architecture design and implementation',
+        'Kubernetes cluster management and optimization',
+        'Cloud-native CI/CD pipeline development',
+        'Multi-cloud and hybrid cloud solutions',
+        'Cloud cost optimization and FinOps',
+        'Disaster recovery and backup automation'
+      ],
+      pricing: '$10,000 - $45,000/month',
+      delivery: '8-20 weeks',
+      category: 'Cloud Native Services'
+    },
+    {
+      title: 'Advanced Network & SD-WAN Solutions',
+      description: 'Software-defined networking with AI-powered optimization and security',
+      icon: Network,
+      features: [
+        'SD-WAN design and implementation',
+        'Network function virtualization (NFV)',
+        'AI-powered network optimization',
+        'Software-defined perimeter (SDP)',
+        'Network automation and orchestration',
+        '5G network integration and optimization'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '6-18 weeks',
+      category: 'Network Services'
+    },
+    {
+      title: 'Advanced DevOps & SRE Solutions',
+      description: 'Site reliability engineering with advanced monitoring and automation',
+      icon: Settings,
+      features: [
+        'SRE implementation and best practices',
+        'Advanced monitoring and observability',
+        'Chaos engineering and resilience testing',
+        'Infrastructure as code (IaC) automation',
+        'Performance optimization and tuning',
+        'Incident response and post-mortem automation'
+      ],
+      pricing: '$7,000 - $32,000/month',
+      delivery: '6-16 weeks',
+      category: 'DevOps Services'
+    },
+    {
+      title: 'Advanced AI/ML Infrastructure',
+      description: 'Machine learning operations (MLOps) with model deployment and monitoring',
+      icon: Brain,
+      features: [
+        'MLOps pipeline development and automation',
+        'Model training and deployment infrastructure',
+        'AI model monitoring and drift detection',
+        'Distributed training and inference systems',
+        'AI model versioning and governance',
+        'Edge AI deployment and optimization'
+      ],
+      pricing: '$12,000 - $55,000/month',
+      delivery: '10-24 weeks',
+      category: 'AI/ML Services'
+    },
+    {
+      title: 'Advanced Compliance & Governance',
+      description: 'Regulatory compliance automation with audit trails and reporting',
+      icon: Shield,
+      features: [
+        'Automated compliance monitoring and reporting',
+        'Regulatory framework implementation (GDPR, HIPAA, SOX)',
+        'Audit trail and evidence collection',
+        'Risk assessment and management automation',
+        'Policy management and enforcement',
+        'Third-party risk management'
+      ],
+      pricing: '$6,000 - $28,000/month',
+      delivery: '6-14 weeks',
+      category: 'Compliance Services'
+    },
+    {
+      title: 'Advanced Performance Engineering',
+      description: 'Application performance optimization with load testing and monitoring',
+      icon: BarChart3,
+      features: [
+        'Performance testing and optimization',
+        'Load testing and capacity planning',
+        'Application performance monitoring (APM)',
+        'Database performance tuning',
+        'Caching strategy implementation',
+        'Performance regression testing'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '4-12 weeks',
+      category: 'Performance Services'
+    },
+    {
+      title: 'Advanced Integration & Middleware',
+      description: 'Enterprise integration with API management and data synchronization',
+      icon: Link2,
+      features: [
+        'Enterprise service bus (ESB) implementation',
+        'API integration and management',
+        'Data synchronization and replication',
+        'Message queuing and event streaming',
+        'Legacy system integration and modernization',
+        'Real-time data integration'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '6-18 weeks',
+      category: 'Integration Services'
+    },
+    {
+      title: 'Advanced Backup & Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery with automation and testing',
+      icon: Shield,
+      features: [
+        'Automated backup and recovery systems',
+        'Disaster recovery planning and testing',
+        'Business continuity management',
+        'Data replication and synchronization',
+        'Recovery time objective (RTO) optimization',
+        'Cloud-based backup and recovery'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-12 weeks',
+      category: 'Backup Services'
     }
   ];
 
