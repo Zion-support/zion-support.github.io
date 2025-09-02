@@ -1,26 +1,189 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+
   useEffect(() => {
-    // Add skip to main content link
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
+    // Check for user's motion preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setReducedMotion(prefersReducedMotion);
 
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators for keyboard navigation
-      const style = document.createElement('style');
-      style.textContent = `
-        .focus-visible {
-          outline: 2px solid #2563eb;
-          outline-offset: 2px;
+    // Apply accessibility settings from localStorage
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+    const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+    
+    setIsHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
+
+    // Apply initial styles
+    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
+  }, []);
+
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
+    const root = document.documentElement;
+    
+    // High contrast mode
+    if (highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Font size adjustments
+    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
+    root.classList.add(`font-${fontSize}`);
+
+    // Reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+  };
+
+  const toggleHighContrast = () => {
+    const newValue = !isHighContrast;
+    setIsHighContrast(newValue);
+    localStorage.setItem('highContrast', newValue.toString());
+    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+  };
+
+  const changeFontSize = (newSize: string) => {
+    setFontSize(newSize);
+    localStorage.setItem('fontSize', newSize);
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
+  };
+
+  return (
+    <>
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
+        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
+          Accessibility Options
+        </h3>
+        
+        <div className="space-y-2">
+          <button
+            onClick={toggleHighContrast}
+            className={`w-full px-3 py-1 text-xs rounded ${
+              isHighContrast 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+            aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+          >
+            {isHighContrast ? 'Disable' : 'Enable'} High Contrast
+          </button>
+          
+          <div className="text-xs text-gray-600 dark:text-gray-300">
+            Font Size:
+          </div>
+          <div className="flex gap-1">
+            {['small', 'normal', 'large', 'extra-large'].map((size) => (
+              <button
+                key={size}
+                onClick={() => changeFontSize(size)}
+                className={`px-2 py-1 text-xs rounded ${
+                  fontSize === size
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+                aria-label={`Set font size to ${size}`}
+              >
+                {size.charAt(0).toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+
+      {/* Screen reader only content */}
+      <div className="sr-only">
+        <h1>Zion Tech Group - Technology Solutions Provider</h1>
+        <p>
+          Leading technology solutions provider helping businesses transform their digital presence 
+          with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
+        </p>
+      </div>
+
+      {/* Main content wrapper with accessibility attributes */}
+      <main id="main-content" role="main" aria-label="Main content">
+        {children}
+      </main>
+
+      {/* Accessibility styles */}
+      <style jsx global>{`
+        /* High contrast mode */
+        .high-contrast {
+          --tw-bg-opacity: 1;
+          --tw-text-opacity: 1;
         }
         
+        .high-contrast * {
+          background-color: white !important;
+          color: black !important;
+          border-color: black !important;
+        }
+        
+        .high-contrast button,
+        .high-contrast a {
+          border: 2px solid black !important;
+        }
+        
+        .high-contrast button:hover,
+        .high-contrast a:hover {
+          background-color: black !important;
+          color: white !important;
+        }
+
+        /* Font size adjustments */
+        .font-small {
+          font-size: 0.875rem;
+        }
+        
+        .font-normal {
+          font-size: 1rem;
+        }
+        
+        .font-large {
+          font-size: 1.125rem;
+        }
+        
+        .font-extra-large {
+          font-size: 1.25rem;
+        }
+
+        /* Reduced motion */
+        .reduced-motion *,
+        .reduced-motion *::before,
+        .reduced-motion *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+
+        /* Focus indicators */
+        *:focus {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+
+        /* Screen reader only content */
         .sr-only {
           position: absolute;
           width: 1px;
@@ -32,112 +195,20 @@ const AccessibilityEnhancer: React.FC = () => {
           white-space: nowrap;
           border: 0;
         }
-        
+
         .focus\\:not-sr-only:focus {
           position: static;
           width: auto;
           height: auto;
-          padding: 0.5rem 1rem;
-          margin: 0;
+          padding: inherit;
+          margin: inherit;
           overflow: visible;
           clip: auto;
           white-space: normal;
         }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      // Add ARIA labels to buttons without text
-      const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      iconButtons.forEach(button => {
-        const icon = button.querySelector('svg');
-        if (icon && !button.textContent?.trim()) {
-          const iconName = icon.getAttribute('data-icon') || 'button';
-          button.setAttribute('aria-label', iconName);
-        }
-      });
-
-      // Add ARIA labels to links
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(link => {
-        if (!link.textContent?.trim() && !link.getAttribute('aria-label')) {
-          const href = link.getAttribute('href');
-          if (href) {
-            link.setAttribute('aria-label', `Navigate to ${href}`);
-          }
-        }
-      });
-    };
-
-    // Enhance color contrast
-    const enhanceColorContrast = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        /* Ensure minimum contrast ratios */
-        .text-gray-600 {
-          color: #4b5563 !important;
-        }
-        
-        .text-gray-700 {
-          color: #374151 !important;
-        }
-        
-        .text-gray-800 {
-          color: #1f2937 !important;
-        }
-        
-        .text-gray-900 {
-          color: #111827 !important;
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-          .bg-white {
-            background-color: #ffffff !important;
-            border: 1px solid #000000 !important;
-          }
-          
-          .text-gray-600 {
-            color: #000000 !important;
-          }
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Initialize accessibility enhancements
-    addSkipLink();
-    enhanceFocusManagement();
-    addAriaLabels();
-    enhanceColorContrast();
-
-    // Re-run ARIA label addition when DOM changes
-    const observer = new MutationObserver(() => {
-      addAriaLabels();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  return null;
+      `}</style>
+    </>
+  );
 };
 
 export default AccessibilityEnhancer;
