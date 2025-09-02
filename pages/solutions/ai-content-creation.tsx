@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -28,32 +27,27 @@ export default function AIContentCreation() {
     {
       icon: FileText,
       title: 'Blog Post Generation',
-      description:
-        'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.',
+      description: 'Automatically generate high-quality blog posts with AI'
     },
     {
       icon: PenTool,
       title: 'Social Media Content',
-      description:
-        'Generate compelling social media posts, captions, and hashtags for all platforms.',
+      description: 'Generate compelling social media posts, captions, and hashtags for all platforms.'
     },
     {
       icon: Search,
       title: 'SEO Optimization',
-      description:
-        'Automatically optimize content for search engines with keyword research and optimization.',
+      description: 'Automatically optimize content for search engines with keyword research and optimization.'
     },
     {
       icon: Globe,
       title: 'Multi-language Support',
-      description:
-        'Create content in multiple languages with accurate translation and localization.',
+      description: 'Create content in multiple languages with accurate translation and localization.'
     },
     {
       icon: BarChart3,
       title: 'Content Analytics',
-      description:
-        'Track performance metrics and optimize content strategy with detailed analytics.',
+      description: 'Track performance metrics and optimize content strategy with detailed analytics.'
     },
     {
       icon: Zap,
@@ -72,7 +66,6 @@ export default function AIContentCreation() {
       features: [
         'Up to 50 blog posts/month',
         'Social media content generation',
-        'Basic SEO optimization',
         '2 languages supported',
         'Email support',
       ],
@@ -86,7 +79,6 @@ export default function AIContentCreation() {
       features: [
         'Up to 200 blog posts/month',
         'Advanced social media campaigns',
-        'Premium SEO optimization',
         '5 languages supported',
         'Content analytics dashboard',
         'Priority support',
@@ -113,11 +105,6 @@ export default function AIContentCreation() {
 
   return (
     <>
-      <SEO
-        title="AI Content Creation - Zion Tech Group"
-        description="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI."
-        keywords="AI content creation, automated content, blog generation, social media content, SEO optimization"
-      />
       <Head>
         <title>AI Content Creation - Zion Tech Group</title>
       </Head>
@@ -139,7 +126,6 @@ export default function AIContentCreation() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your content strategy with our advanced AI-powered
-              content creation platform. Generate high-quality, SEO-optimized
               content for blogs, social media, and marketing materials in
               minutes.
             </p>
