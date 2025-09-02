@@ -30,6 +30,8 @@
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
+    "perf:lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
+    "perf:bundle": "npm run build && npx @next/bundle-analyzer",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
