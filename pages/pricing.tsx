@@ -251,7 +251,7 @@ const Pricing: NextPage = () => {
             </div>
 
             <div className="bg-white rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in maintenance?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s included in maintenance?</h3>
               <p className="text-gray-600">
                 Maintenance includes bug fixes, security updates, performance optimization, and minor feature enhancements as specified in your plan.
               </p>
@@ -260,7 +260,7 @@ const Pricing: NextPage = () => {
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>
               <p className="text-gray-600">
-                Absolutely! You can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition.
+                Absolutely! You can upgrade or downgrade your plan at any time. We&apos;ll work with you to ensure a smooth transition.
               </p>
             </div>
 

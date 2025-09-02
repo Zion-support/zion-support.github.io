@@ -221,7 +221,7 @@ const Blog: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
+            Let&apos;s discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

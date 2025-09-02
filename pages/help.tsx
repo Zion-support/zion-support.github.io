@@ -98,7 +98,7 @@ const Help: NextPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Support</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            We're here to help you succeed. Find answers, get support, and access resources to make the most of our services.
+            We&apos;re here to help you succeed. Find answers, get support, and access resources to make the most of our services.
           </p>
         </div>
       </section>
@@ -222,7 +222,7 @@ const Help: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Still Need Help?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Can't find what you're looking for? Our support team is ready to help you with any questions or concerns.
+            Can&apos;t find what you&apos;re looking for? Our support team is ready to help you with any questions or concerns.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

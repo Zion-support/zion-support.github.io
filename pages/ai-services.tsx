@@ -511,7 +511,7 @@ export default function AIServices() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
-              Let's discuss how our AI solutions can drive your business forward. 
+              Let&apos;s discuss how our AI solutions can drive your business forward. 
               Get a free consultation and custom proposal.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
