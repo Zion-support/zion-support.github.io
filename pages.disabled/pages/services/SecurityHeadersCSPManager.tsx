@@ -5,7 +5,8 @@ import {}
   CheckCircle,
   Wrench,
   Mail,
-  Phone} from 'lucide-react.ts';
+  Phone} from
+  'lucide-react.ts';
 
 export default function SecurityHeadersCSPManager(...args: any[]): any {}
   return()
@@ -23,22 +24,25 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
           </p>""
           <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
             {[
+              {,
+  title: 'Policy templates,'
+                desc:,
+  Prebuilt strict, balanced and relaxed CSP profiles.'},
               {
-'
-                title: 'Policy templates','
-                desc: 'Prebuilt strict, balanced and relaxed CSP profiles.'},
+  '
+                title: 'Per-app overrides,'
+                desc:,
+  Granular exceptions with expiry and approvals.'},
               {
-'
-                title: 'Per-app overrides','
-                desc: 'Granular exceptions with expiry and approvals.'},
+  '
+                title: 'Automated reports,'
+                desc:,
+  CSP report-uri ingestion with triage and fixes.'},
               {
-'
-                title: 'Automated reports','
-                desc: 'CSP report-uri ingestion with triage and fixes.'},
-              {
-'
-                title: 'CI/CD integration','
-                desc: 'Fail builds on insecure headers or CSP regressions.'},
+  '
+                title: 'CI/CD integration,'
+                desc:
+  'Fail builds on insecure headers or CSP regressions.'},
             ].map(f => (
               <div"key={f.title}""
                 className="rounded-xl border border-white/10 bg-white/5 p-5""
@@ -50,7 +54,8 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               </div>
             ))}"
           </div>""
-          <div className="mt-8 text-sm text-slate-300">'"Typical pricing:{' '}""
+          <div className="mt-8 text-sm text-slate-300">,
+  "Typical pricing: {'}""
             <span className="font-semibold text-cyan-300">
               $49–$199/mo per domain;
             </span>
@@ -97,4 +102,4 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
   )}'"
-'"'"
+  '"'"

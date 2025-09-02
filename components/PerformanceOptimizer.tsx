@@ -21,14 +21,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            console.log('LCP: ', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            console.log('FID: ', (entry as any).processingStart - entry.startTime);
           }
           if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {
-              console.log('CLS:', (entry as any).value);
+              console.log('CLS: ', (entry as any).value);
             }
           }
         }
@@ -96,7 +96,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       
       {/* Performance hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />
-      
+
       {/* Service Worker registration */}
       <script
         dangerouslySetInnerHTML={{

@@ -30,16 +30,25 @@ import {
   Eye,
   Calendar as CalendarIcon,
   User,
-  Tag as TagIcon'
-} from 'lucide-react';
+  Tag as TagIcon,
+  } from 'lucide-react
+  ';
 
 interface SearchResult {
   id: string;
-  type: 'service' | 'talent' | 'equipment' | 'comp';
+  type: 'service
+  ' | 'talent
+  ' | 'equipment
+  ' | 'comp
+  ';
   title: string;
   description: string;
   url: string;
-  type: 'service' | 'page' | 'blog' | 'documentation' | 'case-study';
+  type: 'service
+  ' | 'page
+  ' | 'blog
+  ' | 'documentation
+  ' | 'case-study;
   category: string;
   tags: string[];
   relevance: number;
@@ -48,11 +57,17 @@ interface SearchResult {
   featured?: boolean;
 export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+  const [searchQuery, setSearchQuery] = useState(searchParams.get(,
+  q
+  ') || '');
   const [isSearching, setIsSearching] = useState(false);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'popularity'>('relevance');
+  const [sortBy, setSortBy] = useState<
+  'relevance' |
+  'date' |
+  'popularity'>(
+  'relevance');
   const [showFilters, setShowFilters] = useState(false);
 
   // Mock search results - in a real app, this would come from an API
@@ -60,157 +75,253 @@ export default function SearchPage() {
     // AI Services
     {
 
-      id: 'ai-bi',
-      title: 'AI Business Intelligence',
-      description: 'Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
-      url: '/services/ai-business-intelligence',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI',Business Intelligence',Analytics',Machine Learning',Predictive'],
+      id:
+  'ai-bi,
+      title:,
+  AI Business Intelligence',
+      description: Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.,
+  ,
+      url: '/services/ai-business-intelligence,
+      type:,
+  service',
+      category: 'AI Services,
+      tags: [
+  'AI',Business Intelligence
+  ',Analytics',Machine Learning
+  ',Predictive'],
       relevance: 0.95,
-      lastUpdated: '2024-12-01',
+      lastUpdated:
+  '2024-12-01',
       icon: Brain,
       featured: true
     },
     {
 
-      id: 'ai-compliance',
-      title: 'AI Compliance Assistant',
-      description: 'Automated regulatory compliance solution that helps businesses stay compliant with industry standards and regulations through intelligent monitoring and reporting.',
-      url: '/services/ai-compliance-assistant',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI',Compliance',Regulatory',Automation',Risk Management'],
+      id:,
+  ai-compliance',
+      title: 'AI Compliance Assistant,
+      description:,
+  Automated regulatory compliance solution that helps businesses stay compliant with industry standards and regulations through intelligent monitoring and reporting.',
+      url: '/services/ai-compliance-assistant,
+      type:,
+  service',
+      category: 'AI Services,
+      tags: [
+  'AI',Compliance
+  ',Regulatory',Automation
+  ',Risk Management'],
       relevance: 0.92,
-      lastUpdated: '2024-11-28',
+      lastUpdated:
+  '2024-11-28',
       icon: Shield
     },
     {
 
-      id: 'ai-sales',
-      title: 'AI Sales Copilot',
-      description: 'Intelligent sales optimization platform that enhances sales performance through AI-driven insights, lead scoring, and automated follow-up sequences.',
-      url: '/services/ai-sales-copilot',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI',Sales',CRM',Automation',Lead Generation'],
+      id:,
+  ai-sales',
+      title: 'AI Sales Copilot,
+      description:,
+  Intelligent sales optimization platform that enhances sales performance through AI-driven insights, lead scoring, and automated follow-up sequences.',
+      url: '/services/ai-sales-copilot,
+      type:,
+  service',
+      category: 'AI Services,
+      tags: [
+  'AI',Sales
+  ',CRM',Automation
+  ',Lead Generation'],
       relevance: 0.89,
-      lastUpdated: '2024-11-25',
+      lastUpdated:
+  '2024-11-25',
       icon: Users
     },
 
     // Cloud Services
     {
 
-      id: 'cloud-devops',
-      title: 'Cloud DevOps Platform',
-      description: 'Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',
-      url: '/services/cloud-devops',
-      type: 'service',
-      category: 'Cloud & Infrastructure',
-      tags: ['Cloud',DevOps',Automation',Infrastructure',AWS',Azure'],
+      id:,
+  cloud-devops',
+      title: 'Cloud DevOps Platform,
+      description:,
+  Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',
+      url: '/services/cloud-devops,
+      type:,
+  service',
+      category: 'Cloud & Infrastructure,
+      tags: [
+  'Cloud',DevOps
+  ',Automation',Infrastructure
+  ',AWS',Azure
+  '],
       relevance: 0.87,
-      lastUpdated: '2024-11-20',
+      lastUpdated: '2024-11-20
+  ',
       icon: Cloud
     },
     {
 
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure Management',
-      description: 'Enterprise-grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.',
-      url: '/services/it-infrastructure',
-      type: 'service',
-      category: 'Cloud & Infrastructure',
-      tags: ['Infrastructure',IT',Enterprise',Networking',Security'],
+      id:,
+  it-infrastructure
+  ',
+      title: 'IT Infrastructure Management,
+      description:,
+  Enterprise-grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.
+  ',
+      url: '/services/it-infrastructure,
+      type:,
+  service
+  ',
+      category: 'Cloud & Infrastructure,
+      tags: ['Infrastructure
+  ',IT',Enterprise
+  ',Networking',Security
+  '],
       relevance: 0.84,
-      lastUpdated: '2024-11-18',
+      lastUpdated: '2024-11-18
+  ',
       icon: Server
     },
 
     // Security Services
     {
 
-      id: 'ai-cybersecurity',
-      title: 'AI Cybersecurity Platform',
-      description: 'Next-generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.',
-      url: '/services/ai-cybersecurity-platform',
-      type: 'service',
-      category: 'Security & Compliance',
-      tags: ['Cybersecurity',AI',Threat Detection',Security',Compliance'],
+      id:,
+  ai-cybersecurity
+  ',
+      title: 'AI Cybersecurity Platform,
+      description:,
+  Next-generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.
+  ',
+      url: '/services/ai-cybersecurity-platform,
+      type:,
+  service
+  ',
+      category: 'Security & Compliance,
+      tags: ['Cybersecurity
+  ',AI',Threat Detection
+  ',Security',Compliance
+  '],
       relevance: 0.91,
-      lastUpdated: '2024-11-22',
+      lastUpdated: '2024-11-22
+  ',
       icon: Shield,
       featured: true
     },
     {
 
-      id: 'zero-trust',
-      title: 'Zero Trust Network Access',
-      description: 'Modern security architecture that implements zero-trust principles for enhanced network security and access control.',
-      url: '/services/zero-trust-network-access',
-      type: 'service',
-      category: 'Security & Compliance',
-      tags: ['Zero Trust',Security',Network',Access Control',Compliance'],
+      id:,
+  zero-trust
+  ',
+      title: 'Zero Trust Network Access,
+      description:,
+  Modern security architecture that implements zero-trust principles for enhanced network security and access control.
+  ',
+      url: '/services/zero-trust-network-access,
+      type:,
+  service
+  ',
+      category: 'Security & Compliance,
+      tags: ['Zero Trust
+  ',Security',Network
+  ',Access Control',Compliance
+  '],
       relevance: 0.86,
-      lastUpdated: '2024-11-15',
+      lastUpdated: '2024-11-15
+  ',
       icon: Lock
     },
 
     // Quantum Computing
     {
 
-      id: 'quantum-computing',
-      title: 'Quantum Computing Solutions',
-      description: 'Cutting-edge quantum computing services for optimization problems, cryptography, and scientific simulations.',
-      url: '/services/quantum-computing',
-      type: 'service',
-      category: 'Quantum Computing',
-      tags: ['Quantum Computing',Optimization',Cryptography',AI',Research'],
+      id:,
+  quantum-computing
+  ',
+      title: 'Quantum Computing Solutions,
+      description:,
+  Cutting-edge quantum computing services for optimization problems, cryptography, and scientific simulations.
+  ',
+      url: '/services/quantum-computing,
+      type:,
+  service
+  ',
+      category: 'Quantum Computing,
+      tags: ['Quantum Computing
+  ',Optimization',Cryptography
+  ',AI',Research
+  '],
       relevance: 0.88,
-      lastUpdated: '2024-11-10',
+      lastUpdated: '2024-11-10
+  ',
       icon: Atom
     },
 
     // Blog Posts
     {
 
-      id: 'ai-trends-2024',
-      title: 'AI Trends to Watch in 2024',
-      description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',
-      url: '/blog/ai-trends-2024',
-      type: 'blog',
-      category: 'AI & Technology',
-      tags: ['AI',Trends',Technology',2024',Innovation'],
+      id:,
+  ai-trends-2024
+  ',
+      title: 'AI Trends to Watch in 2024,
+      description:,
+  Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.
+  ',
+      url: '/blog/ai-trends-2024,
+      type:,
+  blog
+  ',
+      category: 'AI & Technology,
+      tags: ['AI
+  ',Trends',Technology
+  ',2024',Innovation
+  '],
       relevance: 0.82,
-      lastUpdated: '2024-12-01',
+      lastUpdated: '2024-12-01
+  ',
       icon: BookOpen
     },
     {
 
-      id: 'cloud-migration-guide',
-      title: 'Complete Guide to Cloud Migration',
-      description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',
-      url: '/blog/cloud-migration-guide',
-      type: 'blog',
-      category: 'Cloud & Infrastructure',
-      tags: ['Cloud Migration',Guide',Best Practices',Infrastructure'],
+      id:,
+  cloud-migration-guide
+  ',
+      title: 'Complete Guide to Cloud Migration,
+      description:,
+  A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.
+  ',
+      url: '/blog/cloud-migration-guide,
+      type:,
+  blog
+  ',
+      category: 'Cloud & Infrastructure,
+      tags: ['Cloud Migration
+  ',Guide',Best Practices
+  ',Infrastructure'],
       relevance: 0.79,
-      lastUpdated: '2024-11-28',
+      lastUpdated:
+  '2024-11-28',
       icon: Cloud
     },
 
     // Case Studies
     {
 
-      id: 'healthcare-ai-case-study',
-      title: 'AI Transformation in Healthcare',
-      description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
-      url: '/case-studies/healthcare-ai-transformation',
-      type: 'case-study',
-      category: 'Healthcare',
-      tags: ['AI',Healthcare',Case Study',Transformation',Patient Care'],
+      id:,
+  healthcare-ai-case-study',
+      title: 'AI Transformation in Healthcare,
+      description:,
+  How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
+      url: '/case-studies/healthcare-ai-transformation,
+      type:,
+  case-study',
+      category: 'Healthcare,
+      tags: [
+  'AI',Healthcare
+  ',Case Study',Transformation
+  ',Patient Care'],
       relevance: 0.85,
-      lastUpdated: '2024-11-20',
+      lastUpdated:
+  '2024-11-20',
       icon: FileText
     }
   ];
@@ -232,9 +343,10 @@ export default function SearchPage() {
 
       switch (sortBy) {
 
-        case 'date':
-          return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
-        case 'popularity':
+        case,
+  date': return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
+        case
+  'popularity:
           return b.relevance - a.relevance;
         default:
           return b.relevance - a.relevance}
@@ -262,32 +374,50 @@ export default function SearchPage() {
 
   // Clear all filters
 
-    setSelectedTags([]);'    setSearchQuery('');
+    setSelectedTags([]);,
+  setSearchQuery('
+  ');
     setSearchParams({})};
 
-      case 'page': return FileText;
-      case 'blog': return BookOpen;
-      case 'case-study': return FileText;
-      case 'documentation': return Code;
+      case 'page
+  ': return FileText;
+      case 'blog
+  ': return BookOpen;
+      case 'case-study
+  ': return FileText;
+      case 'documentation: return Code;
       default: return FileText}
-'
-      case 'service': return Zap;'
-      case 'page': return FileText;'
-      case 'blog': return BookOpen;'
-      case 'case-study': return FileText;'      case 'documentation': return Code;
+,
+  case
+  'service': return Zap;'
+      case
+  'page': return FileText;'
+      case
+  'blog': return BookOpen;'
+      case
+  'case-study': return FileText;'      case
+  'documentation: return Code;
       default: return FileText}
   };
 
-      case 'blog': return 'from-green-500 to-emerald-500';
-      case 'case-study': return 'from-purple-500 to-pink-500';
-      case 'documentation': return 'from-orange-500 to-red-500';
-      default: return 'from-gray-500 to-slate-500'}  };
+      case,
+  blog': return
+  'from-green-500 to-emerald-500';
+      case
+  'case-study': return
+  'from-purple-500 to-pink-500';
+      case
+  'documentation': return
+  'from-orange-500 to-red-500';
+      default: return
+  'from-gray-500 to-slate-500}  };
 
   // Calculate filter counts
   filterOptions.forEach(filter => {
 
     filter.count = mockSearchResults.filter(result =>
-      result.category.toLowerCase().replace(/\s+/g,-') === filter.id ||
+      result.category.toLowerCase().replace(/\s+/g,-
+  ') === filter.id ||
       result.type === filter.id
     ).length});
 
@@ -375,8 +505,9 @@ export default function SearchPage() {
                     className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
 
                       selectedFilters.has(filter.id)
-                        ? 'bg-blue-50 border border-blue-200''
-                        : 'hover:bg-gray-50'`
+                        ?,
+  bg-blue-50 border border-blue-200'
+  ': 'hover:bg-gray-50`
                     }`}
                   >"
                     <div className="flex items-center space-x-3">"

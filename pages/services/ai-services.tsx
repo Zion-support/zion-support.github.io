@@ -1,33 +1,44 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import { getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from 'lucide-react';
-import Link from 'next/link';
+import React from,
+  react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import { getServicesByCategory } from
+  '../../data/services';
+import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from
+  'lucide-react';
+import Link from
+  'next/link';
 
 const AIServicesPage: NextPage = () => {
-  const aiServices = getServicesByCategory('ai-services');
+  const aiServices = getServicesByCategory(
+  'ai-services);
 
   const benefits = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: 'Advanced AI',
-      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.'
+      title:,
+  Advanced AI',
+      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Rapid Implementation',
-      description: 'Quick deployment of AI solutions with proven methodologies and best practices.'
+      title:,
+  Rapid Implementation',
+      description: 'Quick deployment of AI solutions with proven methodologies and best practices.
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'Expert Team',
-      description: 'AI specialists with deep expertise in machine learning and data science.'
+      title:,
+  Expert Team',
+      description: 'AI specialists with deep expertise in machine learning and data science.
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Scalable Solutions',
-      description: 'AI solutions that grow with your business and adapt to changing needs.'
+      title:,
+  Scalable Solutions',
+      description: 'AI solutions that grow with your business and adapt to changing needs.
     }
   ];
 

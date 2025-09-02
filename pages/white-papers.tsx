@@ -1,234 +1,473 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Download, FileText, Calendar, User, ArrowRight, Eye } from 'lucide-react';
-import Link from 'next/link';
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
+import { 
+  FileText,
+  Download,
+  Calendar,
+  User,
+  Clock,
+  ArrowRight,
+  Search,
+  Filter,
+  Tag,
+  Eye,
+  Share2,
+  BookOpen,
+  TrendingUp,
+  Brain,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Zap,
+  Globe,
+  Phone,
+  Mail,
+  Award,
+  Star,
+  CheckCircle
+} from
+  'lucide-react';
 
-const WhitePapersPage: React.FC = () => {
+const WhitePapers: React.FC = () => {
   const whitePapers = [
     {
       id: 1,
-      title: "The Future of Artificial Intelligence in Enterprise: A Comprehensive Guide",
-      description: "Explore the latest trends, challenges, and opportunities in enterprise AI implementation. This comprehensive guide covers everything from strategy to execution.",
-      author: "Dr. Sarah Johnson, AI Research Director",
+      title: "The Future of AI in Enterprise: A Comprehensive Guide to Implementation",
+      description: "Explore the latest trends, challenges, and opportunities in enterprise AI adoption. This comprehensive guide covers everything from strategy to implementation.",
+      author: "Dr. Sarah Johnson",
       date: "2025-01-15",
-      category: "Artificial Intelligence",
-      pages: 45,
+      readTime: "45 min read",
+      category: "AI Strategy",
       downloads: 1250,
-      views: 3200,
-      fileSize: "2.3 MB",
-      image: "/images/whitepapers/ai-enterprise.jpg",
-      slug: "future-ai-enterprise-guide"
+      rating: 4.9,
+      pages: 32,
+      image: "/api/placeholder/400/300",
+      tags: ["AI Strategy", "Enterprise", "Implementation", "Future Trends"],
+      featured: true,
+      downloadUrl: "/downloads/ai-enterprise-guide.pdf"
     },
     {
       id: 2,
-      title: "Cloud Security Best Practices: Protecting Your Digital Assets",
-      description: "Learn essential cloud security strategies and best practices to protect your organization's data and infrastructure in today's threat landscape.",
-      author: "Mike Chen, Cybersecurity Expert",
+      title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
+      description: "Learn how AI is revolutionizing cybersecurity and the essential measures organizations need to protect against emerging threats.",
+      author: "Michael Chen",
       date: "2025-01-12",
-      category: "Cybersecurity",
-      pages: 32,
+      readTime: "35 min read",
+      category: "Security",
       downloads: 980,
-      views: 2100,
-      fileSize: "1.8 MB",
-      image: "/images/whitepapers/cloud-security.jpg",
-      slug: "cloud-security-best-practices"
+      rating: 4.8,
+      pages: 28,
+      image: "/api/placeholder/400/300",
+      tags: ["Cybersecurity", "AI Security", "Threat Protection", "Risk Management"],
+      featured: false,
+      downloadUrl: "/downloads/ai-cybersecurity-guide.pdf"
     },
     {
       id: 3,
-      title: "Digital Transformation Roadmap: A Strategic Framework",
-      description: "Navigate your digital transformation journey with our proven framework. Includes case studies, implementation strategies, and ROI measurement techniques.",
-      author: "Alex Rodriguez, Digital Strategy Consultant",
+      title: "Cloud Migration Strategies: Best Practices for 2025",
+      description: "Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.",
+      author: "Emily Rodriguez",
       date: "2025-01-10",
-      category: "Digital Transformation",
-      pages: 38,
+      readTime: "40 min read",
+      category: "Cloud Computing",
       downloads: 1150,
-      views: 2800,
-      fileSize: "2.1 MB",
-      image: "/images/whitepapers/digital-transformation.jpg",
-      slug: "digital-transformation-roadmap"
+      rating: 4.7,
+      pages: 30,
+      image: "/api/placeholder/400/300",
+      tags: ["Cloud Migration", "Strategy", "Best Practices", "Digital Transformation"],
+      featured: false,
+      downloadUrl: "/downloads/cloud-migration-guide.pdf"
     },
     {
       id: 4,
-      title: "Micro SaaS Development: Building Profitable Small-Scale Solutions",
-      description: "Discover the secrets to building successful micro SaaS products. Learn about market validation, development strategies, and scaling techniques.",
-      author: "Emily Watson, SaaS Product Manager",
+      title: "Data Analytics and Machine Learning: Driving Business Intelligence",
+      description: "Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
+      author: "David Kim",
       date: "2025-01-08",
-      category: "SaaS Development",
-      pages: 28,
-      downloads: 750,
-      views: 1800,
-      fileSize: "1.5 MB",
-      image: "/images/whitepapers/micro-saas.jpg",
-      slug: "micro-saas-development-guide"
+      readTime: "38 min read",
+      category: "Analytics",
+      downloads: 890,
+      rating: 4.6,
+      pages: 26,
+      image: "/api/placeholder/400/300",
+      tags: ["Data Analytics", "Machine Learning", "Business Intelligence", "Decision Making"],
+      featured: false,
+      downloadUrl: "/downloads/data-analytics-guide.pdf"
     },
     {
       id: 5,
-      title: "Data Analytics and Business Intelligence: Turning Data into Decisions",
-      description: "Master the art of data-driven decision making. This guide covers analytics frameworks, tools, and implementation strategies for modern businesses.",
-      author: "David Kim, Data Analytics Director",
+      title: "AI-Powered Customer Experience: The New Competitive Advantage",
+      description: "Explore how AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
+      author: "Lisa Wang",
       date: "2025-01-05",
-      category: "Data Analytics",
-      pages: 42,
-      downloads: 890,
-      views: 2200,
-      fileSize: "2.0 MB",
-      image: "/images/whitepapers/data-analytics.jpg",
-      slug: "data-analytics-business-intelligence"
+      readTime: "42 min read",
+      category: "Customer Experience",
+      downloads: 1100,
+      rating: 4.8,
+      pages: 34,
+      image: "/api/placeholder/400/300",
+      tags: ["Customer Experience", "AI", "Automation", "Competitive Advantage"],
+      featured: false,
+      downloadUrl: "/downloads/ai-customer-experience.pdf"
     },
     {
       id: 6,
-      title: "DevOps Automation: Streamlining Development and Operations",
-      description: "Learn how to implement effective DevOps practices to accelerate development cycles, improve quality, and reduce operational overhead.",
-      author: "Lisa Thompson, DevOps Engineer",
+      title: "Digital Transformation: A Roadmap for Modern Organizations",
+      description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.",
+      author: "James Wilson",
       date: "2025-01-03",
-      category: "DevOps",
-      pages: 35,
-      downloads: 650,
-      views: 1600,
-      fileSize: "1.7 MB",
-      image: "/images/whitepapers/devops-automation.jpg",
-      slug: "devops-automation-guide"
+      readTime: "50 min read",
+      category: "Digital Transformation",
+      downloads: 1350,
+      rating: 4.9,
+      pages: 36,
+      image: "/api/placeholder/400/300",
+      tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"],
+      featured: false,
+      downloadUrl: "/downloads/digital-transformation-roadmap.pdf"
     }
   ];
 
-  const categories = ["All", "Artificial Intelligence", "Cybersecurity", "Digital Transformation", "SaaS Development", "Data Analytics", "DevOps"];
+  const categories = [
+    { name: "All Categories", count: 24, active: true },
+    { name: "AI Strategy", count: 6, active: false },
+    { name: "Security", count: 4, active: false },
+    { name: "Cloud Computing", count: 5, active: false },
+    { name: "Analytics", count: 3, active: false },
+    { name: "Customer Experience", count: 3, active: false },
+    { name: "Digital Transformation", count: 2, active: false },
+    { name: "Other", count: 1, active: false }
+  ];
+
+  const featuredPaper = whitePapers.find(paper => paper.featured);
 
   return (
-    <>
-      <Helmet>
-        <title>White Papers - Zion Tech Group | Technology Research & Insights</title>
-        <meta name="description" content="Access our comprehensive white papers and research reports on the latest technology trends, best practices, and industry insights." />
-        <meta name="keywords" content="white papers, technology research, industry insights, AI, cybersecurity, digital transformation, SaaS, data analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/white-papers" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Technology Research & Insights
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8">
-                Access our comprehensive white papers and research reports on the latest technology trends, best practices, and industry insights.
-              </p>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="White Papers - Zion Tech Group" 
+        description="Access our comprehensive white papers and research reports on AI, technology trends, and business innovation. Expert insights and actionable strategies."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge variant="secondary" className="mb-4">
+              <FileText className="w-4 h-4 mr-2" />
+              Research & Insights
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              White Papers
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Access our comprehensive research and insights on the latest technology trends and business strategies.
+            </p>
+          </motion.div>
         </div>
+      </section>
 
-        {/* Category Filter */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  category === "All"
-                    ? "bg-blue-600 text-white shadow-lg"
-                    : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+      {/* Featured White Paper */}
+      {featuredPaper && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-8">Featured White Paper</h2>
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div className="relative h-64 lg:h-full">
+                    <img 
+                      src={featuredPaper.image} 
+                      alt={featuredPaper.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                        <Star className="w-4 h-4 mr-1" />
+                        Featured
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center mb-4">
+                      <Badge variant="outline" className="mr-3">{featuredPaper.category}</Badge>
+                      <span className="text-gray-400 text-sm">{featuredPaper.pages} pages</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{featuredPaper.title}</h3>
+                    <p className="text-gray-300 mb-6">{featuredPaper.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-400">{featuredPaper.downloads.toLocaleString()}</div>
+                        <div className="text-sm text-gray-400">Downloads</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-blue-400">{featuredPaper.rating}/5</div>
+                        <div className="text-sm text-gray-400">Rating</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-gray-400 text-sm">
+                        <User className="w-4 h-4 mr-2" />
+                        {featuredPaper.author}
+                        <Calendar className="w-4 h-4 ml-4 mr-2" />
+                        {new Date(featuredPaper.date).toLocaleDateString()}
+                      </div>
+                      <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                        <Download className="w-4 h-4 mr-2" />
+                        Download Now
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
           </div>
+        </section>
+      )}
 
-          {/* White Papers Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whitePapers.map((paper) => (
-              <div key={paper.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <FileText className="w-16 h-16 mx-auto mb-2" />
-                    <div className="text-lg font-bold">{paper.category}</div>
+      {/* White Papers Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main Content */}
+            <div className="lg:w-2/3">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-3xl font-bold text-white">All White Papers</h2>
+                  <div className="flex items-center gap-4">
+                    <div className="relative">
+                      <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                      <input
+                        type="text"
+                        placeholder="Search white papers..."
+                        className="pl-10 pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <Button variant="outline" size="sm">
+                      <Filter className="w-4 h-4 mr-2" />
+                      Filter
+                    </Button>
                   </div>
                 </div>
                 
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                      {paper.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {paper.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {paper.description}
-                  </p>
-                  
-                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      <span>{paper.author}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{new Date(paper.date).toLocaleDateString()}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
-                    <span>{paper.pages} pages</span>
-                    <span>{paper.fileSize}</span>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <Download className="w-4 h-4" />
-                      <span>{paper.downloads.toLocaleString()} downloads</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Eye className="w-4 h-4" />
-                      <span>{paper.views.toLocaleString()} views</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
-                      <Download className="w-4 h-4" />
-                      Download
-                    </button>
-                    <Link
-                      href={`/white-papers/${paper.slug}`}
-                      className="flex items-center justify-center px-4 py-2 border border-gray-300 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {whitePapers.filter(paper => !paper.featured).map((paper, index) => (
+                    <motion.div
+                      key={paper.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.1 * index }}
                     >
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
+                      <Card className="overflow-hidden h-full">
+                        <div className="relative h-48">
+                          <img 
+                            src={paper.image} 
+                            alt={paper.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-4 left-4">
+                            <Badge variant="outline">{paper.category}</Badge>
+                          </div>
+                          <div className="absolute top-4 right-4">
+                            <Badge variant="secondary" className="text-xs">
+                              {paper.pages} pages
+                            </Badge>
+                          </div>
+                        </div>
+                        <div className="p-6">
+                          <h3 className="text-xl font-bold text-white mb-3">{paper.title}</h3>
+                          <p className="text-gray-300 mb-4 text-sm">{paper.description}</p>
+                          
+                          <div className="flex items-center mb-4 text-sm text-gray-400">
+                            <User className="w-4 h-4 mr-2" />
+                            {paper.author}
+                            <Calendar className="w-4 h-4 ml-4 mr-2" />
+                            {new Date(paper.date).toLocaleDateString()}
+                            <Clock className="w-4 h-4 ml-4 mr-2" />
+                            {paper.readTime}
+                          </div>
+                          
+                          <div className="grid grid-cols-2 gap-4 mb-4">
+                            <div className="text-center">
+                              <div className="text-lg font-bold text-green-400">{paper.downloads.toLocaleString()}</div>
+                              <div className="text-xs text-gray-400">Downloads</div>
+                            </div>
+                            <div className="text-center">
+                              <div className="text-lg font-bold text-blue-400">{paper.rating}/5</div>
+                              <div className="text-xs text-gray-400">Rating</div>
+                            </div>
+                          </div>
+                          
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {paper.tags.slice(0, 3).map((tag, tagIndex) => (
+                              <Badge key={tagIndex} variant="secondary" className="text-xs">
+                                <Tag className="w-3 h-3 mr-1" />
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                          
+                          <div className="flex items-center justify-between">
+                            <Button variant="outline" size="sm">
+                              <Eye className="w-4 h-4 mr-2" />
+                              Preview
+                            </Button>
+                            <div className="flex gap-2">
+                              <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                                <Download className="w-4 h-4 mr-2" />
+                                Download
+                              </Button>
+                              <Button variant="outline" size="sm">
+                                <Share2 className="w-4 h-4" />
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </Card>
+                    </motion.div>
+                  ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
+              </motion.div>
+            </div>
 
-        {/* Newsletter Signup */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Stay Updated with Latest Research
-            </h2>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter and be the first to access new white papers, research reports, and industry insights.
-            </p>
-            <div className="max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-              <button className="px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Subscribe
-              </button>
+            {/* Sidebar */}
+            <div className="lg:w-1/3">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="space-y-8"
+              >
+                {/* Categories Filter */}
+                <Card className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Filter by Category</h3>
+                  <div className="space-y-2">
+                    {categories.map((category, index) => (
+                      <button
+                        key={category.name}
+                        className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                          category.active 
+                            ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
+                        }`}
+                      >
+                        <span>{category.name}</span>
+                        <Badge variant="secondary" className="text-xs">
+                          {category.count}
+                        </Badge>
+                      </button>
+                    ))}
+                  </div>
+                </Card>
+
+                {/* Download Stats */}
+                <Card className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Download Statistics</h3>
+                  <div className="space-y-4">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-400">50K+</div>
+                      <div className="text-sm text-gray-400">Total Downloads</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-blue-400">4.8/5</div>
+                      <div className="text-sm text-gray-400">Average Rating</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-400">25+</div>
+                      <div className="text-sm text-gray-400">White Papers</div>
+                    </div>
+                  </div>
+                </Card>
+
+                {/* Newsletter Signup */}
+                <Card className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Get notified when we publish new white papers and research reports.
+                  </p>
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                      Subscribe
+                    </Button>
+                  </div>
+                </Card>
+
+                {/* CTA */}
+                <Card className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Need Custom Research?</h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    We can create custom white papers and research reports tailored to your specific industry and needs.
+                  </p>
+                  <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Request Custom Research
+                  </Button>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Access All Our Research?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of professionals who rely on our insights to stay ahead of the curve.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                <Download className="w-5 h-5 mr-2" />
+                Download All Papers
+              </Button>
+              <Button size="lg" variant="outline">
+                <Mail className="w-5 h-5 mr-2" />
+                Request Custom Research
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default WhitePapersPage;
+export default WhitePapers;
