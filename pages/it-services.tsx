@@ -632,6 +632,310 @@ export default function ITServices() {
       pricing: '$75,000 - $750,000/month',
       delivery: '32-64 weeks',
       category: 'Space Mission IT Services'
+    },
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations platform with automated incident response and predictive maintenance',
+      icon: Brain,
+      features: [
+        'Automated incident detection and response',
+        'Predictive infrastructure maintenance',
+        'Intelligent capacity planning and optimization',
+        'Automated root cause analysis',
+        'Self-healing infrastructure capabilities',
+        'Integration with existing monitoring tools'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Autonomous IT Infrastructure Management',
+      description: 'Self-managing IT infrastructure with autonomous decision-making and optimization',
+      icon: Settings,
+      features: [
+        'Autonomous infrastructure provisioning and scaling',
+        'Self-optimizing performance tuning',
+        'Automated security patch management',
+        'Intelligent resource allocation and optimization',
+        'Autonomous disaster recovery and failover',
+        'Continuous infrastructure health monitoring'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Autonomous IT Services'
+    },
+    {
+      title: 'Quantum-Enhanced Cybersecurity',
+      description: 'Next-generation cybersecurity solutions leveraging quantum computing for threat detection',
+      icon: Shield,
+      features: [
+        'Quantum-enhanced threat detection algorithms',
+        'Post-quantum cryptography implementation',
+        'Quantum key distribution systems',
+        'Advanced behavioral analysis and anomaly detection',
+        'Quantum-resistant authentication systems',
+        'Integration with existing security infrastructure'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-20 weeks',
+      category: 'Quantum Security Services'
+    },
+    {
+      title: 'Edge AI Computing Infrastructure',
+      description: 'Distributed edge computing platform optimized for AI workloads and real-time processing',
+      icon: Cpu,
+      features: [
+        'Edge AI model deployment and optimization',
+        'Distributed inference and training capabilities',
+        'Real-time data processing and analytics',
+        'Edge-to-cloud synchronization and management',
+        'Low-latency communication protocols',
+        'Integration with IoT and sensor networks'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge AI Services'
+    },
+    {
+      title: 'Autonomous Cloud Cost Optimization',
+      description: 'AI-driven cloud cost management with autonomous optimization and cost prediction',
+      icon: Cloud,
+      features: [
+        'Automated cloud resource optimization',
+        'Intelligent cost prediction and budgeting',
+        'Autonomous rightsizing and scaling recommendations',
+        'Multi-cloud cost comparison and optimization',
+        'Reserved instance and spot instance management',
+        'Real-time cost monitoring and alerting'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'Cloud Optimization Services'
+    },
+    {
+      title: 'Self-Healing Network Infrastructure',
+      description: 'Intelligent network infrastructure with autonomous fault detection and recovery',
+      icon: Network,
+      features: [
+        'Autonomous network fault detection and diagnosis',
+        'Self-healing network topology optimization',
+        'Intelligent traffic routing and load balancing',
+        'Automated network security and threat response',
+        'Predictive network maintenance and upgrades',
+        'Integration with SD-WAN and network virtualization'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Self-Healing Network Services'
+    },
+    {
+      title: 'Autonomous Data Governance Platform',
+      description: 'Intelligent data governance system with automated compliance and quality management',
+      icon: Database,
+      features: [
+        'Automated data discovery and classification',
+        'Intelligent data quality assessment and remediation',
+        'Autonomous compliance monitoring and reporting',
+        'Automated data lineage tracking and documentation',
+        'Intelligent data retention and archival policies',
+        'Integration with data lakes and warehouses'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Data Governance Services'
+    },
+    {
+      title: 'Autonomous API Management Platform',
+      description: 'Intelligent API management with autonomous optimization and security',
+      icon: Code,
+      features: [
+        'Automated API discovery and documentation',
+        'Intelligent API performance optimization',
+        'Autonomous API security and threat protection',
+        'Automated API versioning and lifecycle management',
+        'Intelligent API analytics and insights',
+        'Integration with microservices and cloud platforms'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Autonomous API Services'
+    },
+    {
+      title: 'Self-Optimizing Database Infrastructure',
+      description: 'Intelligent database management with autonomous optimization and scaling',
+      icon: Database,
+      features: [
+        'Autonomous database performance tuning',
+        'Intelligent query optimization and indexing',
+        'Automated database scaling and resource allocation',
+        'Self-healing database recovery and backup',
+        'Predictive database maintenance and optimization',
+        'Integration with cloud and on-premises systems'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Autonomous Database Services'
+    },
+    {
+      title: 'Intelligent IT Asset Management',
+      description: 'AI-powered IT asset lifecycle management with predictive analytics and optimization',
+      icon: Monitor,
+      features: [
+        'Automated asset discovery and inventory management',
+        'Intelligent asset lifecycle prediction and planning',
+        'Automated license compliance and optimization',
+        'Predictive asset maintenance and replacement',
+        'Intelligent asset utilization and optimization',
+        'Integration with procurement and financial systems'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'IT Asset Management Services'
+    },
+    {
+      title: 'Autonomous DevOps Pipeline',
+      description: 'Self-managing DevOps pipeline with intelligent automation and optimization',
+      icon: Settings,
+      features: [
+        'Automated CI/CD pipeline optimization',
+        'Intelligent code quality assessment and improvement',
+        'Autonomous deployment strategy selection',
+        'Automated testing and quality assurance',
+        'Intelligent rollback and recovery mechanisms',
+        'Integration with development and operations tools'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Autonomous DevOps Services'
+    },
+    {
+      title: 'Self-Adaptive Security Operations',
+      description: 'Intelligent security operations with autonomous threat response and adaptation',
+      icon: Shield,
+      features: [
+        'Autonomous threat detection and response',
+        'Intelligent security policy adaptation',
+        'Automated security incident investigation',
+        'Self-learning security behavior analysis',
+        'Autonomous security patch management',
+        'Integration with SIEM and security tools'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Autonomous Security Services'
+    },
+    {
+      title: 'Intelligent IT Service Management',
+      description: 'AI-powered IT service management with autonomous ticket resolution and optimization',
+      icon: Users,
+      features: [
+        'Automated ticket classification and routing',
+        'Intelligent service request resolution',
+        'Autonomous SLA monitoring and optimization',
+        'Automated knowledge base management',
+        'Intelligent service performance analytics',
+        'Integration with ITSM and helpdesk systems'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Intelligent ITSM Services'
+    },
+    {
+      title: 'Autonomous Infrastructure Monitoring',
+      description: 'Self-managing infrastructure monitoring with intelligent alerting and optimization',
+      icon: BarChart3,
+      features: [
+        'Automated monitoring configuration and optimization',
+        'Intelligent alert correlation and reduction',
+        'Autonomous performance baseline establishment',
+        'Automated capacity planning and scaling',
+        'Intelligent anomaly detection and analysis',
+        'Integration with monitoring and observability tools'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'Autonomous Monitoring Services'
+    },
+    {
+      title: 'Self-Optimizing Cloud Migration',
+      description: 'Intelligent cloud migration with autonomous optimization and risk management',
+      icon: Cloud,
+      features: [
+        'Automated migration planning and execution',
+        'Intelligent workload placement optimization',
+        'Autonomous migration risk assessment and mitigation',
+        'Automated post-migration optimization',
+        'Intelligent cost optimization and monitoring',
+        'Integration with multi-cloud and hybrid environments'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous Migration Services'
+    },
+    {
+      title: 'Intelligent IT Compliance Management',
+      description: 'AI-powered compliance management with autonomous monitoring and reporting',
+      icon: Shield,
+      features: [
+        'Automated compliance assessment and monitoring',
+        'Intelligent regulatory change detection',
+        'Autonomous compliance gap identification',
+        'Automated compliance reporting and documentation',
+        'Intelligent risk assessment and mitigation',
+        'Integration with governance and audit systems'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Intelligent Compliance Services'
+    },
+    {
+      title: 'Autonomous IT Disaster Recovery',
+      description: 'Self-managing disaster recovery with intelligent testing and optimization',
+      icon: Shield,
+      features: [
+        'Automated disaster recovery planning and testing',
+        'Intelligent recovery time optimization',
+        'Autonomous backup strategy optimization',
+        'Automated failover and failback procedures',
+        'Intelligent disaster scenario simulation',
+        'Integration with business continuity systems'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Autonomous DR Services'
+    },
+    {
+      title: 'Self-Learning IT Performance Optimization',
+      description: 'Intelligent performance optimization with continuous learning and adaptation',
+      icon: Zap,
+      features: [
+        'Automated performance baseline establishment',
+        'Intelligent performance bottleneck identification',
+        'Autonomous performance optimization recommendations',
+        'Automated performance regression detection',
+        'Intelligent capacity planning and scaling',
+        'Integration with application and infrastructure monitoring'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Autonomous Performance Services'
+    },
+    {
+      title: 'Intelligent IT Change Management',
+      description: 'AI-powered change management with autonomous risk assessment and optimization',
+      icon: Settings,
+      features: [
+        'Automated change impact analysis',
+        'Intelligent change approval workflow optimization',
+        'Autonomous change risk assessment',
+        'Automated change rollback procedures',
+        'Intelligent change success prediction',
+        'Integration with change management and ITSM systems'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Intelligent Change Management Services'
     }
   ];
 

@@ -19,7 +19,13 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info
+  Info,
+  Cpu,
+  Settings,
+  Building,
+  Target,
+  FileText,
+  BookOpen
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -45,15 +51,36 @@ const Navigation = () => {
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Network, description: 'Blockchain & Web3' },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: Cpu, description: 'IoT & Edge Computing' },
         { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
+        { name: 'DevOps', href: '/services/devops', icon: Settings, description: 'DevOps & CI/CD' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, description: 'Enterprise-grade solutions' },
+        { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket, description: 'Startup-focused solutions' },
+        { name: 'Industry Solutions', href: '/solutions/industry', icon: Target, description: 'Industry-specific solutions' },
+        { name: 'Custom Solutions', href: '/solutions/custom', icon: Code, description: 'Tailored solutions' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources',
+      dropdown: [
+        { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Success stories' },
+        { name: 'White Papers', href: '/whitepapers', icon: FileText, description: 'Technical insights' },
+        { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
+        { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical docs' },
+        { name: 'API Reference', href: '/api', icon: Code, description: 'API documentation' }
+      ]
+    },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' }
   ];
 
