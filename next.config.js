@@ -21,16 +21,16 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
-    // Exclude contracts directory from compilation
+    // Exclude problematic directories from compilation
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       include: [
-        /src/,
         /pages/,
         /components/,
       ],
       exclude: [
         /node_modules/,
+        /src/,
         /contracts/,
         /api-backup/,
         /pages\.disabled/,
