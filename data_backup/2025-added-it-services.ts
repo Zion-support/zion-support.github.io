@@ -1,23 +1,27 @@
 import type { AdvancedITService } from './advanced-it-services';
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-export const addedITServices2025: AdvancedITService[] = [{
+  website: 'https://ziontechgroup.com'
+};
+
+export const addedITServices2025: AdvancedITService[] = [
+  {
     id: 'managed-mlops-platform',
     name: 'Managed MLOps Platform',
     tagline: 'Productionize models with CI/CD, monitoring, and governance',
     price: '$3,499',
     period: '/month',
     description: 'End-to-end MLOps stack: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
-    features[;
+    features: [
       'Model registry and lineage',
       'Data/Concept drift detection',
       'Shadow and canary deploys',
       'Feature store and embedding store',
       'Guardrails and evals',
-      'RBAC and audit logs';
+      'RBAC and audit logs'
     ],
     popular: true,
     icon: '🛠️',
@@ -30,11 +34,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '3–6 weeks',
     category: 'MLOps',
     realService: true,
-    technology['Kubernetes', 'Argo', 'dbt', 'Feast', 'Ray'],
-    integrations['AWS', 'GCP', 'Azure', 'Databricks', 'Snowflake'],
-    useCases['LLM apps', 'Forecasting', 'Fraud detection'],
+    technology: ['Kubernetes', 'Argo', 'dbt', 'Feast', 'Ray'],
+    integrations: ['AWS', 'GCP', 'Azure', 'Databricks', 'Snowflake'],
+    useCases: ['LLM apps', 'Forecasting', 'Fraud detection'],
     roi: 'Reduce infra toil 60%, faster cycle time 3–5x',
-    competitors['SageMaker', 'Vertex AI', 'MLflow-only setups'],
+    competitors: ['SageMaker', 'Vertex AI', 'MLflow-only setups'],
     marketSize: '$15B+ ML tooling market',
     growthRate: '25% YoY',
     variant: 'enterprise-managed',
@@ -44,7 +48,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-03-18',
     customers: 28,
     rating: 4.9,
-    reviews: 21},
+    reviews: 21
+  },
   {
     id: 'zero-trust-access-service',
     name: 'Zero-Trust Access Service',
@@ -52,12 +57,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$2,199',
     period: '/month',
     description: 'Deploys an identity-aware proxy, device posture checks, and per-request authN/Z with strong logging and SIEM integration.',
-    features[;
+    features: [
       'mTLS and device posture',
       'Per-route policies',
       'Just-in-time access',
       'Session recording',
-      'SIEM integration';
+      'SIEM integration'
     ],
     popular: true,
     icon: '🔐',
@@ -70,11 +75,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '2 weeks',
     category: 'Security',
     realService: true,
-    technology['Open Policy Agent', 'Envoy', 'OIDC'],
-    integrations['Okta', 'Azure AD', 'Google Workspace', 'Splunk'],
-    useCases['Admin access', 'Partner portals', 'Internal tools'],
+    technology: ['Open Policy Agent', 'Envoy', 'OIDC'],
+    integrations: ['Okta', 'Azure AD', 'Google Workspace', 'Splunk'],
+    useCases: ['Admin access', 'Partner portals', 'Internal tools'],
     roi: 'Cuts VPN tickets and breaches risk significantly',
-    competitors['Cloudflare Access', 'Teleport'],
+    competitors: ['Cloudflare Access', 'Teleport'],
     marketSize: '$20B zero-trust market',
     growthRate: '19% YoY',
     variant: 'managed',
@@ -84,7 +89,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-01-29',
     customers: 52,
     rating: 4.8,
-    reviews: 44},
+    reviews: 44
+  },
   {
     id: 'sre-oncall-as-a-service',
     name: 'SRE On-Call as a Service',
@@ -92,12 +98,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$6,500',
     period: '/month',
     description: 'We implement SLIs/SLOs, error budgets, and lightweight incident management. Shared on-call rotation with runbooks, automation, and postmortems.',
-    features[;
+    features: [
       'SLIs/SLOs and error budgets',
       'Incident response and runbooks',
       'Auto-remediation playbooks',
       'Observability setup (logs, traces, metrics)',
-      'Monthly reliability reviews';
+      'Monthly reliability reviews'
     ],
     popular: true,
     icon: '🧭',
@@ -110,11 +116,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '2–4 weeks',
     category: 'SRE',
     realService: true,
-    technology['Prometheus', 'Grafana', 'OpenTelemetry', 'PagerDuty'],
-    integrations['AWS', 'GCP', 'Azure', 'Datadog'],
-    useCases['Uptime SLAs', 'Latency SLAs', 'Cost/Error trade-offs'],
+    technology: ['Prometheus', 'Grafana', 'OpenTelemetry', 'PagerDuty'],
+    integrations: ['AWS', 'GCP', 'Azure', 'Datadog'],
+    useCases: ['Uptime SLAs', 'Latency SLAs', 'Cost/Error trade-offs'],
     roi: 'Lower incidents 30–60%, faster MTTR',
-    competitors['Consultancies + DIY'],
+    competitors: ['Consultancies + DIY'],
     marketSize: '$10B+ DevOps/SRE services',
     growthRate: '20% YoY',
     variant: 'managed',
@@ -124,7 +130,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-05-30',
     customers: 14,
     rating: 4.9,
-    reviews: 11},
+    reviews: 11
+  },
   {
     id: 'data-platform-accelerator',
     name: 'Data Platform Accelerator',
@@ -132,12 +139,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$4,800',
     period: '/month',
     description: 'Opinionated, secure data platform blueprint with ingestion, transformation, and governance. Delivered with IaC and documentation.',
-    features[;
+    features: [
       'Ingestion and CDC connectors',
       'dbt transformations and tests',
       'Data catalog and lineage',
       'Row/column-level security',
-      'Cost monitoring and quotas';
+      'Cost monitoring and quotas'
     ],
     popular: true,
     icon: '🗄️',
@@ -150,11 +157,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '3–6 weeks',
     category: 'Data',
     realService: true,
-    technology['Fivetran/Airbyte', 'dbt', 'Dagster/Airflow', 'Snowflake/BigQuery'],
-    integrations['Looker', 'Tableau', 'Power BI'],
-    useCases['Product analytics', 'Finance reporting', 'LLM feature pipelines'],
+    technology: ['Fivetran/Airbyte', 'dbt', 'Dagster/Airflow', 'Snowflake/BigQuery'],
+    integrations: ['Looker', 'Tableau', 'Power BI'],
+    useCases: ['Product analytics', 'Finance reporting', 'LLM feature pipelines'],
     roi: 'Cut build time and maintenance cost 2–4x',
-    competitors['Consultancies', 'DIY cloud blueprints'],
+    competitors: ['Consultancies', 'DIY cloud blueprints'],
     marketSize: '$20B data services',
     growthRate: '18% YoY',
     variant: 'accelerator',
@@ -164,7 +171,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-02',
     customers: 9,
     rating: 4.8,
-    reviews: 7},
+    reviews: 7
+  },
   {
     id: 'managed-kubernetes-platform',
     name: 'Managed Kubernetes Platform',
@@ -172,12 +180,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$5,900',
     period: '/month',
     description: 'Hardened clusters with GitOps, autoscaling, cost controls, and golden paths. We operate, you ship.',
-    features[;
+    features: [
       'GitOps and policy as code',
       'Cluster autoscaling and HPA/VPA',
       'Cost allocation and quotas',
       'Multi-env promotions',
-      '24/7 monitoring and on-call';
+      '24/7 monitoring and on-call'
     ],
     popular: true,
     icon: '☸️',
@@ -190,11 +198,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '3–6 weeks',
     category: 'Platform',
     realService: true,
-    technology['EKS/GKE/AKS', 'ArgoCD', 'Kyverno/OPA', 'Istio'],
-    integrations['AWS', 'GCP', 'Azure', 'Datadog', 'Snyk'],
-    useCases['Multi-tenant SaaS', 'Internal platforms', 'Batch and services'],
+    technology: ['EKS/GKE/AKS', 'ArgoCD', 'Kyverno/OPA', 'Istio'],
+    integrations: ['AWS', 'GCP', 'Azure', 'Datadog', 'Snyk'],
+    useCases: ['Multi-tenant SaaS', 'Internal platforms', 'Batch and services'],
     roi: 'Cut infra toil 50%, faster deploys 3x',
-    competitors['DIY platform teams', 'Platform vendors'],
+    competitors: ['DIY platform teams', 'Platform vendors'],
     marketSize: '$25B cloud-native platform',
     growthRate: '22% YoY',
     variant: 'managed',
@@ -204,7 +212,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-09',
     customers: 7,
     rating: 4.8,
-    reviews: 5},
+    reviews: 5
+  },
   {
     id: 'secure-data-mesh',
     name: 'Secure Data Mesh',
@@ -212,12 +221,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$7,400',
     period: '/month',
     description: 'Blueprint and operate a governed data mesh with product SLAs, ownership, lineage, and secure access.',
-    features[;
+    features: [
       'Domain product templates',
       'Row/column security and masking',
       'Lineage and catalog',
       'Quality checks and SLAs',
-      'Self-serve access workflows';
+      'Self-serve access workflows'
     ],
     popular: false,
     icon: '🕸️',
@@ -230,11 +239,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '6–10 weeks',
     category: 'Data',
     realService: true,
-    technology['Snowflake', 'BigQuery', 'Unity Catalog', 'OpenLineage'],
-    integrations['dbt', 'Airflow/Dagster', 'Looker/Tableau'],
-    useCases['Analytics products', 'ML features', 'Data contracts'],
+    technology: ['Snowflake', 'BigQuery', 'Unity Catalog', 'OpenLineage'],
+    integrations: ['dbt', 'Airflow/Dagster', 'Looker/Tableau'],
+    useCases: ['Analytics products', 'ML features', 'Data contracts'],
     roi: 'Faster data delivery, better governance',
-    competitors['Traditional data warehouses', 'Consultancies'],
+    competitors: ['Traditional data warehouses', 'Consultancies'],
     marketSize: '$30B data platforms',
     growthRate: '18% YoY',
     variant: 'enterprise-managed',
@@ -244,7 +253,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-07',
     customers: 5,
     rating: 4.7,
-    reviews: 4},
+    reviews: 4
+  },
   {
     id: 'enterprise-sso-and-iam-hardening',
     name: 'Enterprise SSO & IAM Hardening',
@@ -252,12 +262,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$3,200',
     period: '/month',
     description: 'Modernize identity with SSO, SCIM, JIT, RBAC/ABAC, and device posture across apps and infra.',
-    features[;
+    features: [
       'SSO (SAML/OIDC) and SCIM',
       'RBAC/ABAC and group mapping',
       'Just-in-time access',
       'Device posture checks',
-      'Audit logging and reports';
+      'Audit logging and reports'
     ],
     popular: true,
     icon: '🔑',
@@ -270,11 +280,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '3–5 weeks',
     category: 'Security',
     realService: true,
-    technology['Okta', 'Azure AD', 'Auth0', 'OPA'],
-    integrations['AWS', 'GCP', 'GitHub', 'GitLab'],
-    useCases['Customer SSO', 'Workforce IAM', 'Admin access'],
+    technology: ['Okta', 'Azure AD', 'Auth0', 'OPA'],
+    integrations: ['AWS', 'GCP', 'GitHub', 'GitLab'],
+    useCases: ['Customer SSO', 'Workforce IAM', 'Admin access'],
     roi: 'Reduce access incidents and support tickets',
-    competitors['DIY IAM projects'],
+    competitors: ['DIY IAM projects'],
     marketSize: '$20B IAM services',
     growthRate: '15% YoY',
     variant: 'managed',
@@ -284,7 +294,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-06',
     customers: 12,
     rating: 4.8,
-    reviews: 8},
+    reviews: 8
+  },
   {
     id: 'managed-vulnerability-management',
     name: 'Managed Vulnerability Management',
@@ -292,12 +303,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$2,400',
     period: '/month',
     description: 'Agentless and agent-based scanning across cloud and endpoints with risk-based prioritization, ticketing, and dashboards.',
-    features[;
+    features: [
       'Cloud and endpoint scanning',
       'Risk-based scoring',
       'Ticketing integration',
       'SLA tracking and reports',
-      'Executive dashboards';
+      'Executive dashboards'
     ],
     popular: true,
     icon: '🛡️',
@@ -310,11 +321,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '2–3 weeks',
     category: 'Security',
     realService: true,
-    technology['Cloud scanners', 'EBPF agents', 'Risk engines'],
-    integrations['Jira', 'ServiceNow', 'Splunk'],
-    useCases['Patch cycles', 'Cloud misconfig fixes', 'Compliance evidence'],
+    technology: ['Cloud scanners', 'EBPF agents', 'Risk engines'],
+    integrations: ['Jira', 'ServiceNow', 'Splunk'],
+    useCases: ['Patch cycles', 'Cloud misconfig fixes', 'Compliance evidence'],
     roi: 'Reduce exploitable vulns 40–70%',
-    competitors['Qualys (managed)', 'Tenable (managed)'],
+    competitors: ['Qualys (managed)', 'Tenable (managed)'],
     marketSize: '$15B vuln mgmt',
     growthRate: '12% YoY',
     variant: 'managed-security',
@@ -324,7 +335,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-15',
     customers: 18,
     rating: 4.7,
-    reviews: 13},
+    reviews: 13
+  },
   {
     id: 'managed-sase-lite',
     name: 'Managed SASE Lite',
@@ -332,12 +344,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$3,100',
     period: '/month',
     description: 'Identity-aware proxy, DNS filtering, and basic DLP with opinionated defaults and monthly reviews.',
-    features[;
+    features: [
       'Identity-aware proxy',
       'DNS and web filtering',
       'Basic DLP policies',
       'Device posture checks',
-      'Monthly security reviews';
+      'Monthly security reviews'
     ],
     popular: false,
     icon: '🛰️',
@@ -350,11 +362,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '3–5 weeks',
     category: 'Security',
     realService: true,
-    technology['IAP', 'DNS firewall', 'CASB-lite'],
-    integrations['Okta', 'Azure AD', 'Google Workspace'],
-    useCases['Secure remote access', 'Web filtering', 'Basic DLP'],
+    technology: ['IAP', 'DNS firewall', 'CASB-lite'],
+    integrations: ['Okta', 'Azure AD', 'Google Workspace'],
+    useCases: ['Secure remote access', 'Web filtering', 'Basic DLP'],
     roi: 'Reduce breach risk and tickets',
-    competitors['Cloudflare One (managed)', 'Zscaler (lite)'],
+    competitors: ['Cloudflare One (managed)', 'Zscaler (lite)'],
     marketSize: '$25B SASE',
     growthRate: '17% YoY',
     variant: 'managed',
@@ -364,7 +376,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-18',
     customers: 10,
     rating: 4.6,
-    reviews: 7},
+    reviews: 7
+  },
   {
     id: 'data-quality-observability-service',
     name: 'Data Quality Observability Service',
@@ -372,12 +385,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$2,800',
     period: '/month',
     description: 'Monitors pipelines and datasets for health issues and notifies owners with fixes and SLAs.',
-    features[;
+    features: [
       'Freshness and volume checks',
       'Schema drift detection',
       'Anomaly detection',
       'Owner routing and SLAs',
-      'Data incident postmortems';
+      'Data incident postmortems'
     ],
     popular: true,
     icon: '📊',
@@ -390,11 +403,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '2–4 weeks',
     category: 'Data',
     realService: true,
-    technology['OpenLineage', 'dbt tests', 'Anomaly ML'],
-    integrations['Snowflake', 'BigQuery', 'Databricks'],
-    useCases['Pipeline health', 'Data SLAs', 'Incident mgmt'],
+    technology: ['OpenLineage', 'dbt tests', 'Anomaly ML'],
+    integrations: ['Snowflake', 'BigQuery', 'Databricks'],
+    useCases: ['Pipeline health', 'Data SLAs', 'Incident mgmt'],
     roi: 'Reduce data downtime 40–60%',
-    competitors['Monte Carlo (managed)', 'Bigeye (lite)'],
+    competitors: ['Monte Carlo (managed)', 'Bigeye (lite)'],
     marketSize: '$2B data observability',
     growthRate: '20% YoY',
     variant: 'managed-data',
@@ -404,7 +417,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-11',
     customers: 12,
     rating: 4.7,
-    reviews: 9},
+    reviews: 9
+  },
   {
     id: 'cost-aware-kubernetes-hardening',
     name: 'Cost-Aware Kubernetes Hardening',
@@ -412,12 +426,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$3,700',
     period: '/month',
     description: 'Implements policy packs, resource budgets, and guardrails that reduce both risk and spend, with dashboards for teams.',
-    features[;
+    features: [
       'Policy-as-code packs',
       'Quotas and budgets',
       'Admission controls',
       'Golden templates',
-      'Drift detection';
+      'Drift detection'
     ],
     popular: true,
     icon: '☸️',
@@ -430,11 +444,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '3–6 weeks',
     category: 'Platform',
     realService: true,
-    technology['Kyverno/OPA', 'Gatekeeper', 'Kubecost'],
-    integrations['EKS/GKE/AKS', 'Datadog', 'Snyk'],
-    useCases['Multi-tenant safety', 'Cost controls', 'Secure defaults'],
+    technology: ['Kyverno/OPA', 'Gatekeeper', 'Kubecost'],
+    integrations: ['EKS/GKE/AKS', 'Datadog', 'Snyk'],
+    useCases: ['Multi-tenant safety', 'Cost controls', 'Secure defaults'],
     roi: 'Reduce misconfigs and waste 20–40%',
-    competitors['DIY policies', 'Custom platform builds'],
+    competitors: ['DIY policies', 'Custom platform builds'],
     marketSize: '$6B platform eng services',
     growthRate: '18% YoY',
     variant: 'managed',
@@ -444,7 +458,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-14',
     customers: 8,
     rating: 4.8,
-    reviews: 6},
+    reviews: 6
+  },
   {
     id: 'data-platform-modernization',
     name: 'Data Platform Modernization',
@@ -452,12 +467,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$7,500',
     period: '/month',
     description: 'Design and implement a modern data stack with ingestion, transformation, governance, and observability tuned to your workloads and cost targets.',
-    features[;
+    features: [
       'Ingestion connectors and CDC',
       'dbt transformations and tests',
       'Cost and performance tuning',
       'Data contracts and lineage',
-      'Observability and SLAs';
+      'Observability and SLAs'
     ],
     popular: true,
     icon: '🗄️',
@@ -470,11 +485,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '4–10 weeks',
     category: 'Data Engineering',
     realService: true,
-    technology['Snowflake', 'BigQuery', 'Databricks', 'dbt', 'Airbyte'],
-    integrations['AWS', 'GCP', 'Azure', 'Fivetran'],
-    useCases['Analytics', 'AI/ML', 'Finance/RevOps'],
+    technology: ['Snowflake', 'BigQuery', 'Databricks', 'dbt', 'Airbyte'],
+    integrations: ['AWS', 'GCP', 'Azure', 'Fivetran'],
+    useCases: ['Analytics', 'AI/ML', 'Finance/RevOps'],
     roi: '35–60% faster pipelines, 20–40% lower spend',
-    competitors['Consultancies with time-and-materials only'],
+    competitors: ['Consultancies with time-and-materials only'],
     marketSize: '$20B data services',
     growthRate: '18% YoY',
     variant: 'project+managed',
@@ -484,7 +499,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-05-10',
     customers: 17,
     rating: 4.8,
-    reviews: 12},
+    reviews: 12
+  },
   {
     id: 'sre-and-reliability-ops',
     name: 'SRE & Reliability Ops',
@@ -492,12 +508,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$4,500',
     period: '/month',
     description: 'Establishes reliability fundamentals: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
-    features[;
+    features: [
       'SLIs/SLOs and error budgets',
       'On-call rotations and tooling',
       'Incident response and postmortems',
       'Capacity planning and load tests',
-      'Cost/perf optimizations';
+      'Cost/perf optimizations'
     ],
     popular: true,
     icon: '⚙️',
@@ -510,11 +526,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '2–6 weeks',
     category: 'SRE',
     realService: true,
-    technology['Kubernetes', 'Terraform', 'Prometheus/Grafana', 'OpenTelemetry'],
-    integrations['PagerDuty', 'Datadog', 'New Relic', 'CloudWatch'],
-    useCases['Uptime SLAs', 'Performance tuning', 'Cost stability'],
+    technology: ['Kubernetes', 'Terraform', 'Prometheus/Grafana', 'OpenTelemetry'],
+    integrations: ['PagerDuty', 'Datadog', 'New Relic', 'CloudWatch'],
+    useCases: ['Uptime SLAs', 'Performance tuning', 'Cost stability'],
     roi: 'Reduces incidents 30–50% within 90 days',
-    competitors['Traditional MSPs'],
+    competitors: ['Traditional MSPs'],
     marketSize: '$12B reliability ops',
     growthRate: '16% YoY',
     variant: 'managed-service',
@@ -524,7 +540,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-05-20',
     customers: 24,
     rating: 4.9,
-    reviews: 19},
+    reviews: 19
+  },
   {
     id: 'zero-trust-email-and-endpoint',
     name: 'Zero-Trust Email & Endpoint',
@@ -532,12 +549,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$2,900',
     period: '/month',
     description: 'Harden email and endpoints with identity-aware protections, phishing exercises, and SOC-ready logging integrated with your SIEM.',
-    features[;
+    features: [
       'DMARC/DKIM/SPF enforcement',
       'EDR deployment and baselines',
       'Phishing simulations and training',
       'SIEM integration and alerting',
-      'Playbooks and tabletop drills';
+      'Playbooks and tabletop drills'
     ],
     popular: false,
     icon: '🛡️',
@@ -550,11 +567,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '2–4 weeks',
     category: 'Security',
     realService: true,
-    technology['Okta/Entra', 'Google Workspace', 'CrowdStrike/SentinelOne', 'SIEM'],
-    integrations['Okta', 'Azure AD', 'Google Workspace', 'Splunk'],
-    useCases['Phish resiliency', 'Device hygiene', 'Audit readiness'],
+    technology: ['Okta/Entra', 'Google Workspace', 'CrowdStrike/SentinelOne', 'SIEM'],
+    integrations: ['Okta', 'Azure AD', 'Google Workspace', 'Splunk'],
+    useCases: ['Phish resiliency', 'Device hygiene', 'Audit readiness'],
     roi: 'Reduces phishing risk by 60%+',
-    competitors['Security training-only vendors'],
+    competitors: ['Security training-only vendors'],
     marketSize: '$8B email+endpoint security',
     growthRate: '15% YoY',
     variant: 'project+managed',
@@ -564,7 +581,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-05',
     customers: 13,
     rating: 4.7,
-    reviews: 10},
+    reviews: 10
+  },
   {
     id: 'managed-observability-platform',
     name: 'Managed Observability Platform',
@@ -572,12 +590,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$3,900',
     period: '/month',
     description: 'End-to-end observability with golden signals, SLO dashboards, and alert hygiene. We run the stack and partner with your teams for outcomes.',
-    features[;
+    features: [
       'Unified telemetry pipelines',
       'SLO dashboards and burn alerts',
       'Runbook-driven alerting',
       'Cost optimization of telemetry',
-      'Incident collaboration';
+      'Incident collaboration'
     ],
     popular: true,
     icon: '📊',
@@ -590,11 +608,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '3–6 weeks',
     category: 'Observability',
     realService: true,
-    technology['OpenTelemetry', 'Grafana', 'Prometheus', 'Tempo/Loki'],
-    integrations['Datadog', 'New Relic', 'CloudWatch'],
-    useCases['SLOs/SLAs', 'Incident response', 'Perf/cost tuning'],
+    technology: ['OpenTelemetry', 'Grafana', 'Prometheus', 'Tempo/Loki'],
+    integrations: ['Datadog', 'New Relic', 'CloudWatch'],
+    useCases: ['SLOs/SLAs', 'Incident response', 'Perf/cost tuning'],
     roi: 'Reduce alert noise 50–80%',
-    competitors['Tool-only vendors'],
+    competitors: ['Tool-only vendors'],
     marketSize: '$15B observability',
     growthRate: '17% YoY',
     variant: 'managed',
@@ -604,7 +622,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-21',
     customers: 6,
     rating: 4.8,
-    reviews: 4},
+    reviews: 4
+  },
   {
     id: 'network-modernization-accelerator',
     name: 'Network Modernization Accelerator',
@@ -612,12 +631,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$6,800',
     period: '/month',
     description: 'Blueprint and implement a modern, secure network fabric with SD-WAN, identity-aware access, and cloud interconnects.',
-    features[;
+    features: [
       'SD-WAN rollout',
       'Identity-aware segmentation',
       'Cloud interconnects',
       'Observability and logs',
-      'Playbooks and training';
+      'Playbooks and training'
     ],
     popular: false,
     icon: '🌐',
@@ -630,11 +649,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '4–8 weeks',
     category: 'Networking',
     realService: true,
-    technology['SD-WAN', 'IAP', 'Cloud networking'],
-    integrations['AWS', 'GCP', 'Azure'],
-    useCases['Branch to cloud', 'Partner access', 'Secure hybrid'],
+    technology: ['SD-WAN', 'IAP', 'Cloud networking'],
+    integrations: ['AWS', 'GCP', 'Azure'],
+    useCases: ['Branch to cloud', 'Partner access', 'Secure hybrid'],
     roi: 'Reduce downtime and MPLS costs',
-    competitors['Traditional network integrators'],
+    competitors: ['Traditional network integrators'],
     marketSize: '$40B network services',
     growthRate: '12% YoY',
     variant: 'accelerator',
@@ -644,7 +663,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-22',
     customers: 4,
     rating: 4.7,
-    reviews: 3},
+    reviews: 3
+  },
   {
     id: 'data-governance-foundation',
     name: 'Data Governance Foundation',
@@ -652,12 +672,12 @@ export const addedITServices2025: AdvancedITService[] = [{
     price: '$4,200',
     period: '/month',
     description: 'Stand up pragmatic governance with a catalog, lineage, RBAC/ABAC, and data contracts with owners and SLAs.',
-    features[;
+    features: [
       'Data catalog and ownership',
       'Lineage and impact analysis',
       'RBAC/ABAC and masking',
       'Data contracts and SLAs',
-      'Audit logs and reviews';
+      'Audit logs and reviews'
     ],
     popular: true,
     icon: '📚',
@@ -670,11 +690,11 @@ export const addedITServices2025: AdvancedITService[] = [{
     setupTime: '4–8 weeks',
     category: 'Data Governance',
     realService: true,
-    technology['OpenLineage', 'Unity Catalog', 'OPA'],
-    integrations['Snowflake', 'BigQuery', 'Databricks'],
-    useCases['Access governance', 'Change impact', 'Data products'],
+    technology: ['OpenLineage', 'Unity Catalog', 'OPA'],
+    integrations: ['Snowflake', 'BigQuery', 'Databricks'],
+    useCases: ['Access governance', 'Change impact', 'Data products'],
     roi: 'Faster approvals and fewer incidents',
-    competitors['Large governance suites'],
+    competitors: ['Large governance suites'],
     marketSize: '$6B governance',
     growthRate: '14% YoY',
     variant: 'foundation',
@@ -684,5 +704,6 @@ export const addedITServices2025: AdvancedITService[] = [{
     launchDate: '2025-06-23',
     customers: 3,
     rating: 4.8,
-    reviews: 2;
-]}}
+    reviews: 2
+  }
+];

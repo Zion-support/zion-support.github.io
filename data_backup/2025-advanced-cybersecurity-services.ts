@@ -1,52 +1,59 @@
 export interface AdvancedCybersecurityService {
   id: string;
-   name: string;
-   tagline: string;
-   price: string;
-   period: string;
-   description: string;
-   features: string[];
-   popular: boolean;
-   icon: string;
-   color: string;
-   textColor: string;
-   link: string;
-   marketPosition: string;
-   targetAudience: string[];
-   trialDays: number;
-   setupTime: string;
-   category: string;
-   realService: boolean;
-   technology: string[];
-   integrations: string[];
-   useCases: string[];
-   roi: string;
-   competitors: string[];
-   marketSize: string;
-   growthRate: string;
-   contactInfo: { mobile: string;
-   email: string;
-   address: string;
-   website: string}
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string[];
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number;
+}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [{
+  website: 'https://ziontechgroup.com'
+};
+
+export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
+  {
     id: 'ai-threat-hunting-platform',
     name: 'AI Threat Hunting Platform',
     tagline: 'Proactively hunt and eliminate cyber threats before they strike',
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI-powered threat hunting platform that proactively identifies, analyzes, and eliminates cyber threats before they can cause damage. Features behavioral analysis, threat intelligence, and automated response.',
-    features: [;
+    features: [
       'AI-powered threat detection',
       'Behavioral analysis engine',
       'Threat intelligence integration',
@@ -56,7 +63,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Custom threat hunting rules',
       'Integration with SIEM systems',
       'Mobile threat detection',
-      '24/7 security operations';
+      '24/7 security operations'
     ],
     popular: true,
     icon: '🕵️',
@@ -82,7 +89,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-12-01',
     customers: 28,
     rating: 4.9,
-    reviews: 67},
+    reviews: 67
+  },
   {
     id: 'quantum-resistant-encryption-suite',
     name: 'Quantum-Resistant Encryption Suite',
@@ -90,7 +98,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     price: '$2,499',
     period: '/month',
     description: 'Revolutionary quantum-resistant encryption suite that protects data against current and future quantum computing threats. Features post-quantum cryptography, hybrid encryption, and quantum key distribution.',
-    features: [;
+    features: [
       'Post-quantum cryptography',
       'Hybrid encryption algorithms',
       'Quantum key distribution',
@@ -100,7 +108,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Quantum-resistant certificates',
       'Hybrid TLS implementation',
       'API encryption services',
-      'Compliance certifications';
+      'Compliance certifications'
     ],
     popular: false,
     icon: '🔐',
@@ -126,15 +134,16 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-11-20',
     customers: 15,
     rating: 4.8,
-    reviews: 23},
+    reviews: 23
+  },
   {
     id: 'zero-trust-security-framework',
     name: 'Zero Trust Security Framework',
     tagline: 'Never trust, always verify - comprehensive zero trust implementation',
     price: '$1,899',
     period: '/month',
-    description: 'Complete zero trust security framework that implements 'never trust, always verify' principles across all systems, users, and devices. Features identity verification, micro-segmentation, and continuous monitoring.',
-    features: [;
+    description: 'Complete zero trust security framework that implements \'never trust, always verify\' principles across all systems, users, and devices. Features identity verification, micro-segmentation, and continuous monitoring.',
+    features: [
       'Identity and access management',
       'Micro-segmentation',
       'Continuous verification',
@@ -144,7 +153,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Network segmentation',
       'Application security',
       'Data protection',
-      'Compliance monitoring';
+      'Compliance monitoring'
     ],
     popular: true,
     icon: '🛡️',
@@ -170,7 +179,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-10-15',
     customers: 42,
     rating: 4.7,
-    reviews: 89},
+    reviews: 89
+  },
   {
     id: 'ai-powered-security-operations-center',
     name: 'AI-Powered Security Operations Center',
@@ -178,7 +188,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     price: '$3,299',
     period: '/month',
     description: 'Advanced AI-powered Security Operations Center (SOC) that provides 24/7 intelligent monitoring, threat detection, and automated response. Features machine learning analysis, threat correlation, and incident automation.',
-    features: [;
+    features: [
       '24/7 AI monitoring',
       'Intelligent threat correlation',
       'Automated incident response',
@@ -188,7 +198,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Custom playbooks',
       'Compliance reporting',
       'Mobile SOC access',
-      'Expert security team';
+      'Expert security team'
     ],
     popular: true,
     icon: '🏢',
@@ -214,7 +224,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-09-30',
     customers: 18,
     rating: 4.9,
-    reviews: 45},
+    reviews: 45
+  },
   {
     id: 'blockchain-security-auditor',
     name: 'Blockchain Security Auditor',
@@ -222,7 +233,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     price: '$1,599',
     period: '/month',
     description: 'Specialized blockchain security auditing platform that identifies vulnerabilities in smart contracts, DeFi protocols, and blockchain applications. Features automated testing, manual review, and compliance reporting.',
-    features: [;
+    features: [
       'Smart contract auditing',
       'DeFi protocol analysis',
       'Vulnerability assessment',
@@ -232,7 +243,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Security recommendations',
       'Continuous monitoring',
       'API security testing',
-      'Penetration testing';
+      'Penetration testing'
     ],
     popular: false,
     icon: '⛓️',
@@ -258,7 +269,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-08-20',
     customers: 35,
     rating: 4.6,
-    reviews: 78},
+    reviews: 78
+  },
   {
     id: 'iot-security-orchestrator',
     name: 'IoT Security Orchestrator',
@@ -266,7 +278,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     price: '$999',
     period: '/month',
     description: 'Advanced IoT security platform that protects connected devices, sensors, and IoT ecosystems from cyber threats. Features device authentication, network segmentation, and behavioral monitoring.',
-    features: [;
+    features: [
       'IoT device authentication',
       'Network segmentation',
       'Behavioral monitoring',
@@ -276,7 +288,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Compliance monitoring',
       'Real-time alerts',
       'Mobile app access',
-      'API security';
+      'API security'
     ],
     popular: false,
     icon: '📱',
@@ -302,5 +314,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-07-25',
     customers: 52,
     rating: 4.5,
-    reviews: 96}
+    reviews: 96
+  }
 ];

@@ -1,25 +1,28 @@
 import type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services';
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-;
-export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
+  website: 'https://ziontechgroup.com'
+};
+
+export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
+  {
     id: 'ai-sales-sequence-orchestrator',
     name: 'AI Sales Sequence Orchestrator',
     tagline: 'Autonomously plans, writes, and schedules multichannel outbound sequences',
     price: '$399',
     period: '/month',
     description: 'An autonomous outbound engine that researches prospects, drafts tailored emails/LI messages, and schedules multichannel steps with smart throttling and reply intent detection.',
-    features: [;
+    features: [
       'Prospect research enrichment',
       'Channel mix optimization (Email/LinkedIn/X)',
       'Reply intent and objection detection',
       'Auto A/B test with guardrails',
       'Compliance-aware sending windows',
       'Native CRM sync',
-      'Sequence ROI analytics';
+      'Sequence ROI analytics'
     ],
     popular: true,
     icon: '📈',
@@ -45,7 +48,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-04-10',
     customers: 86,
     rating: 4.8,
-    reviews: 55},
+    reviews: 55
+  },
   {
     id: 'ai-rfp-response-copilot',
     name: 'AI RFP Response Copilot',
@@ -53,13 +57,13 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$649',
     period: '/month',
     description: 'Uploads RFPs, extracts requirements, maps to your knowledge base, drafts compliant answers, and compiles polished proposals with evidence and references.',
-    features: [;
+    features: [
       'RFP requirement extraction',
       'Policy/Compliance mapping',
       'Answer library with citations',
       'Reviewer workflows and redlining',
       'Auto formatting to client template',
-      'Win-loss analytics';
+      'Win-loss analytics'
     ],
     popular: false,
     icon: '📄',
@@ -85,23 +89,21 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-02-20',
     customers: 41,
     rating: 4.7,
-    reviews: 29},
+    reviews: 29
+  },
   {
-    id:,
-  local-seo-insights-engine',
-    name: 'Local SEO Insights Engine,
-    tagline:,
-  Automated audits, content briefs, and citation fixes for local businesses',
-    price: '$129,
-    period:,
-  /month',
-    description: Continuously audits GMB, citations, and competitors generates content briefs and tasks tracks rankings and call leads.',
-    features[;
-  'GMB health scoring',
-  'Citation discovery/fix',
-  'Competitor gap analysis',
-  'Content brief generation',
-  'Lead tracking and call attribution';
+    id: 'local-seo-insights-engine',
+    name: 'Local SEO Insights Engine',
+    tagline: 'Automated audits, content briefs, and citation fixes for local businesses',
+    price: '$129',
+    period: '/month',
+    description: 'Continuously audits GMB, citations, and competitors generates content briefs and tasks tracks rankings and call leads.',
+    features: [
+      'GMB health scoring',
+      'Citation discovery/fix',
+      'Competitor gap analysis',
+      'Content brief generation',
+      'Lead tracking and call attribution'
     ],
     popular: true,
     icon: '📍',
@@ -127,7 +129,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-05-12',
     customers: 211,
     rating: 4.8,
-    reviews: 77},
+    reviews: 77
+  },
   {
     id: 'gdpr-cookie-consent-manager',
     name: 'GDPR Cookie Consent Manager',
@@ -135,12 +138,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$79',
     period: '/month',
     description: 'Deploy region-aware consent banners, auto-scan trackers, generate policy updates, and maintain verifiable consent logs.',
-    features: [;
+    features: [
       'Auto region detection and languages',
       'Scanner for cookies/trackers',
       'Consent evidence logs',
       'IAB TCF support',
-      'WCAG-compliant UI';
+      'WCAG-compliant UI'
     ],
     popular: true,
     icon: '🍪',
@@ -166,7 +169,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-01',
     customers: 318,
     rating: 4.7,
-    reviews: 96},
+    reviews: 96
+  },
   {
     id: 'churn-prediction-insights',
     name: 'Churn Prediction Insights',
@@ -174,12 +178,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$249',
     period: '/month',
     description: 'Ingests product events and billing signals to surface churn risk and automate retention playbooks.',
-    features: [;
+    features: [
       'Risk scoring and cohorts',
       'Health dashboards',
       'Playbook automation',
       'Revenue impact tracking',
-      'Alerting to Slack/Email';
+      'Alerting to Slack/Email'
     ],
     popular: false,
     icon: '📉',
@@ -205,7 +209,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-05-28',
     customers: 122,
     rating: 4.6,
-    reviews: 41},
+    reviews: 41
+  },
   {
     id: 'docs-to-knowledge-bot',
     name: 'Docs-to-Knowledge Bot',
@@ -213,12 +218,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$159',
     period: '/month',
     description: 'Crawl docs, changelogs, and tickets to build a searchable help center with an embedded, safe AI bot.',
-    features: [;
+    features: [
       'Doc crawler and canonicalization',
       'Version-aware indexing',
       'Hallucination guardrails',
       'Feedback and content gaps',
-      'Embeddable widget';
+      'Embeddable widget'
     ],
     popular: true,
     icon: '📚',
@@ -244,7 +249,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-05-15',
     customers: 187,
     rating: 4.8,
-    reviews: 68},
+    reviews: 68
+  },
   {
     id: 'soc2-evidence-collector',
     name: 'SOC 2 Evidence Collector',
@@ -252,12 +258,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$199',
     period: '/month',
     description: 'Automates SOC 2 audit readiness by collecting controls evidence across cloud, code, and processes with exportable reports.',
-    features: [;
+    features: [
       'Automated control checks',
       'Cloud/config drift detection',
       'Access review workflows',
       'Evidence vault and exports',
-      ' auditor-friendly reports';
+      'Auditor-friendly reports'
     ],
     popular: true,
     icon: '🛡️',
@@ -283,7 +289,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-14',
     customers: 57,
     rating: 4.7,
-    reviews: 24},
+    reviews: 24
+  },
   {
     id: 'smart-invoice-extractor',
     name: 'Smart Invoice Extractor',
@@ -291,12 +298,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$129',
     period: '/month',
     description: 'Uploads or emails invoices to auto-extract line items, taxes, vendors, and map to your chart of accounts.',
-    features: [;
+    features: [
       'Table and line-item capture',
       'Vendor normalization',
       'Tax and currency handling',
       'GL account mapping',
-      'Review and approval queue';
+      'Review and approval queue'
     ],
     popular: false,
     icon: '🧾',
@@ -322,7 +329,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-10',
     customers: 133,
     rating: 4.6,
-    reviews: 52},
+    reviews: 52
+  },
   {
     id: 'partner-portal-builder',
     name: 'Partner Portal Builder',
@@ -330,12 +338,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$179',
     period: '/month',
     description: 'Quickly launch a partner portal with deal reg, training, assets, and an AI assistant to answer product questions.',
-    features: [;
+    features: [
       'Deal registration and approvals',
       'Co-marketing asset hub',
       'Training and certifications',
       'AI Q&A with citations',
-      'Role-based access and analytics';
+      'Role-based access and analytics'
     ],
     popular: true,
     icon: '🤝',
@@ -361,7 +369,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-12',
     customers: 48,
     rating: 4.7,
-    reviews: 19},
+    reviews: 19
+  },
   {
     id: 'ai-procurement-bid-analyzer',
     name: 'AI Procurement Bid Analyzer',
@@ -369,12 +378,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$219',
     period: '/month',
     description: 'Uploads RFP packages to extract key clauses, deadlines, and compliance matrices. Produces a win-plan outline and task board with responsible owners.',
-    features: [;
+    features: [
       'Clause/Risk extraction with citations',
       'Compliance matrix generator',
       'Win themes and differentiators',
       'Timeline and task board sync',
-      'Auto Q&A tracker';
+      'Auto Q&A tracker'
     ],
     popular: false,
     icon: '📦',
@@ -400,7 +409,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-20',
     customers: 33,
     rating: 4.6,
-    reviews: 14},
+    reviews: 14
+  },
   {
     id: 'smart-terms-policy-generator',
     name: 'Smart Terms & Policy Generator',
@@ -408,12 +418,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$89',
     period: '/month',
     description: 'Keeps legal pages current using jurisdiction templates and change tracking. Produces diff PRs and stores signed acceptance records.',
-    features: [;
+    features: [
       'Jurisdiction-aware templates',
       'Change-log and redlines',
       'DPA/ToS variants per product',
       'Cookie/Consent policy sync',
-      'Signed acceptance ledger';
+      'Signed acceptance ledger'
     ],
     popular: true,
     icon: '📜',
@@ -439,7 +449,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-18',
     customers: 122,
     rating: 4.7,
-    reviews: 39},
+    reviews: 39
+  },
   {
     id: 'vendor-security-review-assistant',
     name: 'Vendor Security Review Assistant',
@@ -447,12 +458,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$139',
     period: '/month',
     description: 'Centralizes past answers, maps to new questionnaires, drafts responses with citations, and tracks approvals.',
-    features: [;
+    features: [
       'Answer library with tags',
       'Auto-mapping to new forms',
       'Evidence links and approvals',
       'Export to XLSX/portal formats',
-      'Renewal reminders';
+      'Renewal reminders'
     ],
     popular: true,
     icon: '🧰',
@@ -478,7 +489,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-22',
     customers: 58,
     rating: 4.6,
-    reviews: 21},
+    reviews: 21
+  },
   {
     id: 'smart-release-notes-broadcaster',
     name: 'Smart Release Notes Broadcaster',
@@ -486,12 +498,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$109',
     period: '/month',
     description: 'Parses release PRs and commits, drafts customer-facing notes, segments messages by audience, and updates docs/search.',
-    features: [;
+    features: [
       'Repo/PR parser and summarizer',
       'Audience segmentation',
       'Multi-channel publishing',
       'Help center sync',
-      'Impact analytics';
+      'Impact analytics'
     ],
     popular: false,
     icon: '📣',
@@ -517,7 +529,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-21',
     customers: 74,
     rating: 4.7,
-    reviews: 26},
+    reviews: 26
+  },
   {
     id: 'contract-redline-copilot',
     name: 'Contract Redline Copilot',
@@ -525,12 +538,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$199',
     period: '/month',
     description: 'Uploads MSAs/DPAs to find risky terms, compare to playbooks, and propose redlines with rationale and negotiation notes.',
-    features: [;
+    features: [
       'Clause detection and scoring',
       'Playbook comparison',
       'Track-changes export',
       'Negotiation notes',
-      'Approval workflows';
+      'Approval workflows'
     ],
     popular: true,
     icon: '✍️',
@@ -556,7 +569,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-19',
     customers: 61,
     rating: 4.7,
-    reviews: 28},
+    reviews: 28
+  },
   {
     id: 'vendor-security-questionnaire-automation',
     name: 'Vendor Security Questionnaire Automation',
@@ -564,12 +578,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$299',
     period: '/month',
     description: 'Parses vendor questionnaires, maps questions to your approved security statements, and generates responses with evidence links for fast reviews.',
-    features: [;
+    features: [
       'SIG/CAIQ template support',
       'Policy answer library with versioning',
       'Evidence links and doc redaction',
       'Reviewer workflows and exports',
-      'Audit-ready change history';
+      'Audit-ready change history'
     ],
     popular: true,
     icon: '🛡️',
@@ -595,7 +609,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-05-12',
     customers: 57,
     rating: 4.7,
-    reviews: 33},
+    reviews: 33
+  },
   {
     id: 'contract-clause-analyzer',
     name: 'Contract Clause Analyzer',
@@ -603,12 +618,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$199',
     period: '/month',
     description: 'Ingests MSAs and SOWs, highlights risky terms, and drafts friendly redlines using your negotiation playbook and fallback positions.',
-    features: [;
+    features: [
       'Clause classification and risk scoring',
       'Playbook-driven suggestions',
       'Track changes exports',
       'Counterparty-friendly language',
-      'Approval workflows';
+      'Approval workflows'
     ],
     popular: false,
     icon: '📜',
@@ -634,7 +649,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-01',
     customers: 39,
     rating: 4.6,
-    reviews: 22},
+    reviews: 22
+  },
   {
     id: 'marketing-attribution-insights',
     name: 'Marketing Attribution Insights',
@@ -642,12 +658,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$149',
     period: '/month',
     description: 'Collects multi-touch data across ads, web, and CRM to produce actionable attribution dashboards and cohort analyses.',
-    features: [;
+    features: [
       'UTM normalization and deduplication',
       'First/last/multi-touch models',
       'Cohort and LTV reports',
       'Spend ingestion and pacing alerts',
-      'Attribution API for BI tools';
+      'Attribution API for BI tools'
     ],
     popular: true,
     icon: '📊',
@@ -673,7 +689,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-05-25',
     customers: 102,
     rating: 4.8,
-    reviews: 61},
+    reviews: 61
+  },
   {
     id: 'ai-compliance-policy-watcher',
     name: 'AI Compliance Policy Watcher',
@@ -681,12 +698,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$99',
     period: '/month',
     description: 'Continuously monitors regulators and vendors for policy changes, drafts tailored updates to your policies with diffs and approvals.',
-    features: [;
+    features: [
       'Regulatory site monitoring',
       'Change detection and diffs',
       'Jurisdiction-aware updates',
       'Approval workflow',
-      'Export to PDF/HTML';
+      'Export to PDF/HTML'
     ],
     popular: false,
     icon: '🕵️',
@@ -712,7 +729,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-24',
     customers: 27,
     rating: 4.6,
-    reviews: 12},
+    reviews: 12
+  },
   {
     id: 'smart-churn-winback-campaigns',
     name: 'Smart Churn Winback Campaigns',
@@ -720,12 +738,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$119',
     period: '/month',
     description: 'Analyzes churn survey responses and usage data to trigger personalized winback offers and messages across channels.',
-    features: [;
+    features: [
       'Churn reason classifier',
       'Offer library and testing',
       'Multi-channel outreach',
       'Attribution to reactivations',
-      'ROI reporting';
+      'ROI reporting'
     ],
     popular: true,
     icon: '🔁',
@@ -751,7 +769,8 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-23',
     customers: 44,
     rating: 4.7,
-    reviews: 20},
+    reviews: 20
+  },
   {
     id: 'ai-sla-uptime-reporter',
     name: 'AI SLA & Uptime Reporter',
@@ -759,12 +778,12 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     price: '$89',
     period: '/month',
     description: 'Pulls metrics from your observability stack to compile accurate, branded uptime and SLA credits reports with anomaly explanations.',
-    features: [;
+    features: [
       'SLA calculation engine',
       'Incident and anomaly narratives',
       'Branded PDF exports',
       'Customer portal access',
-      'Audit trail and sign-off';
+      'Audit trail and sign-off'
     ],
     popular: false,
     icon: '📈',
@@ -790,5 +809,6 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     launchDate: '2025-06-22',
     customers: 31,
     rating: 4.6,
-    reviews: 14}
+    reviews: 14
+  }
 ];

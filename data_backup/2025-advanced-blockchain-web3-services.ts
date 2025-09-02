@@ -1,52 +1,59 @@
 export interface AdvancedBlockchainWeb3Service {
   id: string;
-   name: string;
-   tagline: string;
-   price: string;
-   period: string;
-   description: string;
-   features: string[];
-   popular: boolean;
-   icon: string;
-   color: string;
-   textColor: string;
-   link: string;
-   marketPosition: string;
-   targetAudience: string[];
-   trialDays: number;
-   setupTime: string;
-   category: string;
-   realService: boolean;
-   technology: string[];
-   integrations: string[];
-   useCases: string[];
-   roi: string;
-   competitors: string[];
-   marketSize: string;
-   growthRate: string;
-   contactInfo: { mobile: string;
-   email: string;
-   address: string;
-   website: string}
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string[];
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number;
+}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [{
+  website: 'https://ziontechgroup.com'
+};
+
+export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
+  {
     id: 'ai-powered-defi-protocol',
     name: 'AI-Powered DeFi Protocol',
     tagline: 'Intelligent decentralized finance with AI-driven optimization',
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary AI-powered DeFi protocol that uses machine learning to optimize yield farming, risk management, and portfolio allocation. Features intelligent trading strategies and automated risk assessment.',
-    features: [;
+    features: [
       'AI-powered yield optimization',
       'Intelligent risk management',
       'Automated portfolio rebalancing',
@@ -56,7 +63,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Real-time analytics',
       'Mobile app access',
       'API for developers',
-      'Advanced security features';
+      'Advanced security features'
     ],
     popular: true,
     icon: '💰',
@@ -82,7 +89,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-12-01',
     customers: 15,
     rating: 4.8,
-    reviews: 28},
+    reviews: 28
+  },
   {
     id: 'quantum-resistant-blockchain',
     name: 'Quantum-Resistant Blockchain',
@@ -90,7 +98,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$4,999',
     period: '/month',
     description: 'Groundbreaking quantum-resistant blockchain platform that implements post-quantum cryptography to protect against future quantum computing threats. Features quantum-safe consensus mechanisms and encryption.',
-    features: [;
+    features: [
       'Post-quantum cryptography',
       'Quantum-safe consensus',
       'Quantum-resistant wallets',
@@ -100,7 +108,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'DeFi integration',
       'NFT marketplace',
       'Developer tools',
-      'Enterprise solutions';
+      'Enterprise solutions'
     ],
     popular: false,
     icon: '⚛️',
@@ -126,7 +134,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-11-15',
     customers: 8,
     rating: 4.9,
-    reviews: 15},
+    reviews: 15
+  },
   {
     id: 'web3-identity-platform',
     name: 'Web3 Identity Platform',
@@ -134,7 +143,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$1,299',
     period: '/month',
     description: 'Comprehensive Web3 identity platform that provides decentralized identity management, verifiable credentials, and privacy-preserving authentication. Features self-sovereign identity and zero-knowledge proofs.',
-    features: [;
+    features: [
       'Self-sovereign identity',
       'Verifiable credentials',
       'Zero-knowledge proofs',
@@ -144,7 +153,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'API integration',
       'Enterprise features',
       'Compliance tools',
-      'Developer SDK';
+      'Developer SDK'
     ],
     popular: true,
     icon: '🆔',
@@ -170,7 +179,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-10-20',
     customers: 32,
     rating: 4.7,
-    reviews: 58},
+    reviews: 58
+  },
   {
     id: 'ai-nft-marketplace',
     name: 'AI NFT Marketplace',
@@ -178,7 +188,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$899',
     period: '/month',
     description: 'Revolutionary AI-powered NFT marketplace that provides intelligent trading insights, automated portfolio management, and AI-generated content. Features predictive pricing and market analysis.',
-    features: [;
+    features: [
       'AI-powered trading insights',
       'Predictive pricing models',
       'Automated portfolio management',
@@ -188,7 +198,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Mobile app access',
       'Social features',
       'Creator tools',
-      'Analytics dashboard';
+      'Analytics dashboard'
     ],
     popular: false,
     icon: '🎨',
@@ -214,7 +224,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-09-25',
     customers: 45,
     rating: 4.6,
-    reviews: 89},
+    reviews: 89
+  },
   {
     id: 'blockchain-supply-chain-orchestrator',
     name: 'Blockchain Supply Chain Orchestrator',
@@ -222,7 +233,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$1,899',
     period: '/month',
     description: 'Advanced blockchain-based supply chain orchestration platform that provides end-to-end transparency, traceability, and automation. Features smart contracts, IoT integration, and real-time monitoring.',
-    features: [;
+    features: [
       'End-to-end traceability',
       'Smart contract automation',
       'IoT sensor integration',
@@ -232,7 +243,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Inventory optimization',
       'Supplier management',
       'Analytics dashboard',
-      'API integration';
+      'API integration'
     ],
     popular: true,
     icon: '📦',
@@ -258,7 +269,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-08-30',
     customers: 28,
     rating: 4.8,
-    reviews: 52},
+    reviews: 52
+  },
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
@@ -266,7 +278,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     price: '$2,499',
     period: '/month',
     description: 'Comprehensive metaverse development platform that enables creators to build immersive virtual worlds with AI-powered content generation, blockchain-based ownership, and cross-platform compatibility.',
-    features: [;
+    features: [
       '3D world building tools',
       'AI content generation',
       'Blockchain ownership',
@@ -276,7 +288,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Monetization tools',
       'Analytics dashboard',
       'Developer SDK',
-      'Marketplace integration';
+      'Marketplace integration'
     ],
     popular: true,
     icon: '🌍',
@@ -302,5 +314,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-07-20',
     customers: 18,
     rating: 4.7,
-    reviews: 35}
+    reviews: 35
+  }
 ];
