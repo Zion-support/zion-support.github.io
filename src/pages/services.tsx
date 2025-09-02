@@ -1,1 +1,18 @@
-import React, { useState } from 'react.ts'; import { motion } from 'framer-motion.ts'; import { Brain, Cloud, Shield, Zap, Users, Rocket, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Cpu, Network, Smartphone, BarChart3, Code, Server, Chip, Wifi, ShieldCheck, Bot, GitFork, Eye, Sparkles, Phone, Mail, MapPin, MessageSquare, FileText, Search, Clock } from 'lucide-react.ts'; type Service = { title: string; description: string; priceRange: string; learnMoreUrl?: string; ctaUrl?: string; }; const featuredServices: Service[] = [ { title: 'AI Autonomous Business Manager', description: 'Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction.', priceRange: '$2,500 - $12,000/month', learnMoreUrl: '/services/ai-autonomous-business-manager', }, { title: 'AI Development & MLOps', description: 'Custom LLMs, RAG, fine-tuning, and MLOps pipelines on AWS/Azure/GCP.', priceRange: '$8,000 - $120,000', learnMoreUrl: 'https:
+import React from 'react';
+import { SEO } from '../components/SEO';
+
+const Services: React.FC = () => {
+  return (
+    <>
+      <SEO title="Services - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Services;
