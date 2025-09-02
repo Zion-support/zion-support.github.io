@@ -50,8 +50,10 @@ import {
   BarChart,
   Users2,
   Settings,
-  Palette'
-} from 'lucide-react';
+  Palette
+  '
+} from 'lucide-react
+  ';
 
 // Optimized futuristic animated background component
 
@@ -87,7 +89,8 @@ import {
     </div>
   )});
 
-FuturisticBackground.displayName = 'FuturisticBackground';
+FuturisticBackground.displayName = 'FuturisticBackground
+  ';
 
 // Enhanced hero section component
 
@@ -197,7 +200,9 @@ FuturisticBackground.displayName = 'FuturisticBackground';
                   onClick={() => setCurrentSlide(index)}`
                   className={`w-3 h-3 rounded-full transition-colors ${
 
-                    index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'`
+                    index === currentSlide ?,
+  bg-cyan-400
+  ': 'bg-white/30`
                   }`}`
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -209,7 +214,8 @@ FuturisticBackground.displayName = 'FuturisticBackground';
     </section>
   )});
 
-HeroSection.displayName = 'HeroSection';
+HeroSection.displayName = 'HeroSection
+  ';
 
 // Enhanced features section
 
@@ -254,7 +260,8 @@ HeroSection.displayName = 'HeroSection';
     </section>
   )});
 
-FeaturesSection.displayName = 'FeaturesSection';
+FeaturesSection.displayName = 'FeaturesSection
+  ';
 
 // Enhanced stats section
 
@@ -283,7 +290,8 @@ FeaturesSection.displayName = 'FeaturesSection';
     </section>
   )});
 
-StatsSection.displayName = 'StatsSection';
+StatsSection.displayName = 'StatsSection
+  ';
 
 // Enhanced CTA section
 
@@ -291,7 +299,8 @@ StatsSection.displayName = 'StatsSection';
 
 )});
 '
-CTASection.displayName = 'CTASection';
+CTASection.displayName =
+  'CTASection';
 
 // Main EnhancedHome component
 const EnhancedHome: React.FC = () => {
@@ -302,7 +311,8 @@ const EnhancedHome: React.FC = () => {
 
     if (servicesSection) {
 
-      servicesSection.scrollIntoView({ behavior: 'smooth' })}
+      servicesSection.scrollIntoView({ behavior:
+  'smooth' })}
   }, []) ;
   if (!isLoaded) {
 

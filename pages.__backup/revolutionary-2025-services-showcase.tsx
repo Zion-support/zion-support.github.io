@@ -1,35 +1,61 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
+import React, { useState } from,
+  react';
+import Head from
+  'next/head';
+import { motion } from
+  'framer-motion';
+import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from
+  'lucide-react';
 
 export default function Revolutionary2025ServicesShowcasePage() {
   // Placeholder data for services
   const services = [
     {
-      id: 'ai-solutions',
-      name: 'AI Solutions',
-      description: 'Revolutionary artificial intelligence and machine learning services',
-      features: ['Custom AI Models', 'Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Consulting'],
-      price: 'Custom',
+      id: 'ai-solutions,
+      name:,
+  AI Solutions',
+      description: 'Revolutionary artificial intelligence and machine learning services,
+      features: [,
+  Custom AI Models',
+  'Predictive Analytics',
+  'Natural Language Processing',
+  'Computer Vision',
+  'AI Consulting'],
+      price: 'Custom,
       rating: 5,
       customers: 50
     },
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      description: 'Next-generation security solutions and threat protection',
-      features: ['Threat Detection', 'Zero Trust Architecture', 'Security Audits', 'Incident Response', 'Compliance'],
-      price: 'Custom',
+      id:,
+  cybersecurity',
+      name: 'Cybersecurity,
+      description:,
+  Next-generation security solutions and threat protection',
+      features: [
+  'Threat Detection,
+,
+  Zero Trust Architecture',
+  'Security Audits',
+  'Incident Response',
+  'Compliance'],
+      price: 'Custom,
       rating: 5,
       customers: 75
     },
     {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure and automation solutions',
-      features: ['Cloud Migration', 'DevOps Automation', 'Infrastructure as Code', 'Monitoring', 'Scalability'],
-      price: 'Custom',
+      id:,
+  cloud-devops',
+      name: 'Cloud & DevOps,
+      description:,
+  Scalable cloud infrastructure and automation solutions',
+      features: [
+  'Cloud Migration,
+,
+  DevOps Automation',
+  'Infrastructure as Code',
+  'Monitoring',
+  'Scalability'],
+      price: 'Custom,
       rating: 5,
       customers: 60}
   });
@@ -40,7 +66,10 @@ export default function Revolutionary2025ServicesShowcasePage() {
     totalCustomers: allRevolutionaryServices.reduce((sum, service) => sum + service.customers, 0),
     averageRating: (allRevolutionaryServices.reduce((sum, service) => sum + service.rating, 0) / allRevolutionaryServices.length).toFixed(1),
     totalRevenue: allRevolutionaryServices.reduce((sum, service) => {
-      const price = parseInt(service.price.replace('$', '').replace(',', ''));
+      const price = parseInt(service.price.replace(
+  '$', '
+  ').replace(',
+  ', ''));
       return sum + (price * service.customers);
     }, 0)
   };
@@ -50,7 +79,8 @@ export default function Revolutionary2025ServicesShowcasePage() {
       <div className="min-h-screen">
         <Head>
           <title>Revolutionary 2025 Services Showcase - Zion Tech Group | Cutting-Edge AI & IT Solutions</title>
-          <meta name="description" content="Explore Zion Tech Group's revolutionary 2025 services including AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950" />
+          <meta name="description" content="Explore Zion Tech Group
+  's revolutionary 2025 services including AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="AI consciousness, quantum computing, zero trust security, edge computing, 5G networks, neuromorphic computing, AI branding, holographic events, mental health AI, creative AI" />
           <meta name="author" content="Zion Tech Group" />
           <meta name="robots" content="index, follow" />
@@ -140,8 +170,9 @@ export default function Revolutionary2025ServicesShowcasePage() {
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
                       selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white'
-                        : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
+                        ?,
+  bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white
+  ': 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400
                     }`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -171,17 +202,25 @@ export default function Revolutionary2025ServicesShowcasePage() {
                 
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => setViewMode('grid')}
+                    onClick={() => setViewMode(,
+  grid
+  ')}
                     className={`p-2 rounded-lg transition-colors ${
-                      viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-blue-400'
+                      viewMode === 'grid
+  ' ? 'bg-blue-600 text-white
+  ': 'text-gray-400 hover:text-blue-400
                     }`}
                   >
                     <Grid className="w-5 h-5" />
                   </button>
                   <button
-                    onClick={() => setViewMode('list')}
+                    onClick={() => setViewMode(,
+  list
+  ')}
                     className={`p-2 rounded-lg transition-colors ${
-                      viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-blue-400'
+                      viewMode === 'list
+  ' ? 'bg-blue-600 text-white
+  ': 'text-gray-400 hover:text-blue-400
                     }`}
                   >
                     <List className="w-5 h-5" />
@@ -202,9 +241,12 @@ export default function Revolutionary2025ServicesShowcasePage() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               className={
-                viewMode === 'grid' 
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
+                viewMode ===,
+  grid
+  ' 
+                  ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8
+  '
+                  : 'space-y-6
               }
             >
               {sortedServices.map((service) => (
@@ -214,9 +256,12 @@ export default function Revolutionary2025ServicesShowcasePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className={`group relative ${
-                    viewMode === 'grid' 
-                      ? 'bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'
-                      : 'bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300'
+                    viewMode ===,
+  grid
+  ' 
+                      ? 'bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover: border-blue-500/50 transition-all duration-300 hover:scale-105
+  '
+                      : 'bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300
                   }`}
                 >
                   {/* Service Header */}

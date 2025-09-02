@@ -1,92 +1,151 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
+import React, { useState } from,
+  react';
+import Head from
+  'next/head';
+import { motion } from
+  'framer-motion';
+import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from
+  'lucide-react';
 
 export default function Revolutionary2025PricingPage() {
   // Placeholder data for services
   const services = [{
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name: 'Starter,
+      description:,
+  Perfect for small businesses and startups',
+      price: billingCycle ===
+  'monthly ? 99 : 79,
+      period: billingCycle ===,
+  monthly' ?
+  '/month': '/month,
+      savings: billingCycle ===,
+  yearly' ?
+  'Save 20%': ',
       features: [
-        'Access to 25+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features'
+        'Access to 25+ Core Services
+  ',
+        'Basic AI Integration
+  ',
+        'Standard Support (24/7)
+  ',
+        '30-Day Free Trial
+  ',
+        'Basic Analytics Dashboard
+  ',
+        'Email Support
+  ',
+        '99.5% Uptime Guarantee
+  ',
+        'Standard Security Features
+  '
       ],
       icon: <Sparkles className="w-8 h-8" />,
-      variant: 'quantum' as const,
+      variant: 'quantum
+  ' as const,
       popular: false,
-      cta: 'Start Free Trial',
-      ctaVariant: 'secondary' as const
+      cta:,
+  Start Free Trial
+  ',
+      ctaVariant: 'secondary as const
     },
     {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name:,
+  Professional
+  ',
+      description: 'Ideal for growing businesses and teams,
+      price: billingCycle === 'monthly
+  ' ? 299 : 239,
+      period: billingCycle ===,
+  monthly
+  ' ? '/month
+  ': '/month,
+      savings: billingCycle ===,
+  yearly
+  ' ? 'Save 20%
+  ': ',
       features: [
-        'Access to 50+ Services',
-        'Advanced AI Integration',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics Dashboard',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Advanced Security Features',
-        'Custom Integrations',
-        'Performance Monitoring'
+  'Access to 50+ Services',
+  'Advanced AI Integration',
+  'Priority Support (24/7)',
+  '60-Day Free Trial',
+  'Advanced Analytics Dashboard',
+  'Phone & Email Support',
+  '99.9% Uptime Guarantee',
+  'Advanced Security Features',
+  'Custom Integrations',
+  'Performance Monitoring'
       ],
       icon: <Rocket className="w-8 h-8" />,
-      variant: 'ai-futuristic' as const,
+      variant:
+  'ai-futuristic' as const,
       popular: true,
-      cta: 'Start Free Trial',
-      ctaVariant: 'primary' as const
+      cta:,
+  Start Free Trial',
+      ctaVariant: 'primary as const
     },
     {
-      name: 'Enterprise',
-      description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name:,
+  Enterprise',
+      description: 'For large organizations and enterprises,
+      price: billingCycle ===
+  'monthly' ? 999 : 799,
+      period: billingCycle ===,
+  monthly' ?
+  '/month': '/month,
+      savings: billingCycle ===,
+  yearly' ?
+  'Save 20%': ',
       features: [
-        'Access to ALL Services',
-        'Full AI & Quantum Integration',
-        'Dedicated Support Team',
-        '90-Day Free Trial',
-        'Enterprise Analytics Suite',
-        '24/7 Dedicated Support',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security Features',
-        'Custom Development',
-        'White-label Solutions',
-        'API Access',
-        'SLA Guarantees'
+        'Access to ALL Services
+  ',
+        'Full AI & Quantum Integration
+  ',
+        'Dedicated Support Team
+  ',
+        '90-Day Free Trial
+  ',
+        'Enterprise Analytics Suite
+  ',
+        '24/7 Dedicated Support
+  ',
+        '99.99% Uptime Guarantee
+  ',
+        'Enterprise Security Features
+  ',
+        'Custom Development
+  ',
+        'White-label Solutions
+  ',
+        'API Access
+  ',
+        'SLA Guarantees
+  '
       ],
       icon: <Crown className="w-8 h-8" />,
-      variant: 'quantum-futuristic' as const,
+      variant: 'quantum-futuristic
+  ' as const,
       popular: false,
-      cta: 'Contact Sales',
-      ctaVariant: 'primary' as const
+      cta:,
+  Contact Sales
+  ',
+      ctaVariant: 'primary as const
     }
   ];
 
   // Market analysis
   const marketAnalysis = {
-    totalMarketSize: '$150B+',
-    growthRate: '250% annually',
-    customerSatisfaction: '98%',
-    averageROI: '500%',
-    timeToValue: '< 30 days',
-    globalReach: '150+ countries'
+    totalMarketSize:,
+  $150B+
+  ',
+    growthRate: '250% annually,
+    customerSatisfaction:,
+  98%
+  ',
+    averageROI: '500%,
+    timeToValue:,
+  < 30 days
+  ',
+    globalReach: '150+ countries
   };
 
   return (
@@ -127,14 +186,20 @@ export default function Revolutionary2025PricingPage() {
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-gray-400">Monthly</span>
                 <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                  onClick={() => setBillingCycle(billingCycle ===,
+  monthly' ?
+  'yearly': 'monthly)}
                   className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
+                    billingCycle ===,
+  yearly' ?
+  'bg-blue-600': 'bg-gray-600
                   }`}
                 >
                   <span
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                      billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                      billingCycle ===,
+  yearly' ?
+  'translate-x-8': 'translate-x-1
                     }`}
                   />
                 </button>
@@ -222,8 +287,8 @@ export default function Revolutionary2025PricingPage() {
                   viewport={{ once: true }}
                   className={`relative ${
                     tier.popular 
-                      ? 'scale-105 border-2 border-blue-500' 
-                      : 'border border-gray-700'
+                      ?,
+  scale-105 border-2 border-blue-500': 'border border-gray-700
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
                 >
                   {tier.popular && (
@@ -296,8 +361,8 @@ export default function Revolutionary2025PricingPage() {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white'
-                      : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
+                      ?,
+  bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white': 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400
                   }`}
                 >
                   <category.icon className="w-5 h-5" />

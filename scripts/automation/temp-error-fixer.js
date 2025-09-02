@@ -2,8 +2,11 @@ const originalLog = console.log;
 let fixCount = 0;
 
 console.log = (...args) => {
-  const message = args.join(' ');
-  if (message.includes('✅ Fixed') || message.includes('fixes applied')) {
+  const message = args.join(
+  ' ');
+  if (message.includes(
+  '✅ Fixed') || message.includes(
+  'fixes applied')) {
     const match = message.match(/(d+)/);
     if (match) {
       fixCount = parseInt(match[1]);
@@ -13,11 +16,13 @@ console.log = (...args) => {
 };
 
 try {
-  require('/workspace/scripts/automation/console-error-fixer.cjs');
+  require(
+  '/workspace/scripts/automation/console-error-fixer.cjs');
   setTimeout(() => {
     process.exit(0);
   }, 5000);
 } catch (error) {
-  console.error('Script error:', error.message);
+  console.error(
+  'Script error:', error.message);
   process.exit(1);
 }

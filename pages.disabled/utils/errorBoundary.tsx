@@ -17,7 +17,8 @@ class ErrorBoundary extends Component<Props, State> {}
       error,
       retryCount: 0}}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    // console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // console.error(
+  'ErrorBoundary caught an error:', error, errorInfo);
     this.setState({}
       error,
       errorInfo});
@@ -26,12 +27,16 @@ class ErrorBoundary extends Component<Props, State> {}
     this.logError (error, errorInfo) }
 :pages.disabled/utils/errorBoundary.tsx
   logError = (error: anyError, errorInfo: ErrorInfo) => {
-'
+  '
     // Log to console for development''
-    if (process.env.NODE_ENV === 'development') {
-'
-      console.group('Error Boundary Error');'
-      // console.error('Error:', error);'// console.error('Error Info:', errorInfo);
+    if (process.env.NODE_ENV ===
+  'development') {
+  '
+      console.group('Error Boundary Error
+  ');'
+      // console.error(
+  'Error:', error);'// console.error(
+  'Error Info:', errorInfo);
       console.groupEnd()}
     // In production, you could send to error reporting service;
     // Example: Sentry, LogRocket, etc.
@@ -91,8 +96,10 @@ class ErrorBoundary extends Component<Props, State> {}
               </p>
 
 :pages.disabled/utils/errorBoundary.tsx
-              {/* Error Details (Development Only) */}'"
-              {process.env.NODE_ENV === 'development' && this.state.error && (""
+              {/* Error Details (Development Only) */}
+  '"
+              {process.env.NODE_ENV === 'development
+  ' && this.state.error && (""
                 <details className="text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30">""
                   <summary className="cursor-pointer text-red-400 font-medium mb-2">
                     Error Details (Development)"</summary>""
@@ -149,4 +156,4 @@ class ErrorBoundary extends Component<Props, State> {}
 
 :pages.disabled/utils/errorBoundary.tsx
 export { ErrorBoundary };'"
-'"'"
+  '"'"
