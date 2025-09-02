@@ -7,20 +7,20 @@ const Footer: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'Micro SaaS',
+      title: 'Revolutionary Micro SaaS',
       services: [
-        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'Project Management', href: '/services/project-management-suite' },
-        { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
-        { name: 'Expense Tracker', href: '/services/expense-tracker' },
-        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
-        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
-        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
-        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
+        { name: 'AI Autonomous Email Responder', href: '/services/ai-autonomous-email-responder' },
+        { name: 'AI Autonomous Social Media Manager', href: '/services/ai-autonomous-social-media-manager' },
+        { name: 'AI Autonomous Customer Support', href: '/services/ai-autonomous-customer-support' },
+        { name: 'AI Autonomous Project Manager', href: '/services/ai-autonomous-project-manager' },
+        { name: 'AI Autonomous Inventory Manager', href: '/services/ai-autonomous-inventory-manager' },
+        { name: 'AI Autonomous Financial Advisor', href: '/services/ai-autonomous-financial-advisor' },
+        { name: 'AI Autonomous HR Manager', href: '/services/ai-autonomous-hr-manager' },
+        { name: 'AI Autonomous Marketing Automation', href: '/services/ai-autonomous-marketing-automation' },
       ]
     },
     {
-      title: 'IT Services',
+      title: 'Advanced IT Services',
       services: [
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
         { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
@@ -33,16 +33,16 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: 'AI Services',
+      title: 'Cutting-Edge AI Services',
       services: [
-        { name: 'Custom AI Models', href: '/services/custom-ai-models' },
-        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
-        { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
-        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
-        { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
-        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
-        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
+        { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager' },
+        { name: 'Quantum AI Cybersecurity Platform', href: '/services/quantum-ai-cybersecurity-platform' },
+        { name: 'AI Autonomous Supply Chain Intelligence', href: '/services/ai-autonomous-supply-chain-intelligence' },
+        { name: 'AI Autonomous Legal Research Platform', href: '/services/ai-autonomous-legal-research-platform' },
+        { name: 'AI Autonomous Healthcare Diagnostics', href: '/services/ai-autonomous-healthcare-diagnostics' },
+        { name: 'AI Autonomous Education Platform', href: '/services/ai-autonomous-education-platform' },
+        { name: 'AI Autonomous Creative Studio', href: '/services/ai-autonomous-creative-studio' },
+        { name: 'AI Autonomous Edge Computing Platform', href: '/services/ai-autonomous-edge-computing-platform' },
       ]
     }
   ];

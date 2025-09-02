@@ -38,12 +38,13 @@ const Home: NextPage = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Transform Your Business with
+            Revolutionize Your Business with
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 animate-gradient"> Zion Tech Group</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200 leading-relaxed">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
+            Pioneering the future of business automation with revolutionary AI services, autonomous micro SaaS solutions, 
+            and cutting-edge technology. From AI business managers to quantum cybersecurity, we deliver transformative 
+            solutions that drive unprecedented growth and efficiency.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -97,9 +98,11 @@ const Home: NextPage = () => {
                 Our Expertise
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Core Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Revolutionary Technology Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We provide comprehensive technology solutions to help your business thrive in the digital age with cutting-edge innovation.
+              Experience the future of business automation with our cutting-edge AI services, revolutionary micro SaaS applications, 
+              and advanced IT solutions. From autonomous business management to quantum cybersecurity, we deliver transformative 
+              technology that drives unprecedented growth and efficiency.
             </p>
           </div>
           
@@ -111,15 +114,16 @@ const Home: NextPage = () => {
                   <Zap className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Micro SaaS Solutions</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Revolutionary Micro SaaS</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.
+                AI-powered autonomous solutions including email responders, social media managers, customer support, and project management 
+                that work 24/7 without human intervention. Starting from $20/month.
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">8+ Solutions</div>
+                <div className="text-sm text-gray-400">15+ Solutions</div>
               </div>
             </div>
 
@@ -130,15 +134,16 @@ const Home: NextPage = () => {
                   <Shield className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">IT Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">Advanced IT Services</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses.
+                Enterprise-grade IT infrastructure, cloud migration, cybersecurity, and performance optimization solutions 
+                for modern businesses. From $2,000 to $75,000.
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/it-services" className="text-purple-600 hover:text-purple-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">12+ Services</div>
+                <div className="text-sm text-gray-400">15+ Services</div>
               </div>
             </div>
 
@@ -149,15 +154,16 @@ const Home: NextPage = () => {
                   <Globe className="w-8 h-8" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">AI Services</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">Cutting-Edge AI Services</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
+                Revolutionary AI solutions including autonomous business managers, quantum cybersecurity, healthcare diagnostics, 
+                and legal research platforms. From $3,000 to $150,000.
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/ai-services" className="text-indigo-600 hover:text-indigo-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">10+ Solutions</div>
+                <div className="text-sm text-gray-400">20+ Solutions</div>
               </div>
             </div>
           </div>
