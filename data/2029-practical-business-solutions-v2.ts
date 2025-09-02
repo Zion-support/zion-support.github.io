@@ -36,13 +36,7 @@ export interface PracticalBusinessSolution2029 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
+reviews: number;export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
     id: 'ai-business-intelligence-suite',
@@ -459,7 +453,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     rating: 4.9,
     reviews: 198
 ];
-<<<<<<< HEAD
 export const getPopularPracticalBusinessSolutions2029 = () => {;
   return practicalBusinessSolutions2029.filter(service => service.popular)};
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {;
@@ -472,12 +465,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 };
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {;
   return practicalBusinessSolutions2029.filter(service => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-<<<<<<< HEAD
-    return price >= minPrice && price <= maxPrice;
+const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+return price >= minPrice && price <= maxPrice;
   });
 };}}
-=======
-    return price >= minPrice && price <= maxPrice})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -23,21 +23,16 @@ import {}
   Users,
   Scale} from 'lucide-react.ts';
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
 const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
 
-  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-=======
-const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {}
-  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-      {/* Hero Section */}""
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
             transition={{ duration: 0.8 }}"
           >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6">""
@@ -46,45 +41,21 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {}
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Revolutionize Legal Research with""
-              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">'
-=======
-            transition={{ duration: 0.8 }}
-          >""
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6">""
-              <BookOpen className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Legal Research;
-            </div>
-""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Revolutionize Legal Research with""
-              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-                {' '}
+              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">'{' '}
                 AI Intelligence;
               </span>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-            </h1>"
-=======
-            </h1>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+            </h1>"""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your legal research capabilities with our AI-powered;
               autonomous platform. Conduct research faster, analyze cases more;
               effectively, and stay ahead of legal developments.
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial"
-=======
-            </p>
-""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-              </button>""
+                Start Free Trial"</button>""
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300">
                 Schedule Demo;
               </button>
@@ -92,132 +63,80 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-      {/* Features Section */}""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+"{/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-            transition={{ duration: 0.8 }}"
-=======
-            transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-            viewport={{ once: true }}""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-              Advanced Legal Research Features"
-=======
-              Advanced Legal Research Features;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-            </h2>""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+              Advanced Legal Research Features"</h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI platform provides comprehensive legal research capabilities;
               for modern law practices;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-          </motion.div>"
-=======
-          </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+          </motion.div>"""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-                viewport={{ once: true }}""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+                transition={{ duration: 0.6, delay: index * 0.1 }}"viewport={{ once: true }}""
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}"
-=======
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>""
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-                </h3>""
+                  {feature.title}"</h3>""
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-      {/* Benefits Section */}""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+"{/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-            transition={{ duration: 0.8 }}"
-=======
-            transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-            viewport={{ once: true }}""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-              Why Choose AI Autonomous Legal Research?"
-=======
-              Why Choose AI Autonomous Legal Research?
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-            </h2>""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+              Why Choose AI Autonomous Legal Research?"</h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in legal research efficiency;
               and case analysis;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-          </motion.div>"
-=======
-          </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+          </motion.div>"""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
               viewport={{ once: true }}"
             >""
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Key Benefits"
               </h3>""
-              <div className="space-y-4">"
-=======
-              viewport={{ once: true }}
-            >""
-              <h3 className="text-2xl font-semibold text-white mb-6">
-                Key Benefits;
-              </h3>""
-              <div className="space-y-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-                {benefits.map((benefit, index) => (""
+              <div className="space-y-4">"{benefits.map((benefit, index) => (""
                   <div key={index} className="flex items-center space-x-3">""
                     <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
@@ -228,29 +147,17 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {}
             <motion.div;
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-              transition={{ duration: 0.8 }}"
-=======
-              transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-              viewport={{ once: true }}""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+              transition={{ duration: 0.8 }}"viewport={{ once: true }}""
               className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8""
             >""
               <h3 className="text-2xl font-semibold text-white mb-6">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
                 Ready to Transform Legal Research?"
               </h3>""
               <p className="text-gray-300 mb-6">
                 Join thousands of legal professionals already using AI to
-                enhance their research capabilities."
-=======
-                Ready to Transform Legal Research?
-              </h3>""
-              <p className="text-gray-300 mb-6">
-                Join thousands of legal professionals already using AI to;
-                enhance their research capabilities.
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-              </p>""
+                enhance their research capabilities."</p>""
               <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                 Get Started Today;
               </button>
@@ -258,19 +165,15 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
-"
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-      {/* CTA Section */}""
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+"{/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
             viewport={{ once: true }}"
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -282,22 +185,7 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                Start Free Trial"
-=======
-            viewport={{ once: true }}
-          >""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Legal Research?
-            </h2>""
-            <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered legal research with our;
-              comprehensive platform.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                Start Free Trial;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx
-              </button>""
+                Start Free Trial"</button>""
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300">
                 Contact Sales;
               </button>
@@ -308,10 +196,6 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {}
     </div>
   )};
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
+:pages.disabled/pages/services/AIAutonomousLegalResearch.tsx
 export default AIAutonomousLegalResearch;'"
 '"'"
-=======
-export default AIAutonomousLegalResearch;
-'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousLegalResearch.tsx

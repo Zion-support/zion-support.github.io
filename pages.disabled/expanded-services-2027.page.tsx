@@ -19,7 +19,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
   ))];
 
   // Filter services based on search and filters
-<<<<<<<< HEAD:pages.disabled/root_pages/expanded-services-2027.page.tsx
+<:pages.disabled/root_pages/expanded-services-2027.page.tsx
   const filteredServices = useMemo(: unknown {;
     return ALL_EXPANDED_SERVICES_2027.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -29,19 +29,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
       '
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
-      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
-========
-  const filteredServices = useMemo(() => {
-    return ALL_EXPANDED_SERVICES_2027.filter(service => {
-      const term = searchTerm.toLowerCase();
-      const matchesSearch =
-        service.name.toLowerCase().includes(term) ||
-        service.description.toLowerCase().includes(term) ||
-        service.category.toLowerCase().includes(term) ||
-        service.subcategory.toLowerCase().includes(term);
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/expanded-services-2027.page.tsx
-
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
 
       return matchesSearch && matchesCategory && matchesSubcategory;
