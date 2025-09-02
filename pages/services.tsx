@@ -18,26 +18,9 @@ import {
   TrendingUp,
   Clock,
   Award,
-  Eye,
-  MessageSquare,
-  Bot,
-  Link2,
-  Wifi,
-  Atom,
-  Glasses,
-  Plug,
-  Heart,
-  CreditCard,
-  ShoppingCart,
-  Factory,
-  Home,
-  GraduationCap,
-  Activity,
-  Share2,
   Mail,
-  Ticket,
-  Package,
-  Timer
+  Calendar,
+  Settings
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -272,36 +255,6 @@ export default function Services() {
 							Average market price ranges referenced from public agency rate cards and vendor quotes. For tailored pricing, see our{' '}
 							<Link href='/pricing-guide' className='text-blue-600 hover:text-blue-500 underline'>Pricing Guide</Link>.
 						</p>
-						
-						{/* Service Category Links */}
-						<div className='mt-8 grid grid-cols-1 md:grid-cols-3 gap-6'>
-							<Link href='/ai-services' className='group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300'>
-								<div className='flex items-center justify-center mb-4'>
-									<Brain className='h-12 w-12 text-blue-600 group-hover:scale-110 transition-transform' />
-								</div>
-								<h3 className='text-xl font-bold text-gray-900 mb-2'>AI Services</h3>
-								<p className='text-gray-600 text-sm mb-4'>Cutting-edge artificial intelligence solutions including machine learning, NLP, and computer vision.</p>
-								<div className='text-blue-600 font-semibold group-hover:text-blue-700'>Explore AI Services →</div>
-							</Link>
-							
-							<Link href='/it-services' className='group bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300'>
-								<div className='flex items-center justify-center mb-4'>
-									<Cloud className='h-12 w-12 text-green-600 group-hover:scale-110 transition-transform' />
-								</div>
-								<h3 className='text-xl font-bold text-gray-900 mb-2'>IT Services</h3>
-								<p className='text-gray-600 text-sm mb-4'>Comprehensive IT solutions including cloud infrastructure, cybersecurity, and network management.</p>
-								<div className='text-green-600 font-semibold group-hover:text-green-700'>Explore IT Services →</div>
-							</Link>
-							
-							<Link href='/micro-saas' className='group bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300'>
-								<div className='flex items-center justify-center mb-4'>
-									<Code className='h-12 w-12 text-orange-600 group-hover:scale-110 transition-transform' />
-								</div>
-								<h3 className='text-xl font-bold text-gray-900 mb-2'>Micro SaaS</h3>
-								<p className='text-gray-600 text-sm mb-4'>Custom software solutions and micro SaaS applications tailored to your business needs.</p>
-								<div className='text-orange-600 font-semibold group-hover:text-orange-700'>Explore Micro SaaS →</div>
-							</Link>
-						</div>
 					</div>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{/* AI Services */}
@@ -598,419 +551,437 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-			{/* Advanced AI & Emerging Technologies */}
-			<section className='py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-indigo-50'>
+			{/* New Innovative Services Section */}
+			<section className='py-24 sm:py-32 bg-gradient-to-br from-blue-50 to-indigo-50'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 					<div className='mx-auto max-w-3xl text-center mb-16'>
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced AI & Emerging Technologies</h2>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Cutting-edge solutions leveraging the latest in artificial intelligence, machine learning, and emerging technologies.
+							Cutting-edge AI solutions and automation tools that transform how businesses operate. 
+							Visit <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.
 						</p>
 					</div>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-						{/* Computer Vision & Image Processing */}
+						{/* AI Content Creation Tools */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
 							<div className='flex items-center gap-3 mb-3'>
-								<Eye className='h-5 w-5 text-blue-600' />
-								<h3 className='font-semibold text-gray-900'>Computer Vision Solutions</h3>
+								<Brain className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>AI Content Creation Suite</h3>
 							</div>
-							<p className='text-sm text-gray-600 mb-3'>Advanced image recognition, object detection, and visual analytics.</p>
+							<p className='text-sm text-gray-600 mb-3'>Generate high-quality content at scale with AI-powered writing tools.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Real-time object detection and tracking</li>
-								<li>• Medical imaging analysis and diagnosis</li>
-								<li>• Quality control and defect detection</li>
-								<li>• Facial recognition and biometric systems</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-blue-600'>From $5k–$25k</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Schedule demo →</Link>
-							</div>
-						</div>
-						{/* Natural Language Processing */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<MessageSquare className='h-5 w-5 text-green-600' />
-								<h3 className='font-semibold text-gray-900'>Advanced NLP & Language Models</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Custom language models, sentiment analysis, and text generation.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Custom GPT models for specific domains</li>
-								<li>• Multi-language translation and localization</li>
-								<li>• Automated content generation and summarization</li>
-								<li>• Voice-to-text and speech recognition</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-green-600'>From $8k–$30k</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Get started →</Link>
-							</div>
-						</div>
-						{/* Predictive Analytics */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<TrendingUp className='h-5 w-5 text-purple-600' />
-								<h3 className='font-semibold text-gray-900'>Predictive Analytics & Forecasting</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Advanced forecasting models for business intelligence and decision making.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Demand forecasting and inventory optimization</li>
-								<li>• Financial risk assessment and fraud detection</li>
-								<li>• Customer lifetime value prediction</li>
-								<li>• Market trend analysis and forecasting</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-purple-600'>From $6k–$20k</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Learn more →</Link>
-							</div>
-						</div>
-						{/* AI Chatbots & Virtual Assistants */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Bot className='h-5 w-5 text-orange-600' />
-								<h3 className='font-semibold text-gray-900'>Intelligent Chatbots & Virtual Assistants</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Advanced conversational AI with context awareness and multi-modal capabilities.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-channel deployment (web, mobile, voice)</li>
-								<li>• Context-aware conversations and memory</li>
-								<li>• Integration with CRM and business systems</li>
-								<li>• Voice synthesis and natural speech patterns</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-orange-600'>From $3k–$15k</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Try demo →</Link>
-							</div>
-						</div>
-						{/* Blockchain & Web3 */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Link2 className='h-5 w-5 text-indigo-600' />
-								<h3 className='font-semibold text-gray-900'>Blockchain & Web3 Solutions</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Smart contracts, DeFi protocols, and decentralized applications.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Smart contract development and auditing</li>
-								<li>• DeFi protocol design and implementation</li>
-								<li>• NFT marketplace and tokenization</li>
-								<li>• Cross-chain interoperability solutions</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-indigo-600'>From $10k–$50k</span>
-								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Explore Web3 →</Link>
-							</div>
-						</div>
-						{/* IoT & Edge Computing */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Wifi className='h-5 w-5 text-teal-600' />
-								<h3 className='font-semibold text-gray-900'>IoT & Edge Computing Platforms</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Connected device management and real-time edge processing.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Device connectivity and data ingestion</li>
-								<li>• Edge AI processing and real-time analytics</li>
-								<li>• Industrial IoT monitoring and control</li>
-								<li>• Smart city and building automation</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-teal-600'>From $8k–$35k</span>
-								<Link href='/contact' className='text-teal-600 hover:text-teal-500'>Connect devices →</Link>
-							</div>
-						</div>
-						{/* Quantum Computing Preparation */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Atom className='h-5 w-5 text-pink-600' />
-								<h3 className='font-semibold text-gray-900'>Quantum Computing Readiness</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Prepare your organization for the quantum computing revolution.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Quantum algorithm development and optimization</li>
-								<li>• Hybrid classical-quantum system design</li>
-								<li>• Quantum security and cryptography</li>
-								<li>• Quantum machine learning applications</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-pink-600'>From $15k–$75k</span>
-								<Link href='/contact' className='text-pink-600 hover:text-pink-500'>Future-proof now →</Link>
-							</div>
-						</div>
-						{/* AR/VR & Metaverse */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Glasses className='h-5 w-5 text-cyan-600' />
-								<h3 className='font-semibold text-gray-900'>AR/VR & Metaverse Solutions</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Immersive experiences and virtual world development.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Virtual reality training and simulations</li>
-								<li>• Augmented reality mobile applications</li>
-								<li>• Metaverse platform development</li>
-								<li>• 3D asset creation and optimization</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-cyan-600'>From $12k–$40k</span>
-								<Link href='/contact' className='text-cyan-600 hover:text-cyan-500'>Enter the metaverse →</Link>
-							</div>
-						</div>
-						{/* API Management & Integration */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Plug className='h-5 w-5 text-red-600' />
-								<h3 className='font-semibold text-gray-900'>Enterprise API Management</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Comprehensive API lifecycle management and integration platform.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• API gateway and security management</li>
-								<li>• Microservices architecture and orchestration</li>
-								<li>• Third-party integration and data synchronization</li>
-								<li>• API analytics and performance monitoring</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-red-600'>From $5k–$25k</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Integrate systems →</Link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			{/* Industry-Specific Solutions */}
-			<section className='py-24 sm:py-32 bg-white'>
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='mx-auto max-w-3xl text-center mb-16'>
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Industry-Specific Solutions</h2>
-						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Tailored technology solutions designed for specific industries and use cases.
-						</p>
-					</div>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-						{/* Healthcare & Life Sciences */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-blue-50 to-indigo-50'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Heart className='h-5 w-5 text-red-600' />
-								<h3 className='font-semibold text-gray-900'>Healthcare & Life Sciences</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>HIPAA-compliant solutions for medical data and patient care.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Electronic Health Records (EHR) integration</li>
-								<li>• Medical imaging AI and diagnostics</li>
-								<li>• Clinical trial management systems</li>
-								<li>• Telemedicine and remote monitoring</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-red-600'>From $15k–$100k</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Healthcare solutions →</Link>
-							</div>
-						</div>
-						{/* Financial Services */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-green-50 to-emerald-50'>
-							<div className='flex items-center gap-3 mb-3'>
-								<CreditCard className='h-5 w-5 text-green-600' />
-								<h3 className='font-semibold text-gray-900'>Financial Services & FinTech</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Secure, compliant solutions for banking and financial institutions.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Payment processing and digital wallets</li>
-								<li>• Fraud detection and risk management</li>
-								<li>• Regulatory compliance automation</li>
-								<li>• Algorithmic trading platforms</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-green-600'>From $20k–$150k</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>FinTech solutions →</Link>
-							</div>
-						</div>
-						{/* E-commerce & Retail */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-orange-50 to-amber-50'>
-							<div className='flex items-center gap-3 mb-3'>
-								<ShoppingCart className='h-5 w-5 text-orange-600' />
-								<h3 className='font-semibold text-gray-900'>E-commerce & Retail</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Omnichannel solutions for modern retail and e-commerce.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-platform marketplace integration</li>
-								<li>• Inventory management and demand forecasting</li>
-								<li>• Personalization and recommendation engines</li>
-								<li>• Supply chain optimization</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-orange-600'>From $10k–$75k</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Retail solutions →</Link>
-							</div>
-						</div>
-						{/* Manufacturing & Industrial */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-gray-50 to-slate-50'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Factory className='h-5 w-5 text-gray-600' />
-								<h3 className='font-semibold text-gray-900'>Manufacturing & Industrial</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Smart manufacturing and industrial automation solutions.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Industrial IoT and sensor networks</li>
-								<li>• Predictive maintenance and quality control</li>
-								<li>• Supply chain visibility and optimization</li>
-								<li>• Digital twin and simulation platforms</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-gray-600'>From $25k–$200k</span>
-								<Link href='/contact' className='text-gray-600 hover:text-gray-500'>Industrial solutions →</Link>
-							</div>
-						</div>
-						{/* Real Estate & PropTech */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-purple-50 to-violet-50'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Home className='h-5 w-5 text-purple-600' />
-								<h3 className='font-semibold text-gray-900'>Real Estate & PropTech</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Technology solutions for property management and real estate.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Property management platforms</li>
-								<li>• Virtual tours and 3D visualization</li>
-								<li>• Smart building automation</li>
-								<li>• Real estate analytics and valuation</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-purple-600'>From $8k–$50k</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>PropTech solutions →</Link>
-							</div>
-						</div>
-						{/* Education & EdTech */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-cyan-50 to-blue-50'>
-							<div className='flex items-center gap-3 mb-3'>
-								<GraduationCap className='h-5 w-5 text-cyan-600' />
-								<h3 className='font-semibold text-gray-900'>Education & EdTech</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Digital learning platforms and educational technology solutions.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Learning Management Systems (LMS)</li>
-								<li>• Virtual classrooms and remote learning</li>
-								<li>• Adaptive learning and AI tutoring</li>
-								<li>• Student analytics and assessment tools</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-cyan-600'>From $5k–$40k</span>
-								<Link href='/contact' className='text-cyan-600 hover:text-cyan-500'>EdTech solutions →</Link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			{/* Specialized Micro SaaS Solutions */}
-			<section className='py-24 sm:py-32 bg-gradient-to-br from-indigo-50 to-purple-50'>
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='mx-auto max-w-3xl text-center mb-16'>
-						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Specialized Micro SaaS Solutions</h2>
-						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Ready-to-deploy SaaS solutions that can be customized for your specific business needs.
-						</p>
-					</div>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-						{/* Real-time Analytics Dashboard */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Activity className='h-5 w-5 text-blue-600' />
-								<h3 className='font-semibold text-gray-900'>Real-time Analytics Dashboard</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Live business intelligence with customizable metrics and alerts.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Real-time data visualization and reporting</li>
-								<li>• Custom KPI tracking and goal setting</li>
-								<li>• Automated alerts and notifications</li>
-								<li>• Multi-source data integration</li>
+								<li>• Blog posts, articles, and marketing copy</li>
+								<li>• SEO-optimized content with keyword research</li>
+								<li>• Multi-language support and brand voice consistency</li>
+								<li>• Content calendar and publishing automation</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-blue-600'>From $199/mo</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>View demo →</Link>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial →</Link>
 							</div>
 						</div>
-						{/* Social Media Management Suite */}
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
-							<div className='flex items-center gap-3 mb-3'>
-								<Share2 className='h-5 w-5 text-pink-600' />
-								<h3 className='font-semibold text-gray-900'>Social Media Management Suite</h3>
-							</div>
-							<p className='text-sm text-gray-600 mb-3'>Comprehensive social media scheduling, analytics, and engagement tools.</p>
-							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-platform content scheduling</li>
-								<li>• AI-powered content suggestions</li>
-								<li>• Engagement analytics and reporting</li>
-								<li>• Influencer collaboration tools</li>
-							</ul>
-							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-pink-600'>From $149/mo</span>
-								<Link href='/contact' className='text-pink-600 hover:text-pink-500'>Manage social →</Link>
-							</div>
-						</div>
-						{/* Email Marketing Automation */}
+						{/* Email Automation Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
 							<div className='flex items-center gap-3 mb-3'>
 								<Mail className='h-5 w-5 text-green-600' />
-								<h3 className='font-semibold text-gray-900'>Email Marketing Automation</h3>
+								<h3 className='font-semibold text-gray-900'>Smart Email Automation</h3>
 							</div>
-							<p className='text-sm text-gray-600 mb-3'>Advanced email campaigns with behavioral triggers and personalization.</p>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered email campaigns with personalized content and optimal send times.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
 								<li>• Behavioral trigger automation</li>
-								<li>• A/B testing and optimization</li>
-								<li>• Advanced segmentation and targeting</li>
-								<li>• Deliverability monitoring and optimization</li>
+								<li>• A/B testing and performance optimization</li>
+								<li>• Lead scoring and segmentation</li>
+								<li>• Integration with CRM and marketing tools</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-green-600'>From $99/mo</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Automate emails →</Link>
+								<span className='font-semibold text-green-600'>From $149/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Automate now →</Link>
 							</div>
 						</div>
-						{/* Customer Support Ticketing */}
+						{/* AI Email Responder */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
 							<div className='flex items-center gap-3 mb-3'>
-								<Ticket className='h-5 w-5 text-orange-600' />
-								<h3 className='font-semibold text-gray-900'>Customer Support Ticketing</h3>
+								<Zap className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>AI Email Assistant</h3>
 							</div>
-							<p className='text-sm text-gray-600 mb-3'>AI-powered customer support with intelligent routing and automation.</p>
+							<p className='text-sm text-gray-600 mb-3'>Intelligent email management with smart responses and priority detection.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Intelligent ticket routing and prioritization</li>
-								<li>• AI-powered response suggestions</li>
-								<li>• Multi-channel support integration</li>
-								<li>• Performance analytics and reporting</li>
+								<li>• Auto-respond to common inquiries</li>
+								<li>• Priority flagging and urgent email alerts</li>
+								<li>• Sentiment analysis and response suggestions</li>
+								<li>• Calendar integration and meeting scheduling</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-orange-600'>From $129/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Support customers →</Link>
+								<span className='font-semibold text-purple-600'>From $99/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Try demo →</Link>
 							</div>
 						</div>
-						{/* Inventory Management System */}
+						{/* Customer Support Platform */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
 							<div className='flex items-center gap-3 mb-3'>
-								<Package className='h-5 w-5 text-purple-600' />
+								<Users className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>AI Customer Support Hub</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive support platform with AI chatbots and ticket management.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• 24/7 AI chatbot with human handoff</li>
+								<li>• Multi-channel support (chat, email, phone)</li>
+								<li>• Knowledge base and FAQ automation</li>
+								<li>• Customer satisfaction tracking</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $299/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Setup support →</Link>
+							</div>
+						</div>
+						{/* Event Management Dashboard */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Calendar className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Event Management</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Complete event planning and management with AI-powered insights.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Event registration and ticketing</li>
+								<li>• Automated email campaigns and reminders</li>
+								<li>• Real-time analytics and attendee insights</li>
+								<li>• Integration with payment and marketing tools</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $179/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Plan events →</Link>
+							</div>
+						</div>
+						{/* Workflow Automation Engine */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Settings className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Business Process Automation</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>No-code workflow automation with AI optimization recommendations.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Visual workflow designer</li>
+								<li>• 500+ pre-built integrations</li>
+								<li>• AI-powered efficiency suggestions</li>
+								<li>• Performance monitoring and optimization</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $79/mo</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Automate workflows →</Link>
+							</div>
+						</div>
+					</div>
+					<div className='mt-12 text-center'>
+						<p className='text-sm text-gray-600 mb-4'>
+							All services include 30-day free trial, setup assistance, and 24/7 support.
+						</p>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+							<Link
+								href='/contact'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors'
+							>
+								Get Started Today
+								<ArrowRight className='ml-2 h-4 w-4' />
+							</Link>
+							<Link
+								href='https://ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
+							>
+								Visit Live Demo
+								<Globe className='ml-2 h-4 w-4' />
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Advanced IT Services Section */}
+			<section className='py-24 sm:py-32 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced IT & Infrastructure Services</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Enterprise-grade IT solutions and infrastructure management services. 
+							Professional implementation with 99.9% uptime guarantee.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{/* DevOps Automation Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Server className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>DevOps Automation Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Complete CI/CD pipelines with infrastructure as code and automated deployments.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• GitOps workflows and automated deployments</li>
+								<li>• Infrastructure monitoring and alerting</li>
+								<li>• Multi-cloud orchestration (AWS, Azure, GCP)</li>
+								<li>• Security scanning and compliance automation</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $599/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Get started →</Link>
+							</div>
+						</div>
+						{/* Infrastructure Monitoring */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>Infrastructure Monitoring & Observability</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Real-time monitoring with AI-powered anomaly detection and predictive scaling.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Application performance monitoring (APM)</li>
+								<li>• Log aggregation and analysis</li>
+								<li>• Predictive scaling and optimization</li>
+								<li>• Custom dashboards and alerting</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $199/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Monitor now →</Link>
+							</div>
+						</div>
+						{/* API Management */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Globe className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>API Management & Gateway</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Enterprise API gateway with rate limiting, authentication, and analytics.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• API versioning and lifecycle management</li>
+								<li>• Rate limiting and throttling</li>
+								<li>• OAuth 2.0 and JWT authentication</li>
+								<li>• API analytics and usage insights</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $299/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Manage APIs →</Link>
+							</div>
+						</div>
+						{/* Database Optimization */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-orange-600' />
+								<h3 className='font-semibold text-gray-900'>Database Performance Optimization</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Database tuning, optimization, and migration services for peak performance.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Query optimization and indexing</li>
+								<li>• Database migration and scaling</li>
+								<li>• Backup and disaster recovery</li>
+								<li>• Performance monitoring and tuning</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-orange-600'>From $399/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Optimize DB →</Link>
+							</div>
+						</div>
+						{/* Security Assessment */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Shield className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>Security Assessment & Penetration Testing</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive security audits and penetration testing for applications and infrastructure.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Web application security testing</li>
+								<li>• Network penetration testing</li>
+								<li>• Vulnerability assessment and remediation</li>
+								<li>• Compliance audits (SOC2, HIPAA, GDPR)</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-red-600'>From $2,500/project</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Secure now →</Link>
+							</div>
+						</div>
+						{/* Cloud Migration */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Cloud className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Cloud Migration & Modernization</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Seamless migration to cloud platforms with modernization and optimization.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Lift-and-shift and re-platforming</li>
+								<li>• Containerization and microservices</li>
+								<li>• Cost optimization and FinOps</li>
+								<li>• Training and knowledge transfer</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $15k–$100k</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Migrate to cloud →</Link>
+							</div>
+						</div>
+					</div>
+					<div className='mt-12 text-center'>
+						<p className='text-sm text-gray-600 mb-4'>
+							All IT services include 24/7 monitoring, regular maintenance, and expert support.
+						</p>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+							<Link
+								href='/contact'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors'
+							>
+								Get IT Consultation
+								<ArrowRight className='ml-2 h-4 w-4' />
+							</Link>
+							<Link
+								href='https://ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
+							>
+								View Case Studies
+								<Globe className='ml-2 h-4 w-4' />
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* Micro SaaS Solutions Section */}
+			<section className='py-24 sm:py-32 bg-gradient-to-br from-purple-50 to-pink-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-3xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Micro SaaS Solutions</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Specialized software solutions designed to solve specific business challenges. 
+							Ready-to-deploy tools with customizable features and integrations.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{/* Project Management Suite */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Users className='h-5 w-5 text-blue-600' />
+								<h3 className='font-semibold text-gray-900'>Smart Project Management Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered project tracking with intelligent resource allocation and team collaboration.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Automated task prioritization and scheduling</li>
+								<li>• Team performance analytics and insights</li>
+								<li>• Integration with popular tools (Slack, Jira, etc.)</li>
+								<li>• Real-time collaboration and communication</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-blue-600'>From $149/mo</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial →</Link>
+							</div>
+						</div>
+						{/* Analytics Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<BarChart3 className='h-5 w-5 text-green-600' />
+								<h3 className='font-semibold text-gray-900'>Business Analytics Dashboard</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive analytics platform with customizable dashboards and automated reporting.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Real-time data visualization and insights</li>
+								<li>• Automated report generation and scheduling</li>
+								<li>• Custom KPI tracking and alerts</li>
+								<li>• Data integration from multiple sources</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-green-600'>From $199/mo</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Analyze data →</Link>
+							</div>
+						</div>
+						{/* Customer Feedback Platform */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Star className='h-5 w-5 text-purple-600' />
+								<h3 className='font-semibold text-gray-900'>Customer Feedback Intelligence</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>AI-driven sentiment analysis and actionable insights from customer feedback across channels.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Multi-channel feedback aggregation</li>
+								<li>• Sentiment analysis and trend identification</li>
+								<li>• Automated response recommendations</li>
+								<li>• Customer satisfaction tracking and NPS</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-purple-600'>From $99/mo</span>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Analyze feedback →</Link>
+							</div>
+						</div>
+						{/* Inventory Management */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<Database className='h-5 w-5 text-orange-600' />
 								<h3 className='font-semibold text-gray-900'>Smart Inventory Management</h3>
 							</div>
-							<p className='text-sm text-gray-600 mb-3'>AI-driven inventory optimization with demand forecasting.</p>
+							<p className='text-sm text-gray-600 mb-3'>AI-powered inventory tracking with predictive analytics and automated reordering.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
 								<li>• Real-time inventory tracking and alerts</li>
-								<li>• Demand forecasting and reorder automation</li>
-								<li>• Multi-location inventory management</li>
-								<li>• Supplier integration and procurement</li>
+								<li>• Predictive analytics for demand forecasting</li>
+								<li>• Automated reorder points and purchase orders</li>
+								<li>• Multi-location and warehouse management</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-purple-600'>From $179/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Manage inventory →</Link>
+								<span className='font-semibold text-orange-600'>From $179/mo</span>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Manage inventory →</Link>
 							</div>
 						</div>
-						{/* Time Tracking & Productivity */}
+						{/* HR Management System */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
 							<div className='flex items-center gap-3 mb-3'>
-								<Timer className='h-5 w-5 text-indigo-600' />
-								<h3 className='font-semibold text-gray-900'>Time Tracking & Productivity</h3>
+								<Users className='h-5 w-5 text-red-600' />
+								<h3 className='font-semibold text-gray-900'>HR Management Platform</h3>
 							</div>
-							<p className='text-sm text-gray-600 mb-3'>Advanced time tracking with productivity insights and team management.</p>
+							<p className='text-sm text-gray-600 mb-3'>Complete HR solution with employee management, payroll, and performance tracking.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Automatic time tracking and categorization</li>
-								<li>• Productivity analytics and insights</li>
-								<li>• Project time allocation and budgeting</li>
-								<li>• Team performance monitoring</li>
+								<li>• Employee onboarding and offboarding</li>
+								<li>• Time tracking and attendance management</li>
+								<li>• Performance reviews and goal setting</li>
+								<li>• Payroll integration and benefits management</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-indigo-600'>From $89/mo</span>
-								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Track productivity →</Link>
+								<span className='font-semibold text-red-600'>From $249/mo</span>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Manage HR →</Link>
 							</div>
+						</div>
+						{/* Financial Management */}
+						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>
+							<div className='flex items-center gap-3 mb-3'>
+								<TrendingUp className='h-5 w-5 text-indigo-600' />
+								<h3 className='font-semibold text-gray-900'>Financial Management Suite</h3>
+							</div>
+							<p className='text-sm text-gray-600 mb-3'>Comprehensive financial tracking with invoicing, expense management, and reporting.</p>
+							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+								<li>• Automated invoicing and payment tracking</li>
+								<li>• Expense management and receipt scanning</li>
+								<li>• Financial reporting and tax preparation</li>
+								<li>• Integration with accounting software</li>
+							</ul>
+							<div className='flex items-center justify-between text-sm'>
+								<span className='font-semibold text-indigo-600'>From $199/mo</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Manage finances →</Link>
+							</div>
+						</div>
+					</div>
+					<div className='mt-12 text-center'>
+						<p className='text-sm text-gray-600 mb-4'>
+							All Micro SaaS solutions include free setup, training, and 30-day money-back guarantee.
+						</p>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+							<Link
+								href='/contact'
+								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors'
+							>
+								Get Custom Solution
+								<ArrowRight className='ml-2 h-4 w-4' />
+							</Link>
+							<Link
+								href='https://ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'
+								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
+							>
+								View Live Demos
+								<Globe className='ml-2 h-4 w-4' />
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -1089,4 +1060,5 @@ export default function Services() {
 				</div>
 			</section>
 		</PageTransition>
-	)}
+	);
+}

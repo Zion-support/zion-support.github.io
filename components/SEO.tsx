@@ -10,6 +10,7 @@ interface SEOProps {
   type?: string;
   siteName?: string;
 }
+
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -22,13 +23,12 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || '/images/og-image.jpg';
   const fullUrl = url || 'https://ziontechgroup.com';
-
   return (
     <Head>
       <title>{fullTitle}</title>
       <meta name='description' content={description} />
       {keywords && <meta name='keywords' content={keywords} />}
-
+;
       {/* Open Graph */}
       <meta property='og:type' content={type} />
       <meta property='og:title' content={fullTitle} />

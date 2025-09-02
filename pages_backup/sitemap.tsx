@@ -4,34 +4,20 @@ import SEO from '../components/SEO';
 import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-  Map,
-  ArrowRight,
-  ExternalLink,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  DollarSign,
-  FileText,
-  BookOpen,
-  Award,
-  Shield,
-  Globe,
-  Search,
-  Filter,
-  Calendar,
-  Star,
-  TrendingUp,
-  Brain,
-  Cloud,
-  Database,
-  Zap,
-  Lock,
-  Code,
-  Smartphone,
-  Monitor,
-  Server,
-  Network
+  Map, ArrowRight,
+  ExternalLink, Home,
+  Users, Briefcase,
+  Phone, DollarSign,
+  FileText, BookOpen,
+  Award, Shield,
+  Globe, Search,
+  Filter, Calendar,
+  Star, TrendingUp,
+  Brain, Cloud,
+  Database, Zap,
+  Lock, Code,
+  Smartphone, Monitor,
+  Server, Network
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
@@ -112,11 +98,11 @@ const SitemapPage: React.FC = () => {
             </div>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Navigate through all pages and sections of the Zion Tech Group website.
-              Find exactly what you're looking for with our comprehensive site structure.
+              Find exactly what you are looking for with our comprehensive site structure.
             </p>
           </motion.div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                         {siteStructure.map((section, index) => (
+            {siteStructure.map((section, index) => (
               <motion.div
                 key={section.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -132,14 +118,14 @@ const SitemapPage: React.FC = () => {
                   </CardHeader>
                   <CardContent>
                     <div className='space-y-3'>
-                                             {section.pages.map((page, pageIndex) => (
+                      {section.pages.map((page, pageIndex) => (
                         <motion.div
                           key={page.path}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.4, delay: (index * 0.1) + (pageIndex * 0.05) }}
-                                                     className='flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors'
-                         >
+                          className='flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors'
+                        >
                           <div className='flex-1'>
                             <a
                               href={page.path}
@@ -162,12 +148,12 @@ const SitemapPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-                         className='mt-12 text-center'
-           >
+            className='mt-12 text-center'
+          >
             <Card className='max-w-2xl mx-auto'>
               <CardContent className='p-8'>
                 <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-                  Can't find what you're looking for?
+                  Can not find what you are looking for?
                 </h3>
                 <p className='text-gray-600 mb-6'>
                   Use our search functionality or contact us directly for assistance.
@@ -189,11 +175,11 @@ const SitemapPage: React.FC = () => {
                   </a>
                 </div>
               </CardContent>
-            </Card>          </motion.div>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </>
   );
 };
-
 export default SitemapPage;

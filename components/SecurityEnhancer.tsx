@@ -24,10 +24,8 @@ const SecurityEnhancer: React.FC = () => {
 
     // Security headers
     const securityHeaders = {
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1 mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     };
 
@@ -38,13 +36,14 @@ const SecurityEnhancer: React.FC = () => {
       meta.content = value;
       document.head.appendChild(meta);
     });
+
     // Detect and prevent XSS attempts
     const detectXSS = () => {
       const scripts = document.querySelectorAll('script');
       scripts.forEach(script => {
         if (script.src && !script.src.startsWith(window.location.origin) &&
-            !script.src.includes('googletagmanager.com') &&
-            !script.src.includes('google-analytics.com')) {
+             !script.src.includes('googletagmanager.com') &&
+             !script.src.includes('google-analytics.com')) {
           console.warn('Potentially malicious script detected: ', script.src);
           script.remove();
         }
@@ -69,10 +68,8 @@ const SecurityEnhancer: React.FC = () => {
         form.addEventListener('submit', (e) => {
           const formData = new FormData(form);
           const suspiciousPatterns = [
-            /<script/i,
-            /javascript: /i,
-            /on\w+\s*=/i,
-            /eval\(/i,
+            /<script/i, /javascript: /i,
+            /on\w+\s*=/i, /eval\(/i,
             /expression\(/i
           ];
 
@@ -100,8 +97,8 @@ const SecurityEnhancer: React.FC = () => {
     const securityInterval = setInterval(() => {;
       detectXSS();
       monitorSuspiciousActivity();
-    }, 30000); // Check every 30 seconds
-    return () => {
+    }, 30000) // Check every 30 seconds;
+    return () => {;
       clearInterval(securityInterval);
     };
   }, []);
@@ -111,21 +108,21 @@ const SecurityEnhancer: React.FC = () => {
       {/* Security Headers */}
       <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
       <meta httpEquiv='X-Frame-Options' content='DENY' />
-      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />;
+      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
       <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=()' />
       {/* Content Security Policy */}
       <meta
-        httpEquiv='Content-Security-Policy';
-        content='default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'';
-      />;
+        httpEquiv='Content-Security-Policy'
+        content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"
+      />
       {/* Additional Security Meta Tags */}
       <meta name='robots' content='index, follow, noarchive, nosnippet' />
       <meta name='googlebot' content='index, follow, noarchive, nosnippet' />
       {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}
-      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />;
+      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />
     </Head>
   );
 };
-;
+
 export default SecurityEnhancer;

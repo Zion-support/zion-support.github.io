@@ -62,6 +62,7 @@ const EnhancedHome: React.FC = () => {
       color: 'from-red-500 to-pink-500'
     }
   ];
+
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
@@ -144,14 +145,14 @@ const EnhancedHome: React.FC = () => {
         <section className='py-16 bg-white'>
           <div className='container mx-auto px-4'>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-                             {stats.map((stat, index) => (
+              {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                                     className='text-center'
-                 >
+                  className='text-center'
+                >
                   <div className='text-4xl md:text-5xl font-bold text-blue-600 mb-2'>
                     {stat.number}
                   </div>
@@ -170,24 +171,24 @@ const EnhancedHome: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-                             className='text-center mb-16'
-            >;
+              className='text-center mb-16'
+            >
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
-                Our Core Services;
+                Our Core Services
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                We provide comprehensive technology solutions that drive innovation,;
-                efficiency, and growth for businesses of all sizes.;
+                We provide comprehensive technology solutions that drive innovation,
+                efficiency, and growth for businesses of all sizes.
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                             {features.map((feature, index) => (
+              {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                                     className='bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow'
+                  className='bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow'
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-6`}>
                     <feature.icon className='w-8 h-8 text-white' />
@@ -210,23 +211,23 @@ const EnhancedHome: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-                             className='text-center mb-16'
-            >;
+              className='text-center mb-16'
+            >
               <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
-                What Our Clients Say;
+                What Our Clients Say
               </h2>
               <p className='text-xl text-gray-600'>
-                Don't just take our word for it - hear from our satisfied clients.;
+                Do not just take our word for it - hear from our satisfied clients.
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-                             {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                                     className='bg-white rounded-xl p-8 shadow-lg'
+                  className='bg-white rounded-xl p-8 shadow-lg'
                 >
                   <div className='flex mb-4'>
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -234,7 +235,7 @@ const EnhancedHome: React.FC = () => {
                     ))}
                   </div>
                   <p className='text-gray-600 mb-6 italic'>
-                    '{testimonial.content}'
+                    &quot;{testimonial.content}&quot;
                   </p>
                   <div>
                     <div className='font-semibold text-gray-900'>
@@ -261,13 +262,13 @@ const EnhancedHome: React.FC = () => {
                 Ready to Transform Your Business?;
               </h2>
               <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-                Let's discuss how our technology solutions can drive your success.;
-                Get in touch with our experts today.;
+                Let us discuss how our technology solutions can drive your success.
+                Get in touch with our experts today.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
-                                     href='/contact'
-                   className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg'
+                  href='/contact'
+                  className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg'
                 >
                   Start Your Project
                   <Rocket className='ml-2 w-5 h-5' />

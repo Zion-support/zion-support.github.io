@@ -163,7 +163,7 @@ const PricingGuide: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >
+              >;
                 <Card className='p-8 h-full'>
                   <div className='flex items-start mb-6'>
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}>
@@ -175,7 +175,7 @@ const PricingGuide: React.FC = () => {
                     </div>
                   </div>
                   <ul className='space-y-3'>
-                                         {factor.details.map((detail, detailIndex) => (
+                    {factor.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className='flex items-center text-gray-300'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
                         {detail}
@@ -195,17 +195,17 @@ const PricingGuide: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-                         className='text-center mb-16'
-          >;
+            className='text-center mb-16'
+          >
             <h2 className='text-4xl font-bold text-white mb-4'>
-              Real-World Pricing Examples;
+              Real-World Pricing Examples
             </h2>
             <p className='text-xl text-gray-300'>
-              See how different project types are priced;
+              See how different project types are priced
             </p>
           </motion.div>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-                         {pricingExamples.map((example, index) => (
+            {pricingExamples.map((example, index) => (
               <motion.div
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
@@ -220,7 +220,7 @@ const PricingGuide: React.FC = () => {
                     <div className='text-sm text-gray-400'>Timeline: {example.timeline}</div>
                   </div>
                   <ul className='space-y-3 mb-6'>
-                                         {example.features.map((feature, featureIndex) => (
+                    {example.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-center text-gray-300 text-sm'>
                         <CheckCircle className='w-4 h-4 text-green-500 mr-3 flex-shrink-0' />
                         {feature}
@@ -246,17 +246,17 @@ const PricingGuide: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-                         className='text-center mb-16'
-          >;
+            className='text-center mb-16'
+          >
             <h2 className='text-4xl font-bold text-white mb-4'>
-              How to Save on AI Development Costs;
+              How to Save on AI Development Costs
             </h2>
             <p className='text-xl text-gray-300'>
-              Smart strategies to maximize your AI investment;
+              Smart strategies to maximize your AI investment
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-                         {costSavingTips.map((tip, index) => (
+            {costSavingTips.map((tip, index) => (
               <motion.div
                 key={tip.tip}
                 initial={{ opacity: 0, y: 20 }}
