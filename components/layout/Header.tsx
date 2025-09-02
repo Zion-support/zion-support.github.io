@@ -31,11 +31,11 @@ const Header: React.FC = () => {
     { name: 'AI Services', href: '/services/ai-services' },
   ];
 
-  const solutionCategories = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Custom Development', href: '/solutions/custom-development' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-  ];
+  // const solutionCategories = [
+  //   { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+  //   { name: 'Custom Development', href: '/solutions/custom-development' },
+  //   { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+  // ];
 
   return (
     <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-xl' : 'shadow-lg'}`}>
