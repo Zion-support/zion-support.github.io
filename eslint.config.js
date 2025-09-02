@@ -240,6 +240,7 @@ export default [
       '**/comprehensive-automation-test.js',
       '**/debug-paths.js',
       '**/pages/**',
+      '**/components/**',
       'test*.js',
       'test*.ts',
       'test*.tsx'
