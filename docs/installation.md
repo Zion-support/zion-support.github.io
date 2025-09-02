@@ -9,20 +9,17 @@
 ## Quick Start
 
 1. Clone the repository:
-
 ```bash
 git clone <repository-url>
 cd zion-app
 ```
 
 2. Install dependencies:
-
 ```bash
 npm install
 ```
 
 3. Start the development server:
-
 ```bash
 npm run dev
 ```
@@ -47,5 +44,4 @@ VITE_APP_ENV=development
 - `npm run type-check` - Run TypeScript type checking
 
 ---
-
-_Generated automatically by Smart Documentation Generator_
+*Generated automatically by Smart Documentation Generator*

@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 
-const Solutions: React.FC = () => {
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO "
-        title="Solutions - Zion Tech Group"
-        description="Explore industry and capability solutions including enterprise and healthcare."
-       />"
-      <div className="container-responsive py-16">"
-        <h1 className="text-4xl font-bold mb-6">Solutions</h1>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-          <Link to="/solutions/enterprise" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Enterprise</Link>"
-          <Link to="/solutions/healthcare" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Healthcare</Link>
-        </div>
-      </div>
-    </div>) };
-
-export default Solutions;
-
-import {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   Brain,
   Cloud,
@@ -33,90 +11,114 @@ import {
   Clock,
   DollarSign,
   Search,
-  Filter'
-} from 'lucide-react';
+  Filter,
+  } from 'lucide-react
+  ';
 
+      'Legacy Modernization
+  ',;
+      'Digital Strategy
+  ',;
+      'Change Management
+  ',;
+      'Technology Consulting
+  ';
+    ]};
+'Process Automation
+  ','
 
-      'Legacy Modernization',;
-      'Digital Strategy',;
-      'Change Management',;
-      'Technology Consulting';
+  'Customer Experience',;'
+  'Legacy Modernization',;'
+  'Digital Strategy',;'
+  'Change Management',;'
+  'Technology Consulting';
     ]};
-=======
-      'Process Automation','
-      'Customer Experience',;'
-      'Legacy Modernization',;'
-      'Digital Strategy',;'
-      'Change Management',;'      'Technology Consulting';
-    ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 ;
 
-      'Citizen Engagement',;
-      'Regulatory Compliance',;
-      'Infrastructure Management';
+  'Citizen Engagement',;
+
+  'Regulatory Compliance',;
+
+  'Infrastructure Management';
     ],;
-    color: 'from-gray-500 to-slate-600'};
+    color: 'from-gray-500 to-slate-600};
 ];
 ;
 
     ],;
-    price: 'Starting at $1,800/month',;
-    implementation: '8-16 weeks',;
+    price:,
+  Starting at $1,800/month',;
+    implementation: '8-16 weeks,;
     icon: Cloud,;
-    color: 'from-blue-500 to-cyan-600'};
+    color:,
+  from-blue-500 to-cyan-600'};
 ];
 
-  
     // Retail & E-commerce Solutions
     {
 
-      title: 'AI & Machine Learning',
+      title: 'AI & Machine Learning,
       icon: Brain,
-      description: 'Cutting-edge AI solutions for business transformation',
-      color: 'from-purple-500 to-pink-600',
-      solutions: ['
-        'AI Business Intelligence',Machine Learning Platforms',Natural Language Processing',Computer Vision Systems',Predictive Analytics',AI Automation'
+      description:,
+  Cutting-edge AI solutions for business transformation',
+      color: 'from-purple-500 to-pink-600,
+      solutions: [,
+  'AI Business Intelligence
+  ',Machine Learning Platforms',Natural Language Processing
+  ',Computer Vision Systems',Predictive Analytics
+  ',AI Automation'
       ]
     },
     {
 
-      title: 'Cloud & Infrastructure',
+      title: 'Cloud & Infrastructure,
       icon: Cloud,
-      description: 'Scalable cloud solutions and infrastructure management',
-      color: 'from-blue-500 to-cyan-600',
-      solutions: ['
-        'Cloud Migration',DevOps Automation',Container Orchestration',Serverless Computing',Multi-cloud Management',Edge Computing'
+      description:,
+  Scalable cloud solutions and infrastructure management',
+      color: 'from-blue-500 to-cyan-600,
+      solutions: [,
+  'Cloud Migration
+  ',DevOps Automation',Container Orchestration
+  ',Serverless Computing',Multi-cloud Management
+  ',Edge Computing'
       ]
     },
 
     // Education Solutions
     {
 
-      title: 'Cybersecurity',
+      title: 'Cybersecurity,
       icon: Shield,
-      description: 'Advanced security solutions for modern threats',
-      color: 'from-red-500 to-orange-600',
-      solutions: ['
-        'Zero Trust Security',AI Threat Detection',Compliance Management',Identity & Access Management',Security Automation',Incident Response'
+      description:,
+  Advanced security solutions for modern threats',
+      color: 'from-red-500 to-orange-600,
+      solutions: [,
+  'Zero Trust Security
+  ',AI Threat Detection',Compliance Management
+  ',Identity & Access Management',Security Automation
+  ',Incident Response'
       ]
     },
 
     // Government Solutions
     {
 
-      title: 'Quantum Computing',
+      title: 'Quantum Computing,
       icon: Atom,
-      description: 'Next-generation quantum computing solutions',
-      color: 'from-indigo-500 to-purple-600',
-      solutions: ['
-        'Quantum Algorithms',Quantum Machine Learning',Quantum Cryptography',Quantum Simulation',Hybrid Quantum-Classical',Quantum Optimization'
+      description:,
+  Next-generation quantum computing solutions',
+      color: 'from-indigo-500 to-purple-600,
+      solutions: [
+  '
+        'Quantum Algorithms
+  ',Quantum Machine Learning',Quantum Cryptography
+  ',Quantum Simulation',Hybrid Quantum-Classical
+  ',Quantum Optimization'
       ]
     }
   ];
 
-  
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}"
@@ -154,9 +156,9 @@ import {
                   onClick={() => setSelectedIndustry(industry.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
 
-                    selectedIndustry === industry.id'
-                      ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30''
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'`
+                    selectedIndustry === industry.id,
+  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30'
+  ': 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50`
                   }`}
                 >"
                   <industry.icon className="w-5 h-5 mr-2" />
@@ -203,7 +205,6 @@ import {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutionCategories.map((category, index) => {
 
-              
               return()                <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -248,13 +249,13 @@ import {
             className="mb-12 text-center"
           >"
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>'"
-            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
+            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry
+  's unique challenges</p>
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industrySolutions.map((industry, index) => {
 
-              
               return()                <motion.div
                   key={industry.industry}
                   initial={{ opacity: 0, y: 20 }}
@@ -304,7 +305,6 @@ import {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredSolutions.map((solution, index) => {
 
-              
               return()                <motion.div
                   key={solution.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -503,7 +503,8 @@ import {
             className="mb-12 text-center"
           >;"
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>;'"
-            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
+            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry
+  's unique challenges</p>;
           </motion.div>;
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;

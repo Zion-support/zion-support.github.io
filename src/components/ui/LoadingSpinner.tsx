@@ -1,17 +1,17 @@
-type LoadingSpinnerProps = {;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-  text?: string};
-export default function LoadingSpinner({ size = 'md', className = '', text }: LoadingSpinnerProps) {;
-  const sizeClasses: Record<string, string> = {;
-    sm: 'w-6 h-6',;
-    md: 'w-10 h-10',;
-    lg: 'w-14 h-14',;
-    xl: 'w-20 h-20';
-  };
-  return (;
-    <div className={`flex flex-col items-center justify-center ${className}`}>;
-      <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin`} aria-label="Loading" />";""
-      {text ? <p className="mt-3 text-sm text-gray-400">{text}</p> : null};
-    </div>;"
-  )};";""
+import React from,
+  react'; import { motion } from
+  'framer-motion'; interface LoadingSpinnerProps { size?: 'sm' |
+  'md' |
+  'lg' |
+  'xl; color?: string; text?: string; className?: string; } export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size =,
+  md', color =
+  'blue', text, className = '
+  ' }) => { const sizeClasses = { sm: 'w-4 h-4, md:,
+  w-8 h-8
+  ', lg: 'w-12 h-12, xl:,
+  w-16 h-16
+  ' }; const colorClasses = { blue: 'border-blue-500, green:,
+  border-green-500
+  ', purple: 'border-purple-500, red:,
+  border-red-500
+  ', gray: 'border-gray-500 }; return ( <div className={`flex flex-col items-center justify-center ${className}`}> <motion.div className={`${sizeClasses[size]} border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}`} animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} > {text} </motion.p> )} </div> ); }; export default LoadingSpinner;

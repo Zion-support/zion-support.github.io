@@ -1,87 +1,13 @@
-<<<<<<< HEAD
-import {
 
-  Users,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Calendar,
-  MapPin,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Heart,
-  Share2,
-  BookOpen,
-  Video,
-  Download,
-  ExternalLink,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Heart,
-  Award,
-  CheckCircle,
-  ArrowRight'
-} from 'lucide-react';
-
-export default function Community() {
-  
-    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;
-    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;
-    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from-green-500 to-emerald-500' },;
-    { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' };
-  ];
-
-  
-      color: 'from-green-600 to-emerald-600',;
-      topics: 620,;
-      posts: 4100,;
-      members: 1800,;
-      href: '/community/digital-transformation'};
-  ];
-
-  
-      type: 'Meetup',;
-      attendees: 75,;
-      icon: Cloud,;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/events/devops-meetup-nyc'};
-  ];
-
-  
-      lastActivity: '1 day ago',;
-      tags: ['Multi-Cloud',Cost Optimization',DevOps'],;
-      icon: Cloud,;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/community/discussions/multi-cloud-cost-optimization'};
-  ];
-
-  
-      title: 'Resource Library',;
-      description: 'Access shared resources, templates, and tools',;
-      icon: Download,;
-      href: '/community/resources',;
-      color: 'from-orange-500 to-red-500'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export default function Community(...args[]):  {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO "
-<<<<<<< HEAD
-        title="Community - Zion Tech Group"
-        description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
-       />
-=======
+
         title="Community - Zion Tech Group""        description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Header */}"
       <div className="bg-slate-800/50 border-b border-slate-700">;"
@@ -108,7 +34,8 @@ export default function Community(...args[]):  {
               Join Our Community
             </h1>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with technology professionals, share knowledge, and stay ahead of industry trends.'
+              Connect with technology professionals, share knowledge, and stay ahead of industry trends.
+  '
 interface CommunityPost {
 
   id: string;
@@ -139,202 +66,276 @@ interface CommunityCategory {
   topics: string[];
 const Community: React.FC = () => {
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('latest');
+  const [searchQuery, setSearchQuery] = useState(,
+  ');
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+  'all');
+  const [sortBy, setSortBy] = useState<string>(
+  'latest');
 
   const communityCategories: CommunityCategory[] = [
     {
 
-      id: 'general',;
-      name: 'General Discussion',
-      description: 'General topics about Zion Tech Group and technology',
+      id:
+  'general,;
+      name:,
+  General Discussion',
+      description: 'General topics about Zion Tech Group and technology,
       icon: Users,
-      color: 'from-blue-500 to-cyan-500',
+      color:
+  'from-blue-500 to-cyan-500',
       postCount: 1247,
-      topics: ['Company News',Technology Trends',Industry Updates']
+      topics: [,
+  Company News',Technology Trends
+  ',Industry Updates']
     },
     {
 
-      id: 'ai-services',;
-      name: 'AI Services',
-      description: 'Discussions about our AI and machine learning services',
+      id: 'ai-services,;
+      name:,
+  AI Services',
+      description: 'Discussions about our AI and machine learning services,
       icon: TrendingUp,
-      color: 'from-purple-500 to-pink-500',
+      color:
+  'from-purple-500 to-pink-500',
       postCount: 892,
-      topics: ['AI Integration',Machine Learning',AI Best Practices']
+      topics: [,
+  AI Integration',Machine Learning
+  ',AI Best Practices']
     },
     {
 
-      id: 'cloud-infrastructure',;
-      name: 'Cloud & Infrastructure',
-      description: 'Cloud computing, DevOps, and infrastructure topics',
+      id: 'cloud-infrastructure,;
+      name:,
+  Cloud & Infrastructure',
+      description: Cloud computing, DevOps, and infrastructure topics',
       icon: TrendingUp,
-      color: 'from-green-500 to-blue-500',
+      color:
+  'from-green-500 to-blue-500',
       postCount: 654,
-      topics: ['Cloud Migration',DevOps',Infrastructure Management']
+      topics: [,
+  Cloud Migration',DevOps
+  ',Infrastructure Management']
     },
     {
 
-      id: 'security-compliance',;
-      name: 'Security & Compliance',
-      description: 'Cybersecurity, compliance, and data protection',
+      id: 'security-compliance,;
+      name:,
+  Security & Compliance',
+      description: Cybersecurity, compliance, and data protection',
       icon: TrendingUp,
-      color: 'from-red-500 to-orange-500',
+      color:
+  'from-red-500 to-orange-500',
       postCount: 456,
-      topics: ['Cybersecurity',Compliance',Data Protection']
+      topics: [,
+  Cybersecurity',Compliance
+  ',Data Protection']
     },
     {
 
-      id: 'micro-saas',;
-      name: 'Micro SaaS Solutions',
-      description: 'Our micro SaaS products and integrations',
+      id: 'micro-saas,;
+      name:,
+  Micro SaaS Solutions',
+      description: 'Our micro SaaS products and integrations,
       icon: TrendingUp,
-      color: 'from-yellow-500 to-orange-500',
+      color:
+  'from-yellow-500 to-orange-500',
       postCount: 789,
-      topics: ['Product Updates',Integration Guides',Best Practices']
+      topics: [,
+  Product Updates',Integration Guides
+  ',Best Practices']
     },
     {
 
-      id: 'support',;
-      name: 'Support & Help',
-      description: 'Get help and support from the community',
+      id: 'support,;
+      name:,
+  Support & Help',
+      description: 'Get help and support from the community,
       icon: MessageCircle,
-      color: 'from-indigo-500 to-purple-500',
+      color:
+  'from-indigo-500 to-purple-500',
       postCount: 1234,
-      topics: ['Technical Support',Troubleshooting',Feature Requests']
+      topics: [,
+  Technical Support',Troubleshooting
+  ',Feature Requests']
     }
   ];
 
-  
-      title: 'Getting Started with AI Business Intelligence - Best Practices',
-      content: 'I\'ve been using Zion Tech Group\'s AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...',
+      title: 'Getting Started with AI Business Intelligence - Best Practices,
+      content:,
+  I\'ve been using Zion Tech Group\
+  's AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...
+  ',
       author: {
 
-        name: 'Sarah Chen',;
-        avatar: '/avatars/sarah.jpg',
-        role: 'Senior Data Scientist',
+        name: 'Sarah Chen,;
+        avatar:,
+  /avatars/sarah.jpg
+  ',
+        role: 'Senior Data Scientist,
         verified: true
       },
-      category: 'ai-services',
-      tags: ['AI',Business Intelligence',Best Practices',Getting Started'],
+      category:,
+  ai-services
+  ',
+      tags: ['AI,Business Intelligence',Best Practices
+  ',Getting Started'],
       likes: 45,
       replies: 23,
       views: 1234,
-      createdAt: '2 hours ago',
+      createdAt:
+  '2 hours ago',
       isPinned: true,
       isFeatured: true
     },
     {
 
-      id: '2',;
-      title: 'Cloud Migration Success Story: From On-Prem to Multi-Cloud',
-      content: 'Just completed our migration to Zion Tech Group\'s cloud infrastructure. Here\'s our journey and lessons learned...',
+      id:,
+  2',;
+      title: 'Cloud Migration Success Story: From On-Prem to Multi-Cloud,
+      content:,
+  Just completed our migration to Zion Tech Group\'s cloud infrastructure. Here\
+  's our journey and lessons learned...',
       author: {
 
-        name: 'Michael Rodriguez',;
-        avatar: '/avatars/michael.jpg',
-        role: 'DevOps Engineer',
+        name:
+  'Michael Rodriguez,;
+        avatar:,
+  /avatars/michael.jpg',
+        role: 'DevOps Engineer,
         verified: true
       },
-      category: 'cloud-infrastructure',
-      tags: ['Cloud Migration',DevOps',Success Story',Multi-Cloud'],
+      category:,
+  cloud-infrastructure',
+      tags: [
+  'Cloud Migration,DevOps
+  ',Success Story',Multi-Cloud
+  '],
       likes: 67,
       replies: 34,
       views: 2156,
-      createdAt: '5 hours ago',
+      createdAt: '5 hours ago
+  ',
       isPinned: false,
       isFeatured: true
     },
     {
 
-      id: '3',;
-      title: 'Zero Trust Security Implementation Guide',
-      content: 'Comprehensive guide on implementing zero trust security using Zion Tech Group\'s security services...',
+      id:,
+  3
+  ',;
+      title: 'Zero Trust Security Implementation Guide,
+      content:,
+  Comprehensive guide on implementing zero trust security using Zion Tech Group\
+  's security services...',
       author: {
 
-        name: 'Alex Thompson',;
-        avatar: '/avatars/alex.jpg',
-        role: 'Security Architect',
+        name:
+  'Alex Thompson,;
+        avatar:,
+  /avatars/alex.jpg',
+        role: 'Security Architect,
         verified: true
       },
-      category: 'security-compliance',
-      tags: ['Zero Trust',Security',Implementation',Guide'],
+      category:,
+  security-compliance',
+      tags: [
+  'Zero Trust,Security
+  ',Implementation',Guide
+  '],
       likes: 89,
       replies: 56,
       views: 3421,
-      createdAt: '1 day ago',
+      createdAt: '1 day ago
+  ',
       isPinned: false,
       isFeatured: false
     },
     {
 
-      id: '4',;
-      title: 'Micro CRM Integration with Salesforce - Step by Step',
-      content: 'Detailed walkthrough of integrating our Micro CRM with Salesforce. Includes code examples and troubleshooting tips...',
+      id:,
+  4
+  ',;
+      title: 'Micro CRM Integration with Salesforce - Step by Step,
+      content:,
+  Detailed walkthrough of integrating our Micro CRM with Salesforce. Includes code examples and troubleshooting tips...
+  ',
       author: {
 
-        name: 'Jennifer Lee',;
-        avatar: '/avatars/jennifer.jpg',
-        role: 'Integration Specialist',
+        name: 'Jennifer Lee,;
+        avatar:,
+  /avatars/jennifer.jpg
+  ',
+        role: 'Integration Specialist,
         verified: false
       },
-      category: 'micro-saas',
-      tags: ['Micro CRM',Salesforce',Integration',Tutorial'],
+      category:,
+  micro-saas
+  ',
+      tags: ['Micro CRM,Salesforce',Integration
+  ',Tutorial'],
       likes: 34,
       replies: 18,
       views: 987,
-      createdAt: '2 days ago',
+      createdAt:
+  '2 days ago',
       isPinned: false,
       isFeatured: false
     },
     {
 
-      id: '5',;
-      title: 'AI Content Creation API Performance Optimization',
-      content: 'Tips and tricks for optimizing performance when using the AI Content Creation API at scale...',
+      id:,
+  5',;
+      title: 'AI Content Creation API Performance Optimization,
+      content:,
+  Tips and tricks for optimizing performance when using the AI Content Creation API at scale...',
       author: {
 
-        name: 'David Kim',;
-        avatar: '/avatars/david.jpg',
-        role: 'Software Engineer',
+        name:
+  'David Kim,;
+        avatar:,
+  /avatars/david.jpg',
+        role: 'Software Engineer,
         verified: true
       },
-      category: 'ai-services',
-      tags: ['AI Content Creation',API',Performance',Optimization'],
+      category:,
+  ai-services',
+      tags: [
+  'AI Content Creation,API
+  ',Performance',Optimization
+  '],
       likes: 56,
       replies: 29,
       views: 1567,
-      createdAt: '3 days ago',
+      createdAt: '3 days ago
+  ',
       isPinned: false,
       isFeatured: false
     }
   ];
 
-  
-    
     return matchesSearch && matchesCategory}) ;
 
-  
-      case 'popular':
-        return b.likes - a.likes;
-=======
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      case 'popular':
+      case,
+  popular
+  ': return b.likes - a.likes;
+return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      case
+  'popular':
         return b.likes - a.likes;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      case 'most-replied':
+      case
+  'most-replied':
         return b.replies - a.replies;
-      case 'most-viewed':
+      case
+  'most-viewed:
         return b.views - a.views;
       default:
         return 0}
   }) ;
 
-  
-    return category ? category.color : 'from-gray-500 to-gray-600'};
+    return category ? category.color :,
+  from-gray-500 to-gray-600'};
 
-  
-    return category ? category.name : 'Unknown'};
+    return category ? category.name: 'Unknown};
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}"
@@ -395,11 +396,6 @@ const Community: React.FC = () => {
   { duration: 0.6,
   delay: 0.5 
 
-
-
-
-
-
 }}"
           className="text-3xl font-bold text-white text-center mb-12"
 
@@ -427,11 +423,6 @@ const Community: React.FC = () => {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
 
-
-
-
-
-
 }}"
               className="group"
 
@@ -443,9 +434,14 @@ const Community: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
 
-                      event.type === 'Conference' ? 'bg-purple-500/20 text-purple-400' :'
-                      event.type === 'Workshop' ? 'bg-blue-500/20 text-blue-400' :'
-                      'bg-green-500/20 text-green-400'`
+                      event.type ===,
+  Conference' ?
+  'bg-purple-500/20 text-purple-400': '
+                      event.type === 'Workshop
+  ' ? 'bg-blue-500/20 text-blue-400
+  ' :'
+
+  'bg-green-500/20 text-green-400`
                     }`}>
                       {event.type}
                     </span>`
@@ -508,11 +504,6 @@ const Community: React.FC = () => {
   { duration: 0.6,
   delay: 0.7 
 
-
-
-
-
-
 }}"
             className="text-3xl font-bold text-white text-center mb-12"
 
@@ -539,11 +530,6 @@ const Community: React.FC = () => {
 
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
-
-
-
-
-
 
 }}"
                 className="group"
@@ -590,12 +576,8 @@ const Community: React.FC = () => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search community posts..."
-=======
+
                   type="text""                  placeholder="Search community posts..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

@@ -1,50 +1,14 @@
-<<<<<<< HEAD
-import {
 
-  Brain,
-  Shield,
-  Zap,
-  Cloud,
-  Lock,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Building2,
-  Leaf,
-  Car,
-  Heart,
-  Scale,
-  Eye,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink'
-} from 'lucide-react';
-export default function InnovativeServicesShowcase2026() {
+,
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');'
+  const [searchQuery, setSearchQuery] = useState('
+  ');'
+  const [selectedCategory, setSelectedCategory] = useState(
+  'All');'
+  const [sortBy, setSortBy] = useState(
+  'innovation');
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-=======
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('All');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  const [sortBy, setSortBy] = useState('innovation');
-
-  
-  
     // Filter by search query
     if (searchQuery) {
 
@@ -54,8 +18,10 @@ export default function InnovativeServicesShowcase2026() {
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
 
-    // Filter by category'
-    if (selectedCategory !== 'All') {
+    // Filter by category
+  '
+    if (selectedCategory !== 'All
+  ') {
 
       filtered = filtered.filter(service => service.category === selectedCategory);
 
@@ -64,52 +30,64 @@ export default function InnovativeServicesShowcase2026() {
 
       switch (sortBy) {
 
-        case 'price':
-          return a.price - b.price;
-        case 'innovation':'
-          return b.innovationLevel === 'Revolutionary' ? 1 : -1;
-        case 'roi':'
-          return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
+        case 'price
+  ': return a.price - b.price;
+        case 'innovation
+  ':'
+          return b.innovationLevel ===
+  'Revolutionary' ? 1 : -1;
+        case
+  'roi':
+  '
+          return parseInt(b.roi.split('-
+  ')[0]) - parseInt(a.roi.split('-)[0]);
         default:
           return 0})}) ;
 
     return filtered}, [searchQuery, selectedCategory, sortBy]) ;
 
-  
     switch (category) {;
-      case 'AI & Automation':;
+      case,
+  AI & Automation
+  ': ;
         return <Cpu className="w-5 h-5"  />;
-      case 'Quantum Computing':;"
+      case 'Quantum Computing
+  ':;"
         return <Zap className="w-5 h-5"  />;
-      case 'Blockchain':;"
+      case 'Blockchain
+  ':;"
         return <Database className="w-5 h-5"  />;
-      case 'Cybersecurity':;"
+      case 'Cybersecurity
+  ':;"
         return <Shield className="w-5 h-5"  />;
-      case 'IoT':;"
+      case 'IoT
+  ':;"
         return <Globe className="w-5 h-5"  />;
-      case 'AI & Content':;"
+      case 'AI & Content
+  ':;"
         return <Cpu className="w-5 h-5"  />;
-      case 'DevOps':;"
+      case 'DevOps
+  ':;"
         return <Database className="w-5 h-5"  />;
-      case 'Finance':;"
+      case 'Finance
+  ':;"
         return <TrendingUp className="w-5 h-5"  />;
-      case 'Sustainability':;"
+      case 'Sustainability:;"
         return <Leaf className="w-5 h-5"  />;
       default:
         return 0}
   }) }};
 
-  
   ;
+  ;,
+  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600,
+,
+  'Advanced
+  ': 'bg-gradient-to-r from-blue-600 to-cyan-600,;  ;
   ;
-=======
-'
-  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600','
-      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ;
-  ;
-  'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
+  ;,
+  Cutting-Edge
+  ': 'bg-gradient-to-r from-green-600 to-emerald-600;
     };
     return()
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>;
@@ -185,12 +163,8 @@ export default function InnovativeServicesShowcase2026() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search services..."
-=======
+
                   type="text""                  placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -254,11 +228,6 @@ export default function InnovativeServicesShowcase2026() {
   { duration: 0.5,
   delay: index * 0.1 
 
-
-
-
-
-
 }}"
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
               >
@@ -266,11 +235,15 @@ export default function InnovativeServicesShowcase2026() {
                 <div className="absolute top-4 right-4">`
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
 
-                    service.innovationLevel === 'Cutting-edge''
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white''
-                      : service.innovationLevel === 'Advanced''
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white''
-                      : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white'`
+                    service.innovationLevel ===,
+  Cutting-edge'
+  '
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+  ': service.innovationLevel === 'Advanced'
+  '
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
+  '
+                      : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white`
                   }`}>
                     {service.innovationLevel}
                   </span>
@@ -425,7 +398,8 @@ export default function InnovativeServicesShowcase2026() {
 "
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>"
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.'
+              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.
+  '
               Let's discuss how we can help you achieve your goals.
             </p>
 "

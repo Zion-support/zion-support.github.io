@@ -1,9 +1,0 @@
-
-const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {;
-  if (!enabled) return null;
-  return (;
-    <div className="hidden" aria-hidden="true" />;
-  );
-};"
-;""
-export default PerformanceOptimizer;";""
