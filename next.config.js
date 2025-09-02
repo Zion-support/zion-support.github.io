@@ -9,9 +9,12 @@ const nextConfig = {
     esmExternals: false,
     newNextLinkBehavior: true,
   },
+<<<<<<< HEAD
   typescript: {
     ignoreBuildErrors: true,
   },
+=======
+>>>>>>> cursor/add-new-services-and-advertise-them-6735
   eslint: {
     ignoreDuringBuilds: true,
   },
