@@ -46,4 +46,4 @@ export { VendorRiskManagement };
 export default VendorRiskManagement;
 :pages.disabled/pages/services/VendorRiskManagement.tsx
 "
-'"'"
+  '"'"

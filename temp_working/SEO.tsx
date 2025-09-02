@@ -1,12 +1,18 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from,
+  react';
+import { Helmet } from
+  'react-helmet-async';
 interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
   url?: string;
   image?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
+  type?:
+  'website' |
+  'article' |
+  'product' |
+  'service;
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
@@ -21,36 +27,48 @@ export function SEO({
   description,
   canonical,
   url,
-  image = '/images/zion-tech-group-og.jpg',
-  type = 'website',
+  image =,
+  /images/zion-tech-group-og.jpg',
+  type =
+  'website',
   publishedTime,
   modifiedTime,
-  author = 'Zion Tech Group',
+  author =
+  'Zion Tech Group',
   section,
   tags = [],
   noindex = false,
   nofollow = false
 }: SEOProps) {
-const siteUrl = 'https://ziontechgroup.com';
+const siteUrl =
+  'https://ziontechgroup.com;
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  const fullImageUrl = image.startsWith(
+  'http') ? image : `${siteUrl}${image}`;
   
   // Default meta description if none provided
-const metaDescription = description ||'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
+const metaDescription = description ||,
+  Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
 
   // Default title if none provided
-  const fullTitle = title ? `${title} | Zion Tech Group` : 'Zion Tech Group - AI & Technology Solutions';
+  const fullTitle = title ? `${title} | Zion Tech Group`: 'Zion Tech Group - AI & Technology Solutions';
 
   // Robots meta tag
   const robots = [];
-  if (noindex) robots.push('noindex');
-  if (nofollow) robots.push('nofollow');
-  if (robots.length === 0) robots.push('index', 'follow');
-  const robotsContent = robots.join(', ');
+  if (noindex) robots.push(
+  'noindex');
+  if (nofollow) robots.push(
+  'nofollow');
+  if (robots.length === 0) robots.push(
+  'index,
+  'follow');
+  const robotsContent = robots.join(
+  ', ');
 
   // Structured data for organization
   const organizationSchema = {
-const siteName = 'Zion Tech Group';
+const siteName =
+  'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical || window.location.href;
 
@@ -125,7 +143,9 @@ const siteName = 'Zion Tech Group';
 // Structured data for the current page
   const pageSchema = {
     "@context": "https://schema.org",
-    "@type": type === 'article' ? 'Article' : 'WebPage',
+    "@type": type ===,
+  article' ?
+  'Article': 'WebPage,
     "headline": title,
     "description": metaDescription,
     "url": fullUrl,
@@ -148,9 +168,11 @@ const siteName = 'Zion Tech Group';
       "@type": "Organization",
       "name": author
     },
-    ...(type === 'article' && {
+    ...(type ===
+  'article' && {
       "articleSection": section,
-      "keywords": tags.join(', ')
+      "keywords": tags.join(
+  ', ')
     })
   };return (
     <Helmet>
@@ -180,7 +202,8 @@ const siteName = 'Zion Tech Group';
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={fullImageUrl} />{/* Additional Meta Tags */}
       <meta name="author" content={author} />
-      <meta name="keywords" content={tags.join(', ')} />
+      <meta name="keywords" content={tags.join(
+  ', ')} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
@@ -230,7 +253,8 @@ const siteName = 'Zion Tech Group';
       <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />
       <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
 {/* Additional structured data for articles */}
-      {type === 'article' && (
+      {type ===
+  'article' && (
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

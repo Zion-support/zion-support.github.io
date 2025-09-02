@@ -1,6 +1,9 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Box, Cpu, Zap, Globe, Rocket, Shield } from 'lucide-react';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';'
+import { Box, Cpu, Zap, Globe, Rocket, Shield } from
+  'lucide-react';
 const QuantumTechnology = () => {}
   return()
 :pages.disabled/pages/services/QuantumTechnology.jsx
@@ -18,9 +21,11 @@ const QuantumTechnology = () => {}
               Quantum Technology"
             </h1>""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Harness the power of quantum computing to solve complex problems'
+              Harness the power of quantum computing to solve complex problems
+  '
               that are impossible for classical computers. Experience the future''
-              of computation with Zion Tech Group's quantum solutions."
+              of computation with Zion Tech Group
+  's quantum solutions."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link""
@@ -458,4 +463,4 @@ const QuantumTechnology = () => {}
 export { QuantumTechnology };
 :pages.disabled/pages/services/QuantumTechnology.jsx
 export default QuantumTechnology;'"
-'"'"
+  '"'"

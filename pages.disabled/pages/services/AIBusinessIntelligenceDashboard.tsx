@@ -21,7 +21,8 @@ import {}
   Play,
   Phone,
   Mail,
-  MapPin} from 'lucide-react.ts';
+  MapPin} from
+  'lucide-react.ts';
 
   return (""
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -205,8 +206,10 @@ import {}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}'
-                className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
+                viewport={{ once: true }}
+,
+  className={`relative ${plan.popular ? 'lg: -mt-8
+  ' : '}`}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
               >"{plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -218,11 +221,11 @@ import {}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 `
                 <div``
-                  className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
-'
-                    plan.popular''
-                      ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10'''`
-                      : 'border-white/20 hover:border-cyan-400/40'``
+                  className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${,
+  plan.popular''
+                      ?
+  'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10''
+  '`: 'border-white/20 hover:border-cyan-400/40``
                   }`}"
                 >""
                   <div className="text-center mb-8">""
@@ -248,11 +251,12 @@ import {}
 "
                   <a""`
                     href="https://ziontechgroup.com/contact"``
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
-'
-                      plan.popular''
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400'''`
-                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'``}`}
+                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${,
+  plan.popular'
+  '
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-400 hover:to-blue-400''
+  '`
+                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10``}`}
                   >
                     Start Free Trial;
                   </a>
@@ -390,4 +394,4 @@ import {}
   )};
 
 export default AIBusinessIntelligenceDashboard;'"`
-'"`'"`
+  '"`'"`

@@ -15,11 +15,10 @@ import {}
   Phone,
   Mail,
   MapPin,
-  ExternalLink} from 'lucide-react.ts';
-
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
-const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
-'const [activeTab, setActiveTab] = useState('overview');
+  ExternalLink} from,
+  lucide-react.ts';: pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
+const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, setActiveTab] = useState('overview
+  ');
 
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
@@ -97,17 +96,22 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       {/* Navigation Tabs */}""
       <section className="px-4 sm:px-6 lg:px-8 mb-16">""
         <div className="max-w-7xl mx-auto">""
-          <div className="flex flex-wrap justify-center gap-2">'{['overview',features',pricing',competitors',contact'].map()
+          <div className="flex flex-wrap justify-center gap-2">,
+  {[
+  'overview',features
+  ',pricing',competitors
+  ',contact'].map()
               tab => (
                 <button;
                   key={tab}
-                  onClick={() => setActiveTab(tab)}
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
+                  onClick={() => setActiveTab(tab)}: pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-'
+  '
                     activeTab === tab''
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'''`
-                      : 'text-gray-400 hover:text-white hover:bg-gray-800'``}`}
+                      ?
+  'bg-gradient-to-r from-cyan-500 to-blue-500 text-white''
+  '`
+                      : 'text-gray-400 hover:text-white hover:bg-gray-800``}`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -121,7 +125,8 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       <div className="px-4 sm:px-6 lg:px-8 mb-20">""
         <div className="max-w-7xl mx-auto">
           {/* Overview Tab */}'
-          {activeTab === 'overview' && (
+          {activeTab ===
+  'overview' && (
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
@@ -186,8 +191,10 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
             </motion.div>
           )}
 
-          {/* Features Tab */}'
-          {activeTab === 'features' && (
+          {/* Features Tab */}
+  '
+          {activeTab === 'features
+  ' && (
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -245,8 +252,11 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 <div>""
                   <h3 className="text-2xl font-bold mb-6">Integrations</h3>""
                   <div className="grid grid-cols-2 gap-4">'
-                    {[''
-                      'DocuSign',Adobe Acrobat',Microsoft Office',Legal databases',
+                    {['
+  '
+                      'DocuSign
+  ',Adobe Acrobat',Microsoft Office
+  ',Legal databases',
                     ].map((integration, index) => (
                       <div"
                         key={index}""
@@ -260,8 +270,10 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
             </motion.div>
           )}
 
-          {/* Pricing Tab */}'
-          {activeTab === 'pricing' && (
+          {/* Pricing Tab */}
+  '
+          {activeTab === 'pricing
+  ' && (
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -279,11 +291,11 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                     animate={{ opacity: 1, y: 0 }}`
                     transition={{ duration: 0.6, delay: index * 0.1 }}``
-                    className={`relative p-8 rounded-2xl border transition-all duration-300 ${
-'
-                      plan.popular''
-                        ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 scale-105'''`
-                        : 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50'``
+                    className={`relative p-8 rounded-2xl border transition-all duration-300 ${,
+  plan.popular'
+  '
+                        ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 scale-105''
+  '`: 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50``
                     }`}
                   >"{plan.popular && (""
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -332,7 +344,8 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           )}
 
           {/* Competitors Tab */}'
-          {activeTab === 'competitors' && (
+          {activeTab ===
+  'competitors' && (
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -395,8 +408,10 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
             </motion.div>
           )}
 
-          {/* Contact Tab */}'
-          {activeTab === 'contact' && (
+          {/* Contact Tab */}
+  '
+          {activeTab === 'contact
+  ' && (
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
@@ -472,4 +487,4 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
   )};
 
 export default AILegalDocumentAnalyzer;'"`
-'"`'"`
+  '"`'"`

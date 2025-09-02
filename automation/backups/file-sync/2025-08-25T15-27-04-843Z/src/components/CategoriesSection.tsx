@@ -1,5 +1,6 @@
 import { GradientHeading } from "./GradientHeading";
-import { Link } from 'react-router-dom';
+import { Link } from
+  'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users const categories = [
   {
     title: "AI Services",

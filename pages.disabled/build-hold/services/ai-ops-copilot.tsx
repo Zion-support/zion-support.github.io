@@ -1,7 +1,11 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import Link from 'next/link';
+import React from
+  'react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import Link from
+  'next/link';
 
 const AIOpsCopilot: NextPage = () => {
   return (
