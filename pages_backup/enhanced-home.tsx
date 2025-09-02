@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -8,14 +7,9 @@ import {
   Cloud,
   Shield,
   Zap,
-  Users,
-  CheckCircle,
   Star,
-  TrendingUp,
-  Globe,
   Code,
   Database,
-  Lock,
   Rocket,
 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
