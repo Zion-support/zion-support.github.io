@@ -58,7 +58,6 @@ class IntelligentLintFixer {
         priority: 'medium;
   '}
     }
-;
     const rule = message.ruleId;
     if (suggestions[rule]) {
       return {

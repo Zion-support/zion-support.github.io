@@ -168,6 +168,5 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/AIAutonomousHR.tsx;
 export default AIAutonomousHR'';'''

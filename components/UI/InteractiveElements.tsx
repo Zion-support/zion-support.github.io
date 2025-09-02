@@ -79,7 +79,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}) => {
     md: 'px-4 py-2 text-base,
     lg: 'px-6 py-3 text-lg;
   '}
-;
 ursor/automate-test-fix-improve-and-merge-code-48f3
   return(
     <motion.button;
@@ -137,7 +136,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       </div>
     </motion.button>
   )}
-;
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string
@@ -380,6 +378,5 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
       )}
     </div>
   )}
-;
 export default { InteractiveButton, AnimatedCard, InteractiveStats }
 

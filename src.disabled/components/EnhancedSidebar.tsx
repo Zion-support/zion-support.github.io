@@ -24,7 +24,6 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)}
-;
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -122,13 +121,11 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         ? prev.filter(id => id !== sectionId);
         : [...prev, sectionId]
     )}
-;
   const isSectionExpanded = (sectionId: string) => expandedSections.includes(sectionId);
   const isLinkActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/'}
     return location.pathname.startsWith(href)}
-;
   const filteredSections = searchQuery;
     ? navigationSections.map(section => ({
         ...section,

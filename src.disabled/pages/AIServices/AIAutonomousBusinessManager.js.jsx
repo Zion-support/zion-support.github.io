@@ -11,19 +11,19 @@ import React from,
   ';AI-powered decision engine that analyzes market trends, customer behavior, and business metrics to make optimal business decisions.;
   ', '' icon: Brain, ,
   ';
-  ' color: 'from-purple-500 to-pink-500}, {};
+  ' color: 'from-purple-500 to-pink-500}, {}
   ';'; title: 'Real-time Analytics, ,
   ';
   ' description: ''';
   ';Continuous monitoring and analysis of business performance with instant insights and actionable recommendations., '' icon: BarChart3, ,
   ';
-  ' color: 'from-blue-500 to-cyan-500}, {};
+  ' color: 'from-blue-500 to-cyan-500}, {}
   ';'; title: 'Automated Operations, ,
   ';
   ' description: ''';
   ';Streamline business processes with intelligent automation that adapts to changing business conditions., '' icon: Zap, ,
   ';
-  ' color: 'from-green-500 to-emerald-500}, {};
+  ' color: 'from-green-500 to-emerald-500}, {}
    title: 'Predictive Insights,
 ,
    description: '';Forecast market trends, customer needs, and business opportunities with advanced predictive analytics.', icon: TrendingUp,
@@ -36,19 +36,19 @@ import React from,
   ', Scale operations seamlessly with intelligent automation' ] const useCases = [] {}';'; title: 'Enterprise Management, ,
   ';
   ' description: ''';
-  ';Comprehensive business management for large enterprises with multiple departments and complex operations., icon: Users}, {};
+  ';Comprehensive business management for large enterprises with multiple departments and complex operations., icon: Users}, {}
   ';'; title: 'Startup Growth, ,
   ';
   ' description: ''';
-  ';Accelerate startup growth with intelligent scaling strategies and market opportunity identification., icon: TrendingUp}, {};
+  ';Accelerate startup growth with intelligent scaling strategies and market opportunity identification., icon: TrendingUp}, {}
   ';'; title: 'E-commerce Optimization, ,
   ';
   ' description: ''';
-  ';Optimize e-commerce operations with AI-driven inventory management and customer behavior analysis., icon: Target}, {};
+  ';Optimize e-commerce operations with AI-driven inventory management and customer behavior analysis., icon: Target}, {}
   ';'; title: 'Financial Services, ,
   ';
   ' description: ''';
-  ';Enhance financial decision-making with real-time market analysis and risk assessment., icon: BarChart3} ] const testimonials = [] {};
+  ';Enhance financial decision-making with real-time market analysis and risk assessment., icon: BarChart3} ] const testimonials = [] {}
   ';'; content: '''';The AI Autonomous Business Manager transformed our operations completely. We&apos;ve seen a 40% increase in efficiency and our decision-making process is now lightning-fast.', ,
   ';
   ' name: 'Sarah Chen, ,

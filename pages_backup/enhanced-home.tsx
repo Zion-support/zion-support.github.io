@@ -235,7 +235,7 @@ const EnhancedHome: React.FC = () => {
                     ))}
                   </div>
                   <p className='text-gray-600 mb-6 italic'>
-                    &quot;{testimonial.content}&quot;
+                    &quot{testimonial.content}&quot;
                   </p>
                   <div>
                     <div className='font-semibold text-gray-900'>
@@ -285,7 +285,6 @@ const EnhancedHome: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )}
 ;
 export default EnhancedHome;

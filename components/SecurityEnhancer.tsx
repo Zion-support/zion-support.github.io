@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 const SecurityEnhancer: React.FC = () => {
-  useEffect(() => {;
+  useEffect(() => {
     // Content Security Policy;
     const csp = `;
       default-src 'self';
@@ -14,7 +14,7 @@ const SecurityEnhancer: React.FC = () => {
       frame-src 'none';
       object-src 'none';
       base-uri 'self';
-      form-action 'self'`;;
+      form-action 'self'`;
 ;
     // Add CSP meta tag;
     const cspMeta = document.createElement('meta');
@@ -27,15 +27,14 @@ const SecurityEnhancer: React.FC = () => {
       'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-    };
+    }
 
     // Add security headers via meta tags
     Object.entries(securityHeaders).forEach(([name, value]) => {
       const meta = document.createElement('meta');
       meta.httpEquiv = name;
       meta.content = value;
-      document.head.appendChild(meta);
-    });
+      document.head.appendChild(meta)})
 
     // Detect and prevent XSS attempts
     const detectXSS = () => {
@@ -45,10 +44,8 @@ const SecurityEnhancer: React.FC = () => {
              !script.src.includes('googletagmanager.com') &&
              !script.src.includes('google-analytics.com')) {
           console.warn('Potentially malicious script detected: ', script.src);
-          script.remove();
-        }
-      });
-    };
+          script.remove()}
+      })}
 
     // Monitor for suspicious activity
     const monitorSuspiciousActivity = () => {
@@ -59,9 +56,8 @@ const SecurityEnhancer: React.FC = () => {
              !iframe.src.includes('youtube.com') &&
              !iframe.src.includes('vimeo.com')) {
           console.warn('Potentially malicious iframe detected: ', iframe.src);
-          iframe.remove();
-        }
-      });
+          iframe.remove()}
+      })
       // Detect suspicious form submissions
       const forms = document.querySelectorAll('form');
       forms.forEach(form => {
@@ -77,30 +73,23 @@ const SecurityEnhancer: React.FC = () => {
             if (typeof value === 'string') {
               suspiciousPatterns.forEach(pattern => {
                 if (pattern.test(value)) {
-                  console.warn('Suspicious form data detected: ', { key, value });
+                  console.warn('Suspicious form data detected: ', { key, value })
                   e.preventDefault();
                   alert('Suspicious content detected. Please check your input.');
-                  return;
-                }
-              });
-            }
+                  return}
+              })}
           }
-        });
-      });
-    };
+        })})}
 ;
     // Initialize security monitoring;
     detectXSS();
     monitorSuspiciousActivity();
-;
     // Set up periodic security checks;
-    const securityInterval = setInterval(() => {;
+    const securityInterval = setInterval(() => {
       detectXSS();
-      monitorSuspiciousActivity();
-    }, 30000) // Check every 30 seconds;
-    return () => {;
-      clearInterval(securityInterval);
-    };
+      monitorSuspiciousActivity()}, 30000) // Check every 30 seconds;
+    return () => {
+      clearInterval(securityInterval)}
   }, []);
 
   return (
@@ -122,7 +111,6 @@ const SecurityEnhancer: React.FC = () => {
       {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}
       <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />
     </Head>
-  );
-};
+  )}
 
 export default SecurityEnhancer;

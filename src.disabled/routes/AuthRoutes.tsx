@@ -43,5 +43,4 @@ const Login = lazy(() => import('../pages/Login'))';const Signup = lazy(() => im
       </Routes>
     </Suspense>
   )}
-;
 export default AuthRoutes"

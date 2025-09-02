@@ -144,7 +144,6 @@ export class APIDocGeneratorService {
         lastGenerated: new Date(),
         languages[],
         frameworks[]}
-;
         totalEndpoints: 0,
         coverage: 0,
         languages: [],

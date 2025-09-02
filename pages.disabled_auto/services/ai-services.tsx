@@ -407,5 +407,4 @@ const AIServicesPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default AIServicesPage

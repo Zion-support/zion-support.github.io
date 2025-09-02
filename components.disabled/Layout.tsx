@@ -33,5 +33,4 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
     </>
   )}
-;
 export default Layout

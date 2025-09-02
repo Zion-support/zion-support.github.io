@@ -1501,5 +1501,4 @@ export default function Services() {
 				</div>
 			</section>
 		</PageTransition>
-	);
-}
+	)}

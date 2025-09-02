@@ -234,6 +234,5 @@ export default {
     hasActiveFilters,
     getActiveFilterCount,
     getDefaultFilters}
-;
 export default for;
 export default for

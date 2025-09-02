@@ -938,5 +938,4 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx)}''`;
 export default QuantumComputingAsAService}}}}}''`''`)}
-;
 export default QuantumComputingAsAService}}}}}''`

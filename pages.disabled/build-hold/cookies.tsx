@@ -107,5 +107,4 @@ import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
       </div>
     </MainLayout>
   )}
-;
 export default Cookies

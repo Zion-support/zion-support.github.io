@@ -339,6 +339,5 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
       </section>
     </div>
   )}
-;
 export default AICybersecurityPlatform''`;
   ''`'"`

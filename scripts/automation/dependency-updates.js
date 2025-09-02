@@ -163,7 +163,6 @@ async function runDependencyUpdates() {
   t exit, just log the error and continue;
     // Generate dependency update report;
   status: 'completed}
-;
     const reportPath = path.join(process.cwd(), ,
   dependency-updates-report.json;
   ');

@@ -3,5 +3,4 @@ export type InnovativeMicroSaasV2 = {
   title: string;
   description: string;
   price?: string}
-;
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];

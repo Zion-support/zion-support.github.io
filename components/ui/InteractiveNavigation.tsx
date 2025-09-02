@@ -16,7 +16,6 @@ const InteractiveNavigation: React.FC = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )}
 
 export default InteractiveNavigation;

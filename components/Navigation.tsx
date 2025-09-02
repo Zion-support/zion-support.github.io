@@ -37,8 +37,7 @@ const Navigation: React.FC = () => {
   ];
 
   const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)}
 
   return (
     <nav className='bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50'>
@@ -126,8 +125,7 @@ const Navigation: React.FC = () => {
                             className='text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm'
                             onClick={() => {
                               setIsOpen(false);
-                              setActiveDropdown(null);
-                            }}
+                              setActiveDropdown(null)}}
                           >
                             {dropdownItem.name}
                           </Link>
@@ -150,7 +148,6 @@ const Navigation: React.FC = () => {
         </div>
       )}
     </nav>
-  );
-};
+  )}
 
 export default Navigation;

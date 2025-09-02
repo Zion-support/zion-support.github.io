@@ -40,10 +40,8 @@ class ErrorBoundary extends Component<Props, State> {
           name: error.name}, errorInfo: {
           componentStack: errorInfo.componentStack},
         url: window.location.href, timestamp: Date.now(), userAgent: navigator.userAgent})}).catch(console.error)}
-;
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-;
   render() {
     if (this.state.hasError) {
       // Custom fallback UI;

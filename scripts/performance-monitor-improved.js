@@ -52,7 +52,6 @@ class ImprovedPerformanceMonitor {
         memoryUsage: process.memoryUsage(),
         uptime: process.uptime(),
         cpuUsage: process.cpuUsage()}
-;
       this.metrics.system = systemInfo} catch (error) {
       console.error('Error collecting system metrics:', error.message);
       this.metrics.errors.push({
@@ -68,7 +67,6 @@ class ImprovedPerformanceMonitor {
       // Get package.json info;
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       let packageInfo = {}
-;
       if (fs.existsSync(packageJsonPath)) {
         const packageContent = fs.readFileSync(packageJsonPath, 'utf8');
         packageInfo = JSON.parse(packageContent)}

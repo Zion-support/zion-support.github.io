@@ -141,5 +141,4 @@ import { Handshake, Award, Users, Globe, Star, CheckCircle } from;
       </div>
     </MainLayout>
   )}
-;
 export default Partners

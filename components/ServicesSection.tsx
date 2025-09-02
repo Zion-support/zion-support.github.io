@@ -110,5 +110,4 @@ const ServicesSection: React.FC = () => {
       </div>
     </section>
   )}
-;
 export default ServicesSection

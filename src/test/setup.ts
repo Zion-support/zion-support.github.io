@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 
-// Mock window.matchMedia
+// Mock window.matchMedia"
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -11,8 +11,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
+    dispatchEvent: jest.fn(),
+})),
 })
 
 // Mock IntersectionObserver
@@ -20,7 +20,7 @@ Object.defineProperty(window, 'matchMedia', {
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn()
+  disconnect: jest.fn(),
 }));
 
 // Mock ResizeObserver
@@ -28,7 +28,7 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn()
+  disconnect: jest.fn(),
 }));
 
 // Mock scrollTo

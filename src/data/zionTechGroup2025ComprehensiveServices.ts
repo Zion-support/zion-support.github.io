@@ -3,15 +3,14 @@ export interface ZionService {
    title: string;
    description: string;
    category: 'Micro SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech';
-   price: string;
+   price: string;"
    billing: 'month' | 'year' | 'project' | 'hour';
    features: string[];
    benefits: string[];
    useCases: string[];
    targetAudience: string[];
-   contactInfo: {
+   contactInfo: { 
    mobile: string;
    email: string;
-   address: string;
-   website: string} ctaLabel: string href: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';
-;
+   address: string"
+   website: string} ctaLabel: string href: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';"

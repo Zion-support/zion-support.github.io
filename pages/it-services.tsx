@@ -790,5 +790,4 @@ export default function ITServices() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

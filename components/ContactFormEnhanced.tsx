@@ -15,7 +15,6 @@ const ContactFormEnhanced: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value}))}
-;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -149,5 +148,4 @@ const ContactFormEnhanced: React.FC = () => {
       </motion.div>
     </div>
   )}
-;
 export default ContactFormEnhanced

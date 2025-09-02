@@ -274,7 +274,6 @@ interface SearchResult {
     })
     setSearchResults (filtered) ;
     setIsSearching (false) }}}
-;
   // Handle search;
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()    if (searchQuery.trim()) {
@@ -282,18 +281,15 @@ interface SearchResult {
       setIsSearching(true);
       setTimeout(() => setIsSearching(false), 1000)}
   }
-;
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId)} else {
       newFilters.add(filterId)}
     setSelectedFilters (newFilters) }
-;
   // Clear all filters;
     setSelectedTags([]);
   setSearchQuery(';
   ');
     setSearchParams({})}
-;
       case 'page;
   ': return FileText;
       case 'blog;
@@ -314,7 +310,6 @@ interface SearchResult {
   'documentation: return Code;
       default: return FileText}
   }
-;
       case,
   blog': return;
   'from-green-500 to-emerald-500';
@@ -326,7 +321,6 @@ interface SearchResult {
   'from-orange-500 to-red-500';
       default: return;
   'from-gray-500 to-slate-500}  }
-;
   // Calculate filter counts;
   filterOptions.forEach(filter => {
     filter.count = mockSearchResults.filter(result =>

@@ -351,5 +351,4 @@ const ITServicesPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default ITServicesPage

@@ -155,7 +155,6 @@ async function runConsoleErrorFixer() {
   '📊 Generating console error fixer report...');
     // Generate console error fixer report;
   status: 'completed}
-;
     console.log(
   '📊 Generating console error fixer report...');
     const reportPath = path.join(process.cwd(),

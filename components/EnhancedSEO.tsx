@@ -23,7 +23,6 @@ const defaultSEO = {
     'technology consulting';
   ],
   author: 'Zion Tech Group'}
-;
 const EnhancedSEO: React.FC<SEOProps> = ({
   title = defaultSEO.title,
   description = defaultSEO.description,
@@ -84,5 +83,4 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       />
     </Head>
   )}
-;
 export default EnhancedSEO

@@ -13,7 +13,6 @@ const PWARegistration: React.FC = () => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true)}
-;
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)}
@@ -26,11 +25,9 @@ const PWARegistration: React.FC = () => {
       setShowInstallPrompt(false);
       setDeferredPrompt(null)}
   }
-;
   const handleDismiss = () => {
     setShowInstallPrompt(false);
     setDeferredPrompt(null)}
-;
   if (!showInstallPrompt) return null
   return (
     <div className='fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-80 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50'>
@@ -63,5 +60,4 @@ const PWARegistration: React.FC = () => {
       </div>
     </div>
   )}
-;
 export default PWARegistration

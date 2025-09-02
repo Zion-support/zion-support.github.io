@@ -18,5 +18,4 @@ import MainLayout from;
       </section>
     </MainLayout>
   )}
-;
 export default MarketplacePage

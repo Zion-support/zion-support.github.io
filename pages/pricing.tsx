@@ -292,7 +292,6 @@ const Pricing: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 
 export default Pricing;

@@ -8,8 +8,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-  siteName?: string;
-}
+  siteName?: string}
 
 const SEO: React.FC<SEOProps> = ({
   title,
@@ -28,7 +27,6 @@ const SEO: React.FC<SEOProps> = ({
       <title>{fullTitle}</title>
       <meta name='description' content={description} />
       {keywords && <meta name='keywords' content={keywords} />}
-;
       {/* Open Graph */}
       <meta property='og:type' content={type} />
       <meta property='og:title' content={fullTitle} />
@@ -75,11 +73,9 @@ const SEO: React.FC<SEOProps> = ({
               'https://twitter.com/ziontechgroup',
               'https://github.com/ziontechgroup'
             ]
-          })
-        }}
+          })}}
       />
     </Head>
-  );
-};
+  )}
 
 export default SEO;

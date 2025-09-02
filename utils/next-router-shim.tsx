@@ -14,7 +14,6 @@ export const Link: React.FC<LinkProps> = ({ to, href, children, className, onCli
       <a className={className} onClick={onClick}>{children as any}</a>
     </NextLink>
   )}
-;
 export function useLocation() {
   const router = useRouter();
   const asPath = router.asPath || router.pathname || '/';

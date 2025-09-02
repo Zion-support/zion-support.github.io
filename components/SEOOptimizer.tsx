@@ -10,8 +10,7 @@ interface SEOOptimizerProps {
    canonicalUrl?: string;
    structuredData?: any;
    noindex?: boolean;
-   nofollow?: boolean;
-}
+   nofollow?: boolean}
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',
@@ -37,7 +36,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'
     ], 'foundingDate': '2020',
     'numberOfEmployees': '50+', 'industry': 'Technology Services'
-  };
+  }
 
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
@@ -52,7 +51,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name='generator' content='Next.js' />
       {/* Canonical URL */}
       {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
-;
       {/* Open Graph */}
       <meta property='og:title' content={fullTitle} />
       <meta property='og:description' content={fullDescription} />
@@ -99,7 +97,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel='preload' href='/fonts/inter-var.woff2' as='font' type='font/woff2' crossOrigin='anonymous' />
       <link rel='preload' href='/images/hero-bg.webp' as='image' />
     </Head>
-  );
-};
+  )}
 
 export default SEOOptimizer;

@@ -264,7 +264,6 @@ Disallow: /private/`;
           src: '/icon-512.png',
           sizes: '512x512',
           type: 'image/png'}]}
-;
     fs.writeFileSync(
       path.join(this.buildDir,
   'manifest.json'),       JSON.stringify(manifest, null, 2));
@@ -278,7 +277,6 @@ Disallow: /private/`;
       totalWarnings: this.optimizationReport.warnings.length,
       totalErrors: this.optimizationReport.errors.length,
       buildTime: new Date().toISOString()}
-;
     fs.writeFileSync(
       path.join(this.buildDir,
   'optimization-report.json'),

@@ -102,7 +102,6 @@ class LinkChecker {
       } catch (error) {
         // Skip directories we can't read}
     }
-;
     scanDirectory(this.projectRoot);
     return files}
   extractLinks(content) {

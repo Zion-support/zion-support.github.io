@@ -28,7 +28,6 @@ const bundleStats = {
     contact:,
   4.15 kB',
     services: '3.67 kB}}
-;
 console.log(
   'Bundle Statistics:');
 console.log(`- Total First Load JS: ${bundleStats.totalSize}`);
@@ -117,7 +116,6 @@ const performanceReport = {
     lighthouseScore: '90+ (estimated),
     accessibility: 'Improved;
   '}}
-;
 // Save report;
 const reportPath = path.join(__dirname, '..;
   ', 'performance-report.json;

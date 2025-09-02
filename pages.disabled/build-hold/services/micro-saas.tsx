@@ -124,5 +124,4 @@ import Link from;
       </section>
     </MainLayout>
   )}
-;
 export default MicroSaasPage

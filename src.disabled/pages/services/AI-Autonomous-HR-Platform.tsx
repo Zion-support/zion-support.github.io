@@ -306,5 +306,4 @@ const AIAutonomousHRPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
 export default AIAutonomousHRPlatform

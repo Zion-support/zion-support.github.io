@@ -47,7 +47,6 @@ class PerformanceMonitor {
         heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB;
         heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB;
         external: Math.round(memoryInfo.external / 1024 / 1024) // MB}
-;
       // CPU usage;
       const startUsage = process.cpuUsage();
       await this.sleep(100) // Wait 100ms;
@@ -55,7 +54,6 @@ class PerformanceMonitor {
       this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms;
         system: Math.round(endUsage.system / 1000) // ms}
-;
       // Process info;
       this.metrics.system.process = {
         pid: process.pid,

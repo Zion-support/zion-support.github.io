@@ -8,8 +8,7 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-  loadTime: number | null;
-}
+  loadTime: number | null}
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -19,7 +18,7 @@ const PerformanceMonitor: React.FC = () => {
     fid: null,
     cls: null,
     ttfb: null,
-    loadTime: null});
+    loadTime: null})
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -28,8 +27,7 @@ const PerformanceMonitor: React.FC = () => {
     // Only show in development or when explicitly enabled''
     if (process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true') {
 
-      setIsVisible(true);
-    }
+      setIsVisible(true)}
 '
     // Measure First Contentful Paint (FCP)''
     if ('PerformanceObserver' in window) {
@@ -40,10 +38,9 @@ const PerformanceMonitor: React.FC = () => {
         const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
 
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-        }'
-      });''
-      fcpObserver.observe({ entryTypes: ['paint'] });
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}'
+      })''
+      fcpObserver.observe({ entryTypes: ['paint'] })
 
       // Measure Largest Contentful Paint (LCP)
       const lcpObserver = new PerformanceObserver((list) => {
@@ -52,10 +49,9 @@ const PerformanceMonitor: React.FC = () => {
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
 
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        }'
-      });''
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}'
+      })''
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 
       // Measure First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
@@ -66,11 +62,10 @@ const PerformanceMonitor: React.FC = () => {
 ''
           if (entry.entryType === 'first-input') {
 
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-          }
-        });'
-      });''
-      fidObserver.observe({ entryTypes: ['first-input'] });
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))}
+        })'
+      })''
+      fidObserver.observe({ entryTypes: ['first-input'] })
 
       // Measure Cumulative Layout Shift (CLS)
       let clsValue = 0;
@@ -80,19 +75,17 @@ const PerformanceMonitor: React.FC = () => {
 
           if (!entry.hadRecentInput) {
 
-            clsValue += (entry as any).value;
-          }
+            clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));'
-      });''
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      })''
+      clsObserver.observe({ entryTypes: ['layout-shift'] })
 
       return () => {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+        clsObserver.disconnect()}
     }
 '
     // Measure Time to First Byte (TTFB)''
@@ -102,13 +95,11 @@ const PerformanceMonitor: React.FC = () => {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
 
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))}
 
       // Measure page load time
       const loadEventEnd = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime: loadEventEnd }));
-    }
+      setMetrics(prev => ({ ...prev, loadTime: loadEventEnd }))}
   }, []);
 
   const getScoreColor = (metric: string, value: number | null): string => {
@@ -128,9 +119,8 @@ const PerformanceMonitor: React.FC = () => {
       case 'cls':''
         return value <= 0.1 ? 'text-green-500' : value <= 0.25 ? 'text-yellow-500' : 'text-red-500';'
       default:''
-        return 'text-gray-500';
-    }
-  };
+        return 'text-gray-500'}
+  }
 
   const getScoreLabel = (metric: string, value: number | null): string => {
 '
@@ -149,9 +139,8 @@ const PerformanceMonitor: React.FC = () => {
       case 'cls':''
         return value <= 0.1 ? 'Good' : value <= 0.25 ? 'Needs Improvement' : 'Poor';'
       default:''
-        return 'N/A';
-    }
-  };
+        return 'N/A'}
+  }
 
   if (!isVisible) return null;
 
@@ -234,7 +223,6 @@ const PerformanceMonitor: React.FC = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )}
 '"`
 export default PerformanceMonitor;'"`'"`

@@ -77,13 +77,11 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
-        : [...prev, section];
-    );
-  };
+        : [...prev, section])}
 
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 
@@ -131,7 +129,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
     ]
-  };
+  }
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
@@ -331,7 +329,6 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-  );
-};
+  )}
 
 export default MainSidebar;

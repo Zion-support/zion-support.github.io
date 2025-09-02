@@ -18,8 +18,7 @@ interface OptimizedImageProps {
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
@@ -54,36 +53,30 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         if (entry.isIntersecting) {
 
           setIsInView(true);
-          observer.disconnect();
-        }
+          observer.disconnect()}
       },
       {
 '
 ''
         rootMargin: '50px', // Start loading 50px before the image comes into view
-        threshold: 0.1}
-    );
+        threshold: 0.1})
 
     if (imageRef.current) {
 
-      observer.observe(imageRef.current);
-    }
+      observer.observe(imageRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()}, [priority]);
 
   // Handle image load
   const handleLoad = () => {
     setIsLoading(false);
-    onLoad?.();
-  };
+    onLoad?.()}
 
   // Handle image error
   const handleError = () => {
     setHasError(true);
     setIsLoading(false);
-    onError?.();
-  };
+    onError?.()}
 
   // Fallback image for errors
   if (hasError) {
@@ -110,8 +103,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <p className="text-xs">Image failed to load</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   // Loading skeleton
   if (!isInView) {
@@ -122,8 +114,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}''
         style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
       />
-    );
-  }
+    )}
 
   return()
     <div`
@@ -169,8 +160,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )}
 
 // HOC for wrapping components with image optimization
 export const withImageOptimization = <P extends object>(
@@ -179,7 +169,6 @@ export const withImageOptimization = <P extends object>(
 
   return (props: P) => (
     <Component {...props} />
-  );
-};
+  )}
 '"`
 export default OptimizedImage;'"`'"`

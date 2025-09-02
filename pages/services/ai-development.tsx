@@ -208,7 +208,6 @@ const AIDevelopment: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 
 export default AIDevelopment;

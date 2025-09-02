@@ -12,7 +12,6 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
         ? prev.filter(item => item !== index);
         : [...prev, index]
     )}
-;
   const faqCategories = [
     {
       title:,
@@ -128,5 +127,4 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
       </div>
     </MainLayout>
   )}
-;
 export default FAQ

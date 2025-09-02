@@ -65,6 +65,5 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/LandingPageGenerator.tsx;
 export { LandingPageGenerator }export default LandingPageGenerator'';''"

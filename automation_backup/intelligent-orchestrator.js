@@ -277,7 +277,6 @@ class IntelligentOrchestrator {
       totalSystems: this.automationSystems.size,
       accessibleSystems: Array.from(this.automationSystems.values()).filter(
         s => s.isAccessible).length}
-;
     return status}
   stop() {
     this.monitoring = false;

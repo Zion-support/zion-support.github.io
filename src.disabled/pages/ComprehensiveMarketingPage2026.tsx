@@ -41,7 +41,7 @@ import React, { useState } from;
   'AI & Business Intelligence'] || 0) + (stats.categories[;
   'Cloud & DevOps'] || 0) + (stats.categories[;
   'Cybersecurity'] || 0) } ]  const getIndustryServices = (industryId: string) => { if (industryId ===
-  'all) return COMPREHENSIVE_SERVICES_CATALOG_2025  const industryMapping: Record<string, string[]> = {;
+  'all) return COMPREHENSIVE_SERVICES_CATALOG_2025  const industryMapping: Record<string, string[]> = {
   healthcare': [;
   'AI & Healthcare,
 ,

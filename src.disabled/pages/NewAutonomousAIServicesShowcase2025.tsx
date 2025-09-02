@@ -278,5 +278,4 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
       </div>
     </>
   )}
-;
 export default NewAutonomousAIServicesShowcase2025

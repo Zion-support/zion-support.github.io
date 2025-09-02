@@ -208,7 +208,6 @@ const WebDevelopment: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 
 export default WebDevelopment;

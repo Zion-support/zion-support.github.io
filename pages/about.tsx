@@ -185,7 +185,6 @@ const About: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 
 export default About;

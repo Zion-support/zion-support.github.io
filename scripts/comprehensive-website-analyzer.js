@@ -233,7 +233,6 @@ class ComprehensiveWebsiteAnalyzer {
       errors: this.errors,
       warnings: this.warnings,
       recommendations: this.generateRecommendations()}
-;
     return report}
   generateRecommendations() {
     const recommendations = [];

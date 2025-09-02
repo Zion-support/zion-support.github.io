@@ -22,7 +22,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     if (score >= 90) return 'text-green-600';
     if (score >= 50) return 'text-yellow-600';
     return 'text-red-600'}
-;
   const updateMetrics = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -35,7 +34,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         cls: Math.random() * 0.3,
         ttfb: Math.random() * 500 + 100,
         score: Math.random() * 100}
-;
       setMetrics(newMetrics);
       setLastUpdated(new Date());
       // Generate alerts based on metrics;
@@ -160,5 +158,4 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </AnimatePresence>
     </div>
   )}
-;
 export default EnhancedPerformanceMonitor

@@ -137,7 +137,6 @@ export default function Revolutionary2025PricingPage() {
   < 30 days
   ',
     globalReach: '150+ countries  }
-;
   return(
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className='min-h-screen'>

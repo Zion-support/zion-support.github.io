@@ -856,5 +856,4 @@ export default function MicroSaaS() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

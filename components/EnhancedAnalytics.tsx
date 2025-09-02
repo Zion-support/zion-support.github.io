@@ -176,5 +176,4 @@ const EnhancedAnalytics: React.FC = () => {
       </motion.div>
     </div>
   )}
-;
 export default EnhancedAnalytics

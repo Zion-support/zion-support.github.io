@@ -65,6 +65,5 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/PriceIntelligenceService.tsx;
 export { PriceIntelligenceService }export default PriceIntelligenceService'';''"

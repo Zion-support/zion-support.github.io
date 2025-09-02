@@ -304,6 +304,5 @@ const AIQuantumHybridPlatform: React.FC = () => {const [activeTab, setActiveTab]
       </section>
     </div>
   )}
-;
 export default AIQuantumHybridPlatform''`;
   ''`''`

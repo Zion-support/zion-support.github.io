@@ -7,14 +7,12 @@ const { execSync, spawn } = require(
   'child_process');
 class IntelligentOrchestrator {
   constructor() {
-;
     this.automationSystems = new Map();
     this.monitoring = false;
     this.logFile = path.join(__dirname,
   'logs',
   'intelligent-orchestrator.log');
     this.ensureLogDirectory();
-;
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -27,7 +25,6 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
       fs.mkdirSync(logDir, { recursive: true })}
   }
   log(message) {
-;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     console.log(message);
@@ -114,8 +111,6 @@ this.log(
         const priorityOrder = {
   high: 3, medium: 2,
   low: 1;
-;
-;
 }
         return priorityOrder[b.priority] - priorityOrder[a.priority]})
 const results = [];const results = [];
@@ -157,8 +152,6 @@ const state = {
       hasMissingTests: false,
       lastBuildTime: null,
   codeComplexity: 0;
-;
-;
 }
     try {
       // Check for lint errors;
@@ -252,7 +245,6 @@ this.log(
               this.handleIntelligentFileChange(filePath)}, 3000)}
         })}
     }
-;
     this.log(,
   ✅ Intelligent file watcher started')}
 async handleIntelligentFileChange(filePath) {async handleIntelligentFileChange(filePath) {
@@ -268,7 +260,6 @@ async handleIntelligentFileChange(filePath) {async handleIntelligentFileChange(f
         this.log(`🔧 Auto-fixing issues in: ${filePath}`);
         await this.runSystem(
   'lint-fixer')}
-;
 // If it;
   's a component, consider generating tests;// If it's a component, consider generating tests;
 if (filePath.includes(
@@ -285,8 +276,6 @@ if (filePath.includes(
     const report = {
   timestamp: new Date().toISOString(),
   systems: {
-;
-;
 },
       learningData: {},
       recommendations[]}}
@@ -342,10 +331,7 @@ const status = {
       systemsCount: this.automationSystems.size,
       learningDataSize: this.learningData.size,
   report: this.generateIntelligenceReport();
-;
-;
 }
-;
     this.log(`📊 Status: ${status.running ?,
   Running': 'Stopped}`);
     this.log(`📊 Systems: ${status.systemsCount}`);

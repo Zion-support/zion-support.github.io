@@ -163,5 +163,4 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
       </div>
     </MainLayout>
   )}
-;
 export default DigitalTransformation

@@ -7,7 +7,7 @@ import React from,
   ';
   ' lg: 'w-16 h-16, ,
   ';
-  ' xl: 'w-24 h-24 } const iconSizes = {};
+  ' xl: 'w-24 h-24 } const iconSizes = {}
    sm: 'w-4 h-4,
 ,
    md: 'w-6 h-6, ,

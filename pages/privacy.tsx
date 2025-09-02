@@ -216,7 +216,6 @@ const Privacy: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 
 export default Privacy;

@@ -242,6 +242,5 @@ const AIWorkflowOrchestrator: React.FC = props {
       </section>
     </div>
   )}
-;
 export { AIWorkflowOrchestrator }export default AIWorkflowOrchestrator''`;
   ''`'"`

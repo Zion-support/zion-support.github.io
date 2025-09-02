@@ -400,5 +400,4 @@ const Blog: React.FC = () => {
       </section>
     </div>
   )}
-;
 export default Blog

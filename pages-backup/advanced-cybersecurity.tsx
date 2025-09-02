@@ -60,15 +60,12 @@ const AdvancedCybersecurityServices: NextPage = () => {
   })
   default: return 'from-gray-500 to-gray-600}
   }
-;
       default: return,
   bg-gradient-to-r from-gray-500 to-gray-600;
   '}
   }
-;
       default: return '🛡️}
   }
-;
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden'>
       {/* Animated Security Background Elements */}'
@@ -340,5 +337,4 @@ const AdvancedCybersecurityServices: NextPage = () => {
       </div>
     </div>
   )}
-;
 export default AdvancedCybersecurityServices}}}}'"`

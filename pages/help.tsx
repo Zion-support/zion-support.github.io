@@ -235,7 +235,6 @@ const Help: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 
 export default Help;

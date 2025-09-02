@@ -5,26 +5,24 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
+  errorInfo: ErrorInfo | null}
 
 class ErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
 
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
+    this.state = { hasError: false, error: null, errorInfo: null }
   }
 
   static getDerivedStateFromError(error: Error): State {
 
-    return { hasError: true, error, errorInfo: null };
+    return { hasError: true, error, errorInfo: null }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -32,20 +30,18 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({
 
       error,
-      errorInfo});
+      errorInfo})
 '
     // Log error to console in development''
     if (process.env.NODE_ENV === 'development') {
 '
 ''
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+      console.error('ErrorBoundary caught an error:', error, errorInfo)}
 
     // Call custom error handler if provided
     if (this.props.onError) {
 
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)}
 '
     // Log to external service in production''
     if (process.env.NODE_ENV === 'production') {
@@ -58,8 +54,7 @@ class ErrorBoundary extends Component<Props, State> {
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
         url: window.location.href,
-        userAgent: navigator.userAgent});
-    }
+        userAgent: navigator.userAgent})}
   }
 
   render() {
@@ -68,8 +63,7 @@ class ErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
 
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       // Default error UI
       return()
@@ -150,11 +144,9 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 // Hook for functional components
@@ -176,11 +168,10 @@ export const useErrorHandler = () => {
         stack: error.stack,
         componentStack: errorInfo?.componentStack,
         timestamp: new Date().toISOString(),
-        url: window.location.href});
-    }
-  };
+        url: window.location.href})}
+  }
 
-  return { handleError };
-};
+  return { handleError }
+}
 '"
 export default ErrorBoundary;'"'"

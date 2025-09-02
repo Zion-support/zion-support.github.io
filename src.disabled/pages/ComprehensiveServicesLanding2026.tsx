@@ -12,7 +12,7 @@ import {} Brain, Shield, TrendingUp, Heart, Scale, Users, FileText, ShoppingCart
   'AI & Supply Chain': any return ShoppingCart'; case;
   'AI & Human Resources': any return Users'; case;
   'AI & Marketing': any return TrendingUp'; case;
-  'AI & Education: any return BookOpen default: any return Brain} };
+  'AI & Education: any return BookOpen default: any return Brain} }
   ';'; case 'AI & Financial Services;
   ': '';
   ' return 'from-green-600 to-emerald-600;

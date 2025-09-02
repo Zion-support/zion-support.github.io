@@ -41,8 +41,7 @@ export default function Index() {
                 'https://linkedin.com/company/zion-tech-group',
                 'https://twitter.com/ziontechgroup'
               ]
-            })
-          }}
+            })}}
         />
       </Head>
       <div style={{
@@ -123,5 +122,4 @@ export default function Index() {
         </div>
       </div>
     </>
-  );
-}
+  )}

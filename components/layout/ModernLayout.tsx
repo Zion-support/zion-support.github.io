@@ -99,20 +99,17 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
               ]
-            })
-          }}
+            })}}
         />
       </Helmet>
       
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />
         <main className="flex-1 pt-20">
-          {children};
+          {children}
         </main>;
         <ModernFooter />;
       </div>;
-    </>;
-  );
-};
+    </>)}
 
-export default ModernLayout;}
+export default ModernLayout}

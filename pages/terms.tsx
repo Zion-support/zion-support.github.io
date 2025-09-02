@@ -259,7 +259,6 @@ const Terms: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )}
 
 export default Terms;

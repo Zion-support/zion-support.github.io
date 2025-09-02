@@ -142,7 +142,6 @@ class ContinuousImprovement {
         totalImprovements: this.improvements.length,
         totalIssues: this.issues.length}
     }
-;
     // Save report to file;
     const reportPath = path.join(this.projectRoot,logs;
   ',continuous-improvement-report.json');

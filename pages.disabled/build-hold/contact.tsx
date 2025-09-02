@@ -20,7 +20,6 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
   'idle')'  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData, [e.target.name]: e.target.value})}
-;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -303,5 +302,4 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
       </section>
     </MainLayout>
   )}
-;
 export default ContactPage

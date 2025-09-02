@@ -11,7 +11,6 @@ const url = require(
   'url');
 class AutomationDashboard {
   constructor() {
-;
     this.automationSystems = new Map();
     this.metrics = new Map();
     this.alerts = [];
@@ -20,13 +19,11 @@ class AutomationDashboard {
   'automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
-;
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     // // // // // // // // console.log(message);
 fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
-;
   loadAutomationSystems() {
     const systems = [
       { name: 'lint-monitor, path:,
@@ -166,7 +163,6 @@ this.log(,
         // Add delay between systems;
         await this.sleep(2000)}
     }
-;
     this.log(`📊 Completed ${results.length} systems`);
     return results}
 generateDashboardHTML() {generateDashboardHTML() {
@@ -300,8 +296,7 @@ const systems = Array.from(this.automationSystems.values());
                 scales: {
                     y: {
                         beginAtZero: true,
-                        max: 100;
-})
+                        max: 100})
         function runAllSystems() {
             fetch(,
   /api/run-all', { method: 'POST })
@@ -338,8 +333,6 @@ const report = {
         runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length,
         totalAlerts: this.alerts.length,
   averageSuccessRate: this.calculateAverageSuccessRate();
-;
-;
 },
       systems: {},
       metrics: {},
@@ -516,4 +509,3 @@ process.exit(1);process.exit(1);
 process.on('SIGINT, () => {
   // // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
 process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-;

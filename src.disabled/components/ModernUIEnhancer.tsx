@@ -54,7 +54,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       warning: '#f59e0b',
       error: '#ef4444',
       info: '#3b82f6'}
-;
     // Apply color variables;
     Object.entries(colors).forEach(([key, value]) => {
       root.style.setProperty(`--color-${key}`, value)})
@@ -98,7 +97,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       48: '192px',
       56: '224px',
       64: '256px'}
-;
     Object.entries(spacing).forEach(([key, value]) => {
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
   const enhanceGlassmorphism = useCallback(() => {
@@ -120,7 +118,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       success: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
       warning: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
       error: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)'}
-;
     Object.entries(gradients).forEach(([key, value]) => {
       root.style.setProperty(`--gradient-${key}`, value)})}, [enabled, enableGradients]);
   const enhanceAnimations = useCallback(() => {
@@ -189,7 +186,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       const docHeight = document.body.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
       progressBar.style.width = scrollPercent + '%'}
-;
     window.addEventListener('scroll', updateScrollProgress);
     return () => {
       window.removeEventListener('scroll', updateScrollProgress);

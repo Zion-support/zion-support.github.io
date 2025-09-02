@@ -8,8 +8,7 @@ interface FormData {
   email: string;
   company: string;
   service: string;
-  message: string;
-}
+  message: string}
 
 const ContactForm: React.FC = () => {
 
@@ -19,10 +18,10 @@ const ContactForm: React.FC = () => {
     email: '',
     company: '',
     service: '',
-    message: ''});
+    message: ''})
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [errors, setErrors] = useState<Partial<FormData>>({})
 
   const services = [
     'AI & Machine Learning',
@@ -37,29 +36,24 @@ const ContactForm: React.FC = () => {
 
   const validateForm = (): boolean => {
 
-    const newErrors: Partial<FormData> = {};
+    const newErrors: Partial<FormData> = {}
 
     if (!formData.name.trim()) {
 
-      newErrors.name = 'Name is required';
-    }
+      newErrors.name = 'Name is required'}
 
     if (!formData.email.trim()) {
 
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email is required'} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
 
-      newErrors.email = 'Email is invalid';
-    }
+      newErrors.email = 'Email is invalid'}
 
     if (!formData.message.trim()) {
 
-      newErrors.message = 'Message is required';
-    }
+      newErrors.message = 'Message is required'}
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0}
 
   const handleSubmit = async (e: React.FormEvent) => {
 
@@ -67,8 +61,7 @@ const ContactForm: React.FC = () => {
 
     if (!validateForm()) {
 
-      return;
-    }
+      return}
 
     setIsSubmitting(true);
 
@@ -88,9 +81,7 @@ const ContactForm: React.FC = () => {
         email: '',
         company: '',
         service: '',
-        message: ''});
-    }, 3000);
-  };
+        message: ''})}, 3000)}
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -104,9 +95,8 @@ const ContactForm: React.FC = () => {
     // Clear error when user starts typing
     if (errors[name as keyof FormData]) {
 
-      setErrors(prev => ({ ...prev, [name]: undefined }));
-    }
-  };
+      setErrors(prev => ({ ...prev, [name]: undefined }))}
+  }
 
   if (isSubmitted) {
 
@@ -124,8 +114,7 @@ const ContactForm: React.FC = () => {
           Thank you for reaching out. We'll get back to you within 24 hours.
         </p>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-white rounded-xl shadow-xl p-8">
@@ -314,7 +303,6 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )}
 
 export default ContactForm;

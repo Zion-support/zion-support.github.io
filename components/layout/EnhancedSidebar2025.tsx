@@ -21,20 +21,7 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-category?: string;
-
-
-
-
-
-
-
-
-
-
-
-
-}
+category?: string}
 
 const sidebarSections = [
   {
@@ -264,14 +251,11 @@ const sidebarSections = [
         description: 'Get help and support',
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
-{ name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
-},;
-          { name: 'Community Forum', href: '/community' },;
-          { name: 'Knowledge Base', href: '/knowledge-base' };
-        ];
-      };
-    ];
-  };
+{ name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training'},
+          { name: 'Community Forum', href: '/community' },
+          { name: 'Knowledge Base', href: '/knowledge-base' }
+        ]}
+    ]}
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
@@ -287,21 +271,18 @@ export default function EnhancedSidebar2025(...args[]: any):  {
       newExpanded.delete(sectionTitle)} else {
 
       newExpanded.add(sectionTitle)}
-    setExpandedSections(newExpanded)};
+    setExpandedSections(newExpanded)}
 
   const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
       item.subItems?.filter(child =>;
         child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase());
-      ) || [];
-    );
-  );
+        child.description?.toLowerCase().includes(searchQuery.toLowerCase())) || []));
 
       newExpanded.delete(itemName)} else {
 
       newExpanded.add(itemName)}
-    setExpandedItems(newExpanded)};
+    setExpandedItems(newExpanded)}
 
   useEffect(() => {
 
@@ -310,8 +291,7 @@ export default function EnhancedSidebar2025(...args[]: any):  {
       document.body.style.overflow = 'hidden'} else {
 
       document.body.style.overflow = 'unset'}
-;
-    return () => {;
+    return () => {
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
@@ -584,6 +564,4 @@ export default function EnhancedSidebar2025(...args[]: any):  {
           </div>;
         </div>;
       </motion.div>;
-    </>;
-  );
-}
+    </>)}
