@@ -1,62 +1,50 @@
-#!/usr/bin/env node;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import http from;
-  'http';
-import { execSync } from;
-  'child_process';
-import { fileURLToPath } from;
-  'url';
-;
+#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import http from 'http';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-;
-class HealthChecker {;
-  constructor() {;
-    this.projectRoot = path.join(__dirname,;
-  '..');
-    this.logDir = path.join(this.projectRoot,;
-  'logs');
+class HealthChecker {
+  constructor() {
+    this.projectRoot = path.join(__dirname, '..');
+    this.logDir = path.join(this.projectRoot, 'logs');
     this.port = process.env.PORT || 3000;
     this.healthEndpoint = `http://localhost:${this.port}/health`;
-    this.maxResponseTime = 5000 // 5 seconds;
+    this.maxResponseTime = 5000; // 5 seconds
     this.checks = [];
-;
+    
     this.ensureDirectories();
   }
-;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.logDir)) {;
+  
+  ensureDirectories() {
+    if (!fs.existsSync(this.logDir)) {
       fs.mkdirSync(this.logDir, { recursive: true });
     }
   }
-;
-  log(level, message, data = null) {;
+  log(level, message, data = null) {
     const timestamp = new Date().toISOString();
-    const logEntry = {;
-      timestamp,;
-      level,;
-      message,;
-      data};
-;
+    const logEntry = {
+      timestamp,
+      level,
+      message,
+      data
+    };
+    
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
-;
-    if (data) {;
+    if (data) {
       console.log(JSON.stringify(data, null, 2));
     }
-;
-    // Write to log file;
-    const logFile = path.join(this.logDir,;
-,;
-  health-checker.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) +;
-  '\n');
+    
+    // Write to log file
+    const logFile = path.join(this.logDir, 'health-checker.log');
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
   }
-;
-  async checkApplicationHealth() {;
-    return new Promise(resolve => {;
+  
+  async checkApplicationHealth() {
+    return new Promise(resolve => {
       const startTime = Date.now();
 ;
       const req = http.get(this.healthEndpoint, res => {;
