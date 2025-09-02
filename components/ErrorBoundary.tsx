@@ -1,149 +1,83 @@
-import React, { Component, ReactNode } from 'react'
-import Link from 'next/link'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-interface ErrorBoundaryState {
-  hasError: boolean
-  error?: Error
-  errorInfo?: React.ErrorInfo
-}
+'use client';''
+''
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
-interface ErrorBoundaryProps {
-  children: ReactNode
-  fallback?: ReactNode
-}
+interface State {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null}
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false }
+export class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+    hasError: false,
+  };
+
+  constructor(props: Props) {
+
+    super(props);
+    this.state = { hasError: false, error: null, errorInfo: null }
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error }
-  }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    this.setState({
-      hasError: true,
-      error,
-      errorInfo
-    })
     // Log error to monitoring service
-    console.error('ErrorBoundary caught an error:', error, errorInfo)
-  }
-
-  handleRetry = () => {
-    if (typeof window !== 'undefined') {
-      // You can integrate with error monitoring services like Sentry here
-      console.error('Error details:', {
-        message: this.state.error?.message, 
-        stack: this.state.error?.stack, 
-        componentStack: this.state.errorInfo?.componentStack
-      })
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+      });
     }
-  }
-
-    // Log error to monitoring service
-ursor/automate-test-fix-improve-and-merge-code-48f3
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
   }
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback
-      }
-
       return (
-        <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
-          <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center'>
-            <div className='w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-              <AlertTriangle className='w-8 h-8 text-red-600' />
-            </div>
-            <h1 className='text-2xl font-bold text-gray-900 mb-2'>
-              Oops! Something went wrong
-            </h1>
-            <p className='text-gray-600 mb-6'>
-              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className='mb-6 text-left'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 mb-2'>
-                  Error Details (Development)
-                </summary>
-                <div className='bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto'>
-                  <div className='mb-2'>
-                    <strong>Error: </strong> {this.state.error.message}
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  </div>                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className='whitespace-pre-wrap mt-1'>'                        {this.state.errorInfo.componentStack}'                      </pre></div>
-                  )}
+        this.props.fallback || (
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">
+            <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+              <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+                <svg
+                  className="w-6 h-6 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
+                </svg>
+              </div>
+              <div className="mt-4 text-center">
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
+                <p className="mt-2 text-sm text-gray-500">
+                  We're sorry, but something unexpected happened. Please try
+                  refreshing the page.
+                </p>
+                <div className="mt-6">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    Refresh Page
+                  </button>
                 </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              
-              <Link
-                href="/"
-                className="flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </Link>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-gray-200">
-              <p className="text-sm text-gray-500">
-                If this problem persists, please{' '}
-                <Link href="/contact" className="text-blue-600 hover:text-blue-700">
-                  contact our support team
-                </Link>
-              </p>
+              </div>
             </div>
           </div>
-        </div>
-<div className='flex flex-col sm: flex-row gap-3'>'              <button'                onClick={this.handleRetry}
-                className='flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200''              >'                <RefreshCw className='w-4 h-4 mr-2' />'                Try Again'              </button>
-              <Link
-                href='/'
-                className='flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200'
-              >
-                <Home className='w-4 h-4 mr-2' />
-                Go Home
-              </Link>
-            </div>
-            <div className='mt-6 pt-6 border-t border-gray-200'>
-              <p className='text-sm text-gray-500'>
-                If this problem persists, please{' '}
-                <Link href='/contact' className='text-blue-600 hover:text-blue-700'>
-                  contact our support team
-                </Link>
-              </p>            </div>
-          </div>
-        </div>
-      )
+        )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
-
-export default ErrorBoundary

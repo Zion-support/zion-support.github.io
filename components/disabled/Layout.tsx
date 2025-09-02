@@ -7,10 +7,17 @@ interface LayoutProps {
   title?: string;
   description?: string}
 
+<<<<<<< HEAD
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+=======
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
+>>>>>>> origin/main
 }) => {
   return (
     <>
@@ -39,4 +46,8 @@ const Layout: React.FC<LayoutProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default Layout;
+=======
+export default Layout;
+>>>>>>> origin/main

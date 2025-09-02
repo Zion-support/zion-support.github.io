@@ -1,25 +1,24 @@
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
+'use client';
+
+import Image from 'next/image';
+import { useState, useRef, useEffect } from 'react';
+
 interface OptimizedImageProps {
-'use client, ';'''
-  'import Image from 'next/image
-  ';interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
-  sizes?: string
-  fill?: boolean
-  style?: React.CSSProperties
-  onClick?: () => void
-  onLoad?: () => void
-  onError?: () => void
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  sizes?: string;
+  fill?: boolean;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -39,183 +38,110 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   onLoad,
   onError
 }) => {
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-src, alt, width,  , ''
-  '  height, '''
-  '  className = '', priority = false, '''
-  '  quality = 75, '''
-  '  placeholder = 'empty
-  ', '  blurDataURL, sizes, '  fill = false, style, '
-  onClick, onLoad, onError}) => {
-  const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
-  const [isInView, setIsInView] = useState(priority)
-  const imageRef = useRef<HTMLDivElement>(null)
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (priority) return
+    if (priority) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
+          setIsInView(true);
+          observer.disconnect();
         }
       },
       {
-        rootMargin: '50px', // Start loading 50px before the image comes into view
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: '50px'
       }
-    )
-    if (imageRef.current) {
+    );
 
-const observer = new IntersectionObserver();([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-        }
-}, {
-''''''
-  '        rootMargin: '50px, // Start loading 50px before the image comes into view'        threshold: 0.1}'
-  '    );if (imageRef.current) {'
-      observer.observe(imageRef.current)
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [priority])
-  // Handle image load
+    return () => observer.disconnect();
+  }, [priority]);
+
   const handleLoad = () => {
-    setIsLoading(false)
-    onLoad?.()
-  }
-  // Handle image error
+    setIsLoading(false);
+    setHasError(false);
+    onLoad?.();
+  };
+
   const handleError = () => {
-    setHasError(true)
-    setIsLoading(false)
-    onError?.()
-  }
-  // Fallback image for errors
+    setIsLoading(false);
+    setHasError(true);
+    onError?.();
+  };
+
+  // Generate a simple blur placeholder if none provided
+  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+
   if (hasError) {
     return (
       <div
-        className={`bg-gray-200 dark:bg-gray-700 flex items-center justify-center ${className}`}
-        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+        ref={imageRef}
+        className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
+        style={style}
+        onClick={onClick}
       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
+        <div className="text-center">
+          <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+          </svg>
+          <p className="text-sm">Failed to load image</p>
+        </div>
       </div>
-    )
+    );
   }
 
-  // Loading skeleton
   if (!isInView) {
     return (
       <div
         ref={imageRef}
-        className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}
-        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+        className={`bg-gray-200 animate-pulse ${className}`}
+        style={style}
       />
-    )
+    );
   }
 
   return (
     <div
       ref={imageRef}
-      className={`relative ${className}`}
+      className={`relative overflow-hidden ${className}`}
       style={style}
       onClick={onClick}
     >
-      {/* Loading overlay */}
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse z-10" />
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
+        </div>
       )}
       
-      {/* Next.js Image component */}
       <Image
         src={src}
         alt={alt}
         width={fill ? undefined : width}
         height={fill ? undefined : height}
+        fill={fill}
+        quality={quality}
+        priority={priority}
+        placeholder={placeholder}
+        blurDataURL={placeholder === 'blur' ? (blurDataURL || defaultBlurDataURL) : undefined}
+        sizes={sizes}
         className={`transition-opacity duration-300 ${
           isLoading ? 'opacity-0' : 'opacity-100'
         }`}
-        priority={priority}
-        quality={quality}
-        placeholder={placeholder}
-
-  // Handle image load
-const handleLoad = () => {;setIsLoading(false)
-    onLoad?.()
-  }
-
-  // Handle image error
-const handleError = () => {;setHasError(true)
-    setIsLoading(false)
-    onError?.()
-  }
-
-  // Fallback image for errors
-  if (hasError) {
-ursor/automate-test-fix-improve-and-merge-code-48f3
-  // Loading skeleton
-  if (!isInView) {
-return()
-      <div``        ref={imageRef}`'`'
-  '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%
-  ' : height }}'      />
-  '    )`  }
-
-  return()
-    <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
-      onClick={onClick}
-    >
-      {/* Loading overlay */}'''      {isLoading && ('''        <div className='absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10' />'      )}'{/* Next.js Image component */}
-      <Image
-        src={src}
-        alt={alt}
-width={fill ? undefined : width}``        height={fill ? undefined : height}```        className={`transition-opacity duration-300 ${`, ''''
-  '`'          isLoading ?
-  'opacity-0': 'opacity-100'``        }`}'        priority={priority}`        quality={quality}placeholder={placeholder}'
-        blurDataURL={blurDataURL}
-        sizes={sizes}
-        fill={fill}
         onLoad={handleLoad}
         onError={handleError}
-        style={{
-          objectFit: fill ? 'cover' : 'contain'
-        }}
       />
-      
-      {/* Loading spinner */}
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center z-20">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        </div>
-      )}
     </div>
-  )
-}
-// HOC for wrapping components with image optimization
-export const withImageOptimization = <P extends object>(
-  Component: React.ComponentType<P>
-) => {
-  return (props: P) => (
-    <Component {...props} />
-  )
-}
-export default OptimizedImage
-        style={{, ''''
-  '          objectFit: fill ? 'cover
-  ' : 'contain}}'      />
-  '
-      {/* Loading spinner */}'''      {isLoading && ('''        <div className='absolute inset-0 flex items-center justify-center z-20'>'''          <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>'        </div>'      )}</div>  )
-}
+  );
+};
 
-// HOC for wrapping components with image optimization
-export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>
-) => {
-  return (props: P) => (
-    <Component {...props} />
-  )
-}''`
-  '''export default OptimizedImage''`;''`''`
+export default OptimizedImage;

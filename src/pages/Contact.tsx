@@ -1,4 +1,3 @@
-    firstName: '', lastName: '',"
-    email: '', company: '',"
+    firstName: '', lastName: '',
+    email: '', company: '',
     phone: '', service: '',
-"
