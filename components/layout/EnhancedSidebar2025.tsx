@@ -1,50 +1,10 @@
 import React, { useState, useEffect              } from 'react.ts';
-<<<<<<< HEAD
-import { Users, Zap, Shield, Globe, Award, Brain, Cloud, Target, Phone, Mail, X, ChevronDown, ChevronRight, Settings, User, Eye, Heart, Home } from 'lucide-react';
-
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-import Link from 'next/link.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-=======
 import Link from 'next/link.ts';
 import { useRouter               } from 'next/router.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
               } from 'lucide-react.ts';
->>>>>>> main
 interface SidebarItem {
 
   name: string;
@@ -58,9 +18,6 @@ interface SidebarItem {
   isHot?: boolean;
   isPremium?: boolean;
 category?: string;
-<<<<<<< HEAD
-
-=======
 >>>>>>> main
 }
 
@@ -75,7 +32,6 @@ const sidebarSections = [
 =======
     title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,
     color: 'from-cyan-500 to-blue-600', items[
->>>>>>> main
       {
 
         name: 'AI & Consciousness',
@@ -196,18 +152,9 @@ const sidebarSections = [
       }, {
 
         name: 'Support',
-<<<<<<< HEAD
-        href: '/support',
-        icon: HelpCircle,
-        description: 'Get help and support',
-        subItems[
-          { name: 'Contact Support', href: '/contact-support' },
-{ name: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknown'Training Programs', href: '/training';
-=======
-        href: '/support', icon: HelpCircle,
+href: '/support', icon: HelpCircle,
         description: 'Get help and support', subItems[
           { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';
->>>>>>> main
 },;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
@@ -221,11 +168,7 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
   isOpen: boolean;
   onClose: ()               => void}
 
-<<<<<<< HEAD
-export default function EnhancedSidebar2025(...args[]: unknown):  {
-=======
 export default function EnhancedSidebar2025(...args[]: any): {
->>>>>>> main
 
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
@@ -254,13 +197,7 @@ export default function EnhancedSidebar2025(...args[]: any): {
       document.body.style.overflow = 'unset'}
     return () => {
       document.body.style.overflow = 'unset'}}, [isOpen]);
-<<<<<<< HEAD
-
-  const isActive = (href: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring)               => router.pathname === href;
-
-=======
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
->>>>>>> main
+const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
   return (
     <>
       {/* Backdrop */}

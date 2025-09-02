@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-02T21:22:03.716Z",
-=======
-  "timestamp": "2025-09-02T21:47:51.351Z",
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+"timestamp": "2025-09-02T21:47:51.351Z",
   "summary": {
     "total": 8,
     "successful": 4,
@@ -14,11 +10,7 @@
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
-<<<<<<< HEAD
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_22_03_129Z-debug-0.log\n"
-=======
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+"error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n"
     },
     {
       "command": "npm run type-check",
@@ -36,11 +28,7 @@
       "command": "npm run build",
       "description": "Build Application",
       "success": false,
-<<<<<<< HEAD
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
-=======
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n.next/types/validator.ts:153:11\nType error: Type 'typeof import(\"/workspace/pages/sitemap\")' does not satisfy the expected type 'PagesPageConfig'.\n  Property 'default' is missing in type 'typeof import(\"/workspace/pages/sitemap\")' but required in type 'PagesPageConfig'.\n\n\u001b[0m \u001b[90m 151 |\u001b[39m {\n \u001b[90m 152 |\u001b[39m   \u001b[36mconst\u001b[39m handler \u001b[33m=\u001b[39m {} \u001b[36mas\u001b[39m \u001b[36mtypeof\u001b[39m \u001b[36mimport\u001b[39m(\u001b[32m\"../../pages/sitemap.js\"\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 153 |\u001b[39m   handler satisfies \u001b[33mPagesPageConfig\u001b[39m\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 154 |\u001b[39m }\n \u001b[90m 155 |\u001b[39m\n \u001b[90m 156 |\u001b[39m \u001b[90m// Validate ../../pages/solutions/ai-content-creation.tsx\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+"error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n.next/types/validator.ts:153:11\nType error: Type 'typeof import(\"/workspace/pages/sitemap\")' does not satisfy the expected type 'PagesPageConfig'.\n  Property 'default' is missing in type 'typeof import(\"/workspace/pages/sitemap\")' but required in type 'PagesPageConfig'.\n\n\u001b[0m \u001b[90m 151 |\u001b[39m {\n \u001b[90m 152 |\u001b[39m   \u001b[36mconst\u001b[39m handler \u001b[33m=\u001b[39m {} \u001b[36mas\u001b[39m \u001b[36mtypeof\u001b[39m \u001b[36mimport\u001b[39m(\u001b[32m\"../../pages/sitemap.js\"\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 153 |\u001b[39m   handler satisfies \u001b[33mPagesPageConfig\u001b[39m\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 154 |\u001b[39m }\n \u001b[90m 155 |\u001b[39m\n \u001b[90m 156 |\u001b[39m \u001b[90m// Validate ../../pages/solutions/ai-content-creation.tsx\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
     },
     {
       "name": "Error Detection",
@@ -89,12 +77,6 @@
       "result": {
         "issues": [
           {
-<<<<<<< HEAD
-            "file": "/workspace/src/components/SEO.tsx",
-            "issue": "Potential XSS vulnerability"
-          },
-          {
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
             "issue": "Potential XSS vulnerability"
@@ -108,7 +90,6 @@
         "count": 3
 =======
         "count": 2
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       }
     },
     {
@@ -125,42 +106,11 @@
             "issue": "Console.log in production code"
           },
           {
-<<<<<<< HEAD
-=======
-            "file": "/workspace/src/components/ErrorBoundary.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
-            "file": "/workspace/src/components/MachineLearningDashboard.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-<<<<<<< HEAD
-            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/PerformanceMonitor.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
-            "issue": "Console.log in production code"
-          }
-        ],
-        "count": 7
-=======
-            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+"file": "/workspace/src/components/PerformanceMonitor.tsx",
             "issue": "Console.log in production code"
           }
         ],
         "count": 5
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       }
     }
   ]

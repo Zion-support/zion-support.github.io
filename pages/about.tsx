@@ -1,9 +1,6 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Award, Globe, Heart, Target, Users, Zap } from 'lucide-react';
-=======
 import {
   Users,
   Award,
@@ -17,7 +14,6 @@ import {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
 const About: NextPage = () => {
   return (
@@ -213,17 +209,10 @@ const About: NextPage = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-            Let's discuss how we can help transform your business with
-            innovative technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-=======
-            Let&apos;s discuss how we can help transform your business with'
+Let&apos;s discuss how we can help transform your business with'
             innovative technology solutions.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"

@@ -36,115 +36,15 @@ interface ComponentProps {
 
 import Link from 'next/link.ts';
 import { useRouter               } from 'next/router.ts';
-<<<<<<< HEAD
-=======
-import { Home, Briefcase, 
-  Users, Phone, 
-  Mail, MapPin, 
-  Globe, Linkedin, 
-  Twitter, Shield, 
-  Handshake, ChevronDown, 
-  ChevronRight, Brain, 
-  Cpu, Database, 
-  Network, Code, 
-  Palette, Target, 
-  Rocket, Eye, 
-  DollarSign, ShoppingCart, 
-  Clock, Cloud, 
-  Search, Building, 
-  Zap, Heart, 
-  Lightbulb, TrendingUp, 
-  BarChart3, Lock, 
-  AlertTriangle, Server, 
-  CheckCircle, Truck, 
-  Car, TestTube, 
-  PenTool, Building2, 
-  Atom, FileText, 
-  Quote, Newspaper, 
-  Calendar, Video, 
-  HelpCircle, LifeBuoy, 
-  Store, PieChart, 
-  Share2, Monitor, 
-  Smartphone, Settings,
-  User, Bell,
-  BookOpen, Award,
-  Leaf, Sun,
-  Wind
-  
-} from 'lucide-react.ts';
->>>>>>> main
-interface SidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownboolean;
-  onClose: ()               => void}
-
-const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-
-  const router = useRouter();
-<<<<<<< HEAD
-  const [expandedSections, setExpandedSections] = useState<unknown>([]);
-
-  const toggleSection = (section: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring)              => {;
-=======
-  const [expandedSections, setExpandedSections] = useState<any>([]);
+const [expandedSections, setExpandedSections] = useState<any>([]);
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> main
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
         : [...prev, section];
     );
   };
-<<<<<<< HEAD
-
-  const isActive = (path: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring)               => router.pathname === path;
-
-  const navigation = {
-
-    main: [
-      { name: 'Home', href: '/', icon: Home },
-      { name: 'About', href: '/about', icon: Building },
-      { name: 'Services', href: '/services', icon: Briefcase },
-      { name: 'Solutions', href: '/solutions', icon: Target },
-      { name: 'Partners', href: '/partners', icon: Handshake },
-      { name: 'Careers', href: '/careers', icon: Users },
-      { name: 'Blog', href: '/blog', icon: Newspaper },
-      { name: 'Contact', href: '/contact', icon: Phone },
-    ],
-    services: [
-      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' },
-      { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' },
-      { name: 'Data & Analytics', href: '/services/data', icon: Database, description: 'Data pipelines & ML ops' },
-      { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' },
-      { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },
-    ],
-    solutions: [
-      { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' },
-      { name: 'SMB', href: '/solutions/smb', icon: Store, description: 'Small business focused' },
-      { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' },
-      { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector expertise' },
-      { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' },
-      { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' },
-    ],
-    resources: [
-      { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' },
-      { name: 'API Reference', href: '/api', icon: Code, description: 'Developer resources' },
-      { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
-      { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support & FAQs' },
-      { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' },
-      { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
-    ],
-    compunknown: [
-      { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
-      { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
-      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
-      { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Compunknown updates' },
-      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
-    ]
-=======
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
+const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
   const navigation = {
 
     main: [
@@ -157,7 +57,6 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' }, { name: 'SMB', href: '/solutions/smb', icon: Store, description: 'Small business focused' }, { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' }, { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector expertise' }, { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' }, { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' },  ], resources: [
       { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' }, { name: 'API Reference', href: '/api', icon: Code, description: 'Developer resources' }, { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' }, { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support & FAQs' }, { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' }, { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },  ], company: [
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' }, { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' }, { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' }, { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' }, { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' }, { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },  ]
->>>>>>> main
   };
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
@@ -173,12 +72,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
-<<<<<<< HEAD
-
-  const renderNavSection = (title: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownstring, items[], sectionKey: string)               => (
-=======
-  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
->>>>>>> main
+const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}

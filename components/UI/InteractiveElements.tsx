@@ -37,12 +37,7 @@ type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient';
 type ButtonSize = 'sm' | 'md' | 'lg';
 interface InteractiveButtonProps {
   'react';
-<<<<<<< HEAD
-import { User, motion, useAnimation, useInView } from 'lucide-react';
-
-=======
 import { motion, useAnimation, useInView  } from 'lucide-react';
->>>>>>> main
 type ButtonVariant =;
   'primary' |;
   'secondary' |;

@@ -34,9 +34,6 @@ interface ComponentProps {
 
 import Layout from '../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Absolutely, ArrowRight, Building, Can, Check, Cloud, Common, Cross, Crown, Fast, File, For, Mobile, Star, Up, Users, Yes, Zap } from 'lucide-react';
-=======
 import {
 <<<<<<< HEAD
   Check,
@@ -47,7 +44,6 @@ import {
   Building,
   Crown,
 } from 'lucide-react';
->>>>>>> main
 
 const Pricing: NextPage = () => {
   const pricingPlans = [
@@ -320,11 +316,7 @@ const Pricing: NextPage = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Service-Specific Pricing
           </h2>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-=======
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8 max-w-4xl mx-auto">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+<div className="grid grid-cols-1 md: grid-cols-2 gap-8 max-w-4xl mx-auto">
             {servicePricing.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -363,11 +355,7 @@ const Pricing: NextPage = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Why Choose Zion Tech Group?
           </h2>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+<div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
                 <Crown className="w-8 h-8 text-blue-600" />
@@ -429,14 +417,9 @@ const Pricing: NextPage = () => {
 
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-<<<<<<< HEAD
-                What's included in maintenance?
-              </h3>
-=======
-                What&apos;s included in maintenance?'
+What&apos;s included in maintenance?'
               </h3>
               ''
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               <p className="text-gray-600">
                 Maintenance includes bug fixes, security updates, performance
                 optimization, and minor feature enhancements as specified in
@@ -449,15 +432,11 @@ const Pricing: NextPage = () => {
                 Can I change my plan later?
               </h3>
               <p className="text-gray-600">
-<<<<<<< HEAD
-                Absolutely! You can upgrade or downgrade your plan at unknown time. We'll work with you to ensure a smooth transition.
-=======
-                Absolutely! You can upgrade or downgrade your plan at any time.
+Absolutely! You can upgrade or downgrade your plan at any time.
 <<<<<<< HEAD
                 We'll work with you to ensure a smooth transition.
 =======
                 We&apos;ll work with you to ensure a smooth transition.'
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
               </p>
             </div>
@@ -484,11 +463,7 @@ const Pricing: NextPage = () => {
             Contact us today to discuss your project requirements and get a
             customized quote that fits your budget.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-=======
-          <div className="flex flex-col sm: flex-row justify-center gap-4">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+<div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link
               href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"

@@ -1,11 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Clock, Eye, MousePointer, Search, Users } from 'lucide-react';
-=======
 import {
   Users, Eye, MousePointer, Clock} from 'lucide-react';
->>>>>>> main
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;

@@ -9,44 +9,9 @@ import {
 } from '../components/ui/Card';
 // import { Badge } from '../components/ui/Badge';
 import {
-<<<<<<< HEAD
-=======
-
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
-  Map,
-  ArrowRight,
-  ExternalLink,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-<<<<<<< HEAD
-  DollarSign,
-  FileText,
-  BookOpen,
-  Award,
-  Shield,
-  Globe,
-  Search,
-  Filter,
-  Calendar,
-  Star,
-  TrendingUp,
-  Brain,
-  Cloud,
-  Database,
-  Zap,
-  Lock,
-  Code,
-  Smartphone,
-  Monitor,
-  Server,
-  Network,
-=======
-  BookOpen,
+BookOpen,
   Shield,
   Search,
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {

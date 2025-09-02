@@ -1,50 +1,5 @@
 'use client';
 import { useEffect, useState, useCallback } from 'react';
-<<<<<<< HEAD
-import { User } from 'lucide-react';
-
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void}
-}
-
-declare const gtag: (...args: unknown[]) => void;
-
-=======
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
@@ -52,20 +7,14 @@ declare global {
 }
 
 declare const gtag: (...args: any[]) => void;
->>>>>>> main
 interface AnalyticsEvent {
   name: string;
   category: string;
   action?: string;
   label?: string;
-<<<<<<< HEAD
-  value?: number
-  custom_parameters?: Record<string, unknown>}
-=======
-  value?: number;
+value?: number;
   custom_parameters?: Record<string, any>;
 }
->>>>>>> main
 
 interface PerformanceMetrics {
   fcp: number;
@@ -115,15 +64,8 @@ const AnalyticsManager: React.FC = () => {
 
     // Initialize other analytics services
     initializeCustomAnalytics();
-<<<<<<< HEAD
-
-    setIsInitialized(true);
+setIsInitialized(true);
   }, []);
-
-=======
-    setIsInitialized(true);
-  }, []);
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const initializeCustomAnalytics = useCallback(() => {
     // Custom analytics initialization
     const sessionId = generateSessionId();
@@ -144,9 +86,6 @@ const AnalyticsManager: React.FC = () => {
       language: navigator.language,
     });
   }, []);
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const generateSessionId = useCallback(() => {
     return (
@@ -156,7 +95,6 @@ const AnalyticsManager: React.FC = () => {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const getUserId = useCallback(() => {
     let userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
@@ -174,9 +112,6 @@ const AnalyticsManager: React.FC = () => {
       referrer: document.referrer,
       timestamp: new Date().toISOString(),
     };
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Google Analytics
     if (typeof gtag !== 'undefined') {
@@ -202,7 +137,6 @@ const AnalyticsManager: React.FC = () => {
   const trackEvent = useCallback(
     (event: AnalyticsEvent) => {
       if (!isInitialized) return;
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Google Analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', event.name, {
@@ -212,14 +146,6 @@ const AnalyticsManager: React.FC = () => {
           ...event.custom_parameters,
         });
       }
-<<<<<<< HEAD
-
-      // Custom analytics
-      sendAnalyticsEvent(event);
-    },
-    [isInitialized]
-  );
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 
       // Custom analytics
@@ -240,21 +166,13 @@ const AnalyticsManager: React.FC = () => {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       // Send to custom analytics endpoint
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-<<<<<<< HEAD
-        body: JSON.stringify(eventData)
-      })} catch (error) {
-      console.error('Analytics: Failed to send event', error)}
-  }, [])
-  const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
-=======
-        body: JSON.stringify(eventData),
+body: JSON.stringify(eventData),
       });
 <<<<<<< HEAD
     } catch (error) {
@@ -262,7 +180,6 @@ const AnalyticsManager: React.FC = () => {
     }
 =======
     } catch (error) {}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   }, []);
   const trackUserProperties = useCallback((properties: Record<string, any>) => {
 >>>>>>> main
@@ -280,9 +197,6 @@ const AnalyticsManager: React.FC = () => {
       custom_parameters: properties,
     });
   }, []);
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const trackPerformance = useCallback((metrics: PerformanceMetrics) => {
     // Google Analytics
@@ -320,7 +234,6 @@ const AnalyticsManager: React.FC = () => {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const trackConversion = useCallback(
     (conversionType: string, value?: number) => {
       trackEvent({
@@ -332,9 +245,6 @@ const AnalyticsManager: React.FC = () => {
     },
     [trackEvent]
   );
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const startSessionTimer = useCallback(() => {
     const updateSessionDuration = () => {
@@ -343,16 +253,11 @@ const AnalyticsManager: React.FC = () => {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     const interval = setInterval(updateSessionDuration, 1000);
     // Store interval ID for cleanup
-<<<<<<< HEAD
-    (window as unknown).analyticsSessionInterval = interval}, []);
-=======
-    (window as any).analyticsSessionInterval = interval;
+(window as any).analyticsSessionInterval = interval;
   }, []);
 <<<<<<< HEAD
->>>>>>> main
 
 =======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
@@ -361,12 +266,6 @@ const AnalyticsManager: React.FC = () => {
     if (interval) {
       clearInterval(interval);
     }
-<<<<<<< HEAD
-
-    const sessionDuration =
-      Date.now() -
-      parseInt(sessionStorage.getItem('analytics_start_time') || '0');
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 
     const sessionDuration =
@@ -404,15 +303,11 @@ const AnalyticsManager: React.FC = () => {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     const handleScroll = () => {
       const scrollPercent = Math.round(
         (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
           100
       );
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       if (scrollPercent > 0 && scrollPercent % 25 === 0) {
         trackEvent({
@@ -426,7 +321,6 @@ const AnalyticsManager: React.FC = () => {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     const handleFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
       trackEvent({
@@ -436,9 +330,6 @@ const AnalyticsManager: React.FC = () => {
         label: form.action || form.className,
       });
     };
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     document.addEventListener('click', handleClick);
     document.addEventListener('scroll', handleScroll);
@@ -466,7 +357,6 @@ const AnalyticsManager: React.FC = () => {
 =======
   return null; // This component doesn't render anything
 };
->>>>>>> main
 
 =======
   return null; // This component doesn&apos;t render anything'

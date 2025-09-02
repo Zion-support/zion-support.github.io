@@ -1,50 +1,8 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import { User } from 'lucide-react';
-
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-
-// Declare gtag function for TypeScript
-declare global {
-  function gtag(...args: unknown[]): void}
-=======
 // Declare gtag function for TypeScript
 declare global {
   function gtag(...args: any[]): void;
 }
->>>>>>> main
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -78,9 +36,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         });
       }
     };
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Listen for route changes (Next.js)
     window.addEventListener('popstate', handleRouteChange);
@@ -122,7 +77,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   }, []);
   return null;
 };
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 // Export tracking functions for use in components
 export const trackEvent = (
   action: string,
@@ -138,9 +92,6 @@ export const trackEvent = (
     });
   }
 };
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export const trackPageView = (url: string, title: string) => {
   if (typeof gtag !== 'undefined') {
@@ -153,5 +104,4 @@ export const trackPageView = (url: string, title: string) => {
 <<<<<<< HEAD
 
 =======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Analytics;

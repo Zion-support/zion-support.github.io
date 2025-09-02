@@ -62,13 +62,8 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <Head>
       <title>{fullTitle}</title>
-<<<<<<< HEAD
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />};
-=======
-      <meta name='description' content={description} />
+<meta name='description' content={description} />
       {keywords && <meta name='keywords' content={keywords} />}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
@@ -111,13 +106,8 @@ const SEO: React.FC<SEOProps> = ({
               contactType: 'customer service',
               email: 'kleber@ziontechgroup.com',
             },
-<<<<<<< HEAD
-            'sameAs': [
-              'https://linkedin.com/compunknown/ziontechgroup',
-=======
-            sameAs: [
+sameAs: [
               'https://linkedin.com/company/ziontechgroup',
->>>>>>> main
               'https://twitter.com/ziontechgroup',
               'https://github.com/ziontechgroup',
             ],

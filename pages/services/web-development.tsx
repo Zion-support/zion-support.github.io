@@ -3,23 +3,7 @@ import { Award, Best, Code, Cross, Globe, Mobile, Regular, Smartphone, Today, Us
 
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-import {
-  Code,
-  Globe,
-  Smartphone,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Users,
-  Award,
-} from 'lucide-react';
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
->>>>>>> main
 const WebDevelopment: NextPage = () => {
   return (
     <Layout
@@ -44,11 +28,7 @@ const WebDevelopment: NextPage = () => {
             technologies that deliver exceptional user experiences.
           </p>
 
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-=======
-          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+<div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link
               href="/contact"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -266,17 +246,10 @@ const WebDevelopment: NextPage = () => {
             Ready to Build Your Web Application?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-            Let's discuss your web development needs and create a solution that
-            drives your business forward.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-=======
-            Let&apos;s discuss your web development needs and create a solution
+Let&apos;s discuss your web development needs and create a solution
             that' drives your business forward.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"

@@ -49,12 +49,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 
   children, title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-<<<<<<< HEAD
-  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https: unknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknownunknown//ziontechgroup.com'
-=======
-  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group', canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
->>>>>>> main
+keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group', canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
 })               => {
 
   return (
@@ -107,24 +102,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
               "logo": "https://ziontechgroup.com/logo.png", "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
               "address": {
 
-<<<<<<< HEAD
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-  "addressCountry": "US"
-=======
-                "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
+"@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
                 "addressLocality": "Middletown", "addressRegion": "DE",
                 "postalCode": "19709", "addressCountry": "US"
-              
-
-
-
-
-
->>>>>>> main
 
 },
               "contactPoint": {
@@ -133,14 +113,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "contactType": "customer service", "email": "kleber@ziontechgroup.com"
               },
               "sameAs"[
-<<<<<<< HEAD
-                "https://linkedin.com/compunknown/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
-=======
-                "https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
+"https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
                 "https: //github.com/ziontechgroup"
->>>>>>> main
               ]
             })}}
         />

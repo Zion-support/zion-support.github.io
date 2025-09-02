@@ -36,11 +36,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 interface WebVitalsMetric {
 { useEffect } from;
   'react';
-<<<<<<< HEAD
-import { User, getCLS, getFCP, getFID, getLCP, getTTFB } from 'lucide-react';';interface WebVitalsMetric {
-=======
 import { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'lucide-react'';interface WebVitalsMetric {'
->>>>>>> main
   name: string;
   value: number;
   delta: number;
@@ -49,17 +45,9 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'lucide-react'';interfa
 const sendToAnalytics = (metric: WebVitalsMetric) => {
   // Send to your analytics service
   if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-    (window as unknown).gtag('event', metric.name, {
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true,
-=======
-    (window as any).gtag('event', metric.name, {
+(window as any).gtag('event', metric.name, {
       event_category: 'Web Vitals', event_label: metric.id,
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
->>>>>>> main
     })}
   
   // Log to console in development

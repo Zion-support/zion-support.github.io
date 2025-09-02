@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-'use client';'
-''
-import { useEffect, useState } from 'react';
-import { User } from 'lucide-react';
-
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> main
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -77,24 +36,7 @@ const PerformanceMonitor: React.FC = () => {
             break;
           case 'first-input':
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-<<<<<<< HEAD
-          }
-        });'
-      });''
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Measure Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-
-        for (const entry of list.getEntries()) {
-
-          if (!entry.hadRecentInput) {
-
-            clsValue += (entry as unknown).value;
-          }
-=======
-            break;
+break;
           case 'layout-shift':
             if (!(entry as any).hadRecentInput) {
               setMetrics(prev => ({
@@ -106,7 +48,6 @@ const PerformanceMonitor: React.FC = () => {
           case 'navigation':
             setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
             break;
->>>>>>> main
         }
       });
     });

@@ -17,9 +17,6 @@ const useResponsive = (): ResponsiveState => {
     isTablet: false,
     isDesktop: true,
   });
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   useEffect(() => {
     const updateDimensions = () => {
@@ -52,5 +49,4 @@ const useResponsive = (): ResponsiveState => {
   }, []);
   return state;
 };
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default useResponsive;

@@ -1,9 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-<<<<<<< HEAD
-import { Open } from 'lucide-react';
-
-
-=======
 >>>>>>> main
 export default function Document() {
   return (
@@ -24,7 +19,6 @@ export default function Document() {
         <link rel="canonical" href="https://ziontechgroup.com/" />
 =======
         <link rel="canonical" href="https: //ziontechgroup.com/" />
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Zion Tech Group" />
@@ -32,11 +26,7 @@ export default function Document() {
           property="og:description"
           content="Technology solutions: AI, Micro SaaS, and enterprise IT services."
         />
-<<<<<<< HEAD
-        <meta property="og:url" content="https://ziontechgroup.com/" />
-=======
-        <meta property="og: url" content="https://ziontechgroup.com/" />
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+<meta property="og: url" content="https://ziontechgroup.com/" />
         <meta property="og:image" content="/og-image.svg" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -46,13 +36,7 @@ export default function Document() {
           content="Technology solutions: AI, Micro SaaS, and enterprise IT services."
         />
         <meta
-<<<<<<< HEAD
-          name="twitter:image"
-          content="https://ziontechgroup.com/og-image.svg"
-        />
-
-=======
-          name="twitter: image"
+name="twitter: image"
           content="https://ziontechgroup.com/og-image.svg"
         />
         <meta
@@ -84,7 +68,6 @@ export default function Document() {
           name="twitter: image"
           content="https://ziontechgroup.com/og-image.svg"
         />
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         {/* PWA / Manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />

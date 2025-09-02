@@ -124,11 +124,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
                 '@type': 'ContactPoint',
                 'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},
               'sameAs': [;
-<<<<<<< HEAD
-                'https://linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
-=======
-                'https: //linkedin.com/company/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
->>>>>>> main
+'https: //linkedin.com/company/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
               ], 'offers': {
                 '@type': 'AggregateOffer',
                 'offerCount': '500+', 'description': 'Technology solutions and services'}

@@ -33,9 +33,6 @@ interface ComponentProps {
 
 
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-import { AlertTriangle, By, CheckCircle, Cloud, Common, Copy, FileText, For, Late, Mobile, Phone, Scale, Shield, To, User, XCircle } from 'lucide-react';
-=======
 import {
 <<<<<<< HEAD
   FileText,
@@ -45,7 +42,6 @@ import {
   CheckCircle,
   XCircle,
 } from 'lucide-react';
->>>>>>> main
 
 =======
   FileText, Scale,
@@ -108,11 +104,7 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 Zion Tech Group provides technology consulting and development
-<<<<<<< HEAD
-                services, including but not limited to:
-=======
-                services, including but not limited to: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+services, including but not limited to: {' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>AI and Machine Learning Development</li>
@@ -138,19 +130,13 @@ const Terms: NextPage = () => {
                 <li>Provide accurate and complete information</li>
                 <li>Use our services in compliance with applicable laws</li>
                 <li>Respect intellectual property rights</li>
-<<<<<<< HEAD
-                <li>Not engage in unknown illegal or harmful activities</li>
-                <li>Maintain the confidentiality of unknown credentials provided</li>
-                <li>Notify us of unknown security breaches or unauthorized access</li>
-=======
-                <li>Not engage in any illegal or harmful activities</li>
+<li>Not engage in any illegal or harmful activities</li>
                 <li>
                   Maintain the confidentiality of any credentials provided
                 </li>
                 <li>
                   Notify us of any security breaches or unauthorized access
                 </li>
->>>>>>> main
               </ul>
             </div>
 
@@ -182,11 +168,7 @@ const Terms: NextPage = () => {
               <p className="text-gray-600 mb-4">
                 All content, trademarks, and intellectual property on our
                 website and in our services are owned by Zion Tech Group or our
-<<<<<<< HEAD
-                licensors. You may not:
-=======
-                licensors. You may not: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+licensors. You may not: {' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>
@@ -207,12 +189,8 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 We strive to maintain high availability of our services, but we
-<<<<<<< HEAD
-                cannot guarantee uninterrupted access. We reserve the right to:
-=======
-                cannot guarantee uninterrupted access. We reserve the right
+cannot guarantee uninterrupted access. We reserve the right
                 to: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Modify or discontinue services with reasonable notice</li>
@@ -248,17 +226,13 @@ const Terms: NextPage = () => {
                 Limitation of Liability
               </h2>
               <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                To the maximum extent permitted by law, Zion Tech Group shall not be liable for unknown indirect, incidental, special, consequential, or punitive damages, including but not limited to:
-=======
-                To the maximum extent permitted by law, Zion Tech Group shall
+To the maximum extent permitted by law, Zion Tech Group shall
                 not be liable for any indirect, incidental, special,
                 consequential, or punitive damages, including but not limited
 <<<<<<< HEAD
                 to:
 =======
                 to: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
@@ -276,15 +250,11 @@ const Terms: NextPage = () => {
                 Indemnification
               </h2>
               <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                You agree to indemnify and hold harmless Zion Tech Group from unknown claims, damages, or expenses arising from:
-=======
-                You agree to indemnify and hold harmless Zion Tech Group from
+You agree to indemnify and hold harmless Zion Tech Group from
 <<<<<<< HEAD
                 any claims, damages, or expenses arising from:
 =======
                 any claims, damages, or expenses arising from: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
@@ -301,31 +271,22 @@ const Terms: NextPage = () => {
                 Termination
               </h2>
               <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                We may terminate or suspend your access to our services at unknown time, with or without cause, with or without notice. Upon termination:
-=======
-                We may terminate or suspend your access to our services at any
+We may terminate or suspend your access to our services at any
                 time, with or without cause, with or without notice. Upon
 <<<<<<< HEAD
                 termination:
 =======
                 termination: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your right to use our services will cease immediately</li>
                 <li>We may delete your account and data</li>
-<<<<<<< HEAD
-                <li>You remain liable for unknown outstanding obligations</li>
-                <li>Provisions that should survive termination will remain in effect</li>
-=======
-                <li>You remain liable for any outstanding obligations</li>
+<li>You remain liable for any outstanding obligations</li>
                 <li>
                   Provisions that should survive termination will remain in
                   effect
                 </li>
->>>>>>> main
               </ul>
             </div>
 
@@ -348,15 +309,11 @@ const Terms: NextPage = () => {
                 Changes to Terms
               </h2>
               <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                We reserve the right to modify these Terms at unknown time. We will notify users of unknown material changes by:
-=======
-                We reserve the right to modify these Terms at any time. We will
+We reserve the right to modify these Terms at any time. We will
 <<<<<<< HEAD
                 notify users of any material changes by:
 =======
                 notify users of any material changes by: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
@@ -376,15 +333,11 @@ const Terms: NextPage = () => {
                 Contact Information
               </h2>
               <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                If you have unknown questions about these Terms of Service, please contact us:
-=======
-                If you have any questions about these Terms of Service, please
+If you have any questions about these Terms of Service, please
 <<<<<<< HEAD
                 contact us:
 =======
                 contact us: {' '}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
@@ -395,11 +348,7 @@ const Terms: NextPage = () => {
                   <strong>Phone:</strong> +1 (302) 464-0950
                 </p>
                 <p className="text-gray-700 mb-2">
-<<<<<<< HEAD
-                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown,
-=======
-                  <strong>Address: </strong> 364 E Main St STE 1008, Middletown,
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+<strong>Address: </strong> 364 E Main St STE 1008, Middletown,
                   DE 19709
                 </p>
               </div>
@@ -431,12 +380,8 @@ const Terms: NextPage = () => {
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
 <<<<<<< HEAD
-            We're here to help clarify unknown questions you may have about our Terms of Service.
-=======
-<<<<<<< HEAD
             We're here to help clarify any questions you may have about our
             Terms of Service.
->>>>>>> main
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
 =======

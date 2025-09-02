@@ -3,23 +3,7 @@ import { Award, Cloud, High, Server, Shield, Today, Users, Zap } from 'lucide-re
 
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-import {
-  Cloud,
-  Server,
-  Shield,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Users,
-  Award,
-} from 'lucide-react';
-<<<<<<< HEAD
-
-=======
 >>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
->>>>>>> main
 const CloudServices: NextPage = () => {
   return (
     <Layout
@@ -250,17 +234,10 @@ const CloudServices: NextPage = () => {
             Ready to Move to the Cloud?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-            Let's discuss how our cloud services can transform your
-            infrastructure and drive business growth.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-=======
-            Let&apos;s discuss how our cloud services can transform your'
+Let&apos;s discuss how our cloud services can transform your'
             infrastructure and drive business growth.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"

@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-import Layout from '../components/Layout';
-import { CheckCircle, Clock, Closed, Cloud, Common, File, Mail, MapPin, Mobile, Now, Phone, Send, User } from 'lucide-react';
-
-const Contact: NextPage = () => {
-=======
 import React from 'react';
 import Head from 'next/head';
 import {
@@ -96,7 +56,6 @@ export default function Contact() {
     'Digital Transformation',
     'DevOps & Automation',
   ];
->>>>>>> main
   return (
     <>
       <Head>
@@ -124,73 +83,7 @@ export default function Contact() {
           </div>
         </section>
 
-<<<<<<< HEAD
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="john@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="compunknown" className="block text-sm font-medium text-gray-700 mb-2">
-                    Compunknown
-                  </label>
-                  <input
-                    type="text"
-                    id="compunknown"
-                    name="compunknown"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Compunknown"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-development">AI Development</option>
-                    <option value="cloud-services">Cloud Services</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="mobile-development">Mobile Development</option>
-                    <option value="blockchain-solutions">Blockchain Solutions</option>
-                    <option value="iot-platforms">IoT Platforms</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project and how we can help..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
-=======
-        {/* Contact Methods */}
+{/* Contact Methods */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -201,7 +94,6 @@ export default function Contact() {
                   className="text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow"
 =======
                   className="text-center p-6 rounded-2xl border border-gray-200 hover: shadow-lg transition-shadow"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 >>>>>>> main
                 >
                   <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">
@@ -369,11 +261,7 @@ export default function Contact() {
                     {businessHours.map((schedule, index) => (
                       <div
                         key={index}
-<<<<<<< HEAD
-                        className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
-=======
-                        className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0"
                       >
                         <span className="font-medium text-gray-900">
                           {schedule.day}

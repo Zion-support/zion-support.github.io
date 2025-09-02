@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { ChevronDown, Cloud, Home, Menu, X } from 'lucide-react';
-
-=======
 import { Menu, X, ChevronDown } from 'lucide-react';
->>>>>>> main
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -27,11 +22,7 @@ const EnhancedNavigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <div className="hidden lg:flex items-center space-x-8">
-=======
-          <div className="hidden lg: flex items-center space-x-8">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+<div className="hidden lg: flex items-center space-x-8">
             <Link
               href="/"
               className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -56,11 +47,7 @@ const EnhancedNavigation: React.FC = () => {
               >
                 <Link
                   href="/services/ai-development"
-<<<<<<< HEAD
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-=======
-                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
                 >
                   AI Development
                 </Link>
@@ -120,11 +107,7 @@ const EnhancedNavigation: React.FC = () => {
               >
                 <Link
                   href="/solutions/enterprise"
-<<<<<<< HEAD
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-=======
-                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
                 >
                   Enterprise Solutions
                 </Link>

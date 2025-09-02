@@ -60,27 +60,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       '@type': 'ContactPoint', 'telephone': '+1-302-464-0950',
       'contactType': 'customer service', 'email': 'kleber@ziontechgroup.com'},
     'sameAs': [;
-<<<<<<< HEAD
-      'https://www.linkedin.com/compunknown/zion-tech-group',
-      'https://github.com/Zion-Technologies';
-    ],
-    'foundingDate': '2020',
-    'numberOfEmployees': '50-100',
-    'services': [;
-      'AI Development',
-      'Cloud Architecture',
-      'Cybersecurity',
-      'Blockchain Solutions',
-      'Micro SaaS Development',
-      'Enterprise IT Services',
-=======
-      'https: //www.linkedin.com/company/zion-tech-group', 'https: //github.com/Zion-Technologies';
+'https: //www.linkedin.com/company/zion-tech-group', 'https: //github.com/Zion-Technologies';
     ], 'foundingDate': '2020',
     'numberOfEmployees': '50-100', 'services': [;
       'AI Development', 'Cloud Architecture',
       'Cybersecurity', 'Blockchain Solutions',
       'Micro SaaS Development', 'Enterprise IT Services',
->>>>>>> main
       'Digital Transformation';
     ], 'areaServed': 'Worldwide',
     'knowsAbout': [

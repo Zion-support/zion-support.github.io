@@ -14,38 +14,7 @@
       "error": "Command failed: npx @next/bundle-analyzer\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error could not determine executable to run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_48_35_642Z-debug-0.log\n"
     }
   ],
-<<<<<<< HEAD
-  "seoImprovements": [
-    {
-      "command": "npm run sitemap",
-      "description": "Generate sitemap",
-      "success": true,
-      "output": "\n> bolt.new.zion.app@0.1.0 sitemap\n> node scripts/generate-sitemap.js\n\nGenerated sitemap with 17 pages\nSitemap saved to: /workspace/public/sitemap.xml\n"
-    },
-    {
-      "command": "node scripts/generate-search-index.js",
-      "description": "Generate search index",
-      "success": false,
-      "error": "Command failed: node scripts/generate-search-index.js\nfile:///workspace/scripts/generate-search-index.js:2\nimport fs from;\n              ^\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-    }
-  ],
-  "performanceEnhancements": [
-    {
-      "command": "npm run format",
-      "description": "Format code for better performance",
-      "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
-    },
-    {
-      "command": "npm run lint",
-      "description": "Lint code for performance issues",
-      "success": false,
-      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid Options:\n- Unknown options: useEslintrc, extensions, resolvePluginsRelativeTo, rulePaths, ignorePath, reportUnusedDisableDirectives\n- 'extensions' has been removed.\n- 'resolvePluginsRelativeTo' has been removed.\n- 'ignorePath' has been removed.\n- 'rulePaths' has been removed. Please define your rules using plugins.\n- 'reportUnusedDisableDirectives' has been removed. Please use the 'overrideConfig.linterOptions.reportUnusedDisableDirectives' option instead.\n"
-    }
-  ]
-}
-=======
-  "summary": {
+"summary": {
     "image_optimization": 3,
     "seo_improvement": 4,
     "performance_enhancement": 27,
@@ -56,4 +25,3 @@
     "code_structure": 2
   }
 }
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
