@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -26,18 +25,27 @@ export const SEO: React.FC<SEOProps> = ({
     'logo': 'https://ziontechgroup.com/logo.svg',
     'description': description,
     'sameAs': [
-      'https://linkedin.com/compunknown/zion-tech-group',
+      'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup'
     ],
     'contactPoint': {
       '@type': 'ContactPoint',
-      'telephone': '+1-555-ZION-TECH',
-      'contactType': 'customer service'
+      'telephone': '+1-302-464-0950',
+      'contactType': 'customer service',
+      'email': 'kleber@ziontechgroup.com'
+    },
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': '364 E Main St STE 1008',
+      'addressLocality': 'Middletown',
+      'addressRegion': 'DE',
+      'postalCode': '19709',
+      'addressCountry': 'US'
     }
   };
 
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -55,55 +63,24 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      
-      {/* Additional SEO */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-    </Helmet>
-  );
-};
-  title = 'Zion Tech Group - Advanced AI Solutions',
-  description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
-  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation',
-  image = '/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website'
-}) => {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      
-      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@ziontechgroup" />
       
-      {/* Additional SEO */}
-      <link rel="canonical" href={url} />
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#3B82F6" />
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     </Head>
   );
 };
 
+export default SEO;

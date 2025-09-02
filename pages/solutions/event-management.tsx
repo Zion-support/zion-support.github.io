@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+import SEO from '../../src/components/SEO';
+import { Card } from '../../src/components/ui/Card';
+import { Button } from '../../src/components/ui/Button';
+import { Badge } from '../../src/components/ui/Badge';
 import {
   Calendar,
   ArrowRight,

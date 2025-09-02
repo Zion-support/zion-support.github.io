@@ -526,6 +526,142 @@ export default function AIServices() {
       delivery: '14-26 weeks',
       category: 'Blockchain AI',
     },
+    {
+      title: 'AI-Powered Predictive Maintenance System',
+      description:
+        'Intelligent equipment monitoring with predictive failure analysis and automated maintenance scheduling',
+      icon: Settings,
+      features: [
+        'Real-time equipment health monitoring',
+        'Predictive failure analysis and alerts',
+        'Automated maintenance scheduling',
+        'Spare parts inventory optimization',
+        'Energy efficiency optimization',
+        'Integration with IoT sensors and SCADA systems',
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '10-16 weeks',
+      category: 'Predictive AI',
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Intelligence',
+      description:
+        'Advanced threat detection and response with behavioral analysis and automated incident response',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response and containment',
+        'Threat intelligence aggregation and analysis',
+        'Zero-day vulnerability detection',
+        'Integration with SIEM and security tools',
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '12-20 weeks',
+      category: 'Cybersecurity AI',
+    },
+    {
+      title: 'AI-Powered Financial Risk Management',
+      description:
+        'Intelligent financial risk assessment with real-time monitoring and automated decision making',
+      icon: TrendingUp,
+      features: [
+        'Real-time market risk analysis',
+        'Credit risk assessment and scoring',
+        'Operational risk monitoring',
+        'Regulatory compliance automation',
+        'Stress testing and scenario analysis',
+        'Integration with trading and banking systems',
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '16-24 weeks',
+      category: 'FinTech AI',
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description:
+        'Intelligent urban infrastructure management with IoT integration and citizen services optimization',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and management',
+        'Energy grid optimization and management',
+        'Waste management and recycling optimization',
+        'Public safety monitoring and response',
+        'Citizen service automation and optimization',
+        'Environmental monitoring and sustainability',
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '20-36 weeks',
+      category: 'Smart City AI',
+    },
+    {
+      title: 'AI-Powered Personalized Medicine Platform',
+      description:
+        'Intelligent healthcare with personalized treatment recommendations and drug discovery',
+      icon: Brain,
+      features: [
+        'Genomic analysis and personalized treatment',
+        'Drug interaction and side effect prediction',
+        'Treatment outcome prediction and optimization',
+        'Clinical trial matching and optimization',
+        'Patient monitoring and health tracking',
+        'Integration with medical devices and EHR',
+      ],
+      pricing: '$18,000 - $70,000/month',
+      delivery: '18-32 weeks',
+      category: 'Personalized Medicine AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Trading System',
+      description:
+        'Intelligent algorithmic trading with market analysis and risk management',
+      icon: BarChart3,
+      features: [
+        'Real-time market analysis and prediction',
+        'Automated trading strategy execution',
+        'Risk management and position sizing',
+        'Portfolio optimization and rebalancing',
+        'Market sentiment analysis and news impact',
+        'Integration with trading platforms and exchanges',
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Trading AI',
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description:
+        'Intelligent energy distribution and consumption optimization with renewable integration',
+      icon: Zap,
+      features: [
+        'Real-time energy demand forecasting',
+        'Renewable energy integration and optimization',
+        'Grid stability and load balancing',
+        'Energy storage optimization',
+        'Peak demand management and pricing',
+        'Integration with smart meters and IoT devices',
+      ],
+      pricing: '$22,000 - $85,000/month',
+      delivery: '22-38 weeks',
+      category: 'Energy AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Drone Fleet',
+      description:
+        'Intelligent drone coordination for delivery, surveillance, and emergency response',
+      icon: Network,
+      features: [
+        'Autonomous flight planning and navigation',
+        'Multi-drone coordination and swarm intelligence',
+        'Real-time obstacle avoidance and safety',
+        'Payload optimization and delivery routing',
+        'Weather and environmental adaptation',
+        'Integration with air traffic control systems',
+      ],
+      pricing: '$30,000 - $120,000/month',
+      delivery: '24-48 weeks',
+      category: 'Drone AI',
+    },
   ];
   const aiTechnologies = [
     {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap, Leaf } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -531,6 +531,176 @@ export default function ITServices() {
       pricing: '$4,000 - $20,000/month',
       delivery: '4-12 weeks',
       category: 'Backup Services',
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description:
+        'Distributed edge computing solutions for low-latency applications and real-time processing',
+      icon: Server,
+      features: [
+        'Edge data center design and deployment',
+        'Edge AI and machine learning processing',
+        'Content delivery network optimization',
+        'Edge security and access control',
+        'Real-time data processing and analytics',
+        'Integration with cloud and on-premises systems',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing Services',
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description:
+        'Integrated compute, storage, and networking solutions for simplified data center management',
+      icon: Database,
+      features: [
+        'HCI platform design and implementation',
+        'Software-defined storage and networking',
+        'Automated resource provisioning',
+        'High availability and disaster recovery',
+        'Performance monitoring and optimization',
+        'Migration from traditional infrastructure',
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-20 weeks',
+      category: 'HCI Services',
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description:
+        'Unified management and orchestration across multiple cloud providers and environments',
+      icon: Cloud,
+      features: [
+        'Multi-cloud resource orchestration',
+        'Cost optimization and governance',
+        'Security and compliance management',
+        'Application portability and migration',
+        'Unified monitoring and analytics',
+        'Disaster recovery across clouds',
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Multi-Cloud Services',
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description:
+        'Comprehensive zero trust security implementation with identity and access management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Device trust and compliance',
+        'Security automation and orchestration',
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Zero Trust Services',
+    },
+    {
+      title: 'API Gateway & Management Platform',
+      description:
+        'Comprehensive API management with security, monitoring, and developer portal',
+      icon: Network,
+      features: [
+        'API gateway design and implementation',
+        'API security and authentication',
+        'Rate limiting and throttling',
+        'API analytics and monitoring',
+        'Developer portal and documentation',
+        'API versioning and lifecycle management',
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'API Management Services',
+    },
+    {
+      title: 'Data Lake & Analytics Platform',
+      description:
+        'Scalable data lake architecture with advanced analytics and machine learning capabilities',
+      icon: Database,
+      features: [
+        'Data lake architecture design',
+        'ETL/ELT pipeline development',
+        'Real-time streaming analytics',
+        'Data governance and cataloging',
+        'Machine learning model deployment',
+        'Business intelligence and visualization',
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Data Analytics Services',
+    },
+    {
+      title: 'Microservices Architecture & Containerization',
+      description:
+        'Modern application architecture with microservices and container orchestration',
+      icon: Settings,
+      features: [
+        'Microservices architecture design',
+        'Container orchestration with Kubernetes',
+        'Service mesh implementation',
+        'API gateway and service discovery',
+        'Monitoring and observability',
+        'CI/CD pipeline automation',
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Microservices Services',
+    },
+    {
+      title: 'Disaster Recovery & Business Continuity',
+      description:
+        'Comprehensive disaster recovery planning and implementation with automated failover',
+      icon: Shield,
+      features: [
+        'Disaster recovery strategy and planning',
+        'Automated backup and replication',
+        'Failover and failback procedures',
+        'Recovery time objective optimization',
+        'Testing and validation procedures',
+        'Compliance and audit support',
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'DR/BC Services',
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description:
+        'Comprehensive IT service management with ITSM tools and process optimization',
+      icon: Users,
+      features: [
+        'ITSM platform implementation',
+        'Service catalog and request management',
+        'Incident and problem management',
+        'Change and release management',
+        'Asset and configuration management',
+        'Service level agreement monitoring',
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-14 weeks',
+      category: 'ITSM Services',
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description:
+        'Sustainable IT infrastructure with energy efficiency and carbon footprint reduction',
+      icon: Leaf,
+      features: [
+        'Energy-efficient infrastructure design',
+        'Carbon footprint assessment and reduction',
+        'Renewable energy integration',
+        'E-waste management and recycling',
+        'Sustainable procurement practices',
+        'Environmental compliance and reporting',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-18 weeks',
+      category: 'Green IT Services',
     },
   ];
   const technologies = [

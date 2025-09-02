@@ -15,23 +15,20 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !==,
-  POST') {
-    return res.status(405).json({ error: 'Method not allowed });
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const data: WebVitalsData = req.body;
 
     // Validate required fields
-    if (!data.name || typeof data.value !==,
-  number') {
-      return res.status(400).json({ error: 'Invalid data format });
+    if (!data.name || typeof data.value !== 'number') {
+      return res.status(400).json({ error: 'Invalid data format' });
     }
 
-    // Log the web vitals data (in production, you,
-  d send this to your analytics service)
-    console.log('Web Vitals: , {
+    // Log the web vitals data (in production, you'd send this to your analytics service)
+    console.log('Web Vitals:', {
       metric: data.name,
       value: data.value,
       url: data.url,
@@ -51,9 +48,7 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error(
-  'Error processing web vitals:,
-  , error);
-    res.status(500).json({ error: 'Internal server error });
+    console.error('Error processing web vitals:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
