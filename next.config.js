@@ -1,74 +1,111 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "font-src 'self' https://fonts.gstatic.com",
+              "img-src 'self' data: https: blob:",
+              "connect-src 'self' https://www.google-analytics.com https://api.ziontechgroup.com",
+              "frame-src 'none'",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'"
+            ].join('; ')
+          }
+        ]
+      }
+    ];
+  },
+
+  // Redirects for SEO
+  async redirects() {
+    return [
+      {
+        source: '/services',
+        destination: '/services-overview',
+        permanent: true
+      },
+      {
+        source: '/blog',
+        destination: '/blog',
+        permanent: false
+      }
+    ];
+  },
+
+
+
+  // Bundle analyzer can be enabled with ANALYZE=true npm run build
+
+  // Experimental features
   experimental: {
-    esmExternals: false,
-    optimizeCss: false,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js'
+        }
+      }
+    }
   },
-  output: 'standalone',
+
+  // Output configuration
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ['ziontechgroup.com'],
-    unoptimized: true,
+    unoptimized: true
   },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-  webpack: (config, { dev, isServer }) => {
-    // Exclude contracts directory from compilation
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      include: [
-        /src/,
-        /pages/,
-        /components/,
-      ],
-      exclude: [
-        /node_modules/,
-        /contracts/,
-        /api-backup/,
-        /pages\.disabled/,
-        /backup-pages/,
-        /\.backup/,
-        /\.disabled/,
-        /automation\/backups/,
-        /automation_backup/,
-        /broken_files_backup/,
-        /contracts/,
-        /cypress/,
-      ],
-    });
-    
-    // Exclude contracts directory specifically
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'hardhat/config': false,
-    };
-    
-    // Add fallback for problematic modules
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-    };
-    
-    return config;
-  },
-  // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  onDemandEntries: {
-    // period (in ms) where the server will keep pages in the buffer
-    maxInactiveAge: 25 * 1000,
-    // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2,
-  },
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY
+  }
 };
 
 export default nextConfig;

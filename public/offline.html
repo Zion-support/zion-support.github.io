@@ -4,292 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
-    <meta name="description" content="You're currently offline. Check your connection and try again.">
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #f8fafc;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            color: white;
         }
-
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
-        .offline-container {
+        
+        .container {
             text-align: center;
             max-width: 500px;
-            background: rgba(30, 41, 59, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
         }
-
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
-        .offline-icon {
+        
+        .icon {
             width: 80px;
             height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #ef4444, #dc2626);
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
-            color: white;
-            margin-bottom: 30px;
+            font-size: 2rem;
         }
-
-        .offline-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #f8fafc, #cbd5e1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .offline-message {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #cbd5e1;
-            margin-bottom: 30px;
-        }
-
-        .retry-button {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 10px;
-            font-size: 16px;
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
             font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .retry-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-bottom: 20px;
+            text-decoration: none;
+            display: inline-block;
         }
-
-        .retry-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        
+        .retry-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
         }
-
-        .retry-button:active {
-            transform: translateY(0);
-        }
-
-        .offline-features {
+        
+        .features {
+            margin-top: 3rem;
             text-align: left;
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 15px;
-            border: 1px solid rgba(148, 163, 184, 0.1);
         }
-
-        .offline-features h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #f1f5f9;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-list li {
-            padding: 8px 0;
-            color: #94a3b8;
+        
+        .feature {
             display: flex;
             align-items: center;
+            margin-bottom: 1rem;
+            opacity: 0.8;
         }
-
-        .feature-list li::before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 18px;
-        }
-
-        .connection-status {
-            margin-top: 20px;
-            padding: 15px;
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 10px;
-            color: #fca5a5;
-        }
-
-        .connection-status.connected {
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            color: #86efac;
-        }
-
-        @media (max-width: 480px) {
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
-            .offline-container {
-                padding: 30px 20px;
-            }
-            
-            .offline-title {
-                font-size: 24px;
-            }
-            
-            .offline-message {
-                font-size: 14px;
-            }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
-            }
+        
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
-    <div class="offline-container">
-        <div class="offline-icon pulse">
-            📡
-        </div>
+    <div class="container">
+        <div class="icon">📡</div>
+        <h1>You're Offline</h1>
+        <p>It looks like you've lost your internet connection. Don't worry, some features are still available offline.</p>
         
-        <h1 class="offline-title">You're Offline</h1>
+        <a href="/" class="retry-btn" onclick="window.location.reload()">
+            Try Again
+        </a>
         
-        <p class="offline-message">
-            It looks like you've lost your internet connection. Don't worry - we're here to help you get back online and continue exploring Zion Tech Group's innovative solutions.
-        </p>
-        
-        <button class="retry-button" onclick="retryConnection()">
-            🔄 Try Again
-        </button>
-        
-        <div class="connection-status" id="connectionStatus">
-            <strong>Status:</strong> Checking connection...
-        </div>
-        
-        <div class="offline-features">
-            <h3>What you can do while offline:</h3>
-            <ul class="feature-list">
-                <li>Review previously cached content</li>
-                <li>Access saved documents and resources</li>
-                <li>Use offline features of our PWA</li>
-                <li>Prepare your questions for when you're back online</li>
-            </ul>
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">✓</div>
+                <span>Previously visited pages are cached</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✓</div>
+                <span>Contact forms will sync when online</span>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✓</div>
+                <span>Essential information is available</span>
+            </div>
         </div>
     </div>
     
     <script>
-        let connectionCheckInterval;
-        
-        // Check connection status
-        function checkConnection() {
-            const statusElement = document.getElementById('connectionStatus');
-            
-            if (navigator.onLine) {
-                statusElement.innerHTML = '<strong>Status:</strong> Connected! Redirecting...';
-                statusElement.className = 'connection-status connected';
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
-                
-                // Redirect to main page after a short delay
-                setTimeout(() => {
-                    window.location.href = '/';
-                }, 2000);
-                
-                clearInterval(connectionCheckInterval);
-            } else {
-                statusElement.innerHTML = '<strong>Status:</strong> Still offline. Please check your connection.';
-                statusElement.className = 'connection-status';
-            }
-        }
-        
-        // Retry connection
-        function retryConnection() {
-            const statusElement = document.getElementById('connectionStatus');
-            statusElement.innerHTML = '<strong>Status:</strong> Checking connection...';
-            
-            // Try to fetch a small resource to test connection
-            fetch('/favicon.ico', { cache: 'no-cache' })
-                .then(() => {
-                    if (navigator.onLine) {
-                        statusElement.innerHTML = '<strong>Status:</strong> Connected! Redirecting...';
-                        statusElement.className = 'connection-status connected';
-                        
-                        setTimeout(() => {
-                            window.location.href = '/';
-                        }, 2000);
-                    }
-                })
-                .catch(() => {
-                    statusElement.innerHTML = '<strong>Status:</strong> Still offline. Please check your connection.';
-                    statusElement.className = 'connection-status';
-                });
-        }
-        
-        // Listen for online/offline events
+        // Check if we're back online
         window.addEventListener('online', () => {
-            checkConnection();
+            window.location.reload();
         });
         
-        window.addEventListener('offline', () => {
-            const statusElement = document.getElementById('connectionStatus');
-            statusElement.innerHTML = '<strong>Status:</strong> Connection lost.';
-            statusElement.className = 'connection-status';
-        });
-        
-        // Check connection every 5 seconds
-        connectionCheckInterval = setInterval(checkConnection, 5000);
-        
-        // Initial check
-        checkConnection();
-        
-        // Service Worker registration
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then((registration) => {
-                    console.log('Service Worker registered successfully:', registration);
-                })
-                .catch((error) => {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
-        
-        // Add some interactive elements
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add click effect to retry button
-            const retryButton = document.querySelector('.retry-button');
-            retryButton.addEventListener('click', () => {
-                retryButton.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    retryButton.style.transform = 'scale(1)';
-                }, 150);
-            });
-        });
->>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+        // Retry connection every 30 seconds
+        setInterval(() => {
+            if (navigator.onLine) {
+                window.location.reload();
+            }
+        }, 30000);
     </script>
 </body>
 </html>

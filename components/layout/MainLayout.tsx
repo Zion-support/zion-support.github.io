@@ -4,6 +4,8 @@ import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import ErrorBoundary from '../ErrorBoundary';
+import PerformanceMonitor from '../PerformanceMonitor';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -101,14 +103,17 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
+      <PerformanceMonitor />
       
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main id="main-content" className="flex-grow" role="main">
-          {children}
-        </main>
-        <Footer />
-      </div>
+      <ErrorBoundary>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main id="main-content" className="flex-grow" role="main">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </ErrorBoundary>
     </>
   );
 };
