@@ -1,19 +1,48 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
-
 import Head from 'next/head';
 import Link from 'next/link';
-// import PageTransition from '../src/components/PageTransition';
+import {
+  Server,
+  Cloud,
+  Shield,
+  Database,
+  Network,
+  Monitor,
+  Smartphone,
+  Globe,
+  Lock,
+  Settings,
+  Zap,
+  Users,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
+  Star,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Code,
+  Terminal,
+  FileText,
+  Mail,
+  Phone,
+  MapPin,
+  TrendingUp,
+  Brain,
+  Link2
+} from 'lucide-react';
+import PageTransition from '../src/components/PageTransition';
+
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
-  const description =
-    'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
+  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
 
   const itServices = [
     {
       title: 'Cloud Infrastructure & Migration',
-      description:
-        'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',
+      description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',
       icon: Cloud,
       features: [
         'Multi-cloud architecture design and implementation',
@@ -21,16 +50,15 @@ export default function ITServices() {
         'Serverless computing and containerization',
         'Auto-scaling and load balancing',
         'Cost optimization and FinOps practices',
-        'Disaster recovery and backup solutions',
+        'Disaster recovery and backup solutions'
       ],
-      pricing: '$5,000 - $50, 000/month',
+      pricing: '$5,000 - $50,000/month',
       delivery: '4-12 weeks',
-      category: 'Cloud Services',
+      category: 'Cloud Services'
     },
     {
       title: 'Cybersecurity & Compliance',
-      description:
-        'Enterprise-grade security solutions and compliance management',
+      description: 'Enterprise-grade security solutions and compliance management',
       icon: Shield,
       features: [
         'Zero-trust security architecture',
@@ -38,16 +66,15 @@ export default function ITServices() {
         'Penetration testing and vulnerability assessments',
         'Security monitoring and incident response',
         'Identity and access management (IAM)',
-        'Data encryption and privacy protection',
+        'Data encryption and privacy protection'
       ],
-      pricing: '$3,000 - $25, 000/month',
+      pricing: '$3,000 - $25,000/month',
       delivery: '3-8 weeks',
-      category: 'Security Services',
+      category: 'Security Services'
     },
     {
       title: 'Network Infrastructure',
-      description:
-        'Design, implementation, and management of enterprise networks',
+      description: 'Design, implementation, and management of enterprise networks',
       icon: Network,
       features: [
         'SD-WAN and hybrid network solutions',
@@ -55,11 +82,11 @@ export default function ITServices() {
         'Wireless network design and optimization',
         'Network monitoring and performance tuning',
         'VoIP and unified communications',
-        'Network documentation and training',
+        'Network documentation and training'
       ],
-      pricing: '$2,000 - $15, 000/month',
+      pricing: '$2,000 - $15,000/month',
       delivery: '2-6 weeks',
-      category: 'Network Services',
+      category: 'Network Services'
     },
     {
       title: 'IT Support & Helpdesk',
@@ -71,16 +98,15 @@ export default function ITServices() {
         'Software installation and updates',
         'Hardware procurement and management',
         'User training and documentation',
-        'SLA-based response times',
+        'SLA-based response times'
       ],
-      pricing: '$1,500 - $8, 000/month',
+      pricing: '$1,500 - $8,000/month',
       delivery: '1-2 weeks',
-      category: 'Support Services',
+      category: 'Support Services'
     },
     {
       title: 'Data Management & Analytics',
-      description:
-        'Data warehousing, analytics, and business intelligence solutions',
+      description: 'Data warehousing, analytics, and business intelligence solutions',
       icon: Database,
       features: [
         'Data warehouse design and implementation',
@@ -88,11 +114,11 @@ export default function ITServices() {
         'Business intelligence dashboards',
         'Data governance and quality management',
         'Real-time analytics and reporting',
-        'Machine learning data preparation',
+        'Machine learning data preparation'
       ],
-      pricing: '$4,000 - $30, 000/month',
+      pricing: '$4,000 - $30,000/month',
       delivery: '6-16 weeks',
-      category: 'Data Services',
+      category: 'Data Services'
     },
     {
       title: 'DevOps & CI/CD',
@@ -104,16 +130,15 @@ export default function ITServices() {
         'Container orchestration with Kubernetes',
         'Monitoring and logging solutions',
         'Automated testing and quality gates',
-        'DevSecOps and security integration',
+        'DevSecOps and security integration'
       ],
-      pricing: '$3,500 - $20, 000/month',
+      pricing: '$3,500 - $20,000/month',
       delivery: '4-10 weeks',
-      category: 'DevOps Services',
+      category: 'DevOps Services'
     },
     {
       title: 'Digital Transformation',
-      description:
-        'End-to-end digital transformation consulting and implementation',
+      description: 'End-to-end digital transformation consulting and implementation',
       icon: Zap,
       features: [
         'Digital strategy and roadmap development',
@@ -121,11 +146,11 @@ export default function ITServices() {
         'Legacy system modernization',
         'Change management and training',
         'Technology stack evaluation',
-        'ROI measurement and optimization',
+        'ROI measurement and optimization'
       ],
-      pricing: '$10,000 - $100, 000/month',
+      pricing: '$10,000 - $100,000/month',
       delivery: '12-24 weeks',
-      category: 'Consulting Services',
+      category: 'Consulting Services'
     },
     {
       title: 'Managed IT Services',
@@ -137,16 +162,15 @@ export default function ITServices() {
         'Performance optimization',
         'Capacity planning and scaling',
         'Vendor management and procurement',
-        'IT strategy and planning',
+        'IT strategy and planning'
       ],
-      pricing: '$2,500 - $15, 000/month',
+      pricing: '$2,500 - $15,000/month',
       delivery: '2-4 weeks',
-      category: 'Managed Services',
+      category: 'Managed Services'
     },
     {
       title: 'Blockchain & Web3 Solutions',
-      description:
-        'Blockchain development, smart contracts, and decentralized applications',
+      description: 'Blockchain development, smart contracts, and decentralized applications',
       icon: Network,
       features: [
         'Smart contract development and auditing',
@@ -154,16 +178,15 @@ export default function ITServices() {
         'Blockchain integration and consulting',
         'Cryptocurrency wallet development',
         'Tokenomics and governance design',
-        'Cross-chain interoperability solutions',
+        'Cross-chain interoperability solutions'
       ],
-      pricing: '$8,000 - $50, 000/month',
+      pricing: '$8,000 - $50,000/month',
       delivery: '8-20 weeks',
-      category: 'Blockchain Services',
+      category: 'Blockchain Services'
     },
     {
       title: 'IoT & Edge Computing',
-      description:
-        'Internet of Things solutions and edge computing infrastructure',
+      description: 'Internet of Things solutions and edge computing infrastructure',
       icon: Cpu,
       features: [
         'IoT device development and integration',
@@ -171,16 +194,15 @@ export default function ITServices() {
         'Real-time data processing and analytics',
         'IoT security and device management',
         'Sensor network design and deployment',
-        'Edge AI and machine learning integration',
+        'Edge AI and machine learning integration'
       ],
-      pricing: '$5,000 - $30, 000/month',
+      pricing: '$5,000 - $30,000/month',
       delivery: '6-16 weeks',
-      category: 'IoT Services',
+      category: 'IoT Services'
     },
     {
       title: 'Quantum Computing Consulting',
-      description:
-        'Quantum computing strategy, algorithm development, and implementation',
+      description: 'Quantum computing strategy, algorithm development, and implementation',
       icon: Cpu,
       features: [
         'Quantum algorithm development',
@@ -188,11 +210,11 @@ export default function ITServices() {
         'Hybrid classical-quantum solutions',
         'Quantum security and cryptography',
         'Quantum machine learning applications',
-        'Quantum hardware evaluation and selection',
+        'Quantum hardware evaluation and selection'
       ],
-      pricing: '$15,000 - $100, 000/month',
+      pricing: '$15,000 - $100,000/month',
       delivery: '12-24 weeks',
-      category: 'Quantum Services',
+      category: 'Quantum Services'
     },
     {
       title: '5G & Network Modernization',
@@ -204,16 +226,15 @@ export default function ITServices() {
         'Legacy network migration',
         'Private 5G network setup',
         'Network performance monitoring',
-        'Edge computing integration',
+        'Edge computing integration'
       ],
-      pricing: '$10,000 - $75, 000/month',
+      pricing: '$10,000 - $75,000/month',
       delivery: '8-20 weeks',
-      category: 'Network Services',
+      category: 'Network Services'
     },
     {
       title: 'AR/VR Development & Implementation',
-      description:
-        'Augmented and virtual reality solutions for business applications',
+      description: 'Augmented and virtual reality solutions for business applications',
       icon: Monitor,
       features: [
         'AR/VR application development',
@@ -221,16 +242,15 @@ export default function ITServices() {
         'Immersive training and simulation',
         'Virtual showroom and retail solutions',
         'AR/VR hardware integration',
-        'Performance optimization and testing',
+        'Performance optimization and testing'
       ],
-      pricing: '$6,000 - $40, 000/month',
+      pricing: '$6,000 - $40,000/month',
       delivery: '8-16 weeks',
-      category: 'AR/VR Services',
+      category: 'AR/VR Services'
     },
     {
       title: 'API Management & Integration',
-      description:
-        'Comprehensive API strategy, development, and management platform',
+      description: 'Comprehensive API strategy, development, and management platform',
       icon: Code,
       features: [
         'API design and development',
@@ -238,16 +258,15 @@ export default function ITServices() {
         'Third-party API integration',
         'API security and authentication',
         'API analytics and monitoring',
-        'Microservices architecture design',
+        'Microservices architecture design'
       ],
-      pricing: '$3,000 - $20, 000/month',
+      pricing: '$3,000 - $20,000/month',
       delivery: '4-12 weeks',
-      category: 'API Services',
+      category: 'API Services'
     },
     {
       title: 'Disaster Recovery & Business Continuity',
-      description:
-        'Comprehensive disaster recovery planning and implementation',
+      description: 'Comprehensive disaster recovery planning and implementation',
       icon: Shield,
       features: [
         'Disaster recovery strategy development',
@@ -255,11 +274,11 @@ export default function ITServices() {
         'Business continuity planning',
         'Recovery time objective optimization',
         'Testing and validation services',
-        'Compliance and audit support',
+        'Compliance and audit support'
       ],
-      pricing: '$5,000 - $35, 000/month',
+      pricing: '$5,000 - $35,000/month',
       delivery: '6-16 weeks',
-      category: 'Recovery Services',
+      category: 'Recovery Services'
     },
     {
       title: 'Green IT & Sustainability Solutions',
@@ -271,16 +290,15 @@ export default function ITServices() {
         'Sustainable cloud migration',
         'Green data center optimization',
         'E-waste management and recycling',
-        'Sustainability reporting and compliance',
+        'Sustainability reporting and compliance'
       ],
-      pricing: '$4,000 - $25, 000/month',
+      pricing: '$4,000 - $25,000/month',
       delivery: '6-14 weeks',
-      category: 'Sustainability Services',
+      category: 'Sustainability Services'
     },
     {
       title: 'FinTech & Payment Solutions',
-      description:
-        'Financial technology solutions and payment system integration',
+      description: 'Financial technology solutions and payment system integration',
       icon: Database,
       features: [
         'Payment gateway integration',
@@ -288,181 +306,15 @@ export default function ITServices() {
         'Compliance and regulatory solutions',
         'Fraud detection and prevention',
         'Digital banking solutions',
-        'Cryptocurrency integration',
+        'Cryptocurrency integration'
       ],
-      pricing: '$8,000 - $60, 000/month',
+      pricing: '$8,000 - $60,000/month',
       delivery: '10-24 weeks',
-      category: 'FinTech Services',
+      category: 'FinTech Services'
     },
     {
       title: 'Advanced Blockchain & Web3 Infrastructure',
-      description:
-        'Enterprise blockchain solutions with smart contracts and DeFi integration',
-      icon: Network,
-      features: [
-        'Enterprise blockchain platform development',
-        'Smart contract auditing and optimization',
-        'DeFi protocol integration and development',
-        'Cross-chain interoperability solutions',
-        'NFT marketplace and tokenization',
-        'Blockchain governance and DAO implementation',
-      ],
-      pricing: '$12,000 - $80,000/month',
-      delivery: '12-24 weeks',
-      category: 'Web3 Services',
-    },
-    {
-      title: 'AI Infrastructure & MLOps',
-      description:
-        'Complete AI infrastructure setup with machine learning operations and model deployment',
-      icon: Brain,
-      features: [
-        'AI/ML infrastructure design and setup',
-        'Model training and deployment pipelines',
-        'MLOps and model lifecycle management',
-        'GPU cluster management and optimization',
-        'AI model monitoring and governance',
-        'AutoML and hyperparameter optimization',
-      ],
-      pricing: '$8,000 - $50,000/month',
-      delivery: '8-16 weeks',
-      category: 'AI Infrastructure',
-    },
-    {
-      title: 'Edge Computing & Distributed Systems',
-      description:
-        'Edge computing infrastructure with distributed system architecture and optimization',
-      icon: Cpu,
-      features: [
-        'Edge computing platform design and deployment',
-        'Distributed system architecture and optimization',
-        'Real-time data processing and streaming',
-        'Edge AI and inference optimization',
-        'Multi-cloud and hybrid edge solutions',
-        'Edge security and device management',
-      ],
-      pricing: '$6,000 - $40,000/month',
-      delivery: '8-16 weeks',
-      category: 'Edge Computing',
-    },
-    {
-      title: 'Cybersecurity Operations Center (SOC)',
-      description:
-        '24/7 security monitoring and incident response with advanced threat detection',
-      icon: Shield,
-      features: [
-        '24/7 security monitoring and alerting',
-        'Advanced threat detection and response',
-        'Security incident investigation and forensics',
-        'Threat intelligence and analysis',
-        'Security awareness training and simulation',
-        'Compliance monitoring and reporting',
-      ],
-      pricing: '$10,000 - $60,000/month',
-      delivery: '6-12 weeks',
-      category: 'Security Operations',
-    },
-    {
-      title: 'Digital Twin & Simulation Platforms',
-      description:
-        'Digital twin development and simulation platforms for industrial and business applications',
-      icon: Monitor,
-      features: [
-        'Digital twin architecture and development',
-        'Real-time simulation and modeling',
-        'IoT sensor integration and data processing',
-        'Predictive maintenance and optimization',
-        'Virtual testing and validation',
-        'Integration with existing systems',
-      ],
-      pricing: '$15,000 - $100,000/month',
-      delivery: '12-24 weeks',
-      category: 'Digital Twin',
-    },
-    {
-      title: 'Zero Trust Security Architecture',
-      description:
-        'Comprehensive zero trust security implementation with identity and access management',
-      icon: Shield,
-      features: [
-        'Zero trust architecture design and implementation',
-        'Identity and access management (IAM)',
-        'Micro-segmentation and network security',
-        'Continuous authentication and monitoring',
-        'Privileged access management (PAM)',
-        'Security policy automation and enforcement',
-      ],
-      pricing: '$12,000 - $75,000/month',
-      delivery: '10-20 weeks',
-      category: 'Zero Trust',
-    },
-    {
-      title: 'Hyperautomation & RPA Solutions',
-      description:
-        'Intelligent process automation with robotic process automation and AI integration',
-      icon: Settings,
-      features: [
-        'Robotic process automation (RPA) implementation',
-        'Intelligent document processing and OCR',
-        'Workflow automation and optimization',
-        'AI-powered decision making and routing',
-        'Process mining and discovery',
-        'Integration with enterprise systems',
-      ],
-      pricing: '$5,000 - $35,000/month',
-      delivery: '6-16 weeks',
-      category: 'Automation',
-    },
-    {
-      title: 'Advanced Data Engineering & Lakehouse',
-      description:
-        'Modern data engineering with data lakehouse architecture and real-time processing',
-      icon: Database,
-      features: [
-        'Data lakehouse architecture design',
-        'Real-time data streaming and processing',
-        'Data pipeline automation and orchestration',
-        'Data quality and governance implementation',
-        'Advanced analytics and ML integration',
-        'Multi-cloud data strategy and migration',
-      ],
-      pricing: '$8,000 - $50,000/month',
-      delivery: '10-20 weeks',
-      category: 'Data Engineering',
-    },
-    {
-      title: 'Cloud-Native Application Development',
-      description:
-        'Modern cloud-native application development with microservices and serverless architecture',
-      icon: Cloud,
-      features: [
-        'Microservices architecture design and implementation',
-        'Serverless application development',
-        'Container orchestration and management',
-        'API-first development and integration',
-        'Cloud-native security and monitoring',
-        'Performance optimization and scaling',
-      ],
-      pricing: '$6,000 - $40,000/month',
-      delivery: '8-16 weeks',
-      category: 'Cloud Native',
-    },
-    {
-      title: 'Advanced Network Security & SD-WAN',
-      description:
-        'Next-generation network security with software-defined wide area networking',
-      icon: Network,
-      features: [
-        'SD-WAN design and implementation',
-        'Next-generation firewall deployment',
-        'Network segmentation and micro-segmentation',
-        'Advanced threat protection and detection',
-        'Network performance monitoring and optimization',
-        'Cloud connectivity and hybrid networking',
-      ],
-      pricing: '$8,000 - $45,000/month',
-      delivery: '8-16 weeks',
-      category: 'Network Security',
+      description: 'Enterprise blockchain solutions with smart contracts and DeFi integration',
       icon: Network,
       features: [
         'Multi-chain blockchain architecture design',
@@ -470,16 +322,15 @@ export default function ITServices() {
         'DeFi protocol integration and optimization',
         'NFT marketplace and tokenization platforms',
         'Cross-chain bridge development',
-        'Regulatory compliance and KYC/AML solutions',
+        'Regulatory compliance and KYC/AML solutions'
       ],
       pricing: '$15,000 - $80,000/month',
       delivery: '12-32 weeks',
-      category: 'Blockchain Services',
+      category: 'Blockchain Services'
     },
     {
       title: 'IoT & Edge Computing Solutions',
-      description:
-        'Comprehensive IoT ecosystem with edge computing and real-time analytics',
+      description: 'Comprehensive IoT ecosystem with edge computing and real-time analytics',
       icon: Cpu,
       features: [
         'IoT device integration and management',
@@ -487,16 +338,15 @@ export default function ITServices() {
         'Real-time data processing and analytics',
         'Industrial IoT (IIoT) solutions',
         'Smart city and building automation',
-        'Predictive maintenance and monitoring',
+        'Predictive maintenance and monitoring'
       ],
       pricing: '$10,000 - $50,000/month',
       delivery: '8-24 weeks',
-      category: 'IoT Services',
+      category: 'IoT Services'
     },
     {
       title: 'Advanced Cybersecurity & Zero Trust',
-      description:
-        'Next-generation security architecture with AI-powered threat detection',
+      description: 'Next-generation security architecture with AI-powered threat detection',
       icon: Shield,
       features: [
         'Zero Trust security architecture implementation',
@@ -504,16 +354,15 @@ export default function ITServices() {
         'Advanced persistent threat (APT) protection',
         'Security orchestration and automation (SOAR)',
         'Identity and access management (IAM)',
-        'Compliance automation and reporting',
+        'Compliance automation and reporting'
       ],
       pricing: '$12,000 - $60,000/month',
       delivery: '10-28 weeks',
-      category: 'Advanced Security',
+      category: 'Advanced Security'
     },
     {
       title: 'Quantum Computing & Cryptography',
-      description:
-        'Quantum computing solutions and post-quantum cryptography implementation',
+      description: 'Quantum computing solutions and post-quantum cryptography implementation',
       icon: Cpu,
       features: [
         'Quantum algorithm development and optimization',
@@ -521,16 +370,15 @@ export default function ITServices() {
         'Quantum key distribution (QKD) systems',
         'Quantum simulation and modeling',
         'Hybrid classical-quantum computing',
-        'Quantum security assessment and consulting',
+        'Quantum security assessment and consulting'
       ],
       pricing: '$25,000 - $150,000/month',
       delivery: '20-48 weeks',
-      category: 'Quantum Services',
+      category: 'Quantum Services'
     },
     {
       title: 'Advanced Data Engineering & Analytics',
-      description:
-        'Enterprise data platforms with real-time processing and AI integration',
+      description: 'Enterprise data platforms with real-time processing and AI integration',
       icon: Database,
       features: [
         'Real-time data streaming and processing',
@@ -538,16 +386,15 @@ export default function ITServices() {
         'Data lake and data warehouse architecture',
         'ETL/ELT automation and optimization',
         'Data governance and quality management',
-        'Business intelligence and visualization',
+        'Business intelligence and visualization'
       ],
       pricing: '$8,000 - $40,000/month',
       delivery: '8-20 weeks',
-      category: 'Data Services',
+      category: 'Data Services'
     },
     {
       title: 'Microservices & API Architecture',
-      description:
-        'Scalable microservices architecture with API management and governance',
+      description: 'Scalable microservices architecture with API management and governance',
       icon: Code,
       features: [
         'Microservices architecture design and implementation',
@@ -555,16 +402,15 @@ export default function ITServices() {
         'Service mesh implementation (Istio, Linkerd)',
         'Container orchestration and management',
         'API security and rate limiting',
-        'Service discovery and load balancing',
+        'Service discovery and load balancing'
       ],
       pricing: '$6,000 - $30,000/month',
       delivery: '6-16 weeks',
-      category: 'Architecture Services',
+      category: 'Architecture Services'
     },
     {
       title: 'Advanced Cloud Native Solutions',
-      description:
-        'Cloud-native application development with serverless and containerization',
+      description: 'Cloud-native application development with serverless and containerization',
       icon: Cloud,
       features: [
         'Serverless architecture design and implementation',
@@ -572,16 +418,15 @@ export default function ITServices() {
         'Cloud-native CI/CD pipeline development',
         'Multi-cloud and hybrid cloud solutions',
         'Cloud cost optimization and FinOps',
-        'Disaster recovery and backup automation',
+        'Disaster recovery and backup automation'
       ],
       pricing: '$10,000 - $45,000/month',
       delivery: '8-20 weeks',
-      category: 'Cloud Native Services',
+      category: 'Cloud Native Services'
     },
     {
       title: 'Advanced Network & SD-WAN Solutions',
-      description:
-        'Software-defined networking with AI-powered optimization and security',
+      description: 'Software-defined networking with AI-powered optimization and security',
       icon: Network,
       features: [
         'SD-WAN design and implementation',
@@ -589,16 +434,15 @@ export default function ITServices() {
         'AI-powered network optimization',
         'Software-defined perimeter (SDP)',
         'Network automation and orchestration',
-        '5G network integration and optimization',
+        '5G network integration and optimization'
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '6-18 weeks',
-      category: 'Network Services',
+      category: 'Network Services'
     },
     {
       title: 'Advanced DevOps & SRE Solutions',
-      description:
-        'Site reliability engineering with advanced monitoring and automation',
+      description: 'Site reliability engineering with advanced monitoring and automation',
       icon: Settings,
       features: [
         'SRE implementation and best practices',
@@ -606,16 +450,15 @@ export default function ITServices() {
         'Chaos engineering and resilience testing',
         'Infrastructure as code (IaC) automation',
         'Performance optimization and tuning',
-        'Incident response and post-mortem automation',
+        'Incident response and post-mortem automation'
       ],
       pricing: '$7,000 - $32,000/month',
       delivery: '6-16 weeks',
-      category: 'DevOps Services',
+      category: 'DevOps Services'
     },
     {
       title: 'Advanced AI/ML Infrastructure',
-      description:
-        'Machine learning operations (MLOps) with model deployment and monitoring',
+      description: 'Machine learning operations (MLOps) with model deployment and monitoring',
       icon: Brain,
       features: [
         'MLOps pipeline development and automation',
@@ -623,16 +466,15 @@ export default function ITServices() {
         'AI model monitoring and drift detection',
         'Distributed training and inference systems',
         'AI model versioning and governance',
-        'Edge AI deployment and optimization',
+        'Edge AI deployment and optimization'
       ],
       pricing: '$12,000 - $55,000/month',
       delivery: '10-24 weeks',
-      category: 'AI/ML Services',
+      category: 'AI/ML Services'
     },
     {
       title: 'Advanced Compliance & Governance',
-      description:
-        'Regulatory compliance automation with audit trails and reporting',
+      description: 'Regulatory compliance automation with audit trails and reporting',
       icon: Shield,
       features: [
         'Automated compliance monitoring and reporting',
@@ -640,16 +482,15 @@ export default function ITServices() {
         'Audit trail and evidence collection',
         'Risk assessment and management automation',
         'Policy management and enforcement',
-        'Third-party risk management',
+        'Third-party risk management'
       ],
       pricing: '$6,000 - $28,000/month',
       delivery: '6-14 weeks',
-      category: 'Compliance Services',
+      category: 'Compliance Services'
     },
     {
       title: 'Advanced Performance Engineering',
-      description:
-        'Application performance optimization with load testing and monitoring',
+      description: 'Application performance optimization with load testing and monitoring',
       icon: BarChart3,
       features: [
         'Performance testing and optimization',
@@ -657,16 +498,15 @@ export default function ITServices() {
         'Application performance monitoring (APM)',
         'Database performance tuning',
         'Caching strategy implementation',
-        'Performance regression testing',
+        'Performance regression testing'
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '4-12 weeks',
-      category: 'Performance Services',
+      category: 'Performance Services'
     },
     {
       title: 'Advanced Integration & Middleware',
-      description:
-        'Enterprise integration with API management and data synchronization',
+      description: 'Enterprise integration with API management and data synchronization',
       icon: Link2,
       features: [
         'Enterprise service bus (ESB) implementation',
@@ -674,16 +514,15 @@ export default function ITServices() {
         'Data synchronization and replication',
         'Message queuing and event streaming',
         'Legacy system integration and modernization',
-        'Real-time data integration',
+        'Real-time data integration'
       ],
       pricing: '$7,000 - $35,000/month',
       delivery: '6-18 weeks',
-      category: 'Integration Services',
+      category: 'Integration Services'
     },
     {
       title: 'Advanced Backup & Disaster Recovery',
-      description:
-        'Comprehensive backup and disaster recovery with automation and testing',
+      description: 'Comprehensive backup and disaster recovery with automation and testing',
       icon: Shield,
       features: [
         'Automated backup and recovery systems',
@@ -691,78 +530,57 @@ export default function ITServices() {
         'Business continuity management',
         'Data replication and synchronization',
         'Recovery time objective (RTO) optimization',
-        'Cloud-based backup and recovery',
+        'Cloud-based backup and recovery'
       ],
       pricing: '$4,000 - $20,000/month',
       delivery: '4-12 weeks',
-      category: 'Backup Services',
-    },
+      category: 'Backup Services'
+    }
   ];
+
   const technologies = [
-    {
-      name: 'Cloud Platforms',
-      icon: Cloud,
-      description: 'AWS, Azure, GCP, DigitalOcean',
-    },
-    {
-      name: 'Containerization',
-      icon: Server,
-      description: 'Docker, Kubernetes, OpenShift',
-    },
-    {
-      name: 'Security Tools',
-      icon: Shield,
-      description: 'SIEM, WAF, IAM, Encryption',
-    },
-    {
-      name: 'Monitoring',
-      icon: BarChart3,
-      description: 'Prometheus, Grafana, ELK Stack',
-    },
-    {
-      name: 'Databases',
-      icon: Database,
-      description: 'PostgreSQL, MongoDB, Redis',
-    },
-    {
-      name: 'Networking',
-      icon: Network,
-      description: 'Cisco, Fortinet, SD-WAN',
-    },
+    { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
+    { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
+    { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
+    { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
+    { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
+    { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
   ];
+
   const benefits = [
     {
       title: 'Reduced Downtime',
       description: 'Proactive monitoring and maintenance',
       icon: Clock,
-      stat: '99.9%',
+      stat: '99.9%'
     },
     {
       title: 'Cost Savings',
       description: 'Optimized infrastructure and processes',
       icon: Zap,
-      stat: '40%',
+      stat: '40%'
     },
     {
       title: 'Enhanced Security',
       description: 'Enterprise-grade protection',
       icon: Shield,
-      stat: '100%',
+      stat: '100%'
     },
     {
       title: 'Scalability',
       description: 'Flexible and scalable solutions',
       icon: TrendingUp,
-      stat: 'Unlimited',
-    },
+      stat: 'Unlimited'
+    }
   ];
+
   return (
-    <>
+    <PageTransition>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https: //ziontechgroup.com/it-services" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
 
       {/* Hero Section */}
@@ -772,22 +590,19 @@ export default function ITServices() {
             <div className="flex items-center justify-center mb-6">
               <Server className="h-12 w-12 text-green-600 mr-4" />
               <Award className="h-6 w-6 text-green-600 mr-2" />
-              <span className="text-base font-semibold leading-7 text-green-600">
-                IT Services
-              </span>
+              <span className="text-base font-semibold leading-7 text-green-600">IT Services</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Information Technology Solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Comprehensive IT services that keep your business running
-              smoothly. From cloud infrastructure to cybersecurity, we provide
-              end-to-end technology solutions.
+              Comprehensive IT services that keep your business running smoothly. From cloud infrastructure 
+              to cybersecurity, we provide end-to-end technology solutions.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -811,8 +626,7 @@ export default function ITServices() {
               Why Choose Our IT Services?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Proven expertise and measurable results for your technology
-              infrastructure
+              Proven expertise and measurable results for your technology infrastructure
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -821,12 +635,8 @@ export default function ITServices() {
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4">
                   <benefit.icon className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {benefit.stat}
-                </h3>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  {benefit.title}
-                </h4>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -835,7 +645,7 @@ export default function ITServices() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24 sm: py-32 bg-gray-50">
+      <section className="py-24 sm:py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -847,17 +657,12 @@ export default function ITServices() {
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {technologies.map((tech, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-              >
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                     <tech.icon className="h-6 w-6 text-green-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 ml-4">
-                    {tech.name}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>
                 </div>
                 <p className="text-gray-600">{tech.description}</p>
               </div>
@@ -867,27 +672,20 @@ export default function ITServices() {
       </section>
 
       {/* IT Services Grid */}
-      <section className="py-24 sm: py-32 bg-white">
+      <section className="py-24 sm:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our IT Service Portfolio
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Comprehensive IT solutions tailored to your business needs. All
-              services include implementation, training, and ongoing support.
-              Contact us at{' '}
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-green-600 hover:text-green-500"
-              >
+              Comprehensive IT solutions tailored to your business needs. All services include implementation, 
+              training, and ongoing support. Contact us at{' '}
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">
                 kleber@ziontechgroup.com
               </a>{' '}
               or call{' '}
-              <a
-                href="tel:+13024640950"
-                className="text-green-600 hover:text-green-500"
-              >
+              <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">
                 +1 302 464 0950
               </a>{' '}
               for custom pricing.
@@ -895,30 +693,20 @@ export default function ITServices() {
           </div>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {itServices.map((service, index) => (
-              <div
-                key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-              >
+              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-green-600 font-medium">
-                      {service.category}
-                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                    <p className="text-sm text-green-600 font-medium">{service.category}</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center gap-x-3"
-                    >
+                    <li key={featureIndex} className="flex items-center gap-x-3">
                       <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
@@ -930,13 +718,11 @@ export default function ITServices() {
                       <Clock className="h-4 w-4" />
                       <span>{service.delivery}</span>
                     </div>
-                    <div className="font-semibold text-green-600">
-                      {service.pricing}
-                    </div>
+                    <div className="font-semibold text-green-600">{service.pricing}</div>
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
+                    className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -949,28 +735,23 @@ export default function ITServices() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="bg-gray-50 py-16 sm: py-24">
+      <section className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Let's discuss how our IT services can optimize your technology
-              infrastructure. Get a free consultation and custom proposal.
+              Let's discuss how our IT services can optimize your technology infrastructure. 
+              Get a free consultation and custom proposal.
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-8 sm: grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
               <div className="text-center">
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
                   <Phone className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Call Us
-                </h3>
-                <a
-                  href="tel:+13024640950"
-                  className="text-green-600 hover:text-green-500"
-                >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
+                <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">
                   +1 302 464 0950
                 </a>
               </div>
@@ -978,13 +759,8 @@ export default function ITServices() {
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
                   <Mail className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Email Us
-                </h3>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="text-green-600 hover:text-green-500"
-                >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -992,14 +768,8 @@ export default function ITServices() {
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
                   <MapPin className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Visit Us
-                </h3>
-                <p className="text-gray-600">
-                  364 E Main St STE 1008
-                  <br />
-                  Middletown DE 19709
-                </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -1019,6 +789,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-    </>
+    </PageTransition>
   );
 }

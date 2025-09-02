@@ -1,95 +1,81 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
-  ];
-  
-  const services = [
-    {
-      title: 'AI Services',
-      description: 'Revolutionary AI solutions including autonomous systems, machine learning, and intelligent automation',
-      icon: Brain,
-      href: '/ai-services',
-      features: ['AI-Powered Drug Discovery', 'Quantum Computing Interface', 'Climate Analytics', 'Space Analytics']
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT infrastructure, cybersecurity, cloud solutions, and digital transformation',
-      icon: Network,
-      href: '/it-services',
-      features: ['Zero Trust Security', 'Edge Computing', 'Digital Twin Platforms', 'Hyperautomation']
-    },
-    {
-      title: 'Micro SaaS',
-      description: 'Innovative micro SaaS solutions for modern businesses with rapid deployment',
-      icon: Cloud,
-      href: '/micro-saas',
-      features: ['Affiliate Marketing Tracker', 'Contract Management', 'Video Content Generator', 'Energy Management']
-    }
-  ];
-
-  const features = [
-    {
-      icon: Zap,
-      title: 'Fast Delivery',
-      description: 'Quick turnaround times without compromising quality'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance standards'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Dedicated professionals with years of experience'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with local expertise'
-    }
-  ];
-
   return (
-    <>
+    <Layout>
       <Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
+        <title>Zion Tech Group - Leading AI, IT & Micro SaaS Solutions Provider</title>
+        <meta name='description' content='Transform your business with Zion Tech Group cutting-edge AI services, enterprise IT solutions, and innovative Micro SaaS platforms. 500+ projects completed, 99.9% uptime guarantee.' />
+        <meta name='keywords' content='AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting, enterprise software' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta property='og:title' content='Zion Tech Group - Leading Technology Solutions Provider' />
+        <meta property='og:description' content='Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ziontechgroup.com' />
+        <meta property='og:image' content='https://ziontechgroup.com/og-image.jpg' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Zion Tech Group - Leading Technology Solutions Provider' />
+        <meta name='twitter:description' content='Transform your business with cutting-edge AI, IT, and Micro SaaS solutions.' />
+        <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
+        <link rel='canonical' href='https://ziontechgroup.com' />
+        <script type='application/ld+json'>
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of AI services, IT solutions, and Micro SaaS platforms",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "sameAs": [
+              "https://ziontechgroup.com"
+            ]
+          })}
+        </script>
       </Head>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-white">
+      <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
-                Transform Your Business with
-                <span className="text-blue-600"> Technology</span>
+        <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32'>
+            <div className='text-center'>
+              <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6'>
+                Welcome to Zion Tech Group
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. 
-                We help businesses innovate, scale, and succeed in the digital age.
+              <p className='text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8'>
+                Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                  Get Started
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+                <Link href='/services'>
+                  <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>
+                    Explore Our Services
+                    <ArrowRight className='w-5 h-5 ml-2' />
+                  </Button>
                 </Link>
-                <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                  View Services
+                <Link href='/contact'>
+                  <Button variant='outline' className='border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold'>
+                    Get Started Today
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -97,13 +83,13 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section className='py-16 bg-white'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600">{stat.label}</div>
+                <div key={index} className='text-center'>
+                  <div className='text-3xl sm:text-4xl font-bold text-blue-600 mb-2'>{stat.number}</div>
+                  <div className='text-sm sm:text-base text-gray-600'>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -111,173 +97,136 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed to drive your business forward
+        <section className='py-20 sm:py-32'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
+                Our Core Services
+              </h2>
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
+                Comprehensive technology solutions designed to transform your business and drive growth.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
               {services.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
-                    <service.icon className="w-8 h-8 text-white" />
+                <Card key={index} className='p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
+                  <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6'>
+                    <service.icon className='w-8 h-8 text-white' />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 text-center">{service.description}</p>
-                  
-                  {/* Featured Services */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-3">Featured Solutions:</h4>
-                    <div className="grid grid-cols-2 gap-2">
+                  <h3 className='text-2xl font-bold text-gray-900 mb-4 text-center'>{service.title}</h3>
+                  <p className='text-gray-600 mb-6 text-center'>{service.description}</p>
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-900 mb-3'>Key Features:</h4>
+                    <div className='grid grid-cols-2 gap-2'>
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                        <div key={featureIndex} className='flex items-center text-sm text-gray-600'>
+                          <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' />
                           {feature}
                         </div>
                       ))}
                     </div>
                   </div>
-                  
-                  <Link href={service.href} className="block">
-                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
-                      Explore Services
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </div>
+                  <Link href={service.href}>
+                    <Button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'>
+                      Learn More
+                      <ArrowRight className='w-4 h-4 ml-2' />
+                    </Button>
                   </Link>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600">
-                We deliver exceptional results through innovation, expertise, and dedication
+        <section className='py-20 bg-gray-50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
+                We deliver exceptional results through innovation, expertise, and unwavering commitment to excellence.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <feature.icon className="w-8 h-8 text-blue-600" />
+                <div key={index} className='text-center group'>
+                  <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
+                    <feature.icon className='w-8 h-8 text-white' />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className='text-xl font-bold text-gray-900 mb-4'>{feature.title}</h3>
+                  <p className='text-gray-600'>{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Pricing & Contact Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Competitive Pricing & Expert Support</h2>
-              <p className="text-lg text-gray-600">
-                Transparent pricing with flexible solutions tailored to your business needs
+        {/* Testimonials Section */}
+        <section className='py-20 bg-white'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
+                What Our Clients Say
+              </h2>
+              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
+                Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {/* Pricing Highlights */}
-              <div className="bg-white rounded-lg p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Pricing Ranges</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-700">Micro SaaS Solutions</span>
-                    <span className="font-semibold text-blue-600">$99 - $8,000/month</span>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className='p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300'>
+                  <div className='flex items-center mb-4'>
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />
+                    ))}
                   </div>
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-700">AI Services</span>
-                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
+                  <p className='text-gray-600 mb-6 italic'>"{testimonial.content}"</p>
+                  <div className='border-t pt-4'>
+                    <div className='font-semibold text-gray-900'>{testimonial.name}</div>
+                    <div className='text-sm text-gray-500'>{testimonial.role}</div>
                   </div>
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-700">IT Services</span>
-                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Enterprise Solutions</span>
-                    <span className="font-semibold text-blue-600">Custom Pricing</span>
-                  </div>
-                </div>
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                  <p className="text-sm text-blue-800">
-                    <strong>Free Consultation:</strong> All projects start with a complimentary strategy session to understand your needs and provide accurate pricing.
-                  </p>
-                </div>
-              </div>
-
-              {/* Contact Information */}
-              <div className="bg-white rounded-lg p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Phone</p>
-                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">+1 302 464 0950</a>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Email</p>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">kleber@ziontechgroup.com</a>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-5 h-5 text-blue-600 mr-3 mt-1">
-                      <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <Link href="/contact" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block">
-                    Schedule Free Consultation
-                  </Link>
-                </div>
-              </div>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+        {/* Contact CTA Section */}
+        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our technology solutions can drive your success. Get started with a free consultation.
+            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
+              Contact us today for a free consultation and discover how our solutions can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Free Consultation
-              </Link>
-              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Learn More About Us
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <a href='tel:+13024640950' className='flex items-center text-white hover:text-blue-200 transition-colors'>
+                <Phone className='w-5 h-5 mr-2' />
+                +1 302 464 0950
+              </a>
+              <a href='mailto:kleber@ziontechgroup.com' className='flex items-center text-white hover:text-blue-200 transition-colors'>
+                <Mail className='w-5 h-5 mr-2' />
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className='mt-4 text-center text-blue-100'>
+              <p className='text-sm'>364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className='text-sm mt-1'>Visit us at <a href='https://ziontechgroup.com' className='underline hover:text-white' target='_blank' rel='noreferrer'>ziontechgroup.com</a></p>
+            </div>
+            <div className='mt-8'>
+              <Link href='/contact'>
+                <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>
+                  Get Free Consultation
+                  <ArrowRight className='w-5 h-5 ml-2' />
+                </Button>
               </Link>
             </div>
           </div>
         </section>
-      </main>
-      
-      <Footer />
-    </>
+      </div>
+    </Layout>
   );
 }

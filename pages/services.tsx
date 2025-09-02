@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 import {
   ArrowRight,
   Brain,
@@ -27,7 +28,8 @@ export default function Services() {
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
-		<PageTransition>
+		<Layout>
+			<PageTransition>
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -1053,6 +1055,157 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
+			{/* Pricing & Market Positioning Section */}
+			<section className='py-24 sm:py-32 bg-gray-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Competitive Pricing & Market Leadership
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.
+						</p>
+					</div>
+					
+					{/* Pricing Tiers */}
+					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>
+							<div className='text-center mb-6'>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>Micro SaaS Solutions</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$300 - $8,000</div>
+								<div className='text-sm text-gray-500'>per month</div>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Rapid deployment (1-8 weeks)
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Industry-specific solutions
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									AI-powered automation
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Scalable architecture
+								</li>
+							</ul>
+							<div className='text-center'>
+								<div className='text-xs text-gray-500 mb-2'>Market Average: $1,200 - $15,000/month</div>
+								<div className='text-sm font-medium text-green-600'>Save up to 60%</div>
+							</div>
+						</div>
+
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ring-2 ring-blue-500'>
+							<div className='text-center mb-6'>
+								<div className='inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2'>
+									Most Popular
+								</div>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>AI Services</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$1,500 - $75,000</div>
+								<div className='text-sm text-gray-500'>per month</div>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Cutting-edge AI technology
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Custom model development
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Real-time processing
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Advanced analytics
+								</li>
+							</ul>
+							<div className='text-center'>
+								<div className='text-xs text-gray-500 mb-2'>Market Average: $5,000 - $100,000/month</div>
+								<div className='text-sm font-medium text-green-600'>Save up to 40%</div>
+							</div>
+						</div>
+
+						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>
+							<div className='text-center mb-6'>
+								<h3 className='text-xl font-semibold text-gray-900 mb-2'>IT Services</h3>
+								<div className='text-3xl font-bold text-blue-600 mb-2'>$4,000 - $150,000</div>
+								<div className='text-sm text-gray-500'>per month</div>
+							</div>
+							<ul className='space-y-3 mb-6'>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Enterprise-grade solutions
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									24/7 support & monitoring
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Advanced security
+								</li>
+								<li className='flex items-center text-sm text-gray-600'>
+									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
+									Scalable infrastructure
+								</li>
+							</ul>
+							<div className='text-center'>
+								<div className='text-xs text-gray-500 mb-2'>Market Average: $8,000 - $200,000/month</div>
+								<div className='text-sm font-medium text-green-600'>Save up to 50%</div>
+							</div>
+						</div>
+					</div>
+
+					{/* Market Positioning */}
+					<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm'>
+						<div className='text-center mb-8'>
+							<h3 className='text-2xl font-bold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h3>
+							<p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
+							</p>
+						</div>
+						
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>
+									<Award className='h-6 w-6 text-blue-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Industry Leaders</h4>
+								<p className='text-sm text-gray-600'>500+ successful projects across diverse industries</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 mb-4'>
+									<Zap className='h-6 w-6 text-green-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Rapid Delivery</h4>
+								<p className='text-sm text-gray-600'>50% faster deployment than industry average</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 mb-4'>
+									<Shield className='h-6 w-6 text-purple-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Enterprise Security</h4>
+								<p className='text-sm text-gray-600'>99.9% uptime with enterprise-grade security</p>
+							</div>
+							<div className='text-center'>
+								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 mb-4'>
+									<TrendingUp className='h-6 w-6 text-orange-600' />
+								</div>
+								<h4 className='text-lg font-semibold text-gray-900 mb-2'>Proven ROI</h4>
+								<p className='text-sm text-gray-600'>Average 300% ROI within first year</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* CTA Section */}
 			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -1084,5 +1237,6 @@ export default function Services() {
 				</div>
 			</section>
 		</PageTransition>
+		</Layout>
 	);
 }
