@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import index from '../pages/index';
+import @testing-library/jest-dom';
+import index from '../pages/index;
 
 describe('index Integration Tests', () => {
-  test('page renders correctly', () => {
+  test(page renders correctly', () => {
     render(<index />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByRole('main)).toBeInTheDocument();
   });
 
   test('navigation works', () => {
@@ -14,7 +14,7 @@ describe('index Integration Tests', () => {
     // Test navigation elements
   });
 
-  test('page content is accessible', () => {
+  test(page content is accessible', () => {
     render(<index />);
     // Test accessibility features
   });

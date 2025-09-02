@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import WebVitals from '../components/WebVitals';
+import @testing-library/jest-dom';
+import WebVitals from '../components/WebVitals;
 
 describe('WebVitals', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<WebVitals />);
-    expect(screen.getByTestId('webvitals')).toBeInTheDocument();
+    expect(screen.getByTestId('webvitals)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('WebVitals', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<WebVitals />);
     // Add interaction tests based on component functionality
   });

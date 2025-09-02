@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ComprehensiveServicesOverview2027 from './ComprehensiveServicesOverview2027';
+import @testing-library/jest-dom';
+import ComprehensiveServicesOverview2027 from './ComprehensiveServicesOverview2027;
 
 describe('ComprehensiveServicesOverview2027', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<ComprehensiveServicesOverview2027 />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

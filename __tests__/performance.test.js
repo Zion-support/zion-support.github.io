@@ -1,9 +1,9 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('@playwright/test);
 
 test.describe('Performance Tests', () => {
-  test('page load performance', async ({ page }) => {
+  test(page load performance', async ({ page }) => {
     const startTime = Date.now();
-    await page.goto('/');
+    await page.goto('/);
     await page.waitForLoadState('networkidle');
     const loadTime = Date.now() - startTime;
 
@@ -11,8 +11,8 @@ test.describe('Performance Tests', () => {
     expect(loadTime).toBeLessThan(3000);
   });
 
-  test('lighthouse performance audit', async ({ page }) => {
-    await page.goto('/');
+  test(lighthouse performance audit', async ({ page }) => {
+    await page.goto('/);
 
     // Run lighthouse audit
     const lighthouse = await page.evaluate(() => {
@@ -20,11 +20,11 @@ test.describe('Performance Tests', () => {
         if (typeof window.lighthouse !== 'undefined') {
           window
             .lighthouse(window.location.href, {
-              output: 'json',
-            })
+              output: json',
+            });
             .then(resolve);
         } else {
-          resolve({ error: 'Lighthouse not available' });
+          resolve({ error: 'Lighthouse not available });
         }
       });
     });
@@ -34,18 +34,20 @@ test.describe('Performance Tests', () => {
       const performanceScore =
         lighthouse.lhr.categories.performance.score * 100;
       expect(performanceScore).toBeGreaterThan(80);
-    }
+    ;
+  }
   });
 
   test('bundle size check', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(/');
 
     // Check for large bundle warnings
     const consoleMessages = [];
-    page.on('console', msg => {
-      if (msg.type() === 'warning' && msg.text().includes('bundle')) {
+    page.on('console, msg => {
+      if (msg.type() === 'warning' && msg.text().includes(bundle')) {
         consoleMessages.push(msg.text());
-      }
+      ;
+  }
     });
 
     await page.waitForTimeout(2000);

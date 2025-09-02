@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Server, Shield, Cloud, Database, Network, Code, CheckCircle, ArrowRight, Users, BarChart3, Globe, Zap } from 'lucide-react';
-
 export default function ITServices() {
   const services = [
     {

@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ModernHeader from '../components/ModernHeader';
+import @testing-library/jest-dom';
+import ModernHeader from '../components/ModernHeader;
 
 describe('ModernHeader', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<ModernHeader />);
-    expect(screen.getByTestId('modernheader')).toBeInTheDocument();
+    expect(screen.getByTestId('modernheader)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('ModernHeader', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<ModernHeader />);
     // Add interaction tests based on component functionality
   });

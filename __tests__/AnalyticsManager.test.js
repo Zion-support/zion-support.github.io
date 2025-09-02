@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AnalyticsManager from '../components/AnalyticsManager';
+import @testing-library/jest-dom';
+import AnalyticsManager from '../components/AnalyticsManager;
 
 describe('AnalyticsManager', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<AnalyticsManager />);
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
+    expect(screen.getByTestId('analyticsmanager)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('AnalyticsManager', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<AnalyticsManager />);
     // Add interaction tests based on component functionality
   });

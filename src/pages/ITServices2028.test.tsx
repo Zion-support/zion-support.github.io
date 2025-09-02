@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ITServices2028 from './ITServices2028';
+import @testing-library/jest-dom';
+import ITServices2028 from './ITServices2028;
 
 describe('ITServices2028', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<ITServices2028 />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Resources from './Resources';
+import @testing-library/jest-dom';
+import Resources from './Resources;
 
 describe('Resources', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<Resources />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

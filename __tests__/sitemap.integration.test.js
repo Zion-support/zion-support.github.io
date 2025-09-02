@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import sitemap from '../pages/sitemap';
+import @testing-library/jest-dom';
+import sitemap from '../pages/sitemap;
 
 describe('sitemap Integration Tests', () => {
-  test('page renders correctly', () => {
+  test(page renders correctly', () => {
     render(<sitemap />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByRole('main)).toBeInTheDocument();
   });
 
   test('navigation works', () => {
@@ -14,7 +14,7 @@ describe('sitemap Integration Tests', () => {
     // Test navigation elements
   });
 
-  test('page content is accessible', () => {
+  test(page content is accessible', () => {
     render(<sitemap />);
     // Test accessibility features
   });

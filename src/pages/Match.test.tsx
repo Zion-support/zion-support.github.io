@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Match from './Match';
+import @testing-library/jest-dom';
+import Match from './Match;
 
 describe('Match', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<Match />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

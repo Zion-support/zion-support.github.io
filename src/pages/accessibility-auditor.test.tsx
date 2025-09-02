@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import accessibility-auditor from './accessibility-auditor';
+import @testing-library/jest-dom';
+import accessibility-auditor from './accessibility-auditor;
 
 describe('accessibility-auditor', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<accessibility-auditor />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import RevolutionaryServicesShowcase2030 from './RevolutionaryServicesShowcase2030';
+import @testing-library/jest-dom';
+import RevolutionaryServicesShowcase2030 from './RevolutionaryServicesShowcase2030;
 
 describe('RevolutionaryServicesShowcase2030', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<RevolutionaryServicesShowcase2030 />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

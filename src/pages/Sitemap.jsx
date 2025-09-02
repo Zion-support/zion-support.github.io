@@ -1,20 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Home, 
-  Briefcase, 
-  Target, 
-  Building, 
-  FileText, 
-  Video, 
-  Mail, 
-  HelpCircle, 
-  Users, 
-  Globe,
-  ArrowRight,
-  ExternalLink
-} from 'lucide-react';
-
 export default function Sitemap() {
   const sitemapStructure = [
     {

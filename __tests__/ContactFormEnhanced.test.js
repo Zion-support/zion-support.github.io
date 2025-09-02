@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ContactFormEnhanced from '../components/ContactFormEnhanced';
+import @testing-library/jest-dom';
+import ContactFormEnhanced from '../components/ContactFormEnhanced;
 
 describe('ContactFormEnhanced', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<ContactFormEnhanced />);
-    expect(screen.getByTestId('contactformenhanced')).toBeInTheDocument();
+    expect(screen.getByTestId('contactformenhanced)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('ContactFormEnhanced', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<ContactFormEnhanced />);
     // Add interaction tests based on component functionality
   });

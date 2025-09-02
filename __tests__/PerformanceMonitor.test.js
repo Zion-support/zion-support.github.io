@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+import @testing-library/jest-dom';
+import PerformanceMonitor from '../components/PerformanceMonitor;
 
 describe('PerformanceMonitor', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<PerformanceMonitor />);
-    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();
+    expect(screen.getByTestId('performancemonitor)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('PerformanceMonitor', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<PerformanceMonitor />);
     // Add interaction tests based on component functionality
   });

@@ -1,17 +1,6 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, Tablet, 
-  Monitor, Touch, 
-  Gesture, Swipe, 
-  Pinch, Rotate,
-  X, Menu,
-  Home, Search,
-  User, Settings,
-  ArrowUp, ArrowDown,
-  ArrowLeft, ArrowRight
-} from 'lucide-react';
 interface TouchGesture {
   type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   direction?: 'up' | 'down' | 'left' | 'right';

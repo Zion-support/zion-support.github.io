@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Badge from '../components/Badge';
+import @testing-library/jest-dom';
+import Badge from '../components/Badge;
 
 describe('Badge', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<Badge />);
-    expect(screen.getByTestId('badge')).toBeInTheDocument();
+    expect(screen.getByTestId('badge)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('Badge', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<Badge />);
     // Add interaction tests based on component functionality
   });

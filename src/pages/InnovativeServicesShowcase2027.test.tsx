@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import InnovativeServicesShowcase2027 from './InnovativeServicesShowcase2027';
+import @testing-library/jest-dom';
+import InnovativeServicesShowcase2027 from './InnovativeServicesShowcase2027;
 
 describe('InnovativeServicesShowcase2027', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<InnovativeServicesShowcase2027 />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

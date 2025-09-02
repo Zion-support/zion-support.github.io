@@ -3,8 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucide-react';
-
 export default function Team() {
   const teamMembers = [
     {

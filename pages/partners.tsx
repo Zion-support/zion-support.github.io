@@ -5,19 +5,6 @@ import SEO from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
-import {
-  Users2 as Handshake,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Globe,
-  Award,
-  Target,
-  Zap,
-  Shield,
-} from 'lucide-react';
-
 export default function Partners() {
   const partnerBenefits = [
     {

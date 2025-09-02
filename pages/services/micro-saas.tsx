@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Cloud, Zap, Target, Shield, CheckCircle, ArrowRight, Users, BarChart3, Globe, Rocket, DollarSign, Settings } from 'lucide-react';
-
 export default function MicroSaaS() {
   const services = [
     {

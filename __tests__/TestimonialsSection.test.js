@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import TestimonialsSection from '../components/TestimonialsSection';
+import @testing-library/jest-dom';
+import TestimonialsSection from '../components/TestimonialsSection;
 
 describe('TestimonialsSection', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<TestimonialsSection />);
-    expect(screen.getByTestId('testimonialssection')).toBeInTheDocument();
+    expect(screen.getByTestId('testimonialssection)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('TestimonialsSection', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<TestimonialsSection />);
     // Add interaction tests based on component functionality
   });

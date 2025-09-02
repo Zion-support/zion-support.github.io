@@ -3,8 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, BarChart3, Brain, CheckCircle, Clock, DollarSign, Globe, Shield, TrendingUp, Users } from 'lucide-react';
-
 export default function CaseStudies() {
   const caseStudies = [
     {

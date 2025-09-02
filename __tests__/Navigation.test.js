@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Navigation from '../components/Navigation';
+import @testing-library/jest-dom';
+import Navigation from '../components/Navigation;
 
 describe('Navigation', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<Navigation />);
-    expect(screen.getByTestId('navigation')).toBeInTheDocument();
+    expect(screen.getByTestId('navigation)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('Navigation', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<Navigation />);
     // Add interaction tests based on component functionality
   });

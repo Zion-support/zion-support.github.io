@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Users, MapPin, Clock, Briefcase, Heart, Zap, Award, Globe } from 'lucide-react';
-
 export default function Careers() {
   const benefits = [
     {

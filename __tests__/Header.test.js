@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Header from '../components/Header';
+import @testing-library/jest-dom';
+import Header from '../components/Header;
 
 describe('Header', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<Header />);
-    expect(screen.getByTestId('header')).toBeInTheDocument();
+    expect(screen.getByTestId('header)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('Header', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<Header />);
     // Add interaction tests based on component functionality
   });

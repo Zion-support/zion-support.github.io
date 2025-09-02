@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ComprehensiveServicesShowcase2025Enhanced from './ComprehensiveServicesShowcase2025Enhanced';
+import @testing-library/jest-dom';
+import ComprehensiveServicesShowcase2025Enhanced from './ComprehensiveServicesShowcase2025Enhanced;
 
 describe('ComprehensiveServicesShowcase2025Enhanced', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<ComprehensiveServicesShowcase2025Enhanced />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

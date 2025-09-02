@@ -1,2 +1,2 @@
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
+const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}
   return()"

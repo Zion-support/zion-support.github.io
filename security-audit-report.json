@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-02T22:04:34.291Z",
+  "timestamp": "2025-09-02T22:55:19.341Z",
   "environment": {
     "issues": [
       "Empty VITE_SENTRY_DSN in .env",
@@ -11,9 +11,9 @@
     "issues": [
       "Server-side env var in client code: /workspace/src/components/ErrorBoundary.jsx",
       "Server-side env var in client code: /workspace/src/components/MobileExperienceEnhancer.tsx",
-      "Server-side env var in client code: /workspace/src/components/PerformanceMonitor.tsx",
       "Server-side env var in client code: /workspace/src/components/error/ErrorBoundary.tsx",
       "Unsanitized dangerouslySetInnerHTML in /workspace/src/components/seo/SEOEnhancer.tsx",
+      "Server-side env var in client code: /workspace/src/store/wishlistSlice.js.jsx",
       "Server-side env var in client code: /workspace/src/store/wishlistSlice.jsx",
       "Use of eval() in /workspace/src/utils/helpers.js"
     ],

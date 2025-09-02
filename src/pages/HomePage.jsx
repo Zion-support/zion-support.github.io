@@ -1,22 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Play, 
-  Star, 
-  Users, 
-  Award, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Rocket,
-  CheckCircle,
-  TrendingUp,
-  Globe,
-  Clock
-} from 'lucide-react';
-
 export function HomePage() {
   const features = [
     {

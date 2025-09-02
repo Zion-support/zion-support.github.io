@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import NotFound from '../pages/NotFound';
+import @testing-library/jest-dom';
+import NotFound from '../pages/NotFound;
 
 describe('NotFound Integration Tests', () => {
-  test('page renders correctly', () => {
+  test(page renders correctly', () => {
     render(<NotFound />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByRole('main)).toBeInTheDocument();
   });
 
   test('navigation works', () => {
@@ -14,7 +14,7 @@ describe('NotFound Integration Tests', () => {
     // Test navigation elements
   });
 
-  test('page content is accessible', () => {
+  test(page content is accessible', () => {
     render(<NotFound />);
     // Test accessibility features
   });

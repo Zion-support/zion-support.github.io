@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import InteractiveElements from '../components/InteractiveElements';
+import @testing-library/jest-dom';
+import InteractiveElements from '../components/InteractiveElements;
 
 describe('InteractiveElements', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<InteractiveElements />);
-    expect(screen.getByTestId('interactiveelements')).toBeInTheDocument();
+    expect(screen.getByTestId('interactiveelements)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('InteractiveElements', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<InteractiveElements />);
     // Add interaction tests based on component functionality
   });

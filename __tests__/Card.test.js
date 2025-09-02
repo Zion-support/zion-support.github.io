@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Card from '../components/Card';
+import @testing-library/jest-dom';
+import Card from '../components/Card;
 
 describe('Card', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<Card />);
-    expect(screen.getByTestId('card')).toBeInTheDocument();
+    expect(screen.getByTestId('card)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('Card', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<Card />);
     // Add interaction tests based on component functionality
   });

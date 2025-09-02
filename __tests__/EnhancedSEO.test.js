@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import @testing-library/jest-dom';
+import EnhancedSEO from '../components/EnhancedSEO;
 
 describe('EnhancedSEO', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<EnhancedSEO />);
-    expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();
+    expect(screen.getByTestId('enhancedseo)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('EnhancedSEO', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<EnhancedSEO />);
     // Add interaction tests based on component functionality
   });

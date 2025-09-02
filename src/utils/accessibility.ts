@@ -20,7 +20,6 @@ export const accessibilityUtils = {
             e.preventDefault();
           }
         }
-
       }
     };
 
@@ -69,4 +68,3 @@ export const accessibilityUtils = {
     return (brightest + 0.05) / (darkest + 0.05);
   }
 };
-

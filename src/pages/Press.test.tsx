@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Press from './Press';
+import @testing-library/jest-dom';
+import Press from './Press;
 
 describe('Press', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<Press />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

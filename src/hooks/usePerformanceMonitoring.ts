@@ -1,3 +1,13 @@
+import { useState, useEffect } from 'react';
+
+export const usePerformanceMonitoring = () => {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0
+  });
+
+  useEffect(() => {
     const startTime = performance.now();
     
     const measurePerformance = () => {
@@ -12,3 +22,13 @@
         });
       }
     };
+
+    measurePerformance();
+    
+    return () => {
+      measurePerformance();
+    };
+  }, []);
+
+  return metrics;
+};

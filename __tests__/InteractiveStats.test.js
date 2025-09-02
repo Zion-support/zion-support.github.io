@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import InteractiveStats from '../components/InteractiveStats';
+import @testing-library/jest-dom';
+import InteractiveStats from '../components/InteractiveStats;
 
 describe('InteractiveStats', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<InteractiveStats />);
-    expect(screen.getByTestId('interactivestats')).toBeInTheDocument();
+    expect(screen.getByTestId('interactivestats)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('InteractiveStats', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<InteractiveStats />);
     // Add interaction tests based on component functionality
   });

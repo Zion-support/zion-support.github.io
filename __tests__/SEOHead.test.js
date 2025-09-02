@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SEOHead from '../components/SEOHead';
+import @testing-library/jest-dom';
+import SEOHead from '../components/SEOHead;
 
 describe('SEOHead', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<SEOHead />);
-    expect(screen.getByTestId('seohead')).toBeInTheDocument();
+    expect(screen.getByTestId('seohead)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('SEOHead', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<SEOHead />);
     // Add interaction tests based on component functionality
   });

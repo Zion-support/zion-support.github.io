@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ApiPlayground from './ApiPlayground';
+import @testing-library/jest-dom';
+import ApiPlayground from './ApiPlayground;
 
 describe('ApiPlayground', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<ApiPlayground />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

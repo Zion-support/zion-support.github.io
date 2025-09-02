@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react';
-
 export default function Pricing() {
   const plans = [
     {

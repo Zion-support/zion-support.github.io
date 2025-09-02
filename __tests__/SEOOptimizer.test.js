@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SEOOptimizer from '../components/SEOOptimizer';
+import @testing-library/jest-dom';
+import SEOOptimizer from '../components/SEOOptimizer;
 
 describe('SEOOptimizer', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<SEOOptimizer />);
-    expect(screen.getByTestId('seooptimizer')).toBeInTheDocument();
+    expect(screen.getByTestId('seooptimizer)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('SEOOptimizer', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<SEOOptimizer />);
     // Add interaction tests based on component functionality
   });

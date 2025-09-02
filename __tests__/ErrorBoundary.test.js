@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ErrorBoundary from '../components/ErrorBoundary';
+import @testing-library/jest-dom';
+import ErrorBoundary from '../components/ErrorBoundary;
 
 describe('ErrorBoundary', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<ErrorBoundary />);
-    expect(screen.getByTestId('errorboundary')).toBeInTheDocument();
+    expect(screen.getByTestId('errorboundary)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('ErrorBoundary', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<ErrorBoundary />);
     // Add interaction tests based on component functionality
   });

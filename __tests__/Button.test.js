@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Button from '../components/Button';
+import @testing-library/jest-dom';
+import Button from '../components/Button;
 
 describe('Button', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<Button />);
-    expect(screen.getByTestId('button')).toBeInTheDocument();
+    expect(screen.getByTestId('button)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('Button', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<Button />);
     // Add interaction tests based on component functionality
   });

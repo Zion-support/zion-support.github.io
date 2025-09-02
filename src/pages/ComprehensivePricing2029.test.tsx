@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ComprehensivePricing2029 from './ComprehensivePricing2029';
+import @testing-library/jest-dom';
+import ComprehensivePricing2029 from './ComprehensivePricing2029;
 
 describe('ComprehensivePricing2029', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
     render(<ComprehensivePricing2029 />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
   it('displays expected content', () => {

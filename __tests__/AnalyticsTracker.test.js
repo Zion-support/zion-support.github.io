@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AnalyticsTracker from '../components/AnalyticsTracker';
+import @testing-library/jest-dom';
+import AnalyticsTracker from '../components/AnalyticsTracker;
 
 describe('AnalyticsTracker', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<AnalyticsTracker />);
-    expect(screen.getByTestId('analyticstracker')).toBeInTheDocument();
+    expect(screen.getByTestId('analyticstracker)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('AnalyticsTracker', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<AnalyticsTracker />);
     // Add interaction tests based on component functionality
   });

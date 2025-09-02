@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceEnhancer from '../components/PerformanceEnhancer';
+import @testing-library/jest-dom';
+import PerformanceEnhancer from '../components/PerformanceEnhancer;
 
 describe('PerformanceEnhancer', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<PerformanceEnhancer />);
-    expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument();
+    expect(screen.getByTestId('performanceenhancer)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('PerformanceEnhancer', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<PerformanceEnhancer />);
     // Add interaction tests based on component functionality
   });

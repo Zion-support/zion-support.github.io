@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Layout from '../components/Layout';
+import @testing-library/jest-dom';
+import Layout from '../components/Layout;
 
 describe('Layout', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<Layout />);
-    expect(screen.getByTestId('layout')).toBeInTheDocument();
+    expect(screen.getByTestId('layout)).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -14,7 +14,7 @@ describe('Layout', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<Layout />);
     // Add interaction tests based on component functionality
   });

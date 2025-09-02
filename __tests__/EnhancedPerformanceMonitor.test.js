@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedPerformanceMonitor from '../components/EnhancedPerformanceMonitor';
+import @testing-library/jest-dom';
+import EnhancedPerformanceMonitor from '../components/EnhancedPerformanceMonitor;
 
 describe('EnhancedPerformanceMonitor', () => {
-  test('renders without crashing', () => {
+  test(renders without crashing', () => {
     render(<EnhancedPerformanceMonitor />);
     expect(
-      screen.getByTestId('enhancedperformancemonitor')
+      screen.getByTestId('enhancedperformancemonitor)
     ).toBeInTheDocument();
   });
 
@@ -16,7 +16,7 @@ describe('EnhancedPerformanceMonitor', () => {
     // Add specific content tests based on component
   });
 
-  test('handles user interactions', () => {
+  test(handles user interactions', () => {
     render(<EnhancedPerformanceMonitor />);
     // Add interaction tests based on component functionality
   });
