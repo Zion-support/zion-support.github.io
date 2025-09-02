@@ -1,32 +1,35 @@
-import React, { useState, useEffect } from 'react';'
-import { useParams } from 'react-router-dom';'
-import SEO from '@/components/SEO';'
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';'
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+import React, { useState, useEffect } from,
+  react';'
+import { useParams } from
+  'react-router-dom';'
+import SEO from
+  '@/components/SEO';'
+import { ProfileLoadingState } from
+  '@/components/profile/ProfileLoadingState';'
+import { ProfileErrorState } from
+  '@/components/profile/ProfileErrorState';
 export { function };
 export default function TalentProfilePage() {}
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-:pages.disabled/pages/talent/[id].jsx
+    const [error, setError] = useState(null);: pages.disabled/pages/talent/[id].jsx
     useEffect(() => {
         const fetchProfile = async () => {
             if (!id) {
-'setError('Profile not found');
+  'setError('Profile not found);
                 setLoading(false);
                 return;
 
             try {}
                 const res = await fetch(`/api/talent/${id}`);
-                if (!res.ok)'
-                    throw new Error('Failed to load profile');
+                if (!res.ok),
+  throw new Error(
+  'Failed to load profile');
                 const data = await res.json();
-                setProfile(data.profile);
-
-:pages.disabled/pages/talent/[id].jsx
+                setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx
             catch (err) {
-'setError('Profile not found');
+  'setError('Profile not found);
 
             finally {}
                 setLoading(false);
@@ -37,8 +40,10 @@ export default function TalentProfilePage() {}
     if (loading)
         return <ProfileLoadingState />;
     if (error || !profile)'
-        return <ProfileErrorState error={error || 'Profile not found'}/>;
-    return (<>'
+        return <ProfileErrorState error={error ||
+  'Profile not found'}/>;
+    return (<>
+  '
       <SEO title={profile.full_name} description={profile.bio || ''}/>
       <main className="min-h-screen bg-zion-blue py-8 text-white">""
         <div className="container mx-auto px-4 space-y-4">""
@@ -66,4 +71,5 @@ export default function TalentProfilePage() {}
         </div>
       </main>
     </>);'"`
-}}}}}'"`'"`
+}}}}}
+  '"`'"`

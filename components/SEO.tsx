@@ -1,5 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from
+  'react';
+import { Helmet } from
+  'react-helmet-async';
 
 interface SEOProps {
   title: string;
@@ -12,17 +14,19 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title,
+  title, 
   description,
-  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions",
+  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", 
   image = "https://ziontechgroup.com/api/placeholder/1200/630",
-  url = "https://ziontechgroup.com",
+  url = "https://ziontechgroup.com", 
   type = "website",
   siteName = "Zion Tech Group"
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-
+  const fullTitle = title.includes(
+  'Zion Tech Group') ? title : `${title} - Zion Tech Group`;
+  const fullUrl = url.startsWith(
+  'http') ? url : `https://ziontechgroup.com${url}`;
+  
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -100,5 +104,4 @@ const SEO: React.FC<SEOProps> = ({
   );
 };
 
-export { SEO };
 export default SEO;

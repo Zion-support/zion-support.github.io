@@ -19,7 +19,8 @@ import {}
   Server,
   Cloud,
   Smartphone,
-  Building} from 'lucide-react.ts';
+  Building} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/micro-crm.tsx
 export default function MicroCRM(...args: any[]): any {
@@ -127,7 +128,8 @@ export default function MicroCRM(...args: any[]): any {
 :pages.disabled/pages/services/micro-crm.tsx
               Perfect For Your Business"
             </h2>""
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+  '
               Whether you're a small business owner or managing a growing sales
               team, our Micro CRM adapts to your needs.
             </p>
@@ -175,5 +177,6 @@ export default function MicroCRM(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/micro-crm.tsx
-  )}'"
+  )}
+  '"
 '"'"
