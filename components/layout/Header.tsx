@@ -25,6 +25,12 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const quickLinks = [
+    { name: 'Get Quote', href: '/contact', type: 'primary' },
+    { name: 'Free Consultation', href: '/contact?type=consultation', type: 'secondary' },
+    { name: 'View Portfolio', href: '/portfolio', type: 'link' },
+  ];
+
   const serviceCategories = [
     { name: 'Micro SaaS', href: '/services/micro-saas' },
     { name: 'IT Services', href: '/services/it-services' },
@@ -104,13 +110,21 @@ const Header: React.FC = () => {
                 </div>
               </div>
 
-              {/* CTA Button */}
-              <Link
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-              >
-                Get Quote
-              </Link>
+              {/* CTA Buttons */}
+              <div className="flex items-center space-x-3">
+                <Link
+                  href="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                >
+                  Get Quote
+                </Link>
+                <Link
+                  href="/contact?type=consultation"
+                  className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                >
+                  Free Consultation
+                </Link>
+              </div>
             </div>
 
             {/* Mobile menu button */}
