@@ -1,14 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
+    { number: '100+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
@@ -16,21 +14,24 @@ export default function Home() {
   const services = [
     {
       title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
+      description: 'Revolutionary AI solutions including autonomous systems, machine learning, and intelligent automation',
       icon: Brain,
-      href: '/services/ai-services'
+      href: '/ai-services',
+      features: ['AI-Powered Cybersecurity', 'Healthcare Diagnostics', 'Financial Trading', 'Smart City Management']
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive information technology services',
+      description: 'Comprehensive IT solutions including cloud infrastructure, cybersecurity, and digital transformation',
       icon: Network,
-      href: '/services/it-services'
+      href: '/it-services',
+      features: ['Cloud Migration', 'Zero Trust Security', 'Edge Computing', 'AIOps']
     },
     {
       title: 'Micro SaaS',
-      description: 'Scalable software as a service solutions',
+      description: 'Innovative SaaS solutions including AI-powered tools, automation platforms, and business intelligence',
       icon: Cloud,
-      href: '/services/micro-saas'
+      href: '/micro-saas',
+      features: ['Social Media Manager', 'Project Management', 'Fleet Management', 'Personal Finance']
     }
   ];
 
@@ -66,8 +67,6 @@ export default function Home() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       
-      <Navigation />
-      
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
@@ -78,8 +77,9 @@ export default function Home() {
                 <span className="text-blue-600"> Technology</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. 
-                We help businesses innovate, scale, and succeed in the digital age.
+                Leading provider of cutting-edge AI services, comprehensive IT solutions, and innovative micro SaaS development. 
+                We transform businesses with intelligent automation, secure cloud infrastructure, and scalable software solutions. 
+                From startups to enterprises, we deliver results that drive growth and innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
@@ -125,9 +125,23 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
                   <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                  
+                  {/* Service Features */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
-                      Learn More
+                      Explore Solutions
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </Link>
@@ -161,6 +175,113 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Innovation Showcase */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Innovation at Scale</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We're at the forefront of technological innovation, delivering cutting-edge solutions that transform industries and drive business success.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Brain className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Innovation</h3>
+                <p className="text-gray-600">Leading-edge AI solutions from healthcare diagnostics to autonomous systems</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>
+                <p className="text-gray-600">Zero-trust architecture and advanced cybersecurity solutions</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Cloud className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Cloud Excellence</h3>
+                <p className="text-gray-600">Scalable cloud infrastructure and hybrid cloud management</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-orange-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Rapid Delivery</h3>
+                <p className="text-gray-600">Agile development with 2-4 week delivery cycles</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Market Positioning */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Trusted by Industry Leaders
+                </h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  Our solutions power businesses across healthcare, finance, manufacturing, and technology sectors. 
+                  We deliver measurable results with transparent pricing and guaranteed outcomes.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <span className="text-gray-700">Competitive pricing starting from $800/month</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <span className="text-gray-700">99.9% uptime guarantee with 24/7 support</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <span className="text-gray-700">Rapid deployment in 2-30 weeks</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <span className="text-gray-700">Enterprise-grade security and compliance</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h3>
+                <p className="text-gray-600 mb-6">
+                  Contact us today for a free consultation and discover how our innovative solutions can transform your business.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center text-gray-700">
+                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                    <a href="tel:+13024640950" className="hover:text-blue-600 transition-colors">+1 302 464 0950</a>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
+                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a>
+                  </div>
+                </div>
+                
+                <div className="mt-6">
+                  <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+                    Schedule Consultation
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -181,8 +302,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </>
   );
 }

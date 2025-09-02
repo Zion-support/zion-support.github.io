@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap, BookOpen, CreditCard, Truck, PiggyBank, Video } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -587,6 +587,193 @@ export default function MicroSaaS() {
       pricing: '$2,500 - $8,000/month',
       delivery: '5-8 weeks',
       category: 'Supply Chain SaaS',
+    },
+    {
+      title: 'AI-Powered Social Media Manager',
+      description:
+        'Intelligent social media management with automated content creation and scheduling',
+      icon: MessageSquare,
+      features: [
+        'AI-generated content creation and optimization',
+        'Multi-platform posting and scheduling',
+        'Hashtag research and optimization',
+        'Engagement tracking and analytics',
+        'Influencer identification and outreach',
+        'Crisis management and sentiment monitoring',
+      ],
+      pricing: '$1,800 - $6,000/month',
+      delivery: '2-4 weeks',
+      category: 'Social Media SaaS',
+    },
+    {
+      title: 'Smart Inventory Management System',
+      description:
+        'AI-driven inventory optimization with demand forecasting and automated reordering',
+      icon: Database,
+      features: [
+        'Demand forecasting and prediction',
+        'Automated reorder point calculation',
+        'Multi-location inventory tracking',
+        'Supplier performance monitoring',
+        'Cost optimization and analysis',
+        'Integration with e-commerce platforms',
+      ],
+      pricing: '$2,200 - $7,500/month',
+      delivery: '3-6 weeks',
+      category: 'Inventory SaaS',
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description:
+        'Intelligent e-learning platform with personalized learning paths and progress tracking',
+      icon: BookOpen,
+      features: [
+        'Personalized learning path generation',
+        'Adaptive content delivery',
+        'Progress tracking and analytics',
+        'Gamification and engagement tools',
+        'Assessment and certification management',
+        'Mobile learning and offline access',
+      ],
+      pricing: '$3,500 - $12,000/month',
+      delivery: '4-8 weeks',
+      category: 'Education SaaS',
+    },
+    {
+      title: 'Smart Expense Management Platform',
+      description:
+        'AI-powered expense tracking with automated categorization and compliance monitoring',
+      icon: CreditCard,
+      features: [
+        'Automated receipt scanning and processing',
+        'Smart expense categorization',
+        'Policy compliance monitoring',
+        'Approval workflow automation',
+        'Real-time budget tracking',
+        'Integration with accounting systems',
+      ],
+      pricing: '$1,500 - $5,000/month',
+      delivery: '2-4 weeks',
+      category: 'Finance SaaS',
+    },
+    {
+      title: 'AI-Powered Project Management Suite',
+      description:
+        'Intelligent project management with automated task allocation and progress prediction',
+      icon: Target,
+      features: [
+        'AI-powered task prioritization',
+        'Resource allocation optimization',
+        'Progress prediction and risk assessment',
+        'Team collaboration and communication',
+        'Time tracking and productivity analytics',
+        'Integration with development tools',
+      ],
+      pricing: '$2,800 - $9,000/month',
+      delivery: '3-6 weeks',
+      category: 'Project Management SaaS',
+    },
+    {
+      title: 'Smart Customer Feedback Platform',
+      description:
+        'Intelligent feedback collection and analysis with sentiment tracking and action insights',
+      icon: MessageSquare,
+      features: [
+        'Multi-channel feedback collection',
+        'Sentiment analysis and emotion detection',
+        'Automated response generation',
+        'Trend analysis and reporting',
+        'Action item tracking and management',
+        'Integration with CRM and support systems',
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '2-3 weeks',
+      category: 'Feedback SaaS',
+    },
+    {
+      title: 'AI-Powered Meeting Assistant',
+      description:
+        'Intelligent meeting management with transcription, summarization, and action item extraction',
+      icon: Video,
+      features: [
+        'Real-time transcription and translation',
+        'Meeting summarization and key point extraction',
+        'Action item identification and tracking',
+        'Meeting analytics and insights',
+        'Integration with calendar and video platforms',
+        'Follow-up automation and reminders',
+      ],
+      pricing: '$1,800 - $6,500/month',
+      delivery: '2-4 weeks',
+      category: 'Productivity SaaS',
+    },
+    {
+      title: 'Smart Contract Management System',
+      description:
+        'AI-powered contract lifecycle management with risk assessment and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Contract creation and template management',
+        'AI-powered risk assessment and analysis',
+        'Automated compliance monitoring',
+        'Renewal and expiration tracking',
+        'Electronic signature integration',
+        'Contract performance analytics',
+      ],
+      pricing: '$3,000 - $10,000/month',
+      delivery: '4-7 weeks',
+      category: 'Legal SaaS',
+    },
+    {
+      title: 'AI-Powered Lead Scoring Platform',
+      description:
+        'Intelligent lead qualification and scoring with predictive analytics and automated nurturing',
+      icon: TrendingUp,
+      features: [
+        'Behavioral scoring and qualification',
+        'Predictive lead conversion modeling',
+        'Automated lead nurturing campaigns',
+        'Multi-channel lead tracking',
+        'Sales team alerts and notifications',
+        'Integration with CRM and marketing tools',
+      ],
+      pricing: '$2,000 - $7,500/month',
+      delivery: '3-5 weeks',
+      category: 'Sales SaaS',
+    },
+    {
+      title: 'Smart Fleet Management System',
+      description:
+        'AI-driven fleet optimization with route planning, maintenance scheduling, and driver monitoring',
+      icon: Truck,
+      features: [
+        'Route optimization and planning',
+        'Predictive maintenance scheduling',
+        'Driver behavior monitoring and scoring',
+        'Fuel consumption optimization',
+        'Real-time tracking and alerts',
+        'Compliance and safety monitoring',
+      ],
+      pricing: '$4,500 - $15,000/month',
+      delivery: '5-10 weeks',
+      category: 'Fleet Management SaaS',
+    },
+    {
+      title: 'AI-Powered Personal Finance Manager',
+      description:
+        'Intelligent personal finance tracking with budgeting, investment advice, and goal setting',
+      icon: PiggyBank,
+      features: [
+        'Automated expense categorization',
+        'Budget creation and monitoring',
+        'Investment portfolio analysis',
+        'Goal setting and progress tracking',
+        'Bill payment reminders and automation',
+        'Financial health scoring and insights',
+      ],
+      pricing: '$800 - $3,000/month',
+      delivery: '2-4 weeks',
+      category: 'Personal Finance SaaS',
     },
   ];
   const technologies = [

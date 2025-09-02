@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap, Leaf, Eye, Bot } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -531,6 +531,159 @@ export default function ITServices() {
       pricing: '$4,000 - $20,000/month',
       delivery: '4-12 weeks',
       category: 'Backup Services',
+    },
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description:
+        'Intelligent IT operations with automated monitoring, incident response, and optimization',
+      icon: Brain,
+      features: [
+        'Intelligent monitoring and alerting',
+        'Automated incident detection and resolution',
+        'Predictive maintenance and capacity planning',
+        'Root cause analysis and problem resolution',
+        'Performance optimization and tuning',
+        'Cost optimization and resource management',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'AIOps Services',
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description:
+        'Comprehensive zero trust security implementation with identity and access management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM)',
+        'Multi-factor authentication and SSO',
+        'Network segmentation and micro-segmentation',
+        'Endpoint detection and response (EDR)',
+        'Data loss prevention (DLP)',
+        'Security orchestration and automation',
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security Services',
+    },
+    {
+      title: 'Hybrid Cloud Management Platform',
+      description:
+        'Unified management platform for multi-cloud and hybrid cloud environments',
+      icon: Cloud,
+      features: [
+        'Multi-cloud resource management and optimization',
+        'Hybrid cloud connectivity and networking',
+        'Cost optimization and governance',
+        'Disaster recovery and business continuity',
+        'Compliance and security management',
+        'Performance monitoring and analytics',
+      ],
+      pricing: '$10,000 - $45,000/month',
+      delivery: '8-18 weeks',
+      category: 'Cloud Services',
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description:
+        'Distributed edge computing solutions for low-latency applications and IoT',
+      icon: Cpu,
+      features: [
+        'Edge data center design and deployment',
+        'Edge AI and machine learning processing',
+        'Real-time data processing and analytics',
+        'Edge security and device management',
+        'Content delivery network (CDN) optimization',
+        'Edge-to-cloud connectivity and synchronization',
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '10-20 weeks',
+      category: 'Edge Computing',
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description:
+        'Sustainable IT infrastructure and carbon footprint reduction services',
+      icon: Leaf,
+      features: [
+        'Energy-efficient data center design',
+        'Carbon footprint assessment and reduction',
+        'Renewable energy integration',
+        'E-waste management and recycling',
+        'Sustainable procurement and vendor management',
+        'Environmental compliance and reporting',
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '6-16 weeks',
+      category: 'Sustainability Services',
+    },
+    {
+      title: 'Digital Twin Technology Platform',
+      description:
+        'Digital twin implementation for physical assets and processes',
+      icon: Monitor,
+      features: [
+        '3D modeling and simulation',
+        'Real-time monitoring and analytics',
+        'Predictive maintenance and optimization',
+        'Virtual testing and scenario planning',
+        'Integration with IoT and sensor networks',
+        'Performance optimization and insights',
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '12-24 weeks',
+      category: 'Digital Twin Services',
+    },
+    {
+      title: 'AR/VR Enterprise Solutions',
+      description:
+        'Augmented and virtual reality solutions for enterprise applications',
+      icon: Eye,
+      features: [
+        'AR/VR application development',
+        'Immersive training and simulation',
+        'Remote collaboration and communication',
+        '3D visualization and modeling',
+        'Hardware integration and optimization',
+        'Content management and distribution',
+      ],
+      pricing: '$12,000 - $55,000/month',
+      delivery: '8-20 weeks',
+      category: 'AR/VR Services',
+    },
+    {
+      title: 'Robotic Process Automation (RPA)',
+      description:
+        'Intelligent automation of business processes with AI-powered bots',
+      icon: Bot,
+      features: [
+        'Process discovery and analysis',
+        'Bot development and deployment',
+        'AI-powered decision making',
+        'Integration with existing systems',
+        'Monitoring and optimization',
+        'Change management and training',
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '4-12 weeks',
+      category: 'RPA Services',
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description:
+        'Simplified and scalable hyperconverged infrastructure solutions',
+      icon: Server,
+      features: [
+        'HCI design and implementation',
+        'Storage and compute optimization',
+        'Virtualization and containerization',
+        'Backup and disaster recovery',
+        'Performance monitoring and tuning',
+        'Scaling and capacity management',
+      ],
+      pricing: '$15,000 - $70,000/month',
+      delivery: '8-20 weeks',
+      category: 'Infrastructure Services',
     },
   ];
   const technologies = [
