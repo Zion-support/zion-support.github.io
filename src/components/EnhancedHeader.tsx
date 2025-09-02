@@ -1,50 +1,138 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X, Zap, Brain, Cloud, Shield } from 'lucide-react';
 
 export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
+    { 
+      label: 'Services', 
+      href: '/services',
+      dropdown: [
+        { label: 'All Services', href: '/comprehensive-services-2025', icon: Zap },
+        { label: 'Micro SAAS', href: '/services/micro-saas', icon: Zap },
+        { label: 'AI Services', href: '/services/ai-services', icon: Brain },
+        { label: 'IT Services', href: '/services/it-services', icon: Cloud },
+        { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { label: 'Emerging Tech', href: '/services/emerging-tech', icon: Zap }
+      ]
+    },
     { label: 'Solutions', href: '/solutions' },
     { label: 'Enterprise', href: '/enterprise' },
-    { label: 'Request Quote', href: '/request-quote' },
+    { label: 'About', href: '/about' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' }
   ];
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="/" className="text-xl sm:text-2xl font-bold text-blue-900">Zion Tech Group</a>
+          <Link to="/" className="text-xl sm:text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors">
+            Zion Tech Group
+          </Link>
+          
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-gray-700 hover:text-blue-600 transition-colors">
-                {link.label}
-              </a>
+              <div key={link.href} className="relative">
+                {link.dropdown ? (
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    <button className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+                      {link.label}
+                      <ChevronDown className="w-4 h-4 ml-1" />
+                    </button>
+                    
+                    {servicesOpen && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.href}
+                            to={item.href}
+                            className="flex items-center px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            <item.icon className="w-4 h-4 mr-3" />
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link to={link.href} className="text-gray-700 hover:text-blue-600 transition-colors">
+                    {link.label}
+                  </Link>
+                )}
+              </div>
             ))}
-            <a href="/services/ai" className="hidden lg:inline-flex bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Explore AI</a>
+            
+            <Link 
+              to="/contact" 
+              className="hidden lg:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-semibold shadow-lg"
+            >
+              Get Started
+            </Link>
           </nav>
-          <button aria-label="Toggle navigation" onClick={() => setMobileOpen((v) => !v)} className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          
+          <button 
+            aria-label="Toggle navigation" 
+            onClick={() => setMobileOpen((v) => !v)} 
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+          >
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-white">
+        <div className="md:hidden border-t border-gray-200 bg-white shadow-lg">
           <div className="px-4 py-3 space-y-2">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="block w-full py-2 text-gray-700 hover:text-blue-600">
-                {link.label}
-              </a>
+              <div key={link.href}>
+                {link.dropdown ? (
+                  <div>
+                    <div className="text-gray-500 text-sm font-semibold mb-2">{link.label}</div>
+                    <div className="ml-4 space-y-1">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.href}
+                          to={item.href}
+                          className="flex items-center py-2 text-gray-700 hover:text-blue-600"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          <item.icon className="w-4 h-4 mr-3" />
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link 
+                    to={link.href} 
+                    className="block w-full py-2 text-gray-700 hover:text-blue-600"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </div>
             ))}
-            <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>
+            <Link 
+              to="/contact" 
+              className="block w-full py-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold mt-4"
+              onClick={() => setMobileOpen(false)}
+            >
+              Get Started
+            </Link>
           </div>
         </div>
-      )}</header>
+      )}
+    </header>
   );
 };
