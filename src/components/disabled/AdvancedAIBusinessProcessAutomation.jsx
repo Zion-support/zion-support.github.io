@@ -1,10 +1,6 @@
 import React, { useState, useRef } from 'react';
-<<<<<<< HEAD;
-export function AdvancedAIBusinessProcessAutomation () {;
-=======;
-import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
->>>>>>> main;
-const mockBusinessProcesses = [;
+;
+export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProcesses = [;
     {;
         id: 'bp-001',;
         name: 'Invoice Processing & Approval',;
