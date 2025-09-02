@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+import Link from 'next/link';
+import { 
+=======
 import { Link } from 'react-router-dom';
 import {
+>>>>>>> origin/main
   Brain,
   Mail,
   Phone, MapPin,
@@ -22,10 +27,10 @@ const Footer: React.FC = () => {
       icon: Brain,
       color: "text-blue-400",
       services: [
-        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
-        { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" },
-        { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" },
-        { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }
+        { name: "AI Services", href: "/services/ai-services" },
+        { name: "IT Services", href: "/services/it-services" },
+        { name: "Micro SaaS", href: "/services/micro-saas" },
+        { name: "All Services", href: "/services" }
       ]
     },
     {
@@ -33,10 +38,9 @@ const Footer: React.FC = () => {
       icon: Cloud,
       color: "text-green-400",
       services: [
-        { name: "Cloud Migration", href: "/services/cloud-migration" },
-        { name: "Micro SaaS Solutions", href: "/micro-saas" },
-        { name: "IT Services", href: "/it-services" },
-        { name: "Infrastructure Management", href: "/services/infrastructure" }
+        { name: "IT Services", href: "/services/it-services" },
+        { name: "Micro SaaS", href: "/services/micro-saas" },
+        { name: "Services Overview", href: "/services" }
       ]
     },
     {
@@ -44,10 +48,9 @@ const Footer: React.FC = () => {
       icon: Database,
       color: "text-purple-400",
       services: [
-        { name: "Data Analytics", href: "/services/data-analytics" },
-        { name: "Business Intelligence", href: "/services/business-intelligence" },
-        { name: "Predictive Analytics", href: "/services/predictive-analytics" },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }
+        { name: "AI Services", href: "/services/ai-services" },
+        { name: "Products", href: "/products" },
+        { name: "Case Studies", href: "/case-studies" }
       ]
     }
   ];
@@ -58,7 +61,7 @@ const Footer: React.FC = () => {
     { name: "Careers", href: "/careers" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
-    { name: "White Papers", href: "/white-papers" },
+    { name: "White Papers", href: "/whitepapers" },
     { name: "Webinars", href: "/webinars" },
     { name: "Pricing", href: "/pricing" }
   ];

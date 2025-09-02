@@ -15,8 +15,11 @@ eslint: {
   eslint: {
     ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD:next.config.js
+=======
   typescript: {
     ignoreBuildErrors: true,},
+>>>>>>> origin/main:next.config.cjs
   images: {
     domains: ['ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
@@ -30,6 +33,9 @@ eslint: {
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
+<<<<<<< HEAD:next.config.js
+    // Keep default TS/JS handling; we already ignore build errors via config
+=======
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -46,6 +52,7 @@ eslint: {
         /hardhat/,
       ],
     });
+>>>>>>> origin/main:next.config.cjs
     
     // Add fallback for problematic modules
     config.resolve.fallback = {

@@ -70,7 +70,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <Link href={service.href} className="inline-block w-full">
+                <Link href={service.href}>
                   <Button variant="outline" className="w-full">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
