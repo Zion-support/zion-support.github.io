@@ -1,7 +1,6 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
-
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react'
 const SmartInventoryManagement: React.FC = () => {
   return (
     <Layout

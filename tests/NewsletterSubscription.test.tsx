@@ -1,7 +1,11 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm';
-import { vi } from 'vitest';
-import * as toastHook from '@/hooks/use-toast';
+import { render, screen, fireEvent } from '@testing-library/react'
+import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm'
+import { vi } from 'vitest'
+import * as toastHook from '@/hooks/use-toast'
+vi.mock(
+  '@/hooks/use-toast', () => ({
+  toast: {
+    success: vi.fn(), error: vi.fn()}}))
 
 vi.mock(
   '@/hooks/use-toast', () => ({

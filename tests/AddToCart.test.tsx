@@ -1,8 +1,14 @@
-import { render, screen, fireEvent, act } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentDetail from '@/pages/EquipmentDetail';
-import { safeStorage } from '@/utils/safeStorage';
-import * as router from 'react-router-dom';
+import { render, screen, fireEvent, act } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
+import EquipmentDetail from '@/pages/EquipmentDetail'
+import { safeStorage } from '@/utils/safeStorage'
+import * as router from 'react-router-dom'
+jest.mock(
+  '@/hooks/useAuth', () => ({ useAuth: () => ({ isAuthenticated: true }) }))
+jest.mock(
+  'react-router-dom', () => ({
+  ...(jest.requireActual(
+  'react-router-dom') as any), useParams: jest.fn(), useNavigate: jest.fn()}))
 
 jest.mock(
   '@/hooks/useAuth', () => ({ useAuth: () => ({ isAuthenticated: true })}));

@@ -32,6 +32,44 @@ export default function SimplePage() {
   }
   const pageInfo = getContent()
   return ("
+
+import { Link, useLocation } from 'react-router-dom'
+import Header from '../layout/Header'
+import Footer from '../layout/Footer'
+export default function SimplePage() {
+  const location = useLocation()
+  const pathname = location.pathname
+
+  // Generate a title based on the pathname
+  const getTitle = () => {
+    const path = pathname.replace('/', '').replace(/-/g, ' ')
+    return path.charAt(0).toUpperCase() + path.slice(1)
+  }
+
+  // Generate content based on the pathname
+  const getContent = () => {
+    if (pathname.includes('pricing')) {
+      return {
+        title: 'Pricing & Plans', description: 'Transparent pricing for our technology solutions and services.', content: 'Our pricing is designed to be transparent and scalable. Contact us for a custom quote tailored to your specific needs and requirements.'
+      }
+    } else if (pathname.includes('case-studies')) {
+      return {
+        title: 'Case Studies', description: 'Real-world examples of how we\'ve helped businesses transform with technology.', content: 'Explore our case studies to see how we\'ve delivered measurable results for clients across various industries.'
+      }
+    } else if (pathname.includes('blog')) {
+      return {
+        title: 'Blog & Insights', description: 'Latest insights, trends, and thought leadership in technology.', content: 'Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.'
+      }
+    } else {
+      return {
+        title: getTitle(), description: 'Welcome to this page.', content: 'This page is under development. Please check back soon for updated content.'
+      }
+    }
+  }
+
+  const pageInfo = getContent()
+
+  return (
     <div className='min-h-screen bg-white'>
       <Header />
       {/* Hero Section */}

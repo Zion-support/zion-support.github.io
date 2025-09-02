@@ -1,4 +1,4 @@
-// Global types for the Zion Tech Group application;
+// Global types for the Zion Tech Group application
 export interface Service {
   id: string;
    name: string;

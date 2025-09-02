@@ -116,7 +116,7 @@ function App() {
         <ChatAssistant />
       </div>
     </Router>
-  );
+  )
 }
 
 export default App;

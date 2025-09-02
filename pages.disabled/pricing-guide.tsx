@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import React from 'react'
+import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
+import { Button } from '../components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Badge } from '../components/ui/Badge'
 import {
   CheckCircle,
   Star,
@@ -33,8 +33,7 @@ import {
   Lightbulb,
   HelpCircle,
   Network
-} from 'lucide-react';
-
+} from 'lucide-react'
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
     {
@@ -66,8 +65,7 @@ const PricingGuide: React.FC = () => {
       ], icon: Clock,
       color: 'from-orange-500 to-red-500'
     }
-  ];
-
+  ]
   const pricingExamples = [
     {
       scenario: 'Small Business Automation', description: 'AI-powered customer service chatbot for a small e-commerce business',
@@ -95,8 +93,7 @@ const PricingGuide: React.FC = () => {
       ], price: '$15,000 - $35,000',
       timeline: '8-12 weeks', roi: '400% ROI within 8 months'
     }
-  ];
-
+  ]
   const costSavingTips = [
     {
       tip: 'Start with MVP', description: 'Begin with a minimum viable product and iterate based on results',
@@ -112,7 +109,7 @@ const PricingGuide: React.FC = () => {
       tip: 'Long-term Partnership',
       description: 'Sign annual contracts for ongoing development and support', savings: 'Get 20% discount on all services'
     }
-  ];
+  ]
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO
@@ -126,16 +123,16 @@ const PricingGuide: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
+          >
             <Badge variant='secondary' className='mb-4'>
               <Calculator className='w-4 h-4 mr-2' />
-              Pricing Guide;
+              Pricing Guide
             </Badge>
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-              AI Solution Pricing Guide;
+              AI Solution Pricing Guide
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Understand the factors that influence AI solution costs and get accurate estimates for your project.;
+              Understand the factors that influence AI solution costs and get accurate estimates for your project.
             </p>
           </motion.div>
         </div>
@@ -153,7 +150,7 @@ const PricingGuide: React.FC = () => {
               What Affects AI Solution Pricing?
             </h2>
             <p className='text-xl text-gray-300'>
-              Several key factors determine the cost of your AI implementation;
+              Several key factors determine the cost of your AI implementation
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -163,7 +160,7 @@ const PricingGuide: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >;
+              >
                 <Card className='p-8 h-full'>
                   <div className='flex items-start mb-6'>
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}>
@@ -211,7 +208,7 @@ const PricingGuide: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >;
+              >
                 <Card className='p-8 h-full'>
                   <div className='text-center mb-6'>
                     <h3 className='text-xl font-bold text-white mb-2'>{example.scenario}</h3>
@@ -262,7 +259,7 @@ const PricingGuide: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >;
+              >
                 <Card className='p-6'>
                   <div className='flex items-start'>
                     <div className='p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4'>
@@ -289,28 +286,28 @@ const PricingGuide: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >;
+          >
             <h2 className='text-4xl font-bold text-white mb-6'>
-              Get Your Custom Quote;
+              Get Your Custom Quote
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              Ready to get started? Contact us for a personalized quote based on your specific requirements.;
+              Ready to get started? Contact us for a personalized quote based on your specific requirements.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                 <Calculator className='w-5 h-5 mr-2' />
-                Get Free Quote;
+                Get Free Quote
               </Button>
               <Button size='lg' variant='outline'>
                 <HelpCircle className='w-5 h-5 mr-2' />
-                Ask Questions;
+                Ask Questions
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
-;
-export default PricingGuide;
+  )
+}
+
+export default PricingGuide

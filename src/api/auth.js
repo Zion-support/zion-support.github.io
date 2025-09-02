@@ -13,7 +13,7 @@ export async function requestPasswordReset(email) {}
   if (!res.ok) throw new Error('Failed to send reset code');
   return res.json().catch(() => ({}))}
 export async function verifyResetCode(email, code) {}
-`;
+`
   const res = await fetch(`${API_URL}/auth/verify-code`, {}
 ';'
 '';
@@ -24,7 +24,7 @@ export async function verifyResetCode(email, code) {}
   if (!res.ok) throw new Error('Invalid code');
   return res.json()}
 export async function resetPassword(token, password) {}
-`;
+`
   const res = await fetch(`${API_URL}/auth/reset`, {}
 ';'
 '';
