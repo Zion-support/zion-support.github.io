@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar';
 import SEOHead from '../src/components/SEO/SEOHead';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import { organizationStructuredData, websiteStructuredData } from '../src/components/SEO/StructuredData';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu, MapPin } from 'lucide-react';
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -85,7 +85,8 @@ export default function Home() {
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. 
-                We help businesses innovate, scale, and succeed in the digital age.
+                We help businesses innovate, scale, and succeed in the digital age with cutting-edge technology 
+                solutions that drive real results and measurable ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
@@ -150,6 +151,50 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Market Position Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry-Leading Technology Solutions</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                With over 500+ successful projects and 50+ satisfied clients, we deliver enterprise-grade 
+                solutions at competitive market rates. Our AI, IT, and SaaS services are designed to 
+                maximize your ROI and accelerate your digital transformation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">$2,000 - $35,000</div>
+                  <div className="text-gray-600 mb-4">Monthly Service Range</div>
+                  <p className="text-sm text-gray-500">
+                    Competitive pricing for enterprise-grade solutions with flexible payment options
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">2-12 weeks</div>
+                  <div className="text-gray-600 mb-4">Average Delivery Time</div>
+                  <p className="text-sm text-gray-500">
+                    Fast implementation with agile development methodologies
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>
+                  <div className="text-gray-600 mb-4">Uptime Guarantee</div>
+                  <p className="text-sm text-gray-500">
+                    Enterprise-grade reliability with 24/7 monitoring and support
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,13 +228,31 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let's discuss how our technology solutions can drive your success. Get started with a free consultation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Free Consultation
               </Link>
               <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Learn More About Us
               </Link>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-blue-100 mb-4">Ready to get started? Contact us today!</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tel:+13024640950" className="text-white hover:text-blue-100 transition-colors flex items-center">
+                  <Phone className="w-4 h-4 mr-2" />
+                  +1 302 464 0950
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-100 transition-colors flex items-center">
+                  <Mail className="w-4 h-4 mr-2" />
+                  kleber@ziontechgroup.com
+                </a>
+                <div className="text-white flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  364 E Main St STE 1008, Middletown DE 19709
+                </div>
+              </div>
             </div>
           </div>
         </section>
