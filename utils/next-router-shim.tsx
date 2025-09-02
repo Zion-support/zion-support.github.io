@@ -24,12 +24,13 @@ export function useLocation() {;
   const [path, query = ''] = asPath.split('?');
   const hashIndex = asPath.indexOf('#');
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : '';
-  return {;
-    pathname: path,;
-    search: query ? `?${query}` : '',;
-    hash,;
-    state: undefined as unknown,;
-    key: 'next'} as any;
+  return {
+    pathname: path,
+    search: query ? `?${query}` : '',
+    hash,
+    state: undefined as unknown,
+    key: 'next'
+  } as any;
 }
 ;
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
