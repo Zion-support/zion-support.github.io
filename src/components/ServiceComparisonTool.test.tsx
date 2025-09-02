@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import ServiceComparisonTool from './ServiceComparisonTool';
-
-describe('ServiceComparisonTool', () => {
-  it('renders without crashing', () => {
-    render(<ServiceComparisonTool />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<ServiceComparisonTool />)
+;
+describe('ServiceComparisonTool', () => {;
+  it('renders without crashing', () => {;
+    render(<ServiceComparisonTool />);
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
+  it('displays expected content', () => {;
+    render(<ServiceComparisonTool />);
     // Add specific test assertions based on component content})})

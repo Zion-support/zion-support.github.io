@@ -1,4 +1,4 @@
-export interface PricingTier2032 {
+export interface PricingTier2032 {;
   id: string;
    name: string;
    price: number;
@@ -9,7 +9,7 @@ export interface PricingTier2032 {
    limitations: string[];
    bestFor: string;
    popular?: boolean;
-   savings?: string} export interface ServicePricing2032 {
+   savings?: string} export interface ServicePricing2032 {;
   serviceId: string;
    serviceName: string;
    category: string;

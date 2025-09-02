@@ -1,4 +1,4 @@
-export interface EquipmentItem {
+export interface EquipmentItem {;
   id: string;
    name: string;
    description: string;

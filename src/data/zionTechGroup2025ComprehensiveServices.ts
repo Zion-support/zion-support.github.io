@@ -1,4 +1,4 @@
-export interface ZionService {
+export interface ZionService {;
    id: string;
    title: string;
    description: string;
@@ -9,7 +9,7 @@ export interface ZionService {
    benefits: string[];
    useCases: string[];
    targetAudience: string[];
-   contactInfo: {
+   contactInfo: {;
    mobile: string;
    email: string;
    address: string;

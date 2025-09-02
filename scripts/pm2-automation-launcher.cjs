@@ -1,38 +1,38 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
-
-class PM2AutomationLauncher {
-  constructor() {
+;
+class PM2AutomationLauncher {;
+  constructor() {;
     this.processes = new Map();
-    this.logFile = path.join(
-      __dirname,..',
-      'logs',pm2-automation-launcher.log'
+    this.logFile = path.join(;
+      __dirname,..',;
+      'logs',pm2-automation-launcher.log';
     );
     this.ensureLogDirectory();
     this.config = this.loadConfig();
   }
-
-  ensureLogDirectory() {
+;
+  ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
+    if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
-
-  log(message) {
+;
+  log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
-  loadConfig() {
-    try {
+;
+  loadConfig() {;
+    try {;
       const configPath = path.join(__dirname, '..', 'ecosystem.config.cjs');
-      if (fs.existsSync(configPath)) {
+      if (fs.existsSync(configPath)) {;
         delete require.cache[require.resolve(configPath)];
         return require(configPath);
       }
@@ -41,9 +41,9 @@ class PM2AutomationLauncher {
       return null;
     }
   }
-
-  async checkPM2Status() {
-    try {
+;
+  async checkPM2Status() {;
+    try {;
       const output = execSync('pm2 jlist', { encoding: 'utf8' });
       const processes = JSON.parse(output);
       return processes.filter(proc => proc.name !== 'pm2-logrotate');
@@ -51,50 +51,50 @@ class PM2AutomationLauncher {
       return [];
     }
   }
-
-  async startAutomationProcesses() {
-    if (!this.config || !this.config.automation) {
+;
+  async startAutomationProcesses() {;
+    if (!this.config || !this.config.automation) {;
       this.log('❌ No automation configuration found');
       return false;
     }
-
+;
     this.log('🚀 Starting PM2 automation processes...');
-
-    for (const process of this.config.automation) {
+;
+    for (const process of this.config.automation) {;
       try {this.log(`🔧 Starting ${process.name}...`);
-
-        // Check if process already exists
+;
+        // Check if process already exists;
         const existingProcesses = await this.checkPM2Status();
         const exists = existingProcesses.find(p => p.name === process.name);
-
+;
         if (exists) {this.log(`⚠️ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { stdio: 'pipe' });
-        } else {
-          // Start new process
+        } else {;
+          // Start new process;
           const scriptPath = path.resolve(__dirname, '..', process.script);
-          if (fs.existsSync(scriptPath)) {execSync(`pm2 start ${scriptPath} --name ${process.name}`, {
-              stdio: 'pipe',
-              env: { ...process.env, ...process.env },
+          if (fs.existsSync(scriptPath)) {execSync(`pm2 start ${scriptPath} --name ${process.name}`, {;
+              stdio: 'pipe',;
+              env: { ...process.env, ...process.env },;
             });this.log(`✅ Started ${process.name}`);
           } else {this.log(`❌ Script not found: ${scriptPath}`);
           }
         }
-
-        // Add delay between starts
+;
+        // Add delay between starts;
         await this.sleep(2000);
       } catch (error) {this.log(`❌ Failed to start ${process.name}: ${error.message}`);
       }
     }
-
+;
     this.log('📊 PM2 automation processes started');
     return true;
   }
-
-  async stopAutomationProcesses() {
+;
+  async stopAutomationProcesses() {;
     this.log('🛑 Stopping PM2 automation processes...');
-
-    try {
+;
+    try {;
       const processes = await this.checkPM2Status();
-      for (const proc of processes) {
+      for (const proc of processes) {;
         if (proc.name !== 'pm2-logrotate') {execSync(`pm2 stop ${proc.name}`, { stdio: 'pipe' });this.log(`🛑 Stopped ${proc.name}`);
         }
       }
@@ -102,13 +102,13 @@ class PM2AutomationLauncher {
     } catch (error) {this.log(`❌ Error stopping processes: ${error.message}`);
     }
   }
-
-  async restartAutomationProcesses() {
+;
+  async restartAutomationProcesses() {;
     this.log('🔄 Restarting PM2 automation processes...');
-
-    try {
+;
+    try {;
       const processes = await this.checkPM2Status();
-      for (const proc of processes) {
+      for (const proc of processes) {;
         if (proc.name !== 'pm2-logrotate') {execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe' });this.log(`🔄 Restarted ${proc.name}`);
         }
       }
@@ -116,13 +116,13 @@ class PM2AutomationLauncher {
     } catch (error) {this.log(`❌ Error restarting processes: ${error.message}`);
     }
   }
-
-  async deleteAutomationProcesses() {
+;
+  async deleteAutomationProcesses() {;
     this.log('🗑️ Deleting PM2 automation processes...');
-
-    try {
+;
+    try {;
       const processes = await this.checkPM2Status();
-      for (const proc of processes) {
+      for (const proc of processes) {;
         if (proc.name !== 'pm2-logrotate') {execSync(`pm2 delete ${proc.name}`, { stdio: 'pipe' });this.log(`🗑️ Deleted ${proc.name}`);
         }
       }
@@ -130,94 +130,94 @@ class PM2AutomationLauncher {
     } catch (error) {this.log(`❌ Error deleting processes: ${error.message}`);
     }
   }
-
-  async showStatus() {
+;
+  async showStatus() {;
     this.log('📊 PM2 Automation Status:');
-
-    try {
+;
+    try {;
       const processes = await this.checkPM2Status();
-
-      if (processes.length === 0) {
+;
+      if (processes.length === 0) {;
         this.log('ℹ️ No automation processes running');
         return;
       }
-
+;
       console.log('\n📋 Automation Processes:');
       console.log('========================');
-
-      for (const proc of processes) {
-        const statusIcon =
-          proc.pm2_env.status === 'online'
-            ? '🟢'
-            : proc.pm2_env.status === 'errored'
-              ? '🔴'
+;
+      for (const proc of processes) {;
+        const statusIcon =;
+          proc.pm2_env.status === 'online';
+            ? '🟢';
+            : proc.pm2_env.status === 'errored';
+              ? '🔴';
               : '🟡';
         const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
 console.log(`\n${statusIcon} ${proc.name}`);console.log(`   Status: ${proc.pm2_env.status}`);console.log(`   Uptime: ${uptime}`);console.log(`   Restarts: ${proc.pm2_env.restart_time}');
-        console.log(   Memory: ${Math.round(proc.monit.memory / 1024 / 1024)}MB'
+        console.log(   Memory: ${Math.round(proc.monit.memory / 1024 / 1024)}MB';
         );
         console.log(`   CPU: ${proc.monit.cpu}%`);
       }
-
-      const onlineCount = processes.filter(
-        p => p.pm2_env.status === 'online'
+;
+      const onlineCount = processes.filter(;
+        p => p.pm2_env.status === 'online';
       ).length;
       const totalCount = processes.length;
-
-      console.log(\n📊 Summary: ${onlineCount}/${totalCount} processes online'
+;
+      console.log(\n📊 Summary: ${onlineCount}/${totalCount} processes online';
       );
     } catch (error) {this.log(`❌ Error getting status: ${error.message}`);
     }
   }
-
-  async showLogs(processName = null, lines = 20) {
-    try {
-      if (processName) {this.log(`📝 Showing logs for ${processName}:`);execSync(`pm2 logs ${processName} --lines ${lines}`, {
-          stdio: 'inherit',
+;
+  async showLogs(processName = null, lines = 20) {;
+    try {;
+      if (processName) {this.log(`📝 Showing logs for ${processName}:`);execSync(`pm2 logs ${processName} --lines ${lines}`, {;
+          stdio: 'inherit',;
         });
-      } else {
+      } else {;
         this.log('📝 Showing all automation logs:');
         execSync('pm2 logs --lines 10', { stdio: 'inherit' });
       }
     } catch (error) {this.log(`❌ Error showing logs: ${error.message}`);
     }
   }
-
-  async openMonitoring() {
+;
+  async openMonitoring() {;
     this.log('📊 Opening PM2 monitoring interface...');
-    try {
+    try {;
       execSync('pm2 monit', { stdio: 'inherit' });
     } catch (error) {this.log(`❌ Error opening monitoring: ${error.message}`);
     }
   }
-
-  async generateReport() {
+;
+  async generateReport() {;
     this.log('📊 Generating automation report...');
-
-    try {
+;
+    try {;
       const processes = await this.checkPM2Status();
-      const report = {
-        timestamp: new Date().toISOString(),
-        totalProcesses: processes.length,
-        onlineProcesses: processes.filter(p => p.pm2_env.status === 'online')
-          .length,
-        erroredProcesses: processes.filter(p => p.pm2_env.status === 'errored')
-          .length,
-        stoppedProcesses: processes.filter(p => p.pm2_env.status === 'stopped')
-          .length,
-        processes: processes.map(proc => ({
-          name: proc.name,
-          status: proc.pm2_env.status,
-          uptime: proc.pm2_env.pm_uptime,
-          restarts: proc.pm2_env.restart_time,
-          memory: proc.monit.memory,
-          cpu: proc.monit.cpu,
-        })),
+      const report = {;
+        timestamp: new Date().toISOString(),;
+        totalProcesses: processes.length,;
+        onlineProcesses: processes.filter(p => p.pm2_env.status === 'online');
+          .length,;
+        erroredProcesses: processes.filter(p => p.pm2_env.status === 'errored');
+          .length,;
+        stoppedProcesses: processes.filter(p => p.pm2_env.status === 'stopped');
+          .length,;
+        processes: processes.map(proc => ({;
+          name: proc.name,;
+          status: proc.pm2_env.status,;
+          uptime: proc.pm2_env.pm_uptime,;
+          restarts: proc.pm2_env.restart_time,;
+          memory: proc.monit.memory,;
+          cpu: proc.monit.cpu,;
+        })),;
       };
-
-      const reportPath = path.join(
-        __dirname,..',
-        'logs',automation-report.json'
+;
+      const reportPath = path.join(;
+        __dirname,..',;
+        'logs',automation-report.json';
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`✅ Report generated: ${reportPath}`);
@@ -226,22 +226,22 @@ this.log(`✅ Report generated: ${reportPath}`);
       return null;
     }
   }
-
-  formatUptime(uptime) {
+;
+  formatUptime(uptime) {;
     if (!uptime) return 'N/A';
-
+;
     const seconds = Math.floor(uptime / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
 if (days > 0) return `${days}d ${hours % 24}h`;if (hours > 0) return `${hours}h ${minutes % 60}m`;if (minutes > 0) return `${minutes}m ${seconds % 60}s`;return `${seconds}s`;
   }
-
-  sleep(ms) {
+;
+  sleep(ms) {;
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-
-  showHelp() {
+;
+  showHelp() {;
     console.log('\n🚀 PM2 Automation Launcher');
     console.log('==========================\n');
     console.log('Available commands:');
@@ -256,46 +256,46 @@ if (days > 0) return `${days}d ${hours % 24}h`;if (hours > 0) return `${hours}h 
     console.log('  help      - Show this help message');
     console.log('\nExamples:');
     console.log('  node pm2-automation-launcher.cjs start');
-    console.log(  node pm2-automation-launcher.cjs logs enhanced-link-checker'
+    console.log(  node pm2-automation-launcher.cjs logs enhanced-link-checker';
     );
     console.log('  node pm2-automation-launcher.cjs status');
   }
 }
-
-// CLI handling
+;
+// CLI handling;
 const launcher = new PM2AutomationLauncher();
 const command = process.argv[2];
 const subCommand = process.argv[3];
-
-async function main() {
-  try {
-    switch (command) {
-      case 'start':
+;
+async function main() {;
+  try {;
+    switch (command) {;
+      case 'start':;
         await launcher.startAutomationProcesses();
         break;
-      case 'stop':
+      case 'stop':;
         await launcher.stopAutomationProcesses();
         break;
-      case 'restart':
+      case 'restart':;
         await launcher.restartAutomationProcesses();
         break;
-      case 'delete':
+      case 'delete':;
         await launcher.deleteAutomationProcesses();
         break;
-      case 'status':
+      case 'status':;
         await launcher.showStatus();
         break;
-      case 'logs':
+      case 'logs':;
         await launcher.showLogs(subCommand);
         break;
-      case 'monit':
+      case 'monit':;
         await launcher.openMonitoring();
         break;
-      case 'report':
+      case 'report':;
         await launcher.generateReport();
         break;
-      case 'help':
-      default:
+      case 'help':;
+      default:;
         launcher.showHelp();
         break;
     }
@@ -303,15 +303,15 @@ async function main() {
     process.exit(1);
   }
 }
-
-// Graceful shutdown
-process.on('SIGINT', () => {
+;
+// Graceful shutdown;
+process.on('SIGINT', () => {;
   launcher.log('\n🛑 Shutting down PM2 automation launcher...');
   process.exit(0);
 });
-
-if (require.main === module) {
+;
+if (require.main === module) {;
   main();
 }
-
+;
 module.exports = PM2AutomationLauncher;

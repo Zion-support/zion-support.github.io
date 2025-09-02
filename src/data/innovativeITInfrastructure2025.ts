@@ -1,4 +1,4 @@
-export interface InnovativeITInfrastructureService {
+export interface InnovativeITInfrastructureService {;
   id: string;
    title: string;
    description: string;

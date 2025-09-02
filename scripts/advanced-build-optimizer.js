@@ -2,16 +2,16 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
+;
 console.log('🚀 Advanced Build Optimizer Starting...');
-class BuildOptimizer {
-  constructor() {
+class BuildOptimizer {;
+  constructor() {;
     this.optimizations = [];
     this.errors = [];
     this.warnings = []}
-  async optimize() {
+  async optimize() {;
     console.log('📊 Analyzing build configuration...');
-    try {
+    try {;
       // 1. Optimize Next.js configuration;
       await this.optimizeNextConfig();
       // 2. Optimize TypeScript configuration;
@@ -23,75 +23,75 @@ class BuildOptimizer {
       // 5. Generate performance report;
       await this.generatePerformanceReport();
       console.log('✅ Build optimization completed successfully!');
-      console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {
+      console.log(`📈 Applied ${this.optimizations.length} optimizations`)} catch (error) {;
       console.error('❌ Build optimization failed:', error.message);
       this.errors.push(error.message)}
   }
-  async optimizeNextConfig() {
+  async optimizeNextConfig() {;
     console.log('🔧 Optimizing Next.js configuration...');
     const nextConfigPath = 'next.config.js';
-    if (fs.existsSync(nextConfigPath)) {
+    if (fs.existsSync(nextConfigPath)) {;
       let config = fs.readFileSync(nextConfigPath, 'utf8');
       // Add performance optimizations;
-      const optimizations = [
-        'experimental: { optimizeCss: true }',
-        'swcMinify: true',
-        'compress: true',
-        'poweredByHeader: false',
-        'generateEtags: false',
+      const optimizations = [;
+        'experimental: { optimizeCss: true }',;
+        'swcMinify: true',;
+        'compress: true',;
+        'poweredByHeader: false',;
+        'generateEtags: false',;
         'httpAgentOptions: { keepAlive: true }';
       ];
       // Apply optimizations if not already present;
-      optimizations.forEach(opt => {
-        if (!config.includes(opt.split(':')[0])) {
-          config = config.replace(
-            /module\.exports\s*=\s*{/,
+      optimizations.forEach(opt => {;
+        if (!config.includes(opt.split(':')[0])) {;
+          config = config.replace(;
+            /module\.exports\s*=\s*{/,;
             `module.exports = {\n  ${opt},`);
           this.optimizations.push(`Added ${opt} to Next.js config`)}
-      })
+      });
       fs.writeFileSync(nextConfigPath, config)}
   }
-  async optimizeTypeScriptConfig() {
+  async optimizeTypeScriptConfig() {;
     console.log('🔧 Optimizing TypeScript configuration...');
     const tsConfigPath = 'tsconfig.json';
-    if (fs.existsSync(tsConfigPath)) {
+    if (fs.existsSync(tsConfigPath)) {;
       const config = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
       // Add performance optimizations;
-      const optimizations = {
-        'incremental': true,
-        'tsBuildInfoFile': '.next/tsbuildinfo',
-        'skipLibCheck': true,
+      const optimizations = {;
+        'incremental': true,;
+        'tsBuildInfoFile': '.next/tsbuildinfo',;
+        'skipLibCheck': true,;
         'forceConsistentCasingInFileNames': true}
 ;
-      Object.entries(optimizations).forEach(([key, value]) => {
-        if (!(key in config.compilerOptions)) {
+      Object.entries(optimizations).forEach(([key, value]) => {;
+        if (!(key in config.compilerOptions)) {;
           config.compilerOptions[key] = value;
           this.optimizations.push(`Added ${key} to TypeScript config`)}
-      })
+      });
       fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2))}
   }
-  async optimizePackageScripts() {
+  async optimizePackageScripts() {;
     console.log('🔧 Optimizing package.json scripts...');
     const packagePath = 'package.json';
-    if (fs.existsSync(packagePath)) {
+    if (fs.existsSync(packagePath)) {;
       const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
       // Add optimized build scripts;
-      const optimizedScripts = {
-        'build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',
-        'build:analyze': 'ANALYZE=true npm run build:optimized',
-        'build:production': 'NODE_ENV=production npm run build:optimized',
-        'build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',
-        'dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',
+      const optimizedScripts = {;
+        'build:optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',;
+        'build:analyze': 'ANALYZE=true npm run build:optimized',;
+        'build:production': 'NODE_ENV=production npm run build:optimized',;
+        'build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',;
+        'dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',;
         'start:optimized': 'NODE_ENV=production next start -p 3000'}
 ;
-      Object.entries(optimizedScripts).forEach(([key, value]) => {
-        if (!(key in pkg.scripts)) {
+      Object.entries(optimizedScripts).forEach(([key, value]) => {;
+        if (!(key in pkg.scripts)) {;
           pkg.scripts[key] = value;
           this.optimizations.push(`Added ${key} script`)}
-      })
+      });
       fs.writeFileSync(packagePath, JSON.stringify(pkg, null, 2))}
   }
-  async createOptimizedBuildScript() {
+  async createOptimizedBuildScript() {;
     console.log('🔧 Creating optimized build script...');
     const buildScript = `#!/bin/bash;
 # Advanced Build Script for Zion Tech Group;
@@ -134,18 +134,18 @@ fi;
     fs.writeFileSync('scripts/optimized-build.sh', buildScript);
     execSync('chmod +x scripts/optimized-build.sh');
     this.optimizations.push('Created optimized build script')}
-  async generatePerformanceReport() {
+  async generatePerformanceReport() {;
     console.log('📊 Generating performance report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      errors: this.errors,
-      warnings: this.warnings,
-      recommendations: [
-        'Use npm run build:optimized for production builds',
-        'Enable SWC minification for faster builds',
-        'Use incremental TypeScript compilation',
-        'Consider using Next.js Image optimization',
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      optimizations: this.optimizations,;
+      errors: this.errors,;
+      warnings: this.warnings,;
+      recommendations: [;
+        'Use npm run build:optimized for production builds',;
+        'Enable SWC minification for faster builds',;
+        'Use incremental TypeScript compilation',;
+        'Consider using Next.js Image optimization',;
         'Implement code splitting for better performance';
       ]}
 ;

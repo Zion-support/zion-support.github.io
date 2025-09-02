@@ -1,4 +1,4 @@
-export interface SpecializedITService {
+export interface SpecializedITService {;
   id: string;
    title: string;
    description: string;

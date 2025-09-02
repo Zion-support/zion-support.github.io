@@ -1,4 +1,4 @@
-export interface EnhancedServiceItem {
+export interface EnhancedServiceItem {;
    id: string;
    title: string;
    description: string;
@@ -19,7 +19,7 @@ export interface EnhancedServiceItem {
    roi: string;
    trialDays: number;
    setupTime: string;
-   contactInfo: {
+   contactInfo: {;
    mobile: string;
    email: string;
    address: string;

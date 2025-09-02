@@ -1,4 +1,4 @@
-export interface AdvancedInnovativeService2032 {
+export interface AdvancedInnovativeService2032 {;
    id: string;
    title: string;
    description: string;
@@ -17,7 +17,7 @@ export interface AdvancedInnovativeService2032 {
    marketPrice: string;
    roi: string;
    innovationLevel: 'Emerging' | 'Advanced' | 'Revolutionary' | 'Breakthrough';
-   contactInfo: {
+   contactInfo: {;
    phone: string;
    email: string;
    website: string;

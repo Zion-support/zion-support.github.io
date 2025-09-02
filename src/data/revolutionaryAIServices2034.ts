@@ -1,4 +1,4 @@
-export interface RevolutionaryAIService2034 {
+export interface RevolutionaryAIService2034 {;
   id: string;
    title: string;
    description: string;

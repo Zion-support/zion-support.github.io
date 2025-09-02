@@ -1,15 +1,15 @@
-interface SupabaseUser {
+interface SupabaseUser {;
   id: string;
    email?: string;
    user_metadata?: { full_name?: string;
-   avatar_url?: string} created_at?: string updated_at?: string} interface Profile {
+   avatar_url?: string} created_at?: string updated_at?: string} interface Profile {;
   id: string;
    display_name?: string;
    avatar_url?: string;
    role?: string;
    is_email_verified?: boolean;
    created_at?: string;
-   updated_at?: string} interface MappedUser {
+   updated_at?: string} interface MappedUser {;
   id: string;
    email: string;
    displayName?: string;
