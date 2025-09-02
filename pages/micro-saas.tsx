@@ -32,7 +32,12 @@ import {
   Cpu,
   Network,
   Terminal,
-  Calendar
+  Calendar,
+  Mic,
+  Home,
+  Utensils,
+  Truck,
+  DollarSign
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -344,6 +349,182 @@ export default function MicroSaaS() {
       pricing: '$299 - $1,200/month',
       delivery: '3-5 weeks',
       category: 'Development SaaS'
+    },
+    {
+      title: 'AI-Powered Voice Analytics Platform',
+      description: 'Advanced voice analysis and sentiment detection for customer service optimization',
+      icon: Mic,
+      features: [
+        'Real-time voice sentiment analysis',
+        'Call quality and performance metrics',
+        'Automated transcription and summarization',
+        'Customer emotion tracking',
+        'Agent coaching recommendations',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$399 - $1,500/month',
+      delivery: '4-6 weeks',
+      category: 'Communication SaaS'
+    },
+    {
+      title: 'Smart Contract Management System',
+      description: 'AI-powered contract lifecycle management with automated risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and extraction',
+        'Risk assessment and compliance checking',
+        'Renewal and expiration tracking',
+        'Digital signature integration',
+        'Contract template management',
+        'Legal clause recommendations'
+      ],
+      pricing: '$599 - $2,500/month',
+      delivery: '5-8 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with predictive analytics and optimization',
+      icon: Network,
+      features: [
+        'Demand forecasting and planning',
+        'Supplier performance analytics',
+        'Risk assessment and mitigation',
+        'Cost optimization recommendations',
+        'Real-time tracking and visibility',
+        'Sustainability impact monitoring'
+      ],
+      pricing: '$1,200 - $5,000/month',
+      delivery: '6-10 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
+      title: 'Intelligent Learning Management System',
+      description: 'AI-driven educational platform with personalized learning paths and assessment',
+      icon: Brain,
+      features: [
+        'Personalized learning recommendations',
+        'Adaptive content delivery',
+        'Automated assessment and grading',
+        'Progress tracking and analytics',
+        'Gamification and engagement tools',
+        'Multi-language support'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '4-7 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'AI-Powered Healthcare Analytics',
+      description: 'Comprehensive healthcare data analysis with predictive insights and compliance',
+      icon: Shield,
+      features: [
+        'Patient data analysis and insights',
+        'Predictive health risk assessment',
+        'Treatment outcome optimization',
+        'HIPAA-compliant data processing',
+        'Clinical decision support',
+        'Population health analytics'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '8-12 weeks',
+      category: 'Healthcare SaaS'
+    },
+    {
+      title: 'Smart Energy Management Platform',
+      description: 'AI-driven energy optimization for buildings and facilities with cost reduction',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'Predictive maintenance scheduling',
+        'Cost optimization algorithms',
+        'Carbon footprint tracking',
+        'Integration with IoT devices',
+        'Sustainability reporting'
+      ],
+      pricing: '$799 - $3,000/month',
+      delivery: '5-8 weeks',
+      category: 'Energy SaaS'
+    },
+    {
+      title: 'AI-Powered Fraud Detection System',
+      description: 'Advanced fraud prevention with machine learning and real-time monitoring',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring',
+        'Machine learning fraud detection',
+        'Risk scoring and assessment',
+        'Multi-channel fraud prevention',
+        'Compliance and regulatory reporting',
+        'Custom rule configuration'
+      ],
+      pricing: '$1,500 - $6,000/month',
+      delivery: '6-10 weeks',
+      category: 'Security SaaS'
+    },
+    {
+      title: 'Intelligent Property Management Platform',
+      description: 'Comprehensive property management with AI-powered tenant screening and maintenance',
+      icon: Home,
+      features: [
+        'Automated tenant screening and verification',
+        'Predictive maintenance scheduling',
+        'Rent optimization and market analysis',
+        'Tenant communication automation',
+        'Financial reporting and analytics',
+        'Maintenance request management'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '4-6 weeks',
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'AI-Powered Restaurant Management',
+      description: 'Complete restaurant operations management with inventory and customer analytics',
+      icon: Utensils,
+      features: [
+        'Smart inventory management',
+        'Customer preference analysis',
+        'Dynamic pricing optimization',
+        'Staff scheduling and management',
+        'Food waste reduction analytics',
+        'Integration with POS systems'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '3-5 weeks',
+      category: 'Restaurant SaaS'
+    },
+    {
+      title: 'Intelligent Fleet Management System',
+      description: 'AI-driven fleet optimization with predictive maintenance and route planning',
+      icon: Truck,
+      features: [
+        'Predictive maintenance scheduling',
+        'Route optimization and planning',
+        'Driver behavior analysis',
+        'Fuel consumption optimization',
+        'Real-time tracking and monitoring',
+        'Compliance and safety reporting'
+      ],
+      pricing: '$599 - $2,500/month',
+      delivery: '5-8 weeks',
+      category: 'Logistics SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Finance Manager',
+      description: 'Intelligent personal finance tracking with budgeting and investment insights',
+      icon: DollarSign,
+      features: [
+        'Automated expense categorization',
+        'Smart budgeting and goal setting',
+        'Investment portfolio analysis',
+        'Bill payment automation',
+        'Financial goal tracking',
+        'Credit score monitoring'
+      ],
+      pricing: '$9.99 - $29.99/month',
+      delivery: '2-4 weeks',
+      category: 'FinTech SaaS'
     }
   ];
 

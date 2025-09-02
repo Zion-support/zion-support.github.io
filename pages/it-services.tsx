@@ -29,7 +29,10 @@ import {
   Mail,
   Phone,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  Brain,
+  Building,
+  Satellite
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -309,6 +312,182 @@ export default function ITServices() {
       pricing: '$8,000 - $60,000/month',
       delivery: '10-24 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed computing solutions for low-latency applications and IoT',
+      icon: Cpu,
+      features: [
+        'Edge server deployment and management',
+        'Content delivery network optimization',
+        'Real-time data processing at the edge',
+        'Edge AI and machine learning deployment',
+        'Multi-cloud edge orchestration',
+        'Edge security and compliance'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring',
+        'Privileged access management (PAM)',
+        'Security orchestration and automation',
+        'Compliance and audit support'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '12-24 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud operations across multiple platforms',
+      icon: Cloud,
+      features: [
+        'Multi-cloud orchestration and management',
+        'Hybrid cloud migration and optimization',
+        'Cloud cost optimization and FinOps',
+        'Disaster recovery across clouds',
+        'Cloud governance and compliance',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Cloud Services'
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup and machine learning operations',
+      icon: Brain,
+      features: [
+        'AI/ML infrastructure design and deployment',
+        'Model training and deployment pipelines',
+        'MLOps automation and monitoring',
+        'GPU cluster management and optimization',
+        'Model versioning and governance',
+        'AI model performance monitoring'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'AI Infrastructure Services'
+    },
+    {
+      title: 'Digital Twin Solutions',
+      description: 'Digital twin development for industrial and smart city applications',
+      icon: Monitor,
+      features: [
+        '3D modeling and simulation development',
+        'Real-time data integration and synchronization',
+        'Predictive analytics and maintenance',
+        'IoT sensor integration and management',
+        'Virtual reality visualization',
+        'Performance optimization and insights'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Robotic Process Automation (RPA)',
+      description: 'Intelligent automation for business processes and workflows',
+      icon: Settings,
+      features: [
+        'Process discovery and analysis',
+        'RPA bot development and deployment',
+        'Workflow automation and optimization',
+        'Integration with existing systems',
+        'Monitoring and performance analytics',
+        'Change management and training'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'Satellite Communication Systems',
+      description: 'Satellite communication infrastructure and ground station management',
+      icon: Satellite,
+      features: [
+        'Satellite network design and optimization',
+        'Ground station setup and management',
+        'Satellite data processing and analytics',
+        'Communication protocol optimization',
+        'Network monitoring and maintenance',
+        'Emergency communication systems'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '20-40 weeks',
+      category: 'Satellite Services'
+    },
+    {
+      title: 'Smart Building Management Systems',
+      description: 'Intelligent building automation and energy management solutions',
+      icon: Building,
+      features: [
+        'Building automation system integration',
+        'Energy management and optimization',
+        'Occupancy and space utilization analytics',
+        'HVAC and lighting control systems',
+        'Security and access control integration',
+        'Maintenance prediction and scheduling'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Smart Building Services'
+    },
+    {
+      title: 'High-Performance Computing (HPC)',
+      description: 'Supercomputing solutions for research and enterprise applications',
+      icon: Cpu,
+      features: [
+        'HPC cluster design and deployment',
+        'Parallel computing optimization',
+        'Scientific computing application support',
+        'GPU computing and CUDA optimization',
+        'High-speed networking and storage',
+        'Performance monitoring and tuning'
+      ],
+      pricing: '$30,000 - $250,000/month',
+      delivery: '16-32 weeks',
+      category: 'HPC Services'
+    },
+    {
+      title: 'Telecommunications Infrastructure',
+      description: 'Complete telecommunications network design and implementation',
+      icon: Phone,
+      features: [
+        'Voice and data network design',
+        'VoIP and unified communications',
+        'Network optimization and performance tuning',
+        'Telecom equipment procurement and installation',
+        'Network security and monitoring',
+        'Compliance and regulatory support'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-28 weeks',
+      category: 'Telecom Services'
+    },
+    {
+      title: 'Industrial IoT & Smart Manufacturing',
+      description: 'IoT solutions for industrial automation and smart manufacturing',
+      icon: Settings,
+      features: [
+        'Industrial sensor network deployment',
+        'Manufacturing execution system integration',
+        'Predictive maintenance and quality control',
+        'Supply chain visibility and tracking',
+        'Energy monitoring and optimization',
+        'Safety and compliance monitoring'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Industrial IoT Services'
     }
   ];
 
