@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+// import { Badge } from '../components/ui/Badge';
 import {
   Map, ArrowRight,
   ExternalLink, Home,

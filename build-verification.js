@@ -29,10 +29,11 @@ try {
   console.log(
   '🎉 All core dependencies imported successfully!');
   console.log(
-  '📋 Components should be ready for build')} catch (error) {
+  '📋 Components should be ready for build');
+} catch (error) {
   console.error(
   '❌ Import error:', error.message);
   process.exit(1);
-ursor/automate-test-fix-improve-and-merge-code-48f3}
+}
 console.log(
   '🏁 Build verification complete');
