@@ -9,45 +9,51 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
-        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
         { name: 'Mobile Survey Platform', href: '/services/mobile-survey-platform' },
-        { name: 'Event Management Dashboard', href: '/services/event-management-dashboard' },
-        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
-        { name: 'AI Talent Matching', href: '/services/ai-talent-matching' },
-        { name: 'AI Recruiting Platform', href: '/services/ai-recruiting-platform' },
-        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
-        { name: 'Project Management Suite', href: '/services/project-management-suite' },
+        { name: 'E-Commerce Return Management', href: '/services/ecommerce-return-management' },
+        { name: 'Automated Email Follow-up', href: '/services/automated-email-followup' },
+        { name: 'Customer Support Helpdesk', href: '/services/customer-support-helpdesk' },
+        { name: 'AI Content Creation Tool', href: '/services/ai-content-creation-tool' },
+        { name: 'Appointment Scheduler for Hospitals', href: '/services/appointment-scheduler-hospitals' },
+        { name: 'Learning Management Software', href: '/services/learning-management-software' },
+        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
-        { name: 'Expense Tracker', href: '/services/expense-tracker' },
-        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
-        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
         { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
-        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
+        { name: 'Invoice Management System', href: '/services/invoice-management-system' },
+        { name: 'Time Tracking & Productivity', href: '/services/time-tracking-productivity' },
+        { name: 'CRM & Sales Pipeline', href: '/services/crm-sales-pipeline' },
+        { name: 'Appointment Booking System', href: '/services/appointment-booking-system' },
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        { name: 'Quantum Security Solutions', href: '/services/quantum-security-solutions' },
+        { name: 'Autonomous Systems Development', href: '/services/autonomous-systems-development' },
+        { name: 'Metaverse Development Platform', href: '/services/metaverse-development' },
+        { name: 'IoT Ecosystem Management', href: '/services/iot-ecosystem-management' },
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
         { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
         { name: 'Zero Trust Security', href: '/services/zero-trust-security' },
         { name: '5G Network Implementation', href: '/services/5g-network-implementation' },
         { name: 'Hyperautomation Platform', href: '/services/hyperautomation-platform' },
-        { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
-        { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
-        { name: 'Database Optimization', href: '/services/database-optimization' },
+        { name: 'Cloud Migration Expert', href: '/services/cloud-migration' },
+        { name: 'Multi-Cloud Strategy', href: '/services/multi-cloud-strategy' },
+        { name: 'Container Orchestration', href: '/services/container-orchestration' },
+        { name: 'Serverless Architecture', href: '/services/serverless-architecture' },
         { name: 'Network Security Audit', href: '/services/network-security-audit' },
-        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
-        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
-        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
+        { name: 'Database Optimization', href: '/services/database-optimization' },
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
+        { name: 'AI Ethical Governance Platform', href: '/services/ai-ethical-governance' },
+        { name: 'AI Sustainability Optimization', href: '/services/ai-sustainability-optimization' },
+        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },
         { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
         { name: 'AI Space Exploration', href: '/services/ai-space-exploration' },
         { name: 'AI Neuroscience Research', href: '/services/ai-neuroscience-research' },
@@ -56,11 +62,8 @@ const Footer: React.FC = () => {
         { name: 'Custom AI Models', href: '/services/custom-ai-models' },
         { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
         { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
-        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
-        { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
-        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
-        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
+        { name: 'Predictive Analytics Platform', href: '/services/predictive-analytics-platform' },
+        { name: 'AI Recommendation Engine', href: '/services/ai-powered-recommendation-engine' },
       ]
     }
   ];
@@ -118,14 +121,15 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        {/* Quick Links */}
+        {/* Quick Links & Additional Info */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
+                <li><Link href="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors">Pricing</Link></li>
                 <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
               </ul>
@@ -138,6 +142,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors">Case Studies</Link></li>
                 <li><Link href="/whitepapers" className="text-gray-300 hover:text-blue-400 transition-colors">Whitepapers</Link></li>
                 <li><Link href="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors">Webinars</Link></li>
+                <li><Link href="/training" className="text-gray-300 hover:text-blue-400 transition-colors">Training</Link></li>
               </ul>
             </div>
             
@@ -148,37 +153,48 @@ const Footer: React.FC = () => {
                 <li><Link href="/documentation" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
                 <li><Link href="/api" className="text-gray-300 hover:text-blue-400 transition-colors">API Reference</Link></li>
                 <li><Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>
+                <li><Link href="/support" className="text-gray-300 hover:text-blue-400 transition-colors">24/7 Support</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Pricing Plans</h4>
+              <ul className="space-y-2">
+                <li><span className="text-gray-300 text-sm">Micro SaaS: $5 - $249/month</span></li>
+                <li><span className="text-gray-300 text-sm">IT Services: $2K - $500K</span></li>
+                <li><span className="text-gray-300 text-sm">AI Services: $5K - $2M</span></li>
+                <li><Link href="/pricing" className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium">View All Pricing →</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Connect</h4>
-              <div className="flex space-x-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <div className="flex space-x-4 mb-4">
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-6 h-6" />
                 </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors" aria-label="Twitter">
                   <Twitter className="w-6 h-6" />
                 </a>
-                <a href="https://facebook.com/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <a href="https://facebook.com/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors" aria-label="Facebook">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="https://instagram.com/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <a href="https://instagram.com/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors" aria-label="Instagram">
                   <Instagram className="w-6 h-6" />
                 </a>
               </div>
               
               {/* Newsletter Signup */}
-              <div className="mt-6">
+              <div>
                 <h5 className="text-sm font-semibold mb-2 text-blue-400">Newsletter</h5>
                 <p className="text-gray-300 text-sm mb-3">Stay updated with our latest insights</p>
                 <div className="flex">
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+                    className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 text-sm"
                   />
-                  <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors">
+                  <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors text-sm">
                     Subscribe
                   </button>
                 </div>
