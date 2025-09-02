@@ -1,6 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import { ProtectedRoute } from '../components/ProtectedRoute';
+import { Route, Routes    } from 'react-router-dom';
+export default function Page() {
+export default function Page() {
+  import { Suspense, lazy } from 'react';
+export default function Page() {
+export default function Page() {
+  import { ProtectedRoute } from '../components/ProtectedRoute';
+export default function Page() {
+export default function Page() {
 import LoadingSpinner from '../components/LoadingSpinner';
 
 // Lazy load dashboard pages
@@ -14,8 +20,7 @@ const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 
 const DashboardRoutes: React.FC = () => {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
+  return (<Suspense fallback={<LoadingSpinner />}>
       <Routes>
         <Route path="/dashboard" element={
           <ProtectedRoute>

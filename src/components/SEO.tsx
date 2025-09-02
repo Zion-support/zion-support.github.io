@@ -1,5 +1,7 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
+export default function Page() {
+export default function Page() {
 interface SEOProps {
   title?: string;
   description?: string;
@@ -17,8 +19,7 @@ export const SEO: React.FC<SEOProps> = ({
   url = 'https://ziontechgroup.com',
   type = 'website'
 }) => {
-  return (
-    <Helmet>
+  return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -55,8 +56,7 @@ export const SEO: React.FC<SEOProps> = ({
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.svg",
           "description": description,
-          "sameAs": [
-            "https://linkedin.com/company/zion-tech-group",
+          "sameAs": ["https://linkedin.com/company/zion-tech-group",
             "https://twitter.com/ziontechgroup"
           ],
           "contactPoint": {

@@ -1,5 +1,7 @@
-import React from 'react';'
-import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
+import React from
+  'react';'
+import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from
+  'lucide-react';
 :pages.disabled/solutions/AIPoweredSecurity.jsx
 const AIPoweredSecurity = () => {
     const securitySolutions = [
@@ -170,9 +172,11 @@ const AIPoweredSecurity = () => {
 :pages.disabled/solutions/AIPoweredSecurity.jsx
               Security Solutions"
             </h2>""
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+  '
               Comprehensive AI-powered security solutions covering all aspects''
-              of your organization's security needs.
+              of your organization
+  's security needs.
             </p>
           </div>"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
@@ -280,4 +284,5 @@ const AIPoweredSecurity = () => {
 export { AIPoweredSecurity };
 :pages.disabled/solutions/AIPoweredSecurity.jsx
 export default AIPoweredSecurity;'"
-}}}}'"'"
+}}}}
+  '"'"

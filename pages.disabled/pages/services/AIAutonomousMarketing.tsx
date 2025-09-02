@@ -20,7 +20,8 @@ import {}
   TrendingUp,
   Zap,
   Shield,
-  Megaphone} from 'lucide-react.ts';
+  Megaphone} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
 const AIAutonomousMarketing: React.FC = (): JSX.Element => {
@@ -40,7 +41,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Marketing with""
-              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
@@ -197,4 +200,4 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousMarketing.tsx
 export default AIAutonomousMarketing;'"
-'"'"
+  '"'"

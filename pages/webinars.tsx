@@ -1,9 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
 import { 
   Calendar,
   Clock,
@@ -32,7 +38,8 @@ import {
   Download,
   Bookmark,
   ExternalLink
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 const Webinars: React.FC = () => {
   const webinars = [
@@ -226,15 +233,21 @@ const Webinars: React.FC = () => {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Button size="lg" className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30">
                         <Play className="w-6 h-6 mr-2" />
-                        {featuredWebinar.status === 'upcoming' ? 'Register Now' : 'Watch Recording'}
+                        {featuredWebinar.status ===,
+  upcoming' ?
+  'Register Now': 'Watch Recording}
                       </Button>
                     </div>
                   </div>
                   <div className="p-8">
                     <div className="flex items-center mb-4">
                       <Badge variant="outline" className="mr-3">{featuredWebinar.category}</Badge>
-                      <Badge variant={featuredWebinar.status === 'upcoming' ? 'default' : 'secondary'} className="text-xs">
-                        {featuredWebinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
+                      <Badge variant={featuredWebinar.status ===,
+  upcoming' ?
+  'default': 'secondary} className="text-xs">
+                        {featuredWebinar.status ===,
+  upcoming' ?
+  'Upcoming': 'Recorded}
                       </Badge>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">{featuredWebinar.title}</h3>
@@ -269,7 +282,9 @@ const Webinars: React.FC = () => {
                         {featuredWebinar.time}
                       </div>
                       <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-                        {featuredWebinar.status === 'upcoming' ? 'Register Now' : 'Watch Recording'}
+                        {featuredWebinar.status ===,
+  upcoming' ?
+  'Register Now': 'Watch Recording}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
@@ -330,14 +345,20 @@ const Webinars: React.FC = () => {
                             <Badge variant="outline">{webinar.category}</Badge>
                           </div>
                           <div className="absolute top-4 right-4">
-                            <Badge variant={webinar.status === 'upcoming' ? 'default' : 'secondary'} className="text-xs">
-                              {webinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
+                            <Badge variant={webinar.status ===,
+  upcoming' ?
+  'default': 'secondary} className="text-xs">
+                              {webinar.status ===,
+  upcoming' ?
+  'Upcoming': 'Recorded}
                             </Badge>
                           </div>
                           <div className="absolute inset-0 flex items-center justify-center">
                             <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30">
                               <Play className="w-4 h-4 mr-2" />
-                              {webinar.status === 'upcoming' ? 'Register' : 'Watch'}
+                              {webinar.status ===,
+  upcoming' ?
+  'Register': 'Watch}
                             </Button>
                           </div>
                         </div>
@@ -381,7 +402,9 @@ const Webinars: React.FC = () => {
                             </Button>
                             <div className="flex gap-2">
                               <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-                                {webinar.status === 'upcoming' ? 'Register' : 'Watch'}
+                                {webinar.status ===,
+  upcoming' ?
+  'Register': 'Watch}
                               </Button>
                               <Button variant="outline" size="sm">
                                 <Share2 className="w-4 h-4" />
@@ -413,8 +436,8 @@ const Webinars: React.FC = () => {
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 
-                            : 'text-gray-300 hover:bg-slate-700'
+                            ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                         }`}
                       >
                         <span>{category.name}</span>

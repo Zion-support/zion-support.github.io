@@ -1,33 +1,44 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import { getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from 'lucide-react';
-import Link from 'next/link';
+import React from,
+  react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import { getServicesByCategory } from
+  '../../data/services';
+import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from
+  'lucide-react';
+import Link from
+  'next/link';
 
 const ITServicesPage: NextPage = () => {
-  const itServices = getServicesByCategory('it-services');
+  const itServices = getServicesByCategory(
+  'it-services);
 
   const benefits = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security protocols and compliance standards to protect your business data.'
+      title:,
+  Enterprise Security',
+      description: 'Bank-level security protocols and compliance standards to protect your business data.
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Performance Optimization',
-      description: 'Optimize your infrastructure for maximum performance and efficiency.'
+      title:,
+  Performance Optimization',
+      description: 'Optimize your infrastructure for maximum performance and efficiency.
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'Expert Team',
-      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'
+      title:,
+  Expert Team',
+      description: 'Experienced IT professionals with deep expertise in enterprise solutions.
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Global Support',
-      description: '24/7 support and monitoring to ensure your systems run smoothly.'
+      title:,
+  Global Support',
+      description: '24/7 support and monitoring to ensure your systems run smoothly.
     }
   ];
 
