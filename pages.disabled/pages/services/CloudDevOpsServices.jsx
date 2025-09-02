@@ -1,6 +1,9 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';'
+import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from
+  'lucide-react';
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
 const CloudDevOpsServices = () => {
     const cloudServices = [
@@ -270,8 +273,10 @@ const CloudDevOpsServices = () => {
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
             Ready to Modernize Your Infrastructure?"
           </h2>""
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">'
-            Let's discuss how our cloud and DevOps expertise can transform your''
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+  '
+            Let's discuss how our cloud and DevOps expertise can transform your'
+  '
             organization's technology landscape."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -287,4 +292,5 @@ const CloudDevOpsServices = () => {
 export { CloudDevOpsServices };
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
 export default CloudDevOpsServices;'"
-}}}'"'"
+}}}
+  '"'"

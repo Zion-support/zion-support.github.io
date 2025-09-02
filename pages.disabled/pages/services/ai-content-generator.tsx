@@ -7,7 +7,8 @@ import {}
   Shield,  Clock,
   BarChart3,
   Headphones,
-  Bot} from 'lucide-react.ts';
+  Bot} from
+  'lucide-react.ts';
 
 export default function AIContentGenerator(...args: any[]): any {}
   return()
@@ -150,5 +151,6 @@ export default function AIContentGenerator(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/ai-content-generator.tsx
-  )}'"
+  )}
+  '"
 '"'"
