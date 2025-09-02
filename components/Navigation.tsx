@@ -11,19 +11,28 @@ const Navigation: React.FC = () => {
     { 
       name: 'Services', href: '/services',
       dropdown: [
-        { name: 'AI Development', href: '/services/ai-model-development-chat' },
-        { name: 'Cloud Solutions', href: '/services/cloud-migration-services-chat' },
-        { name: 'Web Development', href: '/services/web-application-development-chat' },
-        { name: 'Mobile Apps', href: '/services/mobile-app-development-chat' },
-        { name: 'Data Analytics', href: '/services/business-intelligence-chat' },
-        { name: 'Cybersecurity', href: '/services/network-security-chat' }
+        { name: 'AI Services', href: '/services#ai' },
+        { name: 'Cloud Platforms', href: '/services#cloud' },
+        { name: 'Cybersecurity', href: '/services#cybersecurity' },
+        { name: 'Micro SaaS', href: '/services#saas' },
+        { name: 'Blockchain Development', href: '/services#blockchain' },
+        { name: 'IoT Integration', href: '/services#iot' },
+        { name: 'AR/VR Development', href: '/services#arvr' }
       ]
     }, { 
       name: 'Solutions', 
-      href: '/products', dropdown: [
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions' }, { name: 'IoT Platforms', href: '/iot-platforms' }, { name: 'AI-Powered Systems', href: '/services/ai-model-development-chat' }
+      href: '/solutions', dropdown: [
+        { name: 'AI Chatbot Platform', href: '/services#chatbot' },
+        { name: 'Predictive Analytics', href: '/services#analytics' },
+        { name: 'Computer Vision', href: '/services#vision' },
+        { name: 'Smart Scheduling SaaS', href: '/services#scheduling' },
+        { name: 'Invoice Management', href: '/services#invoicing' },
+        { name: 'Email Automation', href: '/services#email' }
       ]
-    }, { name: 'About', href: '/about' }, { name: 'Blog', href: '/blog' }, { name: 'Talent', href: '/talent' }, { name: 'Contact', href: '/contact' }
+    },
+    { name: 'Pricing', href: '/pricing-guide' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   const toggleDropdown = (itemName: string) => {

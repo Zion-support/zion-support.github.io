@@ -17,7 +17,15 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award
+  Award,
+  Eye,
+  MessageSquare,
+  Link as LinkIcon,
+  Wifi,
+  Glasses,
+  Calendar,
+  CreditCard,
+  Mail
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -566,6 +574,225 @@ export default function Services() {
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-red-600">From $79/mo</span>
 								<Link href="/contact" className="text-red-600 hover:text-red-500">Automate workflows →</Link>
+							</div>
+						</div>
+
+						{/* NEW INNOVATIVE AI SERVICES */}
+						<div id="chatbot" className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Brain className="h-5 w-5 text-fuchsia-600" />
+								<h3 className="font-semibold text-gray-900">AI-Powered Chatbot Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Intelligent conversational AI with multi-language support and context awareness.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Natural language processing with 95%+ accuracy</li>
+								<li>• Multi-channel deployment (web, mobile, social)</li>
+								<li>• Real-time learning and adaptation</li>
+								<li>• Integration with CRM and helpdesk systems</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-fuchsia-600">From $199/mo</span>
+								<Link href="/contact" className="text-fuchsia-600 hover:text-fuchsia-500">Deploy chatbot →</Link>
+							</div>
+						</div>
+
+						<div id="analytics" className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<TrendingUp className="h-5 w-5 text-emerald-600" />
+								<h3 className="font-semibold text-gray-900">Predictive Analytics Engine</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Advanced machine learning models for forecasting and trend analysis.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Sales forecasting with 90%+ accuracy</li>
+								<li>• Customer churn prediction and prevention</li>
+								<li>• Market trend analysis and insights</li>
+								<li>• Automated report generation</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-emerald-600">From $299/mo</span>
+								<Link href="/contact" className="text-emerald-600 hover:text-emerald-500">Predict trends →</Link>
+							</div>
+						</div>
+
+						<div id="vision" className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Eye className="h-5 w-5 text-blue-600" />
+								<h3 className="font-semibold text-gray-900">Computer Vision Solutions</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Image recognition, object detection, and visual analysis for various industries.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Quality control and defect detection</li>
+								<li>• Facial recognition and security systems</li>
+								<li>• Medical image analysis and diagnosis</li>
+								<li>• Retail inventory management</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-blue-600">From $399/mo</span>
+								<Link href="/contact" className="text-blue-600 hover:text-blue-500">See vision demo →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<MessageSquare className="h-5 w-5 text-indigo-600" />
+								<h3 className="font-semibold text-gray-900">Natural Language Processing API</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Text analysis, sentiment detection, and language understanding services.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Sentiment analysis and emotion detection</li>
+								<li>• Text summarization and extraction</li>
+								<li>• Language translation and localization</li>
+								<li>• Content moderation and filtering</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-indigo-600">From $149/mo</span>
+								<Link href="/contact" className="text-indigo-600 hover:text-indigo-500">Process text →</Link>
+							</div>
+						</div>
+
+						{/* NEW IT SERVICES */}
+						<div id="blockchain" className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<LinkIcon className="h-5 w-5 text-yellow-600" />
+								<h3 className="font-semibold text-gray-900">Blockchain Development Solutions</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Smart contracts, DeFi protocols, and blockchain infrastructure development.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Ethereum, Polygon, and Solana development</li>
+								<li>• NFT marketplace and token creation</li>
+								<li>• DeFi protocol development and auditing</li>
+								<li>• Web3 integration and wallet connectivity</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-yellow-600">From $5k–$50k</span>
+								<Link href="/contact" className="text-yellow-600 hover:text-yellow-500">Build blockchain →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Wifi className="h-5 w-5 text-green-600" />
+								<h3 className="font-semibold text-gray-900">IoT Integration Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Connect, monitor, and manage IoT devices with real-time analytics.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Device connectivity and management</li>
+								<li>• Real-time data collection and processing</li>
+								<li>• Predictive maintenance and alerts</li>
+								<li>• Custom dashboard and reporting</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-green-600">From $299/mo</span>
+								<Link href="/contact" className="text-green-600 hover:text-green-500">Connect devices →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Glasses className="h-5 w-5 text-purple-600" />
+								<h3 className="font-semibold text-gray-900">AR/VR Application Development</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Immersive experiences for training, marketing, and entertainment.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Virtual reality training simulations</li>
+								<li>• Augmented reality marketing campaigns</li>
+								<li>• 3D visualization and modeling</li>
+								<li>• Cross-platform compatibility</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-purple-600">From $8k–$30k</span>
+								<Link href="/contact" className="text-purple-600 hover:text-purple-500">Create immersive →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Shield className="h-5 w-5 text-red-600" />
+								<h3 className="font-semibold text-gray-900">Cybersecurity Training Programs</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Comprehensive security awareness and technical training for organizations.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Phishing simulation and awareness</li>
+								<li>• Incident response training</li>
+								<li>• Security best practices workshops</li>
+								<li>• Compliance and certification programs</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-red-600">From $2k–$10k</span>
+								<Link href="/contact" className="text-red-600 hover:text-red-500">Train team →</Link>
+							</div>
+						</div>
+
+						{/* NEW MICRO SAAS SERVICES */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Calendar className="h-5 w-5 text-blue-600" />
+								<h3 className="font-semibold text-gray-900">Smart Scheduling & Booking SaaS</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">AI-powered appointment scheduling with automated optimization.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Intelligent time slot optimization</li>
+								<li>• Multi-timezone support and availability</li>
+								<li>• Automated reminders and follow-ups</li>
+								<li>• Integration with calendar and payment systems</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-blue-600">From $29/mo</span>
+								<Link href="/contact" className="text-blue-600 hover:text-blue-500">Schedule smart →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<CreditCard className="h-5 w-5 text-green-600" />
+								<h3 className="font-semibold text-gray-900">Invoice & Payment Management SaaS</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Streamlined invoicing with automated payment processing and tracking.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Automated invoice generation and sending</li>
+								<li>• Multiple payment gateway integration</li>
+								<li>• Expense tracking and reporting</li>
+								<li>• Tax calculation and compliance</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-green-600">From $39/mo</span>
+								<Link href="/contact" className="text-green-600 hover:text-green-500">Manage payments →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<BarChart3 className="h-5 w-5 text-purple-600" />
+								<h3 className="font-semibold text-gray-900">Analytics Dashboard Builder</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Custom analytics dashboards with real-time data visualization.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Drag-and-drop dashboard builder</li>
+								<li>• Real-time data connections</li>
+								<li>• Custom metrics and KPIs</li>
+								<li>• Automated report generation</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-purple-600">From $49/mo</span>
+								<Link href="/contact" className="text-purple-600 hover:text-purple-500">Build dashboards →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Mail className="h-5 w-5 text-orange-600" />
+								<h3 className="font-semibold text-gray-900">Email Marketing Automation SaaS</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">AI-driven email campaigns with personalization and optimization.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Behavioral trigger automation</li>
+								<li>• A/B testing and optimization</li>
+								<li>• Advanced segmentation and targeting</li>
+								<li>• Performance analytics and insights</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-orange-600">From $59/mo</span>
+								<Link href="/contact" className="text-orange-600 hover:text-orange-500">Automate emails →</Link>
 							</div>
 						</div>
 					</div>

@@ -7,18 +7,29 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Development', href: '/services/ai-model-development-chat' },
-      { name: 'Cloud Solutions', href: '/services/cloud-migration-services-chat' },
-      { name: 'Web Development', href: '/services/web-application-development-chat' },
-      { name: 'Mobile Apps', href: '/services/mobile-app-development-chat' },
-      { name: 'Data Analytics', href: '/services/business-intelligence-chat' },
-      { name: 'Cybersecurity', href: '/services/network-security-chat' }
+      { name: 'AI Services', href: '/services#ai' },
+      { name: 'Cloud Platforms', href: '/services#cloud' },
+      { name: 'Cybersecurity', href: '/services#cybersecurity' },
+      { name: 'Micro SaaS', href: '/services#saas' },
+      { name: 'Blockchain Development', href: '/services#blockchain' },
+      { name: 'IoT Integration', href: '/services#iot' }
     ], solutions: [
-      { name: 'Blockchain Solutions', href: '/blockchain-solutions' }, { name: 'IoT Platforms', href: '/iot-platforms' }, { name: 'AI-Powered Systems', href: '/services/ai-model-development-chat' }
+      { name: 'AI Chatbot Platform', href: '/services#chatbot' },
+      { name: 'Predictive Analytics', href: '/services#analytics' },
+      { name: 'Computer Vision', href: '/services#vision' },
+      { name: 'Smart Scheduling SaaS', href: '/services#scheduling' },
+      { name: 'Invoice Management', href: '/services#invoicing' },
+      { name: 'Email Automation', href: '/services#email' }
     ], company: [
-      { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/talent' }, { name: 'Careers', href: '/talent' }, { name: 'Contact', href: '/contact' }
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/about#team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Contact', href: '/contact' }
     ], resources: [
-      { name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/blog' }, { name: 'Documentation', href: '/blog' }, { name: 'Support', href: '/contact' }
+      { name: 'Pricing Guide', href: '/pricing-guide' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Support', href: '/contact' }
     ]
   };
 
@@ -38,15 +49,19 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
-                <span>info@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-5 w-5 mr-3 text-blue-400" />
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:+13024640950" className="hover:text-blue-300 transition-colors">
+                  +1 302 464 0950
+                </a>
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="h-5 w-5 mr-3 text-blue-400" />
-                <span>San Francisco, CA</span>
+                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
               </div>
             </div>
 

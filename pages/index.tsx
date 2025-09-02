@@ -18,21 +18,21 @@ export default function Home() {
   const services = [
     {
       title: "AI Services",
-      description: "Cutting-edge artificial intelligence solutions",
+      description: "AI chatbots, predictive analytics, computer vision, and NLP solutions",
       icon: Brain,
-      href: "/ai-services"
+      href: "/services#ai"
     },
     {
       title: "IT Services", 
-      description: "Comprehensive information technology services",
+      description: "Blockchain, IoT, AR/VR, cybersecurity training, and cloud solutions",
       icon: Network,
-      href: "/it-services"
+      href: "/services#cloud"
     },
     {
       title: "Micro SaaS",
-      description: "Scalable software as a service solutions",
+      description: "Smart scheduling, invoicing, analytics dashboards, and automation tools",
       icon: Cloud,
-      href: "/micro-saas"
+      href: "/services#saas"
     }
   ];
   return (
@@ -69,6 +69,43 @@ export default function Home() {
                 </Link>
               </Card>
             ))}
+          </div>
+
+          {/* Contact Information Section */}
+          <div className="mt-20 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg">
+                <Phone className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg">
+                <Mail className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-500 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg">
+                <Globe className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600 text-center">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <Link href="/contact">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                  Contact Us Today
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
