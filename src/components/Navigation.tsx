@@ -19,13 +19,17 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info
+  Info,
+  Database,
+  Search
 } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSearch, setShowSearch] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,10 +51,12 @@ const Navigation = () => {
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
         { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
         { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' },
+        { name: 'Database Solutions', href: '/services/database-solutions', icon: Database, description: 'Database design and optimization' }
       ]
     },
     { name: 'Solutions', href: '/solutions' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
@@ -70,6 +76,13 @@ const Navigation = () => {
   const closeMobileMenu = () => {
     setIsOpen(false);
     setActiveDropdown(null);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+    }
   };
 
   return (
@@ -150,8 +163,40 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* Search and CTA */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search Button */}
+            <button
+              onClick={() => setShowSearch(!showSearch)}
+              className="p-2 text-gray-300 hover:text-cyan-300 transition-colors duration-200"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            
+            {/* Search Input */}
+            <AnimatePresence>
+              {showSearch && (
+                <motion.form
+                  initial={{ opacity: 0, width: 0 }}
+                  animate={{ opacity: 1, width: 'auto' }}
+                  exit={{ opacity: 0, width: 0 }}
+                  onSubmit={handleSearch}
+                  className="flex items-center"
+                >
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search..."
+                    className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                    autoFocus
+                  />
+                </motion.form>
+              )}
+            </AnimatePresence>
+
+            {/* CTA Button */}
             <Link
               href="/contact"
               className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
@@ -251,6 +296,27 @@ const Navigation = () => {
                     )}
                   </div>
                 ))}
+              </div>
+
+              {/* Mobile Search */}
+              <div className="pt-4 border-t border-gray-700">
+                <form onSubmit={handleSearch} className="mb-4">
+                  <div className="flex items-center space-x-2">
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Search..."
+                      className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                    />
+                    <button
+                      type="submit"
+                      className="p-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
+                    >
+                      <Search className="w-4 h-4" />
+                    </button>
+                  </div>
+                </form>
               </div>
 
               {/* Mobile CTA */}
