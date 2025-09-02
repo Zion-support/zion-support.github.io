@@ -215,21 +215,17 @@ export default function SearchPage() {
     }
   ];
 
-  
   useEffect ( () => {
     if (searchQuery) {
 
       performSearch()}
   }, [searchQuery, selectedFilters, sortBy]) ;
 
-  
         // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 800) ) ;
     
     let filtered = mockSearchResults.filter(result => {
 
-      
-      
       return matchesQuery && matchesFilters}) ;
     // Sort results
     filtered.sort((a, b) => {
@@ -257,7 +253,6 @@ export default function SearchPage() {
       setTimeout(() => setIsSearching(false), 1000)}
   };
 
-  
     if (newFilters.has(filterId)) {
 
       newFilters.delete(filterId)} else {
@@ -266,18 +261,15 @@ export default function SearchPage() {
     setSelectedFilters (newFilters) };
 
   // Clear all filters
-  
 
     setSelectedTags([]);'    setSearchQuery('');
     setSearchParams({})};
 
-  
       case 'page': return FileText;
       case 'blog': return BookOpen;
       case 'case-study': return FileText;
       case 'documentation': return Code;
       default: return FileText}
-=======
 '
       case 'service': return Zap;'
       case 'page': return FileText;'
@@ -286,7 +278,6 @@ export default function SearchPage() {
       default: return FileText}
   };
 
-  
       case 'blog': return 'from-green-500 to-emerald-500';
       case 'case-study': return 'from-purple-500 to-pink-500';
       case 'documentation': return 'from-orange-500 to-red-500';

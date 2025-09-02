@@ -34,23 +34,15 @@ export default function ServicesPage() {
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
 
-  
-  
-  
   // Filter and sort services
-  
-  
-    
-    
-    
+
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
   
       case 'price-high':
         return b.price - a.price;
-=======
-        return a.price - b.price;'      case 'price-high':
+return a.price - b.price;'      case 'price-high':
         return b.price - a.price;'
       case 'newest':
         return ('
@@ -61,10 +53,8 @@ export default function ServicesPage() {
         return 0}
   }) ;
 
-  
     return cat ? cat.icon : Zap};
 
-  
     return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
   return()
     <>

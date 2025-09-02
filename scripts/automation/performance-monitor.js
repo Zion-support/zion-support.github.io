@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log('📊 Starting continuous performance monitoring automation...');
-=======
+
 // // // console.log('📊 Starting continuous performance monitoring automation...');
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
@@ -56,7 +56,7 @@ async function runPerformanceMonitor() {
     }
     // Check for large files in build output
     // // // // // // // console.log('📁 Checking build output for large files...');
-=======
+
     } catch (error) {
       // // // console.log('⚠️  Lighthouse tests failed but continuing...');
     // Check for large files in build output
@@ -95,10 +95,10 @@ async function runPerformanceMonitor() {
     }
     // Generate performance report
     // // // // // // // console.log('📊 Generating performance report...');
-=======
+
   summary: 'Performance monitoring completed'
 };
-=======
+
     console.log('📊 Generating performance report...');
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -110,7 +110,7 @@ async function runPerformanceMonitor() {
     // // // // // // // console.log('✅ Continuous performance monitoring completed successfully');
   } catch (error) {
     // // // // // // // console.error('❌ Continuous performance monitoring failed:', error.message);
-=======
+
     // Don't exit, just log the error and continue
 function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default
   const largeFiles = [];
@@ -150,7 +150,7 @@ function getDirectorySize(dir) {
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-=======
+
   // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial performance monitoring
   await runPerformanceMonitor();
@@ -163,7 +163,7 @@ async function runContinuous() {
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-=======
+
   // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown
 process.on('SIGINT', () => {
@@ -172,14 +172,14 @@ process.on('SIGINT', () => {
 });
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-=======
+
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
 // Start the continuous performance monitor
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous performance monitoring:', error);
-=======
+
   // // // console.error('❌ Failed to start continuous performance monitoring:', error);
   process.exit(1);
 });
