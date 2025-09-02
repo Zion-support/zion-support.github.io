@@ -17,7 +17,11 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award
+  Award,
+  Eye,
+  Link as LinkIcon,
+  Wifi,
+  Glasses
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -537,6 +541,190 @@ export default function Services() {
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $79/mo</span>
 								<Link href='/contact' className='text-red-600 hover:text-red-500'>Automate workflows →</Link>
+							</div>
+						</div>
+					</div>
+					
+					{/* New Innovative Services Section */}
+					<div className='mt-16'>
+						<div className='mx-auto max-w-3xl text-center mb-14'>
+							<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Technology Solutions</h2>
+							<p className='mt-6 text-lg leading-8 text-gray-600'>
+								Cutting-edge services powered by the latest AI, blockchain, IoT, and emerging technologies. 
+								Visit <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.
+							</p>
+						</div>
+						
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+							{/* AI-Powered Chatbots */}
+							<div id='ai-chatbots' className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<Brain className='h-5 w-5 text-blue-600' />
+									<h3 className='font-semibold text-gray-900'>AI-Powered Chatbots</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Intelligent conversational AI with natural language processing and context awareness.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Multi-language support with 99% accuracy</li>
+									<li>• Integration with CRM, helpdesk, and knowledge bases</li>
+									<li>• Real-time sentiment analysis and escalation</li>
+									<li>• Custom training on your business data</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-blue-600'>From $299/mo</span>
+									<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Get chatbot demo →</Link>
+								</div>
+							</div>
+
+							{/* Predictive Analytics Solutions */}
+							<div id='predictive-analytics' className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<TrendingUp className='h-5 w-5 text-green-600' />
+									<h3 className='font-semibold text-gray-900'>Predictive Analytics Solutions</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Advanced forecasting and trend analysis using machine learning algorithms.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Sales forecasting with 95% accuracy</li>
+									<li>• Customer churn prediction and prevention</li>
+									<li>• Market trend analysis and insights</li>
+									<li>• Automated reporting and alerts</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-green-600'>From $499/mo</span>
+									<Link href='/contact' className='text-green-600 hover:text-green-500'>See analytics demo →</Link>
+								</div>
+							</div>
+
+							{/* Computer Vision Solutions */}
+							<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<Eye className='h-5 w-5 text-purple-600' />
+									<h3 className='font-semibold text-gray-900'>Computer Vision Solutions</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Image and video analysis for quality control, security, and automation.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Object detection and recognition</li>
+									<li>• Quality control and defect detection</li>
+									<li>• Facial recognition and access control</li>
+									<li>• Real-time video analytics</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-purple-600'>From $799/mo</span>
+									<Link href='/contact' className='text-purple-600 hover:text-purple-500'>View CV demo →</Link>
+								</div>
+							</div>
+
+							{/* Blockchain Integration Services */}
+							<div id='blockchain' className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<LinkIcon className='h-5 w-5 text-orange-600' />
+									<h3 className='font-semibold text-gray-900'>Blockchain Integration Services</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Secure, transparent blockchain solutions for supply chain, finance, and identity.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Smart contract development and auditing</li>
+									<li>• Supply chain transparency and tracking</li>
+									<li>• DeFi and NFT marketplace development</li>
+									<li>• Digital identity and authentication</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-orange-600'>From $5k–$25k</span>
+									<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Explore blockchain →</Link>
+								</div>
+							</div>
+
+							{/* IoT Solutions */}
+							<div id='iot' className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<Wifi className='h-5 w-5 text-cyan-600' />
+									<h3 className='font-semibold text-gray-900'>IoT Solutions & Edge Computing</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Connected device management and edge computing for real-time processing.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Device connectivity and management</li>
+									<li>• Real-time data processing at the edge</li>
+									<li>• Industrial IoT monitoring and control</li>
+									<li>• Smart city and building automation</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-cyan-600'>From $3k–$15k</span>
+									<Link href='/contact' className='text-cyan-600 hover:text-cyan-500'>IoT consultation →</Link>
+								</div>
+							</div>
+
+							{/* AR/VR Applications */}
+							<div id='ar-vr' className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<Glasses className='h-5 w-5 text-pink-600' />
+									<h3 className='font-semibold text-gray-900'>AR/VR Applications</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Immersive experiences for training, retail, real estate, and entertainment.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Virtual training and simulation</li>
+									<li>• AR product visualization</li>
+									<li>• Virtual showrooms and tours</li>
+									<li>• Interactive marketing experiences</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-pink-600'>From $8k–$40k</span>
+									<Link href='/contact' className='text-pink-600 hover:text-pink-500'>Experience AR/VR →</Link>
+								</div>
+							</div>
+
+							{/* API Management Platform */}
+							<div id='api-management' className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<Code className='h-5 w-5 text-indigo-600' />
+									<h3 className='font-semibold text-gray-900'>API Management Platform</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Comprehensive API lifecycle management with security and analytics.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• API gateway and rate limiting</li>
+									<li>• Developer portal and documentation</li>
+									<li>• Security and authentication</li>
+									<li>• Usage analytics and monitoring</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-indigo-600'>From $199/mo</span>
+									<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Manage APIs →</Link>
+								</div>
+							</div>
+
+							{/* Data Visualization Dashboard */}
+							<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<BarChart3 className='h-5 w-5 text-teal-600' />
+									<h3 className='font-semibold text-gray-900'>Interactive Data Visualization</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Dynamic dashboards and reports with real-time data visualization.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Custom dashboard creation</li>
+									<li>• Real-time data streaming</li>
+									<li>• Interactive charts and graphs</li>
+									<li>• Mobile-responsive design</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-teal-600'>From $149/mo</span>
+									<Link href='/contact' className='text-teal-600 hover:text-teal-500'>Visualize data →</Link>
+								</div>
+							</div>
+
+							{/* Security Monitoring Tool */}
+							<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
+								<div className='flex items-center gap-3 mb-3'>
+									<Shield className='h-5 w-5 text-red-600' />
+									<h3 className='font-semibold text-gray-900'>AI Security Monitoring</h3>
+								</div>
+								<p className='text-sm text-gray-600 mb-3'>Advanced threat detection and security monitoring with AI-powered analysis.</p>
+								<ul className='text-sm text-gray-700 space-y-1 mb-4'>
+									<li>• Real-time threat detection</li>
+									<li>• Behavioral analysis and anomaly detection</li>
+									<li>• Automated incident response</li>
+									<li>• Compliance reporting and auditing</li>
+								</ul>
+								<div className='flex items-center justify-between text-sm'>
+									<span className='font-semibold text-red-600'>From $399/mo</span>
+									<Link href='/contact' className='text-red-600 hover:text-red-500'>Secure your systems →</Link>
+								</div>
 							</div>
 						</div>
 					</div>
