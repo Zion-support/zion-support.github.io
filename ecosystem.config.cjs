@@ -192,6 +192,112 @@ module.exports = {
       cron_restart: '0 2 * * *', // Run daily at 2 AM
       pmx: true,
     },
+
+    // PM2 Sync Automation - runs continuously with remote-first strategy
+    {
+      name: 'pm2-sync-automation',
+      script: './scripts/automation/pm2-sync-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '30000', // 30 seconds
+        BUILD_INTERVAL: '300000', // 5 minutes
+        TEST_INTERVAL: '600000', // 10 minutes
+        SECURITY_INTERVAL: '1800000', // 30 minutes
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-automation-error.log',
+      out_file: './logs/pm2-sync-automation-out.log',
+      log_file: './logs/pm2-sync-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 3000,
+      pmx: true,
+    },
+
+    // PM2 Sync Monitor - runs continuously for health monitoring
+    {
+      name: 'pm2-sync-monitor',
+      script: './scripts/automation/pm2-sync-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        MONITOR_INTERVAL: '60000', // 1 minute
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-monitor-error.log',
+      out_file: './logs/pm2-sync-monitor-out.log',
+      log_file: './logs/pm2-sync-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '15s',
+      restart_delay: 5000,
+      pmx: true,
+    },
+
+    // PM2 Sync Automation - runs continuously with remote-first strategy
+    {
+      name: 'pm2-sync-automation',
+      script: './scripts/automation/pm2-sync-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '30000', // 30 seconds
+        BUILD_INTERVAL: '300000', // 5 minutes
+        TEST_INTERVAL: '600000', // 10 minutes
+        SECURITY_INTERVAL: '1800000', // 30 minutes
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-automation-error.log',
+      out_file: './logs/pm2-sync-automation-out.log',
+      log_file: './logs/pm2-sync-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 3000,
+      pmx: true,
+    },
+
+    // PM2 Sync Monitor - runs continuously for health monitoring
+    {
+      name: 'pm2-sync-monitor',
+      script: './scripts/automation/pm2-sync-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        MONITOR_INTERVAL: '60000', // 1 minute
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-monitor-error.log',
+      out_file: './logs/pm2-sync-monitor-out.log',
+      log_file: './logs/pm2-sync-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '15s',
+      restart_delay: 5000,
+      pmx: true,
+    },
   ],
 
   deploy: {

@@ -66,9 +66,9 @@ export default function Home() {
       <SEOHead
         title="Zion Tech Group - Leading Technology Solutions Provider"
         description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
-        keywords="AI services, micro SaaS, IT services, DevOps, cybersecurity, technology consulting, software development, digital transformation"
-        canonical="https://ziontechgroup.com"
-        structuredData={[organizationStructuredData, websiteStructuredData]}
+        keywords={["AI services", "micro SaaS", "IT services", "DevOps", "cybersecurity", "technology consulting", "software development", "digital transformation"]}
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={organizationStructuredData}
       />
       
       <Navigation />
