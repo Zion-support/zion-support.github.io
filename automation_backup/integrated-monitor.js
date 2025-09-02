@@ -12,10 +12,14 @@
  * 5. Integrates with PM2 for process management
  */
 ;
-const BrowserErrorMonitor = require('./browser-error-monitor');
-const BrowserErrorFixer = require('./browser-error-fixer');
-const fs = require('fs').promises;
-const path = require('path');
+const BrowserErrorMonitor = require(
+  './browser-error-monitor');
+const BrowserErrorFixer = require(
+  './browser-error-fixer');
+const fs = require(
+  'fs').promises;
+const path = require(
+  'path');
 ;
 class IntegratedMonitor {
   constructor() {
@@ -34,37 +38,44 @@ class IntegratedMonitor {
 
   async initialize() {
     try {
-      // console.log('🚀 Initializing Integrated Browser Error Monitor...');
+      // console.log(
+  '🚀 Initializing Integrated Browser Error Monitor...');
       
       // Initialize browser monitor
       await this.browserMonitor.initialize();
       
       // Set up error handling for browser monitor
-      this.browserMonitor.on('error', this.handleBrowserMonitorError.bind(this));
+      this.browserMonitor.on(
+  'error', this.handleBrowserMonitorError.bind(this));
       
       // Set up fix cycle interval (every 10 minutes)
       this.fixCycleInterval = setInterval(async () => {
         await this.runFixCycle();
       }, 10 * 60 * 1000);
       
-      // console.log('✅ Integrated Monitor initialized successfully');
+      // console.log(
+  '✅ Integrated Monitor initialized successfully');
       return true;
     } catch (error) {
-      console.error('❌ Failed to initialize Integrated Monitor:', error);
+      console.error(
+  '❌ Failed to initialize Integrated Monitor:', error);
       return false;
 
 
   async start() {
     if (this.isRunning) {
-      // console.log('⚠️  Integrated Monitor is already running');
+      // console.log(
+  '⚠️  Integrated Monitor is already running');
       return;
 
     const initialized = await this.initialize();
     if (!initialized) {
-      throw new Error('Failed to initialize Integrated Monitor');
+      throw new Error(
+  'Failed to initialize Integrated Monitor');
 
     this.isRunning = true;
-    // console.log('🚀 Integrated Browser Error Monitor started');
+    // console.log(
+  '🚀 Integrated Browser Error Monitor started');
     
     // Start browser monitoring
     await this.browserMonitor.start();
@@ -81,27 +92,32 @@ class IntegratedMonitor {
     if (this.browserMonitor) {
       await this.browserMonitor.stop();
 
-    // console.log('🛑 Integrated Browser Error Monitor stopped');
+    // console.log(
+  '🛑 Integrated Browser Error Monitor stopped');
 
   async restart() {
-    // console.log('🔄 Restarting Integrated Browser Error Monitor...');
+    // console.log(
+  '🔄 Restarting Integrated Browser Error Monitor...');
     await this.stop();
     await new Promise(resolve => setTimeout(resolve, 2000));
     await this.start();
 
   async handleBrowserMonitorError(error) {
-    console.error('🔴 Browser Monitor Error:', error);
+    console.error(
+  '🔴 Browser Monitor Error:', error);
     
     // Attempt to recover
     try {
       await this.browserMonitor.restart();
     } catch (restartError) {
-      console.error('❌ Failed to restart browser monitor:', restartError);
+      console.error(
+  '❌ Failed to restart browser monitor:', restartError);
 
 
   async runFixCycle() {
     try {
-      // console.log('🔧 Starting integrated fix cycle...');
+      // console.log(
+  '🔧 Starting integrated fix cycle...');
       
       // Get recent errors from browser monitor
       const recentErrors = this.browserMonitor.errorLog.filter(error => {
@@ -111,7 +127,8 @@ class IntegratedMonitor {
       });
       
       if (recentErrors.length === 0) {
-        // console.log('✅ No recent errors to fix');
+        // console.log(
+  '✅ No recent errors to fix');
         return;
 
       // console.log(`🔍 Found ${recentErrors.length} recent errors to analyze`);
@@ -129,7 +146,8 @@ class IntegratedMonitor {
       // console.log(`✅ Fix cycle completed. Applied ${fixesApplied.length} source code fixes.`);
       
     } catch (error) {
-      console.error('❌ Error during fix cycle:', error);
+      console.error(
+  '❌ Error during fix cycle:', error);
       this.stats.failedFixes++;
 
 
@@ -156,12 +174,14 @@ class IntegratedMonitor {
 
       };
       
-      const reportPath = path.join(this.browserMonitor.CONFIG.logDir,integrated-monitor-report.json');
+      const reportPath = path.join(this.browserMonitor.CONFIG.logDir,integrated-monitor-report.json
+  ');
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       
       // console.log(`📄 Integrated report generated: ${reportPath}`);
     } catch (error) {
-      console.error('❌ Failed to generate integrated report:', error);
+      console.error(,
+  ❌ Failed to generate integrated report: , error);
 
 
   async getStatus() {
@@ -175,7 +195,9 @@ class IntegratedMonitor {
 
   async performHealthCheck() {
     try {
-      // console.log('🔍 Performing integrated health check...');
+      // console.log(,
+  🔍 Performing integrated health check...
+  ');
       
       // Check browser monitor health
       const browserHealth = await this.browserMonitor.performHealthCheck();
@@ -186,11 +208,15 @@ class IntegratedMonitor {
       // Overall health assessment
       const overallHealth = browserHealth && fixerHealth;
       
-      // console.log(`📊 Integrated Health Check - Browser: ${browserHealth ? '✅' : '❌'}, Fixer: ${fixerHealth ? '✅' : '❌'}`);
+      // console.log(`📊 Integrated Health Check - Browser: ${browserHealth ? '✅
+  ' : '❌}, Fixer: ${fixerHealth ?,
+  ✅
+  ': '❌}`);
       
       return overallHealth;
     } catch (error) {
-      console.error('❌ Integrated health check failed:', error);
+      console.error(,
+  ❌ Integrated health check failed: , error);
       return false;
 
 
@@ -199,34 +225,43 @@ class IntegratedMonitor {
 const integratedMonitor = new IntegratedMonitor();
 
 // Handle process signals
-process.on('SIGINT', async () => {
-  // console.log('🛑 Received SIGINT, shutting down...');
+process.on(,
+  SIGINT
+  ', async () => {
+  // console.log('🛑 Received SIGINT, shutting down...
+  ');
   await integratedMonitor.stop();
   process.exit(0);
 });
 
-process.on('SIGTERM', async () => {
-  // console.log('🛑 Received SIGTERM, shutting down...');
+process.on('SIGTERM
+  ', async () => {
+  // console.log('🛑 Received SIGTERM, shutting down...
+  ');
   await integratedMonitor.stop();
   process.exit(0);
 });
 
 // Handle uncaught exceptions
-process.on('uncaughtException', async (error) => {
-  console.error('❌ Uncaught Exception:', error);
+process.on('uncaughtException
+  ', async (error) => {
+  console.error('❌ Uncaught Exception: , error);
   await integratedMonitor.stop();
   process.exit(1);
 });
 
-process.on('unhandledRejection', async (reason, promise) => {
-  console.error('❌ Unhandled Rejection at:', promise,reason:', reason);
+process.on(,
+  unhandledRejection
+  ', async (reason, promise) => {
+  console.error('❌ Unhandled Rejection at: , promise,reason:', reason);
   await integratedMonitor.stop();
   process.exit(1);
 });
 
 // Start the integrated monitor
 integratedMonitor.start().catch(async (error) => {
-  console.error('❌ Failed to start integrated monitor:', error);
+  console.error(
+  '❌ Failed to start integrated monitor:', error);
   await integratedMonitor.stop();
   process.exit(1);
 });
