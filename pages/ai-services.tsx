@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import MainLayout from '../src/components/layout/MainLayout';
 import {
   Brain,
   Zap,
@@ -34,7 +34,6 @@ import {
   Server,
   Network
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
@@ -304,6 +303,182 @@ export default function AIServices() {
       pricing: '$5,000 - $18,000/month',
       delivery: '6-12 weeks',
       category: 'Market AI'
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis Assistant',
+      description: 'Intelligent medical image analysis and diagnostic support system',
+      icon: Eye,
+      features: [
+        'Medical image analysis (X-rays, MRIs, CT scans)',
+        'Symptom analysis and preliminary diagnosis',
+        'Drug interaction checking',
+        'Treatment recommendation engine',
+        'Patient risk assessment',
+        'Integration with electronic health records'
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '12-20 weeks',
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'AI-Powered Financial Trading Bot',
+      description: 'Intelligent algorithmic trading with risk management and portfolio optimization',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and trading signals',
+        'Risk management and portfolio optimization',
+        'Multi-asset trading support',
+        'Backtesting and strategy validation',
+        'Emotion-free trading execution',
+        'Performance analytics and reporting'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Finance AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Detection',
+      description: 'Advanced threat detection and response system with behavioral analysis',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response',
+        'Zero-day vulnerability detection',
+        'Network traffic analysis',
+        'Integration with security tools'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '10-16 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Climate Change Analytics',
+      description: 'Environmental data analysis and climate impact prediction platform',
+      icon: Globe,
+      features: [
+        'Climate data analysis and modeling',
+        'Environmental impact assessment',
+        'Carbon footprint tracking and optimization',
+        'Weather pattern prediction',
+        'Sustainability reporting automation',
+        'Integration with IoT environmental sensors'
+      ],
+      pricing: '$4,000 - $18,000/month',
+      delivery: '8-14 weeks',
+      category: 'Environmental AI'
+    },
+    {
+      title: 'AI-Powered Legal Research Assistant',
+      description: 'Intelligent legal research and case law analysis platform',
+      icon: FileText,
+      features: [
+        'Automated legal research and case law analysis',
+        'Contract analysis and risk assessment',
+        'Legal precedent matching',
+        'Compliance monitoring and reporting',
+        'Document generation and review',
+        'Integration with legal databases'
+      ],
+      pricing: '$7,000 - $28,000/month',
+      delivery: '10-18 weeks',
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI-Powered Agricultural Optimization',
+      description: 'Smart farming solutions with crop monitoring and yield optimization',
+      icon: Target,
+      features: [
+        'Crop health monitoring and disease detection',
+        'Yield prediction and optimization',
+        'Soil analysis and nutrient management',
+        'Weather-based irrigation scheduling',
+        'Pest and disease early warning system',
+        'Integration with IoT farming equipment'
+      ],
+      pricing: '$5,000 - $22,000/month',
+      delivery: '8-16 weeks',
+      category: 'Agriculture AI'
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description: 'Intelligent energy grid management with demand forecasting and load balancing',
+      icon: Zap,
+      features: [
+        'Energy demand forecasting and optimization',
+        'Grid load balancing and management',
+        'Renewable energy integration',
+        'Power outage prediction and prevention',
+        'Energy storage optimization',
+        'Integration with smart grid infrastructure'
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '12-24 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Fleet Management',
+      description: 'Intelligent fleet coordination and route optimization for autonomous vehicles',
+      icon: Network,
+      features: [
+        'Autonomous vehicle coordination and routing',
+        'Real-time traffic optimization',
+        'Predictive maintenance scheduling',
+        'Passenger demand prediction',
+        'Safety monitoring and incident prevention',
+        'Integration with smart city infrastructure'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '16-32 weeks',
+      category: 'Transportation AI'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent pharmaceutical research with molecular analysis and drug design',
+      icon: Brain,
+      features: [
+        'Molecular structure analysis and drug design',
+        'Drug interaction prediction',
+        'Clinical trial optimization',
+        'Side effect prediction and analysis',
+        'Drug repurposing identification',
+        'Integration with pharmaceutical databases'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Pharmaceutical AI'
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Intelligent space mission optimization with trajectory planning and resource management',
+      icon: Globe,
+      features: [
+        'Spacecraft trajectory optimization',
+        'Mission resource planning and management',
+        'Satellite constellation coordination',
+        'Space debris tracking and avoidance',
+        'Mission risk assessment and mitigation',
+        'Integration with space agency systems'
+      ],
+      pricing: '$30,000 - $120,000/month',
+      delivery: '24-48 weeks',
+      category: 'Aerospace AI'
+    },
+    {
+      title: 'AI-Powered Quantum Computing Optimization',
+      description: 'Intelligent quantum algorithm optimization and error correction',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm optimization',
+        'Quantum error correction and mitigation',
+        'Quantum circuit design and optimization',
+        'Quantum state preparation and measurement',
+        'Quantum machine learning algorithms',
+        'Integration with quantum hardware'
+      ],
+      pricing: '$40,000 - $150,000/month',
+      delivery: '32-64 weeks',
+      category: 'Quantum AI'
     }
   ];
 
@@ -344,13 +519,11 @@ export default function AIServices() {
   ];
 
   return (
-    <PageTransition>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
-      </Head>
+    <MainLayout
+      title={title}
+      description={description}
+      canonical="https://ziontechgroup.com/ai-services"
+    >
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm:py-32">
@@ -531,6 +704,6 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </MainLayout>
   );
 }

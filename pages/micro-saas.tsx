@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import MainLayout from '../src/components/layout/MainLayout';
 import {
   Code,
   Cloud,
@@ -34,7 +34,6 @@ import {
   Terminal,
   Calendar
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
@@ -344,6 +343,182 @@ export default function MicroSaaS() {
       pricing: '$299 - $1,200/month',
       delivery: '3-5 weeks',
       category: 'Development SaaS'
+    },
+    {
+      title: 'AI-Powered Affiliate Marketing Tracker',
+      description: 'Comprehensive affiliate marketing management platform with automated tracking and payments',
+      icon: TrendingUp,
+      features: [
+        'Real-time affiliate performance tracking',
+        'Automated commission calculations',
+        'Multi-tier affiliate program management',
+        'Fraud detection and prevention',
+        'Custom landing page generation',
+        'Advanced analytics and reporting'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '2-4 weeks',
+      category: 'Marketing SaaS'
+    },
+    {
+      title: 'Smart Inventory Forecasting Platform',
+      description: 'AI-driven inventory management with demand prediction and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Machine learning demand forecasting',
+        'Automated reorder point calculations',
+        'Multi-location inventory synchronization',
+        'Supplier performance analytics',
+        'Cost optimization recommendations',
+        'Integration with ERP and POS systems'
+      ],
+      pricing: '$399 - $1,500/month',
+      delivery: '3-5 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent legal document processing with contract analysis and risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract clause extraction',
+        'Risk assessment and compliance checking',
+        'Legal precedent matching',
+        'Document comparison and version control',
+        'Deadline tracking and alerts',
+        'Integration with legal databases'
+      ],
+      pricing: '$599 - $2,500/month',
+      delivery: '4-6 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'Intelligent Property Management System',
+      description: 'Comprehensive property management with AI-powered tenant screening and maintenance scheduling',
+      icon: Users,
+      features: [
+        'AI-powered tenant screening and scoring',
+        'Automated rent collection and reminders',
+        'Maintenance request management',
+        'Property performance analytics',
+        'Financial reporting and tax preparation',
+        'Mobile app for tenants and landlords'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '4-7 weeks',
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'AI-Powered Fitness Coaching Platform',
+      description: 'Personalized fitness coaching with AI-driven workout plans and nutrition guidance',
+      icon: Target,
+      features: [
+        'AI-generated personalized workout plans',
+        'Nutrition tracking and meal planning',
+        'Progress monitoring with computer vision',
+        'Virtual personal trainer integration',
+        'Social features and community building',
+        'Integration with fitness wearables'
+      ],
+      pricing: '$99 - $399/month',
+      delivery: '3-5 weeks',
+      category: 'Health & Fitness SaaS'
+    },
+    {
+      title: 'Smart Energy Management System',
+      description: 'AI-powered energy optimization for buildings with predictive maintenance',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'Predictive maintenance scheduling',
+        'Energy cost optimization algorithms',
+        'Carbon footprint tracking',
+        'Integration with smart devices',
+        'Automated reporting and alerts'
+      ],
+      pricing: '$499 - $2,000/month',
+      delivery: '5-8 weeks',
+      category: 'Energy SaaS'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Intelligent educational platform with personalized learning paths and assessment',
+      icon: Brain,
+      features: [
+        'AI-generated personalized learning paths',
+        'Automated assessment and grading',
+        'Adaptive content delivery',
+        'Student progress analytics',
+        'Virtual classroom integration',
+        'Multi-language support and accessibility'
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '4-6 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'Intelligent Fleet Management Platform',
+      description: 'AI-driven fleet optimization with route planning and maintenance scheduling',
+      icon: Network,
+      features: [
+        'AI-powered route optimization',
+        'Predictive maintenance scheduling',
+        'Driver behavior analysis',
+        'Fuel consumption optimization',
+        'Real-time tracking and monitoring',
+        'Compliance and safety reporting'
+      ],
+      pricing: '$399 - $1,800/month',
+      delivery: '5-8 weeks',
+      category: 'Logistics SaaS'
+    },
+    {
+      title: 'AI-Powered Restaurant Management System',
+      description: 'Comprehensive restaurant operations with AI-driven menu optimization and inventory management',
+      icon: Users,
+      features: [
+        'AI-powered menu optimization',
+        'Dynamic pricing based on demand',
+        'Inventory management and waste reduction',
+        'Customer preference analysis',
+        'Staff scheduling optimization',
+        'Integration with POS and delivery platforms'
+      ],
+      pricing: '$299 - $1,500/month',
+      delivery: '4-6 weeks',
+      category: 'Restaurant SaaS'
+    },
+    {
+      title: 'Smart Waste Management Platform',
+      description: 'AI-driven waste optimization with route planning and recycling analytics',
+      icon: Globe,
+      features: [
+        'AI-powered waste collection routing',
+        'Recycling rate optimization',
+        'Waste composition analysis',
+        'Cost reduction recommendations',
+        'Environmental impact tracking',
+        'Integration with IoT sensors'
+      ],
+      pricing: '$599 - $2,500/month',
+      delivery: '6-10 weeks',
+      category: 'Environmental SaaS'
+    },
+    {
+      title: 'AI-Powered Insurance Claims Processor',
+      description: 'Intelligent claims processing with automated damage assessment and fraud detection',
+      icon: Shield,
+      features: [
+        'AI-powered damage assessment',
+        'Automated fraud detection',
+        'Claims processing workflow automation',
+        'Document verification and validation',
+        'Settlement recommendations',
+        'Integration with insurance databases'
+      ],
+      pricing: '$799 - $3,500/month',
+      delivery: '6-12 weeks',
+      category: 'Insurance SaaS'
     }
   ];
 
@@ -384,13 +559,11 @@ export default function MicroSaaS() {
   ];
 
   return (
-    <PageTransition>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
-      </Head>
+    <MainLayout
+      title={title}
+      description={description}
+      canonical="https://ziontechgroup.com/micro-saas"
+    >
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-32">
@@ -615,6 +788,6 @@ export default function MicroSaaS() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </MainLayout>
   );
 }

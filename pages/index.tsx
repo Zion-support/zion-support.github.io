@@ -1,10 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import MainLayout from '../src/components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
@@ -38,12 +34,11 @@ export default function Home() {
     }
   ];
   return (
-    <>
-      <Head>
-        <title>Zion Tech Group</title>
-        <meta name='description' content='Leading technology solutions provider' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </Head>
+    <MainLayout
+      title="Zion Tech Group - Leading Technology Solutions"
+      description="Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations. Transform your business with intelligent automation and scalable infrastructure."
+      canonical="https://ziontechgroup.com"
+    >
       <main className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
         <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
@@ -57,15 +52,15 @@ export default function Home() {
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
                 <Link href='/services'>
-                  <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>
+                  <button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition-colors'>
                     Explore Our Services
-                    <ArrowRight className='w-5 h-5 ml-2' />
-                  </Button>
+                    <ArrowRight className='w-5 h-5 ml-2 inline' />
+                  </button>
                 </Link>
                 <Link href='/contact'>
-                  <Button variant='outline' className='border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold'>
+                  <button className='border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-colors'>
                     Get Started Today
-                  </Button>
+                  </button>
                 </Link>
               </div>
             </div>
@@ -99,7 +94,7 @@ export default function Home() {
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
               {services.map((service, index) => (
-                <Card key={index} className='p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
+                <div key={index} className='p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg rounded-lg'>
                   <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6'>
                     <service.icon className='w-8 h-8 text-white' />
                   </div>
@@ -117,12 +112,12 @@ export default function Home() {
                     </div>
                   </div>
                   <Link href={service.href}>
-                    <Button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'>
+                    <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
                       Learn More
-                      <ArrowRight className='w-4 h-4 ml-2' />
-                    </Button>
+                      <ArrowRight className='w-4 h-4 ml-2 inline' />
+                    </button>
                   </Link>
-                </Card>
+                </div>
               ))}
             </div>
           </div>
@@ -153,15 +148,15 @@ export default function Home() {
             </div>
             <div className='mt-8'>
               <Link href='/contact'>
-                <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>
+                <button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition-colors'>
                   Get Free Consultation
-                  <ArrowRight className='w-5 h-5 ml-2' />
-                </Button>
+                  <ArrowRight className='w-5 h-5 ml-2 inline' />
+                </button>
               </Link>
             </div>
           </div>
         </section>
       </main>
-    </>
+    </MainLayout>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import MainLayout from '../src/components/layout/MainLayout';
 import {
   Server,
   Cloud,
@@ -31,7 +31,6 @@ import {
   MapPin,
   TrendingUp
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
@@ -309,6 +308,182 @@ export default function ITServices() {
       pricing: '$8,000 - $60,000/month',
       delivery: '10-24 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'Smart City Infrastructure Solutions',
+      description: 'Intelligent city management systems with IoT integration and data analytics',
+      icon: Globe,
+      features: [
+        'Smart traffic management systems',
+        'IoT sensor network deployment',
+        'Environmental monitoring and control',
+        'Public safety and emergency response',
+        'Citizen engagement platforms',
+        'Data analytics and urban planning'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '16-40 weeks',
+      category: 'Smart City Services'
+    },
+    {
+      title: 'Edge Computing & Distributed Systems',
+      description: 'Distributed computing infrastructure with edge optimization and latency reduction',
+      icon: Cpu,
+      features: [
+        'Edge computing platform deployment',
+        'Distributed system architecture design',
+        'Latency optimization and performance tuning',
+        'Edge AI and machine learning integration',
+        'Multi-cloud and hybrid cloud solutions',
+        'Real-time data processing and analytics'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '12-28 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description: 'Virtual replicas of physical systems with real-time monitoring and predictive analytics',
+      icon: Monitor,
+      features: [
+        'Digital twin development and deployment',
+        'Real-time system simulation and modeling',
+        'Predictive maintenance and optimization',
+        'Virtual testing and validation environments',
+        'Integration with IoT and sensor networks',
+        'Advanced analytics and visualization'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Robotic Process Automation (RPA)',
+      description: 'Intelligent automation solutions for business process optimization and efficiency',
+      icon: Settings,
+      features: [
+        'RPA bot development and deployment',
+        'Process mining and optimization',
+        'Workflow automation and orchestration',
+        'Integration with enterprise systems',
+        'Monitoring and performance analytics',
+        'Change management and training'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '8-20 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'High-Performance Computing (HPC)',
+      description: 'Supercomputing solutions for complex computational tasks and scientific research',
+      icon: Cpu,
+      features: [
+        'HPC cluster design and deployment',
+        'Parallel computing optimization',
+        'Scientific computing applications',
+        'GPU computing and acceleration',
+        'High-speed networking and storage',
+        'Performance monitoring and tuning'
+      ],
+      pricing: '$20,000 - $120,000/month',
+      delivery: '20-40 weeks',
+      category: 'HPC Services'
+    },
+    {
+      title: 'Satellite & Space Technology Solutions',
+      description: 'Satellite communication systems and space technology infrastructure',
+      icon: Globe,
+      features: [
+        'Satellite communication system design',
+        'Ground station development and deployment',
+        'Space data processing and analytics',
+        'Satellite constellation management',
+        'Space mission planning and optimization',
+        'Integration with terrestrial networks'
+      ],
+      pricing: '$50,000 - $300,000/month',
+      delivery: '32-64 weeks',
+      category: 'Space Technology Services'
+    },
+    {
+      title: 'Biometric & Identity Management Systems',
+      description: 'Advanced biometric authentication and identity verification solutions',
+      icon: Shield,
+      features: [
+        'Multi-modal biometric authentication',
+        'Identity verification and fraud prevention',
+        'Access control and security systems',
+        'Compliance with privacy regulations',
+        'Integration with existing systems',
+        'Real-time monitoring and analytics'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Identity Management Services'
+    },
+    {
+      title: 'Autonomous Systems & Robotics',
+      description: 'Intelligent autonomous systems and robotic solutions for various industries',
+      icon: Cpu,
+      features: [
+        'Autonomous vehicle system development',
+        'Industrial robotics and automation',
+        'AI-powered decision making systems',
+        'Sensor fusion and perception systems',
+        'Human-robot interaction interfaces',
+        'Safety and reliability engineering'
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '24-48 weeks',
+      category: 'Autonomous Systems Services'
+    },
+    {
+      title: 'Advanced Analytics & Business Intelligence',
+      description: 'Sophisticated data analytics platforms with machine learning and predictive modeling',
+      icon: BarChart3,
+      features: [
+        'Advanced statistical modeling and analysis',
+        'Machine learning and AI integration',
+        'Real-time data processing and visualization',
+        'Predictive analytics and forecasting',
+        'Custom dashboard and reporting solutions',
+        'Data governance and quality management'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '12-28 weeks',
+      category: 'Analytics Services'
+    },
+    {
+      title: 'Telecommunications & Network Infrastructure',
+      description: 'Advanced telecommunications systems and network infrastructure solutions',
+      icon: Network,
+      features: [
+        '5G/6G network planning and deployment',
+        'Fiber optic network design and installation',
+        'Satellite communication systems',
+        'Network optimization and performance tuning',
+        'Telecommunications equipment integration',
+        'Network security and monitoring'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '16-36 weeks',
+      category: 'Telecommunications Services'
+    },
+    {
+      title: 'Industrial IoT & Manufacturing Solutions',
+      description: 'Smart manufacturing systems with IoT integration and process optimization',
+      icon: Settings,
+      features: [
+        'Industrial IoT sensor deployment',
+        'Manufacturing process optimization',
+        'Predictive maintenance systems',
+        'Quality control and monitoring',
+        'Supply chain visibility and tracking',
+        'Integration with ERP and MES systems'
+      ],
+      pricing: '$18,000 - $120,000/month',
+      delivery: '20-40 weeks',
+      category: 'Industrial IoT Services'
     }
   ];
 
@@ -349,13 +524,11 @@ export default function ITServices() {
   ];
 
   return (
-    <PageTransition>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
-      </Head>
+    <MainLayout
+      title={title}
+      description={description}
+      canonical="https://ziontechgroup.com/it-services"
+    >
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm:py-32">
@@ -563,6 +736,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </MainLayout>
   );
 }

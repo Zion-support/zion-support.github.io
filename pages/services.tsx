@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import MainLayout from '../src/components/layout/MainLayout';
 import {
   ArrowRight,
   Brain,
@@ -35,14 +36,17 @@ import {
   CreditCard,
   Smartphone
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group';
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
-		<PageTransition>
+		<MainLayout
+			title={title}
+			description={description}
+			canonical="https://ziontechgroup.com/services"
+		>
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -266,6 +270,36 @@ export default function Services() {
 							Explore our full capabilities at{' '}
 							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.
 						</p>
+						<div className='mt-8 bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-200'>
+							<h3 className='text-lg font-semibold text-gray-900 mb-3'>Why Choose Zion Tech Group?</h3>
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm'>
+								<div className='flex items-start space-x-2'>
+									<CheckCircle className='h-5 w-5 text-green-600 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700'><strong>Proven Track Record:</strong> 500+ successful projects with 99.9% uptime guarantee</span>
+								</div>
+								<div className='flex items-start space-x-2'>
+									<CheckCircle className='h-5 w-5 text-green-600 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700'><strong>24/7 Support:</strong> Round-the-clock technical support and monitoring</span>
+								</div>
+								<div className='flex items-start space-x-2'>
+									<CheckCircle className='h-5 w-5 text-green-600 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700'><strong>Competitive Pricing:</strong> Market-competitive rates with transparent pricing</span>
+								</div>
+								<div className='flex items-start space-x-2'>
+									<CheckCircle className='h-5 w-5 text-green-600 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700'><strong>Expert Team:</strong> Certified professionals with deep industry expertise</span>
+								</div>
+							</div>
+							<div className='mt-4 pt-4 border-t border-blue-200'>
+								<p className='text-sm text-gray-600'>
+									<strong>Contact us today:</strong> Call{' '}
+									<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500 font-semibold'>+1 302 464 0950</a>{' '}
+									or email{' '}
+									<a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500 font-semibold'>kleber@ziontechgroup.com</a>{' '}
+									for a free consultation and custom quote.
+								</p>
+							</div>
+						</div>
 						<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
 							<div className='bg-blue-50 p-4 rounded-lg'>
 								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>
@@ -1349,6 +1383,6 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
+		</MainLayout>
 	);
 }
