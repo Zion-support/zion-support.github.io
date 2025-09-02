@@ -1,1 +1,14 @@
-import React from 'react'; export default function PricingGuide () { const [selectedCategory, setSelectedCategory] = useState ("all") ; const filteredServices = selectedCategory === "all" ? EXPANDED_SERVICES : EXPANDED_SERVICES.filter (service => service.category.toLowerCase () .replace (/\s+/g, "-") === selectedCategory) ; const getCategoryIcon = (category) => { const icons = { "AI Development": <Brain className="w - 6 h - 6"/>, "Cloud Services": <Cloud className="w - 6 h - 6"/>, "DevOps": <Zap className="w - 6 h - 6"/>, "Cybersecurity": <Shield className="w - 6 h - 6"/>, "Data & Analytics": <Database className="w - 6 h - 6"/>, "Digital Transformation": <TrendingUp className="w - 6 h - 6"/>, "Emerging Tech": <Globe className="w - 6 h - 6"/>, ";"
+import React from 'react';
+export const config = { unstable_runtimeJS: false };
+export default function PricingGuide() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
+      <div className="max-w-5xl mx-auto py-20 px-4">
+        <h1 className="text-3xl font-bold mb-4">Pricing Guide</h1>
+        <p className="text-gray-600">
+          Contact us for a tailored quote. Phone: +1 302 464 0950 · Email: kleber@ziontechgroup.com
+        </p>
+      </div>
+    </div>
+  );
+}
