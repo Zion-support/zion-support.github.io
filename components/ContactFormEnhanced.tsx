@@ -1,7 +1,7 @@
 React, { useState } from
   'react';
-import { motion } from
-  'framer-motion';'import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from
+import { motion } from 'lucide-react';
+  'framer-motion';'import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';
   'lucide-react';'
   'const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({;

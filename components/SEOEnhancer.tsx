@@ -1,6 +1,6 @@
 React from
   'react';
-import Head from
+import Head from 'next/head';
   'next/head';'
   'interface SEOEnhancerProps {title?: string;
   description?: string;

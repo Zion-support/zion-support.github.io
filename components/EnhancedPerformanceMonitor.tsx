@@ -1,7 +1,7 @@
 React, { useEffect, useState, useCallback } from
   'react';
-import { motion, AnimatePresence } from
-  'framer-motion';'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from
+import { motion, AnimatePresence } from 'lucide-react';
+  'framer-motion';'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
   'lucide-react';'
   'interface PerformanceMetrics {fcp: number;
   lcp: number;
@@ -144,13 +144,17 @@ if (newMetrics.fcp > 3000) newAlerts.push(,
 
 const getScoreColor = (score: number): string => {;
     if (score >= 90) return 'text-green-500
-  ';'    if (score >= 70) return
-  'text-yellow-500';'    return
+  ;
+   if (score >= 70) return
+  'text-yellow-500;
+   return
   'text-red-500';  };,
   const getScoreBgColor = (score: number): string => {;
     if (score >= 90) return
-  'bg-green-100';'    if (score >= 70) return
-  'bg-yellow-100';'    return
+  'bg-green-100;
+   if (score >= 70) return
+  'bg-yellow-100;
+   return
   'bg-red-100';  };'
   if (!showDetails) {
     return (

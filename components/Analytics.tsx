@@ -1,4 +1,4 @@
-import React, { useEffect } from
+import React, { useEffect } from 'react';
   'react';'
   'interface AnalyticsProps {trackingId?: string;
 }

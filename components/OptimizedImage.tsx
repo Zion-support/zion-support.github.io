@@ -1,7 +1,9 @@
 'use client,
   ;'''''
   'import Image from 'next/image
-  ';'''
+  ;
+
+'
   'interface OptimizedImageProps {src: string;
   alt: string;
   width?: number;
@@ -11,7 +13,8 @@ priority?: boolean;''
   '  quality?: number;''
   '  placeholder?: 'blur
   ' | 'empty
-  ';'  blurDataURL?: string;  sizes?: string;fill?: boolean;
+  ;
+ blurDataURL?: string;  sizes?: string;fill?: boolean;
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;

@@ -1,12 +1,13 @@
 React from,
   react';
-import { Loader2 } from
+import { Loader2 } from 'lucide-react';
   'lucide-react';'
   'interface LoadingSpinnerProps {
   size?: 'sm
   ' | 'md
   ' | 'lg
-  ';'  text?: string;  className?: string;
+  ;
+ text?: string;  className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({

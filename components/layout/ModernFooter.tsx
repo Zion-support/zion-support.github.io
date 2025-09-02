@@ -1,6 +1,6 @@
 React from
   'react.ts';
-import Link from
+import Link from 'next/link';
   'next/link.ts';'import {;'
   Mail, Phone,
   MapPin, Linkedin,
@@ -14,4 +14,5 @@ import Link from
   Globe2, Zap2,
   Brain2, Cloud2,
   Lock2} from
-  'lucide-react.ts';''
+  'lucide-react.ts;
+

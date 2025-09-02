@@ -1,6 +1,6 @@
 React, { useEffect, useState, useCallback } from
   'react';
-import { motion, AnimatePresence } from
+import { motion, AnimatePresence } from 'lucide-react';
   'framer-motion';'import { ;'  BarChart3, Users, 
   Eye, MousePointer, 
   Clock, TrendingUp, 
@@ -105,8 +105,10 @@ console.error(,
 
 const formatNumber = (num: number): string => {;
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M
-  ';'    if (num >= 1000) return (num / 1000).toFixed(1) +
-  'K';'    return num.toString();  };
+  ;
+   if (num >= 1000) return (num / 1000).toFixed(1) +
+  'K;
+   return num.toString();  };
 
   const formatDuration = (seconds: number): string => {;
     const minutes = Math.floor(seconds / 60);
