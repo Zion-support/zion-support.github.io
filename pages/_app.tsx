@@ -1,17 +1,18 @@
-import React, { useEffect } from 'react';
-import { Header } from '../src/components/Header';
-import Footer from '../src/components/layout/Footer';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import React from 'react';
+import dynamic from 'next/dynamic';
+
+// Lazy load components to avoid SSR issues
+const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor'), {
+  ssr: false,
+});
 
 export default function App({ Component, pageProps }) {
   return (
     <div className="min-h-screen flex flex-col">
       <PerformanceMonitor />
-      <Header />
-      <main className="flex-grow pt-16">
+      <main className="flex-grow">
         <Component {...pageProps} />
       </main>
-      <Footer />
     </div>
   );
 }

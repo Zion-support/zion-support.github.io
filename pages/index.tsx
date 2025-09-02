@@ -1,9 +1,15 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import SEO from '../components/SEO';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
+
+// Lazy load heavy components
+const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor'), {
+  ssr: false,
+});
 
 export default function Home() {
   const stats = [
@@ -57,15 +63,42 @@ export default function Home() {
     }
   ];
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'info@ziontechgroup.com',
+      telephone: '+1-555-0123',
+    },
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup',
+    ],
+    offers: {
+      '@type': 'Offer',
+      category: 'Technology Services',
+      description: 'AI services, IT solutions, and micro SaaS development',
+    },
+  };
+
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
-      
+      <SEO 
+        title="Zion Tech Group - Leading Technology Solutions Provider"
+        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
+        structuredData={structuredData}
+      />
+      <PerformanceMonitor />
       <Navigation />
       
       <main className="min-h-screen bg-white">

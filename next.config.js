@@ -11,11 +11,16 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: ['ziontechgroup.com'],
+    minimumCacheTTL: 60,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -33,6 +38,8 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+        /src\.disabled/,
+        /src/,
       ],
     });
 
@@ -44,6 +51,17 @@ const nextConfig = {
       tls: false,
     };
 
+    // Bundle analyzer
+    if (process.env.ANALYZE === 'true') {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          openAnalyzer: true,
+        })
+      );
+    }
+
     return config;
   },
   // Try to exclude problematic directories at the Next.js level
@@ -53,6 +71,32 @@ const nextConfig = {
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
+  },
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: true,
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
   },
 };
 
