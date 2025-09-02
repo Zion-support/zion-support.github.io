@@ -9,40 +9,40 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
-        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'Project Management', href: '/services/project-management-suite' },
-        { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
-        { name: 'Expense Tracker', href: '/services/expense-tracker' },
-        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
-        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
-        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
-        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
+        { name: 'AI Meeting Summary Generator', href: '/services/ai-meeting-summary-generator' },
+        { name: 'AI Customer Sentiment Analyzer', href: '/services/ai-customer-sentiment-analyzer' },
+        { name: 'AI Code Review Assistant', href: '/services/ai-code-review-assistant' },
+        { name: 'Smart Digital Marketing Optimizer', href: '/services/smart-digital-marketing-optimizer' },
+        { name: 'AI Content Curation Platform', href: '/services/ai-content-curation-platform' },
+        { name: 'AI Workflow Automation Suite', href: '/services/ai-workflow-automation' },
+        { name: 'AI SEO Optimizer Pro', href: '/services/ai-seo-optimizer' },
+        { name: 'AI Data Visualization Platform', href: '/services/ai-data-visualization-platform' },
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
+        { name: 'Quantum-Ready Security', href: '/services/quantum-ready-security' },
+        { name: '5G Network Optimization', href: '/services/5g-network-optimization' },
+        { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
+        { name: 'AI Infrastructure & MLOps', href: '/services/ai-infrastructure-setup' },
+        { name: 'Cloud Migration Expert', href: '/services/cloud-migration' },
         { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
-        { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
-        { name: 'Database Optimization', href: '/services/database-optimization' },
-        { name: 'Network Security Audit', href: '/services/network-security-audit' },
-        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
         { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
-        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'Custom AI Models', href: '/services/custom-ai-models' },
+        { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },
+        { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
+        { name: 'AI Autonomous Systems', href: '/services/ai-autonomous-systems' },
+        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
+        { name: 'AI Financial Trading System', href: '/services/ai-financial-trading' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'Custom AI Model Development', href: '/services/custom-ai-models' },
         { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
-        { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
-        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
-        { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
-        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
-        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
       ]
     }
   ];
