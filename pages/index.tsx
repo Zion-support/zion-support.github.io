@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { SEO } from '../components/SEO';
-=======
-import React from
-  'react';
-import Head from
-  'next/head';
->>>>>>> main
 
 export default function Home() {
   return (

@@ -5,14 +5,10 @@ import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-<<<<<<< HEAD
     <HelmetProvider>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </HelmetProvider>
-=======
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
->>>>>>> main
   );
 }
