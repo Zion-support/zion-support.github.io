@@ -34,11 +34,7 @@ describe('AccessibilityEnhancer', () => {
   it('handles keyboard events correctly', () => {
     const handleClick = vi.fn();
     render(
-      <AccessibilityEnhancer
-        role="button"
-        onClick={handleClick}
-        tabIndex={0}
-      >
+      <AccessibilityEnhancer role="button" onClick={handleClick} tabIndex={0}>
         <span>Clickable Element</span>
       </AccessibilityEnhancer>
     );
@@ -63,15 +59,16 @@ describe('AccessibilityEnhancer', () => {
     );
 
     const element = screen.getByRole('button');
-    expect(element).toHaveClass('focus:outline-none', 'focus:ring-2', 'focus:ring-blue-500');
+    expect(element).toHaveClass(
+      'focus:outline-none',
+      'focus:ring-2',
+      'focus:ring-blue-500'
+    );
   });
 
   it('disables focus when not focusable', () => {
     render(
-      <AccessibilityEnhancer
-        role="button"
-        tabIndex={-1}
-      >
+      <AccessibilityEnhancer role="button" tabIndex={-1}>
         <span>Non-focusable Element</span>
       </AccessibilityEnhancer>
     );

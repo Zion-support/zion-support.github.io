@@ -24,8 +24,8 @@ const bundleStats = {
     home: '36.1 kB',
     about: '4.52 kB',
     contact: '4.15 kB',
-    services: '3.67 kB'
-  }
+    services: '3.67 kB',
+  },
 };
 
 console.log('Bundle Statistics:');
@@ -40,32 +40,32 @@ const recommendations = [
     category: 'Code Splitting',
     priority: 'High',
     description: 'Implement dynamic imports for service pages',
-    impact: 'Reduce initial bundle size by 20-30%'
+    impact: 'Reduce initial bundle size by 20-30%',
   },
   {
     category: 'Image Optimization',
     priority: 'High',
     description: 'Add next/image optimization for all images',
-    impact: 'Improve LCP by 15-25%'
+    impact: 'Improve LCP by 15-25%',
   },
   {
     category: 'Caching',
     priority: 'Medium',
     description: 'Implement service worker for offline support',
-    impact: 'Improve repeat visit performance by 40%'
+    impact: 'Improve repeat visit performance by 40%',
   },
   {
     category: 'SEO',
     priority: 'High',
     description: 'Add structured data and meta tags',
-    impact: 'Improve search rankings and social sharing'
+    impact: 'Improve search rankings and social sharing',
   },
   {
     category: 'Accessibility',
     priority: 'Medium',
     description: 'Add ARIA labels and keyboard navigation',
-    impact: 'Improve accessibility score to 95+'
-  }
+    impact: 'Improve accessibility score to 95+',
+  },
 ];
 
 console.log('🎯 Performance Recommendations:');
@@ -87,14 +87,14 @@ const performanceReport = {
     '✅ Enhanced SEO with structured data',
     '✅ Added loading states and error handling',
     '✅ Improved mobile responsiveness',
-    '✅ Added scroll effects and modern UI patterns'
+    '✅ Added scroll effects and modern UI patterns',
   ],
   metrics: {
     buildTime: '< 30s',
     bundleSize: 'Optimized',
     lighthouseScore: '90+ (estimated)',
-    accessibility: 'Improved'
-  }
+    accessibility: 'Improved',
+  },
 };
 
 // Save report
@@ -109,7 +109,9 @@ performanceReport.optimizations.forEach(opt => console.log(`   ${opt}`));
 console.log('\n📊 Estimated Performance Metrics:');
 console.log(`   - Build Time: ${performanceReport.metrics.buildTime}`);
 console.log(`   - Bundle Size: ${performanceReport.metrics.bundleSize}`);
-console.log(`   - Lighthouse Score: ${performanceReport.metrics.lighthouseScore}`);
+console.log(
+  `   - Lighthouse Score: ${performanceReport.metrics.lighthouseScore}`
+);
 console.log(`   - Accessibility: ${performanceReport.metrics.accessibility}`);
 
 console.log('\n✨ Website is now optimized and ready for production!');

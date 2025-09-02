@@ -1,7 +1,16 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from 'lucide-react';
+import {
+  CheckCircle,
+  AlertCircle,
+  XCircle,
+  Clock,
+  Activity,
+  Server,
+  Database,
+  Cloud,
+} from 'lucide-react';
 
 const Status: NextPage = () => {
   const services = [
@@ -10,43 +19,43 @@ const Status: NextPage = () => {
       status: 'operational',
       uptime: '99.9%',
       responseTime: '120ms',
-      lastIncident: 'No incidents in the past 30 days'
+      lastIncident: 'No incidents in the past 30 days',
     },
     {
       name: 'API Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '85ms',
-      lastIncident: 'No incidents in the past 30 days'
+      lastIncident: 'No incidents in the past 30 days',
     },
     {
       name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '45ms',
-      lastIncident: 'No incidents in the past 30 days'
+      lastIncident: 'No incidents in the past 30 days',
     },
     {
       name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.7%',
       responseTime: '200ms',
-      lastIncident: 'No incidents in the past 30 days'
+      lastIncident: 'No incidents in the past 30 days',
     },
     {
       name: 'CDN',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '50ms',
-      lastIncident: 'No incidents in the past 30 days'
+      lastIncident: 'No incidents in the past 30 days',
     },
     {
       name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
       responseTime: '30ms',
-      lastIncident: 'No incidents in the past 30 days'
-    }
+      lastIncident: 'No incidents in the past 30 days',
+    },
   ];
 
   const getStatusIcon = (status: string) => {
@@ -81,17 +90,19 @@ const Status: NextPage = () => {
       title: 'Scheduled Maintenance - API Services',
       status: 'resolved',
       date: '2025-01-20',
-      description: 'Scheduled maintenance window for API services completed successfully.',
-      impact: 'minor'
+      description:
+        'Scheduled maintenance window for API services completed successfully.',
+      impact: 'minor',
     },
     {
       id: 2,
       title: 'Database Performance Issue',
       status: 'resolved',
       date: '2025-01-15',
-      description: 'Temporary performance degradation in database queries has been resolved.',
-      impact: 'minor'
-    }
+      description:
+        'Temporary performance degradation in database queries has been resolved.',
+      impact: 'minor',
+    },
   ];
 
   return (
@@ -104,9 +115,11 @@ const Status: NextPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">System Status</h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">
+              System Status
+            </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Monitor the real-time status of our services and infrastructure. 
+              Monitor the real-time status of our services and infrastructure.
               All systems are currently operational.
             </p>
           </div>
@@ -118,27 +131,30 @@ const Status: NextPage = () => {
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-4">
                 <CheckCircle className="w-12 h-12 text-green-500 mr-3" />
-                <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  All Systems Operational
+                </h2>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                All services are running normally. We're monitoring our systems 24/7 to ensure optimal performance.
+                All services are running normally. We&apos;re monitoring our
+                systems 24/7 to ensure optimal performance.'
               </p>
             </div>
-            
+
             {/* Status Overview Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9%</h3>
                 <p className="text-gray-600">Overall Uptime</p>
               </div>
-              
+
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <Clock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">85ms</h3>
                 <p className="text-gray-600">Average Response Time</p>
               </div>
-              
+
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">0</h3>
@@ -152,12 +168,15 @@ const Status: NextPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Status</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Service Status
+              </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Real-time status of all our services and infrastructure components.
+                Real-time status of all our services and infrastructure
+                components.
               </p>
             </div>
-            
+
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="overflow-x-auto">
@@ -183,17 +202,21 @@ const Status: NextPage = () => {
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       {services.map((service, index) => (
-                        <tr key={index} className="hover:bg-gray-50">
+                        <tr key={index} className="hover: bg-gray-50">
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
                               <Server className="w-5 h-5 text-gray-400 mr-3" />
-                              <span className="text-sm font-medium text-gray-900">{service.name}</span>
+                              <span className="text-sm font-medium text-gray-900">
+                                {service.name}
+                              </span>
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
                               {getStatusIcon(service.status)}
-                              <span className={`ml-2 inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(service.status)}`}>
+                              <span
+                                className={`ml-2 inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(service.status)}`}
+                              >
                                 {service.status}
                               </span>
                             </div>
@@ -221,28 +244,38 @@ const Status: NextPage = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Incidents</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Recent Incidents
+              </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 History of recent incidents and their resolution status.
               </p>
             </div>
-            
+
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {incidents.map((incident) => (
+                {incidents.map(incident => (
                   <div key={incident.id} className="bg-gray-50 rounded-lg p-6">
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center mb-2">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          <h3 className="text-lg font-semibold text-gray-900">{incident.title}</h3>
+                          <h3 className="text-lg font-semibold text-gray-900">
+                            {incident.title}
+                          </h3>
                         </div>
-                        <p className="text-gray-600 mb-2">{incident.description}</p>
+                        <p className="text-gray-600 mb-2">
+                          {incident.description}
+                        </p>
                         <div className="flex items-center text-sm text-gray-500">
                           <span className="mr-4">Date: {incident.date}</span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'
-                          }`}>
+                          <span
+                            className={`px-2 py-1 rounded-full text-xs font-medium ${
+                              incident.impact === 'minor'
+                                ? 'bg-yellow-100 text-yellow-800'
+                                : 'bg-red-100 text-red-800'
+                            }`}
+                          >
                             {incident.impact} impact
                           </span>
                         </div>
@@ -259,34 +292,51 @@ const Status: NextPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Monitoring & Alerts</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Monitoring & Alerts
+              </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We continuously monitor our systems and will notify you of any issues.
+                We continuously monitor our systems and will notify you of any
+                issues.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="bg-white rounded-lg p-6 text-center">
                 <Database className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>
-                <p className="text-gray-600 text-sm">Continuous monitoring of all systems</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  24/7 Monitoring
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Continuous monitoring of all systems
+                </p>
               </div>
-              
+
               <div className="bg-white rounded-lg p-6 text-center">
                 <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Real-time Alerts</h3>
-                <p className="text-gray-600 text-sm">Instant notifications for any issues</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Real-time Alerts
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Instant notifications for any issues
+                </p>
               </div>
-              
+
               <div className="bg-white rounded-lg p-6 text-center">
                 <Cloud className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Global Monitoring</h3>
-                <p className="text-gray-600 text-sm">Monitoring from multiple locations</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Global Monitoring
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Monitoring from multiple locations
+                </p>
               </div>
-              
+
               <div className="bg-white rounded-lg p-6 text-center">
                 <CheckCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">SLA Compliance</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  SLA Compliance
+                </h3>
                 <p className="text-gray-600 text-sm">99.9% uptime guarantee</p>
               </div>
             </div>
@@ -298,7 +348,8 @@ const Status: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-              Subscribe to status updates and get notified about any service incidents.
+              Subscribe to status updates and get notified about any service
+              incidents.
             </p>
             <div className="max-w-md mx-auto flex">
               <input

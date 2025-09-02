@@ -2,22 +2,36 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to recursively find all files with merge conflicts
-function findFilesWithMergeConflicts(dir, fileExtensions = ['.tsx', '.ts', '.jsx', '.js']) {
+function findFilesWithMergeConflicts(
+  dir,
+  fileExtensions = ['.tsx', '.ts', '.jsx', '.js']
+) {
   const files = [];
-  
+
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && !item.startsWith('node_modules')) {
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith('.') &&
+        !item.startsWith('node_modules')
+      ) {
         scanDirectory(fullPath);
-      } else if (stat.isFile() && fileExtensions.some(ext => item.endsWith(ext))) {
+      } else if (
+        stat.isFile() &&
+        fileExtensions.some(ext => item.endsWith(ext))
+      ) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (
+            content.includes('<<<<<<< HEAD') ||
+            content.includes('=======') ||
+            content.includes('>>>>>>>')
+          ) {
             files.push(fullPath);
           }
         } catch (error) {
@@ -26,7 +40,7 @@ function findFilesWithMergeConflicts(dir, fileExtensions = ['.tsx', '.ts', '.jsx
       }
     }
   }
-  
+
   scanDirectory(dir);
   return files;
 }
@@ -35,36 +49,41 @@ function findFilesWithMergeConflicts(dir, fileExtensions = ['.tsx', '.ts', '.jsx
 function fixMergeConflicts(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (
+      !content.includes('<<<<<<< HEAD') &&
+      !content.includes('=======') &&
+      !content.includes('>>>>>>>')
+    ) {
       return false; // No merge conflicts
     }
-    
+
     console.log(`Fixing merge conflicts in: ${filePath}`);
-    
+
     // Create a backup
     const backupPath = filePath + '.backup.' + Date.now();
     fs.writeFileSync(backupPath, content);
-    
+
     // Remove merge conflict markers and keep the first version (HEAD)
     let fixedContent = content;
-    
+
     // Remove all merge conflict sections
-    const conflictRegex = /<<<<<<< HEAD\s*([\s\S]*?)\s*=======\s*[\s\S]*?>>>>>>> [^\n]*\s*/g;
+    const conflictRegex =
+      /<<<<<<< HEAD\s*([\s\S]*?)\s*=======\s*[\s\S]*?>>>>>>> [^\n]*\s*/g;
     fixedContent = fixedContent.replace(conflictRegex, '$1');
-    
+
     // Remove any remaining conflict markers
     fixedContent = fixedContent.replace(/<<<<<<< HEAD\s*/g, '');
     fixedContent = fixedContent.replace(/=======\s*/g, '');
     fixedContent = fixedContent.replace(/>>>>>>> [^\n]*\s*/g, '');
-    
+
     // Clean up any double newlines
     fixedContent = fixedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
+
     // Write the fixed content
     fs.writeFileSync(filePath, fixedContent);
-    
+
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -110,9 +129,9 @@ function removeCorruptedFiles(dir) {
     'src/utils/searchUtils.js.jsx',
     'src/utils/seoOptimizer.js.jsx',
     'src/utils/sitemapGenerator.js.jsx',
-    'src/utils/wishlistSlice.js.jsx'
+    'src/utils/wishlistSlice.js.jsx',
   ];
-  
+
   for (const file of corruptedFiles) {
     const fullPath = path.join(dir, file);
     if (fs.existsSync(fullPath)) {
@@ -152,7 +171,9 @@ for (const file of filesWithConflicts) {
   }
 }
 
-console.log(`\nCleanup complete! Fixed ${fixedCount} out of ${filesWithConflicts.length} files.`);
+console.log(
+  `\nCleanup complete! Fixed ${fixedCount} out of ${filesWithConflicts.length} files.`
+);
 
 // Create a simple working structure for key files
 console.log('\nCreating basic working structure for key files...');

@@ -1,10 +1,15 @@
 import React from 'react';
+export default React.memo(/**
+ * PageTransition function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function PageTransition ({ children }: PageTransitionProps) {;
 
-type PageTransitionProps = {
+;
+type PageTransitionProps = {;
   children: React.ReactNode;
 };
-
-export default function PageTransition({ children }: PageTransitionProps) {
+;
   return <>{children}</>;
-}
-
+};

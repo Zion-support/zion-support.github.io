@@ -135,11 +135,12 @@ export default [
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-'@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-unused-vars': 'off',
-      'no-console': 'off','no-undef': 'off',
+      'no-console': 'off',
+      'no-undef': 'off',
     },
     settings: {
       react: {
@@ -149,7 +150,7 @@ export default [
   },
   {
     ignores: [
-'src/**',
+      'src/**',
       'components/**',
       'pages/**',
       'pages.__backup/**',
@@ -176,12 +177,13 @@ export default [
       'supabase/functions/**',
       'ai-optimization-backups/**',
       'fix_utils_files.ts',
-      '*.jsx','node_modules/',
+      '*.jsx',
+      'node_modules/',
       '.next/',
       'out/',
       'dist/',
       'build/',
-// Broad ignores to stabilize linting
+      // Broad ignores to stabilize linting
       'src/**',
       'supabase/**',
       'temp_working/**',
@@ -212,7 +214,8 @@ export default [
       'mcp_*',
       'fix-*.jsx',
       'fix_*.jsx',
-      'fix_*.ts','*.config.js',
+      'fix_*.ts',
+      '*.config.js',
       '*.config.ts',
       'scripts/',
       'automation/',
@@ -299,7 +302,7 @@ export default [
       '**/pages/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx'
-    ]
-  }
+      'test*.tsx',
+    ],
+  },
 ];

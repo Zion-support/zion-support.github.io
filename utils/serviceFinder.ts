@@ -6,7 +6,7 @@
   price?: number;
   features?: string[];
   tags?: string[];
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export function findServicesByCategory(

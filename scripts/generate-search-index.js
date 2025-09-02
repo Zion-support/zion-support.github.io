@@ -7,7 +7,8 @@ function walk(dir, filelist = []) {
   for (const entry of files) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (entry.name.startsWith('.') || entry.name.includes('node_modules')) continue;
+      if (entry.name.startsWith('.') || entry.name.includes('node_modules'))
+        continue;
       filelist = walk(full, filelist);
     } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {
       filelist.push(full);
@@ -18,7 +19,11 @@ function walk(dir, filelist = []) {
 
 function main() {
   const repoRoot = process.cwd();
-  const srcDirs = [path.join(repoRoot, 'pages'), path.join(repoRoot, 'src'), path.join(repoRoot, 'components')];
+  const srcDirs = [
+    path.join(repoRoot, 'pages'),
+    path.join(repoRoot, 'src'),
+    path.join(repoRoot, 'components'),
+  ];
   const index = [];
   for (const dir of srcDirs) {
     if (!fs.existsSync(dir)) continue;
@@ -26,8 +31,12 @@ function main() {
       try {
         const rel = path.relative(repoRoot, file);
         const content = fs.readFileSync(file, 'utf8');
-        const titleMatch = content.match(/export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/);
-        const title = titleMatch ? (titleMatch[1] || titleMatch[2]) : path.basename(file);
+        const titleMatch = content.match(
+          /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/
+        );
+        const title = titleMatch
+          ? titleMatch[1] || titleMatch[2]
+          : path.basename(file);
         index.push({ file: rel, title });
       } catch {}
     }
@@ -35,9 +44,15 @@ function main() {
   const outDir = path.join(repoRoot, 'public');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir, 'search-index.json');
-  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), items: index }, null, 2));
+  fs.writeFileSync(
+    outPath,
+    JSON.stringify(
+      { generatedAt: new Date().toISOString(), items: index },
+      null,
+      2
+    )
+  );
   console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);
 }
 
 main();
-

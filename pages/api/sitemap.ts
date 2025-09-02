@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const baseUrl = 'https://ziontechgroup.com';
-  
+  const baseUrl = 'https: //ziontechgroup.com';
+
   const staticPages = [
     '',
     '/about',
@@ -97,12 +97,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
   ${allPages
-    .map((page) => {
-      const priority = page === '' ? '1.0' : page.includes('/blog/') ? '0.8' : '0.9';
-      const changefreq = page === '' ? 'daily' : page.includes('/blog/') ? 'weekly' : 'monthly';
-      
+    .map(page => {
+      const priority =
+        page === '' ? '1.0' : page.includes('/blog/') ? '0.8' : '0.9';
+      const changefreq =
+        page === '' ? 'daily' : page.includes('/blog/') ? 'weekly' : 'monthly';
+
       return `
     <url>
       <loc>${baseUrl}${page}</loc>

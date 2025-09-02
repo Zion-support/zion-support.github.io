@@ -4,7 +4,7 @@ import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import { 
+import {
   Calendar,
   Clock,
   User,
@@ -30,106 +30,114 @@ import {
   Target,
   Globe,
   Phone,
-  Mail
+  Mail,
 } from 'lucide-react';
 
 const Blog: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Business: 2025 Trends and Predictions",
-      excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.",
-      author: "Sarah Johnson",
-      date: "2025-01-15",
-      readTime: "8 min read",
-      category: "AI Trends",
-      image: "/api/placeholder/600/400",
-      tags: ["AI", "Business", "Trends", "2025"],
-      featured: true
+      title: 'The Future of AI in Business: 2025 Trends and Predictions',
+      excerpt:
+        'Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.',
+      author: 'Sarah Johnson',
+      date: '2025-01-15',
+      readTime: '8 min read',
+      category: 'AI Trends',
+      image: '/api/placeholder/600/400',
+      tags: ['AI', 'Business', 'Trends', '2025'],
+      featured: true,
     },
     {
       id: 2,
-      title: "Building Scalable AI Solutions: Best Practices and Architecture",
-      excerpt: "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.",
-      author: "Michael Chen",
-      date: "2025-01-12",
-      readTime: "12 min read",
-      category: "Technical",
-      image: "/api/placeholder/600/400",
-      tags: ["AI Architecture", "Scalability", "Best Practices"],
-      featured: false
+      title: 'Building Scalable AI Solutions: Best Practices and Architecture',
+      excerpt:
+        'Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.',
+      author: 'Michael Chen',
+      date: '2025-01-12',
+      readTime: '12 min read',
+      category: 'Technical',
+      image: '/api/placeholder/600/400',
+      tags: ['AI Architecture', 'Scalability', 'Best Practices'],
+      featured: false,
     },
     {
       id: 3,
-      title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
-      excerpt: "Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.",
-      author: "Emily Rodriguez",
-      date: "2025-01-10",
-      readTime: "10 min read",
-      category: "Security",
-      image: "/api/placeholder/600/400",
-      tags: ["Cybersecurity", "AI Security", "Threat Protection"],
-      featured: false
+      title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets',
+      excerpt:
+        'Discover how AI is revolutionizing cybersecurity and the measures you need to protect your organization from emerging threats.',
+      author: 'Emily Rodriguez',
+      date: '2025-01-10',
+      readTime: '10 min read',
+      category: 'Security',
+      image: '/api/placeholder/600/400',
+      tags: ['Cybersecurity', 'AI Security', 'Threat Protection'],
+      featured: false,
     },
     {
       id: 4,
-      title: "Cloud Migration Strategies: A Complete Guide for 2025",
-      excerpt: "Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.",
-      author: "David Kim",
-      date: "2025-01-08",
-      readTime: "15 min read",
-      category: "Cloud",
-      image: "/api/placeholder/600/400",
-      tags: ["Cloud Migration", "Strategy", "Best Practices"],
-      featured: false
+      title: 'Cloud Migration Strategies: A Complete Guide for 2025',
+      excerpt:
+        'Comprehensive guide to planning and executing successful cloud migration projects with minimal disruption to your business operations.',
+      author: 'David Kim',
+      date: '2025-01-08',
+      readTime: '15 min read',
+      category: 'Cloud',
+      image: '/api/placeholder/600/400',
+      tags: ['Cloud Migration', 'Strategy', 'Best Practices'],
+      featured: false,
     },
     {
       id: 5,
-      title: "AI-Powered Customer Experience: Transforming Business Interactions",
-      excerpt: "How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
-      author: "Lisa Wang",
-      date: "2025-01-05",
-      readTime: "9 min read",
-      category: "Customer Experience",
-      image: "/api/placeholder/600/400",
-      tags: ["Customer Experience", "AI", "Automation"],
-      featured: false
+      title:
+        'AI-Powered Customer Experience: Transforming Business Interactions',
+      excerpt:
+        'How AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.',
+      author: 'Lisa Wang',
+      date: '2025-01-05',
+      readTime: '9 min read',
+      category: 'Customer Experience',
+      image: '/api/placeholder/600/400',
+      tags: ['Customer Experience', 'AI', 'Automation'],
+      featured: false,
     },
     {
       id: 6,
-      title: "Data Analytics and Machine Learning: Driving Business Intelligence",
-      excerpt: "Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
-      author: "James Wilson",
-      date: "2025-01-03",
-      readTime: "11 min read",
-      category: "Analytics",
-      image: "/api/placeholder/600/400",
-      tags: ["Data Analytics", "Machine Learning", "Business Intelligence"],
-      featured: false
-    }
+      title:
+        'Data Analytics and Machine Learning: Driving Business Intelligence',
+      excerpt:
+        'Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.',
+      author: 'James Wilson',
+      date: '2025-01-03',
+      readTime: '11 min read',
+      category: 'Analytics',
+      image: '/api/placeholder/600/400',
+      tags: ['Data Analytics', 'Machine Learning', 'Business Intelligence'],
+      featured: false,
+    },
   ];
 
   const categories = [
-    { name: "All", count: 24, active: true },
-    { name: "AI Trends", count: 6, active: false },
-    { name: "Technical", count: 8, active: false },
-    { name: "Security", count: 4, active: false },
-    { name: "Cloud", count: 3, active: false },
-    { name: "Customer Experience", count: 2, active: false },
-    { name: "Analytics", count: 1, active: false }
+    { name: 'All', count: 24, active: true },
+    { name: 'AI Trends', count: 6, active: false },
+    { name: 'Technical', count: 8, active: false },
+    { name: 'Security', count: 4, active: false },
+    { name: 'Cloud', count: 3, active: false },
+    { name: 'Customer Experience', count: 2, active: false },
+    { name: 'Analytics', count: 1, active: false },
   ];
 
   const featuredPost = blogPosts.find(post => post.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Blog - Zion Tech Group" 
+      <SEO
+        title="Blog - Zion Tech Group"
         description="Stay updated with the latest insights on AI, technology trends, and business innovation. Expert articles and thought leadership from Zion Tech Group."
       />
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -144,7 +152,8 @@ const Blog: React.FC = () => {
               Technology Blog
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay ahead with expert insights on AI, technology trends, and business innovation.
+              Stay ahead with expert insights on AI, technology trends, and
+              business innovation.
             </p>
           </motion.div>
         </div>
@@ -152,19 +161,21 @@ const Blog: React.FC = () => {
 
       {/* Featured Post */}
       {featuredPost && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
+              <h2 className="text-3xl font-bold text-white mb-8">
+                Featured Article
+              </h2>
               <Card className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div className="relative h-64 lg:h-full">
-                    <img 
-                      src={featuredPost.image} 
+                    <img
+                      src={featuredPost.image}
                       alt={featuredPost.title}
                       className="w-full h-full object-cover"
                     />
@@ -177,10 +188,16 @@ const Blog: React.FC = () => {
                   </div>
                   <div className="p-8">
                     <div className="flex items-center mb-4">
-                      <Badge variant="outline" className="mr-3">{featuredPost.category}</Badge>
-                      <span className="text-gray-400 text-sm">{featuredPost.readTime}</span>
+                      <Badge variant="outline" className="mr-3">
+                        {featuredPost.category}
+                      </Badge>
+                      <span className="text-gray-400 text-sm">
+                        {featuredPost.readTime}
+                      </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{featuredPost.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {featuredPost.title}
+                    </h3>
                     <p className="text-gray-300 mb-6">{featuredPost.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-gray-400 text-sm">
@@ -203,7 +220,7 @@ const Blog: React.FC = () => {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
@@ -214,61 +231,73 @@ const Blog: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="mb-8"
               >
-                <h2 className="text-3xl font-bold text-white mb-6">Latest Articles</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  Latest Articles
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {blogPosts.filter(post => !post.featured).map((post, index) => (
-                    <motion.div
-                      key={post.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.1 * index }}
-                    >
-                      <Card className="overflow-hidden h-full">
-                        <div className="relative h-48">
-                          <img 
-                            src={post.image} 
-                            alt={post.title}
-                            className="w-full h-full object-cover"
-                          />
-                          <div className="absolute top-4 left-4">
-                            <Badge variant="outline">{post.category}</Badge>
-                          </div>
-                        </div>
-                        <div className="p-6">
-                          <div className="flex items-center mb-3 text-sm text-gray-400">
-                            <User className="w-4 h-4 mr-2" />
-                            {post.author}
-                            <Calendar className="w-4 h-4 ml-4 mr-2" />
-                            {new Date(post.date).toLocaleDateString()}
-                            <Clock className="w-4 h-4 ml-4 mr-2" />
-                            {post.readTime}
-                          </div>
-                          <h3 className="text-xl font-bold text-white mb-3">{post.title}</h3>
-                          <p className="text-gray-300 mb-4 text-sm">{post.excerpt}</p>
-                          <div className="flex items-center justify-between">
-                            <div className="flex flex-wrap gap-2">
-                              {post.tags.slice(0, 2).map((tag, tagIndex) => (
-                                <Badge key={tagIndex} variant="secondary" className="text-xs">
-                                  <Tag className="w-3 h-3 mr-1" />
-                                  {tag}
-                                </Badge>
-                              ))}
+                  {blogPosts
+                    .filter(post => !post.featured)
+                    .map((post, index) => (
+                      <motion.div
+                        key={post.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 * index }}
+                      >
+                        <Card className="overflow-hidden h-full">
+                          <div className="relative h-48">
+                            <img
+                              src={post.image}
+                              alt={post.title}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute top-4 left-4">
+                              <Badge variant="outline">{post.category}</Badge>
                             </div>
-                            <Button variant="outline" size="sm">
-                              Read More
-                              <ArrowRight className="w-4 h-4 ml-2" />
-                            </Button>
                           </div>
-                        </div>
-                      </Card>
-                    </motion.div>
-                  ))}
+                          <div className="p-6">
+                            <div className="flex items-center mb-3 text-sm text-gray-400">
+                              <User className="w-4 h-4 mr-2" />
+                              {post.author}
+                              <Calendar className="w-4 h-4 ml-4 mr-2" />
+                              {new Date(post.date).toLocaleDateString()}
+                              <Clock className="w-4 h-4 ml-4 mr-2" />
+                              {post.readTime}
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-3">
+                              {post.title}
+                            </h3>
+                            <p className="text-gray-300 mb-4 text-sm">
+                              {post.excerpt}
+                            </p>
+                            <div className="flex items-center justify-between">
+                              <div className="flex flex-wrap gap-2">
+                                {post.tags.slice(0, 2).map((tag, tagIndex) => (
+                                  <Badge
+                                    key={tagIndex}
+                                    variant="secondary"
+                                    className="text-xs"
+                                  >
+                                    <Tag className="w-3 h-3 mr-1" />
+                                    {tag}
+                                  </Badge>
+                                ))}
+                              </div>
+                              <Button variant="outline" size="sm">
+                                Read More
+                                <ArrowRight className="w-4 h-4 ml-2" />
+                              </Button>
+                            </div>
+                          </div>
+                        </Card>
+                      </motion.div>
+                    ))}
                 </div>
               </motion.div>
             </div>
 
             {/* Sidebar */}
-            <div className="lg:w-1/3">
+            <div className="lg: w-1/3">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -277,14 +306,16 @@ const Blog: React.FC = () => {
               >
                 {/* Categories */}
                 <Card className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    Categories
+                  </h3>
                   <div className="space-y-2">
                     {categories.map((category, index) => (
                       <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-                          category.active 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 
+                          category.active
+                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
                         }`}
                       >
@@ -299,15 +330,18 @@ const Blog: React.FC = () => {
 
                 {/* Newsletter Signup */}
                 <Card className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    Stay Updated
+                  </h3>
                   <p className="text-gray-300 mb-4 text-sm">
-                    Get the latest AI insights and technology trends delivered to your inbox.
+                    Get the latest AI insights and technology trends delivered
+                    to your inbox.
                   </p>
                   <div className="space-y-3">
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
                       Subscribe
@@ -317,10 +351,25 @@ const Blog: React.FC = () => {
 
                 {/* Popular Tags */}
                 <Card className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Popular Tags</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    Popular Tags
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    {["AI", "Machine Learning", "Cloud", "Security", "Automation", "Analytics", "IoT", "Blockchain"].map((tag, index) => (
-                      <Badge key={index} variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">
+                    {[
+                      'AI',
+                      'Machine Learning',
+                      'Cloud',
+                      'Security',
+                      'Automation',
+                      'Analytics',
+                      'IoT',
+                      'Blockchain',
+                    ].map((tag, index) => (
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="cursor-pointer hover: bg-blue-500 hover:text-white transition-colors"
+                      >
                         {tag}
                       </Badge>
                     ))}
@@ -333,7 +382,7 @@ const Blog: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -344,10 +393,14 @@ const Blog: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our experts help you implement the latest AI technologies and drive innovation in your organization.
+              Let our experts help you implement the latest AI technologies and
+              drive innovation in your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+              >
                 <Phone className="w-5 h-5 mr-2" />
                 Schedule Consultation
               </Button>

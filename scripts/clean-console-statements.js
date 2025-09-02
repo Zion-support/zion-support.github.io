@@ -21,13 +21,8 @@ class ConsoleCleaner {
 
   async cleanConsoleStatements() {
     console.log('🧹 Cleaning console statements from production code...');
-    
-    const directories = [
-      'pages',
-      'components',
-      'src',
-      'lib'
-    ];
+
+    const directories = ['pages', 'components', 'src', 'lib'];
 
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
@@ -36,17 +31,21 @@ class ConsoleCleaner {
       }
     }
 
-    console.log(`✅ Cleaned console statements from ${this.cleanedFiles.length} files`);
-    console.log(`📊 Total console statements removed: ${this.totalConsoleStatements}`);
+    console.log(
+      `✅ Cleaned console statements from ${this.cleanedFiles.length} files`
+    );
+    console.log(
+      `📊 Total console statements removed: ${this.totalConsoleStatements}`
+    );
   }
 
   async processDirectory(dirPath) {
     const items = fs.readdirSync(dirPath);
-    
+
     for (const item of items) {
       const itemPath = path.join(dirPath, item);
       const stat = fs.statSync(itemPath);
-      
+
       if (stat.isDirectory()) {
         await this.processDirectory(itemPath);
       } else if (this.isJavaScriptFile(item)) {
@@ -64,7 +63,7 @@ class ConsoleCleaner {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
-      
+
       // Remove console statements but keep console.error for debugging
       let cleanedContent = content
         .replace(/console\.log\([^)]*\);?\s*/g, '')
@@ -90,14 +89,18 @@ class ConsoleCleaner {
         .replace(/console\.timelineEnd\([^)]*\);?\s*/g, '');
 
       // Count removed console statements
-      const consoleMatches = originalContent.match(/console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);
+      const consoleMatches = originalContent.match(
+        /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g
+      );
       const removedCount = consoleMatches ? consoleMatches.length : 0;
 
       if (removedCount > 0) {
         fs.writeFileSync(filePath, cleanedContent, 'utf8');
         this.cleanedFiles.push(filePath);
         this.totalConsoleStatements += removedCount;
-        console.log(`🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`);
+        console.log(
+          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`
+        );
       }
     } catch (error) {
       console.error(`❌ Error cleaning file ${filePath}:`, error.message);

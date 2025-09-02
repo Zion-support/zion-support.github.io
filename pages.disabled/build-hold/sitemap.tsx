@@ -24,7 +24,7 @@ const SitemapPage: React.FC = () => {
     '/pricing-guide',
     '/pricing',
     '/privacy',
-    '/terms'
+    '/terms',
   ];
 
   return (
@@ -32,12 +32,17 @@ const SitemapPage: React.FC = () => {
       <h1 className="text-3xl font-bold mb-6">Sitemap</h1>
       <p className="mb-4">
         For XML sitemap, visit{' '}
-        <a href="/sitemap.xml" className="text-blue-600 hover:underline">/sitemap.xml</a>.
+        <a href="/sitemap.xml" className="text-blue-600 hover:underline">
+          /sitemap.xml
+        </a>
+        .
       </p>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        {routes.map((path) => (
+        {routes.map(path => (
           <li key={path}>
-            <Link href={path} className="text-blue-600 hover:underline">{path}</Link>
+            <Link href={path} className="text-blue-600 hover:underline">
+              {path}
+            </Link>
           </li>
         ))}
       </ul>

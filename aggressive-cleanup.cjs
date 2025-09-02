@@ -76,7 +76,7 @@ function removeProblematicFiles() {
     'src/utils/sitemapGenerator.ts',
     'src/utils/sitemapGenerator.tsx',
     'src/utils/tokenRewards.ts',
-    'src/utils/withErrorLogging.ts'
+    'src/utils/withErrorLogging.ts',
   ];
 
   console.log('Removing problematic files...');
@@ -96,7 +96,7 @@ function removeProblematicFiles() {
 // Function to create minimal working files
 function createMinimalWorkingFiles() {
   console.log('Creating minimal working files...');
-  
+
   // Create a minimal services page
   const servicesPageContent = `import React from 'react';
 import Head from 'next/head';
@@ -224,7 +224,7 @@ export default function Contact() {
 // Function to clean up empty directories
 function cleanupEmptyDirectories() {
   console.log('Cleaning up empty directories...');
-  
+
   const directoriesToCheck = [
     'src/pages/services',
     'src/pages/solutions',
@@ -232,7 +232,7 @@ function cleanupEmptyDirectories() {
     'src/services',
     'src/store',
     'src/types',
-    'src/utils'
+    'src/utils',
   ];
 
   for (const dir of directoriesToCheck) {

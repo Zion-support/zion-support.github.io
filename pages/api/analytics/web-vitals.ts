@@ -26,8 +26,8 @@ export default async function handler(
       return res.status(400).json({ error: 'Invalid data format' });
     }
 
-    // Log the web vitals data (in production, you'd send this to your analytics service)
-    console.log('Web Vitals:', {
+    // Log the web vitals data (in production, you&apos;d send this to your analytics service)'
+    console.log('Web Vitals: ', {
       metric: data.name,
       value: data.value,
       url: data.url,
@@ -36,17 +36,16 @@ export default async function handler(
 
     // Here you would typically send the data to your analytics service
     // For example: Google Analytics, Mixpanel, or your own analytics database
-    
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({ 
-      success: true, 
+
+    // For now, we&apos;ll just acknowledge receipt'
+    res.status(200).json({
+      success: true,
       message: 'Web vitals data received',
       metric: data.name,
-      value: data.value 
+      value: data.value,
     });
-
   } catch (error) {
-    console.error('Error processing web vitals:', error);
+    console.error('Error processing web vitals: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }

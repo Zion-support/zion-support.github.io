@@ -12,7 +12,7 @@ const colors = {
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
   magenta: '\x1b[35m',
-  cyan: '\x1b[36m'
+  cyan: '\x1b[36m',
 };
 
 function log(message, color = 'reset') {
@@ -30,17 +30,22 @@ function fixFile(filePath) {
     let fixed = false;
 
     // Fix 1: Remove duplicate useState declarations
-    const useStateRegex = /import\s+\{\s*useState\s*\}\s+from\s+['"]react['"];?\s*\nimport\s+\{\s*useState\s*\}\s+from\s+['"]react['"];?/g;
+    const useStateRegex =
+      /import\s+\{\s*useState\s*\}\s+from\s+['"]react['"];?\s*\nimport\s+\{\s*useState\s*\}\s+from\s+['"]react['"];?/g;
     if (useStateRegex.test(content)) {
-      content = content.replace(useStateRegex, 'import { useState } from \'react\';');
+      content = content.replace(
+        useStateRegex,
+        "import { useState } from 'react';"
+      );
       fixed = true;
       log(`Fixed duplicate useState imports in ${filePath}`, 'yellow');
     }
 
     // Fix 2: Remove duplicate Link declarations
-    const linkRegex = /import\s+\{\s*Link\s*\}\s+from\s+['"]next\/link['"];?\s*\nimport\s+\{\s*Link\s*\}\s+from\s+['"]next\/link['"];?/g;
+    const linkRegex =
+      /import\s+\{\s*Link\s*\}\s+from\s+['"]next\/link['"];?\s*\nimport\s+\{\s*Link\s*\}\s+from\s+['"]next\/link['"];?/g;
     if (linkRegex.test(content)) {
-      content = content.replace(linkRegex, 'import { Link } from \'next/link\';');
+      content = content.replace(linkRegex, "import { Link } from 'next/link';");
       fixed = true;
       log(`Fixed duplicate Link imports in ${filePath}`, 'yellow');
     }
@@ -72,7 +77,10 @@ function fixFile(filePath) {
     // Fix 6: Fix missing semicolons before return statements
     const missingSemicolonBeforeReturnRegex = /(\w+)\s*\nreturn\s+/g;
     if (missingSemicolonBeforeReturnRegex.test(content)) {
-      content = content.replace(missingSemicolonBeforeReturnRegex, '$1;\nreturn ');
+      content = content.replace(
+        missingSemicolonBeforeReturnRegex,
+        '$1;\nreturn '
+      );
       fixed = true;
       log(`Fixed missing semicolon before return in ${filePath}`, 'yellow');
     }
@@ -102,7 +110,8 @@ function fixFile(filePath) {
     }
 
     // Fix 10: Fix duplicate exports
-    const duplicateExportRegex = /export\s+default\s+(\w+);?\s*\nexport\s+default\s+\1;?/g;
+    const duplicateExportRegex =
+      /export\s+default\s+(\w+);?\s*\nexport\s+default\s+\1;?/g;
     if (duplicateExportRegex.test(content)) {
       content = content.replace(duplicateExportRegex, 'export default $1;');
       fixed = true;
@@ -122,21 +131,26 @@ function fixFile(filePath) {
   }
 }
 
-function scanAndFixDirectory(dirPath, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+function scanAndFixDirectory(
+  dirPath,
+  extensions = ['.js', '.jsx', '.ts', '.tsx']
+) {
   let totalFiles = 0;
   let fixedFiles = 0;
 
   function processDirectory(currentPath) {
     try {
       const items = fs.readdirSync(currentPath);
-      
+
       for (const item of items) {
         const fullPath = path.join(currentPath, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories
-          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          if (
+            !['node_modules', '.git', '.next', 'dist', 'build'].includes(item)
+          ) {
             processDirectory(fullPath);
           }
         } else if (stat.isFile()) {
@@ -150,7 +164,10 @@ function scanAndFixDirectory(dirPath, extensions = ['.js', '.jsx', '.ts', '.tsx'
         }
       }
     } catch (error) {
-      log(`❌ Error processing directory ${currentPath}: ${error.message}`, 'red');
+      log(
+        `❌ Error processing directory ${currentPath}: ${error.message}`,
+        'red'
+      );
     }
   }
 
@@ -160,7 +177,7 @@ function scanAndFixDirectory(dirPath, extensions = ['.js', '.jsx', '.ts', '.tsx'
 
 function main() {
   log('🔧 Advanced Syntax Fixer Starting...', 'cyan');
-  
+
   const sourceDirs = ['src', 'pages', 'components', 'utils', 'hooks', 'types'];
   let totalProcessed = 0;
   let totalFixed = 0;
@@ -183,7 +200,10 @@ function main() {
     log(`\n✅ Advanced syntax fixing completed!`, 'green');
     log(`   Run 'npm run lint' again to check for remaining issues.`, 'yellow');
   } else {
-    log(`\nℹ️  No syntax issues found that could be automatically fixed.`, 'blue');
+    log(
+      `\nℹ️  No syntax issues found that could be automatically fixed.`,
+      'blue'
+    );
   }
 }
 

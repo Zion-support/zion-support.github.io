@@ -1,7 +1,9 @@
+# <<<<<<< HEAD
+
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+
+> > > > > > > origin/cursor/install-dependencies-and-fix-errors-827a
+
 # PM2 Automation System - Error Monitoring & Auto-Fixing
 
 ## 🚀 Overview
@@ -11,6 +13,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
 ## 🛠️ Components
 
 ### 1. Error Monitor (`scripts/error-monitor.js`)
+
 - **Purpose**: Continuously monitors for TypeScript, ESLint, and build errors
 - **Frequency**: Every 10 minutes
 - **Features**:
@@ -21,6 +24,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Detailed error reporting
 
 ### 2. Auto Fixer (`scripts/auto-fixer.js`)
+
 - **Purpose**: Automatically fixes detected errors
 - **Frequency**: Every 2 hours or when triggered by error monitor
 - **Capabilities**:
@@ -32,6 +36,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Validates fixes after application
 
 ### 3. Health Checker (`scripts/health-checker.js`)
+
 - **Purpose**: Monitors application and system health
 - **Frequency**: Every 5 minutes
 - **Checks**:
@@ -44,6 +49,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Auto-restart on critical health issues
 
 ### 4. Log Cleaner (`scripts/log-cleaner.js`)
+
 - **Purpose**: Manages log files and prevents disk space issues
 - **Frequency**: Daily at 2 AM
 - **Features**:
@@ -54,6 +60,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Rotates PM2 logs
 
 ### 5. Main Application (`zion-app`)
+
 - **Purpose**: Your main application
 - **Features**:
   - Auto-restart on failure
@@ -87,11 +94,13 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
 ## 🚦 Getting Started
 
 ### 1. Start the Automation System
+
 ```bash
 ./start-pm2-automation.sh
 ```
 
 ### 2. Start with System Boot (Optional)
+
 ```bash
 ./start-pm2-automation.sh --startup
 ```
@@ -99,16 +108,19 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
 ## 📊 Monitoring Commands
 
 ### View All Processes
+
 ```bash
 pm2 list
 ```
 
 ### Real-time Monitoring Dashboard
+
 ```bash
 pm2 monit
 ```
 
 ### View Logs
+
 ```bash
 # All logs
 pm2 logs
@@ -122,6 +134,7 @@ pm2 logs log-cleaner
 ```
 
 ### Check Application Health
+
 ```bash
 curl http://localhost:3000/health
 ```
@@ -129,49 +142,56 @@ curl http://localhost:3000/health
 ## 🔧 Management Commands
 
 ### Restart All Processes
+
 ```bash
 pm2 restart all
 ```
 
 ### Stop All Processes
+
 ```bash
 pm2 stop all
 ```
 
 ### Delete All Processes
+
 ```bash
 pm2 delete all
 ```
 
 ### Restart Specific Process
+
 ```bash
 pm2 restart zion-app
 pm2 restart error-monitor
 ```
 
 ### View Process Details
+
 ```bash
 pm2 show zion-app
 ```
 
 ### Save Configuration
+
 ```bash
 pm2 save
 ```
 
 ## 📈 Automation Schedule
 
-| Process | Frequency | Purpose |
-|---------|-----------|---------|
-| Error Monitor | Every 10 minutes | Detect and report errors |
-| Health Checker | Every 5 minutes | Monitor system health |
-| Auto Fixer | Every 2 hours | Fix detected errors |
-| Log Cleaner | Daily at 2 AM | Clean and manage logs |
-| App Restart | Daily at 4 AM | Maintenance restart |
+| Process        | Frequency        | Purpose                  |
+| -------------- | ---------------- | ------------------------ |
+| Error Monitor  | Every 10 minutes | Detect and report errors |
+| Health Checker | Every 5 minutes  | Monitor system health    |
+| Auto Fixer     | Every 2 hours    | Fix detected errors      |
+| Log Cleaner    | Daily at 2 AM    | Clean and manage logs    |
+| App Restart    | Daily at 4 AM    | Maintenance restart      |
 
 ## 🔍 Error Types Monitored
 
 ### TypeScript Errors
+
 - Type mismatches
 - Missing type annotations
 - Import/export errors
@@ -179,6 +199,7 @@ pm2 save
 - Configuration issues
 
 ### ESLint Errors
+
 - Code quality issues
 - Style violations
 - Unused variables
@@ -186,12 +207,14 @@ pm2 save
 - Best practice violations
 
 ### Build Errors
+
 - Compilation failures
 - Dependency issues
 - Configuration problems
 - Asset loading errors
 
 ### System Health Issues
+
 - High memory usage (>90%)
 - Low disk space (<10% free)
 - Process failures
@@ -201,28 +224,33 @@ pm2 save
 ## 🛡️ Auto-Fix Capabilities
 
 ### Merge Conflicts
+
 - Automatically resolves simple merge conflicts
 - Keeps HEAD version by default
 - Removes conflict markers
 
 ### Import/Export Fixes
+
 - Fixes missing imports
 - Corrects import paths
 - Removes unused imports
 - Fixes export syntax
 
 ### Type Annotations
+
 - Adds missing type annotations
 - Provides `any` type for untyped variables
 - Fixes function return types
 
 ### Syntax Fixes
+
 - Adds missing semicolons
 - Fixes incomplete declarations
 - Repairs malformed objects/arrays
 - Corrects string literals
 
 ### File Cleanup
+
 - Removes empty files or adds default exports
 - Fixes malformed file structures
 - Cleans up artifacts
@@ -230,25 +258,33 @@ pm2 save
 ## 📋 Reports and Logs
 
 ### Error Monitor Reports
+
 Location: `error-reports/error-monitor-report-*.json`
+
 - Error summary by type
 - Detailed error information
 - Recommendations for fixes
 
 ### Auto Fixer Reports
+
 Location: `error-reports/auto-fixer-report-*.json`
+
 - Applied fixes summary
 - Failed fixes with reasons
 - Success/failure status
 
 ### Health Reports
+
 Location: `logs/health-report-*.json`
+
 - System health status
 - Resource usage metrics
 - Process status information
 
 ### Log Cleaner Reports
+
 Location: `logs/log-cleaner-report-*.json`
+
 - Cleaned files summary
 - Space reclaimed
 - Archive information
@@ -256,6 +292,7 @@ Location: `logs/log-cleaner-report-*.json`
 ## 🚨 Troubleshooting
 
 ### PM2 Not Starting
+
 ```bash
 # Check PM2 status
 pm2 status
@@ -266,6 +303,7 @@ pm2 start ecosystem.config.js
 ```
 
 ### High Resource Usage
+
 ```bash
 # Check resource usage
 pm2 monit
@@ -275,6 +313,7 @@ pm2 restart <process-name>
 ```
 
 ### Automation Not Working
+
 ```bash
 # Check automation logs
 pm2 logs error-monitor
@@ -286,6 +325,7 @@ node scripts/health-checker.js
 ```
 
 ### Build Failures
+
 ```bash
 # Check build logs
 npm run build
@@ -297,7 +337,9 @@ node scripts/auto-fixer.js
 ## 🔧 Configuration
 
 ### Ecosystem Configuration
+
 Edit `ecosystem.config.js` to modify:
+
 - Process settings
 - Memory limits
 - Restart policies
@@ -305,15 +347,19 @@ Edit `ecosystem.config.js` to modify:
 - Cron schedules
 
 ### Error Thresholds
+
 Modify in `scripts/error-monitor.js`:
+
 ```javascript
 this.errorThreshold = 5; // Number of errors before triggering fixes
 ```
 
 ### Health Check Intervals
+
 Modify cron schedules in `ecosystem.config.js`:
+
 ```javascript
-cron_restart: '*/5 * * * *' // Every 5 minutes
+cron_restart: '*/5 * * * *'; // Every 5 minutes
 ```
 
 ## 🎯 Benefits
@@ -344,21 +390,25 @@ Your project now has a robust, automated error monitoring and fixing system powe
 <<<<<<< HEAD
 =======
 =======
+
 # PM2 Automation System Summary
 
 ## ✅ Successfully Implemented and Running
 
 ### Overview
+
 I have successfully implemented a comprehensive PM2-based automation system to continuously monitor and fix project errors. The system is now actively running and will automatically address issues as they arise.
 
 ### What Was Fixed
 
 #### 1. **Critical Dependency Issues**
+
 - ✅ Fixed React/TypeScript version conflicts in package.json
 - ✅ Installed missing essential packages (globals, eslint plugins, etc.)
 - ✅ Resolved peer dependency conflicts using --legacy-peer-deps
 
 #### 2. **File Corruption Issues**
+
 - ✅ Fixed corrupted files with unterminated string literals
 - ✅ Removed merge conflict markers
 - ✅ Created clean TypeScript versions of corrupted files:
@@ -367,6 +417,7 @@ I have successfully implemented a comprehensive PM2-based automation system to c
   - `src/vite-env.d.ts` (fixed TypeScript reference)
 
 #### 3. **ESLint Configuration**
+
 - ✅ Fixed syntax errors in eslint.config.js
 - ✅ Installed all required ESLint plugins
 - ✅ Configured proper TypeScript integration
@@ -374,6 +425,7 @@ I have successfully implemented a comprehensive PM2-based automation system to c
 ### PM2 Automation System
 
 #### **Active Processes:**
+
 1. **zion-website** - Main application server
 2. **error-monitor** - Monitors for errors every 5 minutes
 3. **syntax-fixer** - Automatically fixes syntax errors
@@ -381,6 +433,7 @@ I have successfully implemented a comprehensive PM2-based automation system to c
 5. **build-monitor** - Monitors build health and performance
 
 #### **Automated Features:**
+
 - 🔄 **Continuous Error Detection** - Scans for lint, type, and build errors
 - 🔧 **Automatic Syntax Fixing** - Fixes corrupted files and syntax errors
 - 📦 **Dependency Management** - Updates packages and fixes vulnerabilities
@@ -390,14 +443,16 @@ I have successfully implemented a comprehensive PM2-based automation system to c
 - 📝 **Log Rotation** - Manages and rotates log files
 
 #### **Cron Schedules:**
+
 - Error Monitor: Every 2 hours
-- Syntax Fixer: Every 6 hours  
+- Syntax Fixer: Every 6 hours
 - Dependency Manager: Daily at 8 AM
 - Build Monitor: Every 4 hours
 
 ### Management Commands
 
 #### Quick Commands:
+
 ```bash
 # Check system status
 ./check-automation.sh
@@ -417,6 +472,7 @@ pm2 monit
 ```
 
 #### Manual PM2 Commands:
+
 ```bash
 # View all processes
 pm2 status
@@ -435,6 +491,7 @@ pm2 restart all
 ### Reports Generated
 
 The system generates detailed reports in JSON format:
+
 - `syntax-error-fixer-report.json` - Latest syntax fixes applied
 - `build-monitor-report.json` - Build health and performance metrics
 - `dependency-manager-report.json` - Dependency updates and security fixes
@@ -452,8 +509,9 @@ The system generates detailed reports in JSON format:
 ### Future Automation
 
 The system will automatically:
+
 - ✅ Fix syntax errors and file corruption
-- ✅ Update dependencies and patch security vulnerabilities  
+- ✅ Update dependencies and patch security vulnerabilities
 - ✅ Monitor build performance and size
 - ✅ Restart failed processes
 - ✅ Generate detailed error reports
@@ -471,5 +529,6 @@ All automation processes are running successfully and will continue to monitor a
 **Node Version:** v22.16.0
 **Total Processes:** 5 (+ 1 module)
 **Status:** All processes online and healthy
->>>>>>> f7db7ceeeca70e96601169c4adc70ab97d4c7057
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+
+> > > > > > > f7db7ceeeca70e96601169c4adc70ab97d4c7057
+> > > > > > > origin/cursor/install-dependencies-and-fix-errors-827a

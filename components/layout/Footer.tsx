@@ -1,4 +1,4 @@
-import React from 'react';'import { Link } from 'react-router-dom';'import { ;'  Brain, Mail,
+import React from 'react';'import { Link } from 'react-router-dom';'import { ;'  Brain, Mail,'
   Phone, MapPin,
   Linkedin, Twitter,
   Github, Youtube,
@@ -15,14 +15,14 @@ import React from 'react';'import { Link } from 'react-router-dom';'import { ;' 
   const serviceCategories = [;
     {
 title: "AI & Automation", icon: Brain,"      color: "text-blue-400", services: ["        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" }, { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" }, { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" }, { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }"      ]"    }, {;
-      title: "Cloud & Infrastructure","      icon: Cloud, color: "text-green-400","      services: ["        { name: "Cloud Migration", href: "/services/cloud-migration" },"        { name: "Micro SaaS Solutions", href: "/micro-saas" },"        { name: "IT Services", href: "/it-services" },"        { name: "Infrastructure Management", href: "/services/infrastructure" }"      ]"    }, {;
-      title: "Data & Analytics","      icon: Database, color: "text-purple-400","      services: ["        { name: "Data Analytics", href: "/services/data-analytics" },"        { name: "Business Intelligence", href: "/services/business-intelligence" },"        { name: "Predictive Analytics", href: "/services/predictive-analytics" },"        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }"      ]"    }
+      title: "Cloud & Infrastructure", "      icon: Cloud, color: "text-green-400", "      services: ["        { name: "Cloud Migration", href: "/services/cloud-migration" }, "        { name: "Micro SaaS Solutions", href: "/micro-saas" }, "        { name: "IT Services", href: "/it-services" }, "        { name: "Infrastructure Management", href: "/services/infrastructure" }"      ]"    }, {;
+      title: "Data & Analytics", "      icon: Database, color: "text-purple-400", "      services: ["        { name: "Data Analytics", href: "/services/data-analytics" }, "        { name: "Business Intelligence", href: "/services/business-intelligence" }, "        { name: "Predictive Analytics", href: "/services/predictive-analytics" }, "        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }"      ]"    }
   ];
 
   const quickLinks = [;
-    { name: "About Us", href: "/about" },"    { name: "Our Team", href: "/team" },"    { name: "Careers", href: "/careers" },"    { name: "Case Studies", href: "/case-studies" },"    { name: "Blog", href: "/blog" },"    { name: "White Papers", href: "/white-papers" },"    { name: "Webinars", href: "/webinars" },"    { name: "Pricing", href: "/pricing" }"  ];"
+    { name: "About Us", href: "/about" },"    { name: "Our Team", href: "/team" },"    { name: "Careers", href: "/careers" },"    { name: "Case Studies", href: "/case-studies" },"    { name: "Blog", href: "/blog" },"    { name: "White Papers", href: "/white-papers" },"    { name: "Webinars", href: "/webinars" },"    { name: "Pricing", href: "/pricing" }"  ];""
   const legalLinks = [;
-    { name: "Privacy Policy", href: "/privacy" },"    { name: "Terms of Service", href: "/terms" },"    { name: "Cookie Policy", href: "/cookies" },"    { name: "Sitemap", href: "/sitemap" }"  ];"
+    { name: "Privacy Policy", href: "/privacy" },"    { name: "Terms of Service", href: "/terms" },"    { name: "Cookie Policy", href: "/cookies" },"    { name: "Sitemap", href: "/sitemap" }"  ];""
   const socialLinks = [;
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin }, { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },"    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }, { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }"  ];"
   const contactInfo = {;
@@ -31,9 +31,9 @@ title: "AI & Automation", icon: Brain,"      color: "text-blue-400", services: [
             <p className="text-gray-300 mb-6 leading-relaxed">"              Leading provider of AI-powered solutions and technology services. "              We help businesses transform and innovate with cutting-edge artificial intelligence.
             </p>
 
-            <div className="space-y-3 mb-6">"              <div className="flex items-center text-gray-300">"                <Mail className="w-4 h-4 mr-3 text-blue-400" />"                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">"                  {contactInfo.email}"                </a>`              </div>
+            <div className="space-y-3 mb-6">"              <div className="flex items-center text-gray-300">"                <Mail className="w-4 h-4 mr-3 text-blue-400" />"                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">"                  {contactInfo.email}"                </a>`              </div>"
               <div className="flex items-center text-gray-300">"                <Phone className="w-4 h-4 mr-3 text-blue-400" />"                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">"                  {contactInfo.phone}"                </a>`              </div>
-              <div className="flex items-center text-gray-300">"                <MapPin className="w-4 h-4 mr-3 text-blue-400" />"                <span>{contactInfo.address}</span>"              </div>
+              <div className="flex items-center text-gray-300">"                <MapPin className="w-4 h-4 mr-3 text-blue-400" />"                <span>{contactInfo.address}</span>"              </div>"
             </div>
 
             {/* Social Links */}
@@ -73,10 +73,10 @@ title: "AI & Automation", icon: Brain,"      color: "text-blue-400", services: [
       </div>
 
       {/* Stats Section */}
-<div className="border-t border-slate-700 py-8">"        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">"            <div>"              <div className="text-3xl font-bold text-white mb-2">200+</div>"              <div className="text-gray-400 text-sm">Projects Completed</div>"            </div>"            <div>
-              <div className="text-3xl font-bold text-white mb-2">50+</div>"              <div className="text-gray-400 text-sm">Expert Team Members</div>"            </div>"            <div>
-              <div className="text-3xl font-bold text-white mb-2">95%</div>"              <div className="text-gray-400 text-sm">Client Satisfaction</div>"            </div>"            <div>
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>"              <div className="text-gray-400 text-sm">Support Available</div>"            </div>"          </div></div>
+<div className="border-t border-slate-700 py-8">"        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">"            <div>"              <div className="text-3xl font-bold text-white mb-2">200+</div>"              <div className="text-gray-400 text-sm">Projects Completed</div>"            </div>"            <div>"
+              <div className="text-3xl font-bold text-white mb-2">50+</div>"              <div className="text-gray-400 text-sm">Expert Team Members</div>"            </div>"            <div>"
+              <div className="text-3xl font-bold text-white mb-2">95%</div>"              <div className="text-gray-400 text-sm">Client Satisfaction</div>"            </div>"            <div>"
+              <div className="text-3xl font-bold text-white mb-2">24/7</div>"              <div className="text-gray-400 text-sm">Support Available</div>"            </div>"          </div></div>"
       </div>
 
       {/* Bottom Footer */}

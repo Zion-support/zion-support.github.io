@@ -17,7 +17,7 @@ console.log('🔍 Starting SEO optimization...');
 // 1. Generate sitemap.xml
 function generateSitemap() {
   console.log('🗺️ Generating sitemap...');
-  
+
   const baseUrl = 'https://ziontechgroup.com';
   const pages = [
     '/',
@@ -37,19 +37,23 @@ function generateSitemap() {
     '/services/transformation',
     '/services/consulting',
     '/privacy',
-    '/terms'
+    '/terms',
   ];
-  
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+${pages
+  .map(
+    page => `  <url>
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '/' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
+  </url>`
+  )
+  .join('\n')}
 </urlset>`;
-  
+
   const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
   console.log('✅ Generated sitemap.xml');
@@ -58,7 +62,7 @@ ${pages.map(page => `  <url>
 // 2. Generate robots.txt
 function generateRobotsTxt() {
   console.log('🤖 Generating robots.txt...');
-  
+
   const robotsTxt = `User-agent: *
 Allow: /
 
@@ -79,7 +83,7 @@ Allow: /services/
 Allow: /solutions/
 Allow: /about/
 Allow: /contact/`;
-  
+
   const robotsPath = path.join(__dirname, '../public/robots.txt');
   fs.writeFileSync(robotsPath, robotsTxt);
   console.log('✅ Generated robots.txt');
@@ -88,11 +92,12 @@ Allow: /contact/`;
 // 3. Generate manifest.json for PWA
 function generateManifest() {
   console.log('📱 Generating manifest.json...');
-  
+
   const manifest = {
     name: 'Zion Tech Group - AI-Powered IT Solutions',
     short_name: 'Zion Tech',
-    description: 'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
+    description:
+      'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0f172a',
@@ -101,19 +106,19 @@ function generateManifest() {
       {
         src: '/icon-192x192.png',
         sizes: '192x192',
-        type: 'image/png'
+        type: 'image/png',
       },
       {
         src: '/icon-512x512.png',
         sizes: '512x512',
-        type: 'image/png'
-      }
+        type: 'image/png',
+      },
     ],
     categories: ['technology', 'business', 'productivity'],
     lang: 'en-US',
-    orientation: 'portrait-primary'
+    orientation: 'portrait-primary',
   };
-  
+
   const manifestPath = path.join(__dirname, '../public/manifest.json');
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log('✅ Generated manifest.json');
@@ -122,41 +127,45 @@ function generateManifest() {
 // 4. Generate structured data
 function generateStructuredData() {
   console.log('📊 Generating structured data...');
-  
+
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description:
+      'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-XXX-XXX-XXXX",
-      "contactType": "customer service",
-      "availableLanguage": "English"
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-XXX-XXX-XXXX',
+      contactType: 'customer service',
+      availableLanguage: 'English',
     },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup',
     ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Information Technology",
-    "services": [
-      "AI Development",
-      "Cybersecurity",
-      "Cloud Solutions",
-      "Digital Transformation",
-      "IT Consulting"
-    ]
+    foundingDate: '2020',
+    numberOfEmployees: '50-100',
+    industry: 'Information Technology',
+    services: [
+      'AI Development',
+      'Cybersecurity',
+      'Cloud Solutions',
+      'Digital Transformation',
+      'IT Consulting',
+    ],
   };
-  
-  const structuredDataPath = path.join(__dirname, '../public/structured-data.json');
+
+  const structuredDataPath = path.join(
+    __dirname,
+    '../public/structured-data.json'
+  );
   fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
   console.log('✅ Generated structured data');
 }
@@ -168,7 +177,7 @@ async function main() {
     generateRobotsTxt();
     generateManifest();
     generateStructuredData();
-    
+
     console.log('✅ SEO optimization completed successfully!');
   } catch (error) {
     console.error('❌ SEO optimization failed:', error.message);
@@ -181,4 +190,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { generateSitemap, generateRobotsTxt, generateManifest, generateStructuredData };
+export {
+  generateSitemap,
+  generateRobotsTxt,
+  generateManifest,
+  generateStructuredData,
+};

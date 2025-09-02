@@ -10,15 +10,25 @@ const SecurityCopilot: NextPage = () => (
   >
     <section className="bg-gradient-to-br from-slate-950 via-zinc-900 to-slate-900 text-white py-16">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Security Copilot</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Security Copilot
+        </h1>
         <p className="text-lg text-gray-200 mb-6">
-          AI-driven detections and playbooks across Okta, M365, GCP/AWS/Azure, CrowdStrike, and more. Reduce mean-time-to-detect and standardize response.
+          AI-driven detections and playbooks across Okta, M365, GCP/AWS/Azure,
+          CrowdStrike, and more. Reduce mean-time-to-detect and standardize
+          response.
         </p>
         <div className="flex flex-wrap gap-3">
           <span className="px-3 py-1 rounded bg-white/10">Sigma/OSQuery</span>
-          <span className="px-3 py-1 rounded bg-white/10">MITRE ATT&CK Mapping</span>
-          <span className="px-3 py-1 rounded bg-white/10">SOC Workflow Automations</span>
-          <span className="px-3 py-1 rounded bg-white/10">Compliance (SOC2/ISO/HIPAA)</span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            MITRE ATT&CK Mapping
+          </span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            SOC Workflow Automations
+          </span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            Compliance (SOC2/ISO/HIPAA)
+          </span>
         </div>
       </div>
     </section>
@@ -47,7 +57,9 @@ const SecurityCopilot: NextPage = () => (
         </div>
         <div className="p-6 border rounded-lg">
           <h3 className="text-xl font-semibold mb-2">Enterprise</h3>
-          <p className="text-gray-600 mb-4">For regulated, high-sensitivity environments.</p>
+          <p className="text-gray-600 mb-4">
+            For regulated, high-sensitivity environments.
+          </p>
           <ul className="text-sm text-gray-700 space-y-2 mb-4">
             <li>• Private deployment, data residency</li>
             <li>• Custom controls & approvals</li>
@@ -62,15 +74,27 @@ const SecurityCopilot: NextPage = () => (
       <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-2xl font-bold mb-3">Outcomes</h2>
         <ul className="grid md:grid-cols-3 gap-4 text-gray-700">
-          <li className="p-4 bg-white rounded border">30-50% faster investigations</li>
-          <li className="p-4 bg-white rounded border">20-40% fewer false positives</li>
-          <li className="p-4 bg-white rounded border">Audit-ready compliance</li>
+          <li className="p-4 bg-white rounded border">
+            30-50% faster investigations
+          </li>
+          <li className="p-4 bg-white rounded border">
+            20-40% fewer false positives
+          </li>
+          <li className="p-4 bg-white rounded border">
+            Audit-ready compliance
+          </li>
         </ul>
         <div className="mt-6 text-sm text-gray-600">
-          Benchmarked vs Snyk, Wiz, Panther, and Microsoft Security Copilot pricing tiers.
+          Benchmarked vs Snyk, Wiz, Panther, and Microsoft Security Copilot
+          pricing tiers.
         </div>
         <div className="mt-4">
-          <Link href="/contact" className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg">Talk to security experts</Link>
+          <Link
+            href="/contact"
+            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg"
+          >
+            Talk to security experts
+          </Link>
         </div>
       </div>
     </section>
@@ -78,4 +102,3 @@ const SecurityCopilot: NextPage = () => (
 );
 
 export default SecurityCopilot;
-

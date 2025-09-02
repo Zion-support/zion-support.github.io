@@ -23,7 +23,7 @@ class WebsiteAnalyzer {
         missingPages: 0,
         redirects: 0,
         errors: 0,
-        warnings: 0
+        warnings: 0,
       },
       brokenLinks: [],
       workingLinks: [],
@@ -31,7 +31,7 @@ class WebsiteAnalyzer {
       missingPages: [],
       errors: [],
       warnings: [],
-      recommendations: []
+      recommendations: [],
     };
 
     this.checkedUrls = new Set();
@@ -58,7 +58,9 @@ class WebsiteAnalyzer {
     this.generateReport();
 
     console.log('\n✅ Analysis completed!');
-    console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`);
+    console.log(
+      `📊 Total links checked: ${this.results.summary.totalLinksChecked}`
+    );
     console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
     console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);
     console.log(`🔄 Redirects: ${this.results.summary.redirects}`);
@@ -71,15 +73,15 @@ class WebsiteAnalyzer {
 
     try {
       console.log(`🔍 Checking: ${url}`);
-      
+
       const response = await axios.get(url, {
         timeout: TIMEOUT,
         maxRedirects: 5,
-        validateStatus: (status) => status < 400
+        validateStatus: status => status < 400,
       });
 
       this.results.summary.totalLinksChecked++;
-      
+
       if (response.status >= 200 && response.status < 300) {
         this.results.summary.workingLinks++;
         this.results.workingLinks.push({
@@ -87,7 +89,7 @@ class WebsiteAnalyzer {
           status: response.status,
           parentUrl,
           headers: response.headers,
-          contentLength: response.data?.length || 0
+          contentLength: response.data?.length || 0,
         });
 
         // Extract links from the page content
@@ -95,7 +97,9 @@ class WebsiteAnalyzer {
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
             if (link.startsWith('/') || link.startsWith(BASE_URL)) {
-              const fullUrl = link.startsWith('/') ? `${BASE_URL}${link}` : link;
+              const fullUrl = link.startsWith('/')
+                ? `${BASE_URL}${link}`
+                : link;
               if (!this.checkedUrls.has(fullUrl)) {
                 this.linkQueue.push({ url: fullUrl, parentUrl: url });
               }
@@ -108,23 +112,22 @@ class WebsiteAnalyzer {
           url,
           status: response.status,
           redirectLocation: response.headers.location,
-          parentUrl
+          parentUrl,
         });
       }
-
     } catch (error) {
       this.results.summary.totalLinksChecked++;
-      
+
       if (error.response) {
         const status = error.response.status;
-        
+
         if (status === 404) {
           this.results.summary.missingPages++;
           this.results.missingPages.push({
             url,
             status,
             parentUrl,
-            error: 'Page not found'
+            error: 'Page not found',
           });
         } else {
           this.results.summary.brokenLinks++;
@@ -132,7 +135,7 @@ class WebsiteAnalyzer {
             url,
             status,
             parentUrl,
-            error: error.message
+            error: error.message,
           });
         }
       } else {
@@ -140,7 +143,7 @@ class WebsiteAnalyzer {
         this.results.brokenLinks.push({
           url,
           parentUrl,
-          error: error.message
+          error: error.message,
         });
       }
     }
@@ -150,11 +153,11 @@ class WebsiteAnalyzer {
     const links = [];
     const linkRegex = /href=["']([^"']+)["']/g;
     let match;
-    
+
     while ((match = linkRegex.exec(html)) !== null) {
       links.push(match[1]);
     }
-    
+
     return links;
   }
 
@@ -177,7 +180,7 @@ class WebsiteAnalyzer {
       '/pricing',
       '/help',
       '/privacy',
-      '/terms'
+      '/terms',
     ];
 
     for (const link of navigationLinks) {
@@ -204,7 +207,7 @@ class WebsiteAnalyzer {
       '/services/blockchain-enterprise-solutions',
       '/services/quantum-computing',
       '/services/iot-edge',
-      '/services/digital-transformation'
+      '/services/digital-transformation',
     ];
 
     for (const link of servicePages) {
@@ -238,7 +241,7 @@ class WebsiteAnalyzer {
       '/login',
       '/dashboard',
       '/request-quote',
-      '/schedule-demo'
+      '/schedule-demo',
     ];
 
     for (const link of additionalPages) {
@@ -251,17 +254,22 @@ class WebsiteAnalyzer {
     // Calculate success rate
     const total = this.results.summary.totalLinksChecked;
     const working = this.results.summary.workingLinks;
-    const successRate = total > 0 ? ((working / total) * 100).toFixed(2) : '0.00';
-    
+    const successRate =
+      total > 0 ? ((working / total) * 100).toFixed(2) : '0.00';
+
     this.results.summary.successRate = `${successRate}%`;
 
     // Generate recommendations
     this.generateRecommendations();
 
     // Save report
-    const reportPath = path.join(__dirname, '..', 'comprehensive-website-analysis-report.json');
+    const reportPath = path.join(
+      __dirname,
+      '..',
+      'comprehensive-website-analysis-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    
+
     console.log(`📄 Report saved to: ${reportPath}`);
   }
 
@@ -270,7 +278,7 @@ class WebsiteAnalyzer {
       this.results.recommendations.push({
         type: 'critical',
         message: `Fix ${this.results.summary.brokenLinks} broken links to improve user experience and SEO`,
-        action: 'Review and fix all broken links identified in the report'
+        action: 'Review and fix all broken links identified in the report',
       });
     }
 
@@ -278,7 +286,8 @@ class WebsiteAnalyzer {
       this.results.recommendations.push({
         type: 'important',
         message: `Create ${this.results.summary.missingPages} missing pages that are referenced in navigation`,
-        action: 'Create content for all missing pages or update navigation to remove broken references'
+        action:
+          'Create content for all missing pages or update navigation to remove broken references',
       });
     }
 
@@ -286,7 +295,8 @@ class WebsiteAnalyzer {
       this.results.recommendations.push({
         type: 'info',
         message: `${this.results.summary.redirects} redirects found - consider updating direct links`,
-        action: 'Update navigation and internal links to point directly to final URLs'
+        action:
+          'Update navigation and internal links to point directly to final URLs',
       });
     }
 
@@ -294,7 +304,7 @@ class WebsiteAnalyzer {
       this.results.recommendations.push({
         type: 'warning',
         message: `Success rate is ${this.results.summary.successRate} - aim for 95%+`,
-        action: 'Address all issues to improve overall website reliability'
+        action: 'Address all issues to improve overall website reliability',
       });
     }
   }

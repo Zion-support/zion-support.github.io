@@ -22,12 +22,12 @@ class ComprehensiveLinkChecker {
       const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
       const sitemapContent = fs.readFileSync(sitemapPath, 'utf8');
       const $ = cheerio.load(sitemapContent, { xmlMode: true });
-      
+
       $('url loc').each((i, elem) => {
         const url = $(elem).text().trim();
         this.sitemapUrls.push(url);
       });
-      
+
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`);
     } catch (error) {
       console.error('Error loading sitemap:', error.message);
@@ -40,13 +40,13 @@ class ComprehensiveLinkChecker {
     }
 
     this.visitedUrls.add(url);
-    
+
     try {
       console.log(`Checking: ${url} (depth: ${depth})`);
-      
+
       const response = await axios.get(url, {
         timeout: 10000,
-        validateStatus: (status) => status < 500
+        validateStatus: status => status < 500,
       });
 
       if (response.status === 200) {
@@ -54,19 +54,26 @@ class ComprehensiveLinkChecker {
           url,
           status: response.status,
           parent: parentUrl,
-          depth
+          depth,
         });
 
         // Extract links from the page
         if (depth < this.maxDepth) {
           const $ = cheerio.load(response.data);
-          const links = $('a[href]').map((i, elem) => {
-            const href = $(elem).attr('href');
-            if (href && !href.startsWith('#') && !href.startsWith('javascript:')) {
-              return this.resolveUrl(href, url);
-            }
-            return null;
-          }).get().filter(Boolean);
+          const links = $('a[href]')
+            .map((i, elem) => {
+              const href = $(elem).attr('href');
+              if (
+                href &&
+                !href.startsWith('#') &&
+                !href.startsWith('javascript:')
+              ) {
+                return this.resolveUrl(href, url);
+              }
+              return null;
+            })
+            .get()
+            .filter(Boolean);
 
           // Check extracted links
           for (const link of links) {
@@ -81,7 +88,7 @@ class ComprehensiveLinkChecker {
           status: response.status,
           parent: parentUrl,
           depth,
-          error: `HTTP ${response.status}`
+          error: `HTTP ${response.status}`,
         });
       }
     } catch (error) {
@@ -90,7 +97,7 @@ class ComprehensiveLinkChecker {
         status: 'ERROR',
         parent: parentUrl,
         depth,
-        error: error.message
+        error: error.message,
       });
     }
   }
@@ -143,10 +150,10 @@ class ComprehensiveLinkChecker {
       '/research-development',
       '/request-quote',
       '/green-it',
-      '/space-tech'
+      '/space-tech',
     ];
 
-    const promises = navigationUrls.map(url => 
+    const promises = navigationUrls.map(url =>
       this.checkUrl(`${this.baseUrl}${url}`, null, 0)
     );
     await Promise.all(promises);
@@ -188,10 +195,10 @@ class ComprehensiveLinkChecker {
       '/services/podcast-transcription',
       '/services/email-sequencer',
       '/services/returns-management',
-      '/services/llm-content-studio'
+      '/services/llm-content-studio',
     ];
 
-    const promises = serviceUrls.map(url => 
+    const promises = serviceUrls.map(url =>
       this.checkUrl(`${this.baseUrl}${url}`, null, 0)
     );
     await Promise.all(promises);
@@ -204,12 +211,12 @@ class ComprehensiveLinkChecker {
         totalUrls: this.visitedUrls.size,
         workingLinks: this.workingLinks.length,
         brokenLinks: this.brokenLinks.length,
-        missingPages: this.missingPages.length
+        missingPages: this.missingPages.length,
       },
       workingLinks: this.workingLinks,
       brokenLinks: this.brokenLinks,
       missingPages: this.missingPages,
-      recommendations: this.generateRecommendations()
+      recommendations: this.generateRecommendations(),
     };
 
     // Save detailed report
@@ -226,9 +233,9 @@ class ComprehensiveLinkChecker {
         url: link.url,
         status: link.status,
         error: link.error,
-        parent: link.parent
+        parent: link.parent,
       })),
-      recommendations: report.recommendations
+      recommendations: report.recommendations,
     };
 
     fs.writeFileSync(
@@ -251,18 +258,23 @@ class ComprehensiveLinkChecker {
           'Fix all broken links identified in the report',
           'Update internal navigation to remove broken links',
           'Implement 301 redirects for moved pages',
-          'Add proper error handling for missing content'
-        ]
+          'Add proper error handling for missing content',
+        ],
       });
     }
 
     // Check for missing important pages
     const importantPages = [
-      '/about', '/services', '/contact', '/pricing', '/privacy', '/terms'
+      '/about',
+      '/services',
+      '/contact',
+      '/pricing',
+      '/privacy',
+      '/terms',
     ];
-    
-    const missingImportant = importantPages.filter(page => 
-      !this.workingLinks.some(link => link.url.endsWith(page))
+
+    const missingImportant = importantPages.filter(
+      page => !this.workingLinks.some(link => link.url.endsWith(page))
     );
 
     if (missingImportant.length > 0) {
@@ -273,16 +285,16 @@ class ComprehensiveLinkChecker {
         actions: [
           'Create missing critical pages',
           'Ensure proper navigation structure',
-          'Add SEO meta tags and content'
-        ]
+          'Add SEO meta tags and content',
+        ],
       });
     }
 
     // Check for orphaned pages
-    const orphanedPages = this.workingLinks.filter(link => 
-      link.depth > 1 && !this.brokenLinks.some(broken => 
-        broken.parent === link.url
-      )
+    const orphanedPages = this.workingLinks.filter(
+      link =>
+        link.depth > 1 &&
+        !this.brokenLinks.some(broken => broken.parent === link.url)
     );
 
     if (orphanedPages.length > 0) {
@@ -293,8 +305,8 @@ class ComprehensiveLinkChecker {
         actions: [
           'Review navigation structure',
           'Add breadcrumbs to deep pages',
-          'Improve internal linking strategy'
-        ]
+          'Improve internal linking strategy',
+        ],
       });
     }
 
@@ -304,32 +316,33 @@ class ComprehensiveLinkChecker {
   async run() {
     console.log('🚀 Starting Comprehensive Link Check for Zion Tech Group');
     console.log(`Base URL: ${this.baseUrl}`);
-    
+
     try {
       await this.loadSitemap();
       await this.checkSitemapUrls();
       await this.checkNavigationLinks();
       await this.checkServicePages();
-      
+
       const report = this.generateReport();
-      
+
       console.log('\n📊 Link Check Complete!');
       console.log(`Total URLs checked: ${report.summary.totalUrls}`);
       console.log(`Working links: ${report.summary.workingLinks}`);
       console.log(`Broken links: ${report.summary.brokenLinks}`);
       console.log(`Missing pages: ${report.summary.missingPages}`);
-      
+
       if (report.recommendations.length > 0) {
         console.log('\n🔧 Recommendations:');
         report.recommendations.forEach((rec, index) => {
-          console.log(`${index + 1}. [${rec.priority}] ${rec.category}: ${rec.description}`);
+          console.log(
+            `${index + 1}. [${rec.priority}] ${rec.category}: ${rec.description}`
+          );
         });
       }
-      
+
       console.log('\n📁 Reports saved to:');
       console.log('- reports/comprehensive-link-check-report.json');
       console.log('- reports/link-check-summary.json');
-      
     } catch (error) {
       console.error('❌ Error during link check:', error.message);
     }

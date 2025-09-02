@@ -10,15 +10,24 @@ const MartechAutomation: NextPage = () => (
   >
     <section className="bg-gradient-to-br from-pink-900 via-rose-900 to-amber-900 text-white py-16">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">MarTech Automation</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          MarTech Automation
+        </h1>
         <p className="text-lg text-gray-200 mb-6">
-          CDP pipelines, audience building, real-time personalization, and multi-touch attribution that connect to your channels.
+          CDP pipelines, audience building, real-time personalization, and
+          multi-touch attribution that connect to your channels.
         </p>
         <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded bg-white/10">Segment/Snowplow</span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            Segment/Snowplow
+          </span>
           <span className="px-3 py-1 rounded bg-white/10">Real-time CDP</span>
-          <span className="px-3 py-1 rounded bg-white/10">GA4, Meta, Ads APIs</span>
-          <span className="px-3 py-1 rounded bg-white/10">Journey Orchestration</span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            GA4, Meta, Ads APIs
+          </span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            Journey Orchestration
+          </span>
         </div>
       </div>
     </section>
@@ -62,12 +71,44 @@ const MartechAutomation: NextPage = () => (
       <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-2xl font-bold mb-3">Learn More</h2>
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
-          <li><a className="text-blue-700 underline" href="https://segment.com/" target="_blank" rel="noreferrer">Segment</a></li>
-          <li><a className="text-blue-700 underline" href="https://snowplow.io/" target="_blank" rel="noreferrer">Snowplow</a></li>
-          <li><a className="text-blue-700 underline" href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noreferrer">Google Analytics</a></li>
+          <li>
+            <a
+              className="text-blue-700 underline"
+              href="https://segment.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Segment
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-blue-700 underline"
+              href="https://snowplow.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Snowplow
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-blue-700 underline"
+              href="https://marketingplatform.google.com/about/analytics/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Google Analytics
+            </a>
+          </li>
         </ul>
         <div className="mt-4">
-          <Link href="/contact" className="inline-block bg-rose-600 text-white px-6 py-3 rounded-lg">Plan your stack</Link>
+          <Link
+            href="/contact"
+            className="inline-block bg-rose-600 text-white px-6 py-3 rounded-lg"
+          >
+            Plan your stack
+          </Link>
         </div>
       </div>
     </section>
@@ -75,4 +116,3 @@ const MartechAutomation: NextPage = () => (
 );
 
 export default MartechAutomation;
-

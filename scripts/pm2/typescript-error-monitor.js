@@ -10,7 +10,7 @@ class TypeScriptErrorMonitor {
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
     this.maxErrorsPerRun = parseInt(process.env.MAX_ERRORS_PER_RUN) || 50;
     this.logFile = 'error-reports/typescript-error-monitor-report.json';
-    
+
     console.log('🔧 TypeScript Error Monitor started');
     console.log(`Check interval: ${this.checkInterval}ms`);
     console.log(`Auto-fix enabled: ${this.autoFixEnabled}`);
@@ -20,7 +20,7 @@ class TypeScriptErrorMonitor {
   async start() {
     // Initial check
     await this.checkAndFixTypeScriptErrors();
-    
+
     // Set up interval checking
     setInterval(async () => {
       await this.checkAndFixTypeScriptErrors();
@@ -29,22 +29,22 @@ class TypeScriptErrorMonitor {
 
   async checkAndFixTypeScriptErrors() {
     console.log('🔍 Checking TypeScript errors...');
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
         totalErrors: 0,
         fixesApplied: 0,
         fixesFailed: 0,
-        fixesSkipped: 0
+        fixesSkipped: 0,
       },
       errors: [],
       fixes: {
         applied: [],
         failed: [],
-        skipped: []
+        skipped: [],
       },
-      recommendations: []
+      recommendations: [],
     };
 
     try {
@@ -68,7 +68,10 @@ class TypeScriptErrorMonitor {
           } catch (fixError) {
             report.fixes.failed.push({ ...error, fixError: fixError.message });
             report.summary.fixesFailed++;
-            console.error(`❌ Failed to fix TS error in ${error.file}:`, fixError.message);
+            console.error(
+              `❌ Failed to fix TS error in ${error.file}:`,
+              fixError.message
+            );
           }
         }
       } else {
@@ -81,11 +84,12 @@ class TypeScriptErrorMonitor {
 
       // Save report
       this.saveReport(report);
-      
+
       console.log(`📊 TypeScript check complete.`);
       console.log(`Total errors: ${report.summary.totalErrors}`);
-      console.log(`✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`);
-      
+      console.log(
+        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`
+      );
     } catch (error) {
       console.error('Error during TypeScript check:', error);
       report.error = error.message;
@@ -99,7 +103,9 @@ class TypeScriptErrorMonitor {
       execSync('npx tsc --noEmit', { stdio: 'pipe' });
       return []; // No errors
     } catch (error) {
-      const output = error.stdout ? error.stdout.toString() : error.stderr.toString();
+      const output = error.stdout
+        ? error.stdout.toString()
+        : error.stderr.toString();
       return this.parseTypeScriptErrors(output);
     }
   }
@@ -107,10 +113,12 @@ class TypeScriptErrorMonitor {
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\\n');
-    
+
     for (const line of lines) {
       // Parse TypeScript error format: file(line,col): error TS#### message
-      const match = line.match(/^(.+?)\\((\\d+),(\\d+)\\):\\s+error\\s+(TS\\d+):\\s+(.+)$/);
+      const match = line.match(
+        /^(.+?)\\((\\d+),(\\d+)\\):\\s+error\\s+(TS\\d+):\\s+(.+)$/
+      );
       if (match) {
         const [, file, line, col, code, message] = match;
         errors.push({
@@ -119,7 +127,7 @@ class TypeScriptErrorMonitor {
           column: parseInt(col),
           code,
           message: message.trim(),
-          type: 'typescript'
+          type: 'typescript',
         });
       }
     }
@@ -130,14 +138,14 @@ class TypeScriptErrorMonitor {
   async fixTypeScriptError(error) {
     try {
       const { file, line, message, code } = error;
-      
+
       if (!fs.existsSync(file)) {
         return false;
       }
 
       const content = fs.readFileSync(file, 'utf8');
       const lines = content.split('\\n');
-      
+
       if (line > lines.length) {
         return false;
       }
@@ -173,7 +181,7 @@ class TypeScriptErrorMonitor {
       if (modified) {
         // Create backup
         fs.writeFileSync(file + '.backup', originalContent);
-        
+
         // Write fixed content
         const newContent = lines.join('\\n');
         fs.writeFileSync(file, newContent);
@@ -182,7 +190,10 @@ class TypeScriptErrorMonitor {
 
       return false;
     } catch (error) {
-      console.error(`Error fixing TypeScript error in ${error.file}:`, error.message);
+      console.error(
+        `Error fixing TypeScript error in ${error.file}:`,
+        error.message
+      );
       return false;
     }
   }
@@ -190,18 +201,18 @@ class TypeScriptErrorMonitor {
   fixCannotFindName(lines, lineIndex, message) {
     const line = lines[lineIndex];
     const nameMatch = message.match(/Cannot find name '(.+?)'/);
-    
+
     if (nameMatch) {
       const missingName = nameMatch[1];
-      
+
       // Add common missing imports
       const commonImports = {
-        'React': "import React from 'react';",
-        'useState': "import { useState } from 'react';",
-        'useEffect': "import { useEffect } from 'react';",
-        'useRef': "import { useRef } from 'react';",
-        'FC': "import { FC } from 'react';",
-        'ReactNode': "import { ReactNode } from 'react';",
+        React: "import React from 'react';",
+        useState: "import { useState } from 'react';",
+        useEffect: "import { useEffect } from 'react';",
+        useRef: "import { useRef } from 'react';",
+        FC: "import { FC } from 'react';",
+        ReactNode: "import { ReactNode } from 'react';",
       };
 
       if (commonImports[missingName]) {
@@ -210,7 +221,11 @@ class TypeScriptErrorMonitor {
       }
 
       // Add type annotation for undefined variables
-      if (line.includes(missingName) && !line.includes('const') && !line.includes('let')) {
+      if (
+        line.includes(missingName) &&
+        !line.includes('const') &&
+        !line.includes('let')
+      ) {
         lines[lineIndex] = line.replace(missingName, `${missingName}: any`);
         return true;
       }
@@ -222,16 +237,19 @@ class TypeScriptErrorMonitor {
   fixCannotFindModule(lines, lineIndex, message) {
     const line = lines[lineIndex];
     const moduleMatch = message.match(/Cannot find module '(.+?)'/);
-    
+
     if (moduleMatch) {
       const moduleName = moduleMatch[1];
-      
+
       // Fix relative imports
       if (moduleName.startsWith('./') || moduleName.startsWith('../')) {
         const extensions = ['.ts', '.tsx', '.js', '.jsx'];
         for (const ext of extensions) {
           const newImport = line.replace(moduleName, moduleName + ext);
-          const resolvedPath = path.resolve(path.dirname(lines[0]), moduleName + ext);
+          const resolvedPath = path.resolve(
+            path.dirname(lines[0]),
+            moduleName + ext
+          );
           if (fs.existsSync(resolvedPath)) {
             lines[lineIndex] = newImport;
             return true;
@@ -245,7 +263,7 @@ class TypeScriptErrorMonitor {
 
   fixPropertyDoesNotExist(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    
+
     // Add optional chaining
     if (line.includes('.') && !line.includes('?.')) {
       lines[lineIndex] = line.replace(/\\.(\\w+)/g, '?.$1');
@@ -257,7 +275,7 @@ class TypeScriptErrorMonitor {
 
   fixArgumentTypeError(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    
+
     // Add type assertions
     if (line.includes('(') && line.includes(')')) {
       lines[lineIndex] = line.replace(/(\\w+)\\s*\\(/g, '$1 as any(');
@@ -269,7 +287,7 @@ class TypeScriptErrorMonitor {
 
   fixTypeNotAssignable(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    
+
     // Add type assertions
     if (line.includes('=')) {
       lines[lineIndex] = line.replace(/=\\s*(.+)$/, '= $1 as any');
@@ -281,8 +299,10 @@ class TypeScriptErrorMonitor {
 
   fixImplicitAnyParameter(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    const paramMatch = message.match(/Parameter '(.+?)' implicitly has an 'any' type/);
-    
+    const paramMatch = message.match(
+      /Parameter '(.+?)' implicitly has an 'any' type/
+    );
+
     if (paramMatch) {
       const paramName = paramMatch[1];
       lines[lineIndex] = line.replace(
@@ -297,9 +317,14 @@ class TypeScriptErrorMonitor {
 
   applyGenericFix(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    
+
     // Generic type annotation fixes
-    if (line.includes(':') && !line.includes(': any') && !line.includes(': string') && !line.includes(': number')) {
+    if (
+      line.includes(':') &&
+      !line.includes(': any') &&
+      !line.includes(': string') &&
+      !line.includes(': number')
+    ) {
       lines[lineIndex] = line.replace(/:\\s*$/, ': any');
       return true;
     }
@@ -318,7 +343,7 @@ class TypeScriptErrorMonitor {
 
     // Generate recommendations based on most common errors
     const sortedErrors = Object.entries(errorCounts)
-      .sort(([,a], [,b]) => b - a)
+      .sort(([, a], [, b]) => b - a)
       .slice(0, 5);
 
     sortedErrors.forEach(([code, count]) => {
@@ -333,12 +358,12 @@ class TypeScriptErrorMonitor {
 
   getRecommendationForErrorCode(code, count) {
     const recommendations = {
-      'TS2304': `Consider adding proper imports for undefined names (${count} occurrences)`,
-      'TS2307': `Check module paths and file extensions (${count} occurrences)`,
-      'TS2339': `Add proper type definitions or use optional chaining (${count} occurrences)`,
-      'TS2345': `Review function argument types (${count} occurrences)`,
-      'TS2322': `Fix type assignments or add type assertions (${count} occurrences)`,
-      'TS7006': `Add explicit type annotations for parameters (${count} occurrences)`,
+      TS2304: `Consider adding proper imports for undefined names (${count} occurrences)`,
+      TS2307: `Check module paths and file extensions (${count} occurrences)`,
+      TS2339: `Add proper type definitions or use optional chaining (${count} occurrences)`,
+      TS2345: `Review function argument types (${count} occurrences)`,
+      TS2322: `Fix type assignments or add type assertions (${count} occurrences)`,
+      TS7006: `Add explicit type annotations for parameters (${count} occurrences)`,
     };
 
     return recommendations[code];
