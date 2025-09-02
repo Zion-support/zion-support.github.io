@@ -1,4 +1,4 @@
-:src/hooks/useAccessibility.tsx interface UseAccessibilityOptions {
+: src/hooks/useAccessibility.tsx interface UseAccessibilityOptions {
   enableKeyboardNavigation?: boolean;
    enableFocusManagement?: boolean;
    enableScreenReaderSupport?: boolean;

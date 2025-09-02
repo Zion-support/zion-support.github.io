@@ -37,14 +37,12 @@ class ErrorBoundary extends Component<Props, State> {}
   'Error Info:', errorInfo)      console.groupEnd()}
     // In production, you could send to error reporting service;
     // Example: Sentry, LogRocket, etc.}
-;
   handleRetry = () => {}
     this.setState(prevState => ({}
       hasError: false,
       error: undefined,
       errorInfo: undefined,
       retryCount: prevState.retryCount + 1}))}
-;
   handleReload = () => {}
     window.location.reload () }
 :pages.disabled/utils/errorBoundary.tsx;

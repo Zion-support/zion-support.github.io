@@ -166,5 +166,4 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
       </section>
     </MainLayout>
   )}
-;
 export default Startups

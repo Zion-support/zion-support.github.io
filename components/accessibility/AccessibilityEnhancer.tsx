@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
    skipToContent?: boolean;
@@ -18,7 +17,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             skipLink.focus()}
         }
       }
-;
       document.addEventListener('keydown', handleSkipToContent);
       return () => document.removeEventListener('keydown', handleSkipToContent)}
   }, [skipToContent]);
@@ -47,10 +45,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 }
               }
             }
-;
             modal.addEventListener('keydown', handleTabKey)}
         })}
-;
       // Run on mount and when DOM changes;
       handleFocusManagement();
       // Use MutationObserver to handle dynamic content;
@@ -86,7 +82,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
       }
-;
       document.addEventListener('keydown', handleKeyboardNavigation);
       return () => document.removeEventListener('keydown', handleKeyboardNavigation)}
   }, [keyboardNavigation])
@@ -105,11 +100,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {children}
 </>
   )}
-;
 // Utility function to generate accessible IDs;
 export const generateAccessibleId = (prefix: string, text: string): string => {
   return `${prefix}-${text.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`}
-;
 // Utility function to announce changes to screen readers;
 export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
   const announcement = document.createElement('div');
@@ -120,5 +113,4 @@ export const announceToScreenReader = (message: string, priority: 'polite' | 'as
   document.body.appendChild(announcement);
   setTimeout(() => {
     document.body.removeChild(announcement)}, 1000)}
-;
 export default AccessibilityEnhancer

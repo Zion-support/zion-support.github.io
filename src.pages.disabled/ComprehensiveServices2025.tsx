@@ -22,7 +22,6 @@ type Service = {
   features?: string[];
   benefits?: string[];
   marketPrice?: string}
-;
 const microSaaSServices: Service[] = [{
     title: 'AI-Powered Content Creation Suite', description: 'Complete AI content generation platform with SEO optimization, multi-language support, and brand voice consistency.',
     priceRange: '$99 - $499/month', marketPrice: '$150 - $600/month',

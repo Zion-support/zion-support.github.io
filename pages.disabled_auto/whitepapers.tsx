@@ -469,5 +469,4 @@ const Whitepapers: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default Whitepapers

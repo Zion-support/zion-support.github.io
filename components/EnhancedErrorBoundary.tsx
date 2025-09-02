@@ -1,6 +1,5 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
    fallback?: ReactNode;
@@ -44,27 +43,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       fetch('/api/error-reporting', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({
+          'Content-Type': 'application/json'}, body: JSON.stringify({
           error: {
-            message: error.message, stack: error.stack,
-            name: error.name},
+            message: error.message, stack: error.stack, name: error.name},
           errorInfo: {
-            componentStack: errorInfo.componentStack},
-          timestamp: new Date().toISOString(), userAgent: navigator.userAgent,
+            componentStack: errorInfo.componentStack}, timestamp: new Date().toISOString(), userAgent: navigator.userAgent,
           url: window.location.href})}).catch(() => {
         // Silently fail if error reporting fails})} catch (reportingError) {
       // Silently fail if error reporting fails}
   }
-;
   private handleRetry = () => {
     this.setState({
       hasError: false, error: null,
       errorInfo: null})}
-;
   private handleReload = () => {
     window.location.reload()}
-;
   override render() {
     if (this.state.hasError) {
       // Custom fallback UI;
@@ -93,7 +86,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Something went wrong
                 </h3>
                 <p className='text-sm text-gray-500'>
-                  We&apos;re sorry, but something unexpected happened.'
+                  We&apos;re sorry, but something unexpected happened.'''
                 </p>
               </div>
             </div>

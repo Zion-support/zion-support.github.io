@@ -35,7 +35,6 @@ interface ComponentProps {
 
 
 import Head from 'next/head';
-
 interface SEOHeadProps {
   title?: string;
    description?: string;
@@ -125,7 +124,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
                 '@type': 'ContactPoint',
                 'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},
               'sameAs': [;
+<<<<<<< HEAD
                 'https://linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
+=======
+                'https: //linkedin.com/company/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
+>>>>>>> main
               ], 'offers': {
                 '@type': 'AggregateOffer',
                 'offerCount': '500+', 'description': 'Technology solutions and services'}
@@ -133,5 +136,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         />)}
     </Head>
   )}
-;
 export default SEOHead

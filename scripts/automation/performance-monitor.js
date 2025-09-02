@@ -1,17 +1,10 @@
-#!/usr/bin/env node;
-import { execSync } from;
-  'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+#!/usr/bin/env node
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 const __dirname = path.dirname(__filename);
-// // // // // // // console.log(
-  '📊 Starting continuous performance monitoring automation...');
-// // // console.log(
-  '📊 Starting continuous performance monitoring automation...');
+console.log('📊 Starting continuous performance monitoring automation...');
 // Get automation interval from environment variable (default: 2 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
 async function runPerformanceMonitor() {
@@ -122,7 +115,6 @@ async function runPerformanceMonitor() {
     // // // // // // // console.log(
   '📊 Generating performance report...');
   summary: 'Performance monitoring completed}
-;
     console.log(
   '📊 Generating performance report...');
     const reportPath = path.join(process.cwd(),

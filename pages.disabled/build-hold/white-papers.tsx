@@ -147,5 +147,4 @@ import { Badge } from;
       </section>
     </div>
   )}
-;
 export default WhitePapers

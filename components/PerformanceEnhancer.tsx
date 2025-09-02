@@ -36,7 +36,6 @@ interface ComponentProps {
 
 
 // import { usePerformanceOptimization } from '../src/utils/performanceOptimizer';
-
 interface PerformanceMetrics {
   fcp: number | null;
    lcp: number | null;
@@ -112,7 +111,6 @@ const PerformanceEnhancer: React.FC = () => {
             setMetrics(prev => ({
               ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB}))}
         }
-;
         updateMemoryUsage();
         const memoryInterval = setInterval(updateMemoryUsage, 5000);
         return () => {
@@ -124,7 +122,6 @@ const PerformanceEnhancer: React.FC = () => {
           clearInterval(memoryInterval)}
       }
     }
-;
     const cleanup = measurePerformance();
     return cleanup}, [isVisible]);
   // Send metrics to analytics;
@@ -146,13 +143,11 @@ const PerformanceEnhancer: React.FC = () => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500'}
-;
   const getScoreText = (value: number | null, thresholds: { good: number needsImprovement: number }) => {
     if (value === null) return 'Measuring...'
     if (value <= thresholds.good) return 'Good'
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor'}
-;
   return(
     <div className='fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm z-50'>
       <h3 className='text-sm font-semibold text-gray-900 mb-3'>Performance Metrics</h3>
@@ -218,5 +213,4 @@ const PerformanceEnhancer: React.FC = () => {
       </div>
     </div>
   )}
-;
 export default PerformanceEnhancer

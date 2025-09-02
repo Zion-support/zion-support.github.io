@@ -42,11 +42,8 @@ import { Shield,
   PieChart'} from 'lucide-react';
 export { function }
 export default function AIFinancialComplianceAssistant(...args[]): {
-  ;
   website: 'https://ziontechgroup.com'
-<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx;
-}
-;
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx}
   const features = [{
       icon: Shield,
       title: 'Automated Compliance Monitoring',

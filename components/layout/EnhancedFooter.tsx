@@ -33,15 +33,35 @@ interface ComponentProps {
 
 
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Cloud, Facebook, Github, Info, Linkedin, Mail, MapPin, Phone, Twitter, User } from 'lucide-react';
+=======
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+} from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> main
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 const EnhancedFooter: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Compunknown Info */}
+=======
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+>>>>>>> main
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -50,20 +70,45 @@ const EnhancedFooter: React.FC = () => {
               <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
             <p className="text-gray-300 mb-4">
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
+              Leading technology solutions provider helping businesses transform
+              their digital presence with cutting-edge AI, cloud architecture,
+              and innovative development services.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a
+<<<<<<< HEAD
+                href="https://linkedin.com"
+=======
+                href="https: //linkedin.com"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-blue-400 transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-blue-400 transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-blue-400 transition-colors"
+              >
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-blue-400 transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -74,37 +119,58 @@ const EnhancedFooter: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/ai-development" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/services/ai-development"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   AI Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-services" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/services/cloud-services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Cloud Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/web-development" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/services/web-development"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Web Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile-development" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/services/mobile-development"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Mobile Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/blockchain-solutions" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/services/blockchain-solutions"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Blockchain Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services/iot-platforms" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/services/iot-platforms"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   IoT Platforms
                 </Link>
               </li>
               <li>
-                <Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/services/cybersecurity"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Cybersecurity
                 </Link>
               </li>
@@ -116,27 +182,42 @@ const EnhancedFooter: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/solutions/enterprise"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Enterprise Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/small-business" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/solutions/small-business"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Small Business
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/startups" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/solutions/startups"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Startups
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/healthcare" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/solutions/healthcare"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Healthcare
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/finance" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/solutions/finance"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Finance
                 </Link>
               </li>
@@ -148,45 +229,64 @@ const EnhancedFooter: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Compunknown</h3>
             <ul className="space-y-2 mb-6">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/careers"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/blog"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="/products"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Products
                 </Link>
               </li>
             </ul>
-            
+
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="mailto:info@ziontechgroup.com"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   info@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <a href="tel:+1-555-123-4567" className="text-gray-300 hover:text-white transition-colors">
+                <a
+                  href="tel:+1-555-123-4567"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   +1 (555) 123-4567
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-blue-400" />
                 <span className="text-gray-300">
-                  123 Tech Street, Innovation District<br />
+                  123 Tech Street, Innovation District
+                  <br />
                   San Francisco, CA 94105
                 </span>
               </div>
@@ -200,12 +300,15 @@ const EnhancedFooter: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest tech insights and updates.</p>
+            <p className="text-gray-300 mb-4">
+              Subscribe to our newsletter for the latest tech insights and
+              updates.
+            </p>
             <div className="flex max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors">
                 Subscribe
@@ -222,14 +325,27 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; 2024 Zion Tech Group. All rights reserved.
             </p>
+<<<<<<< HEAD
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">
+=======
+            <div className="flex space-x-6 mt-4 md: mt-0">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+              <Link
+                href="/privacy"
+                className="text-gray-300 hover:text-white text-sm transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">
+              <Link
+                href="/terms"
+                className="text-gray-300 hover:text-white text-sm transition-colors"
+              >
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="text-gray-300 hover:text-white text-sm transition-colors">
+              <Link
+                href="/sitemap"
+                className="text-gray-300 hover:text-white text-sm transition-colors"
+              >
                 Sitemap
               </Link>
             </div>
@@ -239,5 +355,8 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default EnhancedFooter;

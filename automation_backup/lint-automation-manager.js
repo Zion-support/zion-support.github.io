@@ -21,7 +21,6 @@ class LintAutomationManager {
   'lint-automation.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-;
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -150,7 +149,6 @@ switch (command) {
     // // // // // // // // console.log(
   'Usage: node lint-automation-manager.js [start|stop|status]');
     process.exit(1);
-;
     console.log(
   'Usage: node lint-automation-manager.js [start|stop|status]);
     process.exit(1)}

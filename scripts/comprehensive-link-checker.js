@@ -184,7 +184,6 @@ class ComprehensiveLinkChecker {
       brokenLinks: this.brokenLinks,
       missingPages: this.missingPages,
       recommendations: this.generateRecommendations()}
-;
     // Save detailed report;
     fs.writeFileSync(
       path.join(__dirname,
@@ -200,7 +199,6 @@ class ComprehensiveLinkChecker {
         error: link.error,
         parent: link.parent})),
       recommendations: report.recommendations}
-;
     fs.writeFileSync(
       path.join(__dirname,
 ,

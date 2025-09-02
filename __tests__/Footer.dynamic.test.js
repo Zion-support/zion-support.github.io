@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Footer.dynamic from '../components/Footer.dynamic';
+import Footerdynamic from "../components/Footer.dynamic";
 
-describe('Footer.dynamic', () => {
+describe('Footerdynamic', () => {
   test('renders without crashing', () => {
-    render(<Footer.dynamic />);
+    render(<Footerdynamic />);
     expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<Footer.dynamic />);
+    render(<Footerdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<Footer.dynamic />);
+    render(<Footerdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<Footer.dynamic />);
+    render(<Footerdynamic />);
     // Add styling tests if needed
   })})

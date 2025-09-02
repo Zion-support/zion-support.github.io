@@ -33,14 +33,16 @@ interface ComponentProps {
 
 
 import { motion, useAnimation, useInView } from 'framer-motion';
-
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient';
 type ButtonSize = 'sm' | 'md' | 'lg';
-
 interface InteractiveButtonProps {
   'react';
+<<<<<<< HEAD
 import { User, motion, useAnimation, useInView } from 'lucide-react';
 
+=======
+import { motion, useAnimation, useInView  } from 'lucide-react';
+>>>>>>> main
 type ButtonVariant =;
   'primary' |;
   'secondary' |;
@@ -61,30 +63,24 @@ interface InteractiveButtonProps {
   className?: string}
 
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
-  children,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  disabled = false,
-  loading = false,
-  icon,
-  className = ''
+  children, onClick,
+  variant = 'primary', size = 'md',
+  disabled = false, loading = false,
+  icon, className = ''
 }) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden'
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden'
   
   const variantClasses: Record<ButtonVariant, string> = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
-    ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
+    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500', ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
     gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500'
   }
 
   const sizeClasses: Record<ButtonSize, string> = {
     sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+    md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg'
   }
 
   const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
@@ -95,23 +91,20 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
 ursor/automate-test-fix-improve-and-merge-code-48f3}) => {
   const [isHovered, setIsHovered] = useState(false);
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden'
   const variantClasses: Record<ButtonVariant, string> = {
     primary:,
-  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500,
-    secondary:,
-  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600,
-    ghost:,
-  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800,
-    gradient:,
+  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500, secondary:,
+  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:,
+  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:,
   bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-500}
   const sizeClasses: Record<ButtonSize, string> = {
     sm:,
   px-3 py-2 text-sm;
-  ',
-    md: 'px-4 py-2 text-base,
-    lg: 'px-6 py-3 text-lg;
-  '}
+  ', '
+    md: 'px-4 py-2 text-base,'
+    lg: 'px-6 py-3 text-lg;'
+  '}'
 ;
 ursor/automate-test-fix-improve-and-merge-code-48f3
   return(
@@ -155,36 +148,32 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     >
       <motion.div
         className='absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0';
-        animate={{ x: isHovered ? [,
-  -100%;
+        animate={{ x: isHovered ? [, -100%;
   ', '100%;
   '] as unknown: '-100%, opacity: isHovered ? [0, 0.2, 0] as unknown : 0 }}        transition={{ duration: 0.6 }}
       />
       <div className='relative flex items-center gap-2'>
         {loading ? (
-          <motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear;
-  ' }} />        ) : (
+          <motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear;'
+  ' }} />        ) : ('
           icon && <span className='flex-shrink-0'>{icon}</span>
         )}
         <span>{children}</span>
       </div>
     </motion.button>
   )}
-;
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string
   delay?: number}
 
 export const AnimatedCard: React.FC<AnimatedCardProps> = ({
-  children,
-  className = '',
+  children, className = '',
   delay = 0
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const controls = useAnimation();
-
   useEffect(() => {
     if (isInView) {
       controls.start('visible')}
@@ -193,11 +182,9 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1, y: 0,
       transition: {
-        duration: 0.6,
-        delay,
+        duration: 0.6, delay,
         ease: 'easeOut'
       }
     }
@@ -243,8 +230,7 @@ interface HoverEffectProps {
   scale?: number}
 
 export const HoverEffect: React.FC<HoverEffectProps> = ({
-  children,
-  className = '',
+  children, className = '',
   scale = 1.05
 }) => {
   return (
@@ -263,12 +249,10 @@ interface LoadingSpinnerProps {
   className?: string}
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  className = ''
+  size = 'md', className = ''
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
+    sm: 'w-4 h-4', md: 'w-6 h-6',
     lg: 'w-8 h-8'
   }
 
@@ -288,27 +272,22 @@ interface FadeInProps {
   className?: string}
 
 export const FadeIn: React.FC<FadeInProps> = ({
-  children,
-  delay = 0,
-  duration = 0.6,
-  className = ''
+  children, delay = 0,
+  duration = 0.6, className = ''
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' })
   const controls = useAnimation();
-
   useEffect(() => {
     if (isInView) {
       controls.start('visible')}
   }, [isInView, controls])
 
   const variants = {
-    hidden: { opacity: 0 },
-    visible: {
+    hidden: { opacity: 0 }, visible: {
       opacity: 1,
       transition: {
-        duration,
-        delay,
+        duration, delay,
         ease: 'easeOut'
       }
     }
@@ -328,10 +307,8 @@ export const FadeIn: React.FC<FadeInProps> = ({
 }
 
 export default {
-  InteractiveButton,
-  AnimatedCard,
-  HoverEffect,
-  LoadingSpinner,
+  InteractiveButton, AnimatedCard,
+  HoverEffect, LoadingSpinner,
   FadeIn
 }
 
@@ -365,30 +342,25 @@ interface FloatingActionButtonProps {
   icon: React.ReactNode;
    onClick: () => void;
    tooltip?: string;
-   position?:, bottom-right' | 'bottom-left' | 'top-right' | 'top-left'
-   color?: 'blue' | 'green' | 'purple' | 'red}
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position =,
-  bottom-right', color =;
+   position?:, bottom-right' | 'bottom-left' | 'top-right' | 'top-left''
+   color?: 'blue' | 'green' | 'purple' | 'red}'
+export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position =, bottom-right', color =;'
   'blue' }) => {
   const [showTooltip, setShowTooltip] = useState(false)
   const positionClasses: Record<NonNullable<FloatingActionButtonProps[;
-  'position]>, string> = {,
-  bottom-right': 'bottom-6 right-6,
+  'position]>, string> = {,'
+  bottom-right': 'bottom-6 right-6, 
 ,
-  bottom-left': 'bottom-6 left-6,
+  bottom-left': 'bottom-6 left-6, 
 ,
-  top-right': 'top-6 right-6,
+  top-right': 'top-6 right-6, 
 ,
   top-left': 'top-6 left-6}
-  const colorClasses: Record<NonNullable<FloatingActionButtonProps[,
-  color']>, string> = {
-    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500,
-    green:,
-  bg-green-600 hover: bg-green-700 focus:ring-green-500,
-    purple:,
-  bg-purple-600 hover: bg-purple-700 focus:ring-purple-500,
-    red:,
-  bg-red-600 hover: bg-red-700 focus:ring-red-500}
+  const colorClasses: Record<NonNullable<FloatingActionButtonProps[, color']>, string> = {'
+    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500,'
+    green:, bg-green-600 hover: bg-green-700 focus:ring-green-500,
+    purple:, bg-purple-600 hover: bg-purple-700 focus:ring-purple-500,
+    red:, bg-red-600 hover: bg-red-700 focus:ring-red-500}
 
   return(
     <div className={`fixed ${positionClasses[position]} z-50`}>
@@ -414,5 +386,3 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
     </div>
   )}
 ;
-export default { InteractiveButton, AnimatedCard, InteractiveStats }
-

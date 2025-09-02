@@ -419,6 +419,5 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
       </div>
     </div>
   )}
-;
 export default AILegalDocumentAnalyzer''`;
   ''`''`

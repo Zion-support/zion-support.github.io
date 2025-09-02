@@ -19,7 +19,6 @@ class LintErrorFixer {
   'lint-error-fixer.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-;
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -153,7 +152,6 @@ class LintErrorFixer {
     const baseDir = parts[0];
     if (fs.existsSync(baseDir)) {
       this.scanDirectory(baseDir, files, pattern)}
-;
     return files.filter(file =>;
       !file.includes('node_modules;
   ') &&;
@@ -184,7 +182,6 @@ switch (command) {
   ': ;
     if (filePath) {
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>)}
-;
       fixer.fixFile(filePath)} else {
       console.log(,
   Usage: node lint-error-fixer.js file <filepath>)}
@@ -197,8 +194,6 @@ switch (command) {
   default:;
     // // // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]);
     process.exit(1)}}}}}}}}}}}}}}}}}}}}}}}}}}
-;
     console.log(,
   Usage: node lint-error-fixer.js [file <filepath>|all]);
     process.exit(1)}
-;

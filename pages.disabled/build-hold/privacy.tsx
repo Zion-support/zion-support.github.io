@@ -103,5 +103,4 @@ import { '  Shield, Lock,
       </section>
     </div>
   )}
-;
 export default Privacy

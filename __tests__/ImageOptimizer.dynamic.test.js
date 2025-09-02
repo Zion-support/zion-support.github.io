@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ImageOptimizer.dynamic from '../components/ImageOptimizer.dynamic';
+import ImageOptimizerdynamic from "../components/ImageOptimizer.dynamic";
 
-describe('ImageOptimizer.dynamic', () => {
+describe('ImageOptimizerdynamic', () => {
   test('renders without crashing', () => {
-    render(<ImageOptimizer.dynamic />);
+    render(<ImageOptimizerdynamic />);
     expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<ImageOptimizer.dynamic />);
+    render(<ImageOptimizerdynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<ImageOptimizer.dynamic />);
+    render(<ImageOptimizerdynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<ImageOptimizer.dynamic />);
+    render(<ImageOptimizerdynamic />);
     // Add styling tests if needed
   })})

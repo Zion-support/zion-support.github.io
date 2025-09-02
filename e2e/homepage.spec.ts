@@ -3,12 +3,14 @@ import { test, expect } from '@playwright/test';
 test('homepage loads correctly', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/Zion Tech Group/);
-  await expect(page.locator('h1')).toBeVisible()})
+  await expect(page.locator('h1')).toBeVisible();
+});
 
 test('navigation works', async ({ page }) => {
   await page.goto('/');
   await page.click('text=Services');
-  await expect(page).toHaveURL(/.*services/)})
+  await expect(page).toHaveURL(/.*services/);
+});
 
 test('contact form works', async ({ page }) => {
   await page.goto('/contact');
@@ -16,4 +18,5 @@ test('contact form works', async ({ page }) => {
   await page.fill('input[name="email"]', 'test@example.com');
   await page.fill('textarea[name="message"]', 'Test message');
   await page.click('button[type="submit"]');
-  await expect(page.locator('.success-message')).toBeVisible()})
+  await expect(page.locator('.success-message')).toBeVisible();
+});

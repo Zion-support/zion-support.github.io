@@ -10,5 +10,4 @@ const NotFound = lazy(() => import('../pages/NotFound;
   return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
         <Route path='/404' element={<NotFound />} />'        <Route path='*' element={<NotFound />} />'      </Routes>"    </Suspense>)}
-;
 export default ErrorRoutes

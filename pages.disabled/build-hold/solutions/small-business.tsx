@@ -147,5 +147,4 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
       </section>
     </MainLayout>
   )}
-;
 export default SmallBusiness

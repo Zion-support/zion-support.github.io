@@ -1,5 +1,4 @@
 describe (
-  'accessibility - auditor', () => {}' it ('renders without crashing
-  ', () => {} render (<accessibility - auditor />) '; expect (screen.getByRole (
+  'accessibility - auditor', () => {}' it('renders without crashing', () => {} render(<accessibilityauditor />) '; expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
-  ', () => {} render (<accessibility - auditor />) ''
+  ', () => {} render(<accessibilityauditor />) ''

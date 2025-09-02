@@ -1,5 +1,4 @@
 describe (
-  'case - studies', () => {}' it ('renders without crashing
-  ', () => {} render (<case - studies />) '; expect (screen.getByRole (
+  'case - studies', () => {}' it('renders without crashing', () => {} render(<casestudies />) '; expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
-  ', () => {} render (<case - studies />) ''
+  ', () => {} render(<casestudies />) ''

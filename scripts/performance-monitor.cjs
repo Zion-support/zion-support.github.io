@@ -16,7 +16,7 @@ class PerformanceMonitor {
       buildTime: null,
       bundleSize: null,
       testResults: null,
-      performance: {}
+      performance: {},
     };
   }
 
@@ -40,27 +40,30 @@ class PerformanceMonitor {
       if (!fs.existsSync(buildDir)) {
         throw new Error('Build directory not found');
       }
-      
-      const getDirSize = (dir) => {
+
+      const getDirSize = dir => {
         let size = 0;
         const files = fs.readdirSync(dir);
-        
+
         for (const file of files) {
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-          
+
           if (stat.isDirectory()) {
             size += getDirSize(filePath);
           } else {
             size += stat.size;
           }
         }
-        
+
         return size;
       };
-      
+
       const bundleSize = getDirSize(buildDir);
-      this.metrics.bundleSize = bundleSize;console.log(`📊 Bundle size: ${(bundleSize / 1024 / 1024).toFixed(2)} MB`);
+      this.metrics.bundleSize = bundleSize;
+      console.log(
+        `📊 Bundle size: ${(bundleSize / 1024 / 1024).toFixed(2)} MB`
+      );
       return bundleSize;
     } catch (error) {
       console.log('❌ Failed to measure bundle size');
@@ -83,19 +86,21 @@ class PerformanceMonitor {
 
   async generateReport() {
     const reportPath = path.join(process.cwd(), 'performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));console.log(`📄 Performance report saved to: ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
+    console.log(`📄 Performance report saved to: ${reportPath}`);
   }
 
   async run() {
     console.log('🚀 Starting performance monitoring...\n');
-    
+
     try {
       await this.measureBuildTime();
       await this.measureBundleSize();
       await this.runTests();
-    } catch (error) {console.log(`❌ Performance monitoring failed: ${error.message}`);
+    } catch (error) {
+      console.log(`❌ Performance monitoring failed: ${error.message}`);
     }
-    
+
     await this.generateReport();
     return this.metrics;
   }

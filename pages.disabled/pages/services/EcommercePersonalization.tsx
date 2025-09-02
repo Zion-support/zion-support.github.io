@@ -34,7 +34,6 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/EcommercePersonalization.tsx;
 export { EcommercePersonalization }';
 export default EcommercePersonalization}

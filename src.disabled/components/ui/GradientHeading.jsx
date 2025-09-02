@@ -14,7 +14,7 @@ import React from,
   ';bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent, ,
   ' custom: '';
   ' customGradient ||''';
-  ';bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent}  const getGradientClasses = () => {} return gradients[variant] }  const getSizeClasses = () => {} const sizes = {};
+  ';bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent}  const getGradientClasses = () => {} return gradients[variant] }  const getSizeClasses = () => {} const sizes = {}
   ';'; xs: 'text-xs, ,
   ';
   ' sm: 'text-sm, ,

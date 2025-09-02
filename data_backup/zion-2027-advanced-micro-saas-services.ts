@@ -42,7 +42,6 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}
-;
 export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService[] =;
   [;
     // AI-Powered Autonomous Financial Trading Platform{

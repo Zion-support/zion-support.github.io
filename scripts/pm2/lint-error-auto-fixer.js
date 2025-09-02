@@ -40,7 +40,6 @@ class LintErrorAutoFixer {
         applied: [],
         failed: [],
         skipped: []}}
-;
     try {
       // Run ESLint;
       const lintResult = await this.runLint();

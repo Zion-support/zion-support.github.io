@@ -277,5 +277,4 @@ const Privacy: React.FC = () => {
       </section>
     </div>
   )}
-;
 export default Privacy

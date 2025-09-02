@@ -39,7 +39,6 @@ class TypeScriptErrorMonitor {
         failed: [],
         skipped: []},
       recommendations: []}
-;
     try {
       // Run TypeScript compiler to get errors;
       const errors = await this.getTypeScriptErrors();
@@ -188,7 +187,6 @@ class TypeScriptErrorMonitor {
   'react'';
   'ReactNode': 'import { ReactNode } from;
   'react''}
-;
       if (commonImports[missingName]) {
         lines.unshift(commonImports[missingName]);
         return true}
@@ -282,7 +280,6 @@ class TypeScriptErrorMonitor {
   generateRecommendations(errors) {
     const recommendations = [];
     const errorCounts = {}
-;
     // Count error types;
     errors.forEach(error => {
       errorCounts[error.code] = (errorCounts[error.code] || 0) + 1})
@@ -304,7 +301,6 @@ class TypeScriptErrorMonitor {
   'TS2345': `Review function argument types (${count} occurrences)`,
   'TS2322': `Fix type assignments or add type assertions (${count} occurrences)`,
   'TS7006': `Add explicit type annotations for parameters (${count} occurrences)`}
-;
     return recommendations[code]}
   saveReport(report) {
     try {

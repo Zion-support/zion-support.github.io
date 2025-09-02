@@ -80,7 +80,6 @@ const contactInfo = {
 	address: '364 E Main St STE 1008 Middletown DE 19709,
 	website:,
   https: //ziontechgroup.com}
-;
 return enhancedRealMicroSaasServices;
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[]);
 		.concat(newlyAddedServices as unknown as Service[]);
@@ -145,7 +144,6 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 		description:,
   Detailed service description goes here...',
 		link: '#}
-;
 	return(
 		<>
 			<Head>
@@ -294,7 +292,6 @@ const contactInfo = {
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com}
-;
 export async function getStaticPaths() {
   // Return empty paths for now to fix build;
   return {

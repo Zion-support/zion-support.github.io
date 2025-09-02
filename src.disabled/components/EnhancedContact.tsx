@@ -41,10 +41,8 @@ export function EnhancedContact(...args[]: any):  {
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'}
-;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0}
-;
       // // // // // // // console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
       })} catch (error) {

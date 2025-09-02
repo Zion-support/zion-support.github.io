@@ -33,7 +33,6 @@ class HealthChecker {
       level,
       message,
       data}
-;
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (data) {
       console.log(JSON.stringify(data, null, 2))}
@@ -324,7 +323,6 @@ class HealthChecker {
         critical: this.checks.filter(c => c.status === 'critical).length,
         unknown: this.checks.filter(c => c.status === 'unknown;
   ').length}    }
-;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('info;
   ', `Health report generated: ${reportFile}`);

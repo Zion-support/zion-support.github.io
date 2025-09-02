@@ -33,30 +33,30 @@ interface ComponentProps {
 
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
 
+=======
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+>>>>>>> main
 interface FormData {
-
   name: string;
   email: string;
   compunknown: string;
   service: string;
-  message: string;
-}
+  message: string}
 
 const ContactForm: React.FC = () => {
-
   const [formData, setFormData] = useState<FormData>({
-
     name: '',
     email: '',
     compunknown: '',
     service: '',
-    message: ''});
+    message: '',
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
-
   const services = [
     'AI & Machine Learning',
     'Cloud & DevOps',
@@ -67,82 +67,65 @@ const ContactForm: React.FC = () => {
     'Digital Transformation',
     'Other',
   ];
-
   const validateForm = (): boolean => {
-
     const newErrors: Partial<FormData> = {};
-
     if (!formData.name.trim()) {
-
       newErrors.name = 'Name is required';
     }
 
     if (!formData.email.trim()) {
-
       newErrors.email = 'Email is required';
+<<<<<<< HEAD
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-
+=======
+    } else if (!/\\S+@\\S+\\.\S+/.test(formData.email)) {
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       newErrors.email = 'Email is invalid';
     }
 
     if (!formData.message.trim()) {
-
       newErrors.message = 'Message is required';
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
-
     e.preventDefault();
-
     if (!validateForm()) {
-
       return;
     }
 
     setIsSubmitting(true);
-
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-
     setIsSubmitting(false);
     setIsSubmitted(true);
-
     // Reset form after 3 seconds
     setTimeout(() => {
-
       setIsSubmitted(false);
       setFormData({
-
         name: '',
         email: '',
         compunknown: '',
         service: '',
-        message: ''});
+        message: '',
+      });
     }, 3000);
   };
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-
     // Clear error when user starts typing
     if (errors[name as keyof FormData]) {
-
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
-
   if (isSubmitted) {
-
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -154,23 +137,23 @@ const ContactForm: React.FC = () => {
           Message Sent!
         </h3>
         <p className="text-green-600">
-          Thank you for reaching out. We'll get back to you within 24 hours.
+          Thank you for reaching out. We&apos;ll get back to you within 24
+          hours.'
         </p>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-white rounded-xl shadow-xl p-8">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business? Let's discuss how our technology
-          solutions can drive your success.
+          Ready to transform your business? Let&apos;s discuss how our
+          technology' solutions can drive your success.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">
         <div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             Contact Information
@@ -205,7 +188,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div>
               <label
                 htmlFor="name"
@@ -220,7 +203,6 @@ const ContactForm: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-
                   errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="John Doe"
@@ -243,8 +225,11 @@ const ContactForm: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+<<<<<<< HEAD
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-
+=======
+                className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="john@compunknown.com"
@@ -255,7 +240,7 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div>
               <label
                 htmlFor="compunknown"
@@ -311,8 +296,11 @@ const ContactForm: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               rows={5}
+<<<<<<< HEAD
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-
+=======
+              className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Tell us about your project and how we can help..."
@@ -328,7 +316,6 @@ const ContactForm: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${
-
               isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
@@ -349,5 +336,4 @@ const ContactForm: React.FC = () => {
     </div>
   );
 };
-
 export default ContactForm;

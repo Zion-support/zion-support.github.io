@@ -8,7 +8,8 @@ export interface Listing {
    subcategory?: string;
    tags: string[];
    images: string[];
-   seller: { id: string;
+   seller: {  id: string;
    name: string;
-   rating: number;
+   rating: number
    reviews: number} location: string ;
+}

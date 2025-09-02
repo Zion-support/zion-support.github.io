@@ -1,418 +1,50 @@
 {
-  "timestamp": "2025-09-02T19:06:25.613Z",
-  "totalImprovements": 82,
-  "improvements": [
-    {
-      "type": "image_optimization",
-      "file": "/workspace/public/favicon.svg",
-      "improvement": "Added image optimization"
-    },
-    {
-      "type": "image_optimization",
-      "file": "/workspace/public/og-image.svg",
-      "improvement": "Added image optimization"
-    },
-    {
-      "type": "image_optimization",
-      "file": "/workspace/public/vite.svg",
-      "improvement": "Added image optimization"
-    },
-    {
-      "type": "seo_improvement",
-      "file": "/workspace/pages/NotFound.tsx",
-      "improvement": "Added SEO meta tags"
-    },
-    {
-      "type": "seo_improvement",
-      "file": "/workspace/pages/_app.tsx",
-      "improvement": "Added SEO meta tags"
-    },
-    {
-      "type": "seo_improvement",
-      "file": "/workspace/pages/pricing-guide.tsx",
-      "improvement": "Added SEO meta tags"
-    },
-    {
-      "type": "seo_improvement",
-      "file": "/workspace/pages/services.tsx",
-      "improvement": "Added SEO meta tags"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/AccessibilityEnhancer.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/AccessibilityManager.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/AnalyticsManager.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/AnalyticsTracker.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/ContactForm.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/ContactFormEnhanced.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/EnhancedAnalytics.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/EnhancedErrorBoundary.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/EnhancedPerformanceMonitor.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/ErrorBoundary.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/MainSidebar.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/Navigation.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/OptimizedImage.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/PWARegistration.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/PerformanceEnhancer.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/PerformanceMonitor.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/SecurityDashboard.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/UI/InteractiveElements.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/error/ErrorBoundary.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/layout/EnhancedNavigation.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/layout/EnhancedSidebar2025.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/layout/Layout.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/layout/ModernHeader.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/layout/UltraAdvancedNavigation.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/performance/ImageOptimizer.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/ui/ErrorBoundary.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "performance_enhancement",
-      "file": "/workspace/components/ui/InteractiveStats.tsx",
-      "improvement": "Added performance optimizations"
-    },
-    {
-      "type": "error_boundary",
-      "file": "/workspace/components/ErrorBoundary.jsx",
-      "improvement": "Created error boundary component"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/AccessibilityEnhancer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/AccessibilityManager.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/Analytics.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/AnalyticsManager.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/AnalyticsTracker.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ContactForm.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ContactFormEnhanced.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/EnhancedAnalytics.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/EnhancedErrorBoundary.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/EnhancedPerformanceMonitor.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/EnhancedSEO.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ErrorBoundary.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/Footer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/Layout.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/LoadingSpinner.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/MainSidebar.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/Navigation.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/OptimizedImage.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/PWARegistration.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/PerformanceEnhancer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/PerformanceMonitor.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/PerformanceOptimizer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/SEO.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/SEOEnhancer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/SEOOptimizer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/SecurityDashboard.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/SecurityEnhancer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/SecurityHeaders.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ServicesSection.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/TestimonialsSection.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/InteractiveElements.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/WebVitals.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/AccessibilityEnhancer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ErrorBoundary.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/EnhancedFooter.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/EnhancedNavigation.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/Footer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/Header.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/MainLayout.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ModernLayout.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ImageOptimizer.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/PerformanceMonitor.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/SEOHead.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/ErrorBoundary.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "bundle_optimization",
-      "file": "/workspace/components/OptimizedImage.dynamic.jsx",
-      "improvement": "Created dynamic import wrapper"
-    },
-    {
-      "type": "code_structure",
-      "file": "/workspace/src/utils/api.js",
-      "improvement": "Created utility function"
-    },
-    {
-      "type": "code_structure",
-      "file": "/workspace/src/utils/helpers.js",
-      "improvement": "Created utility function"
+  "timestamp": "2025-09-02T21:48:24.977Z",
+  "bundleOptimization": [
+    {
+      "command": "npm run build",
+      "description": "Build application for analysis",
+      "success": true,
+      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.7s\n   Collecting page data ...\n   Generating static pages (0/19) ...\n   Generating static pages (4/19) \r\n   Generating static pages (9/19) \r\n   Generating static pages (14/19) \r\n ✓ Generating static pages (19/19)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     4.73 kB        92.7 kB\n├   /_app                                     0 B          88 kB\n├ ○ /404                                    180 B        88.2 kB\n├ ○ /about                                2.52 kB        93.5 kB\n├ ○ /ai-services                          8.35 kB        96.4 kB\n├ ○ /blog                                 2.91 kB        93.9 kB\n├ ○ /contact                              2.69 kB        90.7 kB\n├ ○ /help                                  3.5 kB        94.5 kB\n├ ○ /index.p                              1.45 kB        89.5 kB\n├ ○ /it-services                          7.96 kB          96 kB\n├ ○ /micro-saas                           8.75 kB        96.8 kB\n├ ○ /NotFound                             35.5 kB         124 kB\n├ ○ /pricing                              3.53 kB        94.5 kB\n├ ○ /privacy                              3.37 kB        94.4 kB\n├ ○ /services                             13.8 kB         102 kB\n├ ○ /services/ai-development              2.73 kB        93.7 kB\n├ ○ /services/cloud-services              2.61 kB        93.6 kB\n├ ○ /services/web-development             2.77 kB        93.8 kB\n└ ○ /terms                                3.75 kB        94.8 kB\n+ First Load JS shared by all             90.6 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           9.93 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"
+    },
+    {
+      "command": "npx @next/bundle-analyzer",
+      "description": "Analyze bundle size",
+      "success": false,
+      "error": "Command failed: npx @next/bundle-analyzer\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error could not determine executable to run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_48_35_642Z-debug-0.log\n"
     }
   ],
+<<<<<<< HEAD
+  "seoImprovements": [
+    {
+      "command": "npm run sitemap",
+      "description": "Generate sitemap",
+      "success": true,
+      "output": "\n> bolt.new.zion.app@0.1.0 sitemap\n> node scripts/generate-sitemap.js\n\nGenerated sitemap with 17 pages\nSitemap saved to: /workspace/public/sitemap.xml\n"
+    },
+    {
+      "command": "node scripts/generate-search-index.js",
+      "description": "Generate search index",
+      "success": false,
+      "error": "Command failed: node scripts/generate-search-index.js\nfile:///workspace/scripts/generate-search-index.js:2\nimport fs from;\n              ^\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+    }
+  ],
+  "performanceEnhancements": [
+    {
+      "command": "npm run format",
+      "description": "Format code for better performance",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "command": "npm run lint",
+      "description": "Lint code for performance issues",
+      "success": false,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid Options:\n- Unknown options: useEslintrc, extensions, resolvePluginsRelativeTo, rulePaths, ignorePath, reportUnusedDisableDirectives\n- 'extensions' has been removed.\n- 'resolvePluginsRelativeTo' has been removed.\n- 'ignorePath' has been removed.\n- 'rulePaths' has been removed. Please define your rules using plugins.\n- 'reportUnusedDisableDirectives' has been removed. Please use the 'overrideConfig.linterOptions.reportUnusedDisableDirectives' option instead.\n"
+    }
+  ]
+}
+=======
   "summary": {
     "image_optimization": 3,
     "seo_improvement": 4,
@@ -424,3 +56,4 @@
     "code_structure": 2
   }
 }
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27

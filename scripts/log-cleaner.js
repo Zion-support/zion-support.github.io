@@ -30,7 +30,6 @@ class LogCleaner {
       level,
       message,
       data}
-;
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (data) {
       console.log(JSON.stringify(data, null, 2))}
@@ -167,7 +166,6 @@ class LogCleaner {
               name: file})}
         }
       }
-;
       calculateDirSize(this.logDir);
       this.log(
   'info', `Total log directory size: ${Math.round(totalSize / 1024 / 1024)}MB`);
@@ -280,7 +278,6 @@ class LogCleaner {
       status: this.errors.length === 0 ?,
   success;
   ': 'partial    }
-;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('info;
   ', `Log cleaner report generated: ${reportFile}`);

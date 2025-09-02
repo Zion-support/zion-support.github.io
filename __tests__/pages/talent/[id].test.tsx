@@ -19,7 +19,6 @@ const mockFetch = <T,>(data: T, ok = true, status = 200) => {
     text: () =>
       Promise.resolve(typeof data ===;
   'string' ? data : JSON.stringify(data))})}
-;
 // Mock TalentDetails and NextHead to simplify testing TalentPage focus;
 vi.mock(
   '@/components/talent/TalentDetails', () => ({

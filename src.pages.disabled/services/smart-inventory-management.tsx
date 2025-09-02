@@ -267,5 +267,4 @@ const SmartInventoryManagement: React.FC = () => {
       </section>
     </Layout>
   )}
-;
 export default SmartInventoryManagement

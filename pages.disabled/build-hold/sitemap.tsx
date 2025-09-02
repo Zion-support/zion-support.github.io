@@ -44,5 +44,4 @@ const SitemapPage: React.FC = () => {
       </ul>
     </div>
   )}
-;
 export default SitemapPage

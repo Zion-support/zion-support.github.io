@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import TestimonialsSection.dynamic from '../components/TestimonialsSection.dynamic';
+import TestimonialsSectiondynamic from "../components/TestimonialsSection.dynamic";
 
-describe('TestimonialsSection.dynamic', () => {
+describe('TestimonialsSectiondynamic', () => {
   test('renders without crashing', () => {
-    render(<TestimonialsSection.dynamic />);
+    render(<TestimonialsSectiondynamic />);
     expect(screen.getByTestId('testimonialssection.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<TestimonialsSection.dynamic />);
+    render(<TestimonialsSectiondynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<TestimonialsSection.dynamic />);
+    render(<TestimonialsSectiondynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<TestimonialsSection.dynamic />);
+    render(<TestimonialsSectiondynamic />);
     // Add styling tests if needed
   })})

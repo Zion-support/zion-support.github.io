@@ -388,6 +388,5 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
       </section>
     </div>
   )}
-;
 export default AIHealthcarePlatform''`;
   ''`'"`

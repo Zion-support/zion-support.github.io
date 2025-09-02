@@ -159,5 +159,4 @@ import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } fr
       </div>
     </MainLayout>
   )}
-;
 export default CustomDevelopment

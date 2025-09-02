@@ -1,41 +1,7 @@
-import React from 'react';
-import { Common, File, Open, User, X } from 'lucide-react';
-
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
+import Head from 'next/head';
 
 
-import { Helmet } from 'react-helmet-async';
-
+>>>>>>> main
 interface SEOProps {
   title?: string;
   description?: string;
@@ -46,6 +12,7 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
+<<<<<<< HEAD
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',
   keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',
@@ -107,3 +74,39 @@ export const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
+  title = 'Zion Tech Group - Advanced AI Solutions',
+  description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
+  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation',
+  image = '/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website'
+}) => {
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional SEO */}
+      <link rel="canonical" href={url} />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+    </Head>
+  );
+};
+
+>>>>>>> main

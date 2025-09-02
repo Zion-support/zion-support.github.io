@@ -1,5 +1,9 @@
 {
-  "timestamp": "2025-09-02T19:39:51.737Z",
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T21:22:03.716Z",
+=======
+  "timestamp": "2025-09-02T21:47:51.351Z",
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   "summary": {
     "total": 8,
     "successful": 4,
@@ -10,25 +14,33 @@
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+<<<<<<< HEAD
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_22_03_129Z-debug-0.log\n"
+=======
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     },
     {
       "command": "npm run type-check",
       "description": "TypeScript Type Check",
       "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
     },
     {
       "command": "npm run test",
       "description": "Test Suite",
       "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
+      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
     },
     {
       "command": "npm run build",
       "description": "Build Application",
       "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Invalid next.config.js options detected: \n ⚠     Unrecognized key(s) in object: 'newNextLinkBehavior' at \"experimental\"\n ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config\n ⚠ The \"experimental.esmExternals\" option has been modified. experimental.esmExternals is not recommended to be modified as it may disrupt module resolution. It should be removed from your next.config.js.\nFailed to compile.\n\n./components/ui/Button.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/components/ui/Button.tsx\u001b[0m:14:1]\n \u001b[2m11\u001b[0m |   ({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {\n \u001b[2m12\u001b[0m |     return (\n \u001b[2m13\u001b[0m |       <button\n \u001b[2m14\u001b[0m |         className={cn(;\n    : \u001b[35;1m                      ^\u001b[0m\n \u001b[2m15\u001b[0m |           'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',;\n \u001b[2m16\u001b[0m |           {;\n \u001b[2m17\u001b[0m |             'bg-primary text-primary-foreground hover:bg-primary/90': variant === 'default',;\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ui/Button.tsx\n./pages/index.tsx\n\n./components/ui/Card.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/components/ui/Card.tsx\u001b[0m:10:1]\n \u001b[2m 7\u001b[0m | >(({ className, ...props }, ref) => (\n \u001b[2m 8\u001b[0m |   <div\n \u001b[2m 9\u001b[0m |     ref={ref}\n \u001b[2m10\u001b[0m |     className={cn(;\n    : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m11\u001b[0m |       'rounded-lg border bg-card text-card-foreground shadow-sm',;\n \u001b[2m12\u001b[0m |       className;\n \u001b[2m13\u001b[0m |     )}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ui/Card.tsx\n./pages/index.tsx\n\n./pages/NotFound.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token `;`. Expected identifier or string\n    ,-[\u001b[36;1;4m/workspace/pages/NotFound.tsx\u001b[0m:10:1]\n \u001b[2m 7\u001b[0m |   ArrowLeft,\n \u001b[2m 8\u001b[0m |   Phone,\n \u001b[2m 9\u001b[0m |   Mail,\n \u001b[2m10\u001b[0m |   FileText,;\n    : \u001b[35;1m           ^\u001b[0m\n \u001b[2m11\u001b[0m |   Briefcase,;\n \u001b[2m12\u001b[0m |   Users,;\n \u001b[2m13\u001b[0m |   BookOpen,;\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/NotFound.tsx\n\n./pages/enhanced-home.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token `;`. Expected identifier, string literal, numeric literal or [ for the computed key\n    ,-[\u001b[36;1;4m/workspace/pages/enhanced-home.tsx\u001b[0m:40:1]\n \u001b[2m37\u001b[0m |       description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',\n \u001b[2m38\u001b[0m |       color: 'from-blue-500 to-cyan-500'\n \u001b[2m39\u001b[0m |     },\n \u001b[2m40\u001b[0m |     {;\n    : \u001b[35;1m     ^\u001b[0m\n \u001b[2m41\u001b[0m |       icon: Shield,;\n \u001b[2m42\u001b[0m |       title: 'Cybersecurity',;\n \u001b[2m43\u001b[0m |       description: 'Advanced security measures to protect your digital assets and ensure compliance.',;\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/enhanced-home.tsx\n\n./pages/index.p.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got ';'\n    ,-[\u001b[36;1;4m/workspace/pages/index.p.tsx\u001b[0m:26:1]\n \u001b[2m23\u001b[0m |           dangerouslySetInnerHTML={{\n \u001b[2m24\u001b[0m |             __html: JSON.stringify({\n \u001b[2m25\u001b[0m |               '@context': 'https://schema.org', '@type': 'Organization',\n \u001b[2m26\u001b[0m |               'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',;\n    : \u001b[35;1m                                                                            ^\u001b[0m\n \u001b[2m27\u001b[0m |               'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', 'address': {;\n \u001b[2m28\u001b[0m |                 '@type': 'PostalAddress',;\n \u001b[2m29\u001b[0m |                 'addressCountry': 'US';\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.p.tsx\n\n\n> Build failed because of webpack errors\n"
+<<<<<<< HEAD
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+=======
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n.next/types/validator.ts:153:11\nType error: Type 'typeof import(\"/workspace/pages/sitemap\")' does not satisfy the expected type 'PagesPageConfig'.\n  Property 'default' is missing in type 'typeof import(\"/workspace/pages/sitemap\")' but required in type 'PagesPageConfig'.\n\n\u001b[0m \u001b[90m 151 |\u001b[39m {\n \u001b[90m 152 |\u001b[39m   \u001b[36mconst\u001b[39m handler \u001b[33m=\u001b[39m {} \u001b[36mas\u001b[39m \u001b[36mtypeof\u001b[39m \u001b[36mimport\u001b[39m(\u001b[32m\"../../pages/sitemap.js\"\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 153 |\u001b[39m   handler satisfies \u001b[33mPagesPageConfig\u001b[39m\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 154 |\u001b[39m }\n \u001b[90m 155 |\u001b[39m\n \u001b[90m 156 |\u001b[39m \u001b[90m// Validate ../../pages/solutions/ai-content-creation.tsx\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     },
     {
       "name": "Error Detection",
@@ -44,16 +56,16 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/LinkMonitor.jsx",
-            "issue": "Potential N+1 query problem"
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Potential infinite re-render"
           },
           {
             "file": "/workspace/src/components/PerformanceOptimizer.tsx",
             "issue": "Potential N+1 query problem"
           },
           {
-            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.js.jsx",
-            "issue": "Potential infinite re-render"
+            "file": "/workspace/src/components/accessibility/AccessibilityEnhancer.tsx",
+            "issue": "Potential N+1 query problem"
           },
           {
             "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.jsx",
@@ -77,11 +89,26 @@
       "result": {
         "issues": [
           {
+<<<<<<< HEAD
+            "file": "/workspace/src/components/SEO.tsx",
+            "issue": "Potential XSS vulnerability"
+          },
+          {
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "issue": "Potential XSS vulnerability"
+          },
+          {
             "file": "/workspace/src/utils/helpers.js",
             "issue": "Use of eval() detected"
           }
         ],
-        "count": 1
+<<<<<<< HEAD
+        "count": 3
+=======
+        "count": 2
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       }
     },
     {
@@ -90,15 +117,7 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/AICodeGenerator.js.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
             "file": "/workspace/src/components/AICodeGenerator.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
             "issue": "Console.log in production code"
           },
           {
@@ -106,31 +125,42 @@
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
+<<<<<<< HEAD
+=======
+            "file": "/workspace/src/components/ErrorBoundary.tsx",
             "issue": "Console.log in production code"
           },
           {
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             "file": "/workspace/src/components/MachineLearningDashboard.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MobileNavigation.jsx",
+<<<<<<< HEAD
+            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/ProductCard.jsx",
-            "issue": "TODO/FIXME comment found"
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "issue": "Console.log in production code"
           },
           {
             "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
             "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/pages/Search.tsx",
+          }
+        ],
+        "count": 7
+=======
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
             "issue": "Console.log in production code"
           }
         ],
-        "count": 10
+        "count": 5
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       }
     }
   ]

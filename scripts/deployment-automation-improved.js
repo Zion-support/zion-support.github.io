@@ -96,7 +96,6 @@ class ImprovedDeploymentAutomation {
         error: null,
         critical: step.critical,
         timestamp: new Date().toISOString()}
-;
       this.deploymentLog.steps.push(stepResult);
       this.deploymentLog.summary.successful++;
       console.log(`✅ ${step.name} completed successfully (${duration}ms)`)} catch (error) {
@@ -111,7 +110,6 @@ class ImprovedDeploymentAutomation {
         error: error.message,
         critical: step.critical,
         timestamp: new Date().toISOString()}
-;
       this.deploymentLog.steps.push(stepResult);
       this.deploymentLog.summary.failed++;
       console.log(`❌ ${step.name} failed (${duration}ms): ${error.message}`);

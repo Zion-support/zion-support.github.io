@@ -113,5 +113,4 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
       </section>
     </MainLayout>
   )}
-;
 export default AIContentGenerator

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
 import { User } from 'lucide-react';
 
 // Common interfaces for better type safety
@@ -35,6 +36,8 @@ interface ComponentProps {
 
 
 
+=======
+>>>>>>> main
 interface PerformanceMetrics {
   fcp?: number;
    lcp?: number;
@@ -47,7 +50,6 @@ const PerformanceMonitor: React.FC = () => {
     // Only run in browser environment;
     if (typeof window === 'undefined') return;
     const metrics: PerformanceMetrics = {}
-;
     // First Contentful Paint (FCP);
     const fcpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -110,11 +112,9 @@ const PerformanceMonitor: React.FC = () => {
         fetch('/api/analytics/performance', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'},
-          body: JSON.stringify({
+            'Content-Type': 'application/json'}, body: JSON.stringify({
             url: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
     }
-;
     // Send metrics when page is about to unload;
     window.addEventListener('beforeunload', sendMetrics);
     // Also send after a delay to capture late metrics;
@@ -128,6 +128,10 @@ const PerformanceMonitor: React.FC = () => {
       fmpObserver.disconnect();
       window.removeEventListener('beforeunload', sendMetrics)}
   }, []);
+<<<<<<< HEAD
   return null // This component doesn&apos;t render unknownthing'}
+=======
+  return null // This component doesn&apos;t render anything'}''
+>>>>>>> main
 ;
 export default PerformanceMonitor

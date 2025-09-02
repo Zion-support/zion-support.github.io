@@ -1,8 +1,9 @@
-
 import dynamic from 'next/dynamic';
-
 const ImageOptimizer = dynamic(() => import('./ImageOptimizer'), {
   loading: () => <p>Loading...</p>,
-})
+});
+<<<<<<< HEAD
 
-export default ImageOptimizer
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
+export default ImageOptimizer;

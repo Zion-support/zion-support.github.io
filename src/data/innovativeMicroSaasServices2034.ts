@@ -17,7 +17,7 @@ export interface InnovativeMicroSaasService2034 {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
+   contactInfo: {  phone: string;
    email: string;
-   website: string;
+   website: string
    address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const INNOVATIVE_MICRO_SAAS_SERVICES_2034: InnovativeMicroSaasService2034[] = [;

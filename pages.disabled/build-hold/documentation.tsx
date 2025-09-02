@@ -165,5 +165,4 @@ import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
       </div>
     </MainLayout>
   )}
-;
 export default Documentation

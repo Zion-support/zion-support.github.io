@@ -48,7 +48,6 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
       case 'operational
   ': return <CheckCircle className='w-5 h-5 text-green-500' />'      case 'degraded
   ': return <AlertCircle className='w-5 h-5 text-yellow-500' />'      case 'outage: return <XCircle className='w-5 h-5 text-red-500' />'      default: return <Clock className='w-5 h-5 text-gray-500' />'    }'  }
-;
   const getStatusColor = (status: string) => {
     switch (status) {
       case,
@@ -61,7 +60,6 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
   'text-red-600 bg-red-100'      default: return;
   'text-gray-600 bg-gray-100'    }
   '  }
-;
   const incidents = [
     {
       id: 1, title:,
@@ -153,5 +151,4 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
       </div>
     </MainLayout>
   )}
-;
 export default Status

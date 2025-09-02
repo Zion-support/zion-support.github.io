@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { Check, Download, Monitor, Smartphone, User, X } from 'lucide-react';
 
+=======
+import { Download, X, Smartphone, Monitor } from 'lucide-react';
+>>>>>>> main
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{
@@ -14,7 +18,6 @@ const PWARegistration: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
-
   useEffect(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
@@ -34,26 +37,22 @@ const PWARegistration: React.FC = () => {
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
-
     // Register service worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration)})
+          console.log('Service Worker registered successfully: ', registration)})
         .catch((error) => {
-          console.log('Service Worker registration failed:', error)})}
+          console.log('Service Worker registration failed: ', error)})}
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
       window.removeEventListener('appinstalled', handleAppInstalled)}
   }, []);
-
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
-
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    
     if (outcome === 'accepted') {
       console.log('User accepted the install prompt')} else {
       console.log('User dismissed the install prompt')}
@@ -63,12 +62,17 @@ const PWARegistration: React.FC = () => {
 
   const handleDismiss = () => {
     setShowInstallPrompt(false);
+<<<<<<< HEAD
 React, { useEffect, useState } from,
   react';
 import { Check, Download, Monitor, Smartphone, User, X } from 'lucide-react';import { Check, Download, Monitor, Smartphone, User, X } from 'lucide-react';';interface BeforeInstallPromptEvent extends Event {
+=======
+React, { useEffect, useState } from, react';'
+import { motion, AnimatePresence  , Download, X, Smartphone, Monitor   } from "lucide-react";';interface BeforeInstallPromptEvent extends Event {'
+>>>>>>> main
   readonly platforms: string[]
   readonly userChoice: Promise<{
-    outcome: 'accepted;
+    outcome: 'accepted;'
   ' | 'dismissed;
    platform: string  }>prompt(): Promise<void>
 }
@@ -83,25 +87,23 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
     const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true)}
-;
     // Listen for the appinstalled event;
 const handleAppInstalled = () => {setIsInstalled(true);
       setShowInstallPrompt(false);
       setDeferredPrompt(null)}
 ;
-window.addEventListener(,
-  beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener(
-  'appinstalled', handleAppInstalled)'    // Register service worker;
-    if ('serviceWorker;
+window.addEventListener(, beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener(
+  'appinstalled', handleAppInstalled)'    // Register service worker;'
+    if ('serviceWorker;'
   ' in navigator) {'      navigator.serviceWorker.register(
   '/sw.js');
   '        .then((registration) => {'          console.log(
-  'Service Worker registered successfully: , registration)})
-  '        .catch((error) => {
-          console.log('Service Worker registration failed: , error)'        })'    }
+  'Service Worker registered successfully:  , registration)})'
+  '        .catch((error) => {'
+          console.log('Service Worker registration failed:  , error)'        })'    }'
     return () => {
       window.removeEventListener(
-  'beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener(
+  'beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener('
   'appinstalled', handleAppInstalled)'    }'  }, []);
   const handleInstallClick = async () => {if (!deferredPrompt) return;
     deferredPrompt.prompt();
@@ -111,7 +113,7 @@ if (outcome ===;
   '      console.log('User accepted the install prompt;
   ')'    } else {
   '      console.log('User dismissed the install prompt;
-  ')'    }'setDeferredPrompt(null)    setShowInstallPrompt(false)}
+  ')'    }'setDeferredPrompt(null)    setShowInstallPrompt(false)}'
 ;
 const handleDismiss = () => {setShowInstallPrompt(false);
     setDeferredPrompt(null)}
@@ -183,7 +185,7 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
                   className='flex items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover:bg-blue-700 transition-colors''                >'                  <Download className='w-3 h-3' />'                  <span>Install</span>'                </button>
                 <button;
                   onClick={handleDismiss}
-                  className='text-gray-400 hover:text-gray-600 dark:hover:text-gray-300''                >'                  <X className='w-4 h-4' />'                </button>'              </div>
+                  className='text-gray-400 hover: text-gray-600 dark:hover:text-gray-300''                >'                  <X className='w-4 h-4' />'                </button>'              </div>
             </div>
           </div>
           <div className='mt-3 pt-3 border-t border-gray-200 dark:border-gray-700'>'            <div className='flex items-center justify-between text-xs text-gray-500 dark:text-gray-400'>'              <div className='flex items-center space-x-1'>'                <Smartphone className='w-3 h-3' />'                <span>Mobile & Desktop</span>'              </div>'
@@ -193,5 +195,4 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
       </motion.div>
     </AnimatePresence>
   )}
-;
 export default PWARegistration

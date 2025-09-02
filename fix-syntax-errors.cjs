@@ -62,7 +62,11 @@ function fixFilesInDirectory(dir) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+    if (
+      stat.isDirectory() &&
+      !file.startsWith('.') &&
+      file !== 'node_modules'
+    ) {
       fixedCount += fixFilesInDirectory(filePath);
     } else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(file)) {
       if (fixSyntaxErrors(filePath)) {

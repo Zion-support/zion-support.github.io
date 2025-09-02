@@ -312,6 +312,5 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       </footer>
     </div>
   )}
-;
 export default AIBusinessProcessOptimization''`;
   ''`''`

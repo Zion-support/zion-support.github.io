@@ -107,17 +107,18 @@ export interface SEOProps {
    type?: string;
    noindex?: boolean}
 export interface PerformanceMetrics {
-  fcp?: number;
-   // First Contentful Paint lcp?: number;
-   // Largest Contentful Paint fid?: number;
-   // First Input Delay cls?: number;
-   // Cumulative Layout Shift ttfb?: number;
-   // Time to First Byte}
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+}
 export interface AccessibilitySettings {
   highContrast: boolean;
-   fontSize: number;
-   reducedMotion: boolean;
-   screenReader: boolean}
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
    language: string;
@@ -186,7 +187,6 @@ export interface FormState {
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]}
-;
 // Component prop types;
 export interface BaseComponentProps {
   className?: string;

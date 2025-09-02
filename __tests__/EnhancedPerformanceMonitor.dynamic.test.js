@@ -2,24 +2,24 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EnhancedPerformanceMonitor.dynamic from '../components/EnhancedPerformanceMonitor.dynamic';
+import EnhancedPerformanceMonitordynamic from "../components/EnhancedPerformanceMonitor.dynamic";
 
-describe('EnhancedPerformanceMonitor.dynamic', () => {
+describe('EnhancedPerformanceMonitordynamic', () => {
   test('renders without crashing', () => {
-    render(<EnhancedPerformanceMonitor.dynamic />);
+    render(<EnhancedPerformanceMonitordynamic />);
     expect(screen.getByTestId('enhancedperformancemonitor.dynamic')).toBeInTheDocument()})
 
   test('displays correct content', () => {
-    render(<EnhancedPerformanceMonitor.dynamic />);
+    render(<EnhancedPerformanceMonitordynamic />);
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {
-    render(<EnhancedPerformanceMonitor.dynamic />);
+    render(<EnhancedPerformanceMonitordynamic />);
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {
-    render(<EnhancedPerformanceMonitor.dynamic />);
+    render(<EnhancedPerformanceMonitordynamic />);
     // Add styling tests if needed
   })})

@@ -34,48 +34,87 @@ interface ComponentProps {
 
 import { motion } from 'framer-motion';
 import { Card, CardContent } from './ui/Card';
+<<<<<<< HEAD
 import { Star, User } from 'lucide-react';
 
+=======
+import { Star } from 'lucide-react';
+>>>>>>> main
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'CEO',
+<<<<<<< HEAD
       compunknown: 'TechStart Inc.',
       content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+=======
+      company: 'TechStart Inc.',
+      content:
+        'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+>>>>>>> main
       rating: 5,
-      avatar: '/api/placeholder/64/64'},
+      avatar: '/api/placeholder/64/64',
+    },
     {
       name: 'Michael Chen',
       role: 'CTO',
+<<<<<<< HEAD
       compunknown: 'DataCorp',
       content: 'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+=======
+      company: 'DataCorp',
+      content:
+        'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+>>>>>>> main
       rating: 5,
-      avatar: '/api/placeholder/64/64'},
+      avatar: '/api/placeholder/64/64',
+    },
     {
       name: 'Emily Rodriguez',
       role: 'VP of Operations',
+<<<<<<< HEAD
       compunknown: 'GrowthCo',
       content: 'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+=======
+      company: 'GrowthCo',
+      content:
+        'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+>>>>>>> main
       rating: 5,
-      avatar: '/api/placeholder/64/64'}
-  ]
-  return(
-    <section className='py-20 bg-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      avatar: '/api/placeholder/64/64',
+    },
+  ];
+  return (
+    <section className="py-20 bg-white">
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What Our Clients Say
           </h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about working with us.
           </p>
         </motion.div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied
+            clients have to say about working with us.
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -83,23 +122,35 @@ const TestimonialsSection: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className='h-full hover:shadow-lg transition-shadow duration-300'>
-                <CardContent className='p-6'>
-                  <div className='flex items-center mb-4'>
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className='h-5 w-5 text-yellow-400 fill-current' />
+                      <Star
+                        key={i}
+                        className="h-5 w-5 text-yellow-400 fill-current"
+                      />
                     ))}
                   </div>
-                  <blockquote className='text-gray-600 mb-6 italic'>
+                  <blockquote className="text-gray-600 mb-6 italic">
                     '{testimonial.content}'
                   </blockquote>
-                  <div className='flex items-center'>
-                    <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4'>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
+<<<<<<< HEAD
                       <div className='font-semibold text-gray-900'>{testimonial.name}</div>
                       <div className='text-sm text-gray-500'>{testimonial.role}, {testimonial.compunknown}</div>
+=======
+                      <div className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {testimonial.role}, {testimonial.company}
+                      </div>
+>>>>>>> main
                     </div>
                   </div>
                 </CardContent>
@@ -109,6 +160,6 @@ const TestimonialsSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )}
-;
-export default TestimonialsSection
+  );
+};
+export default TestimonialsSection;

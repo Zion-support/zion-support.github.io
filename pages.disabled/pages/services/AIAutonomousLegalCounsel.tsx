@@ -168,6 +168,5 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/AIAutonomousLegalCounsel.tsx;
 export default AIAutonomousLegalCounsel'';'''

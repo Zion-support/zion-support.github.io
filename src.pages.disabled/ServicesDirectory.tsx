@@ -217,5 +217,4 @@ const ServicesDirectory = () => {
       </section>
     </div>
   )}
-;
 export default ServicesDirectory

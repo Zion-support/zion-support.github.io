@@ -23,7 +23,6 @@ describe(
     insert: mockInsert,
     select: mockSelect,
     single: mockSingle}
-;
   beforeEach(() => {
     // Reset all mocks before each test;
     mockSingle.mockReset();
