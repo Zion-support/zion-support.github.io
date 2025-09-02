@@ -1,5 +1,6 @@
-import React, { useState              } from 'react.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Home, 
   Briefcase, 
   Users, 
@@ -64,27 +65,25 @@ import { Home,
   Sun,
   Wind
   
-} from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()               => void}
+  isOpen: boolean;
+  onClose: () => void;
+}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<any>([]);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    setExpandedSections(prev => ;
-      prev.includes(section) ;
-        ? prev.filter(s => s !== section);
-        : [...prev, section];
-    );
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => (
+      prev.includes(section) ? prev.filter(s => s !== section) : [...prev, section]
+    ));
   };
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
+  const isActive = (path: string) => router.pathname === path;
 
   const navigation = {
 
@@ -151,7 +150,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
+  const renderNavSection = (title: string, items: { name: string; href: string; icon: any; description?: string }[], sectionKey: string) => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}

@@ -20,6 +20,125 @@ export interface Service {
 export const services: Service[] = [
   // Micro SaaS Services
   {
+    id: 'ai-sales-copilot',
+    name: 'AI Sales Copilot',
+    category: 'ai-services',
+    description: 'Context-aware AI assistant that drafts emails, qualifies leads, and updates CRM with verifiable sources.',
+    features: [
+      'RAG with CRM + email context',
+      'Auto-draft multi-thread replies',
+      'Meeting summary to CRM notes',
+      'Lead qualification scoring',
+      'Governed prompt library',
+      'SOC2-ready logging'
+    ],
+    pricing: { starter: 999, professional: 2999, enterprise: 7999, currency: 'USD' },
+    benefits: ['Shorter sales cycles', 'Higher reply rates', 'Better CRM hygiene'],
+    useCases: ['B2B outbound', 'Account management', 'Customer success'],
+    technologies: ['OpenAI', 'Vector DB', 'OAuth', 'HubSpot/Salesforce APIs'],
+    link: 'https://ziontechgroup.com/services/ai-sales-copilot',
+    icon: '🤝'
+  },
+  {
+    id: 'finops-cost-optimizer',
+    name: 'Cloud FinOps Cost Optimizer',
+    category: 'it-services',
+    description: 'Continuous cloud spend optimization with rightsizing, RI/SP recommendations, and anomaly detection.',
+    features: [
+      'Multi-cloud ingest (AWS, GCP, Azure)',
+      'Rightsizing recommendations',
+      'RI/SP planning and coverage',
+      'Kubernetes cost allocation',
+      'Anomaly detection alerts',
+      'Weekly savings reports'
+    ],
+    pricing: { starter: 2000, professional: 6500, enterprise: 18000, currency: 'USD' },
+    benefits: ['15–35% cost reduction', 'Fewer surprise bills', 'Tagging hygiene'],
+    useCases: ['Multi-account orgs', 'Kubernetes clusters', 'Data platforms'],
+    technologies: ['Cloud billing APIs', 'Timeseries DB', 'Python/Node'],
+    link: 'https://ziontechgroup.com/services/cloud-finops-cost-optimizer',
+    icon: '💸'
+  },
+  {
+    id: 'gdpr-dsar-automation',
+    name: 'GDPR/CCPA DSAR Automation',
+    category: 'micro-saas',
+    description: 'Automate data subject access requests with secure identity verification and system-of-record connectors.',
+    features: [
+      'Identity verification (KYC)',
+      'System discovery & connectors',
+      'Automated data packaging',
+      'Deletion and rectification flows',
+      'Deadline SLA tracking',
+      'Audit trails and exports'
+    ],
+    pricing: { starter: 99, professional: 299, enterprise: 999, currency: 'USD' },
+    benefits: ['Lower legal risk', 'Faster DSAR turnaround', 'Reduced manual work'],
+    useCases: ['B2C apps', 'Marketplaces', 'SaaS platforms'],
+    technologies: ['OAuth', 'Encryption at rest', 'Queue workers'],
+    link: 'https://ziontechgroup.com/services/gdpr-dsar-automation',
+    icon: '🛡️'
+  },
+  {
+    id: 'ai-data-labeling-studio',
+    name: 'AI Data Labeling Studio',
+    category: 'micro-saas',
+    description: 'Human-in-the-loop labeling with model-assisted pre-annotations and active learning loops.',
+    features: [
+      'Image, text, and audio tasks',
+      'Model-assisted pre-labels',
+      'Consensus and QA workflows',
+      'Active learning sampling',
+      'Webhooks and SDK',
+      'S3/GCS integrations'
+    ],
+    pricing: { starter: 49, professional: 199, enterprise: 799, currency: 'USD' },
+    benefits: ['Higher label quality', 'Lower cost per label', 'Faster model cycles'],
+    useCases: ['Computer vision', 'NLP', 'Speech analytics'],
+    technologies: ['React', 'WebSockets', 'CUDA optional', 'Cloud storage'],
+    link: 'https://ziontechgroup.com/services/ai-data-labeling-studio',
+    icon: '🏷️'
+  },
+  {
+    id: 'ml-observability-suite',
+    name: 'ML Observability Suite',
+    category: 'ai-services',
+    description: 'Monitor drift, data quality, and model performance with automated alerts and dashboards.',
+    features: [
+      'Feature drift detection',
+      'Data quality checks',
+      'Performance monitoring',
+      'Prompt and model versioning',
+      'Batch and real-time support',
+      'PagerDuty/Slack alerts'
+    ],
+    pricing: { starter: 1500, professional: 4500, enterprise: 12000, currency: 'USD' },
+    benefits: ['Reduced incidents', 'Faster RCA', 'Higher model reliability'],
+    useCases: ['Production ML', 'LLM apps', 'Realtime analytics'],
+    technologies: ['Python', 'Prometheus', 'Kafka', 'dbt'],
+    link: 'https://ziontechgroup.com/services/ml-observability-suite',
+    icon: '📈'
+  },
+  {
+    id: 'zero-trust-sase-rollout',
+    name: 'Zero Trust SASE Rollout',
+    category: 'it-services',
+    description: 'Plan and implement Zero Trust network access with identity-aware segmentation and continuous verification.',
+    features: [
+      'Maturity assessment',
+      'Identity provider integration',
+      'Device posture checks',
+      'Micro-segmentation policies',
+      'Logging and SIEM integration',
+      'Runbooks and training'
+    ],
+    pricing: { starter: 25000, professional: 65000, enterprise: 150000, currency: 'USD' },
+    benefits: ['Lower breach risk', 'Better user experience', 'Compliance-ready'],
+    useCases: ['Remote workforce', 'Contractor access', 'M&A consolidations'],
+    technologies: ['IdP', 'SASE', 'MDM', 'SIEM'],
+    link: 'https://ziontechgroup.com/services/zero-trust-sase-rollout',
+    icon: '🔒'
+  },
     id: 'ai-content-generator',
     name: 'AI Content Generator Pro',
     category: 'micro-saas',
