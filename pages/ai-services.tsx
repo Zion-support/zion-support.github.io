@@ -1064,6 +1064,182 @@ export default function AIServices() {
       pricing: '$4,000 - $18,000/month',
       delivery: '6-10 weeks',
       category: 'Customer AI'
+    },
+    {
+      title: 'AI-Powered MLOps Platform',
+      description: 'End-to-end machine learning operations with automated model deployment and monitoring',
+      icon: Settings,
+      features: [
+        'Automated model training and deployment pipelines',
+        'Real-time model performance monitoring',
+        'A/B testing and model versioning',
+        'Automated retraining and drift detection',
+        'Model governance and compliance tracking',
+        'Integration with cloud platforms and data sources'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-8 weeks',
+      category: 'MLOps AI'
+    },
+    {
+      title: 'AI-Powered Predictive Maintenance System',
+      description: 'Intelligent equipment maintenance prediction with IoT integration and cost optimization',
+      icon: Settings,
+      features: [
+        'Predictive failure analysis with 90%+ accuracy',
+        'Real-time equipment health monitoring',
+        'Automated maintenance scheduling optimization',
+        'Cost-benefit analysis for maintenance decisions',
+        'Integration with IoT sensors and SCADA systems',
+        'Maintenance history and performance analytics'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-6 weeks',
+      category: 'Industrial AI'
+    },
+    {
+      title: 'AI-Powered Natural Language Processing Engine',
+      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding',
+      icon: MessageSquare,
+      features: [
+        'Multi-language text analysis and sentiment detection',
+        'Automated document summarization and extraction',
+        'Real-time translation and language detection',
+        'Named entity recognition and relationship extraction',
+        'Custom model training for domain-specific applications',
+        'API integration for seamless deployment'
+      ],
+      pricing: '$2,000 - $10,000/month',
+      delivery: '3-5 weeks',
+      category: 'NLP AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Assessment Platform',
+      description: 'Intelligent financial risk analysis with real-time monitoring and predictive modeling',
+      icon: TrendingUp,
+      features: [
+        'Real-time credit risk assessment and scoring',
+        'Market risk analysis and portfolio optimization',
+        'Fraud detection and prevention algorithms',
+        'Regulatory compliance monitoring and reporting',
+        'Stress testing and scenario analysis',
+        'Integration with financial data sources and systems'
+      ],
+      pricing: '$4,000 - $18,000/month',
+      delivery: '5-7 weeks',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics Assistant',
+      description: 'Intelligent medical image analysis and diagnostic support with clinical decision assistance',
+      icon: Heart,
+      features: [
+        'Medical image analysis with 95%+ accuracy',
+        'Clinical decision support and recommendations',
+        'Patient risk stratification and monitoring',
+        'Drug interaction and adverse event prediction',
+        'Integration with EHR and medical imaging systems',
+        'HIPAA-compliant data processing and storage'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-10 weeks',
+      category: 'HealthTech AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Quality Control System',
+      description: 'Intelligent quality inspection and defect detection for manufacturing and production',
+      icon: Eye,
+      features: [
+        'Real-time defect detection and classification',
+        'Automated quality scoring and pass/fail decisions',
+        'Predictive quality analytics and trend analysis',
+        'Integration with production line systems',
+        'Custom model training for specific products',
+        'Quality reporting and compliance documentation'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Manufacturing AI'
+    },
+    {
+      title: 'AI-Powered Smart City Management Platform',
+      description: 'Intelligent urban infrastructure management with IoT integration and optimization',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and congestion management',
+        'Energy consumption monitoring and optimization',
+        'Environmental monitoring and pollution control',
+        'Public safety and emergency response coordination',
+        'Citizen service automation and optimization',
+        'Integration with smart city infrastructure and sensors'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-12 weeks',
+      category: 'Smart City AI'
+    },
+    {
+      title: 'AI-Powered Agricultural Intelligence System',
+      description: 'Intelligent farming optimization with crop monitoring, yield prediction, and resource management',
+      icon: TreePine,
+      features: [
+        'Crop health monitoring and disease detection',
+        'Yield prediction and optimization recommendations',
+        'Precision agriculture and resource allocation',
+        'Weather analysis and irrigation optimization',
+        'Integration with IoT sensors and drone imagery',
+        'Sustainability tracking and compliance reporting'
+      ],
+      pricing: '$2,500 - $10,000/month',
+      delivery: '4-6 weeks',
+      category: 'AgTech AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Trading Algorithm',
+      description: 'Intelligent algorithmic trading with market analysis and risk management',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and trend prediction',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Backtesting and strategy validation',
+        'Integration with trading platforms and data feeds',
+        'Compliance monitoring and regulatory reporting'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-8 weeks',
+      category: 'Trading AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Intelligence',
+      description: 'Advanced threat detection and response with behavioral analysis and automated defense',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection and user monitoring',
+        'Automated incident response and remediation',
+        'Threat intelligence and vulnerability assessment',
+        'Integration with security tools and SIEM systems',
+        'Compliance monitoring and audit reporting'
+      ],
+      pricing: '$4,000 - $18,000/month',
+      delivery: '5-7 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Personalization Engine',
+      description: 'Intelligent personalization platform for content, products, and user experiences',
+      icon: Users,
+      features: [
+        'Real-time user behavior analysis and profiling',
+        'Dynamic content and product recommendations',
+        'Personalized user interface adaptation',
+        'A/B testing and optimization automation',
+        'Cross-channel personalization consistency',
+        'Integration with CRM and marketing platforms'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Personalization AI'
     }
   ];
   const aiTechnologies = [

@@ -867,6 +867,182 @@ export default function ITServices() {
       pricing: '$5,000 - $30,000/month',
       delivery: '4-12 weeks',
       category: 'Security Services'
+    },
+    {
+      title: 'Advanced Data Analytics & Business Intelligence',
+      description: 'Comprehensive data analytics platform with real-time insights and predictive modeling',
+      icon: BarChart3,
+      features: [
+        'Real-time data processing and analytics',
+        'Advanced business intelligence dashboards',
+        'Predictive modeling and forecasting',
+        'Data visualization and reporting tools',
+        'Integration with multiple data sources',
+        'Custom analytics solutions and consulting'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '3-6 weeks',
+      category: 'Data Analytics'
+    },
+    {
+      title: 'Enterprise IoT Solutions & Integration',
+      description: 'Comprehensive IoT platform with device management, data processing, and analytics',
+      icon: Cpu,
+      features: [
+        'IoT device management and monitoring',
+        'Real-time data collection and processing',
+        'Edge computing and local processing',
+        'Integration with existing business systems',
+        'Custom IoT application development',
+        'Security and compliance for IoT devices'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'Advanced DevOps & CI/CD Automation',
+      description: 'Comprehensive DevOps platform with automated deployment, monitoring, and optimization',
+      icon: Settings,
+      features: [
+        'Automated CI/CD pipeline setup and management',
+        'Infrastructure as Code (IaC) implementation',
+        'Container orchestration and management',
+        'Automated testing and quality assurance',
+        'Performance monitoring and optimization',
+        'Disaster recovery and backup automation'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '3-5 weeks',
+      category: 'DevOps Services'
+    },
+    {
+      title: 'Enterprise API Management & Integration',
+      description: 'Comprehensive API strategy with management, security, and integration services',
+      icon: Code,
+      features: [
+        'API gateway setup and management',
+        'API security and authentication',
+        'Rate limiting and traffic management',
+        'API documentation and developer portals',
+        'Third-party API integration services',
+        'API performance monitoring and analytics'
+      ],
+      pricing: '$2,000 - $10,000/month',
+      delivery: '2-4 weeks',
+      category: 'API Services'
+    },
+    {
+      title: 'Advanced Database Management & Optimization',
+      description: 'Comprehensive database services with optimization, migration, and management',
+      icon: Database,
+      features: [
+        'Database performance tuning and optimization',
+        'Database migration and modernization',
+        'High availability and disaster recovery setup',
+        'Database security and compliance',
+        'Backup and recovery solutions',
+        'Database monitoring and maintenance'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '2-4 weeks',
+      category: 'Database Services'
+    },
+    {
+      title: 'Enterprise Mobile App Development',
+      description: 'Native and cross-platform mobile application development with backend integration',
+      icon: Smartphone,
+      features: [
+        'Native iOS and Android app development',
+        'Cross-platform development with React Native/Flutter',
+        'Mobile backend development and API integration',
+        'App store optimization and deployment',
+        'Mobile app security and compliance',
+        'Performance optimization and monitoring'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Mobile Development'
+    },
+    {
+      title: 'Advanced Cloud Security & Compliance',
+      description: 'Comprehensive cloud security with compliance management and threat protection',
+      icon: Shield,
+      features: [
+        'Cloud security architecture design',
+        'Compliance automation (SOC 2, GDPR, HIPAA)',
+        'Cloud access security broker (CASB) implementation',
+        'Security monitoring and incident response',
+        'Data encryption and key management',
+        'Regular security audits and assessments'
+      ],
+      pricing: '$4,000 - $18,000/month',
+      delivery: '4-8 weeks',
+      category: 'Cloud Security'
+    },
+    {
+      title: 'Enterprise Integration & Data Migration',
+      description: 'Comprehensive system integration with data migration and transformation services',
+      icon: Network,
+      features: [
+        'Legacy system integration and modernization',
+        'Data migration and transformation services',
+        'Enterprise service bus (ESB) implementation',
+        'Real-time data synchronization',
+        'Integration testing and validation',
+        'Ongoing integration support and maintenance'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-10 weeks',
+      category: 'Integration Services'
+    },
+    {
+      title: 'Advanced Performance Monitoring & Optimization',
+      description: 'Comprehensive application and infrastructure performance monitoring with optimization',
+      icon: BarChart3,
+      features: [
+        'Application performance monitoring (APM)',
+        'Infrastructure monitoring and alerting',
+        'Performance optimization and tuning',
+        'Capacity planning and scaling recommendations',
+        'Real-time dashboards and reporting',
+        'Proactive issue detection and resolution'
+      ],
+      pricing: '$2,000 - $10,000/month',
+      delivery: '2-4 weeks',
+      category: 'Performance Services'
+    },
+    {
+      title: 'Enterprise Backup & Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions with business continuity planning',
+      icon: Shield,
+      features: [
+        'Automated backup solutions and scheduling',
+        'Disaster recovery planning and testing',
+        'Business continuity planning and implementation',
+        'Data replication and synchronization',
+        'Recovery time objective (RTO) optimization',
+        'Regular disaster recovery testing and validation'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'Backup & Recovery'
+    },
+    {
+      title: 'Advanced Network Security & Monitoring',
+      description: 'Comprehensive network security with advanced threat detection and response',
+      icon: Network,
+      features: [
+        'Network security architecture design',
+        'Advanced threat detection and prevention',
+        'Network monitoring and traffic analysis',
+        'Intrusion detection and prevention systems',
+        'Network segmentation and micro-segmentation',
+        'Security incident response and forensics'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '3-6 weeks',
+      category: 'Network Security'
     }
   ];
 
