@@ -203,6 +203,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
   // Get notification styles
+<<<<<<< HEAD:ai-optimization-backups/NotificationSystem.tsx.backup.1756518985826
   const getNotificationStyles = (type: NotificationType, priority: string) => {
     const baseStyles = "border-l-4 ";
     
@@ -220,6 +221,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       default:
         return baseStyles + 'border-zion-slate bg-zion-slate/10';
     }
+=======
+        return baseStyles + 'border-zion-slate bg-zion-slate/10'}
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/NotificationSystem.tsx
   };
 
   // Get position classes
@@ -467,19 +471,34 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   ))
                 )}
               </AnimatePresence>
+<<<<<<< HEAD:ai-optimization-backups/NotificationSystem.tsx.backup.1756518985826
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
+=======
+            </div>;
+          </motion.div>;
+        )};
+      </AnimatePresence>;
+    </>;
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/NotificationSystem.tsx
   );
 };
 
 // Hook for using notifications in components
+<<<<<<< HEAD:ai-optimization-backups/NotificationSystem.tsx.backup.1756518985826
 export const useNotifications = () => {
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification(notification);
+=======
+export const useNotifications = () => {;
+  const addNotification = useCallback((notification: anyanyanyanyanyanyanyanyanyanyanyanyanyanyOmit<Notification, 'id' | 'timestamp' | 'read'>)               => {;
+    if ((window as ).addNotification) {;
+      (window as ).addNotification(notification);
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/NotificationSystem.tsx
     }
   }, []);
 
@@ -494,9 +513,21 @@ export const notificationUtils = {
         type: 'success',
         title,
         message,
+<<<<<<< HEAD:ai-optimization-backups/NotificationSystem.tsx.backup.1756518985826
         priority: 'medium',
         ...options
       });
+=======
+  ...options
+})};
+=======
+        priority: anyanyanyanyanyanyanyanyanyanyanyanyanyany'medium',;
+  ;
+  ;
+  ...options;
+      ;
+});
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/NotificationSystem.tsx
     }
   },
 

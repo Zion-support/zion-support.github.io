@@ -100,6 +100,7 @@ const quickActions = [
   }
 ];
 
+<<<<<<< HEAD:ai-optimization-backups/EnhancedMobileNavigation.tsx.backup.1756518985809
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
@@ -131,6 +132,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
+=======
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/EnhancedMobileNavigation.tsx
       }
     };
 
@@ -141,6 +144,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+<<<<<<< HEAD:ai-optimization-backups/EnhancedMobileNavigation.tsx.backup.1756518985809
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
@@ -164,6 +168,16 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
   const isActive = (path: string) => {
     if (path === '/') {
+=======
+      document.body.style.overflow = 'unset'}}, [isOpen]);
+
+        newSet.delete(label)} else {
+        newSet.add(label)}
+      return newSet})};
+
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    if (path === '/') {;
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/EnhancedMobileNavigation.tsx
       return activePath === '/';
     }
     return activePath.startsWith(path);

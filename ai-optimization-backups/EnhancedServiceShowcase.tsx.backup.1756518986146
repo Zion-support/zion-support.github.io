@@ -137,6 +137,7 @@ const categories = [
   'Healthcare AI'
 ];
 
+<<<<<<< HEAD:ai-optimization-backups/EnhancedServiceShowcase.tsx.backup.1756518986146
 export const EnhancedServiceShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
@@ -161,6 +162,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+=======
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/EnhancedServiceShowcase.tsx
         }
       },
       { threshold: 0.1 }

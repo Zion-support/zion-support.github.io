@@ -502,4 +502,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 };}
 =======
     return price >= minPrice && price <= maxPrice})};
+<<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190

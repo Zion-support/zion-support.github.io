@@ -1,6 +1,24 @@
+<<<<<<< HEAD:ai-optimization-backups/Accessibility.tsx.backup.1756680438411
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+=======
+import { useState, useEffect               } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { 
+  Accessibility as AccessibilityIcon, 
+  Type, 
+  Eye, 
+  Volume2, 
+  Keyboard, 
+  X,
+  Plus,
+  Minus,
+  Contrast,
+  Sun,
+  Moon,
+  Settings
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/Accessibility.tsx
 interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
@@ -123,8 +141,21 @@ export function Accessibility() {
     }
   };
 
+<<<<<<< HEAD:ai-optimization-backups/Accessibility.tsx.backup.1756680438411
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
     const newSettings = { ...settings, [key]: value };
+=======
+  const updateSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
+    const newSettings = {
+  ...settings,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  [key]: value ;
+};
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/Accessibility.tsx
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));

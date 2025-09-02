@@ -44,6 +44,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     const categories = data.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
+<<<<<<< HEAD:ai-optimization-backups/SearchAndFilterSystem.tsx.backup.1756680438763
     }, {} as Record<string, number>);
 
     const types = data.reduce((acc, item) => {
@@ -51,6 +52,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       return acc;
     }, {} as Record<string, number>);
 
+=======
+    }, {} as Record<string, any>);
+    const types = data.reduce((acc, item) => {
+      acc[item.type] = (acc[item.type] || 0) + 1;
+      return acc;
+    }, {} as Record<string, any>);
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/SearchAndFilterSystem.tsx
     return {
       categories: Object.entries(categories).map(([key, count]) => ({
         id: key,

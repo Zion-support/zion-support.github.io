@@ -18,6 +18,7 @@ interface StatsSectionProps {
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+<<<<<<< HEAD:ai-optimization-backups/StatsSection.tsx.backup.1756537992475
   const [counts, setCounts] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
@@ -29,6 +30,10 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 }, []);
   // TODO: Add dependencies if needed
 }, []);
+=======
+  const [counts, setCounts] = useState<any>({});
+  useEffect(()  => {
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/home/StatsSection.tsx
     if (isInView) {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {

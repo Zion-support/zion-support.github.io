@@ -100,6 +100,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   }, []);
 
+<<<<<<< HEAD:ai-optimization-backups/EnhancedAccessibility.tsx.backup.1756518985667
   // Load saved settings on mount
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -116,6 +117,14 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     }
   }, [applySettings]);
 
+=======
+  const toggleSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings)                => {
+    setSettings(prev => ({
+      ...prev,;
+      [key]: !prev[key];
+    }))};
+
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/EnhancedAccessibility.tsx
   // Screen reader announcements
   const announce = useCallback((message: string) => {
     const announcement = document.createElement('div');

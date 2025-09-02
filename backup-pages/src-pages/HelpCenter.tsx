@@ -306,6 +306,7 @@ export function HelpCenter() {
       setFilteredFAQs(faqData);
       return;
 
+<<<<<<< HEAD:backup-pages/src-pages/HelpCenter.tsx
     
     setFilteredFAQs (filtered) };
 
@@ -313,6 +314,12 @@ export function HelpCenter() {
   
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">"      <div className="container-responsive">
+=======
+  const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
+      <div className="container-responsive">
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/pages/HelpCenter.tsx
         {/* Header */}
         <motion.div"
           className="text-center mb-12"
@@ -499,7 +506,11 @@ export function HelpCenter() {
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD:backup-pages/src-pages/HelpCenter.tsx
                           transition={{ duration: 0.3 }}"
+=======
+                          transition={{ duration: 0.3 }}
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/pages/HelpCenter.tsx
                           className="border-t border-cyan-400/20"
                         >"
                           <div className="p-6 space-y-4">

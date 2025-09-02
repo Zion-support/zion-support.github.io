@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Cookie, 
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
+import { Cookie, 
   Shield, 
   Settings, 
   Eye, 
@@ -26,6 +31,27 @@ import {
 export default function Cookies() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const lastUpdated = 'January 15, 2025';
+=======
+  Globe,
+  CheckCircle,
+  AlertTriangle,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  Lock,
+  Globe,
+  BarChart3,
+  Users
+             } from 'lucide-react.ts';
+
+export default function Cookies(...args: any[]): any {
+  const [expandedSection, setExpandedSection] = useState<any>(null);
+  const [cookiePreferences, setCookiePreferences] = useState({
+    essential: true,
+    analytics: false,
+    marketing: false,
+    functional: false
+  });
 
   const cookieCategories = [
     {
@@ -167,8 +193,51 @@ export default function Cookies() {
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+=======
+  const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
+  const updateCookiePreference = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring, enabled: boolean)              => {
+    if (type === 'essential') return; // Essential cookies cannot be disabled
+    
+    setCookiePreferences(prev => ({
+      ...prev,
+      [type]: enabled
+    }));
+  };
+
+  const savePreferences = () => {
+    // In a real app, this would save preferences and update cookies
+    console.log('Cookie preferences saved:', cookiePreferences);
+    // Show success message
+    alert('Cookie preferences saved successfully!');
+  };
+
+  const acceptAll = () => {
+    setCookiePreferences({
+      essential: true,
+      analytics: true,
+      marketing: true,
+      functional: true
+    });
+    savePreferences();
+  };
+
+  const rejectAll = () => {
+    setCookiePreferences({
+      essential: true,
+      analytics: false,
+      marketing: false,
+      functional: false
+    });
+    savePreferences();
+  };
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Cookie, Shield, Settings, Eye, Database, Users, FileText, CheckCircle } from 'lucide-react';
+
+export default function Cookies() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -222,9 +291,9 @@ export default function Cookies() {
         </div>
       </section>
 
-      {/* Policy Overview */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Cookie Types Explanation */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -306,6 +375,9 @@ export default function Cookies() {
           
           <div className="space-y-6">
             {cookieCategories.map((category, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {cookieTypes.map((type, index)              => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}

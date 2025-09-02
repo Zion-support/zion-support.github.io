@@ -271,6 +271,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get status color and icon
+<<<<<<< HEAD:ai-optimization-backups/ResourceManagementSystem.tsx.backup.1756537993791
   const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'available':
@@ -307,6 +308,15 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20';
     }
+=======
+        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
+  };
+  // Get type icon
+      default: return <Globe className = "w-5 h-5" />};
+  };
+  // Get priority color
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/ResourceManagementSystem.tsx
   };
 
   // Format currency

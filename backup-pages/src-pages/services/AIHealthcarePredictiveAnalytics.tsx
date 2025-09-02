@@ -1,3 +1,59 @@
+<<<<<<< HEAD:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
+=======
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Heart, 
+  Brain, 
+  TrendingUp, 
+  Users, 
+  Database, 
+  BarChart3, 
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  DollarSign,
+  Target,
+  Globe,
+  Lock,
+  Search,
+  Calendar,
+  MessageSquare,
+  Bell,
+  Phone,
+  Mail,
+  MapPin,
+  Scale,
+  AlertTriangle,
+  BookOpen,
+  CreditCard,
+  Building,
+  Eye,
+  Clock,
+  Award,
+  Gauge,
+  PieChart,
+  Activity,
+  Stethoscope,
+  Pill,
+  Microscope,
+  Shield,
+  Activity as Heartbeat,
+  FileText,
+  UserCheck,
+  Clipboard,
+  TestTube
+} from 'lucide-react';
+import { SEO              } from '../../components/SEO';
+
+export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
+  const contactInfo = {
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
   ;
   ;
   website: 'https://ziontechgroup.com';

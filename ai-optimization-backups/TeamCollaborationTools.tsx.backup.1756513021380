@@ -60,10 +60,16 @@ interface Message {
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
+<<<<<<< HEAD:ai-optimization-backups/TeamCollaborationTools.tsx.backup.1756513021380
   reactions: { type: string; count: number }[];
   isRead: boolean;
 }
 
+=======
+  reactions: { type: string; count: number 
+}[];
+  isRead: boolean}
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/TeamCollaborationTools.tsx
 interface FileItem {
   id: string;
   name: string;
@@ -297,6 +303,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   }, []);
 
   // Get status color and icon
+<<<<<<< HEAD:ai-optimization-backups/TeamCollaborationTools.tsx.backup.1756513021380
   const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
@@ -347,12 +354,16 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
     return `${(size / 1024).toFixed(1)} GB`;
+=======
+      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }};
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/TeamCollaborationTools.tsx
   };
 
   // Handle project selection
   const handleProjectSelect = (project: Project) => {
     setSelectedProject(project);
   };
+<<<<<<< HEAD:ai-optimization-backups/TeamCollaborationTools.tsx.backup.1756513021380
 
   // Handle message reactions
   const handleMessageReaction = (messageId: string, reactionType: string) => {
@@ -364,6 +375,17 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         } else {
           msg.reactions.push({ type: reactionType, count: 1 });
         }
+=======
+  // Get priority color
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+  };
+  // Get file type icon
+      default: return <File className = "w-5 h-5" />};
+  };
+  // Format file size
+          existingReaction.count += 1} else {
+          msg.reactions.push({ type: reactionType, count: 1 })}
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/TeamCollaborationTools.tsx
       }
       return msg;
     }));

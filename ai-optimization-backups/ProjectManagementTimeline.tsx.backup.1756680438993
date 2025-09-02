@@ -288,6 +288,24 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'planning':
+<<<<<<< HEAD:ai-optimization-backups/ProjectManagementTimeline.tsx.backup.1756680438993
+=======
+  total: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
+    active: projects.filter(p               => p.status === 'active').length,
+    completed: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'completed').length,
+    onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'on-hold').length,;
+    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.budget, 0),;
+    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.progress,;
+  ;
+  ;
+  0) / projects.length || 0;
+  ;
+};
+  // Get status color and icon
+  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    switch (status) {;
+      case 'planning':;
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/ProjectManagementTimeline.tsx
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
       case 'active':
         return { color: 'text-green-400 bg-green-400/20', icon: <Play className="w-4 h-4" /> };
@@ -303,6 +321,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get priority color
+<<<<<<< HEAD:ai-optimization-backups/ProjectManagementTimeline.tsx.backup.1756680438993
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
@@ -311,9 +330,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20';
     }
+=======
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/ProjectManagementTimeline.tsx
   };
 
   // Get milestone status color
+<<<<<<< HEAD:ai-optimization-backups/ProjectManagementTimeline.tsx.backup.1756680438993
   const getMilestoneStatusColor = (status: string) => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
@@ -322,6 +345,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'overdue': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20';
     }
+=======
+      default: return 'text-zinc-400 bg-zinc-400/20'}
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190:src/components/ProjectManagementTimeline.tsx
   };
 
   // Format currency
