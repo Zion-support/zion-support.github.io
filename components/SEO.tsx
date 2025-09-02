@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/main
 
 interface SEOProps {
   title: string;
@@ -9,6 +12,7 @@ interface SEOProps {
   url?: string;
 }
 
+<<<<<<< HEAD
 export const SEO: React.FC<SEOProps> = ({ title, description, keywords, image, url }) => {
   return (
     <Helmet>
@@ -21,6 +25,10 @@ export const SEO: React.FC<SEOProps> = ({ title, description, keywords, image, u
       <meta property="og:description" content={description} />
     </Helmet>
   );
+=======
+const SEO: React.FC<SEOProps> = () => {
+  return null;
+>>>>>>> origin/main
 };
 
 export default SEO;

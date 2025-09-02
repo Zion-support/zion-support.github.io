@@ -1,21 +1,104 @@
-import React from 'react';'import type { NextPage } from 'next';'import MainLayout from '../components/layout/MainLayout';'import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from 'lucide-react';'import Link from 'next/link';''const Documentation: NextPage = () => {
+React from
+  'react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../components/layout/MainLayout';
+import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
+  'lucide-react';'import Link from
+  'next/link';'
+  'const Documentation: NextPage = () => {
   const docCategories = [;
     {;
-      icon: Book, title: 'Getting Started','      description: 'Quick start guides and basic setup instructions', articles: ['        { title: 'Introduction to Zion Tech Group', href: '/docs/introduction' }, { title: 'Account Setup', href: '/docs/account-setup' }, { title: 'First Steps', href: '/docs/first-steps' }, { title: 'Basic Configuration', href: '/docs/basic-config' }'      ]'    }, {;
+      icon: Book, title:,
+  Getting Started
+  ','      description: 'Quick start guides and basic setup instructions, articles: [,
+  { title: 'Introduction to Zion Tech Group, href:,
+  /docs/introduction
+  ' }, { title: 'Account Setup, href:,
+  /docs/account-setup
+  ' }, { title: 'First Steps, href:,
+  /docs/first-steps
+  ' }, { title: 'Basic Configuration, href: '/docs/basic-config
+  ' }'      ]
+  '    }, {;
       icon: Code,
-      title: 'API Reference', description: 'Complete API documentation and examples','      articles: ['        { title: 'Authentication', href: '/docs/api/auth' },'        { title: 'Endpoints', href: '/docs/api/endpoints' },'        { title: 'SDKs', href: '/docs/api/sdks' },'        { title: 'Rate Limits', href: '/docs/api/rate-limits' }'      ]'    }, {;
+      title:,
+  API Reference
+  ', description: 'Complete API documentation and examples,'      articles: [,
+  { title: 'Authentication, href:,
+  /docs/api/auth
+  ' },'        { title: 'Endpoints, href:,
+  /docs/api/endpoints' },
+  '        { title: 'SDKs, href:,
+  /docs/api/sdks
+  ' },'        { title: 'Rate Limits, href:
+  '/docs/api/rate-limits' }
+  '      ]'    }, {;
       icon: Database,
-      title: 'Data Management', description: 'Data handling, storage, and processing guides','      articles: ['        { title: 'Data Models', href: '/docs/data/models' },'        { title: 'Data Import/Export', href: '/docs/data/import-export' },'        { title: 'Data Security', href: '/docs/data/security' },'        { title: 'Backup & Recovery', href: '/docs/data/backup' }'      ]'    }, {;
+      title:,
+  Data Management', description: Data handling, storage, and processing guides,
+  ,
+  '      articles: ['        { title:
+  'Data Models, href:,
+  /docs/data/models' },
+  '        { title: 'Data Import/Export, href:,
+  /docs/data/import-export
+  ' },'        { title: 'Data Security, href:,
+  /docs/data/security' },
+  '        { title: 'Backup & Recovery, href: '/docs/data/backup
+  ' }'      ]
+  '    }, {;
       icon: Cloud,
-      title: 'Cloud Services', description: 'Cloud infrastructure and deployment guides','      articles: ['        { title: 'Cloud Setup', href: '/docs/cloud/setup' },'        { title: 'Deployment', href: '/docs/cloud/deployment' },'        { title: 'Scaling', href: '/docs/cloud/scaling' },'        { title: 'Monitoring', href: '/docs/cloud/monitoring' }'      ]'    }, {;
+      title:,
+  Cloud Services
+  ', description: 'Cloud infrastructure and deployment guides,'      articles: [,
+  { title: 'Cloud Setup, href:,
+  /docs/cloud/setup
+  ' },'        { title: 'Deployment, href:,
+  /docs/cloud/deployment' },
+  '        { title: 'Scaling, href:,
+  /docs/cloud/scaling
+  ' },'        { title: 'Monitoring, href:
+  '/docs/cloud/monitoring' }
+  '      ]'    }, {;
       icon: Shield,
-      title: 'Security', description: 'Security best practices and implementation','      articles: ['        { title: 'Security Overview', href: '/docs/security/overview' },'        { title: 'Authentication', href: '/docs/security/auth' },'        { title: 'Authorization', href: '/docs/security/authorization' },'        { title: 'Compliance', href: '/docs/security/compliance' }'      ]'    }, {;
+      title:,
+  Security', description: 'Security best practices and implementation,
+,
+  articles: ['        { title:
+  'Security Overview, href:,
+  /docs/security/overview' },
+  '        { title: 'Authentication, href:,
+  /docs/security/auth
+  ' },'        { title: 'Authorization, href:,
+  /docs/security/authorization' },
+  '        { title: 'Compliance, href: '/docs/security/compliance
+  ' }'      ]
+  '    }, {;
       icon: Zap,
-      title: 'Advanced Features', description: 'Advanced functionality and customization','      articles: ['        { title: 'Custom Integrations', href: '/docs/advanced/integrations' },'        { title: 'Workflow Automation', href: '/docs/advanced/automation' },'        { title: 'Performance Optimization', href: '/docs/advanced/performance' },'        { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' }'      ]'    }
+      title:,
+  Advanced Features
+  ', description: 'Advanced functionality and customization,'      articles: [,
+  { title: 'Custom Integrations, href:,
+  /docs/advanced/integrations
+  ' },'        { title: 'Workflow Automation, href:,
+  /docs/advanced/automation' },
+  '        { title: 'Performance Optimization, href:,
+  /docs/advanced/performance
+  ' },'        { title: 'Troubleshooting, href:,
+  /docs/advanced/troubleshooting' }
+  '      ]'    }
   ];
 
   const quickLinks = [;
-    { title: 'API Playground', href: '/api-playground', icon: Code }, { title: 'Status Page', href: '/status', icon: Zap },'    { title: 'Support', href: '/help', icon: Book }, { title: 'Community', href: '/community', icon: ExternalLink }'  ];'
+    { title: 'API Playground, href:
+  '/api-playground', icon: Code }, { title:,
+  Status Page', href: '/status, icon: Zap },
+,
+  { title: 'Support, href: '/help
+  ', icon: Book }, { title:,
+  Community
+  ', href: '/community, icon: ExternalLink }'  ];'
   return (
     <MainLayout
       title="Documentation - Zion Tech Group""      description="Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and technical resources to help you succeed.""      keywords="documentation, API reference, guides, tutorials, technical documentation, developer resources""    >"      <div className="min-h-screen bg-gray-50">"        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"          <div className="container mx-auto px-4 text-center">"            <h1 className="text-4xl md: text-5xl font-bold mb-6">Documentation</h1>"            <p className="text-xl text-gray-200 max-w-3xl mx-auto">"              Comprehensive guides, API references, and technical resources to help you "              make the most of our services and build amazing solutions.

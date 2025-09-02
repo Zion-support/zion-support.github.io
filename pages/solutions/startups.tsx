@@ -1,53 +1,63 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSign } from 'lucide-react';
-import Link from 'next/link';
+import React from,
+  react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSign } from
+  'lucide-react';
+import Link from
+  'next/link';
 
 const Startups: NextPage = () => {
   const solutions = [
     {
-      title: 'MVP Development',
-      description: 'Rapid development of minimum viable products to validate your ideas',
+      title:
+  'MVP Development,
+      description:
+  'Rapid development of minimum viable products to validate your ideas',
       icon: <Rocket className="w-8 h-8" />,
-      features: [
-        'Agile development methodology',
-        'Rapid prototyping',
-        'User feedback integration',
-        'Scalable architecture'
+      features: [,
+  Agile development methodology',
+  'Rapid prototyping',
+  'User feedback integration',
+  'Scalable architecture'
       ]
     },
     {
-      title: 'AI-Powered Analytics',
-      description: 'Data-driven insights to make informed business decisions',
+      title: 'AI-Powered Analytics,
+      description:
+  'Data-driven insights to make informed business decisions',
       icon: <Target className="w-8 h-8" />,
-      features: [
-        'Real-time analytics dashboard',
-        'Predictive modeling',
-        'Customer behavior analysis',
-        'Performance optimization'
+      features: [,
+  Real-time analytics dashboard',
+  'Predictive modeling',
+  'Customer behavior analysis',
+  'Performance optimization'
       ]
     },
     {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions that grow with your startup',
+      title: 'Cloud Infrastructure,
+      description:
+  'Scalable cloud solutions that grow with your startup',
       icon: <Globe className="w-8 h-8" />,
-      features: [
-        'Auto-scaling infrastructure',
-        'Cost optimization',
-        'High availability',
-        'Global deployment'
+      features: [,
+  Auto-scaling infrastructure',
+  'Cost optimization',
+  'High availability',
+  'Global deployment'
       ]
     },
     {
-      title: 'Digital Marketing Automation',
-      description: 'Automated marketing tools to accelerate growth',
+      title: 'Digital Marketing Automation,
+      description:
+  'Automated marketing tools to accelerate growth',
       icon: <Zap className="w-8 h-8" />,
       features: [
-        'Lead generation automation',
-        'Email marketing campaigns',
-        'Social media management',
-        'Conversion optimization'
+  'Lead generation automation',
+  'Email marketing campaigns',
+  'Social media management',
+  'Conversion optimization'
       ]
     }
   ];
@@ -55,66 +65,76 @@ const Startups: NextPage = () => {
   const benefits = [
     {
       icon: <Rocket className="w-6 h-6" />,
-      title: 'Fast Time to Market',
-      description: 'Launch your product 3x faster with our proven methodologies'
+      title:,
+  Fast Time to Market',
+      description: 'Launch your product 3x faster with our proven methodologies
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
-      title: 'Cost Effective',
-      description: 'Startup-friendly pricing with flexible payment options'
+      title:,
+  Cost Effective',
+      description: 'Startup-friendly pricing with flexible payment options
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Scalable Solutions',
-      description: 'Built to scale from day one as your startup grows'
+      title:,
+  Scalable Solutions',
+      description: 'Built to scale from day one as your startup grows
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Guidance',
-      description: 'Access to experienced entrepreneurs and technical experts'
+      title:,
+  Expert Guidance',
+      description: 'Access to experienced entrepreneurs and technical experts
     }
   ];
 
   const packages = [
     {
-      name: 'Launch',
-      price: '$2,999',
-      description: 'Perfect for early-stage startups',
+      name:,
+  Launch',
+      price: $2,999,
+  ,
+      description: 'Perfect for early-stage startups,
       features: [
-        'MVP development (4-6 weeks)',
-        'Basic cloud infrastructure',
-        'Essential integrations',
-        'Email support',
-        'Basic analytics setup'
+  'MVP development (4-6 weeks)',
+  'Basic cloud infrastructure',
+  'Essential integrations',
+  'Email support',
+  'Basic analytics setup'
       ],
       popular: false
     },
     {
-      name: 'Scale',
-      price: '$7,999',
-      description: 'Ideal for growing startups',
+      name:,
+  Scale',
+      price: $7,999,
+  ,
+      description: 'Ideal for growing startups,
       features: [
-        'Full product development (8-12 weeks)',
-        'Advanced cloud infrastructure',
-        'AI-powered analytics',
-        'Priority support',
-        'Marketing automation',
-        'Team training'
+  'Full product development (8-12 weeks)',
+  'Advanced cloud infrastructure',
+  'AI-powered analytics',
+  'Priority support',
+  'Marketing automation',
+  'Team training'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      description: 'Complete solution for established startups',
+      name:,
+  Enterprise',
+      price: 'Custom,
+      description:,
+  Complete solution for established startups',
       features: [
-        'Custom development timeline',
-        'Enterprise-grade infrastructure',
-        'Advanced AI solutions',
-        'Dedicated team',
-        '24/7 support',
-        'Custom integrations',
-        'Ongoing optimization'
+  'Custom development timeline,
+  'Enterprise-grade infrastructure',
+  'Advanced AI solutions',
+  'Dedicated team',
+  '24/7 support',
+  'Custom integrations',
+  'Ongoing optimization'
       ],
       popular: false
     }
@@ -123,16 +143,17 @@ const Startups: NextPage = () => {
   return (
     <MainLayout
       title="Startup Solutions - Zion Tech Group"
-      description="Accelerate your startup's growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."
+      description="Accelerate your startup,
+  s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Accelerate your startup's growth with our comprehensive technology solutions. 
+            Accelerate your startups growth with our comprehensive technology solutions. 
             From MVP development to scaling infrastructure, we help startups succeed.
           </p>
           
@@ -229,13 +250,16 @@ const Startups: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Packages</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the package that fits your startup's current stage and needs.
+              Choose the package that fits your startup
+  's current stage and needs.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
-              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ? 'ring-2 ring-blue-500' : ''}`}>
+              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?,
+  ring-2 ring-blue-500
+  ': '}`}>
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -265,8 +289,10 @@ const Startups: NextPage = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     pkg.popular
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                      ?,
+  bg-blue-600 hover: bg-blue-700 text-white'
+                      :
+  'bg-gray-100 hover:bg-gray-200 text-gray-900
                   }`}
                 >
                   Get Started

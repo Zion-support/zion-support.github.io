@@ -100,8 +100,17 @@
   "include": [
     "next-env.d.ts",
     "pages/**/*",
+<<<<<<< HEAD
     "src/**/*",
     "data/**/*",
+=======
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
+>>>>>>> origin/main
     ".next/types/**/*.ts"
   ],
   "exclude": [

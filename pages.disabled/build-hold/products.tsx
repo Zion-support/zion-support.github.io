@@ -1,15 +1,114 @@
-import React from 'react';'import type { NextPage } from 'next';'import MainLayout from '../components/layout/MainLayout';'import Link from 'next/link';'import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from 'lucide-react';''const Products: NextPage = () => {
+React from,
+  react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../components/layout/MainLayout';
+import Link from
+  'next/link';'import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from
+  'lucide-react';'
+  'const Products: NextPage = () => {
   const products = [;
     {;
-      title: 'AI Business Intelligence Platform', description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.','      features: ['        'Real-time data visualization', 'Predictive analytics','        'Custom dashboard creation', 'Automated reporting','        'Multi-source data integration''      ], pricing: 'Starting at $299/month','      category: 'AI & Analytics', rating: 4.9,'      users: '500+', image: '/products/ai-bi-platform.jpg''    },'    {;
-      title: 'Cloud Migration Suite', description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.','      features: ['        'Automated migration planning', 'Zero-downtime migration','        'Cost optimization analysis', 'Security compliance checks','        '24/7 migration support''      ], pricing: 'Starting at $199/month','      category: 'Cloud Computing', rating: 4.8,'      users: '300+', image: '/products/cloud-migration.jpg''    },'    {;
-      title: 'Cybersecurity Monitoring System', description: 'Protect your business with our advanced threat detection and response platform.','      features: ['        'Real-time threat monitoring', 'Automated incident response','        'Compliance reporting', 'Security awareness training','        '24/7 SOC support''      ], pricing: 'Starting at $399/month','      category: 'Cybersecurity', rating: 4.9,'      users: '200+', image: '/products/cybersecurity-monitoring.jpg''    },'    {;
-      title: 'Micro SaaS Development Kit', description: 'Build and launch your own micro SaaS products with our comprehensive development framework.','      features: ['        'Pre-built templates', 'Payment integration','        'User management system', 'Analytics dashboard','        'Deployment automation''      ], pricing: 'Starting at $149/month','      category: 'SaaS Development', rating: 4.7,'      users: '150+', image: '/products/micro-saas-kit.jpg''    },'    {;
-      title: 'Digital Transformation Hub', description: 'Accelerate your digital transformation with our integrated suite of modernization tools.','      features: ['        'Process automation', 'Legacy system integration','        'Workflow optimization', 'Change management tools','        'ROI tracking''      ], pricing: 'Starting at $249/month','      category: 'Digital Transformation', rating: 4.8,'      users: '400+', image: '/products/digital-transformation.jpg''    },'    {;
-      title: 'IoT Edge Computing Platform', description: 'Connect and manage your IoT devices with our powerful edge computing solution.','      features: ['        'Device management', 'Edge analytics','        'Real-time processing', 'Data synchronization','        'Remote monitoring''      ], pricing: 'Starting at $179/month','      category: 'IoT & Edge Computing', rating: 4.6,'      users: '100+', image: '/products/iot-edge-platform.jpg''    }'  ];
+      title: 'AI Business Intelligence Platform, description:,
+  Transform your data into actionable insights with our advanced AI-powered analytics platform.
+  ','      features: [
+  '        'Real-time data visualization, ,
+  Predictive analytics
+  ',' 
+  'Custom dashboard creation',
+  'Automated reporting',
+  '        'Multi-source data integration'
+  '      ], pricing: 'Starting at $299/month,'      category:
+  'AI & Analytics', rating: 4.9,
+,
+  users: '500+, image:,
+  /products/ai-bi-platform.jpg'
+  '    },'    {;
+      title: 'Cloud Migration Suite, description:,
+  Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
+  '      features: [' 
+  'Automated migration planning,
+,
+  Zero-downtime migration',
+  '        'Cost optimization analysis
+  ', 'Security compliance checks
+  ',' 
+  '24/7 migration support''      ], pricing: 'Starting at $199/month,
+,
+  category: 'Cloud Computing, rating: 4.8,'      users:,
+  300+', image: '/products/cloud-migration.jpg'    },
+,
+  {;
+      title: 'Cybersecurity Monitoring System, description:,
+  Protect your business with our advanced threat detection and response platform.
+  ','      features: [
+  '        'Real-time threat monitoring, ,
+  Automated incident response
+  ',' 
+  'Compliance reporting',
+  'Security awareness training',
+  '        '24/7 SOC support'
+  '      ], pricing: 'Starting at $399/month,'      category:
+  'Cybersecurity', rating: 4.9,
+,
+  users: '200+, image:,
+  /products/cybersecurity-monitoring.jpg'
+  '    },'    {;
+      title: 'Micro SaaS Development Kit, description:,
+  Build and launch your own micro SaaS products with our comprehensive development framework.',
+  '      features: [' 
+  'Pre-built templates,
+,
+  Payment integration',
+  '        'User management system
+  ', 'Analytics dashboard
+  ',' 
+  'Deployment automation''      ], pricing: 'Starting at $149/month,
+,
+  category: 'SaaS Development, rating: 4.7,'      users:,
+  150+', image: '/products/micro-saas-kit.jpg'    },
+,
+  {;
+      title: 'Digital Transformation Hub, description:,
+  Accelerate your digital transformation with our integrated suite of modernization tools.
+  ','      features: [
+  '        'Process automation, ,
+  Legacy system integration
+  ',' 
+  'Workflow optimization',
+  'Change management tools',
+  '        'ROI tracking'
+  '      ], pricing: 'Starting at $249/month,'      category:
+  'Digital Transformation', rating: 4.8,
+,
+  users: '400+, image:,
+  /products/digital-transformation.jpg'
+  '    },'    {;
+      title: 'IoT Edge Computing Platform, description:,
+  Connect and manage your IoT devices with our powerful edge computing solution.',
+  '      features: [' 
+  'Device management,
+,
+  Edge analytics',
+  '        'Real-time processing
+  ', 'Data synchronization
+  ',' 
+  'Remote monitoring''      ], pricing: 'Starting at $179/month,
+,
+  category: 'IoT & Edge Computing, rating: 4.6,'      users:,
+  100+', image: '/products/iot-edge-platform.jpg'    }
+  '  ];
 
   const categories = [;
-    'All Products', 'AI & Analytics','    'Cloud Computing', 'Cybersecurity','    'SaaS Development', 'Digital Transformation','    'IoT & Edge Computing''  ];'
+    'All Products
+  ', 'AI & Analytics
+  ',' 
+  'Cloud Computing',
+  'Cybersecurity',
+  '    'SaaS Development
+  ', 'Digital Transformation
+  ',' 
+  'IoT & Edge Computing''  ];'
   return (
     <MainLayout
       title="Products - Zion Tech Group""      description="Discover our comprehensive suite of technology products designed to accelerate your business growth and digital transformation.""    >"      {/* Hero Section */}
@@ -21,7 +120,9 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
       <section className="py-20 bg-gray-50">"        <div className="container mx-auto px-4">"          {/* Category Filter */}"          <div className="flex flex-wrap justify-center gap-4 mb-12">"            {categories.map((category, index) => ("              <button
                 key={index}
                 className={`px-6 py-2 rounded-full font-medium transition-colors ${`                  index === 0 
-                    ? 'bg-blue-600 text-white' '                    : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600''                }`}'              >`                {category}
+                    ?,
+  bg-blue-600 text-white' 
+  ': 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'                }`}'              >`                {category}
               </button>
             ))}
           </div>
@@ -43,7 +144,8 @@ import React from 'react';'import type { NextPage } from 'next';'import MainLayo
                     <span className="text-lg font-bold text-blue-600">"                      {product.pricing}"                    </span>
                   </div>
                   
-                  <div className="flex gap-3">"                    <Link "                      href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}'                      className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors""                    >"                      Learn More`                    </Link>
+                  <div className="flex gap-3">"                    <Link "                      href={`/products/${product.title.toLowerCase().replace(/\s+/g,
+  '-')}`}'                      className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors""                    >"                      Learn More`                    </Link>
                     <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-semibold transition-colors">"                      Demo"                    </button>
                   </div>
                 </div>

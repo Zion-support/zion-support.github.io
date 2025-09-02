@@ -1,9 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import SEOEnhancer from '../SEOEnhancer';
+=======
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+>>>>>>> origin/main
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -13,6 +18,7 @@ interface MainLayoutProps {
   ogImage?: string;
 }
 
+<<<<<<< HEAD
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
@@ -50,6 +56,17 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         </div>
       </AccessibilityEnhancer>
     </>
+=======
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation />
+      <main id="main-content" className="flex-grow" role="main">
+        {children}
+      </main>
+      <EnhancedFooter />
+    </div>
+>>>>>>> origin/main
   );
 };
 

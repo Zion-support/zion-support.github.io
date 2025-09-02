@@ -15,8 +15,10 @@ import {
   Target,
   BarChart3,
   Users,
-  Sparkles'
-} from 'lucide-react';
+  Sparkles
+  '
+} from 'lucide-react
+  ';
 ;
 export { function };
 export default function AIContentGenerator(...args[]):  {
@@ -91,34 +93,55 @@ export default function AIContentGenerator(...args[]):  {
     {
 
       icon: Target,
-      title: 'Audience Targeting',
-      description: 'Content tailored to specific demographics, industries, and customer personas'},;
+      title:,
+  Audience Targeting
+  ',
+      description: Content tailored to specific demographics, industries, and customer personas
+  '},;
     {;
       icon: BarChart3,;
-      title: 'Performance Analytics',;
-      description: 'Track content performance with AI-powered insights and optimization recommendations'};
+      title:,
+  Performance Analytics
+  ',;
+      description: 'Track content performance with AI-powered insights and optimization recommendations};
+  ];,
+  Increase content production by 10x with AI assistance
+  ',;
+    'Improve SEO rankings by 45% with optimized content
+  ',;
+    'Reduce content creation costs by 60%
+  ',;
+    'Boost engagement rates by 35% with targeted content
+  ',;
+    'Save 20+ hours per week on content creation
+  ',;
+    'Maintain consistent brand voice across all content
+  ';
   ];
 
-    'Increase content production by 10x with AI assistance',;
-    'Improve SEO rankings by 45% with optimized content',;
-    'Reduce content creation costs by 60%',;
-    'Boost engagement rates by 35% with targeted content',;
-    'Save 20+ hours per week on content creation',;
-    'Maintain consistent brand voice across all content';
-  ];
-
-        'Advanced security features',;
-        'Custom integrations';
+        'Advanced security features
+  ',;
+        'Custom integrations
+  ';
       ],;
-'Unlimited AI-generated content','
-        'Unlimited image generation','
-        'Custom AI model training','
-        'White-label solution','
-        'Dedicated account manager','
-        'SLA guarantees',;'
-        'Advanced security features',;'        'Custom integrations';
+'Unlimited AI-generated content
+  ','
+
+  'Unlimited image generation',
+  '
+        'Custom AI model training
+  ','
+
+  'White-label solution',
+  '
+        'Dedicated account manager
+  ','
+
+  'SLA guarantees',;'
+  'Advanced security features',;'
+  'Custom integrations';
       ],;'
-      cta: 'Contact Sales',;
+      cta: 'Contact Sales,;
       popular: false};
   ];
 
@@ -290,7 +313,8 @@ export default function AIContentGenerator(...args[]):  {
                 Perfect for Every Team
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you're a solo creator or enterprise team, our platform scales with you
+                Whether you
+  're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
 <=
@@ -443,9 +467,9 @@ export default function AIContentGenerator(...args[]):  {
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
 
-                    plan.popular'
-                      ? 'border-purple-500/50 shadow-lg shadow-purple-500/20''
-                      : 'border-slate-700/50'`
+                    plan.popular,
+  ?
+  'border-purple-500/50 shadow-lg shadow-purple-500/20'': 'border-slate-700/50`
                   }`}
 
                   {plan.popular && (;"
@@ -475,9 +499,10 @@ export default function AIContentGenerator(...args[]):  {
 `
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
-                    plan.popular'
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white''
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'`
+                    plan.popular,
+  ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white'
+  '
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white`
                   }`}>
                     {plan.cta}
                   </button>
