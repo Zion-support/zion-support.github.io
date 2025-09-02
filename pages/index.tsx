@@ -46,6 +46,28 @@ const Home: NextPage = () => {
           </motion.p>
           
           <motion.div 
+            className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">100+</div>
+                <div className="text-gray-200">Innovative Services</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">$2M+</div>
+                <div className="text-gray-200">Average Client Savings</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                <div className="text-gray-200">Expert Support</div>
+              </div>
+            </div>
+          </motion.div>
+          
+          <motion.div 
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -209,6 +231,137 @@ const Home: NextPage = () => {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Featured Innovative Services */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovative Solutions for Tomorrow's Challenges</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our cutting-edge services that are revolutionizing industries and driving digital transformation
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div 
+              className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum Computing Solutions</h3>
+              <p className="text-gray-600 mb-4">
+                Revolutionary quantum computing applications for optimization, cryptography, and scientific research.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">Starting at $999/month</div>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Autonomous Systems</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced AI systems for self-driving vehicles, drones, and robotics with real-time decision making.
+              </p>
+              <div className="text-sm text-purple-600 font-semibold">Starting at $100K</div>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">⛓️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Blockchain Infrastructure</h3>
+              <p className="text-gray-600 mb-4">
+                Complete blockchain setup and smart contract development for secure, decentralized applications.
+              </p>
+              <div className="text-sm text-green-600 font-semibold">Starting at $15K</div>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🎬</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Video Editor Pro</h3>
+              <p className="text-gray-600 mb-4">
+                Revolutionary AI-powered video editing that automatically creates professional videos from raw footage.
+              </p>
+              <div className="text-sm text-orange-600 font-semibold">Starting at $29/month</div>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Contract Auditor</h3>
+              <p className="text-gray-600 mb-4">
+                AI-powered smart contract auditing that automatically detects vulnerabilities and security issues.
+              </p>
+              <div className="text-sm text-red-600 font-semibold">Starting at $199/month</div>
+            </motion.div>
+
+            <motion.div 
+              className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Meta-Learning Platform</h3>
+              <p className="text-gray-600 mb-4">
+                Cutting-edge meta-learning that enables AI systems to learn how to learn and adapt quickly.
+              </p>
+              <div className="text-sm text-indigo-600 font-semibold">Starting at $100K</div>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/services" className="group">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto">
+                Explore All 100+ Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
