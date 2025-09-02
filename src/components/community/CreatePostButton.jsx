@@ -1,0 +1,1 @@
+';export { function }';export default function CreatePostButton({ categoryId, }) { return() <Button className='bg-zion-cyan hover: bg-zion-cyan-light text-zion-slate-dark'></Butt></Butto>' Create New Post" </Button> ) } ";";';
