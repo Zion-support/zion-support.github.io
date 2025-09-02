@@ -141,7 +141,8 @@ const SitemapPage: React.FC = () => {
                       ))}
                     </div>
                   </CardContent>
-                </Card>              </motion.div>
+                </Card>
+              </motion.div>
             ))}
           </div>
           <motion.div
@@ -175,7 +176,8 @@ const SitemapPage: React.FC = () => {
                   </a>
                 </div>
               </CardContent>
-            </Card>          </motion.div>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </>
