@@ -1,5 +1,4 @@
 describe (
-  'manufacturing - solutions', () => {}' it ('renders without crashing
-  ', () => {} render (<manufacturing - solutions />) '; expect (screen.getByRole (
+  'manufacturing - solutions', () => {}' it('renders without crashing', () => {} render(<manufacturingsolutions />) '; expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
-  ', () => {} render (<manufacturing - solutions />) ''
+  ', () => {} render(<manufacturingsolutions />) ''

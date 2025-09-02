@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-02T21:44:50.428Z",
+  "timestamp": "2025-09-02T21:47:51.351Z",
   "summary": {
     "total": 8,
     "successful": 4,
@@ -28,7 +28,7 @@
       "command": "npm run build",
       "description": "Build Application",
       "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./api-backup/admin/generate-pitch-deck.d.ts:1:53\nType error: Expression expected.\n\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m type { \u001b[33mNextApiRequest\u001b[39m\u001b[33m,\u001b[39m \u001b[33mNextApiResponse\u001b[39m } \u001b[36mfrom\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 2 |\u001b[39m   \u001b[32m'next'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mfunction\u001b[39m handler(\n \u001b[90m 4 |\u001b[39m   req\u001b[33m:\u001b[39m \u001b[33mNextApiRequest\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n.next/types/validator.ts:153:11\nType error: Type 'typeof import(\"/workspace/pages/sitemap\")' does not satisfy the expected type 'PagesPageConfig'.\n  Property 'default' is missing in type 'typeof import(\"/workspace/pages/sitemap\")' but required in type 'PagesPageConfig'.\n\n\u001b[0m \u001b[90m 151 |\u001b[39m {\n \u001b[90m 152 |\u001b[39m   \u001b[36mconst\u001b[39m handler \u001b[33m=\u001b[39m {} \u001b[36mas\u001b[39m \u001b[36mtypeof\u001b[39m \u001b[36mimport\u001b[39m(\u001b[32m\"../../pages/sitemap.js\"\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 153 |\u001b[39m   handler satisfies \u001b[33mPagesPageConfig\u001b[39m\n \u001b[90m     |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 154 |\u001b[39m }\n \u001b[90m 155 |\u001b[39m\n \u001b[90m 156 |\u001b[39m \u001b[90m// Validate ../../pages/solutions/ai-content-creation.tsx\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n"
     },
     {
       "name": "Error Detection",

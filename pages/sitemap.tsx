@@ -283,3 +283,6 @@ const SitemapPage: React.FC = () => {
   );
 }
 
+
+
+export default sitemap;
