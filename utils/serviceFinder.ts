@@ -19,28 +19,21 @@ export function findServicesByCategory(
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
-      if (s && typeof s.category ===
-  'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
-        results.push(s);
-      }
-    }
+if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {'        results.push(s);'      }}
   }
   
   return results;
 }
 
 export function findServicesByTag(
-  allServiceArrays: Service[][],
-  tagIncludes: string
-): Service[] {
+allServiceArrays: Service[][], tagIncludes: string): Service[] {
   const results: Service[] = [];
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
       if (s && s.tags && Array.isArray(s.tags)) {
-        const hasTag = s.tags.some(tag => 
-          typeof tag ===
-  'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())
+        const hasTag = s.tags.some(tag =>
+          typeof tag === 'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())
         );
         if (hasTag) {
           results.push(s);
@@ -61,8 +54,7 @@ export function findServicesByPriceRange(
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
-      if (s && typeof s.price ===
-  'number' && s.price >= minPrice && s.price <= maxPrice) {
+      if (s && typeof s.price === 'number' && s.price >= minPrice && s.price <= maxPrice) {
         results.push(s);
       }
     }
