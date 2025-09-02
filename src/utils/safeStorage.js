@@ -1,1 +1,1 @@
-function safeConsoleError(message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production';
+function safeConsoleError(message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if (env === 'development') { console.error(message, error); } } function safeStorage() { try { if (typeof window !== 'undefined' && window.localStorage) { return window.localStorage; } return null; } catch (error) { safeConsoleError('LocalStorage not available:', error); return null; } } export { safeStorage, safeConsoleError };
