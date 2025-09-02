@@ -7,16 +7,11 @@ import {
   Linkedin, Twitter,
   Github, Youtube,
   Instagram, ArrowRight,
-  Heart, Globe,
-  Shield, Users,
-  Award, Star,
-  Zap, Cloud,
-  Database, Network,
-  Target, CheckCircle,
-  ExternalLink
+  Heart,
+  Cloud,
+  Database
 } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -136,23 +131,56 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Stats Section */}
-<div className="border-t border-slate-700 py-8">"        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">"            <div>"              <div className="text-3xl font-bold text-white mb-2">200+</div>"              <div className="text-gray-400 text-sm">Projects Completed</div>"            </div>"            <div>
-              <div className="text-3xl font-bold text-white mb-2">50+</div>"              <div className="text-gray-400 text-sm">Expert Team Members</div>"            </div>"            <div>
-              <div className="text-3xl font-bold text-white mb-2">95%</div>"              <div className="text-gray-400 text-sm">Client Satisfaction</div>"            </div>"            <div>
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>"              <div className="text-gray-400 text-sm">Support Available</div>"            </div>"          </div></div>
+      <div className="border-t border-slate-700 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-white mb-2">200+</div>
+              <div className="text-gray-400 text-sm">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-400 text-sm">Expert Team Members</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white mb-2">95%</div>
+              <div className="text-gray-400 text-sm">Client Satisfaction</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white mb-2">24/7</div>
+              <div className="text-gray-400 text-sm">Support Available</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Bottom Footer */}
-<div className="border-t border-slate-700 py-6">"        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"          <div className="flex flex-col md:flex-row items-center justify-between">"            <div className="flex items-center space-x-6 mb-4 md:mb-0">"              <p className="text-gray-400 text-sm">"                © {currentYear} Zion Tech Group. All rights reserved."              </p>
-              <div className="flex items-center space-x-4">"                {legalLinks.map((link) => ("                  <Link
+      <div className="border-t border-slate-700 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-6 mb-4 md:mb-0">
+              <p className="text-gray-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex items-center space-x-4">
+                {legalLinks.map((link) => (
+                  <Link
                     key={link.name}
                     to={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm""                  >"                    {link.name}</Link>
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
                 ))}
               </div>
             </div>
             
-<div className="flex items-center space-x-2 text-gray-400 text-sm">"              <span>Made with</span>"              <Heart className="w-4 h-4 text-red-500" />"              <span>by Zion Tech Group</span>"            </div></div>
+            <div className="flex items-center space-x-2 text-gray-400 text-sm">
+              <span>Made with</span>
+              <Heart className="w-4 h-4 text-red-500" />
+              <span>by Zion Tech Group</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
