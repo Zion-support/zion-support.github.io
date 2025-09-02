@@ -22,16 +22,87 @@ const Solutions: NextPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact">
-              <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Get Your Solution
-              </a>
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              Get Your Solution
             </Link>
-            <Link href="/services">
-              <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                View All Services
-              </a>
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              View All Services
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Overview */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We offer comprehensive technology solutions across three main categories, 
+              each designed to address specific business needs and challenges.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Micro SaaS */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl text-center">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                Focused, affordable software solutions that solve specific business problems with minimal overhead.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-gray-600">• 8+ Specialized Applications</div>
+                <div className="text-sm text-gray-600">• Starting at $19/month</div>
+                <div className="text-sm text-gray-600">• Quick Implementation</div>
+                <div className="text-sm text-gray-600">• Scalable Solutions</div>
+              </div>
+              <Link href="/services/micro-saas" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+                Explore Micro SaaS
+              </Link>
+            </div>
+
+            {/* IT Services */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-xl text-center">
+              <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services & Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                Comprehensive IT infrastructure, security, and development services for modern businesses.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-gray-600">• 8+ Professional Services</div>
+                <div className="text-sm text-gray-600">• Starting at $2,000/project</div>
+                <div className="text-sm text-gray-600">• Enterprise-Grade Security</div>
+                <div className="text-sm text-gray-600">• 24/7 Support</div>
+              </div>
+              <Link href="/services/it-services" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+                Explore IT Services
+              </Link>
+            </div>
+
+            {/* AI Services */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl text-center">
+              <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Brain className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI & Machine Learning</h3>
+              <p className="text-gray-600 mb-6">
+                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-gray-600">• 8+ AI Solutions</div>
+                <div className="text-sm text-gray-600">• Starting at $5,000/project</div>
+                <div className="text-sm text-gray-600">• Custom AI Models</div>
+                <div className="text-sm text-gray-600">• Advanced Analytics</div>
+              </div>
+              <Link href="/services/ai-services" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+                Explore AI Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -372,15 +443,11 @@ const Solutions: NextPage = () => {
             Let's discuss your business needs and find the perfect technology solution to drive your success.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact">
-              <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Get Started Today
-              </a>
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              Get Started Today
             </Link>
-            <Link href="/services">
-              <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Explore Our Services
-              </a>
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              Explore Our Services
             </Link>
           </div>
         </div>
