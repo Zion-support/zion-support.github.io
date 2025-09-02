@@ -112,12 +112,12 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
       // Track form interactions
       const trackFormInteractions = (e: Event) => {
-        const target = e.target as HTMLElement;
+        const target = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
         if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'form_interaction', {
               event_category: 'form_engagement',
-              event_label: target.name || target.id || 'unknown_field',
+              event_label: (target as any).name || target.id || 'unknown_field',
               page_title: pageName
             });
           }

@@ -2,6 +2,14 @@
 
 import { useEffect, useState, useCallback } from 'react';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
+declare const gtag: (...args: any[]) => void;
+
 interface AnalyticsEvent {
   name: string;
   category: string;
