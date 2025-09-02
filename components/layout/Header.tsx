@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Sidebar as SidebarIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onSidebarToggle?: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onSidebarToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -29,6 +33,15 @@ const Header: React.FC = () => {
     { name: 'Micro SaaS', href: '/services/micro-saas' },
     { name: 'IT Services', href: '/services/it-services' },
     { name: 'AI Services', href: '/services/ai-services' },
+  ];
+
+  const popularServices = [
+    { name: 'AI Content Generator', href: '/services/ai-content-generator' },
+    { name: 'Cloud Migration', href: '/services/cloud-migration' },
+    { name: 'Custom AI Models', href: '/services/custom-ai-models' },
+    { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
+    { name: 'AI Video Editor Pro', href: '/services/ai-video-editor' },
+    { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
   ];
 
   const solutionCategories = [
@@ -94,16 +107,33 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="grid grid-cols-2 gap-4 p-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Service Categories</h4>
+                      {serviceCategories.map((category) => (
+                        <Link
+                          key={category.name}
+                          href={category.href}
+                          className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
+                        >
+                          {category.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Popular Services</h4>
+                      {popularServices.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -146,6 +176,17 @@ const Header: React.FC = () => {
               >
                 Contact
               </Link>
+
+              {/* Sidebar Toggle */}
+              {onSidebarToggle && (
+                <button
+                  onClick={onSidebarToggle}
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  aria-label="Open sidebar"
+                >
+                  <SidebarIcon className="w-5 h-5 text-gray-700" />
+                </button>
+              )}
 
               {/* CTA Button */}
               <Link

@@ -94,18 +94,20 @@ const Home: NextPage = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-20"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your digital transformation
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive technology solutions designed to accelerate your digital transformation. 
+              From cutting-edge AI to robust IT infrastructure, we provide the tools and expertise 
+              to drive your business forward.
             </p>
           </motion.div>
 
@@ -212,8 +214,76 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {/* Featured Services Showcase */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">Featured Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Discover our most innovative and impactful technology solutions that are transforming 
+              businesses across industries worldwide.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {services.slice(0, 6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02, y: -5 }}
+              >
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-3">{service.icon}</span>
+                  <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
+                </div>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-600">
+                    ${service.pricing.starter}
+                  </span>
+                  <span className="text-sm text-gray-500">starting at</span>
+                </div>
+                <Link href={service.link} className="group">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/services" className="group">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2 mx-auto">
+                View All Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why Choose Zion Tech Group */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"

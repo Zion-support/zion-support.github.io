@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import Sidebar from './Sidebar';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 
@@ -20,6 +21,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
   ogImage = '/og-image.jpg'
 }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <>
       <Head>
@@ -103,11 +105,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       <AccessibilityEnhancer />
       
       <div className="min-h-screen flex flex-col">
-        <Header />
+        <Header onSidebarToggle={() => setIsSidebarOpen(true)} />
         <main id="main-content" className="flex-grow" role="main">
-          {children}
+          <div className="container mx-auto px-4 py-8">
+            {children}
+          </div>
         </main>
         <Footer />
+        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       </div>
     </>
   );
