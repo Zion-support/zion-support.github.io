@@ -4847,6 +4847,359 @@ export const services: Service[] = [
     technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
     link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
     icon: '📈'
+  },
+  // New Innovative AI Services
+  {
+    id: 'ai-customer-sentiment-analyzer',
+    name: 'AI Customer Sentiment Analyzer Pro',
+    category: 'ai-services',
+    description: 'Advanced AI-powered sentiment analysis platform that monitors customer feedback across all channels in real-time, providing actionable insights for customer experience optimization.',
+    features: [
+      'Real-time sentiment monitoring',
+      'Multi-channel data integration (social media, reviews, surveys, support tickets)',
+      'Emotion detection and classification',
+      'Trend analysis and predictive insights',
+      'Automated alert system for negative sentiment spikes',
+      'Custom dashboard with KPI tracking',
+      'API integration with CRM systems',
+      'White-label reporting capabilities'
+    ],
+    pricing: {
+      starter: 199,
+      professional: 499,
+      enterprise: 1299,
+      currency: 'USD'
+    },
+    benefits: [
+      'Improve customer satisfaction by 40%',
+      'Reduce churn through early warning system',
+      'Enhance brand reputation management',
+      'Data-driven customer experience decisions',
+      'Competitive advantage through sentiment insights'
+    ],
+    useCases: [
+      'Brand reputation monitoring',
+      'Product feedback analysis',
+      'Customer service optimization',
+      'Marketing campaign effectiveness',
+      'Competitor sentiment tracking'
+    ],
+    technologies: ['OpenAI GPT-4', 'BERT', 'Python', 'React', 'Node.js', 'MongoDB', 'Redis'],
+    link: 'https://ziontechgroup.com/services/ai-customer-sentiment-analyzer',
+    icon: '😊'
+  },
+  {
+    id: 'ai-automated-email-followup',
+    name: 'AI Automated Email Follow-up System',
+    category: 'micro-saas',
+    description: 'Intelligent email automation platform that creates personalized follow-up sequences based on recipient behavior, industry best practices, and AI-optimized timing.',
+    features: [
+      'Behavior-triggered email sequences',
+      'AI-powered personalization engine',
+      'Optimal send time prediction',
+      'A/B testing for subject lines and content',
+      'Multi-channel follow-up (email, LinkedIn, SMS)',
+      'CRM integration and lead scoring',
+      'Compliance with GDPR and CAN-SPAM',
+      'Advanced analytics and ROI tracking'
+    ],
+    pricing: {
+      starter: 49,
+      professional: 149,
+      enterprise: 399,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase email open rates by 60%',
+      'Automate 80% of follow-up activities',
+      'Improve lead conversion by 35%',
+      'Save 10+ hours per week on manual follow-ups',
+      'Scale personalized outreach efforts'
+    ],
+    useCases: [
+      'Sales prospecting and nurturing',
+      'Customer onboarding sequences',
+      'Event follow-up campaigns',
+      'Abandoned cart recovery',
+      'Lead qualification automation'
+    ],
+    technologies: ['OpenAI GPT-4', 'SendGrid', 'HubSpot API', 'React', 'Node.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/ai-automated-email-followup',
+    icon: '📧'
+  },
+  {
+    id: 'ai-seo-content-optimizer',
+    name: 'AI SEO Content Optimizer',
+    category: 'ai-services',
+    description: 'Advanced AI-powered SEO optimization platform that analyzes and optimizes content for search engines, providing real-time suggestions and competitive analysis.',
+    features: [
+      'Real-time SEO scoring and recommendations',
+      'Keyword research and competitor analysis',
+      'Content optimization suggestions',
+      'Technical SEO audit and fixes',
+      'Local SEO optimization',
+      'Schema markup generation',
+      'Performance tracking and reporting',
+      'Multi-language SEO support'
+    ],
+    pricing: {
+      starter: 79,
+      professional: 199,
+      enterprise: 599,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase organic traffic by 150%',
+      'Improve search rankings significantly',
+      'Reduce SEO management time by 70%',
+      'Stay ahead of algorithm updates',
+      'Competitive advantage in search results'
+    ],
+    useCases: [
+      'Website SEO optimization',
+      'Content marketing campaigns',
+      'E-commerce product optimization',
+      'Local business visibility',
+      'Technical SEO audits'
+    ],
+    technologies: ['OpenAI GPT-4', 'Google Search Console API', 'Python', 'React', 'Node.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/ai-seo-content-optimizer',
+    icon: '🔍'
+  },
+  {
+    id: 'ai-customer-support-automation',
+    name: 'AI Customer Support Automation Platform',
+    category: 'ai-services',
+    description: 'Comprehensive AI-powered customer support platform with intelligent chatbots, ticket routing, and automated resolution capabilities.',
+    features: [
+      'Intelligent chatbot with natural language processing',
+      'Automated ticket classification and routing',
+      'Knowledge base integration and auto-updates',
+      'Multi-language support (50+ languages)',
+      'Sentiment analysis and escalation triggers',
+      'Integration with popular CRM systems',
+      'Real-time analytics and performance metrics',
+      'Custom workflow automation'
+    ],
+    pricing: {
+      starter: 299,
+      professional: 799,
+      enterprise: 1999,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce support costs by 60%',
+      'Improve response time by 80%',
+      'Increase customer satisfaction scores',
+      '24/7 automated support availability',
+      'Scale support operations efficiently'
+    ],
+    useCases: [
+      'E-commerce customer support',
+      'SaaS product support',
+      'Enterprise helpdesk automation',
+      'Multi-channel support management',
+      'Customer onboarding assistance'
+    ],
+    technologies: ['OpenAI GPT-4', 'Dialogflow', 'React', 'Node.js', 'MongoDB', 'WebSocket'],
+    link: 'https://ziontechgroup.com/services/ai-customer-support-automation',
+    icon: '🤖'
+  },
+  {
+    id: 'ai-affiliate-marketing-tracker',
+    name: 'AI Affiliate Marketing Tracker',
+    category: 'micro-saas',
+    description: 'Advanced affiliate marketing platform with AI-powered fraud detection, performance optimization, and automated commission management.',
+    features: [
+      'Real-time affiliate performance tracking',
+      'AI-powered fraud detection and prevention',
+      'Automated commission calculations and payments',
+      'Cross-device attribution tracking',
+      'Custom landing page builder',
+      'Advanced analytics and reporting',
+      'API integration with e-commerce platforms',
+      'Compliance with affiliate marketing regulations'
+    ],
+    pricing: {
+      starter: 99,
+      professional: 299,
+      enterprise: 799,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase affiliate program ROI by 40%',
+      'Reduce fraud losses by 85%',
+      'Automate 90% of affiliate management tasks',
+      'Improve affiliate partner relationships',
+      'Scale affiliate marketing efforts'
+    ],
+    useCases: [
+      'E-commerce affiliate programs',
+      'SaaS referral programs',
+      'Content creator partnerships',
+      'Influencer marketing campaigns',
+      'Multi-brand affiliate management'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Stripe', 'Machine Learning'],
+    link: 'https://ziontechgroup.com/services/ai-affiliate-marketing-tracker',
+    icon: '🤝'
+  },
+  {
+    id: 'ai-project-management-assistant',
+    name: 'AI Project Management Assistant',
+    category: 'micro-saas',
+    description: 'Intelligent project management platform with AI-powered task prioritization, resource allocation, and risk prediction capabilities.',
+    features: [
+      'AI-powered task prioritization and scheduling',
+      'Intelligent resource allocation and workload balancing',
+      'Risk prediction and mitigation suggestions',
+      'Automated progress tracking and reporting',
+      'Team collaboration and communication tools',
+      'Integration with popular project management tools',
+      'Custom workflow automation',
+      'Advanced analytics and insights'
+    ],
+    pricing: {
+      starter: 29,
+      professional: 79,
+      enterprise: 199,
+      currency: 'USD'
+    },
+    benefits: [
+      'Improve project delivery time by 30%',
+      'Reduce project risks by 50%',
+      'Optimize resource utilization',
+      'Enhance team productivity',
+      'Better project visibility and control'
+    ],
+    useCases: [
+      'Software development projects',
+      'Marketing campaign management',
+      'Event planning and execution',
+      'Construction project management',
+      'Consulting project delivery'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Machine Learning', 'WebSocket', 'Calendar APIs'],
+    link: 'https://ziontechgroup.com/services/ai-project-management-assistant',
+    icon: '📋'
+  },
+  // New IT Services
+  {
+    id: 'cloud-cost-optimization-suite',
+    name: 'Cloud Cost Optimization Suite',
+    category: 'it-services',
+    description: 'Comprehensive cloud cost management platform that uses AI to analyze usage patterns, identify waste, and optimize cloud spending across AWS, Azure, and GCP.',
+    features: [
+      'Multi-cloud cost analysis and optimization',
+      'AI-powered usage pattern analysis',
+      'Automated rightsizing recommendations',
+      'Reserved instance and savings plan optimization',
+      'Real-time cost monitoring and alerts',
+      'Budget management and forecasting',
+      'Cost allocation and chargeback reporting',
+      'Integration with cloud provider APIs'
+    ],
+    pricing: {
+      starter: 500,
+      professional: 2000,
+      enterprise: 10000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce cloud costs by 30-50%',
+      'Eliminate waste and unused resources',
+      'Optimize resource utilization',
+      'Improve budget predictability',
+      'Automate cost management processes'
+    ],
+    useCases: [
+      'Enterprise cloud cost management',
+      'Multi-cloud environment optimization',
+      'Startup cost optimization',
+      'DevOps cost monitoring',
+      'Financial planning and budgeting'
+    ],
+    technologies: ['Python', 'AWS Cost Explorer API', 'Azure Cost Management', 'GCP Billing API', 'React', 'Node.js'],
+    link: 'https://ziontechgroup.com/services/cloud-cost-optimization-suite',
+    icon: '💰'
+  },
+  {
+    id: 'zero-trust-security-platform',
+    name: 'Zero Trust Security Platform',
+    category: 'it-services',
+    description: 'Comprehensive zero trust security solution that implements identity verification, device trust, and network segmentation for enterprise environments.',
+    features: [
+      'Identity and access management (IAM)',
+      'Device trust and compliance verification',
+      'Network segmentation and micro-segmentation',
+      'Continuous security monitoring',
+      'Privileged access management (PAM)',
+      'Multi-factor authentication (MFA)',
+      'Security policy enforcement',
+      'Incident response automation'
+    ],
+    pricing: {
+      starter: 2000,
+      professional: 8000,
+      enterprise: 25000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce security breaches by 80%',
+      'Comply with industry regulations',
+      'Improve security posture',
+      'Simplify access management',
+      'Enable secure remote work'
+    ],
+    useCases: [
+      'Enterprise security transformation',
+      'Remote workforce security',
+      'Compliance and regulatory requirements',
+      'Cloud migration security',
+      'Merger and acquisition security'
+    ],
+    technologies: ['Okta', 'Azure AD', 'AWS IAM', 'Cisco', 'Palo Alto', 'Python', 'React'],
+    link: 'https://ziontechgroup.com/services/zero-trust-security-platform',
+    icon: '🔒'
+  },
+  {
+    id: 'ai-devops-automation-platform',
+    name: 'AI DevOps Automation Platform',
+    category: 'it-services',
+    description: 'Intelligent DevOps platform that automates CI/CD pipelines, infrastructure provisioning, and deployment processes using AI and machine learning.',
+    features: [
+      'AI-powered CI/CD pipeline optimization',
+      'Automated infrastructure provisioning',
+      'Intelligent deployment strategies',
+      'Performance monitoring and optimization',
+      'Automated testing and quality gates',
+      'Infrastructure as Code (IaC) management',
+      'Container orchestration and management',
+      'Disaster recovery automation'
+    ],
+    pricing: {
+      starter: 1000,
+      professional: 4000,
+      enterprise: 15000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce deployment time by 70%',
+      'Improve deployment success rates',
+      'Minimize human errors',
+      'Scale DevOps operations',
+      'Optimize resource utilization'
+    ],
+    useCases: [
+      'Software development automation',
+      'Cloud infrastructure management',
+      'Microservices deployment',
+      'Legacy system modernization',
+      'Multi-environment management'
+    ],
+    technologies: ['Kubernetes', 'Docker', 'Jenkins', 'Terraform', 'Ansible', 'Python', 'React'],
+    link: 'https://ziontechgroup.com/services/ai-devops-automation-platform',
+    icon: '⚙️'
   }
 ];
 
