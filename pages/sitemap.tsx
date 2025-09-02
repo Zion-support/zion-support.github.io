@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';

@@ -32,11 +32,7 @@ import {
   BookOpen,
   Lightbulb,
   HelpCircle,
-<<<<<<< HEAD
   Network
-=======
-  Network as NetworkIcon,
->>>>>>> main
 } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
