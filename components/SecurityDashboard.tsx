@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';\nimport { motion } from 'framer-motion';\nimport { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';''interface SecurityMetrics {
+=======
+React, { useEffect, useState } from
+  'react';
+import { motion } from 'lucide-react';
+  'framer-motion';'import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';
+  'lucide-react';'
+  'interface SecurityMetrics {
+>>>>>>> origin/main
   overallScore: number;
   vulnerabilities: {;critical: number;
     high: number;
@@ -31,7 +40,13 @@ const mockData: SecurityMetrics = {;
   }
 
   const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-500';'    if (score >= 70) return 'text-yellow-500';'    return 'text-red-500';'  };'
+    if (score >= 90) return 'text-green-500
+  ;
+   if (score >= 70) return
+  'text-yellow-500;
+   return
+  'text-red-500;
+ };'
   return (
     <div className="space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>
 

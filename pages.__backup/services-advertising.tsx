@@ -1,8 +1,12 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from
+  'react';
+import SEO from
+  '../components/SEO';
 
 const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
+	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace(,
+  https: //, '
+  ')}</a>
 );
 
 export default function ServicesAdvertisingPage() {
@@ -12,90 +16,161 @@ export default function ServicesAdvertisingPage() {
 				<title>Services Advertising | Zion Tech Group</title>
 				<meta name="description" content="Features, benefits, and market references for Zion Tech Group services" />
 				<link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
-			</Head>const benefits = [
-    '1000% ROI target with measurable KPIs',
-    'Transparent pricing with market references',
-    'Fast onboarding with templates and playbooks',
-    'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',
-    'Proven architectures and reference implementations'
+			</Head>const benefits = [,
+  1000% ROI target with measurable KPIs
+  ',
+    'Transparent pricing with market references
+  ',
+    'Fast onboarding with templates and playbooks
+  ',
+    'Enterprise-grade security and compliance
+  ',
+    '24/7 support with SLAs
+  ',
+    'Proven architectures and reference implementations
+  '
   ];
 
   const anchors = [
-    { title: 'AI & Data', href: '/services#ai' },
-    { title: 'Cloud & FinOps', href: '/services#cloud' },
-    { title: 'Observability', href: '/services#observability' },
-    { title: 'Developer Tools', href: '/services#developer-tools' },
-    { title: 'Quality & Monitoring', href: '/services#quality' }
+    { title: 'AI & Data, href:,
+  /services#ai
+  ' },
+    { title: 'Cloud & FinOps, href:,
+  /services#cloud
+  ' },
+    { title: 'Observability, href:,
+  /services#observability
+  ' },
+    { title: 'Developer Tools, href:,
+  /services#developer-tools
+  ' },
+    { title: 'Quality & Monitoring, href:,
+  /services#quality
+  ' }
   ];
 
   const pricingRefs = [
     {
-      title: 'AI Platforms',
+      title: 'AI Platforms,
       links: [
-        { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
-        { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
-        { name: 'Langfuse', href: 'https://langfuse.com/pricing' },
-        { name: 'Groq', href: 'https://wow.groq.com/pricing' },
-        { name: 'OpenRouter', href: 'https://openrouter.ai/models' }
+        { name:,
+  OpenAI
+  ', href: 'https://openai.com/api/pricing },
+        { name:,
+  Anthropic
+  ', href: 'https://www.anthropic.com/pricing },
+        { name:,
+  Langfuse
+  ', href: 'https://langfuse.com/pricing },
+        { name:,
+  Groq
+  ', href: 'https://wow.groq.com/pricing },
+        { name:,
+  OpenRouter
+  ', href: 'https://openrouter.ai/models }
       ],
-      note: 'SMB budgets: $100–$2,000/mo.'
+      note: 'SMB budgets: $100–$2,000/mo.,
+  },
+    {
+      title: 'Security & Compliance,
+      links: [
+        { name:,
+  Wiz
+  ', href: 'https://www.wiz.io/pricing },
+        { name:,
+  Prisma Cloud
+  ', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing },
+        { name:,
+  HashiCorp Vault
+  ', href: 'https://www.hashicorp.com/products/vault/pricing },
+        { name:,
+  Cloudflare Zero Trust
+  ', href: 'https://www.cloudflare.com/products/zero-trust/pricing/ }
+      ],
+      note: 'SMB budgets: $200–$5,000/mo.,
+  },
+    {
+      title: 'Vector & Search,
+      links: [
+        { name:,
+  Pinecone
+  ', href: 'https://www.pinecone.io/pricing/ },
+        { name:,
+  Weaviate
+  ', href: 'https://weaviate.io/pricing },
+        { name:,
+  Qdrant
+  ', href: 'https://qdrant.tech/pricing/ }
+      ],
+      note: 'SMB budgets: $50–$1,000/mo.,
+  },
+    {
+      title: 'Cloud & Edge,
+      links: [
+        { name:,
+  AWS Calculator
+  ', href: 'https://calculator.aws },
+        { name:,
+  Azure
+  ', href: 'https://azure.microsoft.com/pricing },
+        { name:,
+  Cloudflare
+  ', href: 'https://www.cloudflare.com/plans/ },
+        { name:,
+  Netlify
+  ', href: 'https://www.netlify.com/pricing/ }
+      ],
+      note: 'SMB budgets: $200–$10,000/mo.,
+  },
+    {
+      title: 'EDR/XDR & MDR,
+      links: [
+        { name:,
+  CrowdStrike
+  ', href: 'https://www.crowdstrike.com/pricing/ },
+        { name:,
+  Microsoft Defender
+  ', href: 'https://www.microsoft.com/security/business/microsoft-defender-pricing },
+        { name:,
+  Arctic Wolf MDR
+  ', href: 'https://arcticwolf.com/platform/managed-detection-response/ }
+      ],
+      note:,
+  EDR/XDR from $5–$25/endpoint; MDR from $2k–$10k+/mo.
+  '
     },
     {
-      title: 'Security & Compliance',
+      title: 'MDM/Device Management,
       links: [
-        { name: 'Wiz', href: 'https://www.wiz.io/pricing' },
-        { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },
-        { name: 'HashiCorp Vault', href: 'https://www.hashicorp.com/products/vault/pricing' },
-        { name: 'Cloudflare Zero Trust', href: 'https://www.cloudflare.com/products/zero-trust/pricing/' }
+        { name:,
+  Microsoft Intune
+  ', href: 'https://www.microsoft.com/en-us/microsoft-365/compare-microsoft-intune-plans },
+        { name:,
+  Jamf
+  ', href: 'https://www.jamf.com/pricing/ },
+        { name:,
+  Kandji
+  ', href: 'https://www.kandji.io/pricing }
       ],
-      note: 'SMB budgets: $200–$5,000/mo.'
+      note:,
+  Typical: $2–$8/device/mo depending on platform and features.
     },
     {
-      title: 'Vector & Search',
+      title:,
+  Observability & Logging
+  ',
       links: [
-        { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },
-        { name: 'Weaviate', href: 'https://weaviate.io/pricing' },
-        { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' }
+        { name: 'Datadog, href:,
+  https: //www.datadoghq.com/pricing/ },
+        { name:,
+  Grafana Cloud
+  ', href: 'https://grafana.com/pricing/ },
+        { name:,
+  New Relic
+  ', href: 'https://newrelic.com/pricing }
       ],
-      note: 'SMB budgets: $50–$1,000/mo.'
-    },
-    {
-      title: 'Cloud & Edge',
-      links: [
-        { name: 'AWS Calculator', href: 'https://calculator.aws' },
-        { name: 'Azure', href: 'https://azure.microsoft.com/pricing' },
-        { name: 'Cloudflare', href: 'https://www.cloudflare.com/plans/' },
-        { name: 'Netlify', href: 'https://www.netlify.com/pricing/' }
-      ],
-      note: 'SMB budgets: $200–$10,000/mo.'
-    },
-    {
-      title: 'EDR/XDR & MDR',
-      links: [
-        { name: 'CrowdStrike', href: 'https://www.crowdstrike.com/pricing/' },
-        { name: 'Microsoft Defender', href: 'https://www.microsoft.com/security/business/microsoft-defender-pricing' },
-        { name: 'Arctic Wolf MDR', href: 'https://arcticwolf.com/platform/managed-detection-response/' }
-      ],
-      note: 'EDR/XDR from $5–$25/endpoint; MDR from $2k–$10k+/mo.'
-    },
-    {
-      title: 'MDM/Device Management',
-      links: [
-        { name: 'Microsoft Intune', href: 'https://www.microsoft.com/en-us/microsoft-365/compare-microsoft-intune-plans' },
-        { name: 'Jamf', href: 'https://www.jamf.com/pricing/' },
-        { name: 'Kandji', href: 'https://www.kandji.io/pricing' }
-      ],
-      note: 'Typical: $2–$8/device/mo depending on platform and features.'
-    },
-    {
-      title: 'Observability & Logging',
-      links: [
-        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
-        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' },
-        { name: 'New Relic', href: 'https://newrelic.com/pricing' }
-      ],
-      note: 'SMB: $100–$2,000/mo based on ingest and hosts.'
+      note: 'SMB: $100–$2,000/mo based on ingest and hosts.
+  '
     }
   ];
 
@@ -149,15 +224,42 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: 'LLM Gateway & Cost Control', price: '$299/mo', href: '/llm-gateway' },
-                { name: 'API Observability Starter', price: '$149/mo', href: '/api-observability-starter' },
-                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/cloud-cost-optimizer' },
-                { name: 'SOC 2 Evidence Automation', price: '$499/mo', href: '/soc2-evidence-automation' },
-                { name: 'Vector Search Starter', price: '$249/mo', href: '/vector-search-starter' },
-                { name: 'TLS Certificate Monitor', price: '$49/mo', href: '/tls-certificate-monitor' },
-                { name: 'AI Multimodal Fusion', price: '$2,499/mo', href: '/ai-multimodal-fusion-platform' },
-                { name: 'Zero Trust Architecture', price: '$4,999/mo', href: '/zero-trust-network-architecture' },
-                { name: 'Edge Orchestration', price: '$3,499/mo', href: '/edge-computing-orchestration' }
+                { name:,
+  LLM Gateway & Cost Control
+  ', price: '$299/mo, href:,
+  /llm-gateway
+  ' },
+                { name: 'API Observability Starter, price:,
+  $149/mo
+  ', href: '/api-observability-starter },
+                { name:,
+  Cloud Cost Optimizer
+  ', price: '$399/mo, href:,
+  /cloud-cost-optimizer
+  ' },
+                { name: 'SOC 2 Evidence Automation, price:,
+  $499/mo
+  ', href: '/soc2-evidence-automation },
+                { name:,
+  Vector Search Starter
+  ', price: '$249/mo, href:,
+  /vector-search-starter
+  ' },
+                { name: 'TLS Certificate Monitor, price:,
+  $49/mo
+  ', href: '/tls-certificate-monitor },
+                { name:,
+  AI Multimodal Fusion
+  ', price: $2,499/mo,
+  , href: '/ai-multimodal-fusion-platform },
+                { name:,
+  Zero Trust Architecture
+  ', price: $4,999/mo,
+  , href: '/zero-trust-network-architecture },
+                { name:,
+  Edge Orchestration
+  ', price: $3,499/mo,
+  , href: '/edge-computing-orchestration }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
@@ -172,16 +274,46 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },
-                { name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },
-                { name: 'Incident Postmortem AI Scribe', price: '$39/mo', href: '/services/incident-postmortem-ai-scribe' },
-                { name: 'SLO Burn Rate Coach', price: '$49/mo', href: '/services/slo-burn-rate-coach' },
-                { name: 'API Changelog & SDK Publisher', price: '$59/mo', href: '/services/api-changelog-sdk-publisher' },
-                { name: 'Browser Performance Optimizer', price: '$69/mo', href: '/services/browser-performance-optimizer' },
-                { name: 'Secret Rotation Orchestrator', price: '$129/mo', href: '/services/secret-rotation-orchestrator' },
-                { name: 'SaaS Billing Anomaly Guard', price: '$119/mo', href: '/services/saas-billing-anomaly-guard' },
-                { name: 'ML Feature Store Starter', price: '$149/mo', href: '/services/ml-feature-store-starter' },
-                { name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' }
+                { name:,
+  AI Sales Playbook Generator
+  ', price: '$99/mo, href:,
+  /services/ai-sales-playbook-generator
+  ' },
+                { name: 'Customer Journey Analytics Starter, price:,
+  $79/mo
+  ', href: '/services/customer-journey-analytics-starter },
+                { name:,
+  Incident Postmortem AI Scribe
+  ', price: '$39/mo, href:,
+  /services/incident-postmortem-ai-scribe
+  ' },
+                { name: 'SLO Burn Rate Coach, price:,
+  $49/mo
+  ', href: '/services/slo-burn-rate-coach },
+                { name:,
+  API Changelog & SDK Publisher
+  ', price: '$59/mo, href:,
+  /services/api-changelog-sdk-publisher
+  ' },
+                { name: 'Browser Performance Optimizer, price:,
+  $69/mo
+  ', href: '/services/browser-performance-optimizer },
+                { name:,
+  Secret Rotation Orchestrator
+  ', price: '$129/mo, href:,
+  /services/secret-rotation-orchestrator
+  ' },
+                { name: 'SaaS Billing Anomaly Guard, price:,
+  $119/mo
+  ', href: '/services/saas-billing-anomaly-guard },
+                { name:,
+  ML Feature Store Starter
+  ', price: '$149/mo, href:,
+  /services/ml-feature-store-starter
+  ' },
+                { name: 'Edge Cron Orchestrator, price:,
+  $59/mo
+  ', href: '/services/edge-cron-orchestrator }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
@@ -196,12 +328,30 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Practical Micro SaaS Additions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: 'Affiliate Program Manager', price: '$99/mo', href: '/services/affiliate-program-manager' },
-                { name: 'Email Follow-up Automation', price: '$49/mo', href: '/services/email-follow-up-automation' },
-                { name: 'Podcast Transcription Studio', price: '$29/mo', href: '/services/podcast-transcription-studio' },
-                { name: 'Freelancer Portfolio Builder', price: '$9/mo', href: '/services/freelancer-portfolio-builder' },
-                { name: 'Cookie Consent Manager', price: '$10/mo', href: '/services/cookie-consent-manager' },
-                { name: 'SMB Website Analytics', price: '$14/mo', href: '/services/smb-website-analytics' }
+                { name:,
+  Affiliate Program Manager
+  ', price: '$99/mo, href:,
+  /services/affiliate-program-manager
+  ' },
+                { name: 'Email Follow-up Automation, price:,
+  $49/mo
+  ', href: '/services/email-follow-up-automation },
+                { name:,
+  Podcast Transcription Studio
+  ', price: '$29/mo, href:,
+  /services/podcast-transcription-studio
+  ' },
+                { name: 'Freelancer Portfolio Builder, price:,
+  $9/mo
+  ', href: '/services/freelancer-portfolio-builder },
+                { name:,
+  Cookie Consent Manager
+  ', price: '$10/mo, href:,
+  /services/cookie-consent-manager
+  ' },
+                { name: 'SMB Website Analytics, price:,
+  $14/mo
+  ', href: '/services/smb-website-analytics }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>

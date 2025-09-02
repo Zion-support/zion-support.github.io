@@ -17,7 +17,8 @@ import {}
   Workflow,
   FileText,
   Monitor,
-  Smartphone} from 'lucide-react';
+  Smartphone} from
+  'lucide-react';
 ;
 export { function };
 :pages.disabled/pages/services/DigitalTransformation.tsx
@@ -39,7 +40,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Digital""
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 Transformation;
               </span>
 :pages.disabled/pages/services/DigitalTransformation.tsx
@@ -263,4 +266,4 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
   )}
 :pages.disabled/pages/services/DigitalTransformation.tsx
 export default DigitalTransformation;'"
-'"'"
+  '"'"

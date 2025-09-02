@@ -39,7 +39,3 @@ find src -name "*.js" -exec grep -l "JSX\|<.*>" {} \; | while read file; do
 done
 
 echo "JSX file extensions fixed!"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

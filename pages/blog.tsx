@@ -1,9 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
+=======
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
+>>>>>>> origin/main
 import { 
   Calendar,
   Clock,
@@ -31,7 +46,8 @@ import {
   Globe,
   Phone,
   Mail
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 const Blog: React.FC = () => {
   const blogPosts = [
@@ -284,8 +300,8 @@ const Blog: React.FC = () => {
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 
-                            : 'text-gray-300 hover:bg-slate-700'
+                            ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                         }`}
                       >
                         <span>{category.name}</span>

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Star, CheckCircle, TrendingUp, Award } from 'lucide-react';
+=======
+import React from
+  'react';
+import Head from
+  'next/head';
+>>>>>>> origin/main
 
 export default function Home() {
   const featuredServices = [

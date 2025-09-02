@@ -1,117 +1,216 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import type { NextPage } from
+  'next';
+import Head from
+  'next/head';
+import Link from
+  'next/link';
+import { useState } from
+  'react';
+import Navigation from
+  '../components/Navigation';
+import Footer from
+  '../components/Footer';
 
 const Blog: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(,
+  All');
+  const [searchTerm, setSearchTerm] = useState('
+  ');
 
   const blogPosts = [
     {
-      id: 'quantum-ai-future-business',
-      title: 'The Future of Business Intelligence: How Quantum AI is Revolutionizing Data Analytics',
-      excerpt: 'Explore how quantum computing combined with artificial intelligence is creating unprecedented opportunities for business intelligence and predictive analytics.',
-      content: 'In the rapidly evolving landscape of business intelligence, quantum AI represents a paradigm shift that promises to unlock insights previously thought impossible...',
-      author: 'Dr. Sarah Chen',
-      authorRole: 'Chief Technology Officer',
-      publishDate: '2024-01-15',
-      readTime: '8 min read',
-      category: 'AI & Technology',
-      tags: ['Quantum Computing', 'AI', 'Business Intelligence', 'Data Analytics'],
-      image: '🧬',
+      id: 'quantum-ai-future-business,
+      title:,
+  The Future of Business Intelligence: How Quantum AI is Revolutionizing Data Analytics,
+      excerpt:,
+  Explore how quantum computing combined with artificial intelligence is creating unprecedented opportunities for business intelligence and predictive analytics.
+  ',
+      content: In the rapidly evolving landscape of business intelligence, quantum AI represents a paradigm shift that promises to unlock insights previously thought impossible...,
+  ,
+      author: 'Dr. Sarah Chen,
+      authorRole:,
+  Chief Technology Officer
+  ',
+      publishDate: '2024-01-15,
+      readTime:,
+  8 min read
+  ',
+      category: 'AI & Technology,
+      tags: [,
+  Quantum Computing
+  ', 'AI
+  ', 'Business Intelligence
+  ', 'Data Analytics
+  '],
+      image: '🧬,
       featured: true,
       views: 2847,
       likes: 156
     },
     {
-      id: 'autonomous-devops-guide',
-      title: 'Complete Guide to Autonomous DevOps: Self-Healing Infrastructure in 2024',
-      excerpt: 'Learn how autonomous DevOps platforms are transforming software deployment with self-healing systems and zero-downtime operations.',
-      content: 'The evolution of DevOps has reached a critical juncture where manual intervention is becoming obsolete. Autonomous DevOps represents the next frontier...',
-      author: 'Marcus Rodriguez',
-      authorRole: 'Head of Engineering',
-      publishDate: '2024-01-12',
-      readTime: '12 min read',
-      category: 'DevOps & Infrastructure',
-      tags: ['DevOps', 'Automation', 'Infrastructure', 'Cloud Computing'],
-      image: '🤖',
+      id:,
+  autonomous-devops-guide
+  ',
+      title: 'Complete Guide to Autonomous DevOps: Self-Healing Infrastructure in 2024,
+      excerpt:,
+  Learn how autonomous DevOps platforms are transforming software deployment with self-healing systems and zero-downtime operations.
+  ',
+      content: 'The evolution of DevOps has reached a critical juncture where manual intervention is becoming obsolete. Autonomous DevOps represents the next frontier...,
+      author:,
+  Marcus Rodriguez
+  ',
+      authorRole: 'Head of Engineering,
+      publishDate:,
+  2024-01-12
+  ',
+      readTime: '12 min read,
+      category:,
+  DevOps & Infrastructure
+  ',
+      tags: ['DevOps, ,
+  Automation
+  ', 'Infrastructure
+  ', 'Cloud Computing
+  '],
+      image: '🤖,
       featured: true,
       views: 1923,
       likes: 98
     },
     {
-      id: 'cybersecurity-threats-2024',
-      title: 'Cybersecurity Threats in 2024: AI-Powered Defense Strategies',
-      excerpt: 'Discover the latest cybersecurity threats and how AI-powered defense systems are helping organizations stay ahead of attackers.',
-      content: 'As cyber threats become more sophisticated, traditional security measures are proving inadequate. AI-powered cybersecurity solutions offer new hope...',
-      author: 'Emily Watson',
-      authorRole: 'VP of Client Success',
-      publishDate: '2024-01-10',
-      readTime: '10 min read',
-      category: 'Cybersecurity',
-      tags: ['Cybersecurity', 'AI Defense', 'Threat Detection', 'Security Analytics'],
-      image: '🛡️',
+      id:,
+  cybersecurity-threats-2024
+  ',
+      title: 'Cybersecurity Threats in 2024: AI-Powered Defense Strategies,
+      excerpt:,
+  Discover the latest cybersecurity threats and how AI-powered defense systems are helping organizations stay ahead of attackers.
+  ',
+      content: As cyber threats become more sophisticated, traditional security measures are proving inadequate. AI-powered cybersecurity solutions offer new hope...,
+  ,
+      author: 'Emily Watson,
+      authorRole:,
+  VP of Client Success
+  ',
+      publishDate: '2024-01-10,
+      readTime:,
+  10 min read
+  ',
+      category: 'Cybersecurity,
+      tags: [,
+  Cybersecurity
+  ', 'AI Defense
+  ', 'Threat Detection
+  ', 'Security Analytics
+  '],
+      image: '🛡️,
       featured: false,
       views: 1654,
       likes: 87
     },
     {
-      id: 'metaverse-commerce-trends',
-      title: 'Metaverse Commerce: Building Virtual Storefronts That Actually Convert',
-      excerpt: 'Practical insights into creating successful virtual commerce experiences that drive real revenue in the metaverse.',
-      content: 'The metaverse represents a new frontier for e-commerce, but creating successful virtual storefronts requires a deep understanding of user behavior...',
-      author: 'Kleber Santos',
-      authorRole: 'Founder & CEO',
-      publishDate: '2024-01-08',
-      readTime: '15 min read',
-      category: 'Metaverse & VR',
-      tags: ['Metaverse', 'E-commerce', 'Virtual Reality', 'Digital Transformation'],
-      image: '🌐',
+      id:,
+  metaverse-commerce-trends
+  ',
+      title: 'Metaverse Commerce: Building Virtual Storefronts That Actually Convert,
+      excerpt:,
+  Practical insights into creating successful virtual commerce experiences that drive real revenue in the metaverse.
+  ',
+      content: The metaverse represents a new frontier for e-commerce, but creating successful virtual storefronts requires a deep understanding of user behavior...,
+  ,
+      author: 'Kleber Santos,
+      authorRole:,
+  Founder & CEO
+  ',
+      publishDate: '2024-01-08,
+      readTime:,
+  15 min read
+  ',
+      category: 'Metaverse & VR,
+      tags: [,
+  Metaverse
+  ', 'E-commerce
+  ', 'Virtual Reality
+  ', 'Digital Transformation
+  '],
+      image: '🌐,
       featured: false,
       views: 2156,
       likes: 134
     },
     {
-      id: 'micro-saas-scaling-strategies',
-      title: 'Scaling Micro SaaS: From MVP to Market Leader in 12 Months',
-      excerpt: 'A comprehensive guide to scaling micro SaaS applications with proven strategies and real-world case studies.',
-      content: 'Scaling a micro SaaS application from concept to market leadership requires strategic planning, technical excellence, and market understanding...',
-      author: 'Dr. Sarah Chen',
-      authorRole: 'Chief Technology Officer',
-      publishDate: '2024-01-05',
-      readTime: '18 min read',
-      category: 'Business Strategy',
-      tags: ['Micro SaaS', 'Scaling', 'Product Development', 'Market Strategy'],
-      image: '🚀',
+      id:,
+  micro-saas-scaling-strategies
+  ',
+      title: 'Scaling Micro SaaS: From MVP to Market Leader in 12 Months,
+      excerpt:,
+  A comprehensive guide to scaling micro SaaS applications with proven strategies and real-world case studies.
+  ',
+      content: Scaling a micro SaaS application from concept to market leadership requires strategic planning, technical excellence, and market understanding...,
+  ,
+      author: 'Dr. Sarah Chen,
+      authorRole:,
+  Chief Technology Officer
+  ',
+      publishDate: '2024-01-05,
+      readTime:,
+  18 min read
+  ',
+      category: 'Business Strategy,
+      tags: [,
+  Micro SaaS
+  ', 'Scaling
+  ', 'Product Development
+  ', 'Market Strategy
+  '],
+      image: '🚀,
       featured: false,
       views: 3421,
       likes: 198
     },
     {
-      id: 'healthcare-ai-diagnostics',
-      title: 'AI in Healthcare: Revolutionizing Medical Diagnostics with Machine Learning',
-      excerpt: 'How AI-powered diagnostic tools are improving accuracy, reducing costs, and saving lives in healthcare institutions worldwide.',
-      content: 'The integration of artificial intelligence in healthcare diagnostics is transforming patient care and medical decision-making...',
-      author: 'Dr. Sarah Chen',
-      authorRole: 'Chief Technology Officer',
-      publishDate: '2024-01-03',
-      readTime: '14 min read',
-      category: 'Healthcare & AI',
-      tags: ['Healthcare', 'AI Diagnostics', 'Medical Technology', 'Machine Learning'],
-      image: '🏥',
+      id:,
+  healthcare-ai-diagnostics
+  ',
+      title: 'AI in Healthcare: Revolutionizing Medical Diagnostics with Machine Learning,
+      excerpt:,
+  How AI-powered diagnostic tools are improving accuracy, reducing costs, and saving lives in healthcare institutions worldwide.
+  ',
+      content: 'The integration of artificial intelligence in healthcare diagnostics is transforming patient care and medical decision-making...,
+      author:,
+  Dr. Sarah Chen
+  ',
+      authorRole: 'Chief Technology Officer,
+      publishDate:,
+  2024-01-03
+  ',
+      readTime: '14 min read,
+      category:,
+  Healthcare & AI
+  ',
+      tags: ['Healthcare, ,
+  AI Diagnostics
+  ', 'Medical Technology
+  ', 'Machine Learning
+  '],
+      image: '🏥,
       featured: false,
       views: 1876,
       likes: 103
     }
   ];
 
-  const categories = ['All', 'AI & Technology', 'DevOps & Infrastructure', 'Cybersecurity', 'Metaverse & VR', 'Business Strategy', 'Healthcare & AI'];
+  const categories = ['All
+  ', 'AI & Technology
+  ', 'DevOps & Infrastructure
+  ', 'Cybersecurity
+  ', 'Metaverse & VR
+  ', 'Business Strategy
+  ', 'Healthcare & AI
+  '];
 
   const filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All
+  ' || post.category === selectedCategory;
     const matchesSearch = searchTerm === '' || 
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -173,7 +272,9 @@ const Blog: NextPage = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                        {post.author.split(' ').map(n => n[0]).join('')}
+                        {post.author.split(
+  ' ').map(n => n[0]).join('
+  ')}
                       </div>
                       <div>
                         <div className="font-medium text-gray-900">{post.author}</div>
@@ -279,7 +380,8 @@ const Blog: NextPage = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                        {post.author.split(' ').map(n => n[0]).join('')}
+                        {post.author.split(' 
+  ').map(n => n[0]).join('')}
                       </div>
                       <div>
                         <div className="font-medium text-gray-900">{post.author}</div>
@@ -346,7 +448,8 @@ const Blog: NextPage = () => {
         <div className="mb-8">
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredPosts.length}</span> articles
-            {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+            {selectedCategory !==
+  'All' && ` in ${selectedCategory}`}
             {searchTerm && ` matching "${searchTerm}"`}
           </p>
         </div>

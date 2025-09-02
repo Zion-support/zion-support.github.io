@@ -1,13 +1,32 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';\nimport { motion } from 'framer-motion';\nimport { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';''const ContactFormEnhanced: React.FC = () => {
+=======
+React, { useState } from
+  'react';
+import { motion } from 'lucide-react';
+  'framer-motion';'import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';
+  'lucide-react';'
+  'const ContactFormEnhanced: React.FC = () => {
+>>>>>>> origin/main
   const [formData, setFormData] = useState({;
-    name: '', email: '','    subject: '', message: '''  });'  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');''  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
+    name:,
+  ', email: ','    subject:,
+  ', message: ''  });'  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+  'idle' |
+  'success' |
+  'error'>(
+  'idle');'
+  '  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-setSubmitStatus('success');'    setIsSubmitting(false);'    setFormData({ name: '', email: '', subject: '', message: '' });'  };'
+setSubmitStatus(,
+  success
+  ');'    setIsSubmitting(false);'    setFormData({ name: ', email:,
+  ', subject: ', message: '' });'  };'
   return (
     <div className="max-w-2xl mx-auto p-6">"      <motion.div"        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -51,7 +70,9 @@ type="submit""            disabled={isSubmitting}"            whileHover={{ scal
             )}
           </motion.button>
 
-          {submitStatus === 'success' && ('            <motion.div'              initial={{ opacity: 0, y: 20 }}
+          {submitStatus ===
+  'success' && (
+  '            <motion.div'              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2""            >"              <CheckCircle className="w-5 h-5" />"              <span>Message sent successfully!</span>"            </motion.div>)}
         </form>

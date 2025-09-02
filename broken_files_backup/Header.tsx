@@ -1,19 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from
+  'react';
+import { Link, useLocation } from
+  'react-router-dom';
+import { motion, AnimatePresence } from
+  'framer-motion';
+import { Menu, X, ChevronDown } from
+  'lucide-react';
 const Header: React.FC = () => {;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
   const navigation = [;
-    { name: 'Home', path: '/' },;
-    { name: 'About', path: '/about' },;
-    { name: 'Services', path: '/services' },;
-    { name: 'Solutions', path: '/solutions' },;
-    { name: 'Blog', path: '/blog' },;
-    { name: 'Contact', path: '/contact' };
+    { name:,
+  Home', path: '/ },;
+    { name:,
+  About', path: '/about },;
+    { name:,
+  Services', path: '/services },;
+    { name:,
+  Solutions', path: '/solutions },;
+    { name:,
+  Blog', path: '/blog },;
+    { name:,
+  Contact', path: '/contact };
   ];
   const isActive = (path: string) => {;
     return location.pathname === path;
@@ -31,15 +41,19 @@ const Header: React.FC = () => {;
         setIsMenuOpen(false);
         setActiveDropdown(null);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener(
+  'resize', handleResize);
+    return () => window.removeEventListener(
+  'resize', handleResize);
   }, []);
   useEffect(() => {
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener(
+  'scroll', handleScroll);
+    return () => window.removeEventListener(
+  'scroll', handleScroll);
   }, []);
   const isActive = (path: string) => router.pathname === path;
   const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (
@@ -48,11 +62,12 @@ const Header: React.FC = () => {;
         onClick={onToggle}
         className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-colors ${
           isOpen
-            ? 'bg-white/10 text-white'
-            : 'text-gray-300 hover:text-white hover:bg-white/10'
+            ?,
+  bg-white/10 text-white': 'text-gray-300 hover:text-white hover:bg-white/10
         }`}
         <span>Services</span>
-        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ?,
+  rotate-180': '}`} />
       </button>
       {isOpen && (
         <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
@@ -102,7 +117,9 @@ const Header: React.FC = () => {;
                 key={item.name}
                 to={item.path}
                 className={`text-gray-300 hover:text-white transition-colors duration-200 ${
-                  isActive(item.path) ? 'text-blue-400 font-semibold' : ''
+                  isActive(item.path) ?,
+  text-blue-400 font-semibold
+  ': '
                 }`}
                 {item.name}
               </Link>
@@ -142,7 +159,8 @@ const Header: React.FC = () => {;
 }}
             animate = {
   { opacity: 1,
-  height: 'auto' 
+  height:
+  'auto' 
 }}
             exit = {
   { opacity: 0,
@@ -156,8 +174,8 @@ const Header: React.FC = () => {;
                   to={item.path}
                   className={`block px-3 py-2 rounded-md transition-all duration-200 ${
                     isActive(item.path)
-                      ? 'text-blue-400 bg-blue-600/20 font-semibold'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                      ?,
+  text-blue-400 bg-blue-600/20 font-semibold': 'text-gray-300 hover:text-white hover:bg-gray-700
                   }`}
                   onClick={closeMenu}
                   {item.name}

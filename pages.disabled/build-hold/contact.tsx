@@ -1,8 +1,25 @@
-import React, { useState } from 'react';'import type { NextPage } from 'next';'import MainLayout from '../components/layout/MainLayout';'import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from 'lucide-react';''const ContactPage: NextPage = () => {
+React, { useState } from
+  'react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../components/layout/MainLayout';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from
+  'lucide-react';'
+  'const ContactPage: NextPage = () => {
   const [formData, setFormData] = useState({;
-    name: '', email: '','    company: '', phone: '','    service: '', message: '''  });'
+    name:,
+  ', email: ','    company:,
+  ', phone: ',
+,
+  service: ', message: ''
+  '  });'
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');''  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+  const [submitStatus, setSubmitStatus] = useState<
+  'idle' |
+  'success' |
+  'error'>(
+  'idle');'
+  '  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     setFormData({
       ...formData, [e.target.name]: e.target.value
     });
@@ -15,24 +32,174 @@ import React, { useState } from 'react';'import type { NextPage } from 'next';'i
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      setSubmitStatus('success');'      setFormData({'        name: '', email: '','        company: '', phone: '','        service: '', message: '''      });'    }, 2000);
+      setSubmitStatus(,
+  success
+  ');'      setFormData({
+  '        name: ', email:,
+  ','        company: ', phone:,
+  ',
+  '        service: ', message: ''
+  '      });'    }, 2000);
   };
 
   const contactInfo = [;
     {
-      icon: <Phone className="w-6 h-6" />, title: 'Phone','      details: '+1 302 464 0950', link: 'tel:+13024640950''    },'    {;
-      icon: <Mail className="w-6 h-6" />, title: 'Email','      details: 'kleber@ziontechgroup.com', link: 'mailto:kleber@ziontechgroup.com''    },'    {;
-      icon: <MapPin className="w-6 h-6" />, title: 'Address','      details: '364 E Main St STE 1008, Middletown DE 19709','      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709''    }, {'      icon: <Clock className="w-6 h-6" />,"      title: 'Business Hours', details: 'Mon-Fri: 9AM-6PM EST','      link: null'    }
+      icon: <Phone className="w-6 h-6" />, title:,
+  Phone',
+  '      details: '+1 302 464 0950, link:,
+  tel: +13024640950'    },'    {;
+      icon: <Mail className="w-6 h-6" />, title:,
+  Email',
+  '      details: 'kleber@ziontechgroup.com, link:,
+  mailto: kleber@ziontechgroup.com'    },'    {;
+      icon: <MapPin className="w-6 h-6" />, title:,
+  Address',
+  '      details: 364 E Main St STE 1008, Middletown DE 19709,
+  ,'      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'    }, {
+  '      icon: <Clock className="w-6 h-6" />,"      title:,
+  Business Hours
+  ', details: 'Mon-Fri: 9AM-6PM EST,'      link: null,
+  }
   ];
 
   const services = [;
     // Micro SaaS Services
-    'AI Content Generator Pro', 'Social Media Scheduler Pro','    'Email Marketing Automation Suite', 'Smart Invoice Management','    'Time Tracking & Productivity Suite', 'CRM & Sales Pipeline Manager','    'Smart Appointment Booking', 'Inventory & POS System','    'Document Management & Collaboration', 'Survey & Feedback Platform','    'Expense Management & Reimbursement', 'Smart Project Manager','    'Inventory Tracker Pro', 'AI Support Assistant','    'AI Video Editor Pro', 'AI Voice Cloning Studio','    'AI Code Reviewer Pro', 'AI Meeting Transcriber & Analyzer','    'AI Personal Finance Manager', 'AI Health & Wellness Coach','    'AI Language Learning Tutor', 'AI Interior Design Studio','    'AI Job Matching Platform', 'AI Social Media Analyzer','    'Smart Expense Tracker', 'AI Lead Scoring Platform','    'Time Tracking Analytics Pro', 'Website Speed Optimizer','    'API Monitoring Platform', 'Business Password Manager','    'Advanced Form Builder', 'Screenshot API Service','    'AI Email Responder Pro', 'Mobile-First Survey Platform','    'Industry-Specific Productivity Planner', 'Smart Event Management Dashboard','    'AI SEO Content Optimizer', 'AI Talent Matching Platform','    'AI Recruiting Platform', 'Quantum Computing Solutions','    '    // IT Services
-    'Cloud Migration Expert', 'Multi-Cloud Strategy & Management','    'Container Orchestration & Kubernetes', 'Serverless Architecture Implementation','    'Network Security & Infrastructure Audit', 'Database Optimization & Migration','    'API Gateway & Microservices Management', 'Disaster Recovery & Business Continuity','    'IT Infrastructure Monitoring & Management', 'Identity & Access Management (IAM)', 'Cybersecurity Assessment','    'DevOps Automation Suite', 'Data Backup & Recovery','    'Kubernetes Orchestration', 'API Gateway & Management','    'Database Performance Optimization', 'Network Security Audit','    'Disaster Recovery Planning', 'Microservices Architecture Design','    'Application Performance Monitoring', 'Identity & Access Management','    'Quantum Cloud Computing Solutions', 'Metaverse Infrastructure & Development','    'Autonomous Systems Development', 'Digital Twin Platform Development','    'Cyber-Physical Systems Integration', 'Neuromorphic Computing Solutions','    'Satellite Communication Systems', 'Advanced Biometric Security Systems','    'Edge Computing Solutions', 'Blockchain Infrastructure & Development','    'Zero Trust Security Architecture', '5G Network Implementation & Optimization','    'Hyperautomation Platform', // AI Services'    'Custom AI Model Development','    'Computer Vision & Image Recognition', 'Natural Language Processing (NLP)', 'Predictive Analytics & Forecasting','    'AI-Powered Recommendation Engine', 'AI-Powered Workflow Automation','    'AI Data Analytics & Business Intelligence', 'AI Chatbot & Voice Assistant Development','    'AI Fraud Detection & Security', 'AI Content Moderation & Safety','    'AI Supply Chain Optimization', 'AI Process Automation','    'AI Analytics Platform', 'AI Chatbot Development','    'AI Drug Discovery Platform', 'AI Climate Modeling & Prediction','    'AI Space Exploration Solutions', 'AI Neuroscience Research Platform','    'AI Robotics & Automation', 'AI Financial Trading Platform','    'AI Weather Prediction & Climate Modeling', 'AI Mental Health & Wellness Platform','    'AI Legal Research & Analysis Platform', 'AI Sports Analytics & Performance Platform','    'AI Education Personalization Platform', 'AI Energy Optimization & Smart Grid','    'AI Cybersecurity Threat Intelligence', 'AI Augmented Reality Solutions','    '    'Other''  ];'
+    'AI Content Generator Pro
+  ', 'Social Media Scheduler Pro
+  ',' 
+  'Email Marketing Automation Suite',
+  'Smart Invoice Management',
+  '    'Time Tracking & Productivity Suite
+  ', 'CRM & Sales Pipeline Manager
+  ',' 
+  'Smart Appointment Booking',
+  'Inventory & POS System',
+  '    'Document Management & Collaboration
+  ', 'Survey & Feedback Platform
+  ',' 
+  'Expense Management & Reimbursement',
+  'Smart Project Manager',
+  '    'Inventory Tracker Pro
+  ', 'AI Support Assistant
+  ',' 
+  'AI Video Editor Pro',
+  'AI Voice Cloning Studio',
+  '    'AI Code Reviewer Pro
+  ', 'AI Meeting Transcriber & Analyzer
+  ',' 
+  'AI Personal Finance Manager',
+  'AI Health & Wellness Coach',
+  '    'AI Language Learning Tutor
+  ', 'AI Interior Design Studio
+  ',' 
+  'AI Job Matching Platform',
+  'AI Social Media Analyzer',
+  '    'Smart Expense Tracker
+  ', 'AI Lead Scoring Platform
+  ',' 
+  'Time Tracking Analytics Pro',
+  'Website Speed Optimizer',
+  '    'API Monitoring Platform
+  ', 'Business Password Manager
+  ',' 
+  'Advanced Form Builder',
+  'Screenshot API Service',
+  '    'AI Email Responder Pro
+  ', 'Mobile-First Survey Platform
+  ',' 
+  'Industry-Specific Productivity Planner',
+  'Smart Event Management Dashboard',
+  '    'AI SEO Content Optimizer
+  ', 'AI Talent Matching Platform
+  ',' 
+  'AI Recruiting Platform',
+  'Quantum Computing Solutions',
+  '    '    // IT Services
+  'Cloud Migration Expert',
+  'Multi-Cloud Strategy & Management',
+  '    'Container Orchestration & Kubernetes
+  ', 'Serverless Architecture Implementation
+  ',' 
+  'Network Security & Infrastructure Audit',
+  'Database Optimization & Migration',
+  '    'API Gateway & Microservices Management
+  ', 'Disaster Recovery & Business Continuity
+  ',' 
+  'IT Infrastructure Monitoring & Management',
+  'Identity & Access Management (IAM)',
+  'Cybersecurity Assessment',
+  '    'DevOps Automation Suite
+  ', 'Data Backup & Recovery
+  ',' 
+  'Kubernetes Orchestration',
+  'API Gateway & Management',
+  '    'Database Performance Optimization
+  ', 'Network Security Audit
+  ',' 
+  'Disaster Recovery Planning',
+  'Microservices Architecture Design',
+  '    'Application Performance Monitoring
+  ', 'Identity & Access Management
+  ',' 
+  'Quantum Cloud Computing Solutions',
+  'Metaverse Infrastructure & Development',
+  '    'Autonomous Systems Development
+  ', 'Digital Twin Platform Development
+  ',' 
+  'Cyber-Physical Systems Integration',
+  'Neuromorphic Computing Solutions',
+  '    'Satellite Communication Systems
+  ', 'Advanced Biometric Security Systems
+  ',' 
+  'Edge Computing Solutions',
+  'Blockchain Infrastructure & Development',
+  '    'Zero Trust Security Architecture
+  ', '5G Network Implementation & Optimization
+  ',' 
+  'Hyperautomation Platform', // AI Services
+  '    'Custom AI Model Development
+  ',' 
+  'Computer Vision & Image Recognition',
+  'Natural Language Processing (NLP)',
+  'Predictive Analytics & Forecasting',
+  '    'AI-Powered Recommendation Engine
+  ', 'AI-Powered Workflow Automation
+  ',' 
+  'AI Data Analytics & Business Intelligence',
+  'AI Chatbot & Voice Assistant Development',
+  '    'AI Fraud Detection & Security
+  ', 'AI Content Moderation & Safety
+  ',' 
+  'AI Supply Chain Optimization',
+  'AI Process Automation',
+  '    'AI Analytics Platform
+  ', 'AI Chatbot Development
+  ',' 
+  'AI Drug Discovery Platform',
+  'AI Climate Modeling & Prediction',
+  '    'AI Space Exploration Solutions
+  ', 'AI Neuroscience Research Platform
+  ',' 
+  'AI Robotics & Automation',
+  'AI Financial Trading Platform',
+  '    'AI Weather Prediction & Climate Modeling
+  ', 'AI Mental Health & Wellness Platform
+  ',' 
+  'AI Legal Research & Analysis Platform',
+  'AI Sports Analytics & Performance Platform',
+  '    'AI Education Personalization Platform
+  ', 'AI Energy Optimization & Smart Grid
+  ',' 
+  'AI Cybersecurity Threat Intelligence',
+  'AI Augmented Reality Solutions',
+  '    ' 
+  'Other''  ];'
   return (
     <MainLayout
-      title="Contact Us - Zion Tech Group""      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business."''    >'      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"        <div className="container mx-auto px-4">"          <div className="max-w-4xl mx-auto text-center">"            <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">"              Let&apos;s Build Something Amazing Together''            </h1>'            <p className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed">"              Ready to transform your business with cutting-edge technology? "              Get in touch with our expert team today.
+      title="Contact Us - Zion Tech Group""      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business."'
+  '    >'      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"        <div className="container mx-auto px-4">"          <div className="max-w-4xl mx-auto text-center">"            <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">"              Let&apos;s Build Something Amazing Together'
+  '            </h1>            <p className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed">"              Ready to transform your business with cutting-edge technology? "              Get in touch with our expert team today.
             </p>
           </div>
         </div>
@@ -41,7 +208,13 @@ import React, { useState } from 'react';'import type { NextPage } from 'next';'i
       {/* Contact Information */}
       <section className="py-20">"        <div className="container mx-auto px-4">"          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">"            {contactInfo.map((info, index) => ("              <div key={index} className="text-center p-6 rounded-lg hover: shadow-lg transition-shadow">"                <div className="text-blue-600 mb-4 flex justify-center">{info.icon}</div>"                <h3 className="text-xl font-semibold text-gray-900 mb-3">{info.title}</h3>"                {info.link ? ("                  <a
                     href={info.link}
-                    className="text-gray-600 hover:text-blue-600 transition-colors""                    target={info.link.startsWith('http') ? '_blank' : undefined}'                    rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}'                  >'                    {info.details}
+                    className="text-gray-600 hover:text-blue-600 transition-colors""                    target={info.link.startsWith(
+  'http') ?
+  '_blank' : undefined}
+  '                    rel={info.link.startsWith('http
+  ') ? 'noopener noreferrer
+  ' : undefined}'                  >
+  '                    {info.details}
                   </a>
                 ) : (
                   <p className="text-gray-600">{info.details}</p>"                )}"              </div>
@@ -51,9 +224,13 @@ import React, { useState } from 'react';'import type { NextPage } from 'next';'i
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-20 bg-gray-50">"        <div className="container mx-auto px-4">"          <div className="grid lg: grid-cols-2 gap-12">"            {/* Contact Form */}"            <div className="bg-white rounded-lg shadow-lg p-8">"              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>"              "              {submitStatus === 'success' && ('                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">"                  Thank you for your message! We&apos;ll get back to you within 24 hours.''                </div>'              )}
+      <section className="py-20 bg-gray-50">"        <div className="container mx-auto px-4">"          <div className="grid lg: grid-cols-2 gap-12">"            {/* Contact Form */}"            <div className="bg-white rounded-lg shadow-lg p-8">"              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>"              "              {submitStatus === 'success
+  ' && ('                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">"                  Thank you for your message! We&apos;ll get back to you within 24 hours.'
+  '                </div>'              )}
 
-              {submitStatus === 'error' && ('                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">"                  There was an error sending your message. Please try again or contact us directly."                </div>
+              {submitStatus ===
+  'error' && (
+  '                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">"                  There was an error sending your message. Please try again or contact us directly."                </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">"                <div className="grid md: grid-cols-2 gap-6">"                  <div>"                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">"                      Full Name *"                    </label>
@@ -110,7 +287,8 @@ import React, { useState } from 'react';'import type { NextPage } from 'next';'i
             </div>
 
             {/* Company Information */}
-            <div className="space-y-8">"              <div>"                <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>"                <p className="text-lg text-gray-600 mb-6">"                  We&apos;re here to help you transform your business with cutting-edge technology solutions. ''                  Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.'                </p>
+            <div className="space-y-8">"              <div>"                <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>"                <p className="text-lg text-gray-600 mb-6">"                  We&apos;re here to help you transform your business with cutting-edge technology solutions. ''                  Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.
+  '                </p>
                 <p className="text-gray-600">"                  Contact us today to schedule a free consultation and discover how we can help "                  you achieve your business goals.
                 </p>
               </div>

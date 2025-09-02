@@ -12,35 +12,47 @@
  * 5. Reports all fixes applied
  */
 ;
-const fs = require('fs').promises;
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require(,
+  fs').promises;
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
 ;
 class BrowserErrorFixer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname,..');
+    this.projectRoot = path.resolve(__dirname,..
+  ');
     this.fixesApplied = [];
     this.backupsCreated = [];
     this.fixPatterns = {
       // JavaScript syntax and reference errors
-      'Unexpected token': {
-        type: 'syntax',
+      'Unexpected token
+  ': {
+        type: 'syntax,
         patterns: [
           {
-            regex: /Unexpected token '([^']+)'/,
+            regex: /Unexpected token '([^
+  ']+)'/,
             fix: (match, filePath) => this.fixUnexpectedToken(match[1], filePath)
           }
         ]
-      },Cannot read property': {
-        type: 'null-check',
+      },Cannot read property
+  ': {
+        type:,
+  null-check
+  ',
         patterns: [
           {
-            regex: /Cannot read property '([^']+)' of (null|undefined)/,
+            regex: /Cannot read property '([^
+  ']+) of (null|undefined)/,
             fix: (match, filePath) => this.fixNullPropertyAccess(match[1], filePath)
           }
         ]
-      },is not a function': {
-        type: 'function-check',
+      },is not a function
+  ': {
+        type: 'function-check
+  ',
         patterns: [
           {
             regex: /([a-zA-Z_$][a-zA-Z0-9_$]*) is not a function/,
@@ -48,15 +60,18 @@ class BrowserErrorFixer {
           }
         ]
       },ReferenceError': {
-        type: 'reference',
+        type:
+  'reference',
         patterns: [
           {
             regex: /ReferenceError: ([a-zA-Z_$][a-zA-Z0-9_$]*) is not defined/,
             fix: (match, filePath) => this.fixReferenceError(match[1], filePath)
           }
         ]
-      },TypeError': {
-        type: 'type',
+      },TypeError
+  ': {
+        type: 'type
+  ',
         patterns: [
           {
             regex: /TypeError: Cannot read properties of (undefined|null)/,
@@ -98,7 +113,8 @@ class BrowserErrorFixer {
       for (const filePath of sourceFiles) {
         // console.log(`📁 Analyzing file: ${path.relative(this.projectRoot, filePath)}`);
         
-        const fileContent = await fs.readFile(filePath,utf8');
+        const fileContent = await fs.readFile(filePath,utf8
+  ');
         const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
         
         if (fixes.length > 0) {
@@ -120,11 +136,17 @@ class BrowserErrorFixer {
 
   async findRelevantSourceFiles(error) {
     const sourceFiles = [];
-    const extensions = ['.js',.jsx',.ts',.tsx'];
+    const extensions = [,
+  .js
+  ',.jsx',.ts
+  ',.tsx'];
     
     try {
       // Search for source files in common directories
-      const searchDirs = ['src',components',pages',utils',hooks'];
+      const searchDirs = [
+  'src',components
+  ',pages',utils
+  ',hooks'];
       
       for (const dir of searchDirs) {
         const dirPath = path.join(this.projectRoot, dir);
@@ -135,7 +157,8 @@ class BrowserErrorFixer {
             sourceFiles.push(...files);
           }
         } catch (err) {
-          // Directory doesn't exist, skip
+          // Directory doesn
+  't exist, skip
         }
       }
 
@@ -147,7 +170,7 @@ class BrowserErrorFixer {
 
       return sourceFiles.slice(0, 20); // Limit to first 20 files for performance
     } catch (error) {
-      console.error('Error finding source files:', error);
+      console.error('Error finding source files: , error);
       return [];
     }
   }
@@ -165,7 +188,9 @@ class BrowserErrorFixer {
         for (const entry of entries) {
           const fullPath = path.join(currentDir, entry.name);
           
-          if (entry.isDirectory() && !entry.name.startsWith('.') && !entry.name.startsWith('node_modules')) {
+          if (entry.isDirectory() && !entry.name.startsWith('.
+  ') && !entry.name.startsWith('node_modules
+  ')) {
             await search(fullPath, depth + 1);
           } else if (entry.isFile() && extensions.includes(path.extname(entry.name))) {
             files.push(fullPath);
@@ -184,7 +209,8 @@ class BrowserErrorFixer {
     const fixes = [];
     
     for (const pattern of strategy.patterns) {
-      const matches = fileContent.match(new RegExp(pattern.regex,g'));
+      const matches = fileContent.match(new RegExp(pattern.regex,g
+  '));
       if (matches) {
         for (const match of matches) {
           const fix = await pattern.fix(match, filePath);
@@ -224,29 +250,42 @@ class BrowserErrorFixer {
       console.error(`❌ Failed to apply fixes to ${filePath}:`, error);
 
   applySingleFix(content, fix) {
-    if (fix.type === 'replace') {
+    if (fix.type ===,
+  replace') {
       return content.replace(fix.search, fix.replace);
-    } else if (fix.type === 'insert') {
-      const lines = content.split('\n');
+    } else if (fix.type ===
+  'insert') {
+      const lines = content.split(
+  '\n');
       lines.splice(fix.line - 1, 0, fix.content);
-      return lines.join('\n');
-    } else if (fix.type === 'delete') {
-      const lines = content.split('\n');
+      return lines.join(
+  '\n');
+    } else if (fix.type ===
+  'delete') {
+      const lines = content.split(
+  '\n');
       lines.splice(fix.line - 1, 1);
-      return lines.join('\n');
+      return lines.join(
+  '\n');
 
     return content;
 
   // Fix implementations
   async fixUnexpectedToken(token, filePath) {
     const commonFixes = {
-      '(': '),[': ']',{': '},"': '"',
-      "'": "'",`': '`'
+  '(': ),[':,
+  ]',{
+  ': },"
+  ':,
+  "
+  ',
+      "'": "",`':,
+  `'
     };
     
     if (commonFixes[token]) {
       return {
-        type: 'insert',
+        type: 'insert,
         line: 1,
         content: `// Auto-fix: Added missing closing ${commonFixes[token]} for ${token}`,
         description: `Added missing closing ${commonFixes[token]}`
@@ -256,17 +295,21 @@ class BrowserErrorFixer {
 
   async fixNullPropertyAccess(property, filePath) {
     return {
-      type: 'replace',
-      search: new RegExp(`\\.${property}\\b`,g'),
+      type:
+  'replace',
+      search: new RegExp(`\\.${property}\\b`,g
+  '),
       replace: `?.${property}`,
       description: `Added optional chaining for property ${property}`
     };
 
   async fixFunctionCall(functionName, filePath) {
     return {
-      type: 'replace',
+      type: 'replace
+  ',
       search: new RegExp(`\\b${functionName}\\s*\\(`,g'),
-      replace: `(typeof ${functionName} === 'function' ? ${functionName}(`,
+      replace: `(typeof ${functionName} ===
+  'function' ? ${functionName}(`,
       description: `Added function existence check for ${functionName}`
     };
 
@@ -279,7 +322,8 @@ class BrowserErrorFixer {
     ];
     
     return {
-      type: 'insert',
+      type:
+  'insert',
       line: 1,
       content: commonFixes[0],
       description: `Added variable declaration for ${variableName}`
@@ -287,9 +331,11 @@ class BrowserErrorFixer {
 
   async fixTypeError(type, filePath) {
     return {
-      type: 'replace',
+      type:
+  'replace',
       search: /\.([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g,
-      replace: '?.$1',
+      replace:
+  '?.$1',
       description: `Added optional chaining to prevent ${type} errors`
     };
 
@@ -306,14 +352,16 @@ class BrowserErrorFixer {
         backupsCreated: this.backupsCreated
       };
       
-      const reportPath = path.join(this.projectRoot,reports',auto-fix-report.json');
+      const reportPath = path.join(this.projectRoot,reports
+  ',auto-fix-report.json');
       await fs.mkdir(path.dirname(reportPath), { recursive: true });
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       
       // console.log(`📄 Auto-fix report generated: ${reportPath}`);
       return report;
     } catch (error) {
-      console.error('❌ Failed to generate fix report:', error);
+      console.error(
+  '❌ Failed to generate fix report:', error);
       return null;
 
   async cleanupBackups(keepRecent = 5) {
@@ -332,10 +380,13 @@ class BrowserErrorFixer {
 
       this.backupsCreated = this.backupsCreated.slice(-keepRecent);
     } catch (error) {
-      console.error('❌ Error during backup cleanup:', error);
+      console.error(
+  '❌ Error during backup cleanup:,
+  , error);
 
   async runFixCycle(errorLog) {
-    // console.log('🚀 Starting browser error auto-fix cycle...');
+    // console.log(
+  '🚀 Starting browser error auto-fix cycle...');
     
     for (const error of errorLog) {
       await this.analyzeError(error);
@@ -355,16 +406,19 @@ if (require.main === module) {
   
   // Example usage
   const sampleErrors = [
-    { message: "Cannot read property 'length' of null" },
+    { message: "Cannot read property
+  'length of null" },
     { message: "ReferenceError: userData is not defined" },
     { message: "TypeError: Cannot read properties of undefined" }
   ];
   
   fixer.runFixCycle(sampleErrors).then(() => {
-    // console.log('Auto-fix cycle completed successfully');
+    // console.log(
+  'Auto-fix cycle completed successfully');
     process.exit(0);
   }).catch((error) => {
-    console.error('Auto-fix cycle failed:', error);
+    console.error(
+  'Auto-fix cycle failed:', error);
     process.exit(1);
   });
 

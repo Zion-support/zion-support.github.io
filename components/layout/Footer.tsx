@@ -1,5 +1,30 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
+=======
+React from
+  'react';
+import { Link } from 'lucide-react';
+  'react-router-dom';'import { ;'  Brain, Mail,
+  Phone, MapPin,
+  Linkedin, Twitter,
+  Github, Youtube,
+  Instagram, ArrowRight,
+  Heart, Globe,
+  Shield, Users,
+  Award, Star,
+  Zap, Cloud,
+  Database, Network,
+  Target, CheckCircle,
+  ExternalLink
+} from
+  'lucide-react';'{ Button } from
+  '../ui/Button';
+import { Badge } from 'lucide-react';
+  '../ui/Badge;
+
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
+>>>>>>> origin/main
 
 const Footer: React.FC = () => {
   return (
