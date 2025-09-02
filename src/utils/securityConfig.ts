@@ -1,1 +1,1 @@
-export const securityConfig = {
+export const securityConfig = { contentSecurityPolicy: { 'default-src': ["'self'"], 'script-src': ["'self'", "'unsafe-inline'", "https:
