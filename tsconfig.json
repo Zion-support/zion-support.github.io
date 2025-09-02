@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -39,58 +35,23 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-      "@layout/*": [
-        "src/layout/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@types/*": [
-        "src/types/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@data/*": [
-        "src/data/*"
-      ],
-      "@services/*": [
-        "src/services/*"
-      ],
-      "@context/*": [
-        "src/context/*"
-      ],
-      "@constants/*": [
-        "src/constants/*"
-      ]
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@layout/*": ["src/layout/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@types/*": ["src/types/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@data/*": ["data/*"],
+      "@services/*": ["src/services/*"],
+      "@context/*": ["src/context/*"],
+      "@constants/*": ["src/constants/*"]
     },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "types": [
-      "node"
-    ],
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
+    "plugins": [{ "name": "next" }],
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
@@ -111,34 +72,11 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
-    "components",
     "contracts",
     "cypress",
     "**/*.backup",
     "**/*.disabled",
     "temp_working",
-    "supabase/functions",
-    "src/utils/generateRandomListing.ts",
-    "src/utils/linkChecker.ts",
-    "src/utils/mimeTypeFallback.ts",
-    "src/utils/passwordStrength.tsx",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/seoOptimizer.tsx",
-    "src/utils/serviceWorkerRegistration.ts",
-    "src/utils/unitConversion.ts",
-    "src/utils/withErrorLogging.ts",
-    "src/utils/generateRandomBlogPost.ts",
-    "src/pages/solutions/EnterpriseSolutions.tsx",
-    "src/utils/sitemapGenerator.tsx",
-    "src/pages/zion-hire-ai.tsx",
-    "src/pages/webinars.tsx",
-    "src/routes/*Routes.tsx",
-    "src/pages/services/**",
-    "src/pages/solutions/**",
-    "src/pages/**",
-    "src/routes/**",
-    "src/services/**",
-    "src/types/**",
-    "src/utils/**"
+    "supabase/functions"
   ]
 }
