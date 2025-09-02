@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import ErrorBoundary from '../ui/ErrorBoundary';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -19,7 +20,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   ogImage = '/og-image.jpg'
 }) => {
   return (
-    <>
+    <ErrorBoundary>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -91,7 +92,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         </main>
         <Footer />
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -20,7 +30,9 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'shadow-xl bg-white/95 backdrop-blur-sm' : 'shadow-lg'
+    }`}>
       {/* Top bar with contact info */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">

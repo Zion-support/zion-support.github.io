@@ -23,7 +23,7 @@ import { Brain,
   Cloud
  } from 'lucide-react';
 
-export default function AIProjectManagementPlatform(...args: []):  {
+export default function AIProjectManagementPlatform() {
   const features = [
     {
       icon: Brain,

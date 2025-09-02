@@ -1,6 +1,9 @@
+import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = () => {
+import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity } from 'lucide-react';
+
+const AIPredictiveMaintenance: React.FC = () => {
   const features = [
     {
       icon: Brain,

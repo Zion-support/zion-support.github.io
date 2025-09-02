@@ -1,8 +1,8 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-export default function AISupplyChainOptimization(...args: []):  {
+export default function AISupplyChainOptimization() {
   return (
     <>
       <Helmet>

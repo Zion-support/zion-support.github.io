@@ -1,7 +1,8 @@
-import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
+import React from 'react';
+import { SEO } from '../../components/SEO';
+import { Users, Target, CheckCircle } from 'lucide-react';
 
-export default function MicroCRM(...args: unknown[]): unknown {
+export default function MicroCRM() {
   const features = [
     {
       icon: Users,

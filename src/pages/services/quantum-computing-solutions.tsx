@@ -1,8 +1,9 @@
-import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
+import { Atom, Brain, CheckCircle, Zap } from 'lucide-react';
 
-export default function QuantumComputingSolutions(...args: unknown[]): unknown {
+export default function QuantumComputingSolutions() {
   const features = [
     {
       icon: Atom,

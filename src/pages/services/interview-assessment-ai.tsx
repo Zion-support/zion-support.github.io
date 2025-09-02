@@ -1,8 +1,9 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/src/src/components/SEO';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { Brain, Video, Users, Rocket, CheckCircle, Clock, Trophy, ArrowRight, Phone } from 'lucide-react';
 
-export default function InterviewAssessmentAI(...args: unknown[]): unknown {
+export default function InterviewAssessmentAI() {
   const features = [
     {
       icon: Brain,
