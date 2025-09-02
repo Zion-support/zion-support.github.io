@@ -11,26 +11,38 @@ const Footer: React.FC = () => {
       services: [
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'Project Management', href: '/services/project-management-suite' },
-        { name: 'Inventory Tracker', href: '/services/inventory-management' },
-        { name: 'Customer Support', href: '/services/customer-support-platform' },
+        { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
+        { name: 'Expense Tracker', href: '/services/expense-tracker' },
+        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
+        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
+        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
+        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
       ]
     },
     {
       title: 'IT Services',
       services: [
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity-audit' },
-        { name: 'DevOps Automation', href: '/services/devops-automation' },
-        { name: 'Data Backup', href: '/services/data-backup-recovery' },
+        { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
+        { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
+        { name: 'Database Optimization', href: '/services/database-optimization' },
+        { name: 'Network Security Audit', href: '/services/network-security-audit' },
+        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
+        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
+        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
       ]
     },
     {
       title: 'AI Services',
       services: [
         { name: 'Custom AI Models', href: '/services/custom-ai-models' },
-        { name: 'Process Automation', href: '/services/ai-process-automation' },
-        { name: 'Analytics Platform', href: '/services/ai-analytics-platform' },
-        { name: 'Chatbot Development', href: '/services/ai-chatbot-development' },
+        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
+        { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
+        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
+        { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
+        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
+        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
+        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
       ]
     }
   ];

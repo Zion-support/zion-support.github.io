@@ -16,7 +16,6 @@ export const securityConfig = {
     'upgrade-insecure-requests': true
   },
 
-
   // Security Headers
   headers: {
     'X-Content-Type-Options': 'nosniff',
