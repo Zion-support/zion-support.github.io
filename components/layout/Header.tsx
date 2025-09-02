@@ -36,11 +36,7 @@ const Header: React.FC = () => {
     { name: 'AI Content Generator', href: '/services/ai-content-generator' },
   ];
 
-  const solutionCategories = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Small Business', href: '/solutions/small-business' },
-    { name: 'Startup Solutions', href: '/solutions/startups' },
-  ];
+  // solutionCategories consolidated into inline links in the menu to reduce bundle size
 
   return (
     <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-xl' : 'shadow-lg'}`}>

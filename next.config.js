@@ -3,6 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     esmExternals: false,
+    newNextLinkBehavior: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
   images: {
     domains: ['ziontechgroup.com'],

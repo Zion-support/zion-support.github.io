@@ -42,6 +42,15 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
+                <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Services
+                </Link>
+                <Link href="/services/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  IT Services
+                </Link>
+                <Link href="/services/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Micro SaaS
+                </Link>
                 <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Development
                 </Link>
@@ -96,14 +105,17 @@ const EnhancedNavigation: React.FC = () => {
                 <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Finance
                 </Link>
+                <Link href="/case-studies" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Case Studies
+                </Link>
               </div>
             </div>
 
             <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">
               Products
             </Link>
-            <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Solutions
+            <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Services
             </Link>
             <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
               About
