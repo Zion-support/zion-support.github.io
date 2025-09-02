@@ -118,9 +118,34 @@
     "**/*.disabled",
     "temp_working",
     "supabase/functions",
+<<<<<<< HEAD
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+=======
+    "src/utils/generateRandomListing.ts",
+    "src/utils/linkChecker.ts",
+    "src/utils/mimeTypeFallback.ts",
+    "src/utils/passwordStrength.tsx",
+    "src/utils/resourceMonitor.ts",
+    "src/utils/seoOptimizer.tsx",
+    "src/utils/serviceWorkerRegistration.ts",
+    "src/utils/unitConversion.ts",
+    "src/utils/withErrorLogging.ts",
+    "src/utils/generateRandomBlogPost.ts",
+    "src/pages/solutions/EnterpriseSolutions.tsx",
+    "src/utils/sitemapGenerator.tsx",
+    "src/pages/zion-hire-ai.tsx",
+    "src/pages/webinars.tsx",
+    "src/routes/*Routes.tsx",
+    "src/pages/services/**",
+    "src/pages/solutions/**",
+    "src/pages/**",
+    "src/routes/**",
+    "src/services/**",
+    "src/types/**",
+    "src/utils/**"
+>>>>>>> origin/main
   ]
 }

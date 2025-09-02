@@ -20,7 +20,8 @@ import {}
   Award,
   Phone,
   Mail,
-  MapPin} from 'lucide-react';
+  MapPin} from
+  'lucide-react';
 ;
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
 const AIWorkflowOrchestrator: React.FC = props {
@@ -131,11 +132,11 @@ const AIWorkflowOrchestrator: React.FC = props {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
-                  tier.popular''
-                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10'''`
-                    : 'border-white/10'``
+                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,
+  tier.popular''
+                    ?
+  'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10''
+  '`: 'border-white/10``
                 }`}
               >"{tier.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -168,15 +169,18 @@ const AIWorkflowOrchestrator: React.FC = props {
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-'
-                <Link''`
-                  to={tier.cta === 'Contact Sales' ? '/contact' : '/contact'}``
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    tier.popular''
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'''`
-                      : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'``}`}
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx,
+  <Link'
+  '`
+                  to={tier.cta === 'Contact Sales
+  ' ? '/contact
+  ': '/contact}``
+                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+  tier.popular'
+  '
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover: from-blue-600 hover:to-purple-600''
+  '`
+                      : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white``}`}
                 >
                   {tier.cta}
                 </Link>
@@ -289,4 +293,4 @@ const AIWorkflowOrchestrator: React.FC = props {
   )};
 ;
 export { AIWorkflowOrchestrator };export default AIWorkflowOrchestrator;'"`
-'"`'"`
+  '"`'"`

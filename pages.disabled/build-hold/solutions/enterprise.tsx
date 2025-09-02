@@ -1,4 +1,11 @@
-import type { NextPage } from 'next';'import Layout from '../../components/Layout';'import Link from 'next/link';'import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';''const EnterpriseSolutions: NextPage = () => {
+type { NextPage } from
+  'next';
+import Layout from
+  '../../components/Layout';'Link from
+  'next/link';
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
+  'lucide-react';'
+  'const EnterpriseSolutions: NextPage = () => {
   return (
     <Layout
       title="Enterprise Solutions - Zion Tech Group""      description="Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.""    >"      {/* Hero Section */}
@@ -69,7 +76,8 @@ import type { NextPage } from 'next';'import Layout from '../../components/Layou
           <div className="grid md:grid-cols-2 gap-12">"            <div>"              <h3 className="text-2xl font-bold mb-6 text-gray-900">Common Enterprise Challenges</h3>"              <div className="space-y-6">"                <div className="flex items-start space-x-4">"                  <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">"                    <span className="text-red-600 text-sm font-bold">1</span>"                  </div>"                  <div>
                     <h4 className="text-lg font-semibold mb-2">Legacy System Complexity</h4>"                    <p className="text-gray-600">Outdated systems that are difficult to maintain and integrate with modern technologies.</p>"                  </div>"                </div>
                 <div className="flex items-start space-x-4">"                  <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">"                    <span className="text-red-600 text-sm font-bold">2</span>"                  </div>"                  <div>
-                    <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>"                    <p className="text-gray-600">Systems that can&apos;t handle growth and increased user demands effectively.</p>''                  </div>'                </div>
+                    <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>"                    <p className="text-gray-600">Systems that can&apos;t handle growth and increased user demands effectively.</p>''                  </div>
+  '                </div>
                 <div className="flex items-start space-x-4">"                  <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">"                    <span className="text-red-600 text-sm font-bold">3</span>"                  </div>"                  <div>
                     <h4 className="text-lg font-semibold mb-2">Security & Compliance</h4>"                    <p className="text-gray-600">Meeting strict security requirements and regulatory compliance standards.</p>"                  </div>"                </div>
                 <div className="flex items-start space-x-4">"                  <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">"                    <span className="text-red-600 text-sm font-bold">4</span>"                  </div>"                  <div>
@@ -130,7 +138,8 @@ import type { NextPage } from 'next';'import Layout from '../../components/Layou
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">"              <h3 className="text-2xl font-bold mb-4">Ready to Transform?</h3>"              <p className="mb-6 text-blue-100">"                Let&apos;s discuss how our enterprise solutions can modernize your organization and drive growth.''              </p>'              <Link href="/contact">"                <a className="bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">"                  Schedule a Consultation"                </a>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">"              <h3 className="text-2xl font-bold mb-4">Ready to Transform?</h3>"              <p className="mb-6 text-blue-100">"                Let&apos;s discuss how our enterprise solutions can modernize your organization and drive growth.''              </p>
+  '              <Link href="/contact">"                <a className="bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">"                  Schedule a Consultation"                </a>
               </Link>
             </div>
           </div>

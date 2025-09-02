@@ -12,7 +12,8 @@ import {}
   Target,
   Clock,
   Shield,
-  Globe} from 'lucide-react';
+  Globe} from
+  'lucide-react';
 
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
 export default function AIIoTEdgeComputing() {return()
@@ -105,19 +106,25 @@ export default function AIIoTEdgeComputing() {return()
           {[
             {
 
-              icon: Wifi,'
-              title: 'Device Connectivity','
-              desc: 'Advanced IoT device management and monitoring'},
+              icon: Wifi,
+,
+  title: 'Device Connectivity,'
+              desc:
+  'Advanced IoT device management and monitoring'},
             {
 
-              icon: TrendingUp,'
-              title: 'Real-time Processing','
-              desc: 'Local AI processing for instant decisions'},
+              icon: TrendingUp,
+,
+  title: 'Real-time Processing,'
+              desc:
+  'Local AI processing for instant decisions'},
             {
 
-              icon: Shield,'
-              title: 'Edge Security','
-              desc: 'Advanced security and encryption at the edge'},
+              icon: Shield,
+,
+  title: 'Edge Security,'
+              desc:
+  'Advanced security and encryption at the edge'},
           ].map(item => (
             <div"key={item.title}""
               className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
@@ -163,8 +170,10 @@ export default function AIIoTEdgeComputing() {return()
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-          <div className="mt-4 text-sm text-zion-slate-light">'
-            Visit us at{' '}"<a""
+          <div className="mt-4 text-sm text-zion-slate-light">
+  '
+            Visit us at{' 
+  '}"<a""
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -177,4 +186,4 @@ export default function AIIoTEdgeComputing() {return()
     </div>
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
   )}'"
-'"'"
+  '"'"
