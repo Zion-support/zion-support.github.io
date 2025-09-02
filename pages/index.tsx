@@ -33,7 +33,7 @@ const Home: NextPage = () => {
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-500/20 text-blue-200 border border-blue-400/30">
               <Award className="w-4 h-4 mr-2" />
-              Trusted by 500+ Companies Worldwide
+              Trusted by 500+ Companies Worldwide • 50+ Innovative Solutions • 99.9% Uptime
             </span>
           </div>
           
@@ -43,7 +43,8 @@ const Home: NextPage = () => {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200 leading-relaxed">
             Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
+            with cutting-edge AI, cloud architecture, and innovative development services. From micro SaaS 
+            solutions to enterprise AI platforms, we deliver measurable results that drive growth and efficiency.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -119,7 +120,7 @@ const Home: NextPage = () => {
                 <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">8+ Solutions</div>
+                <div className="text-sm text-gray-400">25+ Solutions</div>
               </div>
             </div>
 
@@ -138,7 +139,7 @@ const Home: NextPage = () => {
                 <Link href="/services/it-services" className="text-purple-600 hover:text-purple-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">12+ Services</div>
+                <div className="text-sm text-gray-400">22+ Services</div>
               </div>
             </div>
 
@@ -157,7 +158,7 @@ const Home: NextPage = () => {
                 <Link href="/services/ai-services" className="text-indigo-600 hover:text-indigo-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">10+ Solutions</div>
+                <div className="text-sm text-gray-400">24+ Solutions</div>
               </div>
             </div>
           </div>
@@ -205,6 +206,99 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Results</h3>
               <p className="text-gray-600">98% client satisfaction and 500+ successful projects</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Leadership Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Market-Leading Technology Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We're at the forefront of technological innovation, delivering solutions that give you a competitive edge in today's digital landscape.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="text-4xl font-bold text-blue-600 mb-4">71+</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Total Solutions</h3>
+              <p className="text-gray-600">Comprehensive portfolio covering micro SaaS, IT services, and AI solutions</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="text-4xl font-bold text-purple-600 mb-4">$2M+</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Cost Savings</h3>
+              <p className="text-gray-600">Average cost reduction achieved for our enterprise clients</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="text-4xl font-bold text-indigo-600 mb-4">6 Months</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Average ROI</h3>
+              <p className="text-gray-600">Typical time to see positive return on investment</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Why Industry Leaders Choose Zion Tech Group</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Cutting-Edge Technology Stack</h4>
+                    <p className="text-gray-600">We leverage the latest technologies including AI/ML, blockchain, cloud computing, and IoT to deliver future-proof solutions.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Proven Track Record</h4>
+                    <p className="text-gray-600">500+ successful projects across various industries with measurable results and high client satisfaction.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="w-5 h-5 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Scalable Solutions</h4>
+                    <p className="text-gray-600">From startup micro SaaS to enterprise AI platforms, our solutions grow with your business needs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 p-8 rounded-2xl text-white">
+              <h3 className="text-2xl font-bold mb-6">Ready to Get Started?</h3>
+              <p className="text-blue-100 mb-6">
+                Join hundreds of companies that have transformed their operations with our innovative technology solutions.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Free consultation & assessment</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Custom solution design</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>24/7 support & maintenance</span>
+                </div>
+              </div>
+              <Link href="/contact" className="inline-block mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Schedule Your Free Consultation
+              </Link>
             </div>
           </div>
         </div>
